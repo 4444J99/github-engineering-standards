@@ -62,7 +62,9 @@ Source: https://github.com/jlcanovas/gh-best-practices-template/blob/bf13cd2c799
 
 Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-See source for full license text. This template repository is licensed under CC BY 4.0.
+See source for full license text. LICENSE.md and README.md declare CC BY 4.0;
+guidelines.md line 92 instead names CC-BY-SA. CODE_OF_CONDUCT.md attributes
+Contributor Covenant 2.1. These observations do not establish blanket per-file clearance.
 
 
 ## atapas/model-repo — 9aa52517830a0e10043116ff768af8fabeeb4347
@@ -94,7 +96,7 @@ SOFTWARE.
 
 ## tmcw/github-best-practices — 801411757531a8880cb315148160fde3079d7227
 
-Source: https://github.com/tmcw/github-best-practices/blob/801411757531a8880cb315148160fde3079d7227/LICENSE
+Source: https://github.com/tmcw/github-best-practices/tree/801411757531a8880cb315148160fde3079d7227
 
 No LICENSE file found in source repository. This distribution uses independently phrased principles and provenance references, not a copy of its README or other expressive content.
 

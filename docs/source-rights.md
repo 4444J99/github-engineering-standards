@@ -7,3 +7,21 @@ The github/docs README declares CC BY 4.0 for documentation/content in assets, c
 Raw upstream text belongs in an ignored private cache. The default corpus exporter produces references, line ranges and hashes without source text. The structured GHQR and well-architected extraction outputs contain MIT-covered source definitions and must retain the notices in THIRD_PARTY_NOTICES. Other bundled templates and control wording are generalized project drafts, not claims of upstream endorsement.
 
 This initial private bootstrap makes no decision to publish, sublicense or replace the user's rights policy. Public distribution and inherited material require the separate rights acceptance gate.
+
+## File-specific recovery findings
+
+`evidence/rights-review-queue.json` binds 22 artifacts to their pinned commit, path
+and digest. All remain pending rights acceptance; these records do not increase the
+rights-cleared numerator. Model-repo's CODE_OF_CONDUCT.md attributes Contributor
+Covenant 2.0, while CONTRIBUTING.md attributes 1.4. The governance template's
+CODE_OF_CONDUCT.md attributes 2.1. A repository MIT or CC BY declaration is not
+substituted for verification of these inherited passages.
+
+The linked version pages were checked live, not added to the six-source pinned corpus:
+[1.4](https://www.contributor-covenant.org/version/1/4/code-of-conduct/),
+[2.0](https://www.contributor-covenant.org/version/2/0/code_of_conduct/), and
+[2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+Current website footers do not resolve historical licensing or modifications in the
+pinned source adaptations. Verify version-specific license history, preserve required
+attribution, reconcile the template's conflicting declarations, and record the
+authorized distribution decision before approving copies of inherited expression.
