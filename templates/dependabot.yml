@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "{{ECOSYSTEM}}"
+    directory: "{{MANIFEST_DIRECTORY}}"
+    schedule:
+      interval: "{{INTERVAL}}"
+    open-pull-requests-limit: {{PR_LIMIT}}
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
