@@ -578,7 +578,7 @@ Check a box only when scoped, current evidence satisfies the stated criterion.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-006 r2 — Review conversations are resolved** (MUST; REVIEWED_DRAFT)
+- [ ] **GES-RULE-006 r3 — Review conversations are resolved** (MUST; REVIEWED_DRAFT)
   Require the effective pull-request policy to resolve review conversations before integration; do not substitute code-owner review or stale approval dismissal for this requirement.
   Acceptance: Require the effective pull-request policy to resolve review conversations before integration; do not substitute code-owner review or stale approval dismissal for this requirement.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `effective_rule`; scope: repository.

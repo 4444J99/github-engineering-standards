@@ -88,7 +88,7 @@ The large source corpus and page-level review queues are workflow artifacts and 
 
 Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; per-file licensing clearance; all upstream scanner predicates implemented as local deterministic checks; all platform feature/plan adapters; live human-review and exception services; native protection activation and cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
 
-The recovery suite passes 163 local tests; this does not imply 95 controls implemented
+The recovery suite passes 199 local tests; this does not imply 95 controls implemented
 as automatic checks or 150,903 candidates reviewed. Current catalog controls remain
 `REVIEWED_DRAFT`; 593 non-adopted generated proposals are preserved separately in
 `controls/review_queue.json`. No native policy is silently activated. See

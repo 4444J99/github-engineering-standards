@@ -52,6 +52,17 @@ class BranchSourceReconciliation(unittest.TestCase):
         self.assertEqual(binding["operator"], "at_least")
         self.assertEqual(self.review["policy_adoption"], "NONE")
 
+    def test_thread_resolution_has_objective_specific_manual_source(self):
+        control = self.controls["GES-RULE-006"]
+        source = next(s for s in control["sources"] if s["path"].endswith("MANUAL_CHECKS.md"))
+        review = json.loads((ROOT / "evidence/source-reviews/ghqr-manual-checks-claims.json").read_text())
+        claim = next(c for c in review["claims"] if c["start_line"] == source["start_line"])
+        self.assertIn(control["id"], claim["proposed_control_ids"])
+        self.assertFalse(claim["accepted_policy"])
+        self.assertEqual(source["start_line"], 136)
+        self.assertEqual(control["status"], "REVIEWED_DRAFT")
+        self.assertFalse(control["enforcement"]["native_deployed"])
+
     def test_malformed_required_check_parameters_do_not_crash(self):
         control = {"verification": {"kind": "effective_rule", "rule_type": "required_status_checks"}}
         snapshot = {"observations": {"effective_branch_rules": {"status": "OK", "data": [

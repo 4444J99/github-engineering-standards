@@ -25,3 +25,11 @@ Current website footers do not resolve historical licensing or modifications in 
 pinned source adaptations. Verify version-specific license history, preserve required
 attribution, reconcile the template's conflicting declarations, and record the
 authorized distribution decision before approving copies of inherited expression.
+
+The complete pinned Docs README, LICENSE and LICENSE-CODE were subsequently read.
+Their 51 independently phrased observations are in
+`evidence/source-reviews/docs-root-rights-claims.json`. Documentation/assets/content/data
+and code remain separately declared license scopes; no file-specific exceptions,
+third-party authority, publisher trademarks or adapted-material distribution are
+cleared by this review. These observations are not legal advice or permission to
+publish. Rights-cleared coverage remains zero.

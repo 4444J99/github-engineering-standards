@@ -45,7 +45,7 @@ Per-file rights clearance remains unfinished.
 
 ## Observed verification
 
-- `python -m unittest discover -s tests -v`: 163 tests passed, exit 0 (renewed attempt).
+- `python -m unittest discover -s tests -v`: 199 tests passed, exit 0 (latest renewed attempt).
 - `python -m ges validate`: 95 controls valid, exit 0.
 - `python -m ges compile`: generated canonical views, exit 0.
 - `git diff --check`: exit 0 after whitespace correction.
@@ -77,15 +77,17 @@ gate remained false. `evidence/recovery-self-assessment.json` retains the saniti
 ## Remaining acceptance and resumption
 
 `evidence/recovery-status.json` owns the nine-gate construction counts, pins and
-unresolved published entries. Validated source-review receipts now cover 55/13,657
+unresolved published entries. Validated source-review receipts now cover 62/13,657
 artifacts: `atapas/model-repo` 8/8, `tmcw/github-best-practices` 1/1, and the
 governance template 13/13. They account for 465 candidate blocks and phrase 222
 atomic reference claims in those three small sources. GHQR adds 21 reviewed artifacts:
 19 YAML files covering all 129 structured definition IDs, 168 reference statements,
-and two scanner files including seven ruleset-collection limitations. Counts are
+and two scanner files including seven ruleset-collection limitations. The complete
+manual-check guide adds one artifact and 56 reference statements, retaining batch
+omissions, administrative scope, manual-review and metric-denominator limitations. Counts are
 not independent omission certification, claim reconciliation or adoption.
 Mappings, adoption and independent omission audit remain open. The other source
-review counts remain `github/docs` 0/13,219, Well-Architected 12/244; GHQR is 21/172,
+review counts remain `github/docs` 6/13,219, Well-Architected 12/244; GHQR is 22/172,
 with no source-wide rights acceptance established.
 The 12 earlier purported exclusions remain unsubstantiated, not justified.
 All 605 structured occurrences are reference-accounted, but still need canonical
@@ -104,11 +106,36 @@ disposable-target policy diff and obtain the applicable approval before native
 activation. Rights acceptance, release publication and estate rollout retain their
 separate human authority gates. Passing local tests does not permit bypassing them.
 
+The three Docs artifacts are the complete README and two license notices, with 51
+independently phrased source observations. None clears other files or advances
+rendered-page assurance. The reference-accounting validator now checks all 605
+structured IDs, 642 statements and 27 labels against pinned file/span digests.
+Its negative tests reject stale or altered evidence, wrong provenance, empty claims,
+unauthorized reviewers, invalid timestamps, label conflicts and false completion.
+GES-RULE-006 is revision 3 with an objective-specific manual-guide citation;
+the ruleset template and solo profile remain draft and native enforcement unverified.
+
+Three complete article-API files add 34 implementation-reference statements.
+The all-claims provenance audit verifies 1,145 reference statements against their
+locked sources, real file lengths and content/span digests. It found and corrected
+two additional out-of-file citation spans in the governance template references.
+Sixty source artifacts have explicit statements; this is distinct from 62 reviewed
+artifacts, some of which contain no separately operative statement.
+
+All 14 unresolved live page bodies and metadata returned HTTP 200 in a bounded
+read-only probe. Metadata reported article types without source revision or redirect
+signals. Source identity, full body review and version/dependency assurance remain
+unresolved. Bodies were hashed and discarded; this does not increase durable
+rendered acquisition or page-assurance counts. See
+`evidence/published-gap-observations.json`. No pin or denominator was changed.
+
 To reproduce the review queue and status without running upstream code:
 
 ```sh
 python -m ges corpus --snapshots .cache/sources --output .cache/corpus
 python -m ges ledger --snapshots .cache/sources --corpus .cache/corpus
+python -m ges.structured_review --ledger .cache/corpus/structured-source-requirements.json --accounting evidence/structured-review-accounting.json --review-policy evidence/source-review-policy.json --sources .cache/sources
+python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json
 python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --output evidence/recovery-status.json
 python -m ges coverage --artifacts .cache/corpus/artifacts.jsonl --candidates .cache/corpus/candidates.jsonl --reviews reviews.json --review-policy review-policy.json
 python -m ges impact --old old/artifacts.jsonl --new new/artifacts.jsonl --output .cache/impact.json

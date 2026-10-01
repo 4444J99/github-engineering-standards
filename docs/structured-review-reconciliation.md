@@ -10,6 +10,35 @@ definition reviews supply 642 independently phrased reference statements.
 Composite criteria can yield multiple statements; statements are not a certified
 exhaustive atomic-claim denominator.
 
+Reproduce the reference accounting with:
+
+```sh
+python -m ges.structured_review --ledger .cache/corpus/structured-source-requirements.json --accounting evidence/structured-review-accounting.json --review-policy evidence/source-review-policy.json --sources .cache/sources
+```
+
+This checks the complete ledger membership, actual referenced occurrence IDs,
+reviewer authority, timestamps, source pins and spans, pinned source content and
+span digests, review-document digests, local claim IDs, nested provenance links,
+statement counts and label/reference exclusivity. It rejects attempts to claim
+policy adoption or completion through this reference-only receipt. Without
+`--sources`, source snapshot verification is explicitly reported false.
+
+The validator exposed a branch-protection reference ending at nonexistent line
+154; the pinned file ends at 153. The citation is corrected and its document
+digest renewed. The informational ruleset finding retains informational strength.
+
+The separate all-reference provenance command checks unstructured claims too:
+
+```sh
+python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json
+```
+
+It verifies source pins, artifact membership, snapshot text digests, real line
+bounds, supplied span hashes, unique claim IDs, reviewer authority and timestamps.
+It does not adjudicate paraphrase fidelity, omissions, license scope or adoption.
+The governance-template references formerly ended CITATION.cff at 33 (actual 32)
+and CODEOWNERS at 64 (actual 62); both citations and their links are corrected.
+
 Twenty-seven structured occurrences are locally judged nonoperative category
 labels (two architecture and twenty-five governance/productivity). Their IDs and
 reasons remain reviewable. They are not independent omission certification,
