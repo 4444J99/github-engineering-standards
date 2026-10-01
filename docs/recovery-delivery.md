@@ -115,3 +115,10 @@ The acquisition workflow is on-demand; no scheduled drift service was activated.
 Checkout retained for continued implementation. No corpus cache, transcript, private
 assessment payload, token or unrelated repository change is included in this delivery.
 Session release, four historical closeout indices and project completion are unproven.
+
+The installed session predicate was run against published head `54bc67e` and exited 1:
+custody was unproven, five processes had unresolved ownership, and the receipt had
+mistakenly scoped newly added verification evidence as implementation. The latter scope
+entry is corrected; this is not a passing recheck. No process was stopped or adopted.
+PR #1 retains these obligations. Independent restore custody and process ownership
+must be established before session release; no deletion or project completion is claimed.
