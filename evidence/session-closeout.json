@@ -1,0 +1,49 @@
+{
+  "schema": "limen.session_closeout.v1",
+  "session_id": "01a0f994-11d8-76b2-ab30-a5aab867e33e",
+  "repository": "4444J99/github-engineering-standards",
+  "worktree_name": "github-engineering-standards",
+  "base_head": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
+  "publication_branch": "implementation/v0.1.0",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1",
+  "disposition": "handoff",
+  "owned_paths": [
+    ".github/workflows/source-acquisition.yml",
+    "CHANGELOG.md",
+    "README.md",
+    "TEST_INFRA.md",
+    "TEST_READY.md",
+    "THIRD_PARTY_NOTICES.md",
+    "controls/",
+    "docs/recovery-delivery.md",
+    "evidence/",
+    "generate_ghqr_controls.py",
+    "generate_wa_controls.py",
+    "generated/",
+    "ges/",
+    "tests/"
+  ],
+  "retained_work": [
+    {
+      "paths": [
+        ".cache/",
+        ".agents/"
+      ],
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1"
+    }
+  ],
+  "verification": [
+    {
+      "command": "python -m unittest discover -s tests -v; python -m ges validate; python -m ges compile; git diff --check",
+      "head": "e3e888b0815a86f63e8e7d195a2ac775d89ce520",
+      "exit_code": 0,
+      "evidence": "evidence/final-recovery-verification.json",
+      "sha256": "4dfa30c286f01392dbfff62f28ce73f8dc4af17fb11d779523fa6c41da6c7559"
+    }
+  ],
+  "custody": {
+    "verified": false,
+    "evidence": "evidence/recovery-custody.json",
+    "sha256": "d4d23113d38355a7859a62dd6c8caa5eb86ba597347e47f16e8d66c689045993"
+  }
+}
