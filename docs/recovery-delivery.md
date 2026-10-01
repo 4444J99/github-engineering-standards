@@ -32,7 +32,9 @@ NOT_VERIFIABLE for configuration/coverage objectives.
 Review accounting now validates reviewer authority, timestamps, candidate identities,
 digests, dispositions, control IDs/revisions and complete candidate accounting. Invalid
 or duplicate receipts do not increase review totals. Source-change impact compares
-stable source/path identities across commits. Provenance requires digests and ordered
+stable source/path identities across commits and can invalidate transitive include
+dependents using a validated dependency ledger; rendered conditionals remain unverified.
+Provenance requires digests and ordered
 line spans. Structured GHQR extraction records full definition spans; WA heading
 classification excludes SPDX headings. These repairs do not certify semantic extraction.
 
@@ -43,7 +45,7 @@ Per-file rights clearance remains unfinished.
 
 ## Observed verification
 
-- `python -m unittest discover -s tests -v`: 153 tests passed, exit 0.
+- `python -m unittest discover -s tests -v`: 155 tests passed, exit 0.
 - `python -m ges validate`: 95 controls valid, exit 0.
 - `python -m ges compile`: generated canonical views, exit 0.
 - `git diff --check`: exit 0 after whitespace correction.
@@ -67,15 +69,21 @@ summary evidence is committed. Observed endpoint statuses were Dependabot 400,
 code scanning 403, secret scanning 404, and configuration/CODEOWNERS 404. Those
 statuses do not establish a particular licensing or permission cause.
 
+Read-only collection of the pushed implementation at `168abf90dfbc78fab36240cae8e33b041a80e0cc`
+produced 13 PASS, 2 FAIL, 60 MANUAL_REVIEW and 6 NOT_VERIFIABLE across the same
+81 applicable controls. No instance had verified native enforcement, and the accepted
+gate remained false. `evidence/recovery-self-assessment.json` retains the sanitized result.
+
 ## Remaining acceptance and resumption
 
 `evidence/recovery-status.json` owns the nine-gate construction counts, pins and
-unresolved published entries. Validated source-review receipts now cover 9/13,657
-artifacts: `atapas/model-repo` 8/8 and `tmcw/github-best-practices` 1/1. They account
-for 202 candidate blocks and independently phrase 132 atomic reference claims.
+unresolved published entries. Validated source-review receipts now cover 22/13,657
+artifacts: `atapas/model-repo` 8/8, `tmcw/github-best-practices` 1/1, and the
+governance template 13/13. They account for 465 candidate blocks and phrase 222
+atomic reference claims. This is not an independent omission audit.
 Mappings, adoption and independent omission audit remain open. The other source
 review counts remain `github/docs` 0/13,219, Well-Architected 0/244, GHQR 0/172,
-and the governance template 0/13. No source-wide rights acceptance is established.
+with no source-wide rights acceptance established.
 The 12 earlier purported exclusions remain unsubstantiated, not justified.
 All 605 structured occurrences need reconciliation; 150,903 candidates are not a
 complete claim denominator. Accepted-control implementation coverage is undefined

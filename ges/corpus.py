@@ -179,7 +179,7 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates:
             'note':'Review receipts require independent source-to-control audit before exhaustive certification.'}
 
 
-def impact(old_path: Path, new_path: Path, controls: list[dict]) -> dict:
+def impact(old_path: Path, new_path: Path, controls: list[dict], dependency_path: Path | None=None) -> dict:
     def idx(p): 
         result={}
         for x in [json.loads(l) for l in p.read_text().splitlines() if l]:
@@ -187,18 +187,37 @@ def impact(old_path: Path, new_path: Path, controls: list[dict]) -> dict:
             result[key]=x
         return result
     a,b=idx(old_path),idx(new_path); changes=[]
+    artifacts_by_id={r['artifact_id']:key for key,r in a.items() if r.get('artifact_id')}
+    dependents=defaultdict(set); unresolved=0
+    if dependency_path:
+        for line in dependency_path.read_text().splitlines():
+            if not line.strip(): continue
+            r=json.loads(line);parent=r.get('artifact_id')
+            if parent not in artifacts_by_id: raise ValueError('Dependency parent absent from old inventory')
+            targets=r.get('resolved_artifact_ids',[])
+            if not targets: unresolved+=1
+            for child in targets:
+                if child not in artifacts_by_id: raise ValueError('Dependency target absent from old inventory')
+                dependents[artifacts_by_id[child]].add(artifacts_by_id[parent])
     for key in sorted(a.keys()|b.keys()):
         if key not in a: kind='ADDED'
         elif key not in b: kind='REMOVED'
         elif a[key].get('sha256')!=b[key].get('sha256'): kind='MODIFIED'
         else: continue
-        # Match controls by source and path, considering commit if present in both
+        # Traverse source include dependencies conservatively; rendering remains separate.
+        impacted={key};pending=[key]
+        while pending:
+            for parent in dependents[pending.pop()]:
+                if parent not in impacted:
+                    impacted.add(parent);pending.append(parent)
         affected=[]
         for c in controls:
             for s in c['sources']:
                 src_key=(s['repository'],s['path'])
-                if src_key==key:
+                if src_key in impacted:
                     affected.append(c['id'])
                     break
-        changes.append({'source':key[0],'path':key[1],'change':kind,'reopen_controls':affected,'review_required':True})
-    return {'changes':changes,'automatic_policy_deletions':0}
+        changes.append({'source':key[0],'path':key[1],'change':kind,'reopen_controls':affected,'review_required':True,
+                        'dependent_artifacts':[{'source':k[0],'path':k[1]} for k in sorted(impacted-{key})]})
+    return {'changes':changes,'automatic_policy_deletions':0,'dependencies_provided':dependency_path is not None,
+            'unresolved_dependencies':unresolved,'rendered_conditionals_verified':False}

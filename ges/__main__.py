@@ -26,6 +26,7 @@ def main(argv=None):
     c.add_argument('--require-accepted',action='store_true'); c.add_argument('--enforce-should',action='store_true')
     c=sub.add_parser('render'); c.add_argument('--template',required=True); c.add_argument('--parameters',type=Path,required=True); c.add_argument('--output',type=Path,required=True)
     c=sub.add_parser('impact'); c.add_argument('--old',type=Path,required=True); c.add_argument('--new',type=Path,required=True); c.add_argument('--output',type=Path,required=True)
+    c.add_argument('--dependencies',type=Path,help='Old pinned dependency ledger for conservative transitive invalidation')
     c=sub.add_parser('collect'); c.add_argument('--repository',required=True); c.add_argument('--output',type=Path,required=True); c.add_argument('--max-files',type=int,default=2000)
     c.add_argument('--include-org',action='store_true'); c.add_argument('--include-enterprise',action='store_true')
     c.add_argument('--enterprise-slug'); c.add_argument('--max-pages',type=int,default=100)
@@ -61,7 +62,7 @@ def main(argv=None):
         ok,reasons=gate(load(args.report),allow_exceptions=args.allow_exceptions,require_accepted=args.require_accepted,enforce_should=args.enforce_should,expected_controls=controls)
         print(json.dumps({'pass':ok,'blockers':reasons},indent=2)); return 0 if ok else 1
     elif args.command=='render': render_template(ROOT,args.template,load(args.parameters),args.output)
-    elif args.command=='impact': dump(args.output,impact(args.old,args.new,controls))
+    elif args.command=='impact': dump(args.output,impact(args.old,args.new,controls,args.dependencies))
     elif args.command=='collect':
         from .collect import collect
         if args.max_files<1 or args.max_files>10000: raise ValueError('max-files must be 1..10000')

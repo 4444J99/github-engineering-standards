@@ -87,6 +87,27 @@ class ReviewAccounting(unittest.TestCase):
         with patch('ges.sources.sync',return_value=report):
             self.assertEqual(main(['sync','--output',str(self.root)]), 2)
 
+    def test_changed_fragment_reopens_transitive_parent_control(self):
+        old,new,deps=self.root/'old.jsonl',self.root/'new.jsonl',self.root/'dependencies.jsonl'
+        rows=[dict(self.artifact),dict(self.artifact,artifact_id='fragment',path='fragment.md'),
+              dict(self.artifact,artifact_id='nested',path='nested.md')]
+        old.write_text(''.join(json.dumps(r)+'\n' for r in rows))
+        rows[-1]['sha256']='c'*64
+        new.write_text(''.join(json.dumps(r)+'\n' for r in rows))
+        deps.write_text('\n'.join(json.dumps(r) for r in [
+            {'artifact_id':'artifact','resolved_artifact_ids':['fragment']},
+            {'artifact_id':'fragment','resolved_artifact_ids':['nested']},
+            {'artifact_id':'nested','resolved_artifact_ids':['fragment']}]))
+        report=impact(old,new,[self.control],deps)
+        self.assertEqual(report['changes'][0]['reopen_controls'],[self.control['id']])
+        self.assertEqual(len(report['changes'][0]['dependent_artifacts']),2)
+
+    def test_unknown_dependency_target_fails_closed(self):
+        old,new,deps=self.root/'old.jsonl',self.root/'new.jsonl',self.root/'dependencies.jsonl'
+        old.write_text(json.dumps(self.artifact)+'\n');new.write_text(old.read_text())
+        deps.write_text(json.dumps({'artifact_id':'artifact','resolved_artifact_ids':['unknown']}))
+        with self.assertRaises(ValueError): impact(old,new,[self.control],deps)
+
 
 if __name__ == '__main__':
     unittest.main()

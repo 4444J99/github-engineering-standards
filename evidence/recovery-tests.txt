@@ -1,0 +1,221 @@
+Command: python -m unittest discover -s tests -v
+Verified implementation head: 168abf90dfbc78fab36240cae8e33b041a80e0cc
+Exit code: 0
+
+test_contents_requests_are_revision_pinned (test_collector_contracts.CollectorContracts.test_contents_requests_are_revision_pinned) ... ok
+test_empty_page_with_next_link_is_not_complete (test_collector_contracts.CollectorContracts.test_empty_page_with_next_link_is_not_complete) ... ok
+test_local_action_outside_documentation_is_collected (test_collector_contracts.CollectorContracts.test_local_action_outside_documentation_is_collected) ... ok
+test_malformed_repository_does_not_crash_or_pass (test_collector_contracts.CollectorContracts.test_malformed_repository_does_not_crash_or_pass) ... ok
+test_null_list_endpoint_is_error (test_collector_contracts.CollectorContracts.test_null_list_endpoint_is_error) ... ok
+test_redirect_never_carries_token_to_plaintext_or_other_origin (test_collector_contracts.CollectorContracts.test_redirect_never_carries_token_to_plaintext_or_other_origin) ... ok
+test_second_page_is_collected (test_collector_contracts.CollectorContracts.test_second_page_is_collected) ... ok
+test_zero_bounds_are_rejected (test_collector_contracts.CollectorContracts.test_zero_bounds_are_rejected) ... ok
+test_act_010_token_write_permission (test_counterexamples.NegativeCounterexampleTests.test_act_010_token_write_permission)
+Scenario 10: GES-ACT-010 must fail when default_workflow_permissions == 'write'. ... ok
+test_alerts_untyped_payload_dict (test_counterexamples.NegativeCounterexampleTests.test_alerts_untyped_payload_dict)
+Scenario 19: Alert evaluator must return ERROR on dict payload for list endpoint. ... ok
+test_alerts_untyped_payload_null (test_counterexamples.NegativeCounterexampleTests.test_alerts_untyped_payload_null)
+Scenario 18: Alert evaluator must return ERROR on None payload. ... ok
+test_com_006_discussions_disabled (test_counterexamples.NegativeCounterexampleTests.test_com_006_discussions_disabled)
+Scenario 7: GES-COM-006 must fail when repository has_discussions == False even if CODE_OF_CONDUCT.md exists. ... ok
+test_com_007_empty_description (test_counterexamples.NegativeCounterexampleTests.test_com_007_empty_description)
+Scenario 8: GES-COM-007 must fail when repository description == "" even if CODE_OF_CONDUCT.md exists. ... ok
+test_com_008_empty_topics (test_counterexamples.NegativeCounterexampleTests.test_com_008_empty_topics)
+Scenario 9: GES-COM-008 must fail when repository topics == [] even if CODE_OF_CONDUCT.md exists. ... ok
+test_composite_action_unpinned_remote (test_counterexamples.NegativeCounterexampleTests.test_composite_action_unpinned_remote)
+Scenario 20: workflow_pinning must detect unpinned action inside local composite action. ... ok
+test_rule_010_zero_reviews_fails (test_counterexamples.NegativeCounterexampleTests.test_rule_010_zero_reviews_fails)
+Scenario 3: GES-RULE-010 must fail when required_approving_review_count == 0. ... ok
+test_rule_011_stale_reviews_not_dismissed (test_counterexamples.NegativeCounterexampleTests.test_rule_011_stale_reviews_not_dismissed)
+Scenario 4: GES-RULE-011 must fail when dismiss_stale_reviews_on_push == False. ... ok
+test_rule_012_codeowners_not_required (test_counterexamples.NegativeCounterexampleTests.test_rule_012_codeowners_not_required)
+Scenario 5: GES-RULE-012 must fail when require_code_owner_review == False. ... ok
+test_rule_014_no_status_checks_rule (test_counterexamples.NegativeCounterexampleTests.test_rule_014_no_status_checks_rule)
+Scenario 6: GES-RULE-014 must fail or return NOT_VERIFIABLE when required_status_checks rule is missing. ... ok
+test_rule_015_force_push_pr_rule_only (test_counterexamples.NegativeCounterexampleTests.test_rule_015_force_push_pr_rule_only)
+Scenario 1: GES-RULE-015 must fail when only PR rule is present without non_fast_forward. ... ok
+test_rule_016_deletion_pr_rule_only (test_counterexamples.NegativeCounterexampleTests.test_rule_016_deletion_pr_rule_only)
+Scenario 2: GES-RULE-016 must fail when only PR rule is present without deletion. ... ok
+test_sec_043_deploy_key_missing_read_only (test_counterexamples.NegativeCounterexampleTests.test_sec_043_deploy_key_missing_read_only)
+Scenario 15: GES-SEC-043 must fail or return ERROR when read_only is missing (not boolean True). ... ok
+test_sec_044_deploy_key_missing_verified (test_counterexamples.NegativeCounterexampleTests.test_sec_044_deploy_key_missing_verified)
+Scenario 16: GES-SEC-044 must fail or return ERROR when verified is missing (not boolean True). ... ok
+test_sec_046_alerts_disabled_empty_list (test_counterexamples.NegativeCounterexampleTests.test_sec_046_alerts_disabled_empty_list)
+Scenario 11: GES-SEC-046 must fail or return NOT_VERIFIABLE when dependabot alerts are disabled. ... ok
+test_sec_047_critical_alerts_only_medium (test_counterexamples.NegativeCounterexampleTests.test_sec_047_critical_alerts_only_medium)
+Scenario 12: GES-SEC-047 must PASS when only medium alerts are present (0 critical alerts). ... ok
+test_sec_048_high_alerts_only_medium (test_counterexamples.NegativeCounterexampleTests.test_sec_048_high_alerts_only_medium)
+Scenario 13: GES-SEC-048 must PASS when only medium alerts are present (0 high alerts). ... ok
+test_sec_050_dependabot_config_empty_dict (test_counterexamples.NegativeCounterexampleTests.test_sec_050_dependabot_config_empty_dict)
+Scenario 17: GES-SEC-050 must fail when dependabot config is empty dict or invalid YAML. ... ok
+test_sec_052_code_scanning_unconfigured (test_counterexamples.NegativeCounterexampleTests.test_sec_052_code_scanning_unconfigured)
+Scenario 14: GES-SEC-052 must fail when CodeQL is not configured (empty alerts list without analysis/workflow evidence). ... ok
+test_cli_audit_execution_nominal (test_e2e_suite.Tier1FeatureCoverage.test_cli_audit_execution_nominal)
+Feature: ges audit. Processes snapshot and writes assessment report matching ges.assessment.v1. ... ok
+test_cli_compile_generates_artifacts_with_digests (test_e2e_suite.Tier1FeatureCoverage.test_cli_compile_generates_artifacts_with_digests)
+Feature: ges compile. Must emit bindings.json, functional-checklist.md, and source-crosswalk.md. ... ok
+test_cli_gate_nominal_blockers (test_e2e_suite.Tier1FeatureCoverage.test_cli_gate_nominal_blockers)
+Feature: ges gate. Blocks with exit code 1 when MUST controls fail. ... ok
+test_cli_gate_nominal_pass (test_e2e_suite.Tier1FeatureCoverage.test_cli_gate_nominal_pass)
+Feature: ges gate. Approves a report where all applicable MUST controls pass. ... ok
+test_cli_render_template_success (test_e2e_suite.Tier1FeatureCoverage.test_cli_render_template_success)
+Feature: ges render. Compiles parameterized JSON and YAML templates. ... ok
+test_cli_validate_custom_catalog (test_e2e_suite.Tier1FeatureCoverage.test_cli_validate_custom_catalog)
+Feature: ges validate with --catalog flag pointing to a validated subset. ... ok
+test_cli_validate_success (test_e2e_suite.Tier1FeatureCoverage.test_cli_validate_success)
+Feature: ges validate. Must exit 0 and report valid status for the canonical catalog. ... ok
+test_corrupted_workflow_yaml_fails (test_e2e_suite.Tier2BoundaryCornerCases.test_corrupted_workflow_yaml_fails)
+Contract: Corrupted or unparseable workflow YAML fails with FAIL outcome. ... ok
+test_deploy_keys_write_access_rejected (test_e2e_suite.Tier2BoundaryCornerCases.test_deploy_keys_write_access_rejected)
+Contract: Deploy keys with read_only=False must trigger immediate failure. ... ok
+test_empty_snapshot_rejected_never_silent_pass (test_e2e_suite.Tier2BoundaryCornerCases.test_empty_snapshot_rejected_never_silent_pass)
+Contract: Malformed/empty snapshot observations must result in ERROR or NOT_ASSESSED, never PASS. ... ok
+test_incomplete_inventory_returns_not_verifiable (test_e2e_suite.Tier2BoundaryCornerCases.test_incomplete_inventory_returns_not_verifiable)
+Contract: Incomplete file inventory yields NOT_VERIFIABLE rather than FAIL. ... ok
+test_missing_target_or_revision_sets_error_outcome (test_e2e_suite.Tier2BoundaryCornerCases.test_missing_target_or_revision_sets_error_outcome)
+Contract: Snapshots omitting target or target_revision must produce ERROR outcome. ... ok
+test_path_traversal_rejection (test_e2e_suite.Tier2BoundaryCornerCases.test_path_traversal_rejection)
+Security: Relative path traversal attempts (../) and root escapes must be rejected. ... ok
+test_symlink_demands_manual_review (test_e2e_suite.Tier2BoundaryCornerCases.test_symlink_demands_manual_review)
+Contract: Symlinks in file inventories cannot be assumed safe; demand MANUAL_REVIEW. ... ok
+test_timestamp_freshness_boundaries (test_e2e_suite.Tier2BoundaryCornerCases.test_timestamp_freshness_boundaries)
+Contract: Freshness checks distinguish FRESH, STALE (> max_age), and FUTURE. ... ok
+test_unpinned_actions_fail (test_e2e_suite.Tier2BoundaryCornerCases.test_unpinned_actions_fail)
+Contract: Workflows using floating tag versions (e.g. @v4) fail pinning checks. ... ok
+test_exception_lifecycle_preserves_outcome_integrity (test_e2e_suite.Tier3CrossFeatureInteractions.test_exception_lifecycle_preserves_outcome_integrity)
+Contract: An exception changes exception_status to APPROVED_UNTIL, but NEVER rewrites outcome from FAIL to PASS. ... ok
+test_missing_profile_context_dimension_stays_unknown (test_e2e_suite.Tier3CrossFeatureInteractions.test_missing_profile_context_dimension_stays_unknown)
+Contract: When a control requires context dimension missing from profile, applicability is UNKNOWN. ... ok
+test_ruleset_compilation_from_profile_parameter (test_e2e_suite.Tier3CrossFeatureInteractions.test_ruleset_compilation_from_profile_parameter)
+Interaction: Ruleset template rendering parameterized directly by profile values. ... ok
+test_solo_vs_team_review_profiles (test_e2e_suite.Tier3CrossFeatureInteractions.test_solo_vs_team_review_profiles)
+Interaction: Solo maintainer policy (required_reviews=0) vs Team Service policy (required_reviews=2). ... ok
+test_untrusted_or_expired_exception_rejected (test_e2e_suite.Tier3CrossFeatureInteractions.test_untrusted_or_expired_exception_rejected)
+Contract: Exceptions approved by unauthorized reviewers or expired timestamps remain invalid. ... ok
+test_complete_repo_assessment_lifecycle (test_e2e_suite.Tier4RealWorldScenarios.test_complete_repo_assessment_lifecycle)
+Scenario: Full assessment pipeline for a realistic repository snapshot against solo profile. ... ok
+test_deterministic_audit_execution (test_e2e_suite.Tier4RealWorldScenarios.test_deterministic_audit_execution)
+Safety Contract: Running audit twice on identical inputs produces bitwise identical digests. ... ok
+test_read_only_safety_guarantees (test_e2e_suite.Tier4RealWorldScenarios.test_read_only_safety_guarantees)
+Safety Contract: CLI tools refuse to overwrite existing destination files. ... ok
+test_remediation_plan_and_diff_generation (test_e2e_suite.Tier4RealWorldScenarios.test_remediation_plan_and_diff_generation)
+Scenario: Detect missing asset, render remediation template in dry-run, compute diff. ... ok
+test_authorized_attestation (test_ges.Assessment.test_authorized_attestation) ... ok
+test_catalog_tamper_fails (test_ges.Assessment.test_catalog_tamper_fails) ... ok
+test_draft_release_gate_fails (test_ges.Assessment.test_draft_release_gate_fails) ... ok
+test_empty_gate_fails (test_ges.Assessment.test_empty_gate_fails) ... ok
+test_exception_cannot_hide_missing_observation (test_ges.Assessment.test_exception_cannot_hide_missing_observation) ... ok
+test_exception_does_not_rewrite_failure (test_ges.Assessment.test_exception_does_not_rewrite_failure) ... ok
+test_expired_attestation_rejected (test_ges.Assessment.test_expired_attestation_rejected) ... ok
+test_foreign_reviewer_rejected (test_ges.Assessment.test_foreign_reviewer_rejected) ... ok
+test_future_not_pass (test_ges.Assessment.test_future_not_pass) ... ok
+test_manual_is_not_pass (test_ges.Assessment.test_manual_is_not_pass) ... ok
+test_missing_control_result_fails (test_ges.Assessment.test_missing_control_result_fails) ... ok
+test_no_revision_error (test_ges.Assessment.test_no_revision_error) ... ok
+test_stale_not_pass (test_ges.Assessment.test_stale_not_pass) ... ok
+test_unknown_denominator (test_ges.Assessment.test_unknown_denominator) ... ok
+test_wrong_revision_attestation_rejected (test_ges.Assessment.test_wrong_revision_attestation_rejected) ... ok
+test_403_manual_review (test_ges.Checks.test_403_manual_review) ... ok
+test_403_not_a_pass (test_ges.Checks.test_403_not_a_pass) ... ok
+test_absent_workflows_not_vacuous_pass (test_ges.Checks.test_absent_workflows_not_vacuous_pass) ... ok
+test_actions_permissions_all_allowed (test_ges.Checks.test_actions_permissions_all_allowed) ... ok
+test_actions_permissions_disabled (test_ges.Checks.test_actions_permissions_disabled) ... ok
+test_actions_permissions_read_only (test_ges.Checks.test_actions_permissions_read_only) ... ok
+test_code_scanning_alerts_none (test_ges.Checks.test_code_scanning_alerts_none) ... ok
+test_code_scanning_alerts_with_critical (test_ges.Checks.test_code_scanning_alerts_with_critical) ... ok
+test_codeowners_validation_empty (test_ges.Checks.test_codeowners_validation_empty) ... ok
+test_codeowners_validation_invalid (test_ges.Checks.test_codeowners_validation_invalid) ... ok
+test_codeowners_validation_missing (test_ges.Checks.test_codeowners_validation_missing) ... ok
+test_codeowners_validation_valid (test_ges.Checks.test_codeowners_validation_valid) ... ok
+test_container_digest (test_ges.Checks.test_container_digest) ... ok
+test_dependabot_alerts_critical_high (test_ges.Checks.test_dependabot_alerts_critical_high) ... ok
+test_dependabot_alerts_none (test_ges.Checks.test_dependabot_alerts_none) ... ok
+test_dependabot_config_error (test_ges.Checks.test_dependabot_config_error) ... ok
+test_dependabot_config_missing (test_ges.Checks.test_dependabot_config_missing) ... ok
+test_dependabot_config_present (test_ges.Checks.test_dependabot_config_present) ... ok
+test_deploy_keys_none (test_ges.Checks.test_deploy_keys_none) ... ok
+test_deploy_keys_unverified (test_ges.Checks.test_deploy_keys_unverified) ... ok
+test_deploy_keys_valid (test_ges.Checks.test_deploy_keys_valid) ... ok
+test_deploy_keys_write_access (test_ges.Checks.test_deploy_keys_write_access) ... ok
+test_empty_file_fails (test_ges.Checks.test_empty_file_fails) ... ok
+test_floating_action_fails (test_ges.Checks.test_floating_action_fails) ... ok
+test_floating_reusable_workflow_fails (test_ges.Checks.test_floating_reusable_workflow_fails) ... ok
+test_incomplete_inventory_not_missing (test_ges.Checks.test_incomplete_inventory_not_missing) ... ok
+test_invalid_yaml_fails (test_ges.Checks.test_invalid_yaml_fails) ... ok
+test_missing_endpoint_not_a_pass (test_ges.Checks.test_missing_endpoint_not_a_pass) ... ok
+test_missing_field_unknown (test_ges.Checks.test_missing_field_unknown) ... ok
+test_name_policy (test_ges.Checks.test_name_policy) ... ok
+test_name_rejects_underscores (test_ges.Checks.test_name_rejects_underscores) ... ok
+test_no_rulesets_does_not_ignore_legacy (test_ges.Checks.test_no_rulesets_does_not_ignore_legacy) ... ok
+test_pinned_workflow (test_ges.Checks.test_pinned_workflow) ... ok
+test_present_file_passes_only_presence (test_ges.Checks.test_present_file_passes_only_presence) ... ok
+test_read_only_permissions (test_ges.Checks.test_read_only_permissions) ... ok
+test_rules_threshold (test_ges.Checks.test_rules_threshold) ... ok
+test_secret_scanning_alerts_none (test_ges.Checks.test_secret_scanning_alerts_none) ... ok
+test_secret_scanning_alerts_present (test_ges.Checks.test_secret_scanning_alerts_present) ... ok
+test_symlink_requires_review (test_ges.Checks.test_symlink_requires_review) ... ok
+test_workflow_permission_missing (test_ges.Checks.test_workflow_permission_missing) ... ok
+test_write_permissions_fail (test_ges.Checks.test_write_permissions_fail) ... ok
+test_absolute_path_rejected (test_ges.Contracts.test_absolute_path_rejected) ... ok
+test_catalog_valid (test_ges.Contracts.test_catalog_valid) ... ok
+test_duplicate_id_invalid (test_ges.Contracts.test_duplicate_id_invalid) ... ok
+test_false_is_not_unknown (test_ges.Contracts.test_false_is_not_unknown) ... ok
+test_missing_acceptance_invalid (test_ges.Contracts.test_missing_acceptance_invalid) ... ok
+test_no_truthy_conversion (test_ges.Contracts.test_no_truthy_conversion) ... ok
+test_path_escape_rejected (test_ges.Contracts.test_path_escape_rejected) ... ok
+test_symlink_escape_rejected (test_ges.Contracts.test_symlink_escape_rejected) ... ok
+test_timezone_required (test_ges.Contracts.test_timezone_required) ... ok
+test_unknown_applicability (test_ges.Contracts.test_unknown_applicability) ... ok
+test_unpinned_source_invalid (test_ges.Contracts.test_unpinned_source_invalid) ... ok
+test_yaml_duplicates_rejected (test_ges.Contracts.test_yaml_duplicates_rejected) ... ok
+test_bad_json_template_rejected (test_ges.RenderingAndCorpus.test_bad_json_template_rejected) ... ok
+test_blocks_track_line_ranges (test_ges.RenderingAndCorpus.test_blocks_track_line_ranges) ... ok
+test_generation_is_deterministic (test_ges.RenderingAndCorpus.test_generation_is_deterministic) ... ok
+test_hash_mismatch_rejected (test_ges.RenderingAndCorpus.test_hash_mismatch_rejected) ... ok
+test_missing_template_variable_rejected (test_ges.RenderingAndCorpus.test_missing_template_variable_rejected) ... ok
+test_source_import_is_not_semantic_review (test_ges.RenderingAndCorpus.test_source_import_is_not_semantic_review) ... ok
+test_template_no_overwrite (test_ges.RenderingAndCorpus.test_template_no_overwrite) ... ok
+test_upstream_changes_reopen_controls (test_ges.RenderingAndCorpus.test_upstream_changes_reopen_controls) ... ok
+test_boolean_is_not_review_count (test_recovery_contracts.RecoveryContracts.test_boolean_is_not_review_count) ... ok
+test_code_scanning_uses_security_severity (test_recovery_contracts.RecoveryContracts.test_code_scanning_uses_security_severity) ... ok
+test_incomplete_alerts_cannot_pass (test_recovery_contracts.RecoveryContracts.test_incomplete_alerts_cannot_pass) ... ok
+test_job_write_permission_fails (test_recovery_contracts.RecoveryContracts.test_job_write_permission_fails) ... ok
+test_local_reusable_workflow_is_followed (test_recovery_contracts.RecoveryContracts.test_local_reusable_workflow_is_followed) ... ok
+test_malformed_alert_is_not_ignored (test_recovery_contracts.RecoveryContracts.test_malformed_alert_is_not_ignored) ... ok
+test_malformed_composite_cannot_pass (test_recovery_contracts.RecoveryContracts.test_malformed_composite_cannot_pass) ... ok
+test_missing_completeness_cannot_pass (test_recovery_contracts.RecoveryContracts.test_missing_completeness_cannot_pass) ... ok
+test_missing_dependabot_updates_fails (test_recovery_contracts.RecoveryContracts.test_missing_dependabot_updates_fails) ... ok
+test_missing_org_evidence_blocks_gate (test_recovery_contracts.RecoveryContracts.test_missing_org_evidence_blocks_gate) ... ok
+test_nonadopted_control_blocks_gate (test_recovery_contracts.RecoveryContracts.test_nonadopted_control_blocks_gate) ... ok
+test_repository_attestation_cannot_prove_org_control (test_recovery_contracts.RecoveryContracts.test_repository_attestation_cannot_prove_org_control) ... ok
+test_unknown_actions_approval_permission_does_not_pass (test_recovery_contracts.RecoveryContracts.test_unknown_actions_approval_permission_does_not_pass) ... ok
+test_untyped_observation_is_error (test_recovery_contracts.RecoveryContracts.test_untyped_observation_is_error) ... ok
+test_changed_commit_without_changed_content_is_not_modification (test_review_accounting.ReviewAccounting.test_changed_commit_without_changed_content_is_not_modification) ... ok
+test_duplicate_receipt_never_counts (test_review_accounting.ReviewAccounting.test_duplicate_receipt_never_counts) ... ok
+test_foreign_reviewer_never_counts (test_review_accounting.ReviewAccounting.test_foreign_reviewer_never_counts) ... ok
+test_invalid_mapping_never_counts (test_review_accounting.ReviewAccounting.test_invalid_mapping_never_counts) ... ok
+test_invalid_timestamp_never_counts (test_review_accounting.ReviewAccounting.test_invalid_timestamp_never_counts) ... ok
+test_page_acquisition_failure_is_nonzero (test_review_accounting.ReviewAccounting.test_page_acquisition_failure_is_nonzero) ... ok
+test_provenance_requires_hash_and_ordered_span (test_review_accounting.ReviewAccounting.test_provenance_requires_hash_and_ordered_span) ... ok
+test_unaccounted_candidate_never_counts (test_review_accounting.ReviewAccounting.test_unaccounted_candidate_never_counts) ... ok
+test_valid_full_accounting (test_review_accounting.ReviewAccounting.test_valid_full_accounting) ... ok
+test_wrong_control_revision_never_counts (test_review_accounting.ReviewAccounting.test_wrong_control_revision_never_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 153 tests in 1.260s
+
+OK
+{
+  "sources": [
+    {
+      "status": "SNAPSHOT_RETRIEVED",
+      "git_tree_reconciliation": {
+        "status": "MATCH"
+      }
+    }
+  ],
+  "published_docs": {
+    "status": "ERROR"
+  }
+}
+

@@ -74,7 +74,9 @@ All required parameters must be supplied. Existing output files are not overwrit
 python -m ges impact --old old/artifacts.jsonl --new new/artifacts.jsonl --output .cache/impact.json
 ```
 
-Changes reopen directly referenced controls. Include/conditional dependencies are separately inventoried; fully transitive dependency invalidation and rendered-version assurance remain outstanding.
+Changes reopen directly referenced controls. Add `--dependencies old/dependencies.jsonl`
+to conservatively reopen controls through resolved include/variable dependencies.
+Unresolved dependencies and conditional/version rendering remain explicit review work.
 
 ## Where to look
 
@@ -86,7 +88,7 @@ The large source corpus and page-level review queues are workflow artifacts and 
 
 Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; per-file licensing clearance; all upstream scanner predicates implemented as local deterministic checks; all platform feature/plan adapters; live human-review and exception services; native protection activation and cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
 
-The recovery suite passes 153 local tests; this does not imply 95 controls implemented
+The recovery suite passes 155 local tests; this does not imply 95 controls implemented
 as automatic checks or 150,903 candidates reviewed. Current catalog controls remain
 `REVIEWED_DRAFT`; 593 non-adopted generated proposals are preserved separately in
 `controls/review_queue.json`. No native policy is silently activated. See
