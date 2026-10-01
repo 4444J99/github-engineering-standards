@@ -1,6 +1,7 @@
 """Applicability, evidence age, outcomes and exceptions are independent axes."""
 from __future__ import annotations
 from collections import Counter
+from datetime import timedelta
 from .core import applicable, digest, now, timestamp
 from .checks import execute
 
@@ -11,12 +12,16 @@ def audit(controls: list[dict], snapshot: dict, profile: dict, *, at: str | None
     context=profile.get('context',{})
     trusted=set(profile.get('authorized_reviewers',[]))
     target=snapshot.get('target'); target_revision=snapshot.get('target_revision')
+    target_type=snapshot.get('target_type') or 'repository'
+    max_age_seconds=profile.get('max_age_hours',24)*3600
     try:
         elapsed=(clock-timestamp(snapshot['observed_at'])).total_seconds()
-        freshness='FUTURE' if elapsed < -60 else ('STALE' if elapsed > profile.get('max_age_hours',24)*3600 else 'FRESH')
+        freshness='FUTURE' if elapsed < -60 else ('STALE' if elapsed > max_age_seconds else 'FRESH')
     except (KeyError,ValueError,TypeError): freshness='INVALID'
     for c in controls:
         app,reason=applicable(c,context)
+        if app=='APPLICABLE' and c['scope']!=target_type and c['scope']!='repository':
+            app,reason='NOT_APPLICABLE_WITH_REASON',f'Control scope {c["scope"]} does not match target type {target_type}'
         row={'control_id':c['id'],'control_revision':c['revision'],'control_status':c['status'],
              'obligation':c['obligation'],'target':target,'target_revision':target_revision,
              'applicability':app,'applicability_reason':reason,'evaluated_at':at,
@@ -33,15 +38,25 @@ def audit(controls: list[dict], snapshot: dict, profile: dict, *, at: str | None
         else:
             outcome,detail=execute(c,snapshot,context)
             if c['verification']['kind']=='manual':
+                best_attestation=None
+                best_reviewed_at=None
                 for a in attestations or []:
                     if (a.get('control_id')!=c['id'] or a.get('control_revision')!=c['revision']
                         or a.get('target')!=target or a.get('target_revision')!=target_revision): continue
                     try:
+                        reviewed=timestamp(a['reviewed_at'])
+                        if reviewed < clock - timedelta(seconds=max_age_seconds):
+                            continue
                         valid=(a.get('reviewer') in trusted and a.get('evidence_ref') and a.get('rationale')
-                               and timestamp(a['reviewed_at'])<=clock<timestamp(a['expires_at'])
+                               and reviewed<=clock<timestamp(a['expires_at'])
                                and a.get('outcome') in {'PASS','FAIL','PARTIAL'})
                     except (ValueError,KeyError,TypeError): valid=False
-                    if valid: outcome,detail=a['outcome'],'Authorized attestation: '+a['evidence_ref']; break
+                    if valid:
+                        if best_reviewed_at is None or reviewed > best_reviewed_at:
+                            best_attestation=a
+                            best_reviewed_at=reviewed
+                if best_attestation:
+                    outcome,detail=best_attestation['outcome'],'Authorized attestation: '+best_attestation['evidence_ref']
             row.update(outcome=outcome,detail=detail)
             if outcome=='PASS' and c['verification']['kind']=='effective_rule':
                 row['enforcement_verified']=True

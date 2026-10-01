@@ -57,7 +57,25 @@ def safe_path(root: Path, relative: str) -> Path:
 def validate_controls(controls: list[dict], root: Path = ROOT) -> list[str]:
     errors=[]; seen=set()
     supported={'file_present','metadata_nonempty','repo_name','workflow_permissions',
-               'workflow_pinning','effective_rule','manual'}
+               'workflow_pinning','effective_rule','manual','dependabot_config',
+               'actions_permissions','deploy_keys','codeowners_validation',
+               'code_scanning_alerts','secret_scanning_alerts','dependabot_alerts'}
+    checker_fields={
+        'file_present': {'paths'},
+        'metadata_nonempty': {'field'},
+        'repo_name': set(),
+        'workflow_permissions': set(),
+        'workflow_pinning': set(),
+        'effective_rule': {'rule_type'},
+        'manual': set(),
+        'dependabot_config': set(),
+        'actions_permissions': set(),
+        'deploy_keys': set(),
+        'codeowners_validation': set(),
+        'code_scanning_alerts': set(),
+        'secret_scanning_alerts': set(),
+        'dependabot_alerts': set(),
+    }
     for c in controls:
         cid=c.get('id','<missing>')
         if cid in seen: errors.append(f'{cid}: duplicate ID')
@@ -69,7 +87,12 @@ def validate_controls(controls: list[dict], root: Path = ROOT) -> list[str]:
         if type(c.get('revision')) is not int or c.get('revision',0)<1: errors.append(f'{cid}: bad revision')
         if c.get('obligation') not in {'MUST','SHOULD','MAY'}: errors.append(f'{cid}: bad obligation')
         if c.get('status') not in {'PROPOSED','REVIEWED_DRAFT','ACCEPTED','RETIRED'}: errors.append(f'{cid}: bad status')
-        if c.get('verification',{}).get('kind') not in supported: errors.append(f'{cid}: unsupported checker')
+        vkind=c.get('verification',{}).get('kind')
+        if vkind not in supported: errors.append(f'{cid}: unsupported checker')
+        else:
+            required=checker_fields.get(vkind,set())
+            for rf in required:
+                if rf not in c.get('verification',{}): errors.append(f'{cid}: verification missing required field {rf}')
         if c.get('scope') not in {'repository','organization','enterprise','workflow','release','person'}: errors.append(f'{cid}: invalid scope')
         for src in c.get('sources',[]):
             if not all(src.get(k) for k in ('repository','commit','path','section')): errors.append(f'{cid}: incomplete provenance')

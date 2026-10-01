@@ -54,3 +54,35 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+## jlcanovas/gh-best-practices-template — bf13cd2c7992876da01de065084e8af3e9c7db06
+
+Source: https://github.com/jlcanovas/gh-best-practices-template/blob/bf13cd2c7992876da01de065084e8af3e9c7db06/LICENSE.md
+
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+See source for full license text. This template repository is licensed under CC BY 4.0.
+
+
+## atapas/model-repo — 9aa52517830a0e10043116ff768af8fabeeb4347
+
+Source: https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/LICENSE
+
+No LICENSE file found in source repository. This distribution uses independently phrased principles and provenance references, not a copy of its README or other expressive content.
+
+
+## tmcw/github-best-practices — 801411757531a8880cb315148160fde3079d7227
+
+Source: https://github.com/tmcw/github-best-practices/blob/801411757531a8880cb315148160fde3079d7227/LICENSE
+
+No LICENSE file found in source repository. This distribution uses independently phrased principles and provenance references, not a copy of its README or other expressive content.
+
+
+## github/docs — 56fcfa816f27bca239e5d39fff0d4f74f77ec995
+
+Source: https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/README.md
+
+Documentation/content: CC BY 4.0 | Code: MIT
+
+See source README for licensing details. GitHub Docs content is licensed under CC BY 4.0 for documentation and MIT for code.

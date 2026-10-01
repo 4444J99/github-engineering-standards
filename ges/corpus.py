@@ -13,9 +13,10 @@ from .core import dump, digest, load
 
 def classify(path: str) -> str:
     p=path.lower()
-    if 'license' in p or p.endswith('notice'): return 'license'
-    if 'template' in p or p.endswith(('citation.cff','funding.yml')): return 'template'
-    if 'test' in p: return 'test'
+    name=Path(p).name
+    if name in {'license','license.md','license.txt','license.rst','notice','notice.md','notice.txt','copying','copying.md','copying.txt','copyright','copyright.md','copyright.txt'}: return 'license'
+    if name in {'citation.cff','funding.yml'} or 'template' in name: return 'template'
+    if '/test/' in p or p.startswith('test/') or name.startswith('test_') or name.endswith('_test.py'): return 'test'
     if p.startswith('data/reusables/'): return 'reusable'
     if p.startswith('content/') or p.endswith(('.md','.mdx','.rst')): return 'documentation'
     if p.endswith(('.yaml','.yml','.json','.toml','.ini','.cfg')): return 'configuration'
@@ -134,8 +135,13 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path) -> dict:
             errors.append(a['path']+': claims not fully accounted for'); continue
         if r['disposition'] not in {'CONTROL_SOURCE','REFERENCE_ONLY','NO_ACTIONABLE_CONTENT','EXCLUDED_WITH_REASON','SUPERSEDED'}:
             errors.append(a['path']+': invalid disposition'); continue
-        if r['disposition']=='CONTROL_SOURCE' and not r.get('claim_mappings'):
-            errors.append(a['path']+': missing claim mappings'); continue
+        if r['disposition']=='CONTROL_SOURCE':
+            mappings=r.get('claim_mappings',[])
+            if not mappings or not isinstance(mappings,list) or len(mappings)==0:
+                errors.append(a['path']+': missing claim mappings'); continue
+            for m in mappings:
+                if not isinstance(m,str) or not m.strip() or not re.fullmatch(r'GES-[A-Z]{2,8}-[0-9]{3}(?:/r\d+)?',m):
+                    errors.append(a['path']+': invalid claim mapping identifier '+str(m)); continue
         complete.add(a['artifact_id'])
     return {'reviewed':len(complete),'inventoried':len(artifacts),
             'review_coverage':len(complete)/len(artifacts) if artifacts else None,'errors':errors,
@@ -143,13 +149,25 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path) -> dict:
 
 
 def impact(old_path: Path, new_path: Path, controls: list[dict]) -> dict:
-    def idx(p): return {(x['source'],x['path']):x for x in [json.loads(l) for l in p.read_text().splitlines() if l]}
+    def idx(p): 
+        result={}
+        for x in [json.loads(l) for l in p.read_text().splitlines() if l]:
+            key=(x['source'],x.get('commit',''),x['path'])
+            result[key]=x
+        return result
     a,b=idx(old_path),idx(new_path); changes=[]
     for key in sorted(a.keys()|b.keys()):
         if key not in a: kind='ADDED'
         elif key not in b: kind='REMOVED'
         elif a[key].get('sha256')!=b[key].get('sha256'): kind='MODIFIED'
         else: continue
-        affected=[c['id'] for c in controls if any((s['repository'],s['path'])==key for s in c['sources'])]
-        changes.append({'source':key[0],'path':key[1],'change':kind,'reopen_controls':affected,'review_required':True})
+        # Match controls by source and path, considering commit if present in both
+        affected=[]
+        for c in controls:
+            for s in c['sources']:
+                src_key=(s['repository'],s.get('commit',''),s['path'])
+                if src_key==key or (src_key[0]==key[0] and src_key[2]==key[2] and (not src_key[1] or not key[1] or src_key[1]==key[1])):
+                    affected.append(c['id'])
+                    break
+        changes.append({'source':key[0],'path':key[2],'change':kind,'reopen_controls':affected,'review_required':True})
     return {'changes':changes,'automatic_policy_deletions':0}

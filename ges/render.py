@@ -22,11 +22,11 @@ def generate(controls: list[dict], output: Path) -> None:
                       '  Applicability: `'+str(c['applicability'])+'`.',
                       '  Evidence: target, revision, observation time, evidence reference, result, reviewer when required.','']
     (output/'functional-checklist.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-    rows=['# Control-to-source crosswalk','', '| Control | Source artifact | Section |','|---|---|---|']
+    rows=['# Control-to-source crosswalk','', '| Control | Revision | Source artifact | Section |','|---|---|---|---|']
     for c in controls:
         for s in c['sources']:
             url=f'https://github.com/{s["repository"]}/blob/{s["commit"]}/{s["path"]}'
-            rows.append(f'| {c["id"]} | [{s["repository"]}:{s["path"]}]({url}) | {s["section"]} |')
+            rows.append(f'| {c["id"]} | {c["revision"]} | [{s["repository"]}:{s["path"]}]({url}) | {s["section"]} |')
     (output/'source-crosswalk.md').write_text('\n'.join(rows)+'\n',encoding='utf-8')
     dump(output/'bindings.json',{'catalog_digest':digest(controls),'controls':[
         {'id':c['id'],'revision':c['revision'],'checker':c['verification'],

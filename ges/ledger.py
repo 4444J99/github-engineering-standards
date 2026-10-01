@@ -11,18 +11,18 @@ from .yamlutil import parse
 
 def enrich(snapshots: Path, corpus: Path, controls: list[dict]) -> dict:
     artifacts=[json.loads(l) for l in (corpus/'artifacts.jsonl').read_text().splitlines()]
-    idx={(r['source'],r['path']):r for r in artifacts};mdpages={};dependencies=[];structured=[]
+    idx={(r['source'],r['commit'],r['path']):r for r in artifacts};mdpages={};dependencies=[];structured=[]
     for p in snapshots.glob('*.text.jsonl.gz'):
         with gzip.open(p,'rt',encoding='utf-8') as f:
             for line in f:
-                r=json.loads(line);text=r['content'];path=r['path'];repo=r['source'];a=idx[(repo,path)]
+                r=json.loads(line);text=r['content'];path=r['path'];repo=r['source'];commit=r['commit'];a=idx[(repo,commit,path)]
                 if path.endswith(('.md','.mdx')):
                     for m in re.finditer(r'(?:data\s+|data\.)(reusables|variables)\.([\w.-]+)',text):
                         ref=m[2];kind=m[1];paths=[]
                         if kind=='reusables':paths=['data/reusables/'+ref.replace('.','/')+x for x in ('.md','.yml','.yaml')]
                         else:
                             parts=ref.split('.');paths=['data/variables/'+('/'.join(parts[:n]))+x for n in range(1,len(parts)) for x in ('.yml','.yaml')]
-                        matches=[idx[(repo,p)] for p in paths if (repo,p) in idx]
+                        matches=[idx[(repo,commit,p)] for p in paths if (repo,commit,p) in idx]
                         dependencies.append({'artifact_id':a['artifact_id'],'kind':kind,'reference':ref,'source_line':text[:m.start()].count('\n')+1,'resolved_artifact_ids':[v['artifact_id'] for v in matches],'resolution':'PATH_MATCH' if matches else 'UNRESOLVED','value_or_conditional_rendering_verified':False})
                     for m in re.finditer(r'{%\s*(ifversion|elsif|include|if|unless)\s+([^%]+)%}',text):
                         dependencies.append({'artifact_id':a['artifact_id'],'kind':m[1],'reference':m[2].strip(),'source_line':text[:m.start()].count('\n')+1,'resolution':'RENDER_REQUIRED','resolved_artifact_ids':[]})

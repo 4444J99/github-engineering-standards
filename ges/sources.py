@@ -12,13 +12,16 @@ from .core import ROOT,dump,load,now
 class NoAuthRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,req,fp,code,msg,headers,newurl):
         new=super().redirect_request(req,fp,code,msg,headers,newurl)
-        if new is not None and urllib.parse.urlparse(newurl).netloc!=urllib.parse.urlparse(req.full_url).netloc:
-            new.remove_header('Authorization')
+        if new is not None:
+            orig_host=urllib.parse.urlparse(req.full_url).netloc
+            new_host=urllib.parse.urlparse(newurl).netloc
+            if new_host!=orig_host:
+                new.remove_header('Authorization')
         return new
 
 OPENER=urllib.request.build_opener(NoAuthRedirect())
 
-def fetch(url: str, *, limit: int=600_000_000, attempts: int=4) -> bytes:
+def fetch(url: str, *, limit: int=600_000_000, attempts: int=4, expected_sha256: str | None=None) -> bytes:
     host=urllib.parse.urlparse(url).netloc
     if host not in {'api.github.com','codeload.github.com','docs.github.com'}:raise ValueError('Source host outside allowlist')
     headers={'User-Agent':'github-engineering-standards/0.1.0'}
@@ -29,6 +32,10 @@ def fetch(url: str, *, limit: int=600_000_000, attempts: int=4) -> bytes:
             with OPENER.open(urllib.request.Request(url,headers=headers),timeout=120) as response:
                 body=response.read(limit+1)
                 if len(body)>limit:raise ValueError('Source response exceeds size limit')
+                if expected_sha256:
+                    actual=hashlib.sha256(body).hexdigest()
+                    if actual!=expected_sha256:
+                        raise ValueError(f'Archive digest mismatch: expected {expected_sha256}, got {actual}')
                 return body
         except urllib.error.HTTPError as exc:
             if exc.code not in {429,500,502,503,504} or attempt+1==attempts:raise
@@ -44,7 +51,8 @@ def acquire_source(spec: dict, output: Path) -> dict:
     repo=spec['repository'];sha=spec['commit'];stamp=now()
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repo) or not re.fullmatch('[a-f0-9]{40}',sha):raise ValueError('Unpinned or invalid source')
     slug=repo.replace('/','__');url=f'https://codeload.github.com/{repo}/tar.gz/{sha}'
-    body=fetch(url);inventory=[]
+    expected_sha256=spec.get('archive_sha256')
+    body=fetch(url,expected_sha256=expected_sha256);inventory=[]
     textpath=output/(slug+'.text.jsonl.gz');temp=textpath.with_suffix('.tmp')
     with gzip.open(temp,'wt',encoding='utf-8') as texts,tarfile.open(fileobj=io.BytesIO(body),mode='r:gz') as archive:
         for m in archive:
@@ -65,6 +73,18 @@ def acquire_source(spec: dict, output: Path) -> dict:
             except (UnicodeDecodeError,ValueError):row['kind']='binary'
             inventory.append(row)
     temp.replace(textpath);dump(output/(slug+'.inventory.json'),inventory)
+    notices=[]
+    for row in inventory:
+        if row.get('kind')=='text' and row['path'].lower().endswith(('.md','.txt','.rst')) and any(kw in row['path'].lower() for kw in ('license','notice','copying','copyright')):
+            text_path=output/(slug+'.text.jsonl.gz')
+            with gzip.open(text_path,'rt',encoding='utf-8') as f:
+                for line in f:
+                    raw=json.loads(line)
+                    if raw['path']==row['path']:
+                        notices.append({'source':repo,'path':row['path'],'content':raw.get('content','')[:5000]})
+                        break
+    if notices:
+        dump(output/(slug+'.notices.json'),notices)
     reconciliation={'status':'PENDING'}
     try:
         tree=json.loads(fetch(f'https://api.github.com/repos/{repo}/git/trees/{sha}?recursive=1',limit=25_000_000))
@@ -127,6 +147,14 @@ def sync(output: Path, *, manifest: Path=ROOT/'sources/sources.lock.json',render
             try:results.append(future.result())
             except Exception as exc:results.append({'repository':s['repository'],'commit':s['commit'],'status':'ERROR','error_type':type(exc).__name__,'http_status':getattr(exc,'code',None)})
     report={'schema_version':'ges.acquisition.v1','generated_at':now(),'sources':results,'semantic_review_complete':False}
-    try:report['published_docs']=acquire_pages(output,rendered=rendered,rendered_limit=rendered_limit,workers=workers)
-    except Exception as exc:report['published_docs']={'status':'ERROR','error_type':type(exc).__name__}
+    docs_result=None
+    try:
+        docs_result=acquire_pages(output,rendered=rendered,rendered_limit=rendered_limit,workers=workers)
+        report['published_docs']=docs_result
+    except Exception as exc:
+        report['published_docs']={'status':'ERROR','error_type':type(exc).__name__}
+    source_errors=any(r.get('status')=='ERROR' for r in results)
+    doc_errors=docs_result is None or any(v.get('status')=='ERROR' for v in docs_result.get('versions',[])) if docs_result else True
+    rendered_errors=docs_result and docs_result.get('rendered_errors') if docs_result else []
+    report['errors']={'source_errors':source_errors,'doc_errors':doc_errors,'rendered_errors':len(rendered_errors) if rendered_errors else 0}
     dump(output/'acquisition-report.json',report);return report
