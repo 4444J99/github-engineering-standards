@@ -3,6 +3,8 @@
 import json
 from pathlib import Path
 
+raise SystemExit('Retired unsafe category-based generator. Use python -m ges ledger to produce UNREVIEWED source requirements; review controls individually before adoption. Historical IDs remain in controls/review_queue.json.')
+
 # Load structured requirements
 with open('.cache/corpus/structured-source-requirements.json') as f:
     structured = json.load(f)
@@ -221,4 +223,3 @@ for c in new_controls:
 # Save to file for review
 with open('.cache/new-ghqr-controls.json', 'w') as f:
     json.dump(new_controls, f, indent=2)
-

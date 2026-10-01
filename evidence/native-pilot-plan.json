@@ -1,0 +1,50 @@
+{
+  "schema_version": "ges.native_pilot_plan.v1",
+  "status": "PENDING_EXPLICIT_NATIVE_APPROVAL",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1",
+  "proposed_disposable_target": "4444J99/ges-enforcement-pilot-20261001",
+  "visibility": "private",
+  "existing_target_mutations": [],
+  "approval_scope": [
+    "Create this isolated private pilot repository using existing credential custody",
+    "Push independently authored synthetic workflow fixtures and test branches",
+    "Apply and remove the attached ruleset only on this pilot repository",
+    "Perform bounded positive and negative branch behavior tests; no production target changes"
+  ],
+  "proposed_ruleset": {
+    "name": "ges-disposable-behavior-pilot",
+    "target": "branch",
+    "enforcement": "active",
+    "bypass_actors": [],
+    "conditions": {"ref_name": {"include": ["refs/heads/pilot-protected"], "exclude": []}},
+    "rules": [
+      {"type": "deletion"},
+      {"type": "non_fast_forward"},
+      {"type": "pull_request", "parameters": {
+        "required_approving_review_count": 0,
+        "dismiss_stale_reviews_on_push": true,
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true
+      }},
+      {"type": "required_status_checks", "parameters": {
+        "strict_required_status_checks_policy": true,
+        "do_not_enforce_on_create": false,
+        "required_status_checks": [{"context": "ges-pilot"}]
+      }}
+    ]
+  },
+  "expected_behavior_tests": [
+    {"operation": "Direct fast-forward write to protected branch", "expected": "REJECT"},
+    {"operation": "Force push to protected branch", "expected": "REJECT"},
+    {"operation": "Delete protected branch", "expected": "REJECT"},
+    {"operation": "Merge pull request with failing ges-pilot check", "expected": "REJECT"},
+    {"operation": "Merge pull request with successful ges-pilot check", "expected": "ACCEPT"},
+    {"operation": "Read effective policy and actor bypass after apply", "expected": "MATCH_PROPOSAL"},
+    {"operation": "Remove pilot ruleset and verify ordinary branch write recovery", "expected": "ACCEPT"}
+  ],
+  "recovery": "Retain pilot repository and captured policy preimage; remove only pilot-created ruleset by recorded ID; verify recovery. Repository deletion requires separate authorization.",
+  "native_receipts": [],
+  "claims_verified_enforcement": false,
+  "capability_limits": "Available native ruleset features, permissions and successful runner execution must be verified on the actual proposed target before activation; no capability is assumed from this plan."
+}

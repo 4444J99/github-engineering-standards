@@ -20,8 +20,28 @@ def audit(controls: list[dict], snapshot: dict, profile: dict, *, at: str | None
     except (KeyError,ValueError,TypeError): freshness='INVALID'
     for c in controls:
         app,reason=applicable(c,context)
-        if app=='APPLICABLE' and c['scope']!=target_type and c['scope']!='repository':
-            app,reason='NOT_APPLICABLE_WITH_REASON',f'Control scope {c["scope"]} does not match target type {target_type}'
+        if app == 'APPLICABLE':
+            if c['scope'] == 'organization':
+                if target_type == 'organization':
+                    pass
+                elif target_type == 'repository':
+                    has_org = ('organization' in snapshot.get('observations', {}) or
+                               any(k.startswith('org_') for k in snapshot.get('observations', {})))
+                    if not has_org:
+                        app, reason = 'UNKNOWN', 'Organization observations not included in repository snapshot; inheritance applicability unresolved'
+                else:
+                    app, reason = 'NOT_APPLICABLE_WITH_REASON', f'Control scope {c["scope"]} does not match target type {target_type}'
+            elif c['scope'] == 'enterprise':
+                if target_type == 'enterprise':
+                    pass
+                else:
+                    has_ent = any(k.startswith('enterprise') for k in snapshot.get('observations', {}))
+                    if not has_ent:
+                        app, reason = 'UNKNOWN', 'Enterprise observations absent; inheritance applicability unresolved'
+            elif target_type == 'organization' and c['scope'] == 'repository':
+                app, reason = 'NOT_APPLICABLE_WITH_REASON', 'Control scope repository does not match target type organization'
+            elif c['scope'] != target_type and c['scope'] != 'repository':
+                app, reason = 'NOT_APPLICABLE_WITH_REASON', f'Control scope {c["scope"]} does not match target type {target_type}'
         row={'control_id':c['id'],'control_revision':c['revision'],'control_status':c['status'],
              'obligation':c['obligation'],'target':target,'target_revision':target_revision,
              'applicability':app,'applicability_reason':reason,'evaluated_at':at,
@@ -37,7 +57,9 @@ def audit(controls: list[dict], snapshot: dict, profile: dict, *, at: str | None
         elif freshness in {'FUTURE','INVALID'}: row.update(outcome='ERROR',detail='Evidence timestamp is invalid or in the future')
         else:
             outcome,detail=execute(c,snapshot,context)
-            if c['verification']['kind']=='manual':
+            if c['verification']['kind']=='manual' and c['scope'] in {'organization', 'enterprise'} and c['scope'] != target_type:
+                outcome, detail = 'NOT_VERIFIABLE', 'Inherited manual control requires an assessment and attestation for its owning entity'
+            elif c['verification']['kind']=='manual':
                 best_attestation=None
                 best_reviewed_at=None
                 for a in attestations or []:
@@ -55,11 +77,12 @@ def audit(controls: list[dict], snapshot: dict, profile: dict, *, at: str | None
                         if best_reviewed_at is None or reviewed > best_reviewed_at:
                             best_attestation=a
                             best_reviewed_at=reviewed
+                        elif reviewed == best_reviewed_at and a['outcome'] != best_attestation['outcome']:
+                            best_attestation=dict(a,outcome='PARTIAL',evidence_ref='Conflicting simultaneous authorized attestations')
                 if best_attestation:
                     outcome,detail=best_attestation['outcome'],'Authorized attestation: '+best_attestation['evidence_ref']
             row.update(outcome=outcome,detail=detail)
             if outcome=='PASS' and c['verification']['kind']=='effective_rule':
-                row['enforcement_verified']=True
                 row['enforcement_scope']='Active ruleset presence/parameter only; actor bypass behavior unverified'
         for e in exceptions or []:
             if e.get('control_id')!=c['id'] or e.get('control_revision')!=c['revision'] or e.get('target')!=target: continue
@@ -103,6 +126,8 @@ def gate(report: dict, *, allow_exceptions: bool=False, require_accepted: bool=F
             if c and (row.get('control_revision')!=c['revision'] or row.get('obligation')!=c['obligation'] or row.get('control_status')!=c['status']):
                 reasons.append(row['control_id']+': result policy metadata mismatch')
     for r in report['results']:
+        if r.get('control_status') in {'NON_ADOPTED_DRAFT', 'PROPOSED'}:
+            reasons.append(r['control_id']+': control is not adopted policy')
         if r['obligation'] not in ({'MUST','SHOULD'} if enforce_should else {'MUST'}): continue
         if require_accepted and r['control_status']!='ACCEPTED': reasons.append(r['control_id']+': control not accepted')
         if r['applicability']=='NOT_APPLICABLE_WITH_REASON': continue

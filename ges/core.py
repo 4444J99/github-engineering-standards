@@ -86,17 +86,40 @@ def validate_controls(controls: list[dict], root: Path = ROOT) -> list[str]:
             if key not in c: errors.append(f'{cid}: missing {key}')
         if type(c.get('revision')) is not int or c.get('revision',0)<1: errors.append(f'{cid}: bad revision')
         if c.get('obligation') not in {'MUST','SHOULD','MAY'}: errors.append(f'{cid}: bad obligation')
-        if c.get('status') not in {'PROPOSED','REVIEWED_DRAFT','ACCEPTED','RETIRED'}: errors.append(f'{cid}: bad status')
+        if c.get('status') not in {'PROPOSED','REVIEWED_DRAFT','ACCEPTED','RETIRED','NON_ADOPTED_DRAFT'}: errors.append(f'{cid}: bad status')
         vkind=c.get('verification',{}).get('kind')
         if vkind not in supported: errors.append(f'{cid}: unsupported checker')
         else:
             required=checker_fields.get(vkind,set())
             for rf in required:
                 if rf not in c.get('verification',{}): errors.append(f'{cid}: verification missing required field {rf}')
+            vspec = c.get('verification', {})
+            if vkind == 'file_present':
+                paths = vspec.get('paths')
+                if not isinstance(paths, list) or not paths or not all(isinstance(p, str) and p for p in paths):
+                    errors.append(f'{cid}: file_present paths must be a non-empty list of non-empty strings')
+            elif vkind == 'metadata_nonempty':
+                f = vspec.get('field')
+                if not isinstance(f, str) or not f:
+                    errors.append(f'{cid}: metadata_nonempty field must be a non-empty string')
+            elif vkind == 'effective_rule':
+                rt = vspec.get('rule_type')
+                valid_rule_types = {'pull_request', 'deletion', 'non_fast_forward', 'required_status_checks',
+                                    'commit_signature', 'required_linear_history', 'creation', 'update',
+                                    'required_deployments', 'code_scanning'}
+                if rt not in valid_rule_types:
+                    errors.append(f'{cid}: effective_rule invalid rule_type {rt!r}')
+                if vspec.get('operator') == 'at_least' and 'value' not in vspec and 'profile_parameter' not in vspec:
+                    errors.append(f'{cid}: effective_rule operator at_least requires value or profile_parameter')
         if c.get('scope') not in {'repository','organization','enterprise','workflow','release','person'}: errors.append(f'{cid}: invalid scope')
         for src in c.get('sources',[]):
             if not all(src.get(k) for k in ('repository','commit','path','section')): errors.append(f'{cid}: incomplete provenance')
             if not re.fullmatch('[a-f0-9]{40}',src.get('commit','')): errors.append(f'{cid}: unpinned source')
+            if not isinstance(src.get('content_sha256'), str) or not re.fullmatch('[a-f0-9]{64}',src['content_sha256']):
+                errors.append(f'{cid}: invalid source content digest')
+            start, end = src.get('start_line'), src.get('end_line')
+            if type(start) is not int or type(end) is not int or start < 1 or end < start:
+                errors.append(f'{cid}: invalid source line range')
         if not c.get('sources'): errors.append(f'{cid}: no source provenance')
         if not c.get('implementation',{}).get('acceptance'): errors.append(f'{cid}: no acceptance criteria')
         t=c.get('implementation',{}).get('template')

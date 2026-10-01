@@ -19,6 +19,9 @@ PROFILE={'context':{},'authorized_reviewers':['owner'],'max_age_hours':24}
 def snap_with_extra(extra=None, files=None, complete=True):
     base=snapshot(files, complete)
     if extra:
+        for observation in extra.values():
+            if isinstance(observation,dict) and isinstance(observation.get('data'),list):
+                observation.setdefault('complete',True)
         base['observations'].update(extra)
     return base
 
@@ -78,7 +81,7 @@ class Checks(unittest.TestCase):
         c=control('effective_rule'); c['verification'].update(rule_type='pull_request',parameter='required_approving_review_count',operator='at_least',profile_parameter='required_reviews'); s=snapshot(); s['observations']['effective_branch_rules']={'status':'OK','data':[{'type':'pull_request','parameters':{'required_approving_review_count':1}}]}; self.assertEqual(execute(c,s,{'required_reviews':2})[0],'FAIL'); self.assertEqual(execute(c,s,{'required_reviews':1})[0],'PASS')
     def test_dependabot_config_present(self):
         c=control('dependabot_config')
-        s=snap_with_extra({'dependabot_config':{'status':'OK','data':{'content':'dmVyc2lvbjogMg==','encoding':'base64'}}})
+        s=snap_with_extra({'dependabot_config':{'status':'OK','data':{'content':'version: 2\nupdates:\n  - package-ecosystem: pip\n    directory: /\n    schedule:\n      interval: weekly\n','encoding':'utf-8'}}})
         self.assertEqual(execute(c,s,{})[0],'PASS')
     def test_dependabot_config_missing(self):
         c=control('dependabot_config')

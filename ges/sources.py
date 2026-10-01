@@ -53,6 +53,8 @@ def acquire_source(spec: dict, output: Path) -> dict:
     slug=repo.replace('/','__');url=f'https://codeload.github.com/{repo}/tar.gz/{sha}'
     expected_sha256=spec.get('archive_sha256')
     body=fetch(url,expected_sha256=expected_sha256);inventory=[]
+    if spec.get('archive_bytes') is not None and len(body) != spec['archive_bytes']:
+        raise ValueError('Archive size does not match locked snapshot')
     textpath=output/(slug+'.text.jsonl.gz');temp=textpath.with_suffix('.tmp')
     with gzip.open(temp,'wt',encoding='utf-8') as texts,tarfile.open(fileobj=io.BytesIO(body),mode='r:gz') as archive:
         for m in archive:
@@ -75,7 +77,9 @@ def acquire_source(spec: dict, output: Path) -> dict:
     temp.replace(textpath);dump(output/(slug+'.inventory.json'),inventory)
     notices=[]
     for row in inventory:
-        if row.get('kind')=='text' and row['path'].lower().endswith(('.md','.txt','.rst')) and any(kw in row['path'].lower() for kw in ('license','notice','copying','copyright')):
+        if row.get('kind')=='text' and PurePosixPath(row['path']).name.lower() in {
+                'license','license.md','license.txt','license.rst','notice','notice.md','notice.txt',
+                'copying','copying.md','copying.txt','copyright','copyright.md','copyright.txt'}:
             text_path=output/(slug+'.text.jsonl.gz')
             with gzip.open(text_path,'rt',encoding='utf-8') as f:
                 for line in f:

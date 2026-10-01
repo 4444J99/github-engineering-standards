@@ -16,6 +16,8 @@ def enrich(snapshots: Path, corpus: Path, controls: list[dict]) -> dict:
         with gzip.open(p,'rt',encoding='utf-8') as f:
             for line in f:
                 r=json.loads(line);text=r['content'];path=r['path'];repo=r['source'];commit=r['commit'];a=idx[(repo,commit,path)]
+                if hashlib.sha256(text.encode()).hexdigest() != a.get('sha256'):
+                    raise ValueError('Ledger source content hash mismatch: '+path)
                 if path.endswith(('.md','.mdx')):
                     for m in re.finditer(r'(?:data\s+|data\.)(reusables|variables)\.([\w.-]+)',text):
                         ref=m[2];kind=m[1];paths=[]
@@ -37,20 +39,28 @@ def enrich(snapshots: Path, corpus: Path, controls: list[dict]) -> dict:
                 if repo=='microsoft/ghqr' and path.startswith('internal/recommendations/definitions/') and path.endswith('.yaml'):
                     definitions=parse(text)
                     if not isinstance(definitions,list):raise ValueError('Unexpected GHQR definition format')
+                    lines=text.splitlines()
+                    starts=[i for i,l in enumerate(lines,1) if re.match(r'^-\s*id:',l)]
                     for d in definitions:
                         # Source-defined fields remain source-defined, not adopted obligations.
                         line_no=next((i for i,l in enumerate(text.splitlines(),1) if re.match(r'\s*-\s*id:\s*'+re.escape(d['id'])+r'\s*$',l)),1)
                         structured.append({'requirement_id':'SRC-GHQR-'+d['id'],'artifact_id':a['artifact_id'],'source':repo,'commit':r['commit'],'path':path,'line':line_no,'source_definition':d,'review_status':'UNREVIEWED','adopted_obligation':None,'canonical_control_ids':[],'verification_binding':'manual_source_disposition','license':'MIT'})
+                        end=next((n-1 for n in starts if n>line_no),len(lines))
+                        structured[-1].update(start_line=line_no,end_line=end,content_sha256=a['sha256'],
+                            span_sha256=hashlib.sha256('\n'.join(lines[line_no-1:end]).encode()).hexdigest())
                 if repo=='github/github-well-architected' and path.startswith('content/library/') and path.endswith('/checklist.md'):
                     heading=[];n=0
                     for line_no,l in enumerate(text.splitlines(),1):
                         h=re.match(r'^(#{1,6})\s+(.+)',l)
-                        if h:heading=heading[:len(h[1])-1]+[h[2]]
+                        if h and not h[2].startswith('SPDX-License-Identifier:'):
+                            heading=heading[:len(h[1])-1]+[h[2]]
                         match=re.match(r'^\s*-\s+(.+)',l)
                         if not match:continue
                         statement=match[1]
                         if statement.endswith(':') or statement.endswith(':**'):continue
                         n+=1;structured.append({'requirement_id':'SRC-WA-'+digest([path,line_no,statement])[:16],'artifact_id':a['artifact_id'],'source':repo,'commit':r['commit'],'path':path,'line':line_no,'function':' / '.join(heading),'source_statement':statement,'review_status':'UNREVIEWED','adopted_obligation':None,'canonical_control_ids':[],'verification_binding':'manual_source_disposition','license':'MIT'})
+                        structured[-1].update(start_line=line_no,end_line=line_no,content_sha256=a['sha256'],
+                            span_sha256=hashlib.sha256(l.encode()).hexdigest())
     with (corpus/'dependencies.jsonl').open('w') as f:
         for r in dependencies:f.write(json.dumps(r,sort_keys=True)+'\n')
     dump(corpus/'docs-source-pages.json',list(mdpages.values()))

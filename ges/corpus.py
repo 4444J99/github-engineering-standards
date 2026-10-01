@@ -8,7 +8,7 @@ import json
 import re
 from collections import Counter,defaultdict
 from pathlib import Path
-from .core import dump, digest, load
+from .core import dump, digest, load, timestamp, now
 
 
 def classify(path: str) -> str:
@@ -120,28 +120,59 @@ def build_corpus(snapshot_dir: Path, output: Path, *, include_restricted_text: b
     return report
 
 
-def coverage_with_reviews(artifact_path: Path, review_path: Path) -> dict:
+def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates: list[dict] | None=None,
+                          controls: list[dict] | None=None, authorized_reviewers: list[str] | None=None) -> dict:
     artifacts=[json.loads(x) for x in artifact_path.read_text().splitlines() if x.strip()]
     reviews=load(review_path)
     by_id={a['artifact_id']:a for a in artifacts}; complete=set(); errors=[]
+    candidate_index={c['candidate_id']:c for c in candidates or []}
+    control_index={c['id']:c for c in controls or []}
+    reviewed_ids=set()
     for r in reviews:
+        if not isinstance(r,dict): errors.append('Review record must be an object'); continue
         a=by_id.get(r.get('artifact_id'))
         if a is None: errors.append('Unknown reviewed artifact'); continue
+        if a['artifact_id'] in reviewed_ids:
+            complete.discard(a['artifact_id']); errors.append(a['path']+': duplicate review receipt'); continue
+        reviewed_ids.add(a['artifact_id'])
         if r.get('commit')!=a['commit'] or r.get('content_sha256')!=a.get('sha256'):
             errors.append(a['path']+': review invalidated by content change'); continue
         if not all(r.get(k) for k in ('reviewer','reviewed_at','disposition','rationale')):
             errors.append(a['path']+': incomplete review record'); continue
+        if r['reviewer'] not in (authorized_reviewers or []):
+            errors.append(a['path']+': reviewer is not authorized'); continue
+        try:
+            if timestamp(r['reviewed_at']) > timestamp(now()): raise ValueError('Future review')
+        except (ValueError,TypeError,AttributeError):
+            errors.append(a['path']+': invalid review timestamp'); continue
         if r.get('all_claims_accounted_for') is not True:
             errors.append(a['path']+': claims not fully accounted for'); continue
         if r['disposition'] not in {'CONTROL_SOURCE','REFERENCE_ONLY','NO_ACTIONABLE_CONTENT','EXCLUDED_WITH_REASON','SUPERSEDED'}:
             errors.append(a['path']+': invalid disposition'); continue
-        if r['disposition']=='CONTROL_SOURCE':
-            mappings=r.get('claim_mappings',[])
-            if not mappings or not isinstance(mappings,list) or len(mappings)==0:
-                errors.append(a['path']+': missing claim mappings'); continue
-            for m in mappings:
-                if not isinstance(m,str) or not m.strip() or not re.fullmatch(r'GES-[A-Z]{2,8}-[0-9]{3}(?:/r\d+)?',m):
-                    errors.append(a['path']+': invalid claim mapping identifier '+str(m)); continue
+        mappings=r.get('claim_mappings',[])
+        if not isinstance(mappings,list) or (r['disposition']=='CONTROL_SOURCE' and not mappings):
+            errors.append(a['path']+': missing claim mappings'); continue
+        valid=True; mapped=set()
+        for m in mappings:
+            if not isinstance(m,dict):
+                errors.append(a['path']+': claim mapping must identify a candidate and disposition'); valid=False; continue
+            candidate=candidate_index.get(m.get('candidate_id'))
+            if candidate is None or candidate['artifact_id'] != a['artifact_id'] or candidate.get('text_sha256')!=m.get('text_sha256'):
+                errors.append(a['path']+': unknown or changed candidate mapping'); valid=False; continue
+            if candidate['candidate_id'] in mapped:
+                errors.append(a['path']+': duplicate candidate mapping'); valid=False
+            mapped.add(candidate['candidate_id'])
+            if m.get('disposition')=='CONTROL':
+                c=control_index.get(m.get('control_id'))
+                if c is None or c['revision']!=m.get('control_revision') or not any(
+                        s['repository']==a['source'] and s['commit']==a['commit'] and s['path']==a['path'] for s in c['sources']):
+                    errors.append(a['path']+': invalid control mapping or revision'); valid=False
+            elif m.get('disposition') not in {'REFERENCE','NO_ACTIONABLE_CONTENT','EXCLUDED_WITH_REASON','SUPERSEDED'} or not m.get('rationale'):
+                errors.append(a['path']+': unresolved candidate disposition'); valid=False
+        expected={c['candidate_id'] for c in candidates or [] if c['artifact_id']==a['artifact_id']}
+        if candidates is None or mapped != expected:
+            errors.append(a['path']+': complete candidate accounting is required'); valid=False
+        if not valid: continue
         complete.add(a['artifact_id'])
     return {'reviewed':len(complete),'inventoried':len(artifacts),
             'review_coverage':len(complete)/len(artifacts) if artifacts else None,'errors':errors,
@@ -152,7 +183,7 @@ def impact(old_path: Path, new_path: Path, controls: list[dict]) -> dict:
     def idx(p): 
         result={}
         for x in [json.loads(l) for l in p.read_text().splitlines() if l]:
-            key=(x['source'],x.get('commit',''),x['path'])
+            key=(x['source'],x['path'])
             result[key]=x
         return result
     a,b=idx(old_path),idx(new_path); changes=[]
@@ -165,9 +196,9 @@ def impact(old_path: Path, new_path: Path, controls: list[dict]) -> dict:
         affected=[]
         for c in controls:
             for s in c['sources']:
-                src_key=(s['repository'],s.get('commit',''),s['path'])
-                if src_key==key or (src_key[0]==key[0] and src_key[2]==key[2] and (not src_key[1] or not key[1] or src_key[1]==key[1])):
+                src_key=(s['repository'],s['path'])
+                if src_key==key:
                     affected.append(c['id'])
                     break
-        changes.append({'source':key[0],'path':key[2],'change':kind,'reopen_controls':affected,'review_required':True})
+        changes.append({'source':key[0],'path':key[1],'change':kind,'reopen_controls':affected,'review_required':True})
     return {'changes':changes,'automatic_policy_deletions':0}

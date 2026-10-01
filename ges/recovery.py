@@ -1,0 +1,109 @@
+"""Reproducible construction accounting. Inventory never closes review gates."""
+from collections import Counter
+from pathlib import Path
+import gzip
+import hashlib
+import json
+
+from .core import ROOT, digest, dump, load, now
+from .corpus import coverage_with_reviews
+
+
+def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None) -> dict:
+    controls = load(ROOT/'controls/catalog.json')
+    queue = load(ROOT/'controls/review_queue.json')
+    pins = load(ROOT/'sources/sources.lock.json')['sources']
+    receipts=[]
+    if reviews:
+        for p in sorted(reviews.glob('*.json')):
+            if not p.name.endswith('-claims.json'):
+                records=load(p)
+                if not isinstance(records,list): raise ValueError('Review receipt file must contain an array')
+                receipts.extend(records)
+    with (corpus/'candidates.jsonl').open() as stream:
+        candidate_records=[json.loads(line) for line in stream if line.strip()]
+    from tempfile import TemporaryDirectory
+    with TemporaryDirectory() as td:
+        receipt_path=Path(td)/'reviews.json';dump(receipt_path,receipts)
+        review_result=coverage_with_reviews(corpus/'artifacts.jsonl',receipt_path,
+                         candidates=candidate_records,controls=controls,
+                         authorized_reviewers=load(review_policy)['authorized_reviewers'] if review_policy else [])
+    if review_result['errors']: raise ValueError('Invalid review receipts: '+str(review_result['errors']))
+    reviewed_by_source=Counter()
+    artifacts_by_id={r['artifact_id']:r for r in [json.loads(l) for l in (corpus/'artifacts.jsonl').read_text().splitlines()]}
+    for receipt in receipts:
+        reviewed_by_source[artifacts_by_id[receipt['artifact_id']]['source']] += 1
+    sources_report = []
+    for pin in pins:
+        slug = pin['repository'].replace('/', '__')
+        inventory = load(sources/(slug+'.inventory.json'))
+        if any(r['source'] != pin['repository'] or r['commit'] != pin['commit'] for r in inventory):
+            raise ValueError('Inventory does not match release pin: '+pin['repository'])
+        tree = load(sources/(slug+'.tree-reconciliation.json'))
+        sources_report.append({'repository': pin['repository'], 'commit': pin['commit'],
+                               'artifacts': len(inventory), 'reviewed_artifacts': reviewed_by_source[pin['repository']],
+                               'review_evidence': 'evidence/source-reviews; source review is not control adoption or independent omission certification',
+                               'git_tree_reconciliation': tree})
+    ledger = load(corpus/'ledger-summary.json')
+    requirements = load(corpus/'structured-source-requirements.json')
+    pages = load(corpus/'published-page-ledger.json')
+    inventories = sum(s['artifacts'] for s in sources_report)
+    candidates = len(candidate_records)
+    rendered = []
+    rendered_path = sources/'docs-rendered.jsonl.gz'
+    if rendered_path.exists():
+        with gzip.open(rendered_path, 'rt') as stream:
+            for line in stream:
+                r = json.loads(line)
+                if r.get('status') == 'RETRIEVED' and hashlib.sha256(r['body'].encode()).hexdigest() == r.get('sha256'):
+                    rendered.append((r['version'],r['path']))
+    page_keys = {(r['version'],r['path']) for r in pages}
+    acquired = len(page_keys & set(rendered))
+    accepted = sum(c['status'] == 'ACCEPTED' for c in controls)
+    canonical_ids = {c['id'] for c in controls}
+    if canonical_ids & {c['id'] for c in queue} or len({c['id'] for c in queue}) != len(queue):
+        raise ValueError('Review queue IDs duplicate canonical or proposal IDs')
+    gates = [
+        ('exhaustive_artifact_accounting',review_result['reviewed'],inventories,'Every artifact has a validated reviewed disposition and independent omission audit'),
+        ('published_content_assurance',0,len(pages),'Every page has rendered/version/dependency review; retrieval alone is insufficient'),
+        ('semantic_extraction',review_result['reviewed'],inventories,'Full-artifact omission review and atomic claims; candidate count is not a claim denominator'),
+        ('consolidation',0,len(requirements),'All structured occurrences mapped with exact provenance; remaining unstructured claims also reviewed'),
+        ('generalization',0,len(controls)+len(queue),'Every definition and proposal has reviewed scope, policy, parameters and conflicts'),
+        ('operational_completeness',0,accepted,'Accepted controls have all required tested bindings and accountable review procedures'),
+        ('native_enforcement',0,None,'Approved target inventory, positive/negative behavior tests and recovery receipts'),
+        ('rights_and_publication',0,inventories,'Per-file rights review and approved distribution; inventory notices alone insufficient'),
+        ('estate_rollout',0,None,'Explicit authorized inventory and effective-policy/behavior evidence per target'),
+    ]
+    return {'schema_version':'ges.recovery.v1','generated_at':now(),'project_complete':False,
+            'historical_checkpoint':'30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040',
+            'owner_url':'https://github.com/4444J99/github-engineering-standards/pull/1',
+            'review_accounting':review_result,'review_receipts_digest':digest(receipts),
+            'sources':sources_report,'inventory_artifacts':inventories,
+            'candidate_blocks':candidates,'structured_requirements':len(requirements),
+            'structured_requirements_by_source':dict(Counter(r['source'] for r in requirements)),
+            'published_pages':len(pages),'rendered_bodies_acquired':acquired,
+            'unresolved_published_pages':[{'page_id':r['page_id'],'version':r['version'],'path':r['path']}
+                                          for r in pages if not r['source_matches']],
+            'ledger':ledger,'catalog_controls':len(controls),'catalog_digest':digest(controls),
+            'quarantined_proposals':len(queue),'queue_digest':digest(queue),
+            'accepted_controls':accepted,'justified_exclusions':0,
+            'templates':len([p for p in (ROOT/'templates').iterdir() if p.is_file()]),
+            'profiles':len(list((ROOT/'profiles').glob('*.json'))),
+            'gates':[{'gate':name,'status':'OPEN','completed':done,'denominator':total,
+                      'remaining':total-done if total is not None else None,'closure_condition':condition,
+                      'evidence':'evidence/recovery-status.json'} for name,done,total,condition in gates]}
+
+
+if __name__ == '__main__':
+    import argparse
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--sources',type=Path,required=True)
+    p.add_argument('--corpus',type=Path,required=True)
+    p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--reviews',type=Path)
+    p.add_argument('--review-policy',type=Path)
+    args=p.parse_args()
+    report=status(args.sources,args.corpus,args.reviews,args.review_policy)
+    dump(args.output,report)
+    print(json.dumps({'project_complete':False,'gates_open':len(report['gates']),
+                      'inventory_artifacts':report['inventory_artifacts'],'published_pages':report['published_pages']}))

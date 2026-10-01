@@ -1,0 +1,294 @@
+{
+  "accepted_controls": 0,
+  "candidate_blocks": 150903,
+  "catalog_controls": 95,
+  "catalog_digest": "ae50265969e82439ee72cb53d49f5213ade16f70ebd582ff905b81a491b3b238",
+  "gates": [
+    {
+      "closure_condition": "Every artifact has a validated reviewed disposition and independent omission audit",
+      "completed": 9,
+      "denominator": 13657,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "exhaustive_artifact_accounting",
+      "remaining": 13648,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "Every page has rendered/version/dependency review; retrieval alone is insufficient",
+      "completed": 0,
+      "denominator": 18019,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "published_content_assurance",
+      "remaining": 18019,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "Full-artifact omission review and atomic claims; candidate count is not a claim denominator",
+      "completed": 9,
+      "denominator": 13657,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "semantic_extraction",
+      "remaining": 13648,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "All structured occurrences mapped with exact provenance; remaining unstructured claims also reviewed",
+      "completed": 0,
+      "denominator": 605,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "consolidation",
+      "remaining": 605,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "Every definition and proposal has reviewed scope, policy, parameters and conflicts",
+      "completed": 0,
+      "denominator": 688,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "generalization",
+      "remaining": 688,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "Accepted controls have all required tested bindings and accountable review procedures",
+      "completed": 0,
+      "denominator": 0,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "operational_completeness",
+      "remaining": 0,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "Approved target inventory, positive/negative behavior tests and recovery receipts",
+      "completed": 0,
+      "denominator": null,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "native_enforcement",
+      "remaining": null,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "Per-file rights review and approved distribution; inventory notices alone insufficient",
+      "completed": 0,
+      "denominator": 13657,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "rights_and_publication",
+      "remaining": 13657,
+      "status": "OPEN"
+    },
+    {
+      "closure_condition": "Explicit authorized inventory and effective-policy/behavior evidence per target",
+      "completed": 0,
+      "denominator": null,
+      "evidence": "evidence/recovery-status.json",
+      "gate": "estate_rollout",
+      "remaining": null,
+      "status": "OPEN"
+    }
+  ],
+  "generated_at": "2026-10-01T22:41:50.695551+00:00",
+  "historical_checkpoint": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
+  "inventory_artifacts": 13657,
+  "justified_exclusions": 0,
+  "ledger": {
+    "dependencies_with_path_match": 56956,
+    "dependency_references": 61801,
+    "docs_source_markdown_files": 3742,
+    "full_semantic_review_complete": false,
+    "generated_or_unresolved_page_instances": 14,
+    "published_page_version_instances": 18019,
+    "published_source_path_matches": 18005,
+    "source_artifacts_referenced_by_canonical_controls": 30,
+    "structured_requirements_by_source": {
+      "github/github-well-architected": 476,
+      "microsoft/ghqr": 129
+    },
+    "structured_source_requirements": 605
+  },
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1",
+  "profiles": 6,
+  "project_complete": false,
+  "published_pages": 18019,
+  "quarantined_proposals": 593,
+  "queue_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
+  "rendered_bodies_acquired": 100,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.0006590027092333602,
+    "reviewed": 9
+  },
+  "review_receipts_digest": "117290c5a9e82efc318cb65d1847a4590f2fee8803f638ed506fec5b21206882",
+  "schema_version": "ges.recovery.v1",
+  "sources": [
+    {
+      "artifacts": 172,
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 172,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 172,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "microsoft/ghqr",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 0
+    },
+    {
+      "artifacts": 1,
+      "commit": "801411757531a8880cb315148160fde3079d7227",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 1,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 1,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "tmcw/github-best-practices",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 1
+    },
+    {
+      "artifacts": 13,
+      "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 13,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 13,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "jlcanovas/gh-best-practices-template",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 0
+    },
+    {
+      "artifacts": 8,
+      "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 8,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 8,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "atapas/model-repo",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 8
+    },
+    {
+      "artifacts": 244,
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 244,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 244,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "github/github-well-architected",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 0
+    },
+    {
+      "artifacts": 13219,
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 13219,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 13219,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "github/docs",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 0
+    }
+  ],
+  "structured_requirements": 605,
+  "structured_requirements_by_source": {
+    "github/github-well-architected": 476,
+    "microsoft/ghqr": 129
+  },
+  "templates": 22,
+  "unresolved_published_pages": [
+    {
+      "page_id": "fb2d1529188708434c9e82d5",
+      "path": "/en/enterprise-cloud@latest/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-page-to-your-repository",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "24d6d3361a7d841be2902bc1",
+      "path": "/en/enterprise-cloud@latest/copilot/concepts/agents/computer-use",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "12c0ddffdeef1e4ca3a615e0",
+      "path": "/en/enterprise-cloud@latest/copilot/concepts/agents/dynamic-workflows",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "7c9198ecee3fa2501c8923b0",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "ad38504de28b9a070caa2d35",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/github-copilot-app/computer-use",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "61bb0b8339b159c297a3a06b",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/use-code-review",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "50f4b6577d5cb4323a9296b9",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/use-dynamic-workflows",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "c1d4c5026518ee542c59f39c",
+      "path": "/en/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-page-to-your-repository",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "44b445ba08f53dd7efdd23c0",
+      "path": "/en/copilot/concepts/agents/computer-use",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "779f25a16e6824273350ec7d",
+      "path": "/en/copilot/concepts/agents/dynamic-workflows",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "a3a9141c5aef7cccda5d04b3",
+      "path": "/en/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "c6df7f68e2a0ce1a79a96e24",
+      "path": "/en/copilot/how-tos/github-copilot-app/computer-use",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "862c555e4307225e8ae08e5b",
+      "path": "/en/copilot/how-tos/use-copilot-agents/use-code-review",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "089c304c4892722ffb3be72a",
+      "path": "/en/copilot/how-tos/use-copilot-agents/use-dynamic-workflows",
+      "version": "free-pro-team@latest"
+    }
+  ]
+}
