@@ -45,7 +45,7 @@ Per-file rights clearance remains unfinished.
 
 ## Observed verification
 
-- `python -m unittest discover -s tests -v`: 155 tests passed, exit 0.
+- `python -m unittest discover -s tests -v`: 163 tests passed, exit 0 (renewed attempt).
 - `python -m ges validate`: 95 controls valid, exit 0.
 - `python -m ges compile`: generated canonical views, exit 0.
 - `git diff --check`: exit 0 after whitespace correction.
@@ -77,12 +77,15 @@ gate remained false. `evidence/recovery-self-assessment.json` retains the saniti
 ## Remaining acceptance and resumption
 
 `evidence/recovery-status.json` owns the nine-gate construction counts, pins and
-unresolved published entries. Validated source-review receipts now cover 22/13,657
+unresolved published entries. Validated source-review receipts now cover 43/13,657
 artifacts: `atapas/model-repo` 8/8, `tmcw/github-best-practices` 1/1, and the
 governance template 13/13. They account for 465 candidate blocks and phrase 222
-atomic reference claims. This is not an independent omission audit.
+atomic reference claims in those three small sources. GHQR adds 21 reviewed artifacts:
+19 YAML files covering all 129 structured definition IDs, 168 reference statements,
+and two scanner files including seven ruleset-collection limitations. Counts are
+not independent omission certification, claim reconciliation or adoption.
 Mappings, adoption and independent omission audit remain open. The other source
-review counts remain `github/docs` 0/13,219, Well-Architected 0/244, GHQR 0/172,
+review counts remain `github/docs` 0/13,219, Well-Architected 0/244; GHQR is 21/172,
 with no source-wide rights acceptance established.
 The 12 earlier purported exclusions remain unsubstantiated, not justified.
 All 605 structured occurrences need reconciliation; 150,903 candidates are not a
@@ -115,6 +118,13 @@ The acquisition workflow is on-demand; no scheduled drift service was activated.
 Checkout retained for continued implementation. No corpus cache, transcript, private
 assessment payload, token or unrelated repository change is included in this delivery.
 Session release, four historical closeout indices and project completion are unproven.
+
+Renewed attempt: GES-RULE-001 through 006 are revision 2 with specific objectives,
+corrected GHQR definition citations and exact pinned GitHub Docs passages. Generated
+views were regenerated. Template and solo-profile review retains ownership/strict-check
+gaps and quorum conflicts. Three new counterexamples reproduced a malformed-parameter
+crash, a false PASS for an empty check context, and a false PASS for a negative policy
+minimum; all now fail closed. See `docs/branch-protection-reconciliation.md`.
 
 The installed session predicate was run against published head `54bc67e` and exited 1:
 custody was unproven, five processes had unresolved ownership, and the receipt had

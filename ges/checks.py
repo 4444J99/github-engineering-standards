@@ -90,6 +90,17 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
         matches=[r for r in rules if r.get('type')==spec['rule_type']]
         if not matches:
             return 'NOT_VERIFIABLE','Requested active ruleset rule not observed; legacy branch protection is not assessed by this checker'
+        if any('parameters' in r and not isinstance(r['parameters'],dict) for r in matches):
+            return 'ERROR','Effective branch rule parameters must be an object'
+        if spec['rule_type'] == 'required_status_checks':
+            check_lists=[r.get('parameters',{}).get('required_status_checks') for r in matches]
+            if any(not isinstance(checks,list) for checks in check_lists):
+                return 'ERROR','Required status checks must be an array'
+            if any(not isinstance(c,dict) or not isinstance(c.get('context'),str)
+                   for checks in check_lists for c in checks):
+                return 'ERROR','Required status check entries must identify a string context'
+            if any(not c['context'].strip() for checks in check_lists for c in checks):
+                return 'FAIL','Required status check context is empty'
         param=spec.get('parameter')
         if not param:
             if spec['rule_type'] == 'required_status_checks':
@@ -104,6 +115,8 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                 expected=prof_val
             elif expected is None:
                 return 'NOT_VERIFIABLE','Missing rule policy parameter'
+        if spec.get('operator')=='at_least' and type(expected) is int and expected < 0:
+            return 'ERROR','Minimum rule policy parameter cannot be negative'
         for rule in matches:
             observed=lookup(rule.get('parameters',{}),param)
             if observed is MISSING: continue

@@ -543,44 +543,44 @@ Check a box only when scoped, current evidence satisfies the stated criterion.
 
 ## Rule
 
-- [ ] **GES-RULE-001 r1 — Protected branch cannot be deleted** (MUST; REVIEWED_DRAFT)
-  Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.
-  Acceptance: Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
+- [ ] **GES-RULE-001 r2 — Protected branch cannot be deleted** (MUST; REVIEWED_DRAFT)
+  Reject deletion of the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.
+  Acceptance: Reject deletion of the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `effective_rule`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-002 r1 — Protected branch rejects non-fast-forward updates** (MUST; REVIEWED_DRAFT)
-  Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.
-  Acceptance: Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
+- [ ] **GES-RULE-002 r2 — Protected branch rejects non-fast-forward updates** (MUST; REVIEWED_DRAFT)
+  Reject non-fast-forward updates to the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.
+  Acceptance: Reject non-fast-forward updates to the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `effective_rule`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-003 r1 — Pull request integration is required** (MUST; REVIEWED_DRAFT)
-  Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.
-  Acceptance: Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
+- [ ] **GES-RULE-003 r2 — Pull request integration is required** (MUST; REVIEWED_DRAFT)
+  Require changes to the assessed protected branch to be integrated through a pull request; review bypass paths separately from approval requirements.
+  Acceptance: Require changes to the assessed protected branch to be integrated through a pull request; review bypass paths separately from approval requirements.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `effective_rule`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-004 r1 — Approving review threshold matches policy** (MUST; REVIEWED_DRAFT)
-  Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.
-  Acceptance: Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
+- [ ] **GES-RULE-004 r2 — Approving review threshold matches policy** (MUST; REVIEWED_DRAFT)
+  Require at least the target profile's explicitly adopted approval count for protected-branch pull requests; do not infer a universal two-review threshold or invent an independent solo reviewer.
+  Acceptance: Require at least the target profile's explicitly adopted approval count for protected-branch pull requests; do not infer a universal two-review threshold or invent an independent solo reviewer.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `effective_rule`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-005 r1 — Stale approvals are dismissed** (MUST; REVIEWED_DRAFT)
-  Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.
-  Acceptance: Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
+- [ ] **GES-RULE-005 r2 — Stale approvals are dismissed** (MUST; REVIEWED_DRAFT)
+  Require the effective pull-request policy to dismiss stale approvals when pushed commits affect the reviewed diff; configuration presence does not prove native rejection behavior.
+  Acceptance: Require the effective pull-request policy to dismiss stale approvals when pushed commits affect the reviewed diff; configuration presence does not prove native rejection behavior.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `effective_rule`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-006 r1 — Review conversations are resolved** (MUST; REVIEWED_DRAFT)
-  Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.
-  Acceptance: Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
+- [ ] **GES-RULE-006 r2 — Review conversations are resolved** (MUST; REVIEWED_DRAFT)
+  Require the effective pull-request policy to resolve review conversations before integration; do not substitute code-owner review or stale approval dismissal for this requirement.
+  Acceptance: Require the effective pull-request policy to resolve review conversations before integration; do not substitute code-owner review or stale approval dismissal for this requirement.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `effective_rule`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.

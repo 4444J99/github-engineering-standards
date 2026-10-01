@@ -2177,9 +2177,9 @@
   },
   {
     "id": "GES-RULE-001",
-    "revision": 1,
+    "revision": 2,
     "title": "Protected branch cannot be deleted",
-    "objective": "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+    "objective": "Reject deletion of the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.",
     "category": "rule",
     "scope": "repository",
     "obligation": "MUST",
@@ -2190,24 +2190,36 @@
     },
     "sources": [
       {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
+        "section": "Ruleset scope and bypass context",
+        "start_line": 17,
+        "end_line": 19,
+        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L17-L19",
+        "support_role": "BACKGROUND_CONTEXT_NOT_OBJECTIVE_SPECIFIC"
+      },
+      {
         "repository": "microsoft/ghqr",
         "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
         "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
-        "section": "repo-bp-014",
-        "start_line": 144,
-        "end_line": 149,
+        "section": "repo-bp-011",
+        "start_line": 111,
+        "end_line": 121,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
-        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L144"
+        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L111"
       },
       {
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
-        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
-        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L1"
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Restrict deletions",
+        "start_line": 33,
+        "end_line": 35,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L33-L35",
+        "support_role": "OBJECTIVE_SPECIFIC_PINNED_PLATFORM_DESCRIPTION"
       }
     ],
     "verification": {
@@ -2217,7 +2229,7 @@
     "implementation": {
       "template": "templates/ruleset.json",
       "acceptance": [
-        "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+        "Reject deletion of the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.",
         "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date."
       ]
     },
@@ -2236,9 +2248,9 @@
   },
   {
     "id": "GES-RULE-002",
-    "revision": 1,
+    "revision": 2,
     "title": "Protected branch rejects non-fast-forward updates",
-    "objective": "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+    "objective": "Reject non-fast-forward updates to the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.",
     "category": "rule",
     "scope": "repository",
     "obligation": "MUST",
@@ -2249,24 +2261,36 @@
     },
     "sources": [
       {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
+        "section": "Ruleset scope and bypass context",
+        "start_line": 17,
+        "end_line": 19,
+        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L17-L19",
+        "support_role": "BACKGROUND_CONTEXT_NOT_OBJECTIVE_SPECIFIC"
+      },
+      {
         "repository": "microsoft/ghqr",
         "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
         "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
-        "section": "repo-bp-014",
-        "start_line": 144,
-        "end_line": 149,
+        "section": "repo-bp-010",
+        "start_line": 100,
+        "end_line": 110,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
-        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L144"
+        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L100"
       },
       {
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
-        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
-        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L1"
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Block force pushes",
+        "start_line": 198,
+        "end_line": 210,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L198-L210",
+        "support_role": "OBJECTIVE_SPECIFIC_PINNED_PLATFORM_DESCRIPTION"
       }
     ],
     "verification": {
@@ -2276,7 +2300,7 @@
     "implementation": {
       "template": "templates/ruleset.json",
       "acceptance": [
-        "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+        "Reject non-fast-forward updates to the assessed protected branch under the effective active policy; evaluate legacy equivalents and bypass principals separately.",
         "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date."
       ]
     },
@@ -2295,9 +2319,9 @@
   },
   {
     "id": "GES-RULE-003",
-    "revision": 1,
+    "revision": 2,
     "title": "Pull request integration is required",
-    "objective": "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+    "objective": "Require changes to the assessed protected branch to be integrated through a pull request; review bypass paths separately from approval requirements.",
     "category": "rule",
     "scope": "repository",
     "obligation": "MUST",
@@ -2308,24 +2332,36 @@
     },
     "sources": [
       {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
+        "section": "Ruleset scope and bypass context",
+        "start_line": 17,
+        "end_line": 19,
+        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L17-L19",
+        "support_role": "BACKGROUND_CONTEXT_NOT_OBJECTIVE_SPECIFIC"
+      },
+      {
         "repository": "microsoft/ghqr",
         "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
         "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
-        "section": "repo-bp-014",
-        "start_line": 144,
-        "end_line": 149,
+        "section": "repo-bp-006",
+        "start_line": 56,
+        "end_line": 66,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
-        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L144"
+        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L56"
       },
       {
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
-        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
-        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L1"
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Require a pull request before merging",
+        "start_line": 101,
+        "end_line": 103,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L101-L103",
+        "support_role": "OBJECTIVE_SPECIFIC_PINNED_PLATFORM_DESCRIPTION"
       }
     ],
     "verification": {
@@ -2335,7 +2371,7 @@
     "implementation": {
       "template": "templates/ruleset.json",
       "acceptance": [
-        "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+        "Require changes to the assessed protected branch to be integrated through a pull request; review bypass paths separately from approval requirements.",
         "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date."
       ]
     },
@@ -2354,9 +2390,9 @@
   },
   {
     "id": "GES-RULE-004",
-    "revision": 1,
+    "revision": 2,
     "title": "Approving review threshold matches policy",
-    "objective": "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+    "objective": "Require at least the target profile's explicitly adopted approval count for protected-branch pull requests; do not infer a universal two-review threshold or invent an independent solo reviewer.",
     "category": "rule",
     "scope": "repository",
     "obligation": "MUST",
@@ -2367,24 +2403,46 @@
     },
     "sources": [
       {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
+        "section": "Ruleset scope and bypass context",
+        "start_line": 17,
+        "end_line": 19,
+        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L17-L19",
+        "support_role": "BACKGROUND_CONTEXT_NOT_OBJECTIVE_SPECIFIC"
+      },
+      {
         "repository": "microsoft/ghqr",
         "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
         "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
-        "section": "repo-bp-014",
-        "start_line": 144,
-        "end_line": 149,
+        "section": "repo-bp-002",
+        "start_line": 12,
+        "end_line": 22,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
-        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L144"
+        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L12"
+      },
+      {
+        "repository": "microsoft/ghqr",
+        "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+        "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+        "section": "repo-bp-003",
+        "start_line": 23,
+        "end_line": 33,
+        "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L23"
       },
       {
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
-        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
-        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L1"
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Required reviews",
+        "start_line": 109,
+        "end_line": 113,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L109-L113",
+        "support_role": "OBJECTIVE_SPECIFIC_PINNED_PLATFORM_DESCRIPTION"
       }
     ],
     "verification": {
@@ -2397,7 +2455,7 @@
     "implementation": {
       "template": "templates/ruleset.json",
       "acceptance": [
-        "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+        "Require at least the target profile's explicitly adopted approval count for protected-branch pull requests; do not infer a universal two-review threshold or invent an independent solo reviewer.",
         "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date."
       ]
     },
@@ -2416,9 +2474,9 @@
   },
   {
     "id": "GES-RULE-005",
-    "revision": 1,
+    "revision": 2,
     "title": "Stale approvals are dismissed",
-    "objective": "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+    "objective": "Require the effective pull-request policy to dismiss stale approvals when pushed commits affect the reviewed diff; configuration presence does not prove native rejection behavior.",
     "category": "rule",
     "scope": "repository",
     "obligation": "MUST",
@@ -2429,24 +2487,36 @@
     },
     "sources": [
       {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
+        "section": "Ruleset scope and bypass context",
+        "start_line": 17,
+        "end_line": 19,
+        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L17-L19",
+        "support_role": "BACKGROUND_CONTEXT_NOT_OBJECTIVE_SPECIFIC"
+      },
+      {
         "repository": "microsoft/ghqr",
         "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
         "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
-        "section": "repo-bp-014",
-        "start_line": 144,
-        "end_line": 149,
+        "section": "repo-bp-004",
+        "start_line": 34,
+        "end_line": 44,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
-        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L144"
+        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L34"
       },
       {
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
-        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
-        "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L1"
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Dismiss stale approvals when the diff changes",
+        "start_line": 115,
+        "end_line": 117,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L115-L117",
+        "support_role": "OBJECTIVE_SPECIFIC_PINNED_PLATFORM_DESCRIPTION"
       }
     ],
     "verification": {
@@ -2458,7 +2528,7 @@
     "implementation": {
       "template": "templates/ruleset.json",
       "acceptance": [
-        "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+        "Require the effective pull-request policy to dismiss stale approvals when pushed commits affect the reviewed diff; configuration presence does not prove native rejection behavior.",
         "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date."
       ]
     },
@@ -2477,9 +2547,9 @@
   },
   {
     "id": "GES-RULE-006",
-    "revision": 1,
+    "revision": 2,
     "title": "Review conversations are resolved",
-    "objective": "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+    "objective": "Require the effective pull-request policy to resolve review conversations before integration; do not substitute code-owner review or stale approval dismissal for this requirement.",
     "category": "rule",
     "scope": "repository",
     "obligation": "MUST",
@@ -2497,17 +2567,30 @@
         "start_line": 144,
         "end_line": 149,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
-        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L144"
+        "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L144",
+        "support_role": "BACKGROUND_ONLY_NOT_EVIDENCE_FOR_THREAD_RESOLUTION"
       },
       {
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
         "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
+        "section": "Ruleset scope and bypass context",
+        "start_line": 17,
+        "end_line": 19,
         "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L1"
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L17-L19",
+        "support_role": "BACKGROUND_CONTEXT_NOT_OBJECTIVE_SPECIFIC"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Resolve review conversations",
+        "start_line": 127,
+        "end_line": 127,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L127-L127",
+        "support_role": "OBJECTIVE_SPECIFIC_PINNED_PLATFORM_DESCRIPTION"
       }
     ],
     "verification": {
@@ -2519,7 +2602,7 @@
     "implementation": {
       "template": "templates/ruleset.json",
       "acceptance": [
-        "Verify the effective active rule and any declared policy parameter on the assessed branch. Review legacy equivalents and bypass actors separately.",
+        "Require the effective pull-request policy to resolve review conversations before integration; do not substitute code-owner review or stale approval dismissal for this requirement.",
         "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date."
       ]
     },

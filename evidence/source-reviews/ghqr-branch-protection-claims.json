@@ -1,0 +1,236 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+  "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-01T23:00:30Z",
+  "review_scope": "Full 14-definition artifact and full linked local scanner, read as data; neither executed. Outbound platform documentation not certified.",
+  "claims": [
+    {
+      "claim_id": "GHQR-BP-001",
+      "source_id": "repo-bp-001",
+      "statement": "Protect the default and production branches with a reviewed combination of change review and integration checks.",
+      "proposed_control_ids": [
+        "GES-RULE-007"
+      ],
+      "decision": "GHQR critical recommendation; default-branch scanner scope is narrower than production-branch prose.",
+      "start_line": 1,
+      "end_line": 11,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-002",
+      "source_id": "repo-bp-002",
+      "statement": "Require at least one independent approval when the selected review policy requires peer review.",
+      "proposed_control_ids": [
+        "GES-RULE-004"
+      ],
+      "decision": "GHQR critical recommendation; solo-maintainer operation needs an explicit compensating workflow, not fabricated approval.",
+      "start_line": 12,
+      "end_line": 22,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-003",
+      "source_id": "repo-bp-003",
+      "statement": "Consider a higher review quorum for high-risk production changes.",
+      "proposed_control_ids": [
+        "GES-RULE-004"
+      ],
+      "decision": "GHQR advisory threshold of two is contextual, not universally mandatory.",
+      "start_line": 23,
+      "end_line": 33,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-004",
+      "source_id": "repo-bp-004",
+      "statement": "Invalidate stale approvals when subsequent commits change the reviewed proposal.",
+      "proposed_control_ids": [
+        "GES-RULE-005"
+      ],
+      "decision": "GHQR high-severity recommendation.",
+      "start_line": 34,
+      "end_line": 44,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-005",
+      "source_id": "repo-bp-005",
+      "statement": "Require designated owners to review changes to their owned paths.",
+      "proposed_control_ids": [],
+      "decision": "Binding gap: CODEOWNERS existence and conversation resolution do not verify required owner review.",
+      "start_line": 45,
+      "end_line": 55,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-006",
+      "source_id": "repo-bp-006",
+      "statement": "Specify an integrated review policy covering quorum, stale approval handling and ownership review.",
+      "proposed_control_ids": [
+        "GES-RULE-003"
+      ],
+      "decision": "Composite recommendation; must preserve all component obligations, not map only to PR existence.",
+      "start_line": 56,
+      "end_line": 66,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-007",
+      "source_id": "repo-bp-007",
+      "statement": "Require integration checks against an up-to-date base when strict status-check policy applies.",
+      "proposed_control_ids": [
+        "GES-RULE-008"
+      ],
+      "decision": "Binding gap: general integration-revision review is not deterministic enforcement of strict mode.",
+      "start_line": 67,
+      "end_line": 77,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-008",
+      "source_id": "repo-bp-008",
+      "statement": "Name the specific required build, test or other integration checks.",
+      "proposed_control_ids": [
+        "GES-RULE-008"
+      ],
+      "decision": "Required-check policy must have nonempty contexts and trusted publishers.",
+      "start_line": 78,
+      "end_line": 88,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-009",
+      "source_id": "repo-bp-009",
+      "statement": "Require configured integration checks to succeed before integration.",
+      "proposed_control_ids": [
+        "GES-RULE-008"
+      ],
+      "decision": "Presence of a workflow is insufficient.",
+      "start_line": 89,
+      "end_line": 99,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-010",
+      "source_id": "repo-bp-010",
+      "statement": "Reject non-fast-forward updates on protected branches.",
+      "proposed_control_ids": [
+        "GES-RULE-002"
+      ],
+      "decision": "Explicitly review bypass principals and approved recovery.",
+      "start_line": 100,
+      "end_line": 110,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-011",
+      "source_id": "repo-bp-011",
+      "statement": "Reject deletion of protected branches.",
+      "proposed_control_ids": [
+        "GES-RULE-001"
+      ],
+      "decision": "Cleanup conventions for topic branches are separate scope.",
+      "start_line": 111,
+      "end_line": 121,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-012",
+      "source_id": "repo-bp-012",
+      "statement": "Evaluate required commit signatures as an integrity mechanism with explicit trust assumptions.",
+      "proposed_control_ids": [
+        "GES-RULE-009"
+      ],
+      "decision": "Conflict: source asserts author authenticity too strongly; key/account attribution is not universal proof of human authorship.",
+      "start_line": 122,
+      "end_line": 132,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-013",
+      "source_id": "repo-bp-013",
+      "statement": "Consider a linear integration history where delivery and audit requirements justify it.",
+      "proposed_control_ids": [
+        "GES-RULE-009",
+        "GES-BR-003"
+      ],
+      "decision": "Contextual option; preserve tmcw opposition to universal squash/rebase policy.",
+      "start_line": 133,
+      "end_line": 143,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-BP-014",
+      "source_id": "repo-bp-014",
+      "statement": "Recognize ruleset-based protection without requiring a redundant legacy protection rule.",
+      "proposed_control_ids": [
+        "GES-RULE-007"
+      ],
+      "decision": "Source informational finding is not proof of effective protection, bypass coverage or tested rejection.",
+      "start_line": 144,
+      "end_line": 154,
+      "source_strength": "UPSTREAM_ASSESSMENT_RECOMMENDATION",
+      "mapping_status": "PROPOSED_REQUIRES_CONTROL_REVIEW",
+      "accepted_policy": false
+    }
+  ],
+  "scanner_review": {
+    "path": "internal/scanners/bestpractices/branch_protection.go",
+    "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+    "observations": [
+      {
+        "start_line": 16,
+        "end_line": 18,
+        "statement": "Missing legacy protection detail emits repo-bp-001 and returns; this function does not itself perform the fallback described in its comment."
+      },
+      {
+        "start_line": 28,
+        "end_line": 40,
+        "statement": "Ruleset evaluator separately emits repo-bp-014 and evaluates supplied flags. Caller composition and effective-rule collection remain to be audited."
+      },
+      {
+        "start_line": 54,
+        "end_line": 97,
+        "statement": "Review count, stale review, owner review, strict checks, nonempty contexts, force pushes, deletion, signing and linear history use supplied values, not native behavior tests."
+      }
+    ],
+    "limits": [
+      "Absent observations and effective bypass access cannot be inferred from booleans alone.",
+      "Commented fallback is not proof of call-site handling.",
+      "Upstream two-review threshold and history preference are not adopted universal requirements."
+    ]
+  },
+  "policy_adoption": "NONE",
+  "rights_clearance": "UNRESOLVED",
+  "independent_omission_audit": false
+}
