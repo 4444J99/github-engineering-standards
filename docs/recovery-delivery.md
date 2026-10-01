@@ -77,7 +77,7 @@ gate remained false. `evidence/recovery-self-assessment.json` retains the saniti
 ## Remaining acceptance and resumption
 
 `evidence/recovery-status.json` owns the nine-gate construction counts, pins and
-unresolved published entries. Validated source-review receipts now cover 43/13,657
+unresolved published entries. Validated source-review receipts now cover 55/13,657
 artifacts: `atapas/model-repo` 8/8, `tmcw/github-best-practices` 1/1, and the
 governance template 13/13. They account for 465 candidate blocks and phrase 222
 atomic reference claims in those three small sources. GHQR adds 21 reviewed artifacts:
@@ -85,10 +85,14 @@ atomic reference claims in those three small sources. GHQR adds 21 reviewed arti
 and two scanner files including seven ruleset-collection limitations. Counts are
 not independent omission certification, claim reconciliation or adoption.
 Mappings, adoption and independent omission audit remain open. The other source
-review counts remain `github/docs` 0/13,219, Well-Architected 0/244; GHQR is 21/172,
+review counts remain `github/docs` 0/13,219, Well-Architected 12/244; GHQR is 21/172,
 with no source-wide rights acceptance established.
 The 12 earlier purported exclusions remain unsubstantiated, not justified.
-All 605 structured occurrences need reconciliation; 150,903 candidates are not a
+All 605 structured occurrences are reference-accounted, but still need canonical
+reconciliation. The accounting preserves 27 nonoperative labels, not certified
+exclusions; it does not vindicate the historical 12 purported exclusions.
+See `evidence/structured-review-accounting.json` and
+`docs/structured-review-reconciliation.md`. The 150,903 candidates are not a
 complete claim denominator. Accepted-control implementation coverage is undefined
 because the accepted-control denominator is zero. Native/estate target denominators
 remain undefined until an authorized inventory is declared.
