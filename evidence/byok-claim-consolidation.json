@@ -217,7 +217,7 @@
         "DOCS-LOCALBYOK-028-A04",
         "DOCS-LOCALBYOK-028-A05"
       ],
-      "decision": "Provider environment must be chosen before startup. Local/remote/Azure/Anthropic examples are inert source context; no key, environment or startup operation follows from ingestion."
+      "decision": "The source procedure presents provider configuration examples before CLI startup; this ordering is not evidence of an enforced startup invariant. Local/remote/Azure/Anthropic examples are inert source context; no key, environment or startup operation follows from ingestion."
     },
     {
       "id": "BYOK-OFFLINE-NOT-REMOTE-ISOLATION",
@@ -364,7 +364,9 @@
     "new_child_claims": 105,
     "all_records_mapped_once": true,
     "whole_source_atomic_completeness_certified": false,
-    "independent_recheck_pending": true,
+    "independent_recheck_pending": false,
+    "independent_recheck": "evidence/byok-independent-repair-recheck.json",
+    "recheck_result": "LIMITED_CORRECTIONS_REQUIRED; both reported wording/classification corrections applied after the immutable audit snapshot, not independently re-certified",
     "auditor_proposed_child_claims": 103,
     "extra_root_splits": 2
   }
