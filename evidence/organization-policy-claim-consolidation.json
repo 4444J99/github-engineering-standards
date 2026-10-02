@@ -1,0 +1,138 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T03:22:57Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-organization-policy-claims.json",
+    "evidence/source-reviews/docs-organization-policy-dependencies-claims.json"
+  ],
+  "input_claims": 32,
+  "groups": [
+    {
+      "id": "ORG-LICENSE-ROLE",
+      "claims": [
+        "DOCS-ORGPOL-001",
+        "DOCS-ORGPOL-002",
+        "DOCS-ORGPOL-003",
+        "DOCS-ORGPOL-010"
+      ],
+      "decision": "Organization-issued seats, Business/Enterprise license, cloud feature scope and paid-agent eligibility are separate preconditions. Role metadata is not actual actor authorization."
+    },
+    {
+      "id": "ORG-ENTERPRISE-PRECEDENCE",
+      "claims": [
+        "DOCS-ORGPOL-004",
+        "DOCS-ORGPOL-011",
+        "DOCS-ORGPOLDEP-001",
+        "DOCS-ORGPOLDEP-002"
+      ],
+      "decision": "Enterprise-selected enabled/disabled/selected-organization policy cannot be overridden locally. Third-party controls may be hidden until enterprise enablement; hidden UI requires inheritance review, not absent-control PASS."
+    },
+    {
+      "id": "ORG-POLICY-VS-MODEL",
+      "claims": [
+        "DOCS-ORGPOL-006",
+        "DOCS-ORGPOL-007",
+        "DOCS-ORGPOL-008"
+      ],
+      "decision": "Privacy/feature Policies and beyond-basic Models controls have different scope. Preserve possible extra cost and review effective enforcement independently of a dropdown choice."
+    },
+    {
+      "id": "ORG-NAVIGATION",
+      "claims": [
+        "DOCS-ORGPOL-005",
+        "DOCS-ORGPOL-016",
+        "DOCS-ORGPOL-017",
+        "DOCS-ORGPOLDEP-003",
+        "DOCS-ORGPOLDEP-004"
+      ],
+      "decision": "Retain nested navigation, organization target selection and per-partner enablement toggle as procedures only. No menu visibility or documented click proves applied policy."
+    },
+    {
+      "id": "ORG-MCP-BOUNDARY",
+      "claims": [
+        "DOCS-ORGPOL-009",
+        "DOCS-ORGPOLDEP-005",
+        "DOCS-ORGPOLDEP-006",
+        "DOCS-ORGPOLDEP-007"
+      ],
+      "decision": "Copilot MCP policy is scoped to generally available support and excludes third-party-host GitHub MCP access/permissions. Review the GitHub MCP server's separate control mechanisms, preview scope and actual host path."
+    },
+    {
+      "id": "ORG-AGENT-APPS-AND-REPOS",
+      "claims": [
+        "DOCS-ORGPOL-012",
+        "DOCS-ORGPOL-013",
+        "DOCS-ORGPOL-014",
+        "DOCS-ORGPOL-015"
+      ],
+      "decision": "Organization agent apps use a distinct single policy, not Partner-agent toggles. Partners share cloud agent's enabled repository set; personal-account installed-app placement must not be generalized."
+    },
+    {
+      "id": "ORG-FEEDBACK-PREVIEW",
+      "claims": [
+        "DOCS-ORGPOL-018",
+        "DOCS-ORGPOL-019",
+        "DOCS-ORGPOL-020",
+        "DOCS-ORGPOLDEP-008",
+        "DOCS-ORGPOLDEP-009",
+        "DOCS-ORGPOLDEP-010"
+      ],
+      "decision": "Feedback and previews need the stated plan plus Copilot-in-GitHub.com enablement. Feedback opportunities are not training consent; previews may have flaws/change/discontinuation and are not presumed generally available privacy coverage."
+    },
+    {
+      "id": "ORG-COVERAGE-DEPENDENCIES",
+      "claims": [
+        "DOCS-ORGPOL-021",
+        "DOCS-ORGPOL-022"
+      ],
+      "decision": "Default-model availability and supported policy surfaces remain separately linked dependencies; no linked page or platform surface is certified through a reference."
+    }
+  ],
+  "related_evidence": [
+    "evidence/account-policy-claim-consolidation.json",
+    "evidence/ai-model-hosting-claim-consolidation.json"
+  ],
+  "cross_scope_decisions": [
+    "Personal installed agent apps and organizational agent apps have different governance paths; retain scope instead of reconciling by deleting an exception.",
+    "Provider hosting agreements, administrator model availability, MCP access permissions, feedback collection and training opt-out are independently governed.",
+    "Assess enterprise-selected effective policy before interpreting organization controls. Owner role does not defeat enterprise precedence.",
+    "Potential model costs are preserved; source ingestion does not authorize enablement or purchase."
+  ],
+  "proposed_effective_policy_review": {
+    "read_only_default": true,
+    "dimensions": [
+      "licensed organization/seat inventory",
+      "actual actor role and permission",
+      "enterprise-selected policy and target selection",
+      "organization policy",
+      "basic versus beyond-basic model availability",
+      "supported product surface",
+      "MCP GA/preview and host application",
+      "partner-agent versus agent-app control",
+      "cloud-agent repository grants",
+      "feedback versus training consent",
+      "cost and preview caveats"
+    ],
+    "missing_permission": "UNVERIFIED; no clean-policy PASS",
+    "native_changes": "Scoped explicit approval with reviewed plan/diff/apply/verify and recovery receipts."
+  },
+  "verification": {
+    "all_input_claims_mapped_once": true,
+    "source_accounting_receipt": "evidence/source-reviews/docs-organization-policy-artifacts.json",
+    "independent_omission_certified": false,
+    "rendered_and_linked_world_complete": false,
+    "target_binding_verified": false,
+    "rights_cleared": false,
+    "policy_adopted": false,
+    "native_enforcement_verified": false
+  },
+  "remaining_work": [
+    "Full enterprise effective-policy and supported-surface review.",
+    "Separate GitHub MCP server governance source/target review within corpus and authority boundaries.",
+    "Model/feature availability and preview exception reconciliation.",
+    "Independent atomicity and omission audit, canonical profile/template applicability review.",
+    "Authorized effective target collection and scoped native behavior verification."
+  ]
+}
