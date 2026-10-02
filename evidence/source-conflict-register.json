@@ -4,6 +4,25 @@
   "reviewer": "codex:source-review",
   "records": [
     {
+      "id": "CONFLICT-SECRET-ALERT-DELETION-001",
+      "source_review": "evidence/source-reviews/wa-continuation-anti-patterns-claims.json",
+      "claim_ids": ["WA-CONT-ANTI-029", "WA-CONT-ANTI-032"],
+      "issue": "Pinned advice describes alert records as universally non-deletable, then describes alert deletion when deleting their custom pattern.",
+      "source_spans_rechecked": ["anti-patterns.md:259-273"],
+      "authoritative_supplement": {
+        "url": "https://docs.github.com/en/rest/secret-scanning/custom-patterns",
+        "reviewed_date": "2026-10-02",
+        "scope": "Current organization and repository bulk custom-pattern deletion parameter documentation; supplemental evidence outside the locked source pin.",
+        "observation": "The documented post_delete_action distinguishes permanent alert removal from resolving alerts, and defaults to removal when omitted.",
+        "runtime_verified": false
+      },
+      "proposed_resolution": "Reject the universal non-deletion inference. Preserve the distinction between individual alert dismissal, pattern removal, associated-alert resolution and associated-alert deletion. Current documentation contradicts the universal assertion but does not establish retention or erasure behavior on every version or target.",
+      "scope": "Custom-pattern lifecycle and sensitive-data exposure; neither documentation nor deletion of an alert proves compliance or removal of all copies.",
+      "retained_alternatives": "Purpose-specific data protection remains separate from credential scanning. Dismissal is not deletion; resolution is not erasure.",
+      "required_evidence": "Exact product version, pattern scope, explicit post-delete action, authorized target-specific plan and preservation decision, readback and completion evidence. Do not execute destructive examples or omit the post-delete action in any future approved adapter.",
+      "policy_accepted": false
+    },
+    {
       "id": "CONFLICT-AI-BUDGET-STOP-001",
       "source_reviews": ["evidence/source-reviews/wa-continuation-ai-credits-claims.json", "evidence/source-reviews/wa-continuation-governing-agents-claims.json"],
       "claim_ids": ["WA-CONT-AIC-003", "WA-CONT-AIC-004", "WA-CONT-AIC-008", "WA-CONT-GA-032"],
