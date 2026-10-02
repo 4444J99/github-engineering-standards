@@ -1,0 +1,19 @@
+{
+  "schema_version":"ges.source-claims-review.v1",
+  "source":"github/docs","commit":"56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:41:26Z",
+  "review_scope":"Two complete bypass fragments and three complete feature declarations read. Version expressions retained literally, not executed as instructions or certified against deployed targets. Alert state and audit notifications are distinct obligations.",
+  "claims":[
+    {"claim_id":"DOCS-PUSHDEP-001","path":"data/reusables/secret-scanning/push-protection-bypass.md","start_line":2,"end_line":2,"statement":"The bypass fragment describes an alert in repository, organization and enterprise security views when a contributor bypasses a block.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-002","path":"data/reusables/secret-scanning/push-protection-bypass.md","start_line":3,"end_line":3,"statement":"The bypass fragment describes an audit-log event independently of alert creation.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-003","path":"data/reusables/secret-scanning/push-protection-bypass.md","start_line":4,"end_line":4,"statement":"The bypass fragment describes email notifications to the listed owners, managers and repository administrators who watch the repository; email receipt is not universal to all actors.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-004","path":"data/reusables/secret-scanning/push-protection-bypass.md","start_line":4,"end_line":4,"statement":"The described bypass email contains a link to the secret and the bypass reason, creating a separate sensitive-notification handling concern.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-005","path":"data/reusables/secret-scanning/bypass-reasons-and-alerts.md","start_line":5,"end_line":5,"statement":"A tests-use bypass reason creates a closed alert resolved as used in tests in the source table; choosing the reason is not independent proof the value is harmless.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-006","path":"data/reusables/secret-scanning/bypass-reasons-and-alerts.md","start_line":6,"end_line":6,"statement":"A false-positive bypass reason creates a closed alert resolved as false positive; the user's assertion does not certify detection error.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-007","path":"data/reusables/secret-scanning/bypass-reasons-and-alerts.md","start_line":7,"end_line":7,"statement":"A fix-later bypass reason creates an open alert in the source table; successful push is not completed remediation.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-008","path":"data/features/push-protection-org-enterprise-exemptions.yml","start_line":3,"end_line":6,"statement":"Organization/enterprise exemptions are declared for fpt and ghec and GHES greater than 3.20; GHES 3.20 is not included by the strict comparison.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-009","path":"data/features/push-protection-repo-exemptions.yml","start_line":3,"end_line":6,"statement":"Repository exemptions are separately declared for fpt and ghec and GHES greater than 3.20, not inferred solely from the organization/enterprise declaration.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-010","path":"data/features/push-protected-pattern-configuration.yml","start_line":3,"end_line":6,"statement":"Protected-pattern configuration is declared for fpt and ghec and GHES greater than 3.18; GHES 3.18 itself is excluded by the expression.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHDEP-011","path":"data/features/push-protected-pattern-configuration.yml","start_line":2,"end_line":2,"statement":"The feature-file comment labels protected-pattern configuration public preview; comments are retained evidence, not an adopted stability guarantee.","accepted_policy":false}
+  ]
+}
