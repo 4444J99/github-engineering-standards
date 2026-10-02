@@ -4,6 +4,18 @@
   "reviewer": "codex:source-review",
   "records": [
     {
+      "id":"CONFLICT-UPSTREAM-CHECK-COMPLETENESS-001",
+      "source_review":"evidence/source-reviews/wa-continuation-workflow-config-claims.json",
+      "claim_ids":["WA-CONT-WF-003"],
+      "source_spans_rechecked":[".github/workflows/deploy-merged-pr.yml:55-105"],
+      "issue":"The workflow labels all checks passed after filtering out StatusContext entries and named jobs; empty filtered sets pass, and NEUTRAL/SKIPPED conclusions are accepted without checking a required-context inventory or immutable head identity.",
+      "proposed_resolution":"Treat this as the upstream workflow's local dispatch predicate, not complete CI, release or deployment proof. A consumer verification binding must resolve the required check/status inventory for the exact target and immutable head, retain missing contexts explicitly and distinguish successful predicates from skipped or neutral outcomes.",
+      "scope":"Source example interpretation only; upstream execution, workflow changes and synchronous CI polling are not authorized by this review.",
+      "retained_alternatives":"Excluded self-jobs can be a legitimate recursion concern but do not justify omitting required predicates. An intentionally empty requirement inventory needs explicit scope evidence; an accidentally empty observed set cannot certify completeness.",
+      "required_evidence":"Applicable required-context inventory, exact head identity, context source identity, observed predicate result and separate dispatch/terminal publication receipts. Missing or inaccessible contexts remain unverified rather than PASS.",
+      "policy_accepted":false
+    },
+    {
       "id":"CONFLICT-MCP-PUSH-PROTECTION-SCOPE-001",
       "source_reviews":["evidence/source-reviews/docs-push-protection-concept-claims.json","evidence/source-reviews/docs-mcp-push-protection-claims.json"],
       "claim_ids":["DOCS-PUSH-006","DOCS-PUSHMCP-001","DOCS-PUSHMCP-006","DOCS-PUSHMCP-007"],
