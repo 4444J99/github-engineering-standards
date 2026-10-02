@@ -1,0 +1,28 @@
+{
+  "schema": "ges.published-body-review.v1",
+  "ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+  "method": "Read both complete acquired Markdown bodies and independently verify their SHA-256 against acquisition receipts; compare with the separately reviewed drift supplement",
+  "instances": [
+    {"page_id": "50f4b6577d5cb4323a9296b9", "version": "enterprise-cloud@latest", "path": "/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/use-dynamic-workflows", "sha256": "4600b3b0be3ab384905dde22f2b7809609376c74c35d19c72684d0a340318b0c", "bytes": 14451, "full_body_read": true},
+    {"page_id": "089c304c4892722ffb3be72a", "version": "free-pro-team@latest", "path": "/en/copilot/how-tos/use-copilot-agents/use-dynamic-workflows", "sha256": "c87a97a1e9e537a2cf4910c904a0c8fcd2ae9e522316f64db08161b65dffca05", "bytes": 14235, "full_body_read": true}
+  ],
+  "observations": [
+    "Both bodies retain preview status, experimental CLI enablement, registered-name and input requirements, and conditional interactive run/authoring approvals.",
+    "Noninteractive execution denies permissions that cannot be automatically approved; no interactive prompt is promised. Repository-extension trust permits executable code and is separate from agent tool permissions.",
+    "Result-file output excludes run identity and progress. A failed, interrupted or paused invocation can leave old output intact; file existence alone is not fresh success evidence.",
+    "Machine-readable output can carry name, run ID and status, but still requires actual invocation/result verification. Definition creation and registration are explicitly separate from starting a run.",
+    "Shared personal/project extensions copy definitions rather than progress or history. Repository updates and extension reload/availability checks precede use of new shared definitions.",
+    "App monitoring applies only to local sessions. OTel spans depend on prior enablement and do not themselves certify final acceptance.",
+    "Saved completed steps can be reused only in resumable runs; unsaved work may repeat. Increased limits count previous usage, and canceled runs cannot resume.",
+    "Scheduling examples concern current-session prompts, not evidence of durable autonomous recurring execution or authorization to publish plugins.",
+    "The two complete bodies preserve the same reviewed operative instructions while internal links carry version-specific prefixes. Separate page IDs and digests are retained."
+  ],
+  "source_review_reference": "evidence/published-drift-dynamic-workflows-howto-review.json",
+  "remaining": ["Independent atomic claim and omission reconciliation", "Linked permission, authentication, extension, scheduling and telemetry references", "Deployment-source identity", "Rights acceptance", "Actual operational binding verification"],
+  "source_revision_verified": false,
+  "all_actionable_claims_extracted": false,
+  "native_behavior_verified": false,
+  "rights_accepted": false,
+  "accepted_policy": false,
+  "raw_expression_committed": false
+}
