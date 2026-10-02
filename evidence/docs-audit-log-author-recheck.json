@@ -1,0 +1,28 @@
+{
+  "schema_version": "ges.author-repair-recheck.v1",
+  "reviewed_at": "2026-10-02T20:45:40Z",
+  "original_author": "/root/evaluator_review",
+  "independent_original_auditor": "/root",
+  "rechecker": "/root/evaluator_review",
+  "review_scope": "Bounded author recheck of root's two terminology repairs and their version_context fields, not an independent audit of the author's original 602 records.",
+  "input": {
+    "path": "evidence/source-reviews/docs-audit-log-claims.json",
+    "original_sha256": "df7ce1bf0545004f75ff0d20ca7097676181dd2c16e128583f533799535cdb31",
+    "root_repaired_sha256": "a4b950b412258aef6d6acc8ffdeff6cbf0182970b50eda987b0397cadf16ebde",
+    "final_sha256": "f409eea9659499f12974e3db569738be9f4dbdac1600147907f45afe45eb2a75",
+    "records": 602,
+    "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995"
+  },
+  "findings": [
+    {
+      "claim_ids": ["DOCS-AUDITLOG-0129", "DOCS-AUDITLOG-0130"],
+      "path": "data/reusables/audit_log/audit-log-action-categories.md",
+      "source_sha256": "0606b419f80d76febe7c6518b570f6ecc89befff0c3cd734d508d8095852a478",
+      "source_lines": [163, 165],
+      "outcome": "SUPPORTED_AFTER_CONTEXT_CLARIFICATION",
+      "rationale": "The outer ghec or ghes branch encloses the user_license category. Its line-164 description includes both occupying an enterprise license/seat and enterprise membership. The nested enterprise-licensing-language branch changes license versus licensed seat wording only. Root's repaired statements accurately preserve that distinction. The prior version_context array still mixed the nested wording predicate into availability provenance; this recheck retained only the outer availability predicate there and placed the nested condition and both ordered alternatives in terminology_context. Claim statements, IDs, spans and counts are unchanged by this clarification."
+    }
+  ],
+  "remaining_findings": [],
+  "boundary": "Only the specified repaired records and context distinction are assessed. Root's independent original audit remains separate. No whole-source omission assurance, rendered/live availability, actual audit logging, accepted policy, native enforcement, rights clearance or global gate certification is asserted."
+}
