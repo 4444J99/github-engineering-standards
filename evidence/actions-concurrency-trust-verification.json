@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "issue": 42,
+  "artifacts": 20,
+  "claims": 41,
+  "candidates": 97,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.13824412389250934,
+    "reviewed": 1888
+  },
+  "claim_accounting": {
+    "reference_claims": 57702,
+    "source_artifacts": 1854,
+    "duplicate_relationships": 7
+  },
+  "unresolved_findings": [
+    {
+      "path": "data/reusables/actions/actions-group-concurrency.md",
+      "lines": [
+        11,
+        65,
+        69
+      ],
+      "finding": "Explicit cancel-in-progress requirement conflicts with unconditional running-cancellation prose."
+    },
+    {
+      "path": "data/reusables/actions/actions-group-concurrency.md",
+      "lines": [
+        138,
+        144
+      ],
+      "finding": "Example ref group conflicts with prose claiming any in-progress run cancelled."
+    }
+  ],
+  "license_observations": [
+    {
+      "path": "data/reusables/actions/actions-importer-legal-notice.md",
+      "notice": "MIT with attribution/notice preservation and disclaimer",
+      "rights_cleared": false
+    },
+    {
+      "path": "data/reusables/actions/actions-runner-controller-legal-notice.md",
+      "notice": "Apache-2.0 abbreviated notice and linked license; full-use clearance pending",
+      "rights_cleared": false
+    }
+  ],
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2.009,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "No upstream setup/code executed, infrastructure activated or credential acquired.",
+    "Source notices are evidence, not accepted rights/distribution attestations."
+  ]
+}
