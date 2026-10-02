@@ -1,0 +1,453 @@
+[
+  {
+    "artifact_id": "4bb57180783f84104b1f85ee",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/hooks/pre-tool-use.md",
+    "content_sha256": "a28d008d5e4116fa84a1c2826594bb634c3a19a93bf61c7632152c0b703d0b16",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T14:59:57Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full348line pinned guide read; all65candidate blocks dispositioned, five signature and sample languages, conditional permissions and argument/context/suppression semantics accounted for. Independent audit records bounded repairs separately. No source execution, actual security enforcement, rights or global extraction certification.",
+    "independent_audit": "evidence/sdk-pre-tool-use-independent-audit.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "6c9762679d5a9cb5ed8c7a5d",
+        "text_sha256": "aa82c1ffe8644851f072f0f5065f3513ed40148938f4785ca2479e33fc5267d5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-001: Pre-tool hook runs before tool execution. DOCS-SDKPRETOOL-002: Guide declares fpt version scope. DOCS-SDKPRETOOL-003: Guide declares Enterprise Cloud version scope.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "290bf5a95c91893a2f3e0eae",
+        "text_sha256": "362fd4504c2bf97ab31984150577848b9392e597f3c83a28240d4693f904f033",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-004: Earlier pre-tool-use route redirects to this guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "e8a710825acbe6c62231b6ec",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "4f333b4e356e3eb860417efa",
+        "text_sha256": "82ab9528a511672be7a1c601aa24265a734a593877cafa7faeb5b483b8b864c8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-005: Hook can approve execution. DOCS-SDKPRETOOL-006: Hook can deny execution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "d59ff16e61771e6548246eb7",
+        "text_sha256": "f855568b2c03364685e04cd3aafb77b2c1222fae655e22bb79654bb26aafdcc9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-007: Hook can modify tool arguments.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "4fa326862f037d599d0d1d05",
+        "text_sha256": "9d0ee164e7a8ba1d2ff1ac5d6a674f0b55efa40d3d892cb0a76d2740d1fa0aab",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-008: Hook can add context for the tool.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "582eaab7ae2e53dfee0cdfe3",
+        "text_sha256": "14a486c4d70ff7e9d566117ad3b0ece0ecacf41f9c3447498247e440c6cd55dd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-009: Hook can suppress tool output from the conversation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "83a35075c7386fc0c221aaf9",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "f14c030761fd20a9a54e2aba",
+        "text_sha256": "419fcbca30c4b18e8e2b0744263ebc70e64e109b0f95ae0935cb731e4fda90d1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-010: TypeScript signature input is PreToolUseHookInput. DOCS-SDKPRETOOL-011: TypeScript signature invocation is HookInvocation. DOCS-SDKPRETOOL-012: TypeScript signature returns a Promise. DOCS-SDKPRETOOL-013: TypeScript output union includes PreToolUseHookOutput. DOCS-SDKPRETOOL-014: TypeScript output union includes null. DOCS-SDKPRETOOL-015: TypeScript output union includes undefined.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "0956c455ea9ab5d6d7e8a02f",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "564f7db8ad684adb333b0e38",
+        "text_sha256": "9da94486aab654a4386f84b29907c021d8135592f992830ab81a46616e21d5ee",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-016: Python callable input is PreToolUseHookInput. DOCS-SDKPRETOOL-017: Python invocation context is dict of string keys and values. DOCS-SDKPRETOOL-018: Python callable returns an Awaitable. DOCS-SDKPRETOOL-019: Python output union includes PreToolUseHookOutput. DOCS-SDKPRETOOL-020: Python output union includes None.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "c845232e18c2744880ba0e17",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "e9cb6553a2525a4d82c9517b",
+        "text_sha256": "b30436bb1215ca2cfe886657e3bac95af88cfb0b23ad59f8ceab1a22d423433e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-021: Go handler input is PreToolUseHookInput. DOCS-SDKPRETOOL-022: Go invocation is HookInvocation. DOCS-SDKPRETOOL-023: Go handler returns a PreToolUseHookOutput pointer. DOCS-SDKPRETOOL-024: Go handler returns error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "26b6352714d07d3893db9835",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "40089821003746160d5a1579",
+        "text_sha256": "313b5d91d027ccc739a7943b2038faa61926ae5228f4c1f2bd93a77cfa1d3905",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-025: .NET handler returns a Task. DOCS-SDKPRETOOL-026: .NET output is nullable PreToolUseHookOutput. DOCS-SDKPRETOOL-027: .NET input is PreToolUseHookInput. DOCS-SDKPRETOOL-028: .NET invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "484a2c9c1eb45dcc49c5555a",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "6702abd04cdac2480ffa1b13",
+        "text_sha256": "842201996b730606de36c44413778e37f4d15d41c7ef6101c93441324e7b49bb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-029: Java handler interface is marked FunctionalInterface. DOCS-SDKPRETOOL-030: Java handler returns CompletableFuture. DOCS-SDKPRETOOL-031: Java future output is PreToolUseHookOutput. DOCS-SDKPRETOOL-032: Java input is PreToolUseHookInput. DOCS-SDKPRETOOL-033: Java invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "0f5c4dd091215c03a84186d8",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "b9723e9e905a8e98c9df1ee3",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "b408198370dd1074ac4817ec",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "ab157b45647d8517e193aa85",
+        "text_sha256": "0eade3e9d88ccfe76d15cfe3867b8af447bbbb6c9b1ecc441a0e53eb2fb14f05",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-034: Input timestamp has number type. DOCS-SDKPRETOOL-035: Input timestamp is Unix time at hook triggering.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "100f408a15600900b0ce2266",
+        "text_sha256": "d318e68b8c59de72cfd8ba7263c245b33b73ba5b0e3a9a83fa9797914d0374bb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-036: Input cwd has string type. DOCS-SDKPRETOOL-037: Input cwd identifies current working directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "b25ad6f17da134f46056cf7a",
+        "text_sha256": "9297b370fede15403363dbacc7fb41f3685e865cb503ddc4ac9f54c9d1f0b49a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-038: Input toolName has string type. DOCS-SDKPRETOOL-039: Input toolName identifies the called tool.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "a256154ac487ec22f9f7d6b2",
+        "text_sha256": "17cf32fbdc4e36c2674b211f8950a89b2be2bb5aabccf8d54a522d813d076830",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-040: Input toolArgs has object type. DOCS-SDKPRETOOL-041: Input toolArgs contains arguments passed to the tool.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "01b4de8e9cd96b36e417930b",
+        "text_sha256": "a1d2c17f248f2377de17d44f0ef2d79a2ab24486d268ff7b032681f096c7f3c9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-042: Returning null allows execution unchanged. DOCS-SDKPRETOOL-043: Returning undefined allows execution unchanged. DOCS-SDKPRETOOL-044: Otherwise output can contain any listed fields.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "08db3db64159ebe238cf744d",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "0b02c9122d36a63106df50b7",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "0146dc43dc6f6c4dbc9e55a3",
+        "text_sha256": "563cdde1387ffbdfd202c3eae2eb0e4507203200de2809e9a5c88b37135afff0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-045: permissionDecision permits allow. DOCS-SDKPRETOOL-046: permissionDecision permits deny. DOCS-SDKPRETOOL-047: permissionDecision permits ask.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "6ba721e141a78c42b1a95bec",
+        "text_sha256": "1c7b4796be410b375a549d2d8fcd5557ec95b649fdd8b11dec9949fc79bf6732",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-048: permissionDecisionReason is a string. DOCS-SDKPRETOOL-049: Decision reason is shown to user for deny or ask.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "813fdde627c17923bd1ca6e3",
+        "text_sha256": "c6f24bfa364c02cc8ceea617182b99fa5bd269d8ecf700448e9ae9a3244718b0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-050: modifiedArgs has object type. DOCS-SDKPRETOOL-051: modifiedArgs replaces tool arguments.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "814a860207e6155109a00712",
+        "text_sha256": "cd736709ad38d02dd48f3cb77a8b30eb607186f5d47668ddb6be3500b51a58bd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-052: additionalContext has string type. DOCS-SDKPRETOOL-053: additionalContext injects extra conversation context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "5a5b1f61a26e14850ba127b3",
+        "text_sha256": "a69861b9eb67eec8133a19cd781de0ff676366c23d8e7119e360c8e8988701ea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-054: suppressOutput has boolean type. DOCS-SDKPRETOOL-055: True suppression omits tool output from conversation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "366d46ca82213e1e9865bd5c",
+        "text_sha256": "4e5ee7463defb581d49e5b271e04db2261b87c86e5c6eb2bb0edb3a604626e93",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "b62ed9b54e0d37170c211b6f",
+        "text_sha256": "f284e946dce01a21cab3304a05b817034502e9899a602b4b81a41a412ea78bef",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "d68cf559329e6a623a16ff73",
+        "text_sha256": "9d320f1a4595391d18f367aba504eff072ba6e1e0f91cd09bd3db27fc42b98d4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-056: allow causes normal tool execution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "ab6a1c9c43c467980b9b3c47",
+        "text_sha256": "fb82ce5dceafee2f21271dcb0df61e36091ba47e78307f1ae632ccab766cc5b1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-057: deny blocks the tool. DOCS-SDKPRETOOL-058: deny displays reason to the user.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "9995a14b0c39c1e18064e70f",
+        "text_sha256": "bc8761797651743b3633b504a126dd0e0619fffd0a6d79ea8484a3675741cb67",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-059: ask prompts user approval in interactive mode.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "438cccfba010013b92880a1d",
+        "text_sha256": "e8abf9ba9ec540fcab24f5e6fff6278ab57371bd4d4022db88fd4fe744a6dd4f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-060: skipPermission true can be set on a safe custom tool definition. DOCS-SDKPRETOOL-061: Skipping is described for trusted tools. DOCS-SDKPRETOOL-062: Skipping is described for app-owned tools. DOCS-SDKPRETOOL-063: Skipping assumes application-constrained inputs. DOCS-SDKPRETOOL-064: Use pre-tool hook for per-call policy checks. DOCS-SDKPRETOOL-065: Use pre-tool hook for argument validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "c155a5a5e02dfa21ef407ab7",
+        "text_sha256": "8d08d1eaf1be374b2816e3dbe660906455c5f308984aad77cf5405249f2cc1ad",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-066: Weather example defines get_weather custom tool. DOCS-SDKPRETOOL-067: Weather tool describes location-based weather. DOCS-SDKPRETOOL-068: Weather argument schema is object. DOCS-SDKPRETOOL-069: Weather location property is string. DOCS-SDKPRETOOL-070: Weather location property is required. DOCS-SDKPRETOOL-071: Weather example sets skipPermission true. DOCS-SDKPRETOOL-072: Weather handler is asynchronous. DOCS-SDKPRETOOL-073: Weather handler returns illustrative forecast. DOCS-SDKPRETOOL-122: Weather sample returns a static sunny string, not an observed weather service result. DOCS-SDKPRETOOL-213: Weather handler destructures location argument. DOCS-SDKPRETOOL-214: Weather forecast interpolates supplied location.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "38242f569ac16416195539d2",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "710a7f4cc84f1cfbd90549d7",
+        "text_sha256": "21723203e4c7ff660174a11c4fd2b30a9a7d7a70cf6c62bf89dd040ca8ff4b66",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-074: TypeScript allow-all creates awaited session with hooks. DOCS-SDKPRETOOL-075: TypeScript allow-all callback is async. DOCS-SDKPRETOOL-076: TypeScript allow-all callback declares input and invocation. DOCS-SDKPRETOOL-077: TypeScript logs invocation sessionId. DOCS-SDKPRETOOL-078: TypeScript logs toolName. DOCS-SDKPRETOOL-079: TypeScript logs arguments as JSON. DOCS-SDKPRETOOL-080: TypeScript returns allow. DOCS-SDKPRETOOL-125: TypeScript logging sample does not redact logged arguments. DOCS-SDKPRETOOL-210: TypeScript allow-all awaits session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "8bff2baa9fc65d6b84b0b90e",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "4e6aa4697dc72292d674e617",
+        "text_sha256": "18a2e2af03e7df5475c38e757570d96c28d9b6c41f9f5a1618f77480a098e37f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-081: Python imports PermissionHandler. DOCS-SDKPRETOOL-082: Python allow-all callback is async. DOCS-SDKPRETOOL-083: Python callback declares input_data and invocation. DOCS-SDKPRETOOL-084: Python reads invocation session_id using snake-case dictionary key. DOCS-SDKPRETOOL-085: Python logs toolName. DOCS-SDKPRETOOL-086: Python logs toolArgs. DOCS-SDKPRETOOL-087: Python returns allow. DOCS-SDKPRETOOL-088: Python creates awaited session with hook. DOCS-SDKPRETOOL-089: Python separately configures approve_all permission requests. DOCS-SDKPRETOOL-126: Python logging sample does not redact logged arguments. DOCS-SDKPRETOOL-130: Python approve_all example is not workspace authority. DOCS-SDKPRETOOL-211: Python allow-all awaits session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "79f8c0692d09d9d11e581e9f",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "8dbbb5324d271d1ef9b15a88",
+        "text_sha256": "e83a47ae550b58c9d316d5dcea278af0d80adefb9622a34bcf8ee8f77449f3eb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-090: Go creates session with SessionConfig hooks. DOCS-SDKPRETOOL-091: Go creation uses context.Background. DOCS-SDKPRETOOL-092: Go callback input is PreToolUseHookInput. DOCS-SDKPRETOOL-093: Go callback invocation is HookInvocation. DOCS-SDKPRETOOL-094: Go callback output is PreToolUseHookOutput pointer. DOCS-SDKPRETOOL-095: Go callback return includes error. DOCS-SDKPRETOOL-096: Go logs invocation SessionID. DOCS-SDKPRETOOL-097: Go logs ToolName. DOCS-SDKPRETOOL-098: Go logs ToolArgs. DOCS-SDKPRETOOL-099: Go returns allow. DOCS-SDKPRETOOL-100: Go returns nil callback error. DOCS-SDKPRETOOL-123: Go discards session-creation error. DOCS-SDKPRETOOL-127: Go logging sample does not redact logged arguments.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "a92a1c5872adc9db84dab3d1",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "da3b031468df04b53c160bac",
+        "text_sha256": "ff45af4eb4a07d17931ab0e5c1ef3828e0a37384032c50d520e914b4177b0e92",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-101: .NET creates awaited session with SessionHooks. DOCS-SDKPRETOOL-102: .NET callback declares input and invocation. DOCS-SDKPRETOOL-103: .NET logs invocation SessionId. DOCS-SDKPRETOOL-104: .NET logs ToolName. DOCS-SDKPRETOOL-105: .NET logs ToolArgs. DOCS-SDKPRETOOL-106: .NET wraps output in Task.FromResult. DOCS-SDKPRETOOL-107: .NET task output is nullable PreToolUseHookOutput. DOCS-SDKPRETOOL-108: .NET returns allow. DOCS-SDKPRETOOL-128: .NET logging sample does not redact logged arguments. DOCS-SDKPRETOOL-212: .NET allow-all awaits session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "016e67836a415f434351dc91",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "be6210dbebeba464119431a1",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-124: Java sample has docs-validate skip marker.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "9070ba0316b19b742132e8dd",
+        "text_sha256": "a92191c59b5ca799754589fbd0e7ea8086d376e0f65531d32d7945e8006cf5fb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-109: Java imports Copilot types. DOCS-SDKPRETOOL-110: Java imports Copilot RPC types. DOCS-SDKPRETOOL-111: Java imports CompletableFuture. DOCS-SDKPRETOOL-112: Java configures pre-tool callback on SessionHooks. DOCS-SDKPRETOOL-113: Java callback declares input and invocation. DOCS-SDKPRETOOL-114: Java logs invocation session ID. DOCS-SDKPRETOOL-115: Java logs tool name. DOCS-SDKPRETOOL-116: Java logs tool arguments. DOCS-SDKPRETOOL-117: Java returns completed future. DOCS-SDKPRETOOL-118: Java uses allow output helper. DOCS-SDKPRETOOL-119: Java creates session with configured hooks. DOCS-SDKPRETOOL-120: Java separately sets APPROVE_ALL permission requests. DOCS-SDKPRETOOL-121: Java waits for session creation with get(). DOCS-SDKPRETOOL-129: Java logging sample does not redact logged arguments. DOCS-SDKPRETOOL-131: Java APPROVE_ALL example is not workspace authority. DOCS-SDKPRETOOL-216: Java allow-all constructs SessionConfig.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "425f24b776d78453e272fefd",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, tab wrapper or lint comments; operative prose/examples mapped separately."
+      },
+      {
+        "candidate_id": "01a7f2e43dada8d9d4b556cc",
+        "text_sha256": "c5233e07d0644ed05f74cde32d57e38cb7e3946c5d3d4d83d212dee35f4b5d36",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-132: Block list includes shell. DOCS-SDKPRETOOL-133: Block list includes bash. DOCS-SDKPRETOOL-134: Block list includes write_file. DOCS-SDKPRETOOL-135: Block list includes delete_file. DOCS-SDKPRETOOL-137: Block pattern checks toolName membership. DOCS-SDKPRETOOL-138: Matching block-list tool is denied. DOCS-SDKPRETOOL-139: Denial reason identifies tool and environment restriction. DOCS-SDKPRETOOL-140: Other tools are allowed. DOCS-SDKPRETOOL-176: Name-list blocking does not establish exhaustive capability prevention. DOCS-SDKPRETOOL-200: Pattern awaits session creation. DOCS-SDKPRETOOL-201: Pattern declares asynchronous pre-tool callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "e57f5b07fc1d670d4e44ba10",
+        "text_sha256": "fcb5fbfef6be17f4f8082aac2f417739dcdae62370ffcd80155a681f017fdaa5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-142: Timeout branch requires toolName shell. DOCS-SDKPRETOOL-143: Timeout branch requires truthy toolArgs. DOCS-SDKPRETOOL-145: Timeout branch allows the tool. DOCS-SDKPRETOOL-146: Timeout branch copies existing arguments. DOCS-SDKPRETOOL-147: Timeout defaults nullish timeout to 30000. DOCS-SDKPRETOOL-148: Timeout comment identifies default as thirty seconds. DOCS-SDKPRETOOL-149: Timeout fallback allows other calls. DOCS-SDKPRETOOL-177: Nullish default preserves zero timeout rather than enforcing a positive minimum. DOCS-SDKPRETOOL-178: Timeout sample shows no schema validation. DOCS-SDKPRETOOL-197: Timeout example asserts command has string type. DOCS-SDKPRETOOL-198: Timeout example asserts timeout is optional. DOCS-SDKPRETOOL-199: Timeout example asserts timeout has number type. DOCS-SDKPRETOOL-202: Pattern awaits session creation. DOCS-SDKPRETOOL-203: Pattern declares asynchronous pre-tool callback. DOCS-SDKPRETOOL-215: Timeout branch installs replacement arguments using modifiedArgs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "324f9752a0831e949351ebbe",
+        "text_sha256": "42dd6e83f94599290aa996d55f4eb9b23e3bcd7eca9214bc11aef0ced0069b6f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-150: Directory example includes illustrative /home/user/projects. DOCS-SDKPRETOOL-151: Directory example includes illustrative /tmp. DOCS-SDKPRETOOL-153: Directory check targets read_file. DOCS-SDKPRETOOL-154: Directory check targets write_file. DOCS-SDKPRETOOL-155: Directory example casts args to path string. DOCS-SDKPRETOOL-156: Directory example tests whether any allowed directory prefix matches. DOCS-SDKPRETOOL-157: Directory comparison uses startsWith. DOCS-SDKPRETOOL-158: No allowed prefix match causes deny. DOCS-SDKPRETOOL-159: Directory denial reason includes requested path. DOCS-SDKPRETOOL-160: Directory denial reason includes allowed directories. DOCS-SDKPRETOOL-161: Directory example allows other calls or matching paths. DOCS-SDKPRETOOL-179: Raw prefix checking does not enforce directory component boundaries. DOCS-SDKPRETOOL-180: Raw prefix checking does not canonicalize traversal segments. DOCS-SDKPRETOOL-181: Raw prefix checking does not resolve symlink destinations. DOCS-SDKPRETOOL-182: Type assertion does not establish runtime path type validation. DOCS-SDKPRETOOL-204: Pattern awaits session creation. DOCS-SDKPRETOOL-205: Pattern declares asynchronous pre-tool callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "be345aaf4cf6c6366e2b71b6",
+        "text_sha256": "af8a24e86cfeeced6f9ee5d416793de1c2a1076075b84959ee27950fe52d9242",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-162: Verbose list includes list_directory. DOCS-SDKPRETOOL-163: Verbose list includes search_files. DOCS-SDKPRETOOL-165: Suppression pattern allows calls. DOCS-SDKPRETOOL-166: Suppression boolean is based on tool-name membership. DOCS-SDKPRETOOL-183: Conversation suppression is not demonstrated deletion from logs or other storage. DOCS-SDKPRETOOL-206: Pattern awaits session creation. DOCS-SDKPRETOOL-207: Pattern declares asynchronous pre-tool callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "9b32541d7f6bbdc0afe5ef2e",
+        "text_sha256": "5d3b78cc80440c5f8dd5b5031fccf14f0a09f8b16a4f105aca7970629451c763",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-168: Context branch matches query_database. DOCS-SDKPRETOOL-169: Context branch allows the tool. DOCS-SDKPRETOOL-170: Context string illustrates PostgreSQL syntax. DOCS-SDKPRETOOL-171: Context string instructs parameterized queries. DOCS-SDKPRETOOL-172: Context fallback allows other tools. DOCS-SDKPRETOOL-184: Parameterization instruction is prompt context, not enforced query construction. DOCS-SDKPRETOOL-208: Pattern awaits session creation. DOCS-SDKPRETOOL-209: Pattern declares asynchronous pre-tool callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "595a4bf816fbc0c570f89d8c",
+        "text_sha256": "d8c53f983f14ae097b2eb007e62941b4a0396ef9bef7bf9f55598a2dd188a45b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-185: Source recommends explicit permission decisions. DOCS-SDKPRETOOL-186: Source notes null still allows execution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "468052bb6022bb47833b826b",
+        "text_sha256": "40efcc1130e271cba70db07f876a56b36d20491f0119a59f604692da896d48fd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-187: Source recommends helpful denial reasons.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "e35ac4b1d459f91f2d1ec598",
+        "text_sha256": "196fdbb7f66fab8d6a0d5d97119ae74a5d51e5e61e6207da6aa7aa9de05e26bc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-173: Denial best-practice example returns deny. DOCS-SDKPRETOOL-174: Denial sample explains approval requirement. DOCS-SDKPRETOOL-175: Denial sample asks user to describe intended outcome.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "6b2cea8211e4cd911657f3fc",
+        "text_sha256": "86f6acfd51c7557e57db5da80547c883bb0c5c6c895acdaab69e7ac1e8186e73",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-188: Modified arguments should maintain expected tool schema.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "c45de38e39c76f1df49ff345",
+        "text_sha256": "34471e66c2b47cd28197194ba4fd566638d452b0681acd621d27f524ccc31095",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-189: Pre-tool hooks run synchronously before each call. DOCS-SDKPRETOOL-190: Source recommends fast pre-tool hooks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "2e14b2c1a92485a73683acae",
+        "text_sha256": "137e09630409c00c97465e8610dd16b00a094599c1f8cd2db25447f33ee51e65",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-191: Source recommends judicious output suppression. DOCS-SDKPRETOOL-192: Suppression prevents model seeing the result. DOCS-SDKPRETOOL-193: Suppression may affect conversation quality.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "66819b5eeea62019f6b902c0",
+        "text_sha256": "62930d51334dcfd405fdfeb544b4195ae684e6ffb91ac40c0774b4298cfd12fa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-194: Hooks index is linked, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "85e2588cc1b3959d933f5726",
+        "text_sha256": "145efc30ee86366a118438ef3fa74baa8285402e60cc7d7ce4e8456edea8ff35",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-195: Post-tool guide is linked, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "85468d3b92fc41152e6906f2",
+        "text_sha256": "fd32214e5d998cf5d1596ad2be9cf284588faf4ec30ee19e7d357e4516bec8c3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPRETOOL-196: Debugging guide is linked, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-pre-tool-use-claims.json"
+      }
+    ]
+  }
+]
