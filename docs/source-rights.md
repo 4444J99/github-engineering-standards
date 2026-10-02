@@ -49,3 +49,31 @@ Actual clearance requires file-specific grants, exceptions, permitted-use decisi
 and attribution duties, plus the applicable authorized distribution decision.
 Published bodies need separate version and rights reconciliation; this pinned
 artifact queue does not cover that denominator.
+
+## Contributor Covenant historical evidence
+
+Historical upstream evidence now narrows the inherited-text question. At commit
+`91532d80ea5f39b6685aff4892bc6854bf2f6d6f` (2022-01-10), the upstream
+[README license section](https://github.com/EthicalSource/contributor_covenant/blob/91532d80ea5f39b6685aff4892bc6854bf2f6d6f/README.md)
+declares Contributor Covenant under CC BY 4.0 and links its
+[license](https://github.com/EthicalSource/contributor_covenant/blob/91532d80ea5f39b6685aff4892bc6854bf2f6d6f/LICENSE.md).
+The same commit's tree contains English versions
+[1.4](https://github.com/EthicalSource/contributor_covenant/blob/91532d80ea5f39b6685aff4892bc6854bf2f6d6f/content/version/1/4/code-of-conduct.md),
+[2.0](https://github.com/EthicalSource/contributor_covenant/blob/91532d80ea5f39b6685aff4892bc6854bf2f6d6f/content/version/2/0/code_of_conduct.md), and
+[2.1](https://github.com/EthicalSource/contributor_covenant/blob/91532d80ea5f39b6685aff4892bc6854bf2f6d6f/content/version/2/1/code_of_conduct.md).
+Their Git blob IDs observed through the upstream tree API are respectively
+`a18dd4b3a25e8280eddee11790375ce6968fea7f`,
+`8f34868eff556be879f81c908ecff3e4ec9a8ee7`, and
+`f346f0b123e2e3de1a20ef0225af7c6c91747b81`.
+The earlier
+[2016 license revision](https://github.com/EthicalSource/contributor_covenant/blob/519ee05a2a6c888129d5318db60893a8238f5c96/LICENSE.md)
+also identifies CC BY 4.0. This evidence is external licensing support, not a
+seventh adopted corpus or an instruction to execute the upstream build process.
+
+Remaining adjudication is narrower than an unknown historic repository license:
+compare each pinned adaptation to its declared version, identify adapter additions
+and their grants, preserve attribution and modification disclosures, and verify
+the intended distribution's compliance. Do not use the current site-source
+Hippocratic license or Contributor Covenant 3.0's CC BY-SA notice to retroactively
+relabel these older texts. No per-file clearance numerator changes from this
+historical declaration alone.
