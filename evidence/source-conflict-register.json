@@ -1,0 +1,43 @@
+{
+  "schema": "ges.source-conflicts.v1",
+  "status": "DRAFT_RECONCILIATION_NOT_POLICY_ACCEPTANCE",
+  "reviewer": "codex:source-review",
+  "records": [
+    {
+      "id": "CONFLICT-ACTION-IMMUTABILITY-001",
+      "source_review": "evidence/source-reviews/wa-continuation-actions-reusability-claims.json",
+      "issue": "Source calls a six-character commit reference immutable while other examples use mutable tags.",
+      "proposed_resolution": "Use the full commit object ID for third-party action identity verification; do not certify abbreviated references or tags as immutable dependencies.",
+      "scope": "Third-party and reusable action dependency integrity; local action content still requires its own provenance and execution review.",
+      "retained_alternatives": "Version tags may convey release intent but do not satisfy immutable identity alone.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-CI-EVIDENCE-001",
+      "source_review": "evidence/source-reviews/wa-continuation-effective-ci-claims.json",
+      "issue": "Illustrative script prints successful test and coverage numbers without executing the corresponding test predicate.",
+      "proposed_resolution": "Require observed command exit status and authoritative test output; printed sample numbers are non-evidence.",
+      "scope": "All test, coverage and acceptance receipts; provider acceptance remains distinct from mocks and local checks.",
+      "retained_alternatives": "Example workflows remain documentation data, not executable verified bindings.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-PRODUCTIVITY-TAXONOMY-001",
+      "source_review": "evidence/source-reviews/wa-continuation-productivity-design-claims.json",
+      "issue": "Four productivity measurement zones can be conflated with four framework layers or five assessment pillars.",
+      "proposed_resolution": "Preserve quality, velocity, developer happiness and business outcomes as measurement zones; retain other taxonomies separately.",
+      "scope": "Measurement profiles, reports and denominators; no category is a substitute for reviewed source coverage.",
+      "retained_alternatives": "Framework layers and pillar organization remain separate source structures.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-CONDUCT-LICENSE-001",
+      "source_review": "evidence/covenant-adaptation-review.json",
+      "issue": "Repository declarations do not uniquely describe mixed Covenant, SustainOSS and adapter expression.",
+      "proposed_resolution": "Preserve component grants and attributions; evaluate adapted SustainOSS expression against its historical CC BY-SA declaration instead of relabeling the whole file MIT or CC BY.",
+      "scope": "jlcanovas conduct-template copying or adaptation; independently authored policy remains separately reviewed.",
+      "retained_alternatives": "Reference-only use without upstream expression is not blanket permission to copy inherited templates.",
+      "policy_accepted": false
+    }
+  ]
+}
