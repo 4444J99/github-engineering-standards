@@ -8,7 +8,7 @@ import json
 import re
 from collections import Counter,defaultdict
 from pathlib import Path
-from .core import dump, digest, load, timestamp, now
+from .core import ROOT, dump, digest, load, timestamp, now
 
 
 def classify(path: str) -> str:
@@ -121,13 +121,40 @@ def build_corpus(snapshot_dir: Path, output: Path, *, include_restricted_text: b
 
 
 def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates: list[dict] | None=None,
-                          controls: list[dict] | None=None, authorized_reviewers: list[str] | None=None) -> dict:
+                          controls: list[dict] | None=None, authorized_reviewers: list[str] | None=None,
+                          evidence_root: Path | None=None) -> dict:
     artifacts=[json.loads(x) for x in artifact_path.read_text().splitlines() if x.strip()]
     reviews=load(review_path)
     by_id={a['artifact_id']:a for a in artifacts}; complete=set(); errors=[]
     candidate_index={c['candidate_id']:c for c in candidates or []}
     control_index={c['id']:c for c in controls or []}
     reviewed_ids=set()
+    evidence_base = (evidence_root or ROOT).resolve()
+    checked_evidence = {}
+
+    def valid_evidence(reference):
+        # Validate advertised references only. Presence is not semantic truth.
+        if not isinstance(reference, str) or not reference.strip():
+            return False
+        if reference in checked_evidence:
+            return checked_evidence[reference]
+        relative = Path(reference)
+        valid = False
+        if (not relative.is_absolute() and '..' not in relative.parts and
+                relative.parts and relative.parts[0] == 'evidence' and
+                relative.suffix == '.json'):
+            target = evidence_base / relative
+            try:
+                symlink = any((evidence_base / Path(*relative.parts[:i])).is_symlink()
+                              for i in range(1, len(relative.parts) + 1))
+                if (not symlink and target.resolve().is_relative_to(evidence_base / 'evidence')
+                        and target.is_file()):
+                    document = json.loads(target.read_text(encoding='utf-8'))
+                    valid = isinstance(document, (dict, list)) and bool(document)
+            except (OSError, ValueError, UnicodeError, RuntimeError):
+                valid = False
+        checked_evidence[reference] = valid
+        return valid
     for r in reviews:
         if not isinstance(r,dict): errors.append('Review record must be an object'); continue
         a=by_id.get(r.get('artifact_id'))
@@ -172,6 +199,10 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates:
         expected={c['candidate_id'] for c in candidates or [] if c['artifact_id']==a['artifact_id']}
         if candidates is None or mapped != expected:
             errors.append(a['path']+': complete candidate accounting is required'); valid=False
+        for record in [r] + [m for m in mappings if isinstance(m, dict)]:
+            for field in ('supporting_evidence', 'supporting_claims', 'independent_audit', 'repair_recheck'):
+                if field in record and not valid_evidence(record[field]):
+                    errors.append(a['path']+': invalid advertised '+field); valid=False
         if not valid: continue
         complete.add(a['artifact_id'])
     return {'reviewed':len(complete),'inventoried':len(artifacts),

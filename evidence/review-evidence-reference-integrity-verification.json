@@ -1,0 +1,60 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/9",
+  "pre_fix_reproduction": {
+    "command": "python -m unittest discover -s tests -p test_review_accounting.py -v",
+    "exit_code": 1,
+    "tests": 13,
+    "failing_test": "test_missing_advertised_evidence_never_counts",
+    "observed": "Missing advertised evidence counted as reviewed1 instead of0"
+  },
+  "post_fix": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 267,
+      "result": "OK; final run after four reviewer-suggested boundary tests added"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 720,
+      "inventory": 13657,
+      "errors": [],
+      "gates_open": 9
+    }
+  ],
+  "reference_preflight": {
+    "advertised_references": 1707,
+    "unique_paths": 76,
+    "missing_paths": 0
+  },
+  "independent_review": {
+    "reviewer": "codex:evaluator_review",
+    "result": "No blocking bug within stated scope; four boundary-test gaps added",
+    "test_gaps_addressed": [
+      "symlinked parent directory",
+      "invalid UTF-8",
+      "valid nonempty array",
+      "cache isolation between calls"
+    ]
+  },
+  "limitations": [
+    "Checks apply to advertised references only, not a new mandatory audit schema.",
+    "Readable nonempty JSON does not prove semantic truth, source identity, independence, licensing or runtime behavior.",
+    "Filesystem inspection is not race-proof against malicious concurrent replacement.",
+    "Existing review count is preserved, not an exhaustive certification."
+  ],
+  "skill_influence": "Testing-patterns guided pre-fix negative reproduction and boundary assertions.",
+  "delivery": "Exact commit/push receipt recorded in issue #9"
+}

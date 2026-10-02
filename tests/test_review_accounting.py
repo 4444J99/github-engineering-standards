@@ -36,13 +36,85 @@ class ReviewAccounting(unittest.TestCase):
         receipts = self.root/'reviews.json'
         receipts.write_text(json.dumps(reviews))
         return coverage_with_reviews(artifacts, receipts, candidates=[self.candidate],
-                                     controls=[self.control], authorized_reviewers=['reviewer'])
+                                     controls=[self.control], authorized_reviewers=['reviewer'],
+                                     evidence_root=self.root)
 
     def test_valid_full_accounting(self):
         self.assertEqual(self.coverage([self.review])['reviewed'], 1)
 
     def test_invalid_mapping_never_counts(self):
         self.review['claim_mappings'] = ['GES-BOGUS-001']
+        self.assertEqual(self.coverage([self.review])['reviewed'], 0)
+
+    def test_missing_advertised_evidence_never_counts(self):
+        self.review['supporting_evidence'] = 'evidence/nonexistent-review-test.json'
+        self.assertEqual(self.coverage([self.review])['reviewed'], 0)
+
+    def evidence(self, content):
+        directory = self.root/'evidence'
+        directory.mkdir(exist_ok=True)
+        target = directory/'support.json'
+        target.write_text(content)
+        return target
+
+    def test_valid_advertised_evidence_counts_without_certifying_truth(self):
+        self.evidence('{"scope": "bounded reference only"}')
+        self.review['supporting_evidence'] = 'evidence/support.json'
+        self.assertEqual(self.coverage([self.review])['reviewed'], 1)
+
+    def test_malformed_empty_or_scalar_evidence_never_counts(self):
+        self.review['supporting_evidence'] = 'evidence/support.json'
+        for content in ('broken', '{}', '[]', 'null', 'true', '"text"'):
+            with self.subTest(content=content):
+                self.evidence(content)
+                self.assertEqual(self.coverage([self.review])['reviewed'], 0)
+
+    def test_unsafe_evidence_paths_never_count(self):
+        target = self.evidence('{"review": "present"}')
+        for reference in (str(target), '../evidence/support.json',
+                          'evidence/../evidence/support.json', '', None, []):
+            with self.subTest(reference=reference):
+                self.review['supporting_evidence'] = reference
+                self.assertEqual(self.coverage([self.review])['reviewed'], 0)
+
+    def test_symlinked_evidence_never_counts(self):
+        target = self.evidence('{"review": "present"}')
+        (self.root/'evidence/link.json').symlink_to(target)
+        self.review['supporting_evidence'] = 'evidence/link.json'
+        self.assertEqual(self.coverage([self.review])['reviewed'], 0)
+
+    def test_candidate_supporting_claims_and_audit_paths_checked(self):
+        for field in ('supporting_claims', 'independent_audit', 'repair_recheck'):
+            with self.subTest(field=field):
+                review = copy.deepcopy(self.review)
+                review['claim_mappings'][0][field] = 'evidence/missing.json'
+                self.assertEqual(self.coverage([review])['reviewed'], 0)
+
+    def test_symlinked_parent_evidence_never_counts(self):
+        self.evidence('{"review": "present"}')
+        outside = self.root/'other'
+        outside.mkdir()
+        (outside/'review.json').write_text('{"review": "present"}')
+        (self.root/'evidence/linked').symlink_to(outside, target_is_directory=True)
+        self.review['supporting_evidence'] = 'evidence/linked/review.json'
+        self.assertEqual(self.coverage([self.review])['reviewed'], 0)
+
+    def test_invalid_utf8_evidence_never_counts(self):
+        target = self.evidence('{}')
+        target.write_bytes(bytes([255]))
+        self.review['supporting_evidence'] = 'evidence/support.json'
+        self.assertEqual(self.coverage([self.review])['reviewed'], 0)
+
+    def test_nonempty_json_array_is_supported(self):
+        self.evidence('[{"scope": "bounded"}]')
+        self.review['supporting_evidence'] = 'evidence/support.json'
+        self.assertEqual(self.coverage([self.review])['reviewed'], 1)
+
+    def test_evidence_cache_does_not_survive_accounting_call(self):
+        target = self.evidence('{"scope": "bounded"}')
+        self.review['supporting_evidence'] = 'evidence/support.json'
+        self.assertEqual(self.coverage([self.review])['reviewed'], 1)
+        target.write_text('{}')
         self.assertEqual(self.coverage([self.review])['reviewed'], 0)
 
     def test_unaccounted_candidate_never_counts(self):
