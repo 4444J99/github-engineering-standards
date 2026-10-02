@@ -22,13 +22,106 @@
       "rights": "Diagram origin and image-specific permission are unresolved; resemblance to an external supply-chain threat model is not attribution or clearance.",
       "operative_source_claims": [
         {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-1",
+          "statement": "Submitting an unauthorized source change is attack point A.",
+          "location": "Attack point A",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-1"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-2",
+          "statement": "Compromising the source repository is attack point B.",
+          "location": "Attack point B",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-1"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-3",
+          "statement": "Building modified source is attack point C.",
+          "location": "Attack point C",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-1"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-4",
+          "statement": "Compromising the build process is attack point D.",
+          "location": "Attack point D",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-5",
+          "statement": "Introducing a compromised dependency is attack point E.",
+          "location": "Attack point E",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-6",
+          "statement": "Publishing an altered package is attack point F.",
+          "location": "Attack point F",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-7",
+          "statement": "Compromising the package repository is attack point G.",
+          "location": "Attack point G",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-1-ATOMIC-8",
+          "statement": "Consuming a compromised package is attack point H.",
+          "location": "Attack point H",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-1-2"
+        }
+      ],
+      "grouped_context": [
+        {
           "id": "WA-ASSET-DIAGRAM-1-1",
           "statement": "A submitted unauthorized change, a compromised source store and a build consuming modified source are distinct source-integrity threats.",
           "location": "Entire diagram and relevant labeled boundaries/arrows",
           "strength": "Illustrative reference, not adopted normative policy",
           "mapping_status": "PROPOSED_ONLY",
           "canonical_control_ids": [],
-          "limitations": "No linked-page completeness, implementation proof or license clearance."
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "status": "GROUPED_CONTEXT_REPLACED",
+          "replaced_with": [
+            "WA-ASSET-DIAGRAM-1-ATOMIC-1",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-2",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-3",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-4",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-5",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-6",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-7",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-8"
+          ]
         },
         {
           "id": "WA-ASSET-DIAGRAM-1-2",
@@ -37,7 +130,18 @@
           "strength": "Illustrative reference, not adopted normative policy",
           "mapping_status": "PROPOSED_ONLY",
           "canonical_control_ids": [],
-          "limitations": "No linked-page completeness, implementation proof or license clearance."
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "status": "GROUPED_CONTEXT_REPLACED",
+          "replaced_with": [
+            "WA-ASSET-DIAGRAM-1-ATOMIC-1",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-2",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-3",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-4",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-5",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-6",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-7",
+            "WA-ASSET-DIAGRAM-1-ATOMIC-8"
+          ]
         }
       ]
     },
@@ -67,15 +171,6 @@
           "limitations": "No linked-page completeness, implementation proof or license clearance."
         },
         {
-          "id": "WA-ASSET-DIAGRAM-2-2",
-          "statement": "Service accounts without MFA, SSH credentials, third-party integrations, federated sessions and anonymous public access introduce separate identity or boundary considerations.",
-          "location": "Entire diagram and relevant labeled boundaries/arrows",
-          "strength": "Illustrative reference, not adopted normative policy",
-          "mapping_status": "PROPOSED_ONLY",
-          "canonical_control_ids": [],
-          "limitations": "No linked-page completeness, implementation proof or license clearance."
-        },
-        {
           "id": "WA-ASSET-DIAGRAM-2-3",
           "statement": "GitHub authentication and an Actions bot are represented separately; their presence does not establish equivalent privileges or local enforcement.",
           "location": "Entire diagram and relevant labeled boundaries/arrows",
@@ -83,6 +178,75 @@
           "mapping_status": "PROPOSED_ONLY",
           "canonical_control_ids": [],
           "limitations": "No linked-page completeness, implementation proof or license clearance."
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-2-ATOMIC-1",
+          "statement": "A non-MFA service account is shown inside the customer trust boundary.",
+          "location": "Labeled identity node and its boundary/access arrows",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-2-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-2-ATOMIC-2",
+          "statement": "SSH credentials are shown outside the principal trust boundary with cross-boundary access.",
+          "location": "Labeled identity node and its boundary/access arrows",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-2-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-2-ATOMIC-3",
+          "statement": "Third-party applications have credential paths crossing customer boundaries.",
+          "location": "Labeled identity node and its boundary/access arrows",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-2-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-2-ATOMIC-4",
+          "statement": "An Okta session connects to the customer's GitHub context.",
+          "location": "Labeled identity node and its boundary/access arrows",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-2-2"
+        },
+        {
+          "id": "WA-ASSET-DIAGRAM-2-ATOMIC-5",
+          "statement": "Anonymous users access the depicted public repository.",
+          "location": "Labeled identity node and its boundary/access arrows",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "derived_from_grouped_context": "WA-ASSET-DIAGRAM-2-2"
+        }
+      ],
+      "grouped_context": [
+        {
+          "id": "WA-ASSET-DIAGRAM-2-2",
+          "statement": "Service accounts without MFA, SSH credentials, third-party integrations, federated sessions and anonymous public access introduce separate identity or boundary considerations.",
+          "location": "Entire diagram and relevant labeled boundaries/arrows",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "limitations": "No linked-page completeness, implementation proof or license clearance.",
+          "status": "GROUPED_CONTEXT_REPLACED",
+          "replaced_with": [
+            "WA-ASSET-DIAGRAM-2-ATOMIC-1",
+            "WA-ASSET-DIAGRAM-2-ATOMIC-2",
+            "WA-ASSET-DIAGRAM-2-ATOMIC-3",
+            "WA-ASSET-DIAGRAM-2-ATOMIC-4",
+            "WA-ASSET-DIAGRAM-2-ATOMIC-5"
+          ]
         }
       ]
     },
