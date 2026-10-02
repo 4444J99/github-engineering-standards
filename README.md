@@ -73,6 +73,12 @@ No credentials are sent. Acquisition does not establish pinned source identity,
 semantic review, rights clearance or acceptance. Recovery reporting accepts this
 cache through `--rendered-directory .cache/rendered-docs`.
 
+Recovery can optionally validate independently audited, digest-bound published
+assurance receipts through paired `--published-assurance` and
+`--published-assurance-policy` inputs. Source-disposition permissions do not grant
+certification authority. No real assurance receipt or authority grant is supplied;
+missing evidence stays unknown. See [receipt contract](docs/published-assurance-receipts.md).
+
 ### Render a template
 
 ```sh
@@ -101,7 +107,7 @@ The large source corpus and page-level review queues are workflow artifacts and 
 
 Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; per-file licensing clearance; all upstream scanner predicates implemented as local deterministic checks; all platform feature/plan adapters; live human-review and exception services; native protection activation and cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
 
-The recovery suite passed 270 local tests on 2026-10-02; this does not imply 95 controls implemented
+The recovery suite passed 294 local tests on 2026-10-02; this does not imply 95 controls implemented
 as automatic checks or 150,903 candidates reviewed. Current catalog controls remain
 `REVIEWED_DRAFT`; 593 non-adopted generated proposals are preserved separately in
 `controls/review_queue.json`. No native policy is silently activated. See

@@ -34,7 +34,8 @@ def evaluate_gate(name: str, completed: int, denominator: int | None,
 
 
 def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None,
-           rendered_directory: Path | None=None) -> dict:
+           rendered_directory: Path | None=None, published_assurance: Path | None=None,
+           published_assurance_policy: Path | None=None) -> dict:
     controls = load(ROOT/'controls/catalog.json')
     queue = load(ROOT/'controls/review_queue.json')
     pins = load(ROOT/'sources/sources.lock.json')['sources']
@@ -89,13 +90,21 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         verified = cached_pages(rendered_directory, pages, page_ledger_sha)
         rendered.extend((r['version'], r['path']) for r in verified.values())
     acquired = len(page_keys & set(rendered))
+    if (published_assurance is None) != (published_assurance_policy is None):
+        raise ValueError('Published assurance requires both receipt and authority policy inputs')
+    from .published_assurance import assurance_accounting
+    assurance = assurance_accounting(
+        corpus/'published-page-ledger.json', rendered_directory, corpus/'artifacts.jsonl',
+        load(published_assurance) if published_assurance is not None else [],
+        load(published_assurance_policy) if published_assurance_policy is not None else {},
+        {p['repository']: p['commit'] for p in pins}, evidence_root=ROOT)
     accepted = sum(c['status'] == 'ACCEPTED' for c in controls)
     canonical_ids = {c['id'] for c in controls}
     if canonical_ids & {c['id'] for c in queue} or len({c['id'] for c in queue}) != len(queue):
         raise ValueError('Review queue IDs duplicate canonical or proposal IDs')
     gates = [
         ('exhaustive_artifact_accounting',review_result['reviewed'],inventories,'Every artifact has a validated reviewed disposition and independent omission audit'),
-        ('published_content_assurance',0,len(pages),'Every page has rendered/version/dependency review; retrieval alone is insufficient'),
+        ('published_content_assurance',assurance['completed'],len(pages),'Every page has rendered/version/dependency review; retrieval alone is insufficient'),
         ('semantic_extraction',review_result['reviewed'],inventories,'Full-artifact omission review and atomic claims; candidate count is not a claim denominator'),
         ('consolidation',0,len(requirements),'All structured occurrences mapped with exact provenance; remaining unstructured claims also reviewed'),
         ('generalization',0,len(controls)+len(queue),'Every definition and proposal has reviewed scope, policy, parameters and conflicts'),
@@ -115,7 +124,7 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         'published_content_assurance': {
             'all_bodies_durably_acquired': acquired == len(pages),
             'all_source_paths_reconciled': all(p['source_matches'] for p in pages),
-            'version_include_and_render_assurance': None},
+            'version_include_and_render_assurance': assurance['version_include_and_render_assurance']},
         'semantic_extraction': {'atomic_claim_fidelity_audit': None,
                                 'independent_source_to_claim_omission_audit': None},
         'consolidation': {'exact_claim_mapping_and_conflict_review': None,
@@ -142,6 +151,7 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             'candidate_blocks':candidates,'structured_requirements':len(requirements),
             'structured_requirements_by_source':dict(Counter(r['source'] for r in requirements)),
             'published_pages':len(pages),'rendered_bodies_acquired':acquired,
+            'published_assurance_accounting': assurance,
             'unresolved_published_pages':[{'page_id':r['page_id'],'version':r['version'],'path':r['path']}
                                           for r in pages if not r['source_matches']],
             'ledger':ledger,'catalog_controls':len(controls),'catalog_digest':digest(controls),
@@ -162,8 +172,13 @@ if __name__ == '__main__':
     p.add_argument('--review-policy',type=Path)
     p.add_argument('--rendered-directory',type=Path,
                    help='Integrity-checked resumable body cache; acquisition is not semantic assurance')
+    p.add_argument('--published-assurance',type=Path,
+                   help='Optional digest-bound page assurance receipt array')
+    p.add_argument('--published-assurance-policy',type=Path,
+                   help='Separately approved certification/independent-audit authority, not source disposition policy')
     args=p.parse_args()
-    report=status(args.sources,args.corpus,args.reviews,args.review_policy,args.rendered_directory)
+    report=status(args.sources,args.corpus,args.reviews,args.review_policy,args.rendered_directory,
+                  args.published_assurance,args.published_assurance_policy)
     dump(args.output,report)
     print(json.dumps({'project_complete':report['project_complete'],
                       'gates_open':sum(g['status'] != 'CLOSED' for g in report['gates']),
