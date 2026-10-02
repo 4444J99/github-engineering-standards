@@ -33,3 +33,19 @@ and code remain separately declared license scopes; no file-specific exceptions,
 third-party authority, publisher trademarks or adapted-material distribution are
 cleared by this review. These observations are not legal advice or permission to
 publish. Rights-cleared coverage remains zero.
+
+## Complete per-artifact work queue
+
+```sh
+python -m ges.rights --artifacts .cache/corpus/artifacts.jsonl --findings evidence/rights-review-queue.json --output .cache/corpus/rights-triage.json
+```
+
+The triage queue covers all 13,657 pinned artifacts, retaining the 22 existing
+file-specific findings. It checks source pins, artifact uniqueness and finding
+digests. Unreviewed files have no inferred repository license. Every record
+remains pending: this queue neither grants rights nor authorizes distribution.
+The workflow queue stays in the ignored cache; its generator and tests are tracked.
+Actual clearance requires file-specific grants, exceptions, permitted-use decisions
+and attribution duties, plus the applicable authorized distribution decision.
+Published bodies need separate version and rights reconciliation; this pinned
+artifact queue does not cover that denominator.
