@@ -2,40 +2,258 @@
   "schema": "ges.reference-consolidation.v1",
   "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T01:32:18Z",
-  "source_documents": ["evidence/source-reviews/docs-custom-pattern-lifecycle-claims.json", "evidence/source-reviews/docs-custom-pattern-prerequisites-claims.json", "evidence/source-reviews/docs-custom-pattern-navigation-claims.json"],
-  "input_claims": 48,
+  "reviewed_at": "2026-10-02T02:35:30Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-custom-pattern-lifecycle-claims.json",
+    "evidence/source-reviews/docs-custom-pattern-prerequisites-claims.json",
+    "evidence/source-reviews/docs-custom-pattern-navigation-claims.json",
+    "evidence/source-reviews/docs-custom-pattern-definition-claims.json",
+    "evidence/source-reviews/docs-custom-pattern-definition-dependencies-claims.json"
+  ],
+  "input_claims": 94,
   "groups": [
-    {"id":"PATTERN-APPLICABILITY","claims":["DOCS-PAT-001","DOCS-PAT-002","DOCS-PATDEP-001"],"decision":"Keep declared product applicability, matching purpose and eligible role descriptions separate. None proves effective target authorization or feature availability."},
-    {"id":"PATTERN-CREATOR-AUTHORITY","claims":["DOCS-PAT-003","DOCS-PAT-004","DOCS-PAT-005","DOCS-PAT-016","DOCS-PATDEP-003","DOCS-PATDEP-004"],"decision":"Enterprise creator-only editing, dry runs and enablement coexist with repository administration requirements. Enterprise ownership does not automatically establish organization or repository dry-run authority."},
-    {"id":"PATTERN-EDIT-PUBLISH","claims":["DOCS-PAT-006","DOCS-PAT-007","DOCS-PAT-008"],"decision":"Distinguish edit-induced alert closure, non-alert-generating dry run and reviewed publication. Editing alone is not successful publication or erasure."},
-    {"id":"PATTERN-REMOVE-ALERT-LIFECYCLE","claims":["DOCS-PAT-010","DOCS-PAT-011","DOCS-PAT-012","DOCS-PAT-013"],"decision":"Require an explicit alert-handling choice and asynchronous completion evidence. Pinned UI terminology is ambiguous; preserve the alert-deletion conflict record rather than map close to erase."},
-    {"id":"PATTERN-SCOPED-PRECONDITIONS","claims":["DOCS-PAT-014","DOCS-PAT-015","DOCS-PAT-017","DOCS-PAT-018","DOCS-PATDEP-005","DOCS-PATDEP-008","DOCS-PATDEP-011"],"decision":"Preserve enterprise, organization and repository prerequisites individually. Organization policy and ordinary secret-scanning enablement do not alone establish effective repository push protection."},
-    {"id":"PATTERN-PUBLICATION-VISIBILITY","claims":["DOCS-PATDEP-002","DOCS-PATDEP-007"],"decision":"Two equivalent published-pattern visibility assertions retain their distinct source occurrences; a visible enable button is not observed blocking."},
-    {"id":"PATTERN-CHANGE-IMPACT","claims":["DOCS-PATDEP-006","DOCS-PATDEP-009","DOCS-PATDEP-012"],"decision":"Repeated disruption warnings are one shared risk proposition with three retained source occurrences. Dry-run and false-positive assessment remain required proposal evidence."},
-    {"id":"PATTERN-UI-ENABLE-DISABLE","claims":["DOCS-PAT-009","DOCS-PAT-019","DOCS-PAT-020","DOCS-PAT-021","DOCS-PATDEP-010"],"decision":"Retain scope-specific UI steps and optional enablement strength. Enablement, disablement, pattern removal and actual enforcement are distinct states."},
-    {"id":"PATTERN-OWNING-SCOPE-NAVIGATION","claims":["DOCS-PATNAV-001","DOCS-PATNAV-002","DOCS-PATNAV-003","DOCS-PATNAV-004"],"decision":"Resolve the owning scope and exact pattern before navigating; a similarly named pattern in another scope is not equivalent evidence."},
-    {"id":"PATTERN-ENTERPRISE-NAVIGATION-VERSION","claims":["DOCS-PATNAV-005","DOCS-PATNAV-006","DOCS-PATNAV-007","DOCS-PATNAV-008"],"decision":"Preserve mutually exclusive GHES and cloud navigation branches. Policy-area product labels remain unresolved dependencies, not hardcoded universal selectors."},
-    {"id":"PATTERN-ORGANIZATION-NESTED-NAVIGATION","claims":["DOCS-PATNAV-009","DOCS-PATNAV-010","DOCS-PATNAV-011"],"decision":"Retain the nested organization Settings include and fallback menu; a fallback locates a tab but does not bypass role requirements."},
-    {"id":"PATTERN-REPOSITORY-NAVIGATION-VERSION","claims":["DOCS-PATNAV-012","DOCS-PATNAV-013","DOCS-PATNAV-014","DOCS-PATNAV-015"],"decision":"Keep repository selection, Settings fallback and feature-conditioned security label distinct. The fpt/ghec feature declaration must not be generalized to GHES without actual version resolution."}
+    {
+      "id": "PATTERN-APPLICABILITY",
+      "claims": [
+        "DOCS-PAT-001",
+        "DOCS-PAT-002",
+        "DOCS-PATDEP-001"
+      ],
+      "decision": "Keep declared product applicability, matching purpose and eligible role descriptions separate. None proves effective target authorization or feature availability."
+    },
+    {
+      "id": "PATTERN-CREATOR-AUTHORITY",
+      "claims": [
+        "DOCS-PAT-003",
+        "DOCS-PAT-004",
+        "DOCS-PAT-005",
+        "DOCS-PAT-016",
+        "DOCS-PATDEP-003",
+        "DOCS-PATDEP-004"
+      ],
+      "decision": "Enterprise creator-only editing, dry runs and enablement coexist with repository administration requirements. Enterprise ownership does not automatically establish organization or repository dry-run authority."
+    },
+    {
+      "id": "PATTERN-EDIT-PUBLISH",
+      "claims": [
+        "DOCS-PAT-006",
+        "DOCS-PAT-007",
+        "DOCS-PAT-008"
+      ],
+      "decision": "Distinguish edit-induced alert closure, non-alert-generating dry run and reviewed publication. Editing alone is not successful publication or erasure."
+    },
+    {
+      "id": "PATTERN-REMOVE-ALERT-LIFECYCLE",
+      "claims": [
+        "DOCS-PAT-010",
+        "DOCS-PAT-011",
+        "DOCS-PAT-012",
+        "DOCS-PAT-013"
+      ],
+      "decision": "Require an explicit alert-handling choice and asynchronous completion evidence. Pinned UI terminology is ambiguous; preserve the alert-deletion conflict record rather than map close to erase."
+    },
+    {
+      "id": "PATTERN-SCOPED-PRECONDITIONS",
+      "claims": [
+        "DOCS-PAT-014",
+        "DOCS-PAT-015",
+        "DOCS-PAT-017",
+        "DOCS-PAT-018",
+        "DOCS-PATDEP-005",
+        "DOCS-PATDEP-008",
+        "DOCS-PATDEP-011"
+      ],
+      "decision": "Preserve enterprise, organization and repository prerequisites individually. Organization policy and ordinary secret-scanning enablement do not alone establish effective repository push protection."
+    },
+    {
+      "id": "PATTERN-PUBLICATION-VISIBILITY",
+      "claims": [
+        "DOCS-PATDEP-002",
+        "DOCS-PATDEP-007"
+      ],
+      "decision": "Two equivalent published-pattern visibility assertions retain their distinct source occurrences; a visible enable button is not observed blocking."
+    },
+    {
+      "id": "PATTERN-CHANGE-IMPACT",
+      "claims": [
+        "DOCS-PATDEP-006",
+        "DOCS-PATDEP-009",
+        "DOCS-PATDEP-012"
+      ],
+      "decision": "Repeated disruption warnings are one shared risk proposition with three retained source occurrences. Dry-run and false-positive assessment remain required proposal evidence."
+    },
+    {
+      "id": "PATTERN-UI-ENABLE-DISABLE",
+      "claims": [
+        "DOCS-PAT-009",
+        "DOCS-PAT-019",
+        "DOCS-PAT-020",
+        "DOCS-PAT-021",
+        "DOCS-PATDEP-010"
+      ],
+      "decision": "Retain scope-specific UI steps and optional enablement strength. Enablement, disablement, pattern removal and actual enforcement are distinct states."
+    },
+    {
+      "id": "PATTERN-OWNING-SCOPE-NAVIGATION",
+      "claims": [
+        "DOCS-PATNAV-001",
+        "DOCS-PATNAV-002",
+        "DOCS-PATNAV-003",
+        "DOCS-PATNAV-004"
+      ],
+      "decision": "Resolve the owning scope and exact pattern before navigating; a similarly named pattern in another scope is not equivalent evidence."
+    },
+    {
+      "id": "PATTERN-ENTERPRISE-NAVIGATION-VERSION",
+      "claims": [
+        "DOCS-PATNAV-005",
+        "DOCS-PATNAV-006",
+        "DOCS-PATNAV-007",
+        "DOCS-PATNAV-008"
+      ],
+      "decision": "Preserve mutually exclusive GHES and cloud navigation branches. Policy-area product labels remain unresolved dependencies, not hardcoded universal selectors."
+    },
+    {
+      "id": "PATTERN-ORGANIZATION-NESTED-NAVIGATION",
+      "claims": [
+        "DOCS-PATNAV-009",
+        "DOCS-PATNAV-010",
+        "DOCS-PATNAV-011"
+      ],
+      "decision": "Retain the nested organization Settings include and fallback menu; a fallback locates a tab but does not bypass role requirements."
+    },
+    {
+      "id": "PATTERN-REPOSITORY-NAVIGATION-VERSION",
+      "claims": [
+        "DOCS-PATNAV-012",
+        "DOCS-PATNAV-013",
+        "DOCS-PATNAV-014",
+        "DOCS-PATNAV-015"
+      ],
+      "decision": "Keep repository selection, Settings fallback and feature-conditioned security label distinct. The fpt/ghec feature declaration must not be generalized to GHES without actual version resolution."
+    },
+    {
+      "id": "PATTERN-AI-GENERATION-SCOPE",
+      "claims": [
+        "DOCS-PATDEF-003",
+        "DOCS-PATDEF-004",
+        "DOCS-PATDEF-005",
+        "DOCS-PATDEFDEP-001",
+        "DOCS-PATDEFDEP-002"
+      ],
+      "decision": "AI generation feature/version and pinned preview context remain distinct from authoring input and optional sample strings. No real-secret submission, AI activation, accuracy or current availability inferred."
+    },
+    {
+      "id": "PATTERN-DEFINITION-ENTITLEMENT-AUTHORITY",
+      "claims": [
+        "DOCS-PATDEF-001",
+        "DOCS-PATDEF-002",
+        "DOCS-PATDEF-006",
+        "DOCS-PATDEF-012",
+        "DOCS-PATDEF-013",
+        "DOCS-PATDEF-018",
+        "DOCS-PATDEF-019",
+        "DOCS-PATDEF-020",
+        "DOCS-PATDEFDEP-019"
+      ],
+      "decision": "Retain organization-owned Team/Enterprise entitlement, repository Secret Protection prerequisite, organization scanning target set, GHES-only enterprise prerequisite and creator-only authority separately. Product metadata and enterprise ownership do not prove effective actor access or approve feature/cost changes."
+    },
+    {
+      "id": "PATTERN-EXPRESSION-DETAILS",
+      "claims": [
+        "DOCS-PATDEF-007",
+        "DOCS-PATDEF-021",
+        "DOCS-PATDEFDEP-003",
+        "DOCS-PATDEFDEP-004",
+        "DOCS-PATDEFDEP-005",
+        "DOCS-PATDEFDEP-006",
+        "DOCS-PATDEFDEP-018"
+      ],
+      "decision": "Pattern name, regex, surrounding requirements, sample testing and new-pattern operation are independent inputs. An example match cannot certify recall, false-positive rate, production safety or correct enforcement."
+    },
+    {
+      "id": "PATTERN-DRY-RUN-COVERAGE-REVISION",
+      "claims": [
+        "DOCS-PATDEF-008",
+        "DOCS-PATDEF-014",
+        "DOCS-PATDEF-022",
+        "DOCS-PATDEFDEP-009",
+        "DOCS-PATDEFDEP-010",
+        "DOCS-PATDEFDEP-011",
+        "DOCS-PATDEFDEP-012",
+        "DOCS-PATDEFDEP-013",
+        "DOCS-PATDEFDEP-014",
+        "DOCS-PATDEFDEP-015",
+        "DOCS-PATDEFDEP-016",
+        "DOCS-PATDEFDEP-017"
+      ],
+      "decision": "Dry runs intentionally generate no alerts. Preserve exact pattern revision, selected repository set, all-organization alternative, ten-repository selection limits and 1,000-result display sample. Retest changed expressions; sample results and screenshots cannot certify complete matches, enterprise coverage or completed testing."
+    },
+    {
+      "id": "PATTERN-PUBLISH-ENABLE-SEPARATION",
+      "claims": [
+        "DOCS-PATDEF-009",
+        "DOCS-PATDEF-010",
+        "DOCS-PATDEF-011",
+        "DOCS-PATDEF-015",
+        "DOCS-PATDEF-023",
+        "DOCS-PATDEFDEP-007",
+        "DOCS-PATDEFDEP-008"
+      ],
+      "decision": "Successful dry run, explicit publication, visible Enable control and optional scope-specific push enablement remain separate states. Publication and generic post-creation scanning are not observed push blocking."
+    },
+    {
+      "id": "PATTERN-POST-CREATION-SCAN-RESPONSE",
+      "claims": [
+        "DOCS-PATDEF-016",
+        "DOCS-PATDEF-017",
+        "DOCS-PATDEF-024",
+        "DOCS-PATDEF-025",
+        "DOCS-PATDEF-026",
+        "DOCS-PATDEFDEP-020"
+      ],
+      "decision": "Retain entire-history/all-present-branch description within the eligible repository set and independent alert-recipient/access assertions. Enterprise description explicitly excludes repositories without Secret Protection; no scan completion, notification delivery, credential revocation or absent-branch coverage inferred."
+    }
   ],
   "binding_proposal": {
     "canonical_mapping": "UNMAPPED_POLICY_DECISION_REQUIRED",
     "related_control": "GES-SEC-004",
     "mapping_equivalence_verified": false,
     "assessment_default": "READ_ONLY",
-    "required_parameters": ["exact product version", "target repository and owning organization/enterprise", "pattern identity and revision", "credential type and intended detection purpose", "required push-protection scope", "authorized reviewer and accountable response owner"],
-    "read_only_evidence": ["effective feature availability and actor permissions", "pattern publication state and revision", "enterprise and repository effective push-protection settings", "dry-run results and false-positive review", "response and revocation procedure with accountable ownership"],
+    "required_parameters": [
+      "exact product version",
+      "target repository and owning organization/enterprise",
+      "pattern identity and revision",
+      "credential type and intended detection purpose",
+      "required push-protection scope",
+      "authorized reviewer and accountable response owner"
+    ],
+    "read_only_evidence": [
+      "effective feature availability and actor permissions",
+      "pattern publication state and revision",
+      "enterprise and repository effective push-protection settings",
+      "dry-run results and false-positive review",
+      "response and revocation procedure with accountable ownership"
+    ],
     "behavior_evidence": "Separate approved positive, negative and bypass tests must show actual blocking for the chosen pattern and repository. Settings alone cannot PASS an enforcement binding.",
     "mutation_boundary": "No scanner, permission, protection or deletion change is authorized by this proposal. A future approved plan/diff/apply/verify adapter must use explicit alert handling and concurrency-safe pattern identity; destructive defaults must not be inherited silently.",
     "unknown_handling": "Missing access, unresolved versions, unavailable feature data and incomplete asynchronous processing remain UNKNOWN or MANUAL_REVIEW, never PASS.",
-    "template_review_required": "Credential-response and applicability templates need review before canonical adoption; PII handling, erasure and regulatory compliance require separate purpose-specific evidence."
+    "template_review_required": "Credential-response and applicability templates need review before canonical adoption; PII handling, erasure and regulatory compliance require separate purpose-specific evidence.",
+    "dry_run_contract": "Retain exact expression revision and target-set inventory, total match count if authoritative data permits, displayed sample and truncation, positive/negative examples and false-positive review. Ten selected repositories and a 1,000-result display cap are not whole-estate or all-match certification; missing totals remain unverified. Retest after expression changes."
   },
   "conflict_record": "CONFLICT-SECRET-ALERT-DELETION-001",
   "remaining_dependency_work": {
     "full_article_accounting_certified": false,
     "published_instances_reviewed": false,
-    "items": ["Resolve referenced product and secret-scanning variables at the locked pin", "Review linked pattern-definition, push-protection, organization-security and enterprise-role pages", "Inspect linked screenshots and determine their per-file rights", "Resolve feature conditionals per published version and compare actual acquired bodies", "Account for every article and reusable candidate plus non-candidate semantic content", "Independent source-to-claim omission and atomic-fidelity audit"]
+    "items": [
+      "Resolve referenced product and secret-scanning variables at the locked pin",
+      "Review linked pattern-definition, push-protection, organization-security and enterprise-role pages",
+      "Inspect linked screenshots and determine their per-file rights",
+      "Resolve feature conditionals per published version and compare actual acquired bodies",
+      "Account for every article and reusable candidate plus non-candidate semantic content",
+      "Independent source-to-claim omission and atomic-fidelity audit",
+      "Review new pattern-details syntax, AI generation, dry-run result and selected-repository dependencies with complete candidate accounting"
+    ]
   },
   "accepted_policy": false,
   "rights_cleared": false,
