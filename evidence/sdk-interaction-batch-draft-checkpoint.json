@@ -1,0 +1,72 @@
+{
+  "schema_version": "ges.source-review-batch-checkpoint.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/2",
+  "reviewer": "codex:source-review",
+  "recorded_at": "2026-10-02T14:15:15Z",
+  "status": "DRAFT_EXTRACTION_AND_IMAGE_AUDIT_CHECKPOINT",
+  "baseline_reviewed_artifacts": 712,
+  "inventory_artifacts": 13657,
+  "new_completed_artifacts": 0,
+  "full_artifact_receipts_created": false,
+  "measurement_window": {
+    "first_recorded_clock": "2026-10-02T14:08:55Z",
+    "checkpoint_clock": "2026-10-02T14:15:15Z",
+    "elapsed_seconds": 380,
+    "limitation": "Preparation and prior225-record image draft precede this window; this is not full batch elapsed time or an overall completion estimate."
+  },
+  "draft_records": [
+    {
+      "path": "evidence/source-reviews/docs-sdk-image-input-claims.json",
+      "records": 225,
+      "source_lines": 368,
+      "remaining": "Apply four split proposals and seven omissions; independent recheck; candidate disposition and consolidation."
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-skills-claims.json",
+      "records": 241,
+      "source_lines": 394,
+      "remaining": "Root independent source audit; repairs/recheck if required; candidate disposition and consolidation."
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json",
+      "records": 331,
+      "source_lines": 574,
+      "remaining": "Independent source audit; repairs/recheck if required; candidate disposition and consolidation."
+    }
+  ],
+  "total_draft_records": 797,
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 255,
+      "result": "OK; expected synthetic published_docs ERROR negative-fixture output does not describe live acquisition."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true,
+      "reference_claims": 44053,
+      "source_artifacts": 686,
+      "semantic_truth_certified": false,
+      "omission_completeness_certified": false
+    }
+  ],
+  "independent_audit": "evidence/sdk-sdk-interaction-batch-independent-audit.json",
+  "audit_design": "Compact exact source/claim hashes, reviewed IDs and only actionable changed-record findings; committed draft input provides durable audit provenance without repeated full snapshots.",
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "global_gate_closed": false,
+  "project_complete": false
+}
