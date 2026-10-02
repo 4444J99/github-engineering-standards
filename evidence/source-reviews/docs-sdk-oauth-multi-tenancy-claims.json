@@ -3,7 +3,7 @@
   "source": "github/docs",
   "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T04:53:07Z",
+  "reviewed_at": "2026-10-02T05:02:01Z",
   "review_scope": "Complete330-line OAuth setup and352-line multi-tenancy articles read, including all code languages, normative rules, tables, metadata and diagram references. Diagrams remain separately unreviewed assets. No OAuth exchange, app/secret creation, token/environment change, command, deletion or inference was executed. Source claims remain non-adopted; no runtime, rights or independent omission certification.",
   "claims": [
     {
@@ -184,7 +184,13 @@
       "end_line": 47,
       "statement": "The source procedure records a client ID and generates a client secret; this is not authorization to generate or expose credentials.",
       "source_strength": "PROCEDURE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-020-A01",
+        "DOCS-SDKSETUP-020-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-021",
@@ -238,7 +244,13 @@
       "end_line": 62,
       "statement": "The exchange example requests and sends JSON.",
       "source_strength": "EXAMPLE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-026-A01",
+        "DOCS-SDKSETUP-026-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-027",
@@ -544,7 +556,13 @@
       "end_line": 140,
       "statement": "The Go example starts the client and defers shutdown.",
       "source_strength": "EXAMPLE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-060-A01",
+        "DOCS-SDKSETUP-060-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-061",
@@ -562,7 +580,13 @@
       "end_line": 162,
       "statement": "The .NET example uses async-disposable client and session lifetimes.",
       "source_strength": "EXAMPLE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-062-A01",
+        "DOCS-SDKSETUP-062-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-063",
@@ -614,7 +638,7 @@
       "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
       "start_line": 225,
       "end_line": 226,
-      "statement": "The membership example tests the returned array for a matching organization login; it does not demonstrate pagination, error handling or permission completeness.",
+      "statement": "The membership example tests returned organization logins for a match; it does not inspect HTTP status, validate array shape or demonstrate pagination, permission completeness or exhaustive membership authorization.",
       "source_strength": "EXAMPLE",
       "accepted_policy": false
     },
@@ -652,7 +676,13 @@
       "end_line": 246,
       "statement": "The EMU example supplies an EMU user token and disables logged-in fallback.",
       "source_strength": "EXAMPLE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-072-A01",
+        "DOCS-SDKSETUP-072-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-073",
@@ -696,7 +726,7 @@
       "start_line": 263,
       "end_line": 263,
       "statement": "The source assigns token storage responsibility to the application.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "source_strength": "REQUIREMENT",
       "accepted_policy": false
     },
     {
@@ -705,7 +735,7 @@
       "start_line": 263,
       "end_line": 263,
       "statement": "The source assigns token refresh responsibility to the application.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "source_strength": "REQUIREMENT",
       "accepted_policy": false
     },
     {
@@ -714,7 +744,7 @@
       "start_line": 263,
       "end_line": 263,
       "statement": "The source assigns token expiration handling responsibility to the application.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "source_strength": "REQUIREMENT",
       "accepted_policy": false
     },
     {
@@ -760,7 +790,13 @@
       "end_line": 278,
       "statement": "The refresh example stores the refreshed result and returns its access token.",
       "source_strength": "EXAMPLE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-084-A01",
+        "DOCS-SDKSETUP-084-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-085",
@@ -886,7 +922,14 @@
       "end_line": 10,
       "statement": "The SDK/runtime provide per-session state, authentication and explicit tool registration; source isolation claims are not observed tenant-isolation proof.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-098-A01",
+        "DOCS-SDKSETUP-098-A02",
+        "DOCS-SDKSETUP-098-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-099",
@@ -940,7 +983,13 @@
       "end_line": 39,
       "statement": "baseDirectory isolates runtime COPILOT_HOME but is ignored when connecting to an existing runtime.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-104-A01",
+        "DOCS-SDKSETUP-104-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-105",
@@ -1118,7 +1167,7 @@
       "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
       "start_line": 85,
       "end_line": 85,
-      "statement": "Python's example connects to an external runtime; it was not started.",
+      "statement": "Python's example connects to an external runtime; the reviewer did not open a connection or start any client/runtime.",
       "source_strength": "EXAMPLE",
       "accepted_policy": false
     },
@@ -1570,7 +1619,13 @@
       "end_line": 205,
       "statement": "Workflow agents are directed toward longer timeouts with explicit completed-session deletion.",
       "source_strength": "PROCEDURE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-174-A01",
+        "DOCS-SDKSETUP-174-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-175",
@@ -1588,7 +1643,14 @@
       "end_line": 209,
       "statement": "Separate runtime state, credentials and session data are suggested per process/pod/worker/tenant boundary.",
       "source_strength": "RECOMMENDATION",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-176-A01",
+        "DOCS-SDKSETUP-176-A02",
+        "DOCS-SDKSETUP-176-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-177",
@@ -1597,7 +1659,14 @@
       "end_line": 215,
       "statement": "The spawned-runtime example selects empty mode, a host-derived state directory and a 900-second idle timeout; the values are examples.",
       "source_strength": "EXAMPLE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-177-A01",
+        "DOCS-SDKSETUP-177-A02",
+        "DOCS-SDKSETUP-177-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-178",
@@ -1687,7 +1756,14 @@
       "end_line": 238,
       "statement": "Callback-capable languages configure filesystem support at client level and provide a per-session handler at creation or resume.",
       "source_strength": "PROCEDURE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-187-A01",
+        "DOCS-SDKSETUP-187-A02",
+        "DOCS-SDKSETUP-187-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-188",
@@ -2047,7 +2123,15 @@
       "end_line": 304,
       "statement": "Empty mode excludes runtime-bundled built-in skills by default but permits explicitly selected built-ins or custom skills.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-227-A01",
+        "DOCS-SDKSETUP-227-A02",
+        "DOCS-SDKSETUP-227-A03",
+        "DOCS-SDKSETUP-227-A04"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-228",
@@ -2110,7 +2194,13 @@
       "end_line": 309,
       "statement": "Applications may opt into their own custom skills with skill enablement and directories; empty mode is not an absolute no-skills guarantee.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-234-A01",
+        "DOCS-SDKSETUP-234-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-235",
@@ -2128,7 +2218,13 @@
       "end_line": 311,
       "statement": "Session IDs must be unique and encode an application tenant/user boundary.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-236-A01",
+        "DOCS-SDKSETUP-236-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-237",
@@ -2137,7 +2233,13 @@
       "end_line": 311,
       "statement": "Access control must precede session resume or deletion.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-237-A01",
+        "DOCS-SDKSETUP-237-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-238",
@@ -2146,7 +2248,14 @@
       "end_line": 317,
       "statement": "Isolated CLI per user is presented as strongest process/credential isolation with higher resource cost.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-238-A01",
+        "DOCS-SDKSETUP-238-A02",
+        "DOCS-SDKSETUP-238-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-239",
@@ -2155,7 +2264,15 @@
       "end_line": 318,
       "statement": "Shared empty-mode CLI is presented as efficient but requires explicit tools, per-session identity and application access checks.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-239-A01",
+        "DOCS-SDKSETUP-239-A02",
+        "DOCS-SDKSETUP-239-A03",
+        "DOCS-SDKSETUP-239-A04"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-240",
@@ -2164,7 +2281,15 @@
       "end_line": 319,
       "statement": "Hybrid cloud/local sessions require workload routing and policy handling; the linked cloud guide is separately scoped.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-240-A01",
+        "DOCS-SDKSETUP-240-A02",
+        "DOCS-SDKSETUP-240-A03",
+        "DOCS-SDKSETUP-240-A04"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-241",
@@ -2173,7 +2298,15 @@
       "end_line": 323,
       "statement": "In the shared pattern the backend authenticates users, selects session IDs, supplies user tokens and provides explicit tools.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-241-A01",
+        "DOCS-SDKSETUP-241-A02",
+        "DOCS-SDKSETUP-241-A03",
+        "DOCS-SDKSETUP-241-A04"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-242",
@@ -2200,7 +2333,13 @@
       "end_line": 330,
       "statement": "Use unique session IDs and store ownership metadata in the application database.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-244-A01",
+        "DOCS-SDKSETUP-244-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-245",
@@ -2209,7 +2348,14 @@
       "end_line": 331,
       "statement": "Check ownership before session resume, deletion or any UI action referencing a session ID.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-245-A01",
+        "DOCS-SDKSETUP-245-A02",
+        "DOCS-SDKSETUP-245-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-246",
@@ -2236,7 +2382,13 @@
       "end_line": 334,
       "statement": "Configure an idle timeout and explicitly delete completed workflow sessions.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKSETUP-248-A01",
+        "DOCS-SDKSETUP-248-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKSETUP-249",
@@ -2309,6 +2461,752 @@
       "statement": "Scaling, backend, BYOK, cloud sessions, persistence and feature links remain references, not automatically completed artifact reviews.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-104-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 39,
+      "end_line": 39,
+      "statement": "Pinned source observation: baseDirectory isolates COPILOT_HOME per instance.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-104",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-104-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 39,
+      "end_line": 39,
+      "statement": "Pinned source observation: Existing-runtime connection ignores client baseDirectory.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-104",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-174-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 205,
+      "end_line": 205,
+      "statement": "Pinned source observation: Workflow agents use a longer timeout.",
+      "source_strength": "PROCEDURE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-174",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-174-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 205,
+      "end_line": 205,
+      "statement": "Pinned source observation: Workflow completion requires explicit session deletion in this procedure.",
+      "source_strength": "PROCEDURE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-174",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-176-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 209,
+      "end_line": 209,
+      "statement": "Pinned source observation: Use baseDirectory to isolate runtime state.",
+      "source_strength": "RECOMMENDATION",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-176",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-176-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 209,
+      "end_line": 209,
+      "statement": "Pinned source observation: Use baseDirectory to isolate credentials.",
+      "source_strength": "RECOMMENDATION",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-176",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-176-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 209,
+      "end_line": 209,
+      "statement": "Pinned source observation: Use baseDirectory to isolate session data.",
+      "source_strength": "RECOMMENDATION",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-176",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-177-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 213,
+      "end_line": 213,
+      "statement": "Pinned source observation: Spawned-runtime example selects empty mode.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-177",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-177-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 214,
+      "end_line": 214,
+      "statement": "Pinned source observation: Spawned-runtime example sets a host-derived directory.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-177",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-177-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 215,
+      "end_line": 215,
+      "statement": "Pinned source observation: Spawned-runtime example sets900second timeout.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-177",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-187-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 238,
+      "end_line": 238,
+      "statement": "Pinned source observation: Configure client-level session filesystem support for callback-capable languages.",
+      "source_strength": "PROCEDURE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-187",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-187-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 238,
+      "end_line": 238,
+      "statement": "Pinned source observation: Provide per-session filesystem handler on create.",
+      "source_strength": "PROCEDURE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-187",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-187-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 238,
+      "end_line": 238,
+      "statement": "Pinned source observation: Provide per-session filesystem handler on resume.",
+      "source_strength": "PROCEDURE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-187",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-227-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Pinned source observation: Empty mode excludes built-in skills by default.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-227",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-227-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Pinned source observation: Callers may explicitly select built-ins.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-227",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-227-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Pinned source observation: Callers may opt into custom skills.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-227",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-227-A04",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Pinned source observation: copilot-cli mode has ambient skills.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-227",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-234-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 309,
+      "end_line": 309,
+      "statement": "Pinned source observation: Custom skills require explicit skill enablement.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-234",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-234-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 309,
+      "end_line": 309,
+      "statement": "Pinned source observation: Custom skill directories may be specified.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-234",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-236-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 311,
+      "end_line": 311,
+      "statement": "Pinned source observation: Use unique session IDs.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-236",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-236-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 311,
+      "end_line": 311,
+      "statement": "Pinned source observation: Encode the tenant/user boundary in IDs.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-236",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-237-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 311,
+      "end_line": 311,
+      "statement": "Pinned source observation: Authorize before resuming.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-237",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-237-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 311,
+      "end_line": 311,
+      "statement": "Pinned source observation: Authorize before deleting.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-237",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-238-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 317,
+      "end_line": 317,
+      "statement": "Pinned source observation: Isolated user CLI offers strongest process isolation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-238",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-238-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 317,
+      "end_line": 317,
+      "statement": "Pinned source observation: Per-user CLI supports separate process credentials.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-238",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-238-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 317,
+      "end_line": 317,
+      "statement": "Pinned source observation: Per-user CLI has higher resource cost.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-238",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-239-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 318,
+      "end_line": 318,
+      "statement": "Pinned source observation: Shared empty runtime offers efficiency.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-239",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-239-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 318,
+      "end_line": 318,
+      "statement": "Pinned source observation: Shared runtime requires careful tool registration.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-239",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-239-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 318,
+      "end_line": 318,
+      "statement": "Pinned source observation: Shared runtime requires per-session tokens.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-239",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-239-A04",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 318,
+      "end_line": 318,
+      "statement": "Pinned source observation: Shared runtime requires application access checks.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-239",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-240-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 319,
+      "end_line": 319,
+      "statement": "Pinned source observation: Hybrid pattern sends heavy work to cloud sessions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-240",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-240-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 319,
+      "end_line": 319,
+      "statement": "Pinned source observation: Hybrid pattern sends light work to local sessions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-240",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-240-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 319,
+      "end_line": 319,
+      "statement": "Pinned source observation: Hybrid pattern requires workload routing.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-240",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-240-A04",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 319,
+      "end_line": 319,
+      "statement": "Pinned source observation: Hybrid pattern requires policy handling.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-240",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-241-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 323,
+      "end_line": 323,
+      "statement": "Pinned source observation: Backend authenticates users.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-241",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-241-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 323,
+      "end_line": 323,
+      "statement": "Pinned source observation: Backend chooses session IDs.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-241",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-241-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 323,
+      "end_line": 323,
+      "statement": "Pinned source observation: Backend supplies session user tokens.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-241",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-241-A04",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 323,
+      "end_line": 323,
+      "statement": "Pinned source observation: Backend supplies explicit tool allowlists.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-241",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-244-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 330,
+      "end_line": 330,
+      "statement": "Pinned source observation: Use unique session IDs.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-244",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-244-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 330,
+      "end_line": 330,
+      "statement": "Pinned source observation: Store ownership metadata in application database.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-244",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-245-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 331,
+      "end_line": 331,
+      "statement": "Pinned source observation: Check ownership before resume.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-245",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-245-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 331,
+      "end_line": 331,
+      "statement": "Pinned source observation: Check ownership before deletion.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-245",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-245-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 331,
+      "end_line": 331,
+      "statement": "Pinned source observation: Check ownership before any session-ID UI action.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-245",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-248-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 334,
+      "end_line": 334,
+      "statement": "Pinned source observation: Set an idle-session timeout.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-248",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-248-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 334,
+      "end_line": 334,
+      "statement": "Pinned source observation: Explicitly delete completed workflow sessions.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-248",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-020-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 47,
+      "end_line": 47,
+      "statement": "Pinned source observation: Record the OAuth client ID.",
+      "source_strength": "PROCEDURE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-020",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-020-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 47,
+      "end_line": 47,
+      "statement": "Pinned source observation: Generate the OAuth client secret; not authorized here.",
+      "source_strength": "PROCEDURE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-020",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-026-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 61,
+      "end_line": 61,
+      "statement": "Pinned source observation: Exchange example sends JSON content.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-026",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-026-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 62,
+      "end_line": 62,
+      "statement": "Pinned source observation: Exchange example requests JSON response.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-026",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-060-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 139,
+      "end_line": 139,
+      "statement": "Pinned source observation: Go example starts the client.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-060",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-060-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 140,
+      "end_line": 140,
+      "statement": "Pinned source observation: Go example defers client stop.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-060",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-062-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 161,
+      "end_line": 161,
+      "statement": "Pinned source observation: .NET example disposes client asynchronously.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-062",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-062-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 162,
+      "end_line": 162,
+      "statement": "Pinned source observation: .NET example disposes session asynchronously.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-062",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-072-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 245,
+      "end_line": 245,
+      "statement": "Pinned source observation: EMU example supplies the user's token.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-072",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-072-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 246,
+      "end_line": 246,
+      "statement": "Pinned source observation: EMU example disables logged-in fallback.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-072",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-084-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 277,
+      "end_line": 277,
+      "statement": "Pinned source observation: Refresh example persists refreshed token data.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-084",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-084-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+      "start_line": 278,
+      "end_line": 278,
+      "statement": "Pinned source observation: Refresh example returns refreshed access token.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-084",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-098-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 8,
+      "end_line": 8,
+      "statement": "Pinned source observation: Runtime provides per-session state.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-098",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-098-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 8,
+      "end_line": 8,
+      "statement": "Pinned source observation: Runtime provides per-session authentication.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-098",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-098-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 9,
+      "end_line": 9,
+      "statement": "Pinned source observation: Runtime supplies explicit tool registration to avoid inherited user tools.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKSETUP-098",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; procedure/example wording does not authorize execution or prove native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-257",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 87,
+      "end_line": 87,
+      "statement": "The Python external-runtime example explicitly awaits client startup; the reviewer started no client.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKSETUP-258",
+      "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+      "start_line": 274,
+      "end_line": 274,
+      "statement": "The per-session-token example selects gpt-5.4; this is illustrative, not availability or policy proof.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
     }
-  ]
+  ],
+  "atomicity_repair": {
+    "audit": "evidence/sdk-tenant-independent-claim-audit.json",
+    "retained_grouped_parents": 23,
+    "added_atomic_children": 60,
+    "added_omitted_observations": 2,
+    "independent_recheck_pending": true,
+    "whole_source_atomic_completeness_certified": false
+  }
 }

@@ -1,0 +1,458 @@
+[
+  {
+    "artifact_id": "b3a5dd2af383bed017207ca8",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/setup/backend-services.md",
+    "content_sha256": "3dab8337624d2b4933ca07e4590a19340b836ec7f976cc7be1e77f5dc20f60ec",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T04:59:44Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete436-line backend article read, including Docker/systemd/Compose and all five SDK language examples. Unsafe/incomplete snippets are reference evidence, not instructions; diagram assets are separately unreviewed. No build/download/process launch/network exposure/token/environment change/deletion/publication performed. No accepted policy, native proof, rights clearance or independent omission certification.",
+    "claim_mappings": [
+      {
+        "candidate_id": "a5e608f46428351f4ac2480b",
+        "text_sha256": "9108267d28654b5a66680e22928695daa5b9444124fe20a0ec831d14137161e1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-001: The article describes network-connected headless CLI for server-side SDK workloads. DOCS-SDKBACKEND-002: The article declares Free/Pro/Team and Enterprise Cloud version scope. DOCS-SDKBACKEND-003: The article declares a former backend setup path redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "b01d6f48d3cbcf86196e9a76",
+        "text_sha256": "df9dec9e38497d83761d71eae08aff8d4d9401445f2afa0b166a256ee3584ba9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-003: The article declares a former backend setup path redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "e4334f41a2776dc698a9cf26",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "f605cef22a2d4828e4b2a5bb",
+        "text_sha256": "093594303116f8dc6d92e2cb36164d62ed71e6daf59e0a7880d074b30fd5f974",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-004: Web backends, APIs, internal tools and CI/CD are suggested backend uses.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "b9a7855d95008d3ee6b19510",
+        "text_sha256": "8949cdc5c7151d5c94e4650a8aa620e10ccca52bd287b50727c56d240dde3c94",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-005: The external-runtime pattern runs CLI independently rather than spawning a child per SDK client. DOCS-SDKBACKEND-006: The backend connects to headless CLI over TCP through a URI connection.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "e62ff02681a9ef2012410cef",
+        "text_sha256": "5a075cf02d025e31637da921ce166ebc5ed30db6b8fad6b2a053e33c27a73c8d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-007: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "b7c93ba005b44096c6a05d8c",
+        "text_sha256": "b62070fef33525323b8d9f0783b9bbb3c779dc118ac1fd4475a4a35164e4dc06",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "c44b6700781347940e33e1f4",
+        "text_sha256": "d4e37c1e1e2b0173a3db7e40654baf9eaf421d5627cc0652ce3cb9a9f2948b5d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-012: The external CLI is a persistent server process, not a per-request process.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "489b513c241aa92825946f45",
+        "text_sha256": "b343aed7c7133683218511b0e94c39b05e43a1fc3598e5e0778105d21d017ac4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-013: TCP allows CLI and application to run in different containers.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "1da2966be74caf55ec40ec68",
+        "text_sha256": "b31e8c7c7b3e71223faca499eadd5184cebc8992a5e1168383ba2b860c12e937",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-014: Multiple SDK clients may share one CLI server.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "48ab5ff1d63cc15449ec651a",
+        "text_sha256": "5562a0b6dbcfbe0e1816261836f253ac6cab1defc142dc751315c6a4a235545d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-015: The backend pattern is described as supporting GitHub tokens, environment authentication and BYOK.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "d6a80ab2b20f306300881ca5",
+        "text_sha256": "dd1f15bca297d7801c393e491c55fef16e2a6ba332e6c8074ac5410ca07e568c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-016: Multi-user backend clients are directed to empty mode. DOCS-SDKBACKEND-017: Multi-user backend credentials are directed to per-session scope. DOCS-SDKBACKEND-018: Multi-user backend tools are directed to explicit per-session allowlists.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "d44bfcc42ba9712eca8d8e43",
+        "text_sha256": "36e5dbdb964ca4e2526423013c3a25ef011b357d7e6989dcdc4f3ffb534c37d0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-008: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "913d313a16190960fcce3917",
+        "text_sha256": "f00d82f7c0beec4a25afe413db443742e62bc3c48b7d105b6997015db5359484",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "b1b23d6d54da680eb38b7bcf",
+        "text_sha256": "cd51c9e8450256dfb01a7177908b15e09dc613c9f176a80e8aa61afd1b404ab0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-019: The headless launch example specifies port4321; no process was launched. DOCS-SDKBACKEND-020: The alternate launch example chooses a random port and reports its listening URL.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "2c04e78a0b8ad989c82aef03",
+        "text_sha256": "b92b148b50594a641ae89d6d9b429c10f67b5a7e7a28c909c995ad24d81e3ca9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-021: Headless CLI accepts loopback connections by default. DOCS-SDKBACKEND-022: Non-loopback binding is needed for remote-host connections.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "d4bdf22e40560b0fed27a277",
+        "text_sha256": "cdf93e245ca2c68fdf0b65b916722f19d52d5261b3a910f819e7b531a910eeca",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-023: The example binds0.0.0.0; broad listening is not authenticated or authorized deployment proof.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "50e4b5d81a95f1af22784bba",
+        "text_sha256": "2617b8aaa4be6908af3fd63c6ddf088930ed149bdbbf2051d5b20615e0eb9fd8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-024: A system service or container is suggested for production.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "901a8ea8b265540ff04e81a5",
+        "text_sha256": "1e34348545eadbb846d1a894f4dbbdc479fef13a87a84cb0d2031014add17c27",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-025: The source reports no official prebuilt CLI Docker image; this is pinned-source status, not a live product assertion. DOCS-SDKBACKEND-026: A custom image can be built from linked CLI releases; the release link is not reviewed or executed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "297934d1101a0414350f2f4b",
+        "text_sha256": "89fc83781131305a2b106e80cffee881967e8a2aaf38c69a71cfc1978cab1e5b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-027: The Dockerfile example uses Debian bookworm-slim. DOCS-SDKBACKEND-028: The Dockerfile sets an example CLI version1.0.7. DOCS-SDKBACKEND-029: The Dockerfile refreshes package lists and installs CA certificates plus a downloader. DOCS-SDKBACKEND-030: The Dockerfile queries Debian architecture. DOCS-SDKBACKEND-031: The Dockerfile maps amd64 to x64. DOCS-SDKBACKEND-032: The Dockerfile maps arm64 to arm64. DOCS-SDKBACKEND-033: The Dockerfile exits on unsupported architectures. DOCS-SDKBACKEND-034: The Dockerfile downloads a version/architecture-specific release archive without a shown digest verification. DOCS-SDKBACKEND-035: The Dockerfile extracts the archive. DOCS-SDKBACKEND-036: The Dockerfile installs the CLI under /usr/local/bin. DOCS-SDKBACKEND-037: The Dockerfile removes the archive. DOCS-SDKBACKEND-038: The Dockerfile removes downloader/package-cache material; none of its destructive commands were executed. DOCS-SDKBACKEND-039: The Dockerfile selects the CLI entrypoint.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "7643a16833be4e1933728e77",
+        "text_sha256": "eb669dfd802ee33301aac0a054f060c8068b4954818f753147989dd7c161beca",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-040: The image build example uses a version argument and latest image tag. DOCS-SDKBACKEND-041: The image example tags a registry target. DOCS-SDKBACKEND-042: The example pushes an image to a registry; no publication was performed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "fccf53bc78001588a03d36d3",
+        "text_sha256": "34fe631a7bba62864f723649f2af8090c66f8fa133fe6135e5863197bbd933fb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-043: The Docker launch example publishes port4321. DOCS-SDKBACKEND-044: The Docker launch example passes a GitHub token through environment; no token was read. DOCS-SDKBACKEND-045: The Docker launch example listens on all interfaces. DOCS-SDKBACKEND-046: The systemd example launches headless CLI at a fixed port. DOCS-SDKBACKEND-047: The systemd example contains a token placeholder, not production secret custody. DOCS-SDKBACKEND-048: The systemd example restarts the process automatically.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "c32c8114e11cf9c34bbfa113",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "a2d0418a7b64fa39dddf0a13",
+        "text_sha256": "4a68fa4bf5e56446be3ffa67134715ad08e07dd359c99ec03b0698145705bc4e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-049: TypeScript's backend example connects to localhost:4321. DOCS-SDKBACKEND-050: TypeScript's session example derives an ID from user/time values; ID construction does not enforce ownership. DOCS-SDKBACKEND-051: TypeScript's example selects gpt-5.4, not a universal model mandate. DOCS-SDKBACKEND-052: TypeScript's example sends a user message and awaits a response; it was not executed. DOCS-SDKBACKEND-069: The TypeScript backend example explicitly selects empty mode. DOCS-SDKBACKEND-070: The TypeScript backend example allows all custom tools, not necessarily a minimal allowlist. DOCS-SDKBACKEND-071: The TypeScript backend example supplies a user token on its session. DOCS-SDKBACKEND-072: The TypeScript backend example returns response content as JSON.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "29796e633cf5652a926fe6d8",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "3059c83682987ea62ebbd203",
+        "text_sha256": "04deabb7923a939cb7973345b0dc581af2922892dd88890eefe18cc454dcfaa0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-053: Python's backend example connects to localhost:4321. DOCS-SDKBACKEND-054: Python's session example derives an ID from user/time values; ID construction does not enforce ownership. DOCS-SDKBACKEND-055: Python's example selects gpt-5.4, not a universal model mandate. DOCS-SDKBACKEND-056: Python's example sends a user message and awaits a response; it was not executed. DOCS-SDKBACKEND-073: The Python backend snippet omits explicit empty mode despite the multi-user direction at33; omission is not a waiver of that requirement. DOCS-SDKBACKEND-074: The Python backend snippet uses approve_all, not an applicable project permission grant. DOCS-SDKBACKEND-075: The Python backend session snippet omits a user token despite the multi-user direction at33. DOCS-SDKBACKEND-076: The Python backend session snippet omits an explicit tool list despite the multi-user direction at33.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "fb21d8a16db5da34c19adf7d",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "39ec87f42b1a67406c201c0a",
+        "text_sha256": "3b770394a4e3c0d3563b573c638bc29951df50b04475a2555411d3f97f0206fd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-057: Go's backend example connects to localhost:4321. DOCS-SDKBACKEND-058: Go's session example derives an ID from user/time values; ID construction does not enforce ownership. DOCS-SDKBACKEND-059: Go's example selects gpt-5.4, not a universal model mandate. DOCS-SDKBACKEND-060: Go's example sends a user message and awaits a response; it was not executed. DOCS-SDKBACKEND-077: The Go backend snippet omits empty mode, rather than demonstrating compliance with multi-user empty-mode guidance. DOCS-SDKBACKEND-078: The Go backend session snippet omits per-session user authentication. DOCS-SDKBACKEND-079: The Go backend session snippet omits an explicit tool list. DOCS-SDKBACKEND-080: The Go backend example discards session and send errors; that is not robust error-handling policy. DOCS-SDKBACKEND-081: The Go example starts the client and defers shutdown.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "08c94a8ef3f7ab34e8b4fb5d",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "449136865887f0d1a0c31c23",
+        "text_sha256": "6654cf20a68bea91cbfd06b5dffcd362c15b4c4d6e21922235e0e5c0b58a983a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-061: C#'s backend example connects to localhost:4321. DOCS-SDKBACKEND-062: C#'s session example derives an ID from user/time values; ID construction does not enforce ownership. DOCS-SDKBACKEND-063: C#'s example selects gpt-5.4, not a universal model mandate. DOCS-SDKBACKEND-064: C#'s example sends a user message and awaits a response; it was not executed. DOCS-SDKBACKEND-082: The .NET backend snippet omits empty mode despite the multi-user guidance. DOCS-SDKBACKEND-083: The .NET backend snippet omits per-session user authentication. DOCS-SDKBACKEND-084: The .NET backend snippet omits an explicit tool list. DOCS-SDKBACKEND-085: The .NET backend example uses async-disposable session lifetime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "7d98da59faa6e305aa3568b0",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "beb6233fcb404bfd442f1ff8",
+        "text_sha256": "41e921aefdcb1f152de28cd338bf1fadf7023db86feff93d323dd1f23759d307",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-065: Java's backend example connects to localhost:4321. DOCS-SDKBACKEND-066: Java's session example derives an ID from user/time values; ID construction does not enforce ownership. DOCS-SDKBACKEND-067: Java's example selects gpt-5.4, not a universal model mandate. DOCS-SDKBACKEND-068: Java's example sends a user message and awaits a response; it was not executed. DOCS-SDKBACKEND-086: The Java backend snippet omits empty mode despite the multi-user guidance. DOCS-SDKBACKEND-087: The Java backend session snippet omits per-session user authentication. DOCS-SDKBACKEND-088: The Java backend session snippet omits an explicit tool list. DOCS-SDKBACKEND-089: The Java backend example selects APPROVE_ALL; this is not project authorization. DOCS-SDKBACKEND-090: The Java backend example waits for startup. DOCS-SDKBACKEND-091: The Java backend example stops the client in a finally block.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "46419419fcfa65e4d9eeca32",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "3b9d167209e0343c3b92b0dc",
+        "text_sha256": "5ace6d50e95fd2379a81f509b60a60696811a3a78676d0b23750c40cbc739548",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-092: The shared environment-token pattern sets credentials on the CLI server.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "3cecee98e27ad6c6dd036432",
+        "text_sha256": "5c291732dbb704b6cb5746d7ad50040642cf0386de0399af6271461e028b5b57",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-009: A diagram asset is linked; its visual content remains separately unreviewed. DOCS-SDKBACKEND-092: The shared environment-token pattern sets credentials on the CLI server.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "29bee0582b9f56e33fd94c89",
+        "text_sha256": "3fa77a956d3cc431cd14a2d0060f94e0276c7e2179408bfeb526f7544583e9aa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-092: The shared environment-token pattern sets credentials on the CLI server. DOCS-SDKBACKEND-093: The environment example attributes all requests to one service-account token, unlike per-user identity. DOCS-SDKBACKEND-094: The environment-token example launches headless CLI; it was not executed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "e78b83b871915ca5abc71f8f",
+        "text_sha256": "9a7b1941e1f8562e5d4e37cc4a60b4112fd8f34001514a2d042090d2bbdf4a8f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-095: The per-user pattern passes tokens when creating sessions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "5b3f24d90a97fd43a850bede",
+        "text_sha256": "a2027e32c406266790faaa70d6151851356e3ac81d06dad1d485ef661ff12716",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-096: The per-user example connects to localhost CLI. DOCS-SDKBACKEND-097: The per-user example selects empty mode. DOCS-SDKBACKEND-098: The per-user route names an authentication middleware; its implementation is not demonstrated. DOCS-SDKBACKEND-099: The per-user example assigns a user-derived chat session ID. DOCS-SDKBACKEND-100: The per-user example selects an example model. DOCS-SDKBACKEND-101: The per-user example allows custom:* tools. DOCS-SDKBACKEND-102: The per-user example uses the authenticated request user's token. DOCS-SDKBACKEND-103: The per-user example forwards request-body prompt content. DOCS-SDKBACKEND-104: The per-user example returns response content.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "ec372947eb708642ac4fdc4a",
+        "text_sha256": "2524424bb0230bb655468b51bf3c56382c94b3d03ae17e2e3f1d1f0f697f31a2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-105: Provider-key BYOK is described as requiring no GitHub authentication, not no application/transport authorization.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "8e516bacea3b07196e747923",
+        "text_sha256": "1018100e0996633273e23e25b16c1c7c6f4785d1621430b3f702def203024df7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-106: The backend BYOK example connects to the external runtime. DOCS-SDKBACKEND-107: The backend BYOK example explicitly selects a model. DOCS-SDKBACKEND-108: The backend BYOK example sets openai provider type. DOCS-SDKBACKEND-109: The backend BYOK example sets the provider /v1 endpoint. DOCS-SDKBACKEND-110: The backend BYOK example reads a provider key from environment, not a free-cost entitlement. DOCS-SDKBACKEND-111: The BYOK snippet omits empty mode; the generic no-GitHub-auth heading does not waive multi-user isolation guidance.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "04b7f1c753fad239512fdf0e",
+        "text_sha256": "e531813eb2f097a6e63ec1044711b2889049f6d3a28e78057a224d62af395d91",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-010: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "6daf3cd9a829aff125ed0a7f",
+        "text_sha256": "c12e112982fd4e861cb0db55115d6535d086fe38f12bd635c8876ac0e4971b12",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-112: The Express example constructs a web application. DOCS-SDKBACKEND-113: The Express example installs a JSON body parser. DOCS-SDKBACKEND-114: The Express example chooses a configured CLI URL or localhost fallback. DOCS-SDKBACKEND-115: The Express shared client explicitly selects empty mode. DOCS-SDKBACKEND-116: The Express example accepts session ID and message from the request body. DOCS-SDKBACKEND-117: The Express example resumes that supplied session ID without a shown ownership check. DOCS-SDKBACKEND-118: The Express resume call does not show the requesting user's token. DOCS-SDKBACKEND-119: The Express example catches all resume errors rather than distinguishing ownership/authentication/not-found errors. DOCS-SDKBACKEND-120: The fallback creation uses the request-supplied session ID. DOCS-SDKBACKEND-121: The fallback creation selects an example model. DOCS-SDKBACKEND-122: The fallback creation allows all custom tools. DOCS-SDKBACKEND-123: The fallback creation supplies req.user.githubToken; no request authentication middleware is shown on this route. DOCS-SDKBACKEND-124: The Express example forwards the message. DOCS-SDKBACKEND-125: The Express example returns the session ID. DOCS-SDKBACKEND-126: The Express example returns content. DOCS-SDKBACKEND-127: The Express example listens on port3000. DOCS-SDKBACKEND-128: The Express ownership/authentication omissions conflict with the separately reviewed multi-tenancy checks; the source example is not deployable policy.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "f6acca4f43c0b373f99441dc",
+        "text_sha256": "37e066d4275c99740e05f4bfa3d3e8c12bcf3edbac01f09889889fe6e5c6d4a6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-129: The worker example chooses a CLI URL or localhost fallback. DOCS-SDKBACKEND-130: The worker example derives session IDs from job IDs. DOCS-SDKBACKEND-131: The worker example selects a sample model. DOCS-SDKBACKEND-132: The worker example forwards the job prompt. DOCS-SDKBACKEND-133: The worker example saves output through an unspecified helper. DOCS-SDKBACKEND-134: The worker example disconnects after a job; disconnect is not shown as explicit session deletion. DOCS-SDKBACKEND-135: The worker example omits empty mode; a shared multi-user use would still need applicable isolation safeguards. DOCS-SDKBACKEND-136: The worker example omits per-session user identity; service-account semantics must be intentionally scoped. DOCS-SDKBACKEND-137: The worker example omits an explicit tool list.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "9d9816d2e1247977f109f08c",
+        "text_sha256": "f520632c7d50f09c074262c13c88ead05e3d7fd18ff7bd2ba961c0b53ddb21df",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-138: The Compose example declares format3.8. DOCS-SDKBACKEND-139: The Compose example uses a locally built latest image tag. DOCS-SDKBACKEND-140: The Compose example binds headless CLI to0.0.0.0. DOCS-SDKBACKEND-141: The Compose example passes the GitHub token in environment. DOCS-SDKBACKEND-142: The Compose example publishes CLI port4321. DOCS-SDKBACKEND-143: The Compose example requests automatic restart. DOCS-SDKBACKEND-144: The Compose example persists session state through a named volume. DOCS-SDKBACKEND-145: The API Compose service builds the current context. DOCS-SDKBACKEND-146: The API Compose service points at the CLI container. DOCS-SDKBACKEND-147: The API Compose service depends on CLI service startup. DOCS-SDKBACKEND-148: The API Compose service publishes port3000.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "5d5646e6924651bc8f21292d",
+        "text_sha256": "c033f09ddb5d9aedf9012afcc457f4722633bcbdb1d605516cd1d83d85821951",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-011: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "5225353d68396a107d0685ab",
+        "text_sha256": "bc41cd4ef0ac8265caf21658c2532bccbb9ede67607bd325cad82cad8af9bc2d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-149: The source directs CLI health monitoring.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "94be136b1dd50ff6f2c0925b",
+        "text_sha256": "5beb115b20421aaed6c50c56ec3ebca5ac747cf24d420eb80ad137c2eccc443c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-150: The health example treats any defined getStatus result as healthy; it is not permission, identity, model or end-to-end behavior validation. DOCS-SDKBACKEND-151: The health example returns false on caught errors.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "98308d91b674ba4e99d1c14b",
+        "text_sha256": "c992f4058e04d00caa243dc590f2c36861fe601ad4c1401bb285067802eb007c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-152: Backend services should actively clean sessions to avoid leaks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "9ff3eebd7ee04f64e1bc1571",
+        "text_sha256": "c39f5db1358e57e90314bb3c8f8aa87979304c46e64e6ea7c27e3cb14733ae6a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-153: The cleanup example lists sessions. DOCS-SDKBACKEND-154: The cleanup example compares current time with creation time, not last activity. DOCS-SDKBACKEND-155: The cleanup example deletes sessions older than its threshold; no ownership check is shown. DOCS-SDKBACKEND-156: The cleanup example schedules hourly deletion for sessions older than24hours; these are example values, not deployment authority.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "cdeeaad5e537ebdc876131ee",
+        "text_sha256": "f07685aa7e8dd81f47845282cb014cd2a20ed2c8c0b6f2d0430bec4327a4f593",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "e04dc66c9106646a6ecccb14",
+        "text_sha256": "f5fda211b2882056f76638b760fc6951422f055dde8e2df1df23630f563f73d2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "88132b22f858f6b78c0def81",
+        "text_sha256": "fbbc4adb93171c1240db434775986eba89c2ea6634b92c8c2d081eb07973eecc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-157: A single CLI server is described as a single point of failure.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "5aeb2a3e23210df72f647de2",
+        "text_sha256": "8258989a6035621138906677aaa0d9b14a9eabf74276e4a28b593616ddebcea9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-158: The source reports no built-in authentication between SDK and CLI. DOCS-SDKBACKEND-159: The network path must be secured, with same-host/VPC examples; non-loopback listening alone is insufficient.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "54f6f3208dc8dcb6c1b1e86e",
+        "text_sha256": "bf1d4e71be29986f6ce39292cfa6744f8abbe07a1b098a0be71ba0c56f01ba5d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-160: Default session state is local disk. DOCS-SDKBACKEND-161: Persistent storage is directed for container restart survival.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "07d90804986d4dab083f1cc1",
+        "text_sha256": "6c647996e7705fd6928b4c2cf4b78b3ff266362285167914eb44a07d6dfddeee",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-162: The source reports no idle timeout by default. DOCS-SDKBACKEND-163: The external CLI idle-timeout flag is directed for inactive-session cleanup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "717173e17d6be6e31c953679",
+        "text_sha256": "2b5a74588d33fb1206bd80ba8911414968c40226c92d3260dc72b5b8197f3180",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "1f590d433ead49db62dd9990",
+        "text_sha256": "0a0c163bd7b23b9c90493a57ad79e85c1b41096cf7a3b3f349f770baa4bdc89c",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/link/syntax context reviewed; no additional policy or permission inference."
+      },
+      {
+        "candidate_id": "58dbfb378010eb45acff225b",
+        "text_sha256": "c5a632508f75332c4d94a62267f8be5199e807e5e97940c32b1fac9ff91f5808",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-164: Scaling, multi-tenancy, OAuth and BYOK links address distinct needs; no linked artifact review is inferred.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "50783ac83914cbcbdefd2daf",
+        "text_sha256": "286192304e58b627426b7a9600e774d06cf492a8b8aa9539912ebe9f9ddeff87",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-164: Scaling, multi-tenancy, OAuth and BYOK links address distinct needs; no linked artifact review is inferred.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "34895923eed0b3644f50656a",
+        "text_sha256": "8f42cc4182b16507e9fd7cbd6f6a6e40d709959d96a15478bf2ff8a7567aae2f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-164: Scaling, multi-tenancy, OAuth and BYOK links address distinct needs; no linked artifact review is inferred.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "07eb7a631284be44bae94977",
+        "text_sha256": "e3357ca2ae268a1afd4e5f4e15b442571c3ae75cb9c908b35e86e8cfc412f64e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-164: Scaling, multi-tenancy, OAuth and BYOK links address distinct needs; no linked artifact review is inferred.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "d38a3371e864e7a6b241c72b",
+        "text_sha256": "63adb3645aef193a1be944af40f37145ed28ed16c61fac5230b257f05ab30203",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-165: Further multi-tenancy, scaling, persistence and OAuth links remain bounded references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "46556d14068d53fe9f6437d4",
+        "text_sha256": "7f8e85412d08f2dc7c88c519d27fdc53d8aab3065269331ab5996eb47da173fc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-165: Further multi-tenancy, scaling, persistence and OAuth links remain bounded references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "be2888b9a47a935a0cfb8d58",
+        "text_sha256": "040277217acefcc484a3ad3ab65b11c1460ecdad96c5d8e98a93ffb58ecd05df",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-165: Further multi-tenancy, scaling, persistence and OAuth links remain bounded references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      },
+      {
+        "candidate_id": "0fa146670b56d3ca4f8317de",
+        "text_sha256": "1f0c0736e6e7db3a9dfa18000f5d970186be79dd6381ceaedf1ed72645abc0ef",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBACKEND-165: Further multi-tenancy, scaling, persistence and OAuth links remain bounded references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-backend-claims.json"
+      }
+    ]
+  }
+]

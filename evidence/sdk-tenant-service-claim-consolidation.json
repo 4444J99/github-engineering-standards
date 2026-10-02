@@ -1,14 +1,14 @@
 {
   "schema_version": "ges.reference-claim-consolidation.v1",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T04:56:17Z",
+  "reviewed_at": "2026-10-02T05:02:01Z",
   "source_documents": [
     "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json",
     "evidence/source-reviews/docs-sdk-server-token-claims.json"
   ],
   "related_consolidation": "evidence/sdk-authentication-claim-consolidation.json",
   "scope": "Four complete pinned artifacts: OAuth330lines, multi-tenancy352lines, server-tokens213lines, checkout1line. Diagram assets and linked setup/runtime articles remain separately reviewed work.",
-  "reviewed_claims": 344,
+  "reviewed_claims": 406,
   "all_records_mapped_once": true,
   "groups": [
     {
@@ -75,7 +75,15 @@
         "DOCS-SDKSETUP-061",
         "DOCS-SDKSETUP-062",
         "DOCS-SDKSETUP-063",
-        "DOCS-SDKSETUP-064"
+        "DOCS-SDKSETUP-064",
+        "DOCS-SDKSETUP-020-A01",
+        "DOCS-SDKSETUP-020-A02",
+        "DOCS-SDKSETUP-026-A01",
+        "DOCS-SDKSETUP-026-A02",
+        "DOCS-SDKSETUP-060-A01",
+        "DOCS-SDKSETUP-060-A02",
+        "DOCS-SDKSETUP-062-A01",
+        "DOCS-SDKSETUP-062-A02"
       ],
       "decision": "User OAuth delegates individual identity/subscription, not model-provider keys. App/secret setup and exchange snippets are inert. Finer-grained GitHub App permissions are recommended; snippets do not demonstrate state validation or complete secure OAuth. Broad permission handlers and diagram links confer neither authorization nor asset review.",
       "accepted_policy": false
@@ -114,7 +122,11 @@
         "DOCS-SDKSETUP-091",
         "DOCS-SDKSETUP-092",
         "DOCS-SDKSETUP-093",
-        "DOCS-SDKSETUP-094"
+        "DOCS-SDKSETUP-094",
+        "DOCS-SDKSETUP-072-A01",
+        "DOCS-SDKSETUP-072-A02",
+        "DOCS-SDKSETUP-084-A01",
+        "DOCS-SDKSETUP-084-A02"
       ],
       "decision": "The application owns OAuth storage/refresh/expiry and membership authorization. Membership snippets do not demonstrate pagination/status/permission completeness. Existing cached clients do not demonstrate credential rotation. EMU source enforcement claims are not target verification.",
       "accepted_policy": false
@@ -191,7 +203,13 @@
         "DOCS-SDKSETUP-161",
         "DOCS-SDKSETUP-162",
         "DOCS-SDKSETUP-163",
-        "DOCS-SDKSETUP-164"
+        "DOCS-SDKSETUP-164",
+        "DOCS-SDKSETUP-104-A01",
+        "DOCS-SDKSETUP-104-A02",
+        "DOCS-SDKSETUP-098-A01",
+        "DOCS-SDKSETUP-098-A02",
+        "DOCS-SDKSETUP-098-A03",
+        "DOCS-SDKSETUP-257"
       ],
       "decision": "Empty mode is required for shared servers by the source, with explicit tools, scoped identity and application ownership checks. Existing runtime connections ignore client home/timeout settings; language examples, approve_all and absent transport token are not secure-service proof.",
       "accepted_policy": false
@@ -237,7 +255,18 @@
         "DOCS-SDKSETUP-200",
         "DOCS-SDKSETUP-201",
         "DOCS-SDKSETUP-202",
-        "DOCS-SDKSETUP-203"
+        "DOCS-SDKSETUP-203",
+        "DOCS-SDKSETUP-174-A01",
+        "DOCS-SDKSETUP-174-A02",
+        "DOCS-SDKSETUP-176-A01",
+        "DOCS-SDKSETUP-176-A02",
+        "DOCS-SDKSETUP-176-A03",
+        "DOCS-SDKSETUP-177-A01",
+        "DOCS-SDKSETUP-177-A02",
+        "DOCS-SDKSETUP-177-A03",
+        "DOCS-SDKSETUP-187-A01",
+        "DOCS-SDKSETUP-187-A02",
+        "DOCS-SDKSETUP-187-A03"
       ],
       "decision": "State-directory, idle timeout and environment configuration belong to the spawned or external runtime owner as applicable. Timeout values are tunable examples. Custom filesystem providers require tenant-aware paths; upstream verified-surface wording and Java limitations remain source-scoped, not local runtime certification.",
       "accepted_policy": false
@@ -262,7 +291,8 @@
         "DOCS-SDKSETUP-218",
         "DOCS-SDKSETUP-219",
         "DOCS-SDKSETUP-220",
-        "DOCS-SDKSETUP-221"
+        "DOCS-SDKSETUP-221",
+        "DOCS-SDKSETUP-258"
       ],
       "decision": "Per-session identity differs from process credentials. Intentionally shared service-account semantics must be explicit. Integration IDs are environment-only attribution/routing metadata, not authorization or billing proof.",
       "accepted_policy": false
@@ -304,7 +334,39 @@
         "DOCS-SDKSETUP-253",
         "DOCS-SDKSETUP-254",
         "DOCS-SDKSETUP-255",
-        "DOCS-SDKSETUP-256"
+        "DOCS-SDKSETUP-256",
+        "DOCS-SDKSETUP-227-A01",
+        "DOCS-SDKSETUP-227-A02",
+        "DOCS-SDKSETUP-227-A03",
+        "DOCS-SDKSETUP-227-A04",
+        "DOCS-SDKSETUP-234-A01",
+        "DOCS-SDKSETUP-234-A02",
+        "DOCS-SDKSETUP-236-A01",
+        "DOCS-SDKSETUP-236-A02",
+        "DOCS-SDKSETUP-237-A01",
+        "DOCS-SDKSETUP-237-A02",
+        "DOCS-SDKSETUP-238-A01",
+        "DOCS-SDKSETUP-238-A02",
+        "DOCS-SDKSETUP-238-A03",
+        "DOCS-SDKSETUP-239-A01",
+        "DOCS-SDKSETUP-239-A02",
+        "DOCS-SDKSETUP-239-A03",
+        "DOCS-SDKSETUP-239-A04",
+        "DOCS-SDKSETUP-240-A01",
+        "DOCS-SDKSETUP-240-A02",
+        "DOCS-SDKSETUP-240-A03",
+        "DOCS-SDKSETUP-240-A04",
+        "DOCS-SDKSETUP-241-A01",
+        "DOCS-SDKSETUP-241-A02",
+        "DOCS-SDKSETUP-241-A03",
+        "DOCS-SDKSETUP-241-A04",
+        "DOCS-SDKSETUP-244-A01",
+        "DOCS-SDKSETUP-244-A02",
+        "DOCS-SDKSETUP-245-A01",
+        "DOCS-SDKSETUP-245-A02",
+        "DOCS-SDKSETUP-245-A03",
+        "DOCS-SDKSETUP-248-A01",
+        "DOCS-SDKSETUP-248-A02"
       ],
       "decision": "Session state/model cache isolation is conditional; host files are shared when host tools exist. Empty mode excludes default skills/plugins but selected/custom skills may be available. IDs do not authorize: ownership checks precede resume/delete/UI access. Allowlist, cleanup and timeout source rules require actual approved target verification.",
       "accepted_policy": false
@@ -483,5 +545,13 @@
   "rights_cleared": false,
   "native_behavior_verified": false,
   "independent_omission_audit_passed": false,
-  "global_gate_closed": false
+  "global_gate_closed": false,
+  "atomicity_repair": {
+    "audit": "evidence/sdk-tenant-independent-claim-audit.json",
+    "retained_grouped_parents": 23,
+    "added_atomic_children": 60,
+    "added_omitted_observations": 2,
+    "independent_recheck_pending": true,
+    "whole_source_atomic_completeness_certified": false
+  }
 }
