@@ -1,0 +1,144 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/code-security/reference/secret-security/custom-patterns.md",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:42:44Z",
+  "review_scope": "Complete pinned article read; atomic reference assertions only. No full candidate accounting, external dependency completeness, rights, policy adoption or runtime certification.",
+  "claims": [
+    {
+      "claim_id": "DOCS-PATSYN-001",
+      "start_line": 5,
+      "end_line": 8,
+      "statement": "Pinned reference declares fpt, ghec and ghes applicability; actual plan entitlement remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-002",
+      "start_line": 16,
+      "end_line": 16,
+      "statement": "Custom pattern expressions use Hyperscan-supported constructs, a subset of PCRE; generic PCRE acceptance is insufficient.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-003",
+      "start_line": 16,
+      "end_line": 16,
+      "statement": "Hyperscan option modifiers are unsupported by custom patterns.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-004",
+      "start_line": 16,
+      "end_line": 16,
+      "statement": "Supported constructs are delegated to linked Hyperscan pattern-support documentation; that external dependency is not fully reviewed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-005",
+      "start_line": 20,
+      "end_line": 20,
+      "statement": "More options UI exposes manual regex fields; UI existence is not deployed configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-006",
+      "start_line": 22,
+      "end_line": 22,
+      "statement": "Secret format defines the expression matching the secret itself.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-007",
+      "start_line": 23,
+      "end_line": 23,
+      "statement": "Before-secret default is the pinned expression \\A|[^0-9A-Za-z]; preserve expression semantics rather than assuming textual line-start paraphrase is precise.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-008",
+      "start_line": 24,
+      "end_line": 24,
+      "statement": "After-secret default is the pinned expression \\z|[^0-9A-Za-z]; preserve expression semantics rather than assuming textual new-line paraphrase is precise.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-009",
+      "start_line": 25,
+      "end_line": 25,
+      "statement": "Additional requirements permit optional positive or negative matching constraints on the secret itself.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-010",
+      "start_line": 27,
+      "end_line": 27,
+      "statement": "Simple tokens commonly need only secret format; additional fields are optional complexity controls, not a mandatory profile.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-011",
+      "start_line": 35,
+      "end_line": 35,
+      "statement": "The example secret-format character class and 5–10 length are illustrative, not adopted enterprise token requirements.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-012",
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "The example after-secret constraint excludes a period; it is not a universal credential policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-013",
+      "start_line": 37,
+      "end_line": 37,
+      "statement": "The example requires uppercase and numeric matches as two distinct additional positive constraints.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-014",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": "The example negative constraint excludes consecutive lowercase pairs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-015",
+      "start_line": 39,
+      "end_line": 39,
+      "statement": "The example special-character constraint is illustrative and must not replace the exact secret-format definition.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-016",
+      "start_line": 41,
+      "end_line": 47,
+      "statement": "Three displayed positive strings and annotated matched substrings are examples, not an executed engine compatibility receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-017",
+      "start_line": 49,
+      "end_line": 56,
+      "statement": "Four displayed negative strings are examples, not exhaustive negative-space verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-018",
+      "start_line": 60,
+      "end_line": 60,
+      "statement": "Pinned custom-pattern capacity is up to 500 per organization or enterprise account.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATSYN-019",
+      "start_line": 60,
+      "end_line": 60,
+      "statement": "Pinned custom-pattern capacity is up to 100 per repository; repository and higher-scope denominators differ.",
+      "accepted_policy": false
+    }
+  ]
+}
