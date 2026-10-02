@@ -6,10 +6,10 @@
     "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
     "content_sha256": "14a891e1d05fe7ff00dc686822a92f6505c231710c441894ab7476c3cb28b969",
     "reviewer": "codex:source-review",
-    "reviewed_at": "2026-10-02T05:08:12Z",
+    "reviewed_at": "2026-10-02T05:15:42Z",
     "disposition": "REFERENCE_ONLY",
     "all_claims_accounted_for": true,
-    "rationale": "Complete609-line article read, all languages/tables/snippets and non-candidate context. Source persistence, model-tier state, disconnect/deletion, credential re-provision and unsafe locking/ID examples retained. Diagram assets and linked pages not inferred reviewed. No commands, inference, state changes, deletion, scheduling, keys or native settings executed; no adoption, rights or independent omission certification.",
+    "rationale": "Complete609-line article read, all languages/tables/snippets and non-candidate context. Source persistence, model-tier state, disconnect/deletion, credential re-provision and unsafe locking/ID examples retained. Diagram assets and linked pages not inferred reviewed. No commands, inference, state changes, deletion, scheduling, keys or native settings executed; no adoption, rights or independent omission certification. Independent audit repairs retain11grouped contexts,28atomic children and7omitted examples; repair recheck pending.",
     "claim_mappings": [
       {
         "candidate_id": "4cb11511ed3780151e154b64",
@@ -29,7 +29,7 @@
         "candidate_id": "9922a9e857fb8f40a30311c3",
         "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "d215c75ae50533d831e57190",
@@ -49,13 +49,13 @@
         "candidate_id": "0b75a05501b90da1de465933",
         "text_sha256": "dcf0a22ef07a39679e4cdd2319f103dd0754fb0df4439310e7133eac957c59aa",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "c57633deec5b7e8a7c386c06",
         "text_sha256": "365fd63e8d301f80dd914c4532566ffc0e09c2d6549ab85c2e3bfa6fa15b45e4",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "77313bc871742758482c2892",
@@ -68,7 +68,7 @@
         "candidate_id": "1446c839f6b721b0285f3352",
         "text_sha256": "2d2c5caa26d5f9f16d06db9335c040e49b1fdf7d0796095e951691c72c0d4cc3",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-018: Active sessions support prompts, tools and responses.",
+        "rationale": "DOCS-SDKPERSIST-018: Active sessions support prompts, tools and responses. DOCS-SDKPERSIST-018-A01: Pinned source observation: Active session supports sending prompts. DOCS-SDKPERSIST-018-A02: Pinned source observation: Active session supports tool calls. DOCS-SDKPERSIST-018-A03: Pinned source observation: Active session receives responses.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -173,13 +173,13 @@
         "candidate_id": "cbec7796c17302396bb24a04",
         "text_sha256": "2e6980819c66cc6beb3073ae5bd4edd0d4ab8e6f7fa2d5bb06f4cf190222b9d6",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "8bd8bad035eae7495ed92148",
         "text_sha256": "66a722b4b1035490ac69ab5e0b54ecad926345df13f05983abcbdf41c587c2cc",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "c68414a68aa59c088a90bb7f",
@@ -192,7 +192,7 @@
         "candidate_id": "35905b7d9baab5b26aff1458",
         "text_sha256": "c9ac243c38f18a6ec2b8001e3620612c5727f7c4bacab6cc5d5aa6c957903bd8",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-060: Resume systemMessage may override or extend the system prompt.",
+        "rationale": "DOCS-SDKPERSIST-060: Resume systemMessage may override or extend the system prompt. DOCS-SDKPERSIST-060-A01: Pinned source observation: Resume system message may override the prompt. DOCS-SDKPERSIST-060-A02: Pinned source observation: Resume system message may extend the prompt.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -360,7 +360,7 @@
         "candidate_id": "13a94880e370bfe804cda918",
         "text_sha256": "7cc0c8ee0126bded936464b79473d604647bf01d1a6eff7d061dd854e53928a4",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-099: Session start/resume events expose optional selected-tier metadata. DOCS-SDKPERSIST-100: The tier field is omitted when no tier is selected.",
+        "rationale": "DOCS-SDKPERSIST-099: Session start/resume events expose optional selected-tier metadata. DOCS-SDKPERSIST-100: The tier field is omitted when no tier is selected. DOCS-SDKPERSIST-099-A01: Pinned source observation: session.start exposes optional selected-tier metadata. DOCS-SDKPERSIST-099-A02: Pinned source observation: session.resume exposes optional selected-tier metadata. DOCS-SDKPERSIST-099-A03: Pinned source observation: The JavaScript field is data.autoTier. DOCS-SDKPERSIST-099-A04: Pinned source observation: The Python field is data.auto_tier.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -388,7 +388,7 @@
         "candidate_id": "7416c61d576a69c282b96c37",
         "text_sha256": "0db9acee7144d117a6483c3e65bdc2c9eb3e26b2eb5751b90dc66efe5f1c65bc",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "8b131ba9eb3d97cab343dcdf",
@@ -401,7 +401,7 @@
         "candidate_id": "1fc0d22ad3612998bfbd01d1",
         "text_sha256": "c7c92394c0284f8e15bfbb0fae0c3a49d0dda8d269e494e21bf70c4b786ce02b",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-110: session.auto_tier_switch_failed reports failure. DOCS-SDKPERSIST-111: Tier-switch failure events are ephemeral. DOCS-SDKPERSIST-112: Failure events are not persisted or replayed on resume. DOCS-SDKPERSIST-113: Failure reasons include policy rejection, request failure, setup failure and unsupported capability. DOCS-SDKPERSIST-114: The previously effective preference remains active after a failed switch.",
+        "rationale": "DOCS-SDKPERSIST-110: session.auto_tier_switch_failed reports failure. DOCS-SDKPERSIST-111: Tier-switch failure events are ephemeral. DOCS-SDKPERSIST-112: Failure events are not persisted or replayed on resume. DOCS-SDKPERSIST-113: Failure reasons include policy rejection, request failure, setup failure and unsupported capability. DOCS-SDKPERSIST-114: The previously effective preference remains active after a failed switch. DOCS-SDKPERSIST-112-A01: Pinned source observation: Tier-failure events are not persisted. DOCS-SDKPERSIST-112-A02: Pinned source observation: Tier-failure events are not replayed on resume.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -415,13 +415,13 @@
         "candidate_id": "4a3d2b43efbc62499ccadd9f",
         "text_sha256": "eb3990abcedbf5e59cb2b3c076a16b1266c29d309a237d791bfe41783256e3d1",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "9f5d90f421dae777c276673a",
         "text_sha256": "388803dc7e2a45f9ca924c10653540a5d9a8033ca7be925f349e6efd78ad4a0f",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "910e88ff0622759e7cf73d17",
@@ -476,13 +476,13 @@
         "candidate_id": "82e41c6daf935297acd9b0f4",
         "text_sha256": "86126c9d1f0b09066e6862be8f2fb81c6f5a04331866e905be1980fa33f12d29",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "335d2e447d87cd3457f97cbc",
         "text_sha256": "9d3487cf0c622a1c412bb179ce533d3f88d4890ff062d1a72e1acb8532bff3cf",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "5fdfded19f1104aecaeda09c",
@@ -530,7 +530,7 @@
         "candidate_id": "d06c33bdc2bd6145b37bb10d",
         "text_sha256": "de634894fc3fbb3d71492c57de78748ed1a4ad00afffe4c807d6b585e71e047b",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-144: Node.js and Python distinguish reset null from omitted/unset arguments. DOCS-SDKPERSIST-145: Rust uses a distinct reset variant. DOCS-SDKPERSIST-146: Go, .NET and Java use a separate reset flag. DOCS-SDKPERSIST-147: Omitting both tier and reset leaves the current preference unchanged.",
+        "rationale": "DOCS-SDKPERSIST-144: Node.js and Python distinguish reset null from omitted/unset arguments. DOCS-SDKPERSIST-145: Rust uses a distinct reset variant. DOCS-SDKPERSIST-146: Go, .NET and Java use a separate reset flag. DOCS-SDKPERSIST-147: Omitting both tier and reset leaves the current preference unchanged. DOCS-SDKPERSIST-144-A01: Pinned source observation: Node.js distinguishes null reset from omitted preference. DOCS-SDKPERSIST-144-A02: Pinned source observation: Python distinguishes None reset from omitted preference. DOCS-SDKPERSIST-146-A01: Pinned source observation: Go carries a separate reset flag. DOCS-SDKPERSIST-146-A02: Pinned source observation: .NET carries a separate reset flag. DOCS-SDKPERSIST-146-A03: Pinned source observation: Java carries a separate reset flag.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -593,20 +593,20 @@
         "candidate_id": "dc6e41063a25ba84392dbe0c",
         "text_sha256": "ceac56fa8ae7b01436837fce257e1e213c347639c40efda29e16ec543d8e1757",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-173: The example layout contains checkpoint snapshots. DOCS-SDKPERSIST-174: The example layout contains planning-state file plan.md. DOCS-SDKPERSIST-175: The example layout contains a session artifacts directory. DOCS-SDKPERSIST-176: The example artifact is an analysis document. DOCS-SDKPERSIST-177: The example artifact is a notes document.",
+        "rationale": "DOCS-SDKPERSIST-173: The example layout contains checkpoint snapshots. DOCS-SDKPERSIST-174: The example layout contains planning-state file plan.md. DOCS-SDKPERSIST-175: The example layout contains a session artifacts directory. DOCS-SDKPERSIST-176: The example artifact is an analysis document. DOCS-SDKPERSIST-177: The example artifact is a notes document. DOCS-SDKPERSIST-283: Pinned source example: The initial checkpoint example is001.json. DOCS-SDKPERSIST-284: Pinned source example: The after-first-interaction checkpoint example is002.json. DOCS-SDKPERSIST-285: Pinned source example: Subsequent checkpoints are described as incremental.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
         "candidate_id": "710fa4a15c2499c40e09aefa",
         "text_sha256": "134138670f67e67f5bf4bd5be3cd1cea8036e02f4a4bf7b40d3723b707e49881",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "2d22957478c6adfccab0162f",
         "text_sha256": "73f0ca443fd44815751a107d79a646dd53928937bec19a22d5e93b127c5eb34d",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "2d72ca289708c6177d7057e4",
@@ -661,13 +661,13 @@
         "candidate_id": "5be614e490925de9a659004e",
         "text_sha256": "0fd64d2ea1df7b0c889dc8ed221dd9a40da90c5c2abb3706df2da8c60cc65c19",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "cc585fe00938c19913ecfb2b",
         "text_sha256": "082fedca65677f10da67924430ed000b866f322fbe9df342dd5cb1b3a7e0a826",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "9210884ecf0fab7b9de35dd0",
@@ -701,7 +701,7 @@
         "candidate_id": "3094501d08af8dee8dadf288",
         "text_sha256": "664618841599897e93bab55c9200b24cfcb2dbbef3f666e1b93cb376ca54114e",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "22509ca5be11120647aea6e1",
@@ -728,21 +728,21 @@
         "candidate_id": "304edbc721fc2247158b6f24",
         "text_sha256": "82ea0fd028c2e9c4ef16f2867135e21cb480ec038701bcfd1e96d8d26aedb1b9",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-194: The TypeScript ID example combines user, task and millisecond timestamp.",
+        "rationale": "DOCS-SDKPERSIST-194: The TypeScript ID example combines user, task and millisecond timestamp. DOCS-SDKPERSIST-286: Pinned source example: TypeScript calls the ID helper with alice and code-review. DOCS-SDKPERSIST-287: Pinned source example: TypeScript illustrative output uses a millisecond-scale timestamp.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
         "candidate_id": "68b34038ddb6b8e27f37e931",
         "text_sha256": "81614ea3ad8aceaa985cb25ae436558d9e6b4e4f8095de80cc4c2a23b90c9296",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-195: The Python ID example combines user, task and second timestamp.",
+        "rationale": "DOCS-SDKPERSIST-195: The Python ID example combines user, task and second timestamp. DOCS-SDKPERSIST-288: Pinned source example: Python calls the helper with alice and code-review. DOCS-SDKPERSIST-289: Pinned source example: Python illustrative output uses a second-scale timestamp.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
         "candidate_id": "f049fcc095bc4ed07b52e295",
         "text_sha256": "30b4897c586209c8445e219bc66510b4e19ca5aa69e021e9750233c7c649971d",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-196: The listing example calls listSessions. DOCS-SDKPERSIST-197: The listing example reports session count. DOCS-SDKPERSIST-198: The listing example reports IDs and creation times. DOCS-SDKPERSIST-199: The listing example supplies an owner/repository filter.",
+        "rationale": "DOCS-SDKPERSIST-196: The listing example calls listSessions. DOCS-SDKPERSIST-197: The listing example reports session count. DOCS-SDKPERSIST-198: The listing example reports IDs and creation times. DOCS-SDKPERSIST-199: The listing example supplies an owner/repository filter. DOCS-SDKPERSIST-198-A01: Pinned source observation: Listing example logs session IDs. DOCS-SDKPERSIST-198-A02: Pinned source observation: Listing example logs creation times.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -770,19 +770,19 @@
         "candidate_id": "b9cd294c1e5889f0babc9f7e",
         "text_sha256": "a2b785c74293fc4bc046bdcaace39d42fdca5d916f926e28352ce4b7a5590691",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "957c3ea9fdf724c761602a2a",
         "text_sha256": "c4d1cca51b0fd074c1deef06b2633269cb9c62a21d7f6ca1ceec065e27583bcf",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "6fa371448592357b2c13804c",
         "text_sha256": "a643283b79c794b4effa66bdf8738fbe1568611d040c5725d507c0be16eb66f9",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "4683c866771666974ce0f3fe",
@@ -879,14 +879,14 @@
         "candidate_id": "27a17544994c05b7839adfc1",
         "text_sha256": "d23833c79bfcf41ef466f178e52f95bc3c962fe9c378f501f594c2e75d2b9f8d",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-233: Sessions running commands or background agents are described as protected from idle cleanup.",
+        "rationale": "DOCS-SDKPERSIST-233: Sessions running commands or background agents are described as protected from idle cleanup. DOCS-SDKPERSIST-233-A01: Pinned source observation: Sessions running commands are protected from idle cleanup according to source. DOCS-SDKPERSIST-233-A02: Pinned source observation: Sessions with background agents are protected from idle cleanup according to source.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
         "candidate_id": "6fc917bd6fb58a35ee2adf89",
         "text_sha256": "66df3a6015930ed7bca51a5328e7b3f9e3164a686e1480fa371c4a88583653a6",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "2e6a64c2629250dc822fa2f4",
@@ -913,7 +913,7 @@
         "candidate_id": "319a277df320eb563f99c33d",
         "text_sha256": "93acc4976a24f12bfe14e22d784f2d5130d949d739b7f2edd71e6dfbacb5f951",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-236: The source advertises complete isolation/simple security/easy scaling; these are not audited target or compliance claims.",
+        "rationale": "DOCS-SDKPERSIST-236: The source advertises complete isolation/simple security/easy scaling; these are not audited target or compliance claims. DOCS-SDKPERSIST-236-A01: Pinned source observation: The source advertises complete per-user isolation, not observed proof. DOCS-SDKPERSIST-236-A02: Pinned source observation: The source advertises simple security, not audited security. DOCS-SDKPERSIST-236-A03: Pinned source observation: The source advertises easy scaling, not measured scaling.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -934,7 +934,7 @@
         "candidate_id": "becc72b460c230a3c7949c91",
         "text_sha256": "10b24fd1fd97f67a6f75737ae5adaea7b23dcffd9f5d098cd35e37a6915216ff",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "1ea1a8a2c2f4c38a06d1e881",
@@ -968,7 +968,7 @@
         "candidate_id": "9a1a0a87f0f293f397df3562",
         "text_sha256": "0ba48dd1aea30fc5a7729546bb5ef856586b99b0fb23e58bf0b228dda2a1d0bb",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "bc9be077ce085b0688140b6d",
@@ -1023,19 +1023,19 @@
         "candidate_id": "ed7e9e937f78b30153090e67",
         "text_sha256": "78883ba1e2668ffb79a713e47f1a57bbca27367c3aa5699557fc8bc1cd49e393",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "f6acf0489c4b4f1e96f06b20",
         "text_sha256": "23c475832929435230c40335833df448132d2c0b7eeb7e877ca6f19b36589606",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "4b16332e47861dc4ac9db31d",
         "text_sha256": "af6c8f8e8ff8ecf88cceca6c6f744cd64b2d66d83aa99736015762ff3da65cc6",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-256: BYOK keys are not persisted and should be stored in a secret manager for resume.",
+        "rationale": "DOCS-SDKPERSIST-256: BYOK keys are not persisted and should be stored in a secret manager for resume. DOCS-SDKPERSIST-256-A01: Pinned source observation: Keys are listed as nonpersisted; source assertion not custody verification. DOCS-SDKPERSIST-256-A02: Pinned source observation: Store BYOK keys in a secret manager. DOCS-SDKPERSIST-256-A03: Pinned source observation: Provide BYOK credentials on resume.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -1056,7 +1056,7 @@
         "candidate_id": "b34bbfee4911c59d37ee4de6",
         "text_sha256": "b3b84a33634cd0fce05033ee81efc9b83025888a16ec60fc8aa822bcf8d510a9",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-261: In-memory tool state is lost. DOCS-SDKPERSIST-262: Tools should be stateless or persist their own state.",
+        "rationale": "DOCS-SDKPERSIST-261: In-memory tool state is lost. DOCS-SDKPERSIST-262: Tools should be stateless or persist their own state. DOCS-SDKPERSIST-262-A01: Pinned source observation: Stateless tool design is a suggested option. DOCS-SDKPERSIST-262-A02: Pinned source observation: Tools may persist their own state as the alternative.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -1077,13 +1077,13 @@
         "candidate_id": "afb757518db27e8a657f52fe",
         "text_sha256": "332bcfe3c62b92c2e80722dc11b0958b2c74f8a4d33a977e2d04c04b655475ed",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "c5ec28feb7e3e5afd15401e3",
         "text_sha256": "b47b8717a62e462248f48be45ac53083369e4e2607f5bffb10f57317c0000663",
         "disposition": "REFERENCE",
-        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+        "rationale": "Editorial/section/language/syntax context reviewed; no extra obligation inferred."
       },
       {
         "candidate_id": "2e4bba3f713bc23be2c1d68b",
@@ -1103,7 +1103,7 @@
         "candidate_id": "1dfbfa3cc8371fc3c203279b",
         "text_sha256": "c27769ceb68ac41d031a8463f2acaf89a356119e177e7d5fdb25a2af4ad985a7",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-277: The summary repeats BYOK provider re-provision.",
+        "rationale": "DOCS-SDKPERSIST-277: The summary repeats mandatory provider re-provision when resuming a BYOK session; this is conditional on BYOK use.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {
@@ -1131,7 +1131,7 @@
         "candidate_id": "f2161187822221f6aa79d411",
         "text_sha256": "74b8cd35a1cb89760740ac12c5fd41c2114eb06f0579f89437084b4e34e1949c",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKPERSIST-281: The summary repeats persistent container storage.",
+        "rationale": "DOCS-SDKPERSIST-281: The summary repeats persistent session storage for restart/migration recovery; this is conditional on intended session retention, not a universal mandate for ephemeral containers.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
       },
       {

@@ -3,7 +3,7 @@
   "source": "github/docs",
   "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T05:08:12Z",
+  "reviewed_at": "2026-10-02T05:15:42Z",
   "review_scope": "Complete609-line article read, all languages/tables/snippets and non-candidate context. Source persistence, model-tier state, disconnect/deletion, credential re-provision and unsafe locking/ID examples retained. Diagram assets and linked pages not inferred reviewed. No commands, inference, state changes, deletion, scheduling, keys or native settings executed; no adoption, rights or independent omission certification.",
   "claims": [
     {
@@ -166,7 +166,14 @@
       "end_line": 27,
       "statement": "Active sessions support prompts, tools and responses.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-018-A01",
+        "DOCS-SDKPERSIST-018-A02",
+        "DOCS-SDKPERSIST-018-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-019",
@@ -544,7 +551,13 @@
       "end_line": 166,
       "statement": "Resume systemMessage may override or extend the system prompt.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-060-A01",
+        "DOCS-SDKPERSIST-060-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-061",
@@ -895,7 +908,15 @@
       "end_line": 198,
       "statement": "Session start/resume events expose optional selected-tier metadata.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-099-A01",
+        "DOCS-SDKPERSIST-099-A02",
+        "DOCS-SDKPERSIST-099-A03",
+        "DOCS-SDKPERSIST-099-A04"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-100",
@@ -1012,7 +1033,13 @@
       "end_line": 216,
       "statement": "Failure events are not persisted or replayed on resume.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-112-A01",
+        "DOCS-SDKPERSIST-112-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-113",
@@ -1300,7 +1327,13 @@
       "end_line": 240,
       "statement": "Node.js and Python distinguish reset null from omitted/unset arguments.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-144-A01",
+        "DOCS-SDKPERSIST-144-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-145",
@@ -1318,7 +1351,14 @@
       "end_line": 240,
       "statement": "Go, .NET and Java use a separate reset flag.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-146-A01",
+        "DOCS-SDKPERSIST-146-A02",
+        "DOCS-SDKPERSIST-146-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-147",
@@ -1786,7 +1826,13 @@
       "end_line": 369,
       "statement": "The listing example reports IDs and creation times.",
       "source_strength": "EXAMPLE",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-198-A01",
+        "DOCS-SDKPERSIST-198-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-199",
@@ -2101,7 +2147,13 @@
       "end_line": 454,
       "statement": "Sessions running commands or background agents are described as protected from idle cleanup.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-233-A01",
+        "DOCS-SDKPERSIST-233-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-234",
@@ -2128,7 +2180,14 @@
       "end_line": 472,
       "statement": "The source advertises complete isolation/simple security/easy scaling; these are not audited target or compliance claims.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-236-A01",
+        "DOCS-SDKPERSIST-236-A02",
+        "DOCS-SDKPERSIST-236-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-237",
@@ -2308,7 +2367,14 @@
       "end_line": 553,
       "statement": "BYOK keys are not persisted and should be stored in a secret manager for resume.",
       "source_strength": "RECOMMENDATION",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-256-A01",
+        "DOCS-SDKPERSIST-256-A02",
+        "DOCS-SDKPERSIST-256-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-257",
@@ -2362,7 +2428,13 @@
       "end_line": 556,
       "statement": "Tools should be stateless or persist their own state.",
       "source_strength": "RECOMMENDATION",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomicity_status": "SPLIT_INTO_REFERENCE_CHILDREN",
+      "replacement_claim_ids": [
+        "DOCS-SDKPERSIST-262-A01",
+        "DOCS-SDKPERSIST-262-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKPERSIST-263",
@@ -2495,8 +2567,8 @@
       "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
       "start_line": 599,
       "end_line": 599,
-      "statement": "The summary repeats BYOK provider re-provision.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "statement": "The summary repeats mandatory provider re-provision when resuming a BYOK session; this is conditional on BYOK use.",
+      "source_strength": "REQUIREMENT",
       "accepted_policy": false
     },
     {
@@ -2531,8 +2603,8 @@
       "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
       "start_line": 603,
       "end_line": 603,
-      "statement": "The summary repeats persistent container storage.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "statement": "The summary repeats persistent session storage for restart/migration recovery; this is conditional on intended session retention, not a universal mandate for ephemeral containers.",
+      "source_strength": "REQUIREMENT",
       "accepted_policy": false
     },
     {
@@ -2543,6 +2615,413 @@
       "statement": "Hook, compatibility and debugging links remain independently scoped references.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-112-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 216,
+      "end_line": 216,
+      "statement": "Pinned source observation: Tier-failure events are not persisted.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-112",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-112-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 216,
+      "end_line": 216,
+      "statement": "Pinned source observation: Tier-failure events are not replayed on resume.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-112",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-144-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 240,
+      "end_line": 240,
+      "statement": "Pinned source observation: Node.js distinguishes null reset from omitted preference.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-144",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-144-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 240,
+      "end_line": 240,
+      "statement": "Pinned source observation: Python distinguishes None reset from omitted preference.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-144",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-146-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 240,
+      "end_line": 240,
+      "statement": "Pinned source observation: Go carries a separate reset flag.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-146",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-146-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 240,
+      "end_line": 240,
+      "statement": "Pinned source observation: .NET carries a separate reset flag.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-146",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-146-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 240,
+      "end_line": 240,
+      "statement": "Pinned source observation: Java carries a separate reset flag.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-146",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-198-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 369,
+      "end_line": 369,
+      "statement": "Pinned source observation: Listing example logs session IDs.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-198",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-198-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 369,
+      "end_line": 369,
+      "statement": "Pinned source observation: Listing example logs creation times.",
+      "source_strength": "EXAMPLE",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-198",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-233-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 454,
+      "end_line": 454,
+      "statement": "Pinned source observation: Sessions running commands are protected from idle cleanup according to source.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-233",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-233-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 454,
+      "end_line": 454,
+      "statement": "Pinned source observation: Sessions with background agents are protected from idle cleanup according to source.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-233",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-236-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 472,
+      "end_line": 472,
+      "statement": "Pinned source observation: The source advertises complete per-user isolation, not observed proof.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-236",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-236-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 472,
+      "end_line": 472,
+      "statement": "Pinned source observation: The source advertises simple security, not audited security.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-236",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-236-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 472,
+      "end_line": 472,
+      "statement": "Pinned source observation: The source advertises easy scaling, not measured scaling.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-236",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-256-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 553,
+      "end_line": 553,
+      "statement": "Pinned source observation: Keys are listed as nonpersisted; source assertion not custody verification.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-256",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-256-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 553,
+      "end_line": 553,
+      "statement": "Pinned source observation: Store BYOK keys in a secret manager.",
+      "source_strength": "RECOMMENDATION",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-256",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-256-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 553,
+      "end_line": 553,
+      "statement": "Pinned source observation: Provide BYOK credentials on resume.",
+      "source_strength": "REQUIREMENT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-256",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-262-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 556,
+      "end_line": 556,
+      "statement": "Pinned source observation: Stateless tool design is a suggested option.",
+      "source_strength": "RECOMMENDATION",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-262",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-262-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 556,
+      "end_line": 556,
+      "statement": "Pinned source observation: Tools may persist their own state as the alternative.",
+      "source_strength": "RECOMMENDATION",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-262",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-018-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 27,
+      "end_line": 27,
+      "statement": "Pinned source observation: Active session supports sending prompts.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-018",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-018-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 27,
+      "end_line": 27,
+      "statement": "Pinned source observation: Active session supports tool calls.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-018",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-018-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 27,
+      "end_line": 27,
+      "statement": "Pinned source observation: Active session receives responses.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-018",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 198,
+      "end_line": 198,
+      "statement": "Pinned source observation: session.start exposes optional selected-tier metadata.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-099",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 198,
+      "end_line": 198,
+      "statement": "Pinned source observation: session.resume exposes optional selected-tier metadata.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-099",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A03",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 198,
+      "end_line": 198,
+      "statement": "Pinned source observation: The JavaScript field is data.autoTier.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-099",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A04",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 198,
+      "end_line": 198,
+      "statement": "Pinned source observation: The Python field is data.auto_tier.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-099",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-060-A01",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 166,
+      "end_line": 166,
+      "statement": "Pinned source observation: Resume system message may override the prompt.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-060",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-060-A02",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 166,
+      "end_line": 166,
+      "statement": "Pinned source observation: Resume system message may extend the prompt.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "claim_role": "ATOMIC_REFERENCE",
+      "derived_from": "DOCS-SDKPERSIST-060",
+      "accepted_policy": false,
+      "context": "Source-scoped reference; no actual API behavior, secret custody, execution or adopted obligation verified."
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-283",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 302,
+      "end_line": 302,
+      "statement": "Pinned source example: The initial checkpoint example is001.json.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-284",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 303,
+      "end_line": 303,
+      "statement": "Pinned source example: The after-first-interaction checkpoint example is002.json.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-285",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Pinned source example: Subsequent checkpoints are described as incremental.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-286",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 344,
+      "end_line": 344,
+      "statement": "Pinned source example: TypeScript calls the ID helper with alice and code-review.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-287",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 345,
+      "end_line": 345,
+      "statement": "Pinned source example: TypeScript illustrative output uses a millisecond-scale timestamp.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-288",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 355,
+      "end_line": 355,
+      "statement": "Pinned source example: Python calls the helper with alice and code-review.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-289",
+      "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+      "start_line": 356,
+      "end_line": 356,
+      "statement": "Pinned source example: Python illustrative output uses a second-scale timestamp.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
     }
-  ]
+  ],
+  "atomicity_repair": {
+    "audit": "evidence/sdk-persistence-independent-claim-audit.json",
+    "retained_grouped_parents": 11,
+    "added_atomic_children": 28,
+    "added_omitted_examples": 7,
+    "independent_recheck_pending": true,
+    "whole_source_atomic_completeness_certified": false
+  }
 }

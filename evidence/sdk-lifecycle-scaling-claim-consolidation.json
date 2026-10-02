@@ -1,7 +1,7 @@
 {
   "schema_version": "ges.reference-claim-consolidation.v1",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T05:11:00Z",
+  "reviewed_at": "2026-10-02T05:15:42Z",
   "source_documents": [
     "evidence/source-reviews/docs-sdk-persistence-claims.json",
     "evidence/source-reviews/docs-sdk-scaling-claims.json"
@@ -12,7 +12,7 @@
     "evidence/sdk-authentication-claim-consolidation.json"
   ],
   "scope": "Two fully read pinned SDK articles:609-line persistence and455-line scaling. No source-example execution, approved deployment, linked-world or diagram review.",
-  "reviewed_claims": 486,
+  "reviewed_claims": 521,
   "all_records_mapped_once": true,
   "groups": [
     {
@@ -70,7 +70,10 @@
         "DOCS-SDKPERSIST-054",
         "DOCS-SDKPERSIST-055",
         "DOCS-SDKPERSIST-056",
-        "DOCS-SDKPERSIST-057"
+        "DOCS-SDKPERSIST-057",
+        "DOCS-SDKPERSIST-018-A01",
+        "DOCS-SDKPERSIST-018-A02",
+        "DOCS-SDKPERSIST-018-A03"
       ],
       "decision": "Creation/resume examples describe custom IDs and automatic persistence, while the introduction says default memory state disappears at session end. Retain this scope tension and generated-ID limitation as unverified source behavior. Default clients and broad permission handlers are not tenant authorization; diagrams are not binary review.",
       "accepted_policy": false
@@ -167,7 +170,20 @@
         "DOCS-SDKPERSIST-144",
         "DOCS-SDKPERSIST-145",
         "DOCS-SDKPERSIST-146",
-        "DOCS-SDKPERSIST-147"
+        "DOCS-SDKPERSIST-147",
+        "DOCS-SDKPERSIST-112-A01",
+        "DOCS-SDKPERSIST-112-A02",
+        "DOCS-SDKPERSIST-144-A01",
+        "DOCS-SDKPERSIST-144-A02",
+        "DOCS-SDKPERSIST-146-A01",
+        "DOCS-SDKPERSIST-146-A02",
+        "DOCS-SDKPERSIST-146-A03",
+        "DOCS-SDKPERSIST-099-A01",
+        "DOCS-SDKPERSIST-099-A02",
+        "DOCS-SDKPERSIST-099-A03",
+        "DOCS-SDKPERSIST-099-A04",
+        "DOCS-SDKPERSIST-060-A01",
+        "DOCS-SDKPERSIST-060-A02"
       ],
       "decision": "Resume options and Auto routing are distinct from live model switching. Pending is acceptance only; committed preference, unclaimed pending and activating state must be measured separately. Failed switches preserve effective state; ephemeral failure events cannot substitute for durable state queries. Reset/unset language differences remain explicit.",
       "accepted_policy": false
@@ -211,7 +227,10 @@
         "DOCS-SDKPERSIST-181",
         "DOCS-SDKPERSIST-182",
         "DOCS-SDKPERSIST-183",
-        "DOCS-SDKPERSIST-184"
+        "DOCS-SDKPERSIST-184",
+        "DOCS-SDKPERSIST-283",
+        "DOCS-SDKPERSIST-284",
+        "DOCS-SDKPERSIST-285"
       ],
       "decision": "WebSocket/HTTP polarity and runtime capability differ from model selection. BYOK must re-provide credentials, with source claims that keys are not persisted; actual secret custody is not verified. Azure endpoint/deploymentId snippet differs from BYOK baseUrl/model configuration and needs version/schema verification. Conversation/tool results/artifacts persist differently from in-memory tool state.",
       "accepted_policy": false
@@ -257,7 +276,13 @@
         "DOCS-SDKPERSIST-220",
         "DOCS-SDKPERSIST-221",
         "DOCS-SDKPERSIST-222",
-        "DOCS-SDKPERSIST-223"
+        "DOCS-SDKPERSIST-223",
+        "DOCS-SDKPERSIST-198-A01",
+        "DOCS-SDKPERSIST-198-A02",
+        "DOCS-SDKPERSIST-286",
+        "DOCS-SDKPERSIST-287",
+        "DOCS-SDKPERSIST-288",
+        "DOCS-SDKPERSIST-289"
       ],
       "decision": "ID naming supports audit but is not stored ownership authorization. Creation-age deletion differs from inactivity. Disconnect releases memory while retaining disk data; irreversible delete requires approval, ownership and custody safeguards. Idiomatic disposal and deprecated destroy must not be inferred as permanent deletion.",
       "accepted_policy": false
@@ -294,7 +319,12 @@
         "DOCS-SDKPERSIST-246",
         "DOCS-SDKPERSIST-247",
         "DOCS-SDKPERSIST-248",
-        "DOCS-SDKPERSIST-249"
+        "DOCS-SDKPERSIST-249",
+        "DOCS-SDKPERSIST-233-A01",
+        "DOCS-SDKPERSIST-233-A02",
+        "DOCS-SDKPERSIST-236-A01",
+        "DOCS-SDKPERSIST-236-A02",
+        "DOCS-SDKPERSIST-236-A03"
       ],
       "decision": "No idle timeout by default; spawned-client timeout does not configure existing runtime. Active work is protected according to source, but behavior needs verification. Shared CLI requires application access/ID checks; prefix-only examples do not establish authoritative ownership. Persistent storage is necessary for container recovery, not proof recovery succeeded.",
       "accepted_policy": false
@@ -334,7 +364,12 @@
         "DOCS-SDKPERSIST-279",
         "DOCS-SDKPERSIST-280",
         "DOCS-SDKPERSIST-281",
-        "DOCS-SDKPERSIST-282"
+        "DOCS-SDKPERSIST-282",
+        "DOCS-SDKPERSIST-256-A01",
+        "DOCS-SDKPERSIST-256-A02",
+        "DOCS-SDKPERSIST-256-A03",
+        "DOCS-SDKPERSIST-262-A01",
+        "DOCS-SDKPERSIST-262-A02"
       ],
       "decision": "Compaction thresholds are tunable ratios. In-memory tools need own persistence/stateless design. No built-in locking means caller coordination; the constant-valued expiring Redis lock with unconditional deletion shows no ownership-safe atomic release or renewal and must not be deployed as verified exclusive locking. Summary links do not imply whole-source acceptance.",
       "accepted_policy": false
@@ -640,5 +675,13 @@
   "rights_cleared": false,
   "native_behavior_verified": false,
   "independent_omission_audit_passed": false,
-  "global_gate_closed": false
+  "global_gate_closed": false,
+  "atomicity_repair": {
+    "audit": "evidence/sdk-persistence-independent-claim-audit.json",
+    "retained_grouped_parents": 11,
+    "added_atomic_children": 28,
+    "added_omitted_examples": 7,
+    "independent_recheck_pending": true,
+    "whole_source_atomic_completeness_certified": false
+  }
 }
