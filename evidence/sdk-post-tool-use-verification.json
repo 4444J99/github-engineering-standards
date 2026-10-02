@@ -1,0 +1,55 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/11",
+  "source_lines": 382,
+  "claim_records": 315,
+  "grouped_context": 13,
+  "atomic_records": 302,
+  "candidate_dispositions": 58,
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 267,
+      "result": "OK; synthetic negative fixture prints published_docs ERROR"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true,
+      "reference_claims": 45008,
+      "source_artifacts": 691,
+      "result": "Corrective provenance recheck after timestamp/span inputs changed."
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 722,
+      "denominator": 13657,
+      "receipt_errors": [],
+      "gates_open": 9,
+      "result": "Corrective accounting recheck after receipt wording and audit hash changed."
+    }
+  ],
+  "source_conflicts_added": [
+    "CONFLICT-SDK-POST-TOOL-FAILURE-001",
+    "CONFLICT-SDK-POST-TOOL-RESULT-TYPE-001"
+  ],
+  "boundaries": [
+    "Root independently read original worker claims and full source; original author recheck not full self-certification.",
+    "No code from source executed",
+    "Regex/logging/audit/summarization samples not verified security/compliance controls",
+    "No accepted policy, rights clearance or global omission assurance"
+  ],
+  "delivery": "Exact commit/push receipt recorded in issue #11"
+}

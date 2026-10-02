@@ -4,6 +4,25 @@
   "reviewer": "codex:source-review",
   "records": [
     {
+      "id": "CONFLICT-SDK-POST-TOOL-FAILURE-001",
+      "source_review": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json",
+      "source_spans_rechecked": ["post-tool-use.md:5-6", "post-tool-use.md:23", "post-tool-use.md:260-273", "post-tool-use.md:288-295", "post-tool-use.md:327"],
+      "issue": "The guide defines onPostToolUse as successful-execution only and supplies a separate failure hook, but later successful-hook examples inspect error/exitCode fields and compute success from absence of an error field.",
+      "proposed_resolution": "Retain runtime execution outcome separately from tool-result payload fields. A successful invocation can conceivably return application-level error data, but this guide does not establish that contract. Do not treat these examples as failure-hook coverage or infer that missing error means successful end-to-end work. Resolve exact failure classification and language SDK contracts before operational adoption.",
+      "retained_alternatives": "Payload-level diagnostic errors may be distinct from runtime failures. Preserve both the explicit success-only statement and examples without silently redefining either.",
+      "required_evidence": "Version-specific tool result and runtime failure classification, callback trigger coverage for success/failure/malformed payload, and approved runtime behavior evidence.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-SDK-POST-TOOL-RESULT-TYPE-001",
+      "source_review": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json",
+      "source_spans_rechecked": ["post-tool-use.md:90", "post-tool-use.md:98", "post-tool-use.md:212-219"],
+      "issue": "The input and output tables label toolResult and modifiedResult as object, while the redaction example explicitly handles and returns a string.",
+      "proposed_resolution": "Preserve declared object schemas and the illustrative string branch separately; no universal string-capable output adapter is proven. Verify the applicable language/runtime result union and serialization behavior. Regex replacement only on string payloads does not sanitize structured results or previously written logs.",
+      "required_evidence": "Pinned/version-specific SDK schemas, object/string/null/malformed result tests, and effective redaction across the intended storage and model-delivery paths.",
+      "policy_accepted": false
+    },
+    {
       "id":"CONFLICT-UPSTREAM-CHECK-COMPLETENESS-001",
       "source_review":"evidence/source-reviews/wa-continuation-workflow-config-claims.json",
       "claim_ids":["WA-CONT-WF-003"],
