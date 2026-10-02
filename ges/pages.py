@@ -74,7 +74,13 @@ def cached_pages(cache: Path, pages: list[dict], ledger_sha256: str) -> dict[str
     index = safe_path(cache, 'index.jsonl')
     if not index.exists():
         return indexed
-    for line in index.read_text().splitlines():
+    # A writer may be appending during read-only recovery reporting. An
+    # unterminated tail is not a committed receipt and never counts.
+    index_text = index.read_text()
+    lines = index_text.splitlines()
+    if index_text and not index_text.endswith('\n'):
+        lines = lines[:-1]
+    for line in lines:
         if not line.strip():
             continue
         row = json.loads(line)
@@ -116,6 +122,11 @@ def acquire(ledger: Path, cache: Path, *, workers: int = 2, timeout: int = 15,
     cache.mkdir(parents=True, exist_ok=True)
     with safe_path(cache, '.writer.lock').open('a') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        index_path = safe_path(cache, 'index.jsonl')
+        if index_path.exists():
+            index_bytes = index_path.read_bytes()
+            if index_bytes and not index_bytes.endswith(b'\n'):
+                raise ValueError('Interrupted index tail requires explicit recovery; preserve before resuming')
         present = cached_pages(cache, pages, ledger_sha)
         pending = sorted((p for p in pages if p['page_id'] not in present),
                          key=lambda p: bool(p.get('source_matches')))

@@ -100,3 +100,13 @@ class PageAcquisitionTests(unittest.TestCase):
         index.write_text(json.dumps(row)+'\n')
         with self.assertRaises(ValueError):
             cached_pages(self.cache, self.pages, hashlib.sha256(self.ledger.read_bytes()).hexdigest())
+
+    def test_uncommitted_index_tail_never_counts(self):
+        acquire(self.ledger, self.cache, workers=1, limit=1, fetcher=self.fetch)
+        index = self.cache / 'index.jsonl'
+        with index.open('a') as out:
+            out.write('{"page_id":')
+        rows = cached_pages(self.cache, self.pages, hashlib.sha256(self.ledger.read_bytes()).hexdigest())
+        self.assertEqual(len(rows), 1)
+        with self.assertRaises(ValueError):
+            acquire(self.ledger, self.cache, fetcher=self.fetch)

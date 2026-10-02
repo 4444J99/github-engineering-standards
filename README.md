@@ -8,7 +8,7 @@ A source-traceable standards toolkit for defining, inspecting, implementing and 
 
 95 canonical draft controls; 22 parameterized templates; six applicability profiles; a read-only repository collector; deterministic configuration checks; scoped human-review attestations; time-bounded exceptions; blocking assessment gates; source ingestion, candidate extraction, structured requirement import, source/page ledgers, crosswalk generation and change-impact analysis.
 
-The initial acquisition contains all six pinned source archives: 13,657 artifact entries, 3,742 documentation source Markdown files, and 18,015 published English page-version entries. The extraction ledger contains 150,903 candidate blocks and 605 explicitly structured source checklist requirements. These figures describe acquisition and extraction, **not completion of semantic review**.
+The initial acquisition contains all six pinned source archives: 13,657 artifact entries, 3,742 documentation source Markdown files, and 18,019 published English page-version entries. The extraction ledger contains 150,903 candidate blocks and 605 explicitly structured source checklist requirements. These figures describe acquisition and extraction, **not completion of semantic review**.
 
 ## Source set
 
@@ -60,6 +60,19 @@ The sync command downloads the six exact source snapshots and published English 
 
 `source-acquisition.yml` produces inspectable artifacts without committing upstream material or accepting extracted policy. It has no recurring schedule.
 
+Published body acquisition can resume from a digest-checked private cache:
+
+```sh
+python -m ges.pages --ledger .cache/corpus/published-page-ledger.json --cache .cache/rendered-docs --workers 2 --timeout 15
+```
+
+Every indexed body is checked against its page identity, ledger digest, content digest
+and size before reuse. Partial acquisition returns a nonzero exit code and retains
+the full page denominator. Eight consecutive failures stop further submissions.
+No credentials are sent. Acquisition does not establish pinned source identity,
+semantic review, rights clearance or acceptance. Recovery reporting accepts this
+cache through `--rendered-directory .cache/rendered-docs`.
+
 ### Render a template
 
 ```sh
@@ -88,7 +101,7 @@ The large source corpus and page-level review queues are workflow artifacts and 
 
 Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; per-file licensing clearance; all upstream scanner predicates implemented as local deterministic checks; all platform feature/plan adapters; live human-review and exception services; native protection activation and cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
 
-The recovery suite passes 208 local tests; this does not imply 95 controls implemented
+The recovery suite passes 220 local tests; this does not imply 95 controls implemented
 as automatic checks or 150,903 candidates reviewed. Current catalog controls remain
 `REVIEWED_DRAFT`; 593 non-adopted generated proposals are preserved separately in
 `controls/review_queue.json`. No native policy is silently activated. See

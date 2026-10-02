@@ -33,7 +33,8 @@ def evaluate_gate(name: str, completed: int, denominator: int | None,
             'evidence': 'evidence/recovery-status.json'}
 
 
-def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None) -> dict:
+def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None,
+           rendered_directory: Path | None=None) -> dict:
     controls = load(ROOT/'controls/catalog.json')
     queue = load(ROOT/'controls/review_queue.json')
     pins = load(ROOT/'sources/sources.lock.json')['sources']
@@ -82,6 +83,11 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
                 if r.get('status') == 'RETRIEVED' and hashlib.sha256(r['body'].encode()).hexdigest() == r.get('sha256'):
                     rendered.append((r['version'],r['path']))
     page_keys = {(r['version'],r['path']) for r in pages}
+    if rendered_directory is not None:
+        from .pages import cached_pages
+        page_ledger_sha = hashlib.sha256((corpus/'published-page-ledger.json').read_bytes()).hexdigest()
+        verified = cached_pages(rendered_directory, pages, page_ledger_sha)
+        rendered.extend((r['version'], r['path']) for r in verified.values())
     acquired = len(page_keys & set(rendered))
     accepted = sum(c['status'] == 'ACCEPTED' for c in controls)
     canonical_ids = {c['id'] for c in controls}
@@ -154,8 +160,10 @@ if __name__ == '__main__':
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--reviews',type=Path)
     p.add_argument('--review-policy',type=Path)
+    p.add_argument('--rendered-directory',type=Path,
+                   help='Integrity-checked resumable body cache; acquisition is not semantic assurance')
     args=p.parse_args()
-    report=status(args.sources,args.corpus,args.reviews,args.review_policy)
+    report=status(args.sources,args.corpus,args.reviews,args.review_policy,args.rendered_directory)
     dump(args.output,report)
     print(json.dumps({'project_complete':report['project_complete'],
                       'gates_open':sum(g['status'] != 'CLOSED' for g in report['gates']),
