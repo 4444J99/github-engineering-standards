@@ -15,3 +15,17 @@ These are remaining work, not completed features or background jobs.
 | Estate rollout | Explicit inventory of in-scope targets, pilot outcomes, owner-approved rollout batches, evidence freshness, exceptions and drift reconciliation. |
 
 The review queue in the corpus ledger is the authoritative remaining-item inventory. Referencing a source file from a draft control does not close review of that entire file. The current 95 controls do not subsume all 605 structured requirements or 150,903 candidate blocks.
+
+## Reporting boundary
+
+Construction reporting now distinguishes observed incomplete coverage from
+unverified prerequisites. Every gate lists `incomplete_conditions` and
+`unverified_conditions`; its state is calculated instead of universally assigned
+OPEN. Zero or undeclared denominators cannot pass. Pinned tree matching and
+durable-body acquisition are observed checks, not semantic certification.
+
+Semantic, rights, adoption, native and estate certification adapters are still
+unfinished. Their required inputs remain explicitly unknown; the reporter does
+not invent failed audits or permit a boolean sidecar to close them. Gate evaluation
+is not itself source review or native verification. See the individual conditions
+in `evidence/recovery-status.json` for the actual outstanding work.

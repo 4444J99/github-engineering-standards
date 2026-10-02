@@ -45,7 +45,7 @@ Per-file rights clearance remains unfinished.
 
 ## Observed verification
 
-- `python -m unittest discover -s tests -v`: 199 tests passed, exit 0 (latest renewed attempt).
+- `python -m unittest discover -s tests -v`: 208 tests passed, exit 0 (latest implementation).
 - `python -m ges validate`: 95 controls valid, exit 0.
 - `python -m ges compile`: generated canonical views, exit 0.
 - `git diff --check`: exit 0 after whitespace correction.

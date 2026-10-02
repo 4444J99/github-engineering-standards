@@ -9,6 +9,30 @@ from .core import ROOT, digest, dump, load, now
 from .corpus import coverage_with_reviews
 
 
+def evaluate_gate(name: str, completed: int, denominator: int | None,
+                  condition: str, prerequisites: dict[str, bool | None]) -> dict:
+    """Separate observed incompleteness from absent certification evidence."""
+    if type(completed) is not int or completed < 0:
+        raise ValueError('Invalid completed count')
+    if denominator is not None and (type(denominator) is not int or denominator < completed):
+        raise ValueError('Invalid or reduced denominator')
+    if (not prerequisites or 'coverage_complete' in prerequisites or
+            any(v is not None and type(v) is not bool for v in prerequisites.values())):
+        raise ValueError('Gate prerequisites must be explicit boolean/unknown observations')
+    coverage = None if denominator is None or denominator == 0 else completed == denominator
+    observations = {'coverage_complete': coverage, **prerequisites}
+    failed = [key for key, value in observations.items() if value is False]
+    unknown = [key for key, value in observations.items() if value is None]
+    closed = not failed and not unknown
+    return {'gate': name, 'status': 'CLOSED' if closed else 'OPEN',
+            'evaluation': 'PROVEN' if closed else ('INCOMPLETE' if failed else 'UNVERIFIED'),
+            'completed': completed, 'denominator': denominator,
+            'remaining': denominator-completed if denominator is not None else None,
+            'closure_condition': condition, 'conditions': observations,
+            'incomplete_conditions': failed, 'unverified_conditions': unknown,
+            'evidence': 'evidence/recovery-status.json'}
+
+
 def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None) -> dict:
     controls = load(ROOT/'controls/catalog.json')
     queue = load(ROOT/'controls/review_queue.json')
@@ -74,7 +98,37 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         ('rights_and_publication',0,inventories,'Per-file rights review and approved distribution; inventory notices alone insufficient'),
         ('estate_rollout',0,None,'Explicit authorized inventory and effective-policy/behavior evidence per target'),
     ]
-    return {'schema_version':'ges.recovery.v1','generated_at':now(),'project_complete':False,
+    # Missing semantic, rights and runtime certification is UNKNOWN, not an
+    # invented failed audit or a successful count-only test. These adapters must
+    # be implemented and supplied validated evidence before their values change.
+    prerequisites = {
+        'exhaustive_artifact_accounting': {
+            'pinned_git_trees_match': all(s['git_tree_reconciliation'].get('status') == 'MATCH' for s in sources_report),
+            'review_receipts_valid': not review_result['errors'],
+            'independent_omission_audit': None},
+        'published_content_assurance': {
+            'all_bodies_durably_acquired': acquired == len(pages),
+            'all_source_paths_reconciled': all(p['source_matches'] for p in pages),
+            'version_include_and_render_assurance': None},
+        'semantic_extraction': {'atomic_claim_fidelity_audit': None,
+                                'independent_source_to_claim_omission_audit': None},
+        'consolidation': {'exact_claim_mapping_and_conflict_review': None,
+                          'unstructured_claim_denominator_certified': None},
+        'generalization': {'profiles_parameters_and_templates_reviewed': None},
+        'operational_completeness': {'accepted_policy_exists': accepted > 0,
+                                     'all_required_bindings_verified': None},
+        'native_enforcement': {'approved_target_inventory': None,
+                               'positive_negative_bypass_and_recovery_evidence': None},
+        'rights_and_publication': {'per_file_rights_acceptance': None,
+                                   'authorized_distribution_decision': None},
+        'estate_rollout': {'approved_estate_inventory': None,
+                           'fresh_effective_enforcement_and_drift_evidence': None},
+    }
+    evaluated = [evaluate_gate(name, done, total, condition, prerequisites[name])
+                 for name, done, total, condition in gates]
+    return {'schema_version':'ges.recovery.v1','generated_at':now(),
+            'project_complete':all(g['status'] == 'CLOSED' for g in evaluated),
+            'certification_adapter_status':'INCOMPLETE_SEMANTIC_RIGHTS_AND_RUNTIME_ADAPTERS',
             'historical_checkpoint':'30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040',
             'owner_url':'https://github.com/4444J99/github-engineering-standards/pull/1',
             'review_accounting':review_result,'review_receipts_digest':digest(receipts),
@@ -89,9 +143,7 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             'accepted_controls':accepted,'justified_exclusions':0,
             'templates':len([p for p in (ROOT/'templates').iterdir() if p.is_file()]),
             'profiles':len(list((ROOT/'profiles').glob('*.json'))),
-            'gates':[{'gate':name,'status':'OPEN','completed':done,'denominator':total,
-                      'remaining':total-done if total is not None else None,'closure_condition':condition,
-                      'evidence':'evidence/recovery-status.json'} for name,done,total,condition in gates]}
+            'gates':evaluated}
 
 
 if __name__ == '__main__':
@@ -105,5 +157,6 @@ if __name__ == '__main__':
     args=p.parse_args()
     report=status(args.sources,args.corpus,args.reviews,args.review_policy)
     dump(args.output,report)
-    print(json.dumps({'project_complete':False,'gates_open':len(report['gates']),
+    print(json.dumps({'project_complete':report['project_complete'],
+                      'gates_open':sum(g['status'] != 'CLOSED' for g in report['gates']),
                       'inventory_artifacts':report['inventory_artifacts'],'published_pages':report['published_pages']}))

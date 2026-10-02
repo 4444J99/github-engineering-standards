@@ -3,90 +3,206 @@
   "candidate_blocks": 150903,
   "catalog_controls": 95,
   "catalog_digest": "c8b550d547c775376b18872b26e98e5bd1b29d45926241e409d85a342c633fd7",
+  "certification_adapter_status": "INCOMPLETE_SEMANTIC_RIGHTS_AND_RUNTIME_ADAPTERS",
   "gates": [
     {
       "closure_condition": "Every artifact has a validated reviewed disposition and independent omission audit",
       "completed": 62,
+      "conditions": {
+        "coverage_complete": false,
+        "independent_omission_audit": null,
+        "pinned_git_trees_match": true,
+        "review_receipts_valid": true
+      },
       "denominator": 13657,
+      "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "exhaustive_artifact_accounting",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
       "remaining": 13595,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "independent_omission_audit"
+      ]
     },
     {
       "closure_condition": "Every page has rendered/version/dependency review; retrieval alone is insufficient",
       "completed": 0,
+      "conditions": {
+        "all_bodies_durably_acquired": false,
+        "all_source_paths_reconciled": false,
+        "coverage_complete": false,
+        "version_include_and_render_assurance": null
+      },
       "denominator": 18019,
+      "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "published_content_assurance",
+      "incomplete_conditions": [
+        "coverage_complete",
+        "all_bodies_durably_acquired",
+        "all_source_paths_reconciled"
+      ],
       "remaining": 18019,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "version_include_and_render_assurance"
+      ]
     },
     {
       "closure_condition": "Full-artifact omission review and atomic claims; candidate count is not a claim denominator",
       "completed": 62,
+      "conditions": {
+        "atomic_claim_fidelity_audit": null,
+        "coverage_complete": false,
+        "independent_source_to_claim_omission_audit": null
+      },
       "denominator": 13657,
+      "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "semantic_extraction",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
       "remaining": 13595,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "atomic_claim_fidelity_audit",
+        "independent_source_to_claim_omission_audit"
+      ]
     },
     {
       "closure_condition": "All structured occurrences mapped with exact provenance; remaining unstructured claims also reviewed",
       "completed": 0,
+      "conditions": {
+        "coverage_complete": false,
+        "exact_claim_mapping_and_conflict_review": null,
+        "unstructured_claim_denominator_certified": null
+      },
       "denominator": 605,
+      "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "consolidation",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
       "remaining": 605,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "exact_claim_mapping_and_conflict_review",
+        "unstructured_claim_denominator_certified"
+      ]
     },
     {
       "closure_condition": "Every definition and proposal has reviewed scope, policy, parameters and conflicts",
       "completed": 0,
+      "conditions": {
+        "coverage_complete": false,
+        "profiles_parameters_and_templates_reviewed": null
+      },
       "denominator": 688,
+      "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "generalization",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
       "remaining": 688,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "profiles_parameters_and_templates_reviewed"
+      ]
     },
     {
       "closure_condition": "Accepted controls have all required tested bindings and accountable review procedures",
       "completed": 0,
+      "conditions": {
+        "accepted_policy_exists": false,
+        "all_required_bindings_verified": null,
+        "coverage_complete": null
+      },
       "denominator": 0,
+      "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "operational_completeness",
+      "incomplete_conditions": [
+        "accepted_policy_exists"
+      ],
       "remaining": 0,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "coverage_complete",
+        "all_required_bindings_verified"
+      ]
     },
     {
       "closure_condition": "Approved target inventory, positive/negative behavior tests and recovery receipts",
       "completed": 0,
+      "conditions": {
+        "approved_target_inventory": null,
+        "coverage_complete": null,
+        "positive_negative_bypass_and_recovery_evidence": null
+      },
       "denominator": null,
+      "evaluation": "UNVERIFIED",
       "evidence": "evidence/recovery-status.json",
       "gate": "native_enforcement",
+      "incomplete_conditions": [],
       "remaining": null,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "coverage_complete",
+        "approved_target_inventory",
+        "positive_negative_bypass_and_recovery_evidence"
+      ]
     },
     {
       "closure_condition": "Per-file rights review and approved distribution; inventory notices alone insufficient",
       "completed": 0,
+      "conditions": {
+        "authorized_distribution_decision": null,
+        "coverage_complete": false,
+        "per_file_rights_acceptance": null
+      },
       "denominator": 13657,
+      "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "rights_and_publication",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
       "remaining": 13657,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "per_file_rights_acceptance",
+        "authorized_distribution_decision"
+      ]
     },
     {
       "closure_condition": "Explicit authorized inventory and effective-policy/behavior evidence per target",
       "completed": 0,
+      "conditions": {
+        "approved_estate_inventory": null,
+        "coverage_complete": null,
+        "fresh_effective_enforcement_and_drift_evidence": null
+      },
       "denominator": null,
+      "evaluation": "UNVERIFIED",
       "evidence": "evidence/recovery-status.json",
       "gate": "estate_rollout",
+      "incomplete_conditions": [],
       "remaining": null,
-      "status": "OPEN"
+      "status": "OPEN",
+      "unverified_conditions": [
+        "coverage_complete",
+        "approved_estate_inventory",
+        "fresh_effective_enforcement_and_drift_evidence"
+      ]
     }
   ],
-  "generated_at": "2026-10-01T23:53:28.640108+00:00",
+  "generated_at": "2026-10-02T00:02:45.063660+00:00",
   "historical_checkpoint": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
   "inventory_artifacts": 13657,
   "justified_exclusions": 0,
