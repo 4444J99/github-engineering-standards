@@ -1,0 +1,29 @@
+{
+  "schema":"ges.reference-consolidation.v1",
+  "status":"REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:42:47Z",
+  "source_documents":["evidence/source-reviews/docs-push-protection-concept-claims.json","evidence/source-reviews/docs-push-protection-bypass-claims.json"],
+  "input_claims":39,
+  "groups":[
+    {"id":"PUSH-INGRESS","claims":["DOCS-PUSH-001","DOCS-PUSH-002","DOCS-PUSH-003","DOCS-PUSH-004","DOCS-PUSH-005","DOCS-PUSH-006","DOCS-PUSH-007"],"decision":"Verify each required ingress independently. Public-only MCP coverage is not private coverage; a blocked command-line test cannot certify UI, upload or REST paths."},
+    {"id":"PUSH-REPOSITORY-SCOPE","claims":["DOCS-PUSH-008","DOCS-PUSH-009","DOCS-PUSH-010","DOCS-PUSH-011","DOCS-PUSH-012"],"decision":"Retain feature prerequisites, repository scope, actor eligibility and default state as distinct evidence; policy configuration alone is not effective repository blocking."},
+    {"id":"PUSH-USER-SCOPE","claims":["DOCS-PUSH-015","DOCS-PUSH-016","DOCS-PUSH-017","DOCS-PUSH-018"],"decision":"Account-level public-repository protection is distinct from repository protection and does not establish private coverage or bypass alerts."},
+    {"id":"PUSH-BYPASS-AUTHORITY","claims":["DOCS-PUSH-019","DOCS-PUSH-020","DOCS-PUSH-021","DOCS-PUSH-022","DOCS-PUSH-024","DOCS-PUSH-027"],"decision":"Default writer bypass, delegated approval, direct bypass privileges and full exemptions are separate branches. Successful blocking without testing authorized bypasses is insufficient enforcement evidence."},
+    {"id":"PUSH-BYPASS-ACCOUNTABILITY","claims":["DOCS-PUSH-013","DOCS-PUSHDEP-001","DOCS-PUSHDEP-002","DOCS-PUSHDEP-003","DOCS-PUSHDEP-004","DOCS-PUSHDEP-005","DOCS-PUSHDEP-006","DOCS-PUSHDEP-007"],"decision":"Retain alert, audit and notification requirements separately. Closed-by-reason is not harmlessness or remediation; open fix-later alerts need accountable response. Notifications may expose sensitive links and depend on watcher eligibility."},
+    {"id":"PUSH-PATTERN-VERSION","claims":["DOCS-PUSH-025","DOCS-PUSH-026","DOCS-PUSH-028","DOCS-PUSHDEP-008","DOCS-PUSHDEP-009","DOCS-PUSHDEP-010","DOCS-PUSHDEP-011"],"decision":"Custom patterns, included-pattern configuration and actor exemptions have distinct prerequisites and feature declarations. Preserve strict GHES boundaries and preview context; no inferred feature parity."},
+    {"id":"PUSH-NON-ENFORCEMENT-ASSERTIONS","claims":["DOCS-PUSH-014","DOCS-PUSH-023"],"decision":"Risk reports and stated benefits do not prove coverage, actual prevention, secret recall, compliance or completed response."}
+  ],
+  "binding_proposal":{
+    "status":"UNMAPPED_POLICY_DECISION_REQUIRED",
+    "assessment_default":"READ_ONLY",
+    "parameters":["exact target and version","required ingress paths","pattern identities and revisions","repository versus account scope","authorized actors and exemption/bypass policy","accountable response owner"],
+    "readback":"Effective target settings, enabled patterns, bypass and exemption assignments, actor permissions and applicable version conditions; unavailable readback is UNKNOWN, never PASS.",
+    "approved_behavior_tests":"For each required supported ingress: controlled non-sensitive positive block, ordinary negative allowed path, permitted bypass, prohibited bypass, exemption behavior where applicable and restoration readback. Never use real credentials or private data as probes.",
+    "accountability_tests":"Verify expected open or closed alert state for each approved bypass reason, audit event and eligible notification delivery. A user's stated reason is not independent evidence of safety.",
+    "coverage":"Record all required paths and actors, including unavailable or untested cases. Do not reduce the denominator to the paths that passed.",
+    "mutation_boundary":"This proposal authorizes no feature, permission, protection, cost or notification change. Runtime tests require the applicable explicit target approval and recovery plan.",
+    "template_review":"Applicability, credential response, bypass approval, exception expiry and sensitive-evidence handling templates require review before canonical policy adoption."
+  },
+  "remaining_work":["Product-variable and rendered-version resolution","Linked page and asset review with rights decisions","Full candidate and non-candidate accounting","Independent atomicity and omission audit","Policy-strength and profile decision","Implementation and actual approved behavior receipts"],
+  "policy_accepted":false,"rights_cleared":false,"native_behavior_verified":false,"canonical_controls_changed":0
+}
