@@ -1,0 +1,34 @@
+{
+  "schema":"ges.reference-reconciliation.v1",
+  "status":"REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer":"codex:source-review",
+  "reviewed_at":"2026-10-02T01:37:57Z",
+  "sources":["evidence/source-reviews/docs-enterprise-organization-role-claims.json","evidence/source-reviews/docs-custom-pattern-prerequisites-claims.json"],
+  "reconciled_claims":["DOCS-ORGROLE-004","DOCS-ORGROLE-005","DOCS-ORGROLE-006","DOCS-ORGROLE-007","DOCS-ORGROLE-008","DOCS-ORGROLE-010","DOCS-ORGROLE-013","DOCS-ORGROLE-014","DOCS-ORGROLE-015","DOCS-ORGROLE-016","DOCS-ORGROLE-017","DOCS-PATDEP-001","DOCS-PATDEP-003","DOCS-PATDEP-004"],
+  "decisions":[
+    {"id":"ENTERPRISE-POLICY-NOT-CONTENT-ACCESS","claims":["DOCS-ORGROLE-004","DOCS-ORGROLE-005","DOCS-PATDEP-001"],"resolution":"Enterprise policy authority and broad feature actor eligibility do not establish repository-content or custom-pattern dry-run permission. Preserve effective permission evidence independently."},
+    {"id":"ORGANIZATION-MEMBERSHIP-NOT-ADMINISTRATION","claims":["DOCS-ORGROLE-006","DOCS-ORGROLE-007","DOCS-PATDEP-003","DOCS-PATDEP-004"],"resolution":"Organization membership is not organization ownership or repository administration. Dry-run applicability requires exact target administration and the documented organization-role condition, without automatically elevating the actor."},
+    {"id":"IDENTITY-PROVISIONING-CONSTRAINTS","claims":["DOCS-ORGROLE-008","DOCS-ORGROLE-010","DOCS-ORGROLE-013","DOCS-ORGROLE-014","DOCS-ORGROLE-015","DOCS-ORGROLE-016","DOCS-ORGROLE-017"],"resolution":"Retain ghec-only SAML and SCIM joining paths. The ability to join or become an owner is not authority to change identity-provider assignment, membership, credentials or role. Existing sanctioned access must be used; unavailable access remains unknown."}
+  ],
+  "assessment_contract": {
+    "default":"READ_ONLY",
+    "target_identity":"Exact enterprise, organization, repository, actor and pattern revision",
+    "evidence":"Current role and effective repository-administration readback, product/version applicability, creator restrictions and identity-provider constraints where applicable",
+    "unknown":"An inaccessible endpoint or missing role readback cannot PASS or prove nonexistence",
+    "human_required":"Membership, IdP assignment, role escalation or credential changes require their applicable explicit approval; do not implement them as automatic collector repair",
+    "behavior_boundary":"A valid role readback does not itself prove successful dry run, published-pattern state or effective push blocking"
+  },
+  "additional_dependency_observation": {
+    "path":"data/reusables/enterprise-accounts/organization-settings-dropdown.md",
+    "commit":"56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "full_text_read":true,
+    "observation":"The one-line include is screenshot alt text and an image reference for a gear dropdown; it adds no role grant or enforcement assertion.",
+    "image_visual_reviewed":false,
+    "image_rights_cleared":false,
+    "full_artifact_accounting_receipt":false
+  },
+  "policy_accepted":false,
+  "native_behavior_verified":false,
+  "rights_cleared":false,
+  "canonical_controls_changed":0
+}
