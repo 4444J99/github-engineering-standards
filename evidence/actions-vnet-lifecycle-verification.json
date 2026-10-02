@@ -1,0 +1,92 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 45,
+  "tranche": {
+    "files": 15,
+    "claims": 48,
+    "candidates": 163
+  },
+  "rbac_action_inventory": [
+    "GitHub.Network/operations/read",
+    "GitHub.Network/networkSettings/read",
+    "GitHub.Network/networkSettings/write",
+    "GitHub.Network/networkSettings/delete",
+    "GitHub.Network/RegisteredSubscriptions/read",
+    "Microsoft.Network/locations/operations/read",
+    "Microsoft.Network/locations/operationResults/read",
+    "Microsoft.Network/locations/usages/read",
+    "Microsoft.Network/networkInterfaces/read",
+    "Microsoft.Network/networkInterfaces/write",
+    "Microsoft.Network/networkInterfaces/delete",
+    "Microsoft.Network/networkInterfaces/join/action",
+    "Microsoft.Network/networkSecurityGroups/join/action",
+    "Microsoft.Network/networkSecurityGroups/read",
+    "Microsoft.Network/publicIpAddresses/read",
+    "Microsoft.Network/publicIpAddresses/write",
+    "Microsoft.Network/publicIPAddresses/join/action",
+    "Microsoft.Network/routeTables/join/action",
+    "Microsoft.Network/virtualNetworks/read",
+    "Microsoft.Network/virtualNetworks/subnets/join/action",
+    "Microsoft.Network/virtualNetworks/subnets/read",
+    "Microsoft.Network/virtualNetworks/subnets/write",
+    "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/delete",
+    "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/read",
+    "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/write",
+    "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/details/read",
+    "Microsoft.Network/virtualNetworks/subnets/serviceAssociationLinks/validate/action",
+    "Microsoft.Resources/subscriptions/resourceGroups/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/deployments/read",
+    "Microsoft.Resources/subscriptions/resourcegroups/deployments/write",
+    "Microsoft.Resources/subscriptions/resourcegroups/deployments/operations/read",
+    "Microsoft.Resources/deployments/read",
+    "Microsoft.Resources/deployments/write",
+    "Microsoft.Resources/deployments/operationStatuses/read"
+  ],
+  "findings": [
+    "Deprecated Bicep has outbound Allow rules only, not the separately recommended explicit inbound block.",
+    "Setup commands are prefixed '. az'; no execution validation performed.",
+    "Troubleshooting debug flag is spelled ---debug.",
+    "Setup prose promises full payload while command projects GitHubId/name.",
+    "Manual failover description and GitHub-initiated failover heading require reconciliation.",
+    "Future NIC subscription move and dated IP closure are not live behavior proofs."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 57802,
+      "source_artifacts": 1894
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 1928,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2.05,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Fifteen full pinned standalone fragments. Every RBAC operation inventoried; complete deprecated address spans reviewed but not adopted or copied as deployment configuration. No upstream commands executed; rendering, independent audits, rights, policy adoption and native approvals remain separate."
+}
