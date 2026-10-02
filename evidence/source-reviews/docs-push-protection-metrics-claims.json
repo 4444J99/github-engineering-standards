@@ -1,0 +1,20 @@
+{
+  "schema_version":"ges.source-claims-review.v1",
+  "source":"github/docs","commit":"56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:57:23Z",
+  "path":"content/code-security/concepts/secret-security/push-protection-metrics.md",
+  "review_scope":"All 36 lines read. Permission and gated-feature includes unresolved; product variables and observed dataset completeness remain unverified. No adoption or measured effectiveness certificate.",
+  "claims":[
+    {"claim_id":"DOCS-PUSHMET-001","start_line":18,"end_line":18,"statement":"The metrics overview describes organization and cross-organization enterprise views; target scope and access filters must be retained when interpreting data.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-002","start_line":18,"end_line":18,"statement":"The overview permits viewing the full dataset or filtering by criteria; a filtered view cannot be substituted for exhaustive estate coverage.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-003","start_line":22,"end_line":22,"statement":"The summary reports pushes containing secrets that were blocked, not every attempted secret exposure or all possible ingress paths.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-004","start_line":22,"end_line":22,"statement":"The summary separately reports bypass counts; bypass activity is not successful remediation or absence of risk.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-005","start_line":25,"end_line":25,"statement":"The overview identifies secret types most often blocked or bypassed; frequency does not establish detection recall for other types.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-006","start_line":26,"end_line":26,"statement":"The overview ranks repositories by blocked-push activity; no activity is not proof of effective protection or clean content.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-007","start_line":27,"end_line":27,"statement":"The overview ranks repositories by bypass activity, a distinct dimension from block counts.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-008","start_line":28,"end_line":28,"statement":"Bypass-reason distribution reflects reasons supplied by users, not independent verification that values were tests or false positives.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-009","start_line":32,"end_line":34,"statement":"Repository administration is listed as a route to metrics visibility; visibility is not enforcement authority or coverage proof.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-010","start_line":32,"end_line":35,"statement":"A custom repository role with view-secret-scanning-alerts permission is listed as another visibility route; an arbitrary custom role is not equivalent.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMET-011","start_line":32,"end_line":36,"statement":"Repository alert access is also listed for metrics visibility; permission-limited omissions must remain explicit, not be interpreted as zero events.","accepted_policy":false}
+  ]
+}
