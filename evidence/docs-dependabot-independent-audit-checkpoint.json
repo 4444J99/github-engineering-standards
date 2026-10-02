@@ -1,0 +1,53 @@
+{
+  "schema": "ges.independent-audit-checkpoint.v1",
+  "issue": 26,
+  "reviewer": "codex:independent-review",
+  "reviewer_identity": "/root",
+  "claim_author_identity": "/root/evaluator_review",
+  "reviewed_at": "2026-10-02T21:01:07.999Z",
+  "input": {
+    "path": "evidence/source-reviews/docs-dependabot-claims.json",
+    "sha256": "88f0ae6acca0a1579e5a7ca31649abd93e43134e8c5eb4b15f63152752a178d2",
+    "claims": 1568
+  },
+  "source_reading": "evidence/docs-dependabot-source-reading-v2.json",
+  "inventory_reconciliation": "evidence/docs-dependabot-inventory-reconciliation.json",
+  "completed_claim_reading": {
+    "first": "DOCS-DEPENDABOT-0001",
+    "last": "DOCS-DEPENDABOT-0310",
+    "count": 310
+  },
+  "method": "Compare statement, physical span and source strength to separately fully read pinned bodies; scoped availability context examined beyond independent metadata occurrence records.",
+  "findings": [
+    {
+      "status": "REPAIR_REQUESTED",
+      "example_claim_ids": [
+        "DOCS-DEPENDABOT-0199",
+        "DOCS-DEPENDABOT-0200",
+        "DOCS-DEPENDABOT-0201",
+        "DOCS-DEPENDABOT-0202",
+        "DOCS-DEPENDABOT-0261",
+        "DOCS-DEPENDABOT-0274",
+        "DOCS-DEPENDABOT-0293",
+        "DOCS-DEPENDABOT-0299"
+      ],
+      "finding": "Conditional semantic support claims omit standalone availability predicate context. Assess all conditional claims; nested terminology or inline exceptions must not be incorrectly turned into whole-claim availability."
+    },
+    {
+      "status": "REPAIR_REQUESTED",
+      "claim_ids": [
+        "DOCS-DEPENDABOT-0217",
+        "DOCS-DEPENDABOT-0218",
+        "DOCS-DEPENDABOT-0219"
+      ],
+      "finding": "Docker metadata prerequisites sourced from must clauses are marked INFO. Preserve REQUIREMENT strength within capability-prerequisite scope, not universal repository policy."
+    }
+  ],
+  "remaining_claims_to_read": 1258,
+  "author_repair_recheck_pending": true,
+  "independent_audit_complete": false,
+  "full_review_receipts_issued": false,
+  "rights_cleared": false,
+  "policy_adopted": false,
+  "native_enforcement_verified": false
+}
