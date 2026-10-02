@@ -1,0 +1,24 @@
+{
+  "schema": "ges.rights-exception.v1",
+  "source": "github/github-well-architected",
+  "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+  "path": "content/library/application-security/recommendations/threat-model.md",
+  "artifact_id": "a630e6b4821c833d8736bb9b",
+  "content_sha256": "9eb39ba482335c2c1af6c31c7b960c6eb730101cd5ef75c3512f1a1754f491e7",
+  "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/application-security/recommendations/threat-model.md",
+  "verified_source_spans": [
+    {"lines": [2, 3], "finding": "The article metadata declares GitHub/project-author copyright and MIT."},
+    {"lines": [75, 83], "finding": "The source-integrity scope references a relative assets/image1.png diagram. Its attribution describes derivation from SLSA's version 1.0 supply-chain threat model and separately identifies Community Specification License 1.0."}
+  ],
+  "component_reference": "https://slsa.dev/spec/v1.0/threats",
+  "license_reference_as_linked_by_source": "https://github.com/slsa-framework/slsa/blob/main/LICENSE.md",
+  "license_reference_is_immutable": false,
+  "resolved_component": {"path": "content/library/application-security/recommendations/assets/image1.png", "artifact_id": "325f0fdf25f350255e3de464", "content_sha256": "73e05cc37c418b7a9b50132334d7aa0ba1473fa64c98a87539601be47ecf54f3", "git_blob_sha": "d32baeb4c8a7cd83f01d12b993da675064807818", "size": 39618, "evidence": "Exact relative path resolves to a binary artifact in the pinned corpus inventory; image bytes and embedded notices remain to be independently checked"},
+  "decision": "Do not infer MIT clearance for the derived diagram from the article metadata or repository declaration. Retain independently phrased textual findings and provenance; exclude diagram expression from distributed outputs until component-specific review and applicable rights acceptance.",
+  "remaining": ["Independently verify image bytes against the inventory digest", "Visually review the exact image and embedded notices", "Pin the historically applicable upstream license text rather than the mutable main link", "Assess adaptation, attribution and intended distribution obligations", "Obtain applicable rights acceptance before redistribution"],
+  "diagram_visual_reviewed": false,
+  "license_terms_adjudicated": false,
+  "rights_accepted": false,
+  "redistribution_approved": false,
+  "raw_expression_committed": false
+}
