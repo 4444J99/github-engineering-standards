@@ -1,0 +1,238 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:44:08Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/section-using-jobs-in-a-workflow-id.md",
+      "content_sha256": "2a17aabe5d951d80ec98083c46e39927a2c5fc199c26753e9819d8b7a0418674",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "Job ID uniquely keys a job configuration map within jobs; starts with letter or underscore and contains only alphanumerics, hyphens or underscores. Display names in the two-job example are distinct from job identifiers.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/section-using-jobs-in-a-workflow-name.md",
+      "content_sha256": "de0f4f346312610f84bfe5b911232b4496e6c4898a346c385c12d75ec4ed82a9",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Job name is the UI display name, not the unique job ID or native execution receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/section-using-jobs-in-a-workflow-needs.md",
+      "content_sha256": "cbee2b26a5e4f1f63ae514ccf3d9fa01dc8405da04c94364a65263a5e42d5cfa",
+      "start_line": 1,
+      "end_line": 20,
+      "statement": "needs is string or array of job IDs requiring successful dependencies; failure/skip propagates down the dependency chain unless a conditional permits continuation. Example job1→job2→job3 also has job3 directly require both predecessors.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/section-using-jobs-in-a-workflow-needs.md",
+      "content_sha256": "cbee2b26a5e4f1f63ae514ccf3d9fa01dc8405da04c94364a65263a5e42d5cfa",
+      "start_line": 22,
+      "end_line": 34,
+      "statement": "always() permits dependent job3 after both dependencies complete regardless of success; it does not turn failed predecessors into passing evidence or authorize bypassing acceptance gates.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/section-using-jobs-in-a-workflow.md",
+      "content_sha256": "45dd88a3c898b18c94887b777878fe21bcae150eb5c46be8647f8862790c2849",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Jobs default parallel and each has runs-on environment; needs imposes ordering. Unlimited job wording is explicitly bounded by workflow usage limits, not unlimited concurrency/cost. API exposes run-job unique IDs separately.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-default-run-value-for-job-example.md",
+      "content_sha256": "df5b117fd2a2b9447683d45d9912ef460477a77a2f80fd630776daf2da92c938",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Example job defaults set Bash and ./scripts on ubuntu-latest. Values are illustrative; directory existence and executed shell behavior remain unverified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-default-values-for-jobs-defaults-job-run.md",
+      "content_sha256": "4ac47847834bce2218638464d9cc6c9a0df9d85b86439302726f77f07cd1fa80",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Job defaults.run supplies shell/working-directory for its run steps, with workflow-level counterpart and specificity include. Source calls out overrides at job defaults.run and steps[*].run; that wording requires reconciliation with actual shell/working-directory step keys, not blindly adopted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-default-values-for-jobs-defaults-job.md",
+      "content_sha256": "f836b81bcf0cec746399d6c6496448f6905a8f14840b36a605cbc37b78435943",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Job defaults is a map of job-step default settings, with workflow defaults and more-specific override reusable referenced; source description does not establish arbitrary defaults accepted for every step type.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-default-values-for-jobs-defaults-run-shell.md",
+      "content_sha256": "f3b1d488b2c57413dd4c5e1f5a78408e0de4048ba1b6e2154f771a10585d7f87",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "shell selects a step shell and includes reusable-keyword, supported-shells and default precedence fragments. Those dependency bodies/rendering remain separately reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-default-values-for-jobs-defaults-run-working-directory.md",
+      "content_sha256": "fd176bebfa2e91d15e6f65ce3556102d0485744bde5d79f6dea44485152b9f80",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "working-directory selects shell step working directory; existence and precedence come from separate includes. Fragment alone does not prove directory availability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-default-values-for-jobs-defaults-run.md",
+      "content_sha256": "d548a34f87b1e1650c99f93eeb3a79e2cac4607cfbed4e8584da8fcf31e52b51",
+      "start_line": 1,
+      "end_line": 12,
+      "statement": "Workflow defaults.run sets shell and working-directory for run steps, with per-job counterpart; contexts and expressions are prohibited at this keyword. Example uses Bash and ./scripts, not universal target settings.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-default-values-for-jobs-defaults.md",
+      "content_sha256": "6ef06f29764e4d615b605e74dfca72d430770eb562ba7fb7a890495e27a78f57",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Workflow defaults is a map applying defaults across jobs, with per-job alternatives and specificity include; actual valid default keys require parent/schema review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-permissions-all-jobs-example.md",
+      "content_sha256": "49548d933cad723a5badfc7588e035b9dc26215803280bc9ac988b9992f3f1b5",
+      "start_line": 1,
+      "end_line": 12,
+      "statement": "Workflow example sets permissions: read-all for all jobs. Prose 'all permissions read' must be qualified by scopes without read capability, especially previously reviewed id-token write/none; not unconditional literal read support or recommended blanket permissions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/setting-permissions-specific-jobs-example.md",
+      "content_sha256": "2f1b13f6580010f256e925a94a3457fd3e2fb07c3ab2a61e6dcc9cfdb690fd8f",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "Stale-job example grants issues and pull-requests write, all other permissions none, and includes action-stale. This is job-specific illustrative privilege, not adopted automatic issue closure or reviewed action implementation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/larger-runner-name-note.md",
+      "content_sha256": "920419af6d8f6fde9b21e6a00d38f934e53fb22354dfcbb291d730b30731cae7",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Larger-runner names can determine function; code-scanning default setup requires code-scanning name in this source. Renaming is not authorized and linked configuration remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/larger-runner-permissions.md",
+      "content_sha256": "3b4a70dc640b8ff9a31c81252c5d7f143141bee8627645ef7e0e946cb718bfde",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Larger runners are described for organizations/enterprises on Team or GHE Cloud; availability statement does not prove target entitlement or provisioning.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/larger-runner-static-ip-contact-support.md",
+      "content_sha256": "28d9fc98a538baf8a03a3636bdae87c984fee176f0ad7c03b6ae7bc929a3e66f",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Using more than ten static-IP larger-runner pools requires contacting support according to pinned guidance; this is not immutable technical ceiling or actual approved expansion.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/larger-runners-table.md",
+      "content_sha256": "e59b64194d552608ffe132206aa013f8a9bbe00efd6b533d1797b435b09879c3",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "Pinned macOS Large Intel row gives 12 CPUs,30GB RAM,14GB SSD and latest/14/15/26 large labels, marking15 latest. XLarge M2 arm64 row gives5 CPUs plus8 GPU acceleration,14GB RAM/SSD and latest/14/15/26 plus preview xcode27 xlarge labels. Preserve dimensions and source date, not current inventory or benchmark proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/learn-more-about-yaml.md",
+      "content_sha256": "c62ddf6fee70a1ecdf5e1a53258fd46d29f80ff938d5df859ee4241bd9debdc8",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "YAML learning fragment links an external primer; navigation is reference-only, not full primer review or verified workflow validity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/lifecycle-of-attestations.md",
+      "content_sha256": "80d2d974c02a404727e85d541b13f8bab997b24b6b20c31a9caf9198481bfc6f",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Attestations are useful when tied to consumed artifacts; source recommends deleting accidental, orphaned or no-longer-trusted attestations. With consumer verification deletion may block use, and external artifact deletion can trigger cleanup automation. These destructive lifecycle proposals require authorization and recovery review; no attestations deleted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSJOBDEFAULT-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/macos-networking-limitation.md",
+      "content_sha256": "913248e3e84a5b97feb07969c96e7df001621fd578b8a0b2fd9e195dd37e977c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "macOS larger runners cannot join a network-configured group, and groups containing them cannot receive a network configuration. Constraint applies both association directions, not all runner types.",
+      "accepted_policy": false
+    }
+  ]
+}
