@@ -4,6 +4,11 @@ Owner: [PR #1](https://github.com/4444J99/github-engineering-standards/pull/1).
 Project status: **NOT COMPLETE**. This is a verified repair and preserved handoff,
 not a release or an exhaustive six-source standard.
 
+This is the historical 2026-10-01 recovery checkpoint, not a live progress report.
+The counts, probes and heads below retain that checkpoint's evidence. Current
+construction coverage is owned by `evidence/recovery-status.json`; later source
+reviews and independent audits are in `evidence/source-reviews/` and `evidence/`.
+
 ## Recovered work
 
 Historical checkpoint `30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040` is retained.
@@ -45,7 +50,7 @@ Per-file rights clearance remains unfinished.
 
 ## Observed verification
 
-- `python -m unittest discover -s tests -v`: 208 tests passed, exit 0 (latest implementation).
+- `python -m unittest discover -s tests -v`: 208 tests passed, exit 0 (implementation at this checkpoint).
 - `python -m ges validate`: 95 controls valid, exit 0.
 - `python -m ges compile`: generated canonical views, exit 0.
 - `git diff --check`: exit 0 after whitespace correction.
@@ -77,7 +82,7 @@ gate remained false. `evidence/recovery-self-assessment.json` retains the saniti
 ## Remaining acceptance and resumption
 
 `evidence/recovery-status.json` owns the nine-gate construction counts, pins and
-unresolved published entries. Validated source-review receipts now cover 62/13,657
+unresolved published entries. At this checkpoint, validated source-review receipts covered 62/13,657
 artifacts: `atapas/model-repo` 8/8, `tmcw/github-best-practices` 1/1, and the
 governance template 13/13. They account for 465 candidate blocks and phrase 222
 atomic reference claims in those three small sources. GHQR adds 21 reviewed artifacts:

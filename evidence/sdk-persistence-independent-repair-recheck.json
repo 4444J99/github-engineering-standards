@@ -1,0 +1,1990 @@
+{
+  "schema": "ges.independent-repair-recheck.v1",
+  "reviewer": "codex:independent-review",
+  "reviewed_at": "2026-10-02T05:17:55Z",
+  "status": "SPECIFIED_BOUNDED_REPAIRS_SUPPORTED",
+  "scope": "Only persistence609-line source partition and specified audit repairs,317current records and lifecycle/scaling consolidation521members. Scaling204claims reused as self-authored reference context, not independently audited by this recheck. Compatibility work excluded.",
+  "original_audit": "evidence/sdk-persistence-independent-claim-audit.json",
+  "original_audit_immutable": true,
+  "inspected_documents": [
+    {
+      "path": "evidence/source-reviews/docs-sdk-persistence-claims.json",
+      "sha256": "f059998e51f96174f2d451fdacd0cdc513c8b9ddd09851136e50aa7b12149902"
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-persistence-artifacts.json",
+      "sha256": "e14f0d740cb1087f205e8d8598488d8b6b76c6905415ebd1b9eaa2fa00ecec4d"
+    },
+    {
+      "path": "evidence/sdk-lifecycle-scaling-claim-consolidation.json",
+      "sha256": "dfa89253bdef8cf103b31a3d0337fac2f87292f76d5c52ba89e8fb48f19513d9"
+    }
+  ],
+  "source": {
+    "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "sha256": "14a891e1d05fe7ff00dc686822a92f6505c231710c441894ab7476c3cb28b969"
+  },
+  "counts": {
+    "persistence_records": 317,
+    "grouped_parents": 11,
+    "atomic_children": 28,
+    "added_example_occurrences": 7,
+    "full_receipts": 1,
+    "consolidation_unique_members": 521
+  },
+  "checks": {
+    "receipt_errors": [],
+    "bounds_errors": [],
+    "all_children_and_added_examples_candidate_mapped": true,
+    "consolidation_members_exactly_once": true
+  },
+  "original_findings_rechecked": [
+    {
+      "finding": "11 grouped records",
+      "result": "Parents retained as grouped context with28 supported children; actions, event names/language field casing, reset handling, active work, tools and advertised benefits separately preserved."
+    },
+    {
+      "finding": "Missing checkpoint layout",
+      "result": "283–285 preserve initial, post-first-interaction and incremental checkpoints at302–304."
+    },
+    {
+      "finding": "Missing ID calls/outputs",
+      "result": "286–289 preserve calls and millisecond/second output distinction at344–345/355–356 without ownership inference."
+    },
+    {
+      "finding": "Mixed key strength",
+      "result": "256-A01 INFO nonpersistence assertion, A02 RECOMMENDATION secret manager and A03 REQUIREMENT resume reprovision are distinguished."
+    },
+    {
+      "finding": "BYOK summary requirement",
+      "result": "277 remains mandatory only for BYOK resume."
+    },
+    {
+      "finding": "Container storage summary",
+      "result": "281 is required only for intended retained-state restart/migration recovery, not every ephemeral container."
+    }
+  ],
+  "remaining_actionable_corrections_identified": [],
+  "qualified_semantic_result": "All specified repairs are supported in this bounded recheck. This is not a new exhaustive linked-world/global omission certification, nor testing source assertions as actual runtime behavior.",
+  "claim_dispositions": [
+    {
+      "claim_id": "DOCS-SDKPERSIST-001",
+      "start_line": 5,
+      "end_line": 6,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-002",
+      "start_line": 7,
+      "end_line": 9,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-003",
+      "start_line": 10,
+      "end_line": 11,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-004",
+      "start_line": 20,
+      "end_line": 20,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-005",
+      "start_line": 20,
+      "end_line": 20,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-006",
+      "start_line": 20,
+      "end_line": 20,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-007",
+      "start_line": 20,
+      "end_line": 20,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-008",
+      "start_line": 20,
+      "end_line": 20,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-009",
+      "start_line": 20,
+      "end_line": 20,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-010",
+      "start_line": 20,
+      "end_line": 20,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-011",
+      "start_line": 22,
+      "end_line": 22,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-012",
+      "start_line": 115,
+      "end_line": 115,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-013",
+      "start_line": 452,
+      "end_line": 452,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-014",
+      "start_line": 470,
+      "end_line": 470,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-015",
+      "start_line": 478,
+      "end_line": 478,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-016",
+      "start_line": 527,
+      "end_line": 527,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-017",
+      "start_line": 26,
+      "end_line": 26,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-018",
+      "start_line": 27,
+      "end_line": 27,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-019",
+      "start_line": 28,
+      "end_line": 28,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-020",
+      "start_line": 29,
+      "end_line": 29,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-021",
+      "start_line": 33,
+      "end_line": 33,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-022",
+      "start_line": 33,
+      "end_line": 33,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-023",
+      "start_line": 40,
+      "end_line": 40,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-024",
+      "start_line": 44,
+      "end_line": 44,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-025",
+      "start_line": 45,
+      "end_line": 45,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-026",
+      "start_line": 49,
+      "end_line": 49,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-027",
+      "start_line": 51,
+      "end_line": 51,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-028",
+      "start_line": 61,
+      "end_line": 61,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-029",
+      "start_line": 65,
+      "end_line": 65,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-030",
+      "start_line": 65,
+      "end_line": 65,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-031",
+      "start_line": 68,
+      "end_line": 68,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-032",
+      "start_line": 70,
+      "end_line": 70,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-033",
+      "start_line": 77,
+      "end_line": 77,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-034",
+      "start_line": 81,
+      "end_line": 81,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-035",
+      "start_line": 82,
+      "end_line": 82,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-036",
+      "start_line": 86,
+      "end_line": 86,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-037",
+      "start_line": 88,
+      "end_line": 88,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-038",
+      "start_line": 96,
+      "end_line": 96,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-039",
+      "start_line": 101,
+      "end_line": 101,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-040",
+      "start_line": 102,
+      "end_line": 102,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-041",
+      "start_line": 106,
+      "end_line": 106,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-042",
+      "start_line": 108,
+      "end_line": 108,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-043",
+      "start_line": 52,
+      "end_line": 52,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-044",
+      "start_line": 62,
+      "end_line": 62,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-045",
+      "start_line": 65,
+      "end_line": 65,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-046",
+      "start_line": 80,
+      "end_line": 80,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-047",
+      "start_line": 113,
+      "end_line": 113,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-048",
+      "start_line": 121,
+      "end_line": 121,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-049",
+      "start_line": 124,
+      "end_line": 124,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-050",
+      "start_line": 131,
+      "end_line": 131,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-051",
+      "start_line": 134,
+      "end_line": 134,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-052",
+      "start_line": 143,
+      "end_line": 143,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-053",
+      "start_line": 146,
+      "end_line": 146,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-054",
+      "start_line": 153,
+      "end_line": 153,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-055",
+      "start_line": 156,
+      "end_line": 156,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-056",
+      "start_line": 131,
+      "end_line": 131,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-057",
+      "start_line": 143,
+      "end_line": 143,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-058",
+      "start_line": 161,
+      "end_line": 161,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-059",
+      "start_line": 165,
+      "end_line": 165,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-060",
+      "start_line": 166,
+      "end_line": 166,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-061",
+      "start_line": 167,
+      "end_line": 167,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-062",
+      "start_line": 168,
+      "end_line": 168,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-063",
+      "start_line": 169,
+      "end_line": 169,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-064",
+      "start_line": 170,
+      "end_line": 170,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-065",
+      "start_line": 171,
+      "end_line": 171,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-066",
+      "start_line": 172,
+      "end_line": 172,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-067",
+      "start_line": 173,
+      "end_line": 173,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-068",
+      "start_line": 174,
+      "end_line": 174,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-069",
+      "start_line": 175,
+      "end_line": 175,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-070",
+      "start_line": 176,
+      "end_line": 176,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-071",
+      "start_line": 177,
+      "end_line": 177,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-072",
+      "start_line": 178,
+      "end_line": 178,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-073",
+      "start_line": 179,
+      "end_line": 179,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-074",
+      "start_line": 180,
+      "end_line": 180,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-075",
+      "start_line": 181,
+      "end_line": 181,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-076",
+      "start_line": 185,
+      "end_line": 185,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-077",
+      "start_line": 185,
+      "end_line": 185,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-078",
+      "start_line": 185,
+      "end_line": 185,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-079",
+      "start_line": 185,
+      "end_line": 185,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-080",
+      "start_line": 185,
+      "end_line": 185,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-081",
+      "start_line": 187,
+      "end_line": 187,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-082",
+      "start_line": 187,
+      "end_line": 187,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-083",
+      "start_line": 187,
+      "end_line": 187,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-084",
+      "start_line": 187,
+      "end_line": 187,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-085",
+      "start_line": 187,
+      "end_line": 187,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-086",
+      "start_line": 187,
+      "end_line": 187,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-087",
+      "start_line": 189,
+      "end_line": 189,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-088",
+      "start_line": 191,
+      "end_line": 191,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-089",
+      "start_line": 192,
+      "end_line": 192,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-090",
+      "start_line": 192,
+      "end_line": 192,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-091",
+      "start_line": 193,
+      "end_line": 193,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-092",
+      "start_line": 193,
+      "end_line": 193,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-093",
+      "start_line": 193,
+      "end_line": 193,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-094",
+      "start_line": 193,
+      "end_line": 193,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-095",
+      "start_line": 194,
+      "end_line": 194,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-096",
+      "start_line": 196,
+      "end_line": 196,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-097",
+      "start_line": 196,
+      "end_line": 196,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-098",
+      "start_line": 196,
+      "end_line": 196,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099",
+      "start_line": 198,
+      "end_line": 198,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-100",
+      "start_line": 198,
+      "end_line": 198,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-101",
+      "start_line": 202,
+      "end_line": 202,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-102",
+      "start_line": 202,
+      "end_line": 202,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-103",
+      "start_line": 205,
+      "end_line": 205,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-104",
+      "start_line": 206,
+      "end_line": 208,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-105",
+      "start_line": 211,
+      "end_line": 211,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-106",
+      "start_line": 211,
+      "end_line": 211,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-107",
+      "start_line": 211,
+      "end_line": 211,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-108",
+      "start_line": 211,
+      "end_line": 211,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-109",
+      "start_line": 215,
+      "end_line": 215,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-110",
+      "start_line": 216,
+      "end_line": 216,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-111",
+      "start_line": 216,
+      "end_line": 216,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-112",
+      "start_line": 216,
+      "end_line": 216,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-113",
+      "start_line": 216,
+      "end_line": 216,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-114",
+      "start_line": 216,
+      "end_line": 216,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-115",
+      "start_line": 218,
+      "end_line": 218,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-116",
+      "start_line": 218,
+      "end_line": 218,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-117",
+      "start_line": 218,
+      "end_line": 218,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-118",
+      "start_line": 222,
+      "end_line": 222,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-119",
+      "start_line": 222,
+      "end_line": 222,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-120",
+      "start_line": 223,
+      "end_line": 223,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-121",
+      "start_line": 223,
+      "end_line": 223,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-122",
+      "start_line": 224,
+      "end_line": 224,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-123",
+      "start_line": 224,
+      "end_line": 224,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-124",
+      "start_line": 225,
+      "end_line": 225,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-125",
+      "start_line": 225,
+      "end_line": 225,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-126",
+      "start_line": 226,
+      "end_line": 226,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-127",
+      "start_line": 226,
+      "end_line": 226,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-128",
+      "start_line": 227,
+      "end_line": 227,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-129",
+      "start_line": 227,
+      "end_line": 227,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-130",
+      "start_line": 229,
+      "end_line": 229,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-131",
+      "start_line": 229,
+      "end_line": 229,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-132",
+      "start_line": 233,
+      "end_line": 233,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-133",
+      "start_line": 233,
+      "end_line": 233,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-134",
+      "start_line": 234,
+      "end_line": 234,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-135",
+      "start_line": 234,
+      "end_line": 234,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-136",
+      "start_line": 235,
+      "end_line": 235,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-137",
+      "start_line": 235,
+      "end_line": 235,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-138",
+      "start_line": 236,
+      "end_line": 236,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-139",
+      "start_line": 236,
+      "end_line": 236,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-140",
+      "start_line": 237,
+      "end_line": 237,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-141",
+      "start_line": 237,
+      "end_line": 237,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-142",
+      "start_line": 238,
+      "end_line": 238,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-143",
+      "start_line": 238,
+      "end_line": 238,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-144",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-145",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-146",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-147",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-148",
+      "start_line": 244,
+      "end_line": 244,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-149",
+      "start_line": 244,
+      "end_line": 244,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-150",
+      "start_line": 244,
+      "end_line": 244,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-151",
+      "start_line": 244,
+      "end_line": 244,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-152",
+      "start_line": 246,
+      "end_line": 246,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-153",
+      "start_line": 246,
+      "end_line": 246,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-154",
+      "start_line": 249,
+      "end_line": 250,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-155",
+      "start_line": 254,
+      "end_line": 254,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-156",
+      "start_line": 261,
+      "end_line": 261,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-157",
+      "start_line": 262,
+      "end_line": 262,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-158",
+      "start_line": 268,
+      "end_line": 268,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-159",
+      "start_line": 268,
+      "end_line": 268,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-160",
+      "start_line": 273,
+      "end_line": 273,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-161",
+      "start_line": 274,
+      "end_line": 274,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-162",
+      "start_line": 276,
+      "end_line": 276,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-163",
+      "start_line": 277,
+      "end_line": 277,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-164",
+      "start_line": 278,
+      "end_line": 278,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-165",
+      "start_line": 279,
+      "end_line": 279,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-166",
+      "start_line": 284,
+      "end_line": 284,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-167",
+      "start_line": 286,
+      "end_line": 286,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-168",
+      "start_line": 287,
+      "end_line": 287,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-169",
+      "start_line": 288,
+      "end_line": 288,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-170",
+      "start_line": 289,
+      "end_line": 289,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-171",
+      "start_line": 276,
+      "end_line": 289,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-172",
+      "start_line": 296,
+      "end_line": 296,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-173",
+      "start_line": 301,
+      "end_line": 301,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-174",
+      "start_line": 305,
+      "end_line": 305,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-175",
+      "start_line": 306,
+      "end_line": 306,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-176",
+      "start_line": 307,
+      "end_line": 307,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-177",
+      "start_line": 308,
+      "end_line": 308,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-178",
+      "start_line": 313,
+      "end_line": 313,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-179",
+      "start_line": 314,
+      "end_line": 314,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-180",
+      "start_line": 315,
+      "end_line": 315,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-181",
+      "start_line": 316,
+      "end_line": 316,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-182",
+      "start_line": 317,
+      "end_line": 317,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-183",
+      "start_line": 318,
+      "end_line": 318,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-184",
+      "start_line": 318,
+      "end_line": 318,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-185",
+      "start_line": 322,
+      "end_line": 322,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-186",
+      "start_line": 322,
+      "end_line": 322,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-187",
+      "start_line": 326,
+      "end_line": 326,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-188",
+      "start_line": 327,
+      "end_line": 327,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-189",
+      "start_line": 328,
+      "end_line": 328,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-190",
+      "start_line": 329,
+      "end_line": 329,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-191",
+      "start_line": 332,
+      "end_line": 332,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-192",
+      "start_line": 333,
+      "end_line": 333,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-193",
+      "start_line": 334,
+      "end_line": 334,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-194",
+      "start_line": 340,
+      "end_line": 341,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-195",
+      "start_line": 352,
+      "end_line": 353,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-196",
+      "start_line": 365,
+      "end_line": 365,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-197",
+      "start_line": 366,
+      "end_line": 366,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-198",
+      "start_line": 369,
+      "end_line": 369,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-199",
+      "start_line": 373,
+      "end_line": 373,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-200",
+      "start_line": 380,
+      "end_line": 380,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-201",
+      "start_line": 381,
+      "end_line": 384,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-202",
+      "start_line": 385,
+      "end_line": 386,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-203",
+      "start_line": 387,
+      "end_line": 387,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-204",
+      "start_line": 393,
+      "end_line": 393,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-205",
+      "start_line": 398,
+      "end_line": 398,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-206",
+      "start_line": 398,
+      "end_line": 398,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-207",
+      "start_line": 398,
+      "end_line": 398,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-208",
+      "start_line": 398,
+      "end_line": 398,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-209",
+      "start_line": 403,
+      "end_line": 403,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-210",
+      "start_line": 406,
+      "end_line": 406,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-211",
+      "start_line": 409,
+      "end_line": 409,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-212",
+      "start_line": 410,
+      "end_line": 410,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-213",
+      "start_line": 418,
+      "end_line": 418,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-214",
+      "start_line": 419,
+      "end_line": 419,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-215",
+      "start_line": 420,
+      "end_line": 420,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-216",
+      "start_line": 421,
+      "end_line": 421,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-217",
+      "start_line": 424,
+      "end_line": 424,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-218",
+      "start_line": 424,
+      "end_line": 424,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-219",
+      "start_line": 424,
+      "end_line": 424,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-220",
+      "start_line": 428,
+      "end_line": 428,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-221",
+      "start_line": 428,
+      "end_line": 428,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-222",
+      "start_line": 432,
+      "end_line": 432,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-223",
+      "start_line": 435,
+      "end_line": 435,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-224",
+      "start_line": 439,
+      "end_line": 439,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-225",
+      "start_line": 439,
+      "end_line": 439,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-226",
+      "start_line": 439,
+      "end_line": 439,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-227",
+      "start_line": 443,
+      "end_line": 443,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-228",
+      "start_line": 447,
+      "end_line": 447,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-229",
+      "start_line": 447,
+      "end_line": 447,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-230",
+      "start_line": 447,
+      "end_line": 447,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-231",
+      "start_line": 450,
+      "end_line": 450,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-232",
+      "start_line": 450,
+      "end_line": 450,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-233",
+      "start_line": 454,
+      "end_line": 454,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-234",
+      "start_line": 459,
+      "end_line": 460,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-235",
+      "start_line": 466,
+      "end_line": 468,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-236",
+      "start_line": 472,
+      "end_line": 472,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-237",
+      "start_line": 476,
+      "end_line": 476,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-238",
+      "start_line": 481,
+      "end_line": 481,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-239",
+      "start_line": 482,
+      "end_line": 482,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-240",
+      "start_line": 483,
+      "end_line": 483,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-241",
+      "start_line": 493,
+      "end_line": 493,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-242",
+      "start_line": 495,
+      "end_line": 496,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-243",
+      "start_line": 499,
+      "end_line": 499,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-244",
+      "start_line": 509,
+      "end_line": 509,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-245",
+      "start_line": 515,
+      "end_line": 515,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-246",
+      "start_line": 518,
+      "end_line": 518,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-247",
+      "start_line": 523,
+      "end_line": 523,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-248",
+      "start_line": 524,
+      "end_line": 524,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-249",
+      "start_line": 529,
+      "end_line": 529,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-250",
+      "start_line": 533,
+      "end_line": 533,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-251",
+      "start_line": 537,
+      "end_line": 537,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-252",
+      "start_line": 539,
+      "end_line": 539,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-253",
+      "start_line": 540,
+      "end_line": 540,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-254",
+      "start_line": 541,
+      "end_line": 541,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-255",
+      "start_line": 547,
+      "end_line": 547,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-256",
+      "start_line": 553,
+      "end_line": 553,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-257",
+      "start_line": 554,
+      "end_line": 554,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-258",
+      "start_line": 554,
+      "end_line": 554,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-259",
+      "start_line": 555,
+      "end_line": 555,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-260",
+      "start_line": 555,
+      "end_line": 555,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-261",
+      "start_line": 556,
+      "end_line": 556,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-262",
+      "start_line": 556,
+      "end_line": 556,
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_SUPPORTED_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-263",
+      "start_line": 560,
+      "end_line": 560,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-264",
+      "start_line": 566,
+      "end_line": 566,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-265",
+      "start_line": 572,
+      "end_line": 572,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-266",
+      "start_line": 573,
+      "end_line": 573,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-267",
+      "start_line": 573,
+      "end_line": 573,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-268",
+      "start_line": 573,
+      "end_line": 573,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-269",
+      "start_line": 575,
+      "end_line": 576,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-270",
+      "start_line": 580,
+      "end_line": 580,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-271",
+      "start_line": 582,
+      "end_line": 582,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-272",
+      "start_line": 573,
+      "end_line": 582,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-273",
+      "start_line": 588,
+      "end_line": 588,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-274",
+      "start_line": 589,
+      "end_line": 589,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-275",
+      "start_line": 597,
+      "end_line": 597,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-276",
+      "start_line": 598,
+      "end_line": 598,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-277",
+      "start_line": 599,
+      "end_line": 599,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-278",
+      "start_line": 600,
+      "end_line": 600,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-279",
+      "start_line": 601,
+      "end_line": 601,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-280",
+      "start_line": 602,
+      "end_line": 602,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-281",
+      "start_line": 603,
+      "end_line": 603,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-282",
+      "start_line": 607,
+      "end_line": 609,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-112-A01",
+      "start_line": 216,
+      "end_line": 216,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-112-A02",
+      "start_line": 216,
+      "end_line": 216,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-144-A01",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-144-A02",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-146-A01",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-146-A02",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-146-A03",
+      "start_line": 240,
+      "end_line": 240,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-198-A01",
+      "start_line": 369,
+      "end_line": 369,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-198-A02",
+      "start_line": 369,
+      "end_line": 369,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-233-A01",
+      "start_line": 454,
+      "end_line": 454,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-233-A02",
+      "start_line": 454,
+      "end_line": 454,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-236-A01",
+      "start_line": 472,
+      "end_line": 472,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-236-A02",
+      "start_line": 472,
+      "end_line": 472,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-236-A03",
+      "start_line": 472,
+      "end_line": 472,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-256-A01",
+      "start_line": 553,
+      "end_line": 553,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-256-A02",
+      "start_line": 553,
+      "end_line": 553,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-256-A03",
+      "start_line": 553,
+      "end_line": 553,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-262-A01",
+      "start_line": 556,
+      "end_line": 556,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-262-A02",
+      "start_line": 556,
+      "end_line": 556,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-018-A01",
+      "start_line": 27,
+      "end_line": 27,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-018-A02",
+      "start_line": 27,
+      "end_line": 27,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-018-A03",
+      "start_line": 27,
+      "end_line": 27,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A01",
+      "start_line": 198,
+      "end_line": 198,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A02",
+      "start_line": 198,
+      "end_line": 198,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A03",
+      "start_line": 198,
+      "end_line": 198,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-099-A04",
+      "start_line": 198,
+      "end_line": 198,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-060-A01",
+      "start_line": 166,
+      "end_line": 166,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-060-A02",
+      "start_line": 166,
+      "end_line": 166,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-283",
+      "start_line": 302,
+      "end_line": 302,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-284",
+      "start_line": 303,
+      "end_line": 303,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-285",
+      "start_line": 304,
+      "end_line": 304,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-286",
+      "start_line": 344,
+      "end_line": 344,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-287",
+      "start_line": 345,
+      "end_line": 345,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-288",
+      "start_line": 355,
+      "end_line": 355,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    },
+    {
+      "claim_id": "DOCS-SDKPERSIST-289",
+      "start_line": 356,
+      "end_line": 356,
+      "disposition": "SUPPORTED_IN_BOUNDED_REPAIR_RECHECK"
+    }
+  ],
+  "preserved_limits": [
+    "Pending/activating/committed Auto state remains distinct; reset versus omission and failed-switch preservation remain source-scoped.",
+    "Keys-not-persisted statement is not forensic secret-custody proof; provider field/schema mismatch remains unresolved.",
+    "Disconnect does not delete disk state; idle cleanup does not become irreversible delete by inference.",
+    "Prefix identity checks do not prove stored ownership; Redis release is unconditional with no renewal or ownership-safe atomicity shown.",
+    "Diagrams, native runtime, rights, policy adoption and global corpus gates remain unverified."
+  ],
+  "certification": {
+    "specified_repairs_supported": true,
+    "bounded_provenance_pass": true,
+    "global_six_source_omission_pass": false,
+    "nine_gates_complete": false,
+    "native_behavior_verified": false,
+    "rights_cleared": false,
+    "policy_adopted": false
+  }
+}
