@@ -1,7 +1,7 @@
 {
   "schema_version":"ges.source-claims-review.v1",
   "source":"github/docs","commit":"56fcfa816f27bca239e5d39fff0d4f74f77ec995",
-  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:39:18Z",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:46:25Z",
   "path":"content/code-security/concepts/secret-security/push-protection.md",
   "review_scope":"Full 88-line concept article read; includes, product variables and three feature conditionals remain unresolved. Marketing benefits are descriptive assertions, not measured outcomes. No complete artifact accounting, enforcement or adoption certificate.",
   "claims":[
@@ -27,7 +27,10 @@
     {"claim_id":"DOCS-PUSH-020","start_line":67,"end_line":68,"statement":"Under the unresolved organization/enterprise exemptions feature branch, delegated actors may both bypass and approve others' bypass requests.","accepted_policy":false},
     {"claim_id":"DOCS-PUSH-021","start_line":67,"end_line":69,"statement":"Under that feature branch, exempt actors may push without triggering protection; exemption is distinct from reviewed bypass.","accepted_policy":false},
     {"claim_id":"DOCS-PUSH-022","start_line":70,"end_line":70,"statement":"The alternative feature branch describes a designated group overseeing bypass requests; it must not be flattened into the exemptions branch.","accepted_policy":false},
-    {"claim_id":"DOCS-PUSH-023","start_line":74,"end_line":77,"statement":"The article asserts preventive security, immediate feedback, reduced leak risk and efficient secret management as benefits; none is an observed effectiveness or compliance receipt.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSH-023","start_line":74,"end_line":74,"statement":"The article asserts preventive security through scanning at push time and prevention before repository history; this is not measured prevention evidence.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSH-029","start_line":75,"end_line":75,"statement":"The article asserts immediate developer feedback and faster remediation; no observed latency or remediation result is provided by this claim.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSH-030","start_line":76,"end_line":76,"statement":"The article asserts reduced accidental credential leakage and secret sprawl; it does not quantify or verify reduction for an owned target.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSH-031","start_line":77,"end_line":77,"statement":"The article asserts more efficient and less time-consuming secret management; it is not a measured productivity outcome.","accepted_policy":false},
     {"claim_id":"DOCS-PUSH-024","start_line":78,"end_line":78,"statement":"The benefit discussion preserves user bypass, delegated repository bypass and feature-conditioned exemption scope; its security assurance language does not prove absence of exposure.","accepted_policy":false},
     {"claim_id":"DOCS-PUSH-025","start_line":79,"end_line":79,"statement":"Custom-pattern detection is described for repositories in organizations; the marketing assertion does not establish recall or blocking of every non-standard secret.","accepted_policy":false},
     {"claim_id":"DOCS-PUSH-026","start_line":85,"end_line":85,"statement":"Custom pattern definitions are a documented customization option after repository protection enablement.","accepted_policy":false},

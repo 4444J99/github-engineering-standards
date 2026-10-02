@@ -1,9 +1,9 @@
 {
   "schema":"ges.reference-consolidation.v1",
   "status":"REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
-  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:42:47Z",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:46:25Z",
   "source_documents":["evidence/source-reviews/docs-push-protection-concept-claims.json","evidence/source-reviews/docs-push-protection-bypass-claims.json"],
-  "input_claims":39,
+  "input_claims":42,
   "groups":[
     {"id":"PUSH-INGRESS","claims":["DOCS-PUSH-001","DOCS-PUSH-002","DOCS-PUSH-003","DOCS-PUSH-004","DOCS-PUSH-005","DOCS-PUSH-006","DOCS-PUSH-007"],"decision":"Verify each required ingress independently. Public-only MCP coverage is not private coverage; a blocked command-line test cannot certify UI, upload or REST paths."},
     {"id":"PUSH-REPOSITORY-SCOPE","claims":["DOCS-PUSH-008","DOCS-PUSH-009","DOCS-PUSH-010","DOCS-PUSH-011","DOCS-PUSH-012"],"decision":"Retain feature prerequisites, repository scope, actor eligibility and default state as distinct evidence; policy configuration alone is not effective repository blocking."},
@@ -11,7 +11,7 @@
     {"id":"PUSH-BYPASS-AUTHORITY","claims":["DOCS-PUSH-019","DOCS-PUSH-020","DOCS-PUSH-021","DOCS-PUSH-022","DOCS-PUSH-024","DOCS-PUSH-027"],"decision":"Default writer bypass, delegated approval, direct bypass privileges and full exemptions are separate branches. Successful blocking without testing authorized bypasses is insufficient enforcement evidence."},
     {"id":"PUSH-BYPASS-ACCOUNTABILITY","claims":["DOCS-PUSH-013","DOCS-PUSHDEP-001","DOCS-PUSHDEP-002","DOCS-PUSHDEP-003","DOCS-PUSHDEP-004","DOCS-PUSHDEP-005","DOCS-PUSHDEP-006","DOCS-PUSHDEP-007"],"decision":"Retain alert, audit and notification requirements separately. Closed-by-reason is not harmlessness or remediation; open fix-later alerts need accountable response. Notifications may expose sensitive links and depend on watcher eligibility."},
     {"id":"PUSH-PATTERN-VERSION","claims":["DOCS-PUSH-025","DOCS-PUSH-026","DOCS-PUSH-028","DOCS-PUSHDEP-008","DOCS-PUSHDEP-009","DOCS-PUSHDEP-010","DOCS-PUSHDEP-011"],"decision":"Custom patterns, included-pattern configuration and actor exemptions have distinct prerequisites and feature declarations. Preserve strict GHES boundaries and preview context; no inferred feature parity."},
-    {"id":"PUSH-NON-ENFORCEMENT-ASSERTIONS","claims":["DOCS-PUSH-014","DOCS-PUSH-023"],"decision":"Risk reports and stated benefits do not prove coverage, actual prevention, secret recall, compliance or completed response."}
+    {"id":"PUSH-NON-ENFORCEMENT-ASSERTIONS","claims":["DOCS-PUSH-014","DOCS-PUSH-023","DOCS-PUSH-029","DOCS-PUSH-030","DOCS-PUSH-031"],"decision":"Risk reports and four independently retained benefit assertions do not prove coverage, actual prevention, secret recall, compliance or completed response."}
   ],
   "binding_proposal":{
     "status":"UNMAPPED_POLICY_DECISION_REQUIRED",
