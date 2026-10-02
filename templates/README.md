@@ -21,7 +21,7 @@
 {{VERIFICATION}}
 
 ## Support and contribution
-See CONTRIBUTING.md, GOVERNANCE.md and SECURITY.md.
+{{SUPPORT_AND_CONTRIBUTION}}
 
 ## Rights and provenance
 {{RIGHTS_AND_PROVENANCE}}

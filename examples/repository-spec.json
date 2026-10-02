@@ -1,0 +1,80 @@
+{
+  "schema_version": "ges.repository-spec.v1",
+  "repository": {
+    "name": "repository-factory-demo",
+    "title": "Repository Factory Demonstration",
+    "owner": "4444J99",
+    "visibility": "private",
+    "default_branch": "main"
+  },
+  "proposed_github_metadata": {
+    "description": "Demonstrate a purpose-declared repository scaffold with traceable engineering conventions.",
+    "topics": [
+      "engineering-standards",
+      "repository-scaffold"
+    ]
+  },
+  "purpose": {
+    "statement": "Demonstrate how an explicit project purpose becomes a deterministic, convention-anchored local repository scaffold.",
+    "function": "Provide a bounded reference consumer for the repository factory.",
+    "repository_type": "reference implementation",
+    "lifecycle_stage": "demonstration",
+    "criticality": "low",
+    "deliverables": [
+      "A locally generated repository foundation",
+      "A digest-pinned standards lock and truthful generation manifest"
+    ],
+    "in_scope": [
+      "Repository documentation and collaboration files",
+      "Profile-specific control applicability and traceability"
+    ],
+    "out_of_scope": [
+      "GitHub repository creation",
+      "Native policy activation",
+      "Application implementation"
+    ],
+    "interfaces": [
+      "Consumes a versioned GitHub Engineering Standards catalog and profile"
+    ],
+    "toolchain": [
+      "Python 3.11 or newer"
+    ]
+  },
+  "standard": {
+    "profile": "solo-software",
+    "materialization_mode": "review_candidate"
+  },
+  "template_parameters": {
+    "STATUS_AND_SCOPE": "Reference consumer only. It creates local files and does not create or configure a hosted GitHub repository.",
+    "REQUIREMENTS": "Python 3.11 or newer and a source checkout of github-engineering-standards.",
+    "INSTALLATION": "No package installation is required for the generated reference files.",
+    "USAGE": "Review the generated purpose record, standards checklist, and manifest before adding project code or publishing a repository.",
+    "ARCHITECTURE": "The repository keeps purpose, policy inputs, generated conventions, and project implementation separate. Cross-repository dependencies must be explicit.",
+    "VERIFICATION": "Re-run the project-specific checks selected for the eventual toolchain. Generation alone is not a passing assessment.",
+    "RIGHTS_AND_PROVENANCE": "No license is selected by this demonstration. Complete project-specific rights review before publication or redistribution.",
+    "SUPPORT_AND_CONTRIBUTION": "See CONTRIBUTING.md, GOVERNANCE.md, SECURITY.md, and CODE_OF_CONDUCT.md after confirming that each policy names real accountable channels.",
+    "DEVELOPMENT_AND_CHECKS": "Run the declared formatter, static analysis, unit tests, and integration tests for the chosen implementation before requesting review.",
+    "REVIEW_MERGE_AND_FOLLOWTHROUGH": "The accountable owner reviews scoped evidence, merges only the intended revision, and records any follow-up work explicitly.",
+    "SECURITY_AND_CONDUCT": "Use SECURITY.md for sensitive reports and CODE_OF_CONDUCT.md for community concerns after their reporting channels have been verified.",
+    "OWNERS_AND_ROLES": "The repository owner is accountable for purpose, access, review policy, and maintenance. Delegation must name an actual responsible person or team.",
+    "DECISION_AND_ESCALATION": "Record durable decisions with rationale. Escalate unresolved security, rights, and ownership questions to the accountable owner.",
+    "RESPONSE_OBJECTIVES": "Triage new work according to impact and maintainer capacity; publish concrete response objectives before accepting external support commitments.",
+    "REVIEW_POLICY": "Require evidence proportionate to risk. Automated authors do not count as independent human approval.",
+    "ACCESS_POLICY": "Grant least privilege, review access periodically, and remove access when responsibility ends.",
+    "SUPPORTED_VERSIONS": "This reference scaffold is not released or deployed. Define supported versions before accepting security reports for a real implementation.",
+    "PRIVATE_REPORTING_CHANNEL": "Before publication, configure and verify a private vulnerability-reporting channel. Do not use a public issue for sensitive reports.",
+    "RESPONSE_AND_DISCLOSURE": "Acknowledge verified private reports, scope impact, preserve evidence, coordinate remediation, and disclose only through an approved process.",
+    "INCIDENT_OWNERSHIP": "The accountable repository owner assigns an incident lead and records containment, recovery, notification, and follow-up responsibilities.",
+    "COMMUNITY_SCOPE": "These expectations apply to repository issues, pull requests, reviews, discussions, and project-controlled communication spaces.",
+    "REPORTING_AND_RESPONSE": "Report concerns through a verified private governance channel. The accountable owner records receipt, recusal needs, and the response decision.",
+    "ENFORCEMENT_AND_APPEALS": "Use proportionate documented responses, protect reporters from retaliation, and provide an escalation path outside the original decision-maker when available.",
+    "DEFAULT_OWNER": "@4444J99",
+    "AUTOMATION_OWNER": "@4444J99",
+    "CRITICAL_PATH": "src",
+    "CRITICAL_OWNER": "@4444J99",
+    "ECOSYSTEM": "pip",
+    "MANIFEST_DIRECTORY": "/",
+    "INTERVAL": "weekly",
+    "PR_LIMIT": "5"
+  }
+}

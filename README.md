@@ -81,6 +81,35 @@ python -m ges render --template templates/README.md --parameters parameters.json
 
 All required parameters must be supplied. Existing output files are not overwritten. JSON and YAML outputs are syntax-checked; project-specific truth, schema requirements and operational suitability require separate verification.
 
+### Build a purpose-specific local repository scaffold
+
+The repository factory turns an explicit project-purpose specification into a new local directory of applicable, parameterized repository files. It evaluates the canonical `REVIEWED_DRAFT` controls against a selected draft profile and records what it materialized, omitted and does not yet support. The CLI profile must match the profile named in the spec. Review the spec, profile and every project-specific parameter before generation.
+
+Validate the inputs and inspect the complete proposed generation manifest without writing files:
+
+```sh
+python -m ges scaffold \
+  --spec examples/repository-spec.json \
+  --profile profiles/solo-software.json \
+  --artifacts factory/artifacts.json \
+  --output .cache/repository-factory-demo \
+  --dry-run
+```
+
+Create the scaffold in a new destination by omitting `--dry-run`:
+
+```sh
+python -m ges scaffold \
+  --spec examples/repository-spec.json \
+  --profile profiles/solo-software.json \
+  --artifacts factory/artifacts.json \
+  --output .cache/repository-factory-demo
+```
+
+The output directory must not already exist; the command refuses to overwrite it. `--artifacts` defaults to `factory/artifacts.json`, but it is shown explicitly above so every construction input is visible. The scaffold includes applicable consumer files plus `.ges/repository-spec.json`, `.ges/standard.lock.json`, `.ges/standards-checklist.md` and `.ges/generation-manifest.json`.
+
+This is local construction only. It does not initialize Git, create or configure a GitHub repository, apply proposed metadata, adopt policy, assess compliance, or activate native enforcement. It also does not invent a `LICENSE`, `.gitignore`, CI workflow, or build/package files; those unsupported capabilities remain explicit in the manifest. See [Repository scaffolding](docs/repository-scaffolding.md) for the object model, output contract and review boundary.
+
 ### Trace changes
 
 ```sh

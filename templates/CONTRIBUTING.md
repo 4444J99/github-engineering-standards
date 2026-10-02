@@ -17,4 +17,4 @@ Use a focused pull request. Explain intent, connect related issues, identify ris
 Documentation, accessibility, research, tests and constructive issue triage are accepted through the same accountable process.
 
 ## Security and conduct
-Use SECURITY.md for sensitive disclosures and CODE_OF_CONDUCT.md for community concerns.
+{{SECURITY_AND_CONDUCT}}

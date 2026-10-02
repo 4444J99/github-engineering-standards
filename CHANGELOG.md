@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+- Added a purpose-specific, local-only repository scaffolder with explicit spec,
+  draft-profile and artifact-catalog inputs; input-digest locks; truthful
+  generation manifests; and documented LICENSE, `.gitignore`, CI, build/package
+  and native-enforcement exclusions. Locks identify the generator version and
+  source-module digests. Generation does not create a Git repository or remote,
+  adopt policy, assess compliance or apply GitHub settings.
+
 ## 0.1.0 — 2026-10-01
 
 Initial six-source pinned acquisition, candidate and page ledgers, 95 reviewed-draft controls, 22 templates, six draft profiles, read-only collection, assessment, human attestations, exceptions, gates, compilation, change-impact analysis and false-pass regression tests. Native enforcement and exhaustive semantic review remain open.
