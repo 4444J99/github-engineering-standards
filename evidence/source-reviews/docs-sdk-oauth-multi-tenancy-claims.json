@@ -2792,7 +2792,7 @@
       "start_line": 318,
       "end_line": 318,
       "statement": "Pinned source observation: Shared runtime requires careful tool registration.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "source_strength": "REQUIREMENT",
       "claim_role": "ATOMIC_REFERENCE",
       "derived_from": "DOCS-SDKSETUP-239",
       "accepted_policy": false,
@@ -2804,7 +2804,7 @@
       "start_line": 318,
       "end_line": 318,
       "statement": "Pinned source observation: Shared runtime requires per-session tokens.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "source_strength": "REQUIREMENT",
       "claim_role": "ATOMIC_REFERENCE",
       "derived_from": "DOCS-SDKSETUP-239",
       "accepted_policy": false,
@@ -2816,7 +2816,7 @@
       "start_line": 318,
       "end_line": 318,
       "statement": "Pinned source observation: Shared runtime requires application access checks.",
-      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "source_strength": "REQUIREMENT",
       "claim_role": "ATOMIC_REFERENCE",
       "derived_from": "DOCS-SDKSETUP-239",
       "accepted_policy": false,
@@ -3206,7 +3206,9 @@
     "retained_grouped_parents": 23,
     "added_atomic_children": 60,
     "added_omitted_observations": 2,
-    "independent_recheck_pending": true,
+    "independent_recheck_pending": false,
+    "independent_recheck": "evidence/sdk-tenant-independent-repair-recheck.json",
+    "recheck_result": "Bounded splits/omissions supported; three shared-pattern conditional requirement labels corrected after the immutable recheck, not independently re-certified",
     "whole_source_atomic_completeness_certified": false
   }
 }
