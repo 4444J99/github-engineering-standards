@@ -1,0 +1,60 @@
+{
+  "schema": "ges.bounded-author-repair-recheck.v1",
+  "reviewer": "codex:source-review",
+  "reviewer_identity": "/root/evaluator_review",
+  "original_claim_author_identity": "/root/evaluator_review",
+  "independent_source_auditor_identity": "/root",
+  "reviewed_at": "2026-10-02T18:20:00Z",
+  "input": {
+    "path": "evidence/source-reviews/docs-gated-features-claims.json",
+    "records": 651,
+    "sha256": "56d243c77d2125b0dcfc6203f3bc8848731d70ac32a33f474f411bac94d8cc46"
+  },
+  "original_input": {
+    "records": 649,
+    "sha256": "d9506e22f26e7b3418c7b0cce472d175f1cd4dd0ccd43433e8a93c37f535d07e"
+  },
+  "method": "Original author rechecks root's two added eligibility relationships and scope/context/disclaimer changes against the previously fully read pinned sources. Root separately independently read all 65 complete bodies and all 649 original statements. This is not independent certification of the author's own original draft.",
+  "source": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/gated-features/security-campaigns.md",
+    "sha256": "0ba033048856b66ad8e7ede61b6a95569c8888ac6fceeafdc7ada9a199aa5a64",
+    "inspected_lines": [
+      7,
+      8
+    ]
+  },
+  "rechecks": [
+    {
+      "claim_id": "DOCS-GATEDFEATURE-0650",
+      "outcome": "SUPPORTED",
+      "detail": "Outer GHES branch and first nested security-campaigns selection qualify organizations with Code Security enabled; this adds eligibility beyond the preexisting link-label observation."
+    },
+    {
+      "claim_id": "DOCS-GATEDFEATURE-0651",
+      "outcome": "SUPPORTED",
+      "detail": "The nested elsif is reached only if security-campaigns fails; selecting security-campaigns-secrets qualifies organizations with Code Security or Secret Protection enabled."
+    },
+    {
+      "topic": "Read scope and dependencies",
+      "outcome": "SUPPORTED",
+      "detail": "63 core reusable files totaling218 physical lines plus two separately fully read one-line dependencies produce65 bodies/220 physical lines. Prior ten full-receipted files remain excluded. No linked external body inherits read status."
+    },
+    {
+      "topic": "Common boundary/disclaimer normalization",
+      "outcome": "SUPPORTED",
+      "detail": "The document retains pinned source-local/no-live-rendering/runtime/entitlement/adoption/rights boundaries; shortening repeated data-tag and link disclaimers does not confer dependency or linked-page review."
+    }
+  ],
+  "remaining_actionable_findings": [],
+  "boundary": {
+    "independent_self_audit": false,
+    "global_omission_certified": false,
+    "render_behavior_verified": false,
+    "native_behavior_verified": false,
+    "rights_cleared": false,
+    "policy_adopted": false,
+    "upstream_executed": false
+  }
+}
