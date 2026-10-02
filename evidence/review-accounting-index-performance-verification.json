@@ -1,0 +1,112 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/12",
+  "baseline_implementation_commit": "4d66bee9c78f67fbd1ef93c953025ebeace8d59a",
+  "benchmark_command": "python -m scripts.benchmark_review_accounting --samples 3",
+  "before": {
+    "samples_seconds": [
+      13.987096750061028,
+      13.761951624997891,
+      13.900666082976386
+    ],
+    "median_seconds": 13.900666082976386,
+    "candidate_count": 150903,
+    "receipt_count": 722,
+    "accounting": {
+      "reviewed": 722,
+      "inventoried": 13657,
+      "review_coverage": 0.052866661785165116,
+      "errors": [],
+      "note": "Review receipts require independent source-to-control audit before exhaustive certification."
+    },
+    "accounting_sha256": "6ceac6c9b61624e018cae99d601102f40c63c9802c41629237e5931b7175ac00",
+    "scope": "coverage_with_reviews only; excludes input loading, claim extraction, published bodies and recovery rendering"
+  },
+  "after": {
+    "samples_seconds": [
+      0.21985545800998807,
+      0.1952007079962641,
+      0.19354945805389434
+    ],
+    "median_seconds": 0.1952007079962641,
+    "candidate_count": 150903,
+    "receipt_count": 722,
+    "accounting": {
+      "reviewed": 722,
+      "inventoried": 13657,
+      "review_coverage": 0.052866661785165116,
+      "errors": [],
+      "note": "Review receipts require independent source-to-control audit before exhaustive certification."
+    },
+    "accounting_sha256": "6ceac6c9b61624e018cae99d601102f40c63c9802c41629237e5931b7175ac00",
+    "scope": "coverage_with_reviews only; excludes input loading, claim extraction, published bodies and recovery rendering"
+  },
+  "indexed_repeat_with_hashes": {
+    "samples_seconds": [
+      0.21944300003815442,
+      0.19625762500800192,
+      0.19432766607496887
+    ],
+    "median_seconds": 0.19625762500800192,
+    "candidate_count": 150903,
+    "receipt_count": 722,
+    "accounting": {
+      "reviewed": 722,
+      "inventoried": 13657,
+      "review_coverage": 0.052866661785165116,
+      "errors": [],
+      "note": "Review receipts require independent source-to-control audit before exhaustive certification."
+    },
+    "accounting_sha256": "6ceac6c9b61624e018cae99d601102f40c63c9802c41629237e5931b7175ac00",
+    "input_hashes_recorded_after_samples": {
+      ".cache/corpus/artifacts.jsonl": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c",
+      ".cache/corpus/candidates.jsonl": "1bd1c456fc141ad1afc02c0f4959f29d8835b224cf0196c411343dfd366ea6b6",
+      "controls/catalog.json": "27f7a05e5a848b956e3bb3b11e61af8eee1810917f4826358730efe5ac33166d",
+      "evidence/source-review-policy.json": "3cc5082cf3ca1acf630763739b109f8b6afa003ef96ca4c61420a7f5bc9ec53c",
+      "decoded_receipts": "4cea3912c9fea75d6c7220558d6b066a380db42fbc2969ea03a530ac88665c66"
+    },
+    "scope": "coverage_with_reviews only; excludes input loading, claim extraction, published bodies and recovery rendering"
+  },
+  "accounting_result_digest_equal": true,
+  "observed_median_speedup": 71.21217041509105,
+  "complexity_change": "Index expected candidate IDs once instead of scanning the full corpus for every receipt.",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 270,
+      "result": "OK; synthetic negative fixture prints published_docs ERROR"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 722,
+      "denominator": 13657,
+      "errors": [],
+      "gates_open": 9
+    }
+  ],
+  "independent_review": {
+    "reviewer": "codex:evaluator_review",
+    "result": "No blocking issue for valid corpus inputs; None/empty, local/foreign and duplicate behavior preserved.",
+    "limitations": "Unchanged result digest does not itself establish identical input datasets."
+  },
+  "caveats": [
+    "Timing is accounting only, not extraction throughput, overall completion or an ETA.",
+    "Warm-cache local measurements include advertised-evidence reads.",
+    "Current input hashes were recorded after the repeat samples, not retrospectively verified baseline hashes. No task changes to corpus, receipts, catalog or reviewer policy occurred between samples; full historical input parity is not independently certified.",
+    "Full denominators and every validation check retained; no gate was weakened."
+  ],
+  "skill_influence": "Testing-patterns guided observable local/foreign/unmapped candidate regression cases rather than implementation-detail assertions.",
+  "delivery": "Exact commit/push receipt recorded in issue #12"
+}

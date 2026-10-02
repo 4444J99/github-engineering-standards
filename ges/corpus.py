@@ -127,6 +127,9 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates:
     reviews=load(review_path)
     by_id={a['artifact_id']:a for a in artifacts}; complete=set(); errors=[]
     candidate_index={c['candidate_id']:c for c in candidates or []}
+    candidates_by_artifact = defaultdict(set)
+    for candidate in candidates or []:
+        candidates_by_artifact[candidate['artifact_id']].add(candidate['candidate_id'])
     control_index={c['id']:c for c in controls or []}
     reviewed_ids=set()
     evidence_base = (evidence_root or ROOT).resolve()
@@ -196,7 +199,7 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates:
                     errors.append(a['path']+': invalid control mapping or revision'); valid=False
             elif m.get('disposition') not in {'REFERENCE','NO_ACTIONABLE_CONTENT','EXCLUDED_WITH_REASON','SUPERSEDED'} or not m.get('rationale'):
                 errors.append(a['path']+': unresolved candidate disposition'); valid=False
-        expected={c['candidate_id'] for c in candidates or [] if c['artifact_id']==a['artifact_id']}
+        expected = candidates_by_artifact.get(a['artifact_id'], set())
         if candidates is None or mapped != expected:
             errors.append(a['path']+': complete candidate accounting is required'); valid=False
         for record in [r] + [m for m in mappings if isinstance(m, dict)]:

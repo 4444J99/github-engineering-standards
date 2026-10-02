@@ -30,17 +30,35 @@ class ReviewAccounting(unittest.TestCase):
                                            'disposition': 'CONTROL', 'control_id': self.control['id'],
                                            'control_revision': self.control['revision']}]}
 
-    def coverage(self, reviews):
+    def coverage(self, reviews, *, candidates=None):
         artifacts = self.root/'artifacts.jsonl'
         artifacts.write_text(json.dumps(self.artifact)+'\n')
         receipts = self.root/'reviews.json'
         receipts.write_text(json.dumps(reviews))
-        return coverage_with_reviews(artifacts, receipts, candidates=[self.candidate],
+        return coverage_with_reviews(artifacts, receipts,
+                                     candidates=[self.candidate] if candidates is None else candidates,
                                      controls=[self.control], authorized_reviewers=['reviewer'],
                                      evidence_root=self.root)
 
     def test_valid_full_accounting(self):
         self.assertEqual(self.coverage([self.review])['reviewed'], 1)
+
+    def test_foreign_artifact_candidates_do_not_change_local_coverage(self):
+        foreign = [dict(self.candidate, artifact_id='other', candidate_id=f'foreign-{i}')
+                   for i in range(100)]
+        baseline = self.coverage([self.review])
+        self.assertEqual(self.coverage([self.review], candidates=[self.candidate]+foreign), baseline)
+
+    def test_unmapped_same_artifact_candidate_still_blocks(self):
+        extra = dict(self.candidate, candidate_id='extra')
+        report = self.coverage([self.review], candidates=[self.candidate, extra])
+        self.assertEqual(report['reviewed'], 0)
+        self.assertIn(self.artifact['path']+': complete candidate accounting is required', report['errors'])
+
+    def test_explicit_empty_candidates_preserve_zero_candidate_receipt(self):
+        self.review['disposition'] = 'REFERENCE_ONLY'
+        self.review['claim_mappings'] = []
+        self.assertEqual(self.coverage([self.review], candidates=[])['reviewed'], 1)
 
     def test_invalid_mapping_never_counts(self):
         self.review['claim_mappings'] = ['GES-BOGUS-001']
