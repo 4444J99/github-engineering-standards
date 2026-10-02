@@ -47,7 +47,7 @@ publish. Rights-cleared coverage remains zero.
 python -m ges.rights --artifacts .cache/corpus/artifacts.jsonl --findings evidence/rights-review-queue.json --output .cache/corpus/rights-triage.json
 ```
 
-The triage queue covers all 13,657 pinned artifacts, retaining the 48 existing
+The triage queue covers all 13,657 pinned artifacts, retaining the 50 existing
 file-specific findings. It checks source pins, artifact uniqueness and finding
 digests. Unreviewed files have no inferred repository license. Every record
 remains pending: this queue neither grants rights nor authorizes distribution.
@@ -57,10 +57,14 @@ and attribution duties, plus the applicable authorized distribution decision.
 Published bodies need separate version and rights reconciliation; this pinned
 artifact queue does not cover that denominator.
 
-Twenty-six inspected binary assets now have file-specific findings tied to their
+Twenty-seven fully inspected binary assets and one partially reviewed video now
+have file-specific findings tied to their
 exact digests and supporting evidence under `evidence/asset-reviews/`: the GHQR
-favicon and twenty-five Well-Architected diagrams, screenshots, PDFs, covers and
-site imagery/icons. The two hero images contain different artwork; their shared
+favicon, twenty-six Well-Architected diagrams, screenshots, PDFs, covers and
+site imagery/icons, and the framework demonstration video. The video's visual
+stream is reviewed, but its audio remains unverified; automatic transcription
+was insufficient. Its queue entry does not constitute complete artifact review
+or audiovisual rights clearance. The two hero images contain different artwork; their shared
 basename does not establish duplication or a shared grant. Contributor portraits
 remain unidentified; portrait permission is separate from source-code licensing.
 Their intended tracked use is identity/provenance references and independently

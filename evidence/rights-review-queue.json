@@ -1,7 +1,7 @@
 {
   "schema": "ges.rights-review-queue.v1",
   "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1",
-  "scope": "48 pinned artifacts with file-specific findings; repository declarations are evidence, not blanket per-file clearance",
+  "scope": "50 pinned artifacts with file-specific findings; repository declarations are evidence, not blanket per-file clearance; video audio remains unverified",
   "rights_accepted": 0,
   "records": [
     {
@@ -831,6 +831,53 @@
         "Preserve attribution/modification duties and assess applicable trademark conditions.",
         "Record applicable authorized redistribution decision before bundling asset."
       ]
+    },
+    {
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "static/favicon.ico",
+      "content_sha256": "c7d39e2f367113ad5b48ca9a05dd691e54c85bed81cc81ca3a659fe67974bbbc",
+      "url": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/static/favicon.ico",
+      "status": "PENDING_RIGHTS_ACCEPTANCE",
+      "repository_notice": "MIT repository declaration; asset-specific grant and exceptions not established",
+      "file_specific_issues": [
+        "All three 48/32/16-pixel icon entries depict a GitHub brand silhouette; artwork origin and applicable trademark/brand permissions are not established by the MIT repository declaration."
+      ],
+      "redistribution_approved": false,
+      "reviewed_at": "2026-10-02T03:39:36Z",
+      "supporting_evidence": "evidence/asset-reviews/wa-continuation-favicon-container-asset-observations.json",
+      "inspection_scope": "Full byte identity, container and three image entries inspected; no operative text. This is not per-file rights acceptance.",
+      "permitted_use_decision": "Reference identity and independently authored observations only; no raw icon, recording, video frames or audio bundled in tracked distribution.",
+      "required_decisions": [
+        "Establish creator and applicable per-file grant for all included media.",
+        "Resolve inherited artwork/interface and trademark conditions.",
+        "Preserve attribution/modification and any audiovisual obligations.",
+        "Record applicable authorized redistribution decision before bundling raw asset."
+      ]
+    },
+    {
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "static/media/waf-v1.mp4",
+      "content_sha256": "2cfebc691e4fe633ae65fbab180ab165caf67b7bf52bd60299530d34f8fa6956",
+      "url": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/static/media/waf-v1.mp4",
+      "status": "PENDING_RIGHTS_ACCEPTANCE",
+      "repository_notice": "MIT repository declaration; asset-specific grant and exceptions not established",
+      "file_specific_issues": [
+        "Video includes desktop/editor/interface screenshots, branded wallpaper and title/outro artwork; creator, recording, included artwork/interface and mark permissions require file-specific provenance.",
+        "Audio stream remains NOT_VERIFIED; automatic transcription is INSUFFICIENT. Audio authorship, spoken content, music/performance and associated license obligations cannot be cleared from visual inspection."
+      ],
+      "redistribution_approved": false,
+      "reviewed_at": "2026-10-02T03:39:36Z",
+      "supporting_evidence": "evidence/asset-reviews/wa-continuation-framework-video-asset-observations.json",
+      "inspection_scope": "All 797 visual frames reviewed; no complete artifact receipt because the AAC audio remains unverified. Rights finding is partial-media triage, not full semantic or rights clearance.",
+      "permitted_use_decision": "Reference identity and independently authored observations only; no raw icon, recording, video frames or audio bundled in tracked distribution.",
+      "required_decisions": [
+        "Establish creator and applicable per-file grant for all included media.",
+        "Resolve inherited artwork/interface and trademark conditions.",
+        "Preserve attribution/modification and any audiovisual obligations.",
+        "Record applicable authorized redistribution decision before bundling raw asset."
+      ]
     }
   ],
   "linked_material": {
@@ -847,5 +894,5 @@
     ],
     "limitation": "Version pages confirmed attribution references. Current website footer is not a pinned license grant for inherited source text. Third-party license history and modification obligations remain unresolved."
   },
-  "asset_findings_added_at": "2026-10-02T02:57:34Z"
+  "asset_findings_added_at": "2026-10-02T03:39:36Z"
 }
