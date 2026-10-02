@@ -255,7 +255,10 @@ class PublishedAssurance(unittest.TestCase):
             {'repository': 'github/docs', 'commit': 'a' * 40}]}))
         (sources / 'github__docs.inventory.json').write_text(json.dumps([self.artifact]))
         (sources / 'github__docs.tree-reconciliation.json').write_text('{"status":"MATCH"}')
-        (corpus / 'artifacts.jsonl').write_bytes(self.artifacts.read_bytes())
+        rights_artifact = {**self.artifact, 'url': 'synthetic source reference',
+                           'retrieved_at': '2026-01-01T00:00:00Z'}
+        (corpus / 'artifacts.jsonl').write_text(json.dumps(rights_artifact) + '\n')
+        (self.evidence / 'rights-review-queue.json').write_text('{"records": []}')
         (corpus / 'candidates.jsonl').write_text('')
         (corpus / 'published-page-ledger.json').write_bytes(self.ledger.read_bytes())
         (corpus / 'ledger-summary.json').write_text('{}')
@@ -284,6 +287,22 @@ class PublishedAssurance(unittest.TestCase):
         self.assertEqual(gate['completed'], 0)
         self.assertEqual(gate['status'], 'OPEN')
         self.assertIsNone(gate['conditions']['version_include_and_render_assurance'])
+
+    def test_recovery_rejects_duplicate_corpus_before_rights_accounting(self):
+        sources, corpus, _, _ = self.recovery_fixture()
+        path = corpus / 'artifacts.jsonl'
+        path.write_bytes(path.read_bytes() * 2)
+        with patch('ges.recovery.ROOT', self.root), self.assertRaisesRegex(ValueError, 'Duplicate corpus'):
+            status(sources, corpus, rendered_directory=self.cache)
+
+    def test_recovery_rejects_same_size_foreign_corpus_identity(self):
+        sources, corpus, _, _ = self.recovery_fixture()
+        path = corpus / 'artifacts.jsonl'
+        artifact = json.loads(path.read_text())
+        artifact['path'] = 'content/uninventoried.md'
+        path.write_text(json.dumps(artifact) + '\n')
+        with patch('ges.recovery.ROOT', self.root), self.assertRaisesRegex(ValueError, 'complete locked inventories'):
+            status(sources, corpus, rendered_directory=self.cache)
 
     def test_recovery_one_sided_authority_input_rejected(self):
         sources, corpus, receipts, _ = self.recovery_fixture()

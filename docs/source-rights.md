@@ -57,6 +57,14 @@ and attribution duties, plus the applicable authorized distribution decision.
 Published bodies need separate version and rights reconciliation; this pinned
 artifact queue does not cover that denominator.
 
+Recovery now supports optional exact-use rights acceptance receipts under the
+[scoped receipt contract](rights-acceptance-receipts.md). Independent review,
+human acceptance and distribution authority must be separately approved and
+digest-bound to the complete inventory, findings and intended project use.
+No real acceptance or authority policy is supplied; actual clearance remains
+zero. Machine validation of an attestation is not legal adjudication, human
+authentication or publication.
+
 The two SDK image-input and steering diagrams now have pinned file-specific
 findings tied to their complete visual observations and independent audit. Their
 tracked use is source identities, links and independently authored observations;

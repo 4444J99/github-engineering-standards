@@ -1,0 +1,57 @@
+{
+  "schema": "ges.bounded-independent-repair-recheck.v1",
+  "reviewer": "codex:independent-review",
+  "reviewer_identity": "/root/evaluator_review",
+  "implementation_author_identity": "/root",
+  "reviewed_at": "2026-10-02T18:33:55Z",
+  "inputs": [
+    {
+      "path": "ges/recovery.py",
+      "sha256": "8bc2474a7e3bf43e02e3ee6b3eca0f6ff889a66ff79de2be97acf9f386391654"
+    },
+    {
+      "path": "tests/test_published_assurance.py",
+      "sha256": "3c91339fb7b6600efe105d8cdd22d463b2cc78251ce7d7a587ef2bee4d8a3ecc"
+    },
+    {
+      "path": "evidence/rights-acceptance-independent-review.json",
+      "sha256": "d38a9788a22142e456d64ad258e77a1a9e8be61c543a581447140b93be5fa700"
+    }
+  ],
+  "scope": "Specified recovery inventory-integrity repair and two actual status integration counterexamples only; prior independent review remains immutable.",
+  "method": "Inspected current recovery original-array preservation, duplicate rejection, complete pinned-inventory comparison and rights-adapter argument, plus the two authored status fixture tests. No additional tests run by this reviewer.",
+  "finding_rechecked": "RIGHTS-INTEGRATION-INVENTORY-001",
+  "outcome": "SUPPORTED_REPAIR",
+  "checks": [
+    {
+      "topic": "Original corpus preservation",
+      "detail": "corpus_artifacts retains all original nonblank JSONL rows; rights_accounting receives this array, not dictionary values."
+    },
+    {
+      "topic": "Duplicate rejection",
+      "detail": "Repeated artifact IDs or repeated source/commit/path/digest identities fail before any rights accounting. Rights triage additionally rejects duplicate source/commit/path keys, including distinct-digest variants."
+    },
+    {
+      "topic": "Locked inventory correspondence",
+      "detail": "Each source inventory matches its release pin; duplicate exact locked identities are rejected. Exact corpus source/commit/path/digest set must equal the union of complete locked inventories, so matching cardinality alone cannot substitute another file."
+    },
+    {
+      "topic": "Counterexamples",
+      "detail": "Duplicate-corpus and same-size foreign-path tests call actual recovery.status with a rooted synthetic fixture and require explicit ValueError. Existing fixture now supplies source acquisition metadata and an empty rights finding queue without manufacturing approvals."
+    },
+    {
+      "topic": "Denominator",
+      "detail": "With exact identity equality and duplicates rejected, original corpus row count corresponds to complete locked inventory count; no row is silently removed before policy digest binding."
+    }
+  ],
+  "remaining_actionable_findings": [],
+  "limitations": {
+    "whole_project_complete": false,
+    "actual_rights_acceptance": false,
+    "human_approval_authenticated": false,
+    "legal_truth_certified": false,
+    "publication_performed": false,
+    "hostile_filesystem_races_comprehensively_solved": false
+  },
+  "note": "Support is bounded to the specified integration repair. Authentic externally approved policy and substantive legal judgment remain human-required; this document supplies neither."
+}

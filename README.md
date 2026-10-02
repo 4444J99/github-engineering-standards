@@ -79,6 +79,12 @@ assurance receipts through paired `--published-assurance` and
 certification authority. No real assurance receipt or authority grant is supplied;
 missing evidence stays unknown. See [receipt contract](docs/published-assurance-receipts.md).
 
+Optional paired `--rights-acceptance` and `--rights-acceptance-policy` recovery
+inputs validate per-file, exact-use review/audit/human/distribution attestations.
+No real authority grant or clearance receipt is supplied. Triage remains pending;
+machine validation is not legal permission or publication. See
+[rights receipt contract](docs/rights-acceptance-receipts.md).
+
 ### Render a template
 
 ```sh
@@ -107,7 +113,7 @@ The large source corpus and page-level review queues are workflow artifacts and 
 
 Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; per-file licensing clearance; all upstream scanner predicates implemented as local deterministic checks; all platform feature/plan adapters; live human-review and exception services; native protection activation and cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
 
-The recovery suite passed 294 local tests on 2026-10-02; this does not imply 95 controls implemented
+The recovery suite passed 324 local tests on 2026-10-02; this does not imply 95 controls implemented
 as automatic checks or 150,903 candidates reviewed. Current catalog controls remain
 `REVIEWED_DRAFT`; 593 non-adopted generated proposals are preserved separately in
 `controls/review_queue.json`. No native policy is silently activated. See

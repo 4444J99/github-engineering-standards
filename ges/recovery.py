@@ -35,7 +35,10 @@ def evaluate_gate(name: str, completed: int, denominator: int | None,
 
 def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None,
            rendered_directory: Path | None=None, published_assurance: Path | None=None,
-           published_assurance_policy: Path | None=None) -> dict:
+           published_assurance_policy: Path | None=None, rights_acceptance: Path | None=None,
+           rights_acceptance_policy: Path | None=None) -> dict:
+    if (rights_acceptance is None) != (rights_acceptance_policy is None):
+        raise ValueError('Rights acceptance requires both receipts and authority policy')
     controls = load(ROOT/'controls/catalog.json')
     queue = load(ROOT/'controls/review_queue.json')
     pins = load(ROOT/'sources/sources.lock.json')['sources']
@@ -56,20 +59,31 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
                          authorized_reviewers=load(review_policy)['authorized_reviewers'] if review_policy else [])
     if review_result['errors']: raise ValueError('Invalid review receipts: '+str(review_result['errors']))
     reviewed_by_source=Counter()
-    artifacts_by_id={r['artifact_id']:r for r in [json.loads(l) for l in (corpus/'artifacts.jsonl').read_text().splitlines()]}
+    corpus_artifacts=[json.loads(l) for l in (corpus/'artifacts.jsonl').read_text().splitlines() if l.strip()]
+    artifacts_by_id={r['artifact_id']:r for r in corpus_artifacts}
+    corpus_identities={(r['source'],r['commit'],r['path'],r['sha256']) for r in corpus_artifacts}
+    if len(artifacts_by_id) != len(corpus_artifacts) or len(corpus_identities) != len(corpus_artifacts):
+        raise ValueError('Duplicate corpus artifact identity')
     for receipt in receipts:
         reviewed_by_source[artifacts_by_id[receipt['artifact_id']]['source']] += 1
     sources_report = []
+    locked_identities=set()
     for pin in pins:
         slug = pin['repository'].replace('/', '__')
         inventory = load(sources/(slug+'.inventory.json'))
         if any(r['source'] != pin['repository'] or r['commit'] != pin['commit'] for r in inventory):
             raise ValueError('Inventory does not match release pin: '+pin['repository'])
+        identities={(r['source'],r['commit'],r['path'],r['sha256']) for r in inventory}
+        if len(identities) != len(inventory) or locked_identities & identities:
+            raise ValueError('Duplicate locked source artifact identity')
+        locked_identities.update(identities)
         tree = load(sources/(slug+'.tree-reconciliation.json'))
         sources_report.append({'repository': pin['repository'], 'commit': pin['commit'],
                                'artifacts': len(inventory), 'reviewed_artifacts': reviewed_by_source[pin['repository']],
                                'review_evidence': 'evidence/source-reviews; source review is not control adoption or independent omission certification',
                                'git_tree_reconciliation': tree})
+    if corpus_identities != locked_identities:
+        raise ValueError('Corpus identities/digests differ from complete locked inventories')
     ledger = load(corpus/'ledger-summary.json')
     requirements = load(corpus/'structured-source-requirements.json')
     pages = load(corpus/'published-page-ledger.json')
@@ -98,6 +112,13 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         load(published_assurance) if published_assurance is not None else [],
         load(published_assurance_policy) if published_assurance_policy is not None else {},
         {p['repository']: p['commit'] for p in pins}, evidence_root=ROOT)
+    from .rights_acceptance import rights_accounting
+    rights = rights_accounting(
+        corpus_artifacts, {p['repository']: p['commit'] for p in pins},
+        load(ROOT/'evidence/rights-review-queue.json')['records'],
+        load(rights_acceptance) if rights_acceptance is not None else [],
+        load(rights_acceptance_policy) if rights_acceptance_policy is not None else {},
+        evidence_root=ROOT)
     accepted = sum(c['status'] == 'ACCEPTED' for c in controls)
     canonical_ids = {c['id'] for c in controls}
     if canonical_ids & {c['id'] for c in queue} or len({c['id'] for c in queue}) != len(queue):
@@ -110,7 +131,7 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         ('generalization',0,len(controls)+len(queue),'Every definition and proposal has reviewed scope, policy, parameters and conflicts'),
         ('operational_completeness',0,accepted,'Accepted controls have all required tested bindings and accountable review procedures'),
         ('native_enforcement',0,None,'Approved target inventory, positive/negative behavior tests and recovery receipts'),
-        ('rights_and_publication',0,inventories,'Per-file rights review and approved distribution; inventory notices alone insufficient'),
+        ('rights_and_publication',rights['completed'],inventories,'Per-file rights review and approved distribution; inventory notices alone insufficient'),
         ('estate_rollout',0,None,'Explicit authorized inventory and effective-policy/behavior evidence per target'),
     ]
     # Missing semantic, rights and runtime certification is UNKNOWN, not an
@@ -134,8 +155,8 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
                                      'all_required_bindings_verified': None},
         'native_enforcement': {'approved_target_inventory': None,
                                'positive_negative_bypass_and_recovery_evidence': None},
-        'rights_and_publication': {'per_file_rights_acceptance': None,
-                                   'authorized_distribution_decision': None},
+        'rights_and_publication': {'per_file_rights_acceptance': rights['per_file_rights_acceptance'],
+                                   'authorized_distribution_decision': rights['authorized_distribution_decision']},
         'estate_rollout': {'approved_estate_inventory': None,
                            'fresh_effective_enforcement_and_drift_evidence': None},
     }
@@ -152,6 +173,7 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             'structured_requirements_by_source':dict(Counter(r['source'] for r in requirements)),
             'published_pages':len(pages),'rendered_bodies_acquired':acquired,
             'published_assurance_accounting': assurance,
+            'rights_acceptance_accounting': rights,
             'unresolved_published_pages':[{'page_id':r['page_id'],'version':r['version'],'path':r['path']}
                                           for r in pages if not r['source_matches']],
             'ledger':ledger,'catalog_controls':len(controls),'catalog_digest':digest(controls),
@@ -176,9 +198,14 @@ if __name__ == '__main__':
                    help='Optional digest-bound page assurance receipt array')
     p.add_argument('--published-assurance-policy',type=Path,
                    help='Separately approved certification/independent-audit authority, not source disposition policy')
+    p.add_argument('--rights-acceptance',type=Path,
+                   help='Optional exact-use per-file rights acceptance receipts')
+    p.add_argument('--rights-acceptance-policy',type=Path,
+                   help='Separately approved rights/human/distribution authority; not triage policy')
     args=p.parse_args()
     report=status(args.sources,args.corpus,args.reviews,args.review_policy,args.rendered_directory,
-                  args.published_assurance,args.published_assurance_policy)
+                  args.published_assurance,args.published_assurance_policy,
+                  args.rights_acceptance,args.rights_acceptance_policy)
     dump(args.output,report)
     print(json.dumps({'project_complete':report['project_complete'],
                       'gates_open':sum(g['status'] != 'CLOSED' for g in report['gates']),
