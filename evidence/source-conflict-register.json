@@ -6,7 +6,13 @@
     {
       "id": "CONFLICT-SDK-POST-TOOL-FAILURE-001",
       "source_review": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json",
-      "source_spans_rechecked": ["post-tool-use.md:5-6", "post-tool-use.md:23", "post-tool-use.md:260-273", "post-tool-use.md:288-295", "post-tool-use.md:327"],
+      "source_spans_rechecked": [
+        "post-tool-use.md:5-6",
+        "post-tool-use.md:23",
+        "post-tool-use.md:260-273",
+        "post-tool-use.md:288-295",
+        "post-tool-use.md:327"
+      ],
       "issue": "The guide defines onPostToolUse as successful-execution only and supplies a separate failure hook, but later successful-hook examples inspect error/exitCode fields and compute success from absence of an error field.",
       "proposed_resolution": "Retain runtime execution outcome separately from tool-result payload fields. A successful invocation can conceivably return application-level error data, but this guide does not establish that contract. Do not treat these examples as failure-hook coverage or infer that missing error means successful end-to-end work. Resolve exact failure classification and language SDK contracts before operational adoption.",
       "retained_alternatives": "Payload-level diagnostic errors may be distinct from runtime failures. Preserve both the explicit success-only statement and examples without silently redefining either.",
@@ -16,53 +22,90 @@
     {
       "id": "CONFLICT-SDK-POST-TOOL-RESULT-TYPE-001",
       "source_review": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json",
-      "source_spans_rechecked": ["post-tool-use.md:90", "post-tool-use.md:98", "post-tool-use.md:212-219"],
+      "source_spans_rechecked": [
+        "post-tool-use.md:90",
+        "post-tool-use.md:98",
+        "post-tool-use.md:212-219"
+      ],
       "issue": "The input and output tables label toolResult and modifiedResult as object, while the redaction example explicitly handles and returns a string.",
       "proposed_resolution": "Preserve declared object schemas and the illustrative string branch separately; no universal string-capable output adapter is proven. Verify the applicable language/runtime result union and serialization behavior. Regex replacement only on string payloads does not sanitize structured results or previously written logs.",
       "required_evidence": "Pinned/version-specific SDK schemas, object/string/null/malformed result tests, and effective redaction across the intended storage and model-delivery paths.",
       "policy_accepted": false
     },
     {
-      "id":"CONFLICT-UPSTREAM-CHECK-COMPLETENESS-001",
-      "source_review":"evidence/source-reviews/wa-continuation-workflow-config-claims.json",
-      "claim_ids":["WA-CONT-WF-003"],
-      "source_spans_rechecked":[".github/workflows/deploy-merged-pr.yml:55-105"],
-      "issue":"The workflow labels all checks passed after filtering out StatusContext entries and named jobs; empty filtered sets pass, and NEUTRAL/SKIPPED conclusions are accepted without checking a required-context inventory or immutable head identity.",
-      "proposed_resolution":"Treat this as the upstream workflow's local dispatch predicate, not complete CI, release or deployment proof. A consumer verification binding must resolve the required check/status inventory for the exact target and immutable head, retain missing contexts explicitly and distinguish successful predicates from skipped or neutral outcomes.",
-      "scope":"Source example interpretation only; upstream execution, workflow changes and synchronous CI polling are not authorized by this review.",
-      "retained_alternatives":"Excluded self-jobs can be a legitimate recursion concern but do not justify omitting required predicates. An intentionally empty requirement inventory needs explicit scope evidence; an accidentally empty observed set cannot certify completeness.",
-      "required_evidence":"Applicable required-context inventory, exact head identity, context source identity, observed predicate result and separate dispatch/terminal publication receipts. Missing or inaccessible contexts remain unverified rather than PASS.",
-      "policy_accepted":false
+      "id": "CONFLICT-UPSTREAM-CHECK-COMPLETENESS-001",
+      "source_review": "evidence/source-reviews/wa-continuation-workflow-config-claims.json",
+      "claim_ids": [
+        "WA-CONT-WF-003"
+      ],
+      "source_spans_rechecked": [
+        ".github/workflows/deploy-merged-pr.yml:55-105"
+      ],
+      "issue": "The workflow labels all checks passed after filtering out StatusContext entries and named jobs; empty filtered sets pass, and NEUTRAL/SKIPPED conclusions are accepted without checking a required-context inventory or immutable head identity.",
+      "proposed_resolution": "Treat this as the upstream workflow's local dispatch predicate, not complete CI, release or deployment proof. A consumer verification binding must resolve the required check/status inventory for the exact target and immutable head, retain missing contexts explicitly and distinguish successful predicates from skipped or neutral outcomes.",
+      "scope": "Source example interpretation only; upstream execution, workflow changes and synchronous CI polling are not authorized by this review.",
+      "retained_alternatives": "Excluded self-jobs can be a legitimate recursion concern but do not justify omitting required predicates. An intentionally empty requirement inventory needs explicit scope evidence; an accidentally empty observed set cannot certify completeness.",
+      "required_evidence": "Applicable required-context inventory, exact head identity, context source identity, observed predicate result and separate dispatch/terminal publication receipts. Missing or inaccessible contexts remain unverified rather than PASS.",
+      "policy_accepted": false
     },
     {
-      "id":"CONFLICT-MCP-PUSH-PROTECTION-SCOPE-001",
-      "source_reviews":["evidence/source-reviews/docs-push-protection-concept-claims.json","evidence/source-reviews/docs-mcp-push-protection-claims.json"],
-      "claim_ids":["DOCS-PUSH-006","DOCS-PUSHMCP-001","DOCS-PUSHMCP-006","DOCS-PUSHMCP-007"],
-      "source_spans_rechecked":["push-protection.md:26-32","push-protection-and-the-github-mcp-server.md:5-8","push-protection-and-the-github-mcp-server.md:20-31"],
-      "issue":"General concept text and MCP product metadata restrict coverage to public repositories, while the MCP body also asserts coverage for GHAS-covered private repositories independent of repository push-protection settings.",
-      "proposed_resolution":"Retain public coverage and the qualified private-coverage assertion separately. Do not silently replace public-only wording with universal private coverage, or discard the private claim as nonexistent. Verify MCP tool, server version, product entitlement and exact target scope against authoritative contracts and approved runtime evidence.",
-      "scope":"MCP response and action paths, distinct from CLI and REST protection; default protection and bypass-option visibility also differ.",
-      "required_evidence":"Feature/version resolution, applicable product entitlement, exact tool/action scope and authorized behavior receipts without real secrets. Missing permissions or entitlement readback remain unknown.",
-      "policy_accepted":false
+      "id": "CONFLICT-MCP-PUSH-PROTECTION-SCOPE-001",
+      "source_reviews": [
+        "evidence/source-reviews/docs-push-protection-concept-claims.json",
+        "evidence/source-reviews/docs-mcp-push-protection-claims.json"
+      ],
+      "claim_ids": [
+        "DOCS-PUSH-006",
+        "DOCS-PUSHMCP-001",
+        "DOCS-PUSHMCP-006",
+        "DOCS-PUSHMCP-007"
+      ],
+      "source_spans_rechecked": [
+        "push-protection.md:26-32",
+        "push-protection-and-the-github-mcp-server.md:5-8",
+        "push-protection-and-the-github-mcp-server.md:20-31"
+      ],
+      "issue": "General concept text and MCP product metadata restrict coverage to public repositories, while the MCP body also asserts coverage for GHAS-covered private repositories independent of repository push-protection settings.",
+      "proposed_resolution": "Retain public coverage and the qualified private-coverage assertion separately. Do not silently replace public-only wording with universal private coverage, or discard the private claim as nonexistent. Verify MCP tool, server version, product entitlement and exact target scope against authoritative contracts and approved runtime evidence.",
+      "scope": "MCP response and action paths, distinct from CLI and REST protection; default protection and bypass-option visibility also differ.",
+      "required_evidence": "Feature/version resolution, applicable product entitlement, exact tool/action scope and authorized behavior receipts without real secrets. Missing permissions or entitlement readback remain unknown.",
+      "policy_accepted": false
     },
     {
-      "id":"CONFLICT-FRAMEWORK-LAYER-MODELS-001",
-      "source_reviews":["evidence/source-reviews/wa-continuation-docs-framework-claims.json","evidence/source-reviews/wa-overview-framework-claims.json"],
-      "claim_ids":["WA-CONT-DFW-009","WA-FRAMEWORK-001","WA-FRAMEWORK-002","WA-FRAMEWORK-003","WA-FRAMEWORK-004"],
-      "source_spans_rechecked":["docs/framework-overview.md:65-101","content/library/overview/layers.md:12-36"],
-      "issue":"Internal framework documentation describes three layers; public library documentation includes checklists as a fourth layer. Five pillars and four productivity zones are separate dimensions, not alternate layer counts.",
-      "proposed_resolution":"Preserve both source-local structural models and explicitly retain checklist content during consolidation. Do not omit checklist requirements to match the three-layer description, invent a checklist-to-recommendation equivalence, or treat equal category counts as semantic identity.",
-      "scope":"Pinned framework organization and corpus interpretation; no source taxonomy changes the approved function-owned polyrepo consumer model.",
-      "retained_alternatives":"Three-layer editorial description and four-layer library navigation remain separately attributed. Pillar focus areas and measurement zones remain independent metadata dimensions.",
-      "required_evidence":"Source-specific typed relationships and full checklist/recommendation mappings; independent omission review and adopted policy/profile decisions remain required.",
-      "policy_accepted":false
+      "id": "CONFLICT-FRAMEWORK-LAYER-MODELS-001",
+      "source_reviews": [
+        "evidence/source-reviews/wa-continuation-docs-framework-claims.json",
+        "evidence/source-reviews/wa-overview-framework-claims.json"
+      ],
+      "claim_ids": [
+        "WA-CONT-DFW-009",
+        "WA-FRAMEWORK-001",
+        "WA-FRAMEWORK-002",
+        "WA-FRAMEWORK-003",
+        "WA-FRAMEWORK-004"
+      ],
+      "source_spans_rechecked": [
+        "docs/framework-overview.md:65-101",
+        "content/library/overview/layers.md:12-36"
+      ],
+      "issue": "Internal framework documentation describes three layers; public library documentation includes checklists as a fourth layer. Five pillars and four productivity zones are separate dimensions, not alternate layer counts.",
+      "proposed_resolution": "Preserve both source-local structural models and explicitly retain checklist content during consolidation. Do not omit checklist requirements to match the three-layer description, invent a checklist-to-recommendation equivalence, or treat equal category counts as semantic identity.",
+      "scope": "Pinned framework organization and corpus interpretation; no source taxonomy changes the approved function-owned polyrepo consumer model.",
+      "retained_alternatives": "Three-layer editorial description and four-layer library navigation remain separately attributed. Pillar focus areas and measurement zones remain independent metadata dimensions.",
+      "required_evidence": "Source-specific typed relationships and full checklist/recommendation mappings; independent omission review and adopted policy/profile decisions remain required.",
+      "policy_accepted": false
     },
     {
       "id": "CONFLICT-SECRET-ALERT-DELETION-001",
       "source_review": "evidence/source-reviews/wa-continuation-anti-patterns-claims.json",
-      "claim_ids": ["WA-CONT-ANTI-029", "WA-CONT-ANTI-032"],
+      "claim_ids": [
+        "WA-CONT-ANTI-029",
+        "WA-CONT-ANTI-032"
+      ],
       "issue": "Pinned advice describes alert records as universally non-deletable, then describes alert deletion when deleting their custom pattern.",
-      "source_spans_rechecked": ["anti-patterns.md:259-273"],
+      "source_spans_rechecked": [
+        "anti-patterns.md:259-273"
+      ],
       "authoritative_supplement": {
         "url": "https://docs.github.com/en/rest/secret-scanning/custom-patterns",
         "reviewed_date": "2026-10-02",
@@ -78,10 +121,22 @@
     },
     {
       "id": "CONFLICT-AI-BUDGET-STOP-001",
-      "source_reviews": ["evidence/source-reviews/wa-continuation-ai-credits-claims.json", "evidence/source-reviews/wa-continuation-governing-agents-claims.json"],
-      "claim_ids": ["WA-CONT-AIC-003", "WA-CONT-AIC-004", "WA-CONT-AIC-008", "WA-CONT-GA-032"],
+      "source_reviews": [
+        "evidence/source-reviews/wa-continuation-ai-credits-claims.json",
+        "evidence/source-reviews/wa-continuation-governing-agents-claims.json"
+      ],
+      "claim_ids": [
+        "WA-CONT-AIC-003",
+        "WA-CONT-AIC-004",
+        "WA-CONT-AIC-008",
+        "WA-CONT-GA-032"
+      ],
       "issue": "FinOps guidance prefers alerts and continuity-aware stopping, while the agent checklist requires stop-at-limit for hard caps. Flattening either statement into a universal policy would lose its condition.",
-      "source_spans_rechecked": ["managing-ai-credits.md:89-98", "managing-ai-credits.md:119-121", "governing-agents.md:169-173"],
+      "source_spans_rechecked": [
+        "managing-ai-credits.md:89-98",
+        "managing-ai-credits.md:119-121",
+        "governing-agents.md:169-173"
+      ],
       "proposed_resolution": "Preserve two distinct, explicitly chosen policy profiles: an intended hard financial ceiling requires effective stopping; an alert-led continuity profile requires accountable response and does not claim a hard ceiling. The checklist's for-hard-caps condition makes these compatible when scope is retained.",
       "scope": "Authorized AI-credit and agent-related financial policy; source vendor configuration assertions remain dated and require current authoritative verification before a binding is adopted.",
       "retained_alternatives": "Continuity-first alerting is not a hard cap, and a configured numeric budget is not proof that spending is prevented. Workflow approximate-credit limits remain separately defined.",
@@ -91,9 +146,16 @@
     {
       "id": "CONFLICT-AI-BUDGET-SCOPE-001",
       "source_review": "evidence/source-reviews/wa-continuation-ai-credits-claims.json",
-      "claim_ids": ["WA-CONT-AIC-005", "WA-CONT-AIC-006", "WA-CONT-AIC-079"],
+      "claim_ids": [
+        "WA-CONT-AIC-005",
+        "WA-CONT-AIC-006",
+        "WA-CONT-AIC-079"
+      ],
       "issue": "Line 113 says available budget at another scope will not be blocked; lines 668-669 say remaining capacity cannot override an exhausted applicable budget. Budget-balance availability and permission to consume must not be conflated.",
-      "source_spans_rechecked": ["managing-ai-credits.md:104-113", "managing-ai-credits.md:665-671"],
+      "source_spans_rechecked": [
+        "managing-ai-credits.md:104-113",
+        "managing-ai-credits.md:665-671"
+      ],
       "proposed_resolution": "Retain the ambiguous assertion as unresolved product semantics rather than infer a fail-open fallback. Consult the linked authoritative budget-evaluation specification and verify all applicable scopes before operational adoption.",
       "scope": "Concurrent user, cost-center, organization and enterprise budget controls; distinguish included versus metered consumption and scope-exclusion choices.",
       "retained_alternatives": "Unused balance can remain at a separate scope without granting permission to continue consumption blocked by another applicable control. The original ambiguous statement is preserved in its source reference, not silently corrected.",
@@ -172,6 +234,28 @@
       "issue": "Filter and enforce-length examples can imply hard rejection, but the guide explicitly says this hook cannot reject a prompt or enforce policy.",
       "proposed_resolution": "Interpret examples as rewriting, response suppression or advisory context. Hard limits belong in an approved pre-send path. Separately verify original history/storage and credential privacy; rewrite does not prove erasure.",
       "required_evidence": "Target/version-specific pre-send rejection tests, no-send observations for rejected input and authorized history/storage observations.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-DOCS-VAR-PROJECT-FLAGS-001",
+      "source_review": "evidence/source-reviews/docs-variable-small-claims.json",
+      "source_spans_rechecked": [
+        "data/variables/projects.yml:17-20"
+      ],
+      "issue": "The authoring comment calls for feature flags to distinguish available project versions; compatibility-named variable values directly reference v2 values without local conditionals.",
+      "proposed_resolution": "Preserve authoring intent and actual values separately. No combined classic/v2 availability or effective feature-flag behavior follows from these values; do not rewrite source data or infer an external renderer cannot supply version context.",
+      "required_evidence": "Pinned variable renderer, feature/version dependency resolution and authorized rendering evidence before any operational availability assertion.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-DOCS-VAR-CODEBLOCK-HTML-001",
+      "source_review": "evidence/source-reviews/docs-variable-small-claims.json",
+      "source_spans_rechecked": [
+        "data/variables/command_line.yml:7-9"
+      ],
+      "issue": "The authoring comment explains codeblock usage by HTML content and shell-only rendering, but the current literal branches contain hostname text without an explicit HTML element.",
+      "proposed_resolution": "Preserve the stated authoring restriction, current branch values and rationale without treating the comment as demonstrated rendering behavior. Historical or external rendering may explain the rationale; this source excerpt does not.",
+      "required_evidence": "Applicable renderer and contextual code-block output; source read does not execute templates or establish arbitrary HTML safety.",
       "policy_accepted": false
     }
   ]

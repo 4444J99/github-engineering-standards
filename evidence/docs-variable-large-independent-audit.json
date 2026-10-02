@@ -1,0 +1,47 @@
+{
+  "schema": "ges.bounded-independent-source-audit.v1",
+  "issue": 15,
+  "audited_at": "2026-10-02T17:47:53Z",
+  "author": "codex:evaluator_review",
+  "independent_reviewer": "codex:root",
+  "scope": "Full source and complete statements of Copilot and product-variable drafts independently read, then root corrective decomposition rechecked. Not an independent certification of root-added atoms; their source basis is recorded and author recheck is separate.",
+  "sources": [
+    {
+      "path": "data/variables/copilot.yml",
+      "source_content_sha256": "8d274044b1764b53d1c1a7af13fb04e901d6aab4fc344fe1538b298db5bed2b2",
+      "read_lines": [
+        1,
+        275
+      ]
+    },
+    {
+      "path": "data/variables/product.yml",
+      "source_content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "read_lines": [
+        1,
+        408
+      ]
+    }
+  ],
+  "draft_hashes": {
+    "copilot": "ce4d952c76bb2a0283d01dd973fedbe8959a72aa98698b2979bf44c9488b76a1",
+    "product": "5a6fed0f4e454d2c0dede6394a727ffd21891b8ca14cabd9556c66d65ddcbcc7"
+  },
+  "final_claim_document_sha256": {
+    "evidence/source-reviews/docs-variable-copilot-claims.json": "637e92f2616ab01cf9038b0067849ea1a5e67146a69f84a4076343452f454e8b",
+    "evidence/source-reviews/docs-variable-product-claims.json": "26a2df6b04befa56eea3372e230b73df5c9ac118e6f394fc8afaac180f2648f1"
+  },
+  "method": "Compared all variable scalars and nonliteral branches, authoring comments and exact source spans. Checked ordered GHES ranges, fallbacks, deprecated names, enterprise-admin restriction, billing and BYOK boundaries. Removed repetitive per-claim context; retained scope once per document. Split9 compound product parents into18 operative child observations; retained parent IDs as GROUPED_CONTEXT. Explicitly added6 billing-unit/scope observations instead of inheriting them from repeated context.",
+  "observations": [
+    "Copilot221 original statements supported by complete275-line source;6 explicit billing-scope additions yield227 records.",
+    "Product292 original statements supported;9 compound parents retained nonoperative with18 child observations yield310 records.",
+    "No source code, Liquid template, URL or sample was executed.",
+    "Prices, model names and service labels are pinned text, not current product truth, availability or a legal conclusion."
+  ],
+  "repair_author_recheck": "evidence/docs-variable-large-author-recheck.json",
+  "unresolved": [
+    "Runtime/version/dependency rendering assurance is not established by reading variable definitions.",
+    "Global extraction omission certification, policy adoption, rights clearance and native behavior remain separate unfinished gates."
+  ],
+  "all_nine_gates_certified": false
+}
