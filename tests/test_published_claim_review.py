@@ -102,6 +102,12 @@ class PublishedClaimReview(unittest.TestCase):
         self.doc['claims'][0]['statement'] = '  '
         with self.assertRaises(ValueError): self.check()
 
+    def test_blank_source_span_rejected_even_with_matching_digest(self):
+        self.doc['spans']['scope'] = {
+            'lines': [2, 2], 'sha256': hashlib.sha256(b'').hexdigest()}
+        with self.assertRaisesRegex(ValueError, 'Blank source span'):
+            self.check()
+
     def test_empty_claims_and_count_mismatch_rejected(self):
         self.doc['claims'] = []
         self.doc['claim_statements'] = 0

@@ -94,7 +94,10 @@ def validate_published_claims(ledger: Path, cache: Path, documents: list[Path],
                         any(type(n) is not int for n in bounds) or
                         not 1 <= bounds[0] <= bounds[1] <= len(lines)):
                     raise ValueError('Source span exceeds body bounds')
-                sha = hashlib.sha256('\n'.join(lines[bounds[0]-1:bounds[1]]).encode()).hexdigest()
+                excerpt = '\n'.join(lines[bounds[0]-1:bounds[1]])
+                if not excerpt.strip():
+                    raise ValueError('Blank source span cannot support a claim')
+                sha = hashlib.sha256(excerpt.encode()).hexdigest()
                 if span.get('sha256') != sha:
                     raise ValueError('Source span digest mismatch')
             page_ids.add(identity)
