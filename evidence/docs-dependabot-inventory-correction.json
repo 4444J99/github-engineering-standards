@@ -1,0 +1,48 @@
+{
+  "schema": "ges.bounded-inventory-reconciliation-correction.v1",
+  "issue": 26,
+  "reviewer": "codex:independent-review",
+  "reviewed_at": "2026-10-02T21:21:51.033Z",
+  "corrects": "evidence/docs-dependabot-inventory-reconciliation.json",
+  "finding": "Prior exact-path claim scan was insufficient to establish receipt overlap; recovery rejected four duplicate receipts. Existing exact-identity receipts inspected and preserved; duplicate new receipts removed before successful recovery.",
+  "fully_read_artifacts": 87,
+  "existing_receipts": [
+    {
+      "file": "evidence/source-reviews/docs-sdk-server-token-artifacts.json",
+      "artifact_id": "ab6b41184bfdbb8b2e7983bd",
+      "path": "data/reusables/actions/action-checkout.md",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "content_sha256": "b557358f2727f5f925de5a33c380d488bdd1523c0c8f7869b6e01a94a62c8eab"
+    },
+    {
+      "file": "evidence/source-reviews/docs-pattern-navigation-artifacts.json",
+      "artifact_id": "5de48842c3403a3039ec00cc",
+      "path": "data/reusables/repositories/navigate-to-code-security-and-analysis.md",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "content_sha256": "ea139944948540caa679ade005f8e838a72deda2fe1dbf0c7e174a509453cbee"
+    },
+    {
+      "file": "evidence/source-reviews/docs-pattern-navigation-artifacts.json",
+      "artifact_id": "8999bc9be3540d09f9befe93",
+      "path": "data/reusables/repositories/navigate-to-repo.md",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "content_sha256": "942ded86ff856fda44a03ed2d007305ef83aed48cf8e7c348b3ddce878099fb7"
+    },
+    {
+      "file": "evidence/source-reviews/docs-pattern-navigation-artifacts.json",
+      "artifact_id": "e102caade55a87aee14a4ef3",
+      "path": "data/reusables/repositories/sidebar-settings.md",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "content_sha256": "5f8a3e8af289b95bfcc3371016d8c1c90239a303bf0c85706f2e17ac46bfc06c"
+    }
+  ],
+  "new_artifact_receipts": 83,
+  "parser_candidates_in_full_read_scope": 458,
+  "denominator": 13657,
+  "no_gate_weakened": true,
+  "successful_corrected_recovery": {
+    "reviewed": 1620,
+    "errors": [],
+    "gates_open": 9
+  }
+}

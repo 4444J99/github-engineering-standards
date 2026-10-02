@@ -1,0 +1,91 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 26,
+  "verified_at": "2026-10-02T21:23:23.665Z",
+  "scope": {
+    "complete_source_reads": 87,
+    "physical_lines": 873,
+    "bytes": 95148,
+    "claims": 1570,
+    "claim_sha256": "ae87909906e6ffbc771eda2a0d4574c63c1e72af1ff153ae9911e7b003ad6d9f",
+    "new_artifact_receipts": 83,
+    "previously_reviewed_rereads": 4,
+    "new_candidate_mappings": 453,
+    "total_candidates_in_read_scope": 458
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in1.333s; OK after final hook-safe paraphrase. Trailing synthetic published_docs ERROR belongs to expected test fixture, not recovery."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "controls": 95
+      }
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "reference_claims": 57148,
+        "source_artifacts": 1586,
+        "duplicate_relationships_validated": 7,
+        "semantic_truth_certified": false,
+        "omission_completeness_certified": false
+      }
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": {
+        "project_complete": false,
+        "gates_open": 9,
+        "inventory_artifacts": 13657,
+        "published_pages": 18019
+      }
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "additional_checks": {
+    "unique_claim_ids": 1570,
+    "exactly_once_reference_groups": 87,
+    "final_claim_hash_matches_independent_audit_and_author_recheck": true,
+    "receipt_timestamps_after_independent_audit": true,
+    "all_claims_nonadopted": true,
+    "support_table_cells_compared": 273,
+    "value_mismatches": [],
+    "original_nonoverlapping_candidate_texts_inspected": 56,
+    "final_nonoverlapping_structural_or_scope_candidates": 54
+  },
+  "corrective_history": [
+    "Commit hook blocked a source-example token assignment placeholder. Claim1056 was paraphrased, separately inspected and author-rechecked; final digest updated, all required checks rerun successfully. No hook bypass or allow-secret marker used.",
+    "Recovery initially rejected four duplicate artifact receipts; existing exact-identity receipts inspected and duplicate new entries removed, reducing new coverage to83.",
+    "Initial receipt serialization omitted content_sha256; strict recovery rejected incomplete receipts. Actual pinned corpus digests supplied before successful final recovery. No gate weakened."
+  ],
+  "accounting": {
+    "reviewed": 1620,
+    "denominator": 13657,
+    "review_coverage": 0.11862048766200484,
+    "reference_claims": 57148,
+    "claim_bearing_artifacts": 1586,
+    "review_errors": [],
+    "project_complete": false,
+    "gates_open": 9
+  },
+  "limitations": [
+    "Bounded source-review tranche, not global omission or cross-source equivalence certification.",
+    "No accepted controls, rendered assurance, rights clearance, actual native pilot or estate rollout added."
+  ]
+}

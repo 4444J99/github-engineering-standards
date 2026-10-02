@@ -1,0 +1,494 @@
+{
+  "schema": "ges.bounded-candidate-to-claim-audit.v1",
+  "issue": 26,
+  "reviewer": "codex:independent-review",
+  "reviewer_identity": "/root",
+  "reviewed_at": "2026-10-02T21:16:04.089Z",
+  "input": {
+    "path": "evidence/source-reviews/docs-dependabot-claims.json",
+    "sha256": "88f0ae6acca0a1579e5a7ca31649abd93e43134e8c5eb4b15f63152752a178d2",
+    "claims": 1568
+  },
+  "scope": {
+    "artifacts": 87,
+    "candidates": 458,
+    "nonoverlapping_candidates": 56
+  },
+  "method": "Compared every parser candidate physical span to original claim spans. Separately inspected full text of all nonoverlapping candidates against complete source bodies and associated semantic claims; lexical overlap is not semantic completeness.",
+  "nonoverlapping_candidates": [
+    {
+      "candidate_id": "62ff16f0c5e848c458d11a8a",
+      "path": "data/reusables/dependabot/cargo-private-registry-config-example.md",
+      "start_line": 1,
+      "end_line": 1,
+      "text_sha256": "bb1d60b4d6386e37507c18350f3e25271ce6f6d0096aee069d7502d42abdb635",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "2c625950c917d450fa181f12",
+      "path": "data/reusables/dependabot/cargo-private-registry-config-example.md",
+      "start_line": 12,
+      "end_line": 12,
+      "text_sha256": "83d338f0ce7726f4a1160682e913617607a992143b55a49de6200c5a7367878a",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "1d9d0057179ca16851fb5859",
+      "path": "data/reusables/dependabot/dependabot-alerts-dependency-scope.md",
+      "start_line": 3,
+      "end_line": 3,
+      "text_sha256": "ffcb8844239fd482d7fefa39af157dd52cf98d9eed023a1b15a42d2bbf686426",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "af06e1abcb3095a1e53d810d",
+      "path": "data/reusables/dependabot/dependabot-alerts-dependency-scope.md",
+      "start_line": 4,
+      "end_line": 4,
+      "text_sha256": "ed17f04a2ad4cc6569ed3faaabeddf303e8d13dd78e3c536deb6a6bf43ba5cc6",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "bb1a885ee821090ebb737331",
+      "path": "data/reusables/dependabot/dependabot-alerts-filters.md",
+      "start_line": 3,
+      "end_line": 3,
+      "text_sha256": "30bead91fe9c23f8a33a11773433777c37927ba43abff0b314dccda6c98f9953",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "1e484b5ffabe8aeee5814204",
+      "path": "data/reusables/dependabot/dependabot-alerts-filters.md",
+      "start_line": 4,
+      "end_line": 4,
+      "text_sha256": "a8acb5105d99f8613bfa0e405098e23aa58ecd5ce182734462b0c22462af8dac",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "efcd96116598567bd2aabf09",
+      "path": "data/reusables/dependabot/dependabot-alerts-filters.md",
+      "start_line": 8,
+      "end_line": 8,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "949d3ee74fda8ea1265e030c",
+      "path": "data/reusables/dependabot/dependabot-alerts-filters.md",
+      "start_line": 11,
+      "end_line": 11,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "0c65df8a2ad35a4e75ac8c06",
+      "path": "data/reusables/dependabot/dependabot-alerts-filters.md",
+      "start_line": 21,
+      "end_line": 21,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "64e41987c783454129760009",
+      "path": "data/reusables/dependabot/dependabot-ignore-dependencies.md",
+      "start_line": 1,
+      "end_line": 1,
+      "text_sha256": "9b3684558c71b1d120663b449d2d0385eb1ed718af8710e70a53e8b1a1cabece",
+      "classification": "CONDITIONAL_REQUIREMENT_SCOPE_RECHECK_REQUESTED"
+    },
+    {
+      "candidate_id": "50db1b88d0ef0b84ee25e92c",
+      "path": "data/reusables/dependabot/dependabot-on-actions-troubleshooting-workflows.md",
+      "start_line": 5,
+      "end_line": 5,
+      "text_sha256": "870bc506185bf192e06a71d4c21341f3dd1934c13bd77df487ce9f152488240a",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "50e16a1f30111221672f18fb",
+      "path": "data/reusables/dependabot/dependabot-runners-network-requirements.md",
+      "start_line": 6,
+      "end_line": 6,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "cc489095afbbb06dcb2ff79f",
+      "path": "data/reusables/dependabot/dependabot-updates-registries-options.md",
+      "start_line": 3,
+      "end_line": 3,
+      "text_sha256": "6a61a5155fcc5c1d63b5ae170c439785264c072fea843da186fc9fb1a58f6675",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "e25207b4a3a6ff5d5d6b179d",
+      "path": "data/reusables/dependabot/dependabot-updates-registries-options.md",
+      "start_line": 4,
+      "end_line": 4,
+      "text_sha256": "80bebc48643e8a34489c421d697af1a0e395d5638393558326254b6b83e24275",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "fe2e277ab4e2aba58c0a2a94",
+      "path": "data/reusables/dependabot/dependabot-updates-registries-options.md",
+      "start_line": 6,
+      "end_line": 6,
+      "text_sha256": "059d5bfd39384fd2b06d53accb184aedec60c449179c22a00de65a42f2bdfbe5",
+      "classification": "SEMANTIC_OMISSION_PENDING_REPAIR"
+    },
+    {
+      "candidate_id": "d89e21cb9d41fe8c084084a7",
+      "path": "data/reusables/dependabot/dependabot-updates-registries-options.md",
+      "start_line": 12,
+      "end_line": 12,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "76025fe3c10f9846fe128643",
+      "path": "data/reusables/dependabot/dependabot-updates-registries.md",
+      "start_line": 1,
+      "end_line": 1,
+      "text_sha256": "b7c30cf9150ffffafc5a10f3fc39d675933f978fe57ef058828e6e0b95a38b03",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "2da0db67d90c6e237a2fefdc",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 7,
+      "end_line": 7,
+      "text_sha256": "515d5659009f320d562a682a8685557f23f70333494c9a2a106a978fce88bbe2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "f257cd929b65a99ea4891c80",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 8,
+      "end_line": 8,
+      "text_sha256": "41e692b6a5efa3b58e16ef98515bf01c47ce35d8673190168abfadf2f0a2ebd4",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "8d60d08b13f635bb264874a9",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 14,
+      "end_line": 14,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "9202fe02568e9008b115bcc6",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 29,
+      "end_line": 29,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "8be6de0d84c17604c2bded4b",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 34,
+      "end_line": 34,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "87ceff67ade1899b8ac60c4a",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 37,
+      "end_line": 37,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "dae8a0c24fc1712a141febc4",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 45,
+      "end_line": 45,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "2abf18e6d1b750c2078564bd",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 48,
+      "end_line": 48,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "6c5c482dc8920075eb6d32df",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 52,
+      "end_line": 52,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "3bdc23d27c3ac5c7b779c512",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 55,
+      "end_line": 55,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "7bb57ec81c3dbaf1cfe0c3a7",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 59,
+      "end_line": 59,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "e6e9b09e4390f9db419e0ea6",
+      "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+      "start_line": 65,
+      "end_line": 65,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "1e50e9547333c0cc7cd236fb",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 3,
+      "end_line": 3,
+      "text_sha256": "75ce894de66aeb3c8ce20ee48b67c0b466ef5af5dbe0a43e77c76280caa33bbf",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "4e423e8e5ce35132b343d6c6",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 28,
+      "end_line": 28,
+      "text_sha256": "9b45dffea483af86afd098b5d415ca3354cf0f252c2d60c894468cc26f0ff8f5",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "e65ad3f20a542884bd66f80e",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 36,
+      "end_line": 36,
+      "text_sha256": "75ce894de66aeb3c8ce20ee48b67c0b466ef5af5dbe0a43e77c76280caa33bbf",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "6e345694b0f468d5f4481518",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 74,
+      "end_line": 74,
+      "text_sha256": "9b45dffea483af86afd098b5d415ca3354cf0f252c2d60c894468cc26f0ff8f5",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "85edf166a1c9393b1b96f6b7",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 81,
+      "end_line": 81,
+      "text_sha256": "75ce894de66aeb3c8ce20ee48b67c0b466ef5af5dbe0a43e77c76280caa33bbf",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "f9440d729dbbd9198326ebe7",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 106,
+      "end_line": 106,
+      "text_sha256": "9b45dffea483af86afd098b5d415ca3354cf0f252c2d60c894468cc26f0ff8f5",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "8a8356cfe7dfcb8b86a62ab3",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 112,
+      "end_line": 112,
+      "text_sha256": "75ce894de66aeb3c8ce20ee48b67c0b466ef5af5dbe0a43e77c76280caa33bbf",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "b547f950b193861c1c45c08d",
+      "path": "data/reusables/dependabot/dependabot-version-updates-groups-yaml-example.md",
+      "start_line": 146,
+      "end_line": 146,
+      "text_sha256": "9b45dffea483af86afd098b5d415ca3354cf0f252c2d60c894468cc26f0ff8f5",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "a33e7fb77700a577b1f07860",
+      "path": "data/reusables/dependabot/enterprise-enable-dependabot.md",
+      "start_line": 9,
+      "end_line": 9,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "ea9b1fdbab62cb09a7e9470f",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 3,
+      "end_line": 4,
+      "text_sha256": "cfab262cd6025b01fcd1187b9b7f8a89a63f4953083394284c59018f587ae285",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "517a6929dda3227703fd2fde",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 14,
+      "end_line": 14,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "c5ba654692ade094765fded3",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 52,
+      "end_line": 52,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "76f78140ef0f79870dd9c275",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 62,
+      "end_line": 62,
+      "text_sha256": "3daa3f002cfb521ef594af42dc2ffabf9f4de83ae660408a0fa81a48ff74ac83",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "d41ffb23f9ff1dd126bbf023",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 87,
+      "end_line": 87,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "e61f5b7a71f7580c3fabf9d6",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 97,
+      "end_line": 97,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "45387be79d7c15c2a026f6fd",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 180,
+      "end_line": 180,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "f953bc55b6bc0619653bc577",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 204,
+      "end_line": 204,
+      "text_sha256": "f7986d4f2fb19497dcdbe922c1b2d8e380fad5355ee6c834cb28dc966ef09ef0",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "8916302bd663c152de786e90",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 205,
+      "end_line": 205,
+      "text_sha256": "4199ba454d6d3ae83657120c2bb6bd674eefc0dd7d3cd4cc844171dc6725135b",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "bbb23dfe7fe30815b4a25185",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 218,
+      "end_line": 218,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "157085b63bf7c605dedbcf45",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 231,
+      "end_line": 231,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "93f415f332afa20e9f65b462",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 239,
+      "end_line": 239,
+      "text_sha256": "a862d6790ba746d47e774477af43d9d4e576ff93e2128ba4469acba0253807b9",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "c3b598b03db03ec0c17933a9",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 247,
+      "end_line": 247,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "e5ce9210d5de3dc0b3c9abe3",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 255,
+      "end_line": 255,
+      "text_sha256": "53cd3ae927c9dd522d5c325931325ca36c6a6e9fc7c21a78a72f07c41a567fe2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "daf85bda1c6ed5505bb73535",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 267,
+      "end_line": 267,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "9f45e35ca6fcc23a13338b8f",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 289,
+      "end_line": 289,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "b277c00b5fafb47cb9d3fe21",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 297,
+      "end_line": 297,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    },
+    {
+      "candidate_id": "51cca2af7e8011b0d46ec04d",
+      "path": "data/reusables/dependabot/supported-package-managers.md",
+      "start_line": 299,
+      "end_line": 299,
+      "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+      "classification": "STRUCTURAL_OR_ASSOCIATED_SCOPE_CONTEXT"
+    }
+  ],
+  "findings": [
+    {
+      "path": "data/reusables/dependabot/dependabot-updates-registries-options.md",
+      "start_line": 6,
+      "end_line": 6,
+      "finding": "Required type identifies registry type; original0112captures requiredness but not identification semantics.",
+      "status": "AUTHOR_REPAIR_REQUESTED"
+    },
+    {
+      "path": "data/reusables/dependabot/dependabot-updates-registries-options.md",
+      "start_line": 8,
+      "end_line": 8,
+      "finding": "Required URL accesses dependencies in this registry; original0113/0117/0118cover requiredness/protocol/slashes but not access-purpose semantics.",
+      "status": "AUTHOR_REPAIR_REQUESTED"
+    },
+    {
+      "path": "data/reusables/dependabot/dependabot-ignore-dependencies.md",
+      "start_line": 1,
+      "end_line": 4,
+      "finding": "Preserve conditional ignore goal and required choice of one alternative, without unconditional ignore policy.",
+      "status": "AUTHOR_SCOPE_RECHECK_REQUESTED"
+    }
+  ],
+  "full_review_receipts_issued": false,
+  "extraction_complete": false,
+  "global_omission_certification": false
+}
