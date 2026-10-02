@@ -4,6 +4,17 @@
   "reviewer": "codex:source-review",
   "records": [
     {
+      "id":"CONFLICT-MCP-PUSH-PROTECTION-SCOPE-001",
+      "source_reviews":["evidence/source-reviews/docs-push-protection-concept-claims.json","evidence/source-reviews/docs-mcp-push-protection-claims.json"],
+      "claim_ids":["DOCS-PUSH-006","DOCS-PUSHMCP-001","DOCS-PUSHMCP-006","DOCS-PUSHMCP-007"],
+      "source_spans_rechecked":["push-protection.md:26-32","push-protection-and-the-github-mcp-server.md:5-8","push-protection-and-the-github-mcp-server.md:20-31"],
+      "issue":"General concept text and MCP product metadata restrict coverage to public repositories, while the MCP body also asserts coverage for GHAS-covered private repositories independent of repository push-protection settings.",
+      "proposed_resolution":"Retain public coverage and the qualified private-coverage assertion separately. Do not silently replace public-only wording with universal private coverage, or discard the private claim as nonexistent. Verify MCP tool, server version, product entitlement and exact target scope against authoritative contracts and approved runtime evidence.",
+      "scope":"MCP response and action paths, distinct from CLI and REST protection; default protection and bypass-option visibility also differ.",
+      "required_evidence":"Feature/version resolution, applicable product entitlement, exact tool/action scope and authorized behavior receipts without real secrets. Missing permissions or entitlement readback remain unknown.",
+      "policy_accepted":false
+    },
+    {
       "id":"CONFLICT-FRAMEWORK-LAYER-MODELS-001",
       "source_reviews":["evidence/source-reviews/wa-continuation-docs-framework-claims.json","evidence/source-reviews/wa-overview-framework-claims.json"],
       "claim_ids":["WA-CONT-DFW-009","WA-FRAMEWORK-001","WA-FRAMEWORK-002","WA-FRAMEWORK-003","WA-FRAMEWORK-004"],
