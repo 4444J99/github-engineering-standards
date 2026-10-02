@@ -78,7 +78,7 @@
         "candidate_id": "274e1dd84e4337b9e73db69e",
         "text_sha256": "b4ef062a759428cfe270717b29222911fca66046765c78d40a242dfaf7868571",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-006: Verify command path correctness, preferring an absolute path when uncertain.",
+        "rationale": "DOCS-SDKMCPDEBUG-006: Verify command path correctness, preferring an absolute path when uncertain. DOCS-SDKMCPDEBUG-006-A01: Verify command path correctness. DOCS-SDKMCPDEBUG-006-A02: Prefer absolute paths when uncertain.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -113,7 +113,7 @@
         "candidate_id": "4092ccf61f2d67e785fc8602",
         "text_sha256": "5a4c54a870c7e3bc53b93f147c76b036d5f51263fc2426ed3faf3ecc362f914c",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-012: The logging example chooses a local server. DOCS-SDKMCPDEBUG-013: The logging example names a placeholder server executable. DOCS-SDKMCPDEBUG-014: The logging example supplies an empty argument list. DOCS-SDKMCPDEBUG-015: The logging example sets MCP_DEBUG. DOCS-SDKMCPDEBUG-016: The logging example enables wildcard DEBUG logging. DOCS-SDKMCPDEBUG-017: The logging example sets Node-specific NODE_DEBUG to mcp.",
+        "rationale": "DOCS-SDKMCPDEBUG-012: The logging example chooses a local server. DOCS-SDKMCPDEBUG-013: The logging example names a placeholder server executable. DOCS-SDKMCPDEBUG-014: The logging example supplies an empty argument list. DOCS-SDKMCPDEBUG-015: The logging example sets MCP_DEBUG to the string '1'; actual server support is not demonstrated. DOCS-SDKMCPDEBUG-016: The logging example enables wildcard DEBUG logging. DOCS-SDKMCPDEBUG-017: The logging example sets Node-specific NODE_DEBUG to mcp.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -134,7 +134,7 @@
         "candidate_id": "a20533bfa673e33f711dd649",
         "text_sha256": "5c17a3f9192c3cfde46fe335e065729797a2bc87115f47aa2cb8001267172f6e",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-020: The Unix initialization example pipes a JSON-RPC request into a placeholder server; not executed. DOCS-SDKMCPDEBUG-021: The Windows initialization example pipes a request to a placeholder executable; not executed. DOCS-SDKMCPDEBUG-022: The initialize request example uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-023: The example uses request ID1. DOCS-SDKMCPDEBUG-024: The initialize example advertises protocol2024-11-05, not verified current support. DOCS-SDKMCPDEBUG-025: The initialize example supplies empty client capabilities. DOCS-SDKMCPDEBUG-026: The initialize example identifies a test client.",
+        "rationale": "DOCS-SDKMCPDEBUG-020: The Unix initialization example pipes a JSON-RPC request into a placeholder server; not executed. DOCS-SDKMCPDEBUG-021: The Windows initialization example pipes a request to a placeholder executable; not executed. DOCS-SDKMCPDEBUG-022: The initialize request example uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-023: The example uses request ID1. DOCS-SDKMCPDEBUG-024: The initialize example advertises protocol2024-11-05, not verified current support. DOCS-SDKMCPDEBUG-025: The initialize example supplies empty client capabilities. DOCS-SDKMCPDEBUG-026: The initialize example identifies a test client. DOCS-SDKMCPDEBUG-139: Initialize example test client reports version1.0. DOCS-SDKMCPDEBUG-143: Initialize request uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-144: Initialize request uses ID1. DOCS-SDKMCPDEBUG-145: Initialize request selects method initialize. DOCS-SDKMCPDEBUG-146: Initialize request advertises protocol2024-11-05. DOCS-SDKMCPDEBUG-147: Initialize request supplies empty client capabilities. DOCS-SDKMCPDEBUG-148: Initialize request names client test. DOCS-SDKMCPDEBUG-149: Initialize request identifies client version1.0.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -147,7 +147,7 @@
         "candidate_id": "6b003b5726fa20046f209d2d",
         "text_sha256": "12370409cd1fdefb87de1b1312f63fb041efb92273bd23ec6c039a1152bc5c7f",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-027: The expected response example echoes request ID1. DOCS-SDKMCPDEBUG-028: The response example returns protocol2024-11-05. DOCS-SDKMCPDEBUG-029: The response example advertises tools capability. DOCS-SDKMCPDEBUG-030: The response example includes server name/version.",
+        "rationale": "DOCS-SDKMCPDEBUG-027: The expected response example echoes request ID1. DOCS-SDKMCPDEBUG-028: The response example returns protocol2024-11-05. DOCS-SDKMCPDEBUG-029: The response example advertises tools capability. DOCS-SDKMCPDEBUG-030: The response example includes server name/version. DOCS-SDKMCPDEBUG-030-A01: Expected initialize response includes server name. DOCS-SDKMCPDEBUG-030-A02: Expected initialize response includes server version. DOCS-SDKMCPDEBUG-140: Expected-response example uses JSON-RPC2.0.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -161,7 +161,7 @@
         "candidate_id": "fe38b16aa7929e6e29e7acbf",
         "text_sha256": "398e26bfabe68185681108259ecb367c73f9c9c283149990e59fb5550394e92d",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-032: The standalone tools/list example starts a fresh piped invocation without a shown preceding handshake; it is not a verified persistent protocol test. DOCS-SDKMCPDEBUG-033: The tools/list request example uses request ID2.",
+        "rationale": "DOCS-SDKMCPDEBUG-032: The standalone tools/list example starts a fresh piped invocation without a shown preceding handshake; it is not a verified persistent protocol test. DOCS-SDKMCPDEBUG-033: The tools/list request example uses request ID2. DOCS-SDKMCPDEBUG-141: tools/list request example supplies empty params. DOCS-SDKMCPDEBUG-157: tools/list request uses JSON-RPC2.0.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -174,7 +174,7 @@
         "candidate_id": "637a736f233e530928906fdd",
         "text_sha256": "4f307387c30c91371ed8de8352cbaad06049f1ad06bf43d1190714c5c23aa9e7",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-034: The expected tool-list response example includes a name. DOCS-SDKMCPDEBUG-035: The expected tool-list response example includes a description. DOCS-SDKMCPDEBUG-036: The expected tool-list response example includes a placeholder input schema.",
+        "rationale": "DOCS-SDKMCPDEBUG-034: The expected tool-list response example includes a name. DOCS-SDKMCPDEBUG-035: The expected tool-list response example includes a description. DOCS-SDKMCPDEBUG-036: The expected tool-list response example includes a placeholder input schema. DOCS-SDKMCPDEBUG-142: tools/list expected-response example correlates request ID2. DOCS-SDKMCPDEBUG-162: Expected tools/list response uses JSON-RPC2.0.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -188,7 +188,7 @@
         "candidate_id": "807b0a73258b801a37727cd3",
         "text_sha256": "64aa61af27b81da32f3247e793e019f57c29f5d7f569a57fa266fb7c8d5526e9",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-038: The script stores the first argument as SERVER but does not show using that variable to launch a server. DOCS-SDKMCPDEBUG-039: The script writes an initialize request. DOCS-SDKMCPDEBUG-040: The script writes notifications/initialized. DOCS-SDKMCPDEBUG-041: The script writes a tools/list request. DOCS-SDKMCPDEBUG-042: The script keeps input open by copying stdin.",
+        "rationale": "DOCS-SDKMCPDEBUG-038: The script stores the first argument as SERVER but does not show using that variable to launch a server. DOCS-SDKMCPDEBUG-039: The script writes an initialize request. DOCS-SDKMCPDEBUG-040: The script writes notifications/initialized. DOCS-SDKMCPDEBUG-041: The script writes a tools/list request. DOCS-SDKMCPDEBUG-042: The script keeps input open by copying stdin. DOCS-SDKMCPDEBUG-150: Initialize request uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-151: Initialize request uses ID1. DOCS-SDKMCPDEBUG-152: Initialize request selects method initialize. DOCS-SDKMCPDEBUG-153: Initialize request advertises protocol2024-11-05. DOCS-SDKMCPDEBUG-154: Initialize request supplies empty client capabilities. DOCS-SDKMCPDEBUG-155: Initialize request names client test. DOCS-SDKMCPDEBUG-156: Initialize request identifies client version1.0. DOCS-SDKMCPDEBUG-158: tools/list request uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-159: Request ID is2. DOCS-SDKMCPDEBUG-160: Request method is tools/list. DOCS-SDKMCPDEBUG-161: Request params are empty. DOCS-SDKMCPDEBUG-163: Initialized notification uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-164: Initialized notification example has no request ID.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -208,7 +208,7 @@
         "candidate_id": "0d4861c0713cc6f2a544d156",
         "text_sha256": "c83198a98517b48431d8a061a7a1c938b6cc155abf86ed372d71af024af01895",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-044: No tools and no log errors are described as startup-failure symptoms.",
+        "rationale": "DOCS-SDKMCPDEBUG-044: No tools and no log errors are described as startup-failure symptoms. DOCS-SDKMCPDEBUG-044-A01: Startup-failure symptoms include no tools appearing. DOCS-SDKMCPDEBUG-044-A02: Startup-failure symptoms include no errors in logs.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -247,7 +247,7 @@
         "candidate_id": "99d23cd935b75551af438be6",
         "text_sha256": "dcad6a636bf0a93aab37b65dc07a6748ada2f75d58e401a71cdf784f1476b832",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-047: Missing dependencies are diagnosed through library checking or independent execution; neither was run.",
+        "rationale": "DOCS-SDKMCPDEBUG-047: Missing dependencies are diagnosed through library checking or independent execution; neither was run. DOCS-SDKMCPDEBUG-047-A01: For dependency problems inspect shared libraries with Linux ldd. DOCS-SDKMCPDEBUG-047-A02: Independent server execution is an alternative diagnostic.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -372,7 +372,7 @@
         "candidate_id": "aaab0e17c2fd859291c50a34",
         "text_sha256": "5ccf4359c9426a8c8995ac47b14f5d9a4cdb3baffcdc706d74f88a43ce3ecb39",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-060: The poor description example has an unspecified tool purpose. DOCS-SDKMCPDEBUG-061: The improved example describes a city-weather tool and its outputs.",
+        "rationale": "DOCS-SDKMCPDEBUG-060: The poor description example has an unspecified tool purpose. DOCS-SDKMCPDEBUG-061: The improved example describes a city-weather tool and its outputs. DOCS-SDKMCPDEBUG-061-A01: Improved tool example identifies city weather purpose. DOCS-SDKMCPDEBUG-061-A02: Improved example describes temperature output. DOCS-SDKMCPDEBUG-061-A03: Improved example describes humidity output. DOCS-SDKMCPDEBUG-061-A04: Improved example describes conditions output.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -460,7 +460,7 @@
         "candidate_id": "dcafa99b880004b54487430c",
         "text_sha256": "3751717702b1991dc355b8c5df572151dbf69b372ba0eaba9426d34e04e6f539",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-071: Parse and invalid-request errors are listed as JSON-RPC symptoms.",
+        "rationale": "DOCS-SDKMCPDEBUG-071: Parse and invalid-request errors are listed as JSON-RPC symptoms. DOCS-SDKMCPDEBUG-071-A01: JSON-RPC symptoms include parse errors. DOCS-SDKMCPDEBUG-071-A02: JSON-RPC symptoms include invalid-request errors.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -547,14 +547,14 @@
         "candidate_id": "0fba61c590c23cfb83700410",
         "text_sha256": "d32b41311e7ac68905118d3b370fc803078ce1846d431cba92cfc38d46fc7d7f",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-088: The Windows npx example invokes cmd. DOCS-SDKMCPDEBUG-089: The example uses /c npx and automatic package acquisition via -y; no package was fetched. DOCS-SDKMCPDEBUG-090: The example passes a filesystem-server package name. DOCS-SDKMCPDEBUG-091: The example provides an allowed path. DOCS-SDKMCPDEBUG-092: The npx example enables all tools. DOCS-SDKMCPDEBUG-093: The Windows example describes cmd/c wrapping for npx.",
+        "rationale": "DOCS-SDKMCPDEBUG-088: The Windows npx example invokes cmd. DOCS-SDKMCPDEBUG-089: The example uses /c npx and automatic package acquisition via -y; no package was fetched. DOCS-SDKMCPDEBUG-090: The example passes a filesystem-server package name. DOCS-SDKMCPDEBUG-091: The example provides an allowed path. DOCS-SDKMCPDEBUG-092: The npx example enables all tools. DOCS-SDKMCPDEBUG-093: The Windows example describes cmd/c wrapping for npx. DOCS-SDKMCPDEBUG-089-A01: Windows example wraps npx with cmd/c. DOCS-SDKMCPDEBUG-089-A02: Windows example uses npx-y automatic acquisition; not executed.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
         "candidate_id": "2f42ff950f852f43f3e951b6",
         "text_sha256": "a4c869464be5daf31684af13b85911999e38b1875d44451fb3905f312a9f2e8f",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-094: Windows raw strings or forward slashes are recommended for paths.",
+        "rationale": "DOCS-SDKMCPDEBUG-094: Windows raw strings or forward slashes are recommended for paths. DOCS-SDKMCPDEBUG-094-A01: Raw Windows path strings are an option. DOCS-SDKMCPDEBUG-094-A02: Forward-slash paths are an alternative.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -637,7 +637,7 @@
         "candidate_id": "eaffdfa0671a39c7af158dc0",
         "text_sha256": "7628437bcb36655832dd3ca18245a2237d2e62faf06ec356800ce53af93d97a6",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-109: The wrapper example creates a timestamp-derived relative log name. DOCS-SDKMCPDEBUG-110: The wrapper captures the server path argument. DOCS-SDKMCPDEBUG-111: The wrapper shifts positional arguments. DOCS-SDKMCPDEBUG-112: The wrapper appends a session header. DOCS-SDKMCPDEBUG-113: The wrapper logs the server path. DOCS-SDKMCPDEBUG-114: The wrapper logs arguments without shown redaction. DOCS-SDKMCPDEBUG-115: The wrapper tees stdin to a log. DOCS-SDKMCPDEBUG-116: The wrapper invokes the actual server. DOCS-SDKMCPDEBUG-117: The wrapper appends server stderr to the same log. DOCS-SDKMCPDEBUG-118: The wrapper tees stdout to the log and caller without shown redaction or bounded retention.",
+        "rationale": "DOCS-SDKMCPDEBUG-109: The wrapper example creates a timestamp-derived relative log name. DOCS-SDKMCPDEBUG-110: The wrapper captures the server path argument. DOCS-SDKMCPDEBUG-111: The wrapper shifts positional arguments. DOCS-SDKMCPDEBUG-112: The wrapper appends a session header. DOCS-SDKMCPDEBUG-113: The wrapper logs the server path. DOCS-SDKMCPDEBUG-114: The wrapper logs arguments without shown redaction. DOCS-SDKMCPDEBUG-115: The wrapper tees stdin to a log. DOCS-SDKMCPDEBUG-116: The wrapper invokes the actual server. DOCS-SDKMCPDEBUG-117: The wrapper appends server stderr to the same log. DOCS-SDKMCPDEBUG-118: The wrapper tees stdout to the log and caller without shown redaction or bounded retention. DOCS-SDKMCPDEBUG-118-A01: Wrapper tees server stdout to log. DOCS-SDKMCPDEBUG-118-A02: Wrapper forwards stdout to caller.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -726,7 +726,7 @@
         "candidate_id": "165e53de5bf50042509e45ac",
         "text_sha256": "5e6d49668fb8de708b00ba940f27838eae930c94f7555f155300925745ce869b",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-130: Collect SDK language/version context.",
+        "rationale": "DOCS-SDKMCPDEBUG-130: Collect SDK language/version context. DOCS-SDKMCPDEBUG-130-A01: Collect SDK language context. DOCS-SDKMCPDEBUG-130-A02: Collect SDK version context.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {
@@ -747,7 +747,7 @@
         "candidate_id": "05cb96d8b4085945c3465a4b",
         "text_sha256": "f144f48b62de06ac53949e2238530a01d17f469ae8aac2b543201821f236897d",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCPDEBUG-133: Collect full MCP configuration with secrets redacted.",
+        "rationale": "DOCS-SDKMCPDEBUG-133: Collect full MCP configuration with secrets redacted. DOCS-SDKMCPDEBUG-133-A01: Collect full MCP configuration. DOCS-SDKMCPDEBUG-133-A02: Redact configuration secrets before sharing.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
       },
       {

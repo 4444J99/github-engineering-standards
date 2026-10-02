@@ -1,0 +1,113 @@
+{
+  "schema": "ges.independent-repair-followup.v1",
+  "reviewer": "codex:independent-review",
+  "reviewed_at": "2026-10-02T05:41:25Z",
+  "status": "SPECIFIED_RESIDUAL_REPAIRS_SUPPORTED",
+  "scope": "Only current SDK-debugging records005/040/140/141 and their exact candidate mappings; not fresh full-file/global omission or configuration review.",
+  "prior_immutable_recheck": "evidence/sdk-debugging-independent-repair-recheck.json",
+  "inspected_documents": [
+    {
+      "path": "evidence/source-reviews/docs-sdk-debugging-claims.json",
+      "sha256": "efb6f9b1dea54116b2e29ca958ad6aeae28fe75ed4b62431884d54916014dab2"
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-debugging-artifacts.json",
+      "sha256": "15950fe74cb3226350aba7827485ccbc94c3a102287b29ed04d33f5b47cb9dbc"
+    }
+  ],
+  "inspected_claims": [
+    {
+      "claim_id": "DOCS-SDKDEBUG-005",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/debugging.md",
+      "start_line": 29,
+      "end_line": 29,
+      "statement": "Enable verbose logging as the stated first debugging step.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false,
+      "context": "Pinned/version-scoped SDK reference only. No snippets executed, logs/credentials collected or disclosed, security attributes/permissions changed or public issues opened. Source examples are neither approved grants nor demonstrated native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKDEBUG-040",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/debugging.md",
+      "start_line": 227,
+      "end_line": 227,
+      "statement": "Not-authenticated error is attributed to the Copilot CLI lacking authentication with GitHub.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "context": "Pinned/version-scoped SDK reference only. No snippets executed, logs/credentials collected or disclosed, security attributes/permissions changed or public issues opened. Source examples are neither approved grants nor demonstrated native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKDEBUG-140",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/debugging.md",
+      "start_line": 345,
+      "end_line": 345,
+      "statement": "The standalone MCP initialization example specifies JSON-RPC version 2.0.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Example protocol envelope only; no request executed or response observed. Placeholder request identity is not adopted policy."
+    },
+    {
+      "claim_id": "DOCS-SDKDEBUG-141",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/debugging.md",
+      "start_line": 345,
+      "end_line": 345,
+      "statement": "The standalone MCP initialization example assigns request ID 1.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Example protocol envelope only; no request executed or response observed. Placeholder request identity is not adopted policy."
+    }
+  ],
+  "inspected_candidate_mappings": [
+    {
+      "candidate_id": "5243fc77f2b1156be7339cfb",
+      "text_sha256": "ead03620a5e9d595d2bed368f4993c61ea56174d450a3f6d410cf75eede0e9e2",
+      "disposition": "REFERENCE",
+      "rationale": "DOCS-SDKDEBUG-005: Enable verbose logging as the stated first debugging step.",
+      "supporting_claims": "evidence/source-reviews/docs-sdk-debugging-claims.json"
+    },
+    {
+      "candidate_id": "eea4ad6ff002eb0573c82ffc",
+      "text_sha256": "06ded6308d59c6ba15121f75c139ed4c794d967ecbd26aa84cb31b924f13da60",
+      "disposition": "REFERENCE",
+      "rationale": "DOCS-SDKDEBUG-040: Not-authenticated error is attributed to the Copilot CLI lacking authentication with GitHub.",
+      "supporting_claims": "evidence/source-reviews/docs-sdk-debugging-claims.json"
+    },
+    {
+      "candidate_id": "75e001163bcf53ec3acb142e",
+      "text_sha256": "9b0bbba9830af6cd39cecee567761645c567da10f36c3c57443dda950791fb3c",
+      "disposition": "REFERENCE",
+      "rationale": "DOCS-SDKDEBUG-071: MCP test sends a JSON-RPC initialize request to a placeholder executable. DOCS-SDKDEBUG-072: MCP test uses protocolVersion2024-11-05, an example version not installed compatibility proof. DOCS-SDKDEBUG-073: MCP test advertises empty capabilities. DOCS-SDKDEBUG-074: MCP test identifies a test client with version1.0. DOCS-SDKDEBUG-140: The standalone MCP initialization example specifies JSON-RPC version 2.0. DOCS-SDKDEBUG-141: The standalone MCP initialization example assigns request ID 1.",
+      "supporting_claims": "evidence/source-reviews/docs-sdk-debugging-claims.json"
+    }
+  ],
+  "results": [
+    {
+      "ids": [
+        "DOCS-SDKDEBUG-140",
+        "DOCS-SDKDEBUG-141"
+      ],
+      "result": "Both supported line345 protocol literal observations now EXAMPLE with nonexecuted context."
+    },
+    {
+      "candidate_id": "75e001163bcf53ec3acb142e",
+      "result": "Current345code-example mapping includes140/141alongside071–074; unchanged candidate digest retained."
+    },
+    {
+      "ids": [
+        "DOCS-SDKDEBUG-005",
+        "DOCS-SDKDEBUG-040"
+      ],
+      "result": "Current source mappings reflect repaired verbose-logging attribution and Copilot CLI authentication identity, without stale sensitivity attribution or GitHub CLI antecedent."
+    }
+  ],
+  "remaining_actionable_failures_in_specified_followup": [],
+  "certification": {
+    "specified_residual_repairs_supported": true,
+    "whole_file_omission_pass": false,
+    "whole_corpus_pass": false,
+    "native_behavior_verified": false,
+    "rights_cleared": false,
+    "policy_adopted": false,
+    "nine_gates_complete": false
+  }
+}

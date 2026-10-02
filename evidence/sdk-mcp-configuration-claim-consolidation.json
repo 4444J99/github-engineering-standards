@@ -1,0 +1,262 @@
+{
+  "schema_version": "ges.reference-claim-consolidation.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T05:40:16Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
+  ],
+  "related_consolidations": [
+    "evidence/sdk-debugging-claim-consolidation.json",
+    "evidence/sdk-compatibility-claim-consolidation.json",
+    "evidence/sdk-tenant-service-claim-consolidation.json"
+  ],
+  "reviewed_claims": 143,
+  "all_records_mapped_once": true,
+  "groups": [
+    {
+      "group_id": "SDK-MCP-CONFIG-01",
+      "claim_ids": [
+        "DOCS-SDKMCP-001",
+        "DOCS-SDKMCP-002",
+        "DOCS-SDKMCP-003",
+        "DOCS-SDKMCP-004",
+        "DOCS-SDKMCP-005",
+        "DOCS-SDKMCP-006",
+        "DOCS-SDKMCP-007",
+        "DOCS-SDKMCP-008",
+        "DOCS-SDKMCP-009",
+        "DOCS-SDKMCP-010",
+        "DOCS-SDKMCP-011",
+        "DOCS-SDKMCP-012",
+        "DOCS-SDKMCP-013",
+        "DOCS-SDKMCP-014",
+        "DOCS-SDKMCP-015",
+        "DOCS-SDKMCP-016"
+      ],
+      "decision": "MCP capability and transport descriptions are source-scoped; executable, database, filesystem and API capabilities require separate permission and isolation decisions.",
+      "accepted_policy": false
+    },
+    {
+      "group_id": "SDK-MCP-CONFIG-02",
+      "claim_ids": [
+        "DOCS-SDKMCP-017",
+        "DOCS-SDKMCP-018",
+        "DOCS-SDKMCP-019",
+        "DOCS-SDKMCP-020",
+        "DOCS-SDKMCP-021",
+        "DOCS-SDKMCP-022",
+        "DOCS-SDKMCP-023",
+        "DOCS-SDKMCP-024",
+        "DOCS-SDKMCP-025",
+        "DOCS-SDKMCP-026",
+        "DOCS-SDKMCP-027",
+        "DOCS-SDKMCP-028",
+        "DOCS-SDKMCP-029",
+        "DOCS-SDKMCP-030",
+        "DOCS-SDKMCP-031",
+        "DOCS-SDKMCP-032",
+        "DOCS-SDKMCP-033",
+        "DOCS-SDKMCP-034",
+        "DOCS-SDKMCP-035",
+        "DOCS-SDKMCP-036",
+        "DOCS-SDKMCP-037",
+        "DOCS-SDKMCP-038",
+        "DOCS-SDKMCP-039",
+        "DOCS-SDKMCP-040",
+        "DOCS-SDKMCP-041",
+        "DOCS-SDKMCP-042",
+        "DOCS-SDKMCP-043",
+        "DOCS-SDKMCP-044",
+        "DOCS-SDKMCP-045",
+        "DOCS-SDKMCP-046",
+        "DOCS-SDKMCP-047",
+        "DOCS-SDKMCP-048",
+        "DOCS-SDKMCP-049",
+        "DOCS-SDKMCP-050",
+        "DOCS-SDKMCP-051",
+        "DOCS-SDKMCP-052",
+        "DOCS-SDKMCP-053",
+        "DOCS-SDKMCP-054",
+        "DOCS-SDKMCP-055",
+        "DOCS-SDKMCP-056",
+        "DOCS-SDKMCP-057",
+        "DOCS-SDKMCP-058",
+        "DOCS-SDKMCP-059",
+        "DOCS-SDKMCP-060",
+        "DOCS-SDKMCP-061",
+        "DOCS-SDKMCP-062",
+        "DOCS-SDKMCP-063",
+        "DOCS-SDKMCP-064",
+        "DOCS-SDKMCP-065",
+        "DOCS-SDKMCP-066",
+        "DOCS-SDKMCP-067",
+        "DOCS-SDKMCP-068",
+        "DOCS-SDKMCP-069",
+        "DOCS-SDKMCP-070",
+        "DOCS-SDKMCP-071"
+      ],
+      "decision": "Language examples differ in startup, cleanup, schema and permission-handler configuration. Python approve_all is not user approval; omitted handlers in other examples do not establish permission success. Literal Bearer ${TOKEN} strings do not demonstrate credential interpolation.",
+      "accepted_policy": false
+    },
+    {
+      "group_id": "SDK-MCP-CONFIG-03",
+      "claim_ids": [
+        "DOCS-SDKMCP-072",
+        "DOCS-SDKMCP-073",
+        "DOCS-SDKMCP-074",
+        "DOCS-SDKMCP-075",
+        "DOCS-SDKMCP-076",
+        "DOCS-SDKMCP-077",
+        "DOCS-SDKMCP-078",
+        "DOCS-SDKMCP-079",
+        "DOCS-SDKMCP-080",
+        "DOCS-SDKMCP-081",
+        "DOCS-SDKMCP-082",
+        "DOCS-SDKMCP-083",
+        "DOCS-SDKMCP-084",
+        "DOCS-SDKMCP-085",
+        "DOCS-SDKMCP-086",
+        "DOCS-SDKMCP-087"
+      ],
+      "decision": "disabledMcpServers uses exact names on each create/resume request without changing global configuration. Creation/cold resume prevent startup and authentication; resident resume cannot undo already-spawned servers. Tool filtering and process suppression are different controls.",
+      "accepted_policy": false
+    },
+    {
+      "group_id": "SDK-MCP-CONFIG-04",
+      "claim_ids": [
+        "DOCS-SDKMCP-088",
+        "DOCS-SDKMCP-089",
+        "DOCS-SDKMCP-090",
+        "DOCS-SDKMCP-091",
+        "DOCS-SDKMCP-092",
+        "DOCS-SDKMCP-093",
+        "DOCS-SDKMCP-094",
+        "DOCS-SDKMCP-095"
+      ],
+      "decision": "Wildcard, named-list and empty-list tool filtering have distinct semantics. No separate allow/disallow list is specified. These source capabilities are not authority to remove required project capabilities or grant dangerous tools.",
+      "accepted_policy": false
+    },
+    {
+      "group_id": "SDK-MCP-CONFIG-05",
+      "claim_ids": [
+        "DOCS-SDKMCP-096",
+        "DOCS-SDKMCP-097",
+        "DOCS-SDKMCP-098",
+        "DOCS-SDKMCP-099",
+        "DOCS-SDKMCP-100",
+        "DOCS-SDKMCP-101",
+        "DOCS-SDKMCP-102",
+        "DOCS-SDKMCP-103",
+        "DOCS-SDKMCP-104",
+        "DOCS-SDKMCP-105",
+        "DOCS-SDKMCP-106",
+        "DOCS-SDKMCP-107",
+        "DOCS-SDKMCP-108",
+        "DOCS-SDKMCP-109"
+      ],
+      "decision": "Filesystem quick start uses npx automatic acquisition and an example /tmp scope. Printed session/response output is illustrative, not observed. Linked packages and server repositories are not reviewed merely by reference.",
+      "accepted_policy": false
+    },
+    {
+      "group_id": "SDK-MCP-CONFIG-06",
+      "claim_ids": [
+        "DOCS-SDKMCP-110",
+        "DOCS-SDKMCP-111",
+        "DOCS-SDKMCP-112",
+        "DOCS-SDKMCP-113",
+        "DOCS-SDKMCP-114",
+        "DOCS-SDKMCP-115",
+        "DOCS-SDKMCP-116",
+        "DOCS-SDKMCP-117",
+        "DOCS-SDKMCP-118",
+        "DOCS-SDKMCP-119",
+        "DOCS-SDKMCP-120",
+        "DOCS-SDKMCP-121"
+      ],
+      "decision": "Local command/args and remote type/url are required, while headers/tools/timeouts are optional in these source tables. Defaults, millisecond units and credential routing require version-specific validation; optional configuration is not authenticated effective enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "group_id": "SDK-MCP-CONFIG-07",
+      "claim_ids": [
+        "DOCS-SDKMCP-122",
+        "DOCS-SDKMCP-123",
+        "DOCS-SDKMCP-124",
+        "DOCS-SDKMCP-125",
+        "DOCS-SDKMCP-126",
+        "DOCS-SDKMCP-127",
+        "DOCS-SDKMCP-128",
+        "DOCS-SDKMCP-129",
+        "DOCS-SDKMCP-130",
+        "DOCS-SDKMCP-131",
+        "DOCS-SDKMCP-132",
+        "DOCS-SDKMCP-133",
+        "DOCS-SDKMCP-134",
+        "DOCS-SDKMCP-135",
+        "DOCS-SDKMCP-136",
+        "DOCS-SDKMCP-137",
+        "DOCS-SDKMCP-138",
+        "DOCS-SDKMCP-139",
+        "DOCS-SDKMCP-140",
+        "DOCS-SDKMCP-141",
+        "DOCS-SDKMCP-142",
+        "DOCS-SDKMCP-143"
+      ],
+      "decision": "Diagnose startup, stderr, tool selection, remote accessibility, authentication and timeout/prompt failures independently. A running server, accessible URL or successful discovery cannot alone prove safe authorized execution; linked guides remain separately scoped.",
+      "accepted_policy": false
+    }
+  ],
+  "execution_default": "READ_ONLY",
+  "applicability_dimensions": [
+    "SDK/runtime version",
+    "language schema",
+    "local/remote transport",
+    "tool filter",
+    "permission handler",
+    "cold/resident resume",
+    "exact server name",
+    "credential provision"
+  ],
+  "proposed_behavior_checks": [
+    {
+      "name": "exact-name disabled-server mismatch",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "observed": false
+    },
+    {
+      "name": "cold startup and auth suppression",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "observed": false
+    },
+    {
+      "name": "resident server not undone",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "observed": false
+    },
+    {
+      "name": "wildcard named and empty tool filters",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "observed": false
+    },
+    {
+      "name": "missing required configuration",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "observed": false
+    },
+    {
+      "name": "literal token versus credential provision",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "observed": false
+    },
+    {
+      "name": "permission-handler omission and explicit refusal",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "observed": false
+    }
+  ],
+  "accepted_policy": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "independent_omission_audit_passed": false,
+  "global_gate_closed": false
+}

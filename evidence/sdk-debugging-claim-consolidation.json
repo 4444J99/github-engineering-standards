@@ -11,7 +11,7 @@
     "evidence/sdk-tenant-service-claim-consolidation.json",
     "evidence/sdk-compatibility-claim-consolidation.json"
   ],
-  "reviewed_claims": 277,
+  "reviewed_claims": 329,
   "all_records_mapped_once": true,
   "groups": [
     {
@@ -124,7 +124,9 @@
         "DOCS-SDKDEBUG-091",
         "DOCS-SDKDEBUG-092",
         "DOCS-SDKDEBUG-093",
-        "DOCS-SDKDEBUG-094"
+        "DOCS-SDKDEBUG-094",
+        "DOCS-SDKDEBUG-140",
+        "DOCS-SDKDEBUG-141"
       ],
       "decision": "MCP initialization and transport troubleshooting remain separate from grants. Stdio process pipes and external TCP routing do not establish endpoint authentication; connected state/process existence cannot prove effective enforcement.",
       "accepted_policy": false
@@ -226,7 +228,37 @@
         "DOCS-SDKMCPDEBUG-040",
         "DOCS-SDKMCPDEBUG-041",
         "DOCS-SDKMCPDEBUG-042",
-        "DOCS-SDKMCPDEBUG-043"
+        "DOCS-SDKMCPDEBUG-043",
+        "DOCS-SDKMCPDEBUG-006-A01",
+        "DOCS-SDKMCPDEBUG-006-A02",
+        "DOCS-SDKMCPDEBUG-030-A01",
+        "DOCS-SDKMCPDEBUG-030-A02",
+        "DOCS-SDKMCPDEBUG-139",
+        "DOCS-SDKMCPDEBUG-140",
+        "DOCS-SDKMCPDEBUG-141",
+        "DOCS-SDKMCPDEBUG-142",
+        "DOCS-SDKMCPDEBUG-143",
+        "DOCS-SDKMCPDEBUG-144",
+        "DOCS-SDKMCPDEBUG-145",
+        "DOCS-SDKMCPDEBUG-146",
+        "DOCS-SDKMCPDEBUG-147",
+        "DOCS-SDKMCPDEBUG-148",
+        "DOCS-SDKMCPDEBUG-149",
+        "DOCS-SDKMCPDEBUG-150",
+        "DOCS-SDKMCPDEBUG-151",
+        "DOCS-SDKMCPDEBUG-152",
+        "DOCS-SDKMCPDEBUG-153",
+        "DOCS-SDKMCPDEBUG-154",
+        "DOCS-SDKMCPDEBUG-155",
+        "DOCS-SDKMCPDEBUG-156",
+        "DOCS-SDKMCPDEBUG-157",
+        "DOCS-SDKMCPDEBUG-158",
+        "DOCS-SDKMCPDEBUG-159",
+        "DOCS-SDKMCPDEBUG-160",
+        "DOCS-SDKMCPDEBUG-161",
+        "DOCS-SDKMCPDEBUG-162",
+        "DOCS-SDKMCPDEBUG-163",
+        "DOCS-SDKMCPDEBUG-164"
       ],
       "decision": "Startup prerequisites and explicit tool filtering precede diagnosis. Wildcard examples do not mandate all tools. Initialization precedes initialized notification and discovery; standalone piped requests do not demonstrate a persistent handshake. Protocol 2024-11-05 is an example, not current compatibility certification.",
       "accepted_policy": false
@@ -260,7 +292,15 @@
         "DOCS-SDKMCPDEBUG-067",
         "DOCS-SDKMCPDEBUG-068",
         "DOCS-SDKMCPDEBUG-069",
-        "DOCS-SDKMCPDEBUG-070"
+        "DOCS-SDKMCPDEBUG-070",
+        "DOCS-SDKMCPDEBUG-044-A01",
+        "DOCS-SDKMCPDEBUG-044-A02",
+        "DOCS-SDKMCPDEBUG-047-A01",
+        "DOCS-SDKMCPDEBUG-047-A02",
+        "DOCS-SDKMCPDEBUG-061-A01",
+        "DOCS-SDKMCPDEBUG-061-A02",
+        "DOCS-SDKMCPDEBUG-061-A03",
+        "DOCS-SDKMCPDEBUG-061-A04"
       ],
       "decision": "A running process without usable tools is distinct from discovery, prompt selection, schema and timeout failures. Preserve initialize/initialized ordering, explicit required schema fields and bounded latency; suggested timeout is not adopted policy.",
       "accepted_policy": false
@@ -293,7 +333,13 @@
         "DOCS-SDKMCPDEBUG-093",
         "DOCS-SDKMCPDEBUG-094",
         "DOCS-SDKMCPDEBUG-095",
-        "DOCS-SDKMCPDEBUG-096"
+        "DOCS-SDKMCPDEBUG-096",
+        "DOCS-SDKMCPDEBUG-071-A01",
+        "DOCS-SDKMCPDEBUG-071-A02",
+        "DOCS-SDKMCPDEBUG-089-A01",
+        "DOCS-SDKMCPDEBUG-089-A02",
+        "DOCS-SDKMCPDEBUG-094-A01",
+        "DOCS-SDKMCPDEBUG-094-A02"
       ],
       "decision": "Protocol stdout is separate from diagnostic stderr. Validate complete newline-framed UTF-8 JSON without BOM; reported whitespace/framing causes do not create a universal prohibition on legal JSON whitespace. Windows paths and npx wrappers remain examples, not executed installations.",
       "accepted_policy": false
@@ -329,7 +375,9 @@
         "DOCS-SDKMCPDEBUG-122",
         "DOCS-SDKMCPDEBUG-123",
         "DOCS-SDKMCPDEBUG-124",
-        "DOCS-SDKMCPDEBUG-125"
+        "DOCS-SDKMCPDEBUG-125",
+        "DOCS-SDKMCPDEBUG-118-A01",
+        "DOCS-SDKMCPDEBUG-118-A02"
       ],
       "decision": "Firewall/antivirus exclusions, quarantine removal, chmod and package acquisition are security or system mutations requiring scope. Raw traffic wrappers capture unredacted input, output and arguments; Inspector invocation is not authorized fetching or execution.",
       "accepted_policy": false
@@ -349,7 +397,11 @@
         "DOCS-SDKMCPDEBUG-135",
         "DOCS-SDKMCPDEBUG-136",
         "DOCS-SDKMCPDEBUG-137",
-        "DOCS-SDKMCPDEBUG-138"
+        "DOCS-SDKMCPDEBUG-138",
+        "DOCS-SDKMCPDEBUG-130-A01",
+        "DOCS-SDKMCPDEBUG-130-A02",
+        "DOCS-SDKMCPDEBUG-133-A01",
+        "DOCS-SDKMCPDEBUG-133-A02"
       ],
       "decision": "Confirm actual runtime protocol/library versions rather than infer compatibility from sample dates. Support requests require configuration redaction and controlled logs; links and troubleshooting completion do not establish whole-source review, rights clearance or native behavior.",
       "accepted_policy": false
@@ -392,5 +444,10 @@
   "rights_cleared": false,
   "native_behavior_verified": false,
   "independent_omission_audit_passed": false,
-  "global_gate_closed": false
+  "global_gate_closed": false,
+  "independent_repair_recheck_pending": false,
+  "independent_repair_rechecks": [
+    "evidence/sdk-debugging-independent-repair-recheck.json",
+    "evidence/sdk-debugging-independent-repair-followup.json"
+  ]
 }
