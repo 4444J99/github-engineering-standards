@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "issue": 30,
+  "artifacts_reviewed": 20,
+  "reference_claims_added": 43,
+  "candidates_mapped": 42,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.12096360840594567,
+    "reviewed": 1652
+  },
+  "claim_accounting": {
+    "reference_claims": 57226,
+    "source_artifacts": 1618,
+    "duplicate_relationships": 7
+  },
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "controls": 95,
+      "valid": true
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "Source-span validation is not independent semantic omission certification, policy adoption, rights clearance or native behavior verification."
+  ]
+}
