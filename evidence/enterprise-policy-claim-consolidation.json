@@ -2,13 +2,15 @@
   "schema": "ges.reference-consolidation.v1",
   "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T03:31:10Z",
+  "reviewed_at": "2026-10-02T03:48:42Z",
   "source_documents": [
     "evidence/source-reviews/docs-enterprise-policy-claims.json",
     "evidence/source-reviews/docs-policy-conflicts-claims.json",
-    "evidence/source-reviews/docs-policy-surfaces-claims.json"
+    "evidence/source-reviews/docs-policy-surfaces-claims.json",
+    "evidence/source-reviews/docs-default-availability-claims.json",
+    "evidence/source-reviews/docs-enterprise-configuration-claims.json"
   ],
-  "input_claims": 138,
+  "input_claims": 190,
   "groups": [
     {
       "id": "POLICY-SEAT-AND-REPOSITORY-SCOPE",
@@ -255,6 +257,142 @@
         "DOCS-POLSURFACE-080"
       ],
       "decision": "Copilot Memory: Cloud agent, third-party agents, CLI and review supported; IDEs, app, GitHub Chat and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "DEFAULT-ARTICLE-SCOPE",
+      "claims": [
+        "DOCS-DEFAULTPOL-001",
+        "DOCS-DEFAULTPOL-002"
+      ],
+      "decision": "Business/Enterprise cloud scope and separate default-policy reusable are not actual target entitlements."
+    },
+    {
+      "id": "DEFAULT-SCHEDULED-ACTIVATION",
+      "claims": [
+        "DOCS-DEFAULTPOL-003",
+        "DOCS-DEFAULTPOL-004",
+        "DOCS-DEFAULTPOL-005",
+        "DOCS-DEFAULTPOL-006"
+      ],
+      "decision": "The pin supplies October22,2026 activation for configurable/not-yet-active feature defaults and impact-count banner; enabled-by-default is a scheduled source assertion, not live runtime proof. Preserve explicit configuration before activation."
+    },
+    {
+      "id": "DEFAULT-GA-LIFECYCLE",
+      "claims": [
+        "DOCS-DEFAULTPOL-007",
+        "DOCS-DEFAULTPOL-008",
+        "DOCS-DEFAULTPOL-009",
+        "DOCS-DEFAULTPOL-010"
+      ],
+      "decision": "Distinguish new GA, preview-to-GA transition and existing Unconfigured GA features; explicit settings do not silently become delegated defaults."
+    },
+    {
+      "id": "DEFAULT-ENTERPRISE-ORG-INHERITANCE",
+      "claims": [
+        "DOCS-DEFAULTPOL-011",
+        "DOCS-DEFAULTPOL-012"
+      ],
+      "decision": "Enterprise Unconfigured and organization delegated-but-unconfigured states are distinct; no generic default rule supersedes explicit upstream choice."
+    },
+    {
+      "id": "DEFAULT-FEATURE-EXCEPTIONS",
+      "claims": [
+        "DOCS-DEFAULTPOL-013",
+        "DOCS-DEFAULTPOL-014",
+        "DOCS-DEFAULTPOL-015",
+        "DOCS-DEFAULTPOL-016",
+        "DOCS-DEFAULTPOL-017",
+        "DOCS-DEFAULTPOL-018",
+        "DOCS-DEFAULTPOL-019"
+      ],
+      "decision": "Exclude previews, residency/FedRAMP restrictive model policies and cloud session storage. Feature scope includes Features & clients plus code review and Copilot MCP pages; UI grouping is not a universal feature set."
+    },
+    {
+      "id": "DEFAULT-MODEL-EXCLUSIONS",
+      "claims": [
+        "DOCS-DEFAULTPOL-020",
+        "DOCS-DEFAULTPOL-021",
+        "DOCS-DEFAULTPOLDEP-001",
+        "DOCS-DEFAULTPOLDEP-002",
+        "DOCS-DEFAULTPOLDEP-003",
+        "DOCS-DEFAULTPOLDEP-004",
+        "DOCS-DEFAULTPOLDEP-005",
+        "DOCS-DEFAULTPOLDEP-006",
+        "DOCS-DEFAULTPOLDEP-007"
+      ],
+      "decision": "Model-default delegation differs from feature-default activation. Pre-GA, open-weight, retention-excluded Fable and nonconforming residency/FedRAMP models stay disabled by default; explicit scoped manual enablement is a different approved workflow. Default choice does not clear retention or model rights."
+    },
+    {
+      "id": "DEFAULT-EXPLICIT-CHOICE",
+      "claims": [
+        "DOCS-DEFAULTPOL-022",
+        "DOCS-DEFAULTPOL-023"
+      ],
+      "decision": "An applicable enterprise/organization can disable default enablement or individually disable a feature/model; procedure does not authorize or verify a change."
+    },
+    {
+      "id": "DEFAULT-DEPENDENCIES",
+      "claims": [
+        "DOCS-DEFAULTPOL-024",
+        "DOCS-DEFAULTPOL-025"
+      ],
+      "decision": "Feature/model settings and release monitoring remain independently reviewed dependencies; release awareness is not effective policy."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-AUTHORITY",
+      "claims": [
+        "DOCS-ENTCONFIG-001",
+        "DOCS-ENTCONFIG-002",
+        "DOCS-ENTCONFIG-003",
+        "DOCS-ENTCONFIG-005"
+      ],
+      "decision": "Declared enterprise-owner role, plan scope, licensed seats and delegation must be reconciled with concept-level custom permissions and effective enterprise constraints. A generic navigation GHES branch does not widen the cloud article scope."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-PROCEDURES",
+      "claims": [
+        "DOCS-ENTCONFIG-006",
+        "DOCS-ENTCONFIG-007",
+        "DOCS-ENTCONFIG-008",
+        "DOCS-ENTCONFIG-009",
+        "DOCS-ENTCONFIG-010",
+        "DOCS-ENTCONFIG-011",
+        "DOCS-ENTCONFIG-012",
+        "DOCS-ENTCONFIG-013",
+        "DOCS-ENTCONFIGDEP-001"
+      ],
+      "decision": "Retain target selection, AI controls and distinct Agents/Copilot/Features & clients/MCP pages. Dropdown, toggle and named-policy configurations are procedures, not approved writes or behavior receipts. No immediate control does not imply no policy."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-MCP",
+      "claims": [
+        "DOCS-ENTCONFIG-014"
+      ],
+      "decision": "The reused MCP note preserves GA-only scope and third-party-host GitHub MCP exclusion; enterprise navigation does not erase this boundary."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-PUBLIC-CODE",
+      "claims": [
+        "DOCS-ENTCONFIG-015",
+        "DOCS-ENTCONFIGDEP-002",
+        "DOCS-ENTCONFIGDEP-003"
+      ],
+      "decision": "Business users' described Allowed default and Privacy route require actual effective-setting review. Public-code availability does not grant output license or blocking assurance on annotate-only surfaces."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-FEEDBACK",
+      "claims": [
+        "DOCS-ENTCONFIG-016"
+      ],
+      "decision": "Feedback opt-in requires GitHub.com feature enablement and remains separate from AI-training consent or provider data-retention agreement."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-LINKED-REVIEW",
+      "claims": [
+        "DOCS-ENTCONFIG-004",
+        "DOCS-ENTCONFIG-017"
+      ],
+      "decision": "First-time adoption guidance and reviewed conflict/surface references supply context only; no live setting or approval is certified."
     }
   ],
   "related_evidence": [
@@ -295,7 +433,7 @@
     "native_enforcement_verified": false
   },
   "remaining_work": [
-    "Read enterprise settings, default availability, Spark/AI-credit and supported-surface limitations independently.",
+    "Review model availability, Spark/AI-credit exceptions and surface limitations independently; default-availability concept and enterprise configuration procedure are now source-accounted, not runtime-certified.",
     "Reconcile all remaining source claims and templates/profiles before acceptance.",
     "Validate model/plan variables and page-version rendering.",
     "Independently audit policy atomicity/omissions and exact mapping equivalence.",
