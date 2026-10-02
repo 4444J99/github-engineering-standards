@@ -26,6 +26,27 @@ class RightsTriage(unittest.TestCase):
         with self.assertRaises(ValueError):
             triage([self.artifact], {}, [])
 
+    def test_file_specific_use_and_evidence_survive_generation(self):
+        self.finding.update(
+            permitted_use_decision='References only; exclude raw artwork',
+            supporting_evidence='evidence/asset-review.json',
+            inspection_scope='Visual inspection only',
+            required_decisions=['Verify inherited artwork grant'])
+        record = triage([self.artifact], self.pins, [self.finding])['records'][0]
+        for field in ('permitted_use_decision', 'supporting_evidence', 'inspection_scope'):
+            self.assertEqual(record[field], self.finding[field])
+        self.assertEqual(record['file_specific_required_decisions'], self.finding['required_decisions'])
+        self.assertIn('Obtain applicable authorized distribution decision', record['required_decisions'])
+        self.assertEqual(record['status'], 'PENDING_RIGHTS_ACCEPTANCE')
+        self.assertFalse(record['redistribution_approved'])
+
+    def test_unreviewed_artifact_does_not_inherit_use_decision(self):
+        record = triage([self.artifact], self.pins, [])['records'][0]
+        self.assertIsNone(record['permitted_use_decision'])
+        self.assertIsNone(record['supporting_evidence'])
+        self.assertIsNone(record['inspection_scope'])
+        self.assertEqual(record['file_specific_required_decisions'], [])
+
     def test_mismatched_digest_rejected(self):
         self.finding['content_sha256'] = 'changed'
         with self.assertRaises(ValueError):

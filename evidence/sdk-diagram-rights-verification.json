@@ -1,0 +1,14 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/6",
+  "changes": ["Two exact-identity diagram rights findings", "Preserve use decisions, supporting evidence, inspection scope and specific next steps during triage", "Two regression tests"],
+  "commands": [
+    {"command": "python -m ges.rights --artifacts .cache/corpus/artifacts.jsonl --findings evidence/rights-review-queue.json --output .cache/corpus/rights-triage.json", "exit_code": 0, "denominator": 13657, "existing_file_findings": 52, "rights_accepted": 0},
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 257, "result": "OK; synthetic negative fixture prints published_docs ERROR"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0}
+  ],
+  "observed_generated_records": "Both diagram records retain exact identities and authored use/evidence/inspection/next-step fields; pending acceptance and redistribution false remain intact.",
+  "boundaries": ["All previous 50 findings retained", "No raw asset bundled", "No rights acceptance", "No publication authorization", "No global gate closure"],
+  "delivery": "Exact commit and push receipt recorded in issue #6"
+}

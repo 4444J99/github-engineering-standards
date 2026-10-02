@@ -17,7 +17,7 @@ This initial private bootstrap makes no decision to publish, sublicense or repla
 
 ## File-specific recovery findings
 
-`evidence/rights-review-queue.json` binds 48 artifacts to their pinned commit, path
+`evidence/rights-review-queue.json` binds 52 artifacts to their pinned commit, path
 and digest. All remain pending rights acceptance; these records do not increase the
 rights-cleared numerator. Model-repo's CODE_OF_CONDUCT.md attributes Contributor
 Covenant 2.0, while CONTRIBUTING.md attributes 1.4. The governance template's
@@ -47,7 +47,7 @@ publish. Rights-cleared coverage remains zero.
 python -m ges.rights --artifacts .cache/corpus/artifacts.jsonl --findings evidence/rights-review-queue.json --output .cache/corpus/rights-triage.json
 ```
 
-The triage queue covers all 13,657 pinned artifacts, retaining the 50 existing
+The triage queue covers all 13,657 pinned artifacts, retaining the 52 existing
 file-specific findings. It checks source pins, artifact uniqueness and finding
 digests. Unreviewed files have no inferred repository license. Every record
 remains pending: this queue neither grants rights nor authorizes distribution.
@@ -56,6 +56,16 @@ Actual clearance requires file-specific grants, exceptions, permitted-use decisi
 and attribution duties, plus the applicable authorized distribution decision.
 Published bodies need separate version and rights reconciliation; this pinned
 artifact queue does not cover that denominator.
+
+The two SDK image-input and steering diagrams now have pinned file-specific
+findings tied to their complete visual observations and independent audit. Their
+tracked use is source identities, links and independently authored observations;
+raw artwork is excluded pending grant, inherited-component, attribution and
+distribution decisions. This is a bounded use disposition, not rights acceptance.
+Regenerated triage preserves recorded use decisions, supporting evidence,
+inspection scope and file-specific next steps alongside its mandatory generic
+checks; previously those fields were dropped. Unknown files receive no inferred
+use decision. The rights-cleared numerator remains zero.
 
 Twenty-seven fully inspected binary assets and one partially reviewed video now
 have file-specific findings tied to their
