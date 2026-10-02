@@ -1,0 +1,304 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T03:31:10Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-enterprise-policy-claims.json",
+    "evidence/source-reviews/docs-policy-conflicts-claims.json",
+    "evidence/source-reviews/docs-policy-surfaces-claims.json"
+  ],
+  "input_claims": 138,
+  "groups": [
+    {
+      "id": "POLICY-SEAT-AND-REPOSITORY-SCOPE",
+      "claims": [
+        "DOCS-ENTPOL-001",
+        "DOCS-ENTPOL-008",
+        "DOCS-ENTPOL-009",
+        "DOCS-POLCONFLICT-001",
+        "DOCS-POLCONFLICT-002",
+        "DOCS-POLCONFLICT-003"
+      ],
+      "decision": "Separate cloud feature declaration, licensed-seat governance, all-user repository exceptions and enterprise delegation. Neither seat inventory alone nor repository ownership alone determines all policies."
+    },
+    {
+      "id": "POLICY-ENTERPRISE-FIRST",
+      "claims": [
+        "DOCS-ENTPOL-003",
+        "DOCS-ENTPOL-004",
+        "DOCS-ENTPOL-005",
+        "DOCS-ENTPOL-006",
+        "DOCS-ENTPOL-007"
+      ],
+      "decision": "Enterprise policies are evaluated first; retain explicit enable/disable/delegate choices, cloud-agent selected-organization exception, and separate default for directly enterprise-assigned users."
+    },
+    {
+      "id": "POLICY-CONFLICT-RULES",
+      "claims": [
+        "DOCS-ENTPOL-010",
+        "DOCS-ENTPOL-011",
+        "DOCS-ENTPOL-012",
+        "DOCS-ENTPOL-013",
+        "DOCS-ENTPOL-014",
+        "DOCS-ENTPOL-015",
+        "DOCS-POLCONFLICT-004",
+        "DOCS-POLCONFLICT-005",
+        "DOCS-POLCONFLICT-025",
+        "DOCS-POLCONFLICT-026",
+        "DOCS-POLCONFLICT-027"
+      ],
+      "decision": "Usually least-restrictive within an enterprise and usually most-restrictive across enterprises are qualified summaries. Use per-policy organization rules; preserve Team-model billing organization, plan transition, enterprise-specific AI-credit usage and unspecified Spark exception instead of inventing merge semantics."
+    },
+    {
+      "id": "POLICY-MOST-RESTRICTIVE-ORG",
+      "claims": [
+        "DOCS-POLCONFLICT-006",
+        "DOCS-POLCONFLICT-007",
+        "DOCS-POLCONFLICT-008",
+        "DOCS-POLCONFLICT-009",
+        "DOCS-POLCONFLICT-010"
+      ],
+      "decision": "Metrics API, non-GitHub semantic indexing, public-code privacy and unlicensed-member code review use most-restrictive organization combination. Semantic indexing requires all organizations explicitly Enabled; Unconfigured means disabled. Metrics reference link is ghec-conditional."
+    },
+    {
+      "id": "POLICY-LEAST-RESTRICTIVE-ORG",
+      "claims": [
+        "DOCS-POLCONFLICT-011",
+        "DOCS-POLCONFLICT-012",
+        "DOCS-POLCONFLICT-013",
+        "DOCS-POLCONFLICT-014",
+        "DOCS-POLCONFLICT-015",
+        "DOCS-POLCONFLICT-016",
+        "DOCS-POLCONFLICT-017",
+        "DOCS-POLCONFLICT-018",
+        "DOCS-POLCONFLICT-019",
+        "DOCS-POLCONFLICT-020",
+        "DOCS-POLCONFLICT-021",
+        "DOCS-POLCONFLICT-022",
+        "DOCS-POLCONFLICT-023",
+        "DOCS-POLCONFLICT-024"
+      ],
+      "decision": "Retain all fourteen individually extracted least-restrictive table policies, including web search, client/agent features, MCP and previews. Any enabled organization enables user access only within the policy's actual scope, enterprise constraints and supported surfaces."
+    },
+    {
+      "id": "POLICY-SURFACE-VS-FUNCTION",
+      "claims": [
+        "DOCS-ENTPOL-002",
+        "DOCS-ENTPOL-018",
+        "DOCS-ENTPOL-019",
+        "DOCS-ENTPOL-020",
+        "DOCS-POLSURFACE-001",
+        "DOCS-POLSURFACE-002",
+        "DOCS-POLSURFACE-003",
+        "DOCS-POLSURFACE-004",
+        "DOCS-POLSURFACE-005",
+        "DOCS-POLSURFACE-006",
+        "DOCS-POLSURFACE-007",
+        "DOCS-POLSURFACE-008"
+      ],
+      "decision": "Client policies are independently configured and table support is policy applicability, not equivalent functionality. Cloud-agent Internet access survives a nonapplicable web-search policy. Public-code agent support is annotate-only and cannot prove blocking, copyright clearance or network isolation."
+    },
+    {
+      "id": "POLICY-DEFAULT-ACTIVATION",
+      "claims": [
+        "DOCS-ENTPOL-016",
+        "DOCS-ENTPOL-017",
+        "DOCS-ENTPOLDEP-001",
+        "DOCS-ENTPOLDEP-002",
+        "DOCS-ENTPOLDEP-003",
+        "DOCS-ENTPOLDEP-004"
+      ],
+      "decision": "Separate unconfigured GA feature and model defaults from explicit choices, preview status and effective target settings. Preserve the pin's staged model-active/feature-coming-soon text and October22 editorial expiry; neither supplies a runtime activation receipt."
+    },
+    {
+      "id": "POLICY-DRIFT-AND-AUTHORITY",
+      "claims": [
+        "DOCS-ENTPOL-021",
+        "DOCS-ENTPOL-022",
+        "DOCS-ENTPOL-023",
+        "DOCS-ENTPOL-024",
+        "DOCS-ENTPOL-025"
+      ],
+      "decision": "Review enterprise owner/custom AI-control roles and organization granular roles separately. Audit policy and organization-enablement changes; observed drift, approved change and effective behavior remain distinct."
+    },
+    {
+      "id": "POLICY-LINKED-PROCEDURES",
+      "claims": [
+        "DOCS-ENTPOL-026",
+        "DOCS-POLCONFLICT-028"
+      ],
+      "decision": "Enterprise/organization setting procedures remain separately reviewed dependencies; no link certifies a setting, rights or world coverage."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-01",
+      "claims": [
+        "DOCS-POLSURFACE-009",
+        "DOCS-POLSURFACE-010",
+        "DOCS-POLSURFACE-011",
+        "DOCS-POLSURFACE-012",
+        "DOCS-POLSURFACE-013",
+        "DOCS-POLSURFACE-014",
+        "DOCS-POLSURFACE-015",
+        "DOCS-POLSURFACE-016"
+      ],
+      "decision": "Editor preview features: IDEs only; other seven table surfaces not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-02",
+      "claims": [
+        "DOCS-POLSURFACE-017",
+        "DOCS-POLSURFACE-018",
+        "DOCS-POLSURFACE-019",
+        "DOCS-POLSURFACE-020",
+        "DOCS-POLSURFACE-021",
+        "DOCS-POLSURFACE-022",
+        "DOCS-POLSURFACE-023",
+        "DOCS-POLSURFACE-024"
+      ],
+      "decision": "Web search: IDEs and GitHub Chat supported; cloud agent, third-party agents, CLI, app, review and Spark not supported. Not network isolation. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-03",
+      "claims": [
+        "DOCS-POLSURFACE-025",
+        "DOCS-POLSURFACE-026",
+        "DOCS-POLSURFACE-027",
+        "DOCS-POLSURFACE-028",
+        "DOCS-POLSURFACE-029",
+        "DOCS-POLSURFACE-030",
+        "DOCS-POLSURFACE-031",
+        "DOCS-POLSURFACE-032"
+      ],
+      "decision": "Custom model configuration: IDEs, CLI, app and GitHub Chat supported; cloud agent, third-party agents, review and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-04",
+      "claims": [
+        "DOCS-POLSURFACE-033",
+        "DOCS-POLSURFACE-034",
+        "DOCS-POLSURFACE-035",
+        "DOCS-POLSURFACE-036",
+        "DOCS-POLSURFACE-037",
+        "DOCS-POLSURFACE-038",
+        "DOCS-POLSURFACE-039",
+        "DOCS-POLSURFACE-040"
+      ],
+      "decision": "Public-code suggestions: IDEs supported; cloud and third-party agents annotate-only; CLI, app, GitHub Chat, review and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-05",
+      "claims": [
+        "DOCS-POLSURFACE-041",
+        "DOCS-POLSURFACE-042",
+        "DOCS-POLSURFACE-043",
+        "DOCS-POLSURFACE-044",
+        "DOCS-POLSURFACE-045",
+        "DOCS-POLSURFACE-046",
+        "DOCS-POLSURFACE-047",
+        "DOCS-POLSURFACE-048"
+      ],
+      "decision": "Copilot MCP servers: IDEs, cloud agent, third-party agents, CLI, app and review supported; GitHub Chat and Spark not supported. Separate GitHub MCP third-party-host governance still applies. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-06",
+      "claims": [
+        "DOCS-POLSURFACE-049",
+        "DOCS-POLSURFACE-050",
+        "DOCS-POLSURFACE-051",
+        "DOCS-POLSURFACE-052",
+        "DOCS-POLSURFACE-053",
+        "DOCS-POLSURFACE-054",
+        "DOCS-POLSURFACE-055",
+        "DOCS-POLSURFACE-056"
+      ],
+      "decision": "Registry-only MCP: IDEs, CLI and app supported; remaining five table surfaces not supported. MCP enablement is not registry-only restriction. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-07",
+      "claims": [
+        "DOCS-POLSURFACE-057",
+        "DOCS-POLSURFACE-058",
+        "DOCS-POLSURFACE-059",
+        "DOCS-POLSURFACE-060",
+        "DOCS-POLSURFACE-061",
+        "DOCS-POLSURFACE-062",
+        "DOCS-POLSURFACE-063",
+        "DOCS-POLSURFACE-064"
+      ],
+      "decision": "Content exclusion: IDEs, cloud agent, CLI, app, GitHub Chat and review supported; third-party agents and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-08",
+      "claims": [
+        "DOCS-POLSURFACE-065",
+        "DOCS-POLSURFACE-066",
+        "DOCS-POLSURFACE-067",
+        "DOCS-POLSURFACE-068",
+        "DOCS-POLSURFACE-069",
+        "DOCS-POLSURFACE-070",
+        "DOCS-POLSURFACE-071",
+        "DOCS-POLSURFACE-072"
+      ],
+      "decision": "Model configuration: IDEs, cloud agent, third-party agents, CLI, app and GitHub Chat supported; review and Spark not supported. Distinct from custom-model configuration. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-09",
+      "claims": [
+        "DOCS-POLSURFACE-073",
+        "DOCS-POLSURFACE-074",
+        "DOCS-POLSURFACE-075",
+        "DOCS-POLSURFACE-076",
+        "DOCS-POLSURFACE-077",
+        "DOCS-POLSURFACE-078",
+        "DOCS-POLSURFACE-079",
+        "DOCS-POLSURFACE-080"
+      ],
+      "decision": "Copilot Memory: Cloud agent, third-party agents, CLI and review supported; IDEs, app, GitHub Chat and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    }
+  ],
+  "related_evidence": [
+    "evidence/account-policy-claim-consolidation.json",
+    "evidence/organization-policy-claim-consolidation.json",
+    "evidence/ai-model-hosting-claim-consolidation.json"
+  ],
+  "generalized_effective_policy_review": {
+    "read_only_default": true,
+    "evaluation_dimensions": [
+      "product/version and current entitlement",
+      "seat-grant organization/enterprise and direct assignment",
+      "billing organization for Team model policy",
+      "explicit upstream policy versus delegated/default state",
+      "specific policy merge rule and exceptions",
+      "target surface and applicability support",
+      "agent-app/CLI independent client controls",
+      "annotate versus blocking semantics",
+      "effective repository grants",
+      "dated activation/default changes",
+      "actual actor authorization and audit changes"
+    ],
+    "unknown": "If rule, permission, seat/billing identity, effective setting, surface or exception is unverified, report UNVERIFIED rather than PASS.",
+    "no_universal_merge_rule": true,
+    "no_generic_web_policy_network_isolation": true,
+    "no_annotate_mode_blocking_assumption": true,
+    "changes": "Explicit scoped approval and reviewed plan/diff/apply/verify with rollback/recovery; no native change authorized by source ingestion."
+  },
+  "verification": {
+    "all_input_claims_mapped_once": true,
+    "source_level_accounting": true,
+    "independent_atomicity_and_omission_certified": false,
+    "linked_and_rendered_assurance_complete": false,
+    "current_activation_verified": false,
+    "operational_binding_verified": false,
+    "rights_cleared": false,
+    "policy_adopted": false,
+    "native_enforcement_verified": false
+  },
+  "remaining_work": [
+    "Read enterprise settings, default availability, Spark/AI-credit and supported-surface limitations independently.",
+    "Reconcile all remaining source claims and templates/profiles before acceptance.",
+    "Validate model/plan variables and page-version rendering.",
+    "Independently audit policy atomicity/omissions and exact mapping equivalence.",
+    "Collect approved effective target policy and positive/negative/bypass/recovery behavior evidence."
+  ]
+}
