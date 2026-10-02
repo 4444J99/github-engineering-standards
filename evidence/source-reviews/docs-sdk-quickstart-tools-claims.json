@@ -4479,7 +4479,12 @@
       "statement": "Java custom-tool example starts client and waits.",
       "source_strength": "EXAMPLE",
       "accepted_policy": false,
-      "context": "Traceable child of DOCS-SDKQUICKTOOLS-139; nonexecuted example, not approved policy or observed native behavior."
+      "context": "Traceable child of DOCS-SDKQUICKTOOLS-139; nonexecuted example, not approved policy or observed native behavior.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICKTOOLS-139-A02-B01",
+        "DOCS-SDKQUICKTOOLS-139-A02-B02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICKTOOLS-162-A01",
@@ -4889,7 +4894,12 @@
       "statement": "Java interactive example starts client and waits.",
       "source_strength": "EXAMPLE",
       "accepted_policy": false,
-      "context": "Traceable child of DOCS-SDKQUICKTOOLS-329; nonexecuted example, not approved policy or observed native behavior."
+      "context": "Traceable child of DOCS-SDKQUICKTOOLS-329; nonexecuted example, not approved policy or observed native behavior.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICKTOOLS-329-A02-B01",
+        "DOCS-SDKQUICKTOOLS-329-A02-B02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICKTOOLS-348-A01",
@@ -4910,8 +4920,53 @@
       "source_strength": "EXAMPLE",
       "accepted_policy": false,
       "context": "Traceable child of DOCS-SDKQUICKTOOLS-348; nonexecuted example, not approved policy or observed native behavior."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKTOOLS-139-A02-B01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1138,
+      "end_line": 1138,
+      "statement": "Java illustrative example starts the client.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Traceable child of DOCS-SDKQUICKTOOLS-139; nonexecuted example, not approved policy or observed native behavior.",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKTOOLS-139-A02-B02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1138,
+      "end_line": 1138,
+      "statement": "Java illustrative example waits for client startup completion.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Traceable child of DOCS-SDKQUICKTOOLS-139; nonexecuted example, not approved policy or observed native behavior.",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKTOOLS-329-A02-B01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1636,
+      "end_line": 1636,
+      "statement": "Java illustrative example starts the client.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Traceable child of DOCS-SDKQUICKTOOLS-329; nonexecuted example, not approved policy or observed native behavior.",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKTOOLS-329-A02-B02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1636,
+      "end_line": 1636,
+      "statement": "Java illustrative example waits for client startup completion.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Traceable child of DOCS-SDKQUICKTOOLS-329; nonexecuted example, not approved policy or observed native behavior.",
+      "claim_role": "ATOMIC"
     }
   ],
   "independent_audit": "evidence/sdk-quickstart-tools-independent-claim-audit.json",
-  "independent_repair_recheck_pending": true
+  "independent_repair_recheck_pending": true,
+  "repair_recheck": "evidence/sdk-quickstart-independent-repair-recheck.json"
 }

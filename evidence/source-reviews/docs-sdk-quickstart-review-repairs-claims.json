@@ -64,7 +64,12 @@
       "accepted_policy": false,
       "claim_id": "DOCS-SDKQUICKREPAIR-006",
       "path": "content/copilot/get-started/sdk-quickstart.md",
-      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted."
+      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICKREPAIR-006-B01",
+        "DOCS-SDKQUICKREPAIR-006-B02"
+      ]
     },
     {
       "start_line": 90,
@@ -114,7 +119,12 @@
       "accepted_policy": false,
       "claim_id": "DOCS-SDKQUICKREPAIR-011",
       "path": "content/copilot/get-started/sdk-quickstart.md",
-      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted."
+      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICKREPAIR-011-B01",
+        "DOCS-SDKQUICKREPAIR-011-B02"
+      ]
     },
     {
       "start_line": 127,
@@ -455,8 +465,73 @@
       "claim_id": "DOCS-SDKQUICKREPAIR-045",
       "path": "content/copilot/get-started/sdk-quickstart.md",
       "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted."
+    },
+    {
+      "start_line": 58,
+      "end_line": 58,
+      "statement": "TypeScript setup procedure directs installing the SDK.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICKREPAIR-006-B01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted.",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "start_line": 58,
+      "end_line": 58,
+      "statement": "TypeScript setup procedure directs installing the TypeScript runner.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICKREPAIR-006-B02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted.",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "start_line": 125,
+      "end_line": 125,
+      "statement": "Java setup procedure directs creating a new directory.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICKREPAIR-011-B01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted.",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "start_line": 125,
+      "end_line": 125,
+      "statement": "Java setup procedure directs initializing the project.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICKREPAIR-011-B02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Bounded independent omission repair; illustrative code is not executed, linked bodies are not reviewed, and no adopted policy or runtime receipt is asserted.",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKREPAIR-046",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1310,
+      "end_line": 1310,
+      "statement": "Interactive weather-assistant procedure directs creating weather-assistant.go.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false,
+      "context": "Source procedure only; no upstream code execution or file creation performed."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKREPAIR-047",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1417,
+      "end_line": 1417,
+      "statement": "Interactive weather-assistant procedure directs creating src/main.rs.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false,
+      "context": "Source procedure only; no upstream code execution or file creation performed."
     }
   ],
   "independent_audit": "evidence/sdk-quickstart-root-sections-independent-claim-audit.json",
-  "independent_repair_recheck_pending": true
+  "independent_repair_recheck_pending": true,
+  "repair_recheck": "evidence/sdk-quickstart-independent-repair-recheck.json"
 }

@@ -1,0 +1,193 @@
+{
+  "schema_version": "ges.independent-repair-recheck.v1",
+  "reviewer": "codex:independent-source-audit",
+  "reviewed_at": "2026-10-02T06:09:37Z",
+  "scope": "Only the exact10 residual findings in the immutable1075-record repair recheck, plus two new source-specific creation procedures1310/1417. No full quickstart candidate mapping, global claim review or whole-corpus certification.",
+  "prior_recheck": {
+    "path": "evidence/sdk-quickstart-independent-repair-recheck.json",
+    "sha256": "e4e26e6c4243e47804863a69d2f2006dd94f22605eb87d9a9e82d9c15fbf3505",
+    "immutable_original_snapshots_records": 1075
+  },
+  "source": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/get-started/sdk-quickstart.md",
+    "content_sha256": "7b9b474311d9251c999e1642480c6757be5a55fbfafac18dd4516ac12c7e8cf9",
+    "inspected_lines": [
+      38,
+      58,
+      125,
+      1138,
+      1310,
+      1417,
+      1636
+    ]
+  },
+  "inputs": [
+    {
+      "path": "evidence/source-reviews/docs-sdk-quickstart-selected-claims.json",
+      "records": 161,
+      "sha256": "66deca7eedb28a20bf28e5967d093b4c476e2a3960001c9511b92c8633987d2b"
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-quickstart-setup-claims.json",
+      "records": 250,
+      "sha256": "4d95e178076cb038ccd2e7a644f79fe85343a1fba8ecac393a56e89d2786f483"
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-quickstart-tail-claims.json",
+      "records": 145,
+      "sha256": "d11c4098a1be8288d93f45cfc467feafee15d93dad95474d63ff427889d01892"
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-quickstart-review-repairs-claims.json",
+      "records": 51,
+      "sha256": "de6c99ba669a7f9b50470e6cdf61624834d44d959294b4f8057f658e601182e8"
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-quickstart-tools-claims.json",
+      "records": 478,
+      "sha256": "5869c7292f69037a62d6c67804cb025c7c1d54f7a9bc43e79e9a3ed281ab9b83"
+    }
+  ],
+  "current_records": 1085,
+  "specified_checks": [
+    {
+      "claim_id": "DOCS-SDKQUICK-010",
+      "source_span": [
+        38,
+        38
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Literal undefined prefix removed; conditional selected-language-only prerequisite scope retained; REQUIREMENT strength remains conditional."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-011",
+      "source_span": [
+        38,
+        38
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Literal undefined prefix removed; conditional selected-language-only prerequisite scope retained; REQUIREMENT strength remains conditional."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-012",
+      "source_span": [
+        38,
+        38
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Literal undefined prefix removed; conditional selected-language-only prerequisite scope retained; REQUIREMENT strength remains conditional."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-013",
+      "source_span": [
+        38,
+        38
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Literal undefined prefix removed; conditional selected-language-only prerequisite scope retained; REQUIREMENT strength remains conditional."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-014",
+      "source_span": [
+        38,
+        38
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Literal undefined prefix removed; conditional selected-language-only prerequisite scope retained; REQUIREMENT strength remains conditional."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-015",
+      "source_span": [
+        38,
+        38
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Literal undefined prefix removed; conditional selected-language-only prerequisite scope retained; REQUIREMENT strength remains conditional."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKREPAIR-006",
+      "source_span": [
+        58,
+        58
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Parent retained as GROUPED_CONTEXT; separate two children preserve atomic actions, exact occurrence span and source strength.",
+      "atomic_children": [
+        "DOCS-SDKQUICKREPAIR-006-B01",
+        "DOCS-SDKQUICKREPAIR-006-B02"
+      ],
+      "source_strength": "PROCEDURE"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKREPAIR-011",
+      "source_span": [
+        125,
+        125
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Parent retained as GROUPED_CONTEXT; separate two children preserve atomic actions, exact occurrence span and source strength.",
+      "atomic_children": [
+        "DOCS-SDKQUICKREPAIR-011-B01",
+        "DOCS-SDKQUICKREPAIR-011-B02"
+      ],
+      "source_strength": "PROCEDURE"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKTOOLS-139-A02",
+      "source_span": [
+        1138,
+        1138
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Parent retained as GROUPED_CONTEXT; separate two children preserve atomic actions, exact occurrence span and source strength.",
+      "atomic_children": [
+        "DOCS-SDKQUICKTOOLS-139-A02-B01",
+        "DOCS-SDKQUICKTOOLS-139-A02-B02"
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKTOOLS-329-A02",
+      "source_span": [
+        1636,
+        1636
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "Parent retained as GROUPED_CONTEXT; separate two children preserve atomic actions, exact occurrence span and source strength.",
+      "atomic_children": [
+        "DOCS-SDKQUICKTOOLS-329-A02-B01",
+        "DOCS-SDKQUICKTOOLS-329-A02-B02"
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKREPAIR-046",
+      "source_span": [
+        1310,
+        1310
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "PROCEDURE explicitly names creation of weather-assistant.go; inert source instruction, not an observed creation."
+    },
+    {
+      "claim_id": "DOCS-SDKQUICKREPAIR-047",
+      "source_span": [
+        1417,
+        1417
+      ],
+      "outcome": "SUPPORTED",
+      "verified": "PROCEDURE explicitly names creation of src/main.rs; inert source instruction, not an observed creation."
+    }
+  ],
+  "bounded_result": "SPECIFIED_REPAIRS_SUPPORTED: all10 prior residual findings corrected; both new filename procedures supported. Ready for root integration of these specified corrections, not independent approval of root's candidate mappings.",
+  "remaining_findings_within_specified_repair_scope": [],
+  "limitations": [
+    "No other evidence files changed; earlier snapshots retained unchanged.",
+    "No upstream execution, installation, native activation, permission authorization, billing, accepted policy or rights clearance.",
+    "Root-authored full candidate accounting is separate and not certified here.",
+    "No whole-file semantic omission assurance or global nine-gate pass.",
+    "No heavy global validation performed."
+  ]
+}
