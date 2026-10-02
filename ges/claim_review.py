@@ -50,6 +50,20 @@ def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
             claims.append((identity, claim, doc))
     if not claims:
         raise ValueError('No reference claims to audit')
+    duplicate_links = {}
+    for _, claim, _ in claims:
+        if 'duplicate_of' in claim:
+            target = claim['duplicate_of']
+            if not isinstance(target, str) or target not in ids:
+                raise ValueError('Unknown duplicate claim target: '+claim['claim_id'])
+            duplicate_links[claim['claim_id']] = target
+    for origin in duplicate_links:
+        visited, current = set(), origin
+        while current in duplicate_links:
+            if current in visited:
+                raise ValueError('Cyclic duplicate claim mapping: '+origin)
+            visited.add(current)
+            current = duplicate_links[current]
     needed = {identity for identity, _, _ in claims}
     texts = {}
     for source in sorted({identity[0] for identity in needed}):
@@ -80,6 +94,7 @@ def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
             if key in claim and hashlib.sha256(raw.encode()).hexdigest() != claim[key]:
                 raise ValueError('Claim span digest mismatch: '+claim['claim_id'])
     return {'valid': True, 'reference_claims': len(claims), 'source_artifacts': len(needed),
+            'duplicate_relationships_validated': len(duplicate_links),
             'review_documents': documents, 'semantic_truth_certified': False,
             'omission_completeness_certified': False, 'rights_cleared': False,
             'policy_adopted': False}

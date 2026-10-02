@@ -86,6 +86,30 @@ class ClaimProvenance(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'asserts adoption'):
             self.check()
 
+    def test_unknown_duplicate_target_rejected(self):
+        self.claim['duplicate_of'] = 'missing'
+        with self.assertRaisesRegex(ValueError, 'Unknown duplicate'):
+            self.check()
+
+    def test_self_duplicate_rejected(self):
+        self.claim['duplicate_of'] = 'REF-1'
+        with self.assertRaisesRegex(ValueError, 'Cyclic duplicate'):
+            self.check()
+
+    def test_duplicate_cycle_rejected(self):
+        self.claim['duplicate_of'] = 'REF-2'
+        other = dict(self.claim, claim_id='REF-2', duplicate_of='REF-1')
+        self.doc['claims'].append(other)
+        with self.assertRaisesRegex(ValueError, 'Cyclic duplicate'):
+            self.check()
+
+    def test_valid_duplicate_is_not_semantic_equivalence_certificate(self):
+        other = dict(self.claim, claim_id='REF-2', duplicate_of='REF-1')
+        self.doc['claims'].append(other)
+        result = self.check()
+        self.assertEqual(result['duplicate_relationships_validated'], 1)
+        self.assertFalse(result['semantic_truth_certified'])
+
 
 if __name__ == '__main__':
     unittest.main()
