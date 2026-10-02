@@ -1,0 +1,48 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 27,
+  "verified_at": "2026-10-02T21:04:34.917Z",
+  "scope": "Test-only subprocess clock injection for exception lifecycle; production engine and CLI unchanged.",
+  "reproduction": {
+    "command": "python -m unittest discover -s tests -v",
+    "exit_code": 1,
+    "tests": 324,
+    "failures": 1,
+    "result": "Fixed expiry2026-10-02T21:00:00Z elapsed; expected APPROVED_UNTIL but engine correctly reported EXPIRED."
+  },
+  "repair": "run_cli optional at controls ges.evaluate.now inside real CLI subprocess. Active scenario uses2026-10-01T22:00:00Z; expiry scenario uses exact expiry with fresh snapshot.",
+  "behavior_verified": [
+    "Active approved exception retains FAIL outcome.",
+    "Without exceptions gate rejects active failure.",
+    "With exceptions gate permits active approved failure.",
+    "At exact expiry exception becomes EXPIRED while outcome stays FAIL.",
+    "At exact expiry --allow-exceptions still rejects."
+  ],
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -p test_e2e_suite.py -v",
+      "exit_code": 0,
+      "result": "25tests in1.179s OK"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324tests in1.369s OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid true95controls"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "production_changes": false,
+  "global_gates_closed": false
+}

@@ -20,9 +20,19 @@ from pathlib import Path
 from ges.core import ROOT, digest, load, safe_path
 
 
-def run_cli(*args: str, check: bool = False) -> subprocess.CompletedProcess[str]:
+def run_cli(*args: str, check: bool = False, at: str | None = None) -> subprocess.CompletedProcess[str]:
     """Execute the ges CLI module via subprocess with environment isolation."""
     cmd = [sys.executable, "-m", "ges", *args]
+    if at is not None:
+        # Test-only clock injection inside the subprocess; production CLI and
+        # expiry predicates remain unchanged.
+        script = (
+            "import runpy, sys; from unittest.mock import patch; "
+            "clock = sys.argv.pop(1); sys.argv[0] = 'ges'; "
+            "with_clock = patch('ges.evaluate.now', return_value=clock); "
+            "with_clock.start(); runpy.run_module('ges', run_name='__main__')"
+        )
+        cmd = [sys.executable, "-c", script, at, *args]
     return subprocess.run(
         cmd,
         cwd=str(ROOT),
@@ -615,6 +625,7 @@ class Tier3CrossFeatureInteractions(BaseE2ETestCase):
             "--profile", str(self.solo_profile_path),
             "--exceptions", str(exc_file),
             "--output", str(report_file),
+            at="2026-10-01T22:00:00+00:00",
         )
         self.assertEqual(res_audit.returncode, 0)
         report = json.loads(report_file.read_text(encoding="utf-8"))
@@ -633,6 +644,28 @@ class Tier3CrossFeatureInteractions(BaseE2ETestCase):
         self.assertEqual(res_gate_allow.returncode, 0)
         gate_data = json.loads(res_gate_allow.stdout)
         self.assertTrue(gate_data.get("pass"))
+
+        # Exact expiry is exclusive even when the snapshot is fresh.
+        snap["observed_at"] = exceptions[0]["expires_at"]
+        snap_file = self.write_json("snap_at_expiry.json", snap)
+        expired_report = self.work_dir / "report_at_expiry.json"
+        expired_audit = run_cli(
+            "--catalog", str(cat_file), "audit",
+            "--snapshot", str(snap_file),
+            "--profile", str(self.solo_profile_path),
+            "--exceptions", str(exc_file),
+            "--output", str(expired_report),
+            at=exceptions[0]["expires_at"],
+        )
+        self.assertEqual(expired_audit.returncode, 0, expired_audit.stderr)
+        expired_result = json.loads(expired_report.read_text())["results"][0]
+        self.assertEqual(expired_result["outcome"], "FAIL")
+        self.assertEqual(expired_result["exception_status"], "EXPIRED")
+        expired_gate = run_cli(
+            "--catalog", str(cat_file), "gate",
+            "--report", str(expired_report), "--allow-exceptions",
+        )
+        self.assertEqual(expired_gate.returncode, 1)
 
     def test_untrusted_or_expired_exception_rejected(self) -> None:
         """Contract: Exceptions approved by unauthorized reviewers or expired timestamps remain invalid."""
