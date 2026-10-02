@@ -1,0 +1,11 @@
+{
+  "schema_version":"ges.source-claims-review.v1",
+  "source":"github/docs","commit":"56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:58:33Z",
+  "review_scope":"Both full three-line metrics-access includes read. The fpt-only condition is retained; absence of text in other branches does not grant access. Product variables, entitlement and actual visibility require separate verification.",
+  "claims":[
+    {"claim_id":"DOCS-SECACCESS-001","path":"data/reusables/permissions/security-overview.md","start_line":1,"end_line":2,"statement":"The security-overview permission fragment requires repository write access for organization views; this is distinct from individual metric visibility routes and may limit the observed dataset.","accepted_policy":false},
+    {"claim_id":"DOCS-SECACCESS-002","path":"data/reusables/permissions/security-overview.md","start_line":1,"end_line":3,"statement":"Enterprise security-overview views identify organization owners and security managers as eligible actors; enterprise ownership alone is not listed as the visibility predicate.","accepted_policy":false},
+    {"claim_id":"DOCS-SECACCESS-003","path":"data/reusables/gated-features/security-overview-fpt-sp-only.md","start_line":1,"end_line":3,"statement":"For fpt, the product include identifies Team-owned organizations with Secret Protection or Enterprise-owned organizations; this conditional is not a universal entitlement or authorization proof.","accepted_policy":false}
+  ]
+}
