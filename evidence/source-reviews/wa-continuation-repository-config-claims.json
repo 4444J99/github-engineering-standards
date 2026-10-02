@@ -1,0 +1,294 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/github-well-architected",
+  "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T01:51:44Z",
+  "review_scope": "Nine complete repository configuration and support text artifacts.",
+  "candidate_count": 18,
+  "claim_count": 13,
+  "claims": [
+    {
+      "claim_id": "WA-CONT-CFG-001",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".devcontainer/devcontainer.json",
+      "artifact_id": "cb8e4fd8d57317ef8e9f7d15",
+      "content_sha256": "f5119e5752e21527c196977b85250d58423824377c05bfdb855b55a38916f8cc",
+      "start_line": 2,
+      "end_line": 18,
+      "statement": "The source development container chooses Ubuntu24.04, Go1.24, Hugo0.151.0 extended and Node LTS with moving feature/image tags; these identities are not immutable supply-chain pins.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.devcontainer/devcontainer.json#L2-L18",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-002",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".devcontainer/devcontainer.json",
+      "artifact_id": "cb8e4fd8d57317ef8e9f7d15",
+      "content_sha256": "f5119e5752e21527c196977b85250d58423824377c05bfdb855b55a38916f8cc",
+      "start_line": 19,
+      "end_line": 19,
+      "statement": "Container creation automatically invokes upstream tools/setup; this imported executable configuration was read only and never activated.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.devcontainer/devcontainer.json#L19-L19",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-003",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".devcontainer/devcontainer.json",
+      "artifact_id": "cb8e4fd8d57317ef8e9f7d15",
+      "content_sha256": "f5119e5752e21527c196977b85250d58423824377c05bfdb855b55a38916f8cc",
+      "start_line": 20,
+      "end_line": 53,
+      "statement": "Source editor extensions and formatting settings target Hugo authoring; the forwarded1313 port and8080 label mismatch requires local verification.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.devcontainer/devcontainer.json#L20-L53",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-004",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".github/CODEOWNERS",
+      "artifact_id": "7566c9e8d24191ea3438759e",
+      "content_sha256": "40deb22a86771894fb09e71999fdf2933d0fcb7fa84d6d2959f8c5f6304872a7",
+      "start_line": 2,
+      "end_line": 7,
+      "statement": "A default owner line and content-specific override assign upstream teams and a bot; file presence neither proves required owner review nor simultaneous approval from every named owner.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.github/CODEOWNERS#L2-L7",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-005",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".github/dependabot.yml",
+      "artifact_id": "1dde32e712da16540b4d2135",
+      "content_sha256": "66a8ef943087b1bba8109a9d5c26488666a5f03753e4788ebd80b2bc5bb87074",
+      "start_line": 9,
+      "end_line": 32,
+      "statement": "The source schedules monthly GitHub Actions updates with seven-day cooldown, reviewer routing and separate version/security groups; directory applicability and actual updater operation remain unverified.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.github/dependabot.yml#L9-L32",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-006",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".github/dependabot.yml",
+      "artifact_id": "1dde32e712da16540b4d2135",
+      "content_sha256": "66a8ef943087b1bba8109a9d5c26488666a5f03753e4788ebd80b2bc5bb87074",
+      "start_line": 34,
+      "end_line": 56,
+      "statement": "Root npm updates use monthly scheduling, seven-day cooldown, increase-if-necessary versioning and separate security/version groups; this maintenance policy is contextual rather than an adopted security deadline.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.github/dependabot.yml#L34-L56",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-007",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".github/dependency-review-config.yml",
+      "artifact_id": "ce6e93db93c4ec0f1ecaa9fe",
+      "content_sha256": "57a7c7321ca2cae603c7654f96f6e6bbb0e264ad0ccae06bc9bedead22edf85e",
+      "start_line": 4,
+      "end_line": 14,
+      "statement": "The source dependency review fails only high-or-critical runtime/unknown findings and excludes development scope; this static-site noise choice conflicts with universally checking build-tool supply-chain risk.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.github/dependency-review-config.yml#L4-L14",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-008",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".github/linters/.markdownlint.json",
+      "artifact_id": "3cbb8bca4e220fa6e5b4adee",
+      "content_sha256": "f8d74500e6ab4425a5e29a9412fd949b0457d523a346dd17266babd9e9e5af9a",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Markdown lint defaults remain enabled while line-length, inline-HTML and table-column formatting rules are disabled; configuration is not proof of executed lint checks.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.github/linters/.markdownlint.json#L1-L6",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-009",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".github/pull_request_template.md",
+      "artifact_id": "d24722c45214ae40c0ec03a2",
+      "content_sha256": "aa8d1f9a6894e863b5903bb57c203b96223047703a4b02a39427f8923b43d5a7",
+      "start_line": 3,
+      "end_line": 19,
+      "statement": "The contribution template asks for change rationale, related issues and applicable content/code/documentation classifications.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.github/pull_request_template.md#L3-L19",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-010",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".github/pull_request_template.md",
+      "artifact_id": "d24722c45214ae40c0ec03a2",
+      "content_sha256": "aa8d1f9a6894e863b5903bb57c203b96223047703a4b02a39427f8923b43d5a7",
+      "start_line": 21,
+      "end_line": 32,
+      "statement": "Contributor prompts cover article metadata, code tests/dependencies/logging/license effects and accurate documentation, with explicit reviewer gaps; checked boxes do not establish independent validation.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.github/pull_request_template.md#L21-L32",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-011",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".gitignore",
+      "artifact_id": "f0d6ab6168e0def6d566f39a",
+      "content_sha256": "cbe5b136826100b5d10316f46b40698017a9f680c5a18f6eeecad0b55404dd70",
+      "start_line": 1,
+      "end_line": 37,
+      "statement": "Generated site content, dependencies, test reports, editor files and environment files are ignored; ignore rules do not prove secrets were never tracked or generated artifacts are safely disposed.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.gitignore#L1-L37",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-012",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": ".prettierrc",
+      "artifact_id": "d6f87b40ac132f38bf2af39d",
+      "content_sha256": "a4bec0fa4552b6bfdd20931780976924a2eab46d18492ee5ac4d5fdeedf997a8",
+      "start_line": 1,
+      "end_line": 16,
+      "statement": "The formatter uses Go-template parsing for HTML, two-space indentation and100-column presentation; these source-local style conventions do not establish correctness or security.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/.prettierrc#L1-L16",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    },
+    {
+      "claim_id": "WA-CONT-CFG-013",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SUPPORT.md",
+      "artifact_id": "ce1b394ab1da7abdf7214ec6",
+      "content_sha256": "72ece1a54248c837af6fa067065d0fea1f872543afbe402378d899bfe055211c",
+      "start_line": 3,
+      "end_line": 13,
+      "statement": "Support uses existing/new GitHub issues and partner representatives, with best-effort community/staff responses and no broader support entitlement asserted.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/SUPPORT.md#L3-L13",
+      "source_authority": "Pinned source-local repository configuration or support procedure.",
+      "source_strength": "Observed configuration or source-local guidance; runtime enforcement unverified.",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Upstream identities and defaults are not local consumer policy"
+      ]
+    }
+  ],
+  "conflicts_and_limits": [
+    "Moving container/runtime selectors lack immutable identity.",
+    "Dependency development-scope exclusion is not universal supply-chain safety.",
+    "CODEOWNERS does not demonstrate enforced joint approvals.",
+    "No execution, rights clearance, adoption, external-page review or native validation."
+  ],
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "independent_omission_certification": false
+}
