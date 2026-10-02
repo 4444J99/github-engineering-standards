@@ -1,0 +1,1160 @@
+[
+  {
+    "artifact_id": "fdcfa87335fe9a8da32bcf21",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/session-persistence.md",
+    "content_sha256": "14a891e1d05fe7ff00dc686822a92f6505c231710c441894ab7476c3cb28b969",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T05:08:12Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete609-line article read, all languages/tables/snippets and non-candidate context. Source persistence, model-tier state, disconnect/deletion, credential re-provision and unsafe locking/ID examples retained. Diagram assets and linked pages not inferred reviewed. No commands, inference, state changes, deletion, scheduling, keys or native settings executed; no adoption, rights or independent omission certification.",
+    "claim_mappings": [
+      {
+        "candidate_id": "4cb11511ed3780151e154b64",
+        "text_sha256": "90c81cf7b5ad4eb4a2a22293b9e481c609a0fc0a62efc193208412d9cc74900f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-001: The article introduces pausing, later resumption and production session management. DOCS-SDKPERSIST-002: The article declares Free/Pro/Team and Enterprise Cloud version scope. DOCS-SDKPERSIST-003: A former SDK session-persistence path redirects to this article.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "0c54bd2013bb0beb290ae73b",
+        "text_sha256": "7144ab3d585504ecf4d2ed55da0028f8a479a28e6f8f5ae666ec15a92233ee4e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-003: A former SDK session-persistence path redirects to this article.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "9922a9e857fb8f40a30311c3",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "d215c75ae50533d831e57190",
+        "text_sha256": "451dbd3abae1d4aa323d8fc9fea4387708da2c603f870e7b5f1b1651ba3e478c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-004: The introduction says CLI maintains conversation history when creating sessions. DOCS-SDKPERSIST-005: The introduction says CLI maintains tool state when creating sessions. DOCS-SDKPERSIST-006: The introduction says CLI maintains planning context when creating sessions. DOCS-SDKPERSIST-007: The introduction describes default in-memory state disappearing when a session ends; later automatic-disk-persistence statements require scope reconciliation. DOCS-SDKPERSIST-008: Enabled persistence is described as allowing resumption after process restart. DOCS-SDKPERSIST-009: Enabled persistence is described as allowing resumption after container migration. DOCS-SDKPERSIST-010: Enabled persistence is described as allowing resumption from different client instances.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "cff93dd2eed828b421b39595",
+        "text_sha256": "851d9887b441835f508fcfcff2f2c5eeea0185987e7058bdcefae8432f5b830e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-011: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "0b75a05501b90da1de465933",
+        "text_sha256": "dcf0a22ef07a39679e4cdd2319f103dd0754fb0df4439310e7133eac957c59aa",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "c57633deec5b7e8a7c386c06",
+        "text_sha256": "365fd63e8d301f80dd914c4532566ffc0e09c2d6549ab85c2e3bfa6fa15b45e4",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "77313bc871742758482c2892",
+        "text_sha256": "0a3a55032e7633f56b0e78f5c422a0dac6306fd8b9e5026363b6f10e194dc837",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-017: Creation assigns a session identifier.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "1446c839f6b721b0285f3352",
+        "text_sha256": "2d2c5caa26d5f9f16d06db9335c040e49b1fdf7d0796095e951691c72c0d4cc3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-018: Active sessions support prompts, tools and responses.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "130ce141a65699c5686a1d47",
+        "text_sha256": "9ba5e9a5c08525e6ad9863da13e208f23e4eb3171876903547a49a1a0866155f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-019: The state table describes pause saving state to disk.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b150157f4a5f0cdf41558449",
+        "text_sha256": "4852764e4018e8dc25d76ee280b77cff991964b0f9111eebafccfe59a3da5ce5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-020: The state table describes resume loading disk state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "68651aa4610397a2d9460f3a",
+        "text_sha256": "6127049f7d9c21eea3bf685b6b9d2a830fdb251b7d54ead09e95e0c22e5b5570",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-021: The quick-start says supplying one's own session ID enables later resumption. DOCS-SDKPERSIST-022: The source says an SDK-generated random ID cannot be resumed later; this statement is retained, not inferred as a tested universal runtime restriction.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "3e1d0300bfb3495e8bd08b3b",
+        "text_sha256": "bfe3648f0305d489d5bca3d5bfb6976a04207f695379ffbd0b9bbc5433c69755",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-023: TypeScript's resumable-session example constructs a default client. DOCS-SDKPERSIST-024: TypeScript's example supplies user-123-task-456 as the session ID; naming does not authorize access. DOCS-SDKPERSIST-025: TypeScript's example selects gpt-5.2-codex rather than establishing a universal available model. DOCS-SDKPERSIST-026: TypeScript's example sends a code-analysis prompt; the reviewer did not perform inference. DOCS-SDKPERSIST-027: TypeScript's example comment says session state is automatically persisted; this is source text, not observed durable custody. DOCS-SDKPERSIST-043: The TypeScript comment says the client can be safely closed after persistence; actual durability/recovery is not verified.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f01bfc9749cea67f69c4fd09",
+        "text_sha256": "3f0c230cd46010af9e6523e8c4c716939c227bfdaf6ed376a67130f9256eb0c0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-028: Python's resumable-session example constructs a default client. DOCS-SDKPERSIST-029: Python's example supplies user-123-task-456 as the session ID; naming does not authorize access. DOCS-SDKPERSIST-030: Python's example selects gpt-5.2-codex rather than establishing a universal available model. DOCS-SDKPERSIST-031: Python's example sends a code-analysis prompt; the reviewer did not perform inference. DOCS-SDKPERSIST-032: Python's example comment says session state is automatically persisted; this is source text, not observed durable custody. DOCS-SDKPERSIST-044: The Python example explicitly starts the client. DOCS-SDKPERSIST-045: The Python creation example uses approve_all, not project permission approval.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "8ba0591a068bc6a0b29eb5d8",
+        "text_sha256": "b4207ed7c6f7a1b1b5fec71ef91e5040de5600e25887a6f9d1e8c36430877bf0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-033: Go's resumable-session example constructs a default client. DOCS-SDKPERSIST-034: Go's example supplies user-123-task-456 as the session ID; naming does not authorize access. DOCS-SDKPERSIST-035: Go's example selects gpt-5.2-codex rather than establishing a universal available model. DOCS-SDKPERSIST-036: Go's example sends a code-analysis prompt; the reviewer did not perform inference. DOCS-SDKPERSIST-037: Go's example comment says session state is automatically persisted; this is source text, not observed durable custody. DOCS-SDKPERSIST-046: The Go creation example discards the session error; this is not error-handling policy.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "c3858e16b4b7c9fcfa4c81ab",
+        "text_sha256": "5decea94895a55c1e89ce14a160d6eb639ebde2d27dff574ccba21b4e2885f80",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-038: C#'s resumable-session example constructs a default client. DOCS-SDKPERSIST-039: C#'s example supplies user-123-task-456 as the session ID; naming does not authorize access. DOCS-SDKPERSIST-040: C#'s example selects gpt-5.2-codex rather than establishing a universal available model. DOCS-SDKPERSIST-041: C#'s example sends a code-analysis prompt; the reviewer did not perform inference. DOCS-SDKPERSIST-042: C#'s example comment says session state is automatically persisted; this is source text, not observed durable custody.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "72baa968c168308c81b409ea",
+        "text_sha256": "fb388ddca438bc06ad830f1ff368e0e5c6d7b9ad3175527d8dee0f8f374c8209",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-047: The source describes resumption minutes, hours or days later, without supplying a tested freshness guarantee.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "18de1e1f862f608482100102",
+        "text_sha256": "a694a35074562229f778a1f7b8a75fcf7c23a4015f389fd2e6aff4785e6e95ae",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-012: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "e62257c52a118b0983433d49",
+        "text_sha256": "123eadeedb2938f8b592a80932b5935c7407c7ac482ae16249a90e00c8412695",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-048: TypeScript's example resumes a known session ID after restart or from another client; no restart was exercised. DOCS-SDKPERSIST-049: TypeScript's resumed example asks about earlier conversation; retained context was not observed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "5d6ce9ca070bd995ae903a67",
+        "text_sha256": "82ca00924d200403fdfd137c33d1a3ee22d8da0e12689fc6c0b396d405cef5af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-050: Python's example resumes a known session ID after restart or from another client; no restart was exercised. DOCS-SDKPERSIST-051: Python's resumed example asks about earlier conversation; retained context was not observed. DOCS-SDKPERSIST-056: The Python resume example uses approve_all again; resume does not itself grant execution authority.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "82831b968fccbecd5321539a",
+        "text_sha256": "4cf6272e5719cd952269a44104ef1220e540d3d0f4ec5b8196b5574fabd7e85b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-052: Go's example resumes a known session ID after restart or from another client; no restart was exercised. DOCS-SDKPERSIST-053: Go's resumed example asks about earlier conversation; retained context was not observed. DOCS-SDKPERSIST-057: The Go resume example discards the resume error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "9acc075ef0b857a8eedd7bae",
+        "text_sha256": "9ded057aef74640f761526bc573b7b1d4b0a1fe707657b9e055d1146604e57d2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-054: C#'s example resumes a known session ID after restart or from another client; no restart was exercised. DOCS-SDKPERSIST-055: C#'s resumed example asks about earlier conversation; retained context was not observed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "be60ec000b6672cc3c34c5c1",
+        "text_sha256": "1b2527c93bdda71670680d5d523520a8158cf67600a22a57d898ee4d5f0f5fbf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-058: The source describes optional reconfiguration during resume.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "cbec7796c17302396bb24a04",
+        "text_sha256": "2e6980819c66cc6beb3073ae5bd4edd0d4ab8e6f7fa2d5bb06f4cf190222b9d6",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "8bd8bad035eae7495ed92148",
+        "text_sha256": "66a722b4b1035490ac69ab5e0b54ecad926345df13f05983abcbdf41c587c2cc",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "c68414a68aa59c088a90bb7f",
+        "text_sha256": "a873572ca22f9fcf49a8efa9d72c066907d6cc55a8420db7a3afc766754bd78e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-059: Resume model configuration may change the model.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "35905b7d9baab5b26aff1458",
+        "text_sha256": "c9ac243c38f18a6ec2b8001e3620612c5727f7c4bacab6cc5d5aa6c957903bd8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-060: Resume systemMessage may override or extend the system prompt.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "346efe123fb7254e84e2cea1",
+        "text_sha256": "b8ffaf6b7d6b07596f6cb9dd2b68fa3c62898bb151cabae4463acf229563d09b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-061: Resume availableTools restricts available tools.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "5d4df498b5f4203f20c1374c",
+        "text_sha256": "0ff19de02aeef2cc530970353b55bcba7a762bc1af751b689365fc6bb6344da9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-062: Resume excludedTools disables particular tools.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "4c5d8e45307b08ded13aec32",
+        "text_sha256": "89f99dee4e52a67b72572f5f62f50d60b33813c10ca76099f83122095ade19ae",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-063: BYOK resume requires re-providing provider credentials.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "5fa709a36f468b2220db758f",
+        "text_sha256": "1c694100b76e7ceb8223779e075ade0d4faf59d3b21614dbf7af5ae453cfc3c7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-064: Resume autoTier overrides persisted Auto routing preference.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "aea2efcd6f0545a643fc09ef",
+        "text_sha256": "ada19e06df1bd197917e9751f2f90194e3b9738484d1c2e258f58f329a580e6e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-065: Resume enableWebSocketResponses chooses Responses transport.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "9b6dea4f900464d4886cfbb3",
+        "text_sha256": "00dc80569e744acf91436f40be4bed9e80c4f8f4b4fdd859b794b8dbdf864e7f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-066: Resume reasoningEffort adjusts reasoning level.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "934f3c79931c407d7655308d",
+        "text_sha256": "499f5bcea8dda3aee6876197b3b975cfcde655b3a7796d49f488f139ebb0874d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-067: Resume streaming enables/disables streamed responses.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "e9bb5e9e08779232a746c0c6",
+        "text_sha256": "23dbd848a4b19a3db6a4e6d90368584bdab97dcc9882a6b7915f2251497284f0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-068: Resume workingDirectory changes the working directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "d22f8126d207b8d0b0ead200",
+        "text_sha256": "93229a967dc90737fe4bf4a1028d97b361b7bb87d523087f7eb11623a6d3f6b7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-069: Resume configDir overrides configuration directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b4624ed01ea055743d1b2757",
+        "text_sha256": "d2b5a439578df04dbb109d6f2c7536733ae4402ad8613b266089d483ccbf2de6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-070: Resume mcpServers configures MCP servers.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "73886f6a0dc7a5e3789f5900",
+        "text_sha256": "695ca5725982628d74e0127159eb3011ce13863548f01030090013f7e72979c0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-071: Resume customAgents configures custom agents.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "c43c5cef3902b6464ad76010",
+        "text_sha256": "1787ba0f03a63fd0b76e83aae6505be5fd185034ab504d5b116f77c068ebd1fc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-072: Resume agent preselects a named custom agent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "08a57fcf1a99959bc225a008",
+        "text_sha256": "0c3f6538acf7f6652ff55802d9a86c86f566ae020821c3d25ccec5ec362d41bf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-073: Resume skillDirectories supplies skill locations.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "a2679004a9744dd2171b86bf",
+        "text_sha256": "5e2ea1bbf64f8c3dfba24d0d595898a058accca7a6c350a2751021702933e4e2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-074: Resume disabledSkills disables selected skills.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f6863076c9db7ef0b97e4be1",
+        "text_sha256": "06bcee29cdcc1484d49a4fa789ab90cc7246afa0005b39461575162b3528eeb2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-075: Resume infiniteSessions configures infinite-session behavior.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "527a9969466df3792174c320",
+        "text_sha256": "a9acfb9c092282ba4b4f6d9ad58e92309c09a87d5c1860ff1019a4ee40b3c208",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-076: Auto tier settings apply with the auto model. DOCS-SDKPERSIST-077: The source lists efficiency, balance, intelligence and fast Auto preferences. DOCS-SDKPERSIST-078: Python uses auto_tier within capi settings. DOCS-SDKPERSIST-079: Tier preferences apply to V2 Auto routing. DOCS-SDKPERSIST-080: V1 Auto requests remain unchanged.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "9b23c2cc92577f6bd5948575",
+        "text_sha256": "b3836cf00d7601a75fd0d33256673e03f31e1c8ff164ec91d5df2384713fe196",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-081: Fast is an integrator-only latency preset rather than a first-party product preference. DOCS-SDKPERSIST-082: The SDK does not decide Fast eligibility, according to the source. DOCS-SDKPERSIST-083: The SDK does not inspect client identity, according to the source. DOCS-SDKPERSIST-084: The SDK does not choose Fast as a default, according to the source. DOCS-SDKPERSIST-085: The SDK does not fall back to another tier for an unsupported runtime, according to the source. DOCS-SDKPERSIST-086: Older unsupported runtimes return their native error unchanged.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "869e5aa3391982db6b57f9de",
+        "text_sha256": "a19edbd283ea8b7dd1ba26184b739403041b086014e2eba9957b7ab0c2cedf37",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-087: Runtime persistence saves the selected Auto tier.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f7ddbc0c17376133f3713ffc",
+        "text_sha256": "e89ad3fa444bb6744857a5feedbe4c82446c6be0891d669b92596d1a7b7b1b08",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-088: Omitting tier during creation uses runtime-default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "61b7c505e6bb3c2b8176c723",
+        "text_sha256": "e72d9ef5791375d46518857f4c75e3651d693886fb52763197d13e54eb6cfdb9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-089: Cold resume restores persisted tier. DOCS-SDKPERSIST-090: An explicit tier on cold resume overrides the restored value for the activation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "7e15ca3a238fb4972e40d7c5",
+        "text_sha256": "686f2b77ee881d9e02f4d666f3462a305cc3212ca56d8df61ace433fc78587c0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-091: Resident-session resume with omitted tier preserves the current tier. DOCS-SDKPERSIST-092: Resident-session resume with the same tier is a no-op. DOCS-SDKPERSIST-093: A different resident-session tier requests a safe switch applied after successful resume. DOCS-SDKPERSIST-094: That resident-session switch cannot alter an in-flight turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "ca4602de9b8e4b580e55434d",
+        "text_sha256": "a162d5762d184c497191f533bf95e567efab80d5db1b1b0aeaf5e1fe2b1eaa09",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-095: Older sessions without saved tiers retain default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "7486c29d84de3dc554ad5026",
+        "text_sha256": "3aed0d676f5093182420f24dd0c448f2828c8e3bd1544fe32ba512e5e28ca55f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-096: Tier selection is not a live model-switch operation. DOCS-SDKPERSIST-097: The SDK forwards preferences while runtime owns persistence. DOCS-SDKPERSIST-098: Runtime owns Auto-tier validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "13a94880e370bfe804cda918",
+        "text_sha256": "7cc0c8ee0126bded936464b79473d604647bf01d1a6eff7d061dd854e53928a4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-099: Session start/resume events expose optional selected-tier metadata. DOCS-SDKPERSIST-100: The tier field is omitted when no tier is selected.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b066443283336724e6f9d03a",
+        "text_sha256": "13114ce1982ef182fa337ee8f4ba5cbefb7e4ae096092d2d28abbdef97a1ee78",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-101: setAutoTier changes live routing preference without changing the selected model. DOCS-SDKPERSIST-102: A null-equivalent tier resets to provider-default Auto routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "23efd2149478b570d7122709",
+        "text_sha256": "0828b9623f330eb75f79ce61ebcf69d26ab2dca07630dd63d49fdcdd4ab0f196",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-103: The example stages the intelligence tier. DOCS-SDKPERSIST-104: The example distinguishes pending acceptance from effective state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "27edf65d8b2c77ef6a71f4d5",
+        "text_sha256": "d19e23d3eb873a8b11acb95c3d89f96a0e65111b262faafe91a06d56670aa00e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-105: Live preference requests are not immediately effective. DOCS-SDKPERSIST-106: Commit waits for a later auto-model user turn obtaining a usable provider model. DOCS-SDKPERSIST-107: Pending status proves request acceptance, not effective preference. DOCS-SDKPERSIST-108: A newer request replaces an earlier unclaimed request.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "7416c61d576a69c282b96c37",
+        "text_sha256": "0db9acee7144d117a6483c3e65bdc2c9eb3e26b2eb5751b90dc66efe5f1c65bc",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "8b131ba9eb3d97cab343dcdf",
+        "text_sha256": "cec7e520a16dbde7884d6992d1e8630f143ec7d9250ecbe0a077da1da84b7f97",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-109: The source reports session.model_change when a tier commits.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "1fc0d22ad3612998bfbd01d1",
+        "text_sha256": "c7c92394c0284f8e15bfbb0fae0c3a49d0dda8d269e494e21bf70c4b786ce02b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-110: session.auto_tier_switch_failed reports failure. DOCS-SDKPERSIST-111: Tier-switch failure events are ephemeral. DOCS-SDKPERSIST-112: Failure events are not persisted or replayed on resume. DOCS-SDKPERSIST-113: Failure reasons include policy rejection, request failure, setup failure and unsupported capability. DOCS-SDKPERSIST-114: The previously effective preference remains active after a failed switch.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "ab0803518e8e170367d4fb7f",
+        "text_sha256": "c908fb67b7fd59407b90faef6f0328aa90bee10a10252925351860952f1b3d93",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-115: model.getCurrent is described as the authoritative effective-tier state query. DOCS-SDKPERSIST-116: model.getCurrent reports unclaimed pendingAutoTier. DOCS-SDKPERSIST-117: model.getCurrent reports activatingAutoTier claimed by an in-progress activation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "4a3d2b43efbc62499ccadd9f",
+        "text_sha256": "eb3990abcedbf5e59cb2b3c076a16b1266c29d309a237d791bfe41783256e3d1",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "9f5d90f421dae777c276673a",
+        "text_sha256": "388803dc7e2a45f9ca924c10653540a5d9a8033ca7be925f349e6efd78ad4a0f",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "910e88ff0622759e7cf73d17",
+        "text_sha256": "11f811f35dc372db639c5808cc10a7263461ff319b6dbcb92020132616fd21e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-118: Node.js's API table documents an explicit tier-change call. DOCS-SDKPERSIST-119: Node.js's API table documents a null-equivalent reset call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "0f438b92480c0ba0d84ff82f",
+        "text_sha256": "411038aab922b838cb1b98d60fcdf5f60950cdf815cf2bad42d3f0015337b11c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-120: Python's API table documents an explicit tier-change call. DOCS-SDKPERSIST-121: Python's API table documents a null-equivalent reset call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "07578ba17210bb62d8c3a81c",
+        "text_sha256": "cad489dfc0d75644669e02c12b296b7488ba8da34fc07a6ac5b08e834b498352",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-122: Go's API table documents an explicit tier-change call. DOCS-SDKPERSIST-123: Go's API table documents a null-equivalent reset call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "03fe98cdee6365908cdfc3b3",
+        "text_sha256": "116a372975f79684e9177365574ea3372fe5c6b3e457453639719a6416513382",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-124: C#'s API table documents an explicit tier-change call. DOCS-SDKPERSIST-125: C#'s API table documents a null-equivalent reset call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "29579bcb4aa96866c805cc08",
+        "text_sha256": "bb2be09e4d288338eea6148d9a16133f349f1ecdf5b70954bd03e8b0c87189e3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-126: Rust's API table documents an explicit tier-change call. DOCS-SDKPERSIST-127: Rust's API table documents a null-equivalent reset call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "c18bf8ca0ee8b81bf93455fc",
+        "text_sha256": "f4a3b6c28f2a80b72e4d2b87a216e0ff867bc9559ec9ef2eedbb8be2a64c8405",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-128: Java's API table documents an explicit tier-change call. DOCS-SDKPERSIST-129: Java's API table documents a null-equivalent reset call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b2d1a645ab81825025dd0d81",
+        "text_sha256": "e9561fec62cf0f53467aa361189149a8f7fe87b66db2fc52d17c482f1dbe40fe",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-130: Tier can be staged together with an auto-model switch. DOCS-SDKPERSIST-131: Runtime rejects staged tier options for a non-auto model.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "82e41c6daf935297acd9b0f4",
+        "text_sha256": "86126c9d1f0b09066e6862be8f2fb81c6f5a04331866e905be1980fa33f12d29",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "335d2e447d87cd3457f97cbc",
+        "text_sha256": "9d3487cf0c622a1c412bb179ce533d3f88d4890ff062d1a72e1acb8532bff3cf",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "5fdfded19f1104aecaeda09c",
+        "text_sha256": "35340a14f58b7a6feeab192db3862a8fb3aa4069bae2aed2e496792e20016025",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-132: Node.js's model-switch example carries an Auto-tier preference. DOCS-SDKPERSIST-133: Node.js's model-switch example explicitly resets to provider-default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "fd6ae5f01f55822b583ceb7e",
+        "text_sha256": "e90a1f399c4436e06d3325a05c95477ded97a9368d0f9d603af1e4f709b3798a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-134: Python's model-switch example carries an Auto-tier preference. DOCS-SDKPERSIST-135: Python's model-switch example explicitly resets to provider-default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "268070c1d0dd207e8e5410f5",
+        "text_sha256": "7d7c0d7d752dc067c17fd40ed64d665e349075f88efa8e36ae68727a26a00808",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-136: Go's model-switch example carries an Auto-tier preference. DOCS-SDKPERSIST-137: Go's model-switch example explicitly resets to provider-default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "d07ee03b7d136813dea838d4",
+        "text_sha256": "5f8c25d6e963c7e1c60c56e95b068ebffd14dcecf13fb5ad1b1a269df43083b9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-138: C#'s model-switch example carries an Auto-tier preference. DOCS-SDKPERSIST-139: C#'s model-switch example explicitly resets to provider-default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b451981136d058cc07aac9be",
+        "text_sha256": "3393131dfff06eae84b6747c4ce1eea5d4cab9fcbd1446a23f6524f145687335",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-140: Rust's model-switch example carries an Auto-tier preference. DOCS-SDKPERSIST-141: Rust's model-switch example explicitly resets to provider-default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "8140d16a2ac5d0bb1a666296",
+        "text_sha256": "84c4bd002f15681f727c3bbcdcfabef14487ce9c6614ca2b380cd6c4908b421b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-142: Java's model-switch example carries an Auto-tier preference. DOCS-SDKPERSIST-143: Java's model-switch example explicitly resets to provider-default routing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "d06c33bdc2bd6145b37bb10d",
+        "text_sha256": "de634894fc3fbb3d71492c57de78748ed1a4ad00afffe4c807d6b585e71e047b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-144: Node.js and Python distinguish reset null from omitted/unset arguments. DOCS-SDKPERSIST-145: Rust uses a distinct reset variant. DOCS-SDKPERSIST-146: Go, .NET and Java use a separate reset flag. DOCS-SDKPERSIST-147: Omitting both tier and reset leaves the current preference unchanged.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "3f13e4dbdc97a5672eb4317b",
+        "text_sha256": "9a6e99bb616750da2b49252b31f8262a4d0c258982363f7e285e2e32027774af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-148: enableWebSocketResponses defaults true. DOCS-SDKPERSIST-149: WebSocket is used when the selected model advertises ws:/responses. DOCS-SDKPERSIST-150: False selects HTTP transport. DOCS-SDKPERSIST-151: Python uses enable_web_socket_responses within capi settings.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "8c49b7b4e880f3dfccc8ca58",
+        "text_sha256": "7a8ff6e97cbc25f43640fe475d518cebabf052fcc1b1324bacbed6671e0a36a7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-152: The source suggests disabling WebSocket on resume for proxy connection failures. DOCS-SDKPERSIST-153: The input-item/connection-ID400 error is described as WebSocket-specific.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "47fd296c75522e8d498ececa",
+        "text_sha256": "ad4b258ae189387a1ac0c5a0b20ea29e1d682eb428f6c384da7ddf30a56a3de7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-154: The resume example selects HTTP with a false WebSocket option.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b85322ba123b84fc33482a56",
+        "text_sha256": "81961dffd4b9f08ebffd7588f9f05ccd43524b0fca18882c0afd2e6028a90c14",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-155: The disabling environment variable has opposite polarity to the positive SDK option.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "5d226a899197c3a5e2566f59",
+        "text_sha256": "88ab19d1efa4270c63bdeb0ac93bdfbf62c920a3a42ae4f48c3b506d406ab31c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-156: The model-resume example selects claude-sonnet-4; availability is not tested. DOCS-SDKPERSIST-157: The model-resume example sets high reasoning effort.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b4899c8f356ec13f5e2f9dad",
+        "text_sha256": "6385cafedd7c47f838f9162bfd8c23325de3664d7148bffc65b83963e6416324",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-158: BYOK resumes must re-provide provider configuration. DOCS-SDKPERSIST-159: The source says API keys are never persisted to disk; this is a source security claim, not observed secret custody.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "6dbb5067f172794a86f43093",
+        "text_sha256": "860097eceb3af2168cbc62b20b5197bff4e0db735c253dcfb3efd7a9f2d62d28",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-160: BYOK creation supplies a known session ID. DOCS-SDKPERSIST-161: BYOK creation selects an example model. DOCS-SDKPERSIST-162: BYOK creation sets azure type. DOCS-SDKPERSIST-163: BYOK creation uses an endpoint field for the Azure host. DOCS-SDKPERSIST-164: BYOK creation reads an Azure key from environment. DOCS-SDKPERSIST-165: BYOK creation includes deploymentId. DOCS-SDKPERSIST-166: BYOK resume references the known session ID. DOCS-SDKPERSIST-167: BYOK resume sets azure type again. DOCS-SDKPERSIST-168: BYOK resume repeats the endpoint field. DOCS-SDKPERSIST-169: BYOK resume re-provides the Azure key. DOCS-SDKPERSIST-170: BYOK resume repeats deploymentId. DOCS-SDKPERSIST-171: The Azure snippet uses endpoint/deploymentId fields, unlike baseUrl/model routing in the separately reviewed BYOK guide; field compatibility is unresolved source context, not a verified adapter.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "9ad9abd7c3ead8128995a15f",
+        "text_sha256": "38e3c2003ac4e02b391ba951ac22159ea7649980d91af237b8ac5495645a2811",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-172: The article locates session state in a session-ID subdirectory beneath the default Copilot home.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "dc6e41063a25ba84392dbe0c",
+        "text_sha256": "ceac56fa8ae7b01436837fce257e1e213c347639c40efda29e16ec543d8e1757",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-173: The example layout contains checkpoint snapshots. DOCS-SDKPERSIST-174: The example layout contains planning-state file plan.md. DOCS-SDKPERSIST-175: The example layout contains a session artifacts directory. DOCS-SDKPERSIST-176: The example artifact is an analysis document. DOCS-SDKPERSIST-177: The example artifact is a notes document.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "710fa4a15c2499c40e09aefa",
+        "text_sha256": "134138670f67e67f5bf4bd5be3cd1cea8036e02f4a4bf7b40d3723b707e49881",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "2d22957478c6adfccab0162f",
+        "text_sha256": "73f0ca443fd44815751a107d79a646dd53928937bec19a22d5e93b127c5eb34d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "2d72ca289708c6177d7057e4",
+        "text_sha256": "ce0db8d2797fbf00aeced1d49e8bd9c2469f027c60d2aa3f7d0a1fc4a0ad30d9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-178: Conversation history is listed as persisted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "75c28ee454587761835528ff",
+        "text_sha256": "882fdeb49d437cb01272752b08cf0297f857f23d208344f7bd541697b78e999d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-179: Tool call results are listed as persisted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "cb2a805f980d38a9c882c0ad",
+        "text_sha256": "4264ffc75d9c847fb35a4d237afeb959ff8fe4da04b6e2b18d04a17b7e7290b7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-180: Agent planning state is listed as persisted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "bc52c8f37bdcee867d0b0429",
+        "text_sha256": "2ce0c46a2b088692e8633c20ca0a9273abbbfdc3a7d687de8d74c5474f5229c9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-181: Session artifacts are listed as persisted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "c5637883b35d398ae468b1f3",
+        "text_sha256": "00d436ec7650d13e404f04a3214b69f2456318977e3ad44567ab15609e05c4c8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-182: Provider/API keys are listed as not persisted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "936e663840ed7221b2837611",
+        "text_sha256": "8062e8f03fc377adec1ea4cbd13efc539b1257f02f536727e30c89ce88afac81",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-183: In-memory tool state is listed as not persisted. DOCS-SDKPERSIST-184: Tools should be stateless, according to the persistence table.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "8af79de9f3139166b6ea8e0a",
+        "text_sha256": "28285faa6a2c71380a44f1fcc4badafa6ad16f21b1dd1b776f206918333b5f6a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-185: Session IDs are recommended to encode ownership. DOCS-SDKPERSIST-186: Session IDs are recommended to encode purpose for audit/cleanup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "5be614e490925de9a659004e",
+        "text_sha256": "0fd64d2ea1df7b0c889dc8ed221dd9a40da90c5c2abb3706df2da8c60cc65c19",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "cc585fe00938c19913ecfb2b",
+        "text_sha256": "082fedca65677f10da67924430ed000b866f322fbe9df342dd5cb1b3a7e0a826",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "9210884ecf0fab7b9de35dd0",
+        "text_sha256": "5c69d545827e3d947f3d217bfc9ebe8789ad8f0894dbe76f731ca6c9113e3972",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-187: A random-ID example is described as difficult to audit.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "fd74e9808af845e5f0e57c27",
+        "text_sha256": "fed88fb7c06cd6b90759ba38a53e7094c3c854883fbff9a118664e95789fd633",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-188: A user/task ID pattern is suggested for multi-user apps.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "d08381936d19ecb012089932",
+        "text_sha256": "5eb9eee9b11831774d3d9944906d18e719f6e9baa56863a5074c1cbf21221fb7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-189: A tenant/workflow ID pattern is suggested for multi-tenant SaaS.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "0232b7e84b3a62643ff841df",
+        "text_sha256": "ebd556af1fe5524aac590b59a3cd8072ef915e3eb51e1a5e23d34b7390d0d782",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-190: A user/task/timestamp pattern is suggested for age-based cleanup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "3094501d08af8dee8dadf288",
+        "text_sha256": "664618841599897e93bab55c9200b24cfcb2dbbef3f666e1b93cb376ca54114e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "22509ca5be11120647aea6e1",
+        "text_sha256": "cead04251738bf8488515ca54a7a818ea1bd9e12c8c8b957e57c3d9d4c2bdef8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-191: Structured IDs are described as supporting user-oriented audit.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f479cdb89fd47750c15a488a",
+        "text_sha256": "519f2b64b207e28d14d2d18e65e002776a65ad2de02b4dfaae4f74682e14096a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-192: Structured IDs are described as helping age-oriented cleanup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "96d7b76dafc9803b6f8fcc37",
+        "text_sha256": "d16d13097600cb017a07a2e058dbfac4120c3104a3383f50aeaf6acd85baf41f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-193: The source presents parsing identity from IDs as natural access control; parsing alone is not verified stored ownership or authorization.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "304edbc721fc2247158b6f24",
+        "text_sha256": "82ea0fd028c2e9c4ef16f2867135e21cb480ec038701bcfd1e96d8d26aedb1b9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-194: The TypeScript ID example combines user, task and millisecond timestamp.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "68b34038ddb6b8e27f37e931",
+        "text_sha256": "81614ea3ad8aceaa985cb25ae436558d9e6b4e4f8095de80cc4c2a23b90c9296",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-195: The Python ID example combines user, task and second timestamp.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f049fcc095bc4ed07b52e295",
+        "text_sha256": "30b4897c586209c8445e219bc66510b4e19ca5aa69e021e9750233c7c649971d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-196: The listing example calls listSessions. DOCS-SDKPERSIST-197: The listing example reports session count. DOCS-SDKPERSIST-198: The listing example reports IDs and creation times. DOCS-SDKPERSIST-199: The listing example supplies an owner/repository filter.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "691f27129f281031e853017d",
+        "text_sha256": "64af3af3c4a7437869f256cffa57378d06bab942cd2472ec495001fb00a538ba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-200: The cleanup example lists sessions. DOCS-SDKPERSIST-201: The cleanup example computes age from creation time, not observed last activity. DOCS-SDKPERSIST-202: The cleanup example deletes sessions older than its threshold without shown ownership authorization. DOCS-SDKPERSIST-203: The cleanup example logs deleted session IDs. DOCS-SDKPERSIST-204: The cleanup example uses24hours as an age threshold, not a mandatory retention policy.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "aabaae0ca896b8562d240a7a",
+        "text_sha256": "1d999bf5328443b5b1bb8ea419ffe2aee00f21ea39ca926ba850e34e1919a860",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-205: Explicit disconnect after task completion is recommended rather than waiting for timeout. DOCS-SDKPERSIST-206: Disconnect releases in-memory resources. DOCS-SDKPERSIST-207: Disconnect preserves session data on disk. DOCS-SDKPERSIST-208: Preserved data permits later resumption, according to the source.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "98a62412c2001b988df62a19",
+        "text_sha256": "2bbe272b516afe615914ebf6b79b98ffa71c68b5ad0a7cd049ad57ff1dec676a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-209: The disconnect example sends a task-completion prompt. DOCS-SDKPERSIST-210: The example disconnects on successful work. DOCS-SDKPERSIST-211: The example disconnects on caught error. DOCS-SDKPERSIST-212: The example rethrows the error after cleanup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b9cd294c1e5889f0babc9f7e",
+        "text_sha256": "a2b785c74293fc4bc046bdcaace39d42fdca5d916f926e28352ce4b7a5590691",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "957c3ea9fdf724c761602a2a",
+        "text_sha256": "c4d1cca51b0fd074c1deef06b2633269cb9c62a21d7f6ca1ceec065e27583bcf",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "6fa371448592357b2c13804c",
+        "text_sha256": "a643283b79c794b4effa66bdf8738fbe1568611d040c5725d507c0be16eb66f9",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "4683c866771666974ce0f3fe",
+        "text_sha256": "641f5feb0a7ae2e5757d1fd426a0c936af7e5f94b1dc3eb0a6b8ef003fa41eae",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-213: TypeScript's automatic cleanup pattern is listed as an idiomatic way to release session resources; this is not permanent deletion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "155642cd311009a6562a8342",
+        "text_sha256": "521827a04310c2bc57dfe23dca801b87e64a6904c05b9d29b41167e157551e8b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-214: Python's automatic cleanup pattern is listed as an idiomatic way to release session resources; this is not permanent deletion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "2ed6032c253e874085b2329e",
+        "text_sha256": "cdf6d0bd6a25ee1071585b655fe786e7dedd5b0795cb0007930d31bed8963cc5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-215: C#'s automatic cleanup pattern is listed as an idiomatic way to release session resources; this is not permanent deletion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "1c5333363350ef8663977646",
+        "text_sha256": "1de5d1c7407ac6fb77aded5b027ea7af530c7bd094bcb8ab6001661646c206f0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-216: Go's automatic cleanup pattern is listed as an idiomatic way to release session resources; this is not permanent deletion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "68a235034cb0219fb7c211b1",
+        "text_sha256": "15915c824e3e15fd20544bac5898ff70dac8b7e8885e038e2d61bfb8df9e9397",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-217: destroy is described as deprecated in favor of disconnect. DOCS-SDKPERSIST-218: Existing destroy calls are described as still working. DOCS-SDKPERSIST-219: Migration to disconnect is recommended.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "42111d646643d30595254c7a",
+        "text_sha256": "1f78910a48c4ad30dde612bf5cd2df3b9b90c9081cc6df42605cc187adaedb5f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-220: deleteSession permanently removes disk session data. DOCS-SDKPERSIST-221: Deleted sessions cannot be resumed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "53e4e661109a5efd8035772d",
+        "text_sha256": "4a48849bc96cac5f0b48b91270003d393a28051ce67da6e9c61125e19fb814ea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-222: The deletion example targets a known session ID; it was not executed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "fbfb55eeb8454909d1a0da81",
+        "text_sha256": "2b3e9068b9a7759195c9d00142107638011b2e50ca26efa3e8d441746cdab2d9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-223: The source explicitly contrasts disconnect preserving disk data with deleteSession removing it.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "79c25a910cd2d3ed857b9b16",
+        "text_sha256": "1a183563f659197a35a9aeeeb62426312ceaade31d44d1c7f769f0609159af76",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-224: Default sessions have no idle timeout. DOCS-SDKPERSIST-225: The source describes sessions living until explicitly disconnected or deleted without timeout. DOCS-SDKPERSIST-226: A server-wide idle timeout can be configured.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "a788670aa75bf42a91ee7d0d",
+        "text_sha256": "cc4e2674fea33f749efd6faec17a977900beb41cc9df3714a811634a134d78f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-227: The example chooses a30minute idle timeout, not a universal requirement.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "57f8b70465baf649f9eb3896",
+        "text_sha256": "ba295a010d550ea2558bf32af9eda69d484ce301ba3c46d7078942ee4241571a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-228: Configured inactivity duration triggers automatic session cleanup. DOCS-SDKPERSIST-229: Zero disables idle timeout. DOCS-SDKPERSIST-230: Omitting idle timeout disables it.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "82ad98342031e5698a0f28b3",
+        "text_sha256": "1017a0002f6c3c653f4d6bc68a7e21ac0b72d201a2b0db457d9ad5ff00eb8209",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-231: The client idle-timeout option applies only to SDK-spawned runtime processes. DOCS-SDKPERSIST-232: Existing external servers use their own timeout settings.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "fdb525279edc6ceed247efac",
+        "text_sha256": "fe87ef67541c0889bb9c1a79a5ecd5188261edd976e9c1f332d5b597e4d1dd63",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-013: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "27a17544994c05b7839adfc1",
+        "text_sha256": "d23833c79bfcf41ef466f178e52f95bc3c962fe9c378f501f594c2e75d2b9f8d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-233: Sessions running commands or background agents are described as protected from idle cleanup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "6fc917bd6fb58a35ee2adf89",
+        "text_sha256": "66df3a6015930ed7bca51a5328e7b3f9e3164a686e1480fa371c4a88583653a6",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "2e6a64c2629250dc822fa2f4",
+        "text_sha256": "ddfccd7a2dc2aabb60f026ce71179d82281348925db225e7844a3f0227e9aa68",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-234: The idle-event example reports idleDurationMs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "a3b3c8652ab2e3f6acbe0963",
+        "text_sha256": "2812f1ebaf6740cb9391bee75946d9607bb820f626b5b5e4bb627004d6d7160e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-235: A CLI server per user is recommended for strong multi-tenant isolation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b928fee7d37c53d25e268f32",
+        "text_sha256": "00beff24f714cbdd08bb7b1b8d66de13aa24c1a311119d99b7ab1944e47ca890",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-014: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "319a277df320eb563f99c33d",
+        "text_sha256": "93acc4976a24f12bfe14e22d784f2d5130d949d739b7f2edd71e6dfbacb5f951",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-236: The source advertises complete isolation/simple security/easy scaling; these are not audited target or compliance claims.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "661934de1f0a4bc5ccfbbce3",
+        "text_sha256": "9f84bd3dfc9275f3c5542fde51a3b948543a67afd928bfe3ca9d7c3900acbab2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-237: Shared CLI is suggested for trusted internal/resource-constrained settings.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "ab48ae7501eeb1bb2f5eb899",
+        "text_sha256": "8916a58f52287a229bef084d19950426b22d894396e88e9e834a673a60aa2d0e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-015: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "becc72b460c230a3c7949c91",
+        "text_sha256": "10b24fd1fd97f67a6f75737ae5adaea7b23dcffd9f5d098cd35e37a6915216ff",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "1ea1a8a2c2f4c38a06d1e881",
+        "text_sha256": "2886b867427a020af748c2a08cfa28e78363fcd6d151081fa3712fabd8467832",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-238: Shared CLI requires unique session IDs per user.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "de6d6597f8d4b4f273c703ae",
+        "text_sha256": "8f83e0c96a561dbe165436c1507a2220a44a8445ad34e3c679e3c38e953c2d2b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-239: Shared CLI requires application-level access control.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "2abd4e9b502be3ab113a69e9",
+        "text_sha256": "b1e3f362cee4089f91ba2a0ff1178c2230bfa0bcd05c0a05097d5ff7c45541ee",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-240: Shared CLI requires session-ID validation before operations.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "97a5c1509ae20ece895525b0",
+        "text_sha256": "2e6c4b54f75919ff117ebbe5de0c8659a452e97f76d11855b762d83756dc7136",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-241: The shared-resume example extracts the first hyphen-delimited ID component. DOCS-SDKPERSIST-242: The example rejects a differing ID component rather than demonstrating stored ownership checks. DOCS-SDKPERSIST-243: The shared-resume example calls resume after its prefix check without shown per-session authentication.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "9a1a0a87f0f293f397df3562",
+        "text_sha256": "0ba48dd1aea30fc5a7729546bb5ef856586b99b0fb23e58bf0b228dda2a1d0bb",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "bc9be077ce085b0688140b6d",
+        "text_sha256": "1c90386885ada777e8b92802bd70bf061b9a95975dcaf7e4849764df5a88f55d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-244: Restart/migration deployment requires mounting session-state storage persistently.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "e746290462d96671cf587544",
+        "text_sha256": "f07be4c56ffe499543349a5684b647a6f239316eee43f044c755f68845657122",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-245: The Azure container example uses a latest-tagged image. DOCS-SDKPERSIST-246: The Azure example mounts the session-state path. DOCS-SDKPERSIST-247: The Azure storage example names a file share. DOCS-SDKPERSIST-248: The Azure storage example names a storage account placeholder.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f583f1efece9d12e0da13829",
+        "text_sha256": "7289cf71ea4395f8ecc8702f6d3c46236ae06e40dbe02bf8b61f3706b5620a9a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-016: A diagram asset is linked; its visual content remains separately unreviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b3bffd89a203c5a81721a313",
+        "text_sha256": "74bb9dfb8d6385bace0a124dd6852440b6757a7ec0bfcc1a5b3b7e4052ce417a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-249: The article asserts survival of container restarts with its storage pattern; actual recovery was not tested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "3d68262c6cf0a5570cc3a642",
+        "text_sha256": "3aeaa65eca4ec5519d6da9c67978bf934d34ee93ebbba36c2bc61e18b74c6d69",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-250: The source directs infinite sessions with compaction for workflows exceeding context limits.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "e6b4982a6705f63f10ac8f40",
+        "text_sha256": "5f6b735bdf04c6fd60ee6f60c9fcd1327dccfec741c1ecea31e481d779e3ed50",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-251: The infinite-session example sets a known workflow ID. DOCS-SDKPERSIST-252: The infinite-session example enables compaction behavior. DOCS-SDKPERSIST-253: The example starts background compaction at80percent context utilization. DOCS-SDKPERSIST-254: The example uses95percent buffer-exhaustion blocking.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "83b566caa67523016d932e3d",
+        "text_sha256": "44adefd500f7b4c433a76e160a55958d35ba2a626cb71c3412d32940385f9e8e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-255: Compaction thresholds are ratios between0and1, not absolute token counts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "ed7e9e937f78b30153090e67",
+        "text_sha256": "78883ba1e2668ffb79a713e47f1a57bbca27367c3aa5699557fc8bc1cd49e393",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "f6acf0489c4b4f1e96f06b20",
+        "text_sha256": "23c475832929435230c40335833df448132d2c0b7eeb7e877ca6f19b36589606",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "4b16332e47861dc4ac9db31d",
+        "text_sha256": "af6c8f8e8ff8ecf88cceca6c6f744cd64b2d66d83aa99736015762ff3da65cc6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-256: BYOK keys are not persisted and should be stored in a secret manager for resume.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "bbc87bdaaf576b3cc87c309c",
+        "text_sha256": "5e93d2947bfe0754a1068ef37881f81ef14d5168be170122a1c2f1988acf71e4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-257: Session-state storage must be writable. DOCS-SDKPERSIST-258: Persistent container volumes are suggested to supply session storage.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "c3431ec5f334c19f278d2a2f",
+        "text_sha256": "79ef2dce26e82dec2312ea8a870852ef165eb355571334e524c7588dedb75452",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-259: Concurrent same-session access is described as undefined without built-in locking. DOCS-SDKPERSIST-260: Application locking or queues are directed for concurrent access.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "b34bbfee4911c59d37ee4de6",
+        "text_sha256": "b3b84a33634cd0fce05033ee81efc9b83025888a16ec60fc8aa822bcf8d510a9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-261: In-memory tool state is lost. DOCS-SDKPERSIST-262: Tools should be stateless or persist their own state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "74eeb37512c31585a0e10d70",
+        "text_sha256": "e19356aa4f7826e815638697c45ffd49fafce72837246d4e01deed1127467c33",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-263: The SDK provides no built-in session locking, according to the source.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "59767ee5ab0f328053ae2986",
+        "text_sha256": "9a942130a859d1d4ceac1a5a542d1b4a7bda2a2284de01e4dd6c08a98ccfe5b7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-264: The locking example creates a Redis client. DOCS-SDKPERSIST-265: The lock key is derived from the session ID. DOCS-SDKPERSIST-266: The example acquires a lock using NX conditional set. DOCS-SDKPERSIST-267: The example gives the lock a300second expiration. DOCS-SDKPERSIST-268: The example uses a constant lock value rather than a unique ownership token. DOCS-SDKPERSIST-269: The example rejects acquisition failure. DOCS-SDKPERSIST-270: The example executes its callback under the acquired lock. DOCS-SDKPERSIST-271: The example unconditionally deletes the lock key in finally, without a shown ownership comparison or atomic release. DOCS-SDKPERSIST-272: The example shows no lock renewal for work exceeding expiration; it is not a verified distributed locking implementation. DOCS-SDKPERSIST-273: The locked usage example resumes a known session ID. DOCS-SDKPERSIST-274: The locked example sends a continuation prompt.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "afb757518db27e8a657f52fe",
+        "text_sha256": "332bcfe3c62b92c2e80722dc11b0958b2c74f8a4d33a977e2d04c04b655475ed",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "c5ec28feb7e3e5afd15401e3",
+        "text_sha256": "b47b8717a62e462248f48be45ac53083369e4e2607f5bffb10f57317c0000663",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/language/syntax context fully read; no extra obligation or diagram review inferred."
+      },
+      {
+        "candidate_id": "2e4bba3f713bc23be2c1d68b",
+        "text_sha256": "0b537a95e2942bb6090d0ffc6da33d2b8578f5dc9fa47bc17b9fa1f730a1dd98",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-275: The summary repeats supplying a custom resumable ID.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "070013af52af83f6619773b4",
+        "text_sha256": "584401f0a535998431ba993b9a931663dd826c52c69fa282959ddea5e2c15359",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-276: The summary repeats resume by session ID.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "1dfbfa3cc8371fc3c203279b",
+        "text_sha256": "c27769ceb68ac41d031a8463f2acaf89a356119e177e7d5fdb25a2af4ad985a7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-277: The summary repeats BYOK provider re-provision.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f5157037134648a31113391a",
+        "text_sha256": "ac9526a3be8e85eeea2c10fdd7b048a35373ce50e960dda896f02820d1820f20",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-278: The summary repeats optional filtered session listing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "5977d0a55ff32c60f4a68425",
+        "text_sha256": "9731a0b88c30327e0ad0503351c23466ca58c168ce9433c98c76ec4cad245c4f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-279: The summary repeats disconnect preserving disk state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "ecbf56c8d6f2ee6ea1103005",
+        "text_sha256": "14bad325575d2e293be5f734765898b087797a0e777cbfaea8f02d663b885459",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-280: The summary repeats irreversible deletion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "f2161187822221f6aa79d411",
+        "text_sha256": "74b8cd35a1cb89760740ac12c5fd41c2114eb06f0579f89437084b4e34e1949c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-281: The summary repeats persistent container storage.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "631814da4bbc1f4803da8caa",
+        "text_sha256": "5ce9573a1ca5b05ddda890ff15c49126ccb5904875808c3d0608498da555a6ae",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-282: Hook, compatibility and debugging links remain independently scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "2f021d81c9dd6e7fca6aaa39",
+        "text_sha256": "d0ecce81db7489fbb1468ab86211a2bddc80b740af75641db71c2306d2864836",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-282: Hook, compatibility and debugging links remain independently scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      },
+      {
+        "candidate_id": "237edda56ec3315819cba89c",
+        "text_sha256": "03bb560b777d18b099470a7777655399ecbed00482c8f46537ca73759d6805b5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPERSIST-282: Hook, compatibility and debugging links remain independently scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-persistence-claims.json"
+      }
+    ]
+  }
+]
