@@ -1,0 +1,74 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/21",
+  "verified_at": "2026-10-02T19:25:54Z",
+  "scope": {
+    "full_source_files": 13,
+    "physical_lines": 623,
+    "query_row_occurrences": 544,
+    "claim_records": 3742,
+    "row_atoms": 3638,
+    "non_row_atoms": 104,
+    "candidate_mappings": 599,
+    "prior_claim_path_overlap": 0
+  },
+  "claims_sha256": "c409b5ac4a7fa03a13047908c3aa0139824d07140e1c9cc64f58ba3c6fc9db4b",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in 1.296s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid=true; controls=95"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "result": "No errors"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": "valid=true; 53253 reference records; 1165 source artifacts; 7 duplicate relationships"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": "1199/13657 reviewed; errors=[]; project_complete=false; nine gates OPEN; rights 0/13657; published denominator 18019"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "No errors"
+    }
+  ],
+  "independent_atom_comparison": {
+    "exact_command": "evidence/docs-codeql-query-tables-independent-audit.json#exact_atom_comparison_command",
+    "exit_code": 0,
+    "result": {
+      "claims_sha256": "c409b5ac4a7fa03a13047908c3aa0139824d07140e1c9cc64f58ba3c6fc9db4b",
+      "row_occurrences_compared": 544,
+      "row_atoms_compared": 3638,
+      "non_row_atoms_separately_read": 104,
+      "exact_atom_mismatches": [],
+      "identity_bounds_non_adoption": true,
+      "semantic_truth_automatically_certified": false,
+      "global_omission_certified": false
+    }
+  },
+  "consolidation_check": {
+    "records": 3742,
+    "each_claim_mapped_exactly_once": true
+  },
+  "accounting": {
+    "artifact_reviewed": 1199,
+    "artifact_denominator": 13657,
+    "artifact_coverage": 0.08779380537453321,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": "Bounded full-body and source-local claim review only. Source facts/identity templates are independently semantically reviewed and every row instantiation checked, not promoted from parsing alone. No query implementation/help destination inherited review, actual scan, Autofix execution, current runtime entitlement or query detection effectiveness, rendered assurance, rights, policy adoption or native approval. All original denominators preserved. Expected synthetic published_docs ERROR belongs to a negative test fixture, not the actual recovery report."
+}
