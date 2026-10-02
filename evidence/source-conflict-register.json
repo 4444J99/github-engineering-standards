@@ -4,6 +4,30 @@
   "reviewer": "codex:source-review",
   "records": [
     {
+      "id": "CONFLICT-AI-BUDGET-STOP-001",
+      "source_reviews": ["evidence/source-reviews/wa-continuation-ai-credits-claims.json", "evidence/source-reviews/wa-continuation-governing-agents-claims.json"],
+      "claim_ids": ["WA-CONT-AIC-003", "WA-CONT-AIC-004", "WA-CONT-AIC-008", "WA-CONT-GA-032"],
+      "issue": "FinOps guidance prefers alerts and continuity-aware stopping, while the agent checklist requires stop-at-limit for hard caps. Flattening either statement into a universal policy would lose its condition.",
+      "source_spans_rechecked": ["managing-ai-credits.md:89-98", "managing-ai-credits.md:119-121", "governing-agents.md:169-173"],
+      "proposed_resolution": "Preserve two distinct, explicitly chosen policy profiles: an intended hard financial ceiling requires effective stopping; an alert-led continuity profile requires accountable response and does not claim a hard ceiling. The checklist's for-hard-caps condition makes these compatible when scope is retained.",
+      "scope": "Authorized AI-credit and agent-related financial policy; source vendor configuration assertions remain dated and require current authoritative verification before a binding is adopted.",
+      "retained_alternatives": "Continuity-first alerting is not a hard cap, and a configured numeric budget is not proof that spending is prevented. Workflow approximate-credit limits remain separately defined.",
+      "required_evidence": "Explicit profile decision, exact target and budget scope, effective stop/alert setting readback, actual boundary behavior and accountable response evidence; no budget or paid-feature changes are authorized by this reconciliation.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-AI-BUDGET-SCOPE-001",
+      "source_review": "evidence/source-reviews/wa-continuation-ai-credits-claims.json",
+      "claim_ids": ["WA-CONT-AIC-005", "WA-CONT-AIC-006", "WA-CONT-AIC-079"],
+      "issue": "Line 113 says available budget at another scope will not be blocked; lines 668-669 say remaining capacity cannot override an exhausted applicable budget. Budget-balance availability and permission to consume must not be conflated.",
+      "source_spans_rechecked": ["managing-ai-credits.md:104-113", "managing-ai-credits.md:665-671"],
+      "proposed_resolution": "Retain the ambiguous assertion as unresolved product semantics rather than infer a fail-open fallback. Consult the linked authoritative budget-evaluation specification and verify all applicable scopes before operational adoption.",
+      "scope": "Concurrent user, cost-center, organization and enterprise budget controls; distinguish included versus metered consumption and scope-exclusion choices.",
+      "retained_alternatives": "Unused balance can remain at a separate scope without granting permission to continue consumption blocked by another applicable control. The original ambiguous statement is preserved in its source reference, not silently corrected.",
+      "required_evidence": "Current authoritative evaluation sequence and scoped runtime/readback evidence; neither article prose nor a sample cost-center total proves effective enterprise-wide spending prevention.",
+      "policy_accepted": false
+    },
+    {
       "id": "CONFLICT-ACTION-IMMUTABILITY-001",
       "source_review": "evidence/source-reviews/wa-continuation-actions-reusability-claims.json",
       "issue": "Source calls a six-character commit reference immutable while other examples use mutable tags.",
