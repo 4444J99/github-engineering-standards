@@ -213,7 +213,7 @@
       "line_end": 78,
       "kind": "PREREQUISITE",
       "statement": "Organization attribution uses an on-behalf-of trailer.",
-      "condition": "organization attribution",
+      "condition": "organization attribution; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
@@ -224,7 +224,7 @@
       "line_end": 78,
       "kind": "PREREQUISITE",
       "statement": "Organization attribution requires a signed commit.",
-      "condition": "organization attribution",
+      "condition": "organization attribution; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
@@ -235,7 +235,7 @@
       "line_end": 78,
       "kind": "PREREQUISITE",
       "statement": "The author must be an organization member.",
-      "condition": "organization attribution",
+      "condition": "organization attribution; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
@@ -246,7 +246,7 @@
       "line_end": 78,
       "kind": "PREREQUISITE",
       "statement": "The author commit email must belong to an organization-verified domain.",
-      "condition": "organization attribution",
+      "condition": "organization attribution; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
@@ -257,7 +257,7 @@
       "line_end": 78,
       "kind": "PREREQUISITE",
       "statement": "The organization email must belong to an organization-verified domain.",
-      "condition": "organization attribution",
+      "condition": "organization attribution; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
@@ -268,7 +268,7 @@
       "line_end": 82,
       "kind": "PROCEDURE",
       "statement": "Enter a short meaningful description for the organization-attributed commit.",
-      "condition": "command-line organization workflow",
+      "condition": "command-line organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "4662b81fb85c73b228f2252a8f70ce716efd9166d8e1d41cd49a182ce932b95a"
@@ -279,7 +279,7 @@
       "line_end": 82,
       "kind": "PROCEDURE",
       "statement": "Leave two empty lines after the description before closing the quoted message.",
-      "condition": "command-line organization workflow",
+      "condition": "command-line organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "4662b81fb85c73b228f2252a8f70ce716efd9166d8e1d41cd49a182ce932b95a"
@@ -290,7 +290,7 @@
       "line_end": 90,
       "kind": "PROCEDURE",
       "statement": "Append an organization handle and email in the on-behalf-of trailer.",
-      "condition": "command-line organization workflow",
+      "condition": "command-line organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "90f146b80d720fd0e8b2a0275374892ba27d8eb6faea4e263325c1ea6a1ba980"
@@ -301,7 +301,7 @@
       "line_end": 90,
       "kind": "PROCEDURE",
       "statement": "Close the quoted message after appending the organization trailer.",
-      "condition": "command-line organization workflow",
+      "condition": "command-line organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "90f146b80d720fd0e8b2a0275374892ba27d8eb6faea4e263325c1ea6a1ba980"
@@ -312,7 +312,7 @@
       "line_end": 99,
       "kind": "PLATFORM_BEHAVIOR",
       "statement": "After push, the organization-attributed commit, message and badge appear on GitHub.",
-      "condition": "command-line organization workflow",
+      "condition": "command-line organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "e4b3d2c7794331ef5e003e65cb30cfcca199e8a1a7b87f69c3362ef99daafc06"
@@ -323,7 +323,7 @@
       "line_end": 103,
       "kind": "PROCEDURE",
       "statement": "Add the organization trailer before committing web-editor changes.",
-      "condition": "web organization workflow",
+      "condition": "web organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "80804f4d5664105abaebc77fa095bf29adf395f3eee84954007e9a6e8965456a"
@@ -334,7 +334,7 @@
       "line_end": 105,
       "kind": "PROCEDURE",
       "statement": "Open the commit dialog.",
-      "condition": "web organization workflow",
+      "condition": "web organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "6c313514fa8a329058d70a4262f0f317d75d0ff4a1d8a7e54204f954ba2224d2"
@@ -344,8 +344,8 @@
       "line_start": 106,
       "line_end": 106,
       "kind": "PROCEDURE",
-      "statement": "Describe the changes in the commit message.",
-      "condition": "web organization workflow",
+      "statement": "Describe the changes with a short, meaningful commit message.",
+      "condition": "web organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "47921f888da38c834ae98da1bafb4299b3425e1a6530ca5f53fb3a3688bc5e07"
@@ -356,7 +356,7 @@
       "line_end": 107,
       "kind": "PROCEDURE",
       "statement": "Enter the organization trailer in the lower message textbox.",
-      "condition": "web organization workflow",
+      "condition": "web organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "19fcfb30a54e2aaad3e32794fa65582938e959b853fc7e40b923d0439fc62d50"
@@ -367,7 +367,7 @@
       "line_end": 108,
       "kind": "PROCEDURE",
       "statement": "Submit a direct commit or proposed changes.",
-      "condition": "web organization workflow",
+      "condition": "web organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "13317da5eb9f0ec0c6f78d05b8b063a5dfb401da97db369f963451d6219746ce"
@@ -378,10 +378,54 @@
       "line_end": 110,
       "kind": "PLATFORM_BEHAVIOR",
       "statement": "The organization-attributed web commit, message and badge appear on GitHub.",
-      "condition": "web organization workflow",
+      "condition": "web organization workflow; unavailable on GitHub Enterprise Server",
       "mapping": "REFERENCE_ONLY",
       "adopted": false,
       "span_sha256": "f2fe9837afae55d2440e993afd40845b5c77f58169f00d0379449b3fe5cb9d5f"
+    },
+    {
+      "id": "accessibility-attribution-root-035",
+      "line_start": 50,
+      "line_end": 50,
+      "kind": "SYNTAX_CONSTRAINT",
+      "statement": "Coauthor trailer syntax includes a name and angle-bracketed email.",
+      "condition": "command-line coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5ceb9701da8e87c94fab0df8d15bed444735a8c955817ff49bdf8fac13feebb1"
+    },
+    {
+      "id": "accessibility-attribution-root-036",
+      "line_start": 68,
+      "line_end": 68,
+      "kind": "SYNTAX_CONSTRAINT",
+      "statement": "Web coauthor trailer syntax includes a name and angle-bracketed email.",
+      "condition": "web coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "0f805e707ff53c67584a1555271bae73a6a394ed25ac495565080560e6d92c0c"
+    },
+    {
+      "id": "accessibility-attribution-root-037",
+      "line_start": 90,
+      "line_end": 90,
+      "kind": "SYNTAX_CONSTRAINT",
+      "statement": "Organization trailer syntax includes an @org handle and angle-bracketed email.",
+      "condition": "command-line organization workflow; unavailable on GitHub Enterprise Server",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "90f146b80d720fd0e8b2a0275374892ba27d8eb6faea4e263325c1ea6a1ba980"
+    },
+    {
+      "id": "accessibility-attribution-root-038",
+      "line_start": 107,
+      "line_end": 107,
+      "kind": "SYNTAX_CONSTRAINT",
+      "statement": "Web organization trailer syntax includes an @org handle and angle-bracketed email.",
+      "condition": "web organization workflow; unavailable on GitHub Enterprise Server",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "19fcfb30a54e2aaad3e32794fa65582938e959b853fc7e40b923d0439fc62d50"
     }
   ],
   "reusable_occurrences": [
@@ -404,5 +448,33 @@
   "root_local_candidate_extraction_complete": true,
   "independent_omission_audit_complete": false,
   "assurance_increment": 0,
-  "pinned_review_increment": 0
+  "pinned_review_increment": 0,
+  "example_discrepancies": [
+    {
+      "source_lines": [
+        42,
+        45,
+        47,
+        53,
+        56
+      ],
+      "observation": "Coauthor prose requests one blank line; initial illustration contains two blank continuation prompts, completed illustration one."
+    },
+    {
+      "source_lines": [
+        90,
+        96,
+        107
+      ],
+      "observation": "Organization prose shows angle-bracketed email, while the illustrated command omits brackets."
+    },
+    {
+      "source_lines": [
+        78,
+        85,
+        93
+      ],
+      "observation": "Signing is prerequisite but examples do not display an explicit signing option; implicit Git signing configuration is not proven."
+    }
+  ]
 }
