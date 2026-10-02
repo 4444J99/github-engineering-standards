@@ -98,6 +98,8 @@ def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
         if content_digest is not None and content_digest != index[identity]['sha256']:
             raise ValueError('Claim content digest mismatch: '+claim['claim_id'])
         raw = '\n'.join(lines[start-1:end])
+        if not raw.strip():
+            raise ValueError('Blank claim source span: '+claim['claim_id'])
         for key in ('text_sha256', 'raw_line_sha256', 'span_sha256'):
             if key in claim and hashlib.sha256(raw.encode()).hexdigest() != claim[key]:
                 raise ValueError('Claim span digest mismatch: '+claim['claim_id'])

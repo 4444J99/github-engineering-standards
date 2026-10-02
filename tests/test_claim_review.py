@@ -47,6 +47,16 @@ class ClaimProvenance(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'exceeds source span'):
             self.check()
 
+    def test_blank_source_span_rejected_even_with_matching_digest(self):
+        for blank in ('', ' \t '):
+            with self.subTest(blank=blank):
+                self.text = f'Review access.\n{blank}\nCheck scope.\n'
+                self.artifact['sha256'] = hashlib.sha256(self.text.encode()).hexdigest()
+                self.claim.update(start_line=2, end_line=2,
+                                  span_sha256=hashlib.sha256(blank.encode()).hexdigest())
+                with self.assertRaisesRegex(ValueError, 'Blank claim source span'):
+                    self.check()
+
     def test_unpinned_commit_rejected(self):
         self.claim['commit'] = 'b'*40
         with self.assertRaisesRegex(ValueError, 'locked source pin'):
