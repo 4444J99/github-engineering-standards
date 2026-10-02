@@ -26,7 +26,7 @@ class ClaimProvenance(unittest.TestCase):
         self.doc = {'reviewer': 'reviewer', 'reviewed_at': '2026-01-01T00:00:00Z',
                     'claims': [self.claim]}
 
-    def check(self, text=None):
+    def check(self, text=None, control_ids=None):
         artifacts = self.root / 'artifacts.jsonl'
         artifacts.write_text(json.dumps(self.artifact)+'\n')
         (self.root / 'reference-claims.json').write_text(json.dumps(self.doc))
@@ -34,7 +34,7 @@ class ClaimProvenance(unittest.TestCase):
             stream.write(json.dumps({'source': self.source, 'commit': self.commit,
                                      'path': 'guide.md', 'content': self.text if text is None else text})+'\n')
         return validate_provenance(artifacts, self.root, self.root, ['reviewer'],
-                                   {self.source: self.commit})
+                                   {self.source: self.commit}, control_ids)
 
     def test_valid_reference_provenance_is_not_semantic_certification(self):
         result = self.check()
@@ -109,6 +109,23 @@ class ClaimProvenance(unittest.TestCase):
         result = self.check()
         self.assertEqual(result['duplicate_relationships_validated'], 1)
         self.assertFalse(result['semantic_truth_certified'])
+
+    def test_unknown_proposed_control_rejected(self):
+        self.claim['proposed_control_ids'] = ['NONEXISTENT']
+        with self.assertRaisesRegex(ValueError, 'Unknown proposed control'):
+            self.check(control_ids={'GES-ACT-001'})
+
+    def test_malformed_proposed_controls_rejected(self):
+        for value in ('GES-ACT-001', [None], ['GES-ACT-001', 'GES-ACT-001']):
+            self.claim['proposed_control_ids'] = value
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, 'Invalid proposed control'):
+                self.check()
+
+    def test_valid_proposal_identity_is_not_equivalence(self):
+        self.claim['proposed_control_ids'] = ['GES-ACT-001']
+        report = self.check(control_ids={'GES-ACT-001'})
+        self.assertTrue(report['proposed_control_identities_verified'])
+        self.assertFalse(report['proposed_mapping_equivalence_certified'])
 
 
 if __name__ == '__main__':

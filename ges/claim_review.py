@@ -10,7 +10,8 @@ import re
 
 
 def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
-                        reviewers: list[str], pins: dict[str, str]) -> dict:
+                        reviewers: list[str], pins: dict[str, str],
+                        control_ids: set[str] | None = None) -> dict:
     if not isinstance(reviewers, list) or not reviewers or any(not isinstance(r, str) for r in reviewers):
         raise ValueError('Invalid authorized reviewer policy')
     rows = [json.loads(line) for line in artifacts.read_text().splitlines() if line.strip()]
@@ -47,6 +48,13 @@ def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
                 raise ValueError('Claim artifact identity mismatch: '+cid)
             if claim.get('accepted_policy', False) is not False or claim.get('adopted_obligation') is not None:
                 raise ValueError('Reference claim asserts adoption: '+cid)
+            proposals = claim.get('proposed_control_ids', [])
+            if (not isinstance(proposals, list) or
+                    any(not isinstance(value, str) or not value for value in proposals) or
+                    len(set(proposals)) != len(proposals)):
+                raise ValueError('Invalid proposed control references: '+cid)
+            if control_ids is not None and any(value not in control_ids for value in proposals):
+                raise ValueError('Unknown proposed control reference: '+cid)
             claims.append((identity, claim, doc))
     if not claims:
         raise ValueError('No reference claims to audit')
@@ -95,6 +103,8 @@ def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
                 raise ValueError('Claim span digest mismatch: '+claim['claim_id'])
     return {'valid': True, 'reference_claims': len(claims), 'source_artifacts': len(needed),
             'duplicate_relationships_validated': len(duplicate_links),
+            'proposed_control_identities_verified': control_ids is not None,
+            'proposed_mapping_equivalence_certified': False,
             'review_documents': documents, 'semantic_truth_certified': False,
             'omission_completeness_certified': False, 'rights_cleared': False,
             'policy_adopted': False}
@@ -109,11 +119,17 @@ def main() -> int:
     parser.add_argument('--reviews', type=Path, required=True)
     parser.add_argument('--review-policy', type=Path, required=True)
     parser.add_argument('--pins', type=Path, default=ROOT / 'sources/sources.lock.json')
+    parser.add_argument('--catalog', type=Path, default=ROOT / 'controls/catalog.json')
     args = parser.parse_args()
     try:
         pins = {r['repository']: r['commit'] for r in json.loads(args.pins.read_text())['sources']}
+        catalog = json.loads(args.catalog.read_text())
+        control_ids = {control['id'] for control in catalog}
+        if len(control_ids) != len(catalog):
+            raise ValueError('Duplicate canonical control identity')
         report = validate_provenance(args.artifacts, args.sources, args.reviews,
-                                    json.loads(args.review_policy.read_text())['authorized_reviewers'], pins)
+                                    json.loads(args.review_policy.read_text())['authorized_reviewers'], pins,
+                                    control_ids)
     except (ValueError, KeyError, TypeError, OSError) as exc:
         print(json.dumps({'valid': False, 'error': str(exc)}))
         return 2
