@@ -1,0 +1,19 @@
+{
+  "schema": "ges.control-recovery.v1",
+  "control_id": "GES-ACT-002",
+  "revision": 2,
+  "defect": "Whole-control PASS could follow SHA/digest syntax even though the canonical objective additionally requires provenance and safe update verification.",
+  "recovery": "Preserve syntactic failures as FAIL. Successful formatting now produces MANUAL_REVIEW for this canonical control pending actual origin, container provenance and safe-update evidence.",
+  "source_review": "evidence/source-reviews/docs-action-pinning-claims.json",
+  "template_review": {
+    "path": "templates/review-checklist.md",
+    "observed": "Template requires exact target revision, control, reviewer, acceptance criteria, evidence, outcome, limitations, review time and expiration. It can carry provenance evidence but its existence is not an attestation.",
+    "changed": false
+  },
+  "applicability_review": "Existing actions=true profiles remain applicable; archive actions=false remains a context declaration requiring actual-target review. No feature or control was disabled to obtain green results.",
+  "tests": ["test_pinning_syntax_is_not_provenance", "test_provenance_requirement_does_not_hide_floating_reference"],
+  "verification": {"unittest_tests": 235, "unittest_result": "PASS", "catalog_controls_validated": 95, "compile_exit_code": 0},
+  "remaining_binding_work": "Implement accountable provenance evidence ingestion and origin/container verification; do not satisfy it using an arbitrary unvalidated boolean.",
+  "policy_accepted": false,
+  "native_enforcement_verified": false
+}

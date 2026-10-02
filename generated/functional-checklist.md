@@ -12,7 +12,7 @@ Check a box only when scoped, current evidence satisfies the stated criterion.
   Applicability: `{'actions': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-ACT-002 r1 — Action and reusable-workflow references are immutable** (MUST; REVIEWED_DRAFT)
+- [ ] **GES-ACT-002 r2 — Action and reusable-workflow references are immutable** (MUST; REVIEWED_DRAFT)
   Pin external action and reusable workflow uses to complete commit SHAs; container actions use image digests. Verify provenance and update safely.
   Acceptance: Pin external action and reusable workflow uses to complete commit SHAs; container actions use image digests. Verify provenance and update safely.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `workflow_pinning`; scope: repository.

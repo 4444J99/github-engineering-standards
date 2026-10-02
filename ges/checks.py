@@ -267,6 +267,9 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                 for use in uses:
                     check_composite_action(use, path, set())
         if failures: return 'FAIL','; '.join(failures)
+        if kind == 'workflow_pinning' and spec.get('require_provenance_review') is True:
+            return 'MANUAL_REVIEW', ('Reference syntax satisfies immutability formatting, but action commit origin, '
+                                     'container provenance and safe-update review have not been verified')
         return 'PASS',f'{len(entries)} workflow files satisfy the syntactic {kind} check; execution and permission adequacy are separate controls'
     if kind=='dependabot_config':
         return dependabot_config(snapshot, spec)

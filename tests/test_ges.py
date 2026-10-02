@@ -67,6 +67,16 @@ class Checks(unittest.TestCase):
         s=snapshot(); s['observations']['repository']['data']['name']='bad_name'; self.assertEqual(execute(control('repo_name'),s,{})[0],'FAIL')
     def workflow(self,body): return snapshot({'.github/workflows/ci.yml':body})
     def test_pinned_workflow(self): self.assertEqual(execute(control('workflow_pinning'),self.workflow('jobs:\n  test:\n    steps:\n      - uses: actions/checkout@'+'a'*40),{})[0],'PASS')
+    def test_pinning_syntax_is_not_provenance(self):
+        ctrl = control('workflow_pinning')
+        ctrl['verification']['require_provenance_review'] = True
+        report = execute(ctrl, self.workflow('jobs:\n  test:\n    steps:\n      - uses: actions/checkout@'+'a'*40), {})
+        self.assertEqual(report[0], 'MANUAL_REVIEW')
+
+    def test_provenance_requirement_does_not_hide_floating_reference(self):
+        ctrl = control('workflow_pinning')
+        ctrl['verification']['require_provenance_review'] = True
+        self.assertEqual(execute(ctrl, self.workflow('jobs:\n  test:\n    steps:\n      - uses: actions/checkout@v4'), {})[0], 'FAIL')
     def test_floating_action_fails(self): self.assertEqual(execute(control('workflow_pinning'),self.workflow('jobs:\n  test:\n    steps:\n      - uses: actions/checkout@v4'),{})[0],'FAIL')
     def test_floating_reusable_workflow_fails(self): self.assertEqual(execute(control('workflow_pinning'),self.workflow('jobs:\n  test:\n    uses: org/repo/.github/workflows/test.yml@main'),{})[0],'FAIL')
     def test_container_digest(self): self.assertEqual(execute(control('workflow_pinning'),self.workflow('jobs:\n  test:\n    steps:\n      - uses: docker://alpine@sha256:'+'a'*64),{})[0],'PASS')

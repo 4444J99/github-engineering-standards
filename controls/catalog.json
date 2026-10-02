@@ -2854,7 +2854,7 @@
   },
   {
     "id": "GES-ACT-002",
-    "revision": 1,
+    "revision": 2,
     "title": "Action and reusable-workflow references are immutable",
     "objective": "Pin external action and reusable workflow uses to complete commit SHAs; container actions use image digests. Verify provenance and update safely.",
     "category": "act",
@@ -2878,7 +2878,8 @@
       }
     ],
     "verification": {
-      "kind": "workflow_pinning"
+      "kind": "workflow_pinning",
+      "require_provenance_review": true
     },
     "implementation": {
       "template": "templates/review-checklist.md",
