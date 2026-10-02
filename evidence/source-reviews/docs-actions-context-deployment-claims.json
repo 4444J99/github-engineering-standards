@@ -1,0 +1,271 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:28:03Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/composite-actions-unsupported-refs.md",
+      "content_sha256": "37f19089de3567a0aea0c8fb60568edbde10251aafeb9031cd0d78b5f5c49a56",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The enclosing context is unsupported in a composite action's run keyword and should be referenced via env. This fragment does not identify the context; do not generalize to every context.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/configure-autoscaling-for-larger-runners.md",
+      "content_sha256": "d3a21ed500762568464a2bcbcf6ee2bea27f827e2cd321bf2f2b6348ecd7ff69",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Larger-runner Capacity settings use Maximum concurrency to bound simultaneous jobs, then Save; target capacity, costs and effective autoscaling are not observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/container-jobs-intro.md",
+      "content_sha256": "2127ed21fb53f1359f319a9504bac0f22f9a1a3a557b956fce531cf835040677",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Job and service containers on the same user-defined Docker bridge expose ports to each other without host port mapping; workflow service label provides access. This is container-local networking, not universal host reachability or port-isolation proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/context-contents.md",
+      "content_sha256": "453d64973b404f929d2d7db7d76bbe7e13e9eef335c0249c7be73a20fb0b67fc",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Contexts, objects and properties vary with workflow run conditions; absent properties must not be assumed to be present from an example.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/context-example-note.md",
+      "content_sha256": "2d7cc80fc1bb114335954e850e4df81fbd33328778cfe9611ef4f1be4af83712",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Shown context is only an example whose content depends on its workflow; shared context-contents dependency reinforces variability and needs separate rendering resolution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/context-injection-warning.md",
+      "content_sha256": "2b0b57e4fa9343703b28e6b16fb94295c208dead51238644900fd55faba7ea7f",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Workflow/action authors should evaluate execution of attacker-controlled input; certain contexts are untrusted because malicious content can be inserted. Linked script-injection mitigation is not implicitly reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/copy-runner-label.md",
+      "content_sha256": "2499308e01e256a986786cc5379ea9abd4167b3f673724fd970db125e065d5f0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Copying a runner label through More options and Copy label is optional workflow authoring assistance, not permission to use the runner or a verified assignment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/copy-workflow-file.md",
+      "content_sha256": "a38aaa97d3fc14b3dec13b13e9b84f5c8ddf325965cc7ceb0137696256264b66",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The enclosing workflow may be copied into .github/workflows and adapted; source copying is not license clearance, execution safety or authorization to deploy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/create-azure-app-plan.md",
+      "content_sha256": "d926207153d01608a40dc5194da59f8e40021b31db769d9d5b00b53f75fe14d7",
+      "start_line": 1,
+      "end_line": 17,
+      "statement": "Azure App Service plan example uses az appservice plan create with existing resource-group and new-plan placeholders and --is-linux; Azure authentication/resource-group references remain separate. No account login, billable provisioning or command execution occurs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/create-azure-publish-profile.md",
+      "content_sha256": "49365dbc4abed8c836c71321d4399b2133dcd0bb7798fc8f333e05e7095cf302",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Deployment tutorial generates a publish profile and stores its full contents in repository secret AZURE_WEBAPP_PUBLISH_PROFILE. These are credential-bearing operations requiring separate authority; no credentials generated, retrieved, exposed or written.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/create-runner-group.md",
+      "content_sha256": "528d7c5702f8d34bba00a72deafc8623957412381282e564806be36db5ed3614",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Create group applies the previously chosen policy in the parent procedure; this UI step alone proves neither authorized scope nor actual enforced access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/creating-a-runner-group-for-an-enterprise.md",
+      "content_sha256": "2bd7b3bce01ad3989513d47dccef8652d390fb3eaa307176a2f9f26d526fd14f",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "Enterprise-group documentation authoring comment requires a contextual self-hosted or larger-runner security admonition; comment is source evidence, not executable instruction.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/creating-a-runner-group-for-an-enterprise.md",
+      "content_sha256": "2bd7b3bce01ad3989513d47dccef8652d390fb3eaa307176a2f9f26d526fd14f",
+      "start_line": 10,
+      "end_line": 14,
+      "statement": "Enterprise runner groups may restrict organizations and conditionally workflows in GHEC/GHES; organization owners add granular repository/conditional workflow policies. Unspecified registration group means default group, later movable; creation requires choosing organizational access policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/creating-a-runner-group-for-an-enterprise.md",
+      "content_sha256": "2bd7b3bce01ad3989513d47dccef8652d390fb3eaa307176a2f9f26d526fd14f",
+      "start_line": 16,
+      "end_line": 19,
+      "statement": "Enterprise creation uses separate first-step, organization-access and workflow-policy includes then Save group. Included contents and native enforcement are not implied by standalone review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/creating-a-runner-group-for-an-organization.md",
+      "content_sha256": "11a29063c73659df59462972af73bf6899901961e17c071e2bb5f63aba0c603a",
+      "start_line": 1,
+      "end_line": 11,
+      "statement": "Organization creation comment requires a contextual runner security admonition. Creation chooses allowed repositories and GHEC/GHES workflows; organization owners and conditionally custom-role users with Manage organization runners and runner groups may manage policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/creating-a-runner-group-for-an-organization.md",
+      "content_sha256": "11a29063c73659df59462972af73bf6899901961e17c071e2bb5f63aba0c603a",
+      "start_line": 13,
+      "end_line": 17,
+      "statement": "Every organization has one default group; additional FPT groups require Team organization owners, while other branches permit owners and conditionally authorized custom-role users. Registration without a group uses default; moving and REST creation are referenced.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/creating-a-runner-group-for-an-organization.md",
+      "content_sha256": "11a29063c73659df59462972af73bf6899901961e17c071e2bb5f63aba0c603a",
+      "start_line": 19,
+      "end_line": 26,
+      "statement": "Procedure navigates organization settings, creates/names a group and includes repository/workflow policy assignment. In GHEC/GHES, organization-owned groups cannot access another organization's workflows; enterprise-owned group is required. Linked/includes remain separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/custom-deployment-protection-rules-availability.md",
+      "content_sha256": "3f3ad0f7581bf89fa303733f608ee1e0dd4ba485ecd32051b459df438f85b46a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Custom deployment rules are described for public repositories on all plans, but private/internal requires Enterprise; gated-feature include and exact current eligibility remain separately verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/custom-deployment-protection-rules-beta-note.md",
+      "content_sha256": "eddea03b25fae256a351a75517975d27fc5ef41707cd4c585b5ced347033882c",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Pinned custom deployment protection is public preview and subject to change, not current feature availability certification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/custom-deployment-protection-rules-limits.md",
+      "content_sha256": "f3ea9fe2fdac6f07de92ba5fefa037f581ec6c6cc3ce435d5253256d2ad6839d",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Any number of GitHub-App-based protection rules can be installed on a repository, but at most six may be enabled simultaneously per environment. Installed quantity is not enforcement coverage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/defaults-override.md",
+      "content_sha256": "38a065c0959b61a17078a937dc1b86254cca0a05f57e9e5bbfd5f43ef8f1c1a8",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "For same-name default settings, the most specific wins; job default overrides workflow default. This describes defaults, not every unrelated configuration precedence rule.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-022",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/delete-env-key.md",
+      "content_sha256": "0a5e8885dd8e1d23952f98bb9a2136355485206764bc3047cd826ddff5b94dbb",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Tutorial substitutes the configured environment name, otherwise removes environment; FPT/GHEC also directs removal for private repositories without GHE Cloud. This source branch is not authority to remove deployment protections or bypass unavailable capabilities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-023",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/dependabot-version-updates-for-actions.md",
+      "content_sha256": "1ef038717feb06ece6b327c74e994099b50b89c34410870f1275d810b9c0c5af",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Dependabot can keep action and reusable-workflow references updated; source describes bug-fix/features benefits and automatic maintenance, not proof that updates are tested, safe, accepted or merged. Linked procedures and security-updates behavior remain separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCONTEXTDEPLOY-024",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/disable-selfhosted-runners-crossrefs.md",
+      "content_sha256": "bd5688247a3251c868315b13d831006c9844ccf36983a6d3ec12e48b0e4a2fe0",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Enterprise/organization owners in GHEC/GHES, or organization owners in FPT, may select repositories allowed to create repository-level self-hosted runners. Conditional custom-role permission is limited to repositories within that organization; enterprise and organization policy links require separate review.",
+      "accepted_policy": false
+    }
+  ]
+}
