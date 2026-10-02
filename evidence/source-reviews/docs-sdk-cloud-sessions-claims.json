@@ -341,7 +341,7 @@
       "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
       "start_line": 197,
       "end_line": 197,
-      "statement": "Streaming-events guide body is separately reviewed, not implied by link.",
+      "statement": "The cloud-session guide links streaming-events guidance; linked-body review remains separate.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false,
       "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed."
@@ -951,7 +951,7 @@
       "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
       "start_line": 274,
       "end_line": 274,
-      "statement": "Multi-tenancy details are linked; body is independently reviewed.",
+      "statement": "The cloud-session guide links multi-tenancy guidance for integration-ID details; linked-body review remains separate.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false,
       "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed."
@@ -1044,7 +1044,12 @@
       "statement": "Remote sessions execute locally or on application server.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false,
-      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed."
+      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKCLOUD-104-A01",
+        "DOCS-SDKCLOUD-104-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKCLOUD-105",
@@ -1064,7 +1069,12 @@
       "statement": "Remote sessions share local sessions to GitHub web/mobile.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false,
-      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed."
+      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKCLOUD-106-A01",
+        "DOCS-SDKCLOUD-106-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKCLOUD-107",
@@ -1074,7 +1084,12 @@
       "statement": "Cloud sessions create and route hosted sessions.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false,
-      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed."
+      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKCLOUD-107-A01",
+        "DOCS-SDKCLOUD-107-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKCLOUD-108",
@@ -1284,7 +1299,13 @@
       "statement": "Missing assistant events/log prompt can reflect race-swallowed send.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false,
-      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed."
+      "context": "Pinned-source observation only. Cloud execution is not authorized by importing this guide; snippets/permissions were not executed, placeholder repositories are not targets, and no billed cloud task, publication or runtime receipt is claimed.",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKCLOUD-128-A01",
+        "DOCS-SDKCLOUD-128-A02",
+        "DOCS-SDKCLOUD-128-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKCLOUD-129",
@@ -2875,6 +2896,235 @@
       "source_strength": "EXAMPLE",
       "accepted_policy": false,
       "context": "Nonexecuted source example. Placeholder owner/repository/branch and broad permission handlers are not adopted targets or approvals. No remote task, publication, billed call or effective runtime receipt is asserted."
+    },
+    {
+      "start_line": 292,
+      "end_line": 292,
+      "statement": "The comparison table places remote-session execution on a local machine.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-104-A01",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 292,
+      "end_line": 292,
+      "statement": "The comparison table also permits remote-session execution on an application server.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-104-A02",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 293,
+      "end_line": 293,
+      "statement": "Remote sessions share local sessions to GitHub web surfaces.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-106-A01",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 293,
+      "end_line": 293,
+      "statement": "Remote sessions share local sessions to GitHub mobile surfaces.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-106-A02",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 293,
+      "end_line": 293,
+      "statement": "Cloud sessions create hosted sessions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-107-A01",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 293,
+      "end_line": 293,
+      "statement": "Cloud sessions route hosted sessions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-107-A02",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 308,
+      "end_line": 308,
+      "statement": "The troubleshooting symptom includes missing assistant events after send returns.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-128-A01",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 308,
+      "end_line": 308,
+      "statement": "The troubleshooting symptom includes a prompt absent from the session log.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-128-A02",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 308,
+      "end_line": 308,
+      "statement": "The source attributes these symptoms to an ahead-of-start send whose prompt the runtime swallowed.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-128-A03",
+      "context": "Independent bounded source repair; no cloud task, billed request, sharing or permission authority inferred."
+    },
+    {
+      "start_line": 81,
+      "end_line": 98,
+      "statement": "The Go example shows no client-stop or deferred-cleanup call; successful client lifecycle cleanup is not demonstrated.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-288",
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKCLOUD-288-A01",
+        "DOCS-SDKCLOUD-288-A02"
+      ]
+    },
+    {
+      "start_line": 104,
+      "end_line": 119,
+      "statement": "The .NET cloud example shows no explicit session-disposal scope.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-289"
+    },
+    {
+      "start_line": 128,
+      "end_line": 140,
+      "statement": "The Java cloud example shows no explicit session-disposal scope.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-290"
+    },
+    {
+      "start_line": 153,
+      "end_line": 153,
+      "statement": "The Rust example constructs the repository with CloudSessionRepository::new.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-291"
+    },
+    {
+      "start_line": 153,
+      "end_line": 153,
+      "statement": "The Rust example selects a branch through with_branch.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-292"
+    },
+    {
+      "start_line": 182,
+      "end_line": 191,
+      "statement": "The first-prompt readiness snippet awaits an unbounded promise; the surrounding timeout advice is not implemented in the displayed code.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-293"
+    },
+    {
+      "start_line": 183,
+      "end_line": 186,
+      "statement": "The readiness handler only resolves the promise for a matching copilot-agent producer, not arbitrary session.start events.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-294"
+    },
+    {
+      "start_line": 199,
+      "end_line": 199,
+      "statement": "The timeout recommendation aims to avoid a stuck startup hanging the application indefinitely; this is not an implemented or verified timeout.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-295"
+    },
+    {
+      "start_line": 204,
+      "end_line": 204,
+      "statement": "The source explicitly limits remote.enable to local-session synchronization, not switching a cloud execution location.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-296"
+    },
+    {
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Troubleshooting attributes policy-blocked creation to organization restrictions on remote control.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-297"
+    },
+    {
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Troubleshooting also attributes policy-blocked creation to organization restrictions on viewing cloud flows.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-298"
+    },
+    {
+      "start_line": 81,
+      "end_line": 98,
+      "statement": "The Go cloud example shows no client-stop call.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-288-A01",
+      "claim_role": "ATOMIC"
+    },
+    {
+      "start_line": 81,
+      "end_line": 98,
+      "statement": "The Go cloud example shows no deferred client-cleanup call.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false,
+      "context": "Pinned source observation only; no cloud task created, billed request issued, code run, retry made or organization setting changed. An omitted cleanup/timeout in an example is not evidence of runtime failure in all implementations.",
+      "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+      "claim_id": "DOCS-SDKCLOUD-288-A02",
+      "claim_role": "ATOMIC"
     }
-  ]
+  ],
+  "independent_audit": "evidence/sdk-cloud-sessions-independent-claim-audit.json",
+  "independent_repair_recheck_pending": true
 }

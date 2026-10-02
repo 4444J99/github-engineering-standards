@@ -1,8 +1,8 @@
 {
   "schema_version": "ges.reference-claim-consolidation.v1",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T13:16:50Z",
-  "review_scope": "PARTIAL integration of current287records; complete317-line rootread does not replace pending independent audit/repair and74candidate accounting.",
+  "reviewed_at": "2026-10-02T13:25:22Z",
+  "review_scope": "Complete317-line source text review,74candidate dispositions and309reference records consolidated once. Independent audits support bounded original and specified repaired records, not global omission or runtime assurance.",
   "source_documents": [
     "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
   ],
@@ -10,12 +10,12 @@
     "evidence/sdk-tenant-service-claim-consolidation.json",
     "evidence/sdk-quickstart-claim-consolidation.json"
   ],
-  "reviewed_claims": 287,
+  "reviewed_claims": 309,
   "all_records_mapped_once": true,
-  "complete_artifact_review": false,
+  "complete_artifact_review": true,
   "groups": [
     {
-      "group_id": "SDK-CLOUD-PARTIAL-01",
+      "group_id": "SDK-CLOUD-01",
       "claim_ids": [
         "DOCS-SDKCLOUD-001",
         "DOCS-SDKCLOUD-002",
@@ -39,7 +39,7 @@
       "accepted_policy": false
     },
     {
-      "group_id": "SDK-CLOUD-PARTIAL-02",
+      "group_id": "SDK-CLOUD-02",
       "claim_ids": [
         "DOCS-SDKCLOUD-140",
         "DOCS-SDKCLOUD-141",
@@ -140,13 +140,20 @@
         "DOCS-SDKCLOUD-236",
         "DOCS-SDKCLOUD-237",
         "DOCS-SDKCLOUD-238",
-        "DOCS-SDKCLOUD-239"
+        "DOCS-SDKCLOUD-239",
+        "DOCS-SDKCLOUD-288",
+        "DOCS-SDKCLOUD-289",
+        "DOCS-SDKCLOUD-290",
+        "DOCS-SDKCLOUD-291",
+        "DOCS-SDKCLOUD-292",
+        "DOCS-SDKCLOUD-288-A01",
+        "DOCS-SDKCLOUD-288-A02"
       ],
       "decision": "Six creation examples retain language-specific typed configurations, lifecycle/error/disposal details and placeholder association fields. Broad approval handlers are non-adopted illustrations.",
       "accepted_policy": false
     },
     {
-      "group_id": "SDK-CLOUD-PARTIAL-03",
+      "group_id": "SDK-CLOUD-03",
       "claim_ids": [
         "DOCS-SDKCLOUD-018",
         "DOCS-SDKCLOUD-019",
@@ -199,13 +206,16 @@
         "DOCS-SDKCLOUD-262",
         "DOCS-SDKCLOUD-263",
         "DOCS-SDKCLOUD-264",
-        "DOCS-SDKCLOUD-265"
+        "DOCS-SDKCLOUD-265",
+        "DOCS-SDKCLOUD-293",
+        "DOCS-SDKCLOUD-294",
+        "DOCS-SDKCLOUD-295"
       ],
       "decision": "Creation resolution reserves a task, not worker readiness. messageId is not prompt-delivery proof; subscribe/check producer/wait/send ordering, streaming selection and bounded readiness wait are distinct.",
       "accepted_policy": false
     },
     {
-      "group_id": "SDK-CLOUD-PARTIAL-04",
+      "group_id": "SDK-CLOUD-04",
       "claim_ids": [
         "DOCS-SDKCLOUD-044",
         "DOCS-SDKCLOUD-045",
@@ -226,13 +236,14 @@
         "DOCS-SDKCLOUD-269",
         "DOCS-SDKCLOUD-270",
         "DOCS-SDKCLOUD-271",
-        "DOCS-SDKCLOUD-272"
+        "DOCS-SDKCLOUD-272",
+        "DOCS-SDKCLOUD-296"
       ],
       "decision": "Cloud inherently hosted URL events differ from enabling remote synchronization on local sessions. Persist/rehydrate URL in late UI mounts rather than assume automatic replay.",
       "accepted_policy": false
     },
     {
-      "group_id": "SDK-CLOUD-PARTIAL-05",
+      "group_id": "SDK-CLOUD-05",
       "claim_ids": [
         "DOCS-SDKCLOUD-057",
         "DOCS-SDKCLOUD-058",
@@ -265,7 +276,7 @@
       "accepted_policy": false
     },
     {
-      "group_id": "SDK-CLOUD-PARTIAL-06",
+      "group_id": "SDK-CLOUD-06",
       "claim_ids": [
         "DOCS-SDKCLOUD-078",
         "DOCS-SDKCLOUD-079",
@@ -302,7 +313,7 @@
       "accepted_policy": false
     },
     {
-      "group_id": "SDK-CLOUD-PARTIAL-07",
+      "group_id": "SDK-CLOUD-07",
       "claim_ids": [
         "DOCS-SDKCLOUD-099",
         "DOCS-SDKCLOUD-100",
@@ -345,7 +356,18 @@
         "DOCS-SDKCLOUD-137",
         "DOCS-SDKCLOUD-138",
         "DOCS-SDKCLOUD-139",
-        "DOCS-SDKCLOUD-287"
+        "DOCS-SDKCLOUD-287",
+        "DOCS-SDKCLOUD-104-A01",
+        "DOCS-SDKCLOUD-104-A02",
+        "DOCS-SDKCLOUD-106-A01",
+        "DOCS-SDKCLOUD-106-A02",
+        "DOCS-SDKCLOUD-107-A01",
+        "DOCS-SDKCLOUD-107-A02",
+        "DOCS-SDKCLOUD-128-A01",
+        "DOCS-SDKCLOUD-128-A02",
+        "DOCS-SDKCLOUD-128-A03",
+        "DOCS-SDKCLOUD-297",
+        "DOCS-SDKCLOUD-298"
       ],
       "decision": "Endpoint overrides and Enterprise Server production support require external confirmation. Hosted/local synchronization comparison and troubleshooting preserve actual location, capabilities and missing-evidence causes.",
       "accepted_policy": false
@@ -354,5 +376,7 @@
   "policy_adopted": false,
   "rights_cleared": false,
   "native_behavior_verified": false,
-  "global_gate_closed": false
+  "global_gate_closed": false,
+  "independent_audit": "evidence/sdk-cloud-sessions-independent-claim-audit.json",
+  "repair_recheck": "evidence/sdk-cloud-sessions-independent-repair-recheck.json"
 }
