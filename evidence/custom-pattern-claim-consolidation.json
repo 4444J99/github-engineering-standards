@@ -2,9 +2,9 @@
   "schema": "ges.reference-consolidation.v1",
   "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T01:29:26Z",
-  "source_documents": ["evidence/source-reviews/docs-custom-pattern-lifecycle-claims.json", "evidence/source-reviews/docs-custom-pattern-prerequisites-claims.json"],
-  "input_claims": 33,
+  "reviewed_at": "2026-10-02T01:32:18Z",
+  "source_documents": ["evidence/source-reviews/docs-custom-pattern-lifecycle-claims.json", "evidence/source-reviews/docs-custom-pattern-prerequisites-claims.json", "evidence/source-reviews/docs-custom-pattern-navigation-claims.json"],
+  "input_claims": 48,
   "groups": [
     {"id":"PATTERN-APPLICABILITY","claims":["DOCS-PAT-001","DOCS-PAT-002","DOCS-PATDEP-001"],"decision":"Keep declared product applicability, matching purpose and eligible role descriptions separate. None proves effective target authorization or feature availability."},
     {"id":"PATTERN-CREATOR-AUTHORITY","claims":["DOCS-PAT-003","DOCS-PAT-004","DOCS-PAT-005","DOCS-PAT-016","DOCS-PATDEP-003","DOCS-PATDEP-004"],"decision":"Enterprise creator-only editing, dry runs and enablement coexist with repository administration requirements. Enterprise ownership does not automatically establish organization or repository dry-run authority."},
@@ -13,7 +13,11 @@
     {"id":"PATTERN-SCOPED-PRECONDITIONS","claims":["DOCS-PAT-014","DOCS-PAT-015","DOCS-PAT-017","DOCS-PAT-018","DOCS-PATDEP-005","DOCS-PATDEP-008","DOCS-PATDEP-011"],"decision":"Preserve enterprise, organization and repository prerequisites individually. Organization policy and ordinary secret-scanning enablement do not alone establish effective repository push protection."},
     {"id":"PATTERN-PUBLICATION-VISIBILITY","claims":["DOCS-PATDEP-002","DOCS-PATDEP-007"],"decision":"Two equivalent published-pattern visibility assertions retain their distinct source occurrences; a visible enable button is not observed blocking."},
     {"id":"PATTERN-CHANGE-IMPACT","claims":["DOCS-PATDEP-006","DOCS-PATDEP-009","DOCS-PATDEP-012"],"decision":"Repeated disruption warnings are one shared risk proposition with three retained source occurrences. Dry-run and false-positive assessment remain required proposal evidence."},
-    {"id":"PATTERN-UI-ENABLE-DISABLE","claims":["DOCS-PAT-009","DOCS-PAT-019","DOCS-PAT-020","DOCS-PAT-021","DOCS-PATDEP-010"],"decision":"Retain scope-specific UI steps and optional enablement strength. Enablement, disablement, pattern removal and actual enforcement are distinct states."}
+    {"id":"PATTERN-UI-ENABLE-DISABLE","claims":["DOCS-PAT-009","DOCS-PAT-019","DOCS-PAT-020","DOCS-PAT-021","DOCS-PATDEP-010"],"decision":"Retain scope-specific UI steps and optional enablement strength. Enablement, disablement, pattern removal and actual enforcement are distinct states."},
+    {"id":"PATTERN-OWNING-SCOPE-NAVIGATION","claims":["DOCS-PATNAV-001","DOCS-PATNAV-002","DOCS-PATNAV-003","DOCS-PATNAV-004"],"decision":"Resolve the owning scope and exact pattern before navigating; a similarly named pattern in another scope is not equivalent evidence."},
+    {"id":"PATTERN-ENTERPRISE-NAVIGATION-VERSION","claims":["DOCS-PATNAV-005","DOCS-PATNAV-006","DOCS-PATNAV-007","DOCS-PATNAV-008"],"decision":"Preserve mutually exclusive GHES and cloud navigation branches. Policy-area product labels remain unresolved dependencies, not hardcoded universal selectors."},
+    {"id":"PATTERN-ORGANIZATION-NESTED-NAVIGATION","claims":["DOCS-PATNAV-009","DOCS-PATNAV-010","DOCS-PATNAV-011"],"decision":"Retain the nested organization Settings include and fallback menu; a fallback locates a tab but does not bypass role requirements."},
+    {"id":"PATTERN-REPOSITORY-NAVIGATION-VERSION","claims":["DOCS-PATNAV-012","DOCS-PATNAV-013","DOCS-PATNAV-014","DOCS-PATNAV-015"],"decision":"Keep repository selection, Settings fallback and feature-conditioned security label distinct. The fpt/ghec feature declaration must not be generalized to GHES without actual version resolution."}
   ],
   "binding_proposal": {
     "canonical_mapping": "UNMAPPED_POLICY_DECISION_REQUIRED",
@@ -28,6 +32,11 @@
     "template_review_required": "Credential-response and applicability templates need review before canonical adoption; PII handling, erasure and regulatory compliance require separate purpose-specific evidence."
   },
   "conflict_record": "CONFLICT-SECRET-ALERT-DELETION-001",
+  "remaining_dependency_work": {
+    "full_article_accounting_certified": false,
+    "published_instances_reviewed": false,
+    "items": ["Resolve referenced product and secret-scanning variables at the locked pin", "Review linked pattern-definition, push-protection, organization-security and enterprise-role pages", "Inspect linked screenshots and determine their per-file rights", "Resolve feature conditionals per published version and compare actual acquired bodies", "Account for every article and reusable candidate plus non-candidate semantic content", "Independent source-to-claim omission and atomic-fidelity audit"]
+  },
   "accepted_policy": false,
   "rights_cleared": false,
   "native_behavior_verified": false,
