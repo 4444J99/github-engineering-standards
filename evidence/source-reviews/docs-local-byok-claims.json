@@ -1,0 +1,498 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T04:26:30Z",
+  "review_scope": "Complete42-line concept, three-line mechanisms reusable,147-line CLI how-to,57-line app how-to, five-line startup reusable and one-line app gate read. All113 parser candidates and non-candidate context retained. Offline/provider endpoint, credential/model/deployment, account/plan/client and enterprise-versus-local distinctions preserved; no command launch, env/key change, current API claim, accepted policy or rights clearance.",
+  "claims": [
+    {
+      "claim_id": "DOCS-LOCALBYOK-001",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 5,
+      "end_line": 10,
+      "statement": "The concept declares Copilot cloud-feature scope and introduces two distinct BYOK mechanisms; it does not verify target entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-002",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 14,
+      "end_line": 16,
+      "statement": "Local BYOK keys are described as client-side/local and models are not shared with other users; this differs from enterprise-served custom models.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-003",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 16,
+      "end_line": 16,
+      "statement": "Local BYOK removes dependency on the Copilot API and can suit air-gapped/no-subscription uses; suitability alone does not prove network isolation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-004",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 22,
+      "end_line": 22,
+      "statement": "VS Code local BYOK is linked to built-in provider setup; vendor instructions remain independently unreviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-005",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 23,
+      "end_line": 24,
+      "statement": "JetBrains and Xcode support references point to a dated public-preview announcement; the link does not prove current installed-client capability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-006",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 25,
+      "end_line": 27,
+      "statement": "CLI, app and SDK BYOK have separate setup references; SDK semantics are not inherited from CLI/app.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-007",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 29,
+      "end_line": 29,
+      "statement": "Business/Enterprise users' local BYOK in IDEs can be disabled by enterprise or organization policy; this paragraph does not explicitly extend that IDE policy to every listed client.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-008",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 34,
+      "end_line": 36,
+      "statement": "Enterprise BYOK is separately previewed; enterprise owners can add keys or enable organization owners via Enable custom models.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-009",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": "Enterprise custom models apply to licensed Business/Enterprise users through the supported-feature variable and are chosen like hosted models.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-010",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 40,
+      "end_line": 42,
+      "statement": "Enterprise BYOK is server-side through the Copilot API and requires both a Copilot license and internet access; local no-subscription/offline claims do not apply.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-011",
+      "path": "data/reusables/copilot/byok-two-mechanisms.md",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "BYOK can use local or external-provider models; locally configured user keys and enterprise/organization model provisioning are distinct mechanisms.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-012",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 7,
+      "end_line": 8,
+      "statement": "CLI BYOK procedure declares fpt/ghec versions, not GHES availability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-013",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 17,
+      "end_line": 20,
+      "statement": "CLI personal-provider setup supports OpenAI-compatible, Azure or Anthropic endpoints and local models, separately from enterprise custom-model administration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-014",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 24,
+      "end_line": 25,
+      "statement": "CLI installation plus supported-provider credentials or a running local model are prerequisites, not observed state.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-015",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 33,
+      "end_line": 33,
+      "statement": "openai is the default provider type, covering OpenAI Chat Completions-compatible endpoints including Ollama, vLLM and Foundry Local.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-016",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 34,
+      "end_line": 34,
+      "statement": "azure identifies Azure OpenAI Service rather than the default OpenAI-compatible type.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-017",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 35,
+      "end_line": 35,
+      "statement": "anthropic identifies Anthropic/Claude provider semantics.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-018",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 37,
+      "end_line": 37,
+      "statement": "Provider help is a documented example command, not executed evidence or a downloaded provider configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-019",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "statement": "Models must support both tool calling and streaming; missing either produces an error according to the source.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-020",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "statement": "At least128k context tokens is recommended for best results, not a mandatory minimum or guarantee of quality.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-021",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 45,
+      "end_line": 59,
+      "statement": "Provider environment is configured before launch; credential-bearing variables are never changed or recorded as actual secrets by ingestion.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-022",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 63,
+      "end_line": 72,
+      "statement": "The local Ollama example configures a localhost endpoint and a pulled model placeholder; endpoint locality is an example, not the user's observed isolation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-023",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 74,
+      "end_line": 82,
+      "statement": "The remote OpenAI example requires an API key and chosen model; its endpoint sends provider traffic and is not offline/local merely because BYOK.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-024",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 84,
+      "end_line": 84,
+      "statement": "The start-CLI dependency launches the program; the source example is not executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 88,
+      "end_line": 106,
+      "statement": "Azure setup distinguishes resource URL, azure provider type, key, API version, underlying model and deployment name; real values remain unverified and uncollected.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-026",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 112,
+      "end_line": 112,
+      "statement": "Azure MODEL_ID names the well-known underlying model used to infer capabilities/token limits, not the deployment route.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-027",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 113,
+      "end_line": 115,
+      "statement": "Azure WIRE_MODEL supplies deployment routing; the separately repeated start step is not executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-028",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 119,
+      "end_line": 130,
+      "statement": "Anthropic example configures provider type, endpoint, key and chosen model followed by startup; example names are not current service recommendations or approvals.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-029",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 134,
+      "end_line": 134,
+      "statement": "Offline mode is described as preventing GitHub-server contact and intended for local/on-prem isolated model-provider use.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-030",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 137,
+      "end_line": 137,
+      "statement": "Full isolation additionally requires a provider local to the same isolated environment; remote BASE_URL still sends prompts and code context over the network.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-031",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 139,
+      "end_line": 147,
+      "statement": "Offline setup first configures the provider, then sets COPILOT_OFFLINE=true before launch; setting one flag does not independently verify network behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-032",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 6,
+      "end_line": 8,
+      "statement": "App article product gating says all Copilot plans and cloud feature; body separately permits no-plan BYOK with GitHub login, so a plan gate must not be inferred from metadata alone.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-033",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 15,
+      "end_line": 18,
+      "statement": "App BYOK is public preview and can be configured on first open or later; preview setup is not actual activation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-034",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 20,
+      "end_line": 20,
+      "statement": "The app requires GitHub account sign-in even when local BYOK needs no Copilot plan; no-plan does not mean no account or guaranteed offline login.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-035",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 20,
+      "end_line": 20,
+      "statement": "A licensed app user can use both their own provider and hosted models in the same app; BYOK presence does not prove every session uses the external provider.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-036",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 23,
+      "end_line": 23,
+      "statement": "App local-provider setup is distinct from organization/enterprise shared custom-model administration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-037",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 40,
+      "end_line": 41,
+      "statement": "The app must be installed and required provider credentials available; installation links and credential existence are not verified by review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 44,
+      "end_line": 53,
+      "statement": "No-plan onboarding can configure a provider; later settings Add provider selects provider and details, then saves. These credential/setup mutations are not performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-039",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 55,
+      "end_line": 55,
+      "statement": "Added-provider models appear alongside hosted models and can be selected per session; current session model selection requires separate evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-040",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 57,
+      "end_line": 57,
+      "statement": "The source says provider credentials are in the system credential store and never displayed in UI; this is not an independent storage/security test.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-041",
+      "path": "data/reusables/copilot/copilot-cli/start-cli.md",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The shared startup reusable contains a CLI launch instruction and code block; both are inert source evidence, not executor instructions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-042",
+      "path": "data/reusables/gated-features/github-app.md",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The app gating reusable describes availability for all Copilot plans but does not negate the body’s no-plan BYOK/login exception.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-001",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 49,
+      "end_line": 49,
+      "statement": "COPILOT_PROVIDER_BASE_URL: Required provider API endpoint URL. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-002",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 50,
+      "end_line": 50,
+      "statement": "COPILOT_PROVIDER_TYPE: Optional openai(default)/azure/anthropic provider type. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-003",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 51,
+      "end_line": 51,
+      "statement": "COPILOT_PROVIDER_API_KEY: Optional API-key credential; unauthenticated local providers may not require it. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-004",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 52,
+      "end_line": 52,
+      "statement": "COPILOT_PROVIDER_BEARER_TOKEN: Optional bearer authentication when API-key authentication is not used. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-005",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 53,
+      "end_line": 53,
+      "statement": "COPILOT_PROVIDER_WIRE_API: Optional provider wire protocol. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-006",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 54,
+      "end_line": 54,
+      "statement": "COPILOT_PROVIDER_AZURE_API_VERSION: Azure-only API version; distinguish applicability from generic optional status. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-007",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 55,
+      "end_line": 55,
+      "statement": "COPILOT_PROVIDER_MODEL_ID: Optional well-known model identity for capabilities/token limits. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-008",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 56,
+      "end_line": 56,
+      "statement": "COPILOT_PROVIDER_WIRE_MODEL: Optional inference wire model, using deployment name for Azure. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-009",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 57,
+      "end_line": 57,
+      "statement": "COPILOT_PROVIDER_MAX_PROMPT_TOKENS: Optional request prompt-token maximum; no actual value enforced is verified. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-010",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 58,
+      "end_line": 58,
+      "statement": "COPILOT_PROVIDER_MAX_OUTPUT_TOKENS: Optional generated-token maximum; no actual value enforced is verified. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-011",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 59,
+      "end_line": 59,
+      "statement": "COPILOT_MODEL: Required model identifier, alternatively supplied by --model; not synonymous with underlying model in every provider. This is a pinned variable contract, not a changed environment or verified target setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-001",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 29,
+      "end_line": 29,
+      "statement": "The app provider list includes OpenAI; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-002",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 30,
+      "end_line": 30,
+      "statement": "The app provider list includes Azure OpenAI; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-003",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 31,
+      "end_line": 31,
+      "statement": "The app provider list includes Microsoft Foundry; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-004",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 32,
+      "end_line": 32,
+      "statement": "The app provider list includes Anthropic; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-005",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 33,
+      "end_line": 33,
+      "statement": "The app provider list includes Ollama; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-006",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 34,
+      "end_line": 34,
+      "statement": "The app provider list includes Foundry Local; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-007",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 35,
+      "end_line": 35,
+      "statement": "The app provider list includes LM Studio; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-008",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "The app provider list includes any OpenAI-compatible HTTP endpoint; this does not prove every model supports tools/streaming, or current credentials/entitlement.",
+      "accepted_policy": false
+    }
+  ]
+}
