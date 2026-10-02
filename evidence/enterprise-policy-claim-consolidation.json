@@ -2,15 +2,17 @@
   "schema": "ges.reference-consolidation.v1",
   "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T03:48:42Z",
+  "reviewed_at": "2026-10-02T04:01:10Z",
   "source_documents": [
     "evidence/source-reviews/docs-enterprise-policy-claims.json",
     "evidence/source-reviews/docs-policy-conflicts-claims.json",
     "evidence/source-reviews/docs-policy-surfaces-claims.json",
     "evidence/source-reviews/docs-default-availability-claims.json",
-    "evidence/source-reviews/docs-enterprise-configuration-claims.json"
+    "evidence/source-reviews/docs-enterprise-configuration-claims.json",
+    "evidence/source-reviews/docs-enterprise-model-access-claims.json",
+    "evidence/source-reviews/docs-enterprise-model-lifecycle-claims.json"
   ],
-  "input_claims": 190,
+  "input_claims": 258,
   "groups": [
     {
       "id": "POLICY-SEAT-AND-REPOSITORY-SCOPE",
@@ -393,6 +395,146 @@
         "DOCS-ENTCONFIG-017"
       ],
       "decision": "First-time adoption guidance and reviewed conflict/surface references supply context only; no live setting or approval is certified."
+    },
+    {
+      "id": "MODEL-MODE-SCOPE",
+      "claims": [
+        "DOCS-MODELACCESS-001",
+        "DOCS-MODELACCESS-002",
+        "DOCS-MODELACCESS-003",
+        "DOCS-MODELACCESS-004",
+        "DOCS-MODELACCESS-005",
+        "DOCS-MODELACCESS-006",
+        "DOCS-MODELACCESS-007"
+      ],
+      "decision": "Retain enterprise-wide baseline, organization delegation/targeted rules and opt-in preview team mode as different policy mechanisms. Generic owner metadata/navigation never verifies target permissions."
+    },
+    {
+      "id": "MODEL-DEFAULT-AND-ORG-RULES",
+      "claims": [
+        "DOCS-MODELACCESS-009",
+        "DOCS-MODELACCESS-010",
+        "DOCS-MODELACCESS-011"
+      ],
+      "decision": "Unconfigured delegated models follow the applicable default policy; targeted organization rule precedence beyond the procedure remains unresolved, not inferred from global least/most-restrictive rules."
+    },
+    {
+      "id": "MODEL-TEAM-UNION-NOT-DENY",
+      "claims": [
+        "DOCS-MODELACCESS-012",
+        "DOCS-MODELACCESS-014",
+        "DOCS-MODELACCESS-015",
+        "DOCS-MODELACCESS-016",
+        "DOCS-MODELACCESS-017"
+      ],
+      "decision": "Enterprise Disabled bounds all grants; enterprise Enabled remains enabled. Team Optional is not deny. Multiple memberships union their grants; no team Disabled override exists in this procedure."
+    },
+    {
+      "id": "MODEL-MIGRATION-AND-ROLLBACK",
+      "claims": [
+        "DOCS-MODELACCESS-013",
+        "DOCS-MODELACCESS-018",
+        "DOCS-MODELACCESS-019",
+        "DOCS-MODELACCESS-020",
+        "DOCS-MODELACCESS-021",
+        "DOCS-MODELACCESS-022",
+        "DOCS-MODELACCESS-023"
+      ],
+      "decision": "Prepared team settings are inactive before opt-in; organization-delegated access can regress during migration. Preview rollback restores pre-opt-in enterprise state and loses subsequent policy changes. Require approved before/after snapshots and behavior/recovery proof."
+    },
+    {
+      "id": "MODEL-AGENT-APP-SCOPE",
+      "claims": [
+        "DOCS-MODELACCESS-008",
+        "DOCS-MODELACCESS-024",
+        "DOCS-MODELACCESS-025",
+        "DOCS-MODELACCESSDEP-002",
+        "DOCS-MODELACCESSDEP-003"
+      ],
+      "decision": "Default agent-app scope follows its installation organization/personal account; enterprise-team mode moves app model decisions to enterprise controls. App grants are distinct from team membership grants; partner app classification is not trust or authorization."
+    },
+    {
+      "id": "MODEL-CONFIGURATION-AND-SURFACES",
+      "claims": [
+        "DOCS-MODELACCESS-026",
+        "DOCS-MODELACCESSDEP-001"
+      ],
+      "decision": "Model configuration navigation and surface references are source context, not an effective configuration or client enforcement receipt."
+    },
+    {
+      "id": "MODEL-ADOPTION-EVIDENCE",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-001",
+        "DOCS-MODELLIFECYCLE-002",
+        "DOCS-MODELLIFECYCLE-003",
+        "DOCS-MODELLIFECYCLE-008",
+        "DOCS-MODELLIFECYCLE-009",
+        "DOCS-MODELLIFECYCLE-010",
+        "DOCS-MODELLIFECYCLE-014",
+        "DOCS-MODELLIFECYCLE-021",
+        "DOCS-MODELLIFECYCLE-038"
+      ],
+      "decision": "Keep capabilities, plans, policy, responsible-use and release monitoring as separate sources. A source recommendation to pilot does not approve a target or supply runtime evidence."
+    },
+    {
+      "id": "MODEL-CAPABILITY-CATEGORIES",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-004",
+        "DOCS-MODELLIFECYCLE-005",
+        "DOCS-MODELLIFECYCLE-006",
+        "DOCS-MODELLIFECYCLE-007"
+      ],
+      "decision": "Assistive approval and agentic autonomy are descriptive source categories. Customization and provider support vary by surface; built-in protections are unverified until behavior-tested."
+    },
+    {
+      "id": "MODEL-RELEASE-AND-DPA-SCOPE",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-015",
+        "DOCS-MODELLIFECYCLE-016",
+        "DOCS-MODELLIFECYCLE-017",
+        "DOCS-MODELLIFECYCLE-018",
+        "DOCS-MODELLIFECYCLE-019",
+        "DOCS-MODELLIFECYCLE-020"
+      ],
+      "decision": "Invitation/eligibility/opt-in and preview change risk remain explicit. Website preview policy does not govern all surfaces. Many DPA-covered previews is not all previews or per-use rights clearance."
+    },
+    {
+      "id": "MODEL-UTILITY-POLICY-EXCEPTION",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-011",
+        "DOCS-MODELLIFECYCLE-022",
+        "DOCS-MODELLIFECYCLE-023",
+        "DOCS-MODELLIFECYCLE-024",
+        "DOCS-MODELLIFECYCLE-025",
+        "DOCS-MODELLIFECYCLE-026",
+        "DOCS-MODELLIFECYCLE-027",
+        "DOCS-MODELLIFECYCLE-028",
+        "DOCS-MODELLIFECYCLE-029",
+        "DOCS-MODELLIFECYCLE-039"
+      ],
+      "decision": "Utility models are automatic across plans/surfaces, hidden from user selection and cannot be individually disabled. Ordinary model deny, billing-line absence and premium-unit controls must not certify no processing; disabling Copilot entirely is the described exception."
+    },
+    {
+      "id": "MODEL-BASE-AUTOMATIC-TRANSITION",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-012",
+        "DOCS-MODELLIFECYCLE-030",
+        "DOCS-MODELLIFECYCLE-031",
+        "DOCS-MODELLIFECYCLE-032",
+        "DOCS-MODELLIFECYCLE-033",
+        "DOCS-MODELLIFECYCLE-034",
+        "DOCS-MODELLIFECYCLE-035"
+      ],
+      "decision": "Base applies to Business/Enterprise, supplies default when no models are enabled and has a documented 60-day automatic transition. Preserve announcement, client upgrade and enablement stages; pin dates are not current target proof."
+    },
+    {
+      "id": "MODEL-LTS-SUPPORT-BOUNDARY",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-013",
+        "DOCS-MODELLIFECYCLE-036",
+        "DOCS-MODELLIFECYCLE-037"
+      ],
+      "decision": "One-year support runs from designation and describes availability, not frozen behavior, immutable pricing or independently verified contractual acceptance."
     }
   ],
   "related_evidence": [
@@ -413,13 +555,25 @@
       "annotate versus blocking semantics",
       "effective repository grants",
       "dated activation/default changes",
-      "actual actor authorization and audit changes"
+      "actual actor authorization and audit changes",
+      "organization mode versus opt-in enterprise-team preview",
+      "enterprise Disabled/Enabled boundary and union of team grants",
+      "agent-app installation scope versus enterprise app grants",
+      "migration activation and pre-opt-in rollback snapshot",
+      "utility model non-disableability, hidden processing and separate rate limits",
+      "base-model designation, client upgrade and automatic enablement timeline",
+      "LTS designation and bounded support period",
+      "website preview policy versus per-feature/client scope and DPA coverage"
     ],
     "unknown": "If rule, permission, seat/billing identity, effective setting, surface or exception is unverified, report UNVERIFIED rather than PASS.",
     "no_universal_merge_rule": true,
     "no_generic_web_policy_network_isolation": true,
     "no_annotate_mode_blocking_assumption": true,
-    "changes": "Explicit scoped approval and reviewed plan/diff/apply/verify with rollback/recovery; no native change authorized by source ingestion."
+    "changes": "Explicit scoped approval and reviewed plan/diff/apply/verify with rollback/recovery; no native change authorized by source ingestion.",
+    "no_team_optional_as_deny": true,
+    "no_rollback_preserves_later_model_changes": true,
+    "no_model_deny_as_complete_processing_denial": true,
+    "no_unbilled_usage_as_no_processing": true
   },
   "verification": {
     "all_input_claims_mapped_once": true,
@@ -433,7 +587,7 @@
     "native_enforcement_verified": false
   },
   "remaining_work": [
-    "Review model availability, Spark/AI-credit exceptions and surface limitations independently; default-availability concept and enterprise configuration procedure are now source-accounted, not runtime-certified.",
+    "Review Spark/AI-credit exceptions, remaining model variable/dependency meanings and surface limitations independently; model-access/lifecycle, default-availability and enterprise procedures are source-accounted, not runtime-certified.",
     "Reconcile all remaining source claims and templates/profiles before acceptance.",
     "Validate model/plan variables and page-version rendering.",
     "Independently audit policy atomicity/omissions and exact mapping equivalence.",
