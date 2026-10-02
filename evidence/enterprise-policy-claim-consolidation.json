@@ -2,7 +2,7 @@
   "schema": "ges.reference-consolidation.v1",
   "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
   "reviewer": "codex:source-review",
-  "reviewed_at": "2026-10-02T04:01:10Z",
+  "reviewed_at": "2026-10-02T04:04:02Z",
   "source_documents": [
     "evidence/source-reviews/docs-enterprise-policy-claims.json",
     "evidence/source-reviews/docs-policy-conflicts-claims.json",
@@ -10,9 +10,10 @@
     "evidence/source-reviews/docs-default-availability-claims.json",
     "evidence/source-reviews/docs-enterprise-configuration-claims.json",
     "evidence/source-reviews/docs-enterprise-model-access-claims.json",
-    "evidence/source-reviews/docs-enterprise-model-lifecycle-claims.json"
+    "evidence/source-reviews/docs-enterprise-model-lifecycle-claims.json",
+    "evidence/source-reviews/docs-enterprise-model-compliance-claims.json"
   ],
-  "input_claims": 258,
+  "input_claims": 320,
   "groups": [
     {
       "id": "POLICY-SEAT-AND-REPOSITORY-SCOPE",
@@ -535,6 +536,104 @@
         "DOCS-MODELLIFECYCLE-037"
       ],
       "decision": "One-year support runs from designation and describes availability, not frozen behavior, immutable pricing or independently verified contractual acceptance."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-ELIGIBILITY",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-001",
+        "DOCS-MODELCOMPLIANCE-002",
+        "DOCS-MODELCOMPLIANCE-003",
+        "DOCS-MODELCOMPLIANCE-006",
+        "DOCS-MODELCOMPLIANCE-007",
+        "DOCS-MODELCOMPLIANCE-009",
+        "DOCS-MODELCOMPLIANCE-010",
+        "DOCS-MODELCOMPLIANCE-017",
+        "DOCS-MODELCOMPLIANCE-020",
+        "DOCS-MODELCOMPLIANCE-023"
+      ],
+      "decision": "Separate Enterprise Cloud/residency eligibility, US FedRAMP precondition and listed model membership. Current overlapping US lists do not equate geographic residency permanently with certification."
+    },
+    {
+      "id": "MODEL-REGIONAL-ENFORCEMENT-CLAIMS",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-008",
+        "DOCS-MODELCOMPLIANCE-011",
+        "DOCS-MODELCOMPLIANCE-012",
+        "DOCS-MODELCOMPLIANCE-013",
+        "DOCS-MODELCOMPLIANCE-014",
+        "DOCS-MODELCOMPLIANCE-015"
+      ],
+      "decision": "Routing, authentication, processing and logs/storage claims are upstream assertions under enabled enforcement. Verify endpoints, client behavior and storage before effective compliance attestation."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-CLIENT-FEATURE-SCOPE",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-004",
+        "DOCS-MODELCOMPLIANCE-016",
+        "DOCS-MODELCOMPLIANCE-021",
+        "DOCS-MODELCOMPLIANCE-022",
+        "DOCS-MODELCOMPLIANCE-024",
+        "DOCS-MODELCOMPLIANCE-025",
+        "DOCS-MODELCOMPLIANCE-026",
+        "DOCS-MODELCOMPLIANCE-027"
+      ],
+      "decision": "Compatible clients and region deployment timing bound availability. General 2025+ heuristic is not an exact compatibility matrix; listed models can be utility-only. Future GA alternatives do not prove preview support."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-COST-AND-APPROVAL",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-005",
+        "DOCS-MODELCOMPLIANCE-018",
+        "DOCS-MODELCOMPLIANCE-019",
+        "DOCS-MODELCOMPLIANCE-028",
+        "DOCS-MODELCOMPLIANCE-029",
+        "DOCS-MODELCOMPLIANCE-030"
+      ],
+      "decision": "FedRAMP and residency policies are distinct and disabled by default. Source pricing says ten percent extra credits for enforced requests; do not infer stacked surcharges, utility billing or authorize cost-bearing enablement."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-US-LIST",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-US-001",
+        "DOCS-MODELCOMPLIANCE-US-002",
+        "DOCS-MODELCOMPLIANCE-US-003",
+        "DOCS-MODELCOMPLIANCE-US-004",
+        "DOCS-MODELCOMPLIANCE-US-005",
+        "DOCS-MODELCOMPLIANCE-US-006",
+        "DOCS-MODELCOMPLIANCE-US-007",
+        "DOCS-MODELCOMPLIANCE-US-008",
+        "DOCS-MODELCOMPLIANCE-US-009",
+        "DOCS-MODELCOMPLIANCE-US-010",
+        "DOCS-MODELCOMPLIANCE-US-011"
+      ],
+      "decision": "Retain eleven pinned US model occurrences separately; membership is not independently certified or observed target allowance."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-EU-LIST",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-EU-001",
+        "DOCS-MODELCOMPLIANCE-EU-002",
+        "DOCS-MODELCOMPLIANCE-EU-003",
+        "DOCS-MODELCOMPLIANCE-EU-004",
+        "DOCS-MODELCOMPLIANCE-EU-005",
+        "DOCS-MODELCOMPLIANCE-EU-006",
+        "DOCS-MODELCOMPLIANCE-EU-007",
+        "DOCS-MODELCOMPLIANCE-EU-008",
+        "DOCS-MODELCOMPLIANCE-EU-009",
+        "DOCS-MODELCOMPLIANCE-EU-010",
+        "DOCS-MODELCOMPLIANCE-EU-011",
+        "DOCS-MODELCOMPLIANCE-EU-012",
+        "DOCS-MODELCOMPLIANCE-EU-013",
+        "DOCS-MODELCOMPLIANCE-EU-014",
+        "DOCS-MODELCOMPLIANCE-EU-015",
+        "DOCS-MODELCOMPLIANCE-EU-016",
+        "DOCS-MODELCOMPLIANCE-EU-017",
+        "DOCS-MODELCOMPLIANCE-EU-018",
+        "DOCS-MODELCOMPLIANCE-EU-019",
+        "DOCS-MODELCOMPLIANCE-EU-020",
+        "DOCS-MODELCOMPLIANCE-EU-021"
+      ],
+      "decision": "Retain twenty-one pinned EU variable identities separately; resolve names and version/feature/client availability before target or rendered-page certification."
     }
   ],
   "related_evidence": [
@@ -563,7 +662,11 @@
       "utility model non-disableability, hidden processing and separate rate limits",
       "base-model designation, client upgrade and automatic enablement timeline",
       "LTS designation and bounded support period",
-      "website preview policy versus per-feature/client scope and DPA coverage"
+      "website preview policy versus per-feature/client scope and DPA coverage",
+      "region/account eligibility and separately scoped FedRAMP restriction",
+      "compatible client and regional endpoint behavior",
+      "residency of inference versus logs/telemetry storage",
+      "explicit approval for compliance enforcement credit-cost change"
     ],
     "unknown": "If rule, permission, seat/billing identity, effective setting, surface or exception is unverified, report UNVERIFIED rather than PASS.",
     "no_universal_merge_rule": true,
@@ -573,7 +676,8 @@
     "no_team_optional_as_deny": true,
     "no_rollback_preserves_later_model_changes": true,
     "no_model_deny_as_complete_processing_denial": true,
-    "no_unbilled_usage_as_no_processing": true
+    "no_unbilled_usage_as_no_processing": true,
+    "no_residency_as_universal_certification": true
   },
   "verification": {
     "all_input_claims_mapped_once": true,
