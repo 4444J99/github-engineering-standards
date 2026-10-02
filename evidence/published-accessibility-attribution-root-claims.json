@@ -1,0 +1,408 @@
+{
+  "schema": "ges.supplemental-attribution-root-claims.v1",
+  "issue": 28,
+  "author": "codex:source-review",
+  "source": {
+    "commit": "d47c19c371086cebacfc5968ee8d8edf400f7b4c",
+    "path": "content/pull-requests/how-tos/commit-changes/creating-a-commit-with-multiple-authors.md",
+    "sha256": "70f92566401b62fe5c4cee8d5cdf2e74154fe4325785df9e78821653b6fc6670",
+    "git_blob_sha": "24606b95803389774a05a80bb6be63dd5b162e83"
+  },
+  "claims": [
+    {
+      "id": "accessibility-attribution-root-001",
+      "line_start": 4,
+      "line_end": 4,
+      "kind": "PURPOSE",
+      "statement": "Commit trailers support attribution for collaboration and transparency.",
+      "condition": null,
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "e5830e8a8c5b6782d28f2f175901b477547571c01dbe656c0f89fcc50f73d99d"
+    },
+    {
+      "id": "accessibility-attribution-root-002",
+      "line_start": 26,
+      "line_end": 26,
+      "kind": "CAPABILITY",
+      "statement": "Co-authored-by trailers attribute a commit to multiple authors.",
+      "condition": null,
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "0b5b324c22a975884bfde95bf0401a82d48c5d9e980dc159aa27a1bc1cf3e448"
+    },
+    {
+      "id": "accessibility-attribution-root-003",
+      "line_start": 30,
+      "line_end": 30,
+      "kind": "PREREQUISITE",
+      "statement": "Obtain the email address the co-author wants used in the trailer.",
+      "condition": "coauthor attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "036da0c1e4c576bd2d289b9113875f74a69f6e28ad0030e77ff9abde784d8fd2"
+    },
+    {
+      "id": "accessibility-attribution-root-004",
+      "line_start": 30,
+      "line_end": 30,
+      "kind": "PREREQUISITE",
+      "statement": "Contribution credit requires an email associated with the co-author account.",
+      "condition": "contribution attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "036da0c1e4c576bd2d289b9113875f74a69f6e28ad0030e77ff9abde784d8fd2"
+    },
+    {
+      "id": "accessibility-attribution-root-005",
+      "line_start": 32,
+      "line_end": 32,
+      "kind": "PROCEDURE",
+      "statement": "For a private-email co-author, use the platform-provided no-reply address.",
+      "condition": "coauthor keeps email private",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "56531a9231a3d818ef851864bbac3e8b65250e72a09980ef869edfea0d26bdfc"
+    },
+    {
+      "id": "accessibility-attribution-root-006",
+      "line_start": 36,
+      "line_end": 36,
+      "kind": "CAPABILITY",
+      "statement": "The desktop client can create co-authored commits.",
+      "condition": null,
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "9720927494d63f05a9c6897a9639f11e05822eb2a2daa598f56169e1e72e1529"
+    },
+    {
+      "id": "accessibility-attribution-root-007",
+      "line_start": 42,
+      "line_end": 42,
+      "kind": "PROCEDURE",
+      "statement": "Enter a short meaningful description in the command-line commit message.",
+      "condition": "command-line coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "22c09d53ad4564f57a5e1fd98d864db022a386c6f8e0c3a991f848a2db40ef03"
+    },
+    {
+      "id": "accessibility-attribution-root-008",
+      "line_start": 42,
+      "line_end": 42,
+      "kind": "PROCEDURE",
+      "statement": "Leave an empty line after the description before closing the quoted message.",
+      "condition": "command-line coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "22c09d53ad4564f57a5e1fd98d864db022a386c6f8e0c3a991f848a2db40ef03"
+    },
+    {
+      "id": "accessibility-attribution-root-009",
+      "line_start": 50,
+      "line_end": 50,
+      "kind": "PROCEDURE",
+      "statement": "Add one Co-authored-by trailer for each co-author.",
+      "condition": "command-line coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5ceb9701da8e87c94fab0df8d15bed444735a8c955817ff49bdf8fac13feebb1"
+    },
+    {
+      "id": "accessibility-attribution-root-010",
+      "line_start": 50,
+      "line_end": 50,
+      "kind": "PROCEDURE",
+      "statement": "Close the quoted commit message after adding coauthor trailers.",
+      "condition": "command-line coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5ceb9701da8e87c94fab0df8d15bed444735a8c955817ff49bdf8fac13feebb1"
+    },
+    {
+      "id": "accessibility-attribution-root-011",
+      "line_start": 59,
+      "line_end": 59,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "A pushed commit and message appear on the hosting platform.",
+      "condition": "command-line coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "feeb8ccb330705e8f6fac868bf2a533c8548e6974e144e936ebd1024486ef261"
+    },
+    {
+      "id": "accessibility-attribution-root-012",
+      "line_start": 63,
+      "line_end": 63,
+      "kind": "PROCEDURE",
+      "statement": "Add coauthor trailers before committing web-editor changes.",
+      "condition": "web coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "7afd46b3418ad92c7df06b632737e1871a094dfd44b69590c5412397b5f4ac18"
+    },
+    {
+      "id": "accessibility-attribution-root-013",
+      "line_start": 66,
+      "line_end": 66,
+      "kind": "PROCEDURE",
+      "statement": "Open the commit dialog.",
+      "condition": "web coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "6c313514fa8a329058d70a4262f0f317d75d0ff4a1d8a7e54204f954ba2224d2"
+    },
+    {
+      "id": "accessibility-attribution-root-014",
+      "line_start": 67,
+      "line_end": 67,
+      "kind": "PROCEDURE",
+      "statement": "Describe the changes with a short meaningful commit message.",
+      "condition": "web coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "47921f888da38c834ae98da1bafb4299b3425e1a6530ca5f53fb3a3688bc5e07"
+    },
+    {
+      "id": "accessibility-attribution-root-015",
+      "line_start": 68,
+      "line_end": 68,
+      "kind": "PROCEDURE",
+      "statement": "Put one coauthor trailer per author in the lower message textbox.",
+      "condition": "web coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "0f805e707ff53c67584a1555271bae73a6a394ed25ac495565080560e6d92c0c"
+    },
+    {
+      "id": "accessibility-attribution-root-016",
+      "line_start": 69,
+      "line_end": 69,
+      "kind": "PROCEDURE",
+      "statement": "Submit either a direct commit or proposed changes.",
+      "condition": "web coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "13317da5eb9f0ec0c6f78d05b8b063a5dfb401da97db369f963451d6219746ce"
+    },
+    {
+      "id": "accessibility-attribution-root-017",
+      "line_start": 71,
+      "line_end": 71,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "The web-created commit and message appear on the hosting platform.",
+      "condition": "web coauthor workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "4d18404f7859eb94cc6f97852268e65cf4ce8f0d84d8798b7ab471bbadf71e20"
+    },
+    {
+      "id": "accessibility-attribution-root-018",
+      "line_start": 76,
+      "line_end": 76,
+      "kind": "CONSTRAINT",
+      "statement": "Organization on-behalf-of attribution is unavailable on Enterprise Server.",
+      "condition": "organization attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "53367d107c63a456da24501c1942a6261bdaa5130d8e974280970241fe59d71c"
+    },
+    {
+      "id": "accessibility-attribution-root-019",
+      "line_start": 78,
+      "line_end": 78,
+      "kind": "PREREQUISITE",
+      "statement": "Organization attribution uses an on-behalf-of trailer.",
+      "condition": "organization attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
+    },
+    {
+      "id": "accessibility-attribution-root-020",
+      "line_start": 78,
+      "line_end": 78,
+      "kind": "PREREQUISITE",
+      "statement": "Organization attribution requires a signed commit.",
+      "condition": "organization attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
+    },
+    {
+      "id": "accessibility-attribution-root-021",
+      "line_start": 78,
+      "line_end": 78,
+      "kind": "PREREQUISITE",
+      "statement": "The author must be an organization member.",
+      "condition": "organization attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
+    },
+    {
+      "id": "accessibility-attribution-root-022",
+      "line_start": 78,
+      "line_end": 78,
+      "kind": "PREREQUISITE",
+      "statement": "The author commit email must belong to an organization-verified domain.",
+      "condition": "organization attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
+    },
+    {
+      "id": "accessibility-attribution-root-023",
+      "line_start": 78,
+      "line_end": 78,
+      "kind": "PREREQUISITE",
+      "statement": "The organization email must belong to an organization-verified domain.",
+      "condition": "organization attribution",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "5d5863baba3b588ce2f1297192c1051608985d61a1859c10af2710b5f4d34ea8"
+    },
+    {
+      "id": "accessibility-attribution-root-024",
+      "line_start": 82,
+      "line_end": 82,
+      "kind": "PROCEDURE",
+      "statement": "Enter a short meaningful description for the organization-attributed commit.",
+      "condition": "command-line organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "4662b81fb85c73b228f2252a8f70ce716efd9166d8e1d41cd49a182ce932b95a"
+    },
+    {
+      "id": "accessibility-attribution-root-025",
+      "line_start": 82,
+      "line_end": 82,
+      "kind": "PROCEDURE",
+      "statement": "Leave two empty lines after the description before closing the quoted message.",
+      "condition": "command-line organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "4662b81fb85c73b228f2252a8f70ce716efd9166d8e1d41cd49a182ce932b95a"
+    },
+    {
+      "id": "accessibility-attribution-root-026",
+      "line_start": 90,
+      "line_end": 90,
+      "kind": "PROCEDURE",
+      "statement": "Append an organization handle and email in the on-behalf-of trailer.",
+      "condition": "command-line organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "90f146b80d720fd0e8b2a0275374892ba27d8eb6faea4e263325c1ea6a1ba980"
+    },
+    {
+      "id": "accessibility-attribution-root-027",
+      "line_start": 90,
+      "line_end": 90,
+      "kind": "PROCEDURE",
+      "statement": "Close the quoted message after appending the organization trailer.",
+      "condition": "command-line organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "90f146b80d720fd0e8b2a0275374892ba27d8eb6faea4e263325c1ea6a1ba980"
+    },
+    {
+      "id": "accessibility-attribution-root-028",
+      "line_start": 99,
+      "line_end": 99,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "After push, the organization-attributed commit, message and badge appear on GitHub.",
+      "condition": "command-line organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "e4b3d2c7794331ef5e003e65cb30cfcca199e8a1a7b87f69c3362ef99daafc06"
+    },
+    {
+      "id": "accessibility-attribution-root-029",
+      "line_start": 103,
+      "line_end": 103,
+      "kind": "PROCEDURE",
+      "statement": "Add the organization trailer before committing web-editor changes.",
+      "condition": "web organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "80804f4d5664105abaebc77fa095bf29adf395f3eee84954007e9a6e8965456a"
+    },
+    {
+      "id": "accessibility-attribution-root-030",
+      "line_start": 105,
+      "line_end": 105,
+      "kind": "PROCEDURE",
+      "statement": "Open the commit dialog.",
+      "condition": "web organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "6c313514fa8a329058d70a4262f0f317d75d0ff4a1d8a7e54204f954ba2224d2"
+    },
+    {
+      "id": "accessibility-attribution-root-031",
+      "line_start": 106,
+      "line_end": 106,
+      "kind": "PROCEDURE",
+      "statement": "Describe the changes in the commit message.",
+      "condition": "web organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "47921f888da38c834ae98da1bafb4299b3425e1a6530ca5f53fb3a3688bc5e07"
+    },
+    {
+      "id": "accessibility-attribution-root-032",
+      "line_start": 107,
+      "line_end": 107,
+      "kind": "PROCEDURE",
+      "statement": "Enter the organization trailer in the lower message textbox.",
+      "condition": "web organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "19fcfb30a54e2aaad3e32794fa65582938e959b853fc7e40b923d0439fc62d50"
+    },
+    {
+      "id": "accessibility-attribution-root-033",
+      "line_start": 108,
+      "line_end": 108,
+      "kind": "PROCEDURE",
+      "statement": "Submit a direct commit or proposed changes.",
+      "condition": "web organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "13317da5eb9f0ec0c6f78d05b8b063a5dfb401da97db369f963451d6219746ce"
+    },
+    {
+      "id": "accessibility-attribution-root-034",
+      "line_start": 110,
+      "line_end": 110,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "The organization-attributed web commit, message and badge appear on GitHub.",
+      "condition": "web organization workflow",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "f2fe9837afae55d2440e993afd40845b5c77f58169f00d0379449b3fe5cb9d5f"
+    }
+  ],
+  "reusable_occurrences": [
+    40,
+    65
+  ],
+  "nonclaim_dispositions": {
+    "metadata": "Lines1-22: title, redirects, versions and categorization; intro purpose extracted separately.",
+    "headings": "Section labels contextualize procedures; not independent obligations.",
+    "examples": "Lines44-48,52-57,84-88,92-97 are illustrative shell messages; inert data, not executed. Placeholder identities are not adopted.",
+    "further_reading": "Lines112-118 are reference links, not a completed linked-web review.",
+    "whitespace": "No independent claim."
+  },
+  "unresolved": [
+    "Independent root omission audit",
+    "Interpretation of illustrative command formatting versus prose empty-line guidance",
+    "Variable/version resolution and linked destinations",
+    "Published deployment identity"
+  ],
+  "root_local_candidate_extraction_complete": true,
+  "independent_omission_audit_complete": false,
+  "assurance_increment": 0,
+  "pinned_review_increment": 0
+}
