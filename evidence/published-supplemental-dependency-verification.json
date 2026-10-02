@@ -1,0 +1,11 @@
+{
+  "issue": 28,
+  "checks": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 324, "seconds": 1.335, "result": "OK"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "git diff --check", "exit_code": 0}
+  ],
+  "dependency_cache_verification": {"files": 31, "bytes": 80695, "sha256": "all match", "git_blob_sha": "all match"},
+  "boundary": "Acquisition and interpretation-dependency evidence only; no new pinned artifact review, published assurance, rights clearance, accepted control or native enforcement receipt."
+}
