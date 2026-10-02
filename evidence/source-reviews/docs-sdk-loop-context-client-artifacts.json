@@ -1,0 +1,844 @@
+[
+  {
+    "artifact_id": "17f3e15f971b9a602ba881b2",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/agent-loop.md",
+    "content_sha256": "600a17ade7a50d0283e5f54e8cec5fcc99b6ba487b840a1a142a2ba1448801c4",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T06:19:55Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned source text read; identified prose contracts and example actions extracted, independently audited and repaired. Links, diagrams and runtime behavior remain separate evidence; all candidates accounted for without promoting reference claims to policy. Bounded audit is not a global extraction-completeness certificate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "f63d055a09dcf30ed6a00fda",
+        "text_sha256": "cee99bbf4ec25564f838b5510365bb84c6f4c7189d1e1d056e5eea76050e8f86",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-001: Source declares Free/Pro/Team applicability. DOCS-SDKLOOP-002: Source declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "dfb344f24cbe4c7eaa2ed7f5",
+        "text_sha256": "787fe46d45f25246450e3b9e1817bd1dd92c1eda5947f34a93bb6b37a6db8394",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-003: Former SDK agent-loop route redirects to this guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "1fbee1513135aec9d01a2bd6",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "323081c76fbaa28842adae91",
+        "text_sha256": "9004b948acfc6f639e9b39ab6081c6bed2414a72a977cf75ad24b8b5f135a3b8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-004: Architecture diagram is linked; its image content requires a separate asset review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "6f66e2dc606fb71d08f71728",
+        "text_sha256": "70e042c5b4721fb764c0bfc5bd5285589e22ae98450790929f4e0bf5599ca8c2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-005: SDK transports prompts to Copilot CLI over JSON-RPC. DOCS-SDKLOOP-006: SDK surfaces CLI events to the application. DOCS-SDKLOOP-007: CLI orchestrates the tool-use loop. DOCS-SDKLOOP-008: CLI can make multiple model API calls for one task.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "e4642497a53d7ff283bf97fe",
+        "text_sha256": "3346c90d8470a77f582bb4eefe8ae0f1a1f1c98c1582908ee05e9e0b74123efa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-009: Calling session.send with a prompt enters the CLI tool-use loop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "c3578c71ca87cf53c0c76ace",
+        "text_sha256": "56c3531b136c6a256463dc7d1626c16bf68a277779a6f7100883ffff9789b65d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-010: Tool-use diagram is linked; linked image is not implied reviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "70c71d66b673a57756f1db88",
+        "text_sha256": "21fa2924b000d586b29c171e826f1d3756a9daee8198dca94c6b9ade57ed4f93",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-011: Each model call receives the system prompt. DOCS-SDKLOOP-012: Each model call receives the user message. DOCS-SDKLOOP-013: Each model call receives prior tool calls. DOCS-SDKLOOP-014: Each model call receives prior tool results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "dfb2c896eee1dd73880725a7",
+        "text_sha256": "e836d76c003c65285c174793d4087ff640a8b9b7d407542881a4a302ce792665",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-015: Source equates each loop iteration to exactly one model API call. DOCS-SDKLOOP-016: Each iteration is exposed as an assistant.turn_start/assistant.turn_end pair. DOCS-SDKLOOP-017: Source says there are no hidden model API calls.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "6ed927920163c99ba06dbd3b",
+        "text_sha256": "acef7d6a99eb3eb70600452e02c4e45fb36ce30561a8766fd82cb9e78731c5c1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-018: A turn consists of one model API call and its consequences.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "7f702cd236038caafb948c26",
+        "text_sha256": "174030c7e848d5a2dc07372afa7798fc5a4a0a4bb1bea2528de17c5967754741",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-019: CLI sends conversation history to the model.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "b5a539a584222e29839fbbc9",
+        "text_sha256": "9a9382cc1781f4cb38b346eb14c33a7b4b3b69ab974993c10d78e74f717d30f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-020: Model responses can contain tool requests.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "c2be55d7b4b90555077f2148",
+        "text_sha256": "8177857897df99fd3e43fa2d9b40c4020781fa920018fae1dad3d8616e664692",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-021: CLI executes requested tools.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "77fc8456f0e71e1c814b3185",
+        "text_sha256": "c0fbc8e430071d8123cf6ea33a1fa017f002f662e4e90c4429fb61c5dfc928a9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-022: CLI emits assistant.turn_end.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "10e792deb80bbbb207a6cb8d",
+        "text_sha256": "12bbc07e09ed7808c148808d2dba23aa9c41dad347c92aecf2225f28a970b6cf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-023: A user message typically results in multiple turns.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "434d24f8b7a34a140c57b2b9",
+        "text_sha256": "4f5b892cbeafdcce1abdd306bdfd91a29cb83df95348f75cc6a94e95a9b824d7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "c3f9b85bf9560ead0d5b7296",
+        "text_sha256": "667165f59621fc6ddc52b0834a79ff244763ab87fb080bfdec40b2bbbfb92f67",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "9ba100fdb63d1222205263f5",
+        "text_sha256": "ab225de89e1f3df27176292900660c04a23395a909ff9d00873f60cde38e0855",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-024-A01: Illustrative first turn calls grep to search the codebase. DOCS-SDKLOOP-024-A02: Illustrative first turn calls glob to search the codebase.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "d9c7600572461d12b0a37267",
+        "text_sha256": "2dbe0fe4bbcbb23659d51b8547f4d8413d728380566d023f0c207b979f72f416",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-025: Illustrative second turn reads files based on search results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "3e90d08a15a3c9b1d0c2c1ee",
+        "text_sha256": "5264bebccc3f4fb255b4055d9eb43da31af3364f98cf36615597400ed612c0aa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-026: Illustrative third turn reads further files.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "fa8f76eebaa8d53841ed68a1",
+        "text_sha256": "b9a30bd42ba51ab8ea914a520cb64ae4f144c25f70ba7f924c6eb1fa6af876f6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-027-A01: Illustrative fourth turn produces a final text answer. DOCS-SDKLOOP-027-A02: Illustrative fourth turn requests no tools. DOCS-SDKLOOP-027-A03: The source table says the illustrative fourth turn ends the loop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "6ee11b0cf5ca94e4275acf91",
+        "text_sha256": "976973dfba605a9ca868c79ff8f7cb6ac14ddfb917a339d23b63253042bd7190",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-028: Model chooses whether to request further tools or answer. DOCS-SDKLOOP-029-A01: A later model call receives accumulated earlier tool calls. DOCS-SDKLOOP-029-A02: A later model call receives accumulated earlier tool results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "63f36f351d1e46ba10959afa",
+        "text_sha256": "a4185b9aedacaeb6a2423f78ebee106a28052f5def4d5f70314b680ae47176cb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-030: Multi-turn event-flow diagram needs separate image review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "45607c8c76be51e517cb6d85",
+        "text_sha256": "2c50015565104e06d990969a70660fdbb4b79bc143b09113d92474a588107f44",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "69adeed2feea4065fdcd1795",
+        "text_sha256": "79246e50f639be0ea2da0fd7fe4783b70a5f6bdd566e5b169b66f0908da0f863",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "e28677c414056d43cb54c2d1",
+        "text_sha256": "5d30b5d19f0765f241fb20c9934c883e3da64881613ca9e087c1e10b0362ae20",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-031: Application triggers initial prompt via session.send.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "79d6f0df9b776e3d15df3cdd",
+        "text_sha256": "4ed2bffd280b89cfc1c7791689384db91818cf5e338fffd81defa94b867d08ae",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-032: CLI feeds executed tool results into the next model call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "5d0984679792e9394a8f4822",
+        "text_sha256": "b218f9a1a754dc92ba112c2c8703ef3ba4ccda647aea39d441ad9353aff3861e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-033: Model determines whether to continue requesting tools or stop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "06175c0c98fd5423ad091f6f",
+        "text_sha256": "feb06ba32a93a5f7679722cc3795f249f97f89154e060b20752a6f517550fe0a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-034: SDK passes events through without controlling the loop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "dfc46d6e187f2fc61bd26faa",
+        "text_sha256": "6cd680413109b1401e39f9c9c33fcb82630dad7cec896fff4694d69a01d89c17",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-073: The source characterizes the CLI's tool loop as mechanical. DOCS-SDKLOOP-074: The source attributes stopping decisions to the model.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "c9350d6a912d939d1193babd",
+        "text_sha256": "9481c3cb2e6ca357872156a8a52270c64c3530c773175c4ecff36af3173edf32",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-085: session.idle and session.task_complete have different completion guarantees.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "a5e71cc04687b090c9499916",
+        "text_sha256": "5536a97ecb40f3da685f8543c04195887e33b3a4fa36234dbfd88de66647d959",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-035: session.idle is emitted whenever the tool-use loop ends.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "b749ce5d8970859130700a2f",
+        "text_sha256": "eceaac68709df095f43abc06ea8d2b53935e97682e54768365a4fbbcc33959b2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-036: session.idle is not persisted to disk. DOCS-SDKLOOP-037: session.idle is not replayed on session resume.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "847e81e06848d988e123109c",
+        "text_sha256": "c78ba664afda93fafa32877b68d74e0ee685cc591aae01664713a1b6ba8babce",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-038-A01: session.idle indicates processing has stopped. DOCS-SDKLOOP-038-A02: session.idle indicates readiness for another message.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "53ac0e4cf666b219d265ecd1",
+        "text_sha256": "edad1667de5b33e81369533e9f8c07962bfa819453912eee1f0e6d3d4d0387ec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-039: Source recommends session.idle as the reliable processing-done signal.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "dafde13e80c8f9ae1ed66324",
+        "text_sha256": "6730d82427d8d38e9cb5ba466542672f2942a7e7898d57d949059fb4579615e9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-040: sendAndWait waits for session.idle.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "14448bc12abc9d956d11edd0",
+        "text_sha256": "45fdcaef29b4e5777271adbb772c8552cb276449a16fef104c18bb7cd7ee9669",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-041: TypeScript example awaits sendAndWait for an illustrative bug-fix prompt.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "f0f61bb88ae36eef845f441c",
+        "text_sha256": "9396a43d23c0c9f5479bc3e069aadcfb1e1e70348df4a6750db2b7c5c3058a42",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-042: session.task_complete is optional. DOCS-SDKLOOP-043: session.task_complete requires explicit model signaling.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "28a8e4a006e1d84a72882be5",
+        "text_sha256": "fb0b1d0b8e8814ec031c3788a578d945dea00343270cfa66791460b65c3aabd8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-044: session.task_complete is persisted in the disk event log.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "f3962c7a5510e6d46baa6276",
+        "text_sha256": "e328720314c3a07cf3f71f5214c684fa53eb61a7ca5ff430bd80ba7f71f16b11",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-045: session.task_complete reports the model's view of task fulfillment.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "92bbf2d4d777dad9a9834098",
+        "text_sha256": "bc3b000e03e1226adbce5dee8f8ef63e6850eb2ce01381af0bedbad77bbf6216",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-046: session.task_complete can include an optional summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "8068f876f3c6267cb6c482d0",
+        "text_sha256": "a03c717991859e8a737b1515381d19f3dace2ea4732f5d3cb260ac2182903690",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-047: TypeScript example subscribes to session.task_complete. DOCS-SDKLOOP-048: Subscriber example prints the event summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "79b738f62ef532658d1a27b4",
+        "text_sha256": "a4a2a96b4ecc7253764dff5f3c9df5c7cc8cb3895ed571e8a66d03f6bc7eac92",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-049: Autopilot tracks whether model called task_complete. DOCS-SDKLOOP-050: Autopilot injects a synthetic user nudge when loop ends without task_complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "91b1dc58328b89aafd75f8eb",
+        "text_sha256": "052175f741e593c928079840d748935a010a0b044d70dcbce093f7647d5fc005",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-075: The quoted autopilot nudge identifies absence of a task_complete call. DOCS-SDKLOOP-076: The quoted autopilot nudge tells the model to move from planning to implementation. DOCS-SDKLOOP-077: The quoted autopilot nudge discourages declaring completion before fully completing the task.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "735be14c0aca83ebcc9b303d",
+        "text_sha256": "befce8b2dc0c066c2237b8851c3e8354b0654f03a9dcb089d27f521c7b38df65",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-051: Nudge restarts the tool-use loop as a new user message.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "28da94a19d4c7281eaf4a04e",
+        "text_sha256": "da730844331d686acd37725a8d5ba3a32a38de3a3174a355691abed013a22210",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-052: Described autopilot nudge discourages task_complete with open questions; upstream behavior, not execution authority. DOCS-SDKLOOP-078: The described nudge tells the model to make decisions when questions remain. DOCS-SDKLOOP-079: The described nudge tells the model to continue work when questions remain.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "ebe7d39688a0d8ca166da4f4",
+        "text_sha256": "479d7d8ecb9f876cd11c8297375841f181320b9166c0f2bed9ddc0ce254a33a4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-053: Described nudge discourages task_complete while errors remain. DOCS-SDKLOOP-080: The described nudge tells the model to attempt resolving an error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "608190cbedab43f4f458492f",
+        "text_sha256": "bcfef6711faa79fe91bfa234fc4d364c4f5735bd51a058181adb6b928bbbe388",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-054: Described nudge discourages task_complete with remaining steps. DOCS-SDKLOOP-081: The described nudge tells the model to finish remaining steps before task_complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "d8af7448b49896a3bced36ad",
+        "text_sha256": "fff0afd844af8c26ad6599554369d1812110cac2645c5a51cad8b9b8d9ebeab4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-086: Autopilot is described as a two-level completion mechanism.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "add5804b44357784ef6ffae7",
+        "text_sha256": "bffb737a90bd23f79249096262cd3a9fd4856c30d3d9bb4557856e433e88db8d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-055: Model task_complete call results in CLI session.task_complete emission. DOCS-SDKLOOP-082: The autopilot completion flow describes a task_complete call with a summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "38ed2d7b10a1689def6bcda8",
+        "text_sha256": "ebec764bc1dfa0d26c5434b1b6411dcaad51838f7cefb834863b5ffa15eee1cd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-056: Stopping without task_complete can trigger further nudging. DOCS-SDKLOOP-083: After nudging, the source says the model may continue work. DOCS-SDKLOOP-084: After nudging, the source says the model may call task_complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "7af13927df34efc71c712c0d",
+        "text_sha256": "ec3b2487083951e54682e4765040218e4cd44547fbb8eeb39770298349b5c3fb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-057: Interactive CLI mode does not nudge for task_complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "3e364635c43221675cd00709",
+        "text_sha256": "ea82d45d5a9e707ef8fbdd85498e8575476900e3b87645818d06c12cea5f29ca",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-058: Conversational answers can stop without discrete task completion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "92e2ebebed30681c1a92bccb",
+        "text_sha256": "15e5f46409261ec8d7f1ef85336a036a2c0d1c0e3cdb2ee13fe835093b3a68d8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-059: Model discretion can yield final text without task_complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "9a42f45aa4907a94626914de",
+        "text_sha256": "29ee3856e610c13acc942c4554a6447c1c2edd0d53f0ebf784369a19cb410e1f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-060: Interruption can precede task-complete signaling.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "c4161f08f2c13740efc12481",
+        "text_sha256": "bf5cdf6d331b5a738985090f72914cc19ef210dab0e5d31bc58a190bb54faca8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-061: session.idle is mechanical loop completion, not semantic task fulfillment.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "bc0dc3ab2121e2dad8aa670c",
+        "text_sha256": "5879c50684c4609334f4eba0bf16d57bbaa4c41ba6cab8079d6158c94d99bddd",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "540c7111dd6007760e5d94af",
+        "text_sha256": "27bc8a9ee7788684c538588bcbd212a8aebbc3e2de26af5e5f1771b53c8e465d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "bef2e670be22836eb8cacf36",
+        "text_sha256": "d2ce5492ed4f7c6afa55db8002ad1125612894405e866d6ed00769824fcb44df",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-062: Use session.idle to wait for processing completion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "1d28792da57c66263c6e356b",
+        "text_sha256": "c930311a999debd5b93075fd08c1d765b6b3531a681a928d83a74aa360569dca",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-063: Coding-task completion uses best-effort session.task_complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "7eae78b994acd030bd2468ff",
+        "text_sha256": "db6a035bb60ff37e94f3aaff33cfea7ad827285d83d2eb9fd0a8846fbe41eccc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-064-A01: Source timeout/error guidance uses session.idle. DOCS-SDKLOOP-064-A02: Source timeout/error guidance also uses session.error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "5fd1c1d9e0eeeb963a2a51be",
+        "text_sha256": "8769739518f5ce73c522e96d43f96c5feed34de290a8f7a45a2254c3098165ce",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-065: Event turn-pair count equals reported model API call count. DOCS-SDKLOOP-066: Source excludes hidden planning calls. DOCS-SDKLOOP-067: Source excludes hidden evaluation calls. DOCS-SDKLOOP-068: Source excludes hidden completion-checking calls.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "45f1825606fe38fa2d96d897",
+        "text_sha256": "b6fd7802f02f8a00631c1b5e403a5907d94cd4dd1e00c2aa40954e2731f20f47",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-087: Source directs inspecting turn count for an individual session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "c565ef0b0a7b078a9f790c57",
+        "text_sha256": "e3a3c8dc23af249989deaef26ca1f5fdf649ffa8fe695d9a0cd354b37692a2ca",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-069: Shell example counts assistant.turn_start occurrences in a session event log; command was not executed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "7d015f1280dd1aea4c849b5f",
+        "text_sha256": "e99959d34364bbe1d8c6397c7104bc33f15a30a58a09f2cbf4e2c3ff91b3fbdb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-070: Streaming-events field reference is linked; its body remains separate.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "40113b3e4f673c096009a86f",
+        "text_sha256": "6f32a40d389ca530961c0158479eb8a9ab7711c7c13cdff8cdc3d809225a5244",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-071: Session-persistence guide is linked; link existence is not body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      },
+      {
+        "candidate_id": "10e3953f553cb0863e34173b",
+        "text_sha256": "1cc54f527a1e8f86c4c2ca311586feb54d4288786249adc149ef214de06f5ebf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLOOP-072: Hooks guide is linked; body remains separate.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-agent-loop-claims.json"
+      }
+    ],
+    "independent_audit": "evidence/sdk-loop-context-client-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-loop-context-client-independent-repair-recheck.json",
+    "final_repair_recheck": "evidence/sdk-loop-context-client-final-repair-recheck.json"
+  },
+  {
+    "artifact_id": "9141a7ab0e655518829e0ce4",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/client-info.md",
+    "content_sha256": "61e09a34a35943a604951d1d810a7aad59271a147163650e6f773e3903867ce7",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T06:19:55Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned source text read; identified prose contracts and example actions extracted, independently audited and repaired. Links, diagrams and runtime behavior remain separate evidence; all candidates accounted for without promoting reference claims to policy. Bounded audit is not a global extraction-completeness certificate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "2235afc65bf0211d346546a2",
+        "text_sha256": "58edb6e50c9878208fe74949247575b07047895a4a84741b6b28bb8de03ec5b4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-001: Source declares Free/Pro/Team applicability. DOCS-SDKCLIENT-002: Source declares Enterprise Cloud applicability. DOCS-SDKCLIENT-003: Client info identifies the SDK application. DOCS-SDKCLIENT-004: Integration identifies a sub-part such as an extension or plugin. DOCS-SDKCLIENT-005: Optional clientInfo attributes connection telemetry to the application rather than runtime build.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "523eebcddb9f4877d1b2d754",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "70c32a163058012de4d8ce10",
+        "text_sha256": "73e33e8219ff6a34a1c75e739e58f81b00b89f5c7831950265bd51f5980b4136",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-006: Set client info for distinct products needing consistent runtime attribution. DOCS-SDKCLIENT-007: Set client info for distinct services needing consistent runtime attribution. DOCS-SDKCLIENT-008: Set client info for distinct integrations needing consistent runtime attribution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "3633f7eb23422e4ac90a0cf8",
+        "text_sha256": "7b802c388f4113a4fea2d7c635f42f3bafe267ae9f2b484c69448f76293791d5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-009: Leave client info unset for scripts without a distinct application. DOCS-SDKCLIENT-010: Leave client info unset for one-off tools without a distinct application. DOCS-SDKCLIENT-011: Leave client info unset for jobs without a distinct application. DOCS-SDKCLIENT-012: Unset client info retains default runtime attribution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "32b96539c2ba9bc2e0fff5f3",
+        "text_sha256": "80732ac56bb17930db6c06fb1e2682fa3d1c3a61b02d22279fe3c4afa08b8765",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-014: Source recommends setting known fields. DOCS-SDKCLIENT-015: Source recommends omitting unknown fields. DOCS-SDKCLIENT-016: SDK includes client info in server.connect only with at least one nonempty field. DOCS-SDKCLIENT-013-A01: Client info defines four fields. DOCS-SDKCLIENT-013-A02: Client-info fields are optional. DOCS-SDKCLIENT-013-A03: Client-info fields are strings.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "3a1dd090c3c2eb1f8cf8eb4a",
+        "text_sha256": "64f7769197f7d5e017e9d6057c1784cfff5689bc9beb136caf877a114ff12091",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "b568413c33d7578d7bcda436",
+        "text_sha256": "23cca02b74f386463efa24796c7a9011b0d2c93f0c38b4d15d5d276205b59b43",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "b8df41dbae27b9a84dc39470",
+        "text_sha256": "9a6563d89781aa58ea95939fbbb2e410883a4e337b5676a9708f0b66fa8a017c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-017: applicationName denotes SDK application name. DOCS-SDKCLIENT-018: vscode is an illustrative applicationName.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "efeb6618b083867530d8b41c",
+        "text_sha256": "720ece5e3f3510e54ffbb3e1827935013bb32a3246587c38d510ca2c8ea57ac7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-019: applicationVersion denotes application version. DOCS-SDKCLIENT-020: 1.124.2 is an illustrative applicationVersion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "6e245c408e94f64c84ab5b77",
+        "text_sha256": "9d2fb48461d849e6788d7fafa4f56fd7b1f29d6489f33f5691d0a235c7a2770e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-021: integrationName denotes the extension/plugin/application sub-part. DOCS-SDKCLIENT-022: copilot-chat is an illustrative integrationName.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "d277c34366c9d68a94177dc0",
+        "text_sha256": "be82b20077979c4d23cd1c3fbf554910258cc06284d504d3dba673d23ae08d19",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-023: integrationVersion denotes integration version. DOCS-SDKCLIENT-024: 0.54.0 is an illustrative integrationVersion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "4c77c24ae2065e9525594ce5",
+        "text_sha256": "1d60f0a159011734d9415a35bcc2e8d67d093bda7eaf30eb9d7cd218a4c532cd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-025: Standalone applications without distinct integrations should set application fields only. DOCS-SDKCLIENT-026: Developer-portal example sets applicationName to acme-developer-portal. DOCS-SDKCLIENT-027: Developer-portal example sets applicationVersion to2.4.0. DOCS-SDKCLIENT-028: Developer-portal example leaves integration fields unset.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "82c91d512992022064831114",
+        "text_sha256": "b2af2a7c443c2410986fff4a955a700e552a36130e7070d04fef43431082a165",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-029: SDK sends client info once while establishing the connection. DOCS-SDKCLIENT-030: Client identity applies for the connection lifetime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "df0252a4771a4b75900699dd",
+        "text_sha256": "4a7f90d9a5d8cb6f66576f580aba1dca7e19a842b5c7d101fdcf29659ec34f23",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-031: Source directs passing client info when creating the client.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "655a7ef6fe9fa9df72f70f3f",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "656098f35a0a17a72d45a1f5",
+        "text_sha256": "2f9b930d36a3eafd3f58928d4554f8d64964292d56c271ddf72038dc766c4c56",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-032: TypeScript example imports CopilotClient from @github/copilot-sdk. DOCS-SDKCLIENT-033: TypeScript example constructs CopilotClient. DOCS-SDKCLIENT-034: TypeScript uses clientInfo option. DOCS-SDKCLIENT-035: TypeScript example awaits client startup. DOCS-SDKCLIENT-071: TypeScript illustrative client-info field/setter applicationName uses vscode; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-072: TypeScript illustrative client-info field/setter applicationVersion uses 1.124.2; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-073: TypeScript illustrative client-info field/setter integrationName uses copilot-chat; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-074: TypeScript illustrative client-info field/setter integrationVersion uses 0.54.0; placeholder identity is not adopted configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "70fc9ee4d1b0feb3fb9be9a1",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "388d7235fa76ac6ed529564f",
+        "text_sha256": "025cb1ba09d3e92bdefd8e281dbcb375719369592634921421fab3a4bb5e5f98",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-095: Python client-info example has a documentation-validation wrap-async marker; this is not evidence of an executed async environment.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "57febf5b41716010e06a1b2b",
+        "text_sha256": "47129a276d432f569c93efede73bbd6c5421de1290b6adbbf36831934d03db78",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-036: Python example imports CopilotClient. DOCS-SDKCLIENT-037: Python example constructs CopilotClient. DOCS-SDKCLIENT-038: Python uses client_info option. DOCS-SDKCLIENT-039: Python example awaits client startup. DOCS-SDKCLIENT-075: Python illustrative client-info field/setter application_name uses vscode; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-076: Python illustrative client-info field/setter application_version uses 1.124.2; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-077: Python illustrative client-info field/setter integration_name uses copilot-chat; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-078: Python illustrative client-info field/setter integration_version uses 0.54.0; placeholder identity is not adopted configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "75cad32fb4e477a444bee911",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "d8a123fc2cef54327408438d",
+        "text_sha256": "ca35fb2fc7ee6b6eda9385716000d5f5ff1426d738b8f1edb954273851edf151",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-040: Go example constructs client using ClientOptions. DOCS-SDKCLIENT-041: Go example uses ClientInfo structure. DOCS-SDKCLIENT-042: Go example starts client with context. DOCS-SDKCLIENT-043: Go example checks startup error for nonnil. DOCS-SDKCLIENT-044: Go example returns startup error. DOCS-SDKCLIENT-079: Go illustrative client-info field/setter ApplicationName uses vscode; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-080: Go illustrative client-info field/setter ApplicationVersion uses 1.124.2; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-081: Go illustrative client-info field/setter IntegrationName uses copilot-chat; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-082: Go illustrative client-info field/setter IntegrationVersion uses 0.54.0; placeholder identity is not adopted configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "659c6f669e77c10df15d6cc2",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "b1ad5aed5250486f2e78af1f",
+        "text_sha256": "a783d55b671f1ba3aea0ea655b31f07df2c7e8eabb68657cf5b52cafa784f1e6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-045: .NET example imports GitHub.Copilot namespace. DOCS-SDKCLIENT-046: .NET example constructs client with CopilotClientOptions. DOCS-SDKCLIENT-047: .NET example uses await using for disposal. DOCS-SDKCLIENT-048: .NET uses ClientInfo with CopilotClientInfo type. DOCS-SDKCLIENT-049: .NET example awaits StartAsync. DOCS-SDKCLIENT-083: .NET illustrative client-info field/setter ApplicationName uses vscode; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-084: .NET illustrative client-info field/setter ApplicationVersion uses 1.124.2; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-085: .NET illustrative client-info field/setter IntegrationName uses copilot-chat; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-086: .NET illustrative client-info field/setter IntegrationVersion uses 0.54.0; placeholder identity is not adopted configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "13e250f942519b2f2e220218",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "415a366640095354088bdca2",
+        "text_sha256": "85ee553fa232bc705734b1ec13ca6275b3e8c7ea96a725db973496ac538d7c5f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-050: Java example creates CopilotClientOptions. DOCS-SDKCLIENT-051: Java example assigns a ClientInfo object. DOCS-SDKCLIENT-052: Java example constructs client from options. DOCS-SDKCLIENT-053: Java example starts client. DOCS-SDKCLIENT-054: Java example waits for startup using get(). DOCS-SDKCLIENT-087: Java illustrative client-info field/setter setApplicationName uses vscode; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-088: Java illustrative client-info field/setter setApplicationVersion uses 1.124.2; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-089: Java illustrative client-info field/setter setIntegrationName uses copilot-chat; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-090: Java illustrative client-info field/setter setIntegrationVersion uses 0.54.0; placeholder identity is not adopted configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "0b1ce2b5ff1e566ad409e4ce",
+        "text_sha256": "9963cf6807f8462e34a5520765fb42ab1aa0dd51a28a555f52d73a3bede242b2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "319d6670076034b30f562462",
+        "text_sha256": "9aa98050651da270ac181adb22e2f836d5bde989228e0a747c82af7450d57430",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-055: Rust example imports Client. DOCS-SDKCLIENT-056: Rust example imports ClientInfo. DOCS-SDKCLIENT-057: Rust example imports ClientOptions. DOCS-SDKCLIENT-058: Rust example starts Client using configured options. DOCS-SDKCLIENT-059: Rust example uses with_client_info. DOCS-SDKCLIENT-060: Rust example creates ClientInfo. DOCS-SDKCLIENT-061: Rust example awaits startup. DOCS-SDKCLIENT-062: Rust example propagates startup error via question-mark operator. DOCS-SDKCLIENT-091: Rust illustrative client-info field/setter with_application_name uses vscode; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-092: Rust illustrative client-info field/setter with_application_version uses 1.124.2; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-093: Rust illustrative client-info field/setter with_integration_name uses copilot-chat; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-094: Rust illustrative client-info field/setter with_integration_version uses 0.54.0; placeholder identity is not adopted configuration. DOCS-SDKCLIENT-096: Rust client-info example constructs options with ClientOptions::new().",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "b04980780655d4552d9ecd53",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "6bf4d03cc83f3be8ddc2de12",
+        "text_sha256": "6b5b924cb01e9be6939cd311f4cc46436928067bf38b752169ef69a27f664991",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-063: Client info is advisory. DOCS-SDKCLIENT-064: Runtime can ignore incorrectly formatted values. DOCS-SDKCLIENT-065: Invalid version string is an illustrative ignored format.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "79f4efc9892e6aae5c890988",
+        "text_sha256": "8d71083afb773dd195e1a7790566e0f22287e4e28b46c6b51b527af129cc0562",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-066: Client info changes telemetry attribution. DOCS-SDKCLIENT-067: Client info does not change what runtime records.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      },
+      {
+        "candidate_id": "73ebea50aa858f66836cd175",
+        "text_sha256": "2ad5d4d763d5e350726d05148f45090006fa70dc72a12bf47e60b631211f099c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLIENT-068: SDK omits client info when every field is unset. DOCS-SDKCLIENT-069: SDK omits client info when every field is empty. DOCS-SDKCLIENT-070: Empty or unset client info retains runtime default attribution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-client-info-claims.json"
+      }
+    ],
+    "independent_audit": "evidence/sdk-loop-context-client-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-loop-context-client-independent-repair-recheck.json",
+    "final_repair_recheck": "evidence/sdk-loop-context-client-final-repair-recheck.json"
+  },
+  {
+    "artifact_id": "c7c6f6031082949b7ea02de3",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/context-management.md",
+    "content_sha256": "4c2e98e12669b0ae3cffac61cf22c5634e2a33f02b1d350af9fd0ab38ab67d78",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T06:19:55Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned source text read; identified prose contracts and example actions extracted, independently audited and repaired. Links, diagrams and runtime behavior remain separate evidence; all candidates accounted for without promoting reference claims to policy. Bounded audit is not a global extraction-completeness certificate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "3b36bd079dab174759210a46",
+        "text_sha256": "4b3c8c54660c47c510a7b511e046bd85c9edb3e17f833d010f5ef3b3e5407bf7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-001: Source declares Free/Pro/Team applicability. DOCS-SDKCONTEXT-002: Source declares Enterprise Cloud applicability. DOCS-SDKCONTEXT-003: clearContext replaces model-facing context without replacing the session. DOCS-SDKCONTEXT-004: Host-managed context lifecycle is a described use case. DOCS-SDKCONTEXT-005: Handoff is a described context-clearing use case. DOCS-SDKCONTEXT-056-A01: Introduction names session.history.clearContext.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "417ebda38f5b473f2848f49b",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "4a35053e01dd7f4384167d5b",
+        "text_sha256": "aceb4f1a89f85e096bf206b3a4e62231f07d8b6dd77e69b85a54d21c97ed6589",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-006: Context clearing preserves session identity. DOCS-SDKCONTEXT-007: Context clearing preserves system messages. DOCS-SDKCONTEXT-008: Context clearing preserves developer messages. DOCS-SDKCONTEXT-009: Context clearing preserves configuration. DOCS-SDKCONTEXT-010: Context clearing preserves the event log. DOCS-SDKCONTEXT-011: Context clearing removes model-facing conversation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "e0b4796b6b8f2e6c2be7ef34",
+        "text_sha256": "5b24b6493dfb221571acd71333aadab23d64f90c75b2f0359ac5e050dbebf1da",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-012: clearContext is a tool-handler primitive. DOCS-SDKCONTEXT-013: Runtime rejects clearContext without an in-flight tool call. DOCS-SDKCONTEXT-014: Runtime rejects clearContext with an empty seed prompt. DOCS-SDKCONTEXT-015: Runtime rejects clearContext on remote sessions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "9f2a56abdb8a0be3dac53047",
+        "text_sha256": "af86a21dd2fbebcae53f4e30ea8cfde2d4ed3726daa35cb9973b3e0b37b6a182",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-016: Source recommends making a successful context-clearing tool terminal. DOCS-SDKCONTEXT-017: Nonterminal clearing risks another model call before the seeded turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "d5f4cf81eeac0a608c7a83b1",
+        "text_sha256": "d9b09f37f83e5b2a1a7dcc9b2e3518285765d7fdcb366a4769af2314cee404cd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-018: TypeScript example imports approveAll; broad approval is illustrative, not adopted least-privilege policy. DOCS-SDKCONTEXT-019: TypeScript example imports CopilotClient. DOCS-SDKCONTEXT-020: TypeScript example imports defineTool. DOCS-SDKCONTEXT-021: TypeScript example imports CopilotSession type. DOCS-SDKCONTEXT-022: TypeScript example imports zod. DOCS-SDKCONTEXT-023: Example constructs a client. DOCS-SDKCONTEXT-024: Example declares a typed session variable. DOCS-SDKCONTEXT-025: Example awaits session creation. DOCS-SDKCONTEXT-026: Example uses approveAll for permission requests; no permission grant was performed. DOCS-SDKCONTEXT-027: Example registers a clear_context tool. DOCS-SDKCONTEXT-028: Example tool description describes a fresh context window. DOCS-SDKCONTEXT-030: Example sets isTerminal true. DOCS-SDKCONTEXT-031: Example sets defer to never. DOCS-SDKCONTEXT-033: Example captures messagesCleared from clearContext result. DOCS-SDKCONTEXT-034: Example awaits session.rpc.history.clearContext with prompt. DOCS-SDKCONTEXT-035: Example returns a message containing removed-message count. DOCS-SDKCONTEXT-029-A01: The TypeScript context-clearing example declares an object argument schema. DOCS-SDKCONTEXT-029-A02: The example argument schema names a prompt field. DOCS-SDKCONTEXT-029-A03: The example prompt field is a string. DOCS-SDKCONTEXT-029-A04: The example object schema provides no optional modifier for prompt. DOCS-SDKCONTEXT-032-A01: The context-clearing example handler is asynchronous. DOCS-SDKCONTEXT-032-A02: The context-clearing handler destructures prompt from its arguments. DOCS-SDKCONTEXT-057: The context-management session example registers the context-clearing tool in its tools list. DOCS-SDKCONTEXT-056-A02: Example spells the method session.rpc.history.clearContext; equivalence with introduction spelling is not assumed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "023465d0f00058cd3842d9ac",
+        "text_sha256": "4f2c4b963b709eb63fa74285c32877b8109e812c59c0f45c218e06951e3e013c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-036: Required seed prompt becomes first user message in fresh context. DOCS-SDKCONTEXT-037: Successful clearing emits session.context_cleared. DOCS-SDKCONTEXT-038: Context-cleared event includes removed-message count. DOCS-SDKCONTEXT-039: Context-cleared event includes initial message.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "60dc2496cbcbb99a96407eb8",
+        "text_sha256": "78c66c7915b8314c512091ac6ee052894b51314739c7eb7794d1ab8218d19caf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-040: isTerminal ends the current agent turn only on tool success. DOCS-SDKCONTEXT-041: Tool failure remains visible to the model. DOCS-SDKCONTEXT-042: Tool denial remains visible to the model. DOCS-SDKCONTEXT-043: Tool rejection remains visible to the model. DOCS-SDKCONTEXT-044: Tool timeout remains visible to the model. DOCS-SDKCONTEXT-045: Tool input-validation errors remain visible to the model. DOCS-SDKCONTEXT-046-A01: Visible unsuccessful tool outcomes allow model recovery. DOCS-SDKCONTEXT-046-A02: Visible unsuccessful tool outcomes allow model retry.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "a4e4705452bf56b4ba5f9682",
+        "text_sha256": "6b379f8d17c2ea357311984c33d78ecdc0385aa7e95751605dc984c2c90e8d4d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "b374c72336b9ec635abf47bb",
+        "text_sha256": "4f3b69dbeb8c956494f44a5efc8ca69949ea7a217d4ca4cfe939aa63e40aa867",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "a62429a94ebc7e6e021f0388",
+        "text_sha256": "4199ba454d6d3ae83657120c2bb6bd674eefc0dd7d3cd4cc844171dc6725135b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint/comment, language-tab delimiter, table header/separator or section introduction to separately extracted claims; no independent operative requirement."
+      },
+      {
+        "candidate_id": "ebd27d1aa39822538f35253e",
+        "text_sha256": "88b77795da1e8b4e3dce7883dd5f59182499d2a1333dd86704d02440836fc3e0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-047: Node.js terminal-tool option is isTerminal.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "92e1994962d3f31863247561",
+        "text_sha256": "4cd1ab14315875b22a8537b2ff02a70fba7c0979b1b00313747429b352c8c719",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-048: Python terminal-tool option is is_terminal.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "1ff6d37a1a94cb00b23bcf1a",
+        "text_sha256": "411448a92b08076a05118f076e70424e26d75ea5dc05c979e1d0b0e4e66123c9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-049: Go terminal-tool option is IsTerminal.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "1453a6bb6cd777bada17ab87",
+        "text_sha256": "89e6ea240e9ca2dc54202dfb0067beec06d33373a27050e400af81532fb8c8e6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-050: .NET terminal-tool option is CopilotToolOptions.IsTerminal.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "3f4eccc1879b152a5230af6a",
+        "text_sha256": "f1c5822510f81db279344495ff302854e83dfcd145312ce404aa44ddafdc12c7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-051: Java ToolDefinition supports isTerminal(true). DOCS-SDKCONTEXT-052: Java CopilotTool annotation supports isTerminal = true.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "17478db8c1c95ff42a8ab6b9",
+        "text_sha256": "fd5a9fba82507dee189f806fda3cb2535e9b1dfb359bf3be505cf43ad18d0f10",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-053: Rust terminal-tool option is with_is_terminal(true).",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      },
+      {
+        "candidate_id": "8e2dde231a8dd44258d5bb2c",
+        "text_sha256": "ce0777e3d1a26e3c08a17f29736982b459d4cabdac40e378298580bb4fc8caf7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCONTEXT-054: Use terminality only when successful tool completion should end the turn. DOCS-SDKCONTEXT-055: Ordinary tools should leave terminality unset.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-context-management-claims.json"
+      }
+    ],
+    "independent_audit": "evidence/sdk-loop-context-client-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-loop-context-client-independent-repair-recheck.json",
+    "final_repair_recheck": "evidence/sdk-loop-context-client-final-repair-recheck.json"
+  }
+]
