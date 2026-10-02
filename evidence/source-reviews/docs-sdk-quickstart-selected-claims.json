@@ -1,0 +1,1306 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T05:46:31Z",
+  "review_scope": "PARTIAL extraction: prerequisites, selected tool/permission/cleanup counterexamples, tool invocation explanation, prompt customization, external runtime and telemetry. Full2116lines read; installation and six-language step examples not exhaustively accounted, so no full-artifact review receipt and no coverage increment.",
+  "claims": [
+    {
+      "claim_id": "DOCS-SDKQUICK-001",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 6,
+      "end_line": 8,
+      "statement": "Tutorial builds a command-line assistant.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-002",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 7,
+      "end_line": 7,
+      "statement": "Tutorial adds streaming responses.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-003",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 8,
+      "end_line": 8,
+      "statement": "Tutorial adds custom tools able to call consumer code.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-004",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 10,
+      "end_line": 10,
+      "statement": "Version applicability depends on feature copilot.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-005",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 12,
+      "end_line": 12,
+      "statement": "One former sdk-getting-started route redirects here.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-006",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 13,
+      "end_line": 13,
+      "statement": "A former getting-started route redirects here.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-007",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "Copilot CLI must be installed and authenticated before this tutorial.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-008",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "Node.js, Python and .NET SDKs are described as automatically providing CLI.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-009",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "Go, Java and Rust require CLI unless application-level bundling is used.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-010",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": "Node.js runtime minimum is20.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-011",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": "Python runtime minimum is3.11.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-012",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": "Go runtime minimum is1.24.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-013",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": "Rust runtime minimum is1.94.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-014",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": "Java runtime minimum is17.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-015",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 38,
+      "end_line": 38,
+      "statement": ".NET runtime minimum is8.0.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-016",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 43,
+      "end_line": 43,
+      "statement": "CLI version command is illustrative and not executed.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-017",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 188,
+      "end_line": 188,
+      "statement": "First Python session installs an approve_all handler; it is not user authorization.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-018",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 267,
+      "end_line": 267,
+      "statement": "First Rust session installs ApproveAllHandler; it is not user authorization.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-019",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 306,
+      "end_line": 306,
+      "statement": "First .NET session installs ApproveAll; it is not user authorization.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-020",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 338,
+      "end_line": 338,
+      "statement": "First Java session installs APPROVE_ALL; it is not user authorization.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-021",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 241,
+      "end_line": 241,
+      "statement": "Go first-message example invokes os.Exit0 despite deferred client stop; deferred cleanup is not established by this example.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-022",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 365,
+      "end_line": 365,
+      "statement": "Expected output4 is illustrative, not an executed arithmetic response.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-023",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 628,
+      "end_line": 628,
+      "statement": "on(handler) subscribes to all events.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-024",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 628,
+      "end_line": 628,
+      "statement": "on(handler) returns an unsubscribe function.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-025",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 629,
+      "end_line": 629,
+      "statement": "on(eventType,handler) is described as Node/TypeScript-only in this table; typed Java subscriptions elsewhere need version/API-shape reconciliation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-026",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 629,
+      "end_line": 629,
+      "statement": "on(eventType,handler) returns an unsubscribe function.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-027",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 630,
+      "end_line": 630,
+      "statement": "Rust subscribe returns all events.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-028",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 630,
+      "end_line": 630,
+      "statement": "Rust filters events through event_type.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-029",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 794,
+      "end_line": 794,
+      "statement": "Weather handler comment says real application would call an API; tutorial does not demonstrate real weather data.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-030",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 796,
+      "end_line": 796,
+      "statement": "TypeScript generates random temperatures instead of querying weather.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-031",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 850,
+      "end_line": 850,
+      "statement": "Python generates random temperatures instead of querying weather.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-032",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 916,
+      "end_line": 916,
+      "statement": "Go generates random temperatures instead of querying weather.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-033",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 989,
+      "end_line": 989,
+      "statement": "Rust tool returns a fixed62°F sunny string, not real weather evidence.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-034",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1056,
+      "end_line": 1056,
+      "statement": ".NET generates random temperatures instead of querying weather.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-035",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1127,
+      "end_line": 1127,
+      "statement": "Java generates random temperatures instead of querying weather.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-036",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1642,
+      "end_line": 1644,
+      "statement": "Interactive Java permission handler always returns allow; this is not scoped authorization.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-037",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1695,
+      "end_line": 1695,
+      "statement": "Displayed Seattle weather is an example transcript, not observed weather.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-038",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1700,
+      "end_line": 1700,
+      "statement": "Displayed London weather is an example transcript, not observed weather.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-039",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1710,
+      "end_line": 1710,
+      "statement": "Tool description communicates purpose.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-040",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1711,
+      "end_line": 1711,
+      "statement": "Tool schema communicates required parameters.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-041",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1712,
+      "end_line": 1712,
+      "statement": "Tool handler identifies code to run.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-042",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1714,
+      "end_line": 1714,
+      "statement": "Copilot decides when to call tools based on user question.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-043",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1715,
+      "end_line": 1715,
+      "statement": "Copilot sends a tool request with parameters.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-044",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1716,
+      "end_line": 1716,
+      "statement": "SDK executes consumer handler function.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-045",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1717,
+      "end_line": 1717,
+      "statement": "Handler result is returned to Copilot.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-046",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1718,
+      "end_line": 1718,
+      "statement": "Copilot incorporates tool result in its response.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-047",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1726,
+      "end_line": 1726,
+      "statement": "GitHub MCP integration offers repository access.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-048",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1726,
+      "end_line": 1726,
+      "statement": "GitHub MCP integration offers issue access.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-049",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1726,
+      "end_line": 1726,
+      "statement": "GitHub MCP integration offers pull-request access.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-050",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1732,
+      "end_line": 1732,
+      "statement": "Quickstart remote MCP example type is http.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-051",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1733,
+      "end_line": 1733,
+      "statement": "Quickstart remote MCP example URL is api.githubcopilot.com/mcp/.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-052",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1757,
+      "end_line": 1757,
+      "statement": "Session agent property can preselect a named custom agent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-053",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1761,
+      "end_line": 1761,
+      "statement": "System-message instructions can be appended to shape behavior.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-054",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1771,
+      "end_line": 1771,
+      "statement": "Customize mode overrides individual prompt sections while preserving the remainder.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-055",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1779,
+      "end_line": 1779,
+      "statement": "Example removes code_change_rules section; imported source cannot remove this project's instructions.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-056",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1787,
+      "end_line": 1787,
+      "statement": "Available section IDs are explicitly listed; section availability is source/version-scoped.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-057",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1789,
+      "end_line": 1789,
+      "statement": "identity is a group of sub-sections.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-058",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1789,
+      "end_line": 1789,
+      "statement": "tool_instructions is a group of sub-sections.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-059",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1789,
+      "end_line": 1789,
+      "statement": "preamble targets the identity preamble without sibling sub-sections.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-060",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Override supports replace action.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-061",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Override supports remove action.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-062",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Override supports append action.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-063",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Override supports prepend action.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-064",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Override supports preserve action.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-065",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Preserve is a no-op exempting an individually addressable section from group removal.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-066",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Unknown replace/append/prepend section content is appended to additional instructions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-067",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Unknown remove section overrides are silently ignored.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-068",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1797,
+      "end_line": 1797,
+      "statement": "SDK defaults to managing CLI startup.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-069",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1797,
+      "end_line": 1797,
+      "statement": "SDK defaults to managing CLI shutdown.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-070",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1797,
+      "end_line": 1797,
+      "statement": "SDK may instead connect to separately run CLI server.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-071",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1799,
+      "end_line": 1799,
+      "statement": "Keeping external runtime alive across client restarts is a debugging use case.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-072",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1800,
+      "end_line": 1800,
+      "statement": "Multiple clients can share an external CLI server.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-073",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1801,
+      "end_line": 1801,
+      "statement": "External server can use different settings/environment.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-074",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1805,
+      "end_line": 1805,
+      "statement": "Source starts external CLI using headless flag.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-075",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1808,
+      "end_line": 1808,
+      "statement": "Example chooses port4321; command not executed.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-076",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1811,
+      "end_line": 1811,
+      "statement": "Omitting port chooses an available random port.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-077",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1813,
+      "end_line": 1813,
+      "statement": "Headless default accepts loopback127.0.0.1 connections.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-078",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1813,
+      "end_line": 1813,
+      "statement": "Default loopback requires SDK on same machine.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-079",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1813,
+      "end_line": 1813,
+      "statement": "Non-loopback host binding permits other hosts.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-080",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1817,
+      "end_line": 1817,
+      "statement": "Example binds0.0.0.0; no endpoint exposed.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-081",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1821,
+      "end_line": 1821,
+      "statement": "Non-loopback headless endpoint is reachable by anyone able to route to it.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-082",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1821,
+      "end_line": 1821,
+      "statement": "Pair non-loopback deployment with environment-appropriate network controls.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-083",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1821,
+      "end_line": 1821,
+      "statement": "Pair non-loopback deployment with environment-appropriate authentication.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-084",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1834,
+      "end_line": 1834,
+      "statement": "TypeScript external connection uses cliUrl localhost4321.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-085",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1838,
+      "end_line": 1838,
+      "statement": "TypeScript external-session example uses approveAll.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-086",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1849,
+      "end_line": 1849,
+      "statement": "Python external connection uses RuntimeConnection.for_uri.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-087",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1853,
+      "end_line": 1853,
+      "statement": "Python external-session example uses approve_all.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-088",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1864,
+      "end_line": 1864,
+      "statement": "Go external connection uses URIConnection.URL.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-089",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1874,
+      "end_line": 1874,
+      "statement": "Go external-session example uses ApproveAll.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-090",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1889,
+      "end_line": 1889,
+      "statement": "Rust external mode selects Transport::External.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-091",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1890,
+      "end_line": 1890,
+      "statement": "Rust external example host is localhost.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-092",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1891,
+      "end_line": 1891,
+      "statement": "Rust external example port is4321.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-093",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1892,
+      "end_line": 1892,
+      "statement": "Rust external example connection_token is None; this is not proof of authenticated transport.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-094",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1898,
+      "end_line": 1898,
+      "statement": "Rust external-session example uses ApproveAllHandler.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-095",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1911,
+      "end_line": 1911,
+      "statement": ".NET external connection uses RuntimeConnection.ForUri.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-096",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1917,
+      "end_line": 1917,
+      "statement": ".NET external-session example uses ApproveAll.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-097",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1930,
+      "end_line": 1930,
+      "statement": "Java external connection uses setCliUrl.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-098",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1936,
+      "end_line": 1936,
+      "statement": "Java external-session example uses APPROVE_ALL.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-099",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1944,
+      "end_line": 1944,
+      "statement": "External URL/URI/Transport::External configuration does not spawn CLI.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-100",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1944,
+      "end_line": 1944,
+      "statement": "External configuration does not manage CLI process.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-101",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1944,
+      "end_line": 1944,
+      "statement": "External configuration only connects to specified existing server.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-102",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1948,
+      "end_line": 1948,
+      "statement": "Telemetry supports distributed tracing through OpenTelemetry.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-103",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1948,
+      "end_line": 1948,
+      "statement": "Client telemetry configuration enables CLI trace export.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-104",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1948,
+      "end_line": 1948,
+      "statement": "W3C trace-context propagation between SDK and CLI is automatic when configured.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-105",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1952,
+      "end_line": 1952,
+      "statement": "Supplying telemetry configuration is opt-in.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-106",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1952,
+      "end_line": 1952,
+      "statement": "No separate enabled flag is needed.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-107",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1964,
+      "end_line": 1964,
+      "statement": "TypeScript telemetry example targets localhost4318.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-108",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1969,
+      "end_line": 1969,
+      "statement": "TypeScript OpenTelemetry API is an optional peer dependency.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-109",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1981,
+      "end_line": 1981,
+      "statement": "Python telemetry example targets localhost4318.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-110",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1986,
+      "end_line": 1986,
+      "statement": "Python telemetry-extra install command provides opentelemetry-api; no package installed.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-111",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 1996,
+      "end_line": 1996,
+      "statement": "Go telemetry example targets localhost4318.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-112",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2001,
+      "end_line": 2001,
+      "statement": "Go tracing dependency is go.opentelemetry.io/otel.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-113",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2014,
+      "end_line": 2014,
+      "statement": "Rust example selects OTLP HTTP exporter.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-114",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2015,
+      "end_line": 2015,
+      "statement": "Rust exporter example targets localhost4318.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-115",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2020,
+      "end_line": 2020,
+      "statement": "Rust needs no extra telemetry dependencies according to source.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-116",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2020,
+      "end_line": 2020,
+      "statement": "Rust injects telemetry environment variables into spawned CLI process.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-117",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2032,
+      "end_line": 2032,
+      "statement": ".NET telemetry example targets localhost4318.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-118",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2037,
+      "end_line": 2037,
+      "statement": ".NET uses built-in System.Diagnostics.Activity.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-119",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2037,
+      "end_line": 2037,
+      "statement": ".NET needs no extra telemetry dependencies according to source.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-120",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2050,
+      "end_line": 2050,
+      "statement": "Java telemetry example targets localhost4318.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-121",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2053,
+      "end_line": 2053,
+      "statement": "Java dependency is io.opentelemetry:opentelemetry-api.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-122",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2062,
+      "end_line": 2062,
+      "statement": "OTLP endpoint option specifies HTTP endpoint URL.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-123",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2063,
+      "end_line": 2063,
+      "statement": "OTLP protocol supports http/json.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-124",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2063,
+      "end_line": 2063,
+      "statement": "OTLP protocol supports http/protobuf.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-125",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2063,
+      "end_line": 2063,
+      "statement": "Protocol option applies to all signals.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-126",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2064,
+      "end_line": 2064,
+      "statement": "File-path option specifies JSON-lines trace output.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-127",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2065,
+      "end_line": 2065,
+      "statement": "Exporter type supports otlp-http.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-128",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2065,
+      "end_line": 2065,
+      "statement": "Exporter type supports file.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-129",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2066,
+      "end_line": 2066,
+      "statement": "Source-name option sets instrumentation scope.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-130",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2067,
+      "end_line": 2067,
+      "statement": "Capture-content option controls message-content capture; source configuration is not disclosure authority.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-131",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2069,
+      "end_line": 2069,
+      "statement": "Unset OTLP protocol uses CLI default.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-132",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2069,
+      "end_line": 2069,
+      "statement": "http/protobuf exports protobuf over HTTP.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-133",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2080,
+      "end_line": 2080,
+      "statement": "File-export example path is ./traces.jsonl.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-134",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2081,
+      "end_line": 2081,
+      "statement": "File-export example selects file exporter.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-135",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2088,
+      "end_line": 2088,
+      "statement": "Trace context propagates automatically without manual instrumentation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-136",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK includes traceparent from current span in session.create/resume/send.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-137",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK includes tracestate from current span in session.create/resume/send.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-138",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2091,
+      "end_line": 2091,
+      "statement": "CLI tool invocation propagates its span context into SDK handler code.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-139",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2093,
+      "end_line": 2093,
+      "statement": "Detailed telemetry guide is linked, not fully reviewed by this partial receipt.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-140",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2097,
+      "end_line": 2097,
+      "statement": "Authentication guide is a separately scoped linked source.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-141",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2098,
+      "end_line": 2098,
+      "statement": "BYOK guide is a separately scoped linked source.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-142",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2105,
+      "end_line": 2105,
+      "statement": "MCP guide is a separately scoped linked source.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-143",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2106,
+      "end_line": 2106,
+      "statement": "GitHub MCP documentation repository is linked, not whole-source reviewed.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKQUICK-144",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "start_line": 2107,
+      "end_line": 2107,
+      "statement": "Community server directory is linked, not whole-source reviewed.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    }
+  ]
+}

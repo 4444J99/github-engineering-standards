@@ -15,7 +15,7 @@
         "candidate_id": "3ab09ce73e33f0239c35d4d2",
         "text_sha256": "6a3ce0dbef1da3ab46c09e0c821f74e43620652c887f5484bb613b2ab9ca372c",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-001: SDK MCP integration extends assistant capabilities with external tools. DOCS-SDKMCP-002: Servers are described as separate processes exposing callable functions. DOCS-SDKMCP-003: Free/Pro/Team version scope is declared. DOCS-SDKMCP-004: Enterprise Cloud version scope is declared.",
+        "rationale": "DOCS-SDKMCP-001: SDK MCP integration extends assistant capabilities with external tools. DOCS-SDKMCP-002: Servers are described as separate processes exposing callable functions. DOCS-SDKMCP-003: Free/Pro/Team version scope is declared. DOCS-SDKMCP-004: Enterprise Cloud version scope is declared. DOCS-SDKMCP-002-A01: MCP servers are described as separate processes. DOCS-SDKMCP-002-A02: MCP servers expose callable functions.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -122,14 +122,14 @@
         "candidate_id": "b4c4b43cabebde71c5d9506c",
         "text_sha256": "4ba5f5303ba8ddb3a29d7c2e1fc89605d280240552fb1ea70aeec2c5422de61e",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-034: Python imports PermissionHandler. DOCS-SDKMCP-035: Python example explicitly starts the client. DOCS-SDKMCP-036: Python example supplies approve_all; it is not an approved project permission grant. DOCS-SDKMCP-037: Python uses model gpt-5. DOCS-SDKMCP-038: Python configuration property is mcp_servers. DOCS-SDKMCP-039: Python local type is local. DOCS-SDKMCP-040: Python local command is python. DOCS-SDKMCP-041: Python passes relative mcp_server.py argument. DOCS-SDKMCP-042: Python local environment sets DEBUG=true. DOCS-SDKMCP-043: Python local cwd is ./servers. DOCS-SDKMCP-044: Python local tools are wildcard. DOCS-SDKMCP-045: Python local timeout is 30000. DOCS-SDKMCP-046: Python remote type is http. DOCS-SDKMCP-047: Python remote URL is the example GitHub MCP endpoint. DOCS-SDKMCP-048: Python Authorization header contains literal Bearer ${TOKEN}; no environment expansion is shown. DOCS-SDKMCP-049: Python remote tools are wildcard. DOCS-SDKMCP-050: Python sends an illustrative notification-listing prompt and waits. DOCS-SDKMCP-051: Python prints response content. DOCS-SDKMCP-052: Python stops the client. DOCS-SDKMCP-053: Python example invokes its async main through asyncio.run.",
+        "rationale": "DOCS-SDKMCP-034: Python imports PermissionHandler. DOCS-SDKMCP-035: Python example explicitly starts the client. DOCS-SDKMCP-036: Python example supplies approve_all; it is not an approved project permission grant. DOCS-SDKMCP-037: Python uses model gpt-5. DOCS-SDKMCP-038: Python configuration property is mcp_servers. DOCS-SDKMCP-039: Python local type is local. DOCS-SDKMCP-040: Python local command is python. DOCS-SDKMCP-041: Python passes relative mcp_server.py argument. DOCS-SDKMCP-042: Python local environment sets DEBUG=true. DOCS-SDKMCP-043: Python local cwd is ./servers. DOCS-SDKMCP-044: Python local tools are wildcard. DOCS-SDKMCP-045: Python local timeout is 30000. DOCS-SDKMCP-046: Python remote type is http. DOCS-SDKMCP-047: Python remote URL is the example GitHub MCP endpoint. DOCS-SDKMCP-048: Python Authorization header contains literal Bearer ${TOKEN}; no environment expansion is shown. DOCS-SDKMCP-049: Python remote tools are wildcard. DOCS-SDKMCP-050: Python sends an illustrative notification-listing prompt and waits. DOCS-SDKMCP-051: Python prints response content. DOCS-SDKMCP-052: Python stops the client. DOCS-SDKMCP-053: Python example invokes its async main through asyncio.run. DOCS-SDKMCP-144: Python example constructs a default client.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
         "candidate_id": "d277f44c6d4803d430436aa7",
         "text_sha256": "0d3cc216f7bad402a94679cf0af02272772a28ad4a4c1526f789f3884ea235f8",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-054: Go checks client-start errors. DOCS-SDKMCP-055: Go defers client stop. DOCS-SDKMCP-056: Go model example is gpt-5. DOCS-SDKMCP-057: Go uses MCPServers configuration. DOCS-SDKMCP-058: Go selects MCPStdioServerConfig. DOCS-SDKMCP-059: Go local command is node. DOCS-SDKMCP-060: Go passes relative mcp-server.js argument. DOCS-SDKMCP-061: Go enables wildcard tools. DOCS-SDKMCP-062: Go checks session-creation errors. DOCS-SDKMCP-063: Go defers session disconnect; this is not persisted-data deletion.",
+        "rationale": "DOCS-SDKMCP-054: Go checks client-start errors. DOCS-SDKMCP-055: Go defers client stop. DOCS-SDKMCP-056: Go model example is gpt-5. DOCS-SDKMCP-057: Go uses MCPServers configuration. DOCS-SDKMCP-058: Go selects MCPStdioServerConfig. DOCS-SDKMCP-059: Go local command is node. DOCS-SDKMCP-060: Go passes relative mcp-server.js argument. DOCS-SDKMCP-061: Go enables wildcard tools. DOCS-SDKMCP-062: Go checks session-creation errors. DOCS-SDKMCP-063: Go defers session disconnect; this is not persisted-data deletion. DOCS-SDKMCP-145: Go example uses a background context. DOCS-SDKMCP-146: Go example constructs a default client. DOCS-SDKMCP-147: Go example starts the client. DOCS-SDKMCP-148: Go exits via log.Fatal on startup error. DOCS-SDKMCP-149: Go exits via log.Fatal on session-creation error.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -143,14 +143,14 @@
         "candidate_id": "1fe27791956daea876b825f4",
         "text_sha256": "26a4926bb1d04c0fe07d8b4a9dd3db5c978ad478b845aca5c7f0762c96e6b7cc",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-072: Set disabledMcpServers to exact server names that must not run in a session. DOCS-SDKMCP-073: Disabled-server setting is scoped to each create or resume request. DOCS-SDKMCP-074: Disabled-server setting does not modify global settings.",
+        "rationale": "DOCS-SDKMCP-072: Set disabledMcpServers to exact server names that must not run in a session. DOCS-SDKMCP-073: Disabled-server setting is scoped to each create or resume request. DOCS-SDKMCP-074: Disabled-server setting does not modify global settings. DOCS-SDKMCP-153: Per-session disabled servers do not modify the server configuration.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
         "candidate_id": "d608c950cea15b875544d016",
         "text_sha256": "59c38f8491b1e5748ed74a532b87993625b9bd091d5f3c9ad69aca0e2dcf7b95",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-075: Disabled-server example configures npx -y filesystem package acquisition and current-directory access; not executed. DOCS-SDKMCP-076: Disabled-server example also configures remote GitHub HTTP server. DOCS-SDKMCP-077: Example suppresses server named github.",
+        "rationale": "DOCS-SDKMCP-075: Disabled-server example configures npx -y filesystem package acquisition and current-directory access; not executed. DOCS-SDKMCP-076: Disabled-server example also configures remote GitHub HTTP server. DOCS-SDKMCP-077: Example suppresses server named github. DOCS-SDKMCP-075-A01: Disabled-server example chooses local filesystem server. DOCS-SDKMCP-075-A02: Example invokes npx. DOCS-SDKMCP-075-A03: Example uses-yautomatic package acquisition, not performed. DOCS-SDKMCP-075-A04: Example specifies filesystem package. DOCS-SDKMCP-075-A05: Example scopes path to current directory.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -211,7 +211,7 @@
         "candidate_id": "e3c35cefb0d6e57ea280a9bf",
         "text_sha256": "e6bbc7e8940c718a6850e7a1a9243bddc5e10a2e8119a574a9fc3b2b018e5152",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-084: At creation and cold resume, disabled servers are not started. DOCS-SDKMCP-085: At creation and cold resume, authentication of disabled servers is not initiated. DOCS-SDKMCP-086: Resident resume cannot undo a server already spawned. DOCS-SDKMCP-087: Server names are matched exactly.",
+        "rationale": "DOCS-SDKMCP-084: At creation and cold resume, disabled servers are not started. DOCS-SDKMCP-085: At creation and cold resume, authentication of disabled servers is not initiated. DOCS-SDKMCP-086: Resident resume cannot undo a server already spawned. DOCS-SDKMCP-087: Server names are matched exactly. DOCS-SDKMCP-084-A01: At creation disabled servers do not start. DOCS-SDKMCP-084-A02: At cold resume disabled servers do not start. DOCS-SDKMCP-085-A01: At creation disabled-server authentication is not initiated. DOCS-SDKMCP-085-A02: At cold resume disabled-server authentication is not initiated.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -293,7 +293,7 @@
         "candidate_id": "0dec0f1d5351428f17e5055c",
         "text_sha256": "f7739ad054e2d67bbaaeb4d96edc0bbc6ef6a9ce5d8fdfce607fa9642a5c2dbe",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-097: Filesystem quick-start type is local. DOCS-SDKMCP-098: Filesystem quick-start command is npx. DOCS-SDKMCP-099: Filesystem quick start uses -y with filesystem package; automatic acquisition is not performed. DOCS-SDKMCP-100: Filesystem example exposes /tmp as its allowed path, not project authorization. DOCS-SDKMCP-101: Filesystem example enables wildcard tools. DOCS-SDKMCP-102: Example logs session ID; no real private session identifier collected. DOCS-SDKMCP-103: Example prompt asks to list files in allowed directory. DOCS-SDKMCP-104: Example prints optional response content. DOCS-SDKMCP-105: Example disconnects session. DOCS-SDKMCP-106: Example stops client.",
+        "rationale": "DOCS-SDKMCP-097: Filesystem quick-start type is local. DOCS-SDKMCP-098: Filesystem quick-start command is npx. DOCS-SDKMCP-099: Filesystem quick start uses -y with filesystem package; automatic acquisition is not performed. DOCS-SDKMCP-100: Filesystem example exposes /tmp as its allowed path, not project authorization. DOCS-SDKMCP-101: Filesystem example enables wildcard tools. DOCS-SDKMCP-102: Example logs session ID; no real private session identifier collected. DOCS-SDKMCP-103: Example prompt asks to list files in allowed directory. DOCS-SDKMCP-104: Example prints optional response content. DOCS-SDKMCP-105: Example disconnects session. DOCS-SDKMCP-106: Example stops client. DOCS-SDKMCP-150: Filesystem quickstart constructs a default client. DOCS-SDKMCP-151: Filesystem quickstart creates a session containing MCP configuration. DOCS-SDKMCP-152: Filesystem quickstart invokes its main function.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -332,7 +332,7 @@
         "candidate_id": "acb81acc7325ebaa25a58fd4",
         "text_sha256": "44c33413e9366267fbf3089f394168f99738ceb7e79b1f8c44cfce854ff223b1",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-110: Local type accepts local or stdio, is optional, and defaults to local.",
+        "rationale": "DOCS-SDKMCP-110: Local type accepts local or stdio, is optional, and defaults to local. DOCS-SDKMCP-110-A01: Local type permits local or stdio. DOCS-SDKMCP-110-A02: Local type is optional. DOCS-SDKMCP-110-A03: Local type defaults to local.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -367,7 +367,7 @@
         "candidate_id": "86613922daa7e661cf211a6d",
         "text_sha256": "dad231c318e5471701729d5eb50aca77e2fbfdb21555b8bdec0d6010c5bac21b",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-115: Local tools is an optional string array; wildcard/all and empty/none semantics are stated.",
+        "rationale": "DOCS-SDKMCP-115: Local tools is an optional string array; wildcard/all and empty/none semantics are stated. DOCS-SDKMCP-115-A01: Local tools is optional string array. DOCS-SDKMCP-115-A02: Wildcard allows all tools. DOCS-SDKMCP-115-A03: Empty list allows no tools.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -435,7 +435,7 @@
         "candidate_id": "c0de2d71d841bb7e30b0ed65",
         "text_sha256": "b9468750022d0b9380f76cab8bbe10a59ec8c295127663841cb46f290c4aeeb9",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-123: Check command and arguments.",
+        "rationale": "DOCS-SDKMCP-123: Check command and arguments. DOCS-SDKMCP-123-A01: Check startup command correctness. DOCS-SDKMCP-123-A02: Check startup arguments correctness.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
@@ -509,21 +509,21 @@
         "candidate_id": "69aa4bf589b7ccdf48146933",
         "text_sha256": "30e520db11fef12f6a1bf3d2a77ac7f1bab57a555d8920605e61e1ba85d3ac90",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-131: For server-not-found check correct executable command path.",
+        "rationale": "DOCS-SDKMCP-131: For server-not-found check correct executable command path. DOCS-SDKMCP-131-A01: For server-not-found verify command path correctness. DOCS-SDKMCP-131-A02: For server-not-found verify executable usability.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
         "candidate_id": "dc30186ef05587971c984ab5",
         "text_sha256": "e0ba586677f003a7809f0cb4fa48766dd5850449928367856ecc0c6dea49d8b5",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-132: For HTTP connection refusal check URL and running server.",
+        "rationale": "DOCS-SDKMCP-132: For HTTP connection refusal check URL and running server. DOCS-SDKMCP-132-A01: For HTTP refusal check the URL. DOCS-SDKMCP-132-A02: For HTTP refusal check the server is running.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
         "candidate_id": "626a2cdbf1d4297b7d27267a",
         "text_sha256": "f6b2e7be12f6e77464895d1e6108c3098bbadbfb93dd6aa02e3c918023755461",
         "disposition": "REFERENCE",
-        "rationale": "DOCS-SDKMCP-133: For timeout increase configured timeout or examine server performance.",
+        "rationale": "DOCS-SDKMCP-133: For timeout increase configured timeout or examine server performance. DOCS-SDKMCP-133-A01: Increasing timeout is a diagnostic option. DOCS-SDKMCP-133-A02: Checking server performance is an alternative diagnostic.",
         "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-configuration-claims.json"
       },
       {
