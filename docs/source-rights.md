@@ -77,3 +77,25 @@ the intended distribution's compliance. Do not use the current site-source
 Hippocratic license or Contributor Covenant 3.0's CC BY-SA notice to retroactively
 relabel these older texts. No per-file clearance numerator changes from this
 historical declaration alone.
+
+## SustainOSS component finding
+
+The source-linked [SustainOSS code of conduct](https://sustainoss.org/code-of-conduct/)
+has a CC BY-SA 4.0 content footer. Historical source inspection at commit
+`dc6b8aa6f3452b68682f4a24dcf969020d7e0994` (2022-03-23) confirms the
+[same content declaration](https://github.com/sustainers/sustainers.github.io/blob/dc6b8aa6f3452b68682f4a24dcf969020d7e0994/_includes/footer.html),
+alongside a repository [MIT software license](https://github.com/sustainers/sustainers.github.io/blob/dc6b8aa6f3452b68682f4a24dcf969020d7e0994/LICENSE).
+The [historical conduct text](https://github.com/sustainers/sustainers.github.io/blob/dc6b8aa6f3452b68682f4a24dcf969020d7e0994/code-of-conduct.md)
+contains corresponding short/long/help structure and present-behavior scope
+language. The governance template's lines 56-58 closely track those scope
+paragraphs with project-role substitutions. Its lines 37-38 also correspond
+to two SustainOSS prohibited-behavior bullets. This is evidence of possible
+adapted expression, not merely an abstract layout idea; exact historical origin
+and component boundaries still require adjudication.
+
+Do not clear the entire governance conduct file as CC BY 4.0 or MIT from its
+repository notice. For copied or adapted SustainOSS expression, assess the
+[CC BY-SA 4.0 attribution and ShareAlike conditions](https://creativecommons.org/licenses/by-sa/4.0/)
+against the actual proposed distribution. Independently authored wording and
+source references remain distinct from copied expression. No publication,
+relicensing, upstream contact or human rights acceptance was performed.
