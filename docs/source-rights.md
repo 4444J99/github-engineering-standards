@@ -17,7 +17,7 @@ This initial private bootstrap makes no decision to publish, sublicense or repla
 
 ## File-specific recovery findings
 
-`evidence/rights-review-queue.json` binds 22 artifacts to their pinned commit, path
+`evidence/rights-review-queue.json` binds 48 artifacts to their pinned commit, path
 and digest. All remain pending rights acceptance; these records do not increase the
 rights-cleared numerator. Model-repo's CODE_OF_CONDUCT.md attributes Contributor
 Covenant 2.0, while CONTRIBUTING.md attributes 1.4. The governance template's
@@ -47,7 +47,7 @@ publish. Rights-cleared coverage remains zero.
 python -m ges.rights --artifacts .cache/corpus/artifacts.jsonl --findings evidence/rights-review-queue.json --output .cache/corpus/rights-triage.json
 ```
 
-The triage queue covers all 13,657 pinned artifacts, retaining the 22 existing
+The triage queue covers all 13,657 pinned artifacts, retaining the 48 existing
 file-specific findings. It checks source pins, artifact uniqueness and finding
 digests. Unreviewed files have no inferred repository license. Every record
 remains pending: this queue neither grants rights nor authorizes distribution.
@@ -56,6 +56,18 @@ Actual clearance requires file-specific grants, exceptions, permitted-use decisi
 and attribution duties, plus the applicable authorized distribution decision.
 Published bodies need separate version and rights reconciliation; this pinned
 artifact queue does not cover that denominator.
+
+Twenty-six inspected binary assets now have file-specific findings tied to their
+exact digests and supporting evidence under `evidence/asset-reviews/`: the GHQR
+favicon and twenty-five Well-Architected diagrams, screenshots, PDFs, covers and
+site imagery/icons. The two hero images contain different artwork; their shared
+basename does not establish duplication or a shared grant. Contributor portraits
+remain unidentified; portrait permission is separate from source-code licensing.
+Their intended tracked use is identity/provenance references and independently
+authored observations, not bundled raw artwork. Asset authorship, inherited
+expression, attribution/modification duties and applicable trademark conditions
+remain explicit clearance work before raw-asset redistribution. This restricted
+use decision is not a legal clearance or publication approval.
 
 ## Contributor Covenant historical evidence
 
