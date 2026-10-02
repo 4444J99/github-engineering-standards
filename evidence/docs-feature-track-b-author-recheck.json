@@ -1,0 +1,68 @@
+{
+  "schema": "ges.bounded-author-repair-recheck.v1",
+  "reviewer": "codex:source-review",
+  "reviewer_identity": "/root/evaluator_review",
+  "independent_auditor_identity": "/root",
+  "reviewed_at": "2026-10-02T18:03:50Z",
+  "input": {
+    "path": "evidence/source-reviews/docs-feature-track-b-claims.json",
+    "records": 615,
+    "sha256": "6b1a3bb1843cc414a741c202f26fad258e565ce78eb3a916b5683bafae4a1568"
+  },
+  "original_input": {
+    "records": 599,
+    "sha256": "eb8785dd50a8f2744943f521974856ceee3b1b2c39c7ef7fed352707e84d9b16"
+  },
+  "method": "Original draft author rechecks only root changes against previously fully read pinned source; not an independent audit of own original599 records. Root separately independently read all137 source bodies and original draft.",
+  "rechecks": [
+    {
+      "parents": [
+        "0052",
+        "0130",
+        "0177",
+        "0250",
+        "0291",
+        "0426",
+        "0438"
+      ],
+      "children": "DOCS-FEATURE-B-0600 through DOCS-FEATURE-B-0614",
+      "outcome": "SUPPORTED",
+      "detail": "Seven multitracker parents retained GROUPED_CONTEXT; fifteen children preserve individual occurrence-qualified tracking identities without linked-world review."
+    },
+    {
+      "id": "DOCS-FEATURE-B-0615",
+      "outcome": "SUPPORTED",
+      "detail": "README20 target /content#versions retained as an inert reference."
+    },
+    {
+      "id": "DOCS-FEATURE-B-0475",
+      "outcome": "SUPPORTED",
+      "detail": "SVG description now points to actual comment at source line2."
+    },
+    {
+      "id": "DOCS-FEATURE-B-0526",
+      "outcome": "SUPPORTED",
+      "detail": "Cross-comparison span2–7 contains both no-GHES comment and active GHES>=3.18 selector; conflict remains unresolved."
+    },
+    {
+      "id": "DOCS-FEATURE-B-0029",
+      "outcome": "SUPPORTED",
+      "detail": "Cloud-only authoring restriction correctly carries REQUIREMENT strength."
+    },
+    {
+      "topic": "Common-context normalization",
+      "outcome": "SUPPORTED",
+      "detail": "Removal of repeated per-predicate availability disclaimer retains document-level pinned-metadata/no-runtime boundary and unchanged literal predicates."
+    }
+  ],
+  "remaining_actionable_findings": [],
+  "boundary": {
+    "scope": "Only this pinned feature-source batch and specified repairs; no whole-corpus omission, render behavior, current availability, entitlements, native enforcement or rights certification.",
+    "global_omission_certified": false,
+    "render_behavior_verified": false,
+    "native_behavior_verified": false,
+    "rights_cleared": false,
+    "policy_adopted": false,
+    "upstream_executed": false
+  }
+}

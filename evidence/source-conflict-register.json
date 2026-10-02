@@ -257,6 +257,28 @@
       "proposed_resolution": "Preserve the stated authoring restriction, current branch values and rationale without treating the comment as demonstrated rendering behavior. Historical or external rendering may explain the rationale; this source excerpt does not.",
       "required_evidence": "Applicable renderer and contextual code-block output; source read does not execute templates or establish arbitrary HTML safety.",
       "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-DOCS-FEATURE-ACTIONS-GHES-001",
+      "source_review": "evidence/source-reviews/docs-feature-track-a-claims.json",
+      "source_spans_rechecked": [
+        "data/features/code-scanning-actions-language.yml:3-7"
+      ],
+      "issue": "Comment excludes GHES while the active ghes selector is >3.17.",
+      "proposed_resolution": "Retain comment and active metadata separately; use literal selector for pinned metadata resolution without asserting actual availability or silently discarding the comment.",
+      "required_evidence": "Pinned renderer and contextual product/version assurance before operational availability assertion.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-DOCS-FEATURE-REGISTRY-GHES-001",
+      "source_review": "evidence/source-reviews/docs-feature-track-b-claims.json",
+      "source_spans_rechecked": [
+        "data/features/org-private-registry.yml:2-7"
+      ],
+      "issue": "Comment excludes GHES while the active ghes selector is >=3.18.",
+      "proposed_resolution": "Retain comment and active metadata separately; use literal selector for pinned metadata resolution without asserting actual availability or silently discarding the comment.",
+      "required_evidence": "Pinned renderer and contextual product/version assurance before operational availability assertion.",
+      "policy_accepted": false
     }
   ]
 }
