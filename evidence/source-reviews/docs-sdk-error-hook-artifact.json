@@ -1,0 +1,427 @@
+[
+  {
+    "artifact_id": "42b21422291724f5b0be32a2",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/hooks/error-handling.md",
+    "content_sha256": "8742be46b6dbe631da72434ea6e5be593aed205d6419e1e256a4a7ea470e967c",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T15:36:24Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Entire424 source lines read, independently checked as recorded in audit; all61 candidate blocks dispositioned. Atomic source APIs, examples, recommendations and limitations retained. Only this pinned source review; no actual SDK execution, adopted policy, rights clearance, published assurance or global omission certification.",
+    "independent_audit": "evidence/sdk-hook-lifecycle-error-prompt-independent-audit.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "6ffd938a9b8a3058bd80363a",
+        "text_sha256": "207448514aa42cc9295594dfde7c1f63cee80a5805a9ae9cab94a6f56c64bc63",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-001: onErrorOccurred is called for errors during session execution. DOCS-SDKERRORHOOK-002: The guide declares fpt applicability. DOCS-SDKERRORHOOK-003: The guide declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "05e69b196ffb7acf3e730873",
+        "text_sha256": "e98037b501f2d1047d3c6a71f49df67ecfed93243267b1c92df3956080c77d3b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-004: The prior use-hooks/error-handling route redirects here.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "0314edd9a9846744eacfe6b8",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "e33d185e27b331553891df9e",
+        "text_sha256": "51df9d8617dca4061fc228511cf2d3ba147d5c1883ba38b472e1734415ac73ef",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-005: The hook supports custom error logging.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "4c8243f05271e4549cf673d3",
+        "text_sha256": "dd51f4560ec9e15ca35c26f1bbdac53f18d22cd0de556f2814ec628e797eb085",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-006: The hook supports tracking error patterns.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "adbdc801aee87e391161501e",
+        "text_sha256": "7904994efe05fecd727ef0d370145d546e8ec13d7e309acc3f415ea563d9f1d6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-007: The hook supports user-friendly error messages.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "8a05ef048f5a624822054196",
+        "text_sha256": "db39e48133c6c49c54cfaf554614a649241308d86ac3cf2da11bad7df0d22939",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-008: The hook supports critical-error alerting.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "3ac6facdd4db89ed5936fde6",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "24525ca72e54df1073acd2d9",
+        "text_sha256": "34aa2526324fa41d8247720473a78908edfeb60d670c73b7303919b9bc6caa03",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-009: TypeScript handler input is ErrorOccurredHookInput. DOCS-SDKERRORHOOK-010: TypeScript invocation is HookInvocation. DOCS-SDKERRORHOOK-222: TypeScript returns a Promise. DOCS-SDKERRORHOOK-223: TypeScript output union includes ErrorOccurredHookOutput. DOCS-SDKERRORHOOK-224: TypeScript output union includes null. DOCS-SDKERRORHOOK-225: TypeScript output union includes undefined.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "39624d81d2c4962555d7541c",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "bef9eff7d308f308405cc706",
+        "text_sha256": "411dbd11345c0ca512e14827addb107ab11b686515b27c1e1f1e4ca58bd1ca87",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-012: Python input is ErrorOccurredHookInput. DOCS-SDKERRORHOOK-013: Python invocation is dict[str, str]. DOCS-SDKERRORHOOK-226: Python returns an Awaitable. DOCS-SDKERRORHOOK-227: Python output union includes ErrorOccurredHookOutput. DOCS-SDKERRORHOOK-228: Python output union includes None.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "7db20d83abe160d297076853",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "8c8fef479d82c56b5a56c0d8",
+        "text_sha256": "41213cd4684530b63d6341017a0d03edc23bc30525e8a27c85eb7cbc5035e772",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-015: Go input is ErrorOccurredHookInput. DOCS-SDKERRORHOOK-016: Go invocation is HookInvocation. DOCS-SDKERRORHOOK-017: Go returns a pointer to ErrorOccurredHookOutput. DOCS-SDKERRORHOOK-018: Go returns an error alongside its output.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "7db7bf295ee2a49b1ff57387",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "0e5c41aa43e45e804ba38266",
+        "text_sha256": "24911d765556952e502cd16cf9f8ae3e34030cd3a9f6678e2c33ebbde7a48577",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-020: .NET input is ErrorOccurredHookInput. DOCS-SDKERRORHOOK-021: .NET invocation is HookInvocation. DOCS-SDKERRORHOOK-229: .NET returns a Task. DOCS-SDKERRORHOOK-230: .NET output type is ErrorOccurredHookOutput. DOCS-SDKERRORHOOK-231: .NET output is nullable.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "a2e2747374252a7ca3104d52",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "36c1ea3bc64686be46898dc2",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-022: The Java signature alternative has a docs-validate skip marker.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "26cfa547f23fbb6eb4a002e6",
+        "text_sha256": "9605f0813fce10cc12d1e7128e90fcd33250e1fdfbdd8fc82b204ac4c0538c4f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-023: The guide explicitly says Java has no onErrorOccurred hook. DOCS-SDKERRORHOOK-024: Java instead uses EventErrorPolicy. DOCS-SDKERRORHOOK-025: Java instead uses EventErrorHandler. DOCS-SDKERRORHOOK-026: The commented Java policy uses SUPPRESS_AND_LOG_ERRORS. DOCS-SDKERRORHOOK-027: The commented Java handler receives event and exception. DOCS-SDKERRORHOOK-028: The commented Java handler logs event type. DOCS-SDKERRORHOOK-029: The commented Java handler logs exception message. DOCS-SDKERRORHOOK-030: The Java alternative points to the later basic logging snippet.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "2bff5430415ca071f9df516b",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "b03d5984a136697e47d20402",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "a0aa439c5334335d55448377",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "b436dbb484e08aacb883d42f",
+        "text_sha256": "cd971b16ece2d8cfaafb64bc552fec438c335188bbdc80eb6844f59c0518cb96",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-185: The input table does not specify timestamp seconds versus milliseconds. DOCS-SDKERRORHOOK-232: timestamp has number type. DOCS-SDKERRORHOOK-233: timestamp represents Unix error time.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "a1a2a316b1b52e0a0a87aec1",
+        "text_sha256": "d318e68b8c59de72cfd8ba7263c245b33b73ba5b0e3a9a83fa9797914d0374bb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-234: cwd has string type. DOCS-SDKERRORHOOK-235: cwd represents current working directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "2b75df5c14528238740f1af5",
+        "text_sha256": "0c8acd65613db111225cf62bca6c147ae2f80716060925df1db05bdd80f65829",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-236: error has string type. DOCS-SDKERRORHOOK-237: error represents an error message.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "231e6b479b0f42c7c5452a74",
+        "text_sha256": "a441769156f65cb66255dbf4a4743142f97163f7e5b600cc99b45ce9268f157b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-035: errorContext permits model_call. DOCS-SDKERRORHOOK-036: errorContext permits tool_execution. DOCS-SDKERRORHOOK-037: errorContext permits system. DOCS-SDKERRORHOOK-038: errorContext permits user_input. DOCS-SDKERRORHOOK-213: The actual documented input name is errorContext, not errorType. DOCS-SDKERRORHOOK-238: errorContext has string type. DOCS-SDKERRORHOOK-239: errorContext identifies where an error occurred.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "fede0f5b56a19a30aa248f88",
+        "text_sha256": "15d093821ed114b8ae59e71363a919ce51ac5a0e0f28299411d8a58846cb806f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-240: recoverable has boolean type. DOCS-SDKERRORHOOK-241: recoverable describes potential recovery rather than proven successful recovery.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "5af3ee1a64de594546ae094f",
+        "text_sha256": "68d46729c2be7842c02bb56cd397213f676b12c08cb137b732ef0f6a324ab22f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-040: Returning null uses default error handling. DOCS-SDKERRORHOOK-041: Returning undefined uses default error handling.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "29223d16230808434fb61dc1",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "f5f6164bcfde4072fdcc1aa8",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "5eb36c79f52f16ad6486a438",
+        "text_sha256": "663f896a2458452a1e1d78eb397e868d46d6c1c6a8e3fcddb53ecd9cc2a148e8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-042: suppressOutput is boolean. DOCS-SDKERRORHOOK-043: True suppressOutput hides error output from the user.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "2954b92b86fad692a6ba6bbb",
+        "text_sha256": "1953e86261e4b29b86259f9d0930e81f5b54f635e5c67bb69af55ac877c34a28",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-044: errorHandling is string typed. DOCS-SDKERRORHOOK-045: errorHandling permits retry. DOCS-SDKERRORHOOK-046: errorHandling permits skip. DOCS-SDKERRORHOOK-047: errorHandling permits abort.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "a045d4ba923ca6ff744c70c1",
+        "text_sha256": "d106f454f4fe1d2c40543110b24ce665c1d7a76a0be297a16c4a253b835c841e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-048: retryCount is a number. DOCS-SDKERRORHOOK-049: retryCount specifies retry attempts when errorHandling is retry.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "be19b6d480b90e796a4982f3",
+        "text_sha256": "0b9cc070dd60441133d1ab7450676915a16132db66b4035bbc3d882b29892ea2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-242: userNotification has string type. DOCS-SDKERRORHOOK-243: userNotification represents a custom user message.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "ea0c747ba5718638c259b248",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "eab5e83ede94908a86babbc1",
+        "text_sha256": "63497b01d71da0db7d85d0a2a0f414a3aacf509c801ed39a30d50e1644ef32af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-051: TypeScript logging awaits session creation. DOCS-SDKERRORHOOK-052: TypeScript logging uses an asynchronous error callback. DOCS-SDKERRORHOOK-053: TypeScript logs invocation.sessionId. DOCS-SDKERRORHOOK-054: TypeScript logs raw input.error. DOCS-SDKERRORHOOK-055: TypeScript logs errorContext. DOCS-SDKERRORHOOK-056: TypeScript logs recoverable. DOCS-SDKERRORHOOK-057: TypeScript logging returns null. DOCS-SDKERRORHOOK-255: TypeScript logging callback receives input. DOCS-SDKERRORHOOK-256: TypeScript logging callback receives invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "08c79ca38c0d8fc565e1b317",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "e368b355c77bf48bbfc9beda",
+        "text_sha256": "20e0541635b312116957f008b88d96983172f9100c49c0e8900ab2ddc5984a2a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-058: Python imports PermissionHandler. DOCS-SDKERRORHOOK-059: Python defines an asynchronous error callback. DOCS-SDKERRORHOOK-060: Python logs invocation session_id. DOCS-SDKERRORHOOK-061: Python logs raw error. DOCS-SDKERRORHOOK-062: Python logs errorContext. DOCS-SDKERRORHOOK-063: Python logs recoverable. DOCS-SDKERRORHOOK-064: Python logging returns None. DOCS-SDKERRORHOOK-065: Python awaits create_session. DOCS-SDKERRORHOOK-066: Python registers on_error_occurred. DOCS-SDKERRORHOOK-067: Python installs approve_all as an inert permission-handler example. DOCS-SDKERRORHOOK-257: Python logging callback receives input_data. DOCS-SDKERRORHOOK-258: Python logging callback receives invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "59a9152739f4ac73caa89a17",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "3cfd21f409238d774fb17d38",
+        "text_sha256": "5cf48429b0e94c6e0e0326cc9a13ca1226db0645e5b82a7f517e86a145b791a4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-069: Go discards the session-creation error with underscore. DOCS-SDKERRORHOOK-070: Go registers OnErrorOccurred in SessionHooks. DOCS-SDKERRORHOOK-071: Go logging callback receives typed input. DOCS-SDKERRORHOOK-072: Go logging callback receives typed invocation. DOCS-SDKERRORHOOK-073: Go logs SessionID. DOCS-SDKERRORHOOK-074: Go logs raw Error. DOCS-SDKERRORHOOK-075: Go logs ErrorContext. DOCS-SDKERRORHOOK-076: Go logs Recoverable. DOCS-SDKERRORHOOK-077: Go returns nil output. DOCS-SDKERRORHOOK-078: Go returns nil error. DOCS-SDKERRORHOOK-244: Go invokes session creation. DOCS-SDKERRORHOOK-245: Go supplies background context. DOCS-SDKERRORHOOK-259: Go logging input type is copilot.ErrorOccurredHookInput. DOCS-SDKERRORHOOK-260: Go logging invocation type is copilot.HookInvocation. DOCS-SDKERRORHOOK-261: Go logging output is a pointer to copilot.ErrorOccurredHookOutput. DOCS-SDKERRORHOOK-262: Go logging callback returns an error alongside output.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "064c96f0ade2dc5d4fcd46b4",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "d20f50438007b92fdafc4865",
+        "text_sha256": "20659e9c95f68b998ad72cebea7df1ec7980893d74240e09b98057f7e8291011",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-079: .NET awaits CreateSessionAsync. DOCS-SDKERRORHOOK-080: .NET registers OnErrorOccurred in SessionHooks. DOCS-SDKERRORHOOK-081: .NET logs invocation SessionId. DOCS-SDKERRORHOOK-082: .NET logs raw Error. DOCS-SDKERRORHOOK-083: .NET logs ErrorContext. DOCS-SDKERRORHOOK-084: .NET logs Recoverable. DOCS-SDKERRORHOOK-246: .NET wraps its output in Task.FromResult. DOCS-SDKERRORHOOK-247: .NET logging output type is nullable ErrorOccurredHookOutput. DOCS-SDKERRORHOOK-248: .NET logging returns null output. DOCS-SDKERRORHOOK-263: .NET logging callback receives input. DOCS-SDKERRORHOOK-264: .NET logging callback receives invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "a26137b3eb3c5083c58bda56",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "2658b38e5b0ef3043538c388",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-086: Java basic logging has a docs-validate skip marker.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "bed0ebb98307a85329a2b88e",
+        "text_sha256": "cabefecf8a0e8907585ed780da51bcab5c25c3388fc194e8e5b735b07563f28f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-087: Java imports Copilot types. DOCS-SDKERRORHOOK-088: Java imports RPC types. DOCS-SDKERRORHOOK-089: Java basic logging repeats that event-error APIs replace the absent hook. DOCS-SDKERRORHOOK-091: Java installs APPROVE_ALL as an inert permission-handler example. DOCS-SDKERRORHOOK-092: Java sets SUPPRESS_AND_LOG_ERRORS. DOCS-SDKERRORHOOK-093: Java installs an event/exception handler. DOCS-SDKERRORHOOK-094: Java logs the session's ID. DOCS-SDKERRORHOOK-095: Java logs exception message. DOCS-SDKERRORHOOK-096: Java logs event type. DOCS-SDKERRORHOOK-097: Java event-error logging does not establish parity with hook retry/abort output. DOCS-SDKERRORHOOK-249: Java invokes session creation. DOCS-SDKERRORHOOK-250: Java waits for creation with get.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "9cda1d1b355a9346f4c6b93e",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "b508c182d5f938b888aeab17",
+        "text_sha256": "7efa76afd520cdf333da60f36417b2a43d24adb2d128ca3a448ba190a9353aa0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-098: Monitoring imports captureException from @sentry/node. DOCS-SDKERRORHOOK-099: The monitoring comment permits another monitoring service. DOCS-SDKERRORHOOK-100: Monitoring registers an asynchronous error callback on a new session. DOCS-SDKERRORHOOK-101: Monitoring constructs Error from raw input.error. DOCS-SDKERRORHOOK-102: Monitoring tags sessionId. DOCS-SDKERRORHOOK-103: Monitoring tags errorContext. DOCS-SDKERRORHOOK-104: Monitoring includes raw error as extra data. DOCS-SDKERRORHOOK-105: Monitoring includes recoverable as extra data. DOCS-SDKERRORHOOK-106: Monitoring includes cwd as extra data. DOCS-SDKERRORHOOK-107: Monitoring returns null. DOCS-SDKERRORHOOK-108: The monitoring excerpt shows no monitoring-client initialization. DOCS-SDKERRORHOOK-109: The monitoring excerpt demonstrates no delivery acknowledgement. DOCS-SDKERRORHOOK-251: The monitoring excerpt shows no raw-error redaction. DOCS-SDKERRORHOOK-252: The monitoring excerpt shows no cwd redaction. DOCS-SDKERRORHOOK-265: Monitoring awaits session creation. DOCS-SDKERRORHOOK-272: Monitoring invokes captureException.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "f048fd1a552664cf75a04c41",
+        "text_sha256": "8906ad6df9798d3d53c610a703dde8435edc228f11f32cb317303109a12947c3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-111: Friendly-message mapping is typed Record<string, string>. DOCS-SDKERRORHOOK-112: The model_call example suggests retry after model communication trouble. DOCS-SDKERRORHOOK-113: The tool_execution example suggests checking inputs and retrying. DOCS-SDKERRORHOOK-114: The system example suggests trying later. DOCS-SDKERRORHOOK-115: The user_input example suggests checking input and retrying. DOCS-SDKERRORHOOK-116: Friendly-message handling registers an asynchronous error callback. DOCS-SDKERRORHOOK-117: Friendly-message lookup is keyed by errorContext. DOCS-SDKERRORHOOK-118: A truthy mapped message is returned as userNotification. DOCS-SDKERRORHOOK-119: Unmapped friendly-message handling returns null. DOCS-SDKERRORHOOK-120: Friendly hints are illustrative messages, not proven recovery outcomes. DOCS-SDKERRORHOOK-266: Friendly-message handling awaits session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "ae251afa8fbfa1ae7b3ab96a",
+        "text_sha256": "8a11bafd3fafefa430521cae2a715e6545ebd2f5ecd5e228357602a3b745f98e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-121: Suppression registers an asynchronous error callback. DOCS-SDKERRORHOOK-122: Suppression requires tool_execution context. DOCS-SDKERRORHOOK-123: Suppression also requires truthy recoverable. DOCS-SDKERRORHOOK-124: Suppression still logs the raw error. DOCS-SDKERRORHOOK-125: The matching suppression branch returns suppressOutput true. DOCS-SDKERRORHOOK-126: Suppression fallback returns null. DOCS-SDKERRORHOOK-127: Potential recoverability is used as the sample's noncritical criterion, not proof of harmlessness. DOCS-SDKERRORHOOK-128: User-output suppression does not remove the sample's error log. DOCS-SDKERRORHOOK-267: Suppression awaits session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "b3ffc7ca49b523a71e410815",
+        "text_sha256": "5d59f6c0e18d029f9d212c77bd80320eb2b99d9e6e359d764337ac947c336b56",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-129: Recovery hints register an asynchronous error callback. DOCS-SDKERRORHOOK-130: Tool-execution errors return userNotification. DOCS-SDKERRORHOOK-131: The tool hint suggests checking required dependencies. DOCS-SDKERRORHOOK-132: The tool hint suggests verifying file paths. DOCS-SDKERRORHOOK-133: The tool hint suggests a simpler approach. DOCS-SDKERRORHOOK-134: The tool hint string is trimmed. DOCS-SDKERRORHOOK-135: The retry branch requires model_call context. DOCS-SDKERRORHOOK-136: The retry branch requires the error to contain the substring rate. DOCS-SDKERRORHOOK-137: The retry branch selects retry errorHandling. DOCS-SDKERRORHOOK-138: The illustrative retry count is three. DOCS-SDKERRORHOOK-139: The retry branch returns a rate-limit retry notification. DOCS-SDKERRORHOOK-140: Recovery-hint fallback returns null. DOCS-SDKERRORHOOK-141: The substring match does not independently classify a rate-limit error. DOCS-SDKERRORHOOK-142: The retry branch does not check recoverable. DOCS-SDKERRORHOOK-143: The retry branch shows no backoff policy. DOCS-SDKERRORHOOK-268: Recovery hints await session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "b9c7328d8d8b681bd0268a9a",
+        "text_sha256": "9bacfb1677db47a83e2afcd36ac13f18286e8e16b9532c1669b933f4b801fbe6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-144: ErrorStats count is number typed. DOCS-SDKERRORHOOK-145: ErrorStats lastOccurred is number typed. DOCS-SDKERRORHOOK-146: ErrorStats contexts is a string array. DOCS-SDKERRORHOOK-147: Error statistics are held in an in-memory Map. DOCS-SDKERRORHOOK-148: Pattern tracking registers an asynchronous error callback. DOCS-SDKERRORHOOK-149: Pattern keys include errorContext. DOCS-SDKERRORHOOK-150: Pattern keys include the first fifty error-string characters. DOCS-SDKERRORHOOK-151: A missing key initializes count to zero. DOCS-SDKERRORHOOK-152: A missing key initializes lastOccurred to zero. DOCS-SDKERRORHOOK-153: A missing key initializes an empty contexts array. DOCS-SDKERRORHOOK-154: Each occurrence increments count. DOCS-SDKERRORHOOK-155: lastOccurred is assigned input.timestamp. DOCS-SDKERRORHOOK-156: The contexts array actually receives session IDs. DOCS-SDKERRORHOOK-157: Updated statistics are stored under the key. DOCS-SDKERRORHOOK-158: Warnings start when count is at least five. DOCS-SDKERRORHOOK-159: Warnings log the key. DOCS-SDKERRORHOOK-160: Warnings log cumulative count. DOCS-SDKERRORHOOK-161: Pattern tracking returns null. DOCS-SDKERRORHOOK-162: Statistics show no size bound. DOCS-SDKERRORHOOK-163: Statistics show no retention window. DOCS-SDKERRORHOOK-164: Statistics show no durable persistence. DOCS-SDKERRORHOOK-165: Truncating an error prefix does not establish secret redaction. DOCS-SDKERRORHOOK-166: Distinct full errors may share the same truncated key. DOCS-SDKERRORHOOK-167: Session IDs are appended without shown deduplication. DOCS-SDKERRORHOOK-168: Every subsequent threshold-matching occurrence can warn; no reset is shown. DOCS-SDKERRORHOOK-269: Pattern tracking awaits session creation. DOCS-SDKERRORHOOK-273: The pattern example declares ErrorStats interface. DOCS-SDKERRORHOOK-274: The statistics Map value type is ErrorStats.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "19a062c022964e05592234f2",
+        "text_sha256": "4d1e80aa7390c014f789c1731ee3115a65462b704255e6677a6f31c8edafb4d7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-169: The sample critical contexts include system. DOCS-SDKERRORHOOK-170: The sample critical contexts include model_call. DOCS-SDKERRORHOOK-171: Critical alerting registers an asynchronous error callback. DOCS-SDKERRORHOOK-172: Alerting requires critical-context membership. DOCS-SDKERRORHOOK-173: Alerting also requires false recoverable. DOCS-SDKERRORHOOK-174: The callback awaits sendAlert. DOCS-SDKERRORHOOK-175: The alert level is critical. DOCS-SDKERRORHOOK-176: The alert message contains session ID. DOCS-SDKERRORHOOK-177: The alert contains raw error. DOCS-SDKERRORHOOK-178: The alert contains errorContext. DOCS-SDKERRORHOOK-180: Alert handling returns null. DOCS-SDKERRORHOOK-181: sendAlert is undefined in the excerpt. DOCS-SDKERRORHOOK-182: The alert example shows no delivery acknowledgement. DOCS-SDKERRORHOOK-183: The alert example shows no alert deduplication. DOCS-SDKERRORHOOK-184: The alert example shows no alert rate limit. DOCS-SDKERRORHOOK-186: The Date constructor is used without a shown unit conversion. DOCS-SDKERRORHOOK-253: The alert timestamp constructs Date from input.timestamp. DOCS-SDKERRORHOOK-254: The alert timestamp serializes that Date to ISO string. DOCS-SDKERRORHOOK-270: Critical alerting awaits session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "e8883cae124476cc0932bc9d",
+        "text_sha256": "2c1cd6b596b346743aa96fb72f530a812826abc9a2f982983473f8e7a49c2470",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-187: Session context uses a string-keyed Map. DOCS-SDKERRORHOOK-188: Stored lastTool is optional string typed. DOCS-SDKERRORHOOK-189: Stored lastPrompt is optional string typed. DOCS-SDKERRORHOOK-190: The context example registers an asynchronous pre-tool callback. DOCS-SDKERRORHOOK-191: Pre-tool context lookup uses session ID with empty-object fallback. DOCS-SDKERRORHOOK-192: Pre-tool context records toolName. DOCS-SDKERRORHOOK-193: Pre-tool context stores the updated entry. DOCS-SDKERRORHOOK-194: The pre-tool example returns permissionDecision allow. DOCS-SDKERRORHOOK-195: The context example registers an asynchronous submitted-prompt callback. DOCS-SDKERRORHOOK-196: Prompt context lookup uses session ID with empty-object fallback. DOCS-SDKERRORHOOK-197: Prompt context retains the first hundred prompt characters. DOCS-SDKERRORHOOK-198: Prompt context stores the updated entry. DOCS-SDKERRORHOOK-199: Prompt context callback returns null. DOCS-SDKERRORHOOK-200: The context example registers an asynchronous error callback. DOCS-SDKERRORHOOK-201: Error context lookup uses session ID. DOCS-SDKERRORHOOK-202: Context logging includes session ID. DOCS-SDKERRORHOOK-203: Context logging includes raw error. DOCS-SDKERRORHOOK-204: Context logging includes errorContext. DOCS-SDKERRORHOOK-205: A truthy lastTool is logged. DOCS-SDKERRORHOOK-206: A truthy lastPrompt is logged with an ellipsis. DOCS-SDKERRORHOOK-207: Context error handling returns null. DOCS-SDKERRORHOOK-208: The shared Map shows no session-end cleanup. DOCS-SDKERRORHOOK-209: Prompt truncation does not establish redaction of sensitive prompt content. DOCS-SDKERRORHOOK-210: The allow example is not authorization to change workspace permissions. DOCS-SDKERRORHOOK-271: Shared context awaits session creation. DOCS-SDKERRORHOOK-275: The shared session-context Map starts empty.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "e62d9f0c426f592dd2fe5d5a",
+        "text_sha256": "18a0e0bf73edaede342b211486fc582d3123d28000947f07be9c81fe35f236bd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-211: Keep error logs for debugging even when user output is suppressed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "6b9d13cf11fde487ebf09366",
+        "text_sha256": "1f95c112906b1f602d2d9cc70ab46dedba376cd426e3cae1b561868e5cf06e9c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-212: The source recommends categorizing with a name errorType.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "60ddd9301595ab35ea9b98b3",
+        "text_sha256": "dd5ba4ee4c473531a202578eff6b03e39c40d2546617fb2b51dd645f8e10c8a4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-214: Suppress only errors known to be noncritical.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "d19baffbebc709fe6346a39b",
+        "text_sha256": "aa61f48ec5a4ab75062a85b73661e3ec4d986f79654fe90cf7b4e3acd3519ba6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-215: Keep error handling fast so recovery is not delayed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "9bd8ed7629eec59fbd2a877d",
+        "text_sha256": "9b1fcff66e285f36ef30a84f9cddf0bea4badbd154b9fb5e6c737aaff1c84397",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-216: The source recommends additionalContext to help model recovery.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "7c4c3ec7092fe4feeb066c69",
+        "text_sha256": "c9c3f0f51754945d23acdc5946e98613fa9613ff476ceb7a83fdf59d2a93752c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-218: Track recurring error patterns to identify systemic issues.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "e0ffee9856345539f11401a3",
+        "text_sha256": "62930d51334dcfd405fdfeb544b4195ae684e6ffb91ac40c0774b4298cfd12fa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-219: The hooks index is linked without inheriting body-review coverage.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "8fb654bc45804a3389d64c52",
+        "text_sha256": "6d9b0e84dcd9927b4de8aa081fc1eb249885514fc905d310f6100e05df77744e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-220: The lifecycle guide is linked without inheriting body-review coverage.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      },
+      {
+        "candidate_id": "4ea54df9e79e2cd413908148",
+        "text_sha256": "fd32214e5d998cf5d1596ad2be9cf284588faf4ec30ee19e7d357e4516bec8c3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKERRORHOOK-221: The debugging guide is linked without inheriting body-review coverage.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-error-hook-claims.json"
+      }
+    ]
+  }
+]

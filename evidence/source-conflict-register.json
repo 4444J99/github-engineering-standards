@@ -135,6 +135,44 @@
       "scope": "jlcanovas conduct-template copying or adaptation; independently authored policy remains separately reviewed.",
       "retained_alternatives": "Reference-only use without upstream expression is not blanket permission to copy inherited templates.",
       "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-SDK-ERROR-CATEGORY-NAME-001",
+      "source_review": "evidence/source-reviews/docs-sdk-error-hook-claims.json",
+      "source_spans_rechecked": [
+        "error-handling.md:91",
+        "error-handling.md:410"
+      ],
+      "issue": "Input table documents errorContext, while the categorization recommendation names errorType.",
+      "proposed_resolution": "Retain both names; do not invent an errorType field. Verify the applicable pinned language SDK schema before adopting a categorization adapter.",
+      "required_evidence": "Version-specific input schema and approved callback behavior tests.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-SDK-ERROR-ADDITIONAL-CONTEXT-001",
+      "source_review": "evidence/source-reviews/docs-sdk-error-hook-claims.json",
+      "source_spans_rechecked": [
+        "error-handling.md:100-103",
+        "error-handling.md:416"
+      ],
+      "issue": "Recommendation names additionalContext for model recovery, but the error output table does not list it.",
+      "proposed_resolution": "Keep recommendation and enumerated error output separately. Do not infer error-hook additionalContext from other hook schemas before version-specific contract verification.",
+      "required_evidence": "Version-specific error output schema and verified intended model-delivery behavior.",
+      "policy_accepted": false
+    },
+    {
+      "id": "CONFLICT-SDK-PROMPT-FILTER-ENFORCEMENT-001",
+      "source_review": "evidence/source-reviews/docs-sdk-prompt-submitted-hook-claims.json",
+      "source_spans_rechecked": [
+        "user-prompt-submitted.md:232-256",
+        "user-prompt-submitted.md:259-278",
+        "user-prompt-submitted.md:333-334",
+        "user-prompt-submitted.md:390"
+      ],
+      "issue": "Filter and enforce-length examples can imply hard rejection, but the guide explicitly says this hook cannot reject a prompt or enforce policy.",
+      "proposed_resolution": "Interpret examples as rewriting, response suppression or advisory context. Hard limits belong in an approved pre-send path. Separately verify original history/storage and credential privacy; rewrite does not prove erasure.",
+      "required_evidence": "Target/version-specific pre-send rejection tests, no-send observations for rejected input and authorized history/storage observations.",
+      "policy_accepted": false
     }
   ]
 }
