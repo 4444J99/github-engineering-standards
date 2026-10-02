@@ -1,0 +1,148 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T03:18:16Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-account-policy-claims.json",
+    "evidence/source-reviews/docs-account-policy-dependencies-claims.json"
+  ],
+  "input_claims": 46,
+  "groups": [
+    {
+      "id": "ACCOUNT-APPLICABILITY",
+      "claims": [
+        "DOCS-ACCPOL-001",
+        "DOCS-ACCPOL-002",
+        "DOCS-ACCPOL-020",
+        "DOCS-ACCPOLDEP-009",
+        "DOCS-ACCPOLDEP-010"
+      ],
+      "decision": "Separate individual page subscription scope, cloud feature declarations, fpt-rendered sections and paid-agent eligibility. Free article scope is not paid-agent entitlement; no GHES range is declared."
+    },
+    {
+      "id": "ACCOUNT-PUBLIC-CODE",
+      "claims": [
+        "DOCS-ACCPOL-004",
+        "DOCS-ACCPOL-005",
+        "DOCS-ACCPOL-006",
+        "DOCS-ACCPOL-007",
+        "DOCS-ACCPOL-008",
+        "DOCS-ACCPOL-009"
+      ],
+      "decision": "Personal Allow/Block choices differ from organization/enterprise-inherited policies. About-150-character matching and most-product support are bounded detection, not exhaustive copyright/license review. Allowed or unsupported-Block suggestions may expose match details without granting rights."
+    },
+    {
+      "id": "ACCOUNT-SETTINGS-PROCEDURE",
+      "claims": [
+        "DOCS-ACCPOL-003",
+        "DOCS-ACCPOL-010",
+        "DOCS-ACCPOL-016",
+        "DOCS-ACCPOL-025",
+        "DOCS-ACCPOLDEP-013"
+      ],
+      "decision": "Retain GitHub settings versus IDE configuration and each navigation/toggle procedure. A reachable menu or read procedure is not evidence of an applied, propagated or effective policy."
+    },
+    {
+      "id": "ACCOUNT-AGENT-CAPABILITY",
+      "claims": [
+        "DOCS-ACCPOL-011",
+        "DOCS-ACCPOL-012"
+      ],
+      "decision": "Autonomous research/planning/code changes and optional PR creation are product capabilities, not blanket task authority, approval or acceptance."
+    },
+    {
+      "id": "ACCOUNT-REPOSITORY-ACCESS",
+      "claims": [
+        "DOCS-ACCPOL-013",
+        "DOCS-ACCPOL-014",
+        "DOCS-ACCPOL-015",
+        "DOCS-ACCPOL-017",
+        "DOCS-ACCPOL-018",
+        "DOCS-ACCPOL-019",
+        "DOCS-ACCPOLDEP-001",
+        "DOCS-ACCPOLDEP-002",
+        "DOCS-ACCPOLDEP-011",
+        "DOCS-ACCPOLDEP-012"
+      ],
+      "decision": "Qualify default-enabled claims with paid eligibility, explicit disablement and Enterprise Managed User repository exclusions. Verify No/All/Only selected plus actual selected targets. Personal-owned settings do not supersede organization policy or possible enterprise control."
+    },
+    {
+      "id": "ACCOUNT-PARTNER-AGENTS",
+      "claims": [
+        "DOCS-ACCPOL-021",
+        "DOCS-ACCPOL-022",
+        "DOCS-ACCPOL-023",
+        "DOCS-ACCPOL-024"
+      ],
+      "decision": "Third-party coding-agent choices and installed app enablement are independent of effective repository grants. Partners use cloud agent's enabled repository set; reconcile separate organization app policies rather than generalize this personal UI."
+    },
+    {
+      "id": "ACCOUNT-WEB-SEARCH",
+      "claims": [
+        "DOCS-ACCPOL-026",
+        "DOCS-ACCPOL-027",
+        "DOCS-ACCPOL-028"
+      ],
+      "decision": "Web search has a separate default-disabled policy and Bing information-processing route. Model-hosting privacy claims do not establish Bing policy or terms; verify the effective Enabled/Disabled state."
+    },
+    {
+      "id": "ACCOUNT-TRAINING",
+      "claims": [
+        "DOCS-ACCPOL-029",
+        "DOCS-ACCPOL-030",
+        "DOCS-ACCPOL-031",
+        "DOCS-ACCPOL-032",
+        "DOCS-ACCPOL-033",
+        "DOCS-ACCPOLDEP-003",
+        "DOCS-ACCPOLDEP-004",
+        "DOCS-ACCPOLDEP-005",
+        "DOCS-ACCPOLDEP-006",
+        "DOCS-ACCPOLDEP-007",
+        "DOCS-ACCPOLDEP-008"
+      ],
+      "decision": "Preserve April 24, 2026 applicability, individual plans, interactions/context data scope, explicit Disabled opt-out, missing-control account verification and Business/Enterprise DPA protection with customer-authorization caveat. Verify applicable plan, agreement and setting separately; absence of UI is not PASS."
+    }
+  ],
+  "cross_source_reconciliation": {
+    "related_evidence": "evidence/ai-model-hosting-claim-consolidation.json",
+    "privacy_decision": "Provider no-training/ZDR promises, GitHub training use, individual opt-out, DPA customer authorization, default agent access and Bing routes are independently assessed dimensions. The account-policy fragment explicitly qualifies enterprise data-training protection with customer authorization; retain that qualification when reconciling shorter no-training statements.",
+    "rights_decision": "Public-code filtering and match details do not establish output licensing; no publication permission follows from an allowed suggestion.",
+    "authority_decision": "Documented default agent availability does not override user task scope, actual role permissions, enterprise policy, paid entitlement, native-change approvals or repository exclusions."
+  },
+  "proposed_review_procedure": {
+    "default": "Read-only effective-policy collection; no personal or administrator setting changes from ingestion.",
+    "dimensions": [
+      "account and seat ownership",
+      "plan identity",
+      "personal versus organization/enterprise inheritance",
+      "product support for Block",
+      "effective public-code choice",
+      "cloud/partner-agent enablement",
+      "repository selection",
+      "Bing route policy",
+      "training opt-out and customer authorization",
+      "policy expiry/version"
+    ],
+    "missing_permission_or_control": "UNVERIFIED with reason and accountable review, never PASS.",
+    "native_remediation": "Only scoped approval plus reviewed plan/diff/apply/verify and recovery evidence; UI procedure is not a binding receipt."
+  },
+  "verification": {
+    "all_input_claims_mapped_once": true,
+    "full_source_accounting_receipt": "evidence/source-reviews/docs-account-policy-artifacts.json",
+    "rendered_page_assurance": false,
+    "linked_privacy_and_plan_review_complete": false,
+    "independent_omission_certified": false,
+    "target_bindings_verified": false,
+    "accepted_policy": false,
+    "rights_cleared": false,
+    "native_enforcement_verified": false
+  },
+  "remaining_work": [
+    "Review linked privacy, account-plan and matching-code content independently.",
+    "Reconcile full organization/enterprise policy article and its separate agent-app controls.",
+    "Review actual versioned rendered pages and dependencies.",
+    "Audit omissions/atomicity, canonical applicability and templates before policy adoption.",
+    "Collect effective authorized target settings and behavior receipts only within explicit native approval."
+  ]
+}
