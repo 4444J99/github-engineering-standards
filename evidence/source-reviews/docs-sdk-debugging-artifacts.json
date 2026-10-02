@@ -1,0 +1,869 @@
+[
+  {
+    "artifact_id": "fecd520cb82ce0813deba685",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/debugging.md",
+    "content_sha256": "7e8a512e9118dfa7a5d86c539cf7f9168180b8648d7658df1c217d81c999dbac",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T05:20:31Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Entire544-line article read.139 independently authored claims preserve each language logging/path/token configuration, current Python/Java argument limits, active-object disconnect versus stored resume, MCP wildcard and JSON-init context, legacy transport schema distinctions, JSON results/errors, platform encoding/path/security changes and issue disclosure limits. All142candidate segments explicitly dispositioned. Commands, credentials, logs and issue publication were not executed; linked files remain separate reviews.",
+    "supporting_claims": "evidence/source-reviews/docs-sdk-debugging-claims.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "71406949d2557c3a884be93b",
+        "text_sha256": "422043ca8a27b7a338d9d91b80ef35a0b316dfaba4b5c7a2e74dfdbb9ec99696",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-001: The guide addresses common SDK debugging across supported languages. DOCS-SDKDEBUG-002: FPT version scope is declared. DOCS-SDKDEBUG-003: GHEC version scope is declared."
+      },
+      {
+        "candidate_id": "1f1906014b0280fa6651a9f6",
+        "text_sha256": "878cd06f718d4ac6687e6249d1cae06f201213d6b3372630329056e0ffbd2dc1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-004: Former debug-guide route redirects here."
+      },
+      {
+        "candidate_id": "7030390359d88bd7f88f0d0d",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines15–16 ((preamble)) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "86586e3600ed4c2c56c9caf7",
+        "text_sha256": "35a851382a7c3066a5b1bf0adaccb41fe6316629fb8d43743bac9286c201bd4e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines20–20 (Table of contents) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "9c267c4dac8fcffac34f2b13",
+        "text_sha256": "1ee8b1cd4e87f41aa9e478040a5807e3305f4e192ca2cabe1afe686a3f16451d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines21–21 (Table of contents) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "5b9f83b0f2a1848c1469d8f1",
+        "text_sha256": "fa062314afeef97fdbb36f8372b68e001732fa3085b31989fcd10a3d45e35fd9",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines22–22 (Table of contents) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "6cd9bd46e53c7095eaa0feb0",
+        "text_sha256": "7f7a8b2796652379a0b9550ed287b9e23b940da2704c496921c635e32a097ae6",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines23–23 (Table of contents) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "870e90d98def358fa77a4e58",
+        "text_sha256": "46519997c955696c93112d97f94bda720d1c7fa31ece7dceb920d08e3ea959b8",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines24–24 (Table of contents) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "18cc29c5a3336fe78f184ed8",
+        "text_sha256": "cea3687ffbff0bc7eb37c64aa69e238696b4704a7b0d20a55b8d7deabbb9d51a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines25–25 (Table of contents) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "5243fc77f2b1156be7339cfb",
+        "text_sha256": "ead03620a5e9d595d2bed368f4993c61ea56174d450a3f6d410cf75eede0e9e2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-005: Enable verbose logging as the stated first debugging step; logs may contain sensitive data."
+      },
+      {
+        "candidate_id": "5310c92f64cf5ac879ef6e0c",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines31–32 (Table of contents / Enable debug logging) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "28536aa500f954b87447e047",
+        "text_sha256": "d789f5823edc72e919cd3ac44619b0fe8dd3b38dd89bc13dad538f3632de87f7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-006: TypeScript logging example sets logLevel debug; not executed. DOCS-SDKDEBUG-011: Log-level example lists none,error,warning,info,debug,all as options."
+      },
+      {
+        "candidate_id": "13059b1951306e8abba2c5fd",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines42–43 (Table of contents / Enable debug logging) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "e8aa9b9cbaf2129f6189cd8b",
+        "text_sha256": "690f299da1b1333753944e9d9b5cdd63545886b6955d969395625e3a4895d22d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-007: Python logging example sets log_level debug; not executed."
+      },
+      {
+        "candidate_id": "896a7b0ef80ed43097df862c",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines51–52 (Table of contents / Enable debug logging) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "f7502cc46af6d495d13cbc8f",
+        "text_sha256": "14735b67374c2e5f1f2be518d1b51e9a85c1fd92a3f715b762210ec8a770620f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-008: Go logging example sets LogLevel debug; not executed."
+      },
+      {
+        "candidate_id": "01cf7ad89691390828d95ed6",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines62–63 (Table of contents / Enable debug logging) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "9e3ecf591ff7eaa8aaa46c6c",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-012: .NET logging snippet skips docs validation; compile/runtime correctness not certified."
+      },
+      {
+        "candidate_id": "bdcf14b5db2d9368c5d8154f",
+        "text_sha256": "352ff2d3178d4c6eb9c6a5c98d8c8b5ca1f992bb08ca1453f83e61fec5dd9b73",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-009: .NET logging example sets LogLevel debug; not executed. DOCS-SDKDEBUG-013: .NET logger factory sets minimum debug level. DOCS-SDKDEBUG-014: .NET adds console logging. DOCS-SDKDEBUG-015: .NET supplies a client-specific ILogger."
+      },
+      {
+        "candidate_id": "58593af4c42a3234daefe807",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines85–86 (Table of contents / Enable debug logging) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "502c814024c150bc38fe990a",
+        "text_sha256": "c8810ae18f742ba84ff9ff5ad9b7743fef1cbeeed413a238270e1d9018cc2b50",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-010: Java logging example sets setLogLevel debug; not executed."
+      },
+      {
+        "candidate_id": "6f61d0af28a04a327acf4d7b",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines97–98 (Table of contents / Enable debug logging) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "1f0cb94e56c06a5e8e70fda5",
+        "text_sha256": "2cf142e92b782f6f38d824ad93d2368df14029bd52ca7724ba6552c49984e533",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-016: CLI logs go to a directory. DOCS-SDKDEBUG-017: A custom log directory can be configured."
+      },
+      {
+        "candidate_id": "f194600879f1cca8217b9424",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines104–105 (Table of contents / Enable debug logging / Log directory) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "b7e77fb376e23c84dd28b104",
+        "text_sha256": "c20e43e8dff8adfcec751331b8c725f5d148946adbbba415f8e6b623615e7c07",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-018: TypeScript example uses cliArgs with --log-dir and a placeholder path."
+      },
+      {
+        "candidate_id": "3c6534f902d9595b0369fd6e",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines113–114 (Table of contents / Enable debug logging / Log directory) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "9f784b47e44e496d842f8ef6",
+        "text_sha256": "c87868957f64ba2c13141873a0f2b3658103303456f27755abca421cef47a2e8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-019: Python is described as currently lacking extra CLI-argument support; pinned/version-specific, not permanent inability. DOCS-SDKDEBUG-020: Python uses default logging location unless external server configuration supplies another."
+      },
+      {
+        "candidate_id": "48f0562113ddf82b3d5c242d",
+        "text_sha256": "49d0ffefbeecf7fcfc2417e1bb9c3cfc41ffd626c112bb4a6a45817d16364637",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-021: Advanced Python logging uses manually configured CLI --log-dir. DOCS-SDKDEBUG-022: Python connects to that externally managed runtime with for_uri."
+      },
+      {
+        "candidate_id": "eef9de772979f193eae810cc",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines125–126 (Table of contents / Enable debug logging / Log directory) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "ead4eb9627e2eee34a1dbfb0",
+        "text_sha256": "ca3b6e4812e2668ce565d34d4dc1c33647f56fa46404e4e2a387ba69979d3d30",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-023: Go custom-log example uses StdioConnection. DOCS-SDKDEBUG-024: Go supplies --log-dir through connection Args."
+      },
+      {
+        "candidate_id": "701d6923223353293ad0aeda",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines136–137 (Table of contents / Enable debug logging / Log directory) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "0d7c7e6cb9c0aa1cd9990d80",
+        "text_sha256": "e445b715b4f5f94adee732f1a35a946c1ac76dbaabbee56ff24fc3c06b606216",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-025: .NET custom-log example uses ForStdio args with --log-dir."
+      },
+      {
+        "candidate_id": "eabd26b277efe1c04a95729e",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines146–147 (Table of contents / Enable debug logging / Log directory) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "33adc72e0c60b9d417030a20",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-026: Java custom-log snippet skips docs validation."
+      },
+      {
+        "candidate_id": "6d135f1fb1753b533a574519",
+        "text_sha256": "78a1e2b7002f9261fd69925cc7216fbac6929c2f24312636cbb245b50c41c42f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-027: Java currently lacks extra CLI arguments according to pinned source. DOCS-SDKDEBUG-028: Java custom-directory workaround configures manually launched CLI --log-dir. DOCS-SDKDEBUG-029: Java then connects using cliUrl."
+      },
+      {
+        "candidate_id": "b218b21f91d87846478861a4",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines157–158 (Table of contents / Enable debug logging / Log directory) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "7e30fe5ebc44457a14ca3687",
+        "text_sha256": "741f37964fef09cac998174cf2c91fbad6708f4a36f9a83eb31c87c47a62719e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-030: CLI-not-found may mean missing installation. DOCS-SDKDEBUG-031: CLI-not-found may mean PATH does not resolve CLI."
+      },
+      {
+        "candidate_id": "68090b239a77a1504cce95b5",
+        "text_sha256": "e26e48cc5d7eaf08fbb9e829119c1ee67f51f8094d3149e40d5143592418f6df",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines166–166 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "6068cb0e653ebcd300e4a2dd",
+        "text_sha256": "4e6e020a3791581e1d027e25536707672a4f24b4dd0a2cc09f7fc9ed13f647ab",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-032: CLI installation is linked; linked setup is not reviewed."
+      },
+      {
+        "candidate_id": "87fedfd053fb6dc8c7acc900",
+        "text_sha256": "49fd306b9287083ede743da6178dceee27ef36fbdf38899d36c150be5f99198f",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines170–170 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "7868ce091c3201f315d8859a",
+        "text_sha256": "1102cf2927272828c1015f9dc92476b87fa521636e691891cf007958d1252029",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-033: Version-check example runs copilot --version; not executed."
+      },
+      {
+        "candidate_id": "9158a36402e2b71fbc267155",
+        "text_sha256": "417927962bcbfae44cbb4a0737c8cb623f8c2be514d695006060e2898f0f6c31",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-034: An explicit executable path is an alternative to PATH resolution."
+      },
+      {
+        "candidate_id": "73430cc4b588635f7c45bfb4",
+        "text_sha256": "edd6645e83cc9081dda7c8aa4aa1c9aec79df3546b96078acc32a0bd600e8f74",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines178–179 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "d60a9db6e56e6e95a8bf6a74",
+        "text_sha256": "2370fc28b9bef9522f1732decc131159b8c1661fd15c8b9014723c714b634772",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-035: TypeScript explicit-path example uses cliPath and/usr/local/bin/copilot; path is illustrative."
+      },
+      {
+        "candidate_id": "b39fbb8da3a00e7731e629a1",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines187–188 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "865d643b058ce949d9924525",
+        "text_sha256": "ea43c95e3b5ffa490eb1b9221d4f814fb6738f8c96948a63318d104865633098",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-036: Python explicit-path example uses cli_path and/usr/local/bin/copilot; path is illustrative."
+      },
+      {
+        "candidate_id": "faac48fa49979b7ab4a308a4",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines194–195 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "ee566f07d5b02633889b0a1b",
+        "text_sha256": "6f46f8404d28b06819ff88a0c31c3c029d3903ef69c6f2190f41e4364718459d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-037: Go explicit-path example uses StdioConnection Path and/usr/local/bin/copilot; path is illustrative."
+      },
+      {
+        "candidate_id": "c33e184381050bb73e8419be",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines203–204 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "cfcad7da0ebac6dde12a4b3c",
+        "text_sha256": "dafa64cec931bff338c2e91ffd3e8a132d11ef6a225efe8d01c17b1dc307bf81",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-038: .NET explicit-path example uses CliPath and/usr/local/bin/copilot; path is illustrative."
+      },
+      {
+        "candidate_id": "c41a774d7e5095ce04a8bd64",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines213–214 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "b6fffeee8e5567e253636b0e",
+        "text_sha256": "109dc3d55d9fdcffb02ffed3e3fb85c3f7dbf2da17c4ef7794fcf14be2bb8c16",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-039: Java explicit-path example uses setCliPath and/usr/local/bin/copilot; path is illustrative."
+      },
+      {
+        "candidate_id": "be64027f94c1faceb2e6e0af",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines222–223 (Table of contents / Common issues / \"CLI not found\" / \"Copilot: command not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "eea4ad6ff002eb0573c82ffc",
+        "text_sha256": "06ded6308d59c6ba15121f75c139ed4c794d967ecbd26aa84cb31b924f13da60",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-040: Not-authenticated error is attributed to missing GitHub CLI authentication."
+      },
+      {
+        "candidate_id": "937e4297135d1b1d437d7b80",
+        "text_sha256": "e26e48cc5d7eaf08fbb9e829119c1ee67f51f8094d3149e40d5143592418f6df",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines229–229 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "36a84f5dfde0b58a0517f5bc",
+        "text_sha256": "90a20a8320e0d4aadcdffc107dce93f138f19ec506a6f2c6405c9eaf09cce951",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines231–231 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "cc02e7b39ae75dd525810525",
+        "text_sha256": "be2621b2f1c8ca7a4b24c18969cc31149695aacda4ade61d00425f1e0cfc1520",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-041: Authentication example invokes interactive copilot auth login; no login performed."
+      },
+      {
+        "candidate_id": "179588303cc11fecf612ebd2",
+        "text_sha256": "bf550960d435badb237d90b89217c71858394865dcfae194a31a0fc202a97ddd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-042: Providing a token programmatically is an alternative."
+      },
+      {
+        "candidate_id": "7456d5da277e914bb2de7995",
+        "text_sha256": "edd6645e83cc9081dda7c8aa4aa1c9aec79df3546b96078acc32a0bd600e8f74",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines239–240 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "1b04d04d323f581cde62c328",
+        "text_sha256": "a651c9f438e53b34e818d64248db74d7b85129911ee04f4666674227d3daa259",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-043: TypeScript user-token example obtains GITHUB_TOKEN from environment and supplies gitHubToken; no credential was read. Explicit user-token settings do not authorize installation-token routing."
+      },
+      {
+        "candidate_id": "2e3d3d75c2ccedff07fec70f",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines248–249 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "78915e340eeb03a70e1a55b6",
+        "text_sha256": "fe4152abf79f237e6103c9bee52d403e226c5dc72f751356c587e38282972dc2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-044: Python user-token example obtains GITHUB_TOKEN from environment and supplies github_token; no credential was read. Explicit user-token settings do not authorize installation-token routing."
+      },
+      {
+        "candidate_id": "d3aa7440901fdf209a1dc404",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines256–257 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "2bb45efb2088b0264d50f408",
+        "text_sha256": "b6908e3b6871d7c35ebddfe0fd3dbbddbf9167308734586cb2fc995a6d165a31",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-045: Go user-token example obtains GITHUB_TOKEN from environment and supplies GitHubToken; no credential was read. Explicit user-token settings do not authorize installation-token routing."
+      },
+      {
+        "candidate_id": "6da729d33e328efef7749ed1",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines265–266 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "6c8da32908de3c9ea4822b28",
+        "text_sha256": "fe2049aa2b72b55d3d1f106952f26b4839c573ca529af5f4d539aa32af0f6680",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-046: .NET user-token example obtains GITHUB_TOKEN from environment and supplies GitHubToken; no credential was read. Explicit user-token settings do not authorize installation-token routing."
+      },
+      {
+        "candidate_id": "f21160098707e2795477d7dc",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines275–276 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "04523b17d668e4954231d9be",
+        "text_sha256": "1af728adab94bdecb4b65e1b1e192fc0e23bd5beb05fedd1b85d69015d7c5ef8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-047: Java user-token example obtains GITHUB_TOKEN from environment and supplies setGitHubToken; no credential was read. Explicit user-token settings do not authorize installation-token routing."
+      },
+      {
+        "candidate_id": "4b3a9e142763176c6e401b2e",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines284–285 (Table of contents / Common issues / \"Not authenticated\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "888c1ac5033a75b0f410a767",
+        "text_sha256": "ca60d5fdef2dd564193f8299b75caa5e0173302a32f4c3c8694c09ecd5116273",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-048: Session-not-found may refer to destroyed sessions. DOCS-SDKDEBUG-049: Session-not-found may refer to nonexistent sessions."
+      },
+      {
+        "candidate_id": "a7817204f6b1b7b66d42ea2f",
+        "text_sha256": "e26e48cc5d7eaf08fbb9e829119c1ee67f51f8094d3149e40d5143592418f6df",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines291–291 (Table of contents / Common issues / \"Session not found\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "1a730a9809dfcad4406e32f1",
+        "text_sha256": "ebfcc2aba4fb0a480cee60b65b94436ff28b9ed27a45e9c5d56dc90e99bf3fab",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-050: Do not call methods on an active session object after disconnect."
+      },
+      {
+        "candidate_id": "dc3236db97a362e68dee54d0",
+        "text_sha256": "ad57ec14b7e920226f691867bdb010cfc129e787a5a5ee037f500d4e66874b69",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-051: Example disconnects an object and warns against further use of that object, not against separately resuming stored data."
+      },
+      {
+        "candidate_id": "e3fcc00ac2e119b83f5a98c3",
+        "text_sha256": "72da1bc23d808dd30f21db7a2cd37ae5e4ec1b32d87e9d444595432f5b59e1f7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-052: Check that a stored ID exists before resume."
+      },
+      {
+        "candidate_id": "96df292742755fe4fe3659b3",
+        "text_sha256": "1d5df441b3d3f30d53dbe8f033c78421c193888a5f8c42a1eb4cb4f8dc10d317",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-053: Resume-debugging example lists stored sessions. DOCS-SDKDEBUG-054: Example logs listed sessions; no actual session metadata collected."
+      },
+      {
+        "candidate_id": "14ba4a2ae66a7cdbeb5d4c95",
+        "text_sha256": "211cfaafa9b10527f3707d30350992eaea392468fbc635d74d50aa258490613b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-055: Connection refusal may follow runtime crash. DOCS-SDKDEBUG-056: Connection refusal may follow failed startup."
+      },
+      {
+        "candidate_id": "712b0c24f995d85835896f8e",
+        "text_sha256": "e26e48cc5d7eaf08fbb9e829119c1ee67f51f8094d3149e40d5143592418f6df",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines311–311 (Table of contents / Common issues / \"Connection refused\" / \"ECONNREFUSED\") consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "f41880d459cb40e5386f6524",
+        "text_sha256": "bffa8ae7fe7682dc00cce4e4fb2d8141d39a3f3a45d7cdeb2fcd7f2ccedfe1a1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-057: Check standalone CLI startup when diagnosing connection refusal."
+      },
+      {
+        "candidate_id": "c9f1eecb1320e197eced6637",
+        "text_sha256": "7d887d446f4403e7e9675b3552451c855867297a25b2fca441e7c3a0485ed168",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-058: Example starts server stdio mode; not executed."
+      },
+      {
+        "candidate_id": "1bf0b9fdf5ae534fd1fce4ac",
+        "text_sha256": "030708dd10850e40da20bc662941f883576292af304b52b99af8cf2cac0153fe",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-059: Check TCP port conflicts."
+      },
+      {
+        "candidate_id": "48dc66f41e48a11f2f3833d7",
+        "text_sha256": "3a5cf1d5998fced84643b1f420ceed841a1c140a5d70277dd3a2ba6023c947a8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-060: Port-conflict example disables stdio. DOCS-SDKDEBUG-061: Port0 chooses an available random port in the example."
+      },
+      {
+        "candidate_id": "150e42d07f64c2e62e5f0d8c",
+        "text_sha256": "f25f2d68ee87893279c6bb6af6190df39edbd44cae2be27ba33662a7c6b1a90a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-062: Detailed MCP debugging is delegated to another article; not implied reviewed."
+      },
+      {
+        "candidate_id": "6abd1d30102d94762a8d64bb",
+        "text_sha256": "ec86d35049b8b2e8be332741332bb197e5b10986283d24745361f5d20ce54f54",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-063: Check MCP executable existence. DOCS-SDKDEBUG-064: Check standalone MCP execution."
+      },
+      {
+        "candidate_id": "cbd312ddef13c41667a74b16",
+        "text_sha256": "c0b4297a2cab69758916aad33eb7868d0fdd993b0058e8748f7a9b5cdc7eff3e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-065: Check command path. DOCS-SDKDEBUG-066: Use absolute command paths."
+      },
+      {
+        "candidate_id": "b6cc7516666613cd425046b7",
+        "text_sha256": "c04bc3ec567ff8f696424dc0c9ad6d56981323643b67ad39c3411dbc8319d910",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-067: Checklist illustrates tools wildcard *; this is not an adopted grant or least-privilege policy."
+      },
+      {
+        "candidate_id": "89593cf4e58751f4d091dfd6",
+        "text_sha256": "02e124ecd462fad1c7f4015aa5bffcea3bd6e4fd64a8c538d1b69baabd6e9c46",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-068: Check correct initialize response."
+      },
+      {
+        "candidate_id": "864372758a37c3ce246cdb43",
+        "text_sha256": "a09c273a49d7573cc70582800ceb0acdce332f99d85d84dafbfa626c373c12e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-069: Set working directory if needed."
+      },
+      {
+        "candidate_id": "159522cbdc4ed8ee13a33285",
+        "text_sha256": "8a0a5f55a245ca4980fa4dbac64597701011068d3d933c0a3dcfb1cbbe8149db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-070: Verify standalone MCP behavior before SDK integration."
+      },
+      {
+        "candidate_id": "75e001163bcf53ec3acb142e",
+        "text_sha256": "9b0bbba9830af6cd39cecee567761645c567da10f36c3c57443dda950791fb3c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-071: MCP test sends a JSON-RPC initialize request to a placeholder executable. DOCS-SDKDEBUG-072: MCP test uses protocolVersion2024-11-05, an example version not installed compatibility proof. DOCS-SDKDEBUG-073: MCP test advertises empty capabilities. DOCS-SDKDEBUG-074: MCP test identifies a test client with version1.0."
+      },
+      {
+        "candidate_id": "1d11bac44d1eb283779f2057",
+        "text_sha256": "ba411d16d24f03e5986ade294063f99dfdbf3fe3139bb36bfab6f5f007156b24",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-075: Detailed MCP troubleshooting link remains separately scoped."
+      },
+      {
+        "candidate_id": "b77d22ab022118cf3dbcaa06",
+        "text_sha256": "92a540d4fa72ad08faf76dcafdb42c36e6a26ed1cdb63be77d3de1d938b0228a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines354–354 (Table of contents / Connection issues / stdio vs TCP mode) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "d67abd6704e75b96b6b03dad",
+        "text_sha256": "d48ade76d87ab3915ee3ec15ef019a32373067d91df0311ca83055b07614a5d8",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines356–356 (Table of contents / Connection issues / stdio vs TCP mode) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "32e4c8f8221382adfd80913d",
+        "text_sha256": "1d293186e7381415e045f19d9615aa46f23dd0d37b5a51b88773cdaea8a8dce1",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines357–357 (Table of contents / Connection issues / stdio vs TCP mode) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "bae43c31658b14a78bf9b17b",
+        "text_sha256": "03f03636e99df08800536f4c57bf8a4631ac45c02af2460ea9fb078ad2e07e51",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-076: Stdio is described as default transport. DOCS-SDKDEBUG-077: Stdio launches CLI as a subprocess. DOCS-SDKDEBUG-078: Stdio communicates through pipes. DOCS-SDKDEBUG-079: Stdio is associated with local single-process use."
+      },
+      {
+        "candidate_id": "b7467191dfa2c000342b492b",
+        "text_sha256": "6830bf4f1d7b0935588e02c8506ec4f3fa070803f9a5198757517ced3c772ffd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-080: TCP uses separately running CLI. DOCS-SDKDEBUG-081: TCP communicates through sockets. DOCS-SDKDEBUG-082: TCP is associated with multiple/remote clients, not authenticated remote-service proof."
+      },
+      {
+        "candidate_id": "d94bb3c6c3961bda73f36091",
+        "text_sha256": "c4da144db110861f49b7f26d963ccb9766349917a5e854e58e079f9a4e001efc",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines361–361 (Table of contents / Connection issues / stdio vs TCP mode) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "b1e9ccc1c77e0eff1e138956",
+        "text_sha256": "c2fda0af41907f8215b3f079331064adeaaa1decc699f8fd09671902b5d5bb8c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-083: Stdio example explicitly sets useStdio true."
+      },
+      {
+        "candidate_id": "af02c849ca8f5e793b6b2ceb",
+        "text_sha256": "d24892fad10ebe2264da34901c8b72e61acc79ed4b10e8aa9fb41a00b1a25669",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines369–369 (Table of contents / Connection issues / stdio vs TCP mode) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "949dd332d1bbb0856e816d6a",
+        "text_sha256": "01919e1818fbcbf0df2c906b5812a862da881d95ad8ea1765fd6da43d470cdd4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-084: TCP example sets useStdio false. DOCS-SDKDEBUG-085: TCP example uses8080 or random0."
+      },
+      {
+        "candidate_id": "7d04bebe0aac13e7088329e5",
+        "text_sha256": "c700f3519cfccdb9518b4a1788514b4a0eedab9acea45fbcf21a5713851fd790",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines378–378 (Table of contents / Connection issues / stdio vs TCP mode) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "48e87c5ba562b57a688c92b6",
+        "text_sha256": "06d9c95d0ffe87d47debc9efc21c3f9a2f22ec6dfa74811349a7beeee20eaa49",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-086: Existing-server example uses cliUrl localhost8080; this legacy-shaped configuration differs from newer RuntimeConnection URI examples and needs version/schema reconciliation."
+      },
+      {
+        "candidate_id": "d98364614f56ba693e841f66",
+        "text_sha256": "82750802c9c5b36f70baf3e24c607261eeacac461658eedd5cae2744f6b078b7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-087: Inspect client connection state."
+      },
+      {
+        "candidate_id": "6d52ff7f9d4346489a2efb9f",
+        "text_sha256": "79747c62881a8b2b9333396c6b32e827aef7bee610586631a7c4dab4ba0987a0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-088: State example calls client.getState. DOCS-SDKDEBUG-089: Comment expects connected after startup; expectation is not observed state."
+      },
+      {
+        "candidate_id": "3295fbdf8cafeb5b49020555",
+        "text_sha256": "2b8e9c5ed65f4bc0e00ea5f4c849533b6063cc255f6f32aa8f3a5858be56a2b4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-090: Subscribe to state changes."
+      },
+      {
+        "candidate_id": "ffb5352e0f6954bf80bef17c",
+        "text_sha256": "c9705370dfc5354ba6a37045b2639f12cf96d554ce903b005df03d6f4e678bee",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-091: Example subscribes to stateChange. DOCS-SDKDEBUG-092: Example logs state-change values."
+      },
+      {
+        "candidate_id": "167329c16dc9b698b044d970",
+        "text_sha256": "2c6961ecbed5302f6df299122418b50e266ea95e80e014cbada65bacae486447",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-093: Check that CLI process runs."
+      },
+      {
+        "candidate_id": "9c66f0e4116902b15d5a8e4a",
+        "text_sha256": "1ba2f17ac4e46b240898d223529a5003fb63d0213b488a2fd518c794c4a981e0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-094: Example filters process listings for copilot; no process census performed."
+      },
+      {
+        "candidate_id": "db8841c0177428459ba50248",
+        "text_sha256": "8016efe66a4796546627e0525ba001550129ac3c2399c23ba47484b2918d5162",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-095: Check custom-tool registration."
+      },
+      {
+        "candidate_id": "600bc62d7f741044e9f7ee65",
+        "text_sha256": "98369cf38ba4c4dc4a099c30006e2f9d5e93998bf7aa359c32fed22bc6d2b1ad",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-096: Registration example supplies myTool on session creation. DOCS-SDKDEBUG-097: Example optionally calls getTools to log registered tools."
+      },
+      {
+        "candidate_id": "e4805be8006977ed0957412a",
+        "text_sha256": "617ff22ef0ce49e942e5f201e06af268cf9ad41602a59783cf19b4a614bbdaa0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-098: Check tool parameters are valid JSON Schema."
+      },
+      {
+        "candidate_id": "0953215fe003064298d02bc1",
+        "text_sha256": "c9d33c3cc52118ffb1fb551beee6aa7adfd5e63bcd8e2dd951372267e70a9c93",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-099: Weather-tool example names get_weather. DOCS-SDKDEBUG-100: Weather-tool example describes location lookup. DOCS-SDKDEBUG-101: Weather parameters schema is an object. DOCS-SDKDEBUG-102: Weather location parameter has string type. DOCS-SDKDEBUG-103: Weather example requires location. DOCS-SDKDEBUG-104: Weather example returns fixed temperature72; not real weather evidence."
+      },
+      {
+        "candidate_id": "99d293d90a771b79a4cd22a7",
+        "text_sha256": "c64e8a6d0e364603e0eec4924d5c81f2fd8c7fdeaf80b20acb8b5d06650a5420",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-105: Check handler result validity."
+      },
+      {
+        "candidate_id": "068ef8b370d921081c153b53",
+        "text_sha256": "9afa2ddd797d45a255426fced2b8b778c6155c9ba6eb9b740081cc8ccf2290cd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-106: Handler must return a JSON-serializable value. DOCS-SDKDEBUG-107: Result example returns success true and illustrative data. DOCS-SDKDEBUG-108: Do not return undefined. DOCS-SDKDEBUG-109: Do not return nonserializable objects."
+      },
+      {
+        "candidate_id": "88e404b3fbf910838696bedf",
+        "text_sha256": "3cff0cca6314b8b7e2f13f6102910b0b5038bf057dd293d7bb45a39fd15e02cb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-110: Subscribe to error events to diagnose hidden tool failures."
+      },
+      {
+        "candidate_id": "ad26cdd0c1d76389ede85db1",
+        "text_sha256": "7ebcbb14e7bbd32680bc204a5b6c867801cce2d4f4fab11c1105d30449ba1561",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-111: Example subscribes to tool.execution_error. DOCS-SDKDEBUG-112: Example logs tool-error event data. DOCS-SDKDEBUG-113: Example also subscribes to session error. DOCS-SDKDEBUG-114: Example logs session-error data."
+      },
+      {
+        "candidate_id": "12d738602a6b4d0e238e13a6",
+        "text_sha256": "3e019e9414cf92ebcc19605c717fc3688720d79e450eddddbb2ffc86978a70f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-115: Windows path guidance uses raw strings as an option. DOCS-SDKDEBUG-116: Windows path guidance uses forward slashes as an alternative."
+      },
+      {
+        "candidate_id": "f0ec7292ffdd548b1c7b57ba",
+        "text_sha256": "bb96f86cacc31d72af7baeabec99676c34a1621fac34fc36cee8e19e059d7f0c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-117: .NET Windows raw-path example points to Program Files GitHub executable. DOCS-SDKDEBUG-118: Alternative uses forward-slash executable path."
+      },
+      {
+        "candidate_id": "5fb595d9aefe847725222411",
+        "text_sha256": "ce97f9b349d1ea9a77d8ecef93d02e93ef6495d192cfa8dcc31f6fa7d09244f8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-119: SDK is described as resolving PATHEXT automatically; not locally tested."
+      },
+      {
+        "candidate_id": "932ac1a975b79e15311f1a1d",
+        "text_sha256": "0ba1e8b2556c9eece3bbb25ce438e48b33168092402781729252a89eeb99029f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-120: For persistent Windows resolution trouble example uses explicit.exe extension."
+      },
+      {
+        "candidate_id": "7fbc06bc936655712e36178c",
+        "text_sha256": "747e90a0fe204e1d9aa107943f233bd1b5439881c22ad551deb15bba36093ba9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-121: Ensure UTF8 console encoding for JSON handling."
+      },
+      {
+        "candidate_id": "932d2cff80b2e0dd90e079cb",
+        "text_sha256": "2d9ee3f7e9e0d44d2f07a9cb7147a1c107aba284b0e3baadcbad67c59436abb9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-122: .NET example sets Console.OutputEncoding UTF8."
+      },
+      {
+        "candidate_id": "76bc1df111618f60cf879e80",
+        "text_sha256": "af11bf78ad3e16f2498b2a8457c804b825721f58963edcfa68a99e3820fd9a8c",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines496–496 (Table of contents / Platform-specific issues / macOS) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "0076faf353118674e2c2da45",
+        "text_sha256": "6a0435f50aaba487dc12fba4d13c852d097629fb35308664764a9570c2605a72",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-123: macOS troubleshooting illustrates deleting com.apple.quarantine; this security mutation is not authorized or performed by importing documentation."
+      },
+      {
+        "candidate_id": "b389023eb65ac124f94db4a8",
+        "text_sha256": "9ac0edcb42aea1755b8881fb57d2040d64088d450eccb1faa6aedf6c6fc191a1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-124: GUI apps may lack inherited shell PATH."
+      },
+      {
+        "candidate_id": "ffe3366e0efe0c4df57f9488",
+        "text_sha256": "4d39d676f193649488373a1a7f5c2bf001217ad9094452dbb1ec04d4a79a5b71",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-125: macOS GUI example supplies absolute Homebrew executable path."
+      },
+      {
+        "candidate_id": "c20add51672e565cc805a771",
+        "text_sha256": "f7e27f59e445ea4b8dbc725fcd80c7d3e882a87e613533e464638827bc14b73a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines512–512 (Table of contents / Platform-specific issues / Linux) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "a9cb6191cecf7a4988111e42",
+        "text_sha256": "1911df5ef3f5805ec1d5781cbdb1703682b74c5048810c11dc999b34cc0677dc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-126: Linux permission example adds execute permission with chmod+x; no filesystem permission mutation authorized or performed."
+      },
+      {
+        "candidate_id": "60c3f4ca817735a723b2f866",
+        "text_sha256": "9a846f0008d434e539eab11c48bc2bf1ec5a84b8d8ed2863fbf043a9247c6ee0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-127: Check needed shared libraries."
+      },
+      {
+        "candidate_id": "478f21fd30c865186ba27c9f",
+        "text_sha256": "2d2cb195a8530189b6fb34def052e235a4484d64a59fd13b3dfc0ea5967b3fab",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-128: Linux example invokes ldd; not executed."
+      },
+      {
+        "candidate_id": "6a05a3b39260f44e5a104e49",
+        "text_sha256": "e9d61700b562e4cf306df5cd0014699153983a86096a8f3f470b613a21d0cbcb",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines526–526 (Table of contents / Getting help) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "3ae357c76ed0d6aef388fd04",
+        "text_sha256": "84ec0a02dbf339f8d9648b6f481194d4b42119f787cbaa2e4b83ada8bc95e903",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines528–528 (Table of contents / Getting help) consist of table/tab/TOC wrappers, editorial lint notes, imports or transition labels. Full source context inspected; no additional operative condition inferred from this segment. Adjacent example semantics and version/permission limitations retained separately."
+      },
+      {
+        "candidate_id": "84c9f4e8df35f2377f3337e4",
+        "text_sha256": "019854a9fc12d579741e3a402f8fbff2f1bdd4bafe976677dd4389ce3f9513a3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-129: Record SDK version. Source guidance is not authorization to disclose secrets, private code or personal data."
+      },
+      {
+        "candidate_id": "dc19ac606040bf4692660428",
+        "text_sha256": "159787c1b5334e010f49ce804f4c373c6f4346ab503ca139328a4a0a8d96011b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-130: Record CLI version. Source guidance is not authorization to disclose secrets, private code or personal data."
+      },
+      {
+        "candidate_id": "38c53613e6873980d2b0331d",
+        "text_sha256": "beb3d5cf59cfccdc9c9757f2404a9dcd19decc3e6462d278f068f1cfcab1ee8a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-131: Record operating system. Source guidance is not authorization to disclose secrets, private code or personal data."
+      },
+      {
+        "candidate_id": "0c55678ad71dd89aeaf8ba45",
+        "text_sha256": "afd2d6dd43e90fc31e94838f810b110c6c7c861ee485487d32c8a3581fcbebb4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-132: Collect debug logs. Source guidance is not authorization to disclose secrets, private code or personal data."
+      },
+      {
+        "candidate_id": "1a13a8a3df38a6c750dd42f5",
+        "text_sha256": "016b2a7bc2dd1c6aa36826b2e2f277db0c465a5e2848dece0b1991e4ba420253",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-133: Prepare minimal reproduction code. Source guidance is not authorization to disclose secrets, private code or personal data."
+      },
+      {
+        "candidate_id": "b5fb39b24a3f083532ed3f05",
+        "text_sha256": "e3e1dbe61438d4dfbc3726ff10e0be222a2e648363014499f92c8781d16f1530",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-134: Search existing SDK issues; no search/public disclosure performed."
+      },
+      {
+        "candidate_id": "0690a15e0cf32e123a7a1232",
+        "text_sha256": "790c5a6167110a6e8da81afce62e686c560e7978dbef24a44601818625c1f0d3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-135: The source proposes opening an issue with collected information; actual public publication requires applicable approval and redaction, not granted here."
+      },
+      {
+        "candidate_id": "19ab5a83635fdcdbab7ae55a",
+        "text_sha256": "74a3b2c7febb72c5a8495bc9c441b51b9853a449cb467b6ffee536bd203437dd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-136: SDK quick-start remains linked reference."
+      },
+      {
+        "candidate_id": "998770431be28eb8ae1170c0",
+        "text_sha256": "405f241a434128f625cc5c86b954623c9ec4c8472df3eba58ae299a691dccad5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-137: MCP setup remains linked reference."
+      },
+      {
+        "candidate_id": "a80ce2a53f139c3d795cfa58",
+        "text_sha256": "a42fce32bf7f2135869575fbcb76e3119d59cf4a9a2a82591a02c46bfe154a03",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-138: MCP troubleshooting remains linked reference."
+      },
+      {
+        "candidate_id": "87b2e7aeb26d5f4e18a46895",
+        "text_sha256": "28a748739ba80c52c635adbf403416b0cc5df3919de3561eb672db59e9f6aa67",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKDEBUG-139: SDK API repository remains linked reference."
+      }
+    ]
+  }
+]
