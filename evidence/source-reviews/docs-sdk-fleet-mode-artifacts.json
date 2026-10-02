@@ -1,0 +1,556 @@
+[
+  {
+    "artifact_id": "515507425f8212d29f6315a4",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/fleet-mode.md",
+    "content_sha256": "8b69a083738d16f06a0392bb2dc0f3355d7b471da5fedd9b31eff1923019e9d5",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T13:48:41Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full281-line root source read, all79candidate dispositions and216reference records consolidated once. Bounded independent audits/repair rechecks do not certify runtime behavior, global omissions, rights or adoption. SQL/prompts/RPC samples were not executed. Retained immutable checker-convention mismatch and corrective recheck.",
+    "independent_audit": "evidence/sdk-fleet-mode-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-fleet-mode-independent-repair-recheck.json",
+    "residual_recheck": "evidence/sdk-fleet-mode-independent-residual-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "cf56c38c7ce72ccf5c270048",
+        "text_sha256": "bb3ea035c9c874b21410d4c76f37fc811bd330d2cdb63160bfa12f51e00cf655",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-001: Fleet orchestration splits work among independent sub-agents. DOCS-SDKFLEET-002: Fleet runtime research describes parallel dispatch through task. DOCS-SDKFLEET-003: SQL todos supply shared coordination state. DOCS-SDKFLEET-004: A parent session coordinates workers. DOCS-SDKFLEET-005: The parent collects worker results. DOCS-SDKFLEET-006: The conversation continues with combined context. DOCS-SDKFLEET-007: Source declares Free/Pro/Team version applicability. DOCS-SDKFLEET-008: Source declares Enterprise Cloud version applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "1efe34cc32b501a19fe6fe5d",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "e2dabefa29829c2ab6a5e419",
+        "text_sha256": "f6cd952f533989d9b249242e7c87321645fa899a80d29d8e8b83eb2456176171",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-009: Fleet fits work decomposable before execution. DOCS-SDKFLEET-010: Each unit should run without waiting for other units.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "3d9ee3407291ab74c9055e7d",
+        "text_sha256": "e4ad29165f6eea68a95929bcef26cd754d415860a029466398cfe79e0457b44a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "d3708adff2c517d235cc87a0",
+        "text_sha256": "ff4cccfe262d67114d15e9bfad91678524a3e44b8427ba340bc6d42f896c46e3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-011: Refactor workers can own distinct files. DOCS-SDKFLEET-012: Refactor workers can own distinct packages. DOCS-SDKFLEET-013: Refactor workers can own distinct language SDKs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "481a4dd355030132c3ac997f",
+        "text_sha256": "7874a7e6b510bc1d579ce6d89be35ff42d7bc6002384f40233cc0777f4ade593",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-014: Batch-review workers can check separate diffs. DOCS-SDKFLEET-015: Batch-review workers can check separate modules. DOCS-SDKFLEET-016: Batch-review workers can check separate alert groups.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "f2993560fb89ee71106c668f",
+        "text_sha256": "71e12cf5144764bf059ebfe93ce437b1c96157fa16041353acb98d360fc06eb1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-017: Parallel research can divide independent repositories. DOCS-SDKFLEET-018: Parallel research can divide independent services. DOCS-SDKFLEET-019: Parallel research can divide independent feature areas.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "830eca8ee403ddf2642a1cea",
+        "text_sha256": "655284e64615e3dd7b9dc7ef77678f59e58f572102c113e2a368cb5ff8c4ad97",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-020: Documentation workers can own separate pages. DOCS-SDKFLEET-021: Documentation workers can own separate topics.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "105c8e96fb05f71d583937ef",
+        "text_sha256": "ea093584dc234e683b8a6d2dc2013ea276aa6cde45181f850338ed3572856db2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-022: Migration workers can validate their own slices. DOCS-SDKFLEET-023: Migration workers report their results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "eb0e185202b352ea337244d4",
+        "text_sha256": "1b1e4943361de5b8c81a31908092b1c26e5cd15fb405027046fedbe1ca9f8211",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "07589b046fbb0d3a9312f62f",
+        "text_sha256": "8d91fdd856994e91a49c9110f71254c909282322fb4e7422ea9419cd53a83510",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-024: Avoid fleet when a later step needs concrete earlier output.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "ab461de6ead9fa0d7942ac87",
+        "text_sha256": "9b7dc159b2b258db775531fd6eac3a7d3fca8e29e4d2e059f25e112637ec0161",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-025: Avoid fleet for edits contending for the same files.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "eb64271b963dd5698f2f2934",
+        "text_sha256": "6f3a79abc09b71e3223a1775d3d2f65d0c640ecf479255a0bef85fa6c7a1144b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-026: Avoid fleet for small tasks quickly handled synchronously or by the parent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "218fa9832b9b79b61b385934",
+        "text_sha256": "43f9828fbad765276498fa6d99d8f4975510267fd3798a17576bbadfae48251c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-027: Avoid fleet for continuously shared reasoning without clear ownership.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "5c17295351154434405905e5",
+        "text_sha256": "6f3bd09f313a5afea345bdc4472a551dc7ab600c153799733c92e8b2cdb4cebe",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-028: Parent should create clear work units. DOCS-SDKFLEET-029: Parent should assign one owner per unit. DOCS-SDKFLEET-030: Parent should define each worker's required return.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "ec89165f95daf25d581e2ecc",
+        "text_sha256": "8012ee8939f3c9e1203acfb0044c25599179815359171933e9129f1b0c76881b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-031: Several SDK languages expose fleet under session RPC. DOCS-SDKFLEET-032: Generated fleet binding is experimental. DOCS-SDKFLEET-033: Dependent applications should pin the SDK. DOCS-SDKFLEET-034: Dependent applications should pin the CLI runtime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "d41478b7f4783d98c5d3c29f",
+        "text_sha256": "353aad7fcf459ceb3c416433e3807573c21c2a11f552bf33f76673e3bd5a972c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-035: Wire method is session.fleet.start. DOCS-SDKFLEET-036: Prompt is optional. DOCS-SDKFLEET-037: Runtime combines prompt with fleet orchestration instructions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "77bbf8f60f80eb90e855da1e",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "d38675961624e2b289e78dc9",
+        "text_sha256": "643f39f1cbad4b19c716accc6fdf02866c25f78d5abf7a25eaf7a9564ec48441",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-038: TypeScript example awaits session.rpc.fleet.start. DOCS-SDKFLEET-040: TypeScript example tests result.started. DOCS-SDKFLEET-041: TypeScript example prints a start message when started is true. DOCS-SDKFLEET-039-A01: The inert TypeScript prompt asks for independent SDK-package refactors. DOCS-SDKFLEET-039-A02: The inert TypeScript prompt asks for a changes summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "6e46185afc6ebc7e3b6de8cb",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "b0855cdb6dbf59f18588ae02",
+        "text_sha256": "6be7a6c66bf99ddf33ec377da91485a34a8350e63ea3ec4b14a8f2fd5623a41f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-042: Python example imports FleetStartRequest. DOCS-SDKFLEET-043: Python example awaits fleet.start with a typed FleetStartRequest. DOCS-SDKFLEET-045: Python example tests result.started. DOCS-SDKFLEET-046: Python example prints a start message when started is true. DOCS-SDKFLEET-044-A01: The inert Python prompt asks for independent service reviews. DOCS-SDKFLEET-044-A02: The inert Python prompt asks for a risks summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "0da1d7404518fe34cacc3098",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "ba0bdad25840e161c32e038a",
+        "text_sha256": "c7f982100a180ccca70c73e31d2827d1728c2e4fc4bd14d9b52e43bc9724fe50",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-048: Go example calls Fleet.Start with context and typed request. DOCS-SDKFLEET-049: Go request points Prompt to the prompt variable. DOCS-SDKFLEET-051: Go example tests result.Started. DOCS-SDKFLEET-052: Go example prints when Started is true. DOCS-SDKFLEET-047-A01: The inert Go prompt asks for independent package updates. DOCS-SDKFLEET-047-A02: The inert Go prompt asks for validation results. DOCS-SDKFLEET-050-A01: The Go example tests whether start error is nonnil. DOCS-SDKFLEET-050-A02: The Go example returns a nonnil start error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "73173a80930a949abc1fdb2b",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "69b9149488a497355917516d",
+        "text_sha256": "88014346bb4f58a756114a9d3f243f007feb56b5f0e72ddf1384d63aa089d1af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-053: .NET example awaits Fleet.StartAsync. DOCS-SDKFLEET-055: .NET example tests result.Started. DOCS-SDKFLEET-056: .NET example prints when Started is true. DOCS-SDKFLEET-054-A01: The inert .NET prompt asks for independent project audits. DOCS-SDKFLEET-054-A02: The inert .NET prompt asks for a findings summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "0ffaef1a1876433e9dbbd3e9",
+        "text_sha256": "9963cf6807f8462e34a5520765fb42ab1aa0dd51a28a555f52d73a3bede242b2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "bbab253bbeb20cdd0fa20e79",
+        "text_sha256": "ebafde935f51f33857563d264ac5a7ca5f1c00ccbf6c8ae472f1f252fe4c965f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-057: Rust example imports FleetStartRequest. DOCS-SDKFLEET-058: Rust example calls session.rpc().fleet().start with a typed request. DOCS-SDKFLEET-059: Rust prompt is an optional Some value. DOCS-SDKFLEET-060: Rust prompt string is converted with into. DOCS-SDKFLEET-062: Rust example awaits the start request. DOCS-SDKFLEET-063: Rust example propagates a start failure with question-mark syntax. DOCS-SDKFLEET-064: Rust example tests result.started. DOCS-SDKFLEET-065: Rust example prints when started is true. DOCS-SDKFLEET-061-A01: The inert Rust prompt asks for independent crate research. DOCS-SDKFLEET-061-A02: The inert Rust prompt asks for a plan summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "ae25b75a48be5ea334df006a",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "965a73c249998aa49b9ec6cd",
+        "text_sha256": "2729634332c1da0b0bb198ca0e6b84cc07937551dc7dceabe188c8ef81d30218",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-066: Source reports typed Node.js/TypeScript fleet bindings verified on its branch. DOCS-SDKFLEET-067: Source reports typed Python fleet bindings verified on its branch. DOCS-SDKFLEET-068: Source reports typed Go fleet bindings verified on its branch. DOCS-SDKFLEET-069: Source reports typed .NET fleet bindings verified on its branch. DOCS-SDKFLEET-070: Source reports typed Rust fleet bindings verified on its branch. DOCS-SDKFLEET-071: Source reports Java binding not found under java/src/main/java on its branch. DOCS-SDKFLEET-072: Java examples are omitted pending availability of that branch's surface.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "e68e58a8f2f80501a10baa33",
+        "text_sha256": "7e78ef7938e55c92e63d1f5ebbfbc981ac3fc623cf8bcf5c8a469733d7fc0074",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-073: Plan-mode UI can return autopilot_fleet as an exit action.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "a679c996db15ee1927bf9c26",
+        "text_sha256": "236434d59ce686dabef0658b8078989b9baec0216d9858820fbfa6b904bb4659",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-074: Example names the union ExitPlanModeAction. DOCS-SDKFLEET-075: Example union contains exit_only. DOCS-SDKFLEET-076: Example union contains interactive. DOCS-SDKFLEET-077: Example union contains autopilot. DOCS-SDKFLEET-078: Example describes autopilot_fleet as exiting plan mode into parallel autonomous workers.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "85b26b2de833e71025e26449",
+        "text_sha256": "9e518957a3086bbae4a68382f645c9b4938851921b6326403eb904eb63bbe1eb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-079: Use fleet exit when a user approves a plan containing independent items. DOCS-SDKFLEET-080: Use autopilot for one autonomous worker. DOCS-SDKFLEET-081: Use interactive when the user stays in the loop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "a6d34cffe7933a27a2f1b869",
+        "text_sha256": "61d6067e3d124941d264008fe85c1e9e47aa35755d8cefde64fb2106212c1d3c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-082: Coordination is explicit rather than implicit shared memory. DOCS-SDKFLEET-083: Parent decomposes work into todos. DOCS-SDKFLEET-084: Each sub-agent owns one todo. DOCS-SDKFLEET-085: Orchestrator dispatches workers whose dependencies are complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "0ac353b61a73296fa877996c",
+        "text_sha256": "602b45eecb0bad87b22a94f14c5c5a9d7cc9ff0d769fdb3d92cdf05168ff286b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-184: The source introduces the displayed SQL as the canonical schema in its runtime guidance.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "9b960c807c27e230bcd3aafe",
+        "text_sha256": "1ccc8c88ee0fa3874fc030221af0b6e31cb59ac6d56e105cc95ea4e3ca3114ae",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-086: SQL example creates a todos table. DOCS-SDKFLEET-087: Todo ID has TEXT type. DOCS-SDKFLEET-088: Todo ID is a primary key. DOCS-SDKFLEET-089: Todo title has TEXT type. DOCS-SDKFLEET-090: Todo title is NOT NULL. DOCS-SDKFLEET-091: Todo description has TEXT type. DOCS-SDKFLEET-092: Todo status has TEXT type. DOCS-SDKFLEET-093: Todo status defaults to pending. DOCS-SDKFLEET-094: SQL example creates a todo_deps table. DOCS-SDKFLEET-095: Dependency todo_id has TEXT type. DOCS-SDKFLEET-096: Dependency depends_on has TEXT type. DOCS-SDKFLEET-097: Dependency table has a composite primary key over todo_id and depends_on. DOCS-SDKFLEET-186: The displayed dependency schema declares no foreign-key constraint linking dependency IDs to todos. DOCS-SDKFLEET-185-A01: The displayed todos table declares no result-output column.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "c5f7096bc7e1eb57218faf4a",
+        "text_sha256": "1d71a8715a9cebf7a5bd79b9b8147c557ec94987a9e69446e459fb1fc6cc92b6",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "90491bde19659204c8e60771",
+        "text_sha256": "3822155cc6701d1d2a33bbd4852186d958f203dd1aabf4aff6939810f3989d09",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-098: State diagram shows pending transitioning to in_progress. DOCS-SDKFLEET-099: State diagram shows in_progress transitioning to done. DOCS-SDKFLEET-100: State diagram shows in_progress transitioning to blocked.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "fd6028c8d2107efb6be0c9d9",
+        "text_sha256": "be2f06ef22d1a613a6fe178375f123eaada4ac695014528fa56adf86dbb4b88b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "fe2b360ea71de3cfd2ed9a3c",
+        "text_sha256": "44c9e890eca65aed06c2ce13d2976004a56cebc52287d142eab70de9b91687c8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-101: Worker should claim exactly one ready todo. DOCS-SDKFLEET-102: Claim example sets status to in_progress.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "993cee54c88533f5da89cfa1",
+        "text_sha256": "d130979a8746a40fff62e1d3d28e6b8ff1703f86dfc2f0d96f3b35f1cc68e3a1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-103: Worker should work only within the owned todo scope.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "493f8e1164ec01e657de5304",
+        "text_sha256": "5ecaa7741ddc9c7f9d8df8efb8f2b734e0da77cfa58bd4371fe59a988e397dc9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-104: Worker should store its result in the conversation or relevant task output. DOCS-SDKFLEET-185-A02: Source recommends storing worker results in the conversation or relevant task output.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "081343f2c8d9d0a7080a1b34",
+        "text_sha256": "6a1129b1525a991e9a5a3248d3e49b51e34828fff7d49c9a442f2a17ed62d1be",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-105: Worker should set done when complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "24114cb5842d1960b42386c0",
+        "text_sha256": "5532152c78ae64e2941dc2137e6ed71f3ef8e5109fff176529e078e808c78467",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-106: Worker should set blocked when unable to proceed. DOCS-SDKFLEET-107: Blocked worker should include the reason.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "2e1b38857e2c85aafcd74bef",
+        "text_sha256": "add9e4e9f41e10e93e3e9df1cab85cda0a28c8eee4ddc125f765b5ac9d424747",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "34bc4e1aaa2955ac96fbcc04",
+        "text_sha256": "c24f952c0f776810df3277069fde3fed5a8d6c731a15ae22f940603651fdfd25",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-108: Ready-work SQL example selects todo rows. DOCS-SDKFLEET-109: Ready-work query filters pending todos. DOCS-SDKFLEET-110: Ready-work query excludes a todo with an unfinished matching dependency. DOCS-SDKFLEET-111: Dependency join matches depends_on to dependency todo ID. DOCS-SDKFLEET-112: Dependency filter matches todo_id to the selected todo. DOCS-SDKFLEET-113: An unfinished dependency is one whose status is not done. DOCS-SDKFLEET-187: The ready-work query uses an inner join; a dependency ID with no matching todo row is not represented as an unfinished dependency by this displayed join. DOCS-SDKFLEET-188: The ready-work subquery selects a constant1 for its existence test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "ac10fe8fb65811879681e12b",
+        "text_sha256": "fe27bbe65cc2a537828e16c043ca6bd1d760f80cd9f66ae38f4195080e911a94",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-114: Ownership pattern exposes readiness to the parent. DOCS-SDKFLEET-115: Ownership pattern exposes running state to the parent. DOCS-SDKFLEET-116: Ownership pattern exposes completion to the parent. DOCS-SDKFLEET-117: Ownership pattern exposes blocked state to the parent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "f9a384ef22eae7fa3bd70180",
+        "text_sha256": "5dbea032e5e6ae66f51a3db0f9fb97337ea8b12ff1d2790435802e686aab30f6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-118: Fleet invokes workers through the runtime task mechanism. DOCS-SDKFLEET-119: Source attributes preToolUse firing for sub-agent calls to the runtime 1.0.52 changelog. DOCS-SDKFLEET-120: Source attributes postToolUse firing for sub-agent calls to the runtime 1.0.52 changelog. DOCS-SDKFLEET-121: Source attributes subagentStart firing for sub-agent calls to the runtime 1.0.52 changelog. DOCS-SDKFLEET-122: Source attributes subagentStop firing for sub-agent calls to the runtime 1.0.52 changelog.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "9088fb1ac0a4a909cf8d0782",
+        "text_sha256": "fd35ec466e22a8d1d6b9f20c66276c080eabb1cf762816e13bc30812030e5eb4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-123: Source reports no dedicated public SDK subagentStart callback found on its branch. DOCS-SDKFLEET-124: Source reports no dedicated public SDK subagentStop callback found on its branch. DOCS-SDKFLEET-125: Generic session stream can expose subagent.started. DOCS-SDKFLEET-126: Generic session stream can expose subagent.completed. DOCS-SDKFLEET-127: Generic session stream can expose subagent.failed. DOCS-SDKFLEET-128: Generic session stream can expose subagent.selected. DOCS-SDKFLEET-129: Generic session stream can expose subagent.deselected.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "b29ff5aa2470923901e20aec",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "1d57ac82312e35136afdb5a6",
+        "text_sha256": "a6710b3104d127b7e9f5b8d0b0a055079bfa95005232d84a3f7711ef443fd66d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-130: TypeScript event example registers a session listener. DOCS-SDKFLEET-131-A01: The event example filters subagent.started. DOCS-SDKFLEET-131-A02: The event example prints agentDisplayName. DOCS-SDKFLEET-132-A01: The event example filters subagent.completed. DOCS-SDKFLEET-132-A02: The event example prints agentDisplayName.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "2ad4e1ffd496d7d6bdcaa93b",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "862a3cd898edf1d0204e88f2",
+        "text_sha256": "8fbd0e32a5f57c11b00dff350443275ca002d223d0d6a2d2c04deffd3b791989",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-133: Python example defines handle_event. DOCS-SDKFLEET-136: Python example registers handle_event. DOCS-SDKFLEET-137: Python example captures an unsubscribe value. DOCS-SDKFLEET-134-A01: The event example filters subagent.started. DOCS-SDKFLEET-134-A02: The event example prints agent_display_name. DOCS-SDKFLEET-135-A01: The event example filters subagent.completed. DOCS-SDKFLEET-135-A02: The event example prints agent_display_name.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "34537ad9e99ffd8b3784d1b0",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "d8571341eae3dcd8bd51d061",
+        "text_sha256": "0bd763b5c58d530b0ad0973af4726e25e3bc039957651058becfdd0e0b56c476",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-138: Hooks link is a reference, not inherited review of the linked body. DOCS-SDKFLEET-139: Custom-agent link is a reference, not inherited review of the linked body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "8468b01e3f7cf40739451bb7",
+        "text_sha256": "86b89df706346ccb64570ef84ecf3988b0427a708a4e18fdfee393c1570dc44a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-140: Runtime loads plugins with --plugin-dir. DOCS-SDKFLEET-141: Loaded plugins can register task(agent_type=...) types in prompt mode. DOCS-SDKFLEET-142: Fleet can dispatch plugin-provided worker types.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "835cb535a7aa02aa2eb2dbd2",
+        "text_sha256": "5f7cf5505948706f35973c6c386a931820f061f225e3cf7501bf54832c1b0a1a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-143: Plugin configuration described here is runtime-level, not a documented SDK registration API. DOCS-SDKFLEET-145: Future SDK helpers are a possibility, not present API proof. DOCS-SDKFLEET-144-A01: Configure the runtime with the plugin directory before connecting the SDK. DOCS-SDKFLEET-144-A02: Then connect the SDK client to that configured runtime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "e8ead93c2ae7229141996a4b",
+        "text_sha256": "6321ca74d70eb8b26317e4524fae0fa869c349d271f454f47172742a0c00ab51",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/query/prompt introduction or lint/language-tab marker only; corresponding operative claims are extracted separately."
+      },
+      {
+        "candidate_id": "1d7ab658f0659b03055c42e1",
+        "text_sha256": "e944cf7aac463ed7fea8f826c8bffc9e95a4f999a73047822351c24f757ace3b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-146: Conceptual inert prompt selects security-review task type for independent packages. DOCS-SDKFLEET-147: Conceptual inert prompt asks for parallel workers. DOCS-SDKFLEET-148: Conceptual inert prompt asks for a high-confidence summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "47c623328b9875a660e8d97f",
+        "text_sha256": "2a1fad23eb8c0f69f59e538820815eb5099a3d44f567613c0a5f94df1bc576a5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-149: Keep plugin worker types narrow. DOCS-SDKFLEET-150: Keep plugin worker type names descriptive. DOCS-SDKFLEET-189: Narrow descriptive plugin worker types are intended to help the orchestrator choose them reliably.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "c15026d80dff52cf086eba99",
+        "text_sha256": "9d025eec0a0cbc2aebd39a4bb39e99b50a7cd44a1978ac38048bf8af02fb02cc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-151: Decompose independent units before fleet.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "fbf649ee26bf6a5c74ccff51",
+        "text_sha256": "c1f5cb508985b29193105eb5bc57491d429f34fd3746ea11c7b66e5d46ff4679",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-152: Minimize todo dependencies. DOCS-SDKFLEET-153: Dependencies reduce parallelism.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "ad116468678ae73d3fdef7c3",
+        "text_sha256": "68e83a4c513c85842e03ccf723341e0d2c34d4eafa872ca9189bd8746415a229",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-154: Give each todo a durable ID. DOCS-SDKFLEET-155: Give each todo a clear title. DOCS-SDKFLEET-156: Give each todo a complete description.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "0379c683518c823f39493099",
+        "text_sha256": "d21d6b9c2889188e5c651f9b549c9fc0a60112ad40830a437dcad247a8171a2d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-157: Give each worker exactly one todo at a time.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "90f6535e9efe077c4028719c",
+        "text_sha256": "0c6b8e8d765e83a651770dd677f0a68d6d73df1de2dd8e0b8ac2013ad8055d29",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-158: Use background workers for truly parallel work.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "a6bb0fe787efd0bb9abf3a24",
+        "text_sha256": "26584386ee596d36dd113c1da8eee38915d2eea9153e0c7190dd3b9da5d31250",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-159: Use synchronous calls for serialized steps. DOCS-SDKFLEET-160: Use synchronous calls for validation gates.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "8c5c99eb180ffd239d5ab440",
+        "text_sha256": "b1895ab57b4b289a2e04ec4289151ed5ae2c4b4aee40e9117be565e6ab47263b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-161: Provide complete context to each worker. DOCS-SDKFLEET-162: Source describes workers as stateless across calls.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "829cc30bfa5fc20976c6dec5",
+        "text_sha256": "42a42f3b655484fcea757253704274e8ea8dcdee65a9b7794df27833873ae1dd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-163: Worker prompts should include file paths. DOCS-SDKFLEET-164: Worker prompts should include commands. DOCS-SDKFLEET-165: Worker prompts should include expected outputs. DOCS-SDKFLEET-166: Worker prompts should include constraints.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "722ebbb4a4a74dacee494236",
+        "text_sha256": "a7b1aa538f51150ebbf411cefee54c432d6649410ddacbc80326c534d201ffa5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-167: Avoid dispatching a single background worker. DOCS-SDKFLEET-168-A01: When parallel dispatch would create only one background worker, prefer a synchronous call. DOCS-SDKFLEET-168-A02: Alternatively batch multiple workers for parallel dispatch.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "dfd15c0b9c38bd8af1d3784a",
+        "text_sha256": "15ea0b73722a7db71a11bb775fd95d819b5189cd1cdd30f3248675412836f0db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-169: Avoid overlapping file assignments unless parent reconciliation is explicit.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "efa58b32d22ed3cd2d422839",
+        "text_sha256": "d5c9491a079262ac52991b6ecf31562b78126f79adca368e158b0792532ccf00",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-170: Workers should report what they changed. DOCS-SDKFLEET-171: Workers should report how changes were validated. DOCS-SDKFLEET-172: Workers should report remaining blockers.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "10a130ee0e648598323bd2e6",
+        "text_sha256": "68bec465053a177bf2dd27c94d51143f227032766abc566e394e35b173a3adb1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-173: Parent should verify the combined result after workers finish.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "69fbd5aee2fca523e978dcd0",
+        "text_sha256": "30c90c94d49060ee89a54ea3edf5411b09c8f45c27758be28de73c95bdf63653",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-174: Generated session RPC fleet bindings are experimental in several SDKs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "b6e3994fa342c2045314b17f",
+        "text_sha256": "d39ebddb19df52ecc50b296f8b5953bfb84a69f64078f6aec19b7c3d70a6a566",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-175: Runtime guidance calls SQL todos canonical. DOCS-SDKFLEET-176: Whether SQL todos are a stable SDK extensibility contract remains open.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "85673a5eea33aa5f353978cc",
+        "text_sha256": "e0ee77e66c156fd2e932acda01a2b5dbfaa6eb9f961e4e1355e64148ad61dfe0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-177: Runtime lifecycle hook names differ from this branch's generic SDK lifecycle-event surface.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "d379711cae30b732fbd828cd",
+        "text_sha256": "cb5cd394a1636f5a4653af60d593b49f98f3e123b06891dfabf3faea6f422bc2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-178: Source reports no SDK-level plugin registration helper verified on its branch.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "db4e2ce12457c693c62b4b4b",
+        "text_sha256": "def2835a4ff24171dd10291bca6ad2afcf585a2c4b0a5a7264834f3c13a9ee08",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-179: Java native session.fleet.start bindings were not found on the source branch.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "04cc8cf0bbe2072869a85463",
+        "text_sha256": "930fd2719fc14614312ba0fc0d0ba7712f2192c242b9ce37229d2e08166b373c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-180: Fleet still requires parent review. DOCS-SDKFLEET-181: Parent must reconcile inconsistent worker assumptions. DOCS-SDKFLEET-190: The source warns that parallel workers can produce inconsistent assumptions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "48afd8fc65bc0ffe12da1fff",
+        "text_sha256": "d93bb8a17318131eb3167613e6760aacf74b0c2620a414265abd179c3de9aa2f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-182: See-also custom-agents link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      },
+      {
+        "candidate_id": "b2176ea301bf2e38213786b6",
+        "text_sha256": "3351b2f3692d1edd60e511a2b05d658c3c67d3d226650ec045612f8d330182f4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKFLEET-183: See-also hooks link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json"
+      }
+    ]
+  }
+]

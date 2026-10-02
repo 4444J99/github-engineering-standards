@@ -1,0 +1,64 @@
+{
+  "schema_version": "ges.independent-repair-recheck.v1",
+  "reviewer": "codex:independent-source-audit",
+  "reviewed_at": "2026-10-02T13:46:20Z",
+  "scope": "Only residual185 mixed-source-strength split; bounded correction of earlier local grouped-parent checker convention.",
+  "prior_recheck": {
+    "path": "evidence/sdk-fleet-mode-independent-repair-recheck.json",
+    "sha256": "3fa58df65afcc337f73c393919bdfd9972217975c861f755a35d433dcc4ea16a",
+    "immutable_snapshot_records": 214
+  },
+  "input": {
+    "path": "evidence/source-reviews/docs-sdk-fleet-mode-claims.json",
+    "sha256": "6d8c0055b4975a9aa65369c7050911f5b7474116c5a700716e3ae6c4040370f8",
+    "records": 216
+  },
+  "source": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/fleet-mode.md",
+    "content_sha256": "8b69a083738d16f06a0392bb2dc0f3355d7b471da5fedd9b31eff1923019e9d5"
+  },
+  "verified_records": [
+    {
+      "claim_id": "DOCS-SDKFLEET-185",
+      "span": [
+        155,
+        179
+      ],
+      "source_strength": "GROUPED_CONTEXT",
+      "result": "GROUPED_PARENT_SUPPORTED"
+    },
+    {
+      "claim_id": "DOCS-SDKFLEET-185-A01",
+      "span": [
+        155,
+        158
+      ],
+      "source_strength": "EXAMPLE",
+      "result": "SUPPORTED_NO_RESULT_COLUMN"
+    },
+    {
+      "claim_id": "DOCS-SDKFLEET-185-A02",
+      "span": [
+        179,
+        179
+      ],
+      "source_strength": "RECOMMENDATION",
+      "result": "SUPPORTED_SOURCE_RESULT_STORAGE_GUIDANCE"
+    }
+  ],
+  "checker_convention_correction": {
+    "prior_status_message_inaccurately_reported_structural_errors_empty": true,
+    "prior_file_actually_records_12_parent_ids": true,
+    "explanation": "Earlier local checker assumed grouped parents use claim_role plus atomic_children. Fleet files instead use source_strength=GROUPED_CONTEXT with occurrence child IDs. The recorded twelve IDs therefore report a checker-convention mismatch, not observed ges.claim_review validation failures. Original snapshot and errors remain immutable; no silent alteration.",
+    "traceability": "185-A01 and185-A02 IDs preserve parent185 association; explicit role/child-list fields are not present in the current fleet convention."
+  },
+  "remaining_source_content_findings_within_specified_scope": [],
+  "bounded_result": "185 repair supported; ready for integration only. Earlier status-text error and checker convention are explicitly corrected; no global certification.",
+  "limitations": [
+    "No other files edited.",
+    "No source execution, native/rights/runtime/cost/policy/global certification.",
+    "No candidate-map/consolidation review."
+  ]
+}
