@@ -1,0 +1,35 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T01:29:26Z",
+  "source_documents": ["evidence/source-reviews/docs-custom-pattern-lifecycle-claims.json", "evidence/source-reviews/docs-custom-pattern-prerequisites-claims.json"],
+  "input_claims": 33,
+  "groups": [
+    {"id":"PATTERN-APPLICABILITY","claims":["DOCS-PAT-001","DOCS-PAT-002","DOCS-PATDEP-001"],"decision":"Keep declared product applicability, matching purpose and eligible role descriptions separate. None proves effective target authorization or feature availability."},
+    {"id":"PATTERN-CREATOR-AUTHORITY","claims":["DOCS-PAT-003","DOCS-PAT-004","DOCS-PAT-005","DOCS-PAT-016","DOCS-PATDEP-003","DOCS-PATDEP-004"],"decision":"Enterprise creator-only editing, dry runs and enablement coexist with repository administration requirements. Enterprise ownership does not automatically establish organization or repository dry-run authority."},
+    {"id":"PATTERN-EDIT-PUBLISH","claims":["DOCS-PAT-006","DOCS-PAT-007","DOCS-PAT-008"],"decision":"Distinguish edit-induced alert closure, non-alert-generating dry run and reviewed publication. Editing alone is not successful publication or erasure."},
+    {"id":"PATTERN-REMOVE-ALERT-LIFECYCLE","claims":["DOCS-PAT-010","DOCS-PAT-011","DOCS-PAT-012","DOCS-PAT-013"],"decision":"Require an explicit alert-handling choice and asynchronous completion evidence. Pinned UI terminology is ambiguous; preserve the alert-deletion conflict record rather than map close to erase."},
+    {"id":"PATTERN-SCOPED-PRECONDITIONS","claims":["DOCS-PAT-014","DOCS-PAT-015","DOCS-PAT-017","DOCS-PAT-018","DOCS-PATDEP-005","DOCS-PATDEP-008","DOCS-PATDEP-011"],"decision":"Preserve enterprise, organization and repository prerequisites individually. Organization policy and ordinary secret-scanning enablement do not alone establish effective repository push protection."},
+    {"id":"PATTERN-PUBLICATION-VISIBILITY","claims":["DOCS-PATDEP-002","DOCS-PATDEP-007"],"decision":"Two equivalent published-pattern visibility assertions retain their distinct source occurrences; a visible enable button is not observed blocking."},
+    {"id":"PATTERN-CHANGE-IMPACT","claims":["DOCS-PATDEP-006","DOCS-PATDEP-009","DOCS-PATDEP-012"],"decision":"Repeated disruption warnings are one shared risk proposition with three retained source occurrences. Dry-run and false-positive assessment remain required proposal evidence."},
+    {"id":"PATTERN-UI-ENABLE-DISABLE","claims":["DOCS-PAT-009","DOCS-PAT-019","DOCS-PAT-020","DOCS-PAT-021","DOCS-PATDEP-010"],"decision":"Retain scope-specific UI steps and optional enablement strength. Enablement, disablement, pattern removal and actual enforcement are distinct states."}
+  ],
+  "binding_proposal": {
+    "canonical_mapping": "UNMAPPED_POLICY_DECISION_REQUIRED",
+    "related_control": "GES-SEC-004",
+    "mapping_equivalence_verified": false,
+    "assessment_default": "READ_ONLY",
+    "required_parameters": ["exact product version", "target repository and owning organization/enterprise", "pattern identity and revision", "credential type and intended detection purpose", "required push-protection scope", "authorized reviewer and accountable response owner"],
+    "read_only_evidence": ["effective feature availability and actor permissions", "pattern publication state and revision", "enterprise and repository effective push-protection settings", "dry-run results and false-positive review", "response and revocation procedure with accountable ownership"],
+    "behavior_evidence": "Separate approved positive, negative and bypass tests must show actual blocking for the chosen pattern and repository. Settings alone cannot PASS an enforcement binding.",
+    "mutation_boundary": "No scanner, permission, protection or deletion change is authorized by this proposal. A future approved plan/diff/apply/verify adapter must use explicit alert handling and concurrency-safe pattern identity; destructive defaults must not be inherited silently.",
+    "unknown_handling": "Missing access, unresolved versions, unavailable feature data and incomplete asynchronous processing remain UNKNOWN or MANUAL_REVIEW, never PASS.",
+    "template_review_required": "Credential-response and applicability templates need review before canonical adoption; PII handling, erasure and regulatory compliance require separate purpose-specific evidence."
+  },
+  "conflict_record": "CONFLICT-SECRET-ALERT-DELETION-001",
+  "accepted_policy": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "canonical_controls_changed": 0
+}
