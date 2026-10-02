@@ -1,0 +1,278 @@
+[
+  {
+    "artifact_id": "eb32bc469ae42225a3f5138b",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/auth/server-to-server-tokens.md",
+    "content_sha256": "8431fe51d06fade89d715eefa136e3e90c9667b284ab5fc8310ba2ea34f91160",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T04:52:51Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned artifact read with non-candidate context. Independently authored scoped identity, organization policy, expiry, runtime-environment priority, transport/lifecycle and billing distinctions preserved. Examples were not executed; no credentials/apps created, policy accepted, costs incurred or rights/native/global omission certified.",
+    "supporting_claims": "evidence/source-reviews/docs-sdk-server-token-claims.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "9c720a0bfa5d6974e7328f97",
+        "text_sha256": "186d78db59f5135877012baff900076d4ef36a44b9ff379efbe01c7e34ad1f19",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-001: Service authentication uses short-lived installation tokens instead of a user's credentials. DOCS-SDKSERVER-002: GitHub Actions should use its built-in GITHUB_TOKEN instead of the external-service approach. DOCS-SDKSERVER-003: The article declares FPT version applicability. DOCS-SDKSERVER-004: The article declares GHEC version applicability."
+      },
+      {
+        "candidate_id": "ad10f5958fd25e15c134e0ac",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines14–15 ((preamble)) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "f822dda731f2fe8a93c44710",
+        "text_sha256": "31cd349db66cf90a13e8d0653951464133cc491674c619405db0033a562f10d6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-005: The built-in workflow-token approach is scoped to organization-owned repositories."
+      },
+      {
+        "candidate_id": "c97a68e470e49adc2d8af2d6",
+        "text_sha256": "5decdc7802d7cdc38fd64736ab061d59b288252117ade058a8e7746ca858531e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-006: Workflow example grants contents read. DOCS-SDKSERVER-007: Workflow example grants copilot-requests write. DOCS-SDKSERVER-008: Workflow example chooses ubuntu-latest, not an adopted runner policy. DOCS-SDKSERVER-009: Workflow example uses the checkout reusable; its pinned content names actions/checkout@v6. DOCS-SDKSERVER-010: Workflow invokes a placeholder application, not a runnable ingestion instruction. DOCS-SDKSERVER-011: Workflow passes the built-in secret as GITHUB_TOKEN."
+      },
+      {
+        "candidate_id": "0aa2601acab694a6cf579ab0",
+        "text_sha256": "15de26fdb9350ecf6efb47bf747ef855a42d49c633ffc2eb53ec59b319d0bd79",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-012: Organization policy allowing CLI usage billed to the organization must be enabled. DOCS-SDKSERVER-013: This Actions approach needs no GitHub App. DOCS-SDKSERVER-014: This Actions approach needs no stored authentication secret. DOCS-SDKSERVER-015: Further CLI-in-Actions details are linked but not independently reviewed."
+      },
+      {
+        "candidate_id": "1d9821d8bd844e26ca39adc9",
+        "text_sha256": "8c33231ad8cd3bbb3113ca178d63191c037ea6adb4ea6a230207da83512e31a6",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines40–40 (GitHub Actions / Other services and CI systems) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "faf6d26c3d477cdeb4033022",
+        "text_sha256": "e9e2ecd11304c463ac6c4ecb3a775b37e3e9d37717c645af199a7545f8c693b4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-016: For external services create a GitHub App with Copilot Requests repository Read & write permission."
+      },
+      {
+        "candidate_id": "49345787b034cc59b594e861",
+        "text_sha256": "18ee1a7d2f19d64bb21bf84d101572c7f234309b5238a3ba0e7be20cf71433f7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-017: Install the app on the organization intended to bear the bill. DOCS-SDKSERVER-018: The stated current permission check requires All repositories installation access."
+      },
+      {
+        "candidate_id": "a967e6a3f56c73d910752d6e",
+        "text_sha256": "737a5d337c810e2844523c791d73ff23f27f3eaa2173195f3af967e80fe66260",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-019: Installation-token generation is linked with a repository ID and Copilot permission; linked token-creation instructions are not reviewed."
+      },
+      {
+        "candidate_id": "0b3cc2343aa49c515a0c4354",
+        "text_sha256": "a557a2e43c587a987ca427583598e9d02fe1d778f8e5012b225fc17086878b01",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-020: Token-request example supplies a repository_ids array containing a placeholder ID. DOCS-SDKSERVER-021: Token-request example grants copilot_requests write."
+      },
+      {
+        "candidate_id": "13474d3bc794d4b1b672a319",
+        "text_sha256": "f29c9b5c6b75c9092893e5afe98a7bd3ab7a5b8902401a1161af5500281fd8d7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-022: Pass the minted ghs_ installation token through COPILOT_GITHUB_TOKEN."
+      },
+      {
+        "candidate_id": "5bf94e841c6571ba0e467c60",
+        "text_sha256": "3f84830a148466c33319cf3e20f4ba642623dfc1b9e980e4f7a22745b75bf8c2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-023: The organization must enable Copilot requests from App installations. DOCS-SDKSERVER-024: Installation tokens expire after one hour."
+      },
+      {
+        "candidate_id": "ae63dcd50de4074feabc8ede",
+        "text_sha256": "42f186ff5f848aef2cc75dd49293df3b0ae3ab2c241abb1c51d3f30c69761d88",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-025: Do not use the SDK explicit gitHubToken/github_token equivalent option for installation tokens. DOCS-SDKSERVER-026: The explicit SDK token option is for user tokens. DOCS-SDKSERVER-027: Installation tokens must use runtime-environment authentication."
+      },
+      {
+        "candidate_id": "e6a70c4612368cbe76111c03",
+        "text_sha256": "7ce7a1bcbf6ad1909e87971d80397e24a98ee04c2d3588f352f55c5ddd3dd529",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-028: Runtime examples assume the minted value is already in INSTALLATION_TOKEN; token creation is not demonstrated here. DOCS-SDKSERVER-029: Examples pass credentials only to the child runtime. DOCS-SDKSERVER-030: Examples disable fallback to stored user credentials."
+      },
+      {
+        "candidate_id": "5ab5f0b445f6111a08ab1c38",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines66–67 (GitHub Actions / Configure the runtime) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "0358c72630cd18c22cd5a6b1",
+        "text_sha256": "ce13526650bdc0d0ae19d0e3437d5b55e35d45fc5acd1bcbcee1730e5c4da1ac",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-031: TypeScript reads INSTALLATION_TOKEN from environment. DOCS-SDKSERVER-032: TypeScript throws when the token is falsy. DOCS-SDKSERVER-033: TypeScript explicitly chooses stdio runtime connection. DOCS-SDKSERVER-034: TypeScript inherits parent environment fields. DOCS-SDKSERVER-035: TypeScript overrides COPILOT_GITHUB_TOKEN with the installation value. DOCS-SDKSERVER-036: TypeScript disables useLoggedInUser."
+      },
+      {
+        "candidate_id": "8372e2d8542692876671e7cb",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines85–86 (GitHub Actions / Configure the runtime) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "31f775032feecd90c01e0bc7",
+        "text_sha256": "a5ac991a55d120cf67e3cc37ac61e1207ed2ac685194e1f7599215deabb80787",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-037: Python explicitly chooses stdio runtime connection. DOCS-SDKSERVER-038: Python copies parent environment fields. DOCS-SDKSERVER-039: Python indexes INSTALLATION_TOKEN and sets COPILOT_GITHUB_TOKEN. DOCS-SDKSERVER-040: Python disables use_logged_in_user."
+      },
+      {
+        "candidate_id": "9f740dcc4f670ebf04a2dc5a",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines100–101 (GitHub Actions / Configure the runtime) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "3dfbbd6ecb14456eaeafb41c",
+        "text_sha256": "07335083d3bcb1378ac07b692de96c9aeb7b5a2b3aac7c8ed2d1099eb78ecaba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-041: Go checks whether INSTALLATION_TOKEN exists. DOCS-SDKSERVER-042: Go logs a fatal error when that variable is absent; existence alone does not validate a nonempty token. DOCS-SDKSERVER-043: Go explicitly chooses stdio transport. DOCS-SDKSERVER-044: Go appends COPILOT_GITHUB_TOKEN to inherited environment entries. DOCS-SDKSERVER-045: Go sets UseLoggedInUser false using the SDK pointer helper. DOCS-SDKSERVER-046: Go example only retains the constructed client; it does not demonstrate a successful request."
+      },
+      {
+        "candidate_id": "81e19c228ae3e998eb0d9338",
+        "text_sha256": "9963cf6807f8462e34a5520765fb42ab1aa0dd51a28a555f52d73a3bede242b2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines127–128 (GitHub Actions / Configure the runtime) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "220b483cafbb0339a79ee835",
+        "text_sha256": "f76fd568820edc900ae0c28063d2c45d46f985338905007d5a5d82e27acdc2c4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-047: Rust expects INSTALLATION_TOKEN to be present. DOCS-SDKSERVER-048: Rust selects stdio transport. DOCS-SDKSERVER-049: Rust supplies COPILOT_GITHUB_TOKEN via client options. DOCS-SDKSERVER-050: Rust disables logged-in-user fallback. DOCS-SDKSERVER-051: Rust drops configured options without demonstrating a live request."
+      },
+      {
+        "candidate_id": "bca095091a10d2353e811f98",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines143–144 (GitHub Actions / Configure the runtime) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "2bc8005cb94e6bc1a201aaf3",
+        "text_sha256": "2bd72065dbf3b101facf02040faab75ec2cdd3fd78375c80417ec912eaddf880",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-052: .NET reads INSTALLATION_TOKEN from environment. DOCS-SDKSERVER-053: .NET rejects null tokens; the shown null check does not independently validate token contents. DOCS-SDKSERVER-054: .NET converts inherited environment values to a string dictionary. DOCS-SDKSERVER-055: .NET overrides COPILOT_GITHUB_TOKEN with the installation value. DOCS-SDKSERVER-056: .NET uses async-disposable client lifetime. DOCS-SDKSERVER-057: .NET explicitly chooses stdio transport. DOCS-SDKSERVER-058: .NET supplies the constructed environment dictionary. DOCS-SDKSERVER-059: .NET disables logged-in-user fallback."
+      },
+      {
+        "candidate_id": "fb60cfcdf2e6fa6da1e6d132",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines165–166 (GitHub Actions / Configure the runtime) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "e5883ef1d6c5f4d9c332b79c",
+        "text_sha256": "6330167fba3ef92b8eb58d1db72027ac87d7644fa7071d712b70dbef099b37c1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-060: Java copies the inherited environment into a mutable map. DOCS-SDKSERVER-061: Java rejects a null installation-token value, not a demonstrated token-validity check. DOCS-SDKSERVER-062: Java overrides COPILOT_GITHUB_TOKEN in the map. DOCS-SDKSERVER-063: Java uses scoped client cleanup. DOCS-SDKSERVER-064: Java supplies the modified environment. DOCS-SDKSERVER-065: Java disables logged-in-user fallback."
+      },
+      {
+        "candidate_id": "88991dd69a1642f66933b490",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines186–187 (GitHub Actions / Configure the runtime) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "59915951a7e97e0fa0fca76e",
+        "text_sha256": "6217caafe8c83dc75004fd350452b890dee966855297a99d49cba44b6ef48149",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-066: For in-process FFI set COPILOT_GITHUB_TOKEN in the host environment before loading runtime. DOCS-SDKSERVER-067: In-process FFI does not support per-client environment options. DOCS-SDKSERVER-068: For an existing runtime URI configure the token on that runtime process."
+      },
+      {
+        "candidate_id": "482df50f95f83d96228f1e97",
+        "text_sha256": "7b6638653b35a525b6b6f1083da236ade25041aec1892994bcb9bc31917b73af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-069: Mint a replacement installation token before expiry. DOCS-SDKSERVER-070: For a child process restart the SDK client with the replacement environment. DOCS-SDKSERVER-071: For in-process runtime restart the host runtime with the new token. DOCS-SDKSERVER-072: For an existing runtime restart its host runtime with the new token."
+      },
+      {
+        "candidate_id": "0ef1625d72a543fa417fe124",
+        "text_sha256": "2f9c3cde4d7ed04da00cc7e6e60cad26cc5befdae97f621a570aa83ad01ac96f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-073: Usage attribution follows the account owning the App installation. DOCS-SDKSERVER-074: Billing follows the account owning the App installation. DOCS-SDKSERVER-075: Organization installation is the stated route to organization billing. DOCS-SDKSERVER-076: User-account installation attributes usage to that user."
+      },
+      {
+        "candidate_id": "d0e39b6e7cf579941174f460",
+        "text_sha256": "6088580fa947c241991329aadd4f5bb0610e32870d218a196684eaa8fa1292a2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines201–201 (GitHub Actions / Troubleshooting) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "1acdb4c5f144b629d004409a",
+        "text_sha256": "4199ba454d6d3ae83657120c2bb6bd674eefc0dd7d3cd4cc844171dc6725135b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines202–202 (GitHub Actions / Troubleshooting) are table headings/separators, tab boundaries or editorial lint metadata. Full context read; no extra permission, secret handling, role or runtime obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "bcb30f09432ea14458696752",
+        "text_sha256": "542c3fe63ee43f15de2b13dd2cbc0d1121aef45d028b25f7866c5037f5fc1871",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-077: For401 check that the organization supports installation authentication for Copilot."
+      },
+      {
+        "candidate_id": "7193cb1318c1f85a8f1efc1f",
+        "text_sha256": "dc86340cb32b26b7fb31c88703c939a306006637572c64067daeb148ac46da88",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-078: For integration-access/user-information errors check that the token uses COPILOT_GITHUB_TOKEN rather than explicit SDK user-token options."
+      },
+      {
+        "candidate_id": "c4d43a81d3e4d0440fb58f50",
+        "text_sha256": "bcd5d6ef4fcca660c380a26c91a551be50f372ed39c64b9d60d61a480f881f20",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-079: For Copilot API403 check repository_ids in the token request. DOCS-SDKSERVER-080: For Copilot API403 check copilot_requests write in the token request."
+      },
+      {
+        "candidate_id": "b42c330230bea63ae995e3b2",
+        "text_sha256": "8e53c9d266a259bde2449c8f05040860b30aa9c2659510aec4e8204e9a4094a9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-081: For403 despite the required request check All repositories installation access. DOCS-SDKSERVER-082: After correcting access mint a new token."
+      },
+      {
+        "candidate_id": "dc7bb7741491ed732182afc6",
+        "text_sha256": "2e664e91179eb1935daebf48539f39c3a2c8e1ffd22412146cf5da285d1a12f9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-083: For unavailable models check organizational model policy. DOCS-SDKSERVER-084: For unavailable models check bundled runtime model support."
+      },
+      {
+        "candidate_id": "06fd3518b91c011d36e6f6a4",
+        "text_sha256": "6afc984f33578af391c5cfce3ffb94ca570315e6401c0fd05e89aa3d83f23e43",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-085: For unexpected billing verify the installation belongs to the intended organization."
+      },
+      {
+        "candidate_id": "68039140142c06cea2dfb5ed",
+        "text_sha256": "92a54a74bea24cf2b60f77e04588ed9d301eeb68523035a3c0a221965e1d8999",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-086: Authentication-method priority is linked elsewhere; that linked file is not certified reviewed by this reference."
+      },
+      {
+        "candidate_id": "6556a9ba7022b2fe9e905e6f",
+        "text_sha256": "383c2b2a3d5eddcaac2f2ffdae42099121d9b8a78bbf26cd86bcb8cfc95ee183",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-087: App-token creation is linked elsewhere; no token is created or its linked article certified here."
+      }
+    ]
+  },
+  {
+    "artifact_id": "ab6b41184bfdbb8b2e7983bd",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/actions/action-checkout.md",
+    "content_sha256": "b557358f2727f5f925de5a33c380d488bdd1523c0c8f7869b6e01a94a62c8eab",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T04:52:51Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned artifact read with non-candidate context. Independently authored scoped identity, organization policy, expiry, runtime-environment priority, transport/lifecycle and billing distinctions preserved. Examples were not executed; no credentials/apps created, policy accepted, costs incurred or rights/native/global omission certified.",
+    "supporting_claims": "evidence/source-reviews/docs-sdk-server-token-claims.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "b37f287e6d10d9aaaa5574a7",
+        "text_sha256": "637d35d91d82f1d3b75173f11076308c1ab4bc2167fb475860e9bee81f3b520c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSERVER-CHECKOUT-001: The complete checkout reusable contains the version-tagged actions/checkout@v6 reference, not an immutable commit digest."
+      }
+    ]
+  }
+]
