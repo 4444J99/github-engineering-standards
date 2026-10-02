@@ -1,0 +1,588 @@
+{
+  "schema": "ges.supplemental-pr-root-claims.v1",
+  "issue": 28,
+  "author": "codex:source-review",
+  "source": {
+    "commit": "d47c19c371086cebacfc5968ee8d8edf400f7b4c",
+    "path": "content/pull-requests/how-tos/create-pull-requests/creating-a-pull-request.md",
+    "sha256": "5bb81df69016b2a52578fb479f1a6a62ea35d9bbb18fc486743a8b5584f8ec1d",
+    "git_blob_sha": "1334abd3ef92b378fed98a1f87e89d5dedc52389"
+  },
+  "claims": [
+    {
+      "id": "accessibility-pr-root-001",
+      "line_start": 3,
+      "line_end": 3,
+      "kind": "PURPOSE",
+      "statement": "A pull request proposes repository code changes.",
+      "condition": "all surfaces",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "8de3371ccbd1ea12de33dad67439c834399a9ea2312e2b94485fc3850afab2b3"
+    },
+    {
+      "id": "accessibility-pr-root-002",
+      "line_start": 4,
+      "line_end": 4,
+      "kind": "PERMISSION",
+      "statement": "Repository read access enables pull-request creation, qualified by included managed-user restrictions and permission notes.",
+      "condition": "all surfaces; interpret with included permission constraints",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "ebbecf7ef5df54e96de2277fb066dc531d60a11f47110c9194bd05ecace40cd1"
+    },
+    {
+      "id": "accessibility-pr-root-003",
+      "line_start": 20,
+      "line_end": 20,
+      "kind": "CAPABILITY",
+      "statement": "A fork can provide a new source branch when repository write permission is unavailable.",
+      "condition": "new branch wanted; no repository write permission; fork constraints separate",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "52e38e46ef4dbfbaafde0a8e5fda82ddf1ca44b0caea028cba46c29dd185a38c"
+    },
+    {
+      "id": "accessibility-pr-root-004",
+      "line_start": 22,
+      "line_end": 22,
+      "kind": "CAPABILITY",
+      "statement": "The pull-request author selects the target merge branch.",
+      "condition": "all surfaces",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "a7a799e1111a4389f44d7582934472259adcc4c42ab55a526c5354d3173eb2f5"
+    },
+    {
+      "id": "accessibility-pr-root-005",
+      "line_start": 22,
+      "line_end": 22,
+      "kind": "CONSTRAINT",
+      "statement": "A pull request requires distinct source and target branches.",
+      "condition": "all surfaces",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "a7a799e1111a4389f44d7582934472259adcc4c42ab55a526c5354d3173eb2f5"
+    },
+    {
+      "id": "accessibility-pr-root-006",
+      "line_start": 33,
+      "line_end": 33,
+      "kind": "PROCEDURE",
+      "statement": "Select the branch containing the commits.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "ceb419f5e5dda3b323b7c8b94ddb7f6ff45ab591b4515f813cf69ffd46491cc6"
+    },
+    {
+      "id": "accessibility-pr-root-007",
+      "line_start": 38,
+      "line_end": 38,
+      "kind": "PROCEDURE",
+      "statement": "Select the intended merge destination in the base dropdown.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "4d6bcbeb9c01bfc6846b6234d23b04924ab3e3ecd76e09522d8a6eb1ba791d10"
+    },
+    {
+      "id": "accessibility-pr-root-008",
+      "line_start": 38,
+      "line_end": 38,
+      "kind": "PROCEDURE",
+      "statement": "Select the changed topic branch in the compare dropdown.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "4d6bcbeb9c01bfc6846b6234d23b04924ab3e3ecd76e09522d8a6eb1ba791d10"
+    },
+    {
+      "id": "accessibility-pr-root-009",
+      "line_start": 44,
+      "line_end": 44,
+      "kind": "CAPABILITY",
+      "statement": "Reviewed pull requests can be merged; detailed merge constraints belong to linked guidance.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "589002851b0546ad2e568567670fc9779ffc1ed653546727d15d42bd261ec569"
+    },
+    {
+      "id": "accessibility-pr-root-010",
+      "line_start": 52,
+      "line_end": 52,
+      "kind": "PROCEDURE",
+      "statement": "Use gh pr create to create a pull request.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "36e03cbe8860c8699b2ad589de27306147ec8324d5d9402c559092f94190ccff"
+    },
+    {
+      "id": "accessibility-pr-root-011",
+      "line_start": 58,
+      "line_end": 58,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The assignee option or its short alias assigns an individual.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1a15d4078393e3681870bb9a28951b9145362c0f8795ce918199402ff57de7ec"
+    },
+    {
+      "id": "accessibility-pr-root-012",
+      "line_start": 58,
+      "line_end": 58,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The @me assignee value self-assigns the pull request.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1a15d4078393e3681870bb9a28951b9145362c0f8795ce918199402ff57de7ec"
+    },
+    {
+      "id": "accessibility-pr-root-013",
+      "line_start": 64,
+      "line_end": 64,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The base option or its short alias specifies the merge destination.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "104f51094f52141899268a98402d383d833ecf1b2aa4ebe17a9261aa88e44fec"
+    },
+    {
+      "id": "accessibility-pr-root-014",
+      "line_start": 64,
+      "line_end": 64,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The head option or its short alias specifies the source branch.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "104f51094f52141899268a98402d383d833ecf1b2aa4ebe17a9261aa88e44fec"
+    },
+    {
+      "id": "accessibility-pr-root-015",
+      "line_start": 70,
+      "line_end": 70,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The title option supplies the pull-request title.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "c40bfa7c42a18a785980f52bdb4dc9b9820377bacf2d012b99006ecd9a16ca4b"
+    },
+    {
+      "id": "accessibility-pr-root-016",
+      "line_start": 70,
+      "line_end": 70,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The body option supplies the pull-request description.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "c40bfa7c42a18a785980f52bdb4dc9b9820377bacf2d012b99006ecd9a16ca4b"
+    },
+    {
+      "id": "accessibility-pr-root-017",
+      "line_start": 76,
+      "line_end": 76,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The draft option marks the created pull request as draft.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "a03c553fe1bd8bdb42c8ac689d564cc6dfc32751e8b3e12a1788309fdd2918b5"
+    },
+    {
+      "id": "accessibility-pr-root-018",
+      "line_start": 82,
+      "line_end": 82,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The label option adds labels.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "ac34bf35f1251ab95ccc44233d82a4679d9eb6140cddcaed2e398b4fd3e1dda7"
+    },
+    {
+      "id": "accessibility-pr-root-019",
+      "line_start": 82,
+      "line_end": 82,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The milestone option adds a milestone.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "ac34bf35f1251ab95ccc44233d82a4679d9eb6140cddcaed2e398b4fd3e1dda7"
+    },
+    {
+      "id": "accessibility-pr-root-020",
+      "line_start": 88,
+      "line_end": 88,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The project option adds the pull request to a project.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "57273c146e8bbce6d9f276cd0b8296a090a8ac2c76fd6fa93c69335115efa930"
+    },
+    {
+      "id": "accessibility-pr-root-021",
+      "line_start": 94,
+      "line_end": 94,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The reviewer option assigns individual reviewers.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "622f3edf6622d9666520d486996b9dae1db0e28fd109eb893736e47309480bf2"
+    },
+    {
+      "id": "accessibility-pr-root-022",
+      "line_start": 94,
+      "line_end": 94,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The reviewer option assigns team reviewers.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "622f3edf6622d9666520d486996b9dae1db0e28fd109eb893736e47309480bf2"
+    },
+    {
+      "id": "accessibility-pr-root-023",
+      "line_start": 100,
+      "line_end": 100,
+      "kind": "OPTIONAL_CAPABILITY",
+      "statement": "The web option starts creation through the default browser.",
+      "condition": "cli",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "7bcc7e2183214a6056bfdbc03c2e0ab0012b7764fe156ed031a2dffe5cc30bf6"
+    },
+    {
+      "id": "accessibility-pr-root-024",
+      "line_start": 110,
+      "line_end": 110,
+      "kind": "PROCEDURE",
+      "statement": "Preview Pull Request opens a preview dialog.",
+      "condition": "desktop",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "cc76f2ba37a9d56fa98876e5245996ebe65e4dc71560e99df92af38f060dc946"
+    },
+    {
+      "id": "accessibility-pr-root-025",
+      "line_start": 110,
+      "line_end": 110,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "The preview shows the diff between current and base branches.",
+      "condition": "desktop",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "cc76f2ba37a9d56fa98876e5245996ebe65e4dc71560e99df92af38f060dc946"
+    },
+    {
+      "id": "accessibility-pr-root-026",
+      "line_start": 112,
+      "line_end": 112,
+      "kind": "ALTERNATIVE_PROCEDURE",
+      "statement": "The dropdown Create Pull Request action goes directly to platform web creation.",
+      "condition": "desktop",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "ef98175c194db95b61fe996977b1a1bed9e3ac919719c2989a34553caa3f1dd3"
+    },
+    {
+      "id": "accessibility-pr-root-027",
+      "line_start": 114,
+      "line_end": 114,
+      "kind": "VERIFICATION_PROCEDURE",
+      "statement": "Confirm the base branch is the intended merge destination.",
+      "condition": "desktop",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "4eb80b3f6c753642e46388596dd5690212651e8969c6d038d1aa27dc5b2bddc1"
+    },
+    {
+      "id": "accessibility-pr-root-028",
+      "line_start": 118,
+      "line_end": 118,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "The desktop client reports automatic mergeability against the base branch.",
+      "condition": "desktop",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "b63b05bafd1a2ca353da1e4a4dcded2d6fcb915e106d19098dc9b5535f326d44"
+    },
+    {
+      "id": "accessibility-pr-root-029",
+      "line_start": 122,
+      "line_end": 122,
+      "kind": "PROCEDURE",
+      "statement": "Create Pull Request opens the default browser on the platform.",
+      "condition": "desktop",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "46130b1a69912f79b77f8d242e988a2cc0a8e72dbdd19e9bfaf130f0e1009001"
+    },
+    {
+      "id": "accessibility-pr-root-030",
+      "line_start": 132,
+      "line_end": 132,
+      "kind": "PROCEDURE",
+      "statement": "Commit local changes before clicking the pull-request creation icon.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "2bfca7f13b5f6deb662a7898ab7e75f9d05eece01981bc7005f989bf7cdede51"
+    },
+    {
+      "id": "accessibility-pr-root-031",
+      "line_start": 134,
+      "line_end": 134,
+      "kind": "VERIFICATION_PROCEDURE",
+      "statement": "Check the local source branch.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1c6adff9e8ed4f7defa05a7c467666ed186ae114c2f35ec7f81de628dc920590"
+    },
+    {
+      "id": "accessibility-pr-root-032",
+      "line_start": 134,
+      "line_end": 134,
+      "kind": "VERIFICATION_PROCEDURE",
+      "statement": "Check the local source repository.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1c6adff9e8ed4f7defa05a7c467666ed186ae114c2f35ec7f81de628dc920590"
+    },
+    {
+      "id": "accessibility-pr-root-033",
+      "line_start": 134,
+      "line_end": 134,
+      "kind": "VERIFICATION_PROCEDURE",
+      "statement": "Check the remote target branch.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1c6adff9e8ed4f7defa05a7c467666ed186ae114c2f35ec7f81de628dc920590"
+    },
+    {
+      "id": "accessibility-pr-root-034",
+      "line_start": 134,
+      "line_end": 134,
+      "kind": "VERIFICATION_PROCEDURE",
+      "statement": "Check the remote target repository.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1c6adff9e8ed4f7defa05a7c467666ed186ae114c2f35ec7f81de628dc920590"
+    },
+    {
+      "id": "accessibility-pr-root-035",
+      "line_start": 134,
+      "line_end": 134,
+      "kind": "PROCEDURE",
+      "statement": "Supply the pull-request title.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1c6adff9e8ed4f7defa05a7c467666ed186ae114c2f35ec7f81de628dc920590"
+    },
+    {
+      "id": "accessibility-pr-root-036",
+      "line_start": 134,
+      "line_end": 134,
+      "kind": "PROCEDURE",
+      "statement": "Supply the pull-request description.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "1c6adff9e8ed4f7defa05a7c467666ed186ae114c2f35ec7f81de628dc920590"
+    },
+    {
+      "id": "accessibility-pr-root-037",
+      "line_start": 136,
+      "line_end": 136,
+      "kind": "PROCEDURE",
+      "statement": "Submit the creation form.",
+      "condition": "codespaces; fpt or ghec",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "09d6bf019ffb93bf58affee3d41ce3b9a99574b8769183c71d395cd2e545d1a9"
+    },
+    {
+      "id": "accessibility-pr-root-038",
+      "line_start": 146,
+      "line_end": 146,
+      "kind": "CAPABILITY",
+      "statement": "Further commits to the head branch continue changing an open pull request.",
+      "condition": "all surfaces",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "a390004055584aea84e96851a890de82e96f508acfd4c74efd6935151104bb96"
+    },
+    {
+      "id": "accessibility-pr-root-039",
+      "line_start": 150,
+      "line_end": 150,
+      "kind": "CAPABILITY",
+      "statement": "Files can also be changed through the platform website.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "dfd5b2f8a1db25b5ded1f293ff275e7ae03ee6dacbc864f51690337463aaf616"
+    },
+    {
+      "id": "accessibility-pr-root-040",
+      "line_start": 152,
+      "line_end": 152,
+      "kind": "PROCEDURE",
+      "statement": "Navigate to the intended repository pull request.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "87a0e49f18dfbc67620b7ffd53b0da9dd47379d87aca7f82e4c70a82f4ef4cad"
+    },
+    {
+      "id": "accessibility-pr-root-041",
+      "line_start": 154,
+      "line_end": 154,
+      "kind": "PROCEDURE",
+      "statement": "Locate the file to change.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "b9956930327ac1ed9c714d03bdf4f7a3ec28982a2620eed859925e72afc0be9f"
+    },
+    {
+      "id": "accessibility-pr-root-042",
+      "line_start": 155,
+      "line_end": 155,
+      "kind": "OPTIONAL_PROCEDURE",
+      "statement": "Use the file filter to find files in a large pull request.",
+      "condition": "webui; many files",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "8cebe773c73431e358f4d9dafcd3aeb4d6212344b29e71ef89211c8dcd49a3d5"
+    },
+    {
+      "id": "accessibility-pr-root-043",
+      "line_start": 156,
+      "line_end": 156,
+      "kind": "PROCEDURE",
+      "statement": "Open the file's options menu.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "a12de21f83912c2080a1c99f6ad7a5aed347042592f952bfeb6fbc3110dee602"
+    },
+    {
+      "id": "accessibility-pr-root-044",
+      "line_start": 158,
+      "line_end": 158,
+      "kind": "PROCEDURE",
+      "statement": "Select Edit file.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "9551c5762fbdf2348c6a7b967edd82cf6cfb939ad776377275f76aff2470957b"
+    },
+    {
+      "id": "accessibility-pr-root-045",
+      "line_start": 159,
+      "line_end": 159,
+      "kind": "PROCEDURE",
+      "statement": "Make the change in the editor.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "39d9f2ba6f43a39655681356bd52f7f17b8e8999a59dae26ef1356851dc8d0db"
+    },
+    {
+      "id": "accessibility-pr-root-046",
+      "line_start": 159,
+      "line_end": 159,
+      "kind": "PROCEDURE",
+      "statement": "Commit the change directly to the pull-request head branch.",
+      "condition": "webui",
+      "mapping": "REFERENCE_ONLY",
+      "adopted": false,
+      "span_sha256": "39d9f2ba6f43a39655681356bd52f7f17b8e8999a59dae26ef1356851dc8d0db"
+    }
+  ],
+  "reusable_occurrences": [
+    4,
+    24,
+    26,
+    32,
+    37,
+    39,
+    40,
+    42,
+    50,
+    123,
+    124,
+    153
+  ],
+  "surface_sections": {
+    "webui": [
+      [
+        30,
+        46
+      ],
+      [
+        148,
+        161
+      ]
+    ],
+    "cli": [
+      [
+        48,
+        106
+      ]
+    ],
+    "desktop": [
+      [
+        108,
+        126
+      ]
+    ],
+    "codespaces": [
+      [
+        130,
+        140
+      ]
+    ]
+  },
+  "version_scope": {
+    "root": {
+      "fpt": "*",
+      "ghec": "*",
+      "ghes": "*"
+    },
+    "codespaces": "fpt or ghec"
+  },
+  "nonclaim_dispositions": {
+    "metadata": "Title, redirect and version context; purpose and permission statements separately extracted.",
+    "headings": "Surface/stage labels, not new obligations.",
+    "shell_examples": "Illustrative invocation syntax supporting extracted options; placeholder identities inert, no command executed.",
+    "screenshots_and_icons": "Supporting descriptions and binaries require separate review.",
+    "further_reading": "Reference links only, not full destination review.",
+    "whitespace": "No independent claim."
+  },
+  "unresolved": [
+    "Independent root omission audit",
+    "Parent-surface application of reusable claims",
+    "Supporting assets and linked interpretations",
+    "Variable/rendering and deployment identity"
+  ],
+  "root_local_candidate_extraction_complete": true,
+  "assurance_increment": 0,
+  "pinned_review_increment": 0
+}
