@@ -76,7 +76,13 @@
       "end_line": 36,
       "statement": "Node.js, Python and .NET SDKs are described as automatically providing CLI.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICK-008-A01",
+        "DOCS-SDKQUICK-008-A02",
+        "DOCS-SDKQUICK-008-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICK-009",
@@ -85,7 +91,13 @@
       "end_line": 36,
       "statement": "Go, Java and Rust require CLI unless application-level bundling is used.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICK-009-A01",
+        "DOCS-SDKQUICK-009-A02",
+        "DOCS-SDKQUICK-009-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICK-010",
@@ -94,7 +106,8 @@
       "end_line": 38,
       "statement": "Node.js runtime minimum is20.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "context": "undefined Conditional minimum only if this language runtime is chosen; the tutorial permits the other listed language alternatives."
     },
     {
       "claim_id": "DOCS-SDKQUICK-011",
@@ -103,7 +116,8 @@
       "end_line": 38,
       "statement": "Python runtime minimum is3.11.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "context": "undefined Conditional minimum only if this language runtime is chosen; the tutorial permits the other listed language alternatives."
     },
     {
       "claim_id": "DOCS-SDKQUICK-012",
@@ -112,7 +126,8 @@
       "end_line": 38,
       "statement": "Go runtime minimum is1.24.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "context": "undefined Conditional minimum only if this language runtime is chosen; the tutorial permits the other listed language alternatives."
     },
     {
       "claim_id": "DOCS-SDKQUICK-013",
@@ -121,7 +136,8 @@
       "end_line": 38,
       "statement": "Rust runtime minimum is1.94.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "context": "undefined Conditional minimum only if this language runtime is chosen; the tutorial permits the other listed language alternatives."
     },
     {
       "claim_id": "DOCS-SDKQUICK-014",
@@ -130,7 +146,8 @@
       "end_line": 38,
       "statement": "Java runtime minimum is17.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "context": "undefined Conditional minimum only if this language runtime is chosen; the tutorial permits the other listed language alternatives."
     },
     {
       "claim_id": "DOCS-SDKQUICK-015",
@@ -139,7 +156,8 @@
       "end_line": 38,
       "statement": ".NET runtime minimum is8.0.",
       "source_strength": "REQUIREMENT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "context": "undefined Conditional minimum only if this language runtime is chosen; the tutorial permits the other listed language alternatives."
     },
     {
       "claim_id": "DOCS-SDKQUICK-016",
@@ -598,7 +616,13 @@
       "end_line": 1791,
       "statement": "Unknown replace/append/prepend section content is appended to additional instructions.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICK-066-A01",
+        "DOCS-SDKQUICK-066-A02",
+        "DOCS-SDKQUICK-066-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICK-067",
@@ -661,7 +685,12 @@
       "end_line": 1801,
       "statement": "External server can use different settings/environment.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICK-073-A01",
+        "DOCS-SDKQUICK-073-A02"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICK-074",
@@ -1228,7 +1257,13 @@
       "end_line": 2090,
       "statement": "SDK includes traceparent from current span in session.create/resume/send.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICK-136-A01",
+        "DOCS-SDKQUICK-136-A02",
+        "DOCS-SDKQUICK-136-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICK-137",
@@ -1237,7 +1272,13 @@
       "end_line": 2090,
       "statement": "SDK includes tracestate from current span in session.create/resume/send.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
-      "accepted_policy": false
+      "accepted_policy": false,
+      "claim_role": "GROUPED_CONTEXT",
+      "atomic_children": [
+        "DOCS-SDKQUICK-137-A01",
+        "DOCS-SDKQUICK-137-A02",
+        "DOCS-SDKQUICK-137-A03"
+      ]
     },
     {
       "claim_id": "DOCS-SDKQUICK-138",
@@ -1301,6 +1342,178 @@
       "statement": "Community server directory is linked, not whole-source reviewed.",
       "source_strength": "INFORMATIONAL_CONSTRAINT",
       "accepted_policy": false
+    },
+    {
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "The source says the Node.js SDK provides CLI automatically.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-008-A01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "The source says the Python SDK provides CLI automatically.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-008-A02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "The source says the .NET SDK provides CLI automatically.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-008-A03",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "Go requires CLI installation unless its application-level bundling feature is used.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-009-A01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "Java requires CLI installation unless its application-level bundling feature is used.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-009-A02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "Rust requires CLI installation unless its application-level bundling feature is used.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-009-A03",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Unknown replace-section content is appended to additional instructions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-066-A01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Unknown append-section content is appended to additional instructions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-066-A02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 1791,
+      "end_line": 1791,
+      "statement": "Unknown prepend-section content is appended to additional instructions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-066-A03",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 1801,
+      "end_line": 1801,
+      "statement": "An external CLI server can use custom settings.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-073-A01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 1801,
+      "end_line": 1801,
+      "statement": "An external CLI server can run in a different environment.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-073-A02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK session.create carries current-span traceparent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-136-A01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK session.resume carries current-span traceparent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-136-A02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK session.send carries current-span traceparent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-136-A03",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK session.create carries current-span tracestate.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-137-A01",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK session.resume carries current-span tracestate.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-137-A02",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
+    },
+    {
+      "start_line": 2090,
+      "end_line": 2090,
+      "statement": "SDK session.send carries current-span tracestate.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "claim_id": "DOCS-SDKQUICK-137-A03",
+      "path": "content/copilot/get-started/sdk-quickstart.md",
+      "context": "Independent bounded source-audit repair. Reference observation only; upstream examples were not executed and are not accepted policy or runtime evidence."
     }
-  ]
+  ],
+  "independent_audit": "evidence/sdk-quickstart-root-sections-independent-claim-audit.json",
+  "independent_repair_recheck_pending": true
 }
