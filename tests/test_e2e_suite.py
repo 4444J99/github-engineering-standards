@@ -20,8 +20,11 @@ from pathlib import Path
 from ges.core import ROOT, digest, load, safe_path
 
 
-def run_cli(*args: str, check: bool = False, at: str | None = None) -> subprocess.CompletedProcess[str]:
-    """Execute the ges CLI module via subprocess with environment isolation."""
+FIXTURE_CLOCK = "2026-10-01T22:00:00+00:00"
+
+
+def run_cli(*args: str, check: bool = False, at: str | None = FIXTURE_CLOCK) -> subprocess.CompletedProcess[str]:
+    """Execute the CLI with deterministic fixture time; None uses the real clock."""
     cmd = [sys.executable, "-m", "ges", *args]
     if at is not None:
         # Test-only clock injection inside the subprocess; production CLI and
@@ -347,6 +350,23 @@ class Tier2BoundaryCornerCases(BaseE2ETestCase):
 
     def test_timestamp_freshness_boundaries(self) -> None:
         """Contract: Freshness checks distinguish FRESH, STALE (> max_age), and FUTURE."""
+        # A frozen fixture clock must not hide actual elapsed-time boundaries.
+        baseline = self.write_json("baseline.json", self.make_snapshot())
+        for clock, expected in (
+            ("2026-10-02T22:00:00+00:00", "FRESH"),
+            ("2026-10-02T22:00:01+00:00", "STALE"),
+        ):
+            with self.subTest(clock=clock):
+                output = self.work_dir / f"boundary-{expected}.json"
+                result = run_cli(
+                    "audit", "--snapshot", str(baseline),
+                    "--profile", str(self.solo_profile_path),
+                    "--output", str(output), at=clock,
+                )
+                self.assertEqual(result.returncode, 0, result.stderr)
+                rows = json.loads(output.read_text())["results"]
+                self.assertTrue(rows)
+                self.assertTrue(all(row["evidence_freshness"] == expected for row in rows))
         # Stale (> 24h old)
         stale_snap = self.write_json("stale.json", self.make_snapshot(observed_at="2026-09-01T00:00:00+00:00"))
         stale_out = self.work_dir / "stale_report.json"
