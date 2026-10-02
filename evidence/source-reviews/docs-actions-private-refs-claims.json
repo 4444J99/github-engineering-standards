@@ -1,0 +1,227 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:52:17Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/postgres-label-description.md",
+      "content_sha256": "c14d874258d972a0fec46da6b0480eca5db2a5c68aba0fbadad8ad1b9dab80fb",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Postgres service example uses container image postgres, label postgres, example default database credential and health checks. Every service requires image; sample credential/health options are not production-safe configuration or runtime readiness proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/private-networking-intro.md",
+      "content_sha256": "a0a7d4803163a45c0fb9f3ce5527713b00cf899126d60f6fd1cfe6ff0e9f7baf",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Hosted runners can reach private registries, secret managers and on-premises resources through private-network configurations; capability is not actual connectivity or universal supported topology.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/private-networking-oidc-intro.md",
+      "content_sha256": "51331b974e1acea5cc34b3dd996bcfa2bff399bcd039f546a91b79841b902458",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "OIDC tokens can authenticate workflows to external services; authentication alone does not establish a network tunnel, provider trust or resource authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/private-networking-wireguard-intro.md",
+      "content_sha256": "2ffee8e0b93d18d4e6b757734098994b3555a9a941e52ef837f70c4f86c05fb9",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "WireGuard on both runner and private service can provide an overlay alternative to separate API Gateway infrastructure. No installation, tunnel keys or route configuration authorized or performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/private-repository-forks-configure.md",
+      "content_sha256": "63261573f25872d86b1e769da66e0a3b3712409156666d66ec6cfc2d85ab2aa7",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Private-fork policy procedure selects Fork pull request workflows options and saves; UI procedure is not target authorization or effective setting verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/private-repository-forks-options.md",
+      "content_sha256": "7959b1cf96ba3285cc49b37b91cc16f2495e2701c065723679ccc0f591054bc3",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "Private fork policy choices separate running read-only/no-secrets workflows, sending write tokens, sending all secrets and approval for collaborators without write by someone with write. Opting into secrets/write is an explicit exception to generic fork withholding, not an approved safe default.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/private-repository-forks-overview.md",
+      "content_sha256": "3654f7e6f4af47f39c934bcb646147583c28476af39d5ccb03f54a8eafa2d008",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Policies govern private-fork pull_request events: FPT private repositories with organization/repository scope; other branches private/internal with enterprise/organization/repository scope. Not a rule for all PR event types.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/proxy-considerations.md",
+      "content_sha256": "0756f1b2892e85ebfac6a91f62c69c5537af7008c3d5d8b801180d417f4fa13c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise Actions proxy guidance supports HTTP proxies only, not SOCKS5 or HTTPS proxies. Proxy protocol restriction is distinct from HTTPS target traffic and current target network capability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/publish-to-maven-workflow-step.md",
+      "content_sha256": "2b24c99d8c17862e9bcf3682fa66fba315d0c2df6b9df6f70a9585800c9d3d3e",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Legacy OSSRH example runs Maven batch deploy with MAVEN_USERNAME/MAVEN_PASSWORD sourced from named username/token secrets. No publishing or secrets used; legacy-service caveat in related intro applies.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/publish-to-packages-workflow-step.md",
+      "content_sha256": "35e6e642fdc699fec770817b0d97f03e558c88ebe251dbdc9b9f696aa70dea1a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "GitHub Packages example uses Maven batch deploy with repository token environment and permissions key controlling rights. Token presence is not published-package receipt or authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/publishing-java-packages-intro.md",
+      "content_sha256": "c9eb2acb0c2a6fa5fd4fc19109af5ba0318497bdc97bd6fdfcb2b78790be2911",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Java publishing guide supports one/multiple registries, but explicitly warns examples refer to Legacy OSSRH and links changed Maven Central publishing. Not a verified current deployment recipe.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/pull-request-target-permissions-warning.md",
+      "content_sha256": "c4aa183ffbf57ab94242c953838da46470487fc787d1c55e74365844bbff83c2",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Untrusted pull_request_target code risks cache poisoning and unintended write/secrets access; separate safe-use and untrusted-checkout references are required, not implicitly reviewed. This qualifies privileged-event exceptions rather than treating every fork as safe.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/pure-javascript.md",
+      "content_sha256": "5cbf91ba35c72daa700a675167a7b790efd193fe6007f84bc306bdfed0ffe1fb",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Packaged JavaScript should be pure JS without additional binary reliance for Ubuntu/Windows/macOS compatibility. Actions run on runner and may use preinstalled binaries; portable intent is not tested universal architecture support.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/redis-environment-variables.md",
+      "content_sha256": "d1a434d26d0430723f6e77272368fb36dc16a8fab45037575cd029b4ee986a04",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Redis client tutorial reads REDIS_HOST/REDIS_PORT set by Connect to Redis step; environment presence is not actual connection or reviewed client source.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/redis-label-description.md",
+      "content_sha256": "96f14b19dff19c22b9501d6577ca9f0ec0d24eea6bafabba344e50458e566c7c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Redis service uses container image/label and health options; tag such as redis:6 selects version but is not immutable digest. Service requires image, and no container executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/ref-description.md",
+      "content_sha256": "5b30aa549052e3d25965cfd0e093748494312a29e76828c2e3caa29fc2cfff3e",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Full ref is event-specific: pushed branch/tag, unmerged PR merge ref, merged PR destination, release tag; unavailable if event has no branch/tag. Branch format refs/heads, ordinary unmerged PR refs/pull/number/merge, pull_request_target base branch, tags refs/tags. Never substitute PR head for merge/base automatically.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/ref_name-description.md",
+      "content_sha256": "33ef5bc721cbead9dbe120b4aa437d7ac89357f1435953ccbdd394c5624d7502",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Short ref name matches displayed branch/tag; unmerged PR format is number/merge, not contributor branch name. Parent event exceptions remain separately reconciled.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/ref_protected-description.md",
+      "content_sha256": "3a4b76aa01a2227341ac99cec0d89f6169aad7ebba568b3efcba4c4a71b7ad64",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "ref_protected true indicates protections or feature-conditional rulesets configured for the triggering ref. Configuration signal alone does not prove effective enforcement, bypass coverage or passing required checks.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/ref_type-description.md",
+      "content_sha256": "cd47764fcd7833e99451ae2f2effec414f9b98b842402af7d697617c27342e3e",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Ref type accepts branch or tag; missing ref remains event-dependent, not a fabricated branch type.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRIVATEREF-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/registry-credentials.md",
+      "content_sha256": "9c9b8cf7b355e3a23f5b1da4974434bdf33b28913ea83c3e07c927219bd08f2b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Authenticated job-container pulls may use credentials map username/password equivalent to docker login values. No credentials retrieved or login executed; required registry access and safe secret storage remain separate.",
+      "accepted_policy": false
+    }
+  ]
+}
