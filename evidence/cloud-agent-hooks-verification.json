@@ -1,0 +1,46 @@
+{
+  "issue": 155,
+  "reviewed_at": "2026-10-03T03:09:37.354Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 10,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59107,
+    "claim_bearing_artifacts": 2639,
+    "tests": 324,
+    "test_seconds": 1.975,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Hook placeholder JSON and object/array prose discrepancy are not validated deployable configuration.",
+    "No commands executed, hook files removed, default-branch deployment or allowlist changes.",
+    "Moving action tags, prompt logging, runtime working directories, rights and native assurance require independent verification."
+  ]
+}
