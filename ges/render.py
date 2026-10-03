@@ -1,9 +1,13 @@
 """Generate human checklists and templates from canonical control definitions."""
 from __future__ import annotations
-import re
+
 import json
+import re
 from pathlib import Path
-from .core import dump, digest, safe_path
+
+from .core import digest, dump, safe_path
+
+TEMPLATE_PARAMETER = re.compile(r'\{\{([A-Z][A-Z0-9_]*)\}\}')
 
 
 def generate(controls: list[dict], output: Path) -> None:
@@ -34,21 +38,34 @@ def generate(controls: list[dict], output: Path) -> None:
          'measurement':c['measurement']} for c in controls]})
 
 
-def render_template(root: Path, template: str, parameters: dict, destination: Path) -> None:
-    text=safe_path(root,template).read_text(encoding='utf-8')
-    keys=set(re.findall(r'\{\{([A-Z][A-Z0-9_]*)\}\}',text))
+def render_template_content(template: str, text: str, parameters: dict) -> str:
+    keys=set(TEMPLATE_PARAMETER.findall(text))
     missing=keys-parameters.keys()
     if missing: raise ValueError('Missing parameters: '+', '.join(sorted(missing)))
-    for key in keys:
+
+    def replace(match: re.Match[str]) -> str:
+        key=match.group(1)
         value=parameters[key]
         if not isinstance(value,str) or not value.strip() or '\x00' in value: raise ValueError('Invalid parameter: '+key)
-        text=text.replace('{{'+key+'}}',value)
-    if re.search(r'\{\{[A-Z][A-Z0-9_]*\}\}',text): raise ValueError('Unresolved template parameters')
+        return value
+
+    text=TEMPLATE_PARAMETER.sub(replace,text)
+    if TEMPLATE_PARAMETER.search(text): raise ValueError('Template markers are not allowed in parameter values')
     if template.endswith('.json'):
         json.loads(text)
     elif template.endswith(('.yml','.yaml','.cff')):
         from .yamlutil import parse
         parse(text)
+    return text
+
+
+def render_template_text(root: Path, template: str, parameters: dict) -> str:
+    text=safe_path(root,template).read_text(encoding='utf-8')
+    return render_template_content(template,text,parameters)
+
+
+def render_template(root: Path, template: str, parameters: dict, destination: Path) -> None:
+    text=render_template_text(root,template,parameters)
     if destination.exists(): raise FileExistsError('Refusing to overwrite '+str(destination))
     destination.parent.mkdir(parents=True,exist_ok=True)
     destination.write_text(text,encoding='utf-8')
