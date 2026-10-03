@@ -1,0 +1,46 @@
+{
+  "issue": 207,
+  "reviewed_at": "2026-10-03T04:44:57.470Z",
+  "artifacts_reviewed": 5,
+  "reference_claims_added": 5,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59432,
+    "claim_bearing_artifacts": 2926,
+    "tests": 324,
+    "test_seconds": 1.984,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Source and destination concurrency scopes are historical references, not observed capacity.",
+    "Best-effort unarchiving is not recovery proof; mannequin invitation is not accepted attribution or Git authorship.",
+    "Includes and example-domain variable inspected; linked full pages and screenshots not certified; no migration or identity mutations, rights clearance or rollout."
+  ]
+}
