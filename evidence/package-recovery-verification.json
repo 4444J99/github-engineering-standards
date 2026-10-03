@@ -1,0 +1,47 @@
+{
+  "issue": 279,
+  "reviewed_at": "2026-10-03T06:59:12.854Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 18,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59910,
+    "claim_bearing_artifacts": 3270,
+    "tests": 324,
+    "test_seconds": 1.992,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Reference-only source review; no accepted policy or independently certified extraction completeness.",
+    "Published-content assurance and per-file rights clearance remain incomplete.",
+    "GHES restoration section's deletion wording remains unresolved.",
+    "No deletion/restoration, credential changes, native pilot or estate rollout executed."
+  ]
+}
