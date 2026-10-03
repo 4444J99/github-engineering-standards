@@ -1,0 +1,311 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:14:45Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-push-protection-concept-claims.json",
+    "evidence/source-reviews/docs-push-protection-bypass-claims.json",
+    "evidence/source-reviews/docs-command-line-push-claims.json",
+    "evidence/source-reviews/docs-rest-push-protection-claims.json",
+    "evidence/source-reviews/docs-mcp-push-protection-claims.json",
+    "evidence/source-reviews/docs-ui-push-protection-claims.json",
+    "evidence/source-reviews/docs-ui-push-dependencies-claims.json",
+    "evidence/source-reviews/docs-push-protection-enablement-claims.json",
+    "evidence/source-reviews/docs-user-push-protection-claims.json",
+    "evidence/source-reviews/docs-push-protection-metrics-claims.json",
+    "evidence/source-reviews/docs-security-overview-access-claims.json",
+    "evidence/source-reviews/docs-copilot-feature-claims.json",
+    "evidence/source-reviews/docs-push-permission-claims.json"
+  ],
+  "input_claims": 126,
+  "groups": [
+    {
+      "id": "PUSH-INGRESS",
+      "claims": [
+        "DOCS-PUSH-001",
+        "DOCS-PUSH-002",
+        "DOCS-PUSH-003",
+        "DOCS-PUSH-004",
+        "DOCS-PUSH-005",
+        "DOCS-PUSH-006",
+        "DOCS-PUSH-007"
+      ],
+      "decision": "Verify each required ingress independently. Public-only MCP coverage is not private coverage; a blocked command-line test cannot certify UI, upload or REST paths."
+    },
+    {
+      "id": "PUSH-REPOSITORY-SCOPE",
+      "claims": [
+        "DOCS-PUSH-008",
+        "DOCS-PUSH-009",
+        "DOCS-PUSH-010",
+        "DOCS-PUSH-011",
+        "DOCS-PUSH-012"
+      ],
+      "decision": "Retain feature prerequisites, repository scope, actor eligibility and default state as distinct evidence; policy configuration alone is not effective repository blocking."
+    },
+    {
+      "id": "PUSH-USER-SCOPE",
+      "claims": [
+        "DOCS-PUSH-015",
+        "DOCS-PUSH-016",
+        "DOCS-PUSH-017",
+        "DOCS-PUSH-018"
+      ],
+      "decision": "Account-level public-repository protection is distinct from repository protection and does not establish private coverage or bypass alerts."
+    },
+    {
+      "id": "PUSH-BYPASS-AUTHORITY",
+      "claims": [
+        "DOCS-PUSH-019",
+        "DOCS-PUSH-020",
+        "DOCS-PUSH-021",
+        "DOCS-PUSH-022",
+        "DOCS-PUSH-024",
+        "DOCS-PUSH-027"
+      ],
+      "decision": "Default writer bypass, delegated approval, direct bypass privileges and full exemptions are separate branches. Successful blocking without testing authorized bypasses is insufficient enforcement evidence."
+    },
+    {
+      "id": "PUSH-BYPASS-ACCOUNTABILITY",
+      "claims": [
+        "DOCS-PUSH-013",
+        "DOCS-PUSHDEP-001",
+        "DOCS-PUSHDEP-002",
+        "DOCS-PUSHDEP-003",
+        "DOCS-PUSHDEP-004",
+        "DOCS-PUSHDEP-005",
+        "DOCS-PUSHDEP-006",
+        "DOCS-PUSHDEP-007"
+      ],
+      "decision": "Retain alert, audit and notification requirements separately. Closed-by-reason is not harmlessness or remediation; open fix-later alerts need accountable response. Notifications may expose sensitive links and depend on watcher eligibility."
+    },
+    {
+      "id": "PUSH-PATTERN-VERSION",
+      "claims": [
+        "DOCS-PUSH-025",
+        "DOCS-PUSH-026",
+        "DOCS-PUSH-028",
+        "DOCS-PUSHDEP-008",
+        "DOCS-PUSHDEP-009",
+        "DOCS-PUSHDEP-010",
+        "DOCS-PUSHDEP-011"
+      ],
+      "decision": "Custom patterns, included-pattern configuration and actor exemptions have distinct prerequisites and feature declarations. Preserve strict GHES boundaries and preview context; no inferred feature parity."
+    },
+    {
+      "id": "PUSH-NON-ENFORCEMENT-ASSERTIONS",
+      "claims": [
+        "DOCS-PUSH-014",
+        "DOCS-PUSH-023",
+        "DOCS-PUSH-029",
+        "DOCS-PUSH-030",
+        "DOCS-PUSH-031"
+      ],
+      "decision": "Risk reports and four independently retained benefit assertions do not prove coverage, actual prevention, secret recall, compliance or completed response."
+    },
+    {
+      "id": "PUSH-COMMAND-LINE-DETECTION-LIMITS",
+      "claims": [
+        "DOCS-PUSHCLI-001",
+        "DOCS-PUSHCLI-004",
+        "DOCS-PUSHCLI-005",
+        "DOCS-PUSHCLI-010",
+        "DOCS-PUSHCLI-011"
+      ],
+      "decision": "Supported-secret detection, preexisting-alert non-blocking, five-result display truncation, all pushed refs and timeout-to-retrospective scanning are separate constraints. An allowed push cannot certify clean content or successful preventive scanning."
+    },
+    {
+      "id": "PUSH-COMMAND-LINE-RESPONSE",
+      "claims": [
+        "DOCS-PUSHCLI-002",
+        "DOCS-PUSHCLI-003",
+        "DOCS-PUSHCLI-006",
+        "DOCS-PUSHCLI-007",
+        "DOCS-PUSHCLI-008",
+        "DOCS-PUSHCLI-009"
+      ],
+      "decision": "Retain removal, approved bypass, response urgency, actual revocation and optional rotation independently. Repository write access or available UI options do not authorize privilege changes, secret handling or destructive history rewriting."
+    },
+    {
+      "id": "PUSH-REST-ENDPOINT-CONTRACTS",
+      "claims": [
+        "DOCS-PUSHREST-001",
+        "DOCS-PUSHREST-002",
+        "DOCS-PUSHREST-003",
+        "DOCS-PUSHREST-004",
+        "DOCS-PUSHREST-005",
+        "DOCS-PUSHREST-006",
+        "DOCS-PUSHREST-007",
+        "DOCS-PUSHREST-008"
+      ],
+      "decision": "Verify blob creation and file-content updates independently under their exact API contract. A generic 409 is not secret-detection evidence; documented bypass endpoint availability is not approved bypass authority."
+    },
+    {
+      "id": "PUSH-MCP-SCOPE-CONFLICT",
+      "claims": [
+        "DOCS-PUSHMCP-001",
+        "DOCS-PUSHMCP-002",
+        "DOCS-PUSHMCP-006",
+        "DOCS-PUSHMCP-007"
+      ],
+      "decision": "Public-only metadata and the qualified GHAS-private body assertion remain unresolved in CONFLICT-MCP-PUSH-PROTECTION-SCOPE-001. Do not certify private coverage or erase that source assertion pending contract and target verification."
+    },
+    {
+      "id": "PUSH-MCP-RESPONSE-ACTION-RECOVERY",
+      "claims": [
+        "DOCS-PUSHMCP-003",
+        "DOCS-PUSHMCP-004",
+        "DOCS-PUSHMCP-005",
+        "DOCS-PUSHMCP-008",
+        "DOCS-PUSHMCP-009",
+        "DOCS-PUSHMCP-010"
+      ],
+      "decision": "AI response blocking and action prevention require separate verification. Default MCP protection, bypass visibility and approved safe exceptions are distinct states; a repository setting alone cannot establish all three."
+    },
+    {
+      "id": "PUSH-UI-DETECTION",
+      "claims": [
+        "DOCS-PUSHUI-001",
+        "DOCS-PUSHUI-002",
+        "DOCS-PUSHUI-003",
+        "DOCS-PUSHUIDEP-001",
+        "DOCS-PUSHUIDEP-002",
+        "DOCS-PUSHUIDEP-003"
+      ],
+      "decision": "Retain supported-pattern and enabled-repository prerequisites, upload preview status, one-result display and existing-alert exceptions independently. UI display and CLI five-result display are different contracts, not a shared detection denominator."
+    },
+    {
+      "id": "PUSH-UI-RESPONSE",
+      "claims": [
+        "DOCS-PUSHUI-004",
+        "DOCS-PUSHUI-005",
+        "DOCS-PUSHUI-006",
+        "DOCS-PUSHUI-007",
+        "DOCS-PUSHUI-008",
+        "DOCS-PUSHUIDEP-007"
+      ],
+      "decision": "Navigation, custom guidance and stated bypass reasons do not establish authorization or safety. Missing bypass controls must not be automatically repaired; removal and independently approved exception paths remain distinct."
+    },
+    {
+      "id": "PUSH-UI-ACCOUNTABILITY",
+      "claims": [
+        "DOCS-PUSHUIDEP-004",
+        "DOCS-PUSHUIDEP-005",
+        "DOCS-PUSHUIDEP-006",
+        "DOCS-PUSHUIDEP-008",
+        "DOCS-PUSHUIDEP-009"
+      ],
+      "decision": "Reason-selected alert closure is not safety verification; fix-later alerts remain open. Opt-in email and account-only public protection with no reason or alert are distinct accountability branches; absent alerts or email cannot certify absence of bypass."
+    },
+    {
+      "id": "PUSH-UI-DELEGATED-EXCEPTION-LIFECYCLE",
+      "claims": [
+        "DOCS-PUSHUI-009",
+        "DOCS-PUSHUI-010",
+        "DOCS-PUSHUI-011",
+        "DOCS-PUSHUI-012",
+        "DOCS-PUSHUI-013",
+        "DOCS-PUSHUIDEP-010",
+        "DOCS-PUSHUIDEP-011",
+        "DOCS-PUSHUIDEP-012",
+        "DOCS-PUSHUIDEP-013"
+      ],
+      "decision": "Submission, reviewer decision, notification and permitted commit are distinct events. Seven-day request expiry does not prove expiry of approval, which the pinned article extends to future uses of the same secret. Do not map this to a one-commit or automatically expiring exception without additional authoritative evidence."
+    },
+    {
+      "id": "PUSH-ENABLEMENT-AUTHORITY",
+      "claims": [
+        "DOCS-PUSHENABLE-001",
+        "DOCS-PUSHENABLE-002",
+        "DOCS-PUSHENABLE-003",
+        "DOCS-PUSHENABLE-004",
+        "DOCS-PUSHENABLE-005",
+        "DOCS-PUSHENABLE-006",
+        "DOCS-PUSHPERM-001"
+      ],
+      "decision": "Secret Protection entitlement, Push protection configuration, documented actor roles and effective target access are independent predicates. Write access to resolve a block is not authority to enable features, change exemptions or approve delegated bypass. Navigation and introductory behavior assertions are not native readback."
+    },
+    {
+      "id": "PUSH-PERSONAL-ACCOUNT-BOUNDARY",
+      "claims": [
+        "DOCS-PUSHUSER-001",
+        "DOCS-PUSHUSER-002",
+        "DOCS-PUSHUSER-003",
+        "DOCS-PUSHUSER-004",
+        "DOCS-PUSHUSER-005",
+        "DOCS-PUSHUSER-006",
+        "DOCS-PUSHUSER-007"
+      ],
+      "decision": "Personal-account settings and fpt/ghec public coverage are not repository or private/GHES protection. Screenshot alt text, navigation and default assertions require distinct exact-target evidence; no disabling or account mutation authorized."
+    },
+    {
+      "id": "PUSH-METRICS-DENOMINATORS",
+      "claims": [
+        "DOCS-PUSHMET-001",
+        "DOCS-PUSHMET-002",
+        "DOCS-PUSHMET-003",
+        "DOCS-PUSHMET-004",
+        "DOCS-PUSHMET-005",
+        "DOCS-PUSHMET-006",
+        "DOCS-PUSHMET-007",
+        "DOCS-PUSHMET-008",
+        "DOCS-PUSHMET-009",
+        "DOCS-PUSHMET-010",
+        "DOCS-PUSHMET-011"
+      ],
+      "decision": "Retain scope, filters, block counts, bypass counts, type/repository rankings and user-selected reasons separately. No activity is not clean content or effective blocking. Missing access remains an explicit coverage gap rather than a zero event count."
+    },
+    {
+      "id": "PUSH-OVERVIEW-ACCESS-ENTITLEMENT",
+      "claims": [
+        "DOCS-SECACCESS-001",
+        "DOCS-SECACCESS-002",
+        "DOCS-SECACCESS-003"
+      ],
+      "decision": "Organization write access, enterprise organization-owner/security-manager roles and fpt product prerequisites are distinct visibility predicates. Enterprise ownership alone does not establish complete repository coverage or authority to change protection."
+    },
+    {
+      "id": "PUSH-COPILOT-FEATURE-APPLICABILITY",
+      "claims": [
+        "DOCS-COPFEATURE-001"
+      ],
+      "decision": "The pinned copilot feature lists fpt/ghec, not GHES; retain this constraint separately from all-version repository protection and unresolved MCP private-scope assertions."
+    }
+  ],
+  "binding_proposal": {
+    "status": "UNMAPPED_POLICY_DECISION_REQUIRED",
+    "assessment_default": "READ_ONLY",
+    "parameters": [
+      "exact target and version",
+      "required ingress paths",
+      "pattern identities and revisions",
+      "repository versus account scope",
+      "authorized actors and exemption/bypass policy",
+      "accountable response owner"
+    ],
+    "readback": "Effective target settings, enabled patterns, bypass and exemption assignments, actor permissions and applicable version conditions; unavailable readback is UNKNOWN, never PASS.",
+    "approved_behavior_tests": "For each required supported ingress: controlled non-sensitive positive block, ordinary negative allowed path, permitted bypass, prohibited bypass, exemption behavior where applicable and restoration readback. Never use real credentials or private data as probes.",
+    "accountability_tests": "Verify expected open or closed alert state for each approved bypass reason, audit event and eligible notification delivery. A user's stated reason is not independent evidence of safety.",
+    "coverage": "Record all required paths and actors, including unavailable or untested cases. Do not reduce the denominator to the paths that passed.",
+    "command_line_cases": "Include a newly detected supported test value, a value with a preexisting alert, more than five detections and every pushed ref. Distinguish display truncation from actual detection completeness. Any timeout must record prevention as unverified rather than substitute subsequent scanning for blocking; do not induce resource exhaustion to test a timeout.",
+    "rest_cases": "Record selected API version and endpoint identity, validate the secret-specific error payload rather than status alone, and verify that blocked requests created no intended content. Approved bypass tests require their own actor authorization and readback; do not call destructive or write endpoints during read-only assessment.",
+    "mcp_cases": "Record exact server and tool/action version, target visibility and entitlement. Verify response and action paths independently with non-sensitive controlled probes only after target approval. The private-coverage conflict remains an unresolved applicability condition, not a blanket PASS or exclusion.",
+    "ui_cases": "Verify create, edit and upload separately under the exact target release. Retain single-result presentation, existing-alert exceptions, repository versus account-only public protection and notification opt-ins. Test delegated request submission, decision and same-secret subsequent behavior only with approved non-sensitive probes; document approved-exception scope and revocation separately from seven-day pending-request expiry.",
+    "mutation_boundary": "This proposal authorizes no feature, permission, protection, cost or notification change. Runtime tests require the applicable explicit target approval and recovery plan.",
+    "template_review": "Applicability, credential response, bypass approval, exception expiry and sensitive-evidence handling templates require review before canonical policy adoption.",
+    "metrics_cases": "Record exact target visibility, product entitlement, actor access, interval, filters and expected complete repository set before interpreting counts. Collect all pages and distinguish inaccessible data from verified zero activity. Reporting, reason-selected alert closure and configuration readback do not replace approved ingress behavior tests."
+  },
+  "remaining_work": [
+    "Product-variable and rendered-version resolution",
+    "Linked page and asset review with rights decisions",
+    "Full candidate and non-candidate accounting",
+    "Independent atomicity and omission audit",
+    "Policy-strength and profile decision",
+    "Implementation and actual approved behavior receipts"
+  ],
+  "policy_accepted": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "canonical_controls_changed": 0
+}

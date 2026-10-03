@@ -1,0 +1,227 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T07:17:22.345Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "NuGet dotnet publication/consumption guide covers FPT/GHEC/GHES; package type may be disabled by GHES site admins and release-stage include is comment-only. Managed users can publish organization namespaces, not personal storage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "GHEC github.com uses nuget.pkg.github.com, alternate enterprise domains nuget.SUBDOMAIN.ghe.com. Example URLs require deployment resolution; no endpoint observation follows from source placeholders.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "packages-nuget-v2 applies FPT/GHEC only, enabling personal/organization granular scope and independent Actions/Codespaces access. Non-v2 namespace is the repository owner; do not assert cloud granular capability for GHES.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "General authentication reusable allows GITHUB_TOKEN associated-repository publication or read-granted access and classic PAT at least read:packages for other private installs. V2 workflow-token migration is recommended, not an executed credential change.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "The workflow source-add example uses GITHUB_TOKEN and store-password-in-clear-text instead of hardcoded PAT. Runtime cleartext storage still needs ephemeral credential handling, cleanup and no-log protections; token substitution and job context do not establish safe execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Workflow and generic source-add examples unconditionally use nuget.HOSTNAME on GHES, while config sections branch to HOSTNAME/_registry/nuget when isolation is disabled. Preserve the missing isolation-specific command adapter rather than certify universal source-add configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "PAT tutorial project nuget.config defines a named github source and Username/ClearTextPassword, with clear removing prior sources. This credential-bearing project file is not authorized for commit; source removal can affect resolution and is not a harmless default.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Cloud endpoint uses namespace/index.json; GHES config isolated nuget.HOSTNAME versus non-isolated HOSTNAME/_registry/nuget. Source host is separate from repository web URL and namespace must match the actual owner/scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "V2 nupkg archive must be smaller than 2.147 GB. Scope is cloud feature branch; exact-equality behavior and all-platform cap are not independently certified. Source-add PAT command and --api-key examples are unexecuted and carry secret exposure risk.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "V2 packages initially private can have independent granular permissions and associate via csproj RepositoryUrl. Existing-package linking is separate; metadata association does not prove inheritance/admin access or publication authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "PAT/API-key tutorial creates console project, packs Release and pushes versioned nupkg through source github. Version, project name and source require resolution; none of the commands were run and no roundtrip receipt exists.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Config publication requires repository OWNER to match authentication NAMESPACE when linking in v2 and generally in non-v2. Version increment, pack/nuspec creation and push remain procedural examples, not measured release provenance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-13",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Csproj examples use netcoreapp3.0 and author/company/description placeholders. Historical framework is not a current supported-runtime recommendation; example source-specific identities are not adopted consumer configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-14",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Same RepositoryUrl in several project files links multiple packages to one repository. MY_APP and MY_OTHER_APP illustrate this, not a mandate to merge consumer repositories or an observed multi-package publication.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-15",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Consumption adds PackageReference with explicit name/version and performs dotnet restore. Configured dependency/version and successful file parsing do not prove resolution, origin, license clearance or behavioral safety.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-16",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Non-v2 troubleshooting ties push failure to RepositoryUrl and requires nuspec repository type/url fields. These diagnostics do not provide a verified current client adapter or automatic remediation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-17",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "The troubleshooting section unconditionally says GITHUB_TOKEN cannot access other private repository-based packages, whereas the authentication reusable explicitly permits granted read access. Preserve this scope/wording tension: repository-based limitation must not erase granular package grants, and no broad credential creation is authorized.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-18",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Public restore intermittent 403 may arise from querying all configured sources when GitHub authentication fails, blocking packages not in that feed. This is a conditional diagnosis, not proof of every 403 cause or permission to disable the feed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-19",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Package Source Mapping routes PACKAGE-ID-PREFIX.* to github and wildcard others to nuget.org by most-specific match, with separate isolation configs. Add each relevant prefix; correct patterns can reduce dependency confusion but are not tested assurance for a real target.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NUGETREGISTRY-20",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+      "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+      "start_line": 1,
+      "end_line": 358,
+      "statement": "Source-mapping examples do not include credentials and must compose with reviewed authentication; guide's claims need actual client-version, routing and denial tests. Linked Microsoft source-mapping/client docs and deletion/token guides remain separately scoped; no client execution, publication, rights acceptance or native rollout occurred.",
+      "accepted_policy": false
+    }
+  ]
+}

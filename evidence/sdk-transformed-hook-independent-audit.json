@@ -1,0 +1,39 @@
+{
+  "schema": "ges.bounded-independent-source-audit.v1",
+  "reviewer": "codex:evaluator_review",
+  "recorded_at": "2026-10-02T14:45:42Z",
+  "scope": "Full137-line transformed hook source and23-line index; all124 authored records and specified repairs",
+  "source_content_digests": [
+    {
+      "path": "content/copilot/how-tos/copilot-sdk/hooks/index.md",
+      "sha256": "10569dcb179d9642e425b66e83e3c182a59ec0e9fbcdf36a60ac7107f31082ba"
+    },
+    {
+      "path": "content/copilot/how-tos/copilot-sdk/hooks/user-prompt-transformed.md",
+      "sha256": "f8a25abf5ef23b156183f1010ecac8afde4f9ce74fbeed020f8f4404ebd649c2"
+    }
+  ],
+  "audited_initial_record_count": 92,
+  "rechecked_record_count": 124,
+  "rechecked_sha256": "3af96e258fc1927bac4dd43254ff4eede2e7c1aa2dcb64ec7369ba59199373e9",
+  "findings": [
+    "Example structures required EXAMPLE strengths.",
+    "Five creation spans widened to include hook configuration.",
+    "Rust hook definition distinguished from registration.",
+    "Seven compound claims retained as context with atomic children.",
+    "Residual093/094 table facts required informational strength."
+  ],
+  "root_final_correction": {
+    "claim_ids": [
+      "DOCS-SDKTRANSFORM-093",
+      "DOCS-SDKTRANSFORM-094"
+    ],
+    "source_strength": "INFORMATIONAL_CONSTRAINT",
+    "final_sha256": "d1e0b6f6aa69cf66c6d653edb3fe9b97710b21bd7b6a82509bc971f310a76bc8"
+  },
+  "result": "Specified repairs supported; residual table-strength correction applied by root. No further material omission found within these two sources.",
+  "limitations": [
+    "No global extraction certification, accepted policy, actual SDK test, rights clearance or native proof."
+  ],
+  "independent_reviewer_edited_files": false
+}

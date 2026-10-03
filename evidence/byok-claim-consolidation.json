@@ -1,0 +1,373 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T04:34:24Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-custom-model-administration-claims.json",
+    "evidence/source-reviews/docs-local-byok-claims.json"
+  ],
+  "input_claims": 205,
+  "groups": [
+    {
+      "id": "BYOK-ENTERPRISE-ORGANIZATION-AUTHORITY",
+      "claims": [
+        "DOCS-CUSTOMMODEL-001",
+        "DOCS-CUSTOMMODEL-002",
+        "DOCS-CUSTOMMODEL-003",
+        "DOCS-CUSTOMMODEL-010",
+        "DOCS-CUSTOMMODEL-011",
+        "DOCS-CUSTOMMODEL-012",
+        "DOCS-CUSTOMMODEL-013",
+        "DOCS-CUSTOMMODEL-014",
+        "DOCS-CUSTOMMODEL-015",
+        "DOCS-CUSTOMMODEL-016",
+        "DOCS-CUSTOMMODEL-003-A01",
+        "DOCS-CUSTOMMODEL-003-A02",
+        "DOCS-CUSTOMMODEL-014-A01",
+        "DOCS-CUSTOMMODEL-014-A02",
+        "DOCS-CUSTOMMODEL-015-A01",
+        "DOCS-CUSTOMMODEL-015-A02",
+        "DOCS-CUSTOMMODEL-015-A03",
+        "DOCS-CUSTOMMODEL-015-A04"
+      ],
+      "decision": "Custom-model administration is owner/enterprise-policy scoped. Organization setup needs upstream enablement; minimum key scopes are a source recommendation, not observed credentials. Roles/navigation do not verify authority."
+    },
+    {
+      "id": "BYOK-ENTERPRISE-MODEL-ACCESS",
+      "claims": [
+        "DOCS-CUSTOMMODEL-004",
+        "DOCS-CUSTOMMODEL-005",
+        "DOCS-CUSTOMMODEL-006",
+        "DOCS-CUSTOMMODEL-007",
+        "DOCS-CUSTOMMODEL-008",
+        "DOCS-CUSTOMMODEL-009",
+        "DOCS-CUSTOMMODEL-004-A01",
+        "DOCS-CUSTOMMODEL-004-A02",
+        "DOCS-CUSTOMMODEL-005-A01",
+        "DOCS-CUSTOMMODEL-005-A02",
+        "DOCS-CUSTOMMODEL-005-A03",
+        "DOCS-CUSTOMMODEL-006-A01",
+        "DOCS-CUSTOMMODEL-006-A02",
+        "DOCS-CUSTOMMODEL-006-A03",
+        "DOCS-CUSTOMMODEL-008-A01",
+        "DOCS-CUSTOMMODEL-008-A02",
+        "DOCS-CUSTOMMODEL-009-A01",
+        "DOCS-CUSTOMMODEL-009-A02",
+        "DOCS-CUSTOMMODEL-009-A03"
+      ],
+      "decision": "Model Enabled is required for the Access tab. Enterprise all-organization grant and individual selection are distinct choices; feature/client support bounds picker availability. Saving is a mutation requiring applicable approval, not a read-only review."
+    },
+    {
+      "id": "BYOK-CUSTOM-PROVIDER-FEATURE-CONTRACT",
+      "claims": [
+        "DOCS-CUSTOMMODEL-017",
+        "DOCS-CUSTOMMODEL-018",
+        "DOCS-CUSTOMMODEL-019",
+        "DOCS-CUSTOMMODEL-030",
+        "DOCS-CUSTOMMODEL-031",
+        "DOCS-CUSTOMMODEL-032",
+        "DOCS-CUSTOMMODEL-PROVIDER-001",
+        "DOCS-CUSTOMMODEL-PROVIDER-002",
+        "DOCS-CUSTOMMODEL-PROVIDER-003",
+        "DOCS-CUSTOMMODEL-PROVIDER-004",
+        "DOCS-CUSTOMMODEL-PROVIDER-005",
+        "DOCS-CUSTOMMODEL-PROVIDER-006",
+        "DOCS-CUSTOMMODEL-PROVIDER-007",
+        "DOCS-CUSTOMMODEL-017-A01",
+        "DOCS-CUSTOMMODEL-017-A02",
+        "DOCS-CUSTOMMODEL-018-A01",
+        "DOCS-CUSTOMMODEL-018-A02",
+        "DOCS-CUSTOMMODEL-018-A03",
+        "DOCS-CUSTOMMODEL-018-A04",
+        "DOCS-CUSTOMMODEL-031-A01",
+        "DOCS-CUSTOMMODEL-031-A02",
+        "DOCS-CUSTOMMODEL-031-A03"
+      ],
+      "decision": "Retain seven provider identities, preview and fpt/ghec feature scope. Custom/fine-tuned support is variable and needs output tests. Chat/CLI/IDE supported-feature variable is targeted evidence, not whole variable-artifact review."
+    },
+    {
+      "id": "BYOK-GOVERNANCE-NOT-CLEARANCE",
+      "claims": [
+        "DOCS-CUSTOMMODEL-020",
+        "DOCS-CUSTOMMODEL-021",
+        "DOCS-CUSTOMMODEL-022",
+        "DOCS-CUSTOMMODEL-023",
+        "DOCS-CUSTOMMODEL-021-A01",
+        "DOCS-CUSTOMMODEL-021-A02",
+        "DOCS-CUSTOMMODEL-022-A01",
+        "DOCS-CUSTOMMODEL-022-A02"
+      ],
+      "decision": "Provider choice, contracts/credits, dashboards and custom models are stated governance/cost/visibility goals. They do not establish regulatory compliance, rights, budgets or monitoring behavior."
+    },
+    {
+      "id": "BYOK-KEY-ADDITION-AND-DEPLOYMENT",
+      "claims": [
+        "DOCS-CUSTOMMODEL-024",
+        "DOCS-CUSTOMMODEL-025",
+        "DOCS-CUSTOMMODEL-026",
+        "DOCS-CUSTOMMODEL-027",
+        "DOCS-CUSTOMMODEL-028",
+        "DOCS-CUSTOMMODEL-029",
+        "DOCS-CUSTOMMODEL-024-A01",
+        "DOCS-CUSTOMMODEL-024-A02",
+        "DOCS-CUSTOMMODEL-024-A03",
+        "DOCS-CUSTOMMODEL-024-A04",
+        "DOCS-CUSTOMMODEL-025-A01",
+        "DOCS-CUSTOMMODEL-025-A02",
+        "DOCS-CUSTOMMODEL-026-A01",
+        "DOCS-CUSTOMMODEL-026-A02",
+        "DOCS-CUSTOMMODEL-026-A03"
+      ],
+      "decision": "Provider discovery differs. OpenAI/Anthropic/xAI fetch key-associated models; Foundry uses deployment URL/model ID with separate key entries for different URLs. Never execute imported credential-bearing examples or infer image rights."
+    },
+    {
+      "id": "BYOK-LOCAL-VERSUS-SERVER-BOUNDARY",
+      "claims": [
+        "DOCS-LOCALBYOK-001",
+        "DOCS-LOCALBYOK-002",
+        "DOCS-LOCALBYOK-003",
+        "DOCS-LOCALBYOK-004",
+        "DOCS-LOCALBYOK-005",
+        "DOCS-LOCALBYOK-006",
+        "DOCS-LOCALBYOK-007",
+        "DOCS-LOCALBYOK-008",
+        "DOCS-LOCALBYOK-009",
+        "DOCS-LOCALBYOK-010",
+        "DOCS-LOCALBYOK-011",
+        "DOCS-LOCALBYOK-002-A01",
+        "DOCS-LOCALBYOK-002-A02",
+        "DOCS-LOCALBYOK-003-A01",
+        "DOCS-LOCALBYOK-003-A02",
+        "DOCS-LOCALBYOK-005-A01",
+        "DOCS-LOCALBYOK-005-A02",
+        "DOCS-LOCALBYOK-006-A01",
+        "DOCS-LOCALBYOK-006-A02",
+        "DOCS-LOCALBYOK-006-A03",
+        "DOCS-LOCALBYOK-008-A01",
+        "DOCS-LOCALBYOK-008-A02",
+        "DOCS-LOCALBYOK-008-A03",
+        "DOCS-LOCALBYOK-009-A01",
+        "DOCS-LOCALBYOK-009-A02",
+        "DOCS-LOCALBYOK-009-A03",
+        "DOCS-LOCALBYOK-010-A01",
+        "DOCS-LOCALBYOK-010-A02",
+        "DOCS-LOCALBYOK-010-A03",
+        "DOCS-LOCALBYOK-011-A01",
+        "DOCS-LOCALBYOK-011-A02"
+      ],
+      "decision": "Local keys are client-side and models are not shared; enterprise models are server-side, licensed and online. IDE disable policy is not silently extended to every client; vendor/SDK links retain separate applicability."
+    },
+    {
+      "id": "BYOK-CLI-PROVIDER-AND-ENV-CONTRACT",
+      "claims": [
+        "DOCS-LOCALBYOK-012",
+        "DOCS-LOCALBYOK-013",
+        "DOCS-LOCALBYOK-014",
+        "DOCS-LOCALBYOK-015",
+        "DOCS-LOCALBYOK-016",
+        "DOCS-LOCALBYOK-017",
+        "DOCS-LOCALBYOK-018",
+        "DOCS-LOCALBYOK-019",
+        "DOCS-LOCALBYOK-020",
+        "DOCS-LOCALBYOK-ENV-001",
+        "DOCS-LOCALBYOK-ENV-002",
+        "DOCS-LOCALBYOK-ENV-003",
+        "DOCS-LOCALBYOK-ENV-004",
+        "DOCS-LOCALBYOK-ENV-005",
+        "DOCS-LOCALBYOK-ENV-006",
+        "DOCS-LOCALBYOK-ENV-007",
+        "DOCS-LOCALBYOK-ENV-008",
+        "DOCS-LOCALBYOK-ENV-009",
+        "DOCS-LOCALBYOK-ENV-010",
+        "DOCS-LOCALBYOK-ENV-011",
+        "DOCS-LOCALBYOK-014-A01",
+        "DOCS-LOCALBYOK-014-A02",
+        "DOCS-LOCALBYOK-019-A01",
+        "DOCS-LOCALBYOK-019-A02",
+        "DOCS-LOCALBYOK-019-A03"
+      ],
+      "decision": "CLI provider types, required endpoint/model, optional keys/bearer/protocol/token limits and Azure-only version are distinct. Tool calling and streaming are required,128k context recommended. Underlying model and wire deployment identifiers must not collapse."
+    },
+    {
+      "id": "BYOK-CLI-SETUP-EXAMPLES-INERT",
+      "claims": [
+        "DOCS-LOCALBYOK-021",
+        "DOCS-LOCALBYOK-022",
+        "DOCS-LOCALBYOK-023",
+        "DOCS-LOCALBYOK-024",
+        "DOCS-LOCALBYOK-025",
+        "DOCS-LOCALBYOK-026",
+        "DOCS-LOCALBYOK-027",
+        "DOCS-LOCALBYOK-028",
+        "DOCS-LOCALBYOK-041",
+        "DOCS-LOCALBYOK-025-A01",
+        "DOCS-LOCALBYOK-025-A02",
+        "DOCS-LOCALBYOK-025-A03",
+        "DOCS-LOCALBYOK-025-A04",
+        "DOCS-LOCALBYOK-025-A05",
+        "DOCS-LOCALBYOK-025-A06",
+        "DOCS-LOCALBYOK-025-A07",
+        "DOCS-LOCALBYOK-025-A08",
+        "DOCS-LOCALBYOK-025-A09",
+        "DOCS-LOCALBYOK-025-A10",
+        "DOCS-LOCALBYOK-028-A01",
+        "DOCS-LOCALBYOK-028-A02",
+        "DOCS-LOCALBYOK-028-A03",
+        "DOCS-LOCALBYOK-028-A04",
+        "DOCS-LOCALBYOK-028-A05"
+      ],
+      "decision": "The source procedure presents provider configuration examples before CLI startup; this ordering is not evidence of an enforced startup invariant. Local/remote/Azure/Anthropic examples are inert source context; no key, environment or startup operation follows from ingestion."
+    },
+    {
+      "id": "BYOK-OFFLINE-NOT-REMOTE-ISOLATION",
+      "claims": [
+        "DOCS-LOCALBYOK-029",
+        "DOCS-LOCALBYOK-030",
+        "DOCS-LOCALBYOK-031",
+        "DOCS-LOCALBYOK-031-A01",
+        "DOCS-LOCALBYOK-031-A02",
+        "DOCS-LOCALBYOK-031-A03"
+      ],
+      "decision": "Offline prevents GitHub-server contact in source description, not external-provider traffic. Full isolation requires a local/same-isolated-environment provider and independent network evidence; remote endpoint still receives prompts/code."
+    },
+    {
+      "id": "BYOK-APP-ACCOUNT-STORAGE-SELECTION",
+      "claims": [
+        "DOCS-LOCALBYOK-032",
+        "DOCS-LOCALBYOK-033",
+        "DOCS-LOCALBYOK-034",
+        "DOCS-LOCALBYOK-035",
+        "DOCS-LOCALBYOK-036",
+        "DOCS-LOCALBYOK-037",
+        "DOCS-LOCALBYOK-038",
+        "DOCS-LOCALBYOK-039",
+        "DOCS-LOCALBYOK-040",
+        "DOCS-LOCALBYOK-042",
+        "DOCS-LOCALBYOK-APPPROVIDER-001",
+        "DOCS-LOCALBYOK-APPPROVIDER-002",
+        "DOCS-LOCALBYOK-APPPROVIDER-003",
+        "DOCS-LOCALBYOK-APPPROVIDER-004",
+        "DOCS-LOCALBYOK-APPPROVIDER-005",
+        "DOCS-LOCALBYOK-APPPROVIDER-006",
+        "DOCS-LOCALBYOK-APPPROVIDER-007",
+        "DOCS-LOCALBYOK-APPPROVIDER-008",
+        "DOCS-LOCALBYOK-032-A01",
+        "DOCS-LOCALBYOK-032-A02",
+        "DOCS-LOCALBYOK-032-A03",
+        "DOCS-LOCALBYOK-033-A01",
+        "DOCS-LOCALBYOK-033-A02",
+        "DOCS-LOCALBYOK-033-A03",
+        "DOCS-LOCALBYOK-037-A01",
+        "DOCS-LOCALBYOK-037-A02",
+        "DOCS-LOCALBYOK-038-A01",
+        "DOCS-LOCALBYOK-038-A02",
+        "DOCS-LOCALBYOK-038-A03",
+        "DOCS-LOCALBYOK-038-A04",
+        "DOCS-LOCALBYOK-038-A05",
+        "DOCS-LOCALBYOK-038-A06",
+        "DOCS-LOCALBYOK-039-A01",
+        "DOCS-LOCALBYOK-039-A02",
+        "DOCS-LOCALBYOK-040-A01",
+        "DOCS-LOCALBYOK-040-A02",
+        "DOCS-LOCALBYOK-032-A04"
+      ],
+      "decision": "App BYOK preview requires GitHub login but can work without a Copilot plan; hosted/local-provider model choice is per session. All-plans gate does not erase no-plan exception. System credential-store/UI masking claims need independent testing."
+    }
+  ],
+  "related_evidence": [
+    "evidence/enterprise-policy-claim-consolidation.json",
+    "evidence/ai-model-hosting-claim-consolidation.json"
+  ],
+  "generalized_byok_model": {
+    "read_only_default": true,
+    "profiles": {
+      "personal_local": "Per-client key/provider/model, supported OS/client, actual account login and exact session provider; no-plan is not no account.",
+      "organization": "Verify enterprise Enable custom models prerequisite, organization owner role, member scope and upstream model availability.",
+      "enterprise": "Verify enterprise owner role, model Enabled state, all-versus-selected organization grant and separate server-side license/internet/client applicability."
+    },
+    "dimensions": [
+      "personal local versus enterprise-server mechanism",
+      "actual product/version and preview eligibility",
+      "account login versus Copilot subscription",
+      "provider type and endpoint geography/locality",
+      "API-key versus bearer/no-auth contract and least scopes",
+      "underlying model identifier versus wire deployment",
+      "tool-calling/streaming requirement versus recommended context size",
+      "enterprise model enabled and selected organizations",
+      "local policy IDE scope versus other clients",
+      "active per-session local/hosted provider selection",
+      "offline flag versus observed endpoint traffic",
+      "credential-store/UI handling and external provider data terms"
+    ],
+    "unknown": "Unverified actor/key scope, inherited policy, endpoint location, client, session model, grant, storage or traffic is UNVERIFIED, never PASS.",
+    "no_offline_flag_as_network_isolation": true,
+    "no_byok_as_regulatory_or_rights_clearance": true,
+    "no_no_plan_as_no_account": true,
+    "no_model_id_as_universal_deployment_identity": true
+  },
+  "proposed_behavior_checks": [
+    {
+      "case": "local_remote_offline",
+      "required": "With approved disposable settings, verify offline prevents GitHub traffic while a remote provider still receives inference; local isolated provider stays in approved network boundary.",
+      "observed": false
+    },
+    {
+      "case": "organization_enterprise_prerequisite",
+      "required": "Verify enterprise policy denial prevents organization custom-model setup, and approval permits only approved scopes.",
+      "observed": false
+    },
+    {
+      "case": "selected_organization_access",
+      "required": "Grant a model only to approved organizations and verify positive/negative member access across supported clients.",
+      "observed": false
+    },
+    {
+      "case": "tool_streaming_error",
+      "required": "A disposable incompatible model lacking tool calling or streaming must error rather than silently evaluate as supported.",
+      "observed": false
+    },
+    {
+      "case": "azure_identity",
+      "required": "Verify distinct underlying-model capability identity and deployment routing, without leaking credential values.",
+      "observed": false
+    },
+    {
+      "case": "app_login_and_provider_selection",
+      "required": "Verify no-plan BYOK still requires account sign-in, and session-local provider selection is not mistaken for hosted selection.",
+      "observed": false
+    },
+    {
+      "case": "credential_and_recovery",
+      "required": "Verify approved credential-store/UI masking and restore provider/model/environment settings after tests; no live key appears in receipts.",
+      "observed": false
+    }
+  ],
+  "verification": {
+    "accepted_policy": false,
+    "rights_accepted": false,
+    "source_revision_verified": false,
+    "independent_omission_audit_passed": false,
+    "native_behavior_verified": false,
+    "acceptance_gate_closed": false
+  },
+  "remaining_work": [
+    "Independent full-source fidelity/omission and mapping audit for this scoped proposal",
+    "SDK/vendor-client and external provider data/legal dependencies",
+    "Canonical-control/profile/template scope and policy-acceptance review",
+    "Per-file and per-use rights decisions",
+    "Explicit credentials/cost/native-target approval and measured behavior/recovery evidence"
+  ],
+  "atomicity_repair": {
+    "audit_document": "evidence/byok-independent-claim-audit.json",
+    "retained_grouped_context": 35,
+    "new_child_claims": 105,
+    "all_records_mapped_once": true,
+    "whole_source_atomic_completeness_certified": false,
+    "independent_recheck_pending": false,
+    "independent_recheck": "evidence/byok-independent-repair-recheck.json",
+    "recheck_result": "LIMITED_CORRECTIONS_REQUIRED; both reported wording/classification corrections applied after the immutable audit snapshot, not independently re-certified",
+    "auditor_proposed_child_claims": 103,
+    "extra_root_splits": 2
+  }
+}

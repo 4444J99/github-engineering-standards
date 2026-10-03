@@ -1,0 +1,583 @@
+{
+  "schema": "ges.source-asset-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:55:00Z",
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "independent_omission_certification": false,
+  "asset_observations": [
+    {
+      "artifact_id": "d8da66e27f0751f1717490b7",
+      "source": "github/github-well-architected",
+      "path": "content/library/governance/recommendations/assets/enterprise-account-model-1.png",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "8df322aff462370ad258e0314dee39c34a4b0be4b854e4c220a55b58d34a8a64",
+      "byte_count": 72528,
+      "inspection": "Entire original-resolution PNG decoded and visually inspected; SHA-256 checked.",
+      "visual": "Single-organisation account diagram with seven model qualifications.",
+      "rights": "Diagram-specific authorship and artwork permission unresolved; organisation model provenance does not establish licensing clearance.",
+      "operative_source_claims": [
+        {
+          "id": "WA-ASSET-GOVERNANCE-1-001",
+          "statement": "The first model consolidates all or most repositories in one organisation.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-1-002",
+          "statement": "Teams administer access to individual repositories in the first model.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-1-003",
+          "statement": "The first model recommends an all-members team for open repositories.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-1-004",
+          "statement": "Base permissions in the first model are generally None or Read.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-1-005",
+          "statement": "Enterprise rulesets are proposed for enforcing policy across repositories.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-1-006",
+          "statement": "The first model suits a single organisation that satisfies compliance needs.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-1-007",
+          "statement": "Additional restricted or location-specific organisations are conditional on legal or operational separation needs.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        }
+      ]
+    },
+    {
+      "artifact_id": "a36fabf0e356f02310a731a5",
+      "source": "github/github-well-architected",
+      "path": "content/library/governance/recommendations/assets/enterprise-account-model-2.png",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "087ddcc0d44e1bf0b7d82f0f9555f3f4e0a098c80c2d891ed1f04e6cb1b4ff74",
+      "byte_count": 108866,
+      "inspection": "Entire original-resolution PNG decoded and visually inspected; SHA-256 checked.",
+      "visual": "Sandbox/Green/Red/Archive model with separate naming, access, production and consumption properties.",
+      "rights": "Diagram-specific authorship and artwork permission unresolved; organisation model provenance does not establish licensing clearance.",
+      "operative_source_claims": [
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-001",
+          "statement": "Sandbox repositories support collaborative exploration.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-002",
+          "statement": "Sandbox naming is unstructured in this illustration.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-003",
+          "statement": "Sandbox access uses broad directory groups.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-004",
+          "statement": "Sandbox base read permission is absent.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-005",
+          "statement": "Sandbox is not intended for production use.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-006",
+          "statement": "Sandbox consumption services are absent.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-007",
+          "statement": "The internal Green organisation holds most code.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-008",
+          "statement": "Green repository naming is standardised.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-009",
+          "statement": "Green base read permission is enabled.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-010",
+          "statement": "Green access uses granular ALM groups.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-011",
+          "statement": "Green is suitable for production usage.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-012",
+          "statement": "Green topics support discovery.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-013",
+          "statement": "Green consumption is enabled.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-014",
+          "statement": "The Red organisation holds a reduced set of highly confidential private repositories.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-015",
+          "statement": "Red repository naming is standardised.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-016",
+          "statement": "Red access uses granular ALM groups.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-017",
+          "statement": "Red base read permission is absent.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-018",
+          "statement": "Red consumption is enabled.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-019",
+          "statement": "The Archive organisation holds deprecated repositories.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-2-020",
+          "statement": "Archive access is limited to enterprise administrators.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Separate Archive organisation conflicts with business-unit archive-in-place model; context must decide. No forced restructuring of function-owned polyrepo consumers."
+        }
+      ]
+    },
+    {
+      "artifact_id": "f358de0ea9e557fcc24a6436",
+      "source": "github/github-well-architected",
+      "path": "content/library/governance/recommendations/assets/enterprise-account-model-3.png",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "e7845ba2639ade5da1a8ac28ff2f880274f155d9a8ea2422e7e6b441e3971761",
+      "byte_count": 53793,
+      "inspection": "Entire original-resolution PNG decoded and visually inspected; SHA-256 checked.",
+      "visual": "Business-unit organisations with shared sandbox and archive-in-place caveat.",
+      "rights": "Diagram-specific authorship and artwork permission unresolved; organisation model provenance does not establish licensing clearance.",
+      "operative_source_claims": [
+        {
+          "id": "WA-ASSET-GOVERNANCE-3-001",
+          "statement": "Business-unit organisations contain their respective division repositories.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Archive-in-place differs from lifecycle-separated Archive model; neither is universal."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-3-002",
+          "statement": "A common sandbox organisation is shared across business units.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Archive-in-place differs from lifecycle-separated Archive model; neither is universal."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-3-003",
+          "statement": "The business-unit model recommends retaining deprecated repositories in the primary unit organisation rather than adding an archive organisation.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Archive-in-place differs from lifecycle-separated Archive model; neither is universal."
+        }
+      ]
+    },
+    {
+      "artifact_id": "08c54e036b3c3218e23dffec",
+      "source": "github/github-well-architected",
+      "path": "content/library/governance/recommendations/assets/enterprise-account-overview.png",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "f84e9bdba1d42163cac816465602d3914f34f59bd417eca13f41f70e84dcb692",
+      "byte_count": 49663,
+      "inspection": "Entire original-resolution PNG decoded and visually inspected; SHA-256 checked.",
+      "visual": "Enterprise/organisation/team/repository hierarchy with enterprise teams spanning organisations.",
+      "rights": "Diagram-specific authorship and artwork permission unresolved; organisation model provenance does not establish licensing clearance.",
+      "operative_source_claims": [
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-001",
+          "statement": "The enterprise account groups billing responsibilities.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-002",
+          "statement": "The enterprise account groups licensing responsibilities.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-003",
+          "statement": "The enterprise account groups identity-provider integration.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-004",
+          "statement": "The enterprise account supplies enterprise-wide policy scope.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-005",
+          "statement": "The enterprise account supplies enterprise audit-log scope.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-006",
+          "statement": "Enterprise teams are defined above organisation level and can span organisations.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-007",
+          "statement": "Organisations retain organisation-level policies.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-008",
+          "statement": "Organisations retain membership management.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-009",
+          "statement": "Organisation billing rolls up to the enterprise.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-4-010",
+          "statement": "Teams and repositories remain nested inside organisations.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Contextual organisation model recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Enterprise organisation model is distinct from repository topology and requires scope/context adoption decisions."
+        }
+      ]
+    },
+    {
+      "artifact_id": "e14f7697eaabef6e136e0b19",
+      "source": "github/github-well-architected",
+      "path": "content/library/governance/recommendations/assets/image1.png",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "af58362dc6ec960a2c00cda7edcf9c92a5cfdb466e7ab464a211c14f2559c0a6",
+      "byte_count": 136601,
+      "inspection": "Entire original-resolution PNG decoded and visually inspected; SHA-256 checked.",
+      "visual": "Branch-rules screenshot containing 12 independently recorded checkbox states.",
+      "rights": "GitHub UI screenshot and service marks require screenshot/trademark provenance; source pin is not permission clearance.",
+      "operative_source_claims": [
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-001",
+          "statement": "The screenshot selects deletion restriction with bypass permission exceptions.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-002",
+          "statement": "The screenshot selects force-push blocking.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-003",
+          "statement": "The screenshot leaves creation restrictions unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-004",
+          "statement": "The screenshot leaves update restrictions unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-005",
+          "statement": "The screenshot leaves linear-history enforcement unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-006",
+          "statement": "The screenshot leaves signed-commit enforcement unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-007",
+          "statement": "The screenshot leaves pull-request enforcement unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-008",
+          "statement": "The screenshot leaves status-check enforcement unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-009",
+          "statement": "The screenshot leaves required workflow enforcement unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-010",
+          "statement": "The screenshot leaves code-scanning-result enforcement unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-011",
+          "statement": "The screenshot leaves commit-metadata restrictions unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-5-012",
+          "statement": "The screenshot leaves branch-name restrictions unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        }
+      ]
+    },
+    {
+      "artifact_id": "a8aa6534c914bbed62be6de8",
+      "source": "github/github-well-architected",
+      "path": "content/library/governance/recommendations/assets/image2.png",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "e277ae01564c5fd0297fa5507cff84e8d4e5a9e1793acf0635c1c0f5cf98fbab",
+      "byte_count": 33370,
+      "inspection": "Entire original-resolution PNG decoded and visually inspected; SHA-256 checked.",
+      "visual": "Push-protection screenshot with write-access bypass selection and narrower alternative.",
+      "rights": "GitHub UI screenshot and service marks require screenshot/trademark provenance; source pin is not permission clearance.",
+      "operative_source_claims": [
+        {
+          "id": "WA-ASSET-GOVERNANCE-6-001",
+          "statement": "The screenshot's secret-scanning push-protection bypass selection permits anyone with write access.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-6-002",
+          "statement": "The dropdown also offers a specific-roles-or-teams alternative.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        },
+        {
+          "id": "WA-ASSET-GOVERNANCE-6-003",
+          "statement": "The screenshot leaves the blocked-commit resource-link option unchecked.",
+          "location": "Named diagram label/bullet or UI control",
+          "strength": "Illustrative UI state, not normative recommendation",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "conflicts": "Unchecked options and permissive bypass are screenshot state only; do not weaken canonical protection or infer live target enforcement."
+        }
+      ]
+    }
+  ]
+}

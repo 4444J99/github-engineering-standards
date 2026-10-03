@@ -1,0 +1,49 @@
+{
+  "issue": 336,
+  "verified_at": "2026-10-03T09:01:28.519Z",
+  "artifacts_reviewed": 2,
+  "reference_claims_added": 12,
+  "feature_scope": {
+    "issue_fields": "FPT/GHEC all; GHES >=3.23",
+    "pr_fields": "FPT/GHEC only"
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "tests": 324,
+    "test_seconds": 1.988,
+    "controls": 95,
+    "reference_claims": 60482,
+    "claim_bearing_artifacts": 3340,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Reference only; displayed reviewer is not approved review.",
+    "No project/issue changes, rights clearance or native receipts."
+  ]
+}

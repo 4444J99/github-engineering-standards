@@ -1,0 +1,90 @@
+{
+  "schema_version": "ges.email-configuration-consolidation.v1",
+  "issue": 427,
+  "reviewed_at": "2026-10-03T11:52:49.544Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed email-preferences and identity claims only; not full six-source consolidation.",
+  "rows": [
+    {
+      "id": "EMAIL-CONFIGURATION-SCOPE",
+      "claims": [
+        "DOCS-COMMITEMAIL-1",
+        "DOCS-COMMITEMAIL-2",
+        "DOCS-COMMITEMAIL-3",
+        "DOCS-COMMITEMAIL-4",
+        "DOCS-COMMITEMAIL-6"
+      ],
+      "decision": "PROPOSED_EFFECTIVE_CONFIGURATION_REVIEW",
+      "requirement": "Record product, web settings, global and repository-local Git email with precedence and account association; preserve old commits separately. Verify effective intended identity without recording personal values or secrets in committed evidence.",
+      "negative_test": "Global read-back cannot pass when local override differs; current setting cannot prove historical scrubbing or authenticated authorship."
+    },
+    {
+      "id": "EMAIL-PUSH-PRIVACY-PREDICATE",
+      "claims": [
+        "DOCS-EMAILPUSHBLOCK-1",
+        "DOCS-EMAILPUSHBLOCK-2",
+        "DOCS-EMAILPUSHBLOCK-3",
+        "DOCS-EMAILPUSHBLOCK-4"
+      ],
+      "decision": "PROPOSED_NATIVE_BEHAVIOR_PLUS_FULL_HISTORY",
+      "requirement": "Keep cloud privacy selection and push-block selection separate; behaviorally verify latest-commit author-email blocking only under approved disposable test scope. Use separate read-only full-history exposure assessment; no broader guarantee from this setting.",
+      "negative_test": "Clean most-recent author email cannot certify earlier commits or committer emails safe; enabled checkbox cannot pass native behavior."
+    },
+    {
+      "id": "EMAIL-BACKUP-RECOVERY",
+      "claims": [
+        "DOCS-BACKUPEMAIL-1",
+        "DOCS-BACKUPEMAIL-2",
+        "DOCS-BACKUPEMAIL-3"
+      ],
+      "decision": "PROPOSED_RECOVERY_EVIDENCE_SPLIT",
+      "requirement": "Separately observe configured backup, mailbox control, notification delivery and approved recovery behavior. Require a recovery plan preserving existing access; do not infer 2FA bypass or managed-user self-service.",
+      "negative_test": "Saved backup address alone cannot pass recovery readiness or prove delivery."
+    },
+    {
+      "id": "EMAIL-MANAGED-CHANGE-AUTHORITY",
+      "claims": [
+        "DOCS-PRIMARYEMAIL-1",
+        "DOCS-EMAILADD-2",
+        "DOCS-EMAILADDERROR-4",
+        "DOCS-EMAILADDERROR-5"
+      ],
+      "decision": "UNRESOLVED_OPERATION_SPECIFIC_MANAGED_USER_MATRIX",
+      "requirement": "Preserve prohibition on managed-user address changes alongside documented ability to unverify for personal-account reuse. Bind exact operation and IdP ownership; resolve independently before any write rather than treating general prohibition as erasing the exception.",
+      "negative_test": "Documented unverification cannot authorize primary-email replacement; IdP access cannot certify third-party app identity."
+    },
+    {
+      "id": "EMAIL-CHANGE-ORDER-CUSTODY",
+      "claims": [
+        "DOCS-PRIMARYEMAIL-2",
+        "DOCS-PRIMARYEMAIL-3",
+        "DOCS-PRIMARYEMAIL-4",
+        "DOCS-PRIMARYEMAIL-5",
+        "DOCS-EMAILTROUBLE-2"
+      ],
+      "decision": "PROPOSED_CONTEXT_BOUND_CHANGE_PLAN",
+      "requirement": "Distinguish ordinary primary change from restricted-account recovery and preserve their different removal/verification orders. Require exact approved target, mailbox access, before/after evidence, ownership continuity and rollback limits; support acceptance remains external.",
+      "negative_test": "Ordinary removal-before-verification cannot certify safe restricted recovery; verified address cannot prove restriction lifted."
+    },
+    {
+      "id": "EMAIL-IDENTIFICATION-CLUES",
+      "claims": [
+        "DOCS-ACCOUNTIDENTIFY-2",
+        "DOCS-ACCOUNTIDENTIFY-3",
+        "DOCS-ACCOUNTIDENTIFY-4",
+        "DOCS-ACCOUNTIDENTIFY-5"
+      ],
+      "decision": "PROPOSED_IDENTITY_RECONCILIATION",
+      "requirement": "Treat Desktop, Git name/email and personal remote strings as clues, reconcile to stable authorized account and current owner. Avoid organization/other-owner clones and renamed stale links as user identity proof.",
+      "negative_test": "Organization remote or configurable user.name cannot pass acting-user authentication."
+    }
+  ],
+  "limitations": [
+    "Negative-test entries are specifications, not implemented or executed tests.",
+    "No private account values, credential change, recovery operation or native activation.",
+    "Claim identity checks do not certify semantic equivalence, rights clearance or omission completeness."
+  ]
+}

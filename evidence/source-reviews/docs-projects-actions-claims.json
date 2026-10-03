@@ -1,0 +1,150 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T08:50:24.309Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Pinned Actions tutorial spans FPT/GHEC/GHES, demonstrates organization project automation for ready_for_review PR events, adds item and sets Todo/date. It is not full issue/PR lifecycle coverage or proof that each platform supports the illustrated runner/tool/action versions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Projects span repositories but workflows are repository-specific; source requires adding workflow to each tracked repository. No estate inventory, inherited coverage or backfill is demonstrated.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Source says repository GITHUB_TOKEN cannot access Projects v2 and recommends App for organization and PAT for user projects. Both actual examples target organization projects; no personal-owner query adaptation demonstrated.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "App example requires organization Projects read/write plus repository issues/PR read and installation across needed repositories. Repository Projects permissions alone are insufficient; broad installation instructions are not authorized least-privilege changes here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "App client ID is stored as configuration variable and full private key as secret, with create-github-app-token@v3 producing installation token. No credentials generated/stored or token scope verified; floating action tag is not immutable pin or licensing clearance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Classic PAT example requests project and repo scopes and secret storage; those broad classic scopes are not fine-grained permission definitions or authorization to issue credentials. Workflow fork-secret availability and safe trigger adaptations are not established by this page.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Field discovery requests first 20 fields without cursor traversal and matches exact Status/Todo/Date posted names. Missing fields/options or duplicate matches are not validated; first-page absence must not establish feature unavailability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "jq identifier extraction writes JSON-formatted quoted strings to GITHUB_ENV without -r, then passes variables through CLI string fields. This presents an unverified identifier-serialization concern, not a reproduced runtime failure or certified deployable workflow.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "PR node ID from event adds existing content and item ID is exported for later mutations. Separate addition and subsequent aliased status/date writes have no demonstrated all-or-nothing rollback, precondition check or readback verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Current runner date is formatted yyyy-mm-dd; explicit timezone and reproducibility policy are absent. Todo and date updates may replace existing values on repeated events; completion cannot be inferred from a configured workflow.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Set-fields command uses --silent and no post-mutation retrieval. Successful invocation, logging silence and workflow-file existence are not evidence of effective native policy or correct field values.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "Conditional Copilot prose recommends agentic workflows for contextual reasoning tasks, whereas deterministic Actions examples use fixed steps. This is source recommendation, not requirement, agent launch approval or guarantee of model decisions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSACTIONS-13",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions.md",
+      "content_sha256": "399f0d5513b62d60e0caf5337f014178c4b68c6fcb8d51f1f76cacd7fd06606f",
+      "start_line": 1,
+      "end_line": 325,
+      "statement": "actions/add-to-project, App/auth/secret/workflow and agentic-workflow links remain independent references; no external code executed or linked repository exhaustiveness certified. All claims reference-only; no accepted policy, rights clearance or authorized rollout.",
+      "accepted_policy": false
+    }
+  ]
+}

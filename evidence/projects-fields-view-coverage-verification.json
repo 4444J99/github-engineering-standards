@@ -1,0 +1,57 @@
+{
+  "issue": 343,
+  "verified_at": "2026-10-03T09:13:34.884Z",
+  "artifacts_reviewed": 2,
+  "reference_claims_added": 2,
+  "source_receipt_coverage": [
+    {
+      "prefix": "content/issues/planning-and-tracking-with-projects/understanding-fields/",
+      "inventory": 11,
+      "receipts": 11,
+      "missing": []
+    },
+    {
+      "prefix": "content/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/",
+      "inventory": 7,
+      "receipts": 7,
+      "missing": []
+    }
+  ],
+  "independent_semantic_completeness": false,
+  "published_assurance": false,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "tests": 324,
+    "test_seconds": 1.971,
+    "controls": 95,
+    "reference_claims": 60542,
+    "claim_bearing_artifacts": 3350,
+    "gates_open": 9,
+    "project_complete": false
+  }
+}

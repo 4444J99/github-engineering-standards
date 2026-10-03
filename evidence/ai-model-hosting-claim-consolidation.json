@@ -1,0 +1,201 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T03:11:30Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-ai-model-hosting-claims.json",
+    "evidence/source-reviews/docs-ai-model-hosting-dependency-claims.json"
+  ],
+  "input_claims": 58,
+  "groups": [
+    {
+      "id": "HOSTING-SCOPE",
+      "claims": [
+        "DOCS-AIHOST-001"
+      ],
+      "decision": "Feature-declared applicability is evidence of article scope only; assess actual subscription, version and administrative authorization separately."
+    },
+    {
+      "id": "HOSTING-ROSTERS",
+      "claims": [
+        "DOCS-AIHOST-002",
+        "DOCS-AIHOST-007",
+        "DOCS-AIHOST-025",
+        "DOCS-AIHOST-029"
+      ],
+      "decision": "Retain provider-specific roster variable keys and resolve against the pinned variable dependencies before asserting model/version identity or availability."
+    },
+    {
+      "id": "HOSTING-ROUTING",
+      "claims": [
+        "DOCS-AIHOST-003",
+        "DOCS-AIHOST-016",
+        "DOCS-AIHOST-026",
+        "DOCS-AIHOST-038",
+        "DOCS-AIHOST-048",
+        "DOCS-AIHOST-049",
+        "DOCS-AIHOST-056",
+        "DOCS-AIHOSTDEP-001"
+      ],
+      "decision": "Maintain distinct developer, model, serving provider, tenant, subscription and interaction mode. Preserve GCP prompt/metadata transmission and Gemini no-training alongside routing. Inline Free/Student Fireworks serving must not inherit interactive or enterprise Azure assumptions."
+    },
+    {
+      "id": "HOSTING-PROVIDER-TRAINING",
+      "claims": [
+        "DOCS-AIHOST-004",
+        "DOCS-AIHOST-017",
+        "DOCS-AIHOST-018",
+        "DOCS-AIHOST-022",
+        "DOCS-AIHOST-034"
+      ],
+      "decision": "Do not collapse no-training, logging, storage, abuse-monitoring exemptions, personnel access and third-party distribution. Retain Bedrock's multiple separate declarations and Google's specifically described GitHub exemption; source declarations require applicable contract evidence."
+    },
+    {
+      "id": "HOSTING-RETENTION-BOUNDARIES",
+      "claims": [
+        "DOCS-AIHOST-005",
+        "DOCS-AIHOST-019",
+        "DOCS-AIHOST-021",
+        "DOCS-AIHOST-030",
+        "DOCS-AIHOST-031",
+        "DOCS-AIHOST-032",
+        "DOCS-AIHOST-033",
+        "DOCS-AIHOST-035",
+        "DOCS-AIHOST-036",
+        "DOCS-AIHOST-050"
+      ],
+      "decision": "Preserve named-provider agreement scope, generally available versus beta/public-preview exclusions, metadata/disk/access/logging boundaries, minimum transient RAM and response-time deletion. Moonshot hosting-provider no-training stays attached to its ZDR declaration, not generalized to GitHub. ZDR is not a universal no-processing claim."
+    },
+    {
+      "id": "HOSTING-FABLE-EXCEPTION",
+      "claims": [
+        "DOCS-AIHOST-008",
+        "DOCS-AIHOST-009",
+        "DOCS-AIHOST-010",
+        "DOCS-AIHOST-011",
+        "DOCS-AIHOST-012",
+        "DOCS-AIHOST-013",
+        "DOCS-AIHOST-014",
+        "DOCS-AIHOST-015",
+        "DOCS-AIHOST-020"
+      ],
+      "decision": "Default safety-classifier retention, requested eligible exemption, account-team approval, qualifying endpoint configuration, separate administrator enablement, end-2026 expiry and EFS reassessment are independent requirements. Preserve internal-only use and prohibited external endpoints/outputs. No local agent or ordinary model enablement grants the exemption."
+    },
+    {
+      "id": "HOSTING-CACHING",
+      "claims": [
+        "DOCS-AIHOST-023",
+        "DOCS-AIHOST-027"
+      ],
+      "decision": "Prompt caching for Claude and Gemini remains explicit. Evaluate cache lifetime, location, access and agreement compatibility separately rather than infer no storage from no-training or ZDR terminology."
+    },
+    {
+      "id": "HOSTING-GITHUB-TRAINING",
+      "claims": [
+        "DOCS-AIHOST-039",
+        "DOCS-AIHOST-040",
+        "DOCS-AIHOST-041",
+        "DOCS-AIHOST-052",
+        "DOCS-AIHOST-053",
+        "DOCS-AIHOST-054"
+      ],
+      "decision": "Preserve equivalent Microsoft/Moonshot section occurrences: Business/Enterprise no-training versus individual-plan possible interaction-data training under terms/settings, with independently verified opt-out. Individual subscription is not a weaker spelling of enterprise privacy."
+    },
+    {
+      "id": "HOSTING-DEPLOYMENT-CONFIG",
+      "claims": [
+        "DOCS-AIHOST-042"
+      ],
+      "decision": "GitHub tenancy and Azure Foundry host identity do not establish processing/retention/security configuration. Require target-specific deployment configuration plus applicable provider guidance."
+    },
+    {
+      "id": "HOSTING-CONTENT-FILTERS",
+      "claims": [
+        "DOCS-AIHOST-006",
+        "DOCS-AIHOST-024",
+        "DOCS-AIHOST-028",
+        "DOCS-AIHOST-037",
+        "DOCS-AIHOST-043",
+        "DOCS-AIHOST-055"
+      ],
+      "decision": "Filtering remains independent of rights, data governance and model safety. Public-code matching is conditional where stated; the shorter Moonshot filtering sentence cannot supply an unstated universal public-code block."
+    },
+    {
+      "id": "HOSTING-OPEN-WEIGHT-RIGHTS",
+      "claims": [
+        "DOCS-AIHOST-044"
+      ],
+      "decision": "Publicly available weights do not imply an open-source license, model/output redistribution permission, contractual clearance or accepted local policy."
+    },
+    {
+      "id": "HOSTING-MODEL-RISK",
+      "claims": [
+        "DOCS-AIHOST-045",
+        "DOCS-AIHOST-046",
+        "DOCS-AIHOST-047"
+      ],
+      "decision": "Retain elevated geographic-bias/alignment concerns, per-model-card review and customer-specific evaluations before enablement. Do not convert a reviewed hosting page or open weights into model safety certification."
+    },
+    {
+      "id": "HOSTING-DEVELOPER-NONDISCLOSURE",
+      "claims": [
+        "DOCS-AIHOST-051",
+        "DOCS-AIHOSTDEP-002"
+      ],
+      "decision": "Non-transmission to original model developers is distinct from host retention and GitHub training. Preserve both the general reusable and model-specific occurrence."
+    }
+  ],
+  "generalized_assessment_contract": {
+    "profile_dimensions": [
+      "subscription and interaction mode",
+      "resolved model/version and serving provider",
+      "tenant and endpoint",
+      "provider agreement and feature coverage",
+      "default retention and exceptions",
+      "cache and logging configuration",
+      "provider training versus GitHub training",
+      "user opt-out state",
+      "model/output permitted use",
+      "model risk evaluations"
+    ],
+    "required_evidence": [
+      "pinned roster/feature dependency resolution",
+      "applicable contractual terms and exception expiry",
+      "actual authorized endpoint/deployment configuration",
+      "cache/logging/retention settings",
+      "independently observed applicable user or administrator policy",
+      "model-card and target-specific evaluation review"
+    ],
+    "read_only_default": true,
+    "unknown_or_missing_permission": "UNVERIFIED, never PASS",
+    "native_changes": "Require scoped approval and reviewed plan/diff/apply/verify plus recovery evidence.",
+    "solo_profile": "Assess individual subscription terms and actual opt-out; do not assume enterprise no-training or account-team exception eligibility.",
+    "enterprise_profile": "Verify effective administrator scope, qualifying deployment and exception configuration; enterprise approval alone does not enable a model or waive output-use restrictions.",
+    "time_bound_exception": "Schedule reassessment by observed contractual expiry; historical end-2026 source description is not a verified current agreement.",
+    "rights_boundary": "Original-model non-disclosure and open weights do not grant publication or redistribution rights."
+  },
+  "verification": {
+    "all_input_claims_mapped_once": true,
+    "source_accounting_receipts": [
+      "evidence/source-reviews/docs-ai-model-hosting-artifact.json",
+      "evidence/source-reviews/docs-ai-model-hosting-dependency-artifact.json"
+    ],
+    "independent_omission_certified": false,
+    "article_variable_resolution": "evidence/ai-model-hosting-variable-resolution.json",
+    "article_variable_keys_resolved_at_pin": 47,
+    "variable_and_render_assurance_complete": false,
+    "external_provider_terms_verified": false,
+    "target_bindings_verified": false,
+    "rights_cleared": false,
+    "accepted_policy": false,
+    "native_enforcement_verified": false
+  },
+  "remaining_work": [
+    "All 47 hosting article variable keys now resolve at the pin; complete non-hosting variable semantics, feature/dependency reconciliation and rendered branch assurance separately.",
+    "Review applicable provider terms and model cards separately without pretending source links are clearance.",
+    "Reconcile privacy/hosting claims with all other source families and canonical applicability/templates.",
+    "Independently audit atomicity and omissions; no 58-claim count certifies completeness.",
+    "Only promote policy and verify bindings after the applicable review/approval process."
+  ]
+}

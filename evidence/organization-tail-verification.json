@@ -1,0 +1,54 @@
+{
+  "issue": 253,
+  "reviewed_at": "2026-10-03T06:06:55.577Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 4,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59717,
+    "claim_bearing_artifacts": 3197,
+    "tests": 324,
+    "test_seconds": 1.988,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "organization_reusable_census": {
+    "inventory": 134,
+    "receipted": 134,
+    "remaining": 0,
+    "semantic_omission_completeness_certified": false
+  },
+  "limitations": [
+    "No team/domain/profile/invitation mutation, accepted policy or rights clearance.",
+    "Secret-team name can leak in mentions; secret teams cannot have parents or children; nonmembers cannot view teams.",
+    "Verified badge requires website/email domains and variants; approval not verification.",
+    "Invitation acceptance precedes membership; no delivery/acceptance observed.",
+    "134 receipts are not independent semantic completeness, rendered-content assurance or all-nine-gate completion."
+  ]
+}

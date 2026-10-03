@@ -1,0 +1,69 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 23,
+  "verified_at": "2026-10-02T20:01:28.762Z",
+  "scope": {
+    "files": 129,
+    "physical_lines": 527,
+    "bytes": 46692,
+    "reference_claims": 698,
+    "parser_candidates": 300,
+    "prior_exact_path_claims": 0,
+    "claim_sha256": "705d04c18e5475531c8685b689287499ddf3b513a2661bc196d5531716334943",
+    "wording_repairs": 6,
+    "independent_audit": "evidence/docs-identity-authentication-signing-independent-audit.json",
+    "separate_author_recheck": "evidence/docs-identity-authentication-signing-author-recheck.json"
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "observed": "324 tests in 1.310s; OK. Trailing published_docs ERROR belongs to synthetic negative fixture."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "observed": "valid true; 95 controls"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "observed": "completed without output"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "observed": "valid true; 54,426 reference records; 1,365 claim-bearing artifacts; 7 duplicate relationships validated; no semantic/global omission/rights/adoption certification."
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "observed": "reviewed 1,399 / 13,657; review errors empty; all nine gates OPEN; project_complete false; rights acceptance 0 / 13,657."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "observed": "no whitespace errors"
+    }
+  ],
+  "additional_checks": {
+    "source_inventory_identity_mismatches": 0,
+    "candidate_span_digests_verified": 300,
+    "claim_consolidation_occurrences": 698,
+    "claim_consolidation_unique_ids": 698,
+    "structural_candidates_without_overlapping_claim": 17,
+    "structural_mapping": "Honest surrounding-context mapping for headings, scope introducers and separators; no fabricated line overlap or new obligation."
+  },
+  "accounting": {
+    "reviewed": 1399,
+    "denominator": 13657,
+    "coverage": 0.10243831002416343,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Bounded source-local full review does not certify global omission completeness or published-page rendering.",
+    "Reference mapping is not accepted policy or generalized control adoption.",
+    "No rights clearance, credential/key/enrollment mutation, actual signing/MFA verification, native pilot or estate rollout occurred."
+  ]
+}

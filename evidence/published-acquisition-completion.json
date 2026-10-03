@@ -1,0 +1,23 @@
+{
+  "schema": "ges.published-acquisition-completion.v1",
+  "observed_process_session": 95735,
+  "command": "python -m ges.pages --ledger .cache/corpus/published-page-ledger.json --cache .cache/rendered-docs --workers 2 --timeout 15",
+  "exit_code": 0,
+  "process_completed_at": "2026-10-02T01:11:23.882235+00:00",
+  "ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+  "denominator": 18019,
+  "retrieved": 18019,
+  "remaining": 0,
+  "errors_this_attempt": [],
+  "kill_switch": false,
+  "credentials_sent": false,
+  "evidence_storage": "Digest-addressed gzip bodies and acquisition index remain in ignored .cache/rendered-docs; raw source expression is not committed",
+  "scope": "English page-version bodies from the unreduced ledger, not complete browser UI or deployment-source proof",
+  "source_revision_verified": false,
+  "semantic_review_complete": false,
+  "rights_cleared": false,
+  "acceptance_gate_closed": false,
+  "claim_provenance_verification": {"command": "python -m ges.published_claim_review --ledger .cache/corpus/published-page-ledger.json --cache .cache/rendered-docs --claims evidence/published-computer-use-cli-claims.json --review-policy evidence/source-review-policy.json", "valid": true, "reference_claims": 32, "page_instances": 2, "claim_page_applications": 64, "claim_document_sha256": "72504f790193aa193a42a3abef05a08f995435cbcdebc2f4f19491073a9e9ce9", "semantic_truth_certified": false},
+  "checks": {"python -m unittest discover -s tests -v": "253 tests passed", "python -m ges validate": "valid=true; controls=95", "python -m ges compile": "exit 0"},
+  "test_scope": "Includes 18 new synthetic provenance-contract tests; tests are not published semantic, rights or native enforcement receipts"
+}

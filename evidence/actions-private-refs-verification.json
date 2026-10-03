@@ -1,0 +1,53 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 56,
+  "tranche": {
+    "files": 20,
+    "claims": 20,
+    "candidates": 25
+  },
+  "findings": [
+    "Private-fork Send secrets/Send write tokens settings qualify generic fork withholding; privileged pull_request_target risk is distinct.",
+    "Legacy OSSRH warning prevents treating Maven source examples as current verified deployment recipes.",
+    "ref_protected is a configuration signal, not proof of effective enforcement."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58060,
+      "source_artifacts": 2114
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2148,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.995,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Twenty full fragments. No source example execution, credential acquisition, publication, networking or native mutation. Independent audits, rendering, rights and adoption remain separate."
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": "ges.account-onboarding-consolidation.v1",
+  "issue": 439,
+  "reviewed_at": "2026-10-03T12:17:08.820Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed personal signup, identity fragment, email and account profile claims; not full six-source reconciliation.",
+  "rows": [
+    {
+      "id": "ONBOARDING-ACTOR-SCOPE",
+      "claims": [
+        "DOCS-ACCOUNTCREATE-1",
+        "DOCS-ACCOUNTCREATE-4",
+        "DOCS-ACCOUNTMANAGEMENT-11"
+      ],
+      "decision": "PROPOSED_PRODUCT_AND_ACCOUNT_TYPE_GATE",
+      "requirement": "Determine exact product, provisioning mode and account type before proposing onboarding. Company-provisioned managed accounts and GHES accounts do not use this cloud personal signup procedure; retain administrator or identity-provider ownership.",
+      "negative_test": "Broad GHES metadata or a working signup URL must not authorize GHES or managed-user personal signup."
+    },
+    {
+      "id": "ONBOARDING-IDENTITY-EVIDENCE",
+      "claims": [
+        "DOCS-ACCOUNTCREATE-2",
+        "DOCS-REUSABLEFORMAT-003",
+        "DOCS-ACCOUNTIDENTIFY-2"
+      ],
+      "decision": "PROPOSED_SEPARATE_IDENTITY_AND_AUTHORITY",
+      "requirement": "Record stable account identity, username/profile, authentication and authorization as separate evidence dimensions. Examples and configured names are clues, not proof of account custody.",
+      "negative_test": "A profile link or local Git username cannot pass authenticated account custody or repository authorization."
+    },
+    {
+      "id": "ONBOARDING-SOCIAL-DISCLOSURE",
+      "claims": [
+        "DOCS-ACCOUNTCREATE-3",
+        "DOCS-PERSONALPROFILE-2"
+      ],
+      "decision": "PROPOSED_OWNER_REVIEWED_PROVIDER_LINKAGE",
+      "requirement": "Treat social provider selection and public profile disclosure as owner-reviewed identity choices. Preserve the stated Apple Hide My Email new-account behavior without inferring existing-account linkage or privacy guarantees.",
+      "negative_test": "Apple Hide My Email enabled cannot certify existing GitHub account linkage, mailbox control or universal nondisclosure."
+    },
+    {
+      "id": "ONBOARDING-EMAIL-OPERATION-MATRIX",
+      "claims": [
+        "DOCS-ACCOUNTCREATE-4",
+        "DOCS-EMAILIDENTITY-5",
+        "DOCS-EMAILIDENTITY-6",
+        "DOCS-EMAILADDERROR-1"
+      ],
+      "decision": "UNRESOLVED_OPERATION_SPECIFIC_ELIGIBILITY",
+      "requirement": "Preserve signup prohibition for an email verified on a managed account separately from unverified shared-email linkage exceptions. Determine verification state and intended operation; absence of the stated prohibition does not positively prove signup eligibility.",
+      "negative_test": "An unverified managed-account email must not automatically pass personal signup, and a retained shared linkage must not be treated as verified third-party identity."
+    },
+    {
+      "id": "ONBOARDING-VERIFICATION-RECEIPT",
+      "claims": [
+        "DOCS-ACCOUNTCREATE-5",
+        "DOCS-EMAILVERIFY-1",
+        "DOCS-EMAILVERIFY-4",
+        "DOCS-EMAILREF-3"
+      ],
+      "decision": "PROPOSED_CURRENT_TARGET_BOUND_VERIFICATION",
+      "requirement": "Require observed current verification for the intended account and mailbox; signup prompts, resend actions and troubleshooting references are procedures, not successful verification receipts. Preserve unavailable capabilities until verified.",
+      "negative_test": "A sent verification request or completed signup form cannot pass verified email or repository-creation capability."
+    },
+    {
+      "id": "ONBOARDING-RECOMMENDATION-ADOPTION",
+      "claims": [
+        "DOCS-ACCOUNTCREATE-6"
+      ],
+      "decision": "PROPOSED_EXPLICIT_LOCAL_POLICY_ACCEPTANCE",
+      "requirement": "Preserve strong 2FA recommendation as upstream recommendation until an accountable policy owner adopts a scoped obligation. Enrollment needs its own valid observation. Billing exploration neither requires a paid plan nor authorizes spending.",
+      "negative_test": "Source recommendation alone cannot mark local mandatory policy accepted, 2FA enrolled or a paid subscription approved."
+    }
+  ],
+  "limitations": [
+    "Negative-test entries are specifications, not implemented or executed tests.",
+    "Claim identity validation does not prove semantic equivalence or extraction completeness.",
+    "No rights clearance, account creation, credentials, billing, publication or native changes."
+  ]
+}

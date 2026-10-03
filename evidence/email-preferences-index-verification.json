@@ -1,0 +1,91 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 426,
+  "verified_at": "2026-10-03T11:51:44.838Z",
+  "scope": "Complete email-preferences index and individual receipt-presence census; not independent omission/published assurance.",
+  "coverage": {
+    "expected": 10,
+    "receipts": {
+      "content/account-and-profile/how-tos/email-preferences/verifying-your-email-address.md": {
+        "receipt": "evidence/source-reviews/docs-email-verification-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/remembering-your-github-username-or-email.md": {
+        "receipt": "evidence/source-reviews/docs-account-identification-guide.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/troubleshooting-email-verification.md": {
+        "receipt": "evidence/source-reviews/docs-email-verification-troubleshooting.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/changing-your-primary-email-address.md": {
+        "receipt": "evidence/source-reviews/docs-primary-email-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/setting-a-backup-email-address.md": {
+        "receipt": "evidence/source-reviews/docs-backup-email-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/index.md": {
+        "receipt": "evidence/source-reviews/docs-email-preferences-index.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/troubleshooting-adding-an-email.md": {
+        "receipt": "evidence/source-reviews/docs-email-addition-troubleshooting.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/blocking-command-line-pushes-that-expose-your-personal-email-address.md": {
+        "receipt": "evidence/source-reviews/docs-email-push-blocking.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/adding-an-email-address-to-your-github-account.md": {
+        "receipt": "evidence/source-reviews/docs-email-addition-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address.md": {
+        "receipt": "evidence/source-reviews/docs-commit-email-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      }
+    },
+    "missing": []
+  },
+  "reference_claims_added": 1,
+  "reference_claims": 61159,
+  "claim_bearing_artifacts": 3463,
+  "tests": {
+    "count": 324,
+    "seconds": 1.991,
+    "result": "PASS"
+  },
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "independent_omission_audit": false,
+  "project_complete": false,
+  "gates_open": 9
+}

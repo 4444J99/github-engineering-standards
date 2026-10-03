@@ -1,0 +1,205 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T07:57:50.209Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Management guide covers FPT/GHEC and requires repository admin to configure custom domains; publishing-source maintainer permission must not be generalized to custom-domain administration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Recommended ordering is verify ownership first, add custom domain to Pages repository settings, then configure provider DNS. DNS configured before repository association can expose subdomain takeover risk; no native changes are authorized by the source.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "DNS propagation can take up to 24 hours. Windows alternatives to dig are Resolve-DnsName or installing BIND; instructions are examples, not executed dependencies or current tool recommendations.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Apex requires repository custom-domain setting and ALIAS, ANAME or A records; IPv6 AAAA is optional in the earlier procedure, with A strongly recommended alongside AAAA. Later summary says add all A and AAAA or only ALIAS/ANAME; preserve the IPv6 obligation discrepancy rather than silently impose one interpretation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Saving domain for branch publishing creates a CNAME commit at source-branch root. Custom Actions publishing creates no CNAME file, ignores existing CNAME and does not require it; repository CNAME file is not a DNS-provider CNAME record.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "ALIAS/ANAME apex target is the default site domain. Pinned A and AAAA endpoint lists are historical source evidence, not freshly verified DNS addresses or permission to replace live records.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Source advises removing a provider-created default record before proceeding. Any actual removal requires exact record identity and dependency/blast-radius review; documentation does not authorize indiscriminate DNS deletion.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Wildcard DNS is strongly discouraged even for verified domains: verification can protect an immediate subdomain while a deeper descendant remains takeover-exposed. Verification must not be generalized to recursive wildcard protection.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "dig examples check record answers against expected targets, not repository ownership verification, successful TLS issuance, effective site privacy or observed HTTP behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Locally generated branch output should incorporate the settings-created CNAME commit before pushing generated files. This synchronization requirement does not apply as an effective-domain mechanism to custom Actions sources that ignore CNAME.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Enforce HTTPS is an optional setting and may take up to 24 hours to become available; checkbox selection or availability alone does not prove valid certificate, redirects or absence of mixed content.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Apex/www paired redirect requires correct provider records for both names. www CNAME must point directly to user.github.io or organization.github.io without repository name; a redirect expectation is not a runtime receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-13",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Subdomain setup adds repository domain first and then provider CNAME. Internationalized domains must be entered Punycode-encoded in the documented settings flow.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-14",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Public and private Pages use the same user/organization default-domain CNAME targets; do not point provider CNAME at the unique *.pages.github.io settings hostname. Private publication availability is GHEC-specific and DNS target alone does not confer reader authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-15",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Pointing custom subdomain to apex rather than the default Pages domain can cause HTTPS enforcement and reachability problems. This warning is separate from legitimate paired-name redirects configured through the default target.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-16",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "DNS summary separates @ apex A/AAAA or ALIAS/ANAME records from subdomain CNAME. Documentation examples contain placeholder domains and illustrative response addresses, not records to apply to this estate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-17",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Removing a domain through repository Pages settings may resolve another-repository association conflict; changing that other repository requires separate authority and can affect inherited project URLs. Remove setting does not itself prove provider DNS cleanup or safe recovery.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINMANAGEMENT-18",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site.md",
+      "content_sha256": "ec29eb6ff36fc9b5e83e918a54b67a4c833f8bcdd86260281e0613150951150a",
+      "start_line": 1,
+      "end_line": 178,
+      "statement": "Disabled site with lingering unverified domain DNS remains takeover-exposed; source recommends prompt update/removal. All extracted procedures remain reference-only, with no DNS, certificate, domain, protection or publication action performed.",
+      "accepted_policy": false
+    }
+  ]
+}

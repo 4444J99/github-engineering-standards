@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:48:20.054Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTMCPCOVERAGE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/mcp-configuration-location.md",
+      "content_sha256": "7d6198599376e5338b3eed3a24572839f2f368d003c232280d5f213aa6bf11ff",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The fragment distinguishes repository .vscode/mcp.json configuration shared with people opening that project in VS Code from personal settings.json configuration available across that user's workspaces. Its description of personal access is not proof of server-side identity isolation or secret confidentiality; neither configuration was authored or installed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPCOVERAGE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/mcp-policy.md",
+      "content_sha256": "8550c7fa439c626c0d25150f0ed120ca64b6f5c123b06eecb287c3803d24c7ca",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The pinned policy description gives enterprise/organization control over MCP use, disabled by default, but limits that control to Business or Enterprise subscriptions supplied by the configuring organization or enterprise. Free, Pro, Pro Plus, and Max are explicitly outside that policy's governance. This limits policy coverage and is not universal estate enforcement; linked policy guides are not reviewed by this receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPCOVERAGE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/registry-alternative.md",
+      "content_sha256": "f90856c7e161986b982507cb56efb6b6129be788f6b8076961d633fff9ee6f1c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The isolated fragment describes its surrounding feature as public preview and not the preferred restriction mechanism, recommending enterprise managed settings as a more secure generally available alternative. The embedding feature and comparative security have not been independently verified, and the linked allowlist guide is not reviewed or adopted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPCOVERAGE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/repo-mcp-limitations.md",
+      "content_sha256": "8dfbd087443663f99ffcc41dc391762ec718fce1ccd835aa06c8b71eeecc9186",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The cloud-agent and code-review fragment restricts their described MCP support to tools, excluding server resources and prompts, and excludes remote servers using OAuth at this revision. These consumer-specific historical limitations must not be generalized to every IDE client or represented as current implementation tests.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPCOVERAGE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/troubleshooting-mcp-server.md",
+      "content_sha256": "9bc05aad547601c5ff6001bf70ea9eb40cd3f1f9fc0c0bc3ec68a238ec5a0b4b",
+      "start_line": 1,
+      "end_line": 32,
+      "statement": "The troubleshooting fragment recommends checking IDE sign-in, PAT validity/correctness/necessary scopes, selected agent, MCP configuration, and action permissions; it also suggests logs, Docker readiness for local use, or restart. It conditionally describes reason-based bypass of a push-protection block believed safe to expose and links to further instructions. Belief and an upstream option are not authorization to disclose secrets, broaden token scopes, bypass protection, or restart services; none was performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPCOVERAGE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/measure-changes-intro.md",
+      "content_sha256": "81fa2770a45cbe980b6eaf63248bc001c80e794db2974faa544242dd7ed7570b",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The measurement fragment recommends monitoring trials and rollout outcomes, making adjustments, and considering quality, velocity, developer happiness, and their combined business effects. It introduces goal-specific metrics but defines none in this isolated text; no measured improvement, adopted metric threshold, or completed rollout is established.",
+      "accepted_policy": false
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:54:47.437Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-EMUAUTHCAP-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-accounts/emu-azure-admin-consent.md",
+      "content_sha256": "10464b359d0e6e2fdf54868fe1aa367ba32a536c0e3d961049db5940d014ab60",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The Entra OIDC application sequence requests organization-wide consent and installation after IdP sign-in, explicitly requiring Entra global admin rights before accepting. This is not ordinary user consent or project approval to install an IdP application; no sign-in, consent or installation occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMUAUTHCAP-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-accounts/emu-cap-public-preview.md",
+      "content_sha256": "eb4a23d0add9796a6855ec8d1d810a350b728362df58202408d88c9a8e883659",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The pinned note describes CAP web-session protection as public preview, optional extended protection available when IdP CAP support is already enabled. When enabled and IP conditions fail, users can still view and filter user-owned resources but cannot view result details for notifications, searches, personal dashboards or starred repositories. This is not total invisibility or a universal access-denial guarantee; no live opt-in or enforcement was verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMUAUTHCAP-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-accounts/emu-cap-validates.md",
+      "content_sha256": "3c4f5d1eb369e5f0bfb466d2e6aead7cf84d01e417fbaececd2761f81819bec1",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "When an enterprise uses OIDC SSO, the fragment describes automatic use of IdP CAP IP conditions for web UI interactions or IP changes and each authentication with a user-associated PAT or SSH key. This claim concerns IP conditions, not every CAP dimension or all app/service identities. Its broad web wording requires reconciliation with the separate optional preview extension; no actual event or denial was tested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMUAUTHCAP-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-accounts/emu-configure-authentication.md",
+      "content_sha256": "a66ad4f267e6f8a44eb4fa00f2d2d025b2e4cf02998474c59a6028095806407b",
+      "start_line": 1,
+      "end_line": 12,
+      "statement": "Entra permits OIDC or SAML with an upstream recommendation for OIDC and CAP support. For multiple enterprises from one tenant, the first may use either, but additional enterprises must use SAML. Other IdPs such as Okta or PingFederate require SAML in this EMU context. These provider and tenant-scoped requirements are not accepted project configuration; linked full guides are not reviewed by this receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMUAUTHCAP-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-accounts/emu-configure-provisioning.md",
+      "content_sha256": "4826dbe76a07b68a00afcb14a058052df81f9a046ebcbfa9973113f4a8cc964a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "After authentication configuration, SCIM provisioning can be configured so the IdP creates managed accounts. Authentication and provisioning remain separate stages; the fragment does not prove provisioning, synchronization or deprovisioning success. The linked full SCIM guide is not reviewed and no accounts were created.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMUAUTHCAP-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-accounts/emu-create-a-pat.md",
+      "content_sha256": "121a8e0358509504e81be6c0357c36c8e8a144fb5455fbeec31a151e87df4531",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "The provisioning token guidance requires creation while signed in as the setup user, at least scim:enterprise scope and no expiration, and links to classic PAT creation. This specialized upstream exception must not become a universal non-expiring-token recommendation or silently override accepted credential policy; additional least-privilege and custody decisions remain pending. No token or secret was created, accessed or changed.",
+      "accepted_policy": false
+    }
+  ]
+}

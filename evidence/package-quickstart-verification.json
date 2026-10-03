@@ -1,0 +1,47 @@
+{
+  "issue": 278,
+  "reviewed_at": "2026-10-03T06:53:25.313Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 10,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59892,
+    "claim_bearing_artifacts": 3269,
+    "tests": 324,
+    "test_seconds": 1.978,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "exit-0 test illustration is not behavior verification.",
+    "GHES runner/host inconsistencies retained rather than deployed.",
+    "Workflow permissions/tags/release instructions are not current recommendations or actual publication evidence.",
+    "No npm, code execution, repositories, releases, credentials, publication, adopted policy, independent assurance, rights clearance or rollout."
+  ]
+}

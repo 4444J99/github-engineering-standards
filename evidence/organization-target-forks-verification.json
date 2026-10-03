@@ -1,0 +1,48 @@
+{
+  "issue": 245,
+  "reviewed_at": "2026-10-03T05:53:33.541Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 12,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59671,
+    "claim_bearing_artifacts": 3151,
+    "tests": 324,
+    "test_seconds": 1.98,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No ruleset/native mutation, paid license, collaborator grant, policy adoption or rights clearance.",
+    "Static/dynamic/all targeting and additive restrictive rules remain distinct; no actual target coverage proved.",
+    "Deployment-context FPT/GHEC record predicates do not prove actual service deployment or health.",
+    "Outside-collaborator fork access requires separate grant and GHEC enterprise/upstream prerequisite.",
+    "Owner/admin prefix lacks action context; plan feature examples not universal entitlement; linked guides remain separate review."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "issue": 239,
+  "reviewed_at": "2026-10-03T05:43:04.343Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59629,
+    "claim_bearing_artifacts": 3115,
+    "tests": 324,
+    "test_seconds": 1.997,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No actual role/property mutation, accepted policy, rights clearance or native enforcement.",
+    "Assignment-removal wording says delete a role; assignment versus definition deletion ambiguity retained.",
+    "NUMBER roles is placeholder, not fixed cardinality or complete inventory.",
+    "Required explicit property values apply FPT/GHEC/GHES >3.20; existing missing explicit values still inherit defaults.",
+    "Copilot suggestions public preview, not accepted schema; dependencies inspected without whole-file review."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "issue": 237,
+  "reviewed_at": "2026-10-03T05:39:44.069Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59617,
+    "claim_bearing_artifacts": 3103,
+    "tests": 324,
+    "test_seconds": 1.985,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No policy adoption, rights clearance, legal compliance attestation or native changes.",
+    "Bulk closure of user-opened content is optional, not a mandatory blocking effect or deletion.",
+    "Verify action is not a successful domain ownership receipt.",
+    "Owner-role acknowledgement and parent selection are not effective access changes.",
+    "Caption-only and linked-guide limitations retained."
+  ]
+}

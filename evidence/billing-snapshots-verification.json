@@ -1,0 +1,46 @@
+{
+  "issue": 93,
+  "reviewed_at": "2026-10-03T01:07:40.814Z",
+  "artifacts_reviewed": 10,
+  "reference_claims_added": 10,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58309,
+    "claim_bearing_artifacts": 2321,
+    "tests": 324,
+    "test_seconds": 1.992,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Historical pinned quota and price tables are not verified current financial guidance.",
+    "No actual billing settings inspected or changed, no permission consent, subscription connection or budget creation.",
+    "Independent omission audit, rendered assurance, rights and adoption remain outstanding."
+  ]
+}

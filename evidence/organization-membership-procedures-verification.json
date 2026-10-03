@@ -1,0 +1,57 @@
+{
+  "issue": 441,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/account-and-profile/how-tos/organization-membership/accessing-an-organization.md",
+    "content/account-and-profile/how-tos/organization-membership/index.md",
+    "content/account-and-profile/how-tos/organization-membership/publicizing-or-hiding-organization-membership.md",
+    "content/account-and-profile/how-tos/organization-membership/removing-yourself-from-an-enterprise.md",
+    "content/account-and-profile/how-tos/organization-membership/removing-yourself-from-an-organization.md",
+    "content/account-and-profile/how-tos/organization-membership/requesting-organization-approval-for-oauth-apps.md",
+    "content/account-and-profile/how-tos/organization-membership/viewing-peoples-roles-in-an-organization.md"
+  ],
+  "section_receipts": {
+    "present": 7,
+    "expected": 7
+  },
+  "dependency_fragments_inspected": 7,
+  "added_reference_claims": 18,
+  "reference_claims": 61252,
+  "claim_bearing_artifacts": 3483,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.983
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_caveat": "Receipt presence, not independent omission completeness, published-version assurance or live access enforcement. Linked role, administrator and billing procedures retain separate scope.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}

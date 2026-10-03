@@ -1,0 +1,48 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/7",
+  "claims": 124,
+  "grouped_context_records": 7,
+  "candidate_dispositions": 40,
+  "new_full_artifact_reviews": 2,
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 257,
+      "result": "OK; synthetic negative fixture prints published_docs ERROR"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true,
+      "reference_claims": 44231,
+      "source_artifacts": 688,
+      "scope": "Corrective recheck after source-strength inputs changed; provenance is not semantic or global omission certification"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 719,
+      "denominator": 13657,
+      "errors": [],
+      "gates_open": 9
+    }
+  ],
+  "delivery": "Commit/push identity posted in issue #7",
+  "boundaries": [
+    "No code from source executed",
+    "No raw unlicensed copies committed",
+    "No adopted controls, rights clearance or native changes"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:31:16.638Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-instructions-note.md",
+      "content_sha256": "527b37bdeb02ed86e8e5a95043fa82c826ca880381d034d02451e004cfdd0839",
+      "start_line": 1,
+      "end_line": 11,
+      "statement": "The instructions-in-use fragment describes saved files as available and automatically included in submitted requests. Its Yes/No feedback links ask whether a file was added; neither a feedback click nor file existence certifies supported scope, prompt inclusion or effective behavior. No feedback was submitted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-instructions-org-support.md",
+      "content_sha256": "73a532dc963d5411761b77fce6192e3d875e321e6e09e0f44a04845a976b803f",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The organization-support note confines support at the pin to website chat, website code review and website cloud agent. Organization instructions cannot be assumed supported in every IDE or CLI.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-instructions-path.md",
+      "content_sha256": "4f59c436f9215d7989b3376eae3bc1b8189f6de4487086679ab3c268e19ccfcc",
+      "start_line": 1,
+      "end_line": 45,
+      "statement": "The path procedure requires files ending .instructions.md under .github/instructions or descendants and applyTo glob metadata. Comma-separated patterns include both ts and tsx in its TypeScript example; examples are scope selectors, not enforced file-access restrictions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-instructions-path.md",
+      "content_sha256": "4f59c436f9215d7989b3376eae3bc1b8189f6de4487086679ab3c268e19ccfcc",
+      "start_line": 1,
+      "end_line": 45,
+      "statement": "The glob examples distinguish current-directory matching from recursive matching, including src/*.py excluding nested paths versus src/**/*.py including them. The any-depth subdir example requires that directory segment; matching Python files outside such a segment is not implied.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-instructions-path.md",
+      "content_sha256": "4f59c436f9215d7989b3376eae3bc1b8189f6de4487086679ab3c268e19ccfcc",
+      "start_line": 1,
+      "end_line": 45,
+      "statement": "The excludeAgent metadata accepts code-review or cloud-agent to exclude that named consumer; the all-files example excludes review and describes cloud-agent use. With no exclusion it describes both consumers using instructions, subject to product support and configuration rather than guaranteed runtime loading.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-instructions-path.md",
+      "content_sha256": "4f59c436f9215d7989b3376eae3bc1b8189f6de4487086679ab3c268e19ccfcc",
+      "start_line": 1,
+      "end_line": 45,
+      "statement": "The procedure permits natural-language Markdown with flexible whitespace/paragraph layout. Formatting or valid glob metadata does not guarantee safe, unambiguous or consistently obeyed instructions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-instructions-reference.md",
+      "content_sha256": "24ba668426f56764b885b061d269c9b4d55535906abbf27fdcf5d1b5bc7371c0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The reference fragment says a response References entry for .github/copilot-instructions.md indicates it was included in the model prompt, even when instructions are not shown in chat/inline chat. Such an entry is inclusion evidence, not proof the model obeyed it; no target reference entry observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-insts-nondeterministic.md",
+      "content_sha256": "0a42a51f795a9030937c843e90b344b49f4d0a3edd957c80dd05690965751e32",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The nondeterminism note explicitly warns instructions may not be followed the same way each time. Instruction loading cannot substitute for behavioral enforcement or repeated negative-case tests.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTGLOBADHERENCE-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/customization-examples-note.md",
+      "content_sha256": "39e2350bfe940283f9df4f3497de9c6d16c9c222afc6dad2689edf1d575e1148",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The customization note calls examples inspiration, links community material and makes instruction scope depend on platform or IDE. It is not adoption, universal support or an assurance of third-party rights.",
+      "accepted_policy": false
+    }
+  ]
+}

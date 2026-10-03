@@ -1,0 +1,46 @@
+{
+  "issue": 311,
+  "reviewed_at": "2026-10-03T08:12:38.128Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 11,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60282,
+    "claim_bearing_artifacts": 3312,
+    "tests": 324,
+    "test_seconds": 1.977,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Destructive source cleanup and dependency installs not executed.",
+    "Ignoring lockfile remains source advice, not adopted reproducibility policy.",
+    "No native publishing, rights clearance or accepted controls."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "issue": 260,
+  "reviewed_at": "2026-10-03T06:23:43.236Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59763,
+    "claim_bearing_artifacts": 3239,
+    "tests": 324,
+    "test_seconds": 1.989,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Deletion UI lacks complete authority, confirmation and recovery context; no deletion performed.",
+    "Personal/organization navigation and access invitation steps do not establish identities, permissions or census.",
+    "Version management preserves host and package-type branches; screenshot captions are not image inspection.",
+    "No accepted policy, independent assurance, rights clearance or native rollout."
+  ]
+}

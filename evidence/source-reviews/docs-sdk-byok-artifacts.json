@@ -1,0 +1,653 @@
+[
+  {
+    "artifact_id": "0d7557428a497918ab9f7b8c",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/auth/byok.md",
+    "content_sha256": "bcf75e87e621ce5d52515c2b152e16d2d0a2da4310937c187e3a9ca93e84eb37",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T04:48:37Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Entire pinned597-line source read.225 independently stated operative claims preserve provider configuration precedence, authentication/session lifecycle, dynamic routing/ports, model discovery caching/replacement, each language example, limitations and troubleshooting. All106 parser candidates explicitly accounted; editorial wrappers are not requirements. Permission approve_all examples are unsafe broad illustrative configuration, not authority. Linked SDK/auth/provider pages and actual native behavior/rights are unresolved; this full-file receipt is not independent omission certification.",
+    "supporting_claims": "evidence/source-reviews/docs-sdk-byok-claims.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "e208045cec38fe6b62b83ac0",
+        "text_sha256": "33dd5eca52f932f6a939215fc31010dba2c707b083fdf114ce9430dcc7611877",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-001: SDK BYOK supplies provider credentials instead of Copilot authentication. DOCS-SDKBYOK-002: Direct provider billing is presented as a motivation, not evidence of zero cost. DOCS-SDKBYOK-003: Enterprise deployment and custom hosting are suggested use contexts. DOCS-SDKBYOK-004: Article metadata enables FPT versions. DOCS-SDKBYOK-005: Article metadata enables GHEC versions. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "e3768596d9cf21c27195e6b5",
+        "text_sha256": "c084d80f8f90dd9322b0d534560551515f0075e168a47fe7a4a86cb4ec25d9ba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-006: A former SDK authentication path redirects here; linked authentication content is not reviewed. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "f0209ec2fb3f9ff1f3ae35cb",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines17–18 in (preamble) contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "f36d0f3856e19dfadcae5c75",
+        "text_sha256": "c8add6fe90640af0be7dfac3ecac1347224c5b7345866aab868106c83fdb2a60",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines22–22 in Supported providers contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "65bc98486d3ace7eaaec75ec",
+        "text_sha256": "7033868ef1e5917eaa2ce98749ff8414c656d618be6db5d19368bd67af110ee4",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines23–23 in Supported providers contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "842d338f5edf4b8d0e7d12b1",
+        "text_sha256": "54f849f578602f6e1ca268e9c3422faf362fde0153ae59e431fe73b00494f352",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-007: OpenAI and compatible endpoints use the openai provider type. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "ba4efa2b51352a8e30f0f04d",
+        "text_sha256": "910229671bea5eedddf5372892b0fd5b1b4275708480c6acde9f4c39b01df5cd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-008: Foundry /openai/v1 endpoints use openai. DOCS-SDKBYOK-009: Native Azure endpoints use azure. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "9eda33a27b5816e87dc7242c",
+        "text_sha256": "42371b1452da179340630b4c9127facda3483380a85082a9eccd814c076d2e21",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-010: Anthropic identifies the Claude provider family. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "cae96c6281f32e9ce89925ac",
+        "text_sha256": "f0eddecb72e6361ab05e2b29d2d94dc3624b37b8a3255e7552c88e6abb4b1029",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-011: Ollama is listed as local OpenAI-compatible. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "5f2491a9e7d62c233cfb147b",
+        "text_sha256": "7c384f87043f3cfc9fc14452c120826933966f1f12f5b85102db063cb27a5d69",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-012: Foundry Local is listed as device-local OpenAI-compatible. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "ecc5c2e1c2e5b78339d5bc02",
+        "text_sha256": "bb326425a554390056145d6c1f7b540362e6cfa34290f68c6ebe4aaa66ca83c5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-013: Other compatible servers include vLLM and LiteLLM. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "93089102d87c8066f4c073e4",
+        "text_sha256": "fd2e63dfaa468bde86700f8df467849559c0de9c66f3f7fd876730bea16109b3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-014: Foundry is characterized as a common enterprise deployment target, not required architecture. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "d89299e814e67794897f51a5",
+        "text_sha256": "6cea9388784e33f0df5ab88c343e57b8b5ebe7fe901312169080e5450b13215b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines35–36 in Supported providers / Quick start: Microsoft Foundry contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "d5378bbbd50430acb0c7ba6e",
+        "text_sha256": "a81b79a5d0f5e3d1b843e87a2f4278a0db1cf98d4c7895216d7a76822a512664",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-015: Python quick-start example imports the Copilot client. DOCS-SDKBYOK-016: Python quick-start example explicitly starts the client. DOCS-SDKBYOK-017: Python quick-start example sets a gpt-5.2-codex model. DOCS-SDKBYOK-018: Python quick-start example uses approve_all permission handling; this unsafe broad example is not project authorization. DOCS-SDKBYOK-019: Python quick-start example sets openai provider type. DOCS-SDKBYOK-020: Python quick-start example sets a resource-specific /openai/v1 URL. DOCS-SDKBYOK-021: Python quick-start example sets responses with an older-model completions alternative comment. DOCS-SDKBYOK-022: Python quick-start example reads FOUNDRY_API_KEY from environment. DOCS-SDKBYOK-023: Python quick-start example prints assistant-message content. DOCS-SDKBYOK-024: Python quick-start example signals completion on session idle. DOCS-SDKBYOK-025: Python quick-start example registers its event handler. DOCS-SDKBYOK-026: Python quick-start example sends a simple arithmetic prompt. DOCS-SDKBYOK-027: Python quick-start example waits for the completion event. DOCS-SDKBYOK-028: Python quick-start example disconnects the session. DOCS-SDKBYOK-029: Python quick-start example stops the client. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "4b7665007a3d5849b9640fa0",
+        "text_sha256": "adf090516494482732438cc6175afb15f7cc7e52fa71b2c67c8982fd001a2041",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines76–77 in Supported providers / Quick start: Microsoft Foundry contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "54a92a858e5de48698797403",
+        "text_sha256": "6269676919220661814fda4af6c4bb4ecf698753ec7aaf0aff2e6fd9e07cc2d5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-030: TypeScript quick-start example imports the SDK client. DOCS-SDKBYOK-031: TypeScript quick-start example constructs the client. DOCS-SDKBYOK-032: TypeScript quick-start example uses a deployment-name model example. DOCS-SDKBYOK-033: TypeScript quick-start example sets openai type. DOCS-SDKBYOK-034: TypeScript quick-start example sets a resource /openai/v1 URL. DOCS-SDKBYOK-035: TypeScript quick-start example sets responses with an older-model completions comment. DOCS-SDKBYOK-036: TypeScript quick-start example reads the Foundry key from environment. DOCS-SDKBYOK-037: TypeScript quick-start example subscribes to assistant messages. DOCS-SDKBYOK-038: TypeScript quick-start example logs message content. DOCS-SDKBYOK-039: TypeScript quick-start example uses sendAndWait for an arithmetic prompt. DOCS-SDKBYOK-040: TypeScript quick-start example stops the client. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "9e2a908c149fd4245004a7f1",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines103–104 in Supported providers / Quick start: Microsoft Foundry contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "ad44fcaf0a89c46aff4820c6",
+        "text_sha256": "1375f0941397720c4944949f7d1fa244f1f55d639f60782a69d304f60be46c96",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-041: Go quick-start example imports the Go SDK. DOCS-SDKBYOK-042: Go quick-start example creates a background context. DOCS-SDKBYOK-043: Go quick-start example constructs a client. DOCS-SDKBYOK-044: Go quick-start example starts the client. DOCS-SDKBYOK-045: Go quick-start example panics on startup error. DOCS-SDKBYOK-046: Go quick-start example defers client shutdown. DOCS-SDKBYOK-047: Go quick-start example uses a deployment-name model example. DOCS-SDKBYOK-048: Go quick-start example sets openai type. DOCS-SDKBYOK-049: Go quick-start example sets a resource /openai/v1 URL. DOCS-SDKBYOK-050: Go quick-start example sets responses with an older-model completions comment. DOCS-SDKBYOK-051: Go quick-start example reads the Foundry key from environment. DOCS-SDKBYOK-052: Go quick-start example panics on session creation error. DOCS-SDKBYOK-053: Go quick-start example uses SendAndWait for an arithmetic prompt. DOCS-SDKBYOK-054: Go quick-start example panics on send error. DOCS-SDKBYOK-055: Go quick-start example type-checks assistant-message response data. DOCS-SDKBYOK-056: Go quick-start example prints response content. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "b805992fa9b00a8043296107",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines150–151 in Supported providers / Quick start: Microsoft Foundry contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "8f5e41c14c41db63ea653d2a",
+        "text_sha256": "92a0859b4800cbdbcedd7f6a01cfbc274e454f439a81ad94e8e297a0cf1c4198",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-057: .NET quick-start example imports the .NET SDK namespace. DOCS-SDKBYOK-058: .NET quick-start example uses async-disposable client lifetime. DOCS-SDKBYOK-059: .NET quick-start example uses async-disposable session lifetime. DOCS-SDKBYOK-060: .NET quick-start example uses a deployment-name model example. DOCS-SDKBYOK-061: .NET quick-start example sets openai type. DOCS-SDKBYOK-062: .NET quick-start example sets a resource /openai/v1 URL. DOCS-SDKBYOK-063: .NET quick-start example sets responses with an older-model completions comment. DOCS-SDKBYOK-064: .NET quick-start example reads the Foundry key from environment. DOCS-SDKBYOK-065: .NET quick-start example awaits an arithmetic prompt response. DOCS-SDKBYOK-066: .NET quick-start example prints nullable response content. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "b6b3d78cc341db83599fa7a5",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines176–177 in Supported providers / Quick start: Microsoft Foundry contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "f00cb96ac9fce207ca97b662",
+        "text_sha256": "a4544d49207e761dbf8be76783c221384d098a4813801ce3978e07371a5ed57d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-067: Java quick-start example imports the Java SDK client. DOCS-SDKBYOK-068: Java quick-start example waits for client startup. DOCS-SDKBYOK-069: Java quick-start example uses a deployment-name model example. DOCS-SDKBYOK-070: Java quick-start example uses APPROVE_ALL permission handling; this unsafe broad example is not project authorization. DOCS-SDKBYOK-071: Java quick-start example sets openai type. DOCS-SDKBYOK-072: Java quick-start example sets a resource /openai/v1 URL. DOCS-SDKBYOK-073: Java quick-start example sets responses with an older-model completions comment. DOCS-SDKBYOK-074: Java quick-start example reads the Foundry key from environment. DOCS-SDKBYOK-075: Java quick-start example waits for session creation. DOCS-SDKBYOK-076: Java quick-start example sends and waits for an arithmetic prompt. DOCS-SDKBYOK-077: Java quick-start example prints response content. DOCS-SDKBYOK-078: Java quick-start example waits for client shutdown. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "bb8f39e3636cdab4413a92ed",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines203–204 in Supported providers / Quick start: Microsoft Foundry contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "f9409466c4fb34b91a587438",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines210–210 in Supported providers / Provider configuration reference / ProviderConfig fields contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "822cf846ee93290bd7696522",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines211–211 in Supported providers / Provider configuration reference / ProviderConfig fields contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "6503e4f8261a9f34fe172896",
+        "text_sha256": "04b0e5848dea908b34128ed1f1664d02680f29e0e5b641219e1723c91c6f4948",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-079: Provider type permits openai, azure or anthropic and defaults to openai. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "0af0df1886e1fd7c95c2368d",
+        "text_sha256": "fc97a5951079332f90fffb1a476605389d5cff5c0b8354e959ae75ff933fa428",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-080: The provider endpoint URL is required. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "507e6c93eb17b35c2556d56c",
+        "text_sha256": "e5cca631bb5f15a2c6da4db233f6908b7ae47548f40441ca43a31615e5acfb55",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-081: API keys are optional for local providers such as Ollama. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "c6f0f87497b1619dff965f83",
+        "text_sha256": "88a1a1d0884ae4978811ac100b76a7aae76862301b804cc2b9ce312225f5a617",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-082: A static bearer token takes precedence over an API key. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "439ecb063bfdf1aa172707a6",
+        "text_sha256": "026f8111ba3e68e0a8eaada410069d0826ccf39816de7ae5aa175399954516d3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-083: A token-provider callback takes precedence over both a static bearer token and an API key. DOCS-SDKBYOK-084: The token-provider field supplies tokens on demand. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "e2ed95bba6867d4d9659bb20",
+        "text_sha256": "a103c76ea9146685f0d80e234827fa288379422584efbe410d4f259739af865e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-085: Completions uses Chat Completions for broad model compatibility. DOCS-SDKBYOK-086: Responses is described as supporting multi-turn state. DOCS-SDKBYOK-087: Responses is described as supporting tool namespacing. DOCS-SDKBYOK-088: Responses is described as supporting reasoning. DOCS-SDKBYOK-089: Anthropic uses Messages regardless of wireApi. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "7003af7eb8f9cc59e92372e4",
+        "text_sha256": "ccc0a2118573e1c1f6ff12d7d699ef3dce493568b554a6b9535c1fd50e483208",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-090: Setting an Azure API version selects versioned deployment routing. DOCS-SDKBYOK-091: Omitting an Azure API version selects the GA versionless v1 route. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "baf5533080fb7dae2d91c1ee",
+        "text_sha256": "3a072d6107e1b7fc1fc9bed8b36e46844cba43f2734dc6156a7314fe1677c9b3",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines222–222 in Supported providers / Provider configuration reference / Wire API format contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "2984fa30566034f60bc8a157",
+        "text_sha256": "8d7fe1536fb17e7b1be204ff029420b4383544ebb04999485702d34aedacd25e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-092: Wire format defaults to completions and the /chat/completions route. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "ec0e64ff7f76f0485b72db6c",
+        "text_sha256": "e7abcff024c3caa62fc4364df995d5a6b983c2ae619763f2253fdf7e2142182a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-093: Responses format has the stated multi-turn, namespacing and reasoning purposes; not tested here. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "decd14a585696d9b7741bceb",
+        "text_sha256": "e6d13197e4e8e78276d16d0da9adf9759d689d2d18e687bc0609de1c90fce804",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-094: The Anthropic wire-format exception is repeated. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "b939d72bdb14c3c234a8173a",
+        "text_sha256": "7b36857181c76d55a9bc0124e4dda8698347a18391f6dc2fa21aadc54f3fe1ac",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines231–231 in Supported providers / Provider configuration reference / Type-specific notes contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "d949032bcdc57953f8a170b9",
+        "text_sha256": "f4dc95840a0e337ba9b60ddd3e5f457bf0b3a24a6b39c4dfdcb9f1f2671c399d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-095: Openai type supports OpenAI and compatible endpoints. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "86df9d4b7bc5889780210a6e",
+        "text_sha256": "d467bf5ce169e6a28ee3a88e95579e36382d8537be6d92bf40dc3e743c0a8284",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-096: OpenAI base URL should contain its full API path. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "8e6739c5990d489d9f39d287",
+        "text_sha256": "00ad3f5b952f0c7dfbfdc213a5e886b00c43d40314d861e76d3647fa79a46170",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines235–235 in Supported providers / Provider configuration reference / Type-specific notes contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "2806385b2a662b071ab91107",
+        "text_sha256": "6b8bee89420fbbfbbe35830cc0df6d42c91f0d5d65c28d7cf07c0c6015d05238",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-097: Azure type is the native Azure endpoint choice. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "130bd24b309feb4bf9858c38",
+        "text_sha256": "c481949fa8f1a81e624d548a844e8793f8e9fdddbb887f82697ec009940c2ea1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-098: Azure base URL may be a host or full project URL. DOCS-SDKBYOK-099: Azure URLs accept an optional trailing slash. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "101d9b6b755df3250b0990f7",
+        "text_sha256": "5259503329e7cef0250bb5fafe2baad0c3a3bf803abba3952a92b24187176b83",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-100: Runtime routing is described as retaining the project prefix. DOCS-SDKBYOK-101: Responses without an API version adds /openai/v1/responses beneath the project prefix. DOCS-SDKBYOK-102: Project URLs require an updated Copilot CLI runtime. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "a1d2bc3a02aada99aab31cc4",
+        "text_sha256": "9fe38175812749df40cffe2a36a8d0f27fb5be45f1d145be94d6b953f7171afc",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines240–240 in Supported providers / Provider configuration reference / Type-specific notes contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "c654ae8f3d4f593bf0b4360a",
+        "text_sha256": "48705411342b69073e5385e51915a1267aab10ab952a4920a55db7db58cb9626",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-103: Anthropic type addresses the direct Anthropic API. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "835a18816a9e4421b3feb8cc",
+        "text_sha256": "67817d21365a8f547754937ffc715570ee0cde514b8e8487dab54c26f9c58333",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-104: Anthropic uses its provider-specific format. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "7506b2e57cc0ea7682aafafd",
+        "text_sha256": "b94b3b34acb23448b6adf3a048a6649cdff55de7c8172567b0cf1e87747bee69",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-105: OpenAI configuration example uses openai type. DOCS-SDKBYOK-106: OpenAI configuration example uses api.openai.com/v1 URL. DOCS-SDKBYOK-107: OpenAI configuration example uses OPENAI_API_KEY environment lookup. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "338b06cc2a503ebf6b9c26ac",
+        "text_sha256": "58e148c5e2bf6ff623cfc92d9054059003894e44f8b85cff6b294621c7876c65",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-131: For a native Azure endpoint choose azure; the hostname alone does not override the compatible-path exception. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "f5aa7fb1625d856f9d28e1fa",
+        "text_sha256": "a476755928b820c878ce6c6accb48e00ba352a9a2c9c8a01b3bb3c88f7fbdfd7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-108: native Azure configuration example uses azure type. DOCS-SDKBYOK-109: native Azure configuration example uses resource-host URL (full project URL allowed by comment). DOCS-SDKBYOK-110: native Azure configuration example uses AZURE_OPENAI_KEY lookup. DOCS-SDKBYOK-111: native Azure configuration example uses 2024-10-21 API-version example, not a universal required value. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "18e0f61d047abf9d5fa0e3bd",
+        "text_sha256": "829066280ac629a3c81a52f7eb9274c08f1425753ed00b39cd0c7c39aeda4913",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-132: For Foundry /openai/v1 compatible deployment paths choose openai. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "1c647748be67686208f119fa",
+        "text_sha256": "a3b43b249c8a575d9eca7cd86cc1a1b34a79243844dac3c84179390e1174fabb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-112: Foundry configuration example uses openai type. DOCS-SDKBYOK-113: Foundry configuration example uses resource /openai/v1 URL. DOCS-SDKBYOK-114: Foundry configuration example uses FOUNDRY_API_KEY lookup. DOCS-SDKBYOK-115: Foundry configuration example uses responses format with GPT-5-series comment. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "0f0dd27380dcab2c36a676a1",
+        "text_sha256": "af194ef6c8e3507bc84b3f0c11b244b666a019dd0a811033f98c097445ec9d70",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-116: Ollama configuration example uses openai type. DOCS-SDKBYOK-117: Ollama configuration example uses localhost11434/v1 URL. DOCS-SDKBYOK-118: Ollama configuration example uses no API key in the local example. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "d53c495e86eb5f0ea592180d",
+        "text_sha256": "5f67fb0be451d22e3d3881484ef94aac79fbc83e242495372787aeb172ae9b62",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-133: Foundry Local hosts models on the device via a compatible API. DOCS-SDKBYOK-134: Foundry Local installation is linked externally and not independently inspected. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "91bd1f740a97ff44dfb79b5b",
+        "text_sha256": "398f3e0dace87edb61f23efc9b5a952f4af2d391ff0c872402787f537513ae8f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-119: Foundry Local configuration example uses openai type. DOCS-SDKBYOK-120: Foundry Local configuration example uses a localhost port placeholder /v1 URL. DOCS-SDKBYOK-121: Foundry Local configuration example uses no API key in the local example. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "7ba96d8632d3c08f5ff44721",
+        "text_sha256": "2b0ca4b68ff6fe3c6dab00a7b69303eff76025f44052c04b15b89cf4de94b879",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-135: Foundry Local's service port is dynamic rather than fixed. DOCS-SDKBYOK-136: Inspect the currently listening service port before selecting baseUrl. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "af92255b6cfd9fe18589d44e",
+        "text_sha256": "62b16a0591905269925989c79db589eb7b7a94ce9fc1a88d810a5999dbb9cd27",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines309–309 in Supported providers / Example configurations / Microsoft Foundry Local contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "57dd73695b7c2b02f1874572",
+        "text_sha256": "14330805744fd267d0ab263ac14aecefabfd3533f5030398fb19d25d12a8052b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-137: Local setup example Windows installation uses winget and requires that package manager; not executed. DOCS-SDKBYOK-138: Local setup example macOS/Linux installation directions are external, unreviewed; not executed. DOCS-SDKBYOK-139: Local setup example lists available models; not executed. DOCS-SDKBYOK-140: Local setup example runs an example model and starts the server; not executed. DOCS-SDKBYOK-141: Local setup example queries service status to identify its port; not executed. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "0072bdb49caa269e5fbca150",
+        "text_sha256": "7ed4ecd37c437aa2705babfa67302411f9394d6885b085b93d4e5556b671b6ff",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-122: Anthropic configuration example uses anthropic type. DOCS-SDKBYOK-123: Anthropic configuration example uses api.anthropic.com URL. DOCS-SDKBYOK-124: Anthropic configuration example uses ANTHROPIC_API_KEY lookup. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "c5df0fc2b82ba994430bf875",
+        "text_sha256": "76158462a9471fda3b48cec7b43b3a5e47d58b909aa068e575c6b12ea9e6cf8e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-142: Some providers require bearer authentication instead of API keys. DOCS-SDKBYOK-143: The runtime invokes a token callback before outbound provider requests. DOCS-SDKBYOK-144: Token caching is managed by the callback or its wrapped identity library. DOCS-SDKBYOK-145: Token refresh is managed by the callback or its wrapped identity library. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "72f3525648991f25c3405957",
+        "text_sha256": "ebc9443e7a24d2ca406c7bfc22b338ddb5768739755f93a289996b81689e6462",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-146: An already-held token may be supplied as a static bearer token. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "14440a69e628a1454e477ec2",
+        "text_sha256": "4a2cb3810a0c178c7c16dff63e3e07ea25f6af6300c68a22ac989a23e1653d73",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-125: static bearer configuration example uses openai type. DOCS-SDKBYOK-126: static bearer configuration example uses resource /openai/v1 URL. DOCS-SDKBYOK-127: static bearer configuration example uses environment token setting the Authorization header. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "15490944591b259b285eecf2",
+        "text_sha256": "1c0f034ba3b338fa8553712bb465755282cfac2ba52b327f11200df1c4d58b24",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-147: Static bearerToken accepts only a token string. DOCS-SDKBYOK-148: The SDK does not automatically refresh a static token. DOCS-SDKBYOK-149: Expired static tokens cause requests to fail. DOCS-SDKBYOK-150: Replace an expired static token by creating a new session with a fresh token. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "2528fbc52cd82e2d0b5a46e9",
+        "text_sha256": "dc3a0abf51c17f0f838fadb39319f97abfb3a6d4b321bef316ac3576b2a8b880",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-151: Use token-provider callbacks for on-demand acquisition. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "1d9bb775db12e58e2348dd72",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-152: The callback snippet skips documentation validation; compilation/runtime behavior is not certified. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "06abd2f4d69e89b6f1e21ab8",
+        "text_sha256": "13ab3945da798952ba54576413d4d25c7817c0fc5187c586550dac8ef1943bf8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-128: callback bearer configuration example uses openai type. DOCS-SDKBYOK-129: callback bearer configuration example uses custom endpoint /v1 URL. DOCS-SDKBYOK-130: callback bearer configuration example uses an async token-acquisition callback. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "74468d3a4579086fee78cf5b",
+        "text_sha256": "776aa0a334207e203b8c5f0163038e9bba25fccbc06fd4591ab03b0b20fcc2c8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-153: Entra token acquisition and refresh are delegated to a linked managed-identity document, not reviewed here. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "fba3cc5cf8b202a9fbc9eff5",
+        "text_sha256": "7a946100712930b97fbb3bccb4033e9ecb1061ff40fefcaf08768a1686805898",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-154: The CLI server may lack knowledge of custom provider models. DOCS-SDKBYOK-155: A client-level model-list handler may supply standard ModelInfo records. DOCS-SDKBYOK-156: The handler enables downstream discovery without querying the CLI. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "75d1dad2683b6175a5367d11",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines373–374 in Supported providers / Custom model listing contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "a9585f6f6022946185d3f726",
+        "text_sha256": "cb79ffeb68ea0840cd4cefab4610515e355356016b7a7efcb774aeed9a4d5d73",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-157: TypeScript discovery example onListModels returns custom records; example capability values are not verified model capabilities. DOCS-SDKBYOK-158: TypeScript discovery example sets an example identifier; example capability values are not verified model capabilities. DOCS-SDKBYOK-159: TypeScript discovery example sets an example display name; example capability values are not verified model capabilities. DOCS-SDKBYOK-160: TypeScript discovery example sets vision support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-161: TypeScript discovery example sets reasoning-effort support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-162: TypeScript discovery example sets128000 context-token limit; example capability values are not verified model capabilities. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "c4d009f395dd46e11c443f31",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines394–395 in Supported providers / Custom model listing contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "7823bd24c9abacae2162bb90",
+        "text_sha256": "fdaa6835179beb409fe06d54f650ee7ef3cc364278b2ba900dc920a4cea88e52",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-163: Python discovery example on_list_models lambda returns records; example capability values are not verified model capabilities. DOCS-SDKBYOK-164: Python discovery example sets an example identifier; example capability values are not verified model capabilities. DOCS-SDKBYOK-165: Python discovery example sets an example display name; example capability values are not verified model capabilities. DOCS-SDKBYOK-166: Python discovery example sets vision support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-167: Python discovery example sets reasoning-effort support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-168: Python discovery example sets128000 context-token limit; example capability values are not verified model capabilities. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "b8eb04b61e24bc1d77927bc7",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines415–416 in Supported providers / Custom model listing contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "322785195f5fb37aeb825728",
+        "text_sha256": "7e8ca91422b06ccbf4a8d630d19b54f113a450f4a7d53b12f938066f5634e415",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-169: Go discovery example OnListModels receives a context and returns records/error; example capability values are not verified model capabilities. DOCS-SDKBYOK-170: Go discovery example sets an example identifier; example capability values are not verified model capabilities. DOCS-SDKBYOK-171: Go discovery example sets an example display name; example capability values are not verified model capabilities. DOCS-SDKBYOK-172: Go discovery example sets vision support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-173: Go discovery example sets reasoning-effort support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-174: Go discovery example sets128000 context-token limit using a pointer helper; example capability values are not verified model capabilities. DOCS-SDKBYOK-175: Go discovery example returns nil error; example capability values are not verified model capabilities. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "299351fe34b7016c5543218e",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines445–446 in Supported providers / Custom model listing contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "b78ffb74e38f1b57b51b1939",
+        "text_sha256": "1280ad578eb9bde14549430529a436406f24fdda883d517d19d372502241ca07",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-176: .NET discovery example OnListModels returns a Task-backed list; example capability values are not verified model capabilities. DOCS-SDKBYOK-177: .NET discovery example sets an example identifier; example capability values are not verified model capabilities. DOCS-SDKBYOK-178: .NET discovery example sets an example display name; example capability values are not verified model capabilities. DOCS-SDKBYOK-179: .NET discovery example sets vision support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-180: .NET discovery example sets reasoning-effort support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-181: .NET discovery example sets128000 context-token limit; example capability values are not verified model capabilities. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "8c18e4fdfd1078d6f9ce69a4",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines469–470 in Supported providers / Custom model listing contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "84047adf25143170bfcd301a",
+        "text_sha256": "4d735f909a1cb1bf28e68a18bb4646e9c86a6252f60fd9df6dd151ab429a2491",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-182: Java discovery example model-list callback returns a completed future; example capability values are not verified model capabilities. DOCS-SDKBYOK-183: Java discovery example sets an example identifier; example capability values are not verified model capabilities. DOCS-SDKBYOK-184: Java discovery example sets an example display name; example capability values are not verified model capabilities. DOCS-SDKBYOK-185: Java discovery example sets vision support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-186: Java discovery example sets reasoning-effort support false; example capability values are not verified model capabilities. DOCS-SDKBYOK-187: Java discovery example sets128000 context-token limit; example capability values are not verified model capabilities. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "58be6ce18e425c55fd0c58dd",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines490–491 in Supported providers / Custom model listing contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "5b5221ce172a08cc919e951d",
+        "text_sha256": "809f3b1d26728d1937cfacb14eaa977fb01f28c64410702945619390ce14831e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-188: Model-list handler results are cached after the first call. DOCS-SDKBYOK-189: The handler entirely replaces the CLI models.list RPC. DOCS-SDKBYOK-190: No server fallback occurs when the custom handler is used. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "dd79c157f34ddc2205911da2",
+        "text_sha256": "e67e14416d385bac8b5441d119bb1d1d185c8f4440d4f1d1b7f03f3159392338",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-191: Some Copilot behavior may differ with BYOK. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "202aec1608601629d7dd58fd",
+        "text_sha256": "1a0ecd92342838bcf24dd8628fca47a5c1a431ec18285222e04ab9fc15c1c06f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-192: Available models are limited to those the provider supports. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "d31ab3006c091442f7b4cddb",
+        "text_sha256": "a9ec703e95cad8f4a2ccafd331ad2b248915b760224e32b771f999151cd017be",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-193: Provider rather than Copilot rate limits apply. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "845eef36e1160ffea5c964e7",
+        "text_sha256": "9965f81c5593e73983a2112277275e00f29c3e7ae36a6cd865f07df3f5d0c37f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-194: Provider rather than Copilot tracks usage. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "67d76fcb2ff64a086f4c564d",
+        "text_sha256": "a704de5168a8aeee9bfd57050b8faa8d56fdbcc627d8fe0a80b8c657f9ae4939",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-195: BYOK usage does not consume Copilot premium-request quota; provider charges are not thereby waived. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "062cb6c32038637ce854aa2a",
+        "text_sha256": "df800c08c5e93bb9459c0290d1bc693241c4089aa5a114dcee565714982cefb0",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines508–508 in Supported providers / Limitations / Provider-specific limitations contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "f5c600b9b3b5f9a6bc4af9d5",
+        "text_sha256": "b642044cc2455ec66e16b030ca877ccdaf2b9c1a6459a14612d3a0a207a5b8a8",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines509–509 in Supported providers / Limitations / Provider-specific limitations contain editorial table headings/separators, tab wrappers, label/transition or markdownlint suppression metadata. Full source context was read; this segment contributes no distinct runtime requirement. Adjacent operative statements are retained separately; neither language/tab presence nor suppression certifies validation."
+      },
+      {
+        "candidate_id": "b5d8f134b91ec37ecaaee07b",
+        "text_sha256": "b7dd42441ad7a6c8fecc64fcb7c6860980f0c255cc1b7a15529d82b84bd8d489",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-196: Foundry Local is described as local only. DOCS-SDKBYOK-197: Foundry Local model availability depends on hardware. DOCS-SDKBYOK-198: Foundry Local does not require an API key. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "344dd7fd8b7d91f32947b6c7",
+        "text_sha256": "b24e8ca41591ab0494db53521c67723c6331074faa04bc011988b83715d490db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-199: Ollama does not require an API key. DOCS-SDKBYOK-200: Ollama is described as local only. DOCS-SDKBYOK-201: Ollama model support varies. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "cc7979c1e0dab45857a84166",
+        "text_sha256": "3480c7e7e32ab06b98efb2e8eb2d935e1a7fad5cee7941fa382689342b0d2c43",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-202: OpenAI rate limits apply. DOCS-SDKBYOK-203: OpenAI quotas apply. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "0533c90aab9cfccae1cdeb92",
+        "text_sha256": "e3d6f95915ee499935315cf52c2f835382a29c1369fd417dcf07305cb143869a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-204: BYOK sessions require the model parameter. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "06639fa8be3768e951aa6e74",
+        "text_sha256": "8d3424894f883cea69009caa06002bbd25d598048653404c80769141ca5454ba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-205: Troubleshooting illustrates a missing-model session as erroneous. DOCS-SDKBYOK-206: Troubleshooting illustrates a session with an explicit model as the correction. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "87428e4a5d4ef0df3affba6c",
+        "text_sha256": "908d3c62e6ed3c7f46bc405d9553558253f101626ecb5e3f66ae6a50c221e87f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-207: Troubleshooting requires endpoint-type selection by native versus compatible routing. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "4f251b7cc246f772086dd057",
+        "text_sha256": "a2ec469b2debec2ef95bb1c00f54733acffd8cc97e4cb15d7a3e6663e3471342",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-208: Native Azure host with openai is shown as an incorrect configuration. DOCS-SDKBYOK-209: Native Azure host with azure is shown as the correction. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "26b12b1bd9ee0909bd509041",
+        "text_sha256": "01175573d776f0d55bf5bc6ef67353ca4607bfb3406c74ea931d65f06a3e7050",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-210: Foundry's compatible /openai/v1 route is the exception using openai. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "e533a0918a908d98b188ee55",
+        "text_sha256": "fd42a210e1bb591eba255345ef65d703bb98bd33b148eb1d02e114d0265eb426",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-211: Compatible Foundry URL paired with openai is shown as correct. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "e6ca1fde852f5b76ab6650e9",
+        "text_sha256": "6561498b1339d131e936937b6a07274613c1970637d9b0df0d49cac3360ee63c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-212: For refused Ollama connections check that the service runs and is reachable. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "70912132874211768e12bcde",
+        "text_sha256": "4e5213661c24432816df4130833b2558858418a86227ab1e3431cbb8ca8f7c0d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-213: Ollama troubleshooting queries the local models endpoint. DOCS-SDKBYOK-214: Ollama troubleshooting illustrates starting its server. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "d87ed4be0cfee75288911eb8",
+        "text_sha256": "2909e226cb52b1efa67e9b270a66c5eb2b6fe4233de6ce6db29af15f2b3e764e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-215: Foundry Local's dynamic port may change between service restarts. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "8edc10c47c236c8c1b4fc65d",
+        "text_sha256": "1322d6a53136faf5787488541f2b8bd707957aaeaa41cbaeae99fcb064d39ce8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-216: Foundry Local troubleshooting queries service status. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "caa7c09f7b5245cba14fadd6",
+        "text_sha256": "a3b52a675752ab4125b403935ae7cac8c29b17f6200e4d3eac8d73a60c1f0e70",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-217: Match baseUrl to the observed active port. DOCS-SDKBYOK-218: If the service is stopped, launching a model starts it. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "d8fa5fcee96560d79e9a2afb",
+        "text_sha256": "ab18eceb0846c8d5b8606812ba91271381afc2b853c61f7a5a78f242b82f7561",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-219: Foundry Local troubleshooting launches the example model. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "d7ab3a09fd6862f22ab2dada",
+        "text_sha256": "a16871fa54001f44966421fcd17c4242fb556f2f66671b6141ffdb13119d3239",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-220: For authentication failure check key correctness. DOCS-SDKBYOK-221: For authentication failure check key expiry. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "e65c4e3b2aca96a6dbf2a73d",
+        "text_sha256": "d2e71bd10370b5ae70fe33a996562cc0ea9c5c27244bc377213ddd26d6719f2b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-222: Check endpoint formatting against the provider. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "2e54c96ae627d7f6971c2a70",
+        "text_sha256": "1f579f13d6bc8bf0ed015da37108d3c8ac34afc90d87a6d3540a26f0f04697e6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-223: Supply the entire bearer token rather than a prefix. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "eea7e26f34a59467b645c0b7",
+        "text_sha256": "d32e0301b95b903b91bf436aafa15b03f781199365558386f11cdf3b20399ea5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-224: Further authentication guidance is linked but not reviewed. Reference-only; not policy or observed execution."
+      },
+      {
+        "candidate_id": "ad79a040bc7c44b4b7d91f68",
+        "text_sha256": "e952dd81952c6912d5a553b6fc471202fbe03d624dd34bb71b64a7595a57e3f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKBYOK-225: The SDK quick-start is linked but not reviewed. Reference-only; not policy or observed execution."
+      }
+    ]
+  }
+]

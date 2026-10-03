@@ -1,0 +1,1875 @@
+{
+  "schema": "ges.bounded-inventory-reconciliation.v1",
+  "issue": 24,
+  "reviewed_at": "2026-10-02T20:07:29.562Z",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "scope": {
+    "files": 95,
+    "physical_lines": 259,
+    "bytes": 40109,
+    "parser_candidates": 180,
+    "prior_exact_path_claims": 0
+  },
+  "method": "Exact full-read source path/pin/content digest comparison with corpus artifacts and independent reconstruction of all candidate span digests. Prior claim documents scanned for exact-path overlap, excluding current draft. Provenance only, not semantic completeness.",
+  "artifacts": [
+    {
+      "artifact_id": "13a66c2170bfb3e135c26dcc",
+      "path": "data/reusables/emus/about-guest-collaborators.md",
+      "content_sha256": "a0053ed3eef752d2b47e7c094ac1aecb8ead2b0071e97f5fddd53d66bf67ba52",
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "candidate_id": "7b076c303db0c1eadcd11abc",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "8f88787b35f20aa05d0cc73b2f447f81837bb8a70b5831419c87eedba13d8523"
+        },
+        {
+          "candidate_id": "9e85250fb08e09e5f1ad7fcf",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "1858ecf276d7f6ce66d83b3c107ba6d30f3850155545fc7af34d18884a21f0f3"
+        },
+        {
+          "candidate_id": "73c3771d40f0ca84e967b522",
+          "start_line": 4,
+          "end_line": 4,
+          "text_sha256": "9d78a37cf8ab151c5617e3d0a3cab52fb4e3cc42d265918c56a2aee85ec631a5"
+        },
+        {
+          "candidate_id": "b90228cbd068ab122fa39d37",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "9373264175e1669591a0ec913ce87f01ad0070a71b7afb1d0acd4aaede103ee6"
+        },
+        {
+          "candidate_id": "815a8337b5fbd51d2d942d0a",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "f4ee9a412fefba7b749d98ea4ef6374fe6e65f4da1b666b8fc582fa898c5f67a"
+        }
+      ]
+    },
+    {
+      "artifact_id": "57598310cd1346ed552050b5",
+      "path": "data/reusables/emus/about-team-management-with-idp.md",
+      "content_sha256": "d994de8ee7962a67563ebd2a6afdc5fb2f476e90ec86ed48ff94a8a41d822ea1",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "5033aa742997fdb6c54ba4a7",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "87e97fbf7ff644c3fb28760b20d70c9545e5c3ab7c3e5ee236ccd78a055ac2d9"
+        }
+      ]
+    },
+    {
+      "artifact_id": "05375c4edb84acc15d1ee6e7",
+      "path": "data/reusables/emus/guest-collaborators-note.md",
+      "content_sha256": "8999dce96e81bac2dc071bbb08b4684a5e86f42b700382e4ff5e18e40c942f92",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "fe9a97b08aef1566454338dd",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "497e12c044b73e02d9e74dfa0a34fb8ca6023bf0796f126eaa35114afb5acd7b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "1deedaf6e60e3cdb9c8fa743",
+      "path": "data/reusables/emus/migration-roles-prereq.md",
+      "content_sha256": "41233e35b75c7c141afec0525eea2bb439b3aff6f5dbdae9127bb0db7f894209",
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "candidate_id": "2d21168e3838028f5e681ebb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "6c1849be7469ec5b47628fbfc4ab8616bad549885c30dda3357b28a21fc9e37a"
+        },
+        {
+          "candidate_id": "ab6772734655a20788c0c519",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "78e536d487f0e414d6935c141b8181a4abe541a3ed45b8989b10226e26daea14"
+        },
+        {
+          "candidate_id": "7038ecb10eee613f291ef708",
+          "start_line": 4,
+          "end_line": 4,
+          "text_sha256": "2572949e026fd8561d13ef1cf7b0e099c40767e00456fdd57f12514eea6117ee"
+        }
+      ]
+    },
+    {
+      "artifact_id": "0748ec50b16e07a77157e4e0",
+      "path": "data/reusables/emus/migration-schedule-downtime.md",
+      "content_sha256": "88a55cdf3e243e8165d7167418eedf7ec9c478cf9583c374856efadd56f78a3f",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "4489ae5eeada2dd17852b97f",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "61454e1037b55611da66e9d59734b1d537c51ff3e5904920ef7a676ad8042768"
+        }
+      ]
+    },
+    {
+      "artifact_id": "947a57206cfafbb068268a15",
+      "path": "data/reusables/emus/mixed-systems-note.md",
+      "content_sha256": "c94a1e85035a8512214ce10f2edf7f0aa44de91048a094e888a1c8030e7f6a46",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "3654875f5cb54307235678d6",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "72272fbf84857c5925050ae7f648eb71012e33df8a14015edcdf9e67da369453"
+        },
+        {
+          "candidate_id": "49c4fe304eba71702784e3bd",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "fef7bd00847326f5ae366cfb82dc10369e404e08c7363fa507a4d983a66a37c8"
+        }
+      ]
+    },
+    {
+      "artifact_id": "7d8e631fdd4ed25f5a3fdee7",
+      "path": "data/reusables/emus/sign-in-as-setup-user.md",
+      "content_sha256": "7b2ead4dec023720dd22274c058c212ea018f4397c35a1acd616985bff813c98",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "83ff518575767cacaf18e8b6",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "cf7a8bbbc72d0c109c447e807cd1242d59d9528ace6d3566a86b543c491dee0c"
+        }
+      ]
+    },
+    {
+      "artifact_id": "6af1039e45100d4a53d592c9",
+      "path": "data/reusables/emus/ssh-ca-support-for-emu.md",
+      "content_sha256": "6d4e0f0661dc3c09748f059f6bc10feddc2364eca6aa0ed5fd5e09983c6e85fb",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "a791a9a80a617539e23990ed",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "89bc582eee42e5fd10369f12051ac0dbe0061fdd82cba26e587a99675cbf0d41"
+        }
+      ]
+    },
+    {
+      "artifact_id": "a4f3114b609abb7f8f7e84e4",
+      "path": "data/reusables/emus/use-enterprise-recovery-code.md",
+      "content_sha256": "6441de1b396ee4de4436c1a902bb0d795bb52ecd46bc1308c80e47b7213f5327",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "536f9c1245f53f79f0f0312d",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "d758f2e905e9cd25813a10ac56a6b8d5c70a486c107e0e7ecb71809454f76524"
+        },
+        {
+          "candidate_id": "ae2d2ae8200073b6e2d3bb8e",
+          "start_line": 3,
+          "end_line": 4,
+          "text_sha256": "713e00698a0f8c8227e12c34bfc7df2ea654f19e4ca3221947595528d0a62b71"
+        }
+      ]
+    },
+    {
+      "artifact_id": "2b8ce7158c6e7c0ca16db490",
+      "path": "data/reusables/enterprise-managed/assigning-roles.md",
+      "content_sha256": "dd58257e34e991a268db76b7bd01a40e825b7fac5e36774064be4c5b9807557e",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "49169805f25c7d915158fce3",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "b2c3f9c341560baed7decb679a99cb3124fd117ef075d4e47fe00e98dec40019"
+        }
+      ]
+    },
+    {
+      "artifact_id": "e862dc2427f10c0c8bc8b191",
+      "path": "data/reusables/enterprise-managed/assigning-users.md",
+      "content_sha256": "cc25f2f76b85a70cd85c5b73e6c6273ec2b9abb22274ffd4c486e13f26b6afe5",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "be6adf223757222a2d32d861",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "98f74f02c58e36331c10bd8037a4e76d61118c341f5b812177962bfdccc6f9b2"
+        }
+      ]
+    },
+    {
+      "artifact_id": "2b6e0bfaa4efa8cf5d50f080",
+      "path": "data/reusables/enterprise-managed/emu-prerequisite.md",
+      "content_sha256": "3f5f478858578c3ed375278d1c75c3399140c9ebdbf60ec042c4f3671be9abc1",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "92ebefb4146c6d19d042c4b0",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "f62518d2434b3977ae97395454d2cc8a9f8178c2ed936129ac62112c543ed621"
+        }
+      ]
+    },
+    {
+      "artifact_id": "b6579daeb23c48b847650476",
+      "path": "data/reusables/enterprise-managed/repo-collaborators-note.md",
+      "content_sha256": "ce421010abd353d4c13603162284a9299044a00c6e74d463216078b4b2afafc3",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "9dca64ac3215d8bcaa09b3cd",
+          "start_line": 1,
+          "end_line": 3,
+          "text_sha256": "ca04400285509763e579314ef96d050befcaa2b482ad11ad0586319ac629b172"
+        }
+      ]
+    },
+    {
+      "artifact_id": "8b135df155d3da11d2077421",
+      "path": "data/reusables/enterprise-managed/sso-redirect-release-phase.md",
+      "content_sha256": "03cd877417aa399fbc00387ec6cf4abc68dfaa955ef3e6943e70bbb175559a5d",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "ba281cbc0117b08e7c32c756",
+          "start_line": 1,
+          "end_line": 2,
+          "text_sha256": "ba65156edf9650910e2b6dd0558542084cf074004016cc2c8c8e0b30703259bd"
+        }
+      ]
+    },
+    {
+      "artifact_id": "f852faf3dd8273eed7ed7e64",
+      "path": "data/reusables/enterprise/link-to-ghec-trial.md",
+      "content_sha256": "2a2d7e463b327c16749ba93caad73b261baef96b92cd64ebd3b3c2e0f9f034bb",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "dc89e6100db1692015dc4711",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "f53b000c101eec72d3b9bc322670ab5e9a36b68569edc4c69e4e2062d2da9cb5"
+        }
+      ]
+    },
+    {
+      "artifact_id": "62f3e65aee2b1c0ba37dd150",
+      "path": "data/reusables/saml/about-authorized-credentials.md",
+      "content_sha256": "1c9eeac6cbb33f630430f5db69f2b15138618aceb3c4b5475a2451b17707d3f8",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "7f6e176f7a1033a27c649748",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "727e499dcd3a384e0b83cd5eeaa59b48cd70a557e8a1347ffb31fb1fa91c0301"
+        }
+      ]
+    },
+    {
+      "artifact_id": "7fe2d1681653bd11d4a253cf",
+      "path": "data/reusables/saml/about-linked-identities.md",
+      "content_sha256": "21ab1772a400771664c135552a1218f833eda8bcdc759668df276911a34f94bb",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "6a4719cd3087ffde028aaf44",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "7d93d1be4b9b7d77c1c403d9e2a42f584c0c432f671e15f8dddbbc50544f6672"
+        },
+        {
+          "candidate_id": "1760d6f59f5455453a242f53",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "211112df125f96e4bf0b9478e5ecb81ba39f036451808997c00483ed4f5b1ce8"
+        }
+      ]
+    },
+    {
+      "artifact_id": "5182efce5d07fd9ee519adb1",
+      "path": "data/reusables/saml/about-saml-access-enterprise-account.md",
+      "content_sha256": "a7c21bb532bdb9b4cdb7875e08ed1f6b9ba7c367903c2c3f2ea28c0fd0a9cb6b",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "d0eaf5a74aa21dd4d17ca2fa",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "9fe0f657ab29010ecc6d38950b7666bf8cb3617d4c66484f194632d72024a566"
+        },
+        {
+          "candidate_id": "51a5055845b209b0d592ab48",
+          "start_line": 3,
+          "end_line": 6,
+          "text_sha256": "2a85b6e42084d9ecc1bcb1ced3d343d712ebc7ed68db8f1db9d9953b69112047"
+        }
+      ]
+    },
+    {
+      "artifact_id": "6cca41b904cbd1feddefaa3c",
+      "path": "data/reusables/saml/about-saml-enterprise-accounts.md",
+      "content_sha256": "3ce51d348c045930bc5f48254f213855cd8f7568fb4078b7e63ba05c252a0973",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "7eebaf5ea4c336b40924c103",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "cb524f60da0200d37ee1bed82cc9a2683baf7f966861dcadafe26c0d966dd30f"
+        }
+      ]
+    },
+    {
+      "artifact_id": "353ff487a0c03bb45187b0cc",
+      "path": "data/reusables/saml/assign-yourself-to-okta.md",
+      "content_sha256": "bbd73b6d335cd1344faf0c3d4abe823bb536acd9671a5bf3f1657158e75be117",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "798253ffb53bd7df2aeb3651",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "98d58515797c29e28ae8c4e26fd20c6db88e475cb1668cad87dcc9e031e1ce9f"
+        }
+      ]
+    },
+    {
+      "artifact_id": "2871e1d95bc2b20ed563f776",
+      "path": "data/reusables/saml/authenticate-with-saml-at-least-once.md",
+      "content_sha256": "021e9670ac6b87c9247dbbf4cc21b47f1990d6fcc05e8c4b6caa6282e066c999",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "f355c54c6d2f9dd50b24cade",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "1275bf111a4c88de2f8d47bc5087458de3c04b3ff095fa9a516829230d71e93e"
+        }
+      ]
+    },
+    {
+      "artifact_id": "37c7732ca52d247182d0c3fb",
+      "path": "data/reusables/saml/authentication-loop.md",
+      "content_sha256": "3503fa6d56ff9ff73a8d8ff3618e18e46c1862e2841a0a2f22002f885f47a341",
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "candidate_id": "754beedc627c730e9a581f6a",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "c3c41a7378dd3b3ba0a288d9ab84833ce24f31a79825b860121486bca6d0eb1e"
+        },
+        {
+          "candidate_id": "f95bcfe9a8e83120cbabd64a",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "6fb6753d45265e55c25d8de5096d81f4ab589d67ca025521c1562669ae7330ad"
+        },
+        {
+          "candidate_id": "2f8c807afb5fc519a733c62f",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "4346698f4bc9ddbfc9bda577464111c757f7cd255e86609cf68eb66540a8fa6f"
+        }
+      ]
+    },
+    {
+      "artifact_id": "24ff4073c712651e225ed629",
+      "path": "data/reusables/saml/authorized-creds-info.md",
+      "content_sha256": "e36ed0b6d8b51daac9eda9512c0501e9328e74cd0c3e4535f90a94de42d3f3bd",
+      "candidate_count": 6,
+      "candidates": [
+        {
+          "candidate_id": "c93f056251260498e57797c6",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "dd31a953f838498db2250aa38c66e0e3d28a1e96f76d6b0c6cd474263cd54030"
+        },
+        {
+          "candidate_id": "6312c9bca3b438750ecefb52",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "7ccc8d65eda80ee4db584f353f18e76736a4c9e900f61750acfa0713a1670556"
+        },
+        {
+          "candidate_id": "3e8fdad0a185ae945d5767c3",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "de3a720c9c0bf572982a6e1f6345b625a148f35cf509f8c4bb62cb1de1669054"
+        },
+        {
+          "candidate_id": "a8592f0706753f00eee7bbfd",
+          "start_line": 6,
+          "end_line": 6,
+          "text_sha256": "dae48ae70d7304e1b5a6f43aee21104e7df233c808f86e28250fe768adb8e3cd"
+        },
+        {
+          "candidate_id": "d953745c884d839ca98f7898",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "ceabff59fe8bd432abf45b314ef06bd3dcec7cb58e79f0a7e9326894d0574e3d"
+        },
+        {
+          "candidate_id": "52381b0e41c7025b4f193e1c",
+          "start_line": 8,
+          "end_line": 8,
+          "text_sha256": "22bab756ff9c1cb4861fd22714d8821cc4acc6eb8b117ad8982a2261f7f2649f"
+        }
+      ]
+    },
+    {
+      "artifact_id": "7095529b16f2dc48f5d991f2",
+      "path": "data/reusables/saml/click-enterprise-account-application.md",
+      "content_sha256": "2641e0fb0692c66d860fc681b55a97be947cc658f36140aa9ed2db5cd727f457",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "5bbf97815c6baf5a7ba4b3d1",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "d2a5e45ff5a4cbc45bb21c15ac9a5895d0967e37dcf9dc67258e1c944f32fb27"
+        }
+      ]
+    },
+    {
+      "artifact_id": "68f6213b9eea0b8fb3cb8499",
+      "path": "data/reusables/saml/click-person-revoke-credentials.md",
+      "content_sha256": "d67f7cb1e07bf03e050a5cb36f0313c8a2f6914e87d4e310928ef62953d13f22",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "dc0b93d39d52909c626737c2",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "1d57f86ae7dd0076d5bc2f658ba7d9488c15b8de9e80217e61262f5143aa8fe5"
+        }
+      ]
+    },
+    {
+      "artifact_id": "544a8f8128446ac57fc33aea",
+      "path": "data/reusables/saml/click-person-revoke-identity.md",
+      "content_sha256": "d41948112662ce5c7051b5558d25573f7092522ed86a0c3020bc2a84720f6259",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "842ec8729c1941014644db8f",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "bc815c5802e0f9b0298757a605720ae23d1ec85cca1bf5323dfacd02e20386d9"
+        }
+      ]
+    },
+    {
+      "artifact_id": "29551f2ed56ae73730232062",
+      "path": "data/reusables/saml/click-person-revoke-session.md",
+      "content_sha256": "52ed7600fa8c21ecdc704447d9bf925b3512930299850fb438fe603907e5c752",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "aa00b1641662f8f5bbaa63c7",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "637000647729ecd84af16db82dda6856736b14ddedcc17b6e411ce36d01a7aaf"
+        }
+      ]
+    },
+    {
+      "artifact_id": "e4173d59108bd745baa8702a",
+      "path": "data/reusables/saml/confirm-revoke-credentials.md",
+      "content_sha256": "5034448bafccd6b7ac497212947b6fc09f6dbff6c4571bc30a7509d7430c532f",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "2ce1418c68c58a29ada1fbbb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "e95e9ba3f5cc5bbfdc63b8793c93e4a92ba3d29acfab2067fe5a85a3d3bf2dd7"
+        }
+      ]
+    },
+    {
+      "artifact_id": "07b912f1f3d50ba99cc7e64b",
+      "path": "data/reusables/saml/confirm-revoke-identity.md",
+      "content_sha256": "26cc5b3843093b423607d1edda2d6ac3b3856265918ba46ef37bca2c2873edb7",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "0991e68c032f6e329779161a",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "d8ce033df4db3b23949544fac07c0a1afe3e426f3d6b1ff7ee42d15e0899fd77"
+        }
+      ]
+    },
+    {
+      "artifact_id": "0127fe4a331451eeea49c8be",
+      "path": "data/reusables/saml/conflicting-identity.md",
+      "content_sha256": "17323259923fc685a9b278ca7619413431f21a3732bb74402badc92d375807ca",
+      "candidate_count": 31,
+      "candidates": [
+        {
+          "candidate_id": "53f73cd1e8f4a6c4861fa482",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "34088027c30e26c054e78315825f459eb7ca9eaaaa22117bce1eb8a18e72ea58"
+        },
+        {
+          "candidate_id": "1187e5d63c5e780c1eabf71c",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "150fa8522397cb3cc8598753e8fcf26122c79308321a1caece5bca3c982f42ef"
+        },
+        {
+          "candidate_id": "36d0d88e503e05cc8b126324",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "260e480b77fefa4e68a7ba0876cc8565226af32557d292aacc9aadd709bf0920"
+        },
+        {
+          "candidate_id": "ac9e11a515a5f8b905a7279c",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "064e980022d35bf5c6f7d4bac50412378dcf7a8c680da5b451ed5041181cae59"
+        },
+        {
+          "candidate_id": "e1e8a17fe6f7cfa63da9e88d",
+          "start_line": 11,
+          "end_line": 11,
+          "text_sha256": "672578f5e6d132e7335f7a181baf29a6548b937530c573991fd8b2094459fe9d"
+        },
+        {
+          "candidate_id": "7662d1f819da430c4aa46fd4",
+          "start_line": 13,
+          "end_line": 13,
+          "text_sha256": "ae2fe6421e04e7577284eb3642cb055f866394815ac5d94ba62248195050fa56"
+        },
+        {
+          "candidate_id": "123ab9c047478c64babff0ef",
+          "start_line": 14,
+          "end_line": 14,
+          "text_sha256": "de0054a36aee6fbca8774d4be5efef8738662f416d54e272fd11659c087c6a8f"
+        },
+        {
+          "candidate_id": "37fb1038156fc377f7d5cebd",
+          "start_line": 15,
+          "end_line": 15,
+          "text_sha256": "e90e3d3b547030982166e6c31373d9484e9a8d9319e46a863bb547b4c6b1cd3f"
+        },
+        {
+          "candidate_id": "fdc29f06fd7d98ee614d8031",
+          "start_line": 16,
+          "end_line": 16,
+          "text_sha256": "f35b58261c503d63cb44c3aa4907f0eda8d1d0896549873c55e4f2fdbe45d865"
+        },
+        {
+          "candidate_id": "d0ed6ac409571feb0937d162",
+          "start_line": 20,
+          "end_line": 20,
+          "text_sha256": "7281ad3f7e9058d7bca506c3b98b7582681dfc906b43d4ffdcd6d03f6599e322"
+        },
+        {
+          "candidate_id": "800b34718561a9bd648d0b4d",
+          "start_line": 22,
+          "end_line": 22,
+          "text_sha256": "18b28ffe9af5c9ea5ec65b1c5490b0725ad31539f44dac649bb2c37ab8aa86cd"
+        },
+        {
+          "candidate_id": "3304b1c366818d04ca714707",
+          "start_line": 23,
+          "end_line": 23,
+          "text_sha256": "1f2272a09f228bd45fc40062042fd71531e6e62273f2aa0e31d6c99df6d75f5e"
+        },
+        {
+          "candidate_id": "057b5ee08ff5f046f4216135",
+          "start_line": 24,
+          "end_line": 24,
+          "text_sha256": "7ed82a5b3e1a9e35d68d7993d37636525cee4cf4a142555b3d8754f03a4c9230"
+        },
+        {
+          "candidate_id": "b3460efd349938b64dc4e48c",
+          "start_line": 28,
+          "end_line": 28,
+          "text_sha256": "bdfc13ece508f090e237b4850bea853723beeb2ab0d5b3dc11b838a1dd297da9"
+        },
+        {
+          "candidate_id": "d8da92e22261d9850e257d0d",
+          "start_line": 29,
+          "end_line": 29,
+          "text_sha256": "febe096d527ca73e7970f36ac7948ad38b9d947acd579d612ac9e1f5cbcef708"
+        },
+        {
+          "candidate_id": "298b3f9a3bb7109f5ab1c9c7",
+          "start_line": 30,
+          "end_line": 30,
+          "text_sha256": "2f880b485ad093c45223eb43d8ec9b37c7d69abd6468738a28081f3969c04572"
+        },
+        {
+          "candidate_id": "78297cbb35fd212aa52c6a73",
+          "start_line": 32,
+          "end_line": 32,
+          "text_sha256": "32fe3302b8be19f8c5c28c920a14b64f357a8efe0893d227f03129b4cdf2c554"
+        },
+        {
+          "candidate_id": "af4826793e20a38d9ae30a49",
+          "start_line": 36,
+          "end_line": 36,
+          "text_sha256": "9bc8ca47f957dd1f1a319f230a8c268535ca184933f415b580bc0fd77cb0b684"
+        },
+        {
+          "candidate_id": "08464cf365a3890b594dcade",
+          "start_line": 37,
+          "end_line": 37,
+          "text_sha256": "dab3452b66d51d544dda399bc3989e63bbe2f75a8f759daf7c9f414f27412312"
+        },
+        {
+          "candidate_id": "51ed68c648719a20537a0ad6",
+          "start_line": 38,
+          "end_line": 38,
+          "text_sha256": "c0f7d6aa119627764463298c57fdc5658be03b555484866b075bd1172efffaf5"
+        },
+        {
+          "candidate_id": "7ae41ffa26d22ba36d30cd47",
+          "start_line": 39,
+          "end_line": 39,
+          "text_sha256": "cc83c6e4945bfbcf813d8636292a54f59561e977650ba5d9b1f3ec7e95e79075"
+        },
+        {
+          "candidate_id": "7fe8ad1320c7d4ece57f9cb6",
+          "start_line": 40,
+          "end_line": 40,
+          "text_sha256": "39d6162218ebf990a117aae43f0bf8ee50e9d3b3ca47772872b1f6f9a7291005"
+        },
+        {
+          "candidate_id": "ecb92ba4f1ee2071cbdfeaf2",
+          "start_line": 41,
+          "end_line": 41,
+          "text_sha256": "949a8fe7c8c61e7b506c4d11b18bc9c4ddc1a52b336ab69506030b41aedb6d76"
+        },
+        {
+          "candidate_id": "d2851f83a63e37fccc77b254",
+          "start_line": 42,
+          "end_line": 42,
+          "text_sha256": "b200cecf1f6764df1716904ce5b99ce68379f38bd502b76193a7ab1f06955d23"
+        },
+        {
+          "candidate_id": "24aa1e2d54da1cce96922a0b",
+          "start_line": 46,
+          "end_line": 46,
+          "text_sha256": "20dd78082d33bcb325dd184547c76d55c6cc4a625addf1958246b9f5d9f2c7d3"
+        },
+        {
+          "candidate_id": "5183584653c22c282a8736e5",
+          "start_line": 48,
+          "end_line": 48,
+          "text_sha256": "53a14d745ba8013c349fd6721eb89218718724b7acc0c8ebc5113c25a7ae1577"
+        },
+        {
+          "candidate_id": "0e7a736a7a9bebe6238fb328",
+          "start_line": 49,
+          "end_line": 49,
+          "text_sha256": "c4f028695e12ae0c70f3eedaa446bacb658ee6d3f1f178813012ed3cdc795460"
+        },
+        {
+          "candidate_id": "1fceb4e14e573b39205c18e9",
+          "start_line": 50,
+          "end_line": 50,
+          "text_sha256": "029b9ec31bc751835cc1ff9187df15935e118b2f4093ee9d174bb143934d8a70"
+        },
+        {
+          "candidate_id": "afc98b10c4409903a9680a3b",
+          "start_line": 51,
+          "end_line": 51,
+          "text_sha256": "81690e21a988f2d98fe526e7466b607a2954641899012bf704c6b00b509291f6"
+        },
+        {
+          "candidate_id": "4acb1b1e31ea1dc097c5f65e",
+          "start_line": 52,
+          "end_line": 52,
+          "text_sha256": "d8d7d62c6a58697f4a929e292a10d83ca74fc6195cb3b4875ac4f01275095ff1"
+        },
+        {
+          "candidate_id": "87c5e628de91f2344d5c2177",
+          "start_line": 53,
+          "end_line": 53,
+          "text_sha256": "90158dc617258d335a3f8e321fa702f575bcc733ae440f6e196d5dbc72192142"
+        }
+      ]
+    },
+    {
+      "artifact_id": "75ded24aceb83624d2aedd3e",
+      "path": "data/reusables/saml/credentials-persist-when-sso-disabled.md",
+      "content_sha256": "88c655742a51587e5830e75266aced2a25d14ec702ed500d014aa3287f17731a",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "52da14fded4c3ccaef132f9d",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "a9255d5e71fc17d868656130b6709cf0394aa7020b3765db01a67144ac7ff1c6"
+        }
+      ]
+    },
+    {
+      "artifact_id": "b5e1c686e919bbe64ed3c78c",
+      "path": "data/reusables/saml/current-time-earlier-than-notbefore-condition.md",
+      "content_sha256": "f4385caf40b649b2eb9424a96ef15034ff1f4da60b0d65e9189d198fb59ce918",
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "candidate_id": "6e43e68d919eded43c474ccc",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "2433ca7ad72a7f1d069bb32a37441bd1cfe5c44be6bc8fa356d6bb921de221dd"
+        },
+        {
+          "candidate_id": "dba7c48493cfcf363c8c72d0",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "c16402be3bc561d741bade6cce835b7ea6e79af51984e91bbc4d987508fc470d"
+        },
+        {
+          "candidate_id": "fbc4fcfba44cc4f939ea0242",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "f89b028fff4e969939480ee64484888a60abfe8bdf9f1c3b6cdfda631524ad7b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "27ede213582e81923c38ea7d",
+      "path": "data/reusables/saml/dotcom-saml-explanation.md",
+      "content_sha256": "5fbfa0379426a992e62d06926b57a87dd765f6d529166cf50ceb8ef9f1b6173b",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "3a07d59bafa123dc52bd6dbd",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "06322247a008e3f1960afa1e4c539af5e1cee7eb4134f2aa2d7fa710729a2b15"
+        }
+      ]
+    },
+    {
+      "artifact_id": "9cfef66dc36abe677ae7c0d1",
+      "path": "data/reusables/saml/edit-signature-and-digest-methods.md",
+      "content_sha256": "3cb23bbf3beeb29b808bf53677088afa2939c9b78369761da00be88cc6d51649",
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "candidate_id": "2c49ca860fcfea342062652f",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "153cd2ed89964ec9091d2fafe211032593710bad46044676726f5381ffdc9308"
+        },
+        {
+          "candidate_id": "19d5a9de6e47c49438531de7",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "560a52b56efc3491f1c76e36eefe09168ba4a8a560afb6725182aabfb45e1f04"
+        },
+        {
+          "candidate_id": "9ec402da75193a7b9cbcb0fe",
+          "start_line": 4,
+          "end_line": 4,
+          "text_sha256": "38877a293042f25792b838b1b1946933c70314e528c2646137e6ab4004d7a808"
+        }
+      ]
+    },
+    {
+      "artifact_id": "350d7a72d636693b41b66432",
+      "path": "data/reusables/saml/ghec-only.md",
+      "content_sha256": "74fd4b0762cec9af84254e2c64771175cd4d37942f544ebb3863bf32c0da2371",
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "candidate_id": "155685daa7f6da84af177f95",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0"
+        },
+        {
+          "candidate_id": "19dfb586165bb6698ba7510e",
+          "start_line": 3,
+          "end_line": 4,
+          "text_sha256": "233b3fb2ce2ac94286929b3ef992d67da17b9264d70caaf8ce1775cb63460968"
+        },
+        {
+          "candidate_id": "5cfcf11b25cab3f986175b94",
+          "start_line": 6,
+          "end_line": 6,
+          "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2"
+        }
+      ]
+    },
+    {
+      "artifact_id": "35bd8bbc6cb12055ad8c530f",
+      "path": "data/reusables/saml/idp-saml-and-scim-explanation.md",
+      "content_sha256": "81c4671b0f907b75397dae119213e3754beca3266850a276207a23e42537b3c4",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "3b19736b5135da8361be4f0e",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "63b6d8fca71feaeaf442e43bf18b5bb41b0e355797152ee2c46a367b1570dfc9"
+        }
+      ]
+    },
+    {
+      "artifact_id": "14bbb196b3f64217590c9a3d",
+      "path": "data/reusables/saml/must-authorize-linked-identity.md",
+      "content_sha256": "07097c2ea579291e41dba2fbaa7654b42e37e8aef635268748683504fac9210c",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "cbc65170ee825a2ec9c798ed",
+          "start_line": 1,
+          "end_line": 2,
+          "text_sha256": "dc4641796b8ba9dafb050a389b7ffa1b789e8e85668884df86243d1ee9ca3004"
+        }
+      ]
+    },
+    {
+      "artifact_id": "d5758bda2290720a0039c474",
+      "path": "data/reusables/saml/no-scim-for-enterprises.md",
+      "content_sha256": "bebab2dfa49c7dda7c0c1b99ae7699d1817ca347cff84467cc7cf68041b1c9dd",
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "candidate_id": "35e36b9e95f9251ba644b9d6",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0"
+        },
+        {
+          "candidate_id": "ca390fc18313a66f16a6a851",
+          "start_line": 3,
+          "end_line": 6,
+          "text_sha256": "6cb79f3b260750bb9c5b7ce62dc5cf53e3c514e719dac7a6c37b9a11c71e17f4"
+        },
+        {
+          "candidate_id": "66749dc6e445dec08a4487ea",
+          "start_line": 8,
+          "end_line": 8,
+          "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2"
+        }
+      ]
+    },
+    {
+      "artifact_id": "809c0c0980cc0e95e3f0e887",
+      "path": "data/reusables/saml/okta-add-ghec-org-integration.md",
+      "content_sha256": "1b1b32d6c079059148178f1eef53993e41a1c9dab41e5cab75470ae3e0e03323",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "78bdd9d6210b79316976983f",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "07e931d92295ac9d89706dee9cb1bf35a7b5240d6e78db23d75100c1764d4f89"
+        },
+        {
+          "candidate_id": "9c53e845cc2dbfb5bf5c3952",
+          "start_line": 2,
+          "end_line": 2,
+          "text_sha256": "11ca3078006f248dfc0261341e3e617c40eb0580192361ddc0b101624e8cf921"
+        }
+      ]
+    },
+    {
+      "artifact_id": "500aeacee235fe4483ac2ab9",
+      "path": "data/reusables/saml/okta-ae-applications-menu.md",
+      "content_sha256": "94705a3be760690b17032f1239289a5c2d4299d35d5d9c6995e280ce5641fb31",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "f535bdae33e5549995ce803e",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "eefc5d23d575e6e1d7bcac6535796133039909a11efb242ac41a2f844dd40f6b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "ec8d59f5c76d6c6bc07bfdd1",
+      "path": "data/reusables/saml/okta-applications-click-ghec-application-label.md",
+      "content_sha256": "1a62d37e9abca6f25f143bba3eec14a734c064721ba18ba6637fab034531c4f7",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "88a67b95020cd67158f967ed",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "62b4616f64690de96d3303c062bf2cc1484d50c6794a33a0be7bf6cc4cb9f314"
+        }
+      ]
+    },
+    {
+      "artifact_id": "c509e80702fde1a5a82869a0",
+      "path": "data/reusables/saml/okta-browse-app-catalog.md",
+      "content_sha256": "b4891e08222dc3066ad843fee98c8e0caec436082728aa6def0ca01342fae576",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "2bd62721e8b5cd2049fb2262",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "76625ad026a2760dcb8c50f1c40214199f6c4bac721d6f5492a0311790a49fa0"
+        }
+      ]
+    },
+    {
+      "artifact_id": "95ee211533179020a4c8285c",
+      "path": "data/reusables/saml/okta-configure-api-integration.md",
+      "content_sha256": "a115b8a8b8fb764000087ab15f7e14ca54a6808fbb31485a21b69623876e046a",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "83a182740fa7c6a985477c28",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "403c135ea7af7a8aefa1743bd52dd594dffe4145149974ec49f06c01f95c4276"
+        }
+      ]
+    },
+    {
+      "artifact_id": "76fdd4152bf08055cf0eac1a",
+      "path": "data/reusables/saml/okta-dashboard-click-applications.md",
+      "content_sha256": "ac601c5fe787e8b560b256d9ddf844a9f2a4e4035b80f276b84b21f902a06407",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "bc9e6c4e246e3ba11bfc368e",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "5e1d3baf46dfb546e6984513e65303bea87f7648528bdd1e39ec68b060b58417"
+        }
+      ]
+    },
+    {
+      "artifact_id": "639e58558f1bb77bf5acb320",
+      "path": "data/reusables/saml/okta-edit-provisioning.md",
+      "content_sha256": "d6a6f398eb0efbc6e0b28a9ea3ed0fcaa978ef42ce34cc10aa7b363901ab713a",
+      "candidate_count": 6,
+      "candidates": [
+        {
+          "candidate_id": "b6a2b6f9aa42638c089c43d3",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "1661cf4a00f7cc825023f7af327039668e03334b86912cfbbf673794bb98a93c"
+        },
+        {
+          "candidate_id": "47efc99c870c43123bb2e283",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "f2b0aa33a1cc0e9e724bc4f96059cf0cae1c87d9ca447ba4179577e9cc397904"
+        },
+        {
+          "candidate_id": "3b68dcb7bb455c1d92709110",
+          "start_line": 4,
+          "end_line": 4,
+          "text_sha256": "be79d6318f0128f1630d59239d091decb5c62dc7aeabfd8e39cf7272253332f0"
+        },
+        {
+          "candidate_id": "789d05bad6146ebe6817a614",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "f6a750410011c5af111e4501d2a43de8f8c735200f7d8baa1d8babc85725619b"
+        },
+        {
+          "candidate_id": "923c3d5ee1f6f4e251697c2f",
+          "start_line": 6,
+          "end_line": 6,
+          "text_sha256": "d55b58653524b7f0bc066b25d060ba8c52bfd7ccce70cf9dfbeab9e23ef61968"
+        },
+        {
+          "candidate_id": "b8d286bb05cd5d70745e567a",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "fc8c37e8ff5f5086e7b3e5c52c92f9d3339f637a7033448a4c1c2bc19c3435b1"
+        }
+      ]
+    },
+    {
+      "artifact_id": "32eda0630a53fd76424c794a",
+      "path": "data/reusables/saml/okta-enable-api-integration.md",
+      "content_sha256": "dc097d4a25ffe1f45f64289b87a2a9d3bccebc0ad9a44aac05e8af0b72cfc470",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "e19ba5dc14d0cf991b7973f7",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "aa020f064f61c2bec34127e4d16917faeec453c68a48410d5debbe8d76c241a1"
+        },
+        {
+          "candidate_id": "c2c42e72ce6de25650e59f69",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "7ebf45b65cd6e5180ea6e30637d048457ce9dc9de4b8a9b37c31252624850f2d"
+        }
+      ]
+    },
+    {
+      "artifact_id": "a8f969912d5d2169918bdcd6",
+      "path": "data/reusables/saml/okta-provisioning-tab.md",
+      "content_sha256": "2c01798dfeb4458331ff79b128a948b4d032143f393c33a94dc62e4583d5a9b4",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "247f98e29181161b22adb9c7",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "2203f0eb3a9019b3c8afaa86baa93939742c40901ae5c4f896bbb034a6eb51fc"
+        }
+      ]
+    },
+    {
+      "artifact_id": "a2a27dbb5d31702da1712a4f",
+      "path": "data/reusables/saml/okta-save-provisioning.md",
+      "content_sha256": "98c38cf72633a64f77d06693682a841933485094590809b03be6dfca0553a193",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "6d469e9881bf6525fc393680",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "fc8c37e8ff5f5086e7b3e5c52c92f9d3339f637a7033448a4c1c2bc19c3435b1"
+        }
+      ]
+    },
+    {
+      "artifact_id": "541e163c96766791aa3686be",
+      "path": "data/reusables/saml/okta-sign-into-your-account.md",
+      "content_sha256": "ca73f76e33c22e75920921e437de1da718ee051d2d7e3360360ce4beae4e3c22",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "b175bc491c8886e9a3da5d19",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "556fe833dd58d397a504ba47c96e70e31462f069ad9d93f3fad8b94d18892a54"
+        }
+      ]
+    },
+    {
+      "artifact_id": "47bd21e54727a687d27f1671",
+      "path": "data/reusables/saml/okta-sign-on-tab.md",
+      "content_sha256": "e5995d7ec14de498063c77a4c7ca7a4fd527f897215874fef987cd45676db34e",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "eac0063b1d2920fe327bee11",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "23a13c478e62ddf13ed6975024f983c9bb9640b3bbbe17a918dae647ace2d627"
+        }
+      ]
+    },
+    {
+      "artifact_id": "0dc9eeb18b991032c4ff2301",
+      "path": "data/reusables/saml/okta-view-setup-instructions.md",
+      "content_sha256": "a4b08955613253ab750bbc5f9db839217c1fc6919ab7d6e606147932a967a28d",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "13418360fbb4f4d0e139aef1",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "829d036161bb563298433eb133ad62c06f810872b0ea26fc3bb3a8d907209cf1"
+        }
+      ]
+    },
+    {
+      "artifact_id": "3cf3906e9dd91e3dc1803a07",
+      "path": "data/reusables/saml/outside-collaborators-exemption.md",
+      "content_sha256": "d0bd92d2210875dadd1153f4e929aa3b0339dee27b4ff804b84742dc9df957ad",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "1edd428eb61f943dcd5e9ec2",
+          "start_line": 1,
+          "end_line": 2,
+          "text_sha256": "dfa3a9d91311056ec5f49960987cb6cc1396674cd02dc1b49bf9d6c113078c51"
+        }
+      ]
+    },
+    {
+      "artifact_id": "9399387ddf6a16f1f2e7bef7",
+      "path": "data/reusables/saml/personal-accounts-determine-email-visibility.md",
+      "content_sha256": "9b22b389f97bb57a8ed4e06ac7e5db84053fdd476c8f901cb549c3ab598659f7",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "d18e6ea6206a51cb5e2b6735",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "cc6516f4537ebcccb8f66aa5a42140ab69cd1173ca6a915da62e0d9d9b14a061"
+        }
+      ]
+    },
+    {
+      "artifact_id": "a6a91c1d26eb43a9834f7a52",
+      "path": "data/reusables/saml/recovery-code-access.md",
+      "content_sha256": "b7e11bb8565f961703e9c7d0aaf89c7f3ae6a83d738e5099e647be32471541bb",
+      "candidate_count": 4,
+      "candidates": [
+        {
+          "candidate_id": "77b4da0f0a4e47ee60ea366a",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "298b952ee05638f1fb004ec1318feff6501acb202d8cd2704e835d64c2d53b5b"
+        },
+        {
+          "candidate_id": "b19c07645e122c01d7713632",
+          "start_line": 2,
+          "end_line": 2,
+          "text_sha256": "827bf9fca3c28a67c9c16fdf5bbfe4fb2a39a9305d76346f6566038c3dfae671"
+        },
+        {
+          "candidate_id": "c3830fc754d0661533239660",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "37014848d991a2b71fb0321f699214a557e26f790d511c2dd89eb8b2352548f4"
+        },
+        {
+          "candidate_id": "790e9d5ccba78fe3a3eecf90",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "81455e2d74c1b622e850d8ac58dc956932e50c83523bbfb9761108404717711c"
+        }
+      ]
+    },
+    {
+      "artifact_id": "975a8f5169cf4deddcbfeb76",
+      "path": "data/reusables/saml/recovery-code-caveats.md",
+      "content_sha256": "f474a812f06d145776c76ab7429468d2c838a507cd3908ae37c1b39028d0c0dc",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "1ec9041c22a1ca0f2da56adb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "d2f27ec880bbd381c533427d282076d69df888bdd97ae647acaeeafe4008c1be"
+        }
+      ]
+    },
+    {
+      "artifact_id": "9c2fe380b4bb0375d99d1aba",
+      "path": "data/reusables/saml/removed-users-can-rejoin.md",
+      "content_sha256": "36250ba0e883dcddb7b698918c155cef5618d700d12c6850d5ef8b504714ef94",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "f2459edf8eee939b845b8aeb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "fd48b0f90a615a2183fae9cefd84ee8d6d8a0e87c1628cb64cdb6254d2122ec3"
+        }
+      ]
+    },
+    {
+      "artifact_id": "96ffff8186fcea4eeed0c672",
+      "path": "data/reusables/saml/resources-without-sso.md",
+      "content_sha256": "dddbcc60b1ac0660744a8667886e9595c9845b411674bf58845383bf39b7a17c",
+      "candidate_count": 5,
+      "candidates": [
+        {
+          "candidate_id": "16c29ea2e0b5cb8d19b01e3b",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "3d47516dfb9b391dab6f08376d859babc4023cec829b3609035fc5f3e4443912"
+        },
+        {
+          "candidate_id": "2c25a543623f0f1ee9bbacb5",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "862a6054884cc59550b09d4b402fd34ff710f83f5a7b454f8db3f7851a4601e2"
+        },
+        {
+          "candidate_id": "c595172191152473c2335c23",
+          "start_line": 4,
+          "end_line": 4,
+          "text_sha256": "bd102d4ce14cf62d7d481303c73550ed99def221ee4cf80a3affed04e8018344"
+        },
+        {
+          "candidate_id": "b80e5aefd5a3e932b0243a8e",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "f754cc598ae9a9cd12a78de947b6e274dc7f9c860bb8636325d0375b0ead4caa"
+        },
+        {
+          "candidate_id": "5b70aa1d79f571d83f3e4a6a",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "6d69b6d5b866d2f5796f646c3248f8ed4602337413e7bbf9527247cc75fb0620"
+        }
+      ]
+    },
+    {
+      "artifact_id": "a46c1725787ec3103e287541",
+      "path": "data/reusables/saml/revoke-authorized-credentials.md",
+      "content_sha256": "d2f12178d3884a4e5403e25d675c9a9ff582a07d1bd18937b3f54b9f2b834a33",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "ac081ff6320694e257ed65e5",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "2a0fd692a238a973bcb36fc3d1a5c3aaed4953e4e0616d51690b2a844394bbc1"
+        }
+      ]
+    },
+    {
+      "artifact_id": "aa7ccdc0f8c813ee40143d0a",
+      "path": "data/reusables/saml/revoke-saml-session.md",
+      "content_sha256": "86fced64535345ad07659c8eb3ecac919af3a23f7b72f6c1b6a84acc1e3aff29",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "4430ed94df0748d43895ad35",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "3a50bc91c5b81977a464cfa9b5b866ef4f84b0ac9a3a896bd9a5e5f1d32d104c"
+        }
+      ]
+    },
+    {
+      "artifact_id": "444fab426e80645c910024bb",
+      "path": "data/reusables/saml/revoke-sso-identity.md",
+      "content_sha256": "9241fee7669382dc14bb6a6662b90425620b104d09c0c76d7dd37253b2be43dd",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "e4bf1ea529225e7e4ea37d56",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "229b74b8a169a23c736c73388bcfef5a6d0ea7e18bd9e21df52194f0a9c5019d"
+        }
+      ]
+    },
+    {
+      "artifact_id": "84f1ca02ff1cb377f0ea49b3",
+      "path": "data/reusables/saml/saml-accounts.md",
+      "content_sha256": "9007c84468adfa34292964f24e686399e041d5abb697ce96fdf3de368f1de29a",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "23591d6f87bd0d77246ecc6c",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "af2f4dc819583083513677f10ff08f2ebdf36d55e17d186356b1355f11a0a978"
+        },
+        {
+          "candidate_id": "535024d6a99b9d3b9fd192c7",
+          "start_line": 3,
+          "end_line": 4,
+          "text_sha256": "5f1b2659ece635978992e123598dcdd49aa0ff46a298e62cb50dd7039a7fc0b2"
+        }
+      ]
+    },
+    {
+      "artifact_id": "be1a7a9eef64ba09e838dac9",
+      "path": "data/reusables/saml/saml-disabled-linked-identities-removed.md",
+      "content_sha256": "1ac6971c6a27f0918eac7db48891dc61a0f5bc2bc3fc0da6e2fe88e2c752a481",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "da537081515cbc4b0be29d05",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "c7baa1c413962900a8a7edb801afcd27f9678f965b930b7b8f647084cdcf03c5"
+        }
+      ]
+    },
+    {
+      "artifact_id": "da6a3add7ace12b11110d2ef",
+      "path": "data/reusables/saml/saml-ghes-account-revocation.md",
+      "content_sha256": "b3b841ed4cfb3d8fb959abacc42709c080d02ddcdbd0d1958a0975877fcc5d0f",
+      "candidate_count": 3,
+      "candidates": [
+        {
+          "candidate_id": "a4183282f19c16cf243d28aa",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "96dd5a9a348fe660fa1330bc98d993d3fb1d30567402e78f840c9305b246d010"
+        },
+        {
+          "candidate_id": "64314cbb830130277d168a84",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "46df55ca923202d19ed095ce3bb4cc4657313431a8cb086a105c3e993565132f"
+        },
+        {
+          "candidate_id": "5aa4b431dc1747d662031a7c",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2"
+        }
+      ]
+    },
+    {
+      "artifact_id": "5c5eee49c27f2e6fbfe0b777",
+      "path": "data/reusables/saml/saml-identity-linked.md",
+      "content_sha256": "335c2d1b36dfc20e72b43d9978f08c8a51266812449c500ca3fea380c91a15f1",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "486c262d5347ee64563be9d0",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "7d75d6cb529bfd14d08eb123adac5ba27973d5a7ff640e1e3a0439ceeeef8396"
+        },
+        {
+          "candidate_id": "e4f510c117dbda390bca83d2",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "3be98809d30c3fba7a5d19444e8ec4084cb8263b097439991c1710116877edd6"
+        }
+      ]
+    },
+    {
+      "artifact_id": "1a61103ba232f557e811fa6a",
+      "path": "data/reusables/saml/saml-session-oauth.md",
+      "content_sha256": "9d6a1cd626736aa79320f2c9118289c23b167977dc9ab0e168d5046370b7e27f",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "8f94af18bdf9430e6c896692",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "08b6c6784221b7c334c672e2ef70f88644d72c93772ca5067919c1dbd3416d57"
+        }
+      ]
+    },
+    {
+      "artifact_id": "6b7294a4e2bbe9c1f1436f3a",
+      "path": "data/reusables/saml/saml-single-logout-not-supported.md",
+      "content_sha256": "56c9c9ded6bb12ca2ac3b31e9a5a372d0c86c9d9e19dd5cf1512e5ba45881fd0",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "7e297792e34bfb7474dae241",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "68d62e26976867b98523705fa54696bfb70abb6267495009fbdaa12b297a4eea"
+        }
+      ]
+    },
+    {
+      "artifact_id": "9bc870825c71c1ef2cf3cee4",
+      "path": "data/reusables/saml/saml-supported-idps.md",
+      "content_sha256": "ea1085cb30df7160db0720f7781da4993e8548c8539f6ba1093a9a386d10e66b",
+      "candidate_count": 8,
+      "candidates": [
+        {
+          "candidate_id": "cc0af5999ba40067d22cbc53",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "e44d09206d8041d86228de90b6b80939cccfb6874aba54de1de429fcfe0c116e"
+        },
+        {
+          "candidate_id": "d75d64f2dd7b1aaf60d3b172",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "4851a958a49efdaf13cfe2d0dfa5c30611e7953c1faaee3dc9bbf72ccd6ca2ac"
+        },
+        {
+          "candidate_id": "32c0f11cc0014548a1a28035",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "76cf14561a89e1754c4c0f22cfe85f7daf415c9cfe08a64c5179987b5113c916"
+        },
+        {
+          "candidate_id": "f0459a279ec91441ea66dc93",
+          "start_line": 6,
+          "end_line": 6,
+          "text_sha256": "107f59e5c0e29b27964ac857f4aba5ccee30d10ee0cb46c5e6c61a3450eb76d6"
+        },
+        {
+          "candidate_id": "47a1deb7f607725da80d3819",
+          "start_line": 7,
+          "end_line": 7,
+          "text_sha256": "7c175f5260dd50af0351b767fd6af691b45d06be3ed2959de4101e271802fbf9"
+        },
+        {
+          "candidate_id": "23d3e8efaaf9f8b3b4ffdb47",
+          "start_line": 8,
+          "end_line": 8,
+          "text_sha256": "6fb627ce5058981921122ae04b5d2739ac2ba9bd46fcbcd59e8bcc25889e7aa9"
+        },
+        {
+          "candidate_id": "3610aa62d998f64bc5c7fff2",
+          "start_line": 9,
+          "end_line": 9,
+          "text_sha256": "14e4fc8f590d0819af8e8fd8c1de6820f2971e8973c7da5830f7911d78a36981"
+        },
+        {
+          "candidate_id": "9f541793c09f4645272bc550",
+          "start_line": 10,
+          "end_line": 10,
+          "text_sha256": "b1814979b006d2b200e4c941bcadae824fde1dfea9934c76518bebe4b3b03ecd"
+        }
+      ]
+    },
+    {
+      "artifact_id": "1177a90016dd9c204fd28ece",
+      "path": "data/reusables/saml/switching-from-org-to-enterprise.md",
+      "content_sha256": "cb8952e0cdf1a670b9a86d76833632834c51be05de6366295b7797f9f03c0377",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "c5c50a7ce1431dd9bc343cab",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "ace73a96c6812c91e469fd0fe64199e58b2d6d4980493a4c29bd9ebe9e33a5ef"
+        }
+      ]
+    },
+    {
+      "artifact_id": "7e7de6cff5762f8f423a64d8",
+      "path": "data/reusables/saml/team-sync-pending-invites.md",
+      "content_sha256": "e9367511ed226ac5a9fcfa8e9556d4e9c0e5b0e01530e84570f6734b296f6a8c",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "fd31f74bdfa7a7bb5b3f6bcb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "d52cf588537797fd538221f818e712972cf63181a970baea59457bfba7ff56eb"
+        }
+      ]
+    },
+    {
+      "artifact_id": "9cf505ef8d26c537dce19d25",
+      "path": "data/reusables/saml/test-must-succeed.md",
+      "content_sha256": "991866cc30b1ae48106a68c1a893a7bf4dec388e363974dd85d8cad8f13af8b6",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "ac7da251b90977f70398fc48",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "d5b4e07561c42f3ce5ca6ecaa612fba2ca850125c1b89933225c6fd7c2bd62b4"
+        }
+      ]
+    },
+    {
+      "artifact_id": "e5642e161bf2728e536e949a",
+      "path": "data/reusables/saml/testing-saml-sso.md",
+      "content_sha256": "1078a8edcf4dba7d69432a8cebdba94c6fe7b95ddf96125640219d13c1159857",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "5ee65018cf713472291d2232",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "e5331abbedd175fdf142916b802448859383d03cea76e1dcb88855d74c48a9de"
+        }
+      ]
+    },
+    {
+      "artifact_id": "64e23edd04a6a32387de050c",
+      "path": "data/reusables/saml/use-api-to-get-externalidentity.md",
+      "content_sha256": "7b72b2ecb62da33423222989b37f2df6c35dab4a02bd2c4ff340a3b554836c34",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "ea4e700bf95e018579807425",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "1220ecb7282c83d2a0950e2e97c5d97156ce9e8e422e2478d816ff7a551a54e5"
+        },
+        {
+          "candidate_id": "db438bc95218b7eb74a381f6",
+          "start_line": 3,
+          "end_line": 4,
+          "text_sha256": "80fd5b76301f193b3721da04715ac2aa25638494aed4d9cdeefcd97695770e4f"
+        }
+      ]
+    },
+    {
+      "artifact_id": "bb46049315b68a017d3a8d84",
+      "path": "data/reusables/saml/view-authorized-credentials.md",
+      "content_sha256": "591e0a647b652b8e52a6f1d885c170a7ea622b60bbcb9974c2e5288bda164138",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "c1d191b1f0c005a39f071569",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "0964a648fde4fe49b2f560aa9eae4e33b00bffc85470a9451fd09d49bead0843"
+        }
+      ]
+    },
+    {
+      "artifact_id": "55d7aface6759247ded4c7f2",
+      "path": "data/reusables/saml/view-saml-sessions.md",
+      "content_sha256": "140eb12100f789a7f8c782036efd31c4cf019f154a311291d3a6c911fe7f67cd",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "b5eb3dc1df33d8dbdd32ced0",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "18e99a21d18edb82f2c7fdd41ea5ac375a1517d26c15288ea75252872fc56bff"
+        }
+      ]
+    },
+    {
+      "artifact_id": "119d0c53e37765cb924a6082",
+      "path": "data/reusables/saml/view-sso-identity.md",
+      "content_sha256": "13d3544aec52336a9d28d28f769564f57fbd70fcbe61050f33327d7a64ee18b6",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "a17ab106c3d5ab3b49786efb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "55de7d032adf98e98313407589b7944c28e06d48b6bd08dd65ea5b77ad021765"
+        }
+      ]
+    },
+    {
+      "artifact_id": "c8d83d9f7376f2ec170c2aed",
+      "path": "data/reusables/saml/when-you-enforce.md",
+      "content_sha256": "ab7121cdd7530ad911f65eefd5c4902e3cc1cff7955740ce77b51ad34ee896f1",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "473b92f4530b7d3061cc1bdf",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "2e6f3d48d0b9a3187e3c0cb31305638da60aac29756eb53a8b018d337596ccb8"
+        }
+      ]
+    },
+    {
+      "artifact_id": "7e3319bdf6db79c070d0ba8d",
+      "path": "data/reusables/saml/you-must-periodically-authenticate.md",
+      "content_sha256": "7c5ea93462d000b067655704907befab3b55b37e12adff36eee55ae2c7dec4c0",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "9dccdfbe50dae5c4fcd9bbc4",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "8e6d13bd3c5cf36905d11ae1ddf02167cb5ca09a728a51ced05aba63ece10950"
+        }
+      ]
+    },
+    {
+      "artifact_id": "ff8f97381c956d488287b029",
+      "path": "data/reusables/scim/after-you-configure-saml.md",
+      "content_sha256": "12cfd8f97ad901190b919715fae76b3934f66ecf5e1b39246ad4d2201e32c41c",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "candidate_id": "ed5b2a1f829db46274a71795",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "b286cf1c3320803ed918e31652dd62bd84e952e733f2908f3331a945e07a2c5b"
+        },
+        {
+          "candidate_id": "6c677dfeb8774a17e2a96e89",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "f4613583785b6dfdb6e833ebc7cbd8ea2a0f71d0b6e0bb3cfe9a1094d4b11652"
+        }
+      ]
+    },
+    {
+      "artifact_id": "5a2bc5a7d0930309a5965dee",
+      "path": "data/reusables/scim/changes-should-come-from-idp.md",
+      "content_sha256": "a2be6f8326ced7f7f53ad1ca86316c580e807343b1ebe4e08424c788e38c5398",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "fa9d4bb32af30ec513fa0fb9",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "7ba9a4aee4f6a278eac9c0efe28ba1980b64f87f541924bd141a82f52247da71"
+        }
+      ]
+    },
+    {
+      "artifact_id": "89aa474f1f6908001eff1430",
+      "path": "data/reusables/scim/dedicated-configuration-account.md",
+      "content_sha256": "cf27d144aa5f12f0153b78f4f8474e11e5d4d69df9b7ae708cb7302633691096",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "a6f2cb7d840ac5b46b3d8c85",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "631da0e8989a768d89601c5b435b980f8edbb1609578f9cac3501d2d4c76dade"
+        }
+      ]
+    },
+    {
+      "artifact_id": "b282de2f4a95822fe07fcb12",
+      "path": "data/reusables/scim/emu-prerequisite-authentication.md",
+      "content_sha256": "5dfcd9b6926bce3aa814dfcf8e313f4264ac9f8f44c4f20b86a1b627a165285e",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "30c561a6593d30a8bb8e7ba7",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "daf3d9d8ee0f19d34ca6702fe7a391fef507491c74a72f4326b7fd5944b929b6"
+        }
+      ]
+    },
+    {
+      "artifact_id": "fb3028af4ad69f5e3d353ece",
+      "path": "data/reusables/scim/emu-scim-rate-limit-details.md",
+      "content_sha256": "fd5c4180a8de797302f40e29fd9f646a84e967dde0d29e66f9c3971e03559ba6",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "48b11f8e7180b2b98a81431a",
+          "start_line": 1,
+          "end_line": 5,
+          "text_sha256": "d8466739b505a08417abcb5749a8539eb31f548549804e33eba5385279f597b0"
+        }
+      ]
+    },
+    {
+      "artifact_id": "67dabd81898cd3fd56750d36",
+      "path": "data/reusables/scim/emu-scim-rate-limit.md",
+      "content_sha256": "16d591b96c3c1b72df9f4d3814d843f328e7b92977e77ff28ac606672ee69099",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "ec2bdc2ad23bea1f6a3c7857",
+          "start_line": 1,
+          "end_line": 2,
+          "text_sha256": "dd6932f22ecf705fdca44b2e3e022bd9053a33497041d036b63a681e7c1ccf8a"
+        }
+      ]
+    },
+    {
+      "artifact_id": "8f7f3e14482fd4025dd35439",
+      "path": "data/reusables/scim/enterprise-account-scim.md",
+      "content_sha256": "5f61d999cf1a94972c8670ac4aca56daf29c31daaa2d729cfe1f1138faad6611",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "e099d9b4e15a9b0951f0031e",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "af83eb7859db180af107b78904cd871b71177ef89f2764f125760a7538e7b829"
+        }
+      ]
+    },
+    {
+      "artifact_id": "3b5c727eb894bcb29200d39b",
+      "path": "data/reusables/scim/ghe-scim-identities-csv.md",
+      "content_sha256": "d21efe510381e75cab1b8515fe6f53c9e2e64a0e86a6e23d97858f61e19ba4aa",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "3bff0429cbc26ca082f02eae",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "22e25872072c5acd30967cdbd442cb9ac61f1e34d3665ca345717103bde05291"
+        }
+      ]
+    },
+    {
+      "artifact_id": "b0ff83cfb57c106b73ead59e",
+      "path": "data/reusables/scim/ghec-open-scim-operation-differentiation.md",
+      "content_sha256": "1aa8a7c7832e5c94394923ca9faffbd3276a562704049581077fd2759af51ff2",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "d5c21dc420dee49ae3fa08fb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "df74da0cfe54c7f0aec4f9f5f1e59aaa7400e2c42a0b105be609ce1d1e4965bb"
+        }
+      ]
+    },
+    {
+      "artifact_id": "002bf19dbb2c82d62badde5d",
+      "path": "data/reusables/scim/ghec-open-scim-test-in-isolation.md",
+      "content_sha256": "6a9b84af57ad45790a2ed70ca472f250ee0791929a54f32d80d51b88fbe1e636",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "b80fee22ff77ee7dc433ab14",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "ae9b79fdbb0316955e23a80ea30a867a5e0c6e2394e5131f2e9906972ff869a9"
+        }
+      ]
+    },
+    {
+      "artifact_id": "808a7104466465948d97b673",
+      "path": "data/reusables/scim/import-groups-unsupported.md",
+      "content_sha256": "cf5c0250f082346a0fd667f6b7baddc46625a4172930e5af0839334109db8689",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "cd791d79a6d8d95310ab9243",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "58fef4dea75d4e09cb2ac76e248237bb90c621d6077d0e3f6eb3541d597af568"
+        }
+      ]
+    },
+    {
+      "artifact_id": "8a813a06f1d0372ff2fdc155",
+      "path": "data/reusables/scim/nameid-and-username-must-match.md",
+      "content_sha256": "821e3666f61723917dcf1bddebb251ecae967b4ece2668a8a4ede0dd40b1648c",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "ea77f44b8d7ab78b2e0fc55e",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "03694d95d6aeafd1023fc3ca446dc06785fa8c8e0557dbb4cddff12fbaf1bff3"
+        }
+      ]
+    },
+    {
+      "artifact_id": "e2e2dd272c5e4a78209adfbd",
+      "path": "data/reusables/scim/organization-rest-api-ghec-deployment-option.md",
+      "content_sha256": "b5f9d96f65e3d977ce18c4ccbad00965747e6bef2d4123830a4e76f3eecf1a66",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "5526e901f7c23b0c0556be62",
+          "start_line": 1,
+          "end_line": 2,
+          "text_sha256": "cb2b81941fcca0d6a2c59b889d9058ff54edf8c321bc675c1d0cf7c713cc2d3e"
+        }
+      ]
+    },
+    {
+      "artifact_id": "4f7e5302bc43691617c7500d",
+      "path": "data/reusables/scim/public-scim-more-info-about-deprovisioning-and-reactivating.md",
+      "content_sha256": "3c2b6d1d7fbc629e5ae68988a207d75f5acdd3595ea8814f9c13e5de4943f418",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "7ee8d4c287b4372e74d87fbc",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "ae877d6b48e4c74cfcc86b3c2bc1ac5c84304987ec89df13ac3758f46bcad77e"
+        }
+      ]
+    },
+    {
+      "artifact_id": "6fe33f7e9523765e517c3bbd",
+      "path": "data/reusables/scim/public-scim-put-or-patch-group-audit-log-events.md",
+      "content_sha256": "9df1c272b992565b6c85c37086f257852989e4eeab05767ea2c921939014c438",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "b15cdad9cf37dc361dcdb139",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "36e076dded6dd90897d692e7b63b965de404902747affbc3f9688cb8c91df996"
+        }
+      ]
+    },
+    {
+      "artifact_id": "a5ea07b7c1e98ff2a46aad0c",
+      "path": "data/reusables/scim/public-scim-put-or-patch-user-audit-log-events.md",
+      "content_sha256": "e87d764e6ba6de371c209a2f0569ae9d82d1dac5827f0646de7fb6cf0411d82e",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "749e197b3f9acd03879f3b72",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "6b15a94f4e46a5e1d38c4a1312ea9c933061d63ba633b3b5b311054aeb28a0d2"
+        }
+      ]
+    },
+    {
+      "artifact_id": "8a59903aef8e70ba585753d6",
+      "path": "data/reusables/scim/scim-standard-prerequisite.md",
+      "content_sha256": "3e715e1638730c4c928253244d99c97b33f37070610cf09c61bccd257bdbbfed",
+      "candidate_count": 4,
+      "candidates": [
+        {
+          "candidate_id": "c2079194ffcd5251f303babb",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "26e9a844fb659d5fc44c9e46ae8f99c9ac11325d886e7711ba19898bebd6ba9d"
+        },
+        {
+          "candidate_id": "7e293769a02b06c88fc001e9",
+          "start_line": 3,
+          "end_line": 3,
+          "text_sha256": "ca7581386bb9807fa31fc3d1f953228d112f51c82721af7066576c39a64b3655"
+        },
+        {
+          "candidate_id": "d5872a2a4a20fcc54bee3351",
+          "start_line": 4,
+          "end_line": 4,
+          "text_sha256": "a73e23fec3cb94d3e8589426ad4ecbece8b3734bef05002573d04f6e65ec4d24"
+        },
+        {
+          "candidate_id": "888a0efabc6c9a79e8c34602",
+          "start_line": 5,
+          "end_line": 5,
+          "text_sha256": "fc90735a802b9996c27514c8a5477dd4fca398f82cd129ed09a62849d496e916"
+        }
+      ]
+    },
+    {
+      "artifact_id": "0cb6ff73b536ad26fca95184",
+      "path": "data/reusables/scim/your-okta-product-must-support-scim.md",
+      "content_sha256": "63ebc3b2dc3f36c7cc7fd8cfcfb130de99a485342bdf1eecb74c1f589fa06f9e",
+      "candidate_count": 1,
+      "candidates": [
+        {
+          "candidate_id": "20caa2af51f55e5cd0d205d2",
+          "start_line": 1,
+          "end_line": 1,
+          "text_sha256": "0278557776e9da21b3287e5478233ff528da3b7495de322a40266e4f2dbcdb0a"
+        }
+      ]
+    }
+  ],
+  "identity_mismatches": [],
+  "checkpoint_verification": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "observed": "324 tests in 1.327s; OK. Trailing published_docs ERROR is synthetic negative fixture."},
+    {"command": "python -m ges validate", "exit_code": 0, "observed": "valid true; 95 controls"},
+    {"command": "python -m ges compile", "exit_code": 0, "observed": "completed without output"},
+    {"command": "git diff --check", "exit_code": 0, "observed": "no whitespace errors"}
+  ],
+  "candidate_span_digest_check": {
+    "checked": 180,
+    "mismatches": [],
+    "method": "Pinned content splitlines, inclusive indexed span, LF join and SHA-256 comparison."
+  },
+  "full_review_receipts_issued": false,
+  "claim_draft_audit_complete": false,
+  "global_omission_certified": false,
+  "rights_cleared": false,
+  "policy_adopted": false,
+  "native_enforcement_verified": false
+}

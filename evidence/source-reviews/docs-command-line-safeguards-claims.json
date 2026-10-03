@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:42:55.351Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COMMANDLINESAFEGUARDS-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/provide-an-access-token.md",
+      "content_sha256": "600ac8c8a852c767738dce00ed5eeed472a9acc5a01bc6ea8a273f4401216725",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "For FPT or GHEC, using the source's PAT-v1 token type to access a SAML-SSO organization additionally requires token authorization before authentication. Preserve both version and token-type conditions rather than imposing this exact procedure on every token or platform. Variable resolution and two linked SSO procedures remain separate; no token was obtained or authorized.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COMMANDLINESAFEGUARDS-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/start_ssh_agent.md",
+      "content_sha256": "41dfd54f19aff0da550beb9847b5a988c0700444c36c5a64bb6c82ea4cc3a40a",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "The source gives a background ssh-agent startup example with illustrative PID, while noting environment-dependent alternatives including different shells and possible root access. These examples are unexecuted data, not a blanket privilege-escalation requirement, verified running process or authorization to evaluate shell output. No agent was started or root shell opened.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COMMANDLINESAFEGUARDS-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/switching_directories_procedural.md",
+      "content_sha256": "f467afe3594220dd40d0899d02b5d91011e7529aeab5195aff361cc42fb3f014",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The directory-switching step selects the local repository as working context. It does not identify a repository, verify remote identity or grant authority for subsequent destructive operations.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COMMANDLINESAFEGUARDS-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/use_with_support_only.md",
+      "content_sha256": "6bd0228fd1ab882b5f989458744c51f21a35b17ac29e433f090da851d27089c3",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment expressly prohibits its context-dependent command without enterprise-support direction and warns of damage or data loss from incorrect use. The command identity is absent here and must be resolved from surrounding content; this warning is not support approval or permission to execute. No support-only command was run and the support link remains separate.",
+      "accepted_policy": false
+    }
+  ]
+}

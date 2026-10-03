@@ -1,0 +1,3756 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/github-well-architected",
+  "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-01T23:14:46Z",
+  "review_scope": "Full architecture and collaboration checklists only",
+  "artifact_count": 2,
+  "candidate_count": 197,
+  "structured_occurrence_count": 156,
+  "atomic_claim_count": 154,
+  "non_actionable_structured_occurrences": [
+    {
+      "structured_requirement_id": "SRC-WA-817958c1b54718eb",
+      "path": "content/library/architecture/checklist.md",
+      "line": 82,
+      "disposition": "NO_ACTIONABLE_CONTENT",
+      "rationale": "This occurrence is a subsection label introducing following checklist items; operative recommendations are individually retained, not inferred from the label."
+    },
+    {
+      "structured_requirement_id": "SRC-WA-64346ea03dad094c",
+      "path": "content/library/architecture/checklist.md",
+      "line": 88,
+      "disposition": "NO_ACTIONABLE_CONTENT",
+      "rationale": "This occurrence is a subsection label introducing following checklist items; operative recommendations are individually retained, not inferred from the label."
+    }
+  ],
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "claims": [
+    {
+      "claim_id": "WA-AC-001",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 21,
+      "end_line": 21,
+      "structured_requirement_id": "SRC-WA-7ee27711199c9fad",
+      "statement": "Review repository organization for comprehensible growth.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L21-L21",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-002",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 22,
+      "end_line": 22,
+      "structured_requirement_id": "SRC-WA-f7b8ad31df26f74e",
+      "statement": "Review repository naming conventions and ensure each repository explains its purpose.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L22-L22",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ID-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-003",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 23,
+      "end_line": 23,
+      "structured_requirement_id": "SRC-WA-10bb982f01cfc1d9",
+      "statement": "Evaluate custom repository properties for justified management and enforcement needs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L23-L23",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-004",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 24,
+      "end_line": 24,
+      "structured_requirement_id": "SRC-WA-91aaf1df9df3c623",
+      "statement": "Keep repository boundaries appropriate to their functions; justify any consolidation instead of assuming a monolithic structure.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L24-L24",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-005",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 25,
+      "end_line": 25,
+      "structured_requirement_id": "SRC-WA-4c1a41c3d6e666ef",
+      "statement": "Verify effective branch safeguards appropriate to required code quality.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L25-L25",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-RULE-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-006",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 28,
+      "end_line": 28,
+      "structured_requirement_id": "SRC-WA-1f8bb43356af3fa2",
+      "statement": "Assess code decomposition for manageable growth and maintenance.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L28-L28",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-007",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 29,
+      "end_line": 29,
+      "structured_requirement_id": "SRC-WA-f1bb3fb5378e3bab",
+      "statement": "Design reusable components with limited coupling.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L29-L29",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-008",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 30,
+      "end_line": 30,
+      "structured_requirement_id": "SRC-WA-949e91a5188f31fa",
+      "statement": "Choose implementation patterns that support component boundaries.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L30-L30",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-009",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 31,
+      "end_line": 31,
+      "structured_requirement_id": "SRC-WA-bc352dd048fe55e1",
+      "statement": "Record component dependency relationships.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L31-L31",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-010",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 34,
+      "end_line": 34,
+      "structured_requirement_id": "SRC-WA-db7158c427d752e5",
+      "statement": "Review cross-project technology choices for efficient interoperability.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L34-L34",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-011",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 35,
+      "end_line": 35,
+      "structured_requirement_id": "SRC-WA-c1ebe0356a8a155f",
+      "statement": "Standardize technology choices where doing so reduces justified complexity.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L35-L35",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-012",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 36,
+      "end_line": 36,
+      "structured_requirement_id": "SRC-WA-eb278f0fecd07ed5",
+      "statement": "Assess the support and ecosystem of chosen technology.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L36-L36",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-013",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 37,
+      "end_line": 37,
+      "structured_requirement_id": "SRC-WA-eeb85a25a9250816",
+      "statement": "Version dependency configuration.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L37-L37",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-014",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 40,
+      "end_line": 40,
+      "structured_requirement_id": "SRC-WA-4e800d994f419ee8",
+      "statement": "Make temporary resources reproducible on demand.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L40-L40",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-015",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 41,
+      "end_line": 41,
+      "structured_requirement_id": "SRC-WA-9d823154f5ea38c4",
+      "statement": "Plan sufficient capacity margins for persistent compute.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L41-L41",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-016",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 42,
+      "end_line": 42,
+      "structured_requirement_id": "SRC-WA-98a521fe4f8400c4",
+      "statement": "Assess load distribution needs and suitable traffic routing.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L42-L42",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-017",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 43,
+      "end_line": 43,
+      "structured_requirement_id": "SRC-WA-fdb9bc36d287d8bc",
+      "statement": "Test the system's performance under increased demand.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L43-L43",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-018",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 44,
+      "end_line": 44,
+      "structured_requirement_id": "SRC-WA-b44a6dff7c5d482e",
+      "statement": "Evaluate storage growth and scaling capability.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L44-L44",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-019",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 49,
+      "end_line": 49,
+      "structured_requirement_id": "SRC-WA-d0eaea4c755b2807",
+      "statement": "Verify useful service behavior during component failure.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L49-L49",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-020",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 50,
+      "end_line": 50,
+      "structured_requirement_id": "SRC-WA-4763828d275f817f",
+      "statement": "Maintain and exercise backup and recovery procedures.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L50-L50",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-021",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 51,
+      "end_line": 51,
+      "structured_requirement_id": "SRC-WA-83a19590d4633002",
+      "statement": "Detect and control configuration divergence across environments.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L51-L51",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-009"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-022",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 54,
+      "end_line": 54,
+      "structured_requirement_id": "SRC-WA-cb64ce8a0143dc83",
+      "statement": "Maintain and regularly test backup and recovery procedures.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L54-L54",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-023",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 55,
+      "end_line": 55,
+      "structured_requirement_id": "SRC-WA-07c9080639c771eb",
+      "statement": "Protect backups and verify recovery within required time.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L55-L55",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-024",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 56,
+      "end_line": 56,
+      "structured_requirement_id": "SRC-WA-53bb5614a4f4366c",
+      "statement": "Evaluate suitable automated backup mechanisms.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L56-L56",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-025",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 57,
+      "end_line": 57,
+      "structured_requirement_id": "SRC-WA-a468eb2604915955",
+      "statement": "Exercise recovery in staging, including relevant feature tests.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L57-L57",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-026",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 60,
+      "end_line": 60,
+      "structured_requirement_id": "SRC-WA-9a6227c5d8b38855",
+      "statement": "Review availability architecture against permitted downtime.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L60-L60",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-027",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 61,
+      "end_line": 61,
+      "structured_requirement_id": "SRC-WA-7889c3e18eeb5995",
+      "statement": "Exercise failover procedures.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L61-L61",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-028",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 62,
+      "end_line": 62,
+      "structured_requirement_id": "SRC-WA-4adce4b6d0a314b8",
+      "statement": "Provide redundancy for critical components where justified.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L62-L62",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-029",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 67,
+      "end_line": 67,
+      "structured_requirement_id": "SRC-WA-54564fe784c83df2",
+      "statement": "Observe performance continuously and address demonstrated bottlenecks.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L67-L67",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-030",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 68,
+      "end_line": 68,
+      "structured_requirement_id": "SRC-WA-7caf3492df90f46f",
+      "statement": "Review resource consumption for avoidable waste.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L68-L68",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-031",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 69,
+      "end_line": 69,
+      "structured_requirement_id": "SRC-WA-8e015c6a2b1dcf4f",
+      "statement": "Automate repetitive work where benefits and error reduction justify maintenance.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L69-L69",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-032",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 70,
+      "end_line": 70,
+      "structured_requirement_id": "SRC-WA-cb9466a7a36cf87a",
+      "statement": "Evaluate profiling tools for locating performance constraints.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L70-L70",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-033",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 73,
+      "end_line": 73,
+      "structured_requirement_id": "SRC-WA-e8bb91708e7618b1",
+      "statement": "Review resource consumption for avoidable waste.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L73-L73",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-034",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 74,
+      "end_line": 74,
+      "structured_requirement_id": "SRC-WA-47a74aa819951d85",
+      "statement": "Tune allocation to measured workload needs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L74-L74",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-035",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 75,
+      "end_line": 75,
+      "structured_requirement_id": "SRC-WA-588e6c13ba2c6c45",
+      "statement": "Evaluate tools for managing resource allocation.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L75-L75",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-036",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 78,
+      "end_line": 78,
+      "structured_requirement_id": "SRC-WA-cdc5fb8e6c6c5146",
+      "statement": "Automate repetitive work where benefits justify maintenance.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L78-L78",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-037",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 79,
+      "end_line": 79,
+      "structured_requirement_id": "SRC-WA-0d591b91bf35c307",
+      "statement": "Document operational automation.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L79-L79",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-038",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 80,
+      "end_line": 80,
+      "structured_requirement_id": "SRC-WA-4e63a72fa2e923a8",
+      "statement": "Keep automation dependencies current through governed updates.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L80-L80",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-039",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 83,
+      "end_line": 83,
+      "structured_requirement_id": "SRC-WA-972d7e52176bc8f3",
+      "statement": "Meet requirements with the least justified design complexity.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L83-L83",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-040",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 84,
+      "end_line": 84,
+      "structured_requirement_id": "SRC-WA-dfdcc42701ee74e9",
+      "statement": "Make architecture understandable to its operators.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L84-L84",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-041",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 85,
+      "end_line": 85,
+      "structured_requirement_id": "SRC-WA-1bb644639c03c8d0",
+      "statement": "Keep configuration manageable and comprehensible.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L85-L85",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-042",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 86,
+      "end_line": 86,
+      "structured_requirement_id": "SRC-WA-5b6be15814c6be77",
+      "statement": "Evaluate design patterns for reducing justified complexity.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L86-L86",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-043",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 89,
+      "end_line": 89,
+      "structured_requirement_id": "SRC-WA-846af04f7651bf08",
+      "statement": "Explain systems and procedures clearly.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L89-L89",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-DOC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-044",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 90,
+      "end_line": 90,
+      "structured_requirement_id": "SRC-WA-333da15d00ba2b82",
+      "statement": "Keep documentation current and available to authorized readers.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L90-L90",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-DOC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-045",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 91,
+      "end_line": 91,
+      "structured_requirement_id": "SRC-WA-ed2fe9aee7153da3",
+      "statement": "Include practical examples and use cases in documentation.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L91-L91",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-DOC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-046",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 92,
+      "end_line": 92,
+      "structured_requirement_id": "SRC-WA-195066ec1b449163",
+      "statement": "Evaluate appropriate documentation publication and management tooling.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L92-L92",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-DOC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-047",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 97,
+      "end_line": 97,
+      "structured_requirement_id": "SRC-WA-28a31472eb1e8370",
+      "statement": "Maintain a disaster recovery plan.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L97-L97",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-048",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 98,
+      "end_line": 98,
+      "structured_requirement_id": "SRC-WA-f7d064e9f358ca78",
+      "statement": "Exercise disaster recovery procedures at a defined cadence.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L98-L98",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-049",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 99,
+      "end_line": 99,
+      "structured_requirement_id": "SRC-WA-2b4176ba947e0b92",
+      "statement": "Evaluate replication against recovery and loss objectives.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L99-L99",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-050",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 100,
+      "end_line": 100,
+      "structured_requirement_id": "SRC-WA-1de510ce6ad3a48d",
+      "statement": "Assign disaster recovery duties to accountable roles.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L100-L100",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-051",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 101,
+      "end_line": 101,
+      "structured_requirement_id": "SRC-WA-194fefefad4ef854",
+      "statement": "Verify recovery of repository history after accidental force updates.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L101-L101",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-052",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 104,
+      "end_line": 104,
+      "structured_requirement_id": "SRC-WA-89b57d90bdedd251",
+      "statement": "Exercise disaster recovery procedures at a defined cadence.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L104-L104",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-053",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 105,
+      "end_line": 105,
+      "structured_requirement_id": "SRC-WA-b52b0780b6887ea3",
+      "statement": "Record recovery test results and subject them to review.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L105-L105",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-054",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 106,
+      "end_line": 106,
+      "structured_requirement_id": "SRC-WA-fd0d1363aeb842a4",
+      "statement": "Resolve defects discovered by recovery exercises.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L106-L106",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-055",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 109,
+      "end_line": 109,
+      "structured_requirement_id": "SRC-WA-7ce74aab75ae8f99",
+      "statement": "Evaluate replication against recovery and loss objectives.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L109-L109",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-056",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 110,
+      "end_line": 110,
+      "structured_requirement_id": "SRC-WA-94296d01cd762d72",
+      "statement": "Monitor replication operation.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L110-L110",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-057",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 111,
+      "end_line": 111,
+      "structured_requirement_id": "SRC-WA-f508f5e1e43a4336",
+      "statement": "Verify replica freshness and consistency.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L111-L111",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-058",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 116,
+      "end_line": 116,
+      "structured_requirement_id": "SRC-WA-af7708acda822900",
+      "statement": "Design suitable service boundaries for independent development, deployment and scaling.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L116-L116",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-059",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 117,
+      "end_line": 117,
+      "structured_requirement_id": "SRC-WA-5aaa0bef55913897",
+      "statement": "Specify component interfaces clearly.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L117-L117",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-060",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 120,
+      "end_line": 120,
+      "structured_requirement_id": "SRC-WA-034224f38eecbce8",
+      "statement": "Review code decomposition for maintainable updates.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L120-L120",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-061",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 121,
+      "end_line": 121,
+      "structured_requirement_id": "SRC-WA-bd011edf82d23e80",
+      "statement": "Design reusable components with limited coupling.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L121-L121",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-062",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 122,
+      "end_line": 122,
+      "structured_requirement_id": "SRC-WA-34853fe59c1403b1",
+      "statement": "Evaluate design patterns that support component boundaries.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L122-L122",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-063",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 123,
+      "end_line": 123,
+      "structured_requirement_id": "SRC-WA-ff390f1f7f6fc50c",
+      "statement": "Record component dependency relationships.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L123-L123",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-064",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 126,
+      "end_line": 126,
+      "structured_requirement_id": "SRC-WA-7091f980b55e4087",
+      "statement": "Consider distributed service architecture only where it fits the system.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L126-L126",
+      "source_strength": "CONTEXTUAL_CONSIDERATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-065",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 127,
+      "end_line": 127,
+      "structured_requirement_id": "SRC-WA-d54c3abfb2fc1c70",
+      "statement": "Verify independent deployment of services when that architecture is adopted.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L127-L127",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-066",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 128,
+      "end_line": 128,
+      "structured_requirement_id": "SRC-WA-102bafeb87d4eb9b",
+      "statement": "Verify correct communication among adopted services.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L128-L128",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-067",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 129,
+      "end_line": 129,
+      "structured_requirement_id": "SRC-WA-8dea281a007a706d",
+      "statement": "Evaluate discovery mechanisms when service topology needs them.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L129-L129",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-068",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 134,
+      "end_line": 134,
+      "structured_requirement_id": "SRC-WA-83a61378b3ba456b",
+      "statement": "Document integration APIs sufficiently for consumers.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L134-L134",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-069",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 135,
+      "end_line": 135,
+      "structured_requirement_id": "SRC-WA-bb5c82923efbcac5",
+      "statement": "Identify and verify applicable API standards.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L135-L135",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-070",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 136,
+      "end_line": 136,
+      "structured_requirement_id": "SRC-WA-6e8f0627acc18b32",
+      "statement": "Version APIs and preserve required compatibility.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L136-L136",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-071",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 137,
+      "end_line": 137,
+      "structured_requirement_id": "SRC-WA-98c234f3989b9dad",
+      "statement": "Evaluate API mediation and access controls where appropriate.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L137-L137",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-072",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 140,
+      "end_line": 140,
+      "structured_requirement_id": "SRC-WA-8ab26cc50d7ff17f",
+      "statement": "Identify interoperability standards applicable to the system.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L140-L140",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-073",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 141,
+      "end_line": 141,
+      "structured_requirement_id": "SRC-WA-3a4cd09c2073f1e9",
+      "statement": "Fulfil applicable licenses for externally sourced software.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L141-L141",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-RIGHTS-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-074",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 142,
+      "end_line": 142,
+      "structured_requirement_id": "SRC-WA-5ca526b8643c6989",
+      "statement": "Verify compatibility across supported execution environments.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L142-L142",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-075",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 143,
+      "end_line": 143,
+      "structured_requirement_id": "SRC-WA-9d39347c9300bf3d",
+      "statement": "Evaluate middleware only where communication needs justify it.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L143-L143",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-076",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 144,
+      "end_line": 144,
+      "structured_requirement_id": "SRC-WA-e7b1a1e55222149f",
+      "statement": "Define interoperable data formats.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L144-L144",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-077",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 147,
+      "end_line": 147,
+      "structured_requirement_id": "SRC-WA-c9c466f107cc0de0",
+      "statement": "Verify compatibility across supported execution environments.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L147-L147",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-078",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 148,
+      "end_line": 148,
+      "structured_requirement_id": "SRC-WA-1dd491f710811d90",
+      "statement": "Exercise supported-platform compatibility regularly.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L148-L148",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-079",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 149,
+      "end_line": 149,
+      "structured_requirement_id": "SRC-WA-de2ef99e2eb78559",
+      "statement": "Evaluate technology portability against platform requirements.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L149-L149",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-080",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 150,
+      "end_line": 150,
+      "structured_requirement_id": "SRC-WA-eee80f07e76cca8e",
+      "statement": "Record execution environment dependencies.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L150-L150",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-081",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 155,
+      "end_line": 155,
+      "structured_requirement_id": "SRC-WA-47b900d999957bbd",
+      "statement": "Capture operational events needed to understand behavior and failures.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L155-L155",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-082",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 156,
+      "end_line": 156,
+      "structured_requirement_id": "SRC-WA-616789156e227358",
+      "statement": "Protect operational logs and permit authorized analysis.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L156-L156",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-083",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 157,
+      "end_line": 157,
+      "structured_requirement_id": "SRC-WA-62293d946c2256b9",
+      "statement": "Define log retention.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L157-L157",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-084",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 158,
+      "end_line": 158,
+      "structured_requirement_id": "SRC-WA-908ba760bad323a1",
+      "statement": "Evaluate appropriate aggregation of operational logs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L158-L158",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-085",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 161,
+      "end_line": 161,
+      "structured_requirement_id": "SRC-WA-8d217205fe79cf02",
+      "statement": "Observe system health and performance with suitable instrumentation.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L161-L161",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-086",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 162,
+      "end_line": 162,
+      "structured_requirement_id": "SRC-WA-16d4aa1cf32a4c8b",
+      "statement": "Create useful dashboards and review them regularly.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L162-L162",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-087",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 163,
+      "end_line": 163,
+      "structured_requirement_id": "SRC-WA-2af6370a56fdbb36",
+      "statement": "Configure actionable operational notifications.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L163-L163",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-009"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-088",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 164,
+      "end_line": 164,
+      "structured_requirement_id": "SRC-WA-28355e6e0f2b6286",
+      "statement": "Evaluate anomaly detection against operational needs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L164-L164",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-089",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 167,
+      "end_line": 167,
+      "structured_requirement_id": "SRC-WA-e0be154b86987511",
+      "statement": "Notify accountable responders promptly about operational problems.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L167-L167",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-009"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-090",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 168,
+      "end_line": 168,
+      "structured_requirement_id": "SRC-WA-4194749bcd67d812",
+      "statement": "Tune alert thresholds to meaningful conditions.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L168-L168",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-009"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-091",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 169,
+      "end_line": 169,
+      "structured_requirement_id": "SRC-WA-0ba0a579e6e0b9d2",
+      "statement": "Include diagnostic context and a clear response in notifications.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L169-L169",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-009"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-092",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 170,
+      "end_line": 170,
+      "structured_requirement_id": "SRC-WA-f24d4ac9e94ae284",
+      "statement": "Manage redundant or noisy alerts to preserve responder attention.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L170-L170",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-009"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-093",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 177,
+      "end_line": 177,
+      "structured_requirement_id": "SRC-WA-01bc9d1e626a5ca1",
+      "statement": "Define Cloud user roles and audit access.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L177-L177",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-094",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 178,
+      "end_line": 178,
+      "structured_requirement_id": "SRC-WA-fd27219753f006e8",
+      "statement": "Reconcile Cloud user privileges regularly.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L178-L178",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-095",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 179,
+      "end_line": 179,
+      "structured_requirement_id": "SRC-WA-ee387bd9abc824a3",
+      "statement": "Evaluate enterprise Cloud single sign-on.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L179-L179",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-096",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 182,
+      "end_line": 182,
+      "structured_requirement_id": "SRC-WA-998e3946763834ef",
+      "statement": "Verify Cloud security obligations against actual organizational and external requirements.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L182-L182",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-097",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 183,
+      "end_line": 183,
+      "structured_requirement_id": "SRC-WA-607865b20a5ea8a0",
+      "statement": "Document Cloud security policy and verify effective enforcement.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L183-L183",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-098",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 186,
+      "end_line": 186,
+      "structured_requirement_id": "SRC-WA-9998d84c5f427fab",
+      "statement": "Justify Cloud integrations and assess their security and efficiency.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L186-L186",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-099",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 187,
+      "end_line": 187,
+      "structured_requirement_id": "SRC-WA-534e6744ea0f2ccd",
+      "statement": "Record Cloud integration contracts and maintain them.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L187-L187",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-100",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 188,
+      "end_line": 188,
+      "structured_requirement_id": "SRC-WA-115ec24ae86170b5",
+      "statement": "Assess Cloud integrations for added security risk.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L188-L188",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-101",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 191,
+      "end_line": 191,
+      "structured_requirement_id": "SRC-WA-8e18f887ff66c26c",
+      "statement": "Meet applicable data residency obligations for Cloud deployments.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L191-L191",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-102",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 192,
+      "end_line": 192,
+      "structured_requirement_id": "SRC-WA-00fe1046a684d5ba",
+      "statement": "Verify approved Cloud storage locations.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L192-L192",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-103",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 193,
+      "end_line": 193,
+      "structured_requirement_id": "SRC-WA-c2ae268f4ad9ec79",
+      "statement": "Evaluate localization where applicable obligations require it.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L193-L193",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_CLOUD_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-104",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 198,
+      "end_line": 198,
+      "structured_requirement_id": "SRC-WA-f1ec860e17689890",
+      "statement": "Define Server user roles and audit access.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L198-L198",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-105",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 199,
+      "end_line": 199,
+      "structured_requirement_id": "SRC-WA-919d4158d31aaa86",
+      "statement": "Reconcile Server user privileges regularly.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L199-L199",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-106",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 200,
+      "end_line": 200,
+      "structured_requirement_id": "SRC-WA-892682005fd93ac2",
+      "statement": "Evaluate enterprise Server single sign-on.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L200-L200",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-107",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 203,
+      "end_line": 203,
+      "structured_requirement_id": "SRC-WA-3322d658d8134e76",
+      "statement": "Verify Server security obligations against actual organizational and external requirements.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L203-L203",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-108",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 204,
+      "end_line": 204,
+      "structured_requirement_id": "SRC-WA-436b4e0faaf5faf6",
+      "statement": "Document Server security policy and verify effective enforcement.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L204-L204",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-109",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 207,
+      "end_line": 207,
+      "structured_requirement_id": "SRC-WA-3455dbb951e29fe1",
+      "statement": "Justify Server integrations and assess their security and efficiency.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L207-L207",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-110",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 208,
+      "end_line": 208,
+      "structured_requirement_id": "SRC-WA-91b1070d6d52f36a",
+      "statement": "Record Server integration contracts and maintain them.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L208-L208",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-111",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 209,
+      "end_line": 209,
+      "structured_requirement_id": "SRC-WA-3c46c3413053f533",
+      "statement": "Assess Server integrations for added security risk.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L209-L209",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-112",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 212,
+      "end_line": 212,
+      "structured_requirement_id": "SRC-WA-ba77df3fc07abb9a",
+      "statement": "Review Server network design for required security and throughput.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L212-L212",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-113",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 213,
+      "end_line": 213,
+      "structured_requirement_id": "SRC-WA-176f02873b6a2614",
+      "statement": "Validate Server firewall and access-filter configuration.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L213-L213",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-114",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 214,
+      "end_line": 214,
+      "structured_requirement_id": "SRC-WA-92600fac2583e0c7",
+      "statement": "Observe Server network traffic for relevant threats.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L214-L214",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-115",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 217,
+      "end_line": 217,
+      "structured_requirement_id": "SRC-WA-bed303da07f8384c",
+      "statement": "Apply authorized Server updates and security patches.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L217-L217",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-116",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 218,
+      "end_line": 218,
+      "structured_requirement_id": "SRC-WA-78a6b76f39e9b47d",
+      "statement": "Plan maintenance windows and inform affected stakeholders.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L218-L218",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-117",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 219,
+      "end_line": 219,
+      "structured_requirement_id": "SRC-WA-14e948a6f6da7eb5",
+      "statement": "Document and exercise Server update procedures.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L219-L219",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-118",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 222,
+      "end_line": 222,
+      "structured_requirement_id": "SRC-WA-197b1a54fcb503be",
+      "statement": "Plan physical capacity growth for Server deployments.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L222-L222",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-119",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 223,
+      "end_line": 223,
+      "structured_requirement_id": "SRC-WA-251d1a9c631cdaa9",
+      "statement": "Review Server capacity plans regularly.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L223-L223",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-120",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 224,
+      "end_line": 224,
+      "structured_requirement_id": "SRC-WA-f264ef0d8e709dcf",
+      "statement": "Evaluate infrastructure scaling options for Server requirements.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L224-L224",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ARC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-121",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 227,
+      "end_line": 227,
+      "structured_requirement_id": "SRC-WA-a60a577d5500017a",
+      "statement": "Provide recovery suited to the self-hosted Server environment.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L227-L227",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-122",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 228,
+      "end_line": 228,
+      "structured_requirement_id": "SRC-WA-cb733c60effa5380",
+      "statement": "Document and exercise Server backups.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L228-L228",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-123",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/architecture/checklist.md",
+      "start_line": 229,
+      "end_line": 229,
+      "structured_requirement_id": "SRC-WA-1d8779cfe13cdb15",
+      "statement": "Protect Server backups and verify timely restoration.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L229-L229",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-IAM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "ENTERPRISE_SERVER_ONLY",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-124",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 14,
+      "end_line": 14,
+      "structured_requirement_id": "SRC-WA-76117e398d227fe7",
+      "statement": "Encourage early collaboration and understandable dialogue.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L14-L14",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-125",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 15,
+      "end_line": 15,
+      "structured_requirement_id": "SRC-WA-521790d008e511f6",
+      "statement": "Provide proactive feedback channels.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L15-L15",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-126",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 16,
+      "end_line": 16,
+      "structured_requirement_id": "SRC-WA-30186d0633e69ebd",
+      "statement": "Use proposed changes as an effective collaboration and review mechanism.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L16-L16",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-127",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 17,
+      "end_line": 17,
+      "structured_requirement_id": "SRC-WA-6020e3ef9f5d6861",
+      "statement": "Document how code review decisions are made.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L17-L17",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-128",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 18,
+      "end_line": 18,
+      "structured_requirement_id": "SRC-WA-c300ff2b1370c5a8",
+      "statement": "Connect team communication to engineering workflow.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L18-L18",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-129",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 19,
+      "end_line": 19,
+      "structured_requirement_id": "SRC-WA-8df5c9c0884a236c",
+      "statement": "Link engineering discussions to relevant implementation context.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L19-L19",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-130",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 20,
+      "end_line": 20,
+      "structured_requirement_id": "SRC-WA-880c3699e754fe4c",
+      "statement": "Evaluate external communication integrations where they serve a need.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L20-L20",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-131",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 21,
+      "end_line": 21,
+      "structured_requirement_id": "SRC-WA-bc22d57a0b24eb6f",
+      "statement": "Assess enterprise communication capabilities against team needs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L21-L21",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-132",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 22,
+      "end_line": 22,
+      "structured_requirement_id": "SRC-WA-92adaab4cf5afd5b",
+      "statement": "Review implementation against chosen coding conventions.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L22-L22",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_EXACT_CONTROL_AND_BINDING",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-133",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 23,
+      "end_line": 23,
+      "structured_requirement_id": "SRC-WA-fe79be02c835fab9",
+      "statement": "Explain implementation for its maintainers.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L23-L23",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-134",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 27,
+      "end_line": 27,
+      "structured_requirement_id": "SRC-WA-5e6525c67ac3af48",
+      "statement": "Onboard new participants to the tools they need.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L27-L27",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-135",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 28,
+      "end_line": 28,
+      "structured_requirement_id": "SRC-WA-4decbd8908996f95",
+      "statement": "Teach new participants the team's existing practices.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L28-L28",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-136",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 29,
+      "end_line": 29,
+      "structured_requirement_id": "SRC-WA-b9d7c061ed0013ad",
+      "statement": "Provide opportunities for learning and mentoring.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L29-L29",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-137",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 30,
+      "end_line": 30,
+      "structured_requirement_id": "SRC-WA-2d29ed451a99164c",
+      "statement": "Include varied participant perspectives in decision-making.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L30-L30",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-138",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 31,
+      "end_line": 31,
+      "structured_requirement_id": "SRC-WA-50de7e101f215d99",
+      "statement": "Provide applicable enterprise tooling instruction during onboarding.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L31-L31",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-139",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 35,
+      "end_line": 35,
+      "structured_requirement_id": "SRC-WA-eab95cb1ef45fd55",
+      "statement": "Provide spaces for questions and collaborative deliberation.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L35-L35",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-140",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 36,
+      "end_line": 36,
+      "structured_requirement_id": "SRC-WA-37ba856aed5e7ed0",
+      "statement": "Define how authorized participants receive security findings throughout delivery.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L36-L36",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-141",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 37,
+      "end_line": 37,
+      "structured_requirement_id": "SRC-WA-df7877534568f915",
+      "statement": "Maintain an accessible body of engineering guidance.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L37-L37",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-142",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 38,
+      "end_line": 38,
+      "structured_requirement_id": "SRC-WA-f9904adaf11b2d65",
+      "statement": "Evaluate discussion tools against communication needs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L38-L38",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-143",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 39,
+      "end_line": 39,
+      "structured_requirement_id": "SRC-WA-da4c6877d9f41eed",
+      "statement": "Review collaborator privileges for appropriate access.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L39-L39",
+      "source_strength": "ASSESSMENT_RECOMMENDATION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-144",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 40,
+      "end_line": 40,
+      "structured_requirement_id": "SRC-WA-031d3f7f04c03f2a",
+      "statement": "Evaluate internal repository and wiki capabilities where they improve authorized knowledge sharing.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L40-L40",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-145",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 44,
+      "end_line": 44,
+      "structured_requirement_id": "SRC-WA-03741bb23f3f62a1",
+      "statement": "Standardize communication of security findings.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L44-L44",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-146",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 45,
+      "end_line": 45,
+      "structured_requirement_id": "SRC-WA-fa92379598fd8d32",
+      "statement": "Make current project progress visible to authorized participants.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L45-L45",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-147",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 46,
+      "end_line": 46,
+      "structured_requirement_id": "SRC-WA-893ec68998734f28",
+      "statement": "Evaluate automated cross-team status notifications.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L46-L46",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-148",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 47,
+      "end_line": 47,
+      "structured_requirement_id": "SRC-WA-675cd509b7fb9a0c",
+      "statement": "Provide project-state visibility using appropriate planning tools.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L47-L47",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-005"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-149",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 48,
+      "end_line": 48,
+      "structured_requirement_id": "SRC-WA-c8a8bb092388a3c0",
+      "statement": "Review audit and monitoring evidence for enterprise accountability.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L48-L48",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-150",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 52,
+      "end_line": 52,
+      "structured_requirement_id": "SRC-WA-6256da982f9fff32",
+      "statement": "Define a team model supporting dialogue and shared responsibility.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L52-L52",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-151",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 53,
+      "end_line": 53,
+      "structured_requirement_id": "SRC-WA-a4a7c59e9fc6c3bb",
+      "statement": "Evaluate workflow automation for delivery quality and productivity.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L53-L53",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-152",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 54,
+      "end_line": 54,
+      "structured_requirement_id": "SRC-WA-3ad6c9b2c1e47809",
+      "statement": "Choose a delivery management approach that fits the team.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L54-L54",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-153",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 55,
+      "end_line": 55,
+      "structured_requirement_id": "SRC-WA-51348554e5944916",
+      "statement": "Evaluate third-party integrations for justified capability needs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L55-L55",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    },
+    {
+      "claim_id": "WA-AC-154",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "content/library/collaboration/checklist.md",
+      "start_line": 56,
+      "end_line": 56,
+      "structured_requirement_id": "SRC-WA-b1a1f0a80d0a4d2d",
+      "statement": "Assess enterprise customization against differing team needs.",
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L56-L56",
+      "source_strength": "ASSESSMENT_QUESTION",
+      "source_authority": "VENDOR_ARCHITECTURE_GUIDANCE_NOT_PLATFORM_REQUIREMENT",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-OPS-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_REQUIRES_CRITERIA_REVIEW",
+      "conditional_scope": "TARGET_CONTEXT_REVIEW_REQUIRED",
+      "limitations": [
+        "Evaluate staffing, product, version and function before adoption",
+        "Proposed mapping is not proof of predicate equivalence or native enforcement"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L21-L24",
+      "issue": "Repository segmentation is conditional design guidance. Preserve the approved function-owned polyrepo consumer model; this checklist grants no monorepo migration authority.",
+      "disposition": "PRESERVE_EXISTING_ARCHITECTURE"
+    },
+    {
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L42-L44",
+      "issue": "Load balancing, scalable storage, redundancy and service discovery depend on actual workload and deployment model; they are not required purchases or deployments for every repository.",
+      "disposition": "APPLICABILITY_AND_COST_REVIEW"
+    },
+    {
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L126-L129",
+      "issue": "Microservices are explicitly conditional and can conflict with simplicity and limited maintainer capacity.",
+      "disposition": "UNRESOLVED_ARCHITECTURE_TRADEOFF"
+    },
+    {
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L174-L229",
+      "issue": "Cloud and self-hosted Server obligations have different operational owners, permissions, features and evidence. Their repeated occurrences must not be collapsed into universal applicability.",
+      "disposition": "PLATFORM_PROFILE_REQUIRED"
+    },
+    {
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L35-L48",
+      "issue": "Open collaboration and visibility must respect authorized access, security reporting confidentiality and data residency obligations.",
+      "disposition": "CONTEXTUAL_SCOPE_REQUIRED"
+    },
+    {
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/architecture/checklist.md#L50-L57",
+      "issue": "Backup presence and tested restoration are different claims; automation does not itself establish recoverability.",
+      "disposition": "EXECUTED_RESTORE_EVIDENCE_REQUIRED"
+    },
+    {
+      "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/collaboration/checklist.md#L20-L21",
+      "issue": "External communication and enterprise feature usage are review options, not blanket credentials, integration or cost authorization.",
+      "disposition": "NEEDS_AND_AUTHORITY_REVIEW"
+    }
+  ],
+  "unresolved": [
+    "Independent source-to-control equivalence and omission audits",
+    "Exact network, patching and custom-property predicates remain unmapped",
+    "Platform features, engineering standards and applicable legal requirements need authoritative scope determination",
+    "Review cadence, recovery objectives and resource thresholds need local parameter choices",
+    "No linked-page coverage, rights clearance or effective enforcement receipts"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/15",
+  "verified_at": "2026-10-02T17:51:03Z",
+  "scope": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "files": 28,
+    "source_lines": 1025,
+    "new_claim_records": 828,
+    "operative_atoms": 793,
+    "nonoperative_grouped_context": 35,
+    "parser_candidate_dispositions": 7,
+    "prior_reference_identities_reconciled": 48,
+    "new_source_conflict_records": 2
+  },
+  "claim_documents_sha256": {
+    "evidence/source-reviews/docs-variable-small-claims.json": "8433dd2a7f1f3d602cf00fb2b3bcea72a82e1fc3498f729bd1902ff7ebf6cd24",
+    "evidence/source-reviews/docs-variable-copilot-claims.json": "637e92f2616ab01cf9038b0067849ea1a5e67146a69f84a4076343452f454e8b",
+    "evidence/source-reviews/docs-variable-product-claims.json": "26a2df6b04befa56eea3372e230b73df5c9ac118e6f394fc8afaac180f2648f1"
+  },
+  "verification": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "294 tests passed in3.508s; printed published_docs ERROR is expected synthetic negative fixture, not the project recovery status."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "controls": 95
+      }
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "result": "Generated views rebuilt; no canonical control changes."
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "reference_claims": 46705,
+        "source_artifacts": 719,
+        "duplicate_relationships_validated": 7,
+        "semantic_truth_certified": false,
+        "omission_completeness_certified": false
+      }
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": {
+        "reviewed": 753,
+        "inventory_artifacts": 13657,
+        "accounting_errors": [],
+        "published_pages": 18019,
+        "published_assurance_completed": 0,
+        "gates_open": 9,
+        "project_complete": false
+      }
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "No whitespace errors."
+    }
+  ],
+  "limitations": [
+    "This tranche supplies bounded source review, not whole-corpus extraction or omission certification.",
+    "Reference consolidation does not adopt policy or validate runtime/version rendering.",
+    "Rights clearance, accepted control bindings, approved pilot and authorized estate rollout remain unfinished.",
+    "Full-file review coverage is753/13657=5.51%, not an overall completion percentage."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "schema_version": "ges.issue-intake-search-consolidation.v1",
+  "issue": 372,
+  "reviewed_at": "2026-10-03T10:09:48.822Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "related_consolidation": "evidence/issue-lifecycle-consolidation.json",
+  "scope": "Reviewed Issues claims only, not full six-source reconciliation.",
+  "rows": [
+    {
+      "id": "ISSUE-INTAKE-AUTHORITY",
+      "claims": [
+        "DOCS-ISSUECREATE-1",
+        "DOCS-ISSUEQUICKSTART-1",
+        "DOCS-ISSUECREATE-9"
+      ],
+      "conflict": "Read creation authority differs tutorial write prerequisite and metadata mutation authority.",
+      "decision": "PROPOSED_PER_OPERATION_INTAKE",
+      "requirement": "Bind enabled-issues/read access separately from label/assignee/project/field permissions; preview target and each metadata mutation.",
+      "negative_test": "Read-only creation cannot imply label/Project authority;404 cannot count compliant absence."
+    },
+    {
+      "id": "ISSUE-INTAKE-VALIDATION",
+      "claims": [
+        "DOCS-ISSUECREATE-2",
+        "DOCS-ISSUECREATE-3",
+        "DOCS-ISSUECREATE-10",
+        "DOCS-ISSUEEDITS2-4"
+      ],
+      "conflict": "Templates/form text prefilling and nonblocking duplicate hints differ field state/validated intake.",
+      "decision": "PROPOSED_SCHEMA_AND_IDENTITY_REVIEW",
+      "requirement": "Validate actual submitted content and exact template/form schema; distinguish organization field assignment and independently audited duplicate equivalence.",
+      "negative_test": "Template insertion or duplicate suggestion cannot certify required field truth or prevent duplicate creation."
+    },
+    {
+      "id": "ISSUE-SEARCH-ADAPTER",
+      "claims": [
+        "DOCS-ISSUESEARCH-2",
+        "DOCS-ISSUESEARCH-5",
+        "DOCS-ISSUESEARCH-9",
+        "DOCS-PROJECTSFILTERING-3"
+      ],
+      "conflict": "Issue boolean nesting/ownership limits and field grammar differ Projects automation scope.",
+      "decision": "PENDING_GRAMMAR_BEHAVIOR_AUDIT",
+      "requirement": "Parameterize surface/platform/version, grouping/qualifiers and unsupported syntax; preserve complete declared inventory outside query results.",
+      "negative_test": "Unsupported adapter syntax or ambiguous ownership OR grouping cannot silently pass scope verification."
+    },
+    {
+      "id": "ISSUE-SEARCH-EVIDENCE",
+      "claims": [
+        "DOCS-ISSUESEARCH-10",
+        "DOCS-ISSUESEARCH-11",
+        "DOCS-ISSUESEARCH-13",
+        "DOCS-ISSUEDASHBOARD-2"
+      ],
+      "conflict": "Review/status predicates and shared URLs describe current accessible display, not frozen accepted evidence.",
+      "decision": "PROPOSED_CURRENT_EVIDENCE_ACCOUNTING",
+      "requirement": "Resolve required checks/reviews, exact head/target, permissions, freshness and pagination; persist independently evaluated criterion evidence.",
+      "negative_test": "status:success without required-check completeness or identical URL with different access cannot certify acceptance."
+    },
+    {
+      "id": "ISSUE-AUDIT-CUSTODY",
+      "claims": [
+        "DOCS-ISSUEEDITS1-2",
+        "DOCS-ISSUECREATE-5",
+        "DOCS-ISSUECREATE-6",
+        "DOCS-ISSUECUSTODY1-2"
+      ],
+      "conflict": "Removable history, code snippet, discussion copy and clone do not establish immutable source or retained full history.",
+      "decision": "PROPOSED_DURABLE_IDENTITY_EVIDENCE",
+      "requirement": "Preserve authorized digests/revision/actor/time and exact source/destination plus retained metadata map; distinguish new identity from transfer.",
+      "negative_test": "Snippet or edit-history UI cannot substitute immutable audit; copied issue cannot claim all discussion history."
+    },
+    {
+      "id": "ISSUE-AI-DECISION",
+      "claims": [
+        "DOCS-ISSUEPINAI2-2",
+        "DOCS-ISSUEPINAI2-4",
+        "DOCS-ISSUEPLANNING-8",
+        "DOCS-ISSUEASSIGNBRANCH1-3"
+      ],
+      "conflict": "AI suggestions/summaries/assignment differ verified live execution and authoritative decisions.",
+      "decision": "PROPOSED_REVIEWED_AI_OUTPUT",
+      "requirement": "Record authorized action/version/input scope/run handle/output and independent review; retain human-required acceptance and no automatic installation.",
+      "negative_test": "Label, assignment or generated summary cannot prove live cloud handoff, correctness or prior adopted decision."
+    },
+    {
+      "id": "ISSUE-FUNCTION-ARCHITECTURE",
+      "claims": [
+        "DOCS-ISSUEPLANNING-1",
+        "DOCS-ISSUEPLANNING-2",
+        "DOCS-ISSUEPLANNING-3"
+      ],
+      "conflict": "Tutorial repository creation and example identity differ existing function-owned polyrepo architecture.",
+      "decision": "PROPOSED_PROFILE_OWNERSHIP",
+      "requirement": "Parameterize repository function/ownership/access and reuse existing homes; retain provenance separately from deployable contacts/names.",
+      "negative_test": "Tutorial Project Octocat cannot trigger unrelated rename/monorepo restructuring or invented contacts."
+    },
+    {
+      "id": "ISSUE-SOURCE-CONFLICTS",
+      "claims": [
+        "DOCS-ISSUEPLANNING-4",
+        "DOCS-ISSUEPLANNING-10",
+        "DOCS-ISSUEOVERVIEW-2",
+        "DOCS-LABELMANAGEMENT-1"
+      ],
+      "conflict": "Broad forms/discussion-label/dependency prose conflicts with detailed cloud qualifications.",
+      "decision": "UNRESOLVED_VERSIONED_SCOPE",
+      "requirement": "Retain broad and detailed claim identities; use conservative unknown for disputed capability until exact version/behavior independently verified.",
+      "negative_test": "Parent GHES wildcard must not manufacture support for cloud-only child capability."
+    },
+    {
+      "id": "ISSUE-DEFAULT-SEMANTICS",
+      "claims": [
+        "DOCS-LABELMANAGEMENT-3",
+        "DOCS-ISSUEFIELDORG2-2",
+        "DOCS-ISSUEQUICKSTART-5"
+      ],
+      "conflict": "Default definitions and tutorial labels do not establish desired assignment or universally adopted policy.",
+      "decision": "PROPOSED_PROFILE_DEFAULTS",
+      "requirement": "Separate platform defaults, current configured definitions, assigned values and explicit local obligation strength.",
+      "negative_test": "Existing Priority field/good-first-issue label cannot certify required value or safe newcomer task."
+    }
+  ],
+  "limitations": [
+    "Negative tests are proposals, not executed new bindings.",
+    "Claim identity checks do not certify mapping equivalence or independent omission completeness.",
+    "No policy adoption, native changes or rights clearance."
+  ]
+}

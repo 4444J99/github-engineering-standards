@@ -1,0 +1,109 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 24,
+  "verified_at": "2026-10-02T20:27:57.286Z",
+  "scope": {
+    "files": 95,
+    "physical_lines": 259,
+    "bytes": 40109,
+    "reference_claims": 550,
+    "parser_candidates": 180,
+    "prior_exact_path_overlap": 0,
+    "claim_sha256": "783ee8b9a014d2cb4b9bd02cb9673f99c2e1f184128f7ff9db7b3557de47d274",
+    "repairs": 3
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "observed": "324tests in1.435s OK; trailing published_docs ERROR belongs to synthetic negative fixture."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "observed": "valid true95controls"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "observed": "completed without output"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "observed": "valid true;54,976reference records;1460claim-bearing artifacts;7validated duplicate relationships. Provenance not semantic/globalcertification."
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "observed": "1494/13657reviewed;errors empty;9gatesOPEN;rights0;project_completefalse."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "observed": "no whitespace errors"
+    }
+  ],
+  "additional_checks": {
+    "candidate_span_digests_verified": 180,
+    "source_inventory_identity_mismatches": 0,
+    "consolidation_occurrences": 550,
+    "consolidation_unique_ids": 550,
+    "structural_candidates_without_overlapping_claim": 2,
+    "structural_mapping": "Honest surrounding-context reference for source introductions; no fabricated overlapping claim."
+  },
+  "accounting": {
+    "review": {
+      "errors": [],
+      "inventoried": 13657,
+      "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+      "review_coverage": 0.10939444973273779,
+      "reviewed": 1494
+    },
+    "project_complete": false,
+    "gates": [
+      [
+        "exhaustive_artifact_accounting",
+        "OPEN"
+      ],
+      [
+        "published_content_assurance",
+        "OPEN"
+      ],
+      [
+        "semantic_extraction",
+        "OPEN"
+      ],
+      [
+        "consolidation",
+        "OPEN"
+      ],
+      [
+        "generalization",
+        "OPEN"
+      ],
+      [
+        "operational_completeness",
+        "OPEN"
+      ],
+      [
+        "native_enforcement",
+        "OPEN"
+      ],
+      [
+        "rights_and_publication",
+        "OPEN"
+      ],
+      [
+        "estate_rollout",
+        "OPEN"
+      ]
+    ],
+    "rights": 0
+  },
+  "limitations": [
+    "Full bounded source review does not certify global omission completeness or published version/render assurance.",
+    "No reference adopted as accepted policy, no rights clearance or publication.",
+    "No credentials/identity/native/protection/pilot/estate changes occurred."
+  ]
+}

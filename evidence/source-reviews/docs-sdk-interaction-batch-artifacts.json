@@ -1,0 +1,1653 @@
+[
+  {
+    "artifact_id": "e69ddf9346261c3707cf36dc",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/image-input.md",
+    "content_sha256": "4a33f27aa8063f8dbf8e4ba3dd49caccc599d08bbf697d1f3345b6a2d5007835",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T14:25:34Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete368-line text read, all70candidate dispositions and240reference records consolidated once. Original draft preserved in d57adec; compact independent audit/recheck only supports its specified scope. Source prompts/handlers/settings are inert, not adopted policy or runtime/rights/global assurance. Diagram references do not review separate assets.",
+    "independent_audit": "evidence/sdk-sdk-interaction-batch-independent-audit.json",
+    "repair_recheck": "evidence/sdk-interaction-batch-independent-repair-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "9fdd653999f744f2b25e61a5",
+        "text_sha256": "a29f110e00c08f2e6e00f44cad825ea763c0ed5b4b22ef0173712b10140e0e5c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-001: Images can be supplied to sessions as attachments. DOCS-SDKIMAGE-002: Source distinguishes file and blob attachment routes. DOCS-SDKIMAGE-003: Source declares Free/Pro/Team applicability. DOCS-SDKIMAGE-004: Source declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "e9b8c6484772e78279d02ab1",
+        "text_sha256": "ee895fb18e1845c479336b26c580e4bc8e5fc6c9cec695ebe62c51dbb9db9a2e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-005: Earlier image-input route redirects to this guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "b3da807ef4dba604da8ebcf8",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "0ec780af6190d9ea8a2fa6ed",
+        "text_sha256": "8004d1a8ebd3e0225708c944e5c826d8a9dd13df7d91a634bffa13511b6dff4b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-006: File attachment uses type file. DOCS-SDKIMAGE-007: Runtime reads attached file from disk. DOCS-SDKIMAGE-008: Runtime converts attached file to base64. DOCS-SDKIMAGE-009: Runtime sends attached image to the model. DOCS-SDKIMAGE-010: File attachment path must be absolute.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "808ebf07bed76ce907d27527",
+        "text_sha256": "b40cf4acf450e1c122bf854b6b0d4fb367fed5272cd8b2858c32d46017f01c44",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-011: Blob attachment uses type blob. DOCS-SDKIMAGE-012: Blob attachment supplies base64 data directly. DOCS-SDKIMAGE-013: Blob route suits image data already in memory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "974157fe27bd1b842e18e043",
+        "text_sha256": "84650d4ff5192592c0df0a5a8947854e733caf48cda6d2ff5abb1e8fef210d72",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-014: Source references a separate sequence-diagram image; referencing does not review its visual content.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "600d1e3f2d5611512003b81d",
+        "text_sha256": "b7dca7855819548aa77cafaed5395908db7f8f3883cb825d27c2719eef65a38f",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "cea1a4ea48283020eca6dbbe",
+        "text_sha256": "81966bbdce03c8154e86a32d4723eca52ea82b00752a4ce482b0ad3dda8cb68d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "278838dfe6a8606dab64f5f5",
+        "text_sha256": "d7780420d22eff9319763c6c5a5f0d9230f586ffb796d8a3a0a6605047838884",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-016: File attachment table requires absolute path. DOCS-SDKIMAGE-015-A01: The file attachment table identifies the file discriminator. DOCS-SDKIMAGE-015-A02: The file attachment table identifies a path to the image on disk.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "fd8efe554c8d80eab052150b",
+        "text_sha256": "96738225e0aef0bfb8e9e746472ea8965091c54eb1e100656ee258543cf494f1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-017: Blob attachment table identifies base64 data. DOCS-SDKIMAGE-018: Blob attachment table includes mimeType. DOCS-SDKIMAGE-019: Blob attachment route does not require disk I/O.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "a5e9229ea0f0fc8a8d3fb9fd",
+        "text_sha256": "794b5468f276b0e146e2e8502025c3b681b8b5c67df125bda5a3b82b7a686652",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-020: File encoding is automatic at runtime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "0478012478d5c40f423870f1",
+        "text_sha256": "843436371273b7792f42b3ed86c36296c2e60fba60812b2ea4122ea42f26c440",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-021: Runtime resizes images exceeding model-specific limits. DOCS-SDKIMAGE-022: Runtime may reduce quality for images exceeding model-specific limits.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "2373d726bf5129022382dc64",
+        "text_sha256": "28d70c488dad166eb0513c9f27eb0e94ca5afdaac87047d29d83a466cabd0f18",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-023: Image processing requires capabilities.supports.vision true.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "c8f1203bc975fee5f8df9b8f",
+        "text_sha256": "da02ce2bd2f2d7aeb2d2fdc9255630d9d8ed241029a8276566b2f88ebafa4c60",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-024: Attach disk image using file attachment. DOCS-SDKIMAGE-025: File quick-start requires absolute image path.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "829fa999b2f363986234d234",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "717a82b2c5aa5377b8a14a23",
+        "text_sha256": "0e74be4acb0fdb75534350e72997d07b797fe8b7a8314effc71d72632a21f785",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-089: TypeScript file example imports CopilotClient. DOCS-SDKIMAGE-090: TypeScript file example constructs a client. DOCS-SDKIMAGE-091: TypeScript file example awaits startup. DOCS-SDKIMAGE-092: TypeScript file example awaits createSession. DOCS-SDKIMAGE-093: TypeScript file example selects illustrative gpt-5.4. DOCS-SDKIMAGE-094: TypeScript file handler asynchronously returns approve-once; not adopted permission authority. DOCS-SDKIMAGE-095: TypeScript file example awaits send. DOCS-SDKIMAGE-096: TypeScript file prompt requests an inert image description. DOCS-SDKIMAGE-097: TypeScript file example supplies attachment array. DOCS-SDKIMAGE-098: TypeScript attachment has file type. DOCS-SDKIMAGE-099: TypeScript attachment uses illustrative absolute screenshot path.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "82639af64309d497136cb27b",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "381d8a1448637de9906fd3cf",
+        "text_sha256": "a4b7af1738c680642531ce91e75c15da1dc58295b9133cfc7940c9f9978a8a6f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-100: Python file example imports CopilotClient. DOCS-SDKIMAGE-101: Python file example imports PermissionDecisionApproveOnce. DOCS-SDKIMAGE-102: Python file example constructs client. DOCS-SDKIMAGE-103: Python file example awaits startup. DOCS-SDKIMAGE-104: Python file example awaits create_session. DOCS-SDKIMAGE-105: Python file handler accepts req and inv. DOCS-SDKIMAGE-106: Python file handler returns ApproveOnce decision; not adopted authority. DOCS-SDKIMAGE-107: Python file example selects illustrative gpt-5.4. DOCS-SDKIMAGE-108: Python file example awaits send. DOCS-SDKIMAGE-109: Python file prompt requests inert image description. DOCS-SDKIMAGE-110: Python file example supplies attachment list. DOCS-SDKIMAGE-111: Python attachment has file type. DOCS-SDKIMAGE-112: Python attachment uses illustrative absolute screenshot path.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "e4361d6f9fa541c3cb9c0b95",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "67782ff8d33e9b31093accd2",
+        "text_sha256": "65cf92ae472dbd6843cacc473a3faa1d062cdb1e1d62e9d43d47c2bcc157f914",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-113: Go file example uses background context. DOCS-SDKIMAGE-114: Go file example constructs client with nil options. DOCS-SDKIMAGE-115: Go file example calls Start. DOCS-SDKIMAGE-116: Go file example calls CreateSession with SessionConfig. DOCS-SDKIMAGE-117: Go file example discards creation error. DOCS-SDKIMAGE-118: Go file example selects illustrative gpt-5.4. DOCS-SDKIMAGE-119: Go file permission handler accepts request and invocation. DOCS-SDKIMAGE-120: Go file handler returns ApproveOnce decision; not adopted authority. DOCS-SDKIMAGE-121: Go file handler returns nil error. DOCS-SDKIMAGE-122: Go file example stores illustrative absolute screenshot path. DOCS-SDKIMAGE-123: Go file example calls Send with context. DOCS-SDKIMAGE-124: Go file prompt requests inert image description. DOCS-SDKIMAGE-125: Go file example supplies attachment slice. DOCS-SDKIMAGE-126: Go file example constructs AttachmentFile. DOCS-SDKIMAGE-127: Go file attachment sets screenshot display name. DOCS-SDKIMAGE-128: Go file attachment uses stored path. DOCS-SDKIMAGE-226: The Go file excerpt calls Start without checking its returned error. DOCS-SDKIMAGE-227: The Go file excerpt does not capture or inspect the Send return values.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "645eef6109037a104cac369d",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "3d9f3930224090e39f316469",
+        "text_sha256": "1bf371817c6e292c4286a86f34adb5ffbcf54db36b77aec8f594ef0ebbc25551",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-129: .NET file example imports GitHub.Copilot. DOCS-SDKIMAGE-130: .NET file example imports GitHub.Copilot.Rpc. DOCS-SDKIMAGE-131: .NET file example constructs client. DOCS-SDKIMAGE-132: .NET file example gives client await-using disposal scope. DOCS-SDKIMAGE-133: .NET file example awaits session creation. DOCS-SDKIMAGE-134: .NET file example gives session await-using disposal scope. DOCS-SDKIMAGE-135: .NET file example selects illustrative gpt-5.4. DOCS-SDKIMAGE-136: .NET file handler accepts request and invocation. DOCS-SDKIMAGE-138: .NET file example awaits SendAsync. DOCS-SDKIMAGE-139: .NET file prompt requests inert image description. DOCS-SDKIMAGE-140: .NET file example supplies attachment list. DOCS-SDKIMAGE-141: .NET file example constructs AttachmentFile. DOCS-SDKIMAGE-142: .NET file attachment uses illustrative absolute screenshot path. DOCS-SDKIMAGE-143: .NET file attachment sets screenshot display name. DOCS-SDKIMAGE-137-A01: The .NET permission callback constructs an ApproveOnce decision. DOCS-SDKIMAGE-137-A02: The .NET permission callback wraps its decision in Task.FromResult.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "039f7d5fd70966a4fb61f9d1",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "dcc249cf004465cea8bc0c3b",
+        "text_sha256": "5812104f120f0a74945ce160a6db99229a70d695ce447194ea897797dfc38ddf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-144: Java file example imports CopilotClient. DOCS-SDKIMAGE-145: Java file example imports RPC wildcard. DOCS-SDKIMAGE-146: Java file example imports List. DOCS-SDKIMAGE-148: Java file example invokes start. DOCS-SDKIMAGE-149: Java file example waits for startup with get. DOCS-SDKIMAGE-150: Java file example creates session with SessionConfig. DOCS-SDKIMAGE-151: Java file example selects illustrative gpt-5.4. DOCS-SDKIMAGE-152: Java file example sets APPROVE_ALL handler; not adopted authority. DOCS-SDKIMAGE-153: Java file example waits for creation with get. DOCS-SDKIMAGE-154: Java file example calls send with MessageOptions. DOCS-SDKIMAGE-155: Java file prompt requests inert image description. DOCS-SDKIMAGE-156: Java file example supplies List.of attachments. DOCS-SDKIMAGE-157: Java attachment constructor uses file discriminator. DOCS-SDKIMAGE-158: Java attachment constructor uses illustrative absolute screenshot path. DOCS-SDKIMAGE-159: Java attachment constructor supplies screenshot display name. DOCS-SDKIMAGE-160: Java file example waits for send with get. DOCS-SDKIMAGE-147-A01: The Java file example constructs a CopilotClient. DOCS-SDKIMAGE-147-A02: The Java file example places the client in a try-with-resources scope. DOCS-SDKIMAGE-231: The Java file excerpt scopes the client as a resource, but does not separately resource-scope the created session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "5aa61353ec632beb86a994f8",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "79be7e77ebf531af6f7ab10c",
+        "text_sha256": "016bdb5d0c397de95f12c7cac6d5936c9e9911f179a4b08dfd1675f1aff4bbfa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-026: Use blob attachment for image data already in memory. DOCS-SDKIMAGE-027: Blob route can send without writing to disk.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "7399e534cfc086719912c6e8",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "e609e47388b5ce55ccd13ccf",
+        "text_sha256": "bc32a8539993b2dab4bf51ee7148272b6229b295630efde5744f1d2339f0bfd1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-161: TypeScript blob example imports CopilotClient. DOCS-SDKIMAGE-162: TypeScript blob example constructs client. DOCS-SDKIMAGE-163: TypeScript blob example awaits startup. DOCS-SDKIMAGE-164: TypeScript blob example awaits session creation. DOCS-SDKIMAGE-165: TypeScript blob example selects illustrative gpt-5.4. DOCS-SDKIMAGE-166: TypeScript blob handler asynchronously returns approve-once; not adopted authority. DOCS-SDKIMAGE-167: TypeScript blob base64 is placeholder ellipsis, not a real image. DOCS-SDKIMAGE-168: TypeScript blob example awaits send. DOCS-SDKIMAGE-169: TypeScript blob prompt requests inert image description. DOCS-SDKIMAGE-170: TypeScript blob example supplies attachment array. DOCS-SDKIMAGE-171: TypeScript blob attachment sets blob type. DOCS-SDKIMAGE-172: TypeScript blob attachment uses placeholder base64 value. DOCS-SDKIMAGE-173: TypeScript blob attachment sets image/png MIME. DOCS-SDKIMAGE-174: TypeScript blob attachment sets screenshot display name.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "a1995b6ef9c984f724ee2ab8",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "aeb3b1b6bcd6232101d859c3",
+        "text_sha256": "ba2537b2df593b1f9c2b4ca60cde7bd9182f9338d63470cbde4ad7e477ccfd86",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-175: Python blob example imports CopilotClient. DOCS-SDKIMAGE-176: Python blob example imports PermissionDecisionApproveOnce. DOCS-SDKIMAGE-177: Python blob example constructs client. DOCS-SDKIMAGE-178: Python blob example awaits startup. DOCS-SDKIMAGE-179: Python blob example awaits session creation. DOCS-SDKIMAGE-180: Python blob permission handler accepts req and inv. DOCS-SDKIMAGE-181: Python blob handler returns ApproveOnce; not adopted authority. DOCS-SDKIMAGE-182: Python blob example selects illustrative gpt-5.4. DOCS-SDKIMAGE-183: Python blob base64 is placeholder ellipsis, not real image data. DOCS-SDKIMAGE-184: Python blob example awaits send. DOCS-SDKIMAGE-185: Python blob prompt requests inert image description. DOCS-SDKIMAGE-186: Python blob example supplies attachments list. DOCS-SDKIMAGE-187: Python blob attachment has blob type. DOCS-SDKIMAGE-188: Python blob attachment uses placeholder base64 value. DOCS-SDKIMAGE-189: Python blob attachment sets image/png MIME. DOCS-SDKIMAGE-190: Python blob attachment sets screenshot display name.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "1d322c8217f6fb814d62dd05",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "6b9b331ebfff7d5916523f88",
+        "text_sha256": "292b47565c340833041ebb7103f866fbc5c7eb772414666bf2f6924575b30b83",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-191: Go blob example stores image/png MIME. DOCS-SDKIMAGE-192: Go blob example stores screenshot display name. DOCS-SDKIMAGE-193: Go blob example calls Send with context. DOCS-SDKIMAGE-194: Go blob prompt requests inert image description. DOCS-SDKIMAGE-195: Go blob example supplies attachment slice. DOCS-SDKIMAGE-196: Go blob example constructs AttachmentBlob. DOCS-SDKIMAGE-197: Go blob data points to base64ImageData. DOCS-SDKIMAGE-198: Go blob MIME uses stored mimeType. DOCS-SDKIMAGE-199: Go blob display name points to stored displayName. DOCS-SDKIMAGE-228: The Go blob excerpt does not capture or inspect the Send return values. DOCS-SDKIMAGE-229: The standalone Go blob excerpt references base64ImageData without showing its declaration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "7ab029e60ad2ddc8e985a47f",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "231265c7e13d6c17cc892ada",
+        "text_sha256": "961f09826e912cd2daf455abd8abc120d05ac5aaa32aab78e776450afb3a3750",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-200: .NET blob example awaits SendAsync. DOCS-SDKIMAGE-201: .NET blob prompt requests inert image description. DOCS-SDKIMAGE-202: .NET blob example supplies attachment list. DOCS-SDKIMAGE-203: .NET blob example constructs AttachmentBlob. DOCS-SDKIMAGE-204: .NET blob data uses base64ImageData. DOCS-SDKIMAGE-205: .NET blob MIME is image/png. DOCS-SDKIMAGE-206: .NET blob display name is screenshot.png. DOCS-SDKIMAGE-230: The standalone .NET blob excerpt references base64ImageData without showing its declaration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "c56641bc2be19e48bf0d7813",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "09c45cd25ea38873b69adbaf",
+        "text_sha256": "166db90f4dc90b777e337dc135e0875f57dbc8a241ed81abda6139c001138b1b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-207: Java blob example imports CopilotClient. DOCS-SDKIMAGE-208: Java blob example imports RPC wildcard. DOCS-SDKIMAGE-209: Java blob example imports List. DOCS-SDKIMAGE-211: Java blob example invokes start. DOCS-SDKIMAGE-212: Java blob example waits for startup with get. DOCS-SDKIMAGE-213: Java blob example creates session with SessionConfig. DOCS-SDKIMAGE-214: Java blob example selects illustrative gpt-5.4. DOCS-SDKIMAGE-215: Java blob example sets APPROVE_ALL handler; not adopted authority. DOCS-SDKIMAGE-216: Java blob example waits for creation with get. DOCS-SDKIMAGE-217: Java blob base64 placeholder is ellipsis, not real image data. DOCS-SDKIMAGE-218: Java blob example calls send with MessageOptions. DOCS-SDKIMAGE-219: Java blob prompt requests inert image description. DOCS-SDKIMAGE-220: Java blob example supplies List.of attachments. DOCS-SDKIMAGE-221: Java blob example constructs BlobAttachment. DOCS-SDKIMAGE-222: Java blob sets data to placeholder base64. DOCS-SDKIMAGE-223: Java blob sets image/png MIME. DOCS-SDKIMAGE-224: Java blob sets screenshot display name. DOCS-SDKIMAGE-225: Java blob waits for send with get. DOCS-SDKIMAGE-210-A01: The Java blob example constructs a CopilotClient. DOCS-SDKIMAGE-210-A02: The Java blob example places the client in a try-with-resources scope. DOCS-SDKIMAGE-232: The Java blob excerpt scopes the client as a resource, but does not separately resource-scope the created session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "e88e285cd546d2fd6d094e0d",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "039c2060d17a5ec8a51c4ae5",
+        "text_sha256": "ce37badb5a54ebaf29e6c4e0b2293900b1be565c6ba51126e2854ddead5b3767",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-028: Source lists JPG as supported. DOCS-SDKIMAGE-029: Source lists PNG as supported. DOCS-SDKIMAGE-030: Source lists GIF as supported. DOCS-SDKIMAGE-031: Source also describes other common formats without an exhaustive list. DOCS-SDKIMAGE-032: Runtime reads file images and converts as needed. DOCS-SDKIMAGE-033: Blob route supplies base64 data directly. DOCS-SDKIMAGE-034: Blob route supplies MIME type directly. DOCS-SDKIMAGE-035: Use PNG or JPEG for broad format support.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "8fdf8bdd9b05170eb3f16d44",
+        "text_sha256": "97721087558bd087a1ae3fa48ba71f08673886bda8c9c088538ddd7587c68a16",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-036: supported_media_types gives exact MIME types accepted by the selected model.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "5eedbab8cf5cac3afc8ab270",
+        "text_sha256": "fa2e5bf668711388c12c602d6f79e920aa4364d3c0f4198f8a29c17333affffd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-037: Runtime processes images to fit model constraints. DOCS-SDKIMAGE-038: Source says manual resizing is not required.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "47ce9a905b2174a3f688b8da",
+        "text_sha256": "d5659d42fe757c503a53a0a5d47f69cb2fc121b1492d8089e5caf443909c7231",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-039: Oversized images can be resized. DOCS-SDKIMAGE-040: Resize preserves aspect ratio. DOCS-SDKIMAGE-041: Oversized images can be quality-reduced.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "4f6b03d831c27be740a9c469",
+        "text_sha256": "6e16b18e0c4a9e07139cdce8064dee0670499d90ac8237fcae96cc68c2e778cf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-042: Images still exceeding limits after processing are skipped. DOCS-SDKIMAGE-043: Skipped images are not sent to the model.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "84e25614b391b0659d48a083",
+        "text_sha256": "3ccded49e148f6df10150e2f14581207d24ba1971120cdda48289928ce415351",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-044: max_prompt_image_size indicates maximum image bytes.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "abc82c26cc529a54ef71ba32",
+        "text_sha256": "7cb5c532ebdc46ad03fc8dc7b3e87d766074df940c5bef27fed40f7f95bbff13",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-045: Inspect limits through runtime model capabilities. DOCS-SDKIMAGE-046: Use reasonably sized PNG or JPEG images.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "2edc6c8d609ac423cde565f5",
+        "text_sha256": "8fcc4d0b929ab589ce89900c65c00e3d2bfb547e7e1bab711ac593887a8faed0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-047: Not every model supports vision. DOCS-SDKIMAGE-048: Check capabilities before sending images.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "652917f7a4b1cd87515a4c4d",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "aab0a0954f9547aef679c031",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "1338749f75c662eb068fd0ef",
+        "text_sha256": "62681c532b6e38d0a302da961f32c384f10ba0319cdc578d97c98767caa15bdb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-049: supports.vision has boolean type. DOCS-SDKIMAGE-050: supports.vision reports ability to process image inputs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "b19c41afbf744c2c8a7bd7f1",
+        "text_sha256": "38f0920ab6c8de2269409deab0d18ac69db38cf8be0c69a80fe6b7c409c7c132",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-051: supported_media_types has string-array type. DOCS-SDKIMAGE-052: supported_media_types lists accepted MIME types. DOCS-SDKIMAGE-053: Capability table illustrates image/png and image/jpeg MIME values.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "c0bed693c4f97682877d283d",
+        "text_sha256": "fd3c290e49625796e39b8a95ecbf84e253a0fa4a7ca796ed7b2ff91a395ea115",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-054: max_prompt_images has numeric type. DOCS-SDKIMAGE-055: max_prompt_images limits image count per prompt.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "fa4997e71887f6351a3584a9",
+        "text_sha256": "8449f6bf99ce5648d516d1a9ea3ca3df12047c3bcc24bff12f085b0447c6b3e2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-056: max_prompt_image_size has numeric type. DOCS-SDKIMAGE-057: max_prompt_image_size measures maximum bytes.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "32806091841cb15c005a3df6",
+        "text_sha256": "39d3ab8896ef517a9379c812f16750621733c458d6e34ed5f4734e30595b38f2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-058: Vision limits type marks vision optional. DOCS-SDKIMAGE-059: Vision limits example types supported_media_types as string array. DOCS-SDKIMAGE-060: Vision limits example types max_prompt_images as number. DOCS-SDKIMAGE-061: Vision limits example types max_prompt_image_size as number. DOCS-SDKIMAGE-062: Example comments image-size units as bytes.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "eafb7a97b687e88c25f9f23c",
+        "text_sha256": "9c3b74601a57e041ec173a03edfe2c4c4537f41848f91c5d8e000a5a3e6c308b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-063: Tools returning images use image content blocks. DOCS-SDKIMAGE-064: Returned image block data is base64 encoded.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "3406e8c38034e1bb99e5d9a2",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "2621690f938fb068d5bf0dfd",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "3ef2159b2abead4c6e0c0808",
+        "text_sha256": "bf0a676784eb0e663fcd0803cdc85d180b0fa62ac3197c7f529e67a26b4880b1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-065: Tool image block discriminator is type image.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "0b18d40a1ff19b5a7038e9f6",
+        "text_sha256": "449cdaf7bf03ff2fe03506dac0ace7ca6904ec51733d05e57b85b2d5e264a7a2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-066: Tool image data is a string. DOCS-SDKIMAGE-067: Tool image data is base64 encoded.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "4463d21f4996f810d98bbbc6",
+        "text_sha256": "b356849b4cd8acfcc62764a20cecf82e179b283080a2d694aa89edf7166cc1a1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-068: Tool image mimeType is a string. DOCS-SDKIMAGE-069: Tool image MIME example is image/png.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "e5d28563df1a5cf13d1bd2f9",
+        "text_sha256": "0ca37ecc3473b91be5f6e2af743542ccf85b6aeee637de7ed2b364cce51f0164",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-070: Image blocks appear in tool.execution_complete results. DOCS-SDKIMAGE-071: Event-lifecycle link does not review linked body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "a52694684b92a32210530404",
+        "text_sha256": "dc2a2e2d9169f9b2c1f9d0ae1541b582a3e7600e05ba3fcf0b6d28e33bd33111",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "e85b63b12ce6577f82333765",
+        "text_sha256": "7fe6267a42443994ea3d179ce821ec3a0024acf63cbaffb29fdf77f6c521379f",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "6b46d55fc6d53a69d637fe00",
+        "text_sha256": "9cf92ab68bbebbdfec1811fe90c1b85c54a847cd126e5b9deaee03531a6de94b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-072: Use PNG or JPEG directly. DOCS-SDKIMAGE-073: Source describes PNG/JPEG as sent as-is to avoid conversion overhead; model-limit processing remains separately described.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "0c142b02ae7aa927f4e76b0a",
+        "text_sha256": "57da3240d02523d5cbb93b849793c879f132896f883e0a42d1cef5601ee49b1d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-074: Keep images reasonably sized. DOCS-SDKIMAGE-075: Quality reduction can lose important details.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "33397a6cf3bc984224cb8e54",
+        "text_sha256": "49e41e0ae64c46f1b9a7696204e86e42be9616bd4953d0b9f08e43c84a2bd190",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-076: Use absolute paths for file attachments. DOCS-SDKIMAGE-077: Runtime reads disk files. DOCS-SDKIMAGE-078: Relative paths may fail resolution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "c1e88b891dedbd57499de60b",
+        "text_sha256": "11c9ab1233a70fa6528615d14cec122dd3723410f7ec9e49256fc80a4caefe79",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-079: Use blob attachments for in-memory base64. DOCS-SDKIMAGE-080: Blob route avoids unnecessary disk I/O.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "52476a7c6723346ada712894",
+        "text_sha256": "128c09c61e38442b55a7fad9118c6449265d97338ebaa8772abc39e9b8b8337a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-081: Check vision support first. DOCS-SDKIMAGE-082: Sending images to non-vision models consumes tokens without visual understanding.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "8accc9313081ea481fa40c67",
+        "text_sha256": "f1ff74e1439c20bbb5023c011c41f7a5a62c33d45dd76a174ed6f9f6b2576884",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-083: One message can contain several image attachments. DOCS-SDKIMAGE-084: Image count must stay within max_prompt_images.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "19acec42b040082d1cc78468",
+        "text_sha256": "27185cfb06a8d3fb805ecaad32214d58e16d2d6f247255e4c82d61a4ad2e2f9d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-085: SVG is not supported for image processing. DOCS-SDKIMAGE-086: Source describes SVG as text-based and excluded.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "60697810060e47e825d9fc19",
+        "text_sha256": "14555e2f3a965aa3f9867753f0e88f4c206825ab109cd26eaa7283f9c35ffc11",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-087: Related streaming-events link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      },
+      {
+        "candidate_id": "5027a7e57d2d396590e835c6",
+        "text_sha256": "9769237d772b48167199473ee0911e1ac07ca589e8ca5d0c456323e024c7de52",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKIMAGE-088: Related steering/queueing link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-image-input-claims.json"
+      }
+    ]
+  },
+  {
+    "artifact_id": "fd89833193da8734da26f54f",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+    "content_sha256": "493a1c4b353fb9aad825e5f7a88c23dac6f6189a550fe748798c31b8ec69ac59",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T14:25:34Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete394-line text read, all75candidate dispositions and258reference records consolidated once. Original draft preserved in d57adec; compact independent audit/recheck only supports its specified scope. Source prompts/handlers/settings are inert, not adopted policy or runtime/rights/global assurance. Diagram references do not review separate assets.",
+    "independent_audit": "evidence/sdk-skills-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-interaction-batch-independent-repair-recheck.json",
+    "directory_span_supplement": "evidence/sdk-skills-directory-span-supplement.json",
+    "directory_span_recheck": "evidence/sdk-skills-directory-span-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "3a2187727516bad9a32ca4ad",
+        "text_sha256": "2d185196a853b7ea9ec58a28db9e39011bdf541acbd2f56f5261a82db36d707e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-001: Skills are reusable prompt modules extending Copilot capabilities. DOCS-SDKSKILLS-002: The guide declares fpt version applicability. DOCS-SDKSKILLS-003: The guide declares Enterprise Cloud version applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "7af1fe0d679c217bcf8f4715",
+        "text_sha256": "2d99fbb53c87c8dcfc7411d7c51e24ae48297a685f7bcd0e88373c78d9612acd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-004: An earlier custom-skills route redirects to this guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "768f23e41a8bb94aa1788e4e",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "5d87ae3c33d52cb48a0356f1",
+        "text_sha256": "3b5f2568742c01da3bbcfc93ba4349e029d62337eb8d566bbd189b393626f34e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-005: A skill occupies a named directory. DOCS-SDKSKILLS-006: A skill directory contains a SKILL.md Markdown instruction file. DOCS-SDKSKILLS-007: Loaded skill content is injected into session context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "919883ea14028d0c8f1f476d",
+        "text_sha256": "f08aaf3c6dab54c38130f6682ce561a13ff22c73a7ffa12ed40d10d4213bdd30",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "ebd780dbb379343057c30e85",
+        "text_sha256": "444d858563298510b004d3948df10f54777aff8790f6bcc80cb51fd0c2278f59",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-008: Skills package domain expertise into reusable modules.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "dca62aef9ae1498c8d7dd07c",
+        "text_sha256": "20b2790c687452a7f852af6e8295f4a4efdb5148d198ac9c5721a15f988c2a67",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-009: Skills share specialized behavior across projects.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "34e284e451a89c7d0d71cbd7",
+        "text_sha256": "189238ccaed0841a7e0d7b8e6bc303b6a637d9356bc93db241af497623292bf4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-010: Skills organize complex agent configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "d1b3164d9f133a973a822ea3",
+        "text_sha256": "a8ea3cdfb7d7f86583eb5240955860001d141dff86786798b0031fe2b4672a1c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-011: Skills enable per-session capability selection.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "858e04698356e4d4199f6de7",
+        "text_sha256": "9ebc88ab0f0a3ca24fd24f59592d0fdfc6de38d286724fe4f57131728162355c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-012: Specify skill-containing directories during session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "d71f2bdc5970f8f9b4d4cd9a",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "b7795fc0074308680b3696f4",
+        "text_sha256": "dbb0c5bf91368b72d690ea6277e3e8288b04ade727e63ce62f7c2d212cd04ee2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-013: TypeScript imports CopilotClient from the SDK package. DOCS-SDKSKILLS-014: TypeScript constructs a client. DOCS-SDKSKILLS-015: TypeScript awaits session creation. DOCS-SDKSKILLS-016: TypeScript selects illustrative gpt-5.4. DOCS-SDKSKILLS-017: TypeScript supplies skillDirectories as an array. DOCS-SDKSKILLS-018: TypeScript lists a code-review directory as its first example path. DOCS-SDKSKILLS-019: TypeScript lists a documentation directory as its second example path. DOCS-SDKSKILLS-020: TypeScript supplies an asynchronous permission callback. DOCS-SDKSKILLS-021: TypeScript callback returns an approve-once decision. DOCS-SDKSKILLS-022: TypeScript comment describes access to the configured directories. DOCS-SDKSKILLS-023: TypeScript awaits sendAndWait. DOCS-SDKSKILLS-024: TypeScript prompt requests a security-focused code review. DOCS-SDKSKILLS-252: TypeScript loading excerpt shows no explicit client.start call; no SDK autostart guarantee is inferred. DOCS-SDKSKILLS-238-A01: The initial TypeScript example lists ./skills/code-review as a loading directory. DOCS-SDKSKILLS-238-A02: The initial TypeScript example lists ./skills/documentation as a loading directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "8caa9d287a7901b6d5a15db8",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "433a863c75db57eddcafa9a7",
+        "text_sha256": "1ec18dcf2abe65d66734ca63eaff3e354628aad67b4ab3576f14804d251ac2cf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-025: Python imports CopilotClient. DOCS-SDKSKILLS-026: Python imports PermissionDecisionApproveOnce. DOCS-SDKSKILLS-027: Python declares an asynchronous main function. DOCS-SDKSKILLS-028: Python constructs a client. DOCS-SDKSKILLS-029: Python awaits client startup. DOCS-SDKSKILLS-030: Python awaits session creation. DOCS-SDKSKILLS-031: Python permission callback accepts request and invocation arguments. DOCS-SDKSKILLS-032: Python callback constructs an ApproveOnce decision. DOCS-SDKSKILLS-033: Python selects illustrative gpt-5.4. DOCS-SDKSKILLS-034: Python supplies a skill_directories list. DOCS-SDKSKILLS-035: Python lists a code-review directory as its first example path. DOCS-SDKSKILLS-036: Python lists a documentation directory as its second example path. DOCS-SDKSKILLS-037: Python comment describes access to the configured directories. DOCS-SDKSKILLS-038: Python awaits send_and_wait. DOCS-SDKSKILLS-039: Python prompt requests security-focused code review. DOCS-SDKSKILLS-040: Python awaits client stop. DOCS-SDKSKILLS-041: The displayed Python excerpt defines main without showing an invocation of that function.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "c92fb9f7d569c880c5a80b43",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "2740a9da941dcd7d767a0d9f",
+        "text_sha256": "09ad3d3a6383e7c1b083ad879c364542c71bbd2e2bbd05a58ba7712b8f7a6e88",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-042: Go declares package main. DOCS-SDKSKILLS-043: Go imports context. DOCS-SDKSKILLS-044: Go imports log. DOCS-SDKSKILLS-045: Go imports the Copilot SDK package. DOCS-SDKSKILLS-046: Go imports the RPC package. DOCS-SDKSKILLS-047: Go creates a background context. DOCS-SDKSKILLS-048: Go constructs a client with nil options. DOCS-SDKSKILLS-049: Go calls client Start. DOCS-SDKSKILLS-050: Go branches when startup returns an error. DOCS-SDKSKILLS-051: Go reports startup failure with log.Fatal. DOCS-SDKSKILLS-052: Go defers client Stop. DOCS-SDKSKILLS-053: Go creates a session with SessionConfig. DOCS-SDKSKILLS-054: Go binds the session-creation error. DOCS-SDKSKILLS-055: Go selects illustrative gpt-5.4. DOCS-SDKSKILLS-056: Go supplies SkillDirectories as a string slice. DOCS-SDKSKILLS-057: Go lists the code-review directory. DOCS-SDKSKILLS-058: Go lists the documentation directory. DOCS-SDKSKILLS-059: Go callback accepts request and invocation parameters. DOCS-SDKSKILLS-060: Go callback declares an RPC permission-decision result. DOCS-SDKSKILLS-061: Go callback declares an error result. DOCS-SDKSKILLS-062: Go callback returns an ApproveOnce decision. DOCS-SDKSKILLS-063: Go callback returns a nil error. DOCS-SDKSKILLS-064: Go checks the session-creation error. DOCS-SDKSKILLS-065: Go reports session-creation failure with log.Fatal. DOCS-SDKSKILLS-066: Go comment describes directory access. DOCS-SDKSKILLS-067: Go invokes SendAndWait with context. DOCS-SDKSKILLS-068: Go discards the message result. DOCS-SDKSKILLS-069: Go retains the message error. DOCS-SDKSKILLS-070: Go prompt requests security-focused code review. DOCS-SDKSKILLS-071: Go checks the send error. DOCS-SDKSKILLS-072: Go reports send failure with log.Fatal. DOCS-SDKSKILLS-242: Go loading example declares main entrypoint.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "0f462178a50da10b0a52857f",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "356e5f8d81dd329662dfdef9",
+        "text_sha256": "01a0f66d096e0a4a4bb17dd50c67a95145a688f27ff566fabb2a8b15f01cf612",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-073: .NET imports GitHub.Copilot. DOCS-SDKSKILLS-074: .NET imports GitHub.Copilot.Rpc. DOCS-SDKSKILLS-075: .NET constructs a client. DOCS-SDKSKILLS-076: .NET places the client in await-using disposal scope. DOCS-SDKSKILLS-077: .NET awaits session creation. DOCS-SDKSKILLS-078: .NET places the session in await-using disposal scope. DOCS-SDKSKILLS-079: .NET selects illustrative gpt-5.4. DOCS-SDKSKILLS-080: .NET supplies SkillDirectories as List<string>. DOCS-SDKSKILLS-081: .NET lists the code-review directory. DOCS-SDKSKILLS-082: .NET lists the documentation directory. DOCS-SDKSKILLS-083: .NET callback accepts request and invocation. DOCS-SDKSKILLS-084: .NET callback constructs an ApproveOnce decision. DOCS-SDKSKILLS-085: .NET callback wraps the decision in Task.FromResult. DOCS-SDKSKILLS-086: .NET comment describes access to configured directories. DOCS-SDKSKILLS-087: .NET awaits SendAndWaitAsync. DOCS-SDKSKILLS-088: .NET prompt requests security-focused code review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "925103fda6d87bddd5cbdb7b",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "f1c7f853263241ba0d2cd0df",
+        "text_sha256": "59dc2f298c51d3605ac4296209c449d0eec58a4fb8bd716fe14f1f5f600802ab",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-089: Java imports CopilotClient. DOCS-SDKSKILLS-090: Java imports RPC types with a wildcard. DOCS-SDKSKILLS-091: Java imports List. DOCS-SDKSKILLS-092: Java constructs a client. DOCS-SDKSKILLS-093: Java places the client in try-with-resources scope. DOCS-SDKSKILLS-094: Java invokes client startup. DOCS-SDKSKILLS-095: Java waits for startup using get. DOCS-SDKSKILLS-096: Java invokes session creation. DOCS-SDKSKILLS-097: Java constructs SessionConfig. DOCS-SDKSKILLS-098: Java selects illustrative gpt-5.4. DOCS-SDKSKILLS-099: Java supplies a list of skill directories. DOCS-SDKSKILLS-100: Java lists the code-review directory. DOCS-SDKSKILLS-101: Java lists the documentation directory. DOCS-SDKSKILLS-102: Java installs an APPROVE_ALL permission callback as an inert example. DOCS-SDKSKILLS-103: Java waits for session creation using get. DOCS-SDKSKILLS-104: Java comment describes directory access. DOCS-SDKSKILLS-105: Java invokes sendAndWait. DOCS-SDKSKILLS-106: Java prompt requests security-focused code review. DOCS-SDKSKILLS-107: Java waits for the message call using get. DOCS-SDKSKILLS-251: Java loading example resource-scopes client but shows no separate session resource scope.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "b6108cf14adbf39015f142f2",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "d72569fc0ade73bf0a1224c7",
+        "text_sha256": "7546f95c100d12fc51062d3d80036732c94d8c804cc5423f5ebbf1f723e56df0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-108: Specific skills may be disabled while others stay active.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "3afbbbcee0a7e9e0355a3a9d",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "1d81eccaed91f1ab08e80996",
+        "text_sha256": "a12f2119a0bff80893880fcff350835c3d0b04908706f12d01b0a1cc836101c6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-109: TypeScript disabling example awaits session creation. DOCS-SDKSKILLS-110: TypeScript disabling example sets skillDirectories to the parent ./skills directory. DOCS-SDKSKILLS-111: TypeScript disabling example lists experimental-feature in disabledSkills. DOCS-SDKSKILLS-112: TypeScript disabling example lists deprecated-tool in disabledSkills. DOCS-SDKSKILLS-239: The standalone TypeScript disabling snippet does not show a permission callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "fd3bf27e043d2c5ec8562b5c",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "be8702a23ed068bff655fc36",
+        "text_sha256": "205f9d58f98b785610f05a6eecaf4c2665dc4fdc6e33271d5377c0864d8de0c7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-113: Python disabling example imports PermissionHandler. DOCS-SDKSKILLS-114: Python disabling example awaits session creation. DOCS-SDKSKILLS-115: Python disabling example supplies approve_all as an inert permission handler. DOCS-SDKSKILLS-116: Python disabling example sets skill_directories to ./skills. DOCS-SDKSKILLS-117: Python disables experimental-feature. DOCS-SDKSKILLS-118: Python disables deprecated-tool.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "f16aa82747c8eee65f9d15bd",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "33bd27e1af4446404e9c42c9",
+        "text_sha256": "66079d46de214f1e19ea8475f63ce102ed733116cd80dfb2f039931047f046a5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-119: Go disabling example calls CreateSession with a background context. DOCS-SDKSKILLS-120: Go disabling example discards the creation error. DOCS-SDKSKILLS-121: Go disabling example sets SkillDirectories to ./skills. DOCS-SDKSKILLS-122: Go disables experimental-feature. DOCS-SDKSKILLS-123: Go disables deprecated-tool. DOCS-SDKSKILLS-240: The standalone Go disabling snippet does not show a permission callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "ac1cb5aa2f73a32f53f50cc0",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "f1ec75d953e55de07afc6ee9",
+        "text_sha256": "946d477b55b1d7e35140b52e228f34b90634b64f305d1a85072f791ef5c91bc0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-124: .NET disabling example awaits CreateSessionAsync. DOCS-SDKSKILLS-125: .NET disabling example sets SkillDirectories to ./skills. DOCS-SDKSKILLS-126: .NET disables experimental-feature. DOCS-SDKSKILLS-127: .NET disables deprecated-tool. DOCS-SDKSKILLS-241: The standalone .NET disabling snippet does not show a permission callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "3fdb019facb02b16a7970ff3",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "c7e9b1975ecf6ab3078ad66e",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-128: Java disabling snippet has a docs-validate skip marker.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "07c9a7ea66fa1e2a6584411a",
+        "text_sha256": "2f86042c6aae7ade942eb8ff6935df6cbdaf1f49c8ab8126c83f530bfb6d05cf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-129: Java disabling snippet imports RPC types with a wildcard. DOCS-SDKSKILLS-130: Java disabling snippet imports List. DOCS-SDKSKILLS-131: Java disabling snippet calls createSession. DOCS-SDKSKILLS-132: Java disabling snippet constructs SessionConfig. DOCS-SDKSKILLS-133: Java disabling snippet sets skillDirectories to ./skills. DOCS-SDKSKILLS-134: Java disables experimental-feature. DOCS-SDKSKILLS-135: Java disables deprecated-tool. DOCS-SDKSKILLS-136: Java disabling snippet supplies APPROVE_ALL as an inert handler. DOCS-SDKSKILLS-137: Java disabling snippet waits using get.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "d07a928a21744ec0ff637ac0",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "2540e31db1bb5b8cc4aee3c2",
+        "text_sha256": "b9a13a714146e5de9cb07c56a97c37248869afe32510e94d5c0c3a13e44f4307",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-138: Each skill is a named subdirectory. DOCS-SDKSKILLS-139: Each skill subdirectory contains SKILL.md.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "3d014a10c38a8e33b1d01e32",
+        "text_sha256": "fe0c59decd3b24f2b66a81897e50e8d69390b326beae564d6f8c60f54d674ef3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-140: The layout example includes a code-review child directory. DOCS-SDKSKILLS-141: The example code-review directory contains SKILL.md. DOCS-SDKSKILLS-142: The layout example includes a documentation child directory. DOCS-SDKSKILLS-143: The example documentation directory contains SKILL.md.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "a9cf8f8b87fb6ddd14a7295d",
+        "text_sha256": "f158b29964db92c28f86b79fc87288da18f5e1373f7833f44baf7b4d3abc470f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-144: skillDirectories points to a parent directory such as ./skills. DOCS-SDKSKILLS-145: The CLI discovers SKILL.md files in immediate subdirectories. DOCS-SDKSKILLS-238-A03: Later discovery guidance says skillDirectories points to the parent directory. DOCS-SDKSKILLS-238-A04: Later discovery guidance says CLI discovers SKILL.md files in immediate subdirectories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "882acdc40e83e4cac5ce9ce5",
+        "text_sha256": "c675bfa3567ea840e877a1e359b35e884225cdf45b07f822d70dbf99d4348f26",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-146: SKILL.md is a Markdown document. DOCS-SDKSKILLS-147: YAML frontmatter is optional.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "8f7cbcbb59fea64b0c7f3a13",
+        "text_sha256": "f91b5ae5fe45b3c3e7b04e7fc81400ab9f023c997ab359b36fbd7aecf60ec731",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-148: The frontmatter example uses code-review as its name. DOCS-SDKSKILLS-149: The frontmatter example describes specialized code-review capabilities. DOCS-SDKSKILLS-150: The inert skill body asks for security-vulnerability review. DOCS-SDKSKILLS-151: The inert skill body asks for performance review. DOCS-SDKSKILLS-152: The inert skill body asks for code-style review. DOCS-SDKSKILLS-153: The inert skill body asks for critical-path test-coverage review. DOCS-SDKSKILLS-154: The inert skill body requests precise line-number references. DOCS-SDKSKILLS-155: The inert skill body requests suggested fixes. DOCS-SDKSKILLS-243: Inert skill-body sample has Code Review Guidelines heading. DOCS-SDKSKILLS-244: Inert sample asks to always check its listed review categories; not a local instruction. DOCS-SDKSKILLS-245: Inert security review sample names SQL injection. DOCS-SDKSKILLS-246: Inert security review sample names XSS. DOCS-SDKSKILLS-247: Inert performance review sample names N+1 queries. DOCS-SDKSKILLS-248: Inert performance review sample names memory leaks. DOCS-SDKSKILLS-249: Inert style review sample names consistent formatting. DOCS-SDKSKILLS-250: Inert style review sample names naming conventions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "84694ced0c1e9e047d7cd535",
+        "text_sha256": "4df7c2ba193974975d47f09226ec6bd42b5b4d929523b66e20a37da5838d0b54",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "edc5bc65673debe324e56a49",
+        "text_sha256": "e4eceaf00a26519c0d15491a69eb7cd91547d485362f754566e1cc02e0beae3a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-156: Frontmatter name is the skill identifier. DOCS-SDKSKILLS-157: disabledSkills uses the skill identifier to select exclusions. DOCS-SDKSKILLS-158: When name is omitted, the directory name is used.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "d64fce105346d3e84caab4d3",
+        "text_sha256": "37e8aea56291c054bd959283e103cca0e1d06ed0d5e1e7fe825776e2ccb290f2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-159: Frontmatter description briefly describes the skill.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "12077e0f5cf73d0e17488a3f",
+        "text_sha256": "a7c1d4066fcd13b8b87ca42eafffd07aeabef36110c01b2a5ed9496e17b12a23",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-160: Loaded skill Markdown body instructions enter the session context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "7eefda3cfd78e305221b1b28",
+        "text_sha256": "42475c0ee5f3b6e61b0e26b24766d240797abe0e62372b4cacba66cd6648aed2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "f1f47b81556b61684f36a4b0",
+        "text_sha256": "8d6924231b729e3e7686d9574b818263eacfbe0cd87254c30e131b8eb3cdf598",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "32107ee8fa4249893cfb6884",
+        "text_sha256": "7f7720e6b1b369e05d8fcc9542b4236717e5acec868f0b0fa617a43886a5a0b1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-161: Node.js exposes skillDirectories with string[] type. DOCS-SDKSKILLS-162: Node.js skillDirectories specifies skill-loading directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "89e1dfe5b6926164fde43193",
+        "text_sha256": "2f0ffacb7c9945b301ebf85b2f740240d8a9003d7809580e2a6710ad3a997b31",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-163: Node.js exposes disabledSkills with string[] type. DOCS-SDKSKILLS-164: Node.js disabledSkills specifies skills to disable.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "57bb8009d5f8ae60cf887b2e",
+        "text_sha256": "3c2160eb17c17672944eafd14ab1490fbdb31539f9484d4af8a20039aa77c569",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-165: Python exposes skill_directories with list[str] type. DOCS-SDKSKILLS-166: Python skill_directories specifies skill-loading directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "37df66d909591145a9476b7f",
+        "text_sha256": "844fc367cbf957f512e578612f4944b430e1ce54965a5f2b2a7d08ddcc3aa324",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-167: Python exposes disabled_skills with list[str] type. DOCS-SDKSKILLS-168: Python disabled_skills specifies skills to disable.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "ad8ff3b41162e15d327ae184",
+        "text_sha256": "531a49857204e0bc1301d12ea9b0930378e6da1526bc1b5deba960206ef467f0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-169: Go exposes SkillDirectories with []string type. DOCS-SDKSKILLS-170: Go SkillDirectories specifies skill-loading directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "c05bc2a36f007aed12d6a8af",
+        "text_sha256": "729b2c7b19905c736ffa38d6d5a49136486a7842966af04bed5a6d4c9f22ff87",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-171: Go exposes DisabledSkills with []string type. DOCS-SDKSKILLS-172: Go DisabledSkills specifies skills to disable.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "daccf15295d59afd1d77e41a",
+        "text_sha256": "ba4d5ddd74483481e9275827d01e5e968fd1e9c720c336c4c4eea4ec2f12ca01",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-173: .NET exposes SkillDirectories with List<string> type. DOCS-SDKSKILLS-174: .NET SkillDirectories specifies skill-loading directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "04dd6784db891973fdf611b8",
+        "text_sha256": "542f7e1399e12675baf1a20d1fc297ba23d19de2bd3c8ad62661d291787da5d6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-175: .NET exposes DisabledSkills with List<string> type. DOCS-SDKSKILLS-176: .NET DisabledSkills specifies skills to disable.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "a6a6c9d26bdfed2aede9beac",
+        "text_sha256": "cf8b7688846270abd5643468d395ab26d2b9cdeac0ff8e7f545c90dd0c62beaa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-177: The runtime bundles built-in skills. DOCS-SDKSKILLS-178: Bundled built-in skills are eligible by default. DOCS-SDKSKILLS-179: Empty mode is the recommended multi-tenancy baseline. DOCS-SDKSKILLS-180: Empty mode excludes all runtime-bundled built-in skills by default. DOCS-SDKSKILLS-181: Empty-mode post-create options patch sends an empty includedBuiltinSkills list. DOCS-SDKSKILLS-182: Empty-mode post-resume options patch sends an empty includedBuiltinSkills list. DOCS-SDKSKILLS-183-A01: Empty-mode post-create options patch also sends an empty installedPlugins list. DOCS-SDKSKILLS-183-A02: Empty-mode post-resume options patch also sends an empty installedPlugins list.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "b43fcb688578ce9f2cc26ceb",
+        "text_sha256": "c7d6ca6176943fc86e4f95b9680253b9c0b311c38ed0fbc13f6faa99f0cca8db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-184: Default built-in skill exclusion is not permanent. DOCS-SDKSKILLS-185: Explicit includedBuiltinSkills names opt selected bundled skills back in. DOCS-SDKSKILLS-186: Custom skills can be explicitly enabled under empty mode. DOCS-SDKSKILLS-187: Empty-mode custom skill opt-in supplies caller-owned skillDirectories. DOCS-SDKSKILLS-188: An enabled custom skill remains usable even when its name matches a built-in skill. DOCS-SDKSKILLS-189: Copilot-cli mode omits includedBuiltinSkills unless the caller sets it.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "ac51b4d9c0bca656d48c4656",
+        "text_sha256": "470c0a582ac7c25b01ad8bd3d088100c76dffa916c47e14024a5c268716437f5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-190: Organize related skills by domain.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "591768e21707e02f84f6bfb6",
+        "text_sha256": "afa25bb8b09c7a30311440b4144fb05ceda5c7d3041a31f819659b40e05252b2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-191: Include frontmatter name for clarity. DOCS-SDKSKILLS-192: Include frontmatter description for clarity.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "020c574afd0842d5ea0a2247",
+        "text_sha256": "ec246fb51645af6da185c2f6886903dadecc879951d1857a76261dd5e90c17ef",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-193: Document tools required by the skill. DOCS-SDKSKILLS-194: Document MCP servers required by the skill.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "bf256e92da15ce0d8fd122b1",
+        "text_sha256": "68f5bc5dfde90473238d7be7736ca9d59d555c98ae2066c06f0dd1e3c79ee668",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-195: Test skills separately before combining them.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "fc9a5ded629530dbbe4068c6",
+        "text_sha256": "e119c5d8f36be1301a82e846a852f5be963312be17300711dae0d55aa2d18f56",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-196: Prefer relative paths to retain environment portability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "0b5538006fdd1ce08ac145d5",
+        "text_sha256": "0287856a4297f416b8933dd23b991bf5a2f1b4309b9aaf4b494c78786f0cd21a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-197: Custom-agent skills listed in its skills field are eagerly preloaded. DOCS-SDKSKILLS-198: Preloading injects the complete skill content at agent startup. DOCS-SDKSKILLS-199: Preloaded skill instructions are accessible without calling a skill tool. DOCS-SDKSKILLS-200: Agent skill names resolve from session-level skillDirectories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "5a63d1ccb0cd4814800d8606",
+        "text_sha256": "5a40157e70710f843e6beb2811e545f48807c77eac26c9133477a0bfae0e6bd0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-201: The custom-agent combination example awaits session creation. DOCS-SDKSKILLS-202: The custom-agent example sets skillDirectories to ./skills/security. DOCS-SDKSKILLS-203: The example supplies a customAgents array. DOCS-SDKSKILLS-204: The example names its agent security-auditor. DOCS-SDKSKILLS-205: The example describes a security-focused reviewer. DOCS-SDKSKILLS-206: The inert example agent prompt focuses on OWASP Top 10. DOCS-SDKSKILLS-207: The example explicitly lists security-scan as an agent skill. DOCS-SDKSKILLS-208: The example explicitly lists dependency-check as an agent skill. DOCS-SDKSKILLS-209: The example supplies an asynchronous permission callback. DOCS-SDKSKILLS-210: The callback returns an approve-once decision.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "25b27524542ba711d2e9cae5",
+        "text_sha256": "4bce9c3622c19d4e8f58a855134a9f2b02230b91bce6ced1161b8e3b64ec7c09",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-211: Agent skill loading is opt-in. DOCS-SDKSKILLS-212: Omitting an agent skills field injects no skill content. DOCS-SDKSKILLS-213: Subagents do not inherit parent skills. DOCS-SDKSKILLS-214: List desired skills explicitly for each subagent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "ce510dd44da025b1e977591e",
+        "text_sha256": "6bbdb239f2009d3005aa4813e9303c0b8525096c0a1e884ecfd6dfbc0e2fbf2a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-215: Skills can complement MCP server capabilities.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "07e5d86802dc825d3ba222e7",
+        "text_sha256": "65156f61a4e9f3373f6a913feede8ddb651bfc67ffdfbe16ec5ac46b05bafbc2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-216: The MCP combination example awaits session creation. DOCS-SDKSKILLS-217: The MCP combination example sets skillDirectories to ./skills/database. DOCS-SDKSKILLS-218: The MCP example supplies mcpServers configuration. DOCS-SDKSKILLS-219: The MCP example labels its server postgres. DOCS-SDKSKILLS-220: The example server type is local. DOCS-SDKSKILLS-221: The example server command is npx. DOCS-SDKSKILLS-222: The example command includes the -y argument. DOCS-SDKSKILLS-223: The example command names the server-postgres package. DOCS-SDKSKILLS-224: The example server tools list contains a wildcard. DOCS-SDKSKILLS-225: The MCP example supplies an asynchronous permission callback. DOCS-SDKSKILLS-226: The MCP permission callback returns approve-once.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "180e59f4e13a9d4c57ac044f",
+        "text_sha256": "7bb41f952a3ddbde04a60cca992b53787f37f767e8bf02775e02a37214dce552",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-227: For loading failures, verify the configured skill path exists. DOCS-SDKSKILLS-228: For loading failures, verify child directories contain SKILL.md.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "0c7d97cbf28c4f8add875634",
+        "text_sha256": "81eb1d8ccb7745810515644706c225f572ca5ef30b3205d4e497efb0fcbf845b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-229: For loading failures, ensure the SDK can read the directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "f945df2c3334e02bec88a9d2",
+        "text_sha256": "214b5b64010f26cc9bd08e131f708eb99e13a2f682a2f918cc0046f73e51b765",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-230: For loading failures, verify well-formed Markdown. DOCS-SDKSKILLS-231: For loading failures, verify valid YAML frontmatter syntax.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "e997c4356ceee8482052af59",
+        "text_sha256": "db875aec4713fe4d42da756e6f9fc97bf59fc02d4f1d810b7b1915be24a51175",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-232: Set logLevel to debug to inspect skill-loading logs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "12604590699198be165a4759",
+        "text_sha256": "87113e0fc5965a329f0091887d7923b7d7a2891de256d6b213a10d29796edc2d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-233: When skill instructions conflict, exclude conflicting skills through disabledSkills. DOCS-SDKSKILLS-234: When skill instructions conflict, reorganize directories to avoid overlap.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "ea90fc14c65eab3488aec3ba",
+        "text_sha256": "5bc7df5917b55dfbae18739202f0a2cea1863d9485529ec85d3ae0215928e42e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-233: When skill instructions conflict, exclude conflicting skills through disabledSkills. DOCS-SDKSKILLS-234: When skill instructions conflict, reorganize directories to avoid overlap.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "5b79289b4be00ae48c1418b5",
+        "text_sha256": "394b5e73e8f21a6fc263da97de951173b566d029ffb1894e311ab96ebf14c928",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-234: When skill instructions conflict, reorganize directories to avoid overlap.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "c7fedbdf1124f39cfc074619",
+        "text_sha256": "f5575a512395f53dfcc063a8b2d933680d2c36d2d260589a911524d2765e637f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-235: The guide links to custom-agent quickstart guidance without reviewing that body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "4e050346f5a89353203add8b",
+        "text_sha256": "4c6aafcf94f620a74aa2737dd5535ddf2debbbf81ac0c04222b60b9f391b9752",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-236: The guide links to custom-tool quickstart guidance without reviewing that body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      },
+      {
+        "candidate_id": "950c39fd6d7aaf5b58f7a0e8",
+        "text_sha256": "2899d76bcb96e4e366f0512e327818422ecce6c7f2dd0ee15c5c751636326974",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSKILLS-237: The guide links to MCP guidance without reviewing that body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-skills-claims.json"
+      }
+    ]
+  },
+  {
+    "artifact_id": "a1da1fe6309e416e520751b8",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/steering-and-queueing.md",
+    "content_sha256": "daf6aecfba744492444de37f667a15ce50fca230e6cbd2d1cd25d78780e44fda",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T14:25:34Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete574-line text read, all93candidate dispositions and353reference records consolidated once. Original draft preserved in d57adec; compact independent audit/recheck only supports its specified scope. Source prompts/handlers/settings are inert, not adopted policy or runtime/rights/global assurance. Diagram references do not review separate assets.",
+    "independent_audit": "evidence/sdk-steering-queueing-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-interaction-batch-independent-repair-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "c327158029c3fcb6b79a6a38",
+        "text_sha256": "e826fd262826513f0f647cf85dabeb8214ce088cc54c2f53bdf3583b54cb676d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-001: Steering redirects an agent mid-turn. DOCS-SDKSTEER-002: Queueing buffers messages for sequential processing after the current turn. DOCS-SDKSTEER-003: Source declares Free/Pro/Team applicability. DOCS-SDKSTEER-004: Source declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "451bf608590930dadf5e85ef",
+        "text_sha256": "fdc150003134d9f18e4debc76faa775715500152ba368d32454108e1f6fe5e61",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-005: Earlier steering/queueing route redirects to this guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "4c9c80e263aafce407f262cb",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "6740163144eca2e3ca3d32de",
+        "text_sha256": "b29ca6a75f921bcf2dea5d118ced95462de906331812c582a017846fc4ed0d26",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-006: MessageOptions.mode selects delivery during an active turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "a328b197a6df6c4d93f09943",
+        "text_sha256": "00cf26170f9eea4fd1276380d384a947f5b3115a3e64e356de28a540a124196c",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "f0807ab77edbffe21b9b1cb7",
+        "text_sha256": "ad0a374ae22958bdb3241860901cc0b4aa2e60bd8c95686d08bd9ccb0f6f2fd6",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "2bccd03d60714c6403771fa2",
+        "text_sha256": "8a54b929d552faac908f49c614665348de177663112cb2b1d4d50cc8a40cf9f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-007: Immediate mode targets the current model turn. DOCS-SDKSTEER-008: Table illustrates an inert correction against creating a file.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "a4a0d5faf15f334f8bbe3924",
+        "text_sha256": "a9a528de5794f32bbef8433496594bc481266b6440f9b93ba68dc2f25e6c233d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-009: Enqueue mode waits for current-turn completion. DOCS-SDKSTEER-010: Table illustrates an inert follow-up test-fix request.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "e2834ff6a23a8053ea556208",
+        "text_sha256": "88146ed78719c1362238b65786102d1cbe03875dbc20af41eb4a6989b791a8dc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-011: Sequence-diagram reference does not review its separate visual artifact.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "fa1bca0f3b1d3360b8dce709",
+        "text_sha256": "ff26868750bf127ce567278cac208ed841dbf1ef2e2502b3711a28c2a16ede56",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-012: Set optional source when forwarding another agent's message. DOCS-SDKSTEER-013: Leave source unset for ordinary human sends to retain runtime defaults. DOCS-SDKSTEER-014: Identified agent source serializes as agent-ID. DOCS-SDKSTEER-015: Send API supports source with enqueue. DOCS-SDKSTEER-016: Send API supports source with immediate. DOCS-SDKSTEER-017: Send-and-wait supports source with enqueue. DOCS-SDKSTEER-018: Send-and-wait supports source with immediate.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "36da6854df71db40f26a1cfd",
+        "text_sha256": "2ad8d4a374ef6fc31d96c3bf5a6a6dfe4a77a0cc16f0931cb721ca5666693bc3",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "d7e5875ed33cd53f77eed4b0",
+        "text_sha256": "c11886b2c29da40b0b487cd1dfcb74d37cec828a26b9ad32e6ca469c093e0ba3",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "e5aa1babe70cd828c6a48dd4",
+        "text_sha256": "5894409d198524e8c84479163da48c4c0a06a70cac05b7d3924ad0ce8e3764bc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-019: TypeScript provenance example uses source agent-sender-id.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "7ad56beb9e9cd31d6f229157",
+        "text_sha256": "217a742610b21a55aee52630b12d2bebc4f09546c77392ae9e86b5332f621563",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-020: Python provenance example uses AgentMessageSource sender-id.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "cdd834f22b2fac63c48347e8",
+        "text_sha256": "493fde833a2de5faa4ae5ec705ebedf5d7bdf1c2c97f796d047bf87664ba7d97",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-021: Go provenance example uses MessageSourceAgent sender-id.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "7295f46532755ef55af377e7",
+        "text_sha256": "129f4cd3f324ce64bea6413f555c141233a07e0cb92fcc811e3d9c5c1b615d8d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-022: .NET provenance example uses MessageSource.Agent sender-id.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "6417d1bd27ef6be67f7bb489",
+        "text_sha256": "eaeb78d3139717503f9acc450242397a5592aebdf5db292ace5676473ef5e509",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-023: Java provenance example uses setSource MessageSource.agent sender-id.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "e3fe1dd6936907c84324bf3b",
+        "text_sha256": "e255e8e4d0f1dd0733b48f46c79d54a4f95b1ea8aff148d211918d2dab5dd849",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-024: Rust provenance example uses with_source MessageSource::Agent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "08060b90b07f52a977e46758",
+        "text_sha256": "70f5222d930802309a29ea1e54a58b3cf6b5a1e27055c8a62c1bf17cd4d546e6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-025: Typed source APIs also support user. DOCS-SDKSTEER-026: Typed source APIs also support system. DOCS-SDKSTEER-027: Agent provenance distinguishes agent input from human authorization. DOCS-SDKSTEER-028: Agent provenance retains runtime agent-message steering behavior. DOCS-SDKSTEER-029: Use system source for internal application context. DOCS-SDKSTEER-030: Do not replace an identified agent with system source. DOCS-SDKSTEER-031: Derive sender ID from trusted application metadata. DOCS-SDKSTEER-032: Never derive sender ID from message text.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "4b022bf0cc9dcf63c2239443",
+        "text_sha256": "35f9115d8a4493e7846f00d8f93e436de053d93217f55a49997ea52e03d728db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-033: Source identifies message origin. DOCS-SDKSTEER-034: Delivery mode requests urgency. DOCS-SDKSTEER-035: Neither source nor mode requires a visible reply. DOCS-SDKSTEER-036: Source does not set billing flags. DOCS-SDKSTEER-037: Runtime retains its existing scheduling rules. DOCS-SDKSTEER-038: Rust typed RPC can supply MessageSource through SendRequest.with_source.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "3162334f3feca4df30aacb3c",
+        "text_sha256": "19dbaa07b5c330049e0cb8bf75ee7556c8ed19f884a598dfe93aeb33b5760ee1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-039: Successful high-level send acknowledgement returns a message ID. DOCS-SDKSTEER-040: Acknowledgement proves acceptance rather than recipient consumption. DOCS-SDKSTEER-041: Send-and-wait can finish on idle without an assistant message. DOCS-SDKSTEER-042: Do not automatically resend an accepted message just because no reply appears.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "76c393224684873ba0b0b7f1",
+        "text_sha256": "cb6182a747676f6385a2d499f05d2f571c755c536ed90365e331eff792d63062",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-043: Remote backends may not preserve provenance end to end. DOCS-SDKSTEER-044: Local agent-session echo may include source absent from remote HTTP request. DOCS-SDKSTEER-045: Local source event is not proof remote worker received identical provenance.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "88f24fa5268e2d27a72af91d",
+        "text_sha256": "58f2ec4346e61e72fc4a98fd7dca8c06b2186068a175e0db061fc10a1c4d227e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-046: Steering injects a message into the current turn. DOCS-SDKSTEER-047: Source describes real-time agent adjustment without aborting that turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "4004469f8bd2cd8f9e3f7388",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "af16c857b4f6574a5f97be64",
+        "text_sha256": "f6dfe3669422a3f0aa1d7acd3c1cbd26d6ea4ac647443e70bd54907bdac4a909",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-104: TypeScript steering imports CopilotClient. DOCS-SDKSTEER-105: TypeScript steering constructs client. DOCS-SDKSTEER-106: TypeScript steering awaits startup. DOCS-SDKSTEER-107: TypeScript steering awaits session creation. DOCS-SDKSTEER-108: TypeScript steering selects illustrative gpt-5.4. DOCS-SDKSTEER-109: TypeScript steering handler asynchronously returns approve-once; not adopted authority. DOCS-SDKSTEER-110: TypeScript initial send awaits acknowledgement. DOCS-SDKSTEER-111: TypeScript initial send stores msgId. DOCS-SDKSTEER-112: TypeScript initial prompt is inert authentication-refactor data. DOCS-SDKSTEER-113: TypeScript correction awaits send. DOCS-SDKSTEER-114: TypeScript correction prompt is inert JWT-redirection data. DOCS-SDKSTEER-115: TypeScript correction sets immediate mode.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "da74f8ca2f3c76689a35ac25",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "b708112f99ecf28333fcd712",
+        "text_sha256": "fa7dae925560349eae5617e9317281b5be97e7b7b464f52c924d6b73099a4cb4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-117: Python steering defines async main. DOCS-SDKSTEER-118: Python steering constructs client. DOCS-SDKSTEER-119: Python steering awaits startup. DOCS-SDKSTEER-120: Python steering awaits session creation. DOCS-SDKSTEER-121: Python steering handler accepts req/inv. DOCS-SDKSTEER-122: Python steering handler returns ApproveOnce; not adopted authority. DOCS-SDKSTEER-123: Python steering selects illustrative gpt-5.4. DOCS-SDKSTEER-124: Python initial send awaits acknowledgement. DOCS-SDKSTEER-125: Python initial send stores msg_id. DOCS-SDKSTEER-126: Python initial prompt is inert authentication-refactor data. DOCS-SDKSTEER-127: Python correction awaits send. DOCS-SDKSTEER-128: Python correction prompt is inert JWT-redirection data. DOCS-SDKSTEER-129: Python correction sets immediate. DOCS-SDKSTEER-130: Python steering awaits client.stop. DOCS-SDKSTEER-116-A01: Python steering imports CopilotClient. DOCS-SDKSTEER-116-A02: Python steering imports PermissionDecisionApproveOnce. DOCS-SDKSTEER-335: The Python steering excerpt defines asynchronous main without showing its invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "07bc372aeb64f9527e013e8a",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "c09540a53fa1e702f6a27a3c",
+        "text_sha256": "8a1fddcb6059317b9e5f41162af0cadf4fdd6006ca7303d7bc7c8e7618e18ffc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-131: Go steering snippet declares package main. DOCS-SDKSTEER-132: Go steering imports context. DOCS-SDKSTEER-133: Go steering imports log. DOCS-SDKSTEER-134: Go steering imports copilot SDK. DOCS-SDKSTEER-135: Go steering imports SDK RPC. DOCS-SDKSTEER-136: Go steering defines main. DOCS-SDKSTEER-137: Go steering uses background context. DOCS-SDKSTEER-138: Go steering constructs client with nil options. DOCS-SDKSTEER-140: Go startup failure invokes log.Fatal. DOCS-SDKSTEER-141: Go steering defers client.Stop. DOCS-SDKSTEER-142: Go steering creates session with context and config. DOCS-SDKSTEER-143: Go steering selects illustrative gpt-5.4. DOCS-SDKSTEER-144: Go steering handler accepts request/invocation. DOCS-SDKSTEER-145: Go steering handler returns ApproveOnce; not adopted authority. DOCS-SDKSTEER-146: Go steering handler returns nil error. DOCS-SDKSTEER-147: Go steering tests session-creation error. DOCS-SDKSTEER-148: Go creation failure invokes log.Fatal. DOCS-SDKSTEER-149: Go initial send discards message-ID value. DOCS-SDKSTEER-150: Go initial send captures err. DOCS-SDKSTEER-151: Go initial prompt is inert authentication-refactor data. DOCS-SDKSTEER-152: Go initial send tests err. DOCS-SDKSTEER-153: Go initial failure invokes log.Fatal. DOCS-SDKSTEER-154: Go correction discards message-ID value. DOCS-SDKSTEER-155: Go correction captures err. DOCS-SDKSTEER-156: Go correction prompt is inert JWT-redirection data. DOCS-SDKSTEER-157: Go correction sets immediate. DOCS-SDKSTEER-158: Go correction tests err. DOCS-SDKSTEER-159: Go correction failure invokes log.Fatal. DOCS-SDKSTEER-139-A01: Go steering calls client Start. DOCS-SDKSTEER-139-A02: Go steering tests the startup error for a non-nil value.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "1ec242639b57d83dd87315cc",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "dfaba8f6cab61aeed7d706c9",
+        "text_sha256": "65ca90edbc27463464bd34e6316ef8095e1ceb8dcde9f2492b34ca42caf9a053",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-160: .NET steering imports SDK. DOCS-SDKSTEER-161: .NET steering imports RPC. DOCS-SDKSTEER-162: .NET steering constructs client. DOCS-SDKSTEER-163: .NET steering scopes client await-using disposal. DOCS-SDKSTEER-164: .NET steering awaits session creation. DOCS-SDKSTEER-165: .NET steering scopes session await-using disposal. DOCS-SDKSTEER-166: .NET steering selects illustrative gpt-5.4. DOCS-SDKSTEER-167: .NET steering handler accepts request/invocation. DOCS-SDKSTEER-168: .NET steering handler returns ApproveOnce; not adopted authority. DOCS-SDKSTEER-169: .NET steering wraps decision in Task.FromResult. DOCS-SDKSTEER-170: .NET initial send awaits SendAsync. DOCS-SDKSTEER-171: .NET initial send stores msgId. DOCS-SDKSTEER-172: .NET initial prompt is inert authentication-refactor data. DOCS-SDKSTEER-173: .NET correction awaits SendAsync. DOCS-SDKSTEER-174: .NET correction prompt is inert JWT-redirection data. DOCS-SDKSTEER-175: .NET correction sets immediate.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "b323ca7f93be1f93e8414f30",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "9a666ff339a68d726ae6a1c2",
+        "text_sha256": "2a602cb8d786a48a7f81f3b59983518556ef9a7a75afd9ce144d32a05aaae86d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-176: Java steering imports client. DOCS-SDKSTEER-177: Java steering imports RPC wildcard. DOCS-SDKSTEER-178: Java steering constructs client. DOCS-SDKSTEER-179: Java steering scopes client with try-with-resources. DOCS-SDKSTEER-180: Java steering starts client. DOCS-SDKSTEER-181: Java steering waits with get. DOCS-SDKSTEER-182: Java steering creates session. DOCS-SDKSTEER-183: Java steering constructs SessionConfig. DOCS-SDKSTEER-184: Java steering selects illustrative gpt-5.4. DOCS-SDKSTEER-185: Java steering assigns APPROVE_ALL; not adopted authority. DOCS-SDKSTEER-186: Java steering waits for creation. DOCS-SDKSTEER-187: Java initial sends MessageOptions. DOCS-SDKSTEER-188: Java initial prompt is inert authentication-refactor data. DOCS-SDKSTEER-189: Java initial send waits with get. DOCS-SDKSTEER-190: Java correction sends MessageOptions. DOCS-SDKSTEER-191: Java correction prompt is inert JWT-redirection data. DOCS-SDKSTEER-192: Java correction sets immediate. DOCS-SDKSTEER-193: Java correction waits with get.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "755edcb240d93b1db045740e",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "814c3d5fd7ab6baa3c36862d",
+        "text_sha256": "e231b6668a99aed226d27ae66ede54879fef61f3dcc7578ef54e36ad7d73b85e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-048: Runtime queues immediate messages in ImmediatePromptProcessor.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "199dca95b00052afdbd8b5be",
+        "text_sha256": "d05ce1e0109aacc1f7c7b656ee1386f813e1ff1a77bcc9f34b54ef195304f445",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-049: Processor injects before the next model request within the turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "25ebc8afedbeca20c0e260bf",
+        "text_sha256": "292ca05395c7aceb367adda726dff63580e9aaa95e135f14076b122df21f7717",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-050: Source describes steering as a new user message seen by the agent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "18bc2d164077a71a17cc68d5",
+        "text_sha256": "df220a27894a7996179d589a51360aa99311f1243a88470b22ae8998e03782e0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-051: Unprocessed steering falls back to regular next-turn queue when turn finishes.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "3b8f9cda65deccca8cba052a",
+        "text_sha256": "6ab65fcaf7e8162026d029e9c1f849de8e133bd3d272705f94fc49525e97e751",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-052: Current-turn steering is best effort. DOCS-SDKSTEER-053: Already committed tool calls complete before steering takes effect. DOCS-SDKSTEER-344: The source describes steering after an already committed tool call as still within that turn, subject to its separate best-effort and fallback qualifications.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "6e9a3d8c43d12fb87e09739e",
+        "text_sha256": "fe7b399e12c08f48973f91872a4dd28e9a0d46cbc2e4a868d3df872b76f339e9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-054: Queued messages process sequentially after the active turn. DOCS-SDKSTEER-055: Each queued message starts a full turn. DOCS-SDKSTEER-056: Omitting mode defaults to enqueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "b47295539f0376cc867eb343",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "16f764c4aa7091b9ed9c7c11",
+        "text_sha256": "0f4b33514506f5aceec7a5853afec34e31df31ea26d4a79757f1fcaa113aa52c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-194: TypeScript queueing imports client. DOCS-SDKSTEER-195: TypeScript queueing constructs client. DOCS-SDKSTEER-196: TypeScript queueing awaits startup. DOCS-SDKSTEER-197: TypeScript queueing awaits session creation. DOCS-SDKSTEER-198: TypeScript queueing selects illustrative gpt-5.4. DOCS-SDKSTEER-199: TypeScript queueing handler returns async approve-once; not adopted authority. DOCS-SDKSTEER-200: TypeScript initial queue send awaits acknowledgement. DOCS-SDKSTEER-201: TypeScript initial prompt is inert project-structure data. DOCS-SDKSTEER-202: TypeScript first follow-up awaits send. DOCS-SDKSTEER-203: TypeScript first follow-up is inert unit-test prompt. DOCS-SDKSTEER-204: TypeScript first follow-up sets enqueue. DOCS-SDKSTEER-205: TypeScript second follow-up awaits send. DOCS-SDKSTEER-206: TypeScript second follow-up is inert README prompt. DOCS-SDKSTEER-207: TypeScript second follow-up sets enqueue. DOCS-SDKSTEER-208: TypeScript comment describes FIFO after-turn processing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "d777524d7e63a428197871ab",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "158658731d60d4f3bff73423",
+        "text_sha256": "8474f089012561a273acfc42b6bf50d1bbaf0903583762257756d96a2d1c4a51",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-210: Python queueing defines async main. DOCS-SDKSTEER-211: Python queueing constructs client. DOCS-SDKSTEER-212: Python queueing awaits startup. DOCS-SDKSTEER-213: Python queueing awaits session creation. DOCS-SDKSTEER-214: Python queueing handler accepts req/inv. DOCS-SDKSTEER-215: Python queueing handler returns ApproveOnce; not adopted authority. DOCS-SDKSTEER-216: Python queueing selects illustrative gpt-5.4. DOCS-SDKSTEER-217: Python initial queue send awaits acknowledgement. DOCS-SDKSTEER-218: Python initial prompt is inert project-structure data. DOCS-SDKSTEER-219: Python first follow-up awaits send. DOCS-SDKSTEER-220: Python first follow-up is inert unit-test prompt. DOCS-SDKSTEER-221: Python first follow-up sets enqueue. DOCS-SDKSTEER-222: Python second follow-up awaits send. DOCS-SDKSTEER-223: Python second follow-up is inert README prompt. DOCS-SDKSTEER-224: Python second follow-up sets enqueue. DOCS-SDKSTEER-225: Python queueing comment describes FIFO after-turn processing. DOCS-SDKSTEER-226: Python queueing awaits client.stop. DOCS-SDKSTEER-209-A01: Python queueing imports CopilotClient. DOCS-SDKSTEER-209-A02: Python queueing imports PermissionDecisionApproveOnce. DOCS-SDKSTEER-336: The Python queueing excerpt defines asynchronous main without showing its invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "25472864e759516d579e160a",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "204af28c331e3b0277e294aa",
+        "text_sha256": "8b2e04e021a61b6a38afe19e8d1a58ef1fff64abd4b45eefaf620a0485f425c9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-227: Go initial queueing calls Send. DOCS-SDKSTEER-228: Go initial prompt is inert project-structure data. DOCS-SDKSTEER-229: Go first follow-up calls Send. DOCS-SDKSTEER-230: Go first follow-up is inert unit-test prompt. DOCS-SDKSTEER-231: Go first follow-up sets enqueue. DOCS-SDKSTEER-232: Go second follow-up calls Send. DOCS-SDKSTEER-233: Go second follow-up is inert README prompt. DOCS-SDKSTEER-234: Go second follow-up sets enqueue. DOCS-SDKSTEER-235: Go queueing comment describes FIFO after-turn processing. DOCS-SDKSTEER-332: The Go initial queueing send does not capture or inspect its return values. DOCS-SDKSTEER-333: The Go first follow-up queueing send does not capture or inspect its return values. DOCS-SDKSTEER-334: The Go second follow-up queueing send does not capture or inspect its return values.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "2e8c6904462b83a3133abc94",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "455bf7a81dd27c369e10e859",
+        "text_sha256": "861fd56f640b1b2c4ef0f41ce142b8c215c39e75ff10b839110d5a585892ae93",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-236: .NET initial queueing awaits SendAsync. DOCS-SDKSTEER-237: .NET initial prompt is inert project-structure data. DOCS-SDKSTEER-238: .NET first follow-up awaits SendAsync. DOCS-SDKSTEER-239: .NET first follow-up is inert unit-test prompt. DOCS-SDKSTEER-240: .NET first follow-up sets enqueue. DOCS-SDKSTEER-241: .NET second follow-up awaits SendAsync. DOCS-SDKSTEER-242: .NET second follow-up is inert README prompt. DOCS-SDKSTEER-243: .NET second follow-up sets enqueue. DOCS-SDKSTEER-244: .NET queueing comment describes FIFO after-turn processing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "4c1d7c1819723ca10ba2ede7",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "adb38ce4ead2a01b5e30e656",
+        "text_sha256": "dd17826635b092b6a937ee9f483a09f41fe77df9775ad71e30fa8c21f2c40b6f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-245: Java queueing imports client. DOCS-SDKSTEER-246: Java queueing imports RPC wildcard. DOCS-SDKSTEER-247: Java queueing constructs client. DOCS-SDKSTEER-248: Java queueing scopes client try-with-resources. DOCS-SDKSTEER-249: Java queueing starts client. DOCS-SDKSTEER-250: Java queueing waits for startup. DOCS-SDKSTEER-251: Java queueing creates session. DOCS-SDKSTEER-252: Java queueing constructs SessionConfig. DOCS-SDKSTEER-253: Java queueing selects illustrative gpt-5.4. DOCS-SDKSTEER-254: Java queueing assigns APPROVE_ALL; not adopted authority. DOCS-SDKSTEER-255: Java queueing waits for creation. DOCS-SDKSTEER-256: Java initial queueing sends inert project-structure prompt. DOCS-SDKSTEER-257: Java initial queueing waits with get. DOCS-SDKSTEER-258: Java first follow-up sends MessageOptions. DOCS-SDKSTEER-259: Java first follow-up is inert unit-test prompt. DOCS-SDKSTEER-260: Java first follow-up sets enqueue. DOCS-SDKSTEER-261: Java first follow-up waits with get. DOCS-SDKSTEER-262: Java second follow-up sends MessageOptions. DOCS-SDKSTEER-263: Java second follow-up is inert README prompt. DOCS-SDKSTEER-264: Java second follow-up sets enqueue. DOCS-SDKSTEER-265: Java second follow-up waits with get. DOCS-SDKSTEER-266: Java comment describes FIFO after-turn processing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "0f52c31141fa343bef4e6880",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "fe21042876bd8662fece8c0d",
+        "text_sha256": "7746602574ba69e293a0f3c49df0a581233fbb37f961ff6ef8ed87d498a25b66",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-057: Queued message is a QueuedItem in session.itemQueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c0a532d64634d4699c2635f6",
+        "text_sha256": "1c3a2e33a01d12706219b32fded6d67d00e00f4556bd648bd0d439217b658ce5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-058: processQueuedItems runs after turn completion and idle.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "1000b23122b333b483832001",
+        "text_sha256": "0772c04c216205f2b82428f76897245f9bd003d40ac50f20df67e344dc8ea90d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-059: Queue dequeues FIFO. DOCS-SDKSTEER-060: Each queued message triggers a full agentic turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "e577a6edfec36326ad0ed9dd",
+        "text_sha256": "89434bf7fa693c07b04b3972d31063c6a117004cc5e97c74b7106db78d5eb227",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-061: Pending steering is moved to the front of the next-turn queue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "e7e914a609bb8c0120fd4988",
+        "text_sha256": "7d8330d00d7f5516477564c555a7e36bf01b3366ef02492aa14e7cf246f7a949",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-062: Processing continues until queue empties. DOCS-SDKSTEER-063: Session then emits idle.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "48a34b76d9dd42b143c51239",
+        "text_sha256": "30ed86a0f3440ded95756b5871acac41d8fc13845f1165b08fc8216455f88cb0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-064: Steering and queueing can be combined within one session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "ac2d09896299eeeb68fe8d77",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "c3c0166336b59d0955c71da1",
+        "text_sha256": "96fd7834e490d758248ab7041cff13cd403a7fa22ed10bfe4b2978f1d39ecbe0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-267: TypeScript combined example awaits session creation. DOCS-SDKSTEER-268: TypeScript combined example selects illustrative gpt-5.4. DOCS-SDKSTEER-269: TypeScript combined handler returns async approve-once; not adopted authority. DOCS-SDKSTEER-270: TypeScript combined initial send awaits acknowledgement. DOCS-SDKSTEER-271: TypeScript combined initial prompt is inert database-refactor data. DOCS-SDKSTEER-272: TypeScript combined correction awaits send. DOCS-SDKSTEER-273: TypeScript combined correction is inert backward-compatibility prompt. DOCS-SDKSTEER-274: TypeScript combined correction sets immediate. DOCS-SDKSTEER-275: TypeScript combined follow-up awaits send. DOCS-SDKSTEER-276: TypeScript combined follow-up is inert migration prompt. DOCS-SDKSTEER-277: TypeScript combined follow-up sets enqueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c0ecf437a4e02a79e421c5de",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "f11f42fddcdba4c562c5daa4",
+        "text_sha256": "49c93ce098849ccd6d19ef6f3ed946758dbe2922dfbbe2217221041a8c80707d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-278: Python combined example awaits session creation. DOCS-SDKSTEER-279: Python combined handler accepts req/inv. DOCS-SDKSTEER-280: Python combined handler returns ApproveOnce; not adopted authority. DOCS-SDKSTEER-281: Python combined example selects illustrative gpt-5.4. DOCS-SDKSTEER-282: Python combined initial send awaits acknowledgement. DOCS-SDKSTEER-283: Python combined initial prompt is inert database-refactor data. DOCS-SDKSTEER-284: Python combined correction awaits send. DOCS-SDKSTEER-285: Python combined correction is inert backward-compatibility prompt. DOCS-SDKSTEER-286: Python combined correction sets immediate. DOCS-SDKSTEER-287: Python combined follow-up awaits send. DOCS-SDKSTEER-288: Python combined follow-up is inert migration prompt. DOCS-SDKSTEER-289: Python combined follow-up sets enqueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c1f8ee0a11b6ff44b350142b",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "17f276f7505224259cec6d93",
+        "text_sha256": "5c014bf3f0da8a606d95d883a8700a9e4033495a2e493254d836dcc7c89fd7db",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "414958c15f149b44410256d4",
+        "text_sha256": "3528065ecb12875fcd28265edb872d387560609ba55318bf52c5c0c6b9cf5885",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "f8cd6f1d1b47b7e0fa3dc56a",
+        "text_sha256": "9eed1ea28b84ace025ec86649161fbfb3b0294191b9b7d486fa7d0887bab1b25",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-065: Source recommends steering to redirect wrong-path work.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "8f3d6e163d851db760374796",
+        "text_sha256": "945345bfa4adf37e3f40a66cc623385c61dfc945d92f5486c98dec873ffd68c1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-066: Source recommends queueing additional tasks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "1f3e7544c980b4db972692f5",
+        "text_sha256": "b5156b0b324f56d4799e0db3808c037ac6e2cc3ba1d502036cadd3c3166e87c6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-067: Source suggests steering before an impending mistake; best-effort/tool-call limitations still apply.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "3c2efa77e03d85c9b9553ee6",
+        "text_sha256": "e16a484cd54fa515456fc6b5d4f110eb44a040b38ebf659db19002c12dfb4f29",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-068: Source recommends FIFO queueing to chain tasks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "9ca71feb0870a6e6b691a0ff",
+        "text_sha256": "906c19b7f8da95c948e12fe980f4f7ce63d8b55799f238f065c7b032c71c6b0f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-069: Source recommends steering to add current-task context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "f3c581051cbd1431c914b1a4",
+        "text_sha256": "437825823fda83d43e59d31525ea70e7d7a158c18d7066a59c251bce2e6385f1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-070: Source recommends queueing unrelated requests into individual turns. DOCS-SDKSTEER-345: The scenario table describes unrelated queued requests as receiving a full turn with clean context; this phrase alone does not establish session-history clearing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "8f66936759b89ab1bef3b391",
+        "text_sha256": "e6099232c2af19b06c583957832e02198e1c78f56cb14152b250c6066932c0b8",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "280b2ffd15198dd71cc276dc",
+        "text_sha256": "4aff46ce366bb335236cee88c0cf4cbf70e2793aea5e3b4ecb86302328fe5a6b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-290: UI example imports CopilotClient. DOCS-SDKSTEER-291: UI example imports CopilotSession. DOCS-SDKSTEER-292: UI example defines PendingMessage interface. DOCS-SDKSTEER-293: PendingMessage prompt is a string. DOCS-SDKSTEER-294: PendingMessage mode is immediate/enqueue union. DOCS-SDKSTEER-295: PendingMessage sentAt is Date. DOCS-SDKSTEER-296: UI example defines InteractiveChat. DOCS-SDKSTEER-297: UI class stores private session. DOCS-SDKSTEER-298: UI processing flag starts false. DOCS-SDKSTEER-299: UI pending-message array starts empty. DOCS-SDKSTEER-300: UI constructor accepts a session. DOCS-SDKSTEER-301: UI constructor stores supplied session. DOCS-SDKSTEER-302: UI constructor subscribes to session events. DOCS-SDKSTEER-303: UI listener filters session.idle. DOCS-SDKSTEER-304: UI idle listener clears processing flag. DOCS-SDKSTEER-305: UI idle listener calls onIdle. DOCS-SDKSTEER-306: UI listener filters assistant.message. DOCS-SDKSTEER-307: UI assistant listener calls renderMessage. DOCS-SDKSTEER-309: UI sendMessage checks processing flag. DOCS-SDKSTEER-310: UI idle send sets processing flag true. DOCS-SDKSTEER-311: UI idle send awaits session.send with prompt. DOCS-SDKSTEER-312: UI idle send returns afterward. DOCS-SDKSTEER-313: UI busy branch is explanatory comment, not implemented selection. DOCS-SDKSTEER-314: UI comment suggests user delivery selection controls. DOCS-SDKSTEER-315: UI steer accepts prompt asynchronously. DOCS-SDKSTEER-316: UI steer pushes pending entry. DOCS-SDKSTEER-317: UI steer pending entry stores prompt. DOCS-SDKSTEER-318: UI steer pending entry stores immediate. DOCS-SDKSTEER-319: UI steer pending entry records Date timestamp. DOCS-SDKSTEER-320: UI steer awaits send with immediate. DOCS-SDKSTEER-321: UI enqueue accepts prompt asynchronously. DOCS-SDKSTEER-322: UI enqueue pushes pending entry. DOCS-SDKSTEER-323: UI enqueue pending entry stores prompt. DOCS-SDKSTEER-324: UI enqueue pending entry stores enqueue. DOCS-SDKSTEER-325: UI enqueue pending entry records Date timestamp. DOCS-SDKSTEER-326: UI enqueue awaits send with enqueue. DOCS-SDKSTEER-327: UI defines private onIdle. DOCS-SDKSTEER-328: UI onIdle clears pending-message array. DOCS-SDKSTEER-329: UI readiness update is a comment only. DOCS-SDKSTEER-330: UI renderMessage accepts unknown event. DOCS-SDKSTEER-331: UI message rendering is a comment placeholder. DOCS-SDKSTEER-308-A01: UI sendMessage is declared asynchronous. DOCS-SDKSTEER-308-A02: UI sendMessage declares a Promise<void> return type. DOCS-SDKSTEER-337: UI steer appends its pending entry before awaiting the send acknowledgement. DOCS-SDKSTEER-338: UI enqueue appends its pending entry before awaiting the send acknowledgement. DOCS-SDKSTEER-339: UI sendMessage sets its processing flag before awaiting send, without showing failure recovery that resets the flag. DOCS-SDKSTEER-340: UI steer does not set the processing flag in its displayed method body. DOCS-SDKSTEER-341: UI enqueue does not set the processing flag in its displayed method body. DOCS-SDKSTEER-342: UI steer shows no send-error branch that removes its already-appended pending entry. DOCS-SDKSTEER-343: UI enqueue shows no send-error branch that removes its already-appended pending entry.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "df881d19a2a9771f27487dc1",
+        "text_sha256": "2b1f6c9d5e24e26b152cb0a06d4796156edd12347bb2bfb54806be96125442aa",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "a4102c04b77874909edeeee2",
+        "text_sha256": "1e2b83c97526079d320e503a424417fe193bcaa3737f765bf8408b48a75a38a9",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "8849c039934deffc89d0dd6c",
+        "text_sha256": "b36db0997010d83e5b0b156cc81bd5b7c181b82b2c1befe90fd6d9039471eebb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-071: Node.js table names delivery field mode. DOCS-SDKSTEER-072: Node.js table types delivery as enqueue/immediate union. DOCS-SDKSTEER-073: Node.js table defaults delivery to enqueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "6ca66fae20b9c35ce12d9d60",
+        "text_sha256": "adfb8f614a23aa61fc65ec705c2b406b07a7ae77fe7cf6db1484f80531937df7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-074: Python table names delivery field mode. DOCS-SDKSTEER-075: Python table types delivery as Literal enqueue/immediate. DOCS-SDKSTEER-076: Python table defaults delivery to enqueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "8aa504a9fb1ef59fb45e5278",
+        "text_sha256": "b4ff36f0430d29dda437784f7b05f1c4e9a462049f2f0d57fef9bbfe435a02fa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-077: Go table names delivery field Mode. DOCS-SDKSTEER-078: Go table types delivery as string. DOCS-SDKSTEER-079: Go table defaults delivery to enqueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c051b521ba042a482d7ca598",
+        "text_sha256": "9c7dc2051794730b5c1fe26355ca14f9ff5d6323dd754c8787f92aa603028a2e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-080: .NET table names delivery field Mode. DOCS-SDKSTEER-081: .NET table types delivery as nullable string. DOCS-SDKSTEER-082: .NET table defaults delivery to enqueue.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "0c31c62941310eb3b5a5437c",
+        "text_sha256": "252b22646ec7c452f786895aca71e19cc31338d0466e92e8166fea9f32e53d3c",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "aca7238d2bd83d395f5fe9ed",
+        "text_sha256": "2fe74522523bf5ae6c9e5eeed17cc5e8371e8984134b70dfc9b46c3eb338de08",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation-only lint comments, language-tab wrappers, list/table introductions, headings or separators; operative text/examples are extracted separately."
+      },
+      {
+        "candidate_id": "680bababc65eee5d92b4a1d9",
+        "text_sha256": "16f0a09c798a86e961b028fc01ae0030375a3641b5d26e59aa436a9276b6b819",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-083: Enqueue waits FIFO during an active turn. DOCS-SDKSTEER-084: Enqueue starts a new turn immediately during idle.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c747b0fce43c32018e176f2c",
+        "text_sha256": "ffdb33a99ce244443147a7b74ec6646381f8771b3d3e8d3347149cee1a7656ba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-085: Immediate injects before the next model call during an active turn. DOCS-SDKSTEER-086: Immediate starts a new turn immediately during idle.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "ddc770e11860e1f0d191cb20",
+        "text_sha256": "53f937d5d14d377e9bde418d83fc35183c8f0da1097c80111d5320fd1f3d13fa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-087: Both modes behave identically when idle.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "6c2098315e2a116ca47b962c",
+        "text_sha256": "b541bda248bc96fcdf46fcf618feb575d42b9393342b28b274c96f1bf027db82",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-088: Default most messages to enqueue or omitted mode. DOCS-SDKSTEER-089: Source presents queueing as predictable and less disruptive.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "2232c965e3d74d79e972e994",
+        "text_sha256": "840b7db4d64ff726fe1afed8befde797cff0ec83ad6e7b43a1c7be7d47d2192a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-090: Reserve immediate steering for active course corrections.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "a0eb856d4b39a65d050c767e",
+        "text_sha256": "17d41379dd325c07d77fe64569e8fc18abfd8ccb7461f92dc1343df8e094a607",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-091: Keep steering concise. DOCS-SDKSTEER-092: Long complex steering can confuse current context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c42b6322823518481aafe244",
+        "text_sha256": "fe014f12abe892ce13023f8da6811e7e6e18446aee95afe02ad7b786a3a6d4e0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-093: Avoid excessive steering. DOCS-SDKSTEER-094: Consider abort/restart for significant direction changes. DOCS-SDKSTEER-095: Rapid steering messages can degrade turn quality.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "510af88e4611f49420fab530",
+        "text_sha256": "0aa737b737e6401405f96b14b437725d150e2d5667c634b62dd814f2189fd0a5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-096: Show queued-message count in the UI. DOCS-SDKSTEER-097: Listen for idle to clear queue display.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "896079b754fc8f08fbfd10d8",
+        "text_sha256": "7daaa346633b1009b6e56a270a09ff96155266d88de063a56fccc9a879dce53a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-098: Post-turn steering automatically falls back to queue. DOCS-SDKSTEER-099: Represent steering-to-queue transition in the UI.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "be43b1401114e8a7eeb13283",
+        "text_sha256": "2797a714716decc0ae7d0c548bacbff958e2930664bb80267595fb3c06d92649",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-100: Related quickstart link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "05f36dce43b9586df655b0c4",
+        "text_sha256": "4e1b43e76ca4837850f790369b8da6c378b4ace009d4138a20b56fe00aa06473",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-101: Related custom-agents link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c5ebfebf6116cb3cec0edbc8",
+        "text_sha256": "ad5062bbdd0e009fa788f1b425f19a345890f7c3f3fb2bc7a92cd5944bbb450f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-102: Related hooks overview link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      },
+      {
+        "candidate_id": "c1ca9fa266015b056887e71b",
+        "text_sha256": "2e518b48e6081ef529a30071e50542f50879ba99a95af4cea7dbeedee67a82a5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSTEER-103: Related session persistence link is not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json"
+      }
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "issue": 446,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/account-and-profile/tutorials/index.md",
+    "content/account-and-profile/tutorials/personalize-your-profile.md",
+    "content/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume.md"
+  ],
+  "account_profile_receipt_coverage": {
+    "expected": 69,
+    "receipt_present": 69,
+    "missing": []
+  },
+  "reusable_fragments_inspected": 3,
+  "feature_datasets_inspected": [
+    "data/features/profile-pronouns.yml",
+    "data/features/profile-social-links.yml"
+  ],
+  "added_reference_claims": 17,
+  "reference_claims": 61350,
+  "claim_bearing_artifacts": 3511,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.976
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_caveat": "69/69 individual list-format source receipts only. Independent semantic omission audit, published-version assurance, unresolved conflicts, policy adoption, rights and behavior gates remain separate.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:41:17.150Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CLONEPROCEDURE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/change-current-directory-clone.md",
+      "content_sha256": "f15019a44be5c3a5e5a818fc93f4ed582aff2aa818f56a4549d17282a86e8da5",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The clone preparation step selects the working directory where the new cloned directory should be placed. This destination choice is contextual, not permission to overwrite existing data or evidence of a verified repository target.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLONEPROCEDURE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/git-clone-url.md",
+      "content_sha256": "b951305237d388a736332ef0696e78f7cdbc32046fb762ccdb77925cd8f03a34",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The clone step combines git clone with an earlier copied URL and gives product-host, user and repository placeholders. Placeholder expansion and repository/credential authorization remain separate; no upstream clone command was executed and the URL is not an actual target receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLONEPROCEDURE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/local-clone-created.md",
+      "content_sha256": "d63e2bb86d03e0eb82518b81bb8373a6a870f9ee7f7c7a0e05950afa43f6ec1d",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "The Enter step illustrates local clone output, including an example repository name and object counts. These are documentation examples, not actual command output, object integrity verification or local/remote parity. The literal remove label in the sample is retained as source text rather than interpreted as a deletion instruction; no clone was performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLONEPROCEDURE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/command_line/manipulating_file_prereqs.md",
+      "content_sha256": "9578e0afe0a41240152ba1b539dce52c9c803b2bded2d18311e5e02d5cd21ee8",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The surrounding file-manipulation procedure assumes an existing/new hosted repository or another owner's repository to contribute to, plus a local clone. Those prerequisites are not automatic write permission to someone else's repository or proof of an authorized clone; linked create/clone procedures remain separate.",
+      "accepted_policy": false
+    }
+  ]
+}

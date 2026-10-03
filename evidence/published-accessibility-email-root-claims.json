@@ -1,0 +1,209 @@
+{
+  "schema": "ges.supplemental-email-root-claims.v1",
+  "issue": 28,
+  "author": "codex:source-review",
+  "source": {
+    "commit": "d47c19c371086cebacfc5968ee8d8edf400f7b4c",
+    "path": "content/account-and-profile/how-tos/email-preferences/setting-your-commit-email-address.md",
+    "sha256": "a20db080ebffc49ae9c1e4e1f87a3a5b714263866b90c4781c96445a6dfd058f",
+    "git_blob_sha": "f9b55f9390830177c3d625f602e3dcad1b1ac633"
+  },
+  "claims": [
+    {
+      "id": "accessibility-email-root-001",
+      "line_start": 3,
+      "line_end": 3,
+      "kind": "CAPABILITY",
+      "statement": "A commit author email can be configured for platform web operations.",
+      "condition": "web operations",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "309a78c525ec703574ab462b50f962fdde10aabda91c48c03e764135702ca9a9"
+    },
+    {
+      "id": "accessibility-email-root-002",
+      "line_start": 3,
+      "line_end": 3,
+      "kind": "CAPABILITY",
+      "statement": "A commit author email can be configured on the local computer.",
+      "condition": "local Git",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "309a78c525ec703574ab462b50f962fdde10aabda91c48c03e764135702ca9a9"
+    },
+    {
+      "id": "accessibility-email-root-003",
+      "line_start": 40,
+      "line_end": 40,
+      "kind": "CAPABILITY",
+      "statement": "Git configuration can change the email associated with newly authored commits.",
+      "condition": null,
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "9687824ea7ec5c55305b29378ab7b27ef74e5547f084115b73db6f2c1c53fbfd"
+    },
+    {
+      "id": "accessibility-email-root-004",
+      "line_start": 40,
+      "line_end": 40,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "The configured new address is visible on future commits pushed from the command line.",
+      "condition": null,
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "9687824ea7ec5c55305b29378ab7b27ef74e5547f084115b73db6f2c1c53fbfd"
+    },
+    {
+      "id": "accessibility-email-root-005",
+      "line_start": 40,
+      "line_end": 40,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "Earlier commits retain their previously associated author email.",
+      "condition": null,
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "9687824ea7ec5c55305b29378ab7b27ef74e5547f084115b73db6f2c1c53fbfd"
+    },
+    {
+      "id": "accessibility-email-root-006",
+      "line_start": 49,
+      "line_end": 49,
+      "kind": "PROCEDURE",
+      "statement": "The global user.email setting selects the computer-wide Git author-email default.",
+      "condition": "global configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "d1565c0446c58937d422f12ec38b405100862643029853e7a22902e1e0d63ded"
+    },
+    {
+      "id": "accessibility-email-root-007",
+      "line_start": 55,
+      "line_end": 55,
+      "kind": "VERIFICATION_PROCEDURE",
+      "statement": "Reading global user.email checks the global configured address.",
+      "condition": "global configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "8a4bf4e6bb4a02b9b74b6c429fc6ed047f03b8b1db4d478c0a00d8a7fe8c46a2"
+    },
+    {
+      "id": "accessibility-email-root-008",
+      "line_start": 63,
+      "line_end": 63,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "Platform account attribution for pushed CLI commits uses the author email configured in local Git.",
+      "condition": null,
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "8827fd5783213655dc98fc82f03beece2570904dc2396208ecd282528c35eb13"
+    },
+    {
+      "id": "accessibility-email-root-009",
+      "line_start": 65,
+      "line_end": 65,
+      "kind": "CAPABILITY",
+      "statement": "Author-email configuration can be scoped to one repository.",
+      "condition": "repository-local configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "5da1aae035a2691c1f63f17ea8ec646054532d009ae15a6f854f481c139ca224"
+    },
+    {
+      "id": "accessibility-email-root-010",
+      "line_start": 65,
+      "line_end": 65,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "Repository-local author-email configuration overrides global configuration for that repository.",
+      "condition": "repository-local configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "5da1aae035a2691c1f63f17ea8ec646054532d009ae15a6f854f481c139ca224"
+    },
+    {
+      "id": "accessibility-email-root-011",
+      "line_start": 65,
+      "line_end": 65,
+      "kind": "PLATFORM_BEHAVIOR",
+      "statement": "A repository-local change does not alter the author-email configuration of other repositories.",
+      "condition": "repository-local configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "5da1aae035a2691c1f63f17ea8ec646054532d009ae15a6f854f481c139ca224"
+    },
+    {
+      "id": "accessibility-email-root-012",
+      "line_start": 69,
+      "line_end": 69,
+      "kind": "PROCEDURE",
+      "statement": "Enter the intended repository working directory before setting its local author email.",
+      "condition": "repository-local configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "d97dc8d5822aff92054d9e3ae79c401dfb4708d7bcef7beb6b2d2fe482432d83"
+    },
+    {
+      "id": "accessibility-email-root-013",
+      "line_start": 73,
+      "line_end": 73,
+      "kind": "PROCEDURE",
+      "statement": "Set repository-local user.email without the global flag.",
+      "condition": "repository-local configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "6b302a9b8e6affee0383a7cafa22a94ffaeeb7c60819388191fd4f5c9eb285d9"
+    },
+    {
+      "id": "accessibility-email-root-014",
+      "line_start": 79,
+      "line_end": 79,
+      "kind": "VERIFICATION_PROCEDURE",
+      "statement": "Read effective user.email from the intended repository; the result may fall back to global configuration.",
+      "condition": "repository-local configuration",
+      "adopted": false,
+      "mapping": "REFERENCE_ONLY",
+      "span_sha256": "06db2cb89ef48c9a7a3a526e940947b094ee2521ce617ece0d5e1d067c7b2d83"
+    }
+  ],
+  "reusable_occurrences": [
+    30,
+    32,
+    33,
+    34,
+    35,
+    36,
+    44,
+    46,
+    52,
+    59,
+    67,
+    70,
+    76,
+    83
+  ],
+  "conditions": [
+    {
+      "lines": [
+        35,
+        36
+      ],
+      "predicate": "fpt or ghec",
+      "note": "Begins after primary-email include; applies to privacy include only."
+    }
+  ],
+  "nonclaim_dispositions": {
+    "metadata": "Lines1-26: versions and redirects retained as context; intro capability extracted.",
+    "headings": "Separate global and repository-local procedures; no new standalone obligation.",
+    "example_output": "Illustrative email placeholders are not user identity evidence.",
+    "links": "Lines87/89 are reference destinations, not completed destination review.",
+    "whitespace": "No independent claims."
+  },
+  "unresolved": [
+    "Independent omission audit",
+    "Variable and linked destination interpretation",
+    "Parent-occurrence application of fragment claims",
+    "Published deployment identity"
+  ],
+  "root_local_candidate_extraction_complete": true,
+  "assurance_increment": 0,
+  "pinned_review_increment": 0
+}

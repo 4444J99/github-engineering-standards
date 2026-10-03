@@ -1,0 +1,271 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:54:50Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/reimage-larger-runner.md",
+      "content_sha256": "ec7e7b09e2cc11eee2dba73017b7bbb4e9d814194250296e240c9a444b09ea4d",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Runner reimage selects from available GitHub-owned images then saves; no arbitrary custom-image support inferred or runner image changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/removing-a-runner-group.md",
+      "content_sha256": "5d8ebf4921a0c974c62e908bdf19549e333a493cc2142a479895aabba01102c7",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Runner group removal selects intended group, Remove group, reviews confirmation then removes. Destructive procedure is source evidence, not authorization; dependent access/recovery must be separately reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/rename-larger-runner.md",
+      "content_sha256": "caca140e5716ce0296411abc61080030656ca8ba6028e9da709be9d25ed7b7e1",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Runner rename edits Name and saves; names can affect functionality in other sources, so no actual rename authorized.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/repository_id-description.md",
+      "content_sha256": "7dd78210057c58a23abdaff14761d956bfc84279d635281d4ceef743e44614dc",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Repository numeric ID is distinct from repository name; illustrative ID is not a real target identity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/repository_owner_id-description.md",
+      "content_sha256": "d7b72fdecb2a96ba5717d7151d5a19f4c36db34ee474f6d97c39672e91b32048",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Owner numeric account ID differs from owner name; illustrative value is not actual principal identity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/resize-larger-runner.md",
+      "content_sha256": "c8c29b46683d9de99fcb93492fd5fef4088707cf2e12e10c0f32669716f5b000",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Available runner resize choices depend on installed image; select Size and Save is not capacity change approval or evidence of cost/performance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/reusable-keyword.md",
+      "content_sha256": "5eb5d8cbe2377c8295ff47e86d024df305a02ddcf6d109aab2eab22f139e4961",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The parent keyword allows several contexts via linked availability table; unspecified keyword and exact supported contexts require parent resolution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/reusable-workflow-calling-syntax.md",
+      "content_sha256": "3e9666b8fd05a0fe4188d4fe255a81405566c933e8dbcdf8e44019e8febc86e0",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Same-repository $/.github/workflows syntax is recommended but unavailable GHES; ./ syntax also allowed. External owner/repo path/ref permits FPT public/private and GHEC/GHES public/internal/private workflows.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/reusable-workflow-calling-syntax.md",
+      "content_sha256": "3e9666b8fd05a0fe4188d4fe255a81405566c933e8dbcdf8e44019e8febc86e0",
+      "start_line": 5,
+      "end_line": 7,
+      "statement": "External ref allows SHA/tag/branch, same-name tag wins, commit SHA safest. Local $/ or ./ uses caller commit; $/ forbids ref suffix and GHES use. refs/heads/tags prefixes and expressions/contexts disallowed in this calling keyword, distinct from access-policy ref syntax.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/run_id_description.md",
+      "content_sha256": "49d1170e133c399a8ff62fa09d583eac21693f1a732749d491ca667f86be3df0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "run_id uniquely identifies a run within repository and stays unchanged on rerun; attempt identity must be tracked separately.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/run_number_description.md",
+      "content_sha256": "9d9721e7ff8fce70086707a4c1a827fc6ebf23de455f98f1224a693f0ef8320d",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "run_number starts1 and increments per new run of a particular workflow, unchanged on rerun. It is workflow-scoped, not repository-wide unique or attempt counter.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-app-open-source.md",
+      "content_sha256": "456a36625bbe086b347f5211862f049d0b57413081abded2435a64707c016d00",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner application is open source with upstream contribution/issue link; linked repository license/code are not audited here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-arch-description.md",
+      "content_sha256": "17f80d8ef9b315a6c7efd681bdb71f028855e82b4758b4d27a2a985167f7014b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner architecture values are X86, X64, ARM or ARM64. Case and identity differ from arbitrary workflow labels; no actual hardware observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-debug-description.md",
+      "content_sha256": "220351c2b5e1550dcea6daaf24ae72362a97e089d0551e46fb02a5a07b19c2cd",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner debug marker exists only with debug logging and value1; absence is not an error or complete verbosity audit, and enabled logs may need sensitive-data review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-environment-description.md",
+      "content_sha256": "8004b0336c241b4db06d41851a495e63398af1b94f1e2939fd42e697bcc91b53",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner environment differentiates github-hosted and self-hosted. Description is source schema, not actual isolation, ownership or trust verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-essential-communications.md",
+      "content_sha256": "0122590a135e29ae6aae87fe2aaa46504516896237a360844c21c6a3ea9accfd",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "GHEC data-residency runners require additional hostnames beyond this list. Essential operations require github.com, api.github.com and *.actions.githubusercontent.com; source list is not complete for every use case.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-essential-communications.md",
+      "content_sha256": "0122590a135e29ae6aae87fe2aaa46504516896237a360844c21c6a3ea9accfd",
+      "start_line": 16,
+      "end_line": 36,
+      "statement": "Action downloads use codeload.github.com; summaries/logs/artifacts/caches results-receiver.actions.githubusercontent.com and *.blob.core.windows.net; updates objects, objects-origin, github-releases and github-registry-files under githubusercontent.com.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-essential-communications.md",
+      "content_sha256": "0122590a135e29ae6aae87fe2aaa46504516896237a360844c21c6a3ea9accfd",
+      "start_line": 38,
+      "end_line": 57,
+      "statement": "OIDC uses *.actions.githubusercontent.com; packages/containers *.pkg.github.com, pkg-containers.githubusercontent.com and ghcr.io; Git LFS github-cloud.githubusercontent.com and github-cloud.s3.amazonaws.com. Categories don't authorize firewall writes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-essential-communications.md",
+      "content_sha256": "0122590a135e29ae6aae87fe2aaa46504516896237a360844c21c6a3ea9accfd",
+      "start_line": 59,
+      "end_line": 79,
+      "statement": "FPT/GHEC Dependabot update jobs use dependabot-actions.githubapp.com; release assets release-assets.githubusercontent.com; VNET api.snapcraft.io and *.core.windows.net. Wildcards, CNAME follow-up and version context remain separately verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-group-assign-policy-repo.md",
+      "content_sha256": "a602913daa511b0b69f10f91e206fc49f1e44b37bf70609dd34065f19b91ab6e",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Repository access policy chooses selected or all repositories; default private-only can be overridden except organization group inherited from enterprise cannot override it. Configuration is not effective access proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-group-assign-policy-workflow.md",
+      "content_sha256": "453eb997e8adba7c733cb63a76cf1095ba9fd5210d37b12613bc15945d666346",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "GHEC/GHES workflow group access selects all or full owner/repository paths and cannot override enterprise-shared policy. Non-reusable pin branch, reusable branch/tag/full SHA; qualify ambiguous refs with refs/heads or refs/tags; only directly defined jobs access. This policy syntax differs from reusable calling syntax where such prefixes are forbidden.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-022",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-groups-add-to-enterprise-first-steps.md",
+      "content_sha256": "37c515a3ded1ba18a4ee265a8039d6948068c24a2146400d3943fc88b951ddf3",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Enterprise group creation navigation consists of four shared enterprise/policy/Actions/group includes plus New runner group and name input. Dependency bodies and actual create policy are separately scoped.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-023",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-groups-enterprise-navigation.md",
+      "content_sha256": "c7051ce23009651eddf9ba7ece18c61d303eafec36fb125a04f018d44f685751",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "Enterprise runner-group navigation is four shared includes; reference presence is not full include-body review or authorized enterprise access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERRESOLVE-024",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-groups-org-navigation.md",
+      "content_sha256": "cfe1a6189eec65981b33e280d2a1a1c8c20ddc2d4ace64f85eb32672ccc643b2",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Organization runner-group navigation opens organization Settings then shared Actions-group sidebar include. Neither target access nor included body is certified here.",
+      "accepted_policy": false
+    }
+  ]
+}

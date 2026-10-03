@@ -1,0 +1,46 @@
+{
+  "issue": 136,
+  "reviewed_at": "2026-10-03T02:31:00.425Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 5,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58930,
+    "claim_bearing_artifacts": 2554,
+    "tests": 324,
+    "test_seconds": 1.969,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No private settings inspected, CSP weakened, trust changes or application execution.",
+    "Preview configuration, actual port and possible CSP cause are distinct; no diagnosis certified.",
+    "Linked procedures, screenshots, rights, adoption and native/rendered assurance remain separate."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 23,
+  "phase": "full-source-reading checkpoint; extraction and independent audit pending",
+  "verified_at": "2026-10-02T19:48:23.095Z",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "observed": "324 tests in 1.300s; OK. Subsequent published_docs ERROR output belongs to a synthetic negative fixture, not a live recovery execution."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "observed": "valid true; controls 95"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "observed": "completed without output"
+    }
+  ],
+  "limitations": [
+    "No new completed full-review receipts issued.",
+    "No independent claim draft audit yet.",
+    "No acceptance gate closure, policy adoption, rights or native enforcement claimed."
+  ]
+}

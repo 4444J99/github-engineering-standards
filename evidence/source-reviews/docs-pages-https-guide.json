@@ -1,0 +1,226 @@
+[
+  {
+    "artifact_id": "04a12657fba226850197a6de",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https.md",
+    "content_sha256": "2b99ddefa5b703119070ce115f95cb1016848a2402dfa9c3ec5022e5b47db1db",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:32:11.650Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "FPT/GHEC-only source requires repository admin to enforce Pages HTTPS; plan-dependent repository availability is separate from published-site access and no protection change is authorized. Source states Pages/custom-domain HTTPS support when custom domain correctly configured, and github.io sites created after June 15 2016 receive HTTPS automatically. Availability/default serving is distinct from tested HTTP redirect enforcement. Pages should not serve sensitive password/payment transactions. FPT private repository does not imply private website; GHEC sites default public except managed-user/private-access cases. Source warning's GHES Public Pages branch is not part of this cloud-only article applicability. Certificate note attributes common-name maximum 64 characters to RFC3280, then requires entire domain strictly less than 64. Preserve maximum-versus-strict-boundary wording discrepancy; neither standard interpretation nor boundary behavior independently verified. Enforce HTTPS UI selection is configuration only; require actual HTTP-to-HTTPS redirect, certificate/hostname validity and asset retrieval observations to prove effective behavior. No site visited or settings changed. Custom-domain save starts DNS eligibility check, certificate job/Let's Encrypt request and installation on TLS termination servers; check mark follows success. Asynchronous queued/requested/configured states are not a valid live certificate receipt. Source suggests removing/retyping/saving custom domain to cancel/restart stalled provisioning. This is a native domain mutation with continuity/takeover implications, not permission for automatic recovery; no DNS or domain changed. HTTP images/styles/scripts on HTTPS pages are mixed content that may weaken security or break assets. Source remediation changes asset URLs to HTTPS; endpoint support/content equivalence must be verified rather than blanket rewrite all URLs. Jekyll layouts and HTML head/body are suggested asset locations; source search for http:// is a diagnostic aid, not exhaustive generated-content assurance or proof every match is an insecure subresource. Illustrative stylesheet/script/image/link HTTP-to-HTTPS table is reference only; examples do not certify third-party host reachability, ownership or asset licensing. Extra apex A/AAAA/ALIAS/ANAME or chosen-subdomain CNAME records may prevent certificate provisioning. Historical table gives Pages address examples and owner.github.io targets; no current DNS recommendation, live resolution proof or authority to overwrite unrelated service records. Source DNS/TLS/domain/privacy and RFC links remain separately scoped. No accepted control, source completeness certification, published assurance, rights clearance or native rollout follows. Full source and required include/variable context read; accounting not independent semantic completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "52e7c832d1db00549f9e1386",
+        "text_sha256": "55b60bd9c1de65575edd53648545077eca6bdadc84e508732ecb1992828fcf50",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "60139696c73b3b771e5374b5",
+        "text_sha256": "884e63051c789e986c298e46d6142ad14fbc50718b359e40c58ea8919fe0f492",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "a6e14d8848846c30dbc1a6b1",
+        "text_sha256": "8852dbaf3b31a354639c6046866746f26c84932886693e0dfa531687c2ec00be",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "624814ff6cd391c0206880cd",
+        "text_sha256": "51d274541cd578b6d9b7b6d3fcb71762cee6c4eb78e5e8a3b45ac7431d2d0412",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "8924480b0d1618cb6953d3ec",
+        "text_sha256": "9e95096e5fbc73af2c55047ae4547558691897788ef2c8686b4763f8dc829cda",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "4e8d2cfa312b01e71ffb5045",
+        "text_sha256": "71c6ea452c8875803649de180ca98e89d6656d63ae896a83eb56e1afc5033a9d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "723a2f0b8e1c6afc996cbeda",
+        "text_sha256": "4d19c5cc0a770e26251d8b09a12b16083ab9eb6448dbac7aa5d91371f445dffc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "fb776ec228d551812620e3b7",
+        "text_sha256": "c1d1e5b1f6a3c566c30a0ecb658907c5d7f57e1ac186598a81acae670b53c470",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "572affb21d498410810176e3",
+        "text_sha256": "64d8e15a4ad52613bada0b32dab61b7c06ea9067e0a5d471fc5a439d997b83fb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "54cff052e407db09894251ec",
+        "text_sha256": "6a86520286232e51bfa6881a4343f1df544d215762ea8baffcfccf731be5f17b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "de04fbff6dda98070d2019b5",
+        "text_sha256": "ee68f86b328b66091957bdb601b1ce5c38f2187e9ae64e64127fce857e271366",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "6d94f75ea9d51089fdb9b67c",
+        "text_sha256": "bc3c30cd0f7876be002f7ade62263a9853d3e7795a99a9e7de89190b10ec524b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "89092c2f75011c68543f6a37",
+        "text_sha256": "4fe6e4c5c5b0769ebaf65063f31bd0a475eb2f8833178920a84f387e0aa47c83",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "a0740e133c42ee8eabfd729d",
+        "text_sha256": "13be2a55e5425c4e34a71bd20a32640c94662138202baf0e746819c157c24cb3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "d3e31b86f165c29e86af136d",
+        "text_sha256": "3368c8d05f84938c9209dadbc70f604203568b01f3fac93be3fb0d9b7d5b29cc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "a1e6d59f255cecac7baecbba",
+        "text_sha256": "bf2f4c732a6c6edb1838b95c560da707b31917a4c989fb40f1f89360fdbfc38b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "1314f35871ee85c48b1ac128",
+        "text_sha256": "bc35d4a27e801be8f9f61bcd28d0146046400ff3a3555b837a8fa22e7930d4b4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "67be3a2a1dcbc09ff67368a5",
+        "text_sha256": "f968f46061a02f770e643b2a0408396eb8293f8883af2a9fe7923dfe811f86a6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "d36744d71019c6449f1375ed",
+        "text_sha256": "c44222952fbdaa8e462402eb71f2fe75f7b82f83786b3dfbe4f380394885e301",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "7e13eb1675c603aa7d8dffda",
+        "text_sha256": "314f95ad38e2ed58845a0fb35c1f86ff04043bf07d1fc301a28c5589f9b24ca8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "ef0d5bf392ff419ab4e49de3",
+        "text_sha256": "a537e6b7ce643debdce8896fa0b9dfb21823f01aef30215cc65bcdbabbc7fab2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "a4a81910a104d27f9ad63bd0",
+        "text_sha256": "0d69954d672043aa54dbec8ff742356a6c26024d471be93e4b549d129b664341",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "8088220901837a2cf18aea39",
+        "text_sha256": "0503bba9d4053725e512994f5d0bb1ee7964f5d274fd2ebc4d08684ad7e61ee1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "9f1bf4e020e74774d8abd900",
+        "text_sha256": "8a6315e228baf9a0b686b5fc578912251d1aa3c26d5600cb41086b0dc1868109",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "6fadfef9d05c60ac9546610d",
+        "text_sha256": "b53878ee40ea8463a04c76a9165b5bea246c33494da0b603f377e1e990f5406c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "6b3b2a029befd641debbbd7d",
+        "text_sha256": "3ba0b14d89fb76481848bd27522ac74dc1c91dce017f3d2e08da68abd4032e24",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "104dfb9991df19e7816b3da3",
+        "text_sha256": "ba23dac4877780dd2cabdf6b02dc921d45db645e869da43e6a83d647b4fdddd7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "eda66f49c6d698a65da4382e",
+        "text_sha256": "fdb1c2be7cd26055e3c70057f0eac8de42e290c032084f710536831194b3f0ff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "ab9f1c0812119003804fb4e4",
+        "text_sha256": "bcdcbd7a13e6a070feb4d41fef2474b71296671a9ce1c6c70fd029118570d81c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "52325ebe6461db2582b93d1b",
+        "text_sha256": "92ae9f7e9f26dcefbeba866ce6715844ba81ea5c039fed6f08158c3391690de0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "88dd2822a4152510ad849bcb",
+        "text_sha256": "4da1ec6f47782090102dc16bda978efb5655fbf2ddce0f84ecf1faf79a930f2d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "87feb9ace955c06f93f8c325",
+        "text_sha256": "b9d84af97565d513d8f9023cbd0ae4f3ad943c3844de8ad393e6fdf77793403e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "17c379a127caceb8c8471afb",
+        "text_sha256": "6af5e76f4a6e5fed42cd1437cc0d5f831fb6f42734e547b88d0bb0712cfef6b9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "6b133e74835859549de1c1c2",
+        "text_sha256": "7a74a435b709200eaf1a37d0e17492a7c87cf9459c27c3f92b5ad1cb53e81e5c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      },
+      {
+        "candidate_id": "a8a9f09340021e823cf9ad3d",
+        "text_sha256": "6935139c3d2e509162913ee403c04672e05cf856bd287cee959e7a41c95db1e4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESHTTPS-1 through -12; not native HTTPS/DNS assurance."
+      }
+    ]
+  }
+]

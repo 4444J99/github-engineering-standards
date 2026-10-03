@@ -1,0 +1,238 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:30:25Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/disable-selfhosted-runners-note.md",
+      "content_sha256": "2b847fa40020edfc8a7fd92dd6166a875fe9b6db3642051d80edb7a6929d6b49",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Disabling repository-level self-hosted runner creation does not prevent workflows from accessing organization- or enterprise-level self-hosted runners. Creation restriction is not complete runner isolation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/disable-selfhosted-runners-overview.md",
+      "content_sha256": "8a63e55a56e4f8b4a1149fd01eef15c02c1462687e2e4122c19f42111df44ee0",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Self-hosted runners are not guaranteed ephemeral clean VMs and can be compromised by untrusted workflows or fork pull requests, exposing secrets and GITHUB_TOKEN with settings-dependent write access. Environment reviews control secret release but do not isolate the runner.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/disable-selfhosted-runners-overview.md",
+      "content_sha256": "8a63e55a56e4f8b4a1149fd01eef15c02c1462687e2e4122c19f42111df44ee0",
+      "start_line": 5,
+      "end_line": 5,
+      "statement": "Source presents disabling repository-level self-hosted runner creation as a possible risk response, not universal prohibition or permission to disable an estate capability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/disabled-actions-description.md",
+      "content_sha256": "ecf2a6e1f4bf2d8a304ba9a3371d5f0c6596cb76e18086d9c6b59b91512343cd",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Disabling Actions prevents repository workflows from running; it does not demonstrate security compliance or authorize disabling required capabilities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/disabling-github-actions.md",
+      "content_sha256": "67a1742364ba8a8015dad456a2d8b76711076b1539de4d0464165b6811a4471a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Actions defaults enabled across organizations/repositories on FPT/GHEC, and on GHES after instance enablement. Scope permits enterprise versus organization disabling/limiting, conditionally including reusable workflows; default capability is not an observed setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/docker-container-os-support.md",
+      "content_sha256": "879aca81469f77f76007a0ae3546cb47faf99c1c67578b8a05d65f7517a09c82",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Docker container actions, job containers and service containers require Linux runners; hosted branch specifies Ubuntu, self-hosted requires Linux with Docker installed. This prerequisite is not authority to install or start Docker.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/dockerfile-guidelines.md",
+      "content_sha256": "06ea49b1d1eca0650c85a8f67337a551a52369cee60908efef3aa8b1f370882a",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Dockerfile action guidance documents required arguments in README, omits them from CMD, offers defaults requiring no args and uses an exposed help flag for self-documentation. Parent action context and actual usability still require testing.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/domain-name-cname-recursive-firewall-rules.md",
+      "content_sha256": "865e48dff05ab33627af4b9cee6399c57c0550730df4252182d4e5e3ddb63ee0",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Some listed domains resolve through CNAMEs; firewalls may need recursive rules for all CNAMEs, whose targets can change while listed domains remain stable. Parent domain list and actual firewall behavior are separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enable-debug-logging-cli.md",
+      "content_sha256": "40ae4d3ce95dd2f3c9fd1a665dd870679d59d6dba32a620f0af85e78abd7dbac",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The enclosing CLI rerun supports --debug for runner diagnostic and step debug logs; this does not validate Azure CLI's separate malformed ---debug example or authorize rerunning jobs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enable-debug-logging.md",
+      "content_sha256": "c4af0a11112c010c13c75432748e81a4266cba4dee4b811eb700981265e00eb9",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "UI rerun optionally enables diagnostic and step debug logging before Re-run jobs; no rerun, data exposure or credential-bearing logging is authorized by source review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enabled-actions-description.md",
+      "content_sha256": "1e03adf1015e1453feaa8896a1ab266fdf02967eb33a8ec103704f4befc3b8fe",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enabled Actions can run repository actions and conditionally reusable workflows, with FPT public and GHEC/GHES public/internal external repositories described. Capability statement does not override selected-action policy or actual access restrictions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enabling-actions-metrics.md",
+      "content_sha256": "51848ade0bc471e407ef81073c42b1e070f2bf7abcc90f4762ccec33180d0040",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Organization owners may grant organization Actions usage-metric viewing through custom organization roles and the View organization Actions metrics permission; no role assigned or metrics access observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-azure-storage-setup.md",
+      "content_sha256": "c84ef1885499eac3be01f7063bcea202ab4a7972ae4a929d9f27cc9755e890ba",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise storage procedure selects Azure Blob Storage Setup under Artifact & Log Storage; parent requirements, credentials and operational success are not established.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-common-prereqs.md",
+      "content_sha256": "751af8cdd5dac2ad5e707cedf86e77970f5f1ae8372a68a41214c327b884fb12",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "GHES Actions prerequisites include hardware review and configured domain TLS; self-signed-cert and HTTP-proxy reusable includes require separately resolved applicability/rendering. Links do not certify instance readiness.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-enable-checkbox.md",
+      "content_sha256": "30a6b299418972ae5628255613248fbaeba0dac1e8655c773c6094d03e023737",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise Actions procedure selects Enable GitHub Actions; this UI instruction is not permission for instance activation or evidence that workloads run.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-gcp-storage-credential-fields.md",
+      "content_sha256": "830540d657be9b69212ffbfd2690968294195e2133471c5b24e2399e1e278139",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "GCP artifact/log storage fields include bucket service URL (usually https://storage.googleapis.com), bucket name and HMAC access ID/secret. Credential references are inert schema evidence; no secret generated, acquired or persisted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-gcp-storage-setup.md",
+      "content_sha256": "255372cf4fa300dc037ef2ad807028b91fcdeb713c7079dee1e5383bb562d258",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Google Cloud Storage Setup appears under enterprise Artifact & Log Storage; selection alone does not establish authorized account/bucket configuration or storage health.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-github-hosted-runners.md",
+      "content_sha256": "217e71432c9354f078ca574fc303efd6e0cb7383e1018a108171c6e990f22626",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "GHES conditional states dotcom-hosted runners unsupported and users should use self-hosted runners; this is platform-specific, not a universal self-hosted-only requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-http-proxy.md",
+      "content_sha256": "5f1edef0079f79fae0b898bb668346c158644dbcde2ed268e0c65734113789f0",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "When an HTTP proxy is configured, exclusion entries .localhost, 127.0.0.1 and ::1 are required in that order; non-routable external storage additionally needs its URL excluded. No network setting changed or routing behavior verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-limit-actions-use.md",
+      "content_sha256": "ef89ffe5e5c6dd49321bf1ed27a9dc6319b582d124332f0db249186dbcc8d366",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "After GitHub Connect enablement, enterprise policies may restrict allowed public actions; prerequisite and policy controls are distinct from actual enabled access or approved Connect activation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSRUNNERSTORAGE-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-marketplace-actions.md",
+      "content_sha256": "ccdbd4b58a13308c52229842a8533c19dcbc5a92dcec269fefa7936ab9fe26a0",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "GHES may have limited dotcom/Marketplace action access; source refers to access guidance and site administrator. Limited availability remains visible, not silently assumed absent, permitted or passing.",
+      "accepted_policy": false
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "path": "internal/scanners/ruleset.go",
+  "content_sha256": "da0e3aab30c9bcba52419c7141e1f554432cd8899a46c5737efe7c6997901692",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-01T23:06:05Z",
+  "review_scope": "Full430-line pinned implementation read; no code executed. Call sites and platform capability evidence remain open.",
+  "policy_adoption": "NONE",
+  "rights_clearance": "UNRESOLVED",
+  "independent_omission_audit": false,
+  "claims": [
+    {
+      "claim_id": "GHQR-RULESET-IMPL-1",
+      "start_line": 19,
+      "end_line": 49,
+      "statement": "Ruleset retrieval includes inherited rulesets but selects at most 25 rule sets and 30 rules per set without cursors. Completeness is not established.",
+      "disposition": "IMPLEMENTATION_LIMITATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-RULESET-IMPL-2",
+      "start_line": 107,
+      "end_line": 157,
+      "statement": "Transport, decoding, GraphQL errors and absent repository data collapse to nil; callers must not interpret that as verified absence or a passing requirement.",
+      "disposition": "IMPLEMENTATION_LIMITATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-RULESET-IMPL-3",
+      "start_line": 165,
+      "end_line": 195,
+      "statement": "Batch query repeats the bounded rule selection and omits branch-selection conditions and bypass actors.",
+      "disposition": "IMPLEMENTATION_LIMITATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-RULESET-IMPL-4",
+      "start_line": 329,
+      "end_line": 345,
+      "statement": "Projection labels a supplied branch but considers every active branch-targeting ruleset without testing its include/exclude conditions against that branch.",
+      "disposition": "IMPLEMENTATION_LIMITATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-RULESET-IMPL-5",
+      "start_line": 347,
+      "end_line": 397,
+      "statement": "Projection combines the greatest review quorum, true review/check flags and a union of contexts across selected rules; it does not preserve effective scope, exceptions or bypass identity.",
+      "disposition": "IMPLEMENTATION_LIMITATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-RULESET-IMPL-6",
+      "start_line": 399,
+      "end_line": 406,
+      "statement": "Protection is declared from the count of active branch-targeting rulesets, not proof that the assessed branch is covered or that writes were rejected.",
+      "disposition": "IMPLEMENTATION_LIMITATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "GHQR-RULESET-IMPL-7",
+      "start_line": 413,
+      "end_line": 423,
+      "statement": "REST fallback is an inert skeleton returning nil, not an available adapter.",
+      "disposition": "IMPLEMENTATION_LIMITATION",
+      "accepted_policy": false
+    }
+  ]
+}

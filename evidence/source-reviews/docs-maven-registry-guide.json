@@ -1,0 +1,286 @@
+[
+  {
+    "artifact_id": "fbf8544111b352954f1a0476",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+    "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:08:53.264Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Guide covers FPT/GHEC/GHES Maven Java publication/dependencies; GHEC data-residency deployments explicitly lack Maven registry, not every GHEC deployment. GHES site admins may enable/disable package types; source presence is not effective availability. GHEC managed-user organization publishing remains distinct from unavailable personal namespace storage. GHES release-stage reusable is comment-only, not a preview predicate or disablement instruction. Maven authentication requires an access token for public/private/internal package operations in this guide. Classic PAT task-scopes are required for the tutorial; explicit workflow exceptions use GITHUB_TOKEN for associated-repository publication and granted read access, otherwise classic PAT read:packages for other private-repository installs. settings.xml maps repository IDs to server IDs with username/token credentials; multiple repositories may map separately. Source instructs a local credential-bearing file but does not authorize exposing, committing or creating tokens; no settings changed. Repository owner in Maven URLs must be lowercase even when the GitHub account/organization name has uppercase letters. Host, owner and repository placeholders require target-specific resolution and are not executable identities. SNAPSHOT versions are supported; downloading them requires enabling snapshots in consuming POM or settings.xml. The sample profile activates github, includes Maven Central and enables snapshots; configured flag is not resolved dependency or safety evidence. FPT/GHEC endpoint example is https://maven.pkg.github.com/OWNER/REPOSITORY. GHES subdomain isolation uses https://maven.HOSTNAME/OWNER/REPOSITORY; non-isolated uses HOSTNAME/_registry/maven path. Preserve isolation as an endpoint dimension. The non-isolated settings.xml URL omits a scheme, whereas the non-isolated distributionManagement example includes https://HOSTNAME/_registry/maven/OWNER/REPOSITORY. This inconsistency remains unresolved; do not copy the missing-scheme example as verified endpoint configuration. Default publication targets an existing repository sharing the package name; the example com.example:test maps to OWNER/test. Explicit distributionManagement repository URL overrides repository matching and supports multiple packages in one repository; namespace does not prove ownership or permissions. Maven artifactId should contain lowercase letters, digits or hyphens; uppercase artifact names produce the documented 422 response. Owner-name normalization and artifactId grammar are separate checks, not a universal rule for all coordinate fields. Publishing edits POM distributionManagement and runs mvn deploy, followed by viewing the package. These examples were not executed; publication authority, scopes, effective repository access and successful behavior remain unverified. Installation adds dependencies to the consuming POM and authenticates before mvn install. The example uses com.example:test:1.0.0-SNAPSHOT; it is illustrative, not an immutable verified production dependency or license clearance. The guide permits owner-wide wildcard repository URL https://maven.pkg.github.com/OWNER/* or isolated GHES counterpart for dependencies across repositories. It does not grant access to every repository or provide a non-isolated wildcard adapter; missing permission is not pass. Outbound Maven getting-started/POM/naming references and Gradle/deletion guides are separately scoped. No dependency installation, upstream script execution, credential/publication change, rights acceptance, accepted control or native enforcement receipt follows. Full source and required include/variable context read; candidate accounting is not independent extraction completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "07da42ee326e60c943299cc2",
+        "text_sha256": "7c9eaad6904fa887019b5459f18001c6ed5df55684708d335aac44e66966e053",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d435fed7923d87e5189b75b1",
+        "text_sha256": "e1122ce02de20e21e6963d37554f789accbba26f889fed1c2646725003376429",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "bf3d7cb25ee17d744ebd0424",
+        "text_sha256": "2a92097790b34dcea579ebf704787e56653ac948982888fc9dad591fb940222a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "59765a41dd798779583a7284",
+        "text_sha256": "679797acf4fdb6c52c1c8b7307ef389f9623ef0f57655a78d9151e16f8be9626",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "c56d8695112f7ad5b78b7d3e",
+        "text_sha256": "d02ae35e122de592d6103678834aa109840631ac83a61e72ae9e13050ee02a75",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "fa08df54bb68c4f4e363de4d",
+        "text_sha256": "dcc832a1bf54e83dbe428f3471391620a0d16a363ba4d17a0780b22e3311099c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d504c75641213802a237958e",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "960c63749550ceee46c62c6e",
+        "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "5727908541e2346480a94678",
+        "text_sha256": "82d9a6fa9bb99d079675bd8511ee23407015f6a4d3b287cf0ed67aa55b8e5ea3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "a29e638e9b1281a159a6d46d",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d2e3c5a9655e6e3f1083a581",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "192816b517cdf99510a06cbb",
+        "text_sha256": "2628eed7df3bb06ca2f01651c4d5b2128c61c0fea12ba49615bb290b73f71aff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "ef6ba338f048e46acabdeddd",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "5a678cf7f4bdd6dd5c59e7c6",
+        "text_sha256": "c8f4b617b4b29d19e08689f5c67c60bb1c1533b695504367350908aeced47adf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "7fe2bbcf5f20d9f1dce65352",
+        "text_sha256": "2c17a101b81dfafe18943d6d87bac0758e3dfd6ee06fd1c7ff50c0fbea77e4c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "0200bce5caf228d6573d6456",
+        "text_sha256": "b55ddf1022e88b2a0e7916e04d65f81a5fa63fcf8c17edde6a0bbd17a14cb592",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "97b35d94396a108ddd1f7b25",
+        "text_sha256": "b8b955a5d5d12d6eb065301cf9d5a903b7f38399fcbe634839babede54574a53",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "64154bd81aa18f79be88978f",
+        "text_sha256": "d7eb4f5322e3b6627227db8b211801d3b48ccc582b0532c5992a0be943059b6a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d796ddf8c6ba8ee7ebe73b57",
+        "text_sha256": "f442403d9d2a59cd2c1462db46bfde0a7075d72837fe560ab193b9e627b63cb6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "1da861068aaef433d652ee6d",
+        "text_sha256": "ffdc2cd993b82a25481422c07cd84547228ccc6ac0d21b101b61f60fb2223792",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "61b7b8515b84b77b5741dd98",
+        "text_sha256": "405c1b5d33dc321c1320c9ae8f3fd7f47f86f8da008de7250e7e12151fdfead8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "33537937bbe41fab94daec9a",
+        "text_sha256": "7cceb53be36fbc4e2813900c009bd94c683721d8e2080abc651ea88832ba92d1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "b55ad8fb169933790ff8c23a",
+        "text_sha256": "31ee3908013c99e0e158e4923c5c030b29d6c9cdba7027f79cd6d15672014a3c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "a9c3dd7426aff5f2663eab3a",
+        "text_sha256": "59c8f16cbe202d719c20e6180a83fad23a6d00617b13d625ab1ed37c658dc69f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "53e8331f509aa29d49931f46",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "f996b9aadbbc920884d98d51",
+        "text_sha256": "1f069a1880706f8e6b33289aa8730f608bab0dd788914894bfe8973ebb3feaf1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "e0d92494fbc8c15db8cf0e37",
+        "text_sha256": "5e6f4b357978e28b6b21e361ccc3552980cc8535faf985aab9cca5af907bb559",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "b459f69d400a6b1bad177513",
+        "text_sha256": "7eac6fd3df386b26c2e0e169678e06538dab7e21380919f6bab542ec22bf1367",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "0502230ae609260134be5d1a",
+        "text_sha256": "9221e3e2d8697f5cac0fe9b1735d7efbe68afbb81779f7994b3d28fef8cdc9b9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "29456b11d036a281674b581b",
+        "text_sha256": "9f9663e0e0cc41b515e792995fb3edf600ed027974527bcba9b9ad2a450583b5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "687851693d9a22b8f6ec6f20",
+        "text_sha256": "ae6c6c1305ab3a816e3ed1bede3f1734e52baf54a76571eb4f226435ba453378",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "838fe0ad942cb761f820d0d1",
+        "text_sha256": "cabd317e67d65bac127be7c52facd52d5f7028326e02ff005794a136ad6ad46d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "fa17e8353c44fd3976637ed8",
+        "text_sha256": "cfc2b322582db5ae5dd0b3741c02e5a3228117d97c1147d863fb96462b214e98",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "68b31aeaefc7ae4341eb3906",
+        "text_sha256": "96197052a148be27cd1a8bc23fac38baf4be21d499c8608b64c360c006d2bcc2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "7b140f6cfcaaadb1127857c2",
+        "text_sha256": "738439f52a21e477956af800eafb7a66d58dfc7d9bb85fdd7c02028d4e1162d3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "236e08190f018c5e9cf76a0d",
+        "text_sha256": "85ddf65e5f66b519075cd39dc5a671d1f563235b4827b3615fe8bb96e1420b20",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "bd0101b7f7fa83d2481c4b11",
+        "text_sha256": "9ceead0bc71d6529048a99d9c017d976a90796a1b6197866e6696125c39ef722",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "ef63a4345bf6ddf27dfac6fb",
+        "text_sha256": "a671c15e52e78b22a0af5081660b5c5e43dbbe3de8345cd9716278d5c159576c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "1a4647b0c628e2b9a4552ba7",
+        "text_sha256": "c0f9b86db5823707f299b707d26faabaa93f3dad76c222f8e341d51de62e4d29",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "37cecb067b94476892381959",
+        "text_sha256": "82c582b79f690f9428d2e8e62a961d8da4398ab9437dc398f6887eafe80955aa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "f9f09489d1c10f845f953a9a",
+        "text_sha256": "bf50c6c30120ba00b58e263e6f56287dfd6ea5940d984af4bb55ff1ab7e8910b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "1bd8ae75ce432c10e35984e7",
+        "text_sha256": "ba829cdad3dca0ea7764131dac31aea95b39d98aada3e81a5b439f7b1e0440d9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "a7940be69569e637979882d4",
+        "text_sha256": "471dcd8f64a41e0410ca5a7508aa567ecde6c8652d87ab3641ad9154958f3c75",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "b0a32f0a9ade9a428de8965c",
+        "text_sha256": "3d3abc304a89fd578690b19a96b8fe24344fb11bfcedccd4b0c20ef318642ca2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "ca766e42bec81f91a7cfc319",
+        "text_sha256": "8d96adafeec9e83b5d448044327dbfc0e69ef5791d1747000b41e37a3ffdf52f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-MAVENREGISTRY-1 through -14; not adopted policy or executed client behavior."
+      }
+    ]
+  }
+]

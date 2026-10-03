@@ -1,0 +1,40 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:41:07Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-APPCONTEXTIDENTITY-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/best-practice-store-data-with-context.md",
+      "content_sha256": "1c432f1285e4161a1bdf1eb6abbbd7bd3986d37b8c8493ff5d14ea270b6bfe19",
+      "start_line": 1,
+      "end_line": 11,
+      "statement": "Saved App data needs organization/enterprise provenance in addition to user ID. The SAML employee-departure example shows copied code/analysis can leak after membership removal unless the App enforces current contextual access; initial sign-in is not permanent authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCONTEXTIDENTITY-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/best-practice-use-durable-id.md",
+      "content_sha256": "3ea216f50925938cfe853480dfaa014d049c3b8a65889f328bc1954adcf47503",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Use durable user IDs rather than mutable handles, organization slugs or email addresses for identity references; also use repository, organization and enterprise IDs. The fragment identifies GET /user but links a get-a-user anchor, requiring endpoint-context reconciliation rather than treating the anchor as equivalent authorization. Durable identity alone does not prove current access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCONTEXTIDENTITY-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/best-practice-validate-org-access.md",
+      "content_sha256": "9c13fefd32fe38013bb47f790820de6f5c940156dcab380ad20f63b3957cc066",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Track user-token organization authorization over time and regularly query user installations; membership removal or missing SAML sign-in can remove access. Deny App-held organization data while unauthorized, until valid SSO or membership restoration and current access verification. Endpoint data and stable identity do not alone prove every cached-data access path is gated.",
+      "accepted_policy": false
+    }
+  ]
+}

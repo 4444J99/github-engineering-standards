@@ -1,0 +1,27 @@
+{
+  "schema": "ges.published-body-review.v1",
+  "ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+  "method": "Read both complete acquired Markdown bodies, recompute SHA-256 against acquisition receipts, and compare operative text with the separately pinned supplement",
+  "instances": [
+    {"page_id": "12c0ddffdeef1e4ca3a615e0", "version": "enterprise-cloud@latest", "path": "/en/enterprise-cloud@latest/copilot/concepts/agents/dynamic-workflows", "sha256": "a53e94b3e25779bf536f9a9966fbe4b155166d5db3b26ca7b6a6ccf3988d8492", "bytes": 14940, "full_body_read": true},
+    {"page_id": "779f25a16e6824273350ec7d", "version": "free-pro-team@latest", "path": "/en/copilot/concepts/agents/dynamic-workflows", "sha256": "94b844e46a33ae558c8343eaaf07a2f37921133edd81e79f6a188630cc04b108", "bytes": 14748, "full_body_read": true}
+  ],
+  "observations": [
+    "Both bodies distinguish reusable code-defined processes from autonomous next-step planning and agent-directed fleet delegation; stable process definitions do not promise identical agent answers.",
+    "Explicit workflow requests, client-dependent input/canvas support, prompt-started background runs and waiting terminal entry points remain distinct. Imported examples are not execution instructions for this reviewer.",
+    "Interactive subagents inherit session grants and wait on additional permissions. Session-duration grants can extend to peers requesting the same permission; noninteractive starts need prior permission. Extension code can execute outside these prompts.",
+    "Saved-definition revisions apply to reloaded new runs, not saved paused results. Sharing copies definitions rather than run history or progress.",
+    "Concurrent agent count, cumulative launches, cumulative active time excluding pauses and approximate credits are separate limits. Credit reporting lag can exceed the approximate ceiling; concurrency saturation queues rather than stops.",
+    "Limit precedence is prompt, definition, personal default for the corresponding type. Resumption includes prior usage, and saved completed work may be reused while unsaved work may repeat.",
+    "Illustrative consensus/release reviews and reported workflow progress do not prove independent correctness or completion; no workflow, plugin or setting was executed or changed.",
+    "Both bodies retain public-preview status and resolved product labels. Version-specific internal links remain separate page identities rather than reducing the published denominator."
+  ],
+  "source_review_reference": "evidence/published-drift-dynamic-workflows-review.json",
+  "remaining": ["Independent atomic claim and omission reconciliation", "Linked canvas and plugin semantics", "Deployment-source identity", "Rights acceptance", "Actual operational binding verification"],
+  "source_revision_verified": false,
+  "all_actionable_claims_extracted": false,
+  "native_behavior_verified": false,
+  "rights_accepted": false,
+  "accepted_policy": false,
+  "raw_expression_committed": false
+}

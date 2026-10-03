@@ -1,0 +1,48 @@
+{
+  "issue": 238,
+  "reviewed_at": "2026-10-03T05:41:21.482Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59623,
+    "claim_bearing_artifacts": 3109,
+    "tests": 324,
+    "test_seconds": 2,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No actual role/team mutation, permission assignment, accepted policy or rights clearance.",
+    "Feature GHEC and GHES >=3.15 preserved; repository-permission inclusion public preview subject to change.",
+    "Role definition differs from assignment and effective privilege verification.",
+    "Delete fragment says role to edit despite delete action; mismatch retained; assignment fallout and recovery unspecified.",
+    "Feature/variable dependencies inspected without whole-artifact review; linked permission guides remain separate work."
+  ]
+}

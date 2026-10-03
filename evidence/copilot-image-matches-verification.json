@@ -1,0 +1,48 @@
+{
+  "issue": 183,
+  "reviewed_at": "2026-10-03T04:03:35.474Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59309,
+    "claim_bearing_artifacts": 2807,
+    "tests": 324,
+    "test_seconds": 1.978,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Image-input model prerequisite retained alongside all-plan attachment statement.",
+    "License if known in match UI is not per-file rights clearance.",
+    "Visual Studio general minimum 17.8 does not replace SKU-isolation minimum 17.11.",
+    "Include context read without new whole-file certification; external guides not reviewed.",
+    "No uploads, delegation, keychain changes, private records, adopted policy, or native action."
+  ]
+}

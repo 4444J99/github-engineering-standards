@@ -1,0 +1,45 @@
+{
+  "issue": 447,
+  "status": "VERIFIED_PROPOSED_CONSOLIDATION",
+  "rows": 8,
+  "missing_claim_references": [],
+  "claim_statements_inspected": true,
+  "reference_claims": 61350,
+  "claim_bearing_artifacts": 3511,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.976
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "negative_tests": "SPECIFICATIONS_ONLY_NOT_IMPLEMENTED_OR_EXECUTED",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}

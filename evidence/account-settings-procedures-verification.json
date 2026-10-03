@@ -1,0 +1,62 @@
+{
+  "issue": 442,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/account-and-profile/how-tos/account-settings/index.md",
+    "content/account-and-profile/how-tos/account-settings/integrating-jira-with-your-personal-projects.md",
+    "content/account-and-profile/how-tos/account-settings/manage-cookie-preferences.md",
+    "content/account-and-profile/how-tos/account-settings/managing-accessibility-settings.md",
+    "content/account-and-profile/how-tos/account-settings/managing-security-and-analysis-features.md",
+    "content/account-and-profile/how-tos/account-settings/managing-your-tab-size-rendering-preference.md",
+    "content/account-and-profile/how-tos/account-settings/prepare-for-job-change.md",
+    "content/account-and-profile/how-tos/account-settings/set-your-hiring-status.md"
+  ],
+  "section_receipts": {
+    "present": 8,
+    "expected": 8
+  },
+  "reusable_fragments_inspected": 6,
+  "feature_datasets_inspected": [
+    "data/features/command-palette.yml"
+  ],
+  "added_reference_claims": 22,
+  "reference_claims": 61274,
+  "claim_bearing_artifacts": 3491,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.983
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_caveat": "Source receipt coverage is not independent omission completeness, rendered-page assurance, rights clearance, live security enforcement or credential recovery verification. Linked external guides remain separate review scope.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false,
+  "upstream_commands_executed": false
+}

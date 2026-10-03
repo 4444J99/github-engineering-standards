@@ -1,0 +1,59 @@
+{
+  "issue": 452,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/about-mandatory-two-factor-authentication.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/countries-where-sms-authentication-is-supported.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/index.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/troubleshooting-two-factor-authentication-issues.md"
+  ],
+  "section_receipt_coverage": {
+    "expected": 11,
+    "receipt_present": 11,
+    "missing": []
+  },
+  "reusable_fragments_inspected": 2,
+  "feature_datasets_inspected": [
+    "data/features/mandatory-2fa-dotcom-contributors.yml"
+  ],
+  "added_reference_claims": 19,
+  "reference_claims": 61427,
+  "claim_bearing_artifacts": 3526,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 2.102
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_caveat": "Individual list-format source receipts only; not independent extraction completeness, published-version assurance, actual cohort selection or live enforcement.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false,
+  "credentials_accessed": false
+}

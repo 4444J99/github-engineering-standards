@@ -1,0 +1,525 @@
+[
+  {
+    "artifact_id": "0702ad28340d4554bf110f2f",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/cloud-sessions.md",
+    "content_sha256": "c1a02a0e4e0c32fd4193ef0339e08ccd3f8f74d9c1536318c890c86310e6ea05",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T13:25:22Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete317-line pinned-source read, all74candidate dispositions and309reference records consolidated once. Source-link facts do not inherit linked-body review. Startup send/worker readiness, policy outcomes, typed language examples and hosted/local execution remain distinct; no upstream code, cloud tasks, permissions, costs or runtime behavior verified.",
+    "independent_audit": "evidence/sdk-cloud-sessions-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-cloud-sessions-independent-repair-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "6e6896b726a3b12f5c7b9f2d",
+        "text_sha256": "9986693f21085247a155d720912a6652a3a51330fe6d0965a279ebdf7af49b38",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-001: Cloud sessions execute Copilot work on GitHub-hosted compute. DOCS-SDKCLOUD-002: Cloud sessions appear in GitHub agents panel. DOCS-SDKCLOUD-003: Cloud sessions differ from starting local CLI work on user machine. DOCS-SDKCLOUD-004: Cloud sessions differ from starting local CLI work on application server. DOCS-SDKCLOUD-005: Source declares Free/Pro/Team applicability. DOCS-SDKCLOUD-006: Source declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "88d66446d4adfbf3873fe851",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "07b09053dd52910cc1712f2b",
+        "text_sha256": "4e8e3abeff5274355ded03641ec4939402532e288539dfa2707d7b3a3502be9b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "4aa6a038cc8abe802ca8e932",
+        "text_sha256": "953b6df26fd8e73a60316e2fd3bf09ae660ab4412964a8cb0d5fa4807915d1d0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-007: User needs Copilot access for cloud-session creation. DOCS-SDKCLOUD-008: User needs cloud-agent entitlement for cloud-session creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "9b2309211c2c6f3de614f7b2",
+        "text_sha256": "c70df4f7143fcddfc73577711f7caa693ebca496aa7cb3a75973bf61644d5830",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-009: Session must authenticate to GitHub. DOCS-SDKCLOUD-010: A user token is one described authentication alternative. DOCS-SDKCLOUD-011: Logged-in Copilot CLI identity is another authentication alternative.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "97e4694458b434e6c05044c0",
+        "text_sha256": "fd904156ae40a44a32b7080ca1e89dd914635768ca8c58db4cb1b24ded7acd2a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-012: Repository association is optional in the SDK type. DOCS-SDKCLOUD-013: Repository association is recommended for correct context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "28edd39af16cb0eb80998bad",
+        "text_sha256": "579e695b371d2fa8cb6c9a2a6612c13fd1b8da828a36e5744844e18e1bc5924b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-014: Organization policy must permit remote control from cloud surfaces. DOCS-SDKCLOUD-015: Organization policy must permit viewing from cloud surfaces.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "493d6dd465117d7729acaf00",
+        "text_sha256": "5ba008e291a359dff5e3a85da31aefc67eedd7f38211e7bd528402c1e12c884d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-016: Set create-session cloud option to create a cloud session. DOCS-SDKCLOUD-017: Repository metadata may associate a cloud session with a repository.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "94f3a7b52ff28431754258e1",
+        "text_sha256": "3dba3c6882adc60aad323b0ae86a2b616e15a66aaeab7571376379bd1e5d097a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "a3ff57ae18a9ced7edf715ca",
+        "text_sha256": "bdd60bb038e5b5b6f3ccacadcc32aa61cd9954f237def9f88dc2b8493844c93c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-140: TypeScript imports CopilotClient from SDK. DOCS-SDKCLOUD-141: TypeScript constructs client. DOCS-SDKCLOUD-142: TypeScript starts client. DOCS-SDKCLOUD-143: TypeScript awaits startup. DOCS-SDKCLOUD-144: TypeScript calls createSession. DOCS-SDKCLOUD-145: TypeScript awaits session creation. DOCS-SDKCLOUD-146: TypeScript permission handler is asynchronous. DOCS-SDKCLOUD-147: TypeScript permission handler returns approve-once decision without scoped validation shown. DOCS-SDKCLOUD-148: TypeScript sets cloud option. DOCS-SDKCLOUD-149: TypeScript sets repository association. DOCS-SDKCLOUD-150: TypeScript association uses illustrative github owner. DOCS-SDKCLOUD-151: TypeScript association uses illustrative copilot-sdk repository. DOCS-SDKCLOUD-152: TypeScript association uses illustrative main branch.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "c53198c24e2e1c80e29fc8b8",
+        "text_sha256": "5360cd91ded3a275975ea2765d2e9adbd3a956c8f8cebc2e9828929d32302d53",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-153: Python imports CloudSessionOptions. DOCS-SDKCLOUD-154: Python imports CloudSessionRepository. DOCS-SDKCLOUD-155: Python imports CopilotClient. DOCS-SDKCLOUD-156: Python imports PermissionHandler. DOCS-SDKCLOUD-157: Python constructs client. DOCS-SDKCLOUD-158: Python starts client. DOCS-SDKCLOUD-159: Python awaits startup. DOCS-SDKCLOUD-160: Python calls create_session. DOCS-SDKCLOUD-161: Python awaits session creation. DOCS-SDKCLOUD-162: Python uses approve_all permission handler; not adopted policy. DOCS-SDKCLOUD-163: Python configures cloud using CloudSessionOptions. DOCS-SDKCLOUD-164: Python configures repository using CloudSessionRepository. DOCS-SDKCLOUD-165: Python uses illustrative github owner. DOCS-SDKCLOUD-166: Python uses illustrative copilot-sdk name. DOCS-SDKCLOUD-167: Python uses illustrative main branch.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "3138192f2ced3f2bdfd479d7",
+        "text_sha256": "6c283cb1faf368b0dabc441cb9b963a4ded6172d3e8688b94d034987bfddd9b7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-168: Go constructs client with nil options. DOCS-SDKCLOUD-169: Go starts client with context. DOCS-SDKCLOUD-170: Go checks startup error for nonnil. DOCS-SDKCLOUD-171: Go returns startup error. DOCS-SDKCLOUD-172: Go calls CreateSession with context. DOCS-SDKCLOUD-173: Go creation uses SessionConfig. DOCS-SDKCLOUD-174: Go captures session return. DOCS-SDKCLOUD-175: Go captures creation err without a shown check. DOCS-SDKCLOUD-176: Go configures Cloud option. DOCS-SDKCLOUD-177: Go uses CloudSessionOptions. DOCS-SDKCLOUD-178: Go configures Repository field. DOCS-SDKCLOUD-179: Go uses CloudSessionRepository. DOCS-SDKCLOUD-180: Go uses illustrative github Owner. DOCS-SDKCLOUD-181: Go uses illustrative copilot-sdk Name. DOCS-SDKCLOUD-182: Go uses illustrative main Branch. DOCS-SDKCLOUD-183: Go permission handler receives PermissionRequest. DOCS-SDKCLOUD-184: Go permission handler receives PermissionInvocation. DOCS-SDKCLOUD-185: Go permission handler returns PermissionDecision. DOCS-SDKCLOUD-186: Go permission handler return signature includes error. DOCS-SDKCLOUD-187: Go handler returns PermissionDecisionApproveOnce without validation shown. DOCS-SDKCLOUD-188: Go handler returns nil error. DOCS-SDKCLOUD-189: Go discards session via blank identifier. DOCS-SDKCLOUD-288-A01: The Go cloud example shows no client-stop call. DOCS-SDKCLOUD-288-A02: The Go cloud example shows no deferred client-cleanup call.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "fe29ba72e52129832214448c",
+        "text_sha256": "87b92f38f03b8a464b68bf5ef05e0d7770789b5ac8f26a809b56776e7175a95f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-190: .NET constructs CopilotClient. DOCS-SDKCLOUD-191: .NET uses await using disposal scope. DOCS-SDKCLOUD-192: .NET calls CreateSessionAsync. DOCS-SDKCLOUD-193: .NET awaits creation. DOCS-SDKCLOUD-194: .NET uses SessionConfig. DOCS-SDKCLOUD-195: .NET configures Cloud option. DOCS-SDKCLOUD-196: .NET uses CloudSessionOptions. DOCS-SDKCLOUD-197: .NET configures Repository option. DOCS-SDKCLOUD-198: .NET uses CloudSessionRepository. DOCS-SDKCLOUD-199: .NET uses illustrative github Owner. DOCS-SDKCLOUD-200: .NET uses illustrative copilot-sdk Name. DOCS-SDKCLOUD-201: .NET uses illustrative main Branch. DOCS-SDKCLOUD-202: .NET permission handler accepts request argument. DOCS-SDKCLOUD-203: .NET permission handler accepts invocation argument. DOCS-SDKCLOUD-204: .NET returns task-wrapped permission decision. DOCS-SDKCLOUD-205: .NET permission handler approves once without scoped validation shown. DOCS-SDKCLOUD-289: The .NET cloud example shows no explicit session-disposal scope.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "f5f05796ac36ddd2a47750f0",
+        "text_sha256": "022e64f6f79b1e2ef5259bde3d21b0cf7a55d996e9736e3ea45b98a42c334914",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-206: Java imports CopilotClient. DOCS-SDKCLOUD-207: Java imports wildcard RPC namespace. DOCS-SDKCLOUD-208: Java constructs client. DOCS-SDKCLOUD-209: Java encloses client in try-with-resources scope. DOCS-SDKCLOUD-210: Java starts client. DOCS-SDKCLOUD-211: Java waits for startup using get(). DOCS-SDKCLOUD-212: Java calls createSession. DOCS-SDKCLOUD-213: Java creation uses SessionConfig. DOCS-SDKCLOUD-214: Java configures cloud using setCloud. DOCS-SDKCLOUD-215: Java cloud uses CloudSessionOptions. DOCS-SDKCLOUD-216: Java configures repository using setRepository. DOCS-SDKCLOUD-217: Java repository uses CloudSessionRepository. DOCS-SDKCLOUD-218: Java uses illustrative github Owner. DOCS-SDKCLOUD-219: Java uses illustrative copilot-sdk Name. DOCS-SDKCLOUD-220: Java uses illustrative main Branch. DOCS-SDKCLOUD-221: Java uses APPROVE_ALL permission handler; not adopted policy. DOCS-SDKCLOUD-222: Java waits for creation using get(). DOCS-SDKCLOUD-290: The Java cloud example shows no explicit session-disposal scope.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "2c3c696ee9a4e9621a8be0f3",
+        "text_sha256": "4932db8c5c38f08eab710ae8480ee2ff523622beae37cd5e80f2c34e0f864c4e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-223: Rust imports Arc. DOCS-SDKCLOUD-224: Rust imports CloudSessionOptions. DOCS-SDKCLOUD-225: Rust imports CloudSessionRepository. DOCS-SDKCLOUD-226: Rust imports SessionConfig. DOCS-SDKCLOUD-227: Rust imports ApproveAllHandler. DOCS-SDKCLOUD-228: Rust calls create_session. DOCS-SDKCLOUD-229: Rust uses default SessionConfig. DOCS-SDKCLOUD-230: Rust sets cloud via with_cloud. DOCS-SDKCLOUD-231: Rust creates cloud repository options using with_repository. DOCS-SDKCLOUD-232: Rust repository constructor uses illustrative github owner. DOCS-SDKCLOUD-233: Rust repository constructor uses illustrative copilot-sdk name. DOCS-SDKCLOUD-234: Rust repository sets illustrative main branch. DOCS-SDKCLOUD-235: Rust attaches permission handler using with_permission_handler. DOCS-SDKCLOUD-236: Rust wraps permission handler in Arc. DOCS-SDKCLOUD-237: Rust uses ApproveAllHandler; not adopted policy. DOCS-SDKCLOUD-238: Rust awaits creation. DOCS-SDKCLOUD-239: Rust propagates creation failure with question-mark operator. DOCS-SDKCLOUD-291: The Rust example constructs the repository with CloudSessionRepository::new. DOCS-SDKCLOUD-292: The Rust example selects a branch through with_branch.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "75bd6bd579c1078d7b3de89b",
+        "text_sha256": "6d60ddfe749050f92a981af548b594f306076991c137ba536f34ccc9ef6ac46d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "3e8dc1ff00a08318d75a4d8b",
+        "text_sha256": "58cbb957fee9fc679cc5009505d47a2ae3f29d7be93801ebd66d0a382ba115bf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-018: Cloud initialization has two phases. DOCS-SDKCLOUD-019: createSession resolves when the agent reserves the task. DOCS-SDKCLOUD-020: Remote worker connects after task reservation. DOCS-SDKCLOUD-021: Remote worker emits session.start. DOCS-SDKCLOUD-022: Source describes a further one-to-two-second worker delay, not a guaranteed bound. DOCS-SDKCLOUD-023: Sending before worker startup can cause RemoteSession.send to throw a starting error. DOCS-SDKCLOUD-024: Fire-and-forget schema wrapper can silently swallow startup send error. DOCS-SDKCLOUD-025: Schema wrapper can still return a new messageId despite dropped prompt. DOCS-SDKCLOUD-026: Premature prompt can be dropped server-side. DOCS-SDKCLOUD-027: Dropped prompt never reaches the remote worker.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "780d4e11c06a00fafb72cd28",
+        "text_sha256": "c75bdd727df1687b5562a16c6cc559fdf65d73a7ef8ac394d8d51bb2a0521bb4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-028: Subscribe before sending first cloud prompt. DOCS-SDKCLOUD-029: Await first session.start from copilot-agent producer before sending.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "916551d13d7b909a909dc4e9",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-240: First-prompt example has docs-validate skip marker; not executed verification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "7a5a7bc9f6cc0f811cf0aae1",
+        "text_sha256": "4504fadc8883ee7a5404d479fdba9bd34da444fb82054426cb7be168d70b964d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-241: First-prompt TypeScript imports CopilotClient. DOCS-SDKCLOUD-242: First-prompt TypeScript imports CopilotSession type. DOCS-SDKCLOUD-243: First-prompt example constructs client. DOCS-SDKCLOUD-244: First-prompt example starts client. DOCS-SDKCLOUD-245: First-prompt example awaits startup. DOCS-SDKCLOUD-246: First-prompt example declares a typed CopilotSession. DOCS-SDKCLOUD-247: First-prompt example calls createSession. DOCS-SDKCLOUD-248: First-prompt example awaits creation. DOCS-SDKCLOUD-249: First-prompt example sets streaming true. DOCS-SDKCLOUD-250: First-prompt example sets cloud repository association. DOCS-SDKCLOUD-251: First-prompt example uses illustrative github owner. DOCS-SDKCLOUD-252: First-prompt example uses illustrative copilot-sdk name. DOCS-SDKCLOUD-253: First-prompt permission handler is asynchronous. DOCS-SDKCLOUD-254: First-prompt handler returns approve-once without scope validation shown. DOCS-SDKCLOUD-255: Example comment orders subscription before sending. DOCS-SDKCLOUD-256: First-prompt example creates a Promise<void> readiness signal. DOCS-SDKCLOUD-257: First-prompt example subscribes to session.start. DOCS-SDKCLOUD-258: Example captures an unsubscribe callback. DOCS-SDKCLOUD-259: First-prompt example filters producer to copilot-agent. DOCS-SDKCLOUD-260: First-prompt example uses optional data access. DOCS-SDKCLOUD-261: Matching startup event unsubscribes the readiness handler. DOCS-SDKCLOUD-262: Matching startup event resolves readiness promise. DOCS-SDKCLOUD-263: Example awaits readiness before send. DOCS-SDKCLOUD-264: Example calls session.send with illustrative README-summary prompt. DOCS-SDKCLOUD-265: Example awaits send. DOCS-SDKCLOUD-293: The first-prompt readiness snippet awaits an unbounded promise; the surrounding timeout advice is not implemented in the displayed code. DOCS-SDKCLOUD-294: The readiness handler only resolves the promise for a matching copilot-agent producer, not arbitrary session.start events.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "fafbef67c17ee160ffa138cd",
+        "text_sha256": "5ca63d4ee2bba44ca718a1d97878d00ce5c1eb8625179abf88c4c17872cb3bf8",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "82a08bedeb5d89beb6488e87",
+        "text_sha256": "1c9d68494a835213d51f95714c86db7e290f99e5122faee36189231bc5fbf1fa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-030: Set streaming true at creation for assistant.message_delta events. DOCS-SDKCLOUD-031: Without streaming, only final assistant.message signal is delivered. DOCS-SDKCLOUD-032: Final-only delivery can suit batch operation. DOCS-SDKCLOUD-033: Without deltas, rendered live chat may appear frozen. DOCS-SDKCLOUD-034: The cloud-session guide links streaming-events guidance; linked-body review remains separate.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "2f83a84075dbe54cfdfe87b5",
+        "text_sha256": "5d8bafa8c83fe067deae4a39ceedd42f9087736f622edf1bef1797ab684f661e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-035: Only first send on a session is described as sensitive to startup race. DOCS-SDKCLOUD-036: Later sends work normally under the described hasSessionStarted lifetime state. DOCS-SDKCLOUD-037: Runtime retains hasSessionStarted for session lifetime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "a5d0dd046d05603c8c800e11",
+        "text_sha256": "067a2f687e07a4c0659b37045cb51a0ea95b5728601d154d03840908b1823f64",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-038: Apply a timeout around startup readiness promise. DOCS-SDKCLOUD-039: 60seconds is an illustrative readiness timeout, not adopted threshold. DOCS-SDKCLOUD-295: The timeout recommendation aims to avoid a stuck startup hanging the application indefinitely; this is not an implemented or verified timeout.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "417dfb407e8f98f7c54d5cb6",
+        "text_sha256": "3acbd190494f45f57686f8e98871be9e1177fb36441ffe8944c49373ac9ea98a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-040: Equivalent ordering applies across SDK languages. DOCS-SDKCLOUD-041: Cross-language pattern subscribes to session.start. DOCS-SDKCLOUD-042: Cross-language pattern checks copilot-agent producer. DOCS-SDKCLOUD-043: Cross-language pattern sends after readiness.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "2b13828ad57b8bd0c2ca6c36",
+        "text_sha256": "5c0c7d6ba02bc837ad49c3a6af9e10a825b0d4b69244ce6ca40050be45a41230",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-044: Cloud sessions are inherently remote. DOCS-SDKCLOUD-045: After worker connection, cloud session is published at a task URL. DOCS-SDKCLOUD-046: Task URL uses github.com/copilot/tasks/{sessionId} pattern. DOCS-SDKCLOUD-047: Runtime emits session.info containing cloud session URL. DOCS-SDKCLOUD-048: Cloud sessions do not require remote.enable. DOCS-SDKCLOUD-049: remote.enable is for synchronizing local sessions to GitHub. DOCS-SDKCLOUD-296: The source explicitly limits remote.enable to local-session synchronization, not switching a cloud execution location.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "9bed9f71d3c63a21b1380e80",
+        "text_sha256": "1a7773c172dc2fb8d2ef54cd5d4a55b7053b7ae0a7b7c5ac7ccd036e4dd6f63e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-050: Subscribe to session.info to capture cloud URL. DOCS-SDKCLOUD-051: Filter session.info by remote infoType.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "65828958d4adbd88df02a082",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-266: URL-capture example has docs-validate skip marker; not executed verification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "fb873174f4ea40b55eecd926",
+        "text_sha256": "3fbb2894c706f2e82d3611c31b36d2246a044ff04f79d27bfcb21be37f4c4388",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-267: URL-capture example subscribes to session.info. DOCS-SDKCLOUD-268: URL-capture example filters remote infoType. DOCS-SDKCLOUD-269: URL-capture example requires a present URL. DOCS-SDKCLOUD-270: URL-capture example logs session URL. DOCS-SDKCLOUD-271: Example suggests a UI shareable link. DOCS-SDKCLOUD-272: Example suggests a UI QR code.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "9b8d7ee053958da55d0f39bd",
+        "text_sha256": "7089580edcf6f9caa66178ba949078faaba0c38bf2f23a1e7eb09f6b04f03635",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-052: session.info follows session.start shortly; no exact timing guarantee is provided. DOCS-SDKCLOUD-053: Late-mounted renderers should persist URL with application session state. DOCS-SDKCLOUD-054: Persisted session URL should rehydrate on remount. DOCS-SDKCLOUD-055: Runtime does not spontaneously re-emit session.info.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "59b481d470d26dac34e037ea",
+        "text_sha256": "95af31b8f1d89e520ac05e6231b1d61921b7e88ea38b9281e6af62e6005363a8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-056: Local promoted sessions use remote true; linked guide remains separate.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "88837793c9f7a88c62dedfd8",
+        "text_sha256": "a3d176a0fa5276cdb2a703c64511a571ba35d1ea5dadbd846816188a33d556ba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-057: cloud.repository associates cloud work with a repository.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "9682838de7950962dc850c84",
+        "text_sha256": "813c01142fb96bfdf3b1542fd285120e9256b5dcdace54482872ee52cbfa79a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "5f3e6e10e9a12fe8d7581154",
+        "text_sha256": "e6c2ed5b9585168fb1473a405404ebcdbd832fdc9afc91a87b90b628dc6886be",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "2b8460a7e07bd5cc5e3bd218",
+        "text_sha256": "b72e8463cae35ac1f75beb95d874a80058160cb2ef4d77ec728257ed1e50f7f0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-058: Repository association requires owner when object is supplied. DOCS-SDKCLOUD-059: owner denotes repository owner or organization.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "69bdb67cc7726985dfc5ce6c",
+        "text_sha256": "9852f724976c585e36aaf3bb1dd9744915b48b40f25e3bcbf0f50a778c812ab4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-060: Repository association requires name when object is supplied. DOCS-SDKCLOUD-061: name denotes repository name.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "e2b91c58cafc905c17d90a38",
+        "text_sha256": "ac372d759afb993ae22c555715d573edcc3228df49acbb8a55ad036a5fe9ac64",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-062: Repository branch is optional. DOCS-SDKCLOUD-063: Branch specifies repository-context branch. DOCS-SDKCLOUD-064: Omitted branch permits runtime default-branch selection. DOCS-SDKCLOUD-065: Omitted branch permits runtime current-repository-context selection.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "a7c371a37bb90eb5c29b38d9",
+        "text_sha256": "2a1ffce1eaa5f6cd138049bcc3b31c6dbc3089a6a7f068c16cbf0ca24319c935",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-066: Include repository association when target repository is known. DOCS-SDKCLOUD-067: Repository metadata helps correct agents-panel context. DOCS-SDKCLOUD-068: Repository metadata gives cloud agent a clearer starting point.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "66128b4743d9548d37bbcc82",
+        "text_sha256": "a6f1f31aa7ad8acebb28bb43dbe1d9d79f5a7ee7f3549974ca704b1b675f4d7e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-069: Supply branch when work should begin on a particular branch. DOCS-SDKCLOUD-070: PR-originated sessions should use branch matching user-visible task. DOCS-SDKCLOUD-071: Issue-triage sessions should use branch matching user-visible task. DOCS-SDKCLOUD-072: Deployment sessions should use branch matching user-visible task.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "73fd10eac1b3aa3d7ae817d9",
+        "text_sha256": "0c81803bc89d4e6b6083241fec4c4931d1eb44af6da5151c34f9c37f50005a19",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-073: cloud option applies only when creating new sessions. DOCS-SDKCLOUD-074: Existing cloud session resumes through standard language-specific resume API.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "01242330893a7454c32f77cc",
+        "text_sha256": "9f2f4950a3b0940c739d000503a2e26c0b8c403a64b5a0fb027cb98a0c4b489a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-273: Resume example invokes resumeSession. DOCS-SDKCLOUD-274: Resume example awaits resume. DOCS-SDKCLOUD-275: Resume example uses illustrative session-id. DOCS-SDKCLOUD-276: Resume permission handler is asynchronous. DOCS-SDKCLOUD-277: Resume handler returns approve-once without scoped validation shown.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "5b6505c62cb529287d187fef",
+        "text_sha256": "2ac97cae4a5c4ddc92860bcd008009357c5c78162310d3362b8999e009bf19ce",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-075: Do not resupply cloud option on resume. DOCS-SDKCLOUD-076: Saved metadata identifies existing session as cloud-backed. DOCS-SDKCLOUD-077: Cloud resume follows normal session resume path.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "db11f3198af9f265eb86bd90",
+        "text_sha256": "79e359a1503bc84bec7eab99919bee0ec9530d7e89e2fdeb3b5cca72c52cefdf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-078: Missing user entitlement can cause cloud creation failure. DOCS-SDKCLOUD-079: Missing organization entitlement can cause cloud creation failure. DOCS-SDKCLOUD-080: Organization policy can block cloud-session creation. DOCS-SDKCLOUD-081: Cloud-sandbox policy can prevent cloud task creation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "b3315d0244668c61158cb9d3",
+        "text_sha256": "0d003a29f17a580d2f5fc8e8bbeb46b6f7749ca35d6a8859122c1b5a6b09548b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-082: Policy-blocked task creation reports policy_blocked failure reason. DOCS-SDKCLOUD-083: Treat policy_blocked as authorization or policy outcome. DOCS-SDKCLOUD-084: Do not classify policy_blocked as transient infrastructure failure.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "bc5a0f283a549b5990d5064c",
+        "text_sha256": "c1d8878db1ebeaaa846e9defa5b48cfad822daec519910b404e308013e7beefa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-085: TypeScript clients should inspect error reason before retrying.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "498ff14e0044950683c2dc0e",
+        "text_sha256": "cfa803ffba170658aa643c13c6f17e4323a4001f9016f83499f403416397653d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-278: Policy-error example attempts cloud session creation. DOCS-SDKCLOUD-279: Policy-error example awaits creation. DOCS-SDKCLOUD-280: Policy-error example passes repository association variable. DOCS-SDKCLOUD-281: Policy-error example catches error. DOCS-SDKCLOUD-282: Policy-error example inspects optional reason field. DOCS-SDKCLOUD-283: Policy-error example matches policy_blocked. DOCS-SDKCLOUD-284: Policy-error comment suggests admin-facing message. DOCS-SDKCLOUD-285: Policy-error comment suggests organization-policy settings link. DOCS-SDKCLOUD-286: Policy-error example rethrows error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "5e8504940b9e483a92935472",
+        "text_sha256": "d35be2707d9b0be9ad05e77a33608750bd239d972a46539d0f319880d915a481",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-086: Other SDK languages should inspect surfaced error reason. DOCS-SDKCLOUD-087: Other SDK languages may inspect surfaced error code. DOCS-SDKCLOUD-088: Other SDK languages should explicitly handle policy_blocked. DOCS-SDKCLOUD-089: Retrying without policy change is not expected to succeed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "f3f9bafeb1428f7d62e261f5",
+        "text_sha256": "d548a4169694b8b2315d147cbcc3107d83b8bc1bbf172123927cf4813b682054",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-090: Cloud sessions carry Copilot-Integration-Id header. DOCS-SDKCLOUD-091: Integration header derives from GITHUB_COPILOT_INTEGRATION_ID environment variable. DOCS-SDKCLOUD-092: Integration ID supports routing. DOCS-SDKCLOUD-093: Integration ID supports attribution. DOCS-SDKCLOUD-094: Integration ID supports integration-specific behavior.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "a8e766c7537355a0e8ae6e04",
+        "text_sha256": "05b86f7109d36e3c1cfbc75c9246294f4854b61fcb846c896e969f44421e97ec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-095: The cloud-session guide links multi-tenancy guidance for integration-ID details; linked-body review remains separate.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "18c603c6b079395353957632",
+        "text_sha256": "3aab93683182af98feb630cd1365b258dfd18f5da2641500e5d3dcae5b2c734c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-096: SDK cloud sessions route to copilot-developer-sandbox agent slug. DOCS-SDKCLOUD-097: Agent slug is internal routing identity. DOCS-SDKCLOUD-098: Agent slug does not indicate local Windows sandbox execution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "012af476d1b69366d5fa4e31",
+        "text_sha256": "5471da548e81780106ca312c05ae1fe7e3f99ba05e1c966aec47f5d24cb1aa1a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-099: Default agent session URL derives from configured Copilot API URL. DOCS-SDKCLOUD-100: Override COPILOT_MC_BASE_URL only when overriding session endpoint is needed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "499cfd424e4cb1c4e1d676d0",
+        "text_sha256": "517e7ad143de3dbca767d09de0d71bd67ea9eea30d478e2cf0c50d9722388b35",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-101: Override may be required for Enterprise Server deployments; support is conditional. DOCS-SDKCLOUD-102: Confirm override value with GitHub representative before production reliance. DOCS-SDKCLOUD-103: Confirm deployment support status with GitHub representative before production reliance.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "701dd1a44f4ba37fb00297c3",
+        "text_sha256": "8f6aec067b7b2d7d30932064df9dff089d2b646b0cef759b50f19344fcfd8a19",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-287: Endpoint override example assigns illustrative example.com/agents URL to COPILOT_MC_BASE_URL.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "e78b9a369217cb3f8f443779",
+        "text_sha256": "9b944717f4f85100d0c030448f27dadacbd129495259739971de9c9b82b70cf4",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "7801093dc59030df657411b5",
+        "text_sha256": "49e0f4a1e798bb9f622f505f9a97058a51ec39279d2562180fd0f60c0721c5c5",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "9cc66b5d0744a7eb276c5142",
+        "text_sha256": "5ce0227beb65611aaae2f6797ae3b6c4d21172e2bad5cfccb1b43133b883d29f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-105: Cloud sessions execute on GitHub-hosted compute. DOCS-SDKCLOUD-104-A01: The comparison table places remote-session execution on a local machine. DOCS-SDKCLOUD-104-A02: The comparison table also permits remote-session execution on an application server.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "e21699ce866044e562892a11",
+        "text_sha256": "3862d17718e00ac8ee0aa95593839cf11bdf3fc28ed8fa715388c806bb9f76b5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-106-A01: Remote sessions share local sessions to GitHub web surfaces. DOCS-SDKCLOUD-106-A02: Remote sessions share local sessions to GitHub mobile surfaces. DOCS-SDKCLOUD-107-A01: Cloud sessions create hosted sessions. DOCS-SDKCLOUD-107-A02: Cloud sessions route hosted sessions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "4a550b6457c00d20bc97963a",
+        "text_sha256": "fbf369eb3e802e9aeaa10ab19669e5865e47e7202c21a9c38b94590bb7efd1b8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-108: Remote option can be set on client. DOCS-SDKCLOUD-109: Remote option can be set on session. DOCS-SDKCLOUD-110: Cloud option belongs on create session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "e7925537a0b279d174164edb",
+        "text_sha256": "6814bd1bc1027bf7175a5466d160a220b467284e137ff860e97050ec12687f80",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-111: Remote sessions use standard resume path. DOCS-SDKCLOUD-112: Cloud sessions use standard resume path.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "b333a618fdc0b4208e7902b8",
+        "text_sha256": "6c661e87316bac58c60ccad90e7f73b51795f1b794231f90443fbd94ea010d25",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-113: Remote session feature is unrelated to Windows sandbox. DOCS-SDKCLOUD-114: Cloud session feature is unrelated to Windows sandbox.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "ae1c2819f367d06f1528e2fb",
+        "text_sha256": "94b24553b05b257aed36c6b2137ff53b1aa59ea96c9f70c3687d60981ede765f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-115: Use remote sessions when runtime-location execution should stay accessible in agents panel. DOCS-SDKCLOUD-116: Use cloud sessions for GitHub-hosted execution.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "3547a7cb6ba29260717d5058",
+        "text_sha256": "6f57d35d5ab2b45d7aefe10a8094148a5cd90162d7c49ec51a2bcf9833dc11d8",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "094ea2a964a180cc3289e9b4",
+        "text_sha256": "33444b8ea9ec08cc870e4a8e17fe3bb73978db8ec1466b40713e462cf4e0c126",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, tab markers, table header/separator or introduction to separately extracted conditions; no independent operative engineering claim."
+      },
+      {
+        "candidate_id": "41d0a5e25f0a8b9ab7dc457e",
+        "text_sha256": "db1e6f657286f1be8f0844c6bb47606690f30f7823724965b272299b65daa0c0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-117: Policy-blocked troubleshooting requires checking organization policies. DOCS-SDKCLOUD-118: Policy-blocked troubleshooting requires checking user entitlement. DOCS-SDKCLOUD-297: Troubleshooting attributes policy-blocked creation to organization restrictions on remote control. DOCS-SDKCLOUD-298: Troubleshooting also attributes policy-blocked creation to organization restrictions on viewing cloud flows.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "d9525533515dbe4271e5f160",
+        "text_sha256": "4a2a22d49d70631acb98e0a168859ddefdf196ed6bcbcc1a238968007562cfe1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-119: Missing repository context may result from omitted cloud.repository. DOCS-SDKCLOUD-120: Troubleshooting missing context recommends owner. DOCS-SDKCLOUD-121: Troubleshooting missing context recommends name. DOCS-SDKCLOUD-122: Troubleshooting missing context leaves branch optional.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "28594afe80900748ea09ddb7",
+        "text_sha256": "3b052429968ee52b977c5c94fc25b46a9425f40692e9628f4427d7497e195a30",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-123: New cloud option on resume is ignored because option applies to new sessions. DOCS-SDKCLOUD-124: Troubleshooting recommends normal existing-session resume.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "420e1f40cc8ebbc90d39b6e2",
+        "text_sha256": "6495bab003e74f8724acb1a510a1172a65c8678dfe5023da8e0b31dbdd3cd2c9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-125: Windows sandbox and cloud session controls are separate. DOCS-SDKCLOUD-126: Do not use SANDBOX=true as cloud-execution control.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "0cfde39ca7b8d5854d9e65c6",
+        "text_sha256": "d14b70093dd7128145f332fff4facc65fdfcd098c02b4a23b75ed1eaa39edf90",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-127: Returned messageId alone does not prove worker receipt of a prompt. DOCS-SDKCLOUD-129: Troubleshooting startup sends requires copilot-agent session.start before send. DOCS-SDKCLOUD-128-A01: The troubleshooting symptom includes missing assistant events after send returns. DOCS-SDKCLOUD-128-A02: The troubleshooting symptom includes a prompt absent from the session log. DOCS-SDKCLOUD-128-A03: The source attributes these symptoms to an ahead-of-start send whose prompt the runtime swallowed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "a6833da09da6039bb532413a",
+        "text_sha256": "b875582bb00d8f22dd28994bf6824409f6cd832e23f9eb82c2417eb94895dd18",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-130: Omitted streaming can explain nonupdating live UI. DOCS-SDKCLOUD-131: Troubleshooting live UI sets streaming true. DOCS-SDKCLOUD-132: Troubleshooting live UI relaunches session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "38561624950590b4a7d3f7f6",
+        "text_sha256": "24fd23141178089955d293e6eced8978ec9330d298856f5359230e27423215f0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-133: Absent URL display may reflect missing session.info subscription. DOCS-SDKCLOUD-134: Troubleshooting URL display subscribes to session.info. DOCS-SDKCLOUD-135: Troubleshooting URL display filters remote infoType.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "2d16fa05b9373a1745e0e105",
+        "text_sha256": "f676f703b23bb059a964be32f52e01d55fc947b078c7c23d6f055df8941371ea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-136: Remote-sessions guide is referenced without implied body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "d919e74a9e6d95335e792a30",
+        "text_sha256": "c6fe4ec1fa37f8527d74d9b6199a957271543bf05dfc29ddf8ab30a6bb8226d7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-137: Streaming-events guide is referenced without implied body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "5d129e0405d259b2f1f564a0",
+        "text_sha256": "169d9bc54522611639af7c5b2543e5dd0ff9e068d4d94db87db3113956ee86a3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-138: Multi-tenancy guide is referenced without implied body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      },
+      {
+        "candidate_id": "4384497306fdb6875faf4c73",
+        "text_sha256": "00a54dbaa98fdd29db0e4486d7ed3723f6b66b2e4c5626efee314e486f0f8938",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCLOUD-139: SDK authentication guide is referenced without implied body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-cloud-sessions-claims.json"
+      }
+    ]
+  }
+]

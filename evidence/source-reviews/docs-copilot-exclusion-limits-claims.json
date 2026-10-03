@@ -1,0 +1,84 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:17:06.553Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTEXCLUSIONLIMITS-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/code-referencing-verifying.md",
+      "content_sha256": "cf27dc21f930f9ab3c016ff1a8f00be5e267afaf3c5a3fc8b91280ceaa562d24",
+      "start_line": 1,
+      "end_line": 16,
+      "statement": "The code-reference verification fragment proposes a FizzBuzz completion-and-acceptance probe followed by checking the matching-code log, depending on preceding log-display instructions. Its expected common match is typical rather than deterministic; one observed match would not prove exhaustive detection, and the probe was not run.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTEXCLUSIONLIMITS-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/code-review/code-review-actions-usage.md",
+      "content_sha256": "89e5d4400308b52c6ab06afc813bc3a17fe23842d6493632c44300d8b966ef7d",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The code-review usage fragment says agentic review capabilities, including project context collection and preview features, use Actions with hosted runners by default. Private-repository reviews consume account or organization minutes and overage is billed; exact cost and spending authorization are not supplied.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTEXCLUSIONLIMITS-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/code-review/code-review-actions-usage.md",
+      "content_sha256": "89e5d4400308b52c6ab06afc813bc3a17fe23842d6493632c44300d8b966ef7d",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The review fragment says disabling organization-hosted runners makes agentic capabilities unavailable and yields a more limited review. A completed review alone therefore does not prove full project context or the agentic capabilities ran.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTEXCLUSIONLIMITS-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/config-enable-copilot-in-vimneovim.md",
+      "content_sha256": "a3a95f1259d2e37ae066ce7fb6e2041944c1befca94e08e404ef0be58891f8aa",
+      "start_line": 1,
+      "end_line": 11,
+      "statement": "The Vim/Neovim setup fragment presents separate setup and enable commands, with configuration-file enablement as an alternative. Documentation commands are not instructions executed here or proof authenticated, enabled editor behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTEXCLUSIONLIMITS-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/content-exclusion-fnmatch-tip.md",
+      "content_sha256": "10c10c3681276b87072e97e94c335a70e3f518b26dc3c53608a31f768591ef9b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The exclusion pattern tip describes fnmatch path notation and case-insensitive matching and links Ruby documentation. Only this source claim is reviewed; full wildcard/path/escaping semantics and actual matcher implementation remain unverified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTEXCLUSIONLIMITS-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/content-exclusion-limitations.md",
+      "content_sha256": "fea5b650ac544e7dab117c850f4cf11ec34898ae70982ce2aba7ff9a4aad9f2b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The exclusion limitation warns that IDE-provided indirect semantic information can still originate from excluded files, including types, symbol hover definitions and build properties. File exclusion is therefore not complete information isolation or a guarantee no derivative context is used.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTEXCLUSIONLIMITS-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/content-exclusion-tooltip.md",
+      "content_sha256": "be79c040bdcc74324c040e92b077437a81b90ebbe04a5b8929e99b5f4197153b",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The exclusion tooltip fragment describes a slashed status icon and hover text identifying the restrictive settings. This UI indicator is distinct from verified exclusion enforcement, especially given indirect semantic leakage; its screenshot asset was not visually reviewed.",
+      "accepted_policy": false
+    }
+  ]
+}

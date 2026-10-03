@@ -1,0 +1,54 @@
+{
+  "schema_version": "ges.bounded-source-review-verification.v1",
+  "reviewer": "codex:source-review",
+  "verified_at": "2026-10-02T14:03:19Z",
+  "scope": "Citations448-line source text review,92candidate dispositions,292reference records and specified independent repairs; not corpus/runtime/IP clearance.",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 255,
+      "result": "OK; synthetic published_docs ERROR is expected negative-fixture output, not a live acquisition result."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true,
+      "reference_claims": 43256,
+      "source_artifacts": 683,
+      "semantic_truth_certified": false,
+      "omission_completeness_certified": false
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed_artifacts": 712,
+      "inventory_artifacts": 13657,
+      "review_accounting_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "independent_evidence": [
+    "evidence/sdk-citations-independent-claim-audit.json",
+    "evidence/sdk-citations-independent-repair-recheck.json"
+  ],
+  "accepted_policy": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "project_complete": false
+}

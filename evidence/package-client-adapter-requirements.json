@@ -1,0 +1,223 @@
+{
+  "issue": 290,
+  "reviewed_at": "2026-10-03T07:24:53.624Z",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "status": "PROPOSED_ADAPTER_REQUIREMENTS",
+  "accepted_policy": false,
+  "implemented": false,
+  "independently_audited": false,
+  "rows": [
+    {
+      "adapter": "maven",
+      "claims": [
+        "DOCS-MAVENREGISTRY-1",
+        "DOCS-MAVENREGISTRY-4",
+        "DOCS-MAVENREGISTRY-7",
+        "DOCS-MAVENREGISTRY-8",
+        "DOCS-MAVENREGISTRY-10",
+        "DOCS-MAVENREGISTRY-13"
+      ],
+      "configuration": [
+        "settings repository/server ID match",
+        "distributionManagement URL",
+        "artifactId grammar",
+        "snapshot enablement"
+      ],
+      "scope": "Repository-scoped; data-residency GHEC unavailable; GHES admin enablement/isolation",
+      "unresolved": [
+        "Non-isolated settings URL omits scheme",
+        "Owner wildcard example does not define non-isolated adapter"
+      ],
+      "verification": [
+        "Positive authorized dependency resolution",
+        "Negative missing/expired credential",
+        "Invalid uppercase artifactId",
+        "Snapshot disabled/enabled distinction",
+        "Host/isolation and owner mismatch",
+        "No credentials in generated/tracked files"
+      ]
+    },
+    {
+      "adapter": "gradle",
+      "claims": [
+        "DOCS-GRADLEREGISTRY-1",
+        "DOCS-GRADLEREGISTRY-3",
+        "DOCS-GRADLEREGISTRY-4",
+        "DOCS-GRADLEREGISTRY-7",
+        "DOCS-GRADLEREGISTRY-8",
+        "DOCS-GRADLEREGISTRY-10"
+      ],
+      "configuration": [
+        "Groovy/Kotlin selected DSL",
+        "maven-publish single/subprojects topology",
+        "gpr properties or environment",
+        "Maven host and dependency coordinates"
+      ],
+      "scope": "Repository-scoped; data-residency GHEC unavailable; GHES admin/isolation",
+      "unresolved": [
+        "Versionless dependency example",
+        "Java component prerequisite not checked",
+        "Snapshot behavior not tested"
+      ],
+      "verification": [
+        "Positive same-repository publication on approved disposable target",
+        "Negative absent Java components",
+        "Absent/invalid secret",
+        "Immutable dependency version/identity",
+        "Multiple subprojects retain intended repository mapping"
+      ]
+    },
+    {
+      "adapter": "rubygems",
+      "claims": [
+        "DOCS-RUBYGEMSREGISTRY-2",
+        "DOCS-RUBYGEMSREGISTRY-5",
+        "DOCS-RUBYGEMSREGISTRY-7",
+        "DOCS-RUBYGEMSREGISTRY-8",
+        "DOCS-RUBYGEMSREGISTRY-11",
+        "DOCS-RUBYGEMSREGISTRY-13",
+        "DOCS-RUBYGEMSREGISTRY-14"
+      ],
+      "configuration": [
+        "Credential file/Bundler handling separated from source routing",
+        "Namespace and github_repo metadata",
+        "Version-specific source block/global source",
+        "Metadata uncompressed size"
+      ],
+      "scope": "FPT/GHEC granular v2; GHES repository scope; alternate GHEC domain and GHES isolation",
+      "unresolved": [
+        "Credential-in-URL persistence hazards",
+        "Different illustrated publish/install versions",
+        "Exact metadata equality boundary"
+      ],
+      "verification": [
+        "No secret in URL logs/history/generated files",
+        "Source provenance with multiple feeds",
+        "Wrong namespace denied",
+        "Metadata size around boundary",
+        "Bundler source behavior per version",
+        "Matching published/installed identity on approved target"
+      ]
+    },
+    {
+      "adapter": "npm",
+      "claims": [
+        "DOCS-NPMREGISTRY-2",
+        "DOCS-NPMREGISTRY-3",
+        "DOCS-NPMREGISTRY-7",
+        "DOCS-NPMREGISTRY-10",
+        "DOCS-NPMREGISTRY-13",
+        "DOCS-NPMREGISTRY-15",
+        "DOCS-NPMREGISTRY-16",
+        "DOCS-NPMREGISTRY-18"
+      ],
+      "configuration": [
+        "Project scope routing versus user authToken",
+        "publishConfig or scope map",
+        "Lowercase scoped package name",
+        "Repository association",
+        "Instance proxy enablement"
+      ],
+      "scope": "Cloud v2 granular; GHES repository scope and isolation; alternate GHEC domain",
+      "unresolved": [
+        "All-request routing prose versus scope-only snippets",
+        "Example dependency lacks @",
+        "Future 1000-version cap not verified enforcement"
+      ],
+      "verification": [
+        "Public/private credential cases",
+        "Credential file excluded from staging",
+        "Wrong/default registry rejected by intended routing",
+        "Multi-namespace resolution",
+        "npmjs proxy unavailable stays explicit",
+        "Tarball size only within applicable scope"
+      ]
+    },
+    {
+      "adapter": "nuget",
+      "claims": [
+        "DOCS-NUGETREGISTRY-2",
+        "DOCS-NUGETREGISTRY-3",
+        "DOCS-NUGETREGISTRY-5",
+        "DOCS-NUGETREGISTRY-6",
+        "DOCS-NUGETREGISTRY-7",
+        "DOCS-NUGETREGISTRY-17",
+        "DOCS-NUGETREGISTRY-19"
+      ],
+      "configuration": [
+        "Source alias and namespace/index.json",
+        "Credential store separate from tracked config",
+        "RepositoryUrl owner match",
+        "PackageReference version",
+        "Package Source Mapping prefixes"
+      ],
+      "scope": "Cloud v2 granular; GHES repository scope/isolation; alternate GHEC domain",
+      "unresolved": [
+        "Cleartext storage and clear existing-sources impact",
+        "Source-add lacks non-isolated host branch",
+        "Cross-repository token troubleshooting conflicts with granted-read reusable",
+        "Legacy target framework"
+      ],
+      "verification": [
+        "Mapping routes private prefixes only to approved source",
+        "Unrelated feed auth failure does not incorrectly derail mapped public resolution",
+        "Wrong owner denied",
+        "No credential commit",
+        "Positive/negative cross-repository grants per scope",
+        "Current target/client compatibility before execution"
+      ]
+    },
+    {
+      "adapter": "actions_package_publication",
+      "claims": [
+        "DOCS-PACKAGEACTIONSGUIDE-5",
+        "DOCS-PACKAGEACTIONSGUIDE-9",
+        "DOCS-PACKAGEACTIONSGUIDE-11",
+        "DOCS-PACKAGEACTIONSGUIDE-12",
+        "DOCS-PACKAGEACTIONSGUIDE-13",
+        "DOCS-PACKAGEACTIONSGUIDE-16",
+        "DOCS-PACKAGEACTIONSGUIDE-17",
+        "DOCS-PACKAGEACTIONSGUIDE-18"
+      ],
+      "configuration": [
+        "Event authorization and PR/publish separation",
+        "Runner availability",
+        "Immutable action identities",
+        "Effective package grant",
+        "Deployment-specific registry",
+        "Meaningful tests and artifact identity"
+      ],
+      "scope": "Workflow grants distinct from linking; cloud/GHES/domain predicates",
+      "unresolved": [
+        "Visibility inheritance conflicts with access-only inheritance guide",
+        "GHES ubuntu-latest and docker.pkg.github.com mismatch",
+        "Unconditional Docker push on pull_request",
+        "Tags remain despite SHA recommendation"
+      ],
+      "verification": [
+        "Untrusted PR cannot publish",
+        "Failed meaningful tests block publication",
+        "Missing package grant stays denied/unknown",
+        "Actual runner/host compatibility",
+        "Positive/negative access and recovery evidence",
+        "Immutable artifact provenance and independent attestation verification"
+      ]
+    }
+  ],
+  "shared_dimensions": [
+    "deployment/version/domain",
+    "registry permission model",
+    "namespace owner/managed identity",
+    "operation/effective credentials",
+    "source and artifact identity",
+    "authorization and recovery"
+  ],
+  "limitations": [
+    "Claim IDs verified for existence only; no independent equivalence certification.",
+    "Tests below are required future behavior, not run adapter test receipts.",
+    "Unresolved source contradictions remain open; missing permissions cannot become pass.",
+    "No rights clearance, credentials/native/publication changes or estate rollout."
+  ],
+  "gate_closed": false
+}

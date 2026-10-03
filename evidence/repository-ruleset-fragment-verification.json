@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "issue": 35,
+  "artifacts": 20,
+  "claims": 58,
+  "candidates": 85,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.1282858607307608,
+    "reviewed": 1752
+  },
+  "claim_accounting": {
+    "reference_claims": 57466,
+    "source_artifacts": 1718,
+    "duplicate_relationships": 7
+  },
+  "unresolved_findings": [
+    {
+      "path": "data/reusables/repositories/rulesets-commit-regex.md",
+      "lines": [
+        23,
+        26
+      ],
+      "finding": "Single-character pattern claims my-branch matches.",
+      "diagnostic": {
+        "engine": "Python re only; not native GitHub or RE2",
+        "pattern": "\\A[0-9a-z-_]$",
+        "results": {
+          "my-branch": false,
+          "myBranch": false,
+          "a": true
+        }
+      }
+    },
+    {
+      "path": "data/reusables/repositories/rulesets-commit-regex.md",
+      "line": 9,
+      "finding": "Positive-lookahead advice contradicts declared RE2 syntax.",
+      "external_reference": "https://github.com/google/re2/wiki/Syntax",
+      "reference_observed": "Official syntax lists both positive and negative lookahead unsupported.",
+      "scope": "Current external reference, not pinned corpus authority or native test."
+    }
+  ],
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2.021,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "No regex example promoted to accepted configuration.",
+    "Source review does not certify independent omissions, rights, adoption or native behavior."
+  ]
+}

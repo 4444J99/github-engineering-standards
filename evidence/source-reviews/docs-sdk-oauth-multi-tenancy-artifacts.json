@@ -1,0 +1,1252 @@
+[
+  {
+    "artifact_id": "a6fc73309d8262cd0b4f2028",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/setup/github-oauth.md",
+    "content_sha256": "154ea4ea0d61170066dbbd7b568f89b6578dcd1c40df5027f454931cb6f47140",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T05:02:01Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete330-line OAuth setup and352-line multi-tenancy articles read, including all code languages, normative rules, tables, metadata and diagram references. Diagrams remain separately unreviewed assets. No OAuth exchange, app/secret creation, token/environment change, command, deletion or inference was executed. Source claims remain non-adopted; no runtime, rights or independent omission certification. Independent audit findings repaired with retained grouped context and60reference children plus two omitted examples; repair not independently re-certified.",
+    "claim_mappings": [
+      {
+        "candidate_id": "3582562fa26add18c2ca9bb3",
+        "text_sha256": "4a645e3daba165909376ef5268e84fd9f942f5e65c32525542ad3d350580de18",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-001: The article describes GitHub-account authentication for individual, organization and enterprise identities. DOCS-SDKSETUP-002: The article declares Free/Pro/Team and Enterprise Cloud versions, not universal tenant entitlement. DOCS-SDKSETUP-003: The article declares a former OAuth setup route redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "540222c9b149cbe80faf4d87",
+        "text_sha256": "40663d4d37e552221c36a7fd56b91153cf76a933b1d0289f055b9c0f3e58abea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-003: The article declares a former OAuth setup route redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "23ac5e4ebb7d342caf52f5a4",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "cfd5054da68b6508e75cb6a5",
+        "text_sha256": "d82d012bed39870b94bb9d480752ce8901f6bec8661ac11e915f9fc5bc8dc339",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-004: Multi-user apps, internal organization-controlled tools, SaaS and GitHub-account apps are suggested use cases.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "ef25afb2c5a951d6eb6c901d",
+        "text_sha256": "8b5f98f3be58dd1efcced7f3901af68e6073084cc8b743f4cb8a0e766875d05c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-005: The documented flow creates an OAuth App or GitHub App. DOCS-SDKSETUP-006: Users authorize the application before their access tokens are passed to the SDK. DOCS-SDKSETUP-007: Copilot requests use the authenticated user's Copilot subscription.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "85776892d7a77643045fba50",
+        "text_sha256": "8d2e53ab04635fb8728d617404b1d1039cfc4a38bca3870238c1f86d5689581f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-012: A source diagram asset is referenced; its visual content is not reviewed merely because its alt text or link exists.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "ecfed7889a4003f772037567",
+        "text_sha256": "b62070fef33525323b8d9f0783b9bbb3c779dc118ac1fd4475a4a35164e4dc06",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "1566e7754e366ea09d0a8129",
+        "text_sha256": "bbf15d8ba13dfd4b5a3b6ee428a07fa13557e4c72b2a31f2d3b56575a5dd846e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-008: Each user authenticates with their own GitHub account.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "5ae975e0d51737910f53e2bd",
+        "text_sha256": "835ddb395e3318c18ff2f73a3a0932cc12aace63475d644042523213fc8ee4a2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-009: Usage is described as billed to each user's subscription.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "90ebe117c29e391b4cc97730",
+        "text_sha256": "0013664b5160bd2661eb496b3dcbf0374a57730187cccab5282d7c721cf6fc3a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-010: Organization and enterprise accounts are described as supported.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e4f1e0b44b2dbbacd11f580c",
+        "text_sha256": "997d886df75f4e27d924d4615aaf37f996cce4077267fcbac483bbb4501cb8b4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-011: This GitHub OAuth pattern does not require the application to handle model-provider API keys.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "5a3498601a1d7411346a9fdc",
+        "text_sha256": "fcaed453105284ba402e09903aeae180e6435c6b20c644454156d07ae8f5cbda",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-013: A source diagram asset is referenced; its visual content is not reviewed merely because its alt text or link exists.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "efee71bf9a0375a5473493a5",
+        "text_sha256": "041d7473736a98d72238968ebf9a159b48ac4bd53a77bffebb5ad5d328c5a824",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-016: App creation is directed to personal or organization developer settings; no app was created.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "707f8adf0e875029fd13ab39",
+        "text_sha256": "47691179e7b85168ff5ca41d93c44a459fcfe7626939d152aa08a1c39fa93187",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "c06910dcb155279a27b60b84",
+        "text_sha256": "7e925fdba5891fddda501207d971df9d69ae19f941fea3368047786504380e93",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-017: The registration procedure supplies an application name.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "9ad35867548a52017d4cf5ad",
+        "text_sha256": "a34f5636f85659c9682c9cbe02f821da9e65abf96d7b245b4680700c650d44b1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-018: The registration procedure supplies a homepage URL.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f4f58244761354c804e0873a",
+        "text_sha256": "73029acc6822fa2e456474ac797f65e4537cda8edc918250a2301eae161d310a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-019: The registration procedure supplies an authorization callback endpoint.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "12b9d1cbd61f4bb8ef82bbf7",
+        "text_sha256": "fb5be33ed6cd52c8b2269bb2b8798ada963b5d53dd0893b247fffcefced3beea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-020: The source procedure records a client ID and generates a client secret; this is not authorization to generate or expose credentials. DOCS-SDKSETUP-020-A01: Pinned source observation: Record the OAuth client ID. DOCS-SDKSETUP-020-A02: Pinned source observation: Generate the OAuth client secret; not authorized here.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "770b5614394ea859c9ba9b66",
+        "text_sha256": "40ba14b03fe100822ece23023a86dc0d93d38b147b310162a21ad3619ad3b5e1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-021: Both GitHub Apps and OAuth Apps are described as working with the SDK token flow. DOCS-SDKSETUP-022: GitHub Apps are recommended for new projects because of finer-grained permissions. DOCS-SDKSETUP-023: OAuth Apps are described as simpler to set up.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "b081e09f33118974c442a0ed",
+        "text_sha256": "c9c44b964cadfd48ba414a291b4704d0c060399d4ebc24e94f4f6eb10dfcafbb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-024: The application handles the GitHub OAuth flow rather than delegating OAuth lifecycle management to the SDK.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "8251ec01ae578a34aac7d1e9",
+        "text_sha256": "d946b4113d8c5d90c87a5a3b96248174a6de2cd6b95a89ca7c504d87da098693",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-025: The TypeScript exchange example sends a POST to GitHub's OAuth access-token endpoint; it was not executed. DOCS-SDKSETUP-026: The exchange example requests and sends JSON. DOCS-SDKSETUP-027: The exchange example reads the client ID from an environment variable. DOCS-SDKSETUP-028: The exchange example reads the client secret from an environment variable; no secret was read. DOCS-SDKSETUP-029: The exchange example includes the authorization code in its request body. DOCS-SDKSETUP-030: The exchange example parses the response and returns an access token; it does not demonstrate response-status validation or a complete secure OAuth implementation. DOCS-SDKSETUP-026-A01: Pinned source observation: Exchange example sends JSON content. DOCS-SDKSETUP-026-A02: Pinned source observation: Exchange example requests JSON response.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e37a394e135ebec6d079c35d",
+        "text_sha256": "851ed0d7168c22eea1a3492f5631c0ede3f55f481aaba92694a374dd2ce4d55e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-031: The documented pattern constructs an SDK client for each authenticated user using their token.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "2893e65f10511f53839e721e",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "0d4f3512d0fd79f821a3867c",
+        "text_sha256": "57bca9d0930920aac0274082c651c1f063c17a2d928a653a7d9e154187fe68ec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-032: TypeScript's user-client example supplies the user's token. DOCS-SDKSETUP-033: TypeScript's user-client example disables logged-in-user fallback. DOCS-SDKSETUP-034: TypeScript's session example includes a user-derived session identifier; naming alone is not ownership authorization. DOCS-SDKSETUP-035: TypeScript's session example selects gpt-5.4; the example is not a universal available model or policy. DOCS-SDKSETUP-036: TypeScript's example sends a greeting and waits for a response; no inference request was performed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "27bbc731e87028b1ca84aa87",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "dca67383614f71521111e67d",
+        "text_sha256": "b935c5d2dc63a06ec0101d6c749dd62a7f2211c66c40d1e55df127011eae2245",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-037: Python's user-client example supplies the user's token. DOCS-SDKSETUP-038: Python's user-client example disables logged-in-user fallback. DOCS-SDKSETUP-039: Python's session example includes a user-derived session identifier; naming alone is not ownership authorization. DOCS-SDKSETUP-040: Python's session example selects gpt-5.4; the example is not a universal available model or policy. DOCS-SDKSETUP-041: Python's example sends a greeting and waits for a response; no inference request was performed. DOCS-SDKSETUP-057: Python's session example uses approve_all; this broad handler is not project authorization or an independently safe default. DOCS-SDKSETUP-059: The Python example explicitly starts its client.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "9f5a13e9d83320efd9b66b39",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "630a37615c850dd5c57331fc",
+        "text_sha256": "27af92616b7a784c340644a7473e6dc4ba532619116929875f04254f38180e01",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-042: Go's user-client example supplies the user's token. DOCS-SDKSETUP-043: Go's user-client example disables logged-in-user fallback. DOCS-SDKSETUP-044: Go's session example includes a user-derived session identifier; naming alone is not ownership authorization. DOCS-SDKSETUP-045: Go's session example selects gpt-5.4; the example is not a universal available model or policy. DOCS-SDKSETUP-046: Go's example sends a greeting and waits for a response; no inference request was performed. DOCS-SDKSETUP-060: The Go example starts the client and defers shutdown. DOCS-SDKSETUP-061: The Go example discards session/send errors; this is source example context, not a recommended error-handling policy. DOCS-SDKSETUP-060-A01: Pinned source observation: Go example starts the client. DOCS-SDKSETUP-060-A02: Pinned source observation: Go example defers client stop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "168c3848712557af69d6a7ec",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "c3a91485d1c7808949f138e6",
+        "text_sha256": "6e0dc1739d33b2f8e9e24551a97ef6e04fa069fd1e496169cbd4195e05bb83b7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-047: C#'s user-client example supplies the user's token. DOCS-SDKSETUP-048: C#'s user-client example disables logged-in-user fallback. DOCS-SDKSETUP-049: C#'s session example includes a user-derived session identifier; naming alone is not ownership authorization. DOCS-SDKSETUP-050: C#'s session example selects gpt-5.4; the example is not a universal available model or policy. DOCS-SDKSETUP-051: C#'s example sends a greeting and waits for a response; no inference request was performed. DOCS-SDKSETUP-062: The .NET example uses async-disposable client and session lifetimes. DOCS-SDKSETUP-062-A01: Pinned source observation: .NET example disposes client asynchronously. DOCS-SDKSETUP-062-A02: Pinned source observation: .NET example disposes session asynchronously.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c78e0ed55aa2617dfb0dc067",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "debe1d3fafd983b741b65e96",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "77af9adbeb3307a271686f92",
+        "text_sha256": "27dfe77f998003a19c6cc5094d651a41e2b802690bdf4a18697911ef0961d39d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-052: Java's user-client example supplies the user's token. DOCS-SDKSETUP-053: Java's user-client example disables logged-in-user fallback. DOCS-SDKSETUP-054: Java's session example includes a user-derived session identifier; naming alone is not ownership authorization. DOCS-SDKSETUP-055: Java's session example selects gpt-5.4; the example is not a universal available model or policy. DOCS-SDKSETUP-056: Java's example sends a greeting and waits for a response; no inference request was performed. DOCS-SDKSETUP-058: Java's session example uses APPROVE_ALL; this broad handler is not project authorization or an independently safe default. DOCS-SDKSETUP-063: The Java client helper waits for startup. DOCS-SDKSETUP-064: The Java example uses try-with-resources for client cleanup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f13c69e56a8fbc456010d5d3",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "c745cd7ff42002de6b81a77f",
+        "text_sha256": "743e65077c41b70a4dc7b2994bf854a27c41467105bdc1f5f98c4463859201c2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-065: GitHub authentication is described as carrying organization memberships and enterprise associations.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "afe6f6f1f92116b5be31955c",
+        "text_sha256": "abc56d47e0d3c1649c8df40f5b1ab2d6226b1f6e013a129901994fb272b601cc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-014: A source diagram asset is referenced; its visual content is not reviewed merely because its alt text or link exists.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e7d44502e222bb19a18c6aa1",
+        "text_sha256": "74842f25ab5e57e7c6ec9bb8e89e0573d573634f79060cc1ef7d9ab0a3720227",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-066: The source directs organization membership checking after OAuth.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "9116def3b4ce0100cfea9338",
+        "text_sha256": "f0582e72723692bfdb668455b0ccbde43a9588ce8336cb64966e3da38369432b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-067: The membership example reads /user/orgs with the user's bearer token. DOCS-SDKSETUP-068: The membership example tests returned organization logins for a match; it does not inspect HTTP status, validate array shape or demonstrate pagination, permission completeness or exhaustive membership authorization. DOCS-SDKSETUP-069: The example rejects a user when its membership check does not find the required organization.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "658e7c2dbe4f4ee3eb45e037",
+        "text_sha256": "b833400762044cd28f379bb69c4746869e6cad291f685306a7a225fd59d2c888",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-070: The article describes Enterprise Managed Users as using the same OAuth flow. DOCS-SDKSETUP-071: The article attributes enterprise IP restrictions and SAML enforcement to GitHub; no target enforcement was tested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "66bd1d4b83ecbf14f4a9244e",
+        "text_sha256": "90f807461e586fb712c6b075e4aefc97ff1d5988ae4e873e83da21b42c620823",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-072: The EMU example supplies an EMU user token and disables logged-in fallback. DOCS-SDKSETUP-072-A01: Pinned source observation: EMU example supplies the user's token. DOCS-SDKSETUP-072-A02: Pinned source observation: EMU example disables logged-in fallback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c339b43a9e5fd38acb8ee91c",
+        "text_sha256": "9fe59b6f3681c8965dd6e5da26d0ac54c722a628c26fdf581d71981ee2e0dde2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "408636f8d84cbf526a995225",
+        "text_sha256": "952e92b58325dd63087e32910ebbfe117562c3e3480aa567b3f0b96c3245b6c4",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "349ea046a54f03a97b67b3d1",
+        "text_sha256": "aac2c476d833fb2c7342e1ce77b2fdd6e7e4699bb5da81de640bbdc26ed4d00a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-073: gho_ OAuth user tokens are listed as supported.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "9d9d66845430a0a2b78ef0e7",
+        "text_sha256": "82b21fefe424cec9ff1d584ae15c8631ea13b8acadd47a485dd0c53698194506",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-074: ghu_ GitHub App user tokens are listed as supported.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c0e2ee115fd51d2f74481534",
+        "text_sha256": "5496303c17f2c168ce65d9d5707955e07825456c8ed7f00b805ff7d8a263e12d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-075: github_pat_ fine-grained PATs are listed as supported.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "64036bfea60937951e36153b",
+        "text_sha256": "93ea839640428776b08f42878c44a710d99aa4165cd5ef362249a5e727cdd727",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-076: ghp_ classic PATs are listed as unsupported and deprecated.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c4b0e0b085ca755bfe220bac",
+        "text_sha256": "af8653ee857b615bad64885c70efb331aca49d11cb01961ce6a7448963533110",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-015: A source diagram asset is referenced; its visual content is not reviewed merely because its alt text or link exists.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e7b9dea8e4c4f746242ee1d8",
+        "text_sha256": "f502b7178a7ece0e8792b9f898beb8c83f84ab785e4a2062028af4b2c498fbba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-077: The source assigns token storage responsibility to the application. DOCS-SDKSETUP-078: The source assigns token refresh responsibility to the application. DOCS-SDKSETUP-079: The source assigns token expiration handling responsibility to the application. DOCS-SDKSETUP-080: The SDK uses the supplied token and does not manage the OAuth lifecycle.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e9c2475e6fcab5edf1f64686",
+        "text_sha256": "b8536ad53515e155b2ab29cddcccd51aacd6f4b29799a74757718885c9de5f88",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-081: The refresh example looks up token storage by user ID. DOCS-SDKSETUP-082: The refresh example reuses an unexpired stored access token. DOCS-SDKSETUP-083: The refresh example invokes a refresh helper when a refresh token exists. DOCS-SDKSETUP-084: The refresh example stores the refreshed result and returns its access token. DOCS-SDKSETUP-085: The refresh example throws a re-authentication error when no usable token or refresh path remains. DOCS-SDKSETUP-084-A01: Pinned source observation: Refresh example persists refreshed token data. DOCS-SDKSETUP-084-A02: Pinned source observation: Refresh example returns refreshed access token.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "70e23e0035618f3bda25e90d",
+        "text_sha256": "e264944edc320d9dd6e1de619f135f221efa026319789bf81bfabccb9b51690b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-086: One client per user is recommended and described as strongest isolation; this does not eliminate application authorization responsibility.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c2680456f9744d6af541470b",
+        "text_sha256": "9f9aec75e2f321105590d0a936b270762b2fdc4fea94536c0b9e987beb8cfcde",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-087: The example caches clients by user ID and creates a token-bound client only when absent; it does not demonstrate updating an existing client's credentials after rotation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "dc320439f0d08b64d296228e",
+        "text_sha256": "02271bfb38f059bd98a88c89d00f0ac4eeb6a968a74f60f8bba53e24134e2264",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-088: A shared external CLI with per-session tokens is presented as lower-resource alternative; its separate backend guide is not automatically reviewed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c9b1af5ff904f0f924faecb0",
+        "text_sha256": "f07685aa7e8dd81f47845282cb014cd2a20ed2c8c0b6f2d0430bec4327a4f593",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "8c9d5ac71d55733fa6c2cf48",
+        "text_sha256": "f5fda211b2882056f76638b760fc6951422f055dde8e2df1df23630f563f73d2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "ce29aa2481d996dc5b3d5f79",
+        "text_sha256": "5f2e999770026f2c95514782bea8a02f92eed3716d4fd07972248cb0460ce535",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-089: Each user in this OAuth pattern needs an active Copilot subscription.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "3bfe6bd368c10890b18a1b89",
+        "text_sha256": "73f1d7a78678387ca6746f876bdf5ba5a42fdad4f4687e3e3dec9548bcc5da57",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-090: The limitations table repeats application-owned token storage, refresh and expiration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "b2b12305f81ed2a4ea67cd72",
+        "text_sha256": "703fa9e0f61d8926133cc7711fb58b9eeb1f8023d725232fff923a5d9617607d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-091: Users in this OAuth pattern require GitHub accounts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e6193ca65b1e0bb7fd07a89b",
+        "text_sha256": "f1d9ef7297a8003a9d5342b84c0d47c752f4c887a90551b5e70bf597864687f0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-092: Rate limits are attributed to each user.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "02cd839b81840c48254f734f",
+        "text_sha256": "2b5a74588d33fb1206bd80ba8911414968c40226c92d3260dc72b5b8197f3180",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "4493277c8734ca71e6377205",
+        "text_sha256": "0a0c163bd7b23b9c90493a57ad79e85c1b41096cf7a3b3f349f770baa4bdc89c",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "2ba7a0e87415e68089c7e7e4",
+        "text_sha256": "e37c660222456537e3413f846cb56627afd2df0fdcd461b65a1fe2f33d9b272f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-093: BYOK, server backend and scaling links are suggested for different needs; these references do not review linked articles.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "07ee22fb64ce3d8f0a2631c0",
+        "text_sha256": "ffbe24a8e9678b231583994c1a627efdcff61ae49144a2f5dbc70e30b22c1e75",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-093: BYOK, server backend and scaling links are suggested for different needs; these references do not review linked articles.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f0a5663ea6e988f0a9b7080f",
+        "text_sha256": "72f595bd028b4ae8be9d22b4ce7141b9e3ada24cc3ef176f06cc2dacd14f70c3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-093: BYOK, server backend and scaling links are suggested for different needs; these references do not review linked articles.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "08989640b8cca4566bfcfd96",
+        "text_sha256": "ce6b81f35d1d8b718bdba092d115a9778d83a03025ce4afbaadf2c068c2a1476",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-094: Authentication, backend and scaling next steps remain separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "d5516a8e1e226059a32493a4",
+        "text_sha256": "0d7b8bed59312b9887e6a2292f65191dc707968f11a32d6b9a72a0c604076129",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-094: Authentication, backend and scaling next steps remain separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f4528ebed51416958d08a4c0",
+        "text_sha256": "52bc6034fe29a985ca9453f49b5b79b29d78060c3f7a15b4f4d38fba9877fc5c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-094: Authentication, backend and scaling next steps remain separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      }
+    ]
+  },
+  {
+    "artifact_id": "c44570f953b7eba944e26597",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/setup/multi-tenancy.md",
+    "content_sha256": "e8aead3ae3fd07d10b3d6409d8ac3a1b72f42e67aa47094599315f741f8a27bc",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T05:02:01Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete330-line OAuth setup and352-line multi-tenancy articles read, including all code languages, normative rules, tables, metadata and diagram references. Diagrams remain separately unreviewed assets. No OAuth exchange, app/secret creation, token/environment change, command, deletion or inference was executed. Source claims remain non-adopted; no runtime, rights or independent omission certification. Independent audit findings repaired with retained grouped context and60reference children plus two omitted examples; repair not independently re-certified.",
+    "claim_mappings": [
+      {
+        "candidate_id": "17fe192c8ad5009e0eb8d248",
+        "text_sha256": "264557367067c2cbf9f150948b9329f8d3f57c09f2c2fe121690f9e0e62101f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-095: Multi-user server mode covers more than one human, tenant, workspace or integration account. DOCS-SDKSETUP-096: The application owns request routing in multi-user mode. DOCS-SDKSETUP-097: The application owns authorization in multi-user mode. DOCS-SDKSETUP-098: The SDK/runtime provide per-session state, authentication and explicit tool registration; source isolation claims are not observed tenant-isolation proof. DOCS-SDKSETUP-099: The article declares Free/Pro/Team and Enterprise Cloud versions. DOCS-SDKSETUP-098-A01: Pinned source observation: Runtime provides per-session state. DOCS-SDKSETUP-098-A02: Pinned source observation: Runtime provides per-session authentication. DOCS-SDKSETUP-098-A03: Pinned source observation: Runtime supplies explicit tool registration to avoid inherited user tools.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "65fc98cd65d527022164113e",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "fa3a8b92671e5a4bcfc5022f",
+        "text_sha256": "da2336ab7ae5672c291e0f8ee17284da0d031ead128b997fa1a6d815b3029946",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-100: SaaS, partner integrations, internal platforms, concurrent backends and shared runtimes are suggested use contexts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "583e4b7d25121d96fd0c84ea",
+        "text_sha256": "5200b1d1d200c84418ac33d2ee5dec81d980459cf4e75f33c8045166b10c432d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-100: SaaS, partner integrations, internal platforms, concurrent backends and shared runtimes are suggested use contexts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "8f8d825fac9203f89caf74ef",
+        "text_sha256": "62cf4748a1777b31c941de2ef22da9555a2bdf7278d0c4ca74ab3ac202104e8f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-100: SaaS, partner integrations, internal platforms, concurrent backends and shared runtimes are suggested use contexts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "be6bec415774b361752c5f1c",
+        "text_sha256": "c286ddc40d4bcd5b481c65c6c16d4997b867395ee3109e7c6f8edb88f35d2759",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-100: SaaS, partner integrations, internal platforms, concurrent backends and shared runtimes are suggested use contexts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "43d651d01708d3bef9a96025",
+        "text_sha256": "44ffc3e8f5b5f3ffb7c6eae7a93cbfe3d34ca5abb904c19be3a7dc09addedda9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-100: SaaS, partner integrations, internal platforms, concurrent backends and shared runtimes are suggested use contexts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "383c938a7cce9d853079a5bf",
+        "text_sha256": "3a342bc6e33ea0c54a9504ea284b991ddc109cb3036a509c3f0c15a2dd9fd80f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-100: SaaS, partner integrations, internal platforms, concurrent backends and shared runtimes are suggested use contexts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "54294b9fa0d6eb208deb04c2",
+        "text_sha256": "c48294e7623aba06acb3aab133a1a41b9ce1705b56e9ee3a3ab09a98999ae072",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-101: The scaling guide owns topology/load-balancing/storage; this guide owns SDK options/isolation and does not review that linked guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "46041f6de06b1b293954078b",
+        "text_sha256": "178d2e7b23ca7c198bc17ee5a749b63917a9c4ecc109435e798c0e1d7ecc333f",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "5625f6062197795b556b5396",
+        "text_sha256": "1da3a4d0fd76754121845df3c818c1c58ed6e70e832ba340409fbd7e40c6958e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "36db676a84851a5baeeab2fc",
+        "text_sha256": "aa0ddd5e8346d091b2fc0d2441a82bb95acdab63acf0d67baa1f5e7de32cd807",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-102: Empty mode is required by the source for multi-user or shared scenarios.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "689d369e067f5c0ec1fc3949",
+        "text_sha256": "06ed57730673f300033a8bfd1ad1b54a9586d43a29ce34b62e3fe85e3819bdf4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-103: The source directs server-side idle-session timeout configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c955d41cad62ae6a3da11ea6",
+        "text_sha256": "b9dc28aa59a90f8e3df73351aabd2847fcd3d5a12369b5f564b2b6c8a90c80e2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-104: baseDirectory isolates runtime COPILOT_HOME but is ignored when connecting to an existing runtime. DOCS-SDKSETUP-104-A01: Pinned source observation: baseDirectory isolates COPILOT_HOME per instance. DOCS-SDKSETUP-104-A02: Pinned source observation: Existing-runtime connection ignores client baseDirectory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e78c48bd807a24d14fea0f56",
+        "text_sha256": "4aee9773b0cee3efa6f40c53678c37a123944d66b525c66eee5bd16d77eeab0d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-105: sessionFs routes session storage off local disk with per-session filesystem providers.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "dd74cbc8cf8f5829b707bd32",
+        "text_sha256": "e1b2e65dc99f94ebe118d612428a97d5f5f1f523381726dad8c4acafb9779be0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-106: External runtime connection shares an already-running runtime, with language-specific naming.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "82e4eafbf8b8bf754862be0c",
+        "text_sha256": "ff92d4ce68b136a096e03f4f545e3cd291dc04004de7362fa4c960b5103d6657",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-107: Per-session GitHub tokens or providers scope authentication to the requesting user. DOCS-SDKSETUP-108: Rotating providers are preferred for short-lived credentials; static tokens are suggested only when rotation is unnecessary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "026ead6574882f2cc888662b",
+        "text_sha256": "491ed9d914e3190931c628996f76a412efd7bbb88654cf0254d492d065cf8035",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-109: Each session owns its token-provider registration. DOCS-SDKSETUP-110: Concurrent sessions can use different GitHub hosts/accounts without sharing callback state, according to the source.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c6b3c82e2453a4369b739902",
+        "text_sha256": "c65cc6f1a110b724b35722c8c95af780f2d8df236cfa995a333d0b727a7b1c58",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-111: Empty mode disables optional CLI behavior by default. DOCS-SDKSETUP-112: The application must explicitly choose which tools each session can access. DOCS-SDKSETUP-113: The application must explicitly choose which MCP servers each session can access. DOCS-SDKSETUP-114: The application must explicitly choose which skills each session can access. DOCS-SDKSETUP-115: The application must explicitly choose which workspace paths each session can access.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "6ebc259aaccb7b6275e4b7c0",
+        "text_sha256": "bb89562a477f7758d4c070885a9c8c3e83bc0587ba9750cd25caa417d76a58e5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-116: Default copilot-cli mode must not be used for shared servers because it can expose ambient host filesystem capabilities.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "94cfbe13a3d122f41e307131",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "313e0726ee23467683d50068",
+        "text_sha256": "d9f1c55b82dae5ec01ef96743923fb76d5e249b39c2db05a8a0ebab80c3c10c6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-117: TypeScript's shared-runtime example selects empty mode. DOCS-SDKSETUP-118: TypeScript's example connects to an external runtime; it was not started. DOCS-SDKSETUP-119: TypeScript's example uses a user/request-derived session ID; the string does not itself enforce ownership. DOCS-SDKSETUP-120: TypeScript's example selects gpt-5.4 rather than establishing a universal model. DOCS-SDKSETUP-121: TypeScript's example limits available tools to two source-qualified custom tools. DOCS-SDKSETUP-122: TypeScript's example passes the requesting user's token on the session. DOCS-SDKSETUP-161: The TypeScript example comment assigns state-directory and idle-timeout configuration to the external runtime process, not the connected client.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "24a0750195a90a12407fb48a",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "838c8176363babc542be2924",
+        "text_sha256": "4c704ed83377b18597733ad792b330e1c9141bd5cc8a528a231b9c7aa1509020",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-123: Python's shared-runtime example selects empty mode. DOCS-SDKSETUP-124: Python's example connects to an external runtime; the reviewer did not open a connection or start any client/runtime. DOCS-SDKSETUP-125: Python's example uses a user/request-derived session ID; the string does not itself enforce ownership. DOCS-SDKSETUP-126: Python's example selects gpt-5.4 rather than establishing a universal model. DOCS-SDKSETUP-127: Python's example limits available tools to two source-qualified custom tools. DOCS-SDKSETUP-128: Python's example passes the requesting user's token on the session. DOCS-SDKSETUP-153: Python's example sets a per-instance state directory, but the documented external-runtime connection makes client base-directory settings ineffective. DOCS-SDKSETUP-154: Python's example uses a 900-second idle timeout; this is not a universal requirement and external-runtime process configuration must be considered. DOCS-SDKSETUP-163: The Python empty-mode example still uses approve_all; explicit tools and authentication are distinct from permission-handler approval. DOCS-SDKSETUP-257: The Python external-runtime example explicitly awaits client startup; the reviewer started no client.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "a69b0607b9413526ac570b32",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "4497b9189be7e5429fd11b31",
+        "text_sha256": "ea9f20e76660c1a8c7320621a8106338bcedd01dda195bdd2c9f2bc2693d333a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-129: Go's shared-runtime example selects empty mode. DOCS-SDKSETUP-130: Go's example connects to an external runtime; it was not started. DOCS-SDKSETUP-131: Go's example uses a user/request-derived session ID; the string does not itself enforce ownership. DOCS-SDKSETUP-132: Go's example selects gpt-5.4 rather than establishing a universal model. DOCS-SDKSETUP-133: Go's example limits available tools to two source-qualified custom tools. DOCS-SDKSETUP-134: Go's example passes the requesting user's token on the session. DOCS-SDKSETUP-155: Go's example sets a per-instance state directory, but the documented external-runtime connection makes client base-directory settings ineffective. DOCS-SDKSETUP-156: Go's example uses a 900-second idle timeout; this is not a universal requirement and external-runtime process configuration must be considered.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "312951e6ab609a723717535f",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "c08a852aeb71da3c4126eaa4",
+        "text_sha256": "92857a99d241594fe547307b3303150714512ed4cbb8eacebca1093ef889cc38",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-135: C#'s shared-runtime example selects empty mode. DOCS-SDKSETUP-136: C#'s example connects to an external runtime; it was not started. DOCS-SDKSETUP-137: C#'s example uses a user/request-derived session ID; the string does not itself enforce ownership. DOCS-SDKSETUP-138: C#'s example selects gpt-5.4 rather than establishing a universal model. DOCS-SDKSETUP-139: C#'s example limits available tools to two source-qualified custom tools. DOCS-SDKSETUP-140: C#'s example passes the requesting user's token on the session. DOCS-SDKSETUP-157: C#'s example sets a per-instance state directory, but the documented external-runtime connection makes client base-directory settings ineffective. DOCS-SDKSETUP-158: C#'s example uses a 900-second idle timeout; this is not a universal requirement and external-runtime process configuration must be considered.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e5c956de299abbf1919db082",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "2669b0148f59991715743972",
+        "text_sha256": "9bf953025982e29cd7a59b10e09613e2fc9a070f97e77d7636683cf09e6ad78c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-141: Java's shared-runtime example selects empty mode. DOCS-SDKSETUP-142: Java's example connects to an external runtime; it was not started. DOCS-SDKSETUP-143: Java's example uses a user/request-derived session ID; the string does not itself enforce ownership. DOCS-SDKSETUP-144: Java's example selects gpt-5.4 rather than establishing a universal model. DOCS-SDKSETUP-145: Java's example limits available tools to two source-qualified custom tools. DOCS-SDKSETUP-146: Java's example passes the requesting user's token on the session. DOCS-SDKSETUP-162: The Java example comment says client home and idle-timeout settings are ignored with an external CLI URL.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "614ed330e099b715bc494cf2",
+        "text_sha256": "9963cf6807f8462e34a5520765fb42ab1aa0dd51a28a555f52d73a3bede242b2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "70823040a474531dfbbd0983",
+        "text_sha256": "3b50a8c1e3cb19611ea127284372e68cd9cf965f384db1512fe54365d5172a4d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-147: Rust's shared-runtime example selects empty mode. DOCS-SDKSETUP-148: Rust's example connects to an external runtime; it was not started. DOCS-SDKSETUP-149: Rust's example uses a user/request-derived session ID; the string does not itself enforce ownership. DOCS-SDKSETUP-150: Rust's example selects gpt-5.4 rather than establishing a universal model. DOCS-SDKSETUP-151: Rust's example limits available tools to two source-qualified custom tools. DOCS-SDKSETUP-152: Rust's example passes the requesting user's token on the session. DOCS-SDKSETUP-159: Rust's example sets a per-instance state directory, but the documented external-runtime connection makes client base-directory settings ineffective. DOCS-SDKSETUP-160: Rust's example uses a 900-second idle timeout; this is not a universal requirement and external-runtime process configuration must be considered. DOCS-SDKSETUP-164: The Rust external transport example sets connection_token to None; it is not evidence that a remote shared service is securely authenticated.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "2fcc756b587b378f0685567f",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "8c93449e72b5ae59c6c34061",
+        "text_sha256": "03572fc8438bd9deb16ba579866632c972057ede644beeec01c564db1d3327eb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-165: Servers are directed to configure automatic cleanup of inactive sessions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "6372c3f89384f375690b613d",
+        "text_sha256": "b4943335fd49de8777d6cf31ef7b6fd1748f9064262bfde3c7c34c2f413742d2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "8c8d9f37574a42b6d402c067",
+        "text_sha256": "d0f7e545d7c76df6e8386c823d11bea52f312aaf5c50b5623ab60bc861273950",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "4b16de939d4c0c6c91868a68",
+        "text_sha256": "c2aa8b877785578487f89a2c2f3a50a6a9dd2bfda3ac709afdaed7cb8a278801",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-166: TypeScript has a documented public idle-timeout option; listing is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "8c9331fe0b37f8efc4b3b771",
+        "text_sha256": "6c1a94802727fde3872c2d35d2c9412d26097bb4bf2312452ff06ca8f354a0d7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-167: Python has a documented public idle-timeout option; listing is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f41f8781a61b53c872e05737",
+        "text_sha256": "0118772ccc701c96f97b9247651d3c8b92c755e2c08c311a62663422306651ed",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-168: Go has a documented public idle-timeout option; listing is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "033194c40728e47c82cb57df",
+        "text_sha256": "9995605cf8906e7e0d8c1177c76f87cc5ca484ad96c67e67c99ec982910137eb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-169: C# has a documented public idle-timeout option; listing is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "b27bcda8e48a5119f9d84f32",
+        "text_sha256": "8fba965bc2bdf2cae3f7d8ce085f3edaf3bc85547e7b3dd495a1b003b18b79f5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-170: Java has a documented public idle-timeout option; listing is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "a6cfa3271f31d4c66c46ac8f",
+        "text_sha256": "4b25e9003e5c2ed5363a1af157e1427b0fd23362dae93f9d1149519c3c37a945",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-171: Rust has a documented public idle-timeout option; listing is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "56a4c2dddff8edad25ee8609",
+        "text_sha256": "68ce8db5e1e978463b48e71928fea7118cfdeafdb104e0306f88aabeefa84104",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-172: Idle timeout should match conversation lifetime. DOCS-SDKSETUP-173: Fifteen to thirty minutes is suggested as a chat-backend starting range, not a fixed mandatory threshold. DOCS-SDKSETUP-174: Workflow agents are directed toward longer timeouts with explicit completed-session deletion. DOCS-SDKSETUP-174-A01: Pinned source observation: Workflow agents use a longer timeout. DOCS-SDKSETUP-174-A02: Pinned source observation: Workflow completion requires explicit session deletion in this procedure.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "b5df0f29e5ccffd96dc77e19",
+        "text_sha256": "405c4c3d849cf765f143eb3e001245b87649b095fe0f6b9fe3a69cedeef0ac7a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-175: baseDirectory sets COPILOT_HOME for a runtime instance. DOCS-SDKSETUP-176: Separate runtime state, credentials and session data are suggested per process/pod/worker/tenant boundary. DOCS-SDKSETUP-176-A01: Pinned source observation: Use baseDirectory to isolate runtime state. DOCS-SDKSETUP-176-A02: Pinned source observation: Use baseDirectory to isolate credentials. DOCS-SDKSETUP-176-A03: Pinned source observation: Use baseDirectory to isolate session data.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "ff11e3d919625b5b476d6da9",
+        "text_sha256": "4450058c3de2bd7903693f10b4ad3910ea56201a395eaaf3873991d5aa107b02",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-177: The spawned-runtime example selects empty mode, a host-derived state directory and a 900-second idle timeout; the values are examples. DOCS-SDKSETUP-177-A01: Pinned source observation: Spawned-runtime example selects empty mode. DOCS-SDKSETUP-177-A02: Pinned source observation: Spawned-runtime example sets a host-derived directory. DOCS-SDKSETUP-177-A03: Pinned source observation: Spawned-runtime example sets900second timeout.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "53773c2cf439abe1ac6323de",
+        "text_sha256": "d94346cae247e56aeea77f449b39ee0d39178aee6077ccbe0b301258d04f0460",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-178: Session state is stored beneath COPILOT_HOME in session-state/{sessionId}. DOCS-SDKSETUP-179: Multiple runtime instances should have distinct directories unless shared storage is intentional.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "7c36c2620a0a1dccf6b85bea",
+        "text_sha256": "53d6247f746998cba16be655e9444975d4d2a0b9ffac2b549912f84be463d8df",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-180: Client baseDirectory is ignored with a connection to an already-running runtime. DOCS-SDKSETUP-181: COPILOT_HOME must instead be configured on that external runtime process.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c2dd84e11e21a4ed0ae461cd",
+        "text_sha256": "cd31a3335748b9f826ac56f5e68a29490164c2a6c0b392d0eb6a1f05ac451b1e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-182: A custom session filesystem can route session file I/O through application storage. DOCS-SDKSETUP-183: Ephemeral disks, object storage and tenant-aware paths are suggested reasons for custom storage.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "a66a63431d4c04f7ba9ced1f",
+        "text_sha256": "06060f181058bc54f5447e7a5efd524c757ae755f6c27a7c5008bd735b52ca3c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-184: The session filesystem example starts at /workspace. DOCS-SDKSETUP-185: The example session-state path is /session-state. DOCS-SDKSETUP-186: The example uses POSIX conventions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "8f2d8d7f2598c0318aa5d6ba",
+        "text_sha256": "4f09104d92b228d83048fbfaef213bffd7d5c8159284b2ace4729bc419ad136b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-187: Callback-capable languages configure filesystem support at client level and provide a per-session handler at creation or resume. DOCS-SDKSETUP-187-A01: Pinned source observation: Configure client-level session filesystem support for callback-capable languages. DOCS-SDKSETUP-187-A02: Pinned source observation: Provide per-session filesystem handler on create. DOCS-SDKSETUP-187-A03: Pinned source observation: Provide per-session filesystem handler on resume.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "3f90b9fa60f5ead64bb0b897",
+        "text_sha256": "2defeec9cfbf0e82b9ae6f1d61dfb4145cea385be69e9bf2dbfd1f20d82ef5e3",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "e44d6f56b2623755f446181f",
+        "text_sha256": "5b456db73548fecc8a82277f46e0d8b615f3d7f0d10eec1418afc06d65ebb675",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "4704622288fcb1c2ea5e7042",
+        "text_sha256": "b64cf83b0676db4cde0edae6205a61791dd2f8d81aa4a769eb0ec45cd7d78b6a",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "cb9e2ce0624d24660a1a1595",
+        "text_sha256": "bece48a842cb45ec82676d38d2f951d1792d947b0b932e866fca3b4cf4b997cc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-188: TypeScript's documented filesystem surfaces pair client configuration with per-session provider support; upstream 'verified' wording is not local runtime certification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "5f4bda22e7e138aa084d891c",
+        "text_sha256": "86adbd313a4b7877276f1a5241294824e3cd95fe817ff2da6a5ede6e8b0d19bd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-189: Python's documented filesystem surfaces pair client configuration with per-session provider support; upstream 'verified' wording is not local runtime certification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c8e02df6fb7d10607a4f4479",
+        "text_sha256": "f63794f7b2344cad46ad1da500d4e0ea9faa01699508388945f872feaaca0d27",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-190: Go's documented filesystem surfaces pair client configuration with per-session provider support; upstream 'verified' wording is not local runtime certification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "bfec4bb187f71e095cba3fab",
+        "text_sha256": "b64e1dfb8f1ef5f0cdc3f243237d6480af511867716b39002c0a02d50274502c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-191: C#'s documented filesystem surfaces pair client configuration with per-session provider support; upstream 'verified' wording is not local runtime certification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "df8ebe4b0e72bc6ffae3ff46",
+        "text_sha256": "9d31f4a01dd93386342e2897a9593e7b416d836d156a00ed0475952da757c93b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-192: Rust's documented filesystem surfaces pair client configuration with per-session provider support; upstream 'verified' wording is not local runtime certification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "9c31f86aebf4118a888559b8",
+        "text_sha256": "1a24da1b974c9ab1d8aeba53844d0fda940a923fd2aeea387a1f3fa1db9a0443",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-193: This guide does not show Java sessionFs because it reports no verified public Java option; that is a bounded source limitation, not permanent impossibility.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "321cd1a97b463d45592ef482",
+        "text_sha256": "59b2d5add0ee0974804fb135bf564e07cc6a169ada60f5a8529a68af9a8bf5d7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-194: External runtime connections are suggested when multiple SDK clients share a separately managed runtime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "01981169d58120278b994624",
+        "text_sha256": "8bc608c608ce98217eab217c01f03caa6354e47e4dd1418636d8efaff80f02f6",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "ff8b37c964d1ed436900520d",
+        "text_sha256": "8118b0cd236a6a4b5b84183587a2803cbb063b5628f3f8c17fbf5d9dd1d9471d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "0fb25b20308de465dc613118",
+        "text_sha256": "826435b5c6714f244dd655fbfe1d99aca5c5bf84f044d26041717b1e70637127",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-195: TypeScript's external connection surface is documented; no connection was made.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "0711c73a31509cfd5e4868ba",
+        "text_sha256": "62d6d2b61a117a6a255cd191a5b91ff2f4602a248ecdafaf0ef96b8002cc064c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-196: Python's external connection surface is documented; no connection was made.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "ab1ca71b53206e339d961d62",
+        "text_sha256": "aa6c3ac94443d9633dbccdea584138b157051958c66497650834f02032eee7cb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-197: Go's external connection surface is documented; no connection was made.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "748acd83d13a55befb5dbc16",
+        "text_sha256": "2837d455f29870d159835ab404fd86c4bc65111653d624b8a991234a74183e5a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-198: C#'s external connection surface is documented; no connection was made.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "8e97ddc15bcbf10144e88385",
+        "text_sha256": "689cf1df20e908501791e83b6849fbc2970028150d758dc36ebe8382a27e5a9a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-199: Java's external connection surface is documented; no connection was made.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "d7b9639a50e87e85b2984384",
+        "text_sha256": "1b172772b9ebed4d93df7c7b8a6e2abd8d9699420ca823fef6709aafac50ab06",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-200: Rust's external connection surface is documented; no connection was made.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "eb2d5a13ba04a8e2783f8af6",
+        "text_sha256": "98c03bc183a5ca0debc72fa0f8738d03417ab213ac9ac90ebfd1cf878311d587",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-201: External runtimes manage their own process-level authentication. DOCS-SDKSETUP-202: External runtimes manage their own storage. DOCS-SDKSETUP-203: Per-session tokens are passed at creation/resume for user-specific authentication.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "35caef6a31032b010897e997",
+        "text_sha256": "501fa7607f9fcc5e27e7365d0e0999dc53c87b53ef2d324292fe8ba46308ec4c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-204: Session GitHub tokens scope authentication to the requesting user. DOCS-SDKSETUP-205: Client-level tokens authenticate the runtime process rather than establishing per-session user identity.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "5a20aa12c106be8156032c2c",
+        "text_sha256": "e332440703de9cb019f93425e1c64ba5dfeb631d673bb39e99dc60daf3f99903",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-206: The example uses a user-derived support-session ID. DOCS-SDKSETUP-207: The example allows all custom tools via custom:*; it is not a universal least-privilege allowlist. DOCS-SDKSETUP-208: The example supplies a session-level user token. DOCS-SDKSETUP-258: The per-session-token example selects gpt-5.4; this is illustrative, not availability or policy proof.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e6398ee6f5baf159f83df609",
+        "text_sha256": "dd3ca4c6d8369b08f8fb193c7015c145f6154e2698ebe48682808b5a6b7972e8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-209: Per-session tokens are directed for content exclusion. DOCS-SDKSETUP-210: Per-session tokens are directed for model routing. DOCS-SDKSETUP-211: Per-session tokens are directed for quota checks. DOCS-SDKSETUP-212: Per-session tokens are directed for user-specific Copilot access. DOCS-SDKSETUP-213: One service token should not be shared across users unless service-account semantics are intentionally chosen.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "448d349cda3116f51a8a75f1",
+        "text_sha256": "696ed845361750a2c2763e8fd8346cc8996de87e96ca2d3ed4911adfbb5050cb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-214: The runtime reads GITHUB_COPILOT_INTEGRATION_ID. DOCS-SDKSETUP-215: Integration ID is stamped in the Copilot-Integration-Id header on every agent-session request.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "aae21611d58376c335df0e14",
+        "text_sha256": "633017b938a18d8c0a37f9a7a6ca4279152cd4bc70b3f471cbafa1e739ed5078",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-216: The headless launch example supplies an integration environment variable and example port; no process was launched.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e171e716a5cbb01ad77a5909",
+        "text_sha256": "c3b1e60c34885f738faf4fb10d197f7bbfdeb6c220ad3cc7cc0907775ea935ce",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-217: The documented default integration ID is copilot-developer-cli. DOCS-SDKSETUP-218: A stable product integration ID is suggested for attribution and routing. DOCS-SDKSETUP-219: Integration ID is configured only through an environment variable, not a first-class SDK option.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "d696934b5dd45cc136b54048",
+        "text_sha256": "41442a7d3fe6ac4cb11f71b02bd5ac1d46a65b36f35ac47b74c0ec6fedd42270",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-220: For SDK-spawned runtimes the integration variable is passed through client environment options. DOCS-SDKSETUP-221: For external runtimes the integration variable is set on the runtime process.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "09858af02070df5ff19d9288",
+        "text_sha256": "7adfb7687bf76d771dd0bb72752af0c9a81572b342d79a0268208cc8f48a6fec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-222: The source defines isolation as model/state information scoped per session rather than global shared state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "71d502c9cd46cbde8219dfff",
+        "text_sha256": "97a9a7d9af124f2a500069287f07fb4449800212615c9bafe47cd1692da94ae6",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "e921eafdf1ae9347f7bf6e31",
+        "text_sha256": "4ff74a747ce3bef0fa48140b8d08971eda2364b9b66dce5964e7b54c472b8be7",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "05884e1ceb13654156e2f44f",
+        "text_sha256": "058c4bfad22d8343e2a44f200983eda7c5620d32886327f71acb68353b05d1c0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-223: The isolation table describes model lookup/cache as per-session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "ba399508270b5e69d73887e9",
+        "text_sha256": "dd33343c4fc1a7eca0707e57604967a04e3be97b7313c8c5d6de3b992dcfa54b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-224: The isolation table describes state as per session ID under COPILOT_HOME.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "1194310f7adca53ac452d5b2",
+        "text_sha256": "146bc5e0ca95058e2d8e86e91f50f640a8de811c35130d5ce97b91122a0d670e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-225: GitHub identity is per-session when a token is set on the session; the condition must not be omitted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "942730907f1d5325da0291a9",
+        "text_sha256": "34c295a13a5b41941fbcbddb0af8cdb7ebdf9c3d3cb0d7f64c82d5a503411b75",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-226: Tools are explicit in empty mode and ambient in copilot-cli mode.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c0eb46e316e963f838b2e49f",
+        "text_sha256": "efef098432daf40bb54504007503265ed5dcd46ec042e645bdbb7edd8f01817e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-227: Empty mode excludes runtime-bundled built-in skills by default but permits explicitly selected built-ins or custom skills. DOCS-SDKSETUP-227-A01: Pinned source observation: Empty mode excludes built-in skills by default. DOCS-SDKSETUP-227-A02: Pinned source observation: Callers may explicitly select built-ins. DOCS-SDKSETUP-227-A03: Pinned source observation: Callers may opt into custom skills. DOCS-SDKSETUP-227-A04: Pinned source observation: copilot-cli mode has ambient skills.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "b23c726655bf51c81435a5c8",
+        "text_sha256": "4ef83ed5f6512d7b1df2938a5cdc9555351e3cd6c8ff6d9299975775b3f9974b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-228: Host filesystem access remains shared by the runtime process if host tools are available.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "9fe1f977a12b43426fb456d6",
+        "text_sha256": "098f01ac1a26b93b0ab7b3432c839d4028cfeba83c47c5eb8806b3a2402d6f57",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-229: Empty mode exposes no ambient OS tools unless the application registers or allows them. DOCS-SDKSETUP-230: Shared host-process filesystem access is why copilot-cli mode must not be used for multi-user servers.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "22a09373082806afb1826a30",
+        "text_sha256": "745ef0a5da628c04ab09a9d1a5691693ac6f70aa990a74a07b0dc75a782bb469",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-231: Empty mode sends an empty includedBuiltinSkills list in the post-create/post-resume options patch. DOCS-SDKSETUP-232: That empty-mode options patch also contains an empty installedPlugins list. DOCS-SDKSETUP-233: Selected built-in skills require explicit inclusion, with language-specific casing. DOCS-SDKSETUP-234: Applications may opt into their own custom skills with skill enablement and directories; empty mode is not an absolute no-skills guarantee. DOCS-SDKSETUP-234-A01: Pinned source observation: Custom skills require explicit skill enablement. DOCS-SDKSETUP-234-A02: Pinned source observation: Custom skill directories may be specified.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "e93979c508e78417c7d5fa90",
+        "text_sha256": "046af397994ff3c41f5a199605caa3bd77b905a1dc50b5527b577ffe34434657",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-235: sessionFs can replace the default COPILOT_HOME session-state storage route. DOCS-SDKSETUP-236: Session IDs must be unique and encode an application tenant/user boundary. DOCS-SDKSETUP-237: Access control must precede session resume or deletion. DOCS-SDKSETUP-236-A01: Pinned source observation: Use unique session IDs. DOCS-SDKSETUP-236-A02: Pinned source observation: Encode the tenant/user boundary in IDs. DOCS-SDKSETUP-237-A01: Pinned source observation: Authorize before resuming. DOCS-SDKSETUP-237-A02: Pinned source observation: Authorize before deleting.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "1f611cf208933c999eb63c18",
+        "text_sha256": "b6c4822cd42bcbbb7b927c88c5bdc29fdadcab71ccb95c6de5f8337160e5d1b3",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "2fe22b0e43dd95ca2a51fbd6",
+        "text_sha256": "174c304727b72b6f56d8213d11d9e573b32728d48b0476e5931d4664c098f2b9",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "504aa8cd0a283dc195c7c5df",
+        "text_sha256": "72f1ee1aebf0eb52ae74d1180152698880bedf02f012aa5317e82a1754db4dc1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-238: Isolated CLI per user is presented as strongest process/credential isolation with higher resource cost. DOCS-SDKSETUP-238-A01: Pinned source observation: Isolated user CLI offers strongest process isolation. DOCS-SDKSETUP-238-A02: Pinned source observation: Per-user CLI supports separate process credentials. DOCS-SDKSETUP-238-A03: Pinned source observation: Per-user CLI has higher resource cost.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "b4330f1336df55eb03383bda",
+        "text_sha256": "83d3e40f2e9f13973007c3c3ce12141b13171cb0c8fef5252541192157993683",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-239: Shared empty-mode CLI is presented as efficient but requires explicit tools, per-session identity and application access checks. DOCS-SDKSETUP-239-A01: Pinned source observation: Shared empty runtime offers efficiency. DOCS-SDKSETUP-239-A02: Pinned source observation: Shared runtime requires careful tool registration. DOCS-SDKSETUP-239-A03: Pinned source observation: Shared runtime requires per-session tokens. DOCS-SDKSETUP-239-A04: Pinned source observation: Shared runtime requires application access checks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "481c6b2cfd89c33940618765",
+        "text_sha256": "9ea0ac556e45b00d9dfc96efd79066053cb425eeae20aecb2c178519a590a2f7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-240: Hybrid cloud/local sessions require workload routing and policy handling; the linked cloud guide is separately scoped. DOCS-SDKSETUP-240-A01: Pinned source observation: Hybrid pattern sends heavy work to cloud sessions. DOCS-SDKSETUP-240-A02: Pinned source observation: Hybrid pattern sends light work to local sessions. DOCS-SDKSETUP-240-A03: Pinned source observation: Hybrid pattern requires workload routing. DOCS-SDKSETUP-240-A04: Pinned source observation: Hybrid pattern requires policy handling.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "7df1fb549fd3d80104a56692",
+        "text_sha256": "f97ff0b1c7bea795e21217fd400edf52d2858fa90ebb40dbcce95b9512e2bc50",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-241: In the shared pattern the backend authenticates users, selects session IDs, supplies user tokens and provides explicit tools. DOCS-SDKSETUP-241-A01: Pinned source observation: Backend authenticates users. DOCS-SDKSETUP-241-A02: Pinned source observation: Backend chooses session IDs. DOCS-SDKSETUP-241-A03: Pinned source observation: Backend supplies session user tokens. DOCS-SDKSETUP-241-A04: Pinned source observation: Backend supplies explicit tool allowlists.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "fbfd3650226bb1820ff84875",
+        "text_sha256": "f0a1494553c8e744af4612f08dec4b52360a05cb4d760da100c6db8638b89796",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-242: A multi-tenancy diagram asset is referenced; no visual review is inferred from the link.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "d8cdb855dec9fef365a3615a",
+        "text_sha256": "c94707a24b21eeb14381fe7b7678b00d5497c74b8c47ba327e5a58d7ea775127",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/language/syntax/link context read; no additional obligation inferred."
+      },
+      {
+        "candidate_id": "3a097284f612f3ced04c8b5e",
+        "text_sha256": "07222e57468d32180b6b7a9c3735a6b9b0cad0d848ac433b776c740c7ee9374b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-243: Always use empty mode for the documented shared-runtime pattern.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "7812d96c9fa460bafd537410",
+        "text_sha256": "3835c77853b9a8cee73187036f23cdc65beb4279584e46a3c0e13484bd2bdb3a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-244: Use unique session IDs and store ownership metadata in the application database. DOCS-SDKSETUP-244-A01: Pinned source observation: Use unique session IDs. DOCS-SDKSETUP-244-A02: Pinned source observation: Store ownership metadata in application database.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f86f2a63c6b0f53727af318f",
+        "text_sha256": "9f5d5f0f35918f67fb38f9efb3875e4ef572ede5d2d72de8a1f8fa4f1ed890cd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-245: Check ownership before session resume, deletion or any UI action referencing a session ID. DOCS-SDKSETUP-245-A01: Pinned source observation: Check ownership before resume. DOCS-SDKSETUP-245-A02: Pinned source observation: Check ownership before deletion. DOCS-SDKSETUP-245-A03: Pinned source observation: Check ownership before any session-ID UI action.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "17981d3e7abdd47a0adc00a0",
+        "text_sha256": "b829353009cff64bc3e07395c2df46b69c57f6c79de366212550825239bead48",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-246: Pass a per-session user token when requests should run as that user.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "294243671f032b925d8430ed",
+        "text_sha256": "7b01a23be2136feaf45f69c1267271e004f91bf5627179031b2d8c4981634e48",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-247: Register only tools the session needs. DOCS-SDKSETUP-249: Source-qualified custom/MCP allowlists are preferred over unspecified tool patterns.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f4b24444f37f9d0bff0161df",
+        "text_sha256": "9aa1738cb31259750646723f0a07e2caf4e52a2583deef6f79325ccd41e8f59b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-248: Configure an idle timeout and explicitly delete completed workflow sessions. DOCS-SDKSETUP-248-A01: Pinned source observation: Set an idle-session timeout. DOCS-SDKSETUP-248-A02: Pinned source observation: Explicitly delete completed workflow sessions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "5c52b615d1d00f3912075bff",
+        "text_sha256": "610324956f1ff19675f1093a52d6eff87c760162fdc0a6e1b300366439db7999",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-250: The default CLI-like mode can expose ambient host files, so omission of empty mode is a stated pitfall.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c2444f639257ae165e8311bd",
+        "text_sha256": "98932b8a0ee3e44eb6f3d202aae77032bafe516c8e8b7ebd2177b97650162b51",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-251: Omitting idle timeout can accumulate inactive sessions in long-running servers.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "219204e8870899d2eb732d8d",
+        "text_sha256": "fdff76571f303fe911929cea9c4ed74de479b6d9b51eb89123138e9ad16bdfc6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-252: Sharing a token across users instead of session-scoped tokens is a stated pitfall.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "c77bc509fca2252b6e06c866",
+        "text_sha256": "b9824295a7b942381b02567c2e50d5e8d7c7e19930fdc993566b700052fc4afe",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-253: Client-provided session IDs require backend ownership checks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "6d8027c883e3166b635aa9cf",
+        "text_sha256": "942c0666f85c76e92e367c6c99581f3c53ebbf349fd455d9b39644d208df5c52",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-254: Connected-client baseDirectory cannot relocate external runtime storage.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "3451338e6c92f6513dfad5d3",
+        "text_sha256": "e84a6a05e2d1eb84cfb91d23f2d7dbd8abd28c74780d2f3caadcecc23119b70f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-255: Broad builtin:* patterns require review of each tool's user suitability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "0469c41c417ef0f9534d0a94",
+        "text_sha256": "538bfa8b72f3883d34c847ade5280a3fa8e293ee49ddcb57844165621594a1a4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-256: Scaling, backend, BYOK, cloud sessions, persistence and feature links remain references, not automatically completed artifact reviews.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "d92e38f3d9f29c8e3ac030cf",
+        "text_sha256": "af8e83182a5232f9fee114294c1554323c7e8932c624e6595426ebf149b846ea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-256: Scaling, backend, BYOK, cloud sessions, persistence and feature links remain references, not automatically completed artifact reviews.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "220f3de1ed3f421d3082d32f",
+        "text_sha256": "1457daa02c9a4dcf72d6388f3a0c33c11c7ff8fe0d8068fc474143efcfd7f885",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-256: Scaling, backend, BYOK, cloud sessions, persistence and feature links remain references, not automatically completed artifact reviews.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "b45d36a1e7268038772646c3",
+        "text_sha256": "958006a921a5ca538d948489c1a4edb6b184d492f050384bb40c72f0f3df10ce",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-256: Scaling, backend, BYOK, cloud sessions, persistence and feature links remain references, not automatically completed artifact reviews.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "f09fc02ebb41c533a2e582bf",
+        "text_sha256": "64d42e85b224ef851b4f990191d6d20c38246f3508122502362a1812e1cce076",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-256: Scaling, backend, BYOK, cloud sessions, persistence and feature links remain references, not automatically completed artifact reviews.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      },
+      {
+        "candidate_id": "cbc7fdf3d62e6801957cc481",
+        "text_sha256": "28f4afa0c91ff03d64d68f69a3c7883fcf26e205bc0a134c83cb611b4d05f27d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSETUP-256: Scaling, backend, BYOK, cloud sessions, persistence and feature links remain references, not automatically completed artifact reviews.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-oauth-multi-tenancy-claims.json"
+      }
+    ]
+  }
+]

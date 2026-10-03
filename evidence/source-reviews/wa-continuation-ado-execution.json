@@ -1,0 +1,1294 @@
+[
+  {
+    "artifact_id": "e3d4ca35459881d3f8998a1a",
+    "source": "github/github-well-architected",
+    "path": "content/library/scenarios/migrations/azure-devops-migration-guide/05-repository-migration.md",
+    "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+    "content_sha256": "7a93230883fa531292f7e26dff0e8ef799704c385657118e68dd45e2d6b3555f",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T01:34:19Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Read344lines including progress tracker, readiness, schedule example, write freeze/backups, migration and cancellation/log commands, verification, identity reclamation, Boards/Pipelines implementation and developer credential/remote transition. Captured33 independent claims,213 individually accounted candidates. All embedded scripts/commands are inert, no execution, authentication mutation, actual migration or rights/native proof claimed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "8b17225356052e79e3cdab5e",
+        "text_sha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 1-1 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "5f1787b68d961acaab7454a1",
+        "text_sha256": "785fea58e8733b44504fb4098b55eed54c5e00d16cc8954efb59336704f4d261",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 4-8 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "2f21a45e2fda5853a54582ca",
+        "text_sha256": "4402f6230a26b440b2138cbc4b26bd14bfa29dacb9ae8770cfa5b4fce6a62af9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-001: Execute only an approved migration focused on integrity, communication and verified workflow continuity."
+      },
+      {
+        "candidate_id": "5b492a7f9172cb5b28e301f6",
+        "text_sha256": "107e1b3e58db53d926f57695a451602f96f8b2bd950386e0a367ce375e9f71f2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 14-14 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "5499cb875aa3fe69b5f73a0c",
+        "text_sha256": "81966bbdce03c8154e86a32d4723eca52ea82b00752a4ce482b0ad3dda8cb68d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 15-15 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "a0dcea6dc8b18ff232dab9e3",
+        "text_sha256": "6a7424c1cc074d6e2992bea04a4a80ea21ed1ff388d08a3e9dd0e0d103711675",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 16-16 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "280cd507971665539b714a89",
+        "text_sha256": "c6ffcd146186cdb05adb7e7ef8d529173dbc5e9ee5145d63883fc018f4c485ca",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 17-17 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "a03682e5c2e2f28141666c1d",
+        "text_sha256": "8209b54bda3731289088aa6c5021193fb60fcd8e6aed2319948d84251582535e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 18-18 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "a3789ee04b46f69171aaebae",
+        "text_sha256": "a8c1b1d02f002f6c8d0e7f88a5d3e25ef880f4542e766bc8ca4022b4c246c6dc",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 19-19 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "7b461956d2cc722c303ea3c8",
+        "text_sha256": "664b34c4244f0fd826370320345b75d3ff5006f3902842d7f8cd0e33341485f9",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 20-20 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "d31cf74f3ce809a599f42f80",
+        "text_sha256": "55780fb8038ef540935a22cedf577f63575e5b56fc0aa0a35e81b97ef80a6f5d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 24-24 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "da5742fe496ed50728cdca27",
+        "text_sha256": "0db30f34d6dcd69cd513e4705f52c877993cd3f1a09888c6932d0eaa1e99e193",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "0393c8e5088e45d03722fe36",
+        "text_sha256": "c7d78a7b4afd64f16cae09e2dd626098d3cb3f4cd517e52056f6ad07d5d0306a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "36d202cac1c0ec5ff3005931",
+        "text_sha256": "ff0ff50b9f02e717ab1bfcfe3a1f1549f0018b141421cc1bdff8577736830884",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "485ca6b8d71b13e565994691",
+        "text_sha256": "2884ccd1deb5bfd0fdb70bb5ac480f4d7f42284482302ce02aac22856f90c9cb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "334910a43c76142725fb84dc",
+        "text_sha256": "f5f3f183b73110e3d1ba9bf6daaa8caf5ca78bd2b153b4a5ac14165e88e1f6c3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "e40afbfcbab35866856e65be",
+        "text_sha256": "babfa07ba70f19d74e421efa2ecebdca24139e97309190f87f95703bbdf8b1cb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "80cebc42102638cff19d5213",
+        "text_sha256": "d4054ee5bbc282735fb12715da4c6ae5f4d968f234f727f8b7d884ade6a106cb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "feff62c5b409ef139c96f008",
+        "text_sha256": "9ae71de4462124f6d06b63e7bfc04364f0b7cd84bc069be21783dc6874c01cff",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "3a73607c6945c34d2c10626a",
+        "text_sha256": "cd8c5fbee25a8338a2f26aca29be99385accbee7b209da7edbe43cde16be4735",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-002: The tracker distinguishes tested readiness, communication, frozen/backed-up source, execution, integrity, identity, security, integrations and team access."
+      },
+      {
+        "candidate_id": "9c10d6b3beedb14a3df5fc22",
+        "text_sha256": "4890b66ff4783b5ecf1c2977382624288d44c233e7d2fce320fb0a45b1e5c4c7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 38-38 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "72a2d52d5e031266de11420c",
+        "text_sha256": "8604441f7938455bca9f0a621a1a313e1d7eb47784defe2bc07a48f03d561e87",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 40-40 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "eed52382eae495317be21f67",
+        "text_sha256": "4214ab30ce93883045834dc7d3fedc3a7cb74f7af140a438eed7914ae2378c71",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 41-41 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "6075820d36cb049783dd617f",
+        "text_sha256": "96174cb31ec99bf4401fe66a5ee3e99c2c237d5e4fbaf478a91acb709cdd7ed7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 42-42 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "6e1d67ec700f47a1018a2403",
+        "text_sha256": "6b108104e5b7fca341cdd01e8394ea097c4173800af58598261c2cb1f6b311a6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "876014a7cdaddb0a94a4020d",
+        "text_sha256": "22f81e78aed38b887d2ba77292f7c95e97038f3600e6a11aaff9c6230d317428",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "564616c1f3d505e23af1e7b3",
+        "text_sha256": "53a21b9b8304bdee5b81c623385bde909f056be2b2b3d48cb5791ef046886a0d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "ad31b1085087d3d7445352ae",
+        "text_sha256": "d01a95fb77d5d54119437f9bf89946db48ea83b1a1d3eb8dbf67f9fe1a574c98",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "ac2344851ce3b35487eec05d",
+        "text_sha256": "f19413b6b7268ab032a04ac8ee5700ebc76a47d9b9d8c5b2b973f78e09b649a2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "77dea9b6e0f020a6aa4f625a",
+        "text_sha256": "1a811ef9e5c1500bdc18414f4e62a1eeb950a52a050be79c52d9d35870170965",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "36baae56adbd87cb241982e4",
+        "text_sha256": "91cbeef78be6a2dfea79e7f5eb68782f7d1cd1fd995c5a6c4ef68029c1442219",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "949a5e31d639910299188495",
+        "text_sha256": "027027a83c817a33eac87d35ef4e5c30307106a629594252a16e030f53b5a871",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "a2f0474e21f5c0b09ff14b21",
+        "text_sha256": "561546eacfdcc47867dffc11bb5072ee1ba71cc2df9b3b602827caf869b3c80c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-003: Verify actual target identity, effective permissions/protection, integration settings and retained audit before execution."
+      },
+      {
+        "candidate_id": "24c34fe6d24d3e702e472aed",
+        "text_sha256": "e4644b91d065930f5529bb1c27c07912cc52082b31b21ca1bfe3170063123dc1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-004: Exercise representative user, security, integration, CI/CD, template and audit behavior under authorized test scope."
+      },
+      {
+        "candidate_id": "b933b730daeb0bc038bc2d12",
+        "text_sha256": "9886688538a1b230c2a54db8a9e70e2a51d2c1c8464a4f65479157795bfa1296",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-004: Exercise representative user, security, integration, CI/CD, template and audit behavior under authorized test scope."
+      },
+      {
+        "candidate_id": "77611945f8ea0f9aaed45cff",
+        "text_sha256": "0d932879d344eb8fdbaa0968cd74f964e2a8eae4ca31d00daa7abe785d18d1a2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-004: Exercise representative user, security, integration, CI/CD, template and audit behavior under authorized test scope."
+      },
+      {
+        "candidate_id": "70e6a61769e57df9610bbc47",
+        "text_sha256": "9891184f0ac019115a1497449e59e18e87b239151dc50aa0a6f2e9ff4d256735",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-004: Exercise representative user, security, integration, CI/CD, template and audit behavior under authorized test scope."
+      },
+      {
+        "candidate_id": "8b733cd041bcd9b65ec8addb",
+        "text_sha256": "398541329dccdbeba4f09c2637c210f9994e506076b6f8da0747ec5180244343",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-004: Exercise representative user, security, integration, CI/CD, template and audit behavior under authorized test scope."
+      },
+      {
+        "candidate_id": "361b08f0c8c5c4f7813ca944",
+        "text_sha256": "de849f00d7026fb8b5693861bbe497344f9e47fd301a817be7b743395507393f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-004: Exercise representative user, security, integration, CI/CD, template and audit behavior under authorized test scope."
+      },
+      {
+        "candidate_id": "26995461281747195f211910",
+        "text_sha256": "4e40c0bac2b5f4192c024e79512b2bfd85b884150135ce076fd4e7a1ce9e0879",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-004: Exercise representative user, security, integration, CI/CD, template and audit behavior under authorized test scope."
+      },
+      {
+        "candidate_id": "f2eb5c98dd51e0c6ff35e304",
+        "text_sha256": "917a15a82d58b77d46d9ea0ffa0446d187b70f6c7db8a279ee2a111d9129462b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-005: Communicate a real approved schedule; the source's dated diagram is an illustrative schedule, not actual project timing."
+      },
+      {
+        "candidate_id": "410cce4d8f2d7f832df8cab5",
+        "text_sha256": "10277a947d7f216240d9e0440bce68f8273a45da85a872e62d0f60f45292357b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-005: Communicate a real approved schedule; the source's dated diagram is an illustrative schedule, not actual project timing."
+      },
+      {
+        "candidate_id": "cc7f6f6412ed2eb1d4ab2a33",
+        "text_sha256": "781800b0231341b59488e0f435a7910c6335b0e1f25751e66a3a09bd20f8c0c5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "a63bcd7ab4790be01f3d52db",
+        "text_sha256": "50cfb85e948adb846842ddf0b4047c0a27b31c31a956172aee7449c54d4173a3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "a1c3acd66852fd65814ee7a5",
+        "text_sha256": "6fd08f0279dfff99f0a5633db8411e8c6606a321b5a729c31779fe07d215ce8d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "3f0acba84e65141a9e808091",
+        "text_sha256": "34f4be8efcf58bbcab46d2b3cc10a81a824f4806ad489e5d3c2c3c74b56b567b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "a822ffce6356bef36c5beeae",
+        "text_sha256": "cee2ea2b5d70ed2bfe5df6d978d4b88fffd2e22d262ca6744efbbf24c44b8a5d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "3e822300d2a8a6c6409be68e",
+        "text_sha256": "de78d527c4efa7e12dc65fd66b94ccb80c68d4327bcf823c3984cc8dee2605e8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "621079dea606887c6278f83d",
+        "text_sha256": "34aa3763cd80643454233f219d0b3f83d2c205a34bb1f4290a4abe90e5bd808d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "b8eecf13b52cce9957f10b57",
+        "text_sha256": "1a2b8103be10ba42654a3311b7b0ede77df70abadff640d5949d70ee36434b14",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-006: Explain repository timing, expected downtime, emergency contacts, rollback triggers, support, training and process changes."
+      },
+      {
+        "candidate_id": "00ec2c9168d70f8366bd5b5e",
+        "text_sha256": "602bbf881dedec1d904c3e3fdae0a53870f94ed2a3368c08ff1b26ee9812ed87",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-007: Maintain appropriate status cadence and issue updates and announce success only after validation."
+      },
+      {
+        "candidate_id": "7a51aa0663f06b38ed042e2d",
+        "text_sha256": "c4b978100c586c533c8684443af94c81d3a4677599cc54628e16b4d4c13af4ed",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-007: Maintain appropriate status cadence and issue updates and announce success only after validation."
+      },
+      {
+        "candidate_id": "75a22fbaf253fa4ec344ab9a",
+        "text_sha256": "1359ca6bdc022100142919899d918918bd949ff17b9b241e3de445dd33505a22",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-007: Maintain appropriate status cadence and issue updates and announce success only after validation."
+      },
+      {
+        "candidate_id": "54a703ea80c633d1b80a9950",
+        "text_sha256": "9233a480bf40416cf88f658d0c198aaa27f07c739d6287b1ddf8f49719962a6e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-007: Maintain appropriate status cadence and issue updates and announce success only after validation."
+      },
+      {
+        "candidate_id": "bcec281539172ed45e8de4dc",
+        "text_sha256": "8cfe2584e1ffd35cc7802705b56a73df5d95c729acf4f6bb16e59d0806f1f436",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-007: Maintain appropriate status cadence and issue updates and announce success only after validation."
+      },
+      {
+        "candidate_id": "3b123a5dd7221db91a354f39",
+        "text_sha256": "20fbe194a8fb8364d530916e68b95c21dbbcfee182f719cc3ec8e4d184b7e902",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-007: Maintain appropriate status cadence and issue updates and announce success only after validation."
+      },
+      {
+        "candidate_id": "fc903cc5264514c42a53667a",
+        "text_sha256": "1ed69b6e4d51bc6fb2b1e34c816209904a7d33159235f01f4c76f80d3488a407",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-008: Apply an approved source write freeze, pause relevant triggers/integrations and record active references to prevent divergent changes."
+      },
+      {
+        "candidate_id": "99b1b7606826b7f194b5c745",
+        "text_sha256": "544c21fb79f696bb8e21ea266f865c2ab7268dbc685cc4af0a4cffbd0531467d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-008: Apply an approved source write freeze, pause relevant triggers/integrations and record active references to prevent divergent changes."
+      },
+      {
+        "candidate_id": "4f5b463e907765c7246e12db",
+        "text_sha256": "db1ff6216ad3aa865e6b219734cdbf24dbdf3b330065d4320b7f84e179516d19",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-008: Apply an approved source write freeze, pause relevant triggers/integrations and record active references to prevent divergent changes."
+      },
+      {
+        "candidate_id": "aee829fcd744200492b4b106",
+        "text_sha256": "91d26a1b5481004ec0604d439b42c385ef23809817ca450bbe409be3b7ac3c95",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-008: Apply an approved source write freeze, pause relevant triggers/integrations and record active references to prevent divergent changes."
+      },
+      {
+        "candidate_id": "4e5d37f02e59c9ef7cd5c255",
+        "text_sha256": "1381516d3b9510ad34d8040a346d43fba0b21c459290d5c10924335526d2c713",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-008: Apply an approved source write freeze, pause relevant triggers/integrations and record active references to prevent divergent changes."
+      },
+      {
+        "candidate_id": "69fb47a38f8b48f58a1c3ef5",
+        "text_sha256": "1735c922866c642af4631e06f2093fd009823efe1c2f8296168535e4ab7fe441",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-009: Create restorable custody covering all branches/tags, source configuration, pipelines/variables, access and work-item states before migration."
+      },
+      {
+        "candidate_id": "1538913e00843e2b3a16c775",
+        "text_sha256": "23839bf0f518deb16530fadf05336c11a63d9b0ed18f07b0faff77828738c8b0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-009: Create restorable custody covering all branches/tags, source configuration, pipelines/variables, access and work-item states before migration."
+      },
+      {
+        "candidate_id": "a23c07d6589d335bf5faa6cf",
+        "text_sha256": "cef04634b489f415490071f3c6dc50f6f23267300f3ce663a98423156113d9a6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-009: Create restorable custody covering all branches/tags, source configuration, pipelines/variables, access and work-item states before migration."
+      },
+      {
+        "candidate_id": "fdd00a73b432c16efbc8bae4",
+        "text_sha256": "03b188c01b5531c678042f97a7cb912d39cb6970ca7f8166fdf39954a519b65a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-009: Create restorable custody covering all branches/tags, source configuration, pipelines/variables, access and work-item states before migration."
+      },
+      {
+        "candidate_id": "d7925eb2214f505db7b92385",
+        "text_sha256": "c095a8234b1a6707cf695218357a5a3c1c0532a8a39d4bb0e906f1b20e190caf",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-009: Create restorable custody covering all branches/tags, source configuration, pipelines/variables, access and work-item states before migration."
+      },
+      {
+        "candidate_id": "b00fd3e684083b655238176a",
+        "text_sha256": "cd343db1fa966eff43e79d751bf01cff65fff443817a30d78d780c2ab7dcc18d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-009: Create restorable custody covering all branches/tags, source configuration, pipelines/variables, access and work-item states before migration."
+      },
+      {
+        "candidate_id": "29de5fd362d6da97b9187343",
+        "text_sha256": "e943e7efa75fe046dbe0d0fe24e4a013526830188c1d91f02cfc81a23b15536d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-010: Record source protection, build/release, identity and tracking configuration without exposing raw credentials."
+      },
+      {
+        "candidate_id": "aa329113e4d200d9820589d8",
+        "text_sha256": "e5347ad220f3d02bc1d89b1ae61fda9714580fe669044e8bc4eb9e762f45d970",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-010: Record source protection, build/release, identity and tracking configuration without exposing raw credentials."
+      },
+      {
+        "candidate_id": "5788194a08ecd4c2a83dff41",
+        "text_sha256": "aea2daf3c57649f013458ec16a3b8fa6f65cb3e934c3364354191b41d02874bb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-010: Record source protection, build/release, identity and tracking configuration without exposing raw credentials."
+      },
+      {
+        "candidate_id": "f46c9234df461653798e672c",
+        "text_sha256": "257c024df085831baa631e7bd529ab5e3e6a5c7771790cd7117d8a5870b82aff",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-010: Record source protection, build/release, identity and tracking configuration without exposing raw credentials."
+      },
+      {
+        "candidate_id": "388458a6357b41babb32ee8c",
+        "text_sha256": "bde56c66efb7af3caf97ad8ab924e3fa713e46475d06703f5fc5e156c8c03a12",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-010: Record source protection, build/release, identity and tracking configuration without exposing raw credentials."
+      },
+      {
+        "candidate_id": "4518e65973fb35c195d97746",
+        "text_sha256": "ab148d9c98081f8e260a5d3379c518d61573ac5eedd8be3aaa6460de2aaa5192",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-010: Record source protection, build/release, identity and tracking configuration without exposing raw credentials."
+      },
+      {
+        "candidate_id": "9bf74fad9e2debec7f656e72",
+        "text_sha256": "53f4aa7d82cf3564d52c51ab5e9fb329d95087cdb1d72e36115be85b44009c4b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-010: Record source protection, build/release, identity and tracking configuration without exposing raw credentials."
+      },
+      {
+        "candidate_id": "c8e47c0684861ea9f2d82f00",
+        "text_sha256": "9f539354d4d1a418b269bf7eada225f59a178a23d299d007b62c9428067fdf17",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-011: The source illustrates ado2gh migration, visibility and queue/wait behavior; verify exact tool contract and destination identity before any execution."
+      },
+      {
+        "candidate_id": "4309e618e240242fafc4acf4",
+        "text_sha256": "74188aecf7cb6ffdc18453f94343feb6da94026070333d7238fff56916a9f3b6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-011: The source illustrates ado2gh migration, visibility and queue/wait behavior; verify exact tool contract and destination identity before any execution."
+      },
+      {
+        "candidate_id": "28a53aa98fce938b5e5704d2",
+        "text_sha256": "af5824ed89f44497bd84c51d166e71cc8e03409c4d10852ed2713b83979658c9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-011: The source illustrates ado2gh migration, visibility and queue/wait behavior; verify exact tool contract and destination identity before any execution."
+      },
+      {
+        "candidate_id": "7fd8f99ad1d7ecc2fc1f59cb",
+        "text_sha256": "2ad149f9b904c6c8685fc7ddf9c0ed0ce6bb5627f022366bee1f9dd52e46d83c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-012: Inspect per-repository logs and warnings, track completion/performance and communicate actual progress; queued status is not completion."
+      },
+      {
+        "candidate_id": "1af020c89e135b33cc48a4dc",
+        "text_sha256": "80164bb4b3566e1c34907523f579bdacf97899c474bd360a8235c2e669149df0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-012: Inspect per-repository logs and warnings, track completion/performance and communicate actual progress; queued status is not completion."
+      },
+      {
+        "candidate_id": "c42754d0fb6c2354e52b78f1",
+        "text_sha256": "c01d8d511f999537de98a14d2bbd847847872d87378f5a7f2809fe71bbedc572",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-012: Inspect per-repository logs and warnings, track completion/performance and communicate actual progress; queued status is not completion."
+      },
+      {
+        "candidate_id": "b4c9323cd40a9fb03644ec63",
+        "text_sha256": "3dfe5d36709a224922dc09849098c67c9bb62df9e75c7b0977f41edf0b04e1cb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-012: Inspect per-repository logs and warnings, track completion/performance and communicate actual progress; queued status is not completion."
+      },
+      {
+        "candidate_id": "1020eedd6b61d04b617d05c1",
+        "text_sha256": "5ea0a032c4be583456501e5e221a6169dd0ae34013d540041474b6a70c3ef87c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-012: Inspect per-repository logs and warnings, track completion/performance and communicate actual progress; queued status is not completion."
+      },
+      {
+        "candidate_id": "49c34e571b6469354d2f6386",
+        "text_sha256": "1ca115acf7c3208c4223a63ba85d4ff8d50741af4bf0a463220b0f6506c3e783",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-012: Inspect per-repository logs and warnings, track completion/performance and communicate actual progress; queued status is not completion."
+      },
+      {
+        "candidate_id": "3001f6ace3c54d9c89a925a4",
+        "text_sha256": "2b5870af747e29de575a3e554c013e422002ec84eedb48465410bc3268cf87ea",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-012: Inspect per-repository logs and warnings, track completion/performance and communicate actual progress; queued status is not completion."
+      },
+      {
+        "candidate_id": "4a9ff867093419130ed7a394",
+        "text_sha256": "ce40a8af622775994aa596af9df005c55a5bbcfa5d46df7d90b8f50f07ac6d21",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "b6ce675f25a63845068eac4e",
+        "text_sha256": "352c4105a80e1f79fa089fe329650e589462e07801fc6a3923ec5d738c1d9e08",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "fd673505d88b1c85ac9595a6",
+        "text_sha256": "5c8d81ee7350d0c10e4e3361b0095fed533661efbe1ec4e785a71e7ca6f6b2a8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "7b40d1d6338793125ac8e8fb",
+        "text_sha256": "4fe92ff9aaedeb3a727a6c0df337d829c11e2785dd0f4b39ea3a29b7a90407c5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "224e4eb6e985c095a528f542",
+        "text_sha256": "addd9747d0ee651514679df0fe37ba541449ab02a7e2a466800901365b24cf5c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "719bae55b6a0a53db61638f2",
+        "text_sha256": "b78c651e7fe7089e40c862dc41d8a331b3ad1a17709a7dd667476026b8e7c833",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "3e354bafe63e90767a915f84",
+        "text_sha256": "fbeba5ca797d913ab545c6c62810c6f25248afc3c493691726bc75645b5e2c59",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "d42b4d9097898fb517c46a50",
+        "text_sha256": "b1fd3873bb8859c70bc9a8f5cb319defe909854da508fd76ecabaa40e828a96c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-013: Diagnose failures, perform authorized cancellation/retry only after correction, document workarounds and escalate owned blockers."
+      },
+      {
+        "candidate_id": "68e2680b81b0da99db253b25",
+        "text_sha256": "a412dcf93b3983ebf63cc29c5905b6b483cc93be9309f83602f1ef00412bd000",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 166-166 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "e7178fd811bb068e2abf236f",
+        "text_sha256": "70f990ea22a593afc3cd96843985f4e8c4e2fac7d41f61d15ea01e1f1517bbc9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-014: Compare exact source and target reference/content/history identities and access; equal branch or commit counts alone are insufficient."
+      },
+      {
+        "candidate_id": "9fe3c8c16b30fb329a9fcb5d",
+        "text_sha256": "4c194ff2de1c2d84a5a62e67cc4394d70e69404e8c676b28805cf57f58be6cb2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-014: Compare exact source and target reference/content/history identities and access; equal branch or commit counts alone are insufficient."
+      },
+      {
+        "candidate_id": "83f725195e7d5265d1f525bd",
+        "text_sha256": "47a98c42657e197178e858d98f9cb53f7f4c3ebae103c926caa08d1229994ae2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-014: Compare exact source and target reference/content/history identities and access; equal branch or commit counts alone are insufficient."
+      },
+      {
+        "candidate_id": "9dcb5a0c6588b6fec996bbb4",
+        "text_sha256": "dfd07b1cf2d58e0ce7769affac64992e4be60b6e6a0cdcb4e175db616a8788d2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-014: Compare exact source and target reference/content/history identities and access; equal branch or commit counts alone are insufficient."
+      },
+      {
+        "candidate_id": "bcf6b110686354d16a4518c4",
+        "text_sha256": "60bdb517c565e47e93489e5170c2d24fafeb16ed2ec408fe9354b2aa6aabe472",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-014: Compare exact source and target reference/content/history identities and access; equal branch or commit counts alone are insufficient."
+      },
+      {
+        "candidate_id": "f169ea241c4c2ca51e21f685",
+        "text_sha256": "40fe90758fe7d1ec5c31f62ae9224170a0bc4d0e8ae01287f938f660721b4a78",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-015: Validate scoped review, comment, tracking-link, label, milestone and actor metadata independently of tool support."
+      },
+      {
+        "candidate_id": "7a0b4374dd784a4c581ff2b6",
+        "text_sha256": "51ae35615836b91f1830dff514d82cb07f1f29d8610163ffeb22c220e938295a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-015: Validate scoped review, comment, tracking-link, label, milestone and actor metadata independently of tool support."
+      },
+      {
+        "candidate_id": "9694c071e2886b77d17a8e40",
+        "text_sha256": "7ec08124d4d8792457c11eac134cbfea3efbd81133423da36275d2786cfbc8c3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-015: Validate scoped review, comment, tracking-link, label, milestone and actor metadata independently of tool support."
+      },
+      {
+        "candidate_id": "a920134a285316f2dd731d3c",
+        "text_sha256": "a1285d7fa735a11af2bb832e70e272fc1f33168c4f52a2f2594e250fdfdd64fe",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-015: Validate scoped review, comment, tracking-link, label, milestone and actor metadata independently of tool support."
+      },
+      {
+        "candidate_id": "ecccd64aa1c8d4b0628f984d",
+        "text_sha256": "79467141210981c1c8bde2d1fd418b8aaeb760897ab25f3b28433f522fcd9150",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-015: Validate scoped review, comment, tracking-link, label, milestone and actor metadata independently of tool support."
+      },
+      {
+        "candidate_id": "a88edd11b45a467b4f1eaefc",
+        "text_sha256": "d5906525eeea8a7493e2d1cdab556ce932b052d3808ddb4b64203afb4354c034",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-016: Verify actual target visibility, permissions, eligible scanning, hooks and branch/merge settings."
+      },
+      {
+        "candidate_id": "a3ca9cf2fb99fd214ca7701b",
+        "text_sha256": "ffa3584515f3cc0b348b1eb13868afad0ad83b4602eae029c7377aa4ec792519",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-016: Verify actual target visibility, permissions, eligible scanning, hooks and branch/merge settings."
+      },
+      {
+        "candidate_id": "3e2e42e611d4fc3a418ebe63",
+        "text_sha256": "efe4597aad6782423ad24ac796fcc95b183b7ec59b313ea03402c5253bbbb79d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-016: Verify actual target visibility, permissions, eligible scanning, hooks and branch/merge settings."
+      },
+      {
+        "candidate_id": "4ab17efc046de3757f72069a",
+        "text_sha256": "046982fbd5c52f00ac540d6a38de0f265d10fb74a33322eb4edc8b0a0c9b3fad",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-016: Verify actual target visibility, permissions, eligible scanning, hooks and branch/merge settings."
+      },
+      {
+        "candidate_id": "84b9884daec5cc99aac3bb85",
+        "text_sha256": "bd6557ecc62bd50a9cf6af01a0453b15c68bc2b36291e32972b7c22eea8771fc",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-016: Verify actual target visibility, permissions, eligible scanning, hooks and branch/merge settings."
+      },
+      {
+        "candidate_id": "78ab1df7aa1385af3f1f7863",
+        "text_sha256": "b2985490a7cdc826a98c33f96c5e7013e28a636c98e61c729ca52aaa95d147f0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-016: Verify actual target visibility, permissions, eligible scanning, hooks and branch/merge settings."
+      },
+      {
+        "candidate_id": "d1124983f7f78a8db8e2ee9d",
+        "text_sha256": "5ad067a363b16456ca6059e2c0f9ac262601a5184a7870508f98061ff0841a12",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-017: Prove core clone/fetch, branch/push, review/merge, build, issue and search behavior."
+      },
+      {
+        "candidate_id": "d7f48bf68c11c565ff322c7d",
+        "text_sha256": "f134f70170b512b10497c981ba603c3e7556600a0c65b4c96820c92eaa1d4558",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-017: Prove core clone/fetch, branch/push, review/merge, build, issue and search behavior."
+      },
+      {
+        "candidate_id": "31fec97e42b59d8c2388ffe2",
+        "text_sha256": "58f0306d9dedb535c2cd04eb270cc5191a9c0a77c54ab711c67abd2cf3593331",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-017: Prove core clone/fetch, branch/push, review/merge, build, issue and search behavior."
+      },
+      {
+        "candidate_id": "f9a9480a8d607170f7148819",
+        "text_sha256": "355bd04421a4732b0eef73b282a72cb053786d6f9ad36bb065fd0ebd20a852d2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-017: Prove core clone/fetch, branch/push, review/merge, build, issue and search behavior."
+      },
+      {
+        "candidate_id": "2ef7bbd8962467e5376aced6",
+        "text_sha256": "b784c94856fe17a5ef82ac346e723ca9a39003ff0ab66795e2913eab55840b1a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-017: Prove core clone/fetch, branch/push, review/merge, build, issue and search behavior."
+      },
+      {
+        "candidate_id": "5affbfe15d4738d708709217",
+        "text_sha256": "ebd2833446b1f3af3c09a765327c78d85e0f3fd1ce23aef50f148256dc8dffd3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-017: Prove core clone/fetch, branch/push, review/merge, build, issue and search behavior."
+      },
+      {
+        "candidate_id": "d33dc4ccf0c4ce0f49c75ead",
+        "text_sha256": "d79838adfe51af03e4ff98fc4830fbb5f86748496fcd31195301ffa26ff0afd8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-017: Prove core clone/fetch, branch/push, review/merge, build, issue and search behavior."
+      },
+      {
+        "candidate_id": "614dd86298195945542e0630",
+        "text_sha256": "99ad66f743a1d0ca070c6163e1f5f847faffcae745ccd568955cb15f8df5a23c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-018: Validate all scoped identity, retained-service, webhook and automation integrations rather than merely labeling them critical."
+      },
+      {
+        "candidate_id": "78c5be15f56afedd891d9653",
+        "text_sha256": "9ffee608ddd7a86354cb4588504baafe313a765de0b362eba014972fbb290754",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-018: Validate all scoped identity, retained-service, webhook and automation integrations rather than merely labeling them critical."
+      },
+      {
+        "candidate_id": "84221a70d2f41ada209b4c60",
+        "text_sha256": "386a1276e276d0b1708b6c6d4934ef25012cf8f8e87ef2554856ece9b2700574",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-018: Validate all scoped identity, retained-service, webhook and automation integrations rather than merely labeling them critical."
+      },
+      {
+        "candidate_id": "35b7d980d58e7e684cb40987",
+        "text_sha256": "e1bcd769acb1958ce6011ce28a62332612a5a892e71e94ec11737ac546a088ad",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-018: Validate all scoped identity, retained-service, webhook and automation integrations rather than merely labeling them critical."
+      },
+      {
+        "candidate_id": "f2cb1bcef53fcd3fc9c1ddec",
+        "text_sha256": "4ee4c68a5fa2798cd83fad355beb869a4c71a6d6b902459f9b8439d42da61da2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-018: Validate all scoped identity, retained-service, webhook and automation integrations rather than merely labeling them critical."
+      },
+      {
+        "candidate_id": "643d4896a336360491bfb38c",
+        "text_sha256": "72d9c206d18589458d76022b2b0533f159a8d4df020f32ac9f2fbd53ef069607",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-018: Validate all scoped identity, retained-service, webhook and automation integrations rather than merely labeling them critical."
+      },
+      {
+        "candidate_id": "16dc0d84beac2c68bb57e5fd",
+        "text_sha256": "43acc1df91b3d68434f90a0bc9932995cb33592c363c86940fff2d68154679f1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-019: Inventory imported actor placeholders using supported logs/export/UI before mapping them to verified users."
+      },
+      {
+        "candidate_id": "5745d660fea1792801717e89",
+        "text_sha256": "8ba9256ae1747868cd559b7dc476462d172db37fdd1703b878825affcb4059ce",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-019: Inventory imported actor placeholders using supported logs/export/UI before mapping them to verified users."
+      },
+      {
+        "candidate_id": "efb7e275879f6f20e199f6c3",
+        "text_sha256": "7d6edec082c3474b5f64661fd47c3acdc42cf91bafa29b71377e8670d88c1254",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-019: Inventory imported actor placeholders using supported logs/export/UI before mapping them to verified users."
+      },
+      {
+        "candidate_id": "811c344c560cc21c23fead06",
+        "text_sha256": "61c6659a792717a211ee32172037d78420a48368374ebea4cab526affad8e630",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-019: Inventory imported actor placeholders using supported logs/export/UI before mapping them to verified users."
+      },
+      {
+        "candidate_id": "3c07664f6fb813060047683f",
+        "text_sha256": "8b1d828c4c5375009c7c30c1424486b711bcc540010dd23ade6f6610ae2fcd11",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-019: Inventory imported actor placeholders using supported logs/export/UI before mapping them to verified users."
+      },
+      {
+        "candidate_id": "8024583b668e1ed2c5b89f88",
+        "text_sha256": "18bdbfce1e2eaeb61e0b2c5d897cb2bfc151eb5a2fcecf031322302ac48bdc0e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-020: Reclaim only verified identities with required organization access and account-model-appropriate invitation handling; source commands and mapping names are examples."
+      },
+      {
+        "candidate_id": "51f2fb6af8b972ac4de571e6",
+        "text_sha256": "47f02b27344c029063b6521586029bbfee42069623907f837e3ee40b0780afe3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-020: Reclaim only verified identities with required organization access and account-model-appropriate invitation handling; source commands and mapping names are examples."
+      },
+      {
+        "candidate_id": "3b86ad0c98db1e0ece373285",
+        "text_sha256": "158d42867e9d229525f37bb35c4f041c872b35685d4802a3c0610c1b44084df9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-020: Reclaim only verified identities with required organization access and account-model-appropriate invitation handling; source commands and mapping names are examples."
+      },
+      {
+        "candidate_id": "6fa4ebb32f57689b90a40eaf",
+        "text_sha256": "ab9743e9a8a3415e9ac14e8c22c5ba0339e0f1009bfea22560585659bb2123c8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-020: Reclaim only verified identities with required organization access and account-model-appropriate invitation handling; source commands and mapping names are examples."
+      },
+      {
+        "candidate_id": "adc90efafa22ab95503414c6",
+        "text_sha256": "57f8542e4820667df05115d196f7aec09b9af6b8015600d23654366573d67997",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-020: Reclaim only verified identities with required organization access and account-model-appropriate invitation handling; source commands and mapping names are examples."
+      },
+      {
+        "candidate_id": "65686c1ed4d7b911b2b7496a",
+        "text_sha256": "4d7ede8df6f38d3ace6a10fa98fe5976d1207d7d0b08efb398bb092bbe6c8f21",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-020: Reclaim only verified identities with required organization access and account-model-appropriate invitation handling; source commands and mapping names are examples."
+      },
+      {
+        "candidate_id": "28db7e62560748cf71187b17",
+        "text_sha256": "10497f6ec914443f40356d35b1da2f78bea647244b007d984b7e97e782c74ef6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-021: Verify resulting attribution and explicitly retain unresolved placeholders instead of inventing matches."
+      },
+      {
+        "candidate_id": "e9fc2028b284749a12059eca",
+        "text_sha256": "5bf0f79e41b758fc1e6df01e7678045271e183a7eecf7fc0fb797756d2fce68b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-021: Verify resulting attribution and explicitly retain unresolved placeholders instead of inventing matches."
+      },
+      {
+        "candidate_id": "bf59067a2717eb6a7e7c289f",
+        "text_sha256": "5d5e60838fdd4f6f5a30c35425e147169cdd19a71e56d87e2d6252b014f39406",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-021: Verify resulting attribution and explicitly retain unresolved placeholders instead of inventing matches."
+      },
+      {
+        "candidate_id": "97350bf7b9d798599bd8a8a6",
+        "text_sha256": "85b0c879dee10ae9ed31ebd33374841cca0231b3b432539a34617eaf87954587",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-021: Verify resulting attribution and explicitly retain unresolved placeholders instead of inventing matches."
+      },
+      {
+        "candidate_id": "03b46624ec75ee4677ef0028",
+        "text_sha256": "dd32e18397e108dcdd03e96cc0109dfe3ed95dc174cb8fd9e80bcd75b8497659",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "eb256d37a762de80c4d85153",
+        "text_sha256": "1e28f6bf4de20019d405fd111dd678cff281143802557bd36e6a400be04ad4f1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "356509412bff05eb1777d477",
+        "text_sha256": "7a9f2e088b648ed0f4efbac292a6a134cc4e646462e91bae256dd67214402c45",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "deef8fd0336308d191e9cbef",
+        "text_sha256": "71f808d50b98f6b82043c6eb1b0b9dc7a1b3cc3ad3554f343c05788a1f13e4dc",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "815963899fb49af693577afe",
+        "text_sha256": "0f0a0c244a439ff1c7af7cd85f61f6b2e251a7aab77dd237be609c217712577f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "4fc95e5bf54a133e36ebc5fd",
+        "text_sha256": "08009cab96f604883c9ec9baed80813834d854e07371cafda314f2dedf123900",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "b1abdfbb5f300b15adcfd7da",
+        "text_sha256": "231b328bfb018b1a8be3c5f31b3c71c5bdb955f3bee851048a2c3252b4082d32",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "74a8dcce38ff3a8921c30106",
+        "text_sha256": "58bcb19b89998f13675252c1e76b30517c63b20977963952f6e08bb5cfd5f3e2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-022: Where Boards integration is approved, authorize only intended organizations/repositories and establish actual work-item links."
+      },
+      {
+        "candidate_id": "0e176eec012054145df8ff1e",
+        "text_sha256": "33f8d0dba919f6f1cd651c0ee30ee7ca58925fb5b8a2491dc36deaa33e6325a5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-023: Exercise actual commit/PR linkage and supported state synchronization; bidirectional behavior is a source capability assertion requiring validation."
+      },
+      {
+        "candidate_id": "0ff83fa3ff8f9d4e8f504659",
+        "text_sha256": "cc3ef9e5aff21f0f4414d6868f223980a7febd60f2e626d2e8756a956cce7fa0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-023: Exercise actual commit/PR linkage and supported state synchronization; bidirectional behavior is a source capability assertion requiring validation."
+      },
+      {
+        "candidate_id": "a342bc622b7a527b804e118c",
+        "text_sha256": "1ca3ee1c0d69cb9ee2b76419f9e2af954c936c411d2f2fdd8184c01b2f0149d3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-023: Exercise actual commit/PR linkage and supported state synchronization; bidirectional behavior is a source capability assertion requiring validation."
+      },
+      {
+        "candidate_id": "1395069ef62e92c609debb25",
+        "text_sha256": "932d60e5f6d000f52edf95d4679c81e142bd849408fceaeee9ad71e7e669d2cb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-023: Exercise actual commit/PR linkage and supported state synchronization; bidirectional behavior is a source capability assertion requiring validation."
+      },
+      {
+        "candidate_id": "9d02a8369bcffaca7341121e",
+        "text_sha256": "5b5d4fa07230257d801720e618ff14a24b28aab68bdcc09c0f6a2642b83b17c8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-023: Exercise actual commit/PR linkage and supported state synchronization; bidirectional behavior is a source capability assertion requiring validation."
+      },
+      {
+        "candidate_id": "3538c3117c90275f68b6820b",
+        "text_sha256": "646e39366e720f19a7c3a3fab2c1b399c60a3e20f6eafeb6bfe0c878fb9984c1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-024: Configure scoped pipeline service authentication and test it; the source's OAuth/PAT-only example omits its earlier app-preferred alternative."
+      },
+      {
+        "candidate_id": "2bdbca525e4e98f9e707ba63",
+        "text_sha256": "b94c683f0a337914fba3545ad1b18f13da5532dbbb7c48073bfb99e29722d5e4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-024: Configure scoped pipeline service authentication and test it; the source's OAuth/PAT-only example omits its earlier app-preferred alternative."
+      },
+      {
+        "candidate_id": "bcbc2ac795bc176a0bd63ee3",
+        "text_sha256": "6b06501948f39f881c6f4ee616efc72233984bad7b2307fe09874a61455fb9b2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-024: Configure scoped pipeline service authentication and test it; the source's OAuth/PAT-only example omits its earlier app-preferred alternative."
+      },
+      {
+        "candidate_id": "5843289946798710e1aa9209",
+        "text_sha256": "4bfdfa6eb2b895c82471eb78d4907ec76f4482caed029b7afe35a102d77bb65b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-024: Configure scoped pipeline service authentication and test it; the source's OAuth/PAT-only example omits its earlier app-preferred alternative."
+      },
+      {
+        "candidate_id": "d5c78103c0cabff4cb7fc706",
+        "text_sha256": "dc5ca7bbead9bd52b6b90484e7fe189b7612cc7fced432e4b12d262c177ac176",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-024: Configure scoped pipeline service authentication and test it; the source's OAuth/PAT-only example omits its earlier app-preferred alternative."
+      },
+      {
+        "candidate_id": "49c074fbe4430dd145bf4011",
+        "text_sha256": "848970583ac72bc376f8b1d18d6aca042aa496b148599a90ce673e8126859b92",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-024: Configure scoped pipeline service authentication and test it; the source's OAuth/PAT-only example omits its earlier app-preferred alternative."
+      },
+      {
+        "candidate_id": "7cfbc9faf7574a2381dde9e9",
+        "text_sha256": "6862f07f2dc771305b8087d046954d07ffbd423ae429d0535d24bed2f3110cc0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-025: Translate source references, triggers, PR validation and environment approvals without weakening protected delivery."
+      },
+      {
+        "candidate_id": "3329334c5e450c91da348baa",
+        "text_sha256": "df69aeceed87812dba2b2afedc00d9ebeedc65c0de4ab8554e0bc15cc43b6981",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-025: Translate source references, triggers, PR validation and environment approvals without weakening protected delivery."
+      },
+      {
+        "candidate_id": "098994a478062ffc25642fdb",
+        "text_sha256": "8e9bb6fafe55d140bc3ede5f2676833d8a9529efb7aca27fa4a2419f250a376c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-025: Translate source references, triggers, PR validation and environment approvals without weakening protected delivery."
+      },
+      {
+        "candidate_id": "89e443c872623e08dab021b3",
+        "text_sha256": "fa9a882766903f9e9add28fef44858f0a8f1d2bb0881f61c15f426dbf5d50ae4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-025: Translate source references, triggers, PR validation and environment approvals without weakening protected delivery."
+      },
+      {
+        "candidate_id": "ab119007b1e397129941a25f",
+        "text_sha256": "7d944f16c325b9886dea6edcc887ac9850e6982b3eaed8fb12e280e732b936b6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-025: Translate source references, triggers, PR validation and environment approvals without weakening protected delivery."
+      },
+      {
+        "candidate_id": "9c5c98ae97b2f582565b08fb",
+        "text_sha256": "40332487cecabb28913e702c6255ee57a30cd4c6553f45a624ea9246f5850af8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-025: Translate source references, triggers, PR validation and environment approvals without weakening protected delivery."
+      },
+      {
+        "candidate_id": "e7164c998027268315d6f277",
+        "text_sha256": "3ebb0e199a9d95bdebd340bed5a7a2801320268e17f9e33e64ca3dad4b5bd784",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-026: Review supported event triggers and branch/path filters against the actual pipeline system."
+      },
+      {
+        "candidate_id": "00dd34ff679eb6935d5f170f",
+        "text_sha256": "6a936e24e027aaa00599f64fe2a957c5f5d72fca6e04786e4857db5d2e525406",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-026: Review supported event triggers and branch/path filters against the actual pipeline system."
+      },
+      {
+        "candidate_id": "8f16cf46b1396211683c0b76",
+        "text_sha256": "558bf30d0e507bef52a594918af9df9f4d2c7d7ee38f21fc80b617ea9464c732",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-026: Review supported event triggers and branch/path filters against the actual pipeline system."
+      },
+      {
+        "candidate_id": "57bb259f3c017e67a1eac488",
+        "text_sha256": "fafeb77e7b75eb2a4c20917bfb8c255478b8eec5aac8c7bb7029616540a44e75",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-027: Test builds, exact generated artifacts, authorized deployment targets, status reporting and event delivery."
+      },
+      {
+        "candidate_id": "b22f091b7f9d436e26cc089b",
+        "text_sha256": "36c5bea0d3177b3d28c32d9a6b09255ae53705b8bbf2ba2a929b5e7c1ebcf770",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-027: Test builds, exact generated artifacts, authorized deployment targets, status reporting and event delivery."
+      },
+      {
+        "candidate_id": "a4f1ade679ca3bd29039aa24",
+        "text_sha256": "38a80b2cfb555af86c5a4ebc5cf6d63000067a35efe14333c546b4b1d8624842",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-027: Test builds, exact generated artifacts, authorized deployment targets, status reporting and event delivery."
+      },
+      {
+        "candidate_id": "4ef3ba47b632f0a3865af325",
+        "text_sha256": "e3757856cca9fc40236f915f2f5c184c41a00c02eaae484710ac2f3659fb4a4b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-027: Test builds, exact generated artifacts, authorized deployment targets, status reporting and event delivery."
+      },
+      {
+        "candidate_id": "86f638c2e77bb9892ed92eb4",
+        "text_sha256": "fdf0e52a40f462719b1afcc40ba008a7ebf9732e3eb0fc8cf9f7d020bc4c7239",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-027: Test builds, exact generated artifacts, authorized deployment targets, status reporting and event delivery."
+      },
+      {
+        "candidate_id": "f0f1eda1cc7ebb09ac033750",
+        "text_sha256": "412b5861dfd2d48936d06ae212d7a9d9553c59f6353454013c1eb913b56a3b72",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-027: Test builds, exact generated artifacts, authorized deployment targets, status reporting and event delivery."
+      },
+      {
+        "candidate_id": "4fd6fbfc13aa88f50b1efc57",
+        "text_sha256": "305483f3a8f974748664e4c2f845ea532d576e9c11d5aff3f2d996606dad4a81",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-028: Verify correct user access, membership synchronization, exposure, reviewer and custom-role assignments."
+      },
+      {
+        "candidate_id": "d2f704ff03c485df067e85af",
+        "text_sha256": "d510c3dc7b30e3607e33d6b63d6bd3a83c1e67f58680520625bf3f86ea8d9b02",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-028: Verify correct user access, membership synchronization, exposure, reviewer and custom-role assignments."
+      },
+      {
+        "candidate_id": "de0ab0ef2f1c67882ba55fa1",
+        "text_sha256": "f5d03f7491a92d982afb4263c04fcd282e0a38e6c52a1d98cc67b70e14729ea0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-028: Verify correct user access, membership synchronization, exposure, reviewer and custom-role assignments."
+      },
+      {
+        "candidate_id": "6ce77679393b6ed089de886c",
+        "text_sha256": "93bdf44cbc369f8714e413d944465eb412009d84cc033e2d74cfb7d936d7a5dd",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-028: Verify correct user access, membership synchronization, exposure, reviewer and custom-role assignments."
+      },
+      {
+        "candidate_id": "bfc14176b5e0142d79e4f37c",
+        "text_sha256": "9c3f91f160c7866a3db6cc4c4406414bdca74e3521b9a2af773f89564560d5ff",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-028: Verify correct user access, membership synchronization, exposure, reviewer and custom-role assignments."
+      },
+      {
+        "candidate_id": "62c4dcf1c670325f83c9c8ca",
+        "text_sha256": "d6d74b579c364a5f78861ef0169e7fa5243760d9e6256a238c8f1b1fe6501417",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-028: Verify correct user access, membership synchronization, exposure, reviewer and custom-role assignments."
+      },
+      {
+        "candidate_id": "ce11a386f48cb0bee05b05b7",
+        "text_sha256": "a43f389f72bc6e283d8889b975557c1fa1e099777375374725c88d12621ddd4a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-029: Test approved SSH/HTTPS authentication and actual credential scope and document requirements."
+      },
+      {
+        "candidate_id": "2b3bcf5065a5a5a4b44a821b",
+        "text_sha256": "8fb7ed88475a8e467126931005aa60185079b6dea9c3dbfd4924099464b45b4a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-029: Test approved SSH/HTTPS authentication and actual credential scope and document requirements."
+      },
+      {
+        "candidate_id": "206f67e59d401835d83d2530",
+        "text_sha256": "9882bfb661f7cbaf76aa3fd7f6114bd3524b9f576b2484e6d21a4a64df713bfd",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-029: Test approved SSH/HTTPS authentication and actual credential scope and document requirements."
+      },
+      {
+        "candidate_id": "0a4de467003d38bbb8730e51",
+        "text_sha256": "523ccd563e9730ec8cdaee940dfe6636a16c86c87eb5e814a6a2de7f5040cf21",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-029: Test approved SSH/HTTPS authentication and actual credential scope and document requirements."
+      },
+      {
+        "candidate_id": "3427f5943c24b78b7e7b01dd",
+        "text_sha256": "3251111e509236b1e05531ebb07424bf0d3fed63207b5a02df16b7824e837f2d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-029: Test approved SSH/HTTPS authentication and actual credential scope and document requirements."
+      },
+      {
+        "candidate_id": "81788ad4f755bc09c7a0740a",
+        "text_sha256": "0dcb2210fffaf88cab3b1c7460e0c28b8a640c507b3acfe5fff03fa96b5a4298",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-029: Test approved SSH/HTTPS authentication and actual credential scope and document requirements."
+      },
+      {
+        "candidate_id": "f86b74aa5e38ccfccc9ad53f",
+        "text_sha256": "c54b99eafcdc0da17b50fd7dcb5a14a4e58f1ad44701a22ba01ae192b5e8b4d8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-030: Update only approved exact remote, tracking and integration references; illustrative bulk scripts do not authorize broad changes."
+      },
+      {
+        "candidate_id": "5a7a24dedb62dcb676fdfbd8",
+        "text_sha256": "a416b27b49b239c4922d64c0ce0fe30c88629808a65b877ba8e8c85ffe904726",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-030: Update only approved exact remote, tracking and integration references; illustrative bulk scripts do not authorize broad changes."
+      },
+      {
+        "candidate_id": "34c7e83037184470fa6e59fe",
+        "text_sha256": "04cb393d3ae78caea1f33b9ed256134c422cb99ed7b4dbbf521e98e84c9c966e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-030: Update only approved exact remote, tracking and integration references; illustrative bulk scripts do not authorize broad changes."
+      },
+      {
+        "candidate_id": "dc80d7d62623e87b76e61445",
+        "text_sha256": "7a8fd20c4e2220385e4ff2427a3ae531f731d12de764871388ff1d876a80bf99",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-030: Update only approved exact remote, tracking and integration references; illustrative bulk scripts do not authorize broad changes."
+      },
+      {
+        "candidate_id": "3b03ad0344d53026878ed731",
+        "text_sha256": "11c0c45bc2dce6d37a2fc0068bfd3cd5cda41f0cee239bdca9c9b41b11c0cf1e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-030: Update only approved exact remote, tracking and integration references; illustrative bulk scripts do not authorize broad changes."
+      },
+      {
+        "candidate_id": "18e46515982d91a9318507ce",
+        "text_sha256": "e080865819222df4dbf4ea664adfe8ffc799929daf40216357b36fc69824df3d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-030: Update only approved exact remote, tracking and integration references; illustrative bulk scripts do not authorize broad changes."
+      },
+      {
+        "candidate_id": "ce093a9947b7e6420b62d9b2",
+        "text_sha256": "fd1cfd514424c0ee17eebfdd112437a73fc7d7da988490e45f173992cfe91906",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-030: Update only approved exact remote, tracking and integration references; illustrative bulk scripts do not authorize broad changes."
+      },
+      {
+        "candidate_id": "a3eafaa16abe17c4d39f9d68",
+        "text_sha256": "6ebc79b8e7bbb8b935c1c23e5319a5dfbff456b8ea9120c14a407e7c25c47274",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-031: Handle cached credentials and password-manager updates through the applicable credential authority and supported process."
+      },
+      {
+        "candidate_id": "0b1ecd0ca2ea74157ba4ee9c",
+        "text_sha256": "9c8adfd61a331d26667956185989afffe960618125b678343e5fb4242cabbd7f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-031: Handle cached credentials and password-manager updates through the applicable credential authority and supported process."
+      },
+      {
+        "candidate_id": "5b074703a646b972dfd6eb89",
+        "text_sha256": "1aa30cadb2303f2d7ba46ced30ecc680b05cc0d346e86ac497bb2a04103e6ac8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-031: Handle cached credentials and password-manager updates through the applicable credential authority and supported process."
+      },
+      {
+        "candidate_id": "ef404a798636f44e5094550d",
+        "text_sha256": "cdedf6d8c29fa7b58cd134c7993da8c45f5c4616944b6eaf4c7026d3546bed77",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-031: Handle cached credentials and password-manager updates through the applicable credential authority and supported process."
+      },
+      {
+        "candidate_id": "58f536be199c5cd9acec2c1d",
+        "text_sha256": "006ea0d77a3c4934d07ddf365e798a7a61c45c5a1b691effad1d2d5f992fa3bc",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-031: Handle cached credentials and password-manager updates through the applicable credential authority and supported process."
+      },
+      {
+        "candidate_id": "0801e46b111d9a6317ee71b4",
+        "text_sha256": "126b12975943917cef12c51dfaf62f040f0ed65f17a1cadec0d84e068b798700",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "91033bb19d41d48b5a1495df",
+        "text_sha256": "f001da4001758b8fb72604d3b09586353b11a6cc177702229fb7cf652b6262c9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "1d86a0bfe8d655d4928e4fca",
+        "text_sha256": "a6e8a7b5e141e1af22af9e0e67d1b282f8fd3224b91b60c949f75359680d282e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "faa02b7adabf4366956805a8",
+        "text_sha256": "adb5118acafca72df7f99fc8f9dbd2d14a15590653012ada5bd6fca6429210ce",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "9e4d5cc047c3dd732f5e0a52",
+        "text_sha256": "351a931e6cb9f64af8bd0c3ef6349fd187a9aa2f0ec8b7dbd29299266d81a4a8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "6602b4322c1967d88f814dc3",
+        "text_sha256": "43db3fc6e6d78b1105f1e4dab9094dff6e5c952c9cf2a28edc8690fe87e594b8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "55a8d9022ac0623e2989410a",
+        "text_sha256": "127d4afaf8ae52e66709440e1e57bea4078a4bee22d44bd3ecdbcba92585a8f4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "4372c55847d5772c0a218923",
+        "text_sha256": "992166026e6e4e08ef0f29216992c564d21a7bd6487750068a01fd86d413ad5d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "718baa73a74f9c32938382ad",
+        "text_sha256": "c878d065ba952f49274ce311778ede0356f79d588fb10f5cff8fb4acf6be255e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "e2a36d1b5576831ef5dc95a7",
+        "text_sha256": "1e6a4585bfb6f5701bf63cac647e12883f4d5ca4dadb480bf0e446c81875bfd3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "45d068596d032f121cd604d2",
+        "text_sha256": "470da0dd01b64663d116ee235e409ffd6e63d30a440bcc05075d44bf57dfa036",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "d9fdb531558ec0edc2a32f26",
+        "text_sha256": "ece99e0a50e763bb63f6416737708fb0c2e8adc08c57ba781fbeff61418ab975",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "0a8d90f6fc9d40fcdf7fe8ae",
+        "text_sha256": "f244e85ea25b805b7183bd3e1f39fde2f64ef076764c98f5b7810dc7d02a4bdc",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-032: Document target review, branch, commit, release and security practices and provide maintained operation guidance."
+      },
+      {
+        "candidate_id": "a0ea7840d14e6a5c6c822e75",
+        "text_sha256": "b2147ac163e689f96f1d99f1cb8a63ab778dc7055a0eda0d1a6fc1db10700b24",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 338-338 contain frontmatter, table/phase labels, learning-resource references or introduction, not a separate operative migration step. All adjacent execution guidance accounted independently."
+      },
+      {
+        "candidate_id": "27c27d2d42a0bddd0f986bd3",
+        "text_sha256": "ee200f499250d9da6354ec76c6b719edd04bd8df66db982884ef3eaf26974e51",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-033: Declare transition only after every scoped repository, actor attribution and integration has verified function; unresolved identities remain explicit."
+      },
+      {
+        "candidate_id": "8106b53e689a5131f7bb024c",
+        "text_sha256": "1f75750ce33716cbdb013b2b1335a670eb17505da663fe1bbe92c92c7e132d31",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-033: Declare transition only after every scoped repository, actor attribution and integration has verified function; unresolved identities remain explicit."
+      },
+      {
+        "candidate_id": "17c254262770a7e600cb8002",
+        "text_sha256": "5a465e81c5a6489087d4c99bc8c5c09e2e1e007d9694a56462208b73d6a511cc",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-033: Declare transition only after every scoped repository, actor attribution and integration has verified function; unresolved identities remain explicit."
+      },
+      {
+        "candidate_id": "7611f9a25e9b36e9de0d9d36",
+        "text_sha256": "2d4c9d4c5918dc3d09f0b5e42ca66e39121e978eecd2ec8abeecc7a92504b985",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOEX-033: Declare transition only after every scoped repository, actor attribution and integration has verified function; unresolved identities remain explicit."
+      }
+    ]
+  }
+]

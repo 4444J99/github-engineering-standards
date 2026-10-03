@@ -1,0 +1,49 @@
+{
+  "issue": 342,
+  "verified_at": "2026-10-03T09:12:05.293Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 14,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "tests": 324,
+    "test_seconds": 1.974,
+    "controls": 95,
+    "reference_claims": 60540,
+    "claim_bearing_artifacts": 3348,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "unresolved": [
+    "updated greater-than examples conflict with older-than prose",
+    "last-updated versus updated syntax",
+    "reviewed-by versus assigned reviewer semantics"
+  ],
+  "limitations": [
+    "Reference only; no filter/native writes, accepted policy or rights clearance."
+  ]
+}

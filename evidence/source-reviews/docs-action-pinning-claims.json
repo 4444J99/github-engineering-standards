@@ -1,0 +1,17 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T00:34:19Z",
+  "review_scope": "Three full action-pinning reusable fragments; no consuming page or rendering certificate",
+  "claims": [
+    {"claim_id": "DOCS-PIN-001", "path": "data/reusables/actions/actions-pin-commit-sha.md", "start_line": 1, "end_line": 1, "statement": "Verify that a selected action commit belongs to the intended upstream action repository rather than a fork.", "source_strength": "CONTEXTUAL_RECOMMENDATION", "accepted_policy": false},
+    {"claim_id": "DOCS-PIN-002", "path": "data/reusables/actions/actions-use-sha-pinning.md", "start_line": 1, "end_line": 1, "statement": "The product guidance recommends committing action dependency references to a specific SHA.", "source_strength": "RECOMMENDATION", "accepted_policy": false},
+    {"claim_id": "DOCS-PIN-003", "path": "data/reusables/actions/actions-use-sha-pinning.md", "start_line": 1, "end_line": 1, "statement": "Moving a pinned action dependency to a newer revision requires updating its selected SHA.", "source_strength": "INFORMATIONAL_CONSTRAINT", "accepted_policy": false},
+    {"claim_id": "DOCS-PIN-004", "path": "data/reusables/actions/actions-use-sha-pinning.md", "start_line": 1, "end_line": 1, "statement": "Tag and branch action references are permitted references but their resolved content can change without notice.", "source_strength": "INFORMATIONAL_CONSTRAINT", "accepted_policy": false},
+    {"claim_id": "DOCS-PIN-005", "path": "data/reusables/actions/actions-use-sha-pinning-comment.md", "start_line": 1, "end_line": 1, "statement": "The reusable comment repeats GitHub's recommendation for SHA action references.", "duplicate_of": "DOCS-PIN-002", "source_strength": "RECOMMENDATION", "accepted_policy": false},
+    {"claim_id": "DOCS-PIN-006", "path": "data/reusables/actions/actions-use-sha-pinning-comment.md", "start_line": 2, "end_line": 2, "statement": "The reusable comment repeats the need to update a selected SHA when upgrading an action.", "duplicate_of": "DOCS-PIN-003", "source_strength": "INFORMATIONAL_CONSTRAINT", "accepted_policy": false},
+    {"claim_id": "DOCS-PIN-007", "path": "data/reusables/actions/actions-use-sha-pinning-comment.md", "start_line": 3, "end_line": 3, "statement": "The reusable comment repeats the unannounced-change risk of tag and branch action references.", "duplicate_of": "DOCS-PIN-004", "source_strength": "INFORMATIONAL_CONSTRAINT", "accepted_policy": false}
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/13",
+  "verified_at": "2026-10-02T15:41:57Z",
+  "source_lines": 1322,
+  "artifacts_added": 3,
+  "claim_records": 869,
+  "grouped_context": 14,
+  "atomic_records": 855,
+  "candidate_dispositions": 218,
+  "claims_sha256": {
+    "evidence/source-reviews/docs-sdk-error-hook-claims.json": "85c7391ba0f2a000e9c4c1783cfd13296059a6f837718617b6ddb68743298cda",
+    "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json": "ca04e854aafd30cf6349497a9eae8b07ca16312878bc3e167c2d8e73e601fd68",
+    "evidence/source-reviews/docs-sdk-prompt-submitted-hook-claims.json": "ea90dff2c5f23a037667dd8039ba12f62284c92b1da1cfaf02989afe1e4066c9"
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 270,
+      "duration_seconds": 3.31,
+      "result": "OK; synthetic negative fixture prints published_docs ERROR, not a live acquisition failure"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true,
+      "reference_claims": 45877,
+      "source_artifacts": 694,
+      "semantic_truth_certified": false,
+      "omission_completeness_certified": false
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 725,
+      "denominator": 13657,
+      "receipt_errors": [],
+      "gates_open": 9
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "source_conflicts_added": [
+    "CONFLICT-SDK-ERROR-CATEGORY-NAME-001",
+    "CONFLICT-SDK-ERROR-ADDITIONAL-CONTEXT-001",
+    "CONFLICT-SDK-PROMPT-FILTER-ENFORCEMENT-001"
+  ],
+  "boundaries": [
+    "One integrated verification pass for the batch.",
+    "Root full-read worker claims and sources; worker independently full-read root error claims and source. Root applied narrow provenance/atom repairs before verification.",
+    "Candidate dispositions and reference groups do not establish all-corpus omission assurance.",
+    "No source code executed, accepted policy, rights clearance, native behavior or estate rollout."
+  ],
+  "delivery": "All authored plan/review/audit/disposition/consolidation/conflict/verification/accounting changes committed and pushed together; exact commit receipt recorded in issue13."
+}

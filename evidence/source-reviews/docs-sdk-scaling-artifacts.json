@@ -1,0 +1,467 @@
+[
+  {
+    "artifact_id": "e614a8ec68accc59b59877ea",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/setup/scaling.md",
+    "content_sha256": "7f7434e5d333b71309edaee76f5c5907a917e839b0b1e472513c675a4e88dfb5",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T05:08:48Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete455-line article read.204 independently authored claims preserve all topology comparison cells, example routing/storage/locking/API/container details, lifecycle recommendations and limitations. Prefix-ID access checking lacks stored ownership; GET/DEL release is non-atomic with no renewal shown; isolated process snippet lacks distinct homes; shared samples omit required empty/user-token/tools; API resume/delete lacks demonstrated ownership; disconnect is not explicit deletion; age TTL differs from idle cleanup. Sticky versus any-node storage conditions retained. No code executed or image pixels reviewed.",
+    "supporting_claims": "evidence/source-reviews/docs-sdk-scaling-claims.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "5d419a0324a004e0b7ecf460",
+        "text_sha256": "20f30e7767e39a612dfc81a709f0ad1cd2a4799b8df446a82a1c1dbb0cdb8125",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-001: The article scopes deployment design to multiple users, concurrency and horizontal infrastructure scaling. DOCS-SDKSCALE-002: FPT versions are declared. DOCS-SDKSCALE-003: GHEC versions are declared."
+      },
+      {
+        "candidate_id": "2b21709b20de80e69d15d6c5",
+        "text_sha256": "abec83b9ed74a0b1f0cbba3672951b28dea52f7818824e1f4edfbd0e3ce7a065",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-004: A former scaling route redirects to this page."
+      },
+      {
+        "candidate_id": "dffc04251523906d8ca14a00",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines16–17 in (preamble) provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "3bad88b409c158510a2f3206",
+        "text_sha256": "b76df839f470e4ec6f249d142e280b51227eb05004a7eddd086371daf1887069",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-005: SDK-level options are delegated to the multi-tenancy guide; references do not certify linked files."
+      },
+      {
+        "candidate_id": "759c47959eba25d97fb5f285",
+        "text_sha256": "2c4d51db5473d2cd7f41c927b05f2c9582882e61e52e43f2c628f5527b9fbd60",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-006: Platform developers and multi-user SaaS deployments are suggested users."
+      },
+      {
+        "candidate_id": "7142e1474968b1afbd368356",
+        "text_sha256": "63ba3b0996ea512404866b004374f17b3d7a411f40808e3cc770962bc67209ca",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines25–25 in Core concepts provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "d17b8482b40810f433ee19d1",
+        "text_sha256": "6ce47761c03b1674843ef01ccf6234ab459e15050e87c1e4ab78e2f7cc737f06",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-195: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "2d4618185575d1b0935f2704",
+        "text_sha256": "8a293e306f61749cb2b8bf66f72cf90a39813d105f851eed725e686cf946466c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-007: Per-user CLI gives each user a separate server process. DOCS-SDKSCALE-008: The source describes per-user sessions as separated; no deployed isolation was measured. DOCS-SDKSCALE-009: The source describes per-user memory as separated. DOCS-SDKSCALE-010: The source describes per-user processes as separated."
+      },
+      {
+        "candidate_id": "f8a95c1748b6a09f20c01691",
+        "text_sha256": "f56fcdaff4ebedbc8a130c57ef41971ba3632cc1f1fc04c940a45472ec5768b1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-196: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "2306b0ecd48e9ac5833de484",
+        "text_sha256": "9d268f0a3d52ebc3ba75a442be3e0de1a8109136b0551730104ded3ebafdab4d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines37–37 in Core concepts / Session isolation patterns / Pattern 1: isolated CLI per user provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "0a1518204911083e40a334cc",
+        "text_sha256": "74e380d2eceaf6f77ffb8e298b73074e3655de220d450699ae8765dc6d07ac7f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-011: Critical-data-isolation multi-tenant SaaS is a suggested per-user-process case."
+      },
+      {
+        "candidate_id": "557e91d914464ff23f40ec3f",
+        "text_sha256": "0b6ebb6f54db11df4e5c77b42f5bd6690a1f6e3fbdcff002a3104d0c785cd347",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-012: Different user credentials are a suggested per-user-process case."
+      },
+      {
+        "candidate_id": "8b516a38430a8270de23dec5",
+        "text_sha256": "5154ea4ec0ba35ef124c9364fa061274c8f900d265d16c82bd6d004397d69c73",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-013: Compliance needs are a suggested use case, not a SOC2/HIPAA certification."
+      },
+      {
+        "candidate_id": "fc686a8a0ba564fcfe7212eb",
+        "text_sha256": "1b2993e0b1354af7b6eb6ea05653557e1a883c1a8c71edd31151bf52894b026a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-014: Per-user pool example Maintains a user-indexed client/port map. DOCS-SDKSCALE-015: Per-user pool example Starts its example port allocator at5000. DOCS-SDKSCALE-016: Per-user pool example Returns an existing user's cached client. DOCS-SDKSCALE-017: Per-user pool example Increments its next port; no collision probing is shown. DOCS-SDKSCALE-018: Per-user pool example Calls a spawn helper with port and optional token; helper implementation and separate COPILOT_HOME are not shown. DOCS-SDKSCALE-019: Per-user pool example Connects to that localhost port. DOCS-SDKSCALE-020: Per-user pool example Caches the user's client and port. DOCS-SDKSCALE-021: Per-user pool example Calls client.stop when releasing a user. DOCS-SDKSCALE-022: Per-user pool example Removes the map entry after stop; dedicated process termination semantics are not demonstrated."
+      },
+      {
+        "candidate_id": "9981148cf32c032284a5948e",
+        "text_sha256": "1b6fd84dd0af78564b4652f4e596e0489ee855f37d8965bbf2236ec52eb89e60",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-023: Shared CLI sessions use unique IDs as logical separation. DOCS-SDKSCALE-024: Shared CLI has lighter resource use than per-user processes. DOCS-SDKSCALE-025: Shared CLI isolation is described as weaker."
+      },
+      {
+        "candidate_id": "9be2ca86c2f2ff0f5f2c9d53",
+        "text_sha256": "0d2d9e3c4c5c9d13ba032856bb346a926fbd4bcddf2d27dc56bafdb97c9bcf3b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-197: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "ed8b83120f3f8d8cfd97920f",
+        "text_sha256": "9d268f0a3d52ebc3ba75a442be3e0de1a8109136b0551730104ded3ebafdab4d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines82–82 in Core concepts / Session isolation patterns / Pattern 2: shared CLI with session isolation provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "935659a22f519b374bab51fd",
+        "text_sha256": "1097123fc33afb27e407f5dd061c516d3f7ff3d3c79e9f263b6808e0a50482bc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-026: Trusted-user internal tools are suggested shared-CLI use cases."
+      },
+      {
+        "candidate_id": "8aec20d39843cfedb9fe9b55",
+        "text_sha256": "7172925c4988b4f67a08976c62398729d8f513b20ecdb6bac2f8d1e629b1f66c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-027: Resource constraints are suggested shared-CLI use cases."
+      },
+      {
+        "candidate_id": "130b073d613fda9600f1c7f5",
+        "text_sha256": "90380874d78128ae4d799c8c7d3fc37ac308f7cd2835b3c62b0a26bd59bb7c79",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-028: Lower isolation needs are suggested shared-CLI use cases."
+      },
+      {
+        "candidate_id": "9d97ad05268d6b798165e97c",
+        "text_sha256": "7c30dda2aab4eca808c738ced4373d2bdf67070a9454f2f209f6deecf6c03cac",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-029: Shared-CLI example Connects one shared client to localhost4321. DOCS-SDKSCALE-030: Shared-CLI example Builds an ID from user, purpose and current time; string naming is not stored ownership authorization. DOCS-SDKSCALE-031: Shared-CLI example Splits the supplied ID on a hyphen. DOCS-SDKSCALE-032: Shared-CLI example Compares the first segment with the current user ID; this is only a prefix check. DOCS-SDKSCALE-033: Shared-CLI example Rejects mismatched prefixes. DOCS-SDKSCALE-034: Shared-CLI example Resumes the ID after the prefix check; no authoritative ownership lookup or per-session token is shown. DOCS-SDKSCALE-035: Shared client configuration omits explicit empty mode; this conflicts with the linked multi-user safe-baseline requirements. DOCS-SDKSCALE-036: Shared resume example omits user-scoped token and explicit tools; it is not production-safe isolation proof."
+      },
+      {
+        "candidate_id": "db4c1cd62746c9fd9a88e7e7",
+        "text_sha256": "8a9941fe60393fb2d5b972b9fd64914acfe3e870096ae9c83c33a006792e71ff",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-037: Collaborative use means multiple users sharing the same session."
+      },
+      {
+        "candidate_id": "d400d1325f4ef91daf890b2f",
+        "text_sha256": "19324d8f636b2d68bccf96e66207f38c565533b240becf39ba34d615d0600bd0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-198: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "ac875d348dbfc70de2d3ecbb",
+        "text_sha256": "9d268f0a3d52ebc3ba75a442be3e0de1a8109136b0551730104ded3ebafdab4d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines116–116 in Core concepts / Session isolation patterns / Pattern 3: shared sessions (collaborative) provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "3d1fa79c4b55e67da7eb255d",
+        "text_sha256": "10c883b5a4fe24a17430e0047cea2f3898fb7a9325426b16bc201f7db558c3b9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-038: Team collaboration is a suggested shared-session case."
+      },
+      {
+        "candidate_id": "54a17e8821cde78b499f9217",
+        "text_sha256": "c6320eb79223ec312b84538a8118ef274ec01216e4fac34d3bff677019268293",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-039: Shared code review is a suggested shared-session case."
+      },
+      {
+        "candidate_id": "b6b17c5b826127daa582a5ac",
+        "text_sha256": "94a54f85da6922b38dd90426a9db82714c08438b1865e606ae2175e07cf3abbc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-040: Pair programming is a suggested shared-session case."
+      },
+      {
+        "candidate_id": "de27148c5caf3206a75f3c03",
+        "text_sha256": "5e3ae68a1272fbb546648808ef332a438fc22d59e6b0ca780567494d8b174605",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-041: The SDK provides no built-in session locking. DOCS-SDKSCALE-042: Applications must serialize shared-session writes to prevent concurrency conflicts."
+      },
+      {
+        "candidate_id": "c10000ce9c28f56d03c844c4",
+        "text_sha256": "7b0bb267571ab56d9069c37b48f0e483469127c32a047de2564517f8037ddd4e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-043: Shared lock example Imports ioredis. DOCS-SDKSCALE-044: Shared lock example Constructs a default Redis client. DOCS-SDKSCALE-045: Shared lock example Defaults the lock TTL to300seconds; not a mandatory safe lease duration. DOCS-SDKSCALE-046: Shared lock example Namespaces lock keys by session ID. DOCS-SDKSCALE-047: Shared lock example Creates a random ownership value. DOCS-SDKSCALE-048: Shared lock example Acquires with Redis SET NX EX expiry. DOCS-SDKSCALE-049: Shared lock example Throws when acquisition fails. DOCS-SDKSCALE-050: Shared lock example Runs the protected callback. DOCS-SDKSCALE-051: Shared lock example Enters release handling in finally. DOCS-SDKSCALE-052: Shared lock example Reads the current lock value via GET. DOCS-SDKSCALE-053: Shared lock example Compares that value to its own ownership value. DOCS-SDKSCALE-054: Shared lock example Deletes the lock separately after comparison; GET and DEL are not shown as atomic compare-delete. DOCS-SDKSCALE-055: Shared lock example Registers authenticated team-chat route via an unspecified authMiddleware. DOCS-SDKSCALE-056: Shared lock example Uses a fixed team session under the lock. DOCS-SDKSCALE-057: Shared lock example Resumes that team session. DOCS-SDKSCALE-058: Shared lock example Sends request-body text and awaits its response. DOCS-SDKSCALE-059: Shared lock example Returns response content to the HTTP client. DOCS-SDKSCALE-060: The lock example shows a fixed expiry but no lease renewal; long-running callbacks are not proven exclusive after expiry. DOCS-SDKSCALE-061: Authentication middleware is referenced but team/session membership authorization is not implemented in the shown handler."
+      },
+      {
+        "candidate_id": "d307f1109d307658ba89c05b",
+        "text_sha256": "e154be29ddd9425999af5edc0486354abdcf18b6a36504856c028e1d7aae7b7d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines166–166 in Core concepts / Comparison of isolation patterns provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "d3a5e79bf22c40046d4be7d9",
+        "text_sha256": "4da1ec6f47782090102dc16bda978efb5655fbf2ddce0f84ecf1faf79a930f2d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines167–167 in Core concepts / Comparison of isolation patterns provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "994e1571688f5c2c9152fa77",
+        "text_sha256": "7966892e305f669bb5b21547150a773442538b745a521eff34a6c3bb79badde8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-062: Comparison table labels isolated CLI complete for isolation; source characterization only. DOCS-SDKSCALE-063: Comparison table labels shared CLI logical for isolation; source characterization only. DOCS-SDKSCALE-064: Comparison table labels shared sessions shared for isolation; source characterization only."
+      },
+      {
+        "candidate_id": "630dc2431511462aa28bddc6",
+        "text_sha256": "800db715c04de29a782e27fd74926cc756fd89127835e63fa435bd8c70f8ddd3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-065: Comparison table labels isolated CLI high for resource usage; source characterization only. DOCS-SDKSCALE-066: Comparison table labels shared CLI low for resource usage; source characterization only. DOCS-SDKSCALE-067: Comparison table labels shared session low for resource usage; source characterization only."
+      },
+      {
+        "candidate_id": "d9492243d7797ae7c97f1f28",
+        "text_sha256": "c8e4679342ac7b2a7ce23feaa24030325615dba4fe5a1c7af341ad316ea90f77",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-068: Comparison table labels isolated CLI medium for complexity; source characterization only. DOCS-SDKSCALE-069: Comparison table labels shared CLI low for complexity; source characterization only. DOCS-SDKSCALE-070: Comparison table labels shared-session high due to locking for complexity; source characterization only."
+      },
+      {
+        "candidate_id": "07c05b6e7ab7dc7e3a808699",
+        "text_sha256": "58efb4d349d36b77a7e01980593f7dcccbbbcb31393eed4298656d0594e72e2c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-071: Comparison table labels isolated CLI per-user tokens for authentication flexibility; source characterization only. DOCS-SDKSCALE-072: Comparison table labels shared CLI service token for authentication flexibility; source characterization only. DOCS-SDKSCALE-073: Comparison table labels shared sessions service token for authentication flexibility; source characterization only."
+      },
+      {
+        "candidate_id": "60be517877ad49e6f86c527e",
+        "text_sha256": "91127932a2265193d76232d5c6732f86c22ef41aacd9cab1580717f96d50dfa5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-074: Comparison table labels isolated CLI multi-tenant SaaS for recommended application; source characterization only. DOCS-SDKSCALE-075: Comparison table labels shared CLI internal tools for recommended application; source characterization only. DOCS-SDKSCALE-076: Comparison table labels shared sessions collaboration for recommended application; source characterization only."
+      },
+      {
+        "candidate_id": "e0e1a5959a5c8498091c5eb2",
+        "text_sha256": "de29bde7e6610f8457abc7c4a09e0b6a8a1e9d65b71701c0c4b266c95956296e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-199: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "4bbc14f4eb330c5126ce500c",
+        "text_sha256": "219a59bc8109375d93ad25b4d5c8d833dfda7ae3a685b2f40a13139d192dcfce",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-077: Any-node session resumption across CLI servers requires shared session storage."
+      },
+      {
+        "candidate_id": "f8a39c47af34ae5b53b26e9b",
+        "text_sha256": "d5683622c7409cd63899154712ec03386ec8120e7e8cfd4398477a6d630d353d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-078: Load-balancer example Maintains a list of server addresses. DOCS-SDKSCALE-079: Load-balancer example Starts a round-robin cursor at zero. DOCS-SDKSCALE-080: Load-balancer example Copies configured server addresses. DOCS-SDKSCALE-081: Load-balancer example Selects the indexed address. DOCS-SDKSCALE-082: Load-balancer example Advances modulo server count; empty-list handling is not shown. DOCS-SDKSCALE-083: Load-balancer example Hashes the user ID for sticky routing. DOCS-SDKSCALE-084: Load-balancer example Selects server by hash modulo count. DOCS-SDKSCALE-085: Load-balancer example Combines characters through integer shifting/subtraction. DOCS-SDKSCALE-086: Load-balancer example Truncates hash to signed32bit. DOCS-SDKSCALE-087: Load-balancer example Returns absolute hash magnitude. DOCS-SDKSCALE-088: Load-balancer example Lists cli-1:4321. DOCS-SDKSCALE-089: Load-balancer example Lists cli-2:4321. DOCS-SDKSCALE-090: Load-balancer example Lists cli-3:4321. DOCS-SDKSCALE-091: Load-balancer example Routes by req.user.id; authentication middleware is not shown. DOCS-SDKSCALE-092: Load-balancer example Constructs a client to the selected server. DOCS-SDKSCALE-093: Load-balancer example Uses a stable user-chat session ID. DOCS-SDKSCALE-094: Load-balancer example Chooses gpt-5.4 as an illustrative model. DOCS-SDKSCALE-095: Load-balancer example Sends request text and awaits a response. DOCS-SDKSCALE-096: Load-balancer example Returns model content. DOCS-SDKSCALE-097: Load-balanced client/session snippet omits explicit empty mode, per-session credentials and a tool allowlist; no native isolation proof."
+      },
+      {
+        "candidate_id": "cc5322b87b3343f615918c6d",
+        "text_sha256": "205781e7f8f508f2b8882261ce512f81f6e121443695ef6a96ae03fe296891e3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-200: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "5e53da6187aa875017114255",
+        "text_sha256": "7822978f70ddb4f54ec825183cca03e116372267552bd90f70b0da6e9c0fc0d4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-098: Sticky routing pins a user to a server. DOCS-SDKSCALE-099: Sticky routing does not need shared storage. DOCS-SDKSCALE-100: Sticky routing may give uneven load distribution."
+      },
+      {
+        "candidate_id": "6e2edbd48cf925a586e3de92",
+        "text_sha256": "73bfbb11f26ca2c1a8f1d90c761e0e68a56b39baf13ed70a560c5dead35eab7c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-101: Shared storage allows any CLI to handle any session. DOCS-SDKSCALE-102: Shared storage offers better distribution. DOCS-SDKSCALE-103: Any-node shared storage requires networked storage for the CLI session-state directory."
+      },
+      {
+        "candidate_id": "7f6155475e0f0dcb85692961",
+        "text_sha256": "5c37611278164e39f7e66408865eac77054c4f62c1697411f2a870de5061d38a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-104: A single CLI can serve many concurrent sessions according to the source."
+      },
+      {
+        "candidate_id": "fbf36df9f74113b0253f2202",
+        "text_sha256": "efdc160dfb11be55f5f7522d50b5edd6bef7b928fa9686c19f8c98e7365240db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-201: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "b1069024a3e3511c78b90347",
+        "text_sha256": "852e573984b8fa0b3ac8cb5e6c6923e0a12d75b3ff1b5f38fd6c5f92a59d0c29",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines251–251 in Core concepts / Vertical scaling / Tuning a single CLI server provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "f57d05283b9a3bef8076c7b1",
+        "text_sha256": "987e3c4932e05510856273cf94e84e53989b72c5cba6f02c139c4ebb011586af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-105: Session-manager example Tracks active sessions in a map. DOCS-SDKSCALE-106: Session-manager example Defaults the concurrency limit to50, an illustrative threshold. DOCS-SDKSCALE-107: Session-manager example Returns an already tracked session. DOCS-SDKSCALE-108: Session-manager example Checks tracked count against the configured limit. DOCS-SDKSCALE-109: Session-manager example Evicts when the tracked limit is reached. DOCS-SDKSCALE-110: Session-manager example Creates a session despite the comment saying create or resume; no resume call is shown. DOCS-SDKSCALE-111: Session-manager example Uses the requested session ID without shown ownership authorization. DOCS-SDKSCALE-112: Session-manager example Uses example gpt-5.4 model. DOCS-SDKSCALE-113: Session-manager example Caches the created session. DOCS-SDKSCALE-114: Session-manager example Selects the first map key as oldest; no least-recent-activity timestamp is shown. DOCS-SDKSCALE-115: Session-manager example Comments that persistence makes disconnect safe; this assertion is not tested here. DOCS-SDKSCALE-116: Session-manager example Disconnects the session. DOCS-SDKSCALE-117: Session-manager example Removes it from the active map. DOCS-SDKSCALE-118: Disconnect removes a live connection; the example does not call deleteSession to remove persisted state. DOCS-SDKSCALE-119: Concurrency limit example does not demonstrate synchronization of concurrent callers."
+      },
+      {
+        "candidate_id": "8510295c49ee16aeb9e90f78",
+        "text_sha256": "1548adcaf89230ff73964b1e03366b6d69be50ef858d553e3f501868c6cbad2c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-202: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "c74eece6a03ea83d62088975",
+        "text_sha256": "384509cfc8c4f7b1fcbfadafb727025836f1ff98cc8cda4403825fffddc4bf33",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-120: Independent stateless API requests are the suggested ephemeral-session case."
+      },
+      {
+        "candidate_id": "94651c103991fea73117bbe1",
+        "text_sha256": "190f48e4674b57c8787dd1eb2e3956be8e13e514c66d045e4728bb67a2ce2071",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-121: Ephemeral example Registers an analyze route. DOCS-SDKSCALE-122: Ephemeral example Creates a session per request. DOCS-SDKSCALE-123: Ephemeral example Uses example gpt-5.4 model. DOCS-SDKSCALE-124: Ephemeral example Sends the request prompt. DOCS-SDKSCALE-125: Ephemeral example Returns response content. DOCS-SDKSCALE-126: Ephemeral example Runs cleanup in finally. DOCS-SDKSCALE-127: Ephemeral example Disconnects immediately, but does not explicitly delete persisted state."
+      },
+      {
+        "candidate_id": "f1dc4f03bc2859f1c15f26a0",
+        "text_sha256": "220ca124a6ae931a7c3b59255fb4b38b4d9f55e83ec1ffc83fbac1b3c1024a49",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-128: Conversation interfaces are suggested persistent-session cases. DOCS-SDKSCALE-129: Long-running workflows are suggested persistent-session cases."
+      },
+      {
+        "candidate_id": "90fa3db43f2035c546826633",
+        "text_sha256": "dd085379cbaec5db46aff106afed8e6fbd6f331fc225905c758fd2ac5dbfea03",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-130: Persistent API example Registers the session-start route. DOCS-SDKSCALE-131: Persistent API example Builds an ID from user and current time. DOCS-SDKSCALE-132: Persistent API example Uses that ID for session creation. DOCS-SDKSCALE-133: Persistent API example Uses example gpt-5.4 model. DOCS-SDKSCALE-134: Persistent API example Enables infinite sessions. DOCS-SDKSCALE-135: Persistent API example Sets compaction threshold0.80, not a required universal threshold. DOCS-SDKSCALE-136: Persistent API example Returns the session ID. DOCS-SDKSCALE-137: Persistent API example Registers the message route. DOCS-SDKSCALE-138: Persistent API example Resumes the body-supplied ID without shown ownership check or per-user token. DOCS-SDKSCALE-139: Persistent API example Sends request-body message. DOCS-SDKSCALE-140: Persistent API example Returns response content. DOCS-SDKSCALE-141: Persistent API example Registers the end route. DOCS-SDKSCALE-142: Persistent API example Deletes a body-supplied session ID without shown ownership check. DOCS-SDKSCALE-143: Persistent API example Returns success after deletion."
+      },
+      {
+        "candidate_id": "6dc7ebf2e243fb70a42c1e18",
+        "text_sha256": "52892ac84fa3457952a53ed8e35342786ac0e3b98e200dfd6117ac3f189fcabd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-144: Kubernetes example Uses apps/v1 Deployment. DOCS-SDKSCALE-145: Kubernetes example Names the deployment copilot-cli. DOCS-SDKSCALE-146: Kubernetes example Sets three replicas. DOCS-SDKSCALE-147: Kubernetes example Selects app copilot-cli labels. DOCS-SDKSCALE-148: Kubernetes example Sets matching pod labels. DOCS-SDKSCALE-149: Kubernetes example Names its CLI container. DOCS-SDKSCALE-150: Kubernetes example Uses a placeholder registry latest image, not a digest-pinned release. DOCS-SDKSCALE-151: Kubernetes example Starts headless runtime on0.0.0.0 port4321; no transport authentication or network policy is shown. DOCS-SDKSCALE-152: Kubernetes example Uses runtime COPILOT_GITHUB_TOKEN. DOCS-SDKSCALE-153: Kubernetes example Names copilot-secrets Kubernetes Secret. DOCS-SDKSCALE-154: Kubernetes example References its github-token key. DOCS-SDKSCALE-155: Kubernetes example Exposes container port4321. DOCS-SDKSCALE-156: Kubernetes example Mounts session-state under/root/.copilot/session-state. DOCS-SDKSCALE-157: Kubernetes example Uses a PVC named copilot-sessions-pvc; multi-node access mode and lock behavior are not shown. DOCS-SDKSCALE-158: Kubernetes example Defines a Service. DOCS-SDKSCALE-159: Kubernetes example Names service copilot-cli. DOCS-SDKSCALE-160: Kubernetes example Uses app label selection. DOCS-SDKSCALE-161: Kubernetes example Exposes service port4321. DOCS-SDKSCALE-162: Kubernetes example Targets port4321."
+      },
+      {
+        "candidate_id": "feb48eaa7d7b6a5b9f64c8d6",
+        "text_sha256": "9815d011e30ffb90c22f7ef5986a23285fd1395d9c5a3aa28f5ed7170ef3cae0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-203: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "558b239294a69cb7f8de1bc6",
+        "text_sha256": "8837c46c6a1da0a69d9c4e59b230aa797cb2ba9a783a79f4552e276cd15a674f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-163: Azure container example Names CLI container. DOCS-SDKSCALE-164: Azure container example Uses placeholder latest image. DOCS-SDKSCALE-165: Azure container example Runs headless CLI on0.0.0.0 port4321 without shown transport authentication/network restriction. DOCS-SDKSCALE-166: Azure container example Mounts/root/.copilot/session-state. DOCS-SDKSCALE-167: Azure container example Names session-storage volume. DOCS-SDKSCALE-168: Azure container example Uses Azure File backing. DOCS-SDKSCALE-169: Azure container example Names copilot-sessions share. DOCS-SDKSCALE-170: Azure container example Uses example storage account myaccount; credentials/mount verification are not shown."
+      },
+      {
+        "candidate_id": "54d93b3b60d68957ea3ee263",
+        "text_sha256": "5a931a0b521d8b2dffcaf5cd9bdd347f59afacaffbf702f6dc8b3eae8e283e39",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-204: A diagram is referenced, but its pixels are not independently inspected or fully reviewed by this text receipt."
+      },
+      {
+        "candidate_id": "4de8b0da359743331505a507",
+        "text_sha256": "63adc290f616b237ba3c6d2035a2f0eef722d8f6e7fedb0255320c4e60733bc9",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines430–430 in Core concepts / Production checklist provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "57fb1c6d0ece9958b1ff4c1b",
+        "text_sha256": "2c6e2d2796a38ced4831b90b4d20d456b87b997d98de64446935d384249018a6",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines431–431 in Core concepts / Production checklist provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "b6191ff8a51ae750ee522ca2",
+        "text_sha256": "4d263ddb1fc52cb6b690a7b9bbd1cdda77c7566c4cc9a0da9f354d00b4ca4dcb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-171: Periodically delete sessions older than a configured TTL. DOCS-SDKSCALE-172: The recommendation is creation-age TTL wording, not proof of last-activity idle cleanup."
+      },
+      {
+        "candidate_id": "b41b780f1cb2f9f1b29a3f86",
+        "text_sha256": "3c4f0d98cdf3062a4c96e6fc134ce6249d6de531fe502fd9634efa709ba6e9ed",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-173: Periodically ping runtime health. DOCS-SDKSCALE-174: Restart an unresponsive runtime."
+      },
+      {
+        "candidate_id": "0c9054c1438b0d4d0dfb3ce3",
+        "text_sha256": "8a7117222b6d9c75c9ca8bb60107a14977152cf5325e58144036d1713a649a24",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-175: Mount persistent session-state volumes."
+      },
+      {
+        "candidate_id": "aa3fa61df8421c149c91b20f",
+        "text_sha256": "851fa082dc4c997c6aaf5002fecd3826eb0c1fc3604cfc6dfd1067a3d8d9fc41",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-176: Use a platform secret manager."
+      },
+      {
+        "candidate_id": "e47c55674a52066420992d70",
+        "text_sha256": "595dbb14a0bfceea5c9782ed04ed721c1d9bfadb730d3eb815f336fc28be7454",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-177: Track active session count. DOCS-SDKSCALE-178: Track response latency. DOCS-SDKSCALE-179: Track error rates."
+      },
+      {
+        "candidate_id": "0530e0175805a5ab35e550bd",
+        "text_sha256": "11e4d67347e820b9be0e06197776359129dad9407870d116fbe00df9ac359ac4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-180: Use Redis or similar for shared-session locking; technology choice is recommended, serialization itself is required at121."
+      },
+      {
+        "candidate_id": "2e3c56ebbb3c05a8c001d571",
+        "text_sha256": "69e2c93ddc422aababaaaf37117b5b5e7922c011d098bd0efae4d12de83973f9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-181: Drain active sessions before runtime shutdown."
+      },
+      {
+        "candidate_id": "801d0cdd218f8c5dc23986a3",
+        "text_sha256": "f07685aa7e8dd81f47845282cb014cd2a20ed2c8c0b6f2d0430bec4327a4f593",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines442–442 in Core concepts / Limitations provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "7799ab0235022b8883117a61",
+        "text_sha256": "f5fda211b2882056f76638b760fc6951422f055dde8e2df1df23630f563f73d2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines443–443 in Core concepts / Limitations provide editorial labels, headings/table separators or lint metadata. Entire surrounding source was read; no additional operational obligation inferred from this wrapper."
+      },
+      {
+        "candidate_id": "e0ac94720e424ed9a7affcd0",
+        "text_sha256": "055fb0bf740a7a68173208f8a547251ecf182bfb245872badc74241ad192b341",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-182: Application-level locking is needed for concurrent shared access; the SDK does not supply it."
+      },
+      {
+        "candidate_id": "e2d224a4a583d08f3703b342",
+        "text_sha256": "2a985c43ddf411ea3883f73c83ac3048dfeded51d12fa8c19b9be19c8d302546",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-183: Load balancing is external, not built into SDK. DOCS-SDKSCALE-184: Use a load balancer or service mesh for balancing."
+      },
+      {
+        "candidate_id": "b78868d67ff17c8a96d44a1d",
+        "text_sha256": "c485db4456374e477c05d7d6fca47fe6187be9c4d8ef0607d7ac737f2aa64509",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-185: Session state is file-based. DOCS-SDKSCALE-186: Multi-server any-node storage needs a shared filesystem, while sticky single-node assignment is separately described."
+      },
+      {
+        "candidate_id": "9beb8de41e0c4c5923c2bbd2",
+        "text_sha256": "6c647996e7705fd6928b4c2cf4b78b3ff266362285167914eb44a07d6dfddeee",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-187: No idle timeout is enabled by default. DOCS-SDKSCALE-188: Supply --session-idle-timeout seconds to automatically clean inactive sessions."
+      },
+      {
+        "candidate_id": "ee438c9d8e10e159ba21a786",
+        "text_sha256": "03c5fd91c51e84c0b03488ebe0a36d3e36c7357e6d3932d740ac685f82af3104",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-189: CLI runtime is single-process. DOCS-SDKSCALE-190: Scale with additional CLI instances rather than threads."
+      },
+      {
+        "candidate_id": "5ae3dffaca988d486426057a",
+        "text_sha256": "773c7a5ebefa0bb48459017dccaa541f6c71593df85648fcc83ce2959403f7bd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-191: Persistence details remain a linked reference."
+      },
+      {
+        "candidate_id": "09b0a00a3234696414afb5b8",
+        "text_sha256": "6241dd14325206a9ca29f97ee0707924db058541fbebaab2672269e3c216d863",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-192: Backend service setup remains a linked reference."
+      },
+      {
+        "candidate_id": "f793ca55214840a41db437a4",
+        "text_sha256": "7e0e132ec7c3f0dfd66bfcfecd3ac52ecc4e354f14e37eac7147f21caca5d057",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-193: OAuth multi-user setup remains a linked reference."
+      },
+      {
+        "candidate_id": "45c3d1db2bfc0438a9c8f285",
+        "text_sha256": "ee1a1713b0522d395a6f8148a3bd027565cfc8b399aad8aed51128b05b670a83",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKSCALE-194: Provider BYOK remains a linked reference."
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "schema_version":"ges.source-claims-review.v1",
+  "source":"github/docs","commit":"56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:51:31Z",
+  "path":"content/code-security/concepts/secret-security/push-protection-and-the-github-mcp-server.md",
+  "review_scope":"Full 37-line article read. Public-only metadata and qualified private-repository body assertion conflict with general concept wording; scope remains unresolved. Feature declaration, product variables and linked MCP contracts need further review. No native behavior or privilege evidence.",
+  "claims":[
+    {"claim_id":"DOCS-PUSHMCP-001","start_line":5,"end_line":5,"statement":"Article product metadata describes public cloud repositories, narrower than the body assertion about certain private repositories.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-002","start_line":7,"end_line":8,"statement":"Version applicability is delegated to the copilot feature definition rather than explicit version ranges in this article.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-003","start_line":20,"end_line":20,"statement":"The introductory claim describes prevention of inadvertent credential exposure; it is not observed zero exposure or complete detection coverage.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-004","start_line":22,"end_line":22,"statement":"The body describes secret blocking in AI-generated MCP responses, a distinct path from repository writes.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-005","start_line":22,"end_line":22,"statement":"The body describes secret prevention in MCP actions, with issue creation as an example; this does not prove every tool or action is covered.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-006","start_line":24,"end_line":24,"statement":"The body describes default protection for MCP interactions with public repositories independently of the repository push-protection setting.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-007","start_line":24,"end_line":24,"statement":"The body additionally describes default protection for private repositories covered by GHAS independently of the repository push-protection setting; this qualified assertion conflicts with public-only general wording and needs authoritative scope verification.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-008","start_line":30,"end_line":30,"statement":"The documented non-bypass block response removes the secret from request content before retry.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-009","start_line":31,"end_line":31,"statement":"The article conditions visibility of the MCP bypass option on repository or personal-account push-protection enablement; default MCP protection is not equivalent to this bypass prerequisite.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHMCP-010","start_line":31,"end_line":31,"statement":"The article asks users to evaluate safety before bypassing; UI availability is not an approved exception or independent evidence that inclusion is safe.","accepted_policy":false}
+  ]
+}

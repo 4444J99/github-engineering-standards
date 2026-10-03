@@ -1,0 +1,95 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:07:52.416Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent-workflow-run-approval-default.md",
+      "content_sha256": "00c455e91d2085500b0e7528bca752566b27a58c93d14c9a0cee0d04f50561c9",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "The pinned workflow fragment says Copilot pushes do not automatically trigger Actions by default and identifies a human approval control for running workflows. Its inspection dependency asks review of proposed changes, especially workflow files, because privileged workflows may expose secrets. No actual approval or safety audit occurred here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent-workflow-run-approval-default.md",
+      "content_sha256": "00c455e91d2085500b0e7528bca752566b27a58c93d14c9a0cee0d04f50561c9",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "The same workflow fragment describes optional configuration permitting runs without human intervention. This is distinct from the default and does not authorize enabling it, prove its target configuration or establish that a workflow passed. The screenshot was not visually verified in this tranche.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/agent-management-intro.md",
+      "content_sha256": "8e806b8abe02d1ab80ba2403b2d8436441c2d03e5369b6951d45194769621b91",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The management fragment describes repository Agents sessions only where the cloud agent is enabled and also names a central Agents page. Navigation surfaces do not prove enabled access or live agents.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/automations-availability.md",
+      "content_sha256": "9d0d414719a4ebb88761cc9f5a18dd40ff492c650c8ad7eb9d32092ecb36be18",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Automation availability requires all listed conditions: a private or internal repository, enabled cloud agent, and organization permission for both the agent and automations. Public repositories are excluded; Business/Enterprise access additionally requires administrator policy enablement. Stated defaults cannot replace observation of effective target configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/automations-availability.md",
+      "content_sha256": "9d0d414719a4ebb88761cc9f5a18dd40ff492c650c8ad7eb9d32092ecb36be18",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "The availability fragment lists Pro, Pro+, Max, Business and Enterprise plans; plan membership alone is insufficient without the repository and policy conditions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/automations-billing.md",
+      "content_sha256": "a96d671be467ddcc1c03f954e040de656861bd2263007569afa0901a5e02d928",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The automation billing fragment says each run starts a cloud-agent session consuming Actions minutes and AI credits, billed to the automation creator. No budget, rate, expenditure authorization or actual billing receipt is supplied.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/automations-what-is.md",
+      "content_sha256": "3b5a80ae27832f774cb9f4a3256aea6f20b40c0236a17558668bd8064e60cd60",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The automation definition describes scheduled or repository-event invocation and actions within the configured repository, such as pull requests or issue labels. It is a capability description, not evidence of installed schedules, successful runs or authority over other repositories.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTAUTOMATION-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/cloud-sandboxes-prerequisite-slack.md",
+      "content_sha256": "64da766bc0dc9afc7d20b7eb857ca10935f7dabdbecd5879e12a565e80b4b156",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The Slack prerequisite requires cloud sandboxes for the plan and says sandbox policies share cloud-agent policy configuration. Organization or enterprise members, including managed-user enterprises, may need owner enablement of both before Slack use; membership or a personal subscription is not proof of effective access.",
+      "accepted_policy": false
+    }
+  ]
+}

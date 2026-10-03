@@ -1,0 +1,44 @@
+{
+  "schema_version": "ges.claim-consolidation.v1",
+  "issue": 68,
+  "status": "DRAFT_NOT_POLICY_ACCEPTANCE",
+  "reviewer": "codex:source-review",
+  "relationships": [
+    {
+      "claim_ids": [
+        "DOCS-ACTIONSSKIPPATH-002",
+        "DOCS-ACTIONSPATHPENDING-002"
+      ],
+      "relationship": "DISTINCT_SCOPE_NOT_CONTRADICTION",
+      "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "decision": "Preserve separate job-level and workflow-level outcomes. Do not deduplicate either into a universal skipped-check result.",
+      "dimensions": [
+        "evaluation unit: job versus whole workflow",
+        "trigger filtering versus job condition",
+        "native merge eligibility versus actual obligation execution"
+      ],
+      "generalized_intent": "Required-context status and verified execution evidence are different predicates. Assessment must retain the evaluation unit, exact target head, required-context inventory, trigger applicability and execution result.",
+      "required_native_cases": [
+        {
+          "case": "required job skipped by condition",
+          "source_expectation": "Success can permit merge",
+          "obligation_evidence": "Not executed; cannot independently prove substantive requirement"
+        },
+        {
+          "case": "entire required workflow skipped by path/branch/message filter",
+          "source_expectation": "Pending blocks required-success merge",
+          "obligation_evidence": "Not executed; distinguish unavailable check from failed execution"
+        },
+        {
+          "case": "required workflow and job executed",
+          "source_expectation": "Must observe actual result",
+          "obligation_evidence": "Exact head/context identity and substantive positive/negative behavior required"
+        }
+      ],
+      "effective_behavior_verified": false,
+      "policy_accepted": false,
+      "independent_audit_complete": false
+    }
+  ],
+  "scope": "Source reconciliation only. No policy acceptance, native settings, workflow execution, approvals or rights clearance. Source expectations are pinned statements, not current runtime receipts."
+}

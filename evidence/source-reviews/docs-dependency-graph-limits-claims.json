@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:08:25.994Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-DEPENDENCYGRAPHLIMITS-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-graph/deduplication.md",
+      "content_sha256": "e69164c51c80c68f4fe663575e902e5f30df4ab148eaf9fbb8fc1163019baaf0",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "The deduplication fragment prioritizes user submissions, sorting different-detector manual snapshots alphabetically by correlator and using the first, while merging resolved dependencies for two correlators using the same detector. Its fpt/ghec branch places Dependabot graph jobs for Go/Python above automatic submissions; outside that branch the extra priority is absent. Automatic submissions precede static analysis, which is fallback only. One displayed manifest and source-priority heuristics do not prove complete or correct dependencies; no snapshot was submitted or precedence behavior tested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYGRAPHLIMITS-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-graph/dependency-insights-maintenance-mode.md",
+      "content_sha256": "d69c00518a562fb6b7d797b149cc1f33579811a2a3a7d85171ee3bf957ec7883",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The maintenance-mode warning says dependency insights receives no new features/improvements and may show incomplete organization data when dependency submission is used. It recommends the linked SBOM Toolkit, but that repository and code were not reviewed or executed. The warning prevents treating this view as exhaustive estate dependency assurance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYGRAPHLIMITS-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-graph/dependency-submission-API-short.md",
+      "content_sha256": "5df6f9e217fc61f4f443dd2d6efbe12d898fa88024a5fbd136d92d646fa2ee58",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The submission fragment says submitted dependencies display detector identity and submission time. These provenance metadata fields alone do not attest to detector correctness, authentic complete build coverage, freshness, or actual submission; no detector was run.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYGRAPHLIMITS-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-graph/feature-availability.md",
+      "content_sha256": "380c61f594815438470048848c0d155bca0ab078be9b21fc5b4fa36bffe0f8ef",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The availability fragment describes repository-administrator capability to enable or disable the dependency graph. It does not provide an effective setting, actual permission, approval for a change, or evidence of enabled collection; no toggle changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYGRAPHLIMITS-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-graph/sbom-export.md",
+      "content_sha256": "80b31f741cf7da62fe602a974af8a2b487407e7f14bf088545c072276dcec73d",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The SBOM fragment describes exporting the repository dependency graph in SPDX-compatible form via UI or REST with at least read access. Access capability and compatible format do not establish complete dependency coverage, verified supply-chain provenance, legal clearance, or authorization to publish private inventories; no export occurred and the linked guide is not reviewed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYGRAPHLIMITS-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-graph/used-by.md",
+      "content_sha256": "03e58a79c9919106666a17f603c9e6318209bb86a1a99a316b7f00f6c4625579",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The Used by fragment describes an optional Code-sidebar section reporting found public package references and selected dependent-owner avatars. Found public references are not exhaustive dependency use, private-consumer visibility, unique verified installations, or permission to collect personal records.",
+      "accepted_policy": false
+    }
+  ]
+}

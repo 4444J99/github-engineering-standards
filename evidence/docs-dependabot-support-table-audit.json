@@ -1,0 +1,660 @@
+{
+  "schema": "ges.bounded-source-table-audit.v1",
+  "issue": 26,
+  "reviewer": "codex:independent-review",
+  "reviewer_identity": "/root",
+  "reviewed_at": "2026-10-02T20:55:30.531Z",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "data/reusables/dependabot/supported-package-managers.md",
+  "source_sha256": "18896c8164741a6456da38d6d4dbd52001dc63cd1b9680c873b23283c9b23d0d",
+  "physical_lines": [
+    3,
+    66
+  ],
+  "method": "Root read every original support-table cell and each surrounding version branch; normalized availability values below for later independent comparison to author claims. This table audit is not whole-file omission certification or evidence of feature execution.",
+  "rows": [
+    {
+      "line": 6,
+      "ecosystem": "Bazel",
+      "yaml_value": "bazel",
+      "version_literal": "v7, v8, v9",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-bazel-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 8,
+      "ecosystem": "Bun",
+      "yaml_value": "bun",
+      "version_literal": ">=v1.1.39",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 9,
+      "ecosystem": "Bundler",
+      "yaml_value": "bundler",
+      "version_literal": "v2",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "SUPPORTED"
+      }
+    },
+    {
+      "line": 10,
+      "ecosystem": "Cargo",
+      "yaml_value": "cargo",
+      "version_literal": "v1",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 11,
+      "ecosystem": "Composer",
+      "yaml_value": "composer",
+      "version_literal": "v2",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 13,
+      "ecosystem": "Conda",
+      "yaml_value": "conda",
+      "version_literal": "Not applicable",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-conda-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 16,
+      "ecosystem": "Deno",
+      "yaml_value": "deno",
+      "version_literal": ">=v2",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-deno-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 18,
+      "ecosystem": "Dev containers",
+      "yaml_value": "devcontainers",
+      "version_literal": "Not applicable",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 19,
+      "ecosystem": "Docker",
+      "yaml_value": "docker",
+      "version_literal": "v1",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 20,
+      "ecosystem": "Docker Compose",
+      "yaml_value": "docker-compose",
+      "version_literal": "v2, v3",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 21,
+      "ecosystem": ".NET SDK",
+      "yaml_value": "dotnet-sdk",
+      "version_literal": ">=.NET Core 3.1",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "NOT_APPLICABLE",
+        "private_registries": "NOT_APPLICABLE",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 22,
+      "ecosystem": "Helm Charts",
+      "yaml_value": "helm",
+      "version_literal": "v3",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 23,
+      "ecosystem": "Hex",
+      "yaml_value": "mix",
+      "version_literal": "v1",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 25,
+      "ecosystem": "Julia",
+      "yaml_value": "julia",
+      "version_literal": ">=v1.10",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-julia-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 27,
+      "ecosystem": "elm-package",
+      "yaml_value": "elm",
+      "version_literal": "v0.19",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 28,
+      "ecosystem": "git submodule",
+      "yaml_value": "gitsubmodule",
+      "version_literal": "Not applicable",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 29,
+      "ecosystem": "GitHub Actions",
+      "yaml_value": "github-actions",
+      "version_literal": "Not applicable",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 30,
+      "ecosystem": "Go modules",
+      "yaml_value": "gomod",
+      "version_literal": "v1",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "SUPPORTED"
+      }
+    },
+    {
+      "line": 31,
+      "ecosystem": "Gradle",
+      "yaml_value": "gradle",
+      "version_literal": "Not applicable",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 32,
+      "ecosystem": "Maven",
+      "yaml_value": "maven",
+      "version_literal": "Not applicable",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 34,
+      "ecosystem": "Nix",
+      "yaml_value": "nix",
+      "version_literal": "Not applicable",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-nix-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "NOT_APPLICABLE",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 36,
+      "ecosystem": "npm",
+      "yaml_value": "npm",
+      "version_literal": "v7, v8, v9, v10, v11",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 37,
+      "ecosystem": "NuGet",
+      "yaml_value": "nuget",
+      "version_literal": "<=6.12.0",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 39,
+      "ecosystem": "OpenTofu",
+      "yaml_value": "opentofu",
+      "version_literal": "Not applicable",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-opentofu-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 41,
+      "ecosystem": "pip",
+      "yaml_value": "pip",
+      "version_literal": "26.1.1",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 42,
+      "ecosystem": "pipenv",
+      "yaml_value": "pip",
+      "version_literal": "2024.4.1",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 43,
+      "ecosystem": "pip-compile",
+      "yaml_value": "pip",
+      "version_literal": "7.5.3",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 44,
+      "ecosystem": "pnpm",
+      "yaml_value": "npm",
+      "version_literal": "v7, v8, v9, v10",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 45,
+      "ecosystem": "poetry",
+      "yaml_value": "pip",
+      "version_literal": "v2",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 47,
+      "ecosystem": "pre-commit",
+      "yaml_value": "pre-commit",
+      "version_literal": "Not applicable",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-pre-commit-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "NOT_SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 49,
+      "ecosystem": "pub",
+      "yaml_value": "pub",
+      "version_literal": "v2",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 51,
+      "ecosystem": "Rust toolchain",
+      "yaml_value": "rust-toolchain",
+      "version_literal": "Not applicable",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-rust-toolchain-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "NOT_APPLICABLE",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 54,
+      "ecosystem": "sbt",
+      "yaml_value": "sbt",
+      "version_literal": "Not applicable",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-sbt-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 56,
+      "ecosystem": "Swift",
+      "yaml_value": "swift",
+      "version_literal": "v5, v6",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED_GIT_ONLY",
+        "vendoring": "NOT_SUPPORTED"
+      }
+    },
+    {
+      "line": 57,
+      "ecosystem": "Terraform",
+      "yaml_value": "terraform",
+      "version_literal": ">= 0.13, <= 1.15.x",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 59,
+      "ecosystem": "uv",
+      "yaml_value": "uv",
+      "version_literal": "v0.11",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-uv-security-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 61,
+      "ecosystem": "uv",
+      "yaml_value": "uv",
+      "version_literal": "v0.11",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-uv-support",
+          "excluding_prior_branches": [
+            "dependabot-uv-security-support"
+          ]
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 64,
+      "ecosystem": "vcpkg",
+      "yaml_value": "vcpkg",
+      "version_literal": "Not applicable",
+      "availability_conditions": [
+        {
+          "predicate": "dependabot-vcpkg-support",
+          "excluding_prior_branches": []
+        }
+      ],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "NOT_SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "NOT_SUPPORTED",
+        "vendoring": "NOT_APPLICABLE"
+      }
+    },
+    {
+      "line": 66,
+      "ecosystem": "yarn",
+      "yaml_value": "npm",
+      "version_literal": "v1, v2, v3, v4",
+      "availability_conditions": [],
+      "capabilities": {
+        "version_updates": "SUPPORTED",
+        "security_updates": "SUPPORTED",
+        "private_repositories": "SUPPORTED",
+        "private_registries": "SUPPORTED",
+        "vendoring": "SUPPORTED"
+      }
+    }
+  ],
+  "scope": {
+    "rows": 39,
+    "capability_cells": 195
+  },
+  "findings": [
+    {
+      "source_lines": [
+        37,
+        184
+      ],
+      "finding": "Table reports NuGet <=6.12.0; later CLI prose reports most features up through6.8.0. Preserve both scopes rather than silently reconcile."
+    },
+    {
+      "source_lines": [
+        58,
+        62
+      ],
+      "finding": "uv security-supported branch precedes elsif version-only branch; elsif applies only when prior security predicate does not match."
+    },
+    {
+      "source_lines": [
+        56,
+        251
+      ],
+      "finding": "Swift private-registry support is git-only; native Swift registries and nondeclarative manifests excluded in prose."
+    }
+  ],
+  "claim_draft_compared": false,
+  "full_review_receipts_issued": false,
+  "rendered_version_assurance": false,
+  "current_feature_availability_verified": false,
+  "rights_cleared": false,
+  "policy_adopted": false,
+  "native_enforcement_verified": false
+}

@@ -1,0 +1,225 @@
+[
+  {
+    "artifact_id": "31d2989e5505de9e417be936",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/session-limits.md",
+    "content_sha256": "16432f77a8785452db37cc2f719aef87bd8139326e08713efbc4ad03e1a2fcf1",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T13:19:11Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete182-line pinned-source read and31candidate dispositions,152reference records consolidated once. Bounded independent audit repairs value/representation, next-call behavior and event-table qualifiers. No code executed, credit changes authorized, external schema guaranteed or native behavior verified.",
+    "independent_audit": "evidence/sdk-session-limits-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-session-limits-independent-repair-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "a9c213b1b8c4d38fc9929a2d",
+        "text_sha256": "1ada8e099a3cea2320a58a7bc2c4789e5ecf926a8cbc580cce2df217c261f86e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-001: Session limits let an application set an AI Credits budget for a session. DOCS-SDKLIMITS-002: sessionLimits can be supplied while creating a session. DOCS-SDKLIMITS-003: sessionLimits can be supplied while resuming a session. DOCS-SDKLIMITS-004: Session limit is a soft cap for the current accounting window. DOCS-SDKLIMITS-005: Source declares Free/Pro/Team applicability. DOCS-SDKLIMITS-006: Source declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "8e9d6cc5e8155f651371f7a3",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "3c8ec94eee15f7018d4e5890",
+        "text_sha256": "0e1bd62fd15537adbadb902cd991698b608486056fea1daf434732f8e97e45c9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-007: Set maxAiCredits to the current accounting-window soft cap. DOCS-SDKLIMITS-008: Usage is checked after a model call returns. DOCS-SDKLIMITS-009: A single response can exceed the configured credits cap. DOCS-SDKLIMITS-010: The source describes blocking the next model call after post-return cap exhaustion; this is source behavior, not observed runtime enforcement. DOCS-SDKLIMITS-011: SDK forwards limit to Copilot CLI when creating a session. DOCS-SDKLIMITS-012: SDK forwards limit to Copilot CLI when resuming a session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "61bf427402e4ab619dd1d495",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "774480d04c2ce6464b9a4ee5",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-013: TypeScript example carries docs-validate skip marker; this is not executed validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "b4f0693148987cc1a953cbae",
+        "text_sha256": "687ae69b35a6a7fcb61cfc731d959df319cd0769dd3d8bd4eae5e463311e82ed",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-014: TypeScript example creates a session. DOCS-SDKLIMITS-015: TypeScript example awaits session creation. DOCS-SDKLIMITS-016: TypeScript creation uses approveAll permission handler; illustrative broad approval is not adopted. DOCS-SDKLIMITS-017: TypeScript creation config uses sessionLimits. DOCS-SDKLIMITS-018: TypeScript creation sets maxAiCredits to illustrative30. DOCS-SDKLIMITS-019: TypeScript example resumes a session. DOCS-SDKLIMITS-020: TypeScript example awaits resume. DOCS-SDKLIMITS-021: TypeScript resume identifies session by session.sessionId. DOCS-SDKLIMITS-022: TypeScript resume uses approveAll permission handler; not adopted approval policy. DOCS-SDKLIMITS-023: TypeScript resume config uses sessionLimits. DOCS-SDKLIMITS-024: TypeScript resume sets maxAiCredits to illustrative30.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "f08f32939e6c9b83f5c222d0",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "9a65937fd6bc955c050377a3",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-025: Python example carries docs-validate skip marker; not runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "fba61709b4752481aa8cbaba",
+        "text_sha256": "3a7c6138f3dc1617674560b209b36523c2800d774f3ff20b983a51d23bfb8064",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-026: Python example creates a session with create_session. DOCS-SDKLIMITS-027: Python example awaits creation. DOCS-SDKLIMITS-028: Python creation uses PermissionHandler.approve_all; not adopted permission policy. DOCS-SDKLIMITS-029: Python creation config uses session_limits. DOCS-SDKLIMITS-030: Python creation sets max_ai_credits to illustrative30. DOCS-SDKLIMITS-031: Python example resumes using resume_session. DOCS-SDKLIMITS-032: Python example awaits resume. DOCS-SDKLIMITS-033: Python resume identifies session using session.session_id. DOCS-SDKLIMITS-034: Python resume uses PermissionHandler.approve_all; not adopted permission policy. DOCS-SDKLIMITS-035: Python resume uses session_limits. DOCS-SDKLIMITS-036: Python resume sets max_ai_credits to illustrative30.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "c9367c3ed4721f8e70ff0bf4",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "21282b604380e353f18c4e9d",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-037: Go example carries docs-validate skip marker; not runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "65634ffa2b6192a27ea6b411",
+        "text_sha256": "6913f60130614ae0c815720dcf016ea9ad7a3265df0cb3765bd2ac09a4123848",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-038: Go example calls CreateSession with context. DOCS-SDKLIMITS-039: Go creation uses SessionConfig. DOCS-SDKLIMITS-040: Go creation captures session return. DOCS-SDKLIMITS-041: Go creation captures err return without a shown check. DOCS-SDKLIMITS-042: Go creation uses PermissionHandler.ApproveAll; not adopted policy. DOCS-SDKLIMITS-043: Go creation uses SessionLimits field. DOCS-SDKLIMITS-044: Go creation uses rpc.SessionLimitsConfig. DOCS-SDKLIMITS-045: Go creation uses MaxAiCredits field. DOCS-SDKLIMITS-047: Go example calls ResumeSession with context. DOCS-SDKLIMITS-048: Go resume identifies session by session.SessionID. DOCS-SDKLIMITS-049: Go resume uses ResumeSessionConfig. DOCS-SDKLIMITS-050: Go resume captures resumed session return. DOCS-SDKLIMITS-051: Go resume assigns err again without a shown check. DOCS-SDKLIMITS-052: Go resume uses PermissionHandler.ApproveAll; not adopted policy. DOCS-SDKLIMITS-053: Go resume uses SessionLimits field. DOCS-SDKLIMITS-054: Go resume uses rpc.SessionLimitsConfig. DOCS-SDKLIMITS-055: Go resume uses MaxAiCredits field. DOCS-SDKLIMITS-046-A01: Go creation limit uses copilot.Float64 for representation. DOCS-SDKLIMITS-046-A02: Go creation uses illustrative cap30. DOCS-SDKLIMITS-056-A01: Go resume limit uses copilot.Float64 for representation. DOCS-SDKLIMITS-056-A02: Go resume uses illustrative cap30.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "00a547ff6fad1ffacf006c50",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "549cc6e37f3eb3a8ec6914b4",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-057: .NET example carries docs-validate skip marker; not runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "a0ea3a1f976784763e8fe75d",
+        "text_sha256": "77db1bc3b252e024fbbb8c07988b812f367493802352ff34118e841eecabe861",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-058: .NET example calls CreateSessionAsync. DOCS-SDKLIMITS-059: .NET example awaits creation. DOCS-SDKLIMITS-060: .NET creation uses SessionConfig. DOCS-SDKLIMITS-061: .NET creation uses PermissionHandler.ApproveAll; not adopted policy. DOCS-SDKLIMITS-062: .NET creation uses SessionLimits field. DOCS-SDKLIMITS-063: .NET creation uses SessionLimitsConfig. DOCS-SDKLIMITS-064: .NET creation sets MaxAiCredits to illustrative30. DOCS-SDKLIMITS-065: .NET example calls ResumeSessionAsync. DOCS-SDKLIMITS-066: .NET example awaits resume. DOCS-SDKLIMITS-067: .NET resume identifies session by session.SessionId. DOCS-SDKLIMITS-068: .NET resume uses ResumeSessionConfig. DOCS-SDKLIMITS-069: .NET resume uses PermissionHandler.ApproveAll; not adopted policy. DOCS-SDKLIMITS-070: .NET resume uses SessionLimits field. DOCS-SDKLIMITS-071: .NET resume uses SessionLimitsConfig. DOCS-SDKLIMITS-072: .NET resume sets MaxAiCredits to illustrative30.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "49d42d72edc3da636a292c49",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "e08a7265484cee02230d9f19",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-073: Java example carries docs-validate skip marker; not runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "aba32676bab58fd4552cdbe4",
+        "text_sha256": "0cd8ddf45f6df3060393ed1b5e0e72f139b1c1b03b21248733967d81bc565dae",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-074: Java creation captures a CopilotSession value. DOCS-SDKLIMITS-075: Java example invokes createSession. DOCS-SDKLIMITS-076: Java creation uses SessionConfig. DOCS-SDKLIMITS-077: Java creation sets PermissionHandler.APPROVE_ALL; not adopted policy. DOCS-SDKLIMITS-078: Java creation configures limit using setSessionLimits. DOCS-SDKLIMITS-080: Java creation waits using get(). DOCS-SDKLIMITS-081: Java resume captures a CopilotSession value. DOCS-SDKLIMITS-082: Java example invokes resumeSession. DOCS-SDKLIMITS-083: Java resume identifies session by getSessionId(). DOCS-SDKLIMITS-084: Java resume uses ResumeSessionConfig. DOCS-SDKLIMITS-085: Java resume sets PermissionHandler.APPROVE_ALL; not adopted policy. DOCS-SDKLIMITS-086: Java resume configures limit using setSessionLimits. DOCS-SDKLIMITS-088: Java resume waits using get(). DOCS-SDKLIMITS-079-A01: Java creation constructs SessionLimitsConfig. DOCS-SDKLIMITS-079-A02: Java creation constructor supplies illustrative cap30.0. DOCS-SDKLIMITS-087-A01: Java resume constructs SessionLimitsConfig. DOCS-SDKLIMITS-087-A02: Java resume constructor supplies illustrative cap30.0.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "24ccb59c626f5f35aaf75f41",
+        "text_sha256": "9963cf6807f8462e34a5520765fb42ab1aa0dd51a28a555f52d73a3bede242b2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "e2ffab80854fde786c40e887",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-089: Rust example carries docs-validate skip marker; not runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "f8ab324d757db79dbdf69187",
+        "text_sha256": "c18f9b60d880d874ac8a1a6b6678e3f51c29a0040d104e698f30bae9a8139a26",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-090: Rust example constructs SessionLimitsConfig. DOCS-SDKLIMITS-091: Rust limit uses max_ai_credits field. DOCS-SDKLIMITS-093: Rust example calls create_session. DOCS-SDKLIMITS-094: Rust creation uses SessionConfig::default. DOCS-SDKLIMITS-095: Rust creation approves all permissions in the illustration; not adopted policy. DOCS-SDKLIMITS-096: Rust creation attaches limits with with_session_limits. DOCS-SDKLIMITS-097: Rust creation clones limits for later reuse. DOCS-SDKLIMITS-098: Rust example awaits creation. DOCS-SDKLIMITS-099: Rust example propagates creation errors using question-mark operator. DOCS-SDKLIMITS-100: Rust example calls resume_session. DOCS-SDKLIMITS-101: Rust resume uses ResumeSessionConfig::new. DOCS-SDKLIMITS-102: Rust resume identifies session through session.id(). DOCS-SDKLIMITS-103: Rust resume clones the session identifier. DOCS-SDKLIMITS-104: Rust resume approves all permissions in the illustration; not adopted policy. DOCS-SDKLIMITS-105: Rust resume attaches limits with with_session_limits. DOCS-SDKLIMITS-106: Rust resume passes the limits value without the creation clone. DOCS-SDKLIMITS-107: Rust example awaits resume. DOCS-SDKLIMITS-108: Rust example propagates resume errors using question-mark operator. DOCS-SDKLIMITS-092-A01: Rust limit value is wrapped in Some. DOCS-SDKLIMITS-092-A02: Rust limit uses illustrative cap30.0.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "ba956c057df5e14baff69256",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "72accb222bada742fab10952",
+        "text_sha256": "e63626b16d4ac123932eb766da4b1f16bcade89bcdd5741ee5335c8a514b99c5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-109: Applications can subscribe to budget events to update UI when soft cap changes. DOCS-SDKLIMITS-110: Applications can subscribe to events when exhausted-budget flow is reached.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "242eebba4fdb297d5a961b0e",
+        "text_sha256": "d3936d9801b8b3849455117e2135772459403f2a69f71b053ceb831bc456a71b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "16fe31b46875ef3a8b170e73",
+        "text_sha256": "23cca02b74f386463efa24796c7a9011b0d2c93f0c38b4d15d5d276205b59b43",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments, language tab delimiters or event-table header/separator; operative examples and field observations are separately extracted."
+      },
+      {
+        "candidate_id": "eb7ea87cb3684162361226c1",
+        "text_sha256": "e83e157fdb218eae8e64837bf68728b0f9026b5585e9d4464638f24dd6b4d512",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-111: session.session_limits_changed is emitted for active session-limit changes. DOCS-SDKLIMITS-112: Null sessionLimits means no active limits. DOCS-SDKLIMITS-113: Changed-limit event exposes optional sessionLimits.maxAiCredits.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "dbb3287a8b9bf2226ce0bb41",
+        "text_sha256": "05c790359d80a5f524bf90c79fb80ca9b677928635135523c79f592d782b2584",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-114: session.usage_checkpoint records durable aggregate usage. DOCS-SDKLIMITS-115: Durable usage checkpoint supports resume. DOCS-SDKLIMITS-116: Durable usage checkpoint supports accounting. DOCS-SDKLIMITS-117: Usage checkpoint includes totalNanoAiu. DOCS-SDKLIMITS-118: Usage checkpoint can include optional totalPremiumRequests. DOCS-SDKLIMITS-137: The event table lists totalNanoAiu without an optional '?' marker for this event occurrence.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "ac5796888d6d48da077ed27e",
+        "text_sha256": "7e49369efa2d9c7fa32aa1d5f893f949a833859751cae0bcfb1bf5ae36505fb4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-119: session_limits_exhausted.requested means exhausted-budget flow was reached. DOCS-SDKLIMITS-120: Requested exhaustion requires a user decision before continuation. DOCS-SDKLIMITS-121: Exhaustion request exposes requestId. DOCS-SDKLIMITS-122: Exhaustion request exposes maxAiCredits. DOCS-SDKLIMITS-123: Exhaustion request exposes usedAiCredits. DOCS-SDKLIMITS-138: The event table lists requestId without an optional '?' marker for this event occurrence. DOCS-SDKLIMITS-139: The event table lists maxAiCredits without an optional '?' marker for this event occurrence. DOCS-SDKLIMITS-140: The event table lists usedAiCredits without an optional '?' marker for this event occurrence.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "a62b9985efa815a48479b385",
+        "text_sha256": "eacb6deb5ca3206f24b6c31e2a8d66d53e9ccb030c79113eff429b719afbaa8c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-124: session_limits_exhausted.completed means the exhausted-limit prompt was resolved. DOCS-SDKLIMITS-125: Completed exhaustion includes requestId. DOCS-SDKLIMITS-126: Completed exhaustion includes response.action. DOCS-SDKLIMITS-127: Completed exhaustion can include optional response.additionalAiCredits. DOCS-SDKLIMITS-128: Completed exhaustion can include optional response.maxAiCredits. DOCS-SDKLIMITS-141: The event table lists requestId without an optional '?' marker for this event occurrence. DOCS-SDKLIMITS-142: The event table lists response.action without an optional '?' marker for this event occurrence.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "b6554bc0d6298c5057405701",
+        "text_sha256": "5047c219da6ec42d1755494a223a7c6d285b2232aee72cbac2a0e95602dce8a0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-129: Use generated event types for the chosen SDK language. DOCS-SDKLIMITS-130: TypeScript example narrows event type via event.type.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      },
+      {
+        "candidate_id": "8511206517f02318d0cc4696",
+        "text_sha256": "46cc78c2cb96ab2732d57e2f76ffc0a6d6feb530af6622628dd3d33aaf19789b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIMITS-131: TypeScript example subscribes using session.on. DOCS-SDKLIMITS-132: Example filters session_limits_exhausted.requested events. DOCS-SDKLIMITS-133: Example invokes showBudgetDialog. DOCS-SDKLIMITS-134: Example dialog receives event.data.requestId. DOCS-SDKLIMITS-135: Example dialog receives event.data.maxAiCredits. DOCS-SDKLIMITS-136: Example dialog receives event.data.usedAiCredits.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-limits-claims.json"
+      }
+    ]
+  }
+]

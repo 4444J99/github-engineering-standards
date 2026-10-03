@@ -1,0 +1,263 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:35:29Z",
+  "review_scope": "Six complete spreadsheet orchestration, conversion, findings, organization/repository table and fixture artifacts.",
+  "candidate_count": 0,
+  "claim_count": 11,
+  "claims": [
+    {
+      "claim_id": "GHQR-CONT-EXCEL-001",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/convert.go",
+      "artifact_id": "f35dd180712ffbd65db95c81",
+      "content_sha256": "987d7762ca1ddd54502136bc3585b49e701ef70984d80043447d41b17bdfa02d",
+      "start_line": 8,
+      "end_line": 32,
+      "statement": "Excel entity conversion accepts typed pointers or JSON-round-trips values, silently returning nil for absent or malformed values. Conversion failure can omit a row and is not evidence that the entity does not exist.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/convert.go#L8-L32",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-002",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/excel.go",
+      "artifact_id": "4c513c9c1f1b842b88bbed09",
+      "content_sha256": "6e5853401a131a4171d62dad688afb62d6d94c9f200f99253d18c3b51eb0432e",
+      "start_line": 14,
+      "end_line": 55,
+      "statement": "Workbook presentation reuses cached bold/header and alternating wrapped-cell styles; style creation errors are returned to the caller. Presentation quality does not validate source evidence.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/excel.go#L14-L55",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-003",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/excel.go",
+      "artifact_id": "4c513c9c1f1b842b88bbed09",
+      "content_sha256": "6e5853401a131a4171d62dad688afb62d6d94c9f200f99253d18c3b51eb0432e",
+      "start_line": 57,
+      "end_line": 95,
+      "statement": "Workbook generation creates six fixed sheets for organizations, repositories, protection, budgets, GHAS and findings, removes a default sheet when appropriate and saves the file. Style failures return without a result, save failure is fatal logging, and the API does not return a write-success/error contract to pipeline callers.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/excel.go#L57-L95",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-004",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/excel.go",
+      "artifact_id": "4c513c9c1f1b842b88bbed09",
+      "content_sha256": "6e5853401a131a4171d62dad688afb62d6d94c9f200f99253d18c3b51eb0432e",
+      "start_line": 97,
+      "end_line": 168,
+      "statement": "Streaming retains all data rows, sets sampled widths before headers, alternates style and applies autofilter before flush. Writer/header/row/filter/flush errors are logged rather than propagated, so a saved workbook may not establish complete sheet contents.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/excel.go#L97-L168",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-005",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/excel.go",
+      "artifact_id": "4c513c9c1f1b842b88bbed09",
+      "content_sha256": "6e5853401a131a4171d62dad688afb62d6d94c9f200f99253d18c3b51eb0432e",
+      "start_line": 170,
+      "end_line": 210,
+      "statement": "Column width calculation samples at most1000rows, uses byte length and caps width120 with minimum8 applied by the writer; this formatting sample does not intentionally truncate the written row denominator. Boolean display maps true/false to Yes/No without unknown state.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/excel.go#L170-L210",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-006",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/issues.go",
+      "artifact_id": "71c84940462f584dcc3b4bc1",
+      "content_sha256": "718f326e02ad3ae686272ee9299a04aea82b76e1e819d2cd091e579dd64f2c62",
+      "start_line": 15,
+      "end_line": 56,
+      "statement": "Findings rendering includes only typed EvaluationResult pointers, creates seven columns and does not preserve stable RuleID in rows. Replay/untyped values or missing/no-data evaluations can be omitted without explicit unknown rows.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/issues.go#L15-L56",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-007",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/issues.go",
+      "artifact_id": "71c84940462f584dcc3b4bc1",
+      "content_sha256": "718f326e02ad3ae686272ee9299a04aea82b76e1e819d2cd091e579dd64f2c62",
+      "start_line": 58,
+      "end_line": 126,
+      "statement": "The findings-key switch includes cloud repository/organization subevaluations, enterprise budgets/GHAS and metadata, but no appliance combined or granular evaluation prefixes. Computed GHES findings therefore do not reach this Excel Findings table.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/issues.go#L58-L126",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-008",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/issues.go",
+      "artifact_id": "71c84940462f584dcc3b4bc1",
+      "content_sha256": "718f326e02ad3ae686272ee9299a04aea82b76e1e819d2cd091e579dd64f2c62",
+      "start_line": 128,
+      "end_line": 151,
+      "statement": "Finding rows sort by five fixed severity tiers then name; an unrecognized tier gets zero map priority. Sorting and rows do not prove semantic priority or actual remediation completion.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/issues.go#L128-L151",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-009",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/issues_test.go",
+      "artifact_id": "db08204c7b1add61c3130071",
+      "content_sha256": "25e97967458b83361f64ea1913e6647adc021952268e03a42123d99c36c2d9a7",
+      "start_line": 12,
+      "end_line": 50,
+      "statement": "A synthetic table fixture checks enterprise budget and GHAS entries appear. It does not test appliance findings, stable rule identity, all families or workbook serialization.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/issues_test.go#L12-L50",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-010",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/organizations.go",
+      "artifact_id": "e0942e78a75852333b2731bd",
+      "content_sha256": "fb814e9d014d2a055fa63e27be78c96808ef055a400d5f32d5b7c94f2c6e96d0",
+      "start_line": 17,
+      "end_line": 103,
+      "statement": "Organization rows show parent enterprise, defaults,2FA/signoff,new-repo security and only the base organization evaluation issue count. Managed-user2FA is displayed IdP(EMU) without verifying providerMFA; other organization subevaluation findings are not included in this row total.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/organizations.go#L17-L103",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCEL-011",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/repositories.go",
+      "artifact_id": "8a63ad35d66f796b7446a5e7",
+      "content_sha256": "87f8d70068da8b1938e10e2f7d479190d456963c4c9b7bb2ef3269d25d4909a1",
+      "start_line": 17,
+      "end_line": 101,
+      "statement": "Repository rows show parent scopes, access flags, branch/language/license and only the base repository evaluation totals/tier counts. Separate metadata, collaborators, keys and config evaluations are not added to the displayed total, and license naming is not rights clearance.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/repositories.go#L17-L101",
+      "source_authority": "Pinned spreadsheet renderer implementation and synthetic fixture, source-only review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Spreadsheet presentation and saved-file logs are distinct from complete authoritative assessment.",
+        "No workbook generation, source execution, rights adoption or native validation."
+      ]
+    }
+  ],
+  "conflicts_and_limits": [
+    "EXCEL-007 Findings table excludes allGHES evaluation key families.",
+    "EXCEL-006 stableRuleID absent from spreadsheet rows; EXCEL-010/011 totals onlybaseevaluation, notallsubevaluations.",
+    "EXCEL-003/004 logging-only errors do not provide full workbook success contract.",
+    "EXCEL-005 widths sample is formatting only, no row denominator reduction."
+  ],
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "independent_omission_certification": false
+}

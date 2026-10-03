@@ -1,0 +1,29 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:26:26Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSBRANCHNAME-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-workflow-branches4.md",
+      "content_sha256": "9effcad086cdbd184a9f63876a1d58a57646aa2884730f75414b9fd5bcbdbe6b",
+      "start_line": 1,
+      "end_line": 18,
+      "statement": "For a single event, branch inclusion and ignore keys are mutually exclusive. Mixed patterns use the inclusion key, and a negative pattern requires a positive pattern. Later negative matches exclude and later positive matches re-include; the PR example matches target releases branches while excluding alpha suffixes. These example names are not adopted branch naming policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSBRANCHNAME-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/workflow-syntax-name.md",
+      "content_sha256": "08e41ebc7d8a8166e4cbbb2bacc74bfc5bb8c0c7e0527075f5cd8afd9c2a4cb7",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Workflow name controls the Actions-tab display; omitting name displays the workflow's path relative to repository root. A display label is not immutable workflow identity, successful execution or enforcement evidence.",
+      "accepted_policy": false
+    }
+  ]
+}

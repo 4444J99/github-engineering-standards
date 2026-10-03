@@ -1,0 +1,47 @@
+{
+  "issue": 193,
+  "reviewed_at": "2026-10-03T04:19:32.136Z",
+  "artifacts_reviewed": 3,
+  "reference_claims_added": 4,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59355,
+    "claim_bearing_artifacts": 2851,
+    "tests": 324,
+    "test_seconds": 1.978,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Unspecified surrounding event not exhaustive trigger matrix.",
+    "Fork secret/token statements not complete event-specific privilege model, especially pull_request_target.",
+    "Include excludes secrets except GITHUB_TOKEN; read for context, not new whole-artifact certification.",
+    "No enablement, workflow approval, credentials, native test, adopted policy, or rights clearance."
+  ]
+}

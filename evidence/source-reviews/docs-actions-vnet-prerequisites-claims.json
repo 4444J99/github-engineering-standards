@@ -1,0 +1,106 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:19:08Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/artifacts/artifacts-from-deleted-workflow-runs.md",
+      "content_sha256": "da4917492e469184dd0787d8e5f79c45d3e8be64a79922b4e6cc374ab33f0c80",
+      "start_line": 3,
+      "end_line": 3,
+      "statement": "Deleting a workflow run also deletes all its associated stored artifacts; UI, REST and gh deletion interfaces are referenced, not authorized or executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/attestation-virtual-registry.md",
+      "content_sha256": "845155440a6cc6212464153e9df5ca9071c7882ace0f6ea3bf48118f4d04a8ce",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The attest action creates virtual-registry storage records only when push-to-registry is true AND the containing workflow grants artifact-metadata: write; attestation alone is insufficient.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/automatically-adding-a-runner-to-a-group.md",
+      "content_sha256": "4687b7aa43dbae4e6c374ed633f9f599a3750b30ffc246d7b7f8573f2d9a892f",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Runner registration may select an existing group with --runnergroup; the example group, organization/enterprise URL and token are placeholders, and config.sh is inert source data.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/automatically-adding-a-runner-to-a-group.md",
+      "content_sha256": "4687b7aa43dbae4e6c374ed633f9f599a3750b30ffc246d7b7f8573f2d9a892f",
+      "start_line": 7,
+      "end_line": 11,
+      "statement": "Registration fails if the named self-hosted runner group does not exist; the illustrated error is not a live registration receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/azure-vnet-about-failover.md",
+      "content_sha256": "c0f194a17e8165bf7c4d4d6d603e3a11a98d6b414da13ec506ff5082a0ed0b56",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Pinned VNET failover is public preview and subject to change; this is not current availability verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/azure-vnet-about-failover.md",
+      "content_sha256": "c0f194a17e8165bf7c4d4d6d603e3a11a98d6b414da13ec506ff5082a0ed0b56",
+      "start_line": 4,
+      "end_line": 8,
+      "statement": "A secondary Azure subnet may reside in a different region and can route runner traffic during primary disruption; enabling and disabling failover is manual, not an automatic recovery guarantee.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/azure-vnet-about-failover.md",
+      "content_sha256": "c0f194a17e8165bf7c4d4d6d603e3a11a98d6b414da13ec506ff5082a0ed0b56",
+      "start_line": 9,
+      "end_line": 10,
+      "statement": "Both primary and failover subnets require Azure network resources before use, and the failover region must be supported; linked region coverage is separately pending.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/azure-vnet-about-larger-runners.md",
+      "content_sha256": "0fec5d8e1876a199a238d53b5c1145a37b7bb4711da0c6c46697af21d45f01cf",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Pinned Azure VNET private networking supports larger Ubuntu and Windows runners with 2–64 vCPU, not standard GitHub-hosted runners; linked specifications require separate review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSVNETPRE-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/azure-vnet-about-larger-runners.md",
+      "content_sha256": "0fec5d8e1876a199a238d53b5c1145a37b7bb4711da0c6c46697af21d45f01cf",
+      "start_line": 3,
+      "end_line": 3,
+      "statement": "Dynamic IP addresses are required and are the larger-runner default; the static-IP limitation reusable dependency and linked networking page are not implicitly reviewed.",
+      "accepted_policy": false
+    }
+  ]
+}

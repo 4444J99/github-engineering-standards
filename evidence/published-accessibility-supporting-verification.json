@@ -1,0 +1,20 @@
+{
+  "issue": 28,
+  "source_checks": {"supporting_descriptions": 8, "source_digests": "MATCH", "span_digests": "computed from exact source content"},
+  "independent_correction_recheck": {
+    "auditor": "codex:evaluator_review",
+    "claims": 34,
+    "source_span_digests": "MATCH",
+    "root_extraction_sha256": "e014f14e7d4a19110243d0c1b0d0c5f8ce03081906e4b90f472530df935e131d",
+    "reusable_extraction_sha256": "012f6ec6d63e683452709d9d0f3bbece5e7bc6a51a28c0aa5f8f3eb2d028a139",
+    "crosswalk_sha256": "1cf9d44bbfbb95b58f6a30445059006b8ac4bd9659b806eff807524b64a34bb7",
+    "feature_map_full_read": true,
+    "supporting_description_recheck": "not yet performed"
+  },
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 1, "tests": 324, "seconds": 1.266, "failures": 8, "result": "FAILED; observed freshness-related STALE expectations"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0}
+  ],
+  "boundary": "Failed full-suite verification preserved. No release readiness, assurance, binary review or adoption claimed."
+}

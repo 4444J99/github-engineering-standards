@@ -1,0 +1,119 @@
+{
+  "schema_version": "ges.discussion-governance-consolidation.v1",
+  "issue": 402,
+  "reviewed_at": "2026-10-03T11:07:40.726Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed discussion claims only; not full six-source reconciliation.",
+  "rows": [
+    {
+      "id": "DISCUSS-OPERATION-AUTHORITY",
+      "claims": [
+        "DOCS-DISCUSSMOD-1",
+        "DOCS-DISCUSSLIFECYCLE-1",
+        "DOCS-DISCUSSCATEGORIES-1",
+        "DOCS-DISCUSSQUICKSTART-9"
+      ],
+      "conflict": "Triage/write/maintain-admin requirements differ by operation and product.",
+      "decision": "UNRESOLVED_ROLE_MATRIX",
+      "requirement": "Bind operation, repository/source repository, role and exact platform/version; disputed privileges remain unknown pending independent evidence.",
+      "negative_test": "Cloud triage management cannot imply GHES deletion/category authority."
+    },
+    {
+      "id": "DISCUSS-SOURCE-CUSTODY",
+      "claims": [
+        "DOCS-DISCUSSQUICKSTART-4",
+        "DOCS-DISCUSSQUICKSTART-5",
+        "DOCS-DISCUSSLIFECYCLE-9"
+      ],
+      "conflict": "Source repository permission inheritance and source reassignment differ data transfer.",
+      "decision": "PROPOSED_EXPLICIT_MIGRATION",
+      "requirement": "Record current source, affected discussions, destination permissions and approved migration/recovery plan; pointer change does not certify movement.",
+      "negative_test": "Changing organization source cannot mark old discussions transferred or recoverably preserved."
+    },
+    {
+      "id": "DISCUSS-VISIBILITY-TRANSFER",
+      "claims": [
+        "DOCS-DISCUSSQUICKSTART-1",
+        "DOCS-DISCUSSLIFECYCLE-10",
+        "DOCS-DISCUSSMOD-7"
+      ],
+      "conflict": "Inherited visibility, owner-limited transfers and conversion preserve different identity/scope.",
+      "decision": "PROPOSED_TARGET_BOUNDARY",
+      "requirement": "Preview source/destination ownership, visibility, category and operation; check private/internal-public prohibition and announcement restriction.",
+      "negative_test": "Private-to-public or announcement transfer cannot pass; issue conversion cannot certify metadata/history parity."
+    },
+    {
+      "id": "DISCUSS-FORM-CONTRACT",
+      "claims": [
+        "DOCS-DISCUSSFORMS-1-2",
+        "DOCS-DISCUSSFORMS-1-3",
+        "DOCS-DISCUSSFORMS-2-3",
+        "DOCS-DISCUSSFORMS-2-4"
+      ],
+      "conflict": "YAML syntax and sample rendering differ category/default-branch deployment and native input validation.",
+      "decision": "PROPOSED_SCHEMA_AND_DEPLOYMENT",
+      "requirement": "Validate category slug/default branch, supported format and body non-Markdown field; keep render hints data and test actual scoped form behavior.",
+      "negative_test": "Parsed YAML or render:bash cannot authorize execution or certify form working for polls."
+    },
+    {
+      "id": "DISCUSS-EVIDENCE-ACCEPTANCE",
+      "claims": [
+        "DOCS-DISCUSSMOD-2",
+        "DOCS-DISCUSSLIFECYCLE-12",
+        "DOCS-DISCUSSFORMS-2-2"
+      ],
+      "conflict": "Marked answers, closed discussions and editable form output are not accepted engineering evidence.",
+      "decision": "PROPOSED_SEPARATE_REVIEW",
+      "requirement": "Retain exact revision, criteria, accountable reviewer and independent acceptance outside mutable UI state.",
+      "negative_test": "Closed/resolved or required checkbox cannot automatically accept policy or certify correctness."
+    },
+    {
+      "id": "DISCUSS-LOCK-RECOVERY",
+      "claims": [
+        "DOCS-DISCUSSMOD-5",
+        "DOCS-DISCUSSMOD-6",
+        "DOCS-DISCUSSMOD-9",
+        "DOCS-DISCUSSCATEGORIES-8",
+        "DOCS-DISCUSSCATEGORIES-9"
+      ],
+      "conflict": "Lock bypass, timed unblock and category deletion migration differ universal restriction and recoverability.",
+      "decision": "PROPOSED_BEHAVIOR_AND_RECOVERY",
+      "requirement": "Test authorized actor matrix, expiry and category/section membership effects with scoped approval and post-change evidence; retain unknown restoration.",
+      "negative_test": "Lock cannot certify writers barred; section deletion cannot imply discussion deletion or proven rollback."
+    },
+    {
+      "id": "DISCUSS-METRIC-TRUST",
+      "claims": [
+        "DOCS-DISCUSSINSIGHTS-2",
+        "DOCS-DISCUSSINSIGHTS-4",
+        "DOCS-DISCUSSACCESS-1",
+        "DOCS-DISCUSSCOLLAB-1-4"
+      ],
+      "conflict": "Aggregate activity, unique engaged users and answer ranking differ trust/access/quality.",
+      "decision": "PROPOSED_EXPLICIT_UNITS",
+      "requirement": "Record target/time/period/unit/privacy and complete declared denominator; independent access review precedes elevation.",
+      "negative_test": "High rank, reaction or pageview cannot prove trusted moderator or accepted outcome."
+    },
+    {
+      "id": "DISCUSS-SOURCE-APPLICABILITY",
+      "claims": [
+        "DOCS-DISCUSSLIFECYCLE-4",
+        "DOCS-DISCUSSCATEGORIES-2",
+        "DOCS-DISCUSSFORMS-2-6",
+        "DOCS-DISCUSSCONCEPT-3"
+      ],
+      "conflict": "Broad labels/formats/creation claims omit detailed scope exceptions.",
+      "decision": "UNRESOLVED_FEATURE_CONFLICTS",
+      "requirement": "Preserve claim identities and exact version, category and operation; independently verify conflicts without broad parent wildcard inference.",
+      "negative_test": "Unqualified labels cannot create GHES support; any-access prose cannot override announcement/EMU/configured creation restrictions."
+    }
+  ],
+  "limitations": [
+    "Negative tests specify proposed bindings, not executed implementations.",
+    "Identity verification does not certify mapping equivalence or omission completeness.",
+    "No rights clearance, public publication, access grants or native activation."
+  ]
+}

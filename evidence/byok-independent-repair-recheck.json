@@ -1,0 +1,2060 @@
+{
+  "schema": "ges.independent-repair-recheck.v1",
+  "reviewer": "codex:independent-review",
+  "reviewed_at": "2026-10-02T04:42:56Z",
+  "status": "LIMITED_CORRECTIONS_REQUIRED",
+  "original_audit": "evidence/byok-independent-claim-audit.json",
+  "original_audit_immutable": true,
+  "scope": "Independent semantic recheck of the repaired original100 BYOK observations, 105 added children, 35 grouped parents, 184 candidate mappings and205 consolidation memberships. Thirteen complete pinned source artifacts and one targeted variable span269–270; no whole variable-file review.",
+  "inspected_documents": [
+    {
+      "path": "evidence/source-reviews/docs-custom-model-administration-claims.json",
+      "sha256": "7439f0040b794da1fdc014b5bed0a0e3e3b7c970c01f837c9c7e70609c0c980c"
+    },
+    {
+      "path": "evidence/source-reviews/docs-custom-model-administration-artifacts.json",
+      "sha256": "5a5b8551a6cb193aca634f493b6f632177709bf8e8f382025ddc5a1ad1da8380"
+    },
+    {
+      "path": "evidence/source-reviews/docs-local-byok-claims.json",
+      "sha256": "c2adb0f7ff5e43bd96334c9e6330dbb6fe99bf938336b46d5d900e69701b4013"
+    },
+    {
+      "path": "evidence/source-reviews/docs-local-byok-artifacts.json",
+      "sha256": "1de81b436a3173f1a4b2d5d99076650412f0f8f2a13ab6ccbe5c1b16d78a7b21"
+    },
+    {
+      "path": "evidence/byok-claim-consolidation.json",
+      "sha256": "487e81b9c3a7bd14717a91c66935a04eb90d12f323ff9eb3e95117711dbfa8fb"
+    }
+  ],
+  "sources": [
+    {
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "sha256": "d9bfb7459ebc315b715df45b64f0380f341aa4ca3f1fb79939f89bf4667104e2",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "sha256": "e62308110c607a2367946f8f5a28be4f5960a94bc2e8aa169198c0817bef7db1",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "sha256": "c375c8a8fb84f708a40d7ea12a5fbed289a6bb78c9a894cc707098d338da859c",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "sha256": "75a96b239083fc2eea7a068606812346cebc717ab3ffb03f9ec216fbdb83d229",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "sha256": "69c05d70fc389a1e67291a2d789d0f78b320e2d2e95cd0bd16ccdd9b79b49175",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/features/copilot-byok.yml",
+      "sha256": "9270464c51e2db8eae2ec51427ebac11da584182a818ff2b24bd35655fcd7e93",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/reusables/copilot/byok-add.md",
+      "sha256": "73f59e0271ccefe1f88c7392d225b2f4f5744673676e054463dc9c5bccae9c83",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/reusables/copilot/byok-intro.md",
+      "sha256": "d93c2e42e66da571b5bf6aa45e2d333b2d370e30d0b3f7a7769f2c0b3d4d0ec4",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/reusables/copilot/byok-preview-note.md",
+      "sha256": "ddaed339530f6b22bdb1b250a53072433cb7debf2733bc8796739ca9ba8747f9",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/reusables/copilot/byok-two-mechanisms.md",
+      "sha256": "2cb9fd71f2b928f7a43ceeed2b71fcc9af29741ed1c91fedacfb9c2b64fe43d4",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/reusables/copilot/byok-why.md",
+      "sha256": "b6768898af8f51c76b33ddc22026c521e6ff124014fdc6724573067642de285b",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/reusables/copilot/copilot-cli/start-cli.md",
+      "sha256": "841c4bcd7086636db1cb346ff555b3a5cc925a26fe175c0c42fbf2204861f0c8",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/reusables/gated-features/github-app.md",
+      "sha256": "180e715aa3d70b956328c59400d9f560ab8ef040a5fafbb309381020e7d802a4",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    },
+    {
+      "path": "data/variables/copilot.yml",
+      "sha256": "8d274044b1764b53d1c1a7af13fb04e901d6aab4fc344fe1538b298db5bed2b2",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "source": "github/docs"
+    }
+  ],
+  "counts": {
+    "records": 205,
+    "grouped_parents": 35,
+    "atomic_children": 105,
+    "retained_other_originals": 65,
+    "candidate_mappings": 184,
+    "full_artifact_receipts": 13,
+    "targeted_variable_artifacts": 1
+  },
+  "structural_checks": {
+    "unique_claim_ids": true,
+    "all_205_consolidation_members_exactly_once": true,
+    "all_replacement_children_resolve_to_parent": true,
+    "all_source_bounds_valid": true,
+    "all_mapping_references_resolve": true,
+    "zero_candidate_feature_children_not_candidate_mapped": [
+      "DOCS-CUSTOMMODEL-031-A01",
+      "DOCS-CUSTOMMODEL-031-A02",
+      "DOCS-CUSTOMMODEL-031-A03"
+    ]
+  },
+  "corrected_original_findings": [
+    {
+      "finding": "SDK linkage",
+      "result": "LOCAL006 parent and child A03 distinguish separate setup references; neither identical permissions nor CLI offline/no-auth inheritance is asserted."
+    },
+    {
+      "finding": "Save authority",
+      "result": "CUSTOM009-A01 describes Save as source procedure; applicable approval remains a project constraint, not attributed to upstream."
+    },
+    {
+      "finding": "App gating versus login",
+      "result": "LOCAL032 expanded6–20 and children separate metadata, login and no-plan facts; no-plan does not negate GitHub login."
+    },
+    {
+      "finding": "Cloud wording",
+      "result": "LOCAL001 no longer uses ambiguous cloud-feature wording; FPT/GHEC feature aliases remain source metadata, not free-account-only applicability."
+    },
+    {
+      "finding": "Azure deployment selector",
+      "result": "LOCAL025-A07 preserves COPILOT_MODEL deployment-name example at97 separately from MODEL_ID underlying model and WIRE_MODEL routing."
+    },
+    {
+      "finding": "Foundry actions",
+      "result": "CUSTOM026 separates endpoint, Model ID and Add model."
+    }
+  ],
+  "findings": [
+    {
+      "id": "BYOK-RECHECK-001",
+      "severity": "CORRECTION",
+      "claim_ids": [
+        "DOCS-CUSTOMMODEL-006-A02"
+      ],
+      "source_path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "lines": [
+        44,
+        44
+      ],
+      "observation": "Use Added models is procedural navigation, not an informational constraint.",
+      "correction": "Set source_strength PROCEDURE; preserve reference-only/non-executed context."
+    },
+    {
+      "id": "BYOK-RECHECK-002",
+      "severity": "CORRECTION",
+      "claim_ids": [
+        "DOCS-LOCALBYOK-028-A05"
+      ],
+      "source_path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "lines": [
+        130,
+        130
+      ],
+      "observation": "The source is a startup reusable inclusion following the Anthropic configuration example. 'Only after configuration' reads as an enforced universal invariant not established by that line.",
+      "correction": "Say the example proceeds to CLI startup after the shown configuration, classify PROCEDURE, and retain startup reusable provenance; no runtime enforcement assertion."
+    }
+  ],
+  "semantic_conclusions": {
+    "children_independently_checked": 105,
+    "major_previous_omissions_repaired": true,
+    "remaining_operative_omission_identified_in_inspected_set": false,
+    "qualified_notes": [
+      "WHY goals about billing/access/monitoring remain explanatory rationales, not adopted obligations or measured benefits.",
+      "The65 untouched original records retain contextual scope but do not all have explicit source_strength fields; this recheck does not claim a fully typed schema across205records.",
+      "Linked installation/provider pages, screenshots, API/key permissions and runtime behavior are not verified by these receipts.",
+      "Feature aliases and targeted variable expansion do not establish full linked-world coverage."
+    ]
+  },
+  "claim_dispositions": [
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-001",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 4,
+      "end_line": 6,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-002",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 16,
+      "end_line": 22,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-003",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 20,
+      "end_line": 26,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-004",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 28,
+      "end_line": 28,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-005",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 30,
+      "end_line": 34,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-006",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 38,
+      "end_line": 45,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-007",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 46,
+      "end_line": 47,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-008",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 48,
+      "end_line": 50,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-009",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 51,
+      "end_line": 57,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-010",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 4,
+      "end_line": 6,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-011",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 20,
+      "end_line": 22,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-012",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 26,
+      "end_line": 26,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-013",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 30,
+      "end_line": 30,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-014",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 32,
+      "end_line": 32,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-015",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 34,
+      "end_line": 39,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-016",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 41,
+      "end_line": 45,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-017",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 1,
+      "end_line": 4,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-018",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-019",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 18,
+      "end_line": 18,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-020",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 1,
+      "end_line": 1,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-021",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 2,
+      "end_line": 2,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-022",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 3,
+      "end_line": 3,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-023",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 4,
+      "end_line": 4,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-024",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 1,
+      "end_line": 4,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-025",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 5,
+      "end_line": 6,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-026",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 10,
+      "end_line": 10,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-027",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 12,
+      "end_line": 12,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-028",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 8,
+      "end_line": 14,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-029",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-030",
+      "path": "data/reusables/copilot/byok-preview-note.md",
+      "start_line": 1,
+      "end_line": 1,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-031",
+      "path": "data/features/copilot-byok.yml",
+      "start_line": 1,
+      "end_line": 5,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-032",
+      "path": "data/variables/copilot.yml",
+      "start_line": 270,
+      "end_line": 270,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-PROVIDER-001",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 8,
+      "end_line": 8,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-PROVIDER-002",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 9,
+      "end_line": 9,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-PROVIDER-003",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 10,
+      "end_line": 10,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-PROVIDER-004",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 11,
+      "end_line": 11,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-PROVIDER-005",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 12,
+      "end_line": 12,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-PROVIDER-006",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 13,
+      "end_line": 13,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-PROVIDER-007",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 14,
+      "end_line": 14,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-003-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 20,
+      "end_line": 20,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-003-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 26,
+      "end_line": 26,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "RECOMMENDATION",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-004-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 28,
+      "end_line": 28,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-004-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 28,
+      "end_line": 28,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-005-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 32,
+      "end_line": 32,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-005-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 33,
+      "end_line": 33,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-005-A03",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 34,
+      "end_line": 34,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-006-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 38,
+      "end_line": 38,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-006-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 44,
+      "end_line": 44,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "CORRECTION_REQUIRED"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-006-A03",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 45,
+      "end_line": 45,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-008-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 49,
+      "end_line": 49,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-008-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 50,
+      "end_line": 50,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-009-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 51,
+      "end_line": 51,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-009-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 55,
+      "end_line": 55,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-009-A03",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/enable-custom-models.md",
+      "start_line": 57,
+      "end_line": 57,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-014-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 32,
+      "end_line": 32,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-014-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 32,
+      "end_line": 32,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-015-A01",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 36,
+      "end_line": 36,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-015-A02",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 37,
+      "end_line": 37,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-015-A03",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 38,
+      "end_line": 38,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-015-A04",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-organization/enable-custom-models.md",
+      "start_line": 39,
+      "end_line": 39,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-017-A01",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 2,
+      "end_line": 2,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-017-A02",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 4,
+      "end_line": 4,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-018-A01",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-018-A02",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-018-A03",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "RECOMMENDATION",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-018-A04",
+      "path": "data/reusables/copilot/byok-intro.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "RECOMMENDATION",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-021-A01",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 2,
+      "end_line": 2,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-021-A02",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 2,
+      "end_line": 2,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-022-A01",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 3,
+      "end_line": 3,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-022-A02",
+      "path": "data/reusables/copilot/byok-why.md",
+      "start_line": 3,
+      "end_line": 3,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-024-A01",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 1,
+      "end_line": 1,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-024-A02",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 2,
+      "end_line": 2,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-024-A03",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 3,
+      "end_line": 3,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-024-A04",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 4,
+      "end_line": 4,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-025-A01",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 6,
+      "end_line": 6,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-025-A02",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 6,
+      "end_line": 6,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-026-A01",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 10,
+      "end_line": 10,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-026-A02",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 10,
+      "end_line": 10,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-031-A01",
+      "path": "data/features/copilot-byok.yml",
+      "start_line": 1,
+      "end_line": 1,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-031-A02",
+      "path": "data/features/copilot-byok.yml",
+      "start_line": 4,
+      "end_line": 4,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-031-A03",
+      "path": "data/features/copilot-byok.yml",
+      "start_line": 5,
+      "end_line": 5,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-CUSTOMMODEL-026-A03",
+      "path": "data/reusables/copilot/byok-add.md",
+      "start_line": 10,
+      "end_line": 10,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-001",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 5,
+      "end_line": 10,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-002",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 14,
+      "end_line": 16,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-003",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-004",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 22,
+      "end_line": 22,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-005",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 23,
+      "end_line": 24,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-006",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 25,
+      "end_line": 27,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-007",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 29,
+      "end_line": 29,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-008",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 34,
+      "end_line": 36,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-009",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 38,
+      "end_line": 38,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-010",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 40,
+      "end_line": 42,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-011",
+      "path": "data/reusables/copilot/byok-two-mechanisms.md",
+      "start_line": 1,
+      "end_line": 3,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-012",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 7,
+      "end_line": 8,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-013",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 17,
+      "end_line": 20,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-014",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 24,
+      "end_line": 25,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-015",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 33,
+      "end_line": 33,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-016",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 34,
+      "end_line": 34,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-017",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 35,
+      "end_line": 35,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-018",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 37,
+      "end_line": 37,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-019",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-020",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-021",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 45,
+      "end_line": 59,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-022",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 63,
+      "end_line": 72,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-023",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 74,
+      "end_line": 82,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-024",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 84,
+      "end_line": 84,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 88,
+      "end_line": 106,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-026",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 112,
+      "end_line": 112,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-027",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 113,
+      "end_line": 115,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-028",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 119,
+      "end_line": 130,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-029",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 134,
+      "end_line": 134,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-030",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 137,
+      "end_line": 137,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-031",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 139,
+      "end_line": 147,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-032",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 6,
+      "end_line": 20,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-033",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 15,
+      "end_line": 18,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-034",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 20,
+      "end_line": 20,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-035",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 20,
+      "end_line": 20,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-036",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 23,
+      "end_line": 23,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-037",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 40,
+      "end_line": 41,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 44,
+      "end_line": 53,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-039",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 55,
+      "end_line": 55,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-040",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 57,
+      "end_line": 57,
+      "claim_role": "GROUPED_CONTEXT",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "GROUPED_PARENT_RETAINED_WITH_CHILDREN"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-041",
+      "path": "data/reusables/copilot/copilot-cli/start-cli.md",
+      "start_line": 1,
+      "end_line": 5,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-042",
+      "path": "data/reusables/gated-features/github-app.md",
+      "start_line": 1,
+      "end_line": 1,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-001",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 49,
+      "end_line": 49,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-002",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 50,
+      "end_line": 50,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-003",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 51,
+      "end_line": 51,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-004",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 52,
+      "end_line": 52,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-005",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 53,
+      "end_line": 53,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-006",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 54,
+      "end_line": 54,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-007",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 55,
+      "end_line": 55,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-008",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 56,
+      "end_line": 56,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-009",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 57,
+      "end_line": 57,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-010",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 58,
+      "end_line": 58,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-ENV-011",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 59,
+      "end_line": 59,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-001",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 29,
+      "end_line": 29,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-002",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 30,
+      "end_line": 30,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-003",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 31,
+      "end_line": 31,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-004",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 32,
+      "end_line": 32,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-005",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 33,
+      "end_line": 33,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-006",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 34,
+      "end_line": 34,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-007",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 35,
+      "end_line": 35,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-APPPROVIDER-008",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 36,
+      "end_line": 36,
+      "claim_role": "RETAINED_REFERENCE",
+      "source_strength": "NOT_EXPLICITLY_TYPED",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-002-A01",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-002-A02",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-003-A01",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-003-A02",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-005-A01",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 23,
+      "end_line": 23,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-005-A02",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 24,
+      "end_line": 24,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-006-A01",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 25,
+      "end_line": 25,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-006-A02",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 26,
+      "end_line": 26,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-006-A03",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 27,
+      "end_line": 27,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-008-A01",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 34,
+      "end_line": 34,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-008-A02",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 36,
+      "end_line": 36,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-008-A03",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 36,
+      "end_line": 36,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-009-A01",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 38,
+      "end_line": 38,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-009-A02",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 38,
+      "end_line": 38,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-009-A03",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 38,
+      "end_line": 38,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-010-A01",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 40,
+      "end_line": 40,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-010-A02",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 40,
+      "end_line": 40,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-010-A03",
+      "path": "content/copilot/concepts/models/bring-your-own-key.md",
+      "start_line": 40,
+      "end_line": 40,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-011-A01",
+      "path": "data/reusables/copilot/byok-two-mechanisms.md",
+      "start_line": 1,
+      "end_line": 1,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-011-A02",
+      "path": "data/reusables/copilot/byok-two-mechanisms.md",
+      "start_line": 3,
+      "end_line": 3,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-014-A01",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 24,
+      "end_line": 24,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-014-A02",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 25,
+      "end_line": 25,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-019-A01",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-019-A02",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-019-A03",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A01",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 91,
+      "end_line": 91,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A02",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 92,
+      "end_line": 92,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A03",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 93,
+      "end_line": 93,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A04",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 94,
+      "end_line": 94,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A05",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 95,
+      "end_line": 95,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A06",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 96,
+      "end_line": 96,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A07",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 97,
+      "end_line": 97,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A08",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 102,
+      "end_line": 102,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A09",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 103,
+      "end_line": 103,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-025-A10",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 104,
+      "end_line": 104,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-028-A01",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 122,
+      "end_line": 122,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-028-A02",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 123,
+      "end_line": 123,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-028-A03",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 124,
+      "end_line": 124,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-028-A04",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 125,
+      "end_line": 125,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "EXAMPLE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-028-A05",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 130,
+      "end_line": 130,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "CORRECTION_REQUIRED"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-031-A01",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 139,
+      "end_line": 139,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-031-A02",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 144,
+      "end_line": 144,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-031-A03",
+      "path": "content/copilot/how-tos/copilot-cli/customize-copilot/use-byok-models.md",
+      "start_line": 147,
+      "end_line": 147,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-032-A01",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 6,
+      "end_line": 6,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-032-A02",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 8,
+      "end_line": 8,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-032-A03",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 20,
+      "end_line": 20,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-033-A01",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 16,
+      "end_line": 16,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-033-A02",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 18,
+      "end_line": 18,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-033-A03",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 18,
+      "end_line": 18,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-037-A01",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 40,
+      "end_line": 40,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-037-A02",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 41,
+      "end_line": 41,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "REQUIREMENT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038-A01",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 44,
+      "end_line": 44,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038-A02",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 49,
+      "end_line": 49,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038-A03",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 50,
+      "end_line": 50,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038-A04",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 51,
+      "end_line": 51,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038-A05",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 52,
+      "end_line": 52,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-038-A06",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 53,
+      "end_line": 53,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "PROCEDURE",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-039-A01",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 55,
+      "end_line": 55,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-039-A02",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 55,
+      "end_line": 55,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-040-A01",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 57,
+      "end_line": 57,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-040-A02",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 57,
+      "end_line": 57,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    },
+    {
+      "claim_id": "DOCS-LOCALBYOK-032-A04",
+      "path": "content/copilot/how-tos/github-copilot-app/use-byok-models.md",
+      "start_line": 20,
+      "end_line": 20,
+      "claim_role": "ATOMIC_REFERENCE",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "disposition": "SUPPORTED_WITH_CONTEXT_LIMITATIONS"
+    }
+  ],
+  "certification_limits": {
+    "overall_six_source_omission_pass": false,
+    "nine_gates_complete": false,
+    "rights_clearance": false,
+    "accepted_policy": false,
+    "native_behavior_verified": false,
+    "independent_global_omission_certification": false
+  }
+}

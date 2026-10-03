@@ -1,0 +1,353 @@
+{
+  "schema": "ges.bounded-source-table-audit.v1",
+  "issue": 26,
+  "reviewer": "codex:independent-review",
+  "reviewer_identity": "/root",
+  "reviewed_at": "2026-10-02T20:58:11.569Z",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "data/reusables/dependabot/dependabot-updates-supported-versioning-tags.md",
+  "source_sha256": "fff9ae45c5f50b6abe9778465f02b23c987622ff47e3868aed3f5b2fb0b50f2f",
+  "physical_lines": [
+    7,
+    65
+  ],
+  "scope": {
+    "rows": 37
+  },
+  "method": "Root separately read all version-tag table rows and their surrounding conditionals, plus the complete ecosystem-specific prose through line114. Normalized table facts below are for independent comparison to author claims, not a current platform test.",
+  "rows": [
+    {
+      "line": 9,
+      "package_manager": "Maven",
+      "yaml_value": "maven",
+      "tag_vocabulary": "alpha, a, beta, b, milestone, m, rc, cr, sp, ga, final, release, snapshot",
+      "example_count": 2,
+      "version_predicates": []
+    },
+    {
+      "line": 10,
+      "package_manager": "npm",
+      "yaml_value": "npm",
+      "tag_vocabulary": "alpha, beta, canary, dev, experimental, latest, legacy, next, nightly, rc, release, stable",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 11,
+      "package_manager": "pnpm",
+      "yaml_value": "npm",
+      "tag_vocabulary": "alpha, beta, canary, dev, experimental, latest, legacy, next, nightly, rc, release, stable",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 13,
+      "package_manager": "sbt",
+      "yaml_value": "sbt",
+      "tag_vocabulary": "alpha, a, beta, b, milestone, m, rc, cr, sp, ga, final, release, snapshot",
+      "example_count": 2,
+      "version_predicates": [
+        "dependabot-sbt-support"
+      ]
+    },
+    {
+      "line": 15,
+      "package_manager": "yarn",
+      "yaml_value": "npm",
+      "tag_vocabulary": "alpha, beta, canary, dev, experimental, latest, legacy, next, nightly, rc, release, stable",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 16,
+      "package_manager": "Bundler",
+      "yaml_value": "bundler",
+      "tag_vocabulary": "Any prerelease identifier (commonly alpha, beta, rc, pre)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 17,
+      "package_manager": "Cargo",
+      "yaml_value": "cargo",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc, dev)",
+      "example_count": 4,
+      "version_predicates": []
+    },
+    {
+      "line": 18,
+      "package_manager": "pip",
+      "yaml_value": "pip",
+      "tag_vocabulary": "a, b, rc, dev, post",
+      "example_count": 5,
+      "version_predicates": []
+    },
+    {
+      "line": 19,
+      "package_manager": "pipenv",
+      "yaml_value": "pip",
+      "tag_vocabulary": "a, b, rc, dev, post",
+      "example_count": 5,
+      "version_predicates": []
+    },
+    {
+      "line": 20,
+      "package_manager": "pip-compile",
+      "yaml_value": "pip",
+      "tag_vocabulary": "a, b, rc, dev, post",
+      "example_count": 5,
+      "version_predicates": []
+    },
+    {
+      "line": 21,
+      "package_manager": "poetry",
+      "yaml_value": "pip",
+      "tag_vocabulary": "a, b, rc, dev, post",
+      "example_count": 5,
+      "version_predicates": []
+    },
+    {
+      "line": 22,
+      "package_manager": "Gradle",
+      "yaml_value": "gradle",
+      "tag_vocabulary": "alpha, a, beta, b, milestone, m, rc, cr, snapshot, ga, final, release, sp (case-insensitive)",
+      "example_count": 5,
+      "version_predicates": []
+    },
+    {
+      "line": 23,
+      "package_manager": "Elm",
+      "yaml_value": "elm",
+      "tag_vocabulary": "None—strict MAJOR.MINOR.PATCH only (no pre-release versions)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 24,
+      "package_manager": "Docker",
+      "yaml_value": "docker",
+      "tag_vocabulary": "alpha, beta, rc, dev, preview, pre, nightly, snapshot, canary, unstable (heuristic detection)",
+      "example_count": 5,
+      "version_predicates": []
+    },
+    {
+      "line": 25,
+      "package_manager": "git submodule",
+      "yaml_value": "gitsubmodule",
+      "tag_vocabulary": "None—pins to commit SHAs or git tags (no versioning scheme)",
+      "example_count": 2,
+      "version_predicates": []
+    },
+    {
+      "line": 26,
+      "package_manager": "Go modules",
+      "yaml_value": "gomod",
+      "tag_vocabulary": "alpha, beta, rc (SemVer prerelease after -)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 28,
+      "package_manager": "Bazel",
+      "yaml_value": "bazel",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": [
+        "dependabot-bazel-support"
+      ]
+    },
+    {
+      "line": 30,
+      "package_manager": "Bun",
+      "yaml_value": "bun",
+      "tag_vocabulary": "alpha, beta, rc, canary (SemVer prerelease after -)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 31,
+      "package_manager": "Composer",
+      "yaml_value": "composer",
+      "tag_vocabulary": "dev, alpha, a, beta, b, RC (case-insensitive)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 33,
+      "package_manager": "Conda",
+      "yaml_value": "conda",
+      "tag_vocabulary": "dev, alpha, a, beta, b, rc, c, post",
+      "example_count": 4,
+      "version_predicates": [
+        "dependabot-conda-support"
+      ]
+    },
+    {
+      "line": 36,
+      "package_manager": "Deno",
+      "yaml_value": "deno",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": [
+        "dependabot-deno-support"
+      ]
+    },
+    {
+      "line": 38,
+      "package_manager": "Dev containers",
+      "yaml_value": "devcontainers",
+      "tag_vocabulary": "SemVer 2.0.0 (prerelease not used in practice)",
+      "example_count": 2,
+      "version_predicates": []
+    },
+    {
+      "line": 39,
+      "package_manager": ".NET SDK",
+      "yaml_value": "dotnet-sdk",
+      "tag_vocabulary": "preview.N, rc.N, alpha.N",
+      "example_count": 2,
+      "version_predicates": []
+    },
+    {
+      "line": 40,
+      "package_manager": "GitHub Actions",
+      "yaml_value": "github-actions",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 41,
+      "package_manager": "Helm Charts",
+      "yaml_value": "helm",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 42,
+      "package_manager": "Hex",
+      "yaml_value": "mix",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc, dev)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 44,
+      "package_manager": "Julia",
+      "yaml_value": "julia",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly rc, DEV, beta)",
+      "example_count": 3,
+      "version_predicates": [
+        "dependabot-julia-support"
+      ]
+    },
+    {
+      "line": 47,
+      "package_manager": "Nix",
+      "yaml_value": "nix",
+      "tag_vocabulary": "None—tracks flake input commits (no versioning scheme)",
+      "example_count": 3,
+      "version_predicates": [
+        "dependabot-nix-support"
+      ]
+    },
+    {
+      "line": 49,
+      "package_manager": "NuGet",
+      "yaml_value": "nuget",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc, preview)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 51,
+      "package_manager": "OpenTofu",
+      "yaml_value": "opentofu",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": [
+        "dependabot-opentofu-support"
+      ]
+    },
+    {
+      "line": 54,
+      "package_manager": "pre-commit",
+      "yaml_value": "pre-commit",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": [
+        "dependabot-pre-commit-support"
+      ]
+    },
+    {
+      "line": 56,
+      "package_manager": "Pub",
+      "yaml_value": "pub",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly dev, beta, rc)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 58,
+      "package_manager": "Rust toolchain",
+      "yaml_value": "rust-toolchain",
+      "tag_vocabulary": "Channel-based: stable, beta, nightly (not SemVer prerelease)",
+      "example_count": 4,
+      "version_predicates": [
+        "dependabot-rust-toolchain-support"
+      ]
+    },
+    {
+      "line": 60,
+      "package_manager": "Swift",
+      "yaml_value": "swift",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 61,
+      "package_manager": "Terraform",
+      "yaml_value": "terraform",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly alpha, beta, rc)",
+      "example_count": 3,
+      "version_predicates": []
+    },
+    {
+      "line": 62,
+      "package_manager": "uv",
+      "yaml_value": "uv",
+      "tag_vocabulary": "a, b, rc, dev, post (PEP 440)",
+      "example_count": 5,
+      "version_predicates": []
+    },
+    {
+      "line": 64,
+      "package_manager": "vcpkg",
+      "yaml_value": "vcpkg",
+      "tag_vocabulary": "Any SemVer prerelease identifier (commonly beta, rc)",
+      "example_count": 3,
+      "version_predicates": [
+        "dependabot-vcpkg-support"
+      ]
+    }
+  ],
+  "qualifications": [
+    "Vocabulary examples do not exhaust ecosystems supporting arbitrary SemVer prerelease identifiers.",
+    "Shared pip YAML values do not merge distinct manager versions or manifest support.",
+    "Gradle aliases and precedence, PEP440 normalization, pseudo-versions, metadata stripping and case sensitivity remain ecosystem-specific.",
+    "Swift prose says prerelease filtering is not applied despite recognized prerelease vocabulary; preserve distinction.",
+    "Rust channel/date updates and Nix/submodule commit tracking are not ordinary SemVer.",
+    "GitHub Actions prerelease recognition can use Release API flags regardless of tag format.",
+    "All examples inert; no package resolution, credentials, installation, live feature availability or legal clearance."
+  ],
+  "claim_draft_compared": false,
+  "full_review_receipts_issued": false,
+  "rendered_version_assurance": false,
+  "current_feature_availability_verified": false,
+  "rights_cleared": false,
+  "policy_adopted": false,
+  "native_enforcement_verified": false
+}

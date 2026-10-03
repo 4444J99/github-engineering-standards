@@ -1,0 +1,42 @@
+[
+  {
+    "artifact_id": "0927898e30d94940a434ba19",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-data-residency/access-domain.md",
+    "content_sha256": "829acb668cc2326ca41e232f334de7df4944316704a7f5ca714077bd5bafd59b",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:16:26.857Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment read; conditional domain and SSH variables inspected for context only. The domain note warns that article commands/examples use product_url while the user's GitHub deployment may use another domain, illustrated by octocorp.ghe.com. The inspected product_url variable resolves to github.com for fpt/ghec and HOSTNAME otherwise. These are source example/placeholder branches, not the actual enterprise host, validated endpoint, or authorization to retarget commands.",
+    "claim_mappings": [
+      {
+        "candidate_id": "c6e52fd492e19da27ee718bd",
+        "text_sha256": "767b22d4d6a8fe77e274dd7dbb34acc00fce3fb8b092f265499f1ca6b48989a3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RESIDENCYDOMAINSSH-001; no actual host/identity certificate, credentials, native change, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "115d8cddb62c752f575f330d",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-data-residency/ssh-user.md",
+    "content_sha256": "0eb2bb4e73ae3568e8420194c6a37ae8f81cce6c162c7098cef2ae6ae36f9b60",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:16:26.857Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment read; conditional domain and SSH variables inspected for context only. The SSH note describes substituting git at product_url with the illustrated octocorp user at octocorp.ghe.com when using a different domain. This changes both the example SSH user and host, not just DNS, but is not a finding about the user's actual enterprise SSH identity, key trust, credentials, or remote parity. No SSH connection or remote configuration was changed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "9d22be2c1f4c04466bbcc425",
+        "text_sha256": "966937548d35b9b1c29e4905727b0122cf46fb3a7dcd63b642d087c9d2732b6c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RESIDENCYDOMAINSSH-002; no actual host/identity certificate, credentials, native change, adoption, or rights clearance."
+      }
+    ]
+  }
+]

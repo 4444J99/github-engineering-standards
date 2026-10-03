@@ -1,0 +1,97 @@
+{
+  "schema": "ges.published-metadata-observation.v1",
+  "issue": 28,
+  "method": "Credential-free bounded GET of four declared docs.github.com page URLs; SHA-256 of full response bytes, UTF-8 decode, HTML tag removal, entity decoding and whitespace collapse, then selected prerequisite-text search. No upstream scripts executed.",
+  "limitations": [
+    "Text-search observation, not browser visibility or DOM semantics certification",
+    "HTML response bytes were hashed in memory and not retained; no reproducible cached HTML snapshot is claimed",
+    "Live retrieval occurred later than original article-body acquisition; deployment identity across those times remains unverified",
+    "Not an exhaustive metadata, source or page review"
+  ],
+  "pages": [
+    {
+      "page": {
+        "page_id": "7c9198ecee3fa2501c8923b0",
+        "path": "/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+        "version": "enterprise-cloud@latest"
+      },
+      "url": "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "final_url": "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "http_status": 200,
+      "html_sha256": "fd3b00cbfd2cd875bf015afccbcf7f2c479597c97fc284ce7d89de6a7f2a00bd",
+      "bytes": 612601,
+      "retrieved_at": "2026-10-02T21:49:13.542552+00:00",
+      "all_plan_availability_text_detected": true,
+      "organization_cli_policy_prerequisite_text_detected": true,
+      "product_section_context_detected": true,
+      "deployment_revision_verified": false
+    },
+    {
+      "page": {
+        "page_id": "ad38504de28b9a070caa2d35",
+        "path": "/en/enterprise-cloud@latest/copilot/how-tos/github-copilot-app/computer-use",
+        "version": "enterprise-cloud@latest"
+      },
+      "url": "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/github-copilot-app/computer-use",
+      "final_url": "https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/github-copilot-app/computer-use",
+      "http_status": 200,
+      "html_sha256": "7edb41ed3515e53c599978be9808b73b62ca6c79d3495bf84ca1bf936cc73204",
+      "bytes": 605798,
+      "retrieved_at": "2026-10-02T21:49:13.890729+00:00",
+      "all_plan_availability_text_detected": true,
+      "organization_cli_policy_prerequisite_text_detected": null,
+      "product_section_context_detected": true,
+      "deployment_revision_verified": false
+    },
+    {
+      "page": {
+        "page_id": "a3a9141c5aef7cccda5d04b3",
+        "path": "/en/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+        "version": "free-pro-team@latest"
+      },
+      "url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "final_url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "http_status": 200,
+      "html_sha256": "894bbed99c6a7badf2f62dab098feab674af7e938772f7df57381f118bd301f7",
+      "bytes": 588569,
+      "retrieved_at": "2026-10-02T21:49:15.463575+00:00",
+      "all_plan_availability_text_detected": true,
+      "organization_cli_policy_prerequisite_text_detected": true,
+      "product_section_context_detected": true,
+      "deployment_revision_verified": false
+    },
+    {
+      "page": {
+        "page_id": "c6df7f68e2a0ce1a79a96e24",
+        "path": "/en/copilot/how-tos/github-copilot-app/computer-use",
+        "version": "free-pro-team@latest"
+      },
+      "url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app/computer-use",
+      "final_url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app/computer-use",
+      "http_status": 200,
+      "html_sha256": "4bfa018fde1b50cace89645ba12834449278dae6a003429901190103cf4b138c",
+      "bytes": 581886,
+      "retrieved_at": "2026-10-02T21:49:15.968712+00:00",
+      "all_plan_availability_text_detected": true,
+      "organization_cli_policy_prerequisite_text_detected": null,
+      "product_section_context_detected": true,
+      "deployment_revision_verified": false
+    }
+  ],
+  "conclusion": "Current HTML contains prerequisite text matching supplemental product-frontmatter fragments; acquired article-body-only evidence must be supplemented with metadata review rather than treating omitted product frontmatter as absence of prerequisites.",
+  "source_dependencies": [
+    {
+      "commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9",
+      "path": "data/reusables/gated-features/copilot-cli.md",
+      "sha256": "93f6a35254b013f6a38ec915cb85ba866677f0103b54a6c1cfd0ff84b5002108",
+      "git_blob_sha": "43c44c5124acd886734632b017849b8fe8f0be69"
+    },
+    {
+      "commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9",
+      "path": "data/reusables/gated-features/github-app.md",
+      "sha256": "180e715aa3d70b956328c59400d9f560ab8ef040a5fafbb309381020e7d802a4",
+      "git_blob_sha": "28612fbe2ff622f005613676e96203154ed843fc"
+    }
+  ],
+  "published_assurance_increment": 0
+}

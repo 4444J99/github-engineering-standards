@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "issue": 38,
+  "artifacts": 16,
+  "claims": 36,
+  "candidates": 53,
+  "directory_accounting": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "prefix": "data/reusables/repositories/",
+    "inventory": 196,
+    "standalone_receipts": 196,
+    "unreceipted": [],
+    "independent_omission_certified": false,
+    "rendering_certified": false,
+    "rights_cleared": false
+  },
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.13238632203265724,
+    "reviewed": 1808
+  },
+  "claim_accounting": {
+    "reference_claims": 57565,
+    "source_artifacts": 1774,
+    "duplicate_relationships": 7
+  },
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.998,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "Directory receipt coverage is not overall goal completion.",
+    "No transfers, forks, issue closures or disclosures performed; linked context, rasters, rendering and independent omissions remain separate."
+  ]
+}

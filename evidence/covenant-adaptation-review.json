@@ -1,0 +1,63 @@
+{
+  "schema": "ges.rights-adaptation-review.v1",
+  "reviewer": "codex:source-review",
+  "historical_upstream_commit": "91532d80ea5f39b6685aff4892bc6854bf2f6d6f",
+  "method": "Full-line SequenceMatcher comparison against downloaded historical English version; independently described differences, no copied source passages retained",
+  "rights_accepted": 0,
+  "publication_authorized": false,
+  "records": [
+    {
+      "source": "atapas/model-repo",
+      "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+      "path": "CODE_OF_CONDUCT.md",
+      "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f",
+      "upstream_path": "content/version/2/0/code_of_conduct.md",
+      "upstream_sha256": "be088bbb67151f2f17d75d784f411c617831fafe879252f752c3b304def042ff",
+      "upstream_lines": 137,
+      "adaptation_lines": 128,
+      "findings": [
+        "The behavioral body matches the historical 2.0 text except replacement of its contact placeholder at adaptation line 63.",
+        "Front matter removed; attribution URLs and link syntax reformatted at lines 119-128.",
+        "Original Covenant and Mozilla attribution preserved; do not deploy the source contact as a consumer contact."
+      ],
+      "remaining_decisions": ["Add explicit CC BY 4.0 license reference and adaptation disclosure to any licensed-expression distribution", "Verify destination attribution and authorized publication decision"],
+      "status": "ADAPTATION_COMPARED_DISTRIBUTION_PENDING"
+    },
+    {
+      "source": "atapas/model-repo",
+      "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+      "path": "CONTRIBUTING.md",
+      "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687",
+      "upstream_path": "content/version/1/4/code-of-conduct.md",
+      "upstream_sha256": "f7f12911b8c0b73321cc6c6b763b428d7736bcf5c4cf2eca2d81da933d79d852",
+      "upstream_lines": 81,
+      "adaptation_lines": 92,
+      "findings": [
+        "Contribution process at lines 3-18 is additional expression outside the compared Covenant text; its provenance requires a separate grant decision.",
+        "Adaptation modifies pledge wording and protected-characteristic list at lines 24-28 relative to this later historical 1.4 snapshot; exact earlier 1.4 revision remains unresolved.",
+        "Scope wording differs at lines 66-71; contact is substituted at line 76; headings and attribution links changed.",
+        "Version 1.4 attribution remains at lines 86-92; this is not a verbatim identity certificate."
+      ],
+      "remaining_decisions": ["Trace contribution-process additions and exact 1.4 revision", "Separate MIT adapter additions from CC BY inherited expression", "Verify attribution, changes disclosure and approved distribution"],
+      "status": "MIXED_EXPRESSION_PROVENANCE_PENDING"
+    },
+    {
+      "source": "jlcanovas/gh-best-practices-template",
+      "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+      "path": "CODE_OF_CONDUCT.md",
+      "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa",
+      "upstream_path": "content/version/2/1/code_of_conduct.md",
+      "upstream_sha256": "c1a8d6aca7701da989fd35287e3a01329eaf57e609e30151481d882183d2ee74",
+      "upstream_lines": 137,
+      "adaptation_lines": 108,
+      "findings": [
+        "Short/long structure and maintainer placeholders added; source separately attributes SustainOSS inspiration at line 104.",
+        "Behavior standards and enforcement responsibilities differ materially; the short and long protected-characteristic lists also differ.",
+        "Scope and reporting paragraphs at lines 54-73 contain additional or modified expression; formatting-only similarity cannot clear the whole file.",
+        "Four-level consequences substantially follow 2.1 with line wrapping and role changes; Covenant and Mozilla attributions remain."
+      ],
+      "remaining_decisions": ["Review SustainOSS source-linked expression and applicable grant", "Resolve repository declaration conflict for adapter contributions", "Preserve component attribution and modifications; approve actual distribution separately"],
+      "status": "MULTIPLE_SOURCE_RIGHTS_PENDING"
+    }
+  ]
+}

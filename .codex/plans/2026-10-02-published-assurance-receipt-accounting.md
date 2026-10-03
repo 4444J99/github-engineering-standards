@@ -1,0 +1,5 @@
+# Published assurance receipt accounting
+
+Issue: https://github.com/4444J99/github-engineering-standards/issues/14
+
+The fourteen route gaps already have drift investigation, supplemental reference extraction and acquisition evidence. Do not repeat that work or invent deployment identity. Implement an optional fail-closed assurance adapter to replace recovery's hard-coded zero once real independently audited evidence is supplied. Bind exact page ledger, acquired body, locked source artifact, policy roles and five digest-bound evidence records (source identity, version rendering, dependencies, claim mapping and independent omission). Preserve all denominators and forbid disposition authority from becoming certification authority. Add negative tests first; verify integrated tests/validate/compile and unchanged real recovery, then commit/push all authored changes with issue receipt. Missing approved policy/receipts remains unknown; no certification authority, receipt or native approval is created by this tranche.

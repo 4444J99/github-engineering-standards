@@ -1,0 +1,227 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:46:36Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/macos-runner-limitations.md",
+      "content_sha256": "412d9ac18f830c237e3318e0de0263d6a84867953c5ab457557b64be4d059cf9",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Pinned macOS limits state GitHub-provided actions compatible with arm64, community actions may require manual runtime installation; nested virtualization unsupported; no Azure private networking/static IP on macOS larger runners. arm64 lacks static UUID/UDID while Intel has public static UDID4203018E-580F-C1B5-9525-B745CECA79EB; development provisioning depends on same-host testing and Apple account setup. GHEC condition includes residency restriction, not actual signing approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/macos-unavailable-ghecom.md",
+      "content_sha256": "4bf4172ff7f7a93c16ddd6e9b9a655ef725841c855147a7b440cda5bcd260329",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "macOS runners unavailable on data-residency-site subdomains in pinned guidance; example domain is variable, not an inspected tenant.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/make-workflow-file.md",
+      "content_sha256": "df3b38eefe179379f91dae027129ad184e00a3ee50dbe63536a0048557f537ca",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Workflow tutorial creates .github/workflows/YOUR_WORKFLOW.yml with chosen filename; source instruction is inert and not consumer repository mutation or valid workflow proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/matrix-variable-example.md",
+      "content_sha256": "914625228ff0279744513ba76102037156be9ce58853f2d1e010edad2b4fb22d",
+      "start_line": 1,
+      "end_line": 24,
+      "statement": "Matrix include example assigns Node14.x/prod/site-a and Node16.x/dev/site-b, then env SITE/DATACENTER from matrix.site/datacenter. Prose incorrectly says env: matrix.env, which the shown matrix does not define. Preserve mismatch; no deployment or npm execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/merge-group-event-with-required-checks.md",
+      "content_sha256": "5e511c15a9570d6826d5db04dd6ad2a28883accba459407ef66d3d5e007e7183",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "For merge queues, required Actions checks and conditionally organization-required workflows need merge_group in addition to PR/push triggers; otherwise queue checks are absent and merge fails. Event is distinct, not covered automatically by push or pull_request.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/message-annotation-explanation.md",
+      "content_sha256": "54c9a58735aea03137fda992fd78c95a156c5b2d4702605e7444dc4b651c2d76",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Annotation message can associate with a repository file and optional position; annotation creation is not evidence of actual finding validity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/message-parameters.md",
+      "content_sha256": "0152e8b7303f403ff50ad32de71930d9c704f7ea36e5dba9783e0c2a27c2bc96",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "Annotation optional fields: title no default; file defaults .github; col starts at1 with no default; endColumn no default; line starts at1/default1; endLine default1. No required parameter or actual annotation emitted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/migrating-enterprise.md",
+      "content_sha256": "4a1019cad39b1e486c40321ca279f42d0a8ee4bd1a4d34ee87d8835f574bf333",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise provider migration has additional linked considerations; link does not complete migration review or authorize conversion.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/minimum-hardware.md",
+      "content_sha256": "ebe1757c5a85f87bfed60a61956293c0f3b9d1295469004004ae4a506519c7ba",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Pinned source states minimum8vCPU/64GB memory for Actions in its enclosing instance context; do not apply instance hardware threshold to every workflow runner or claim current capacity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/more-resources-for-ghes.md",
+      "content_sha256": "45433971732645c4c6652a9343c3146fa0beec44608ee84c9742a5c665b51ba4",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "Enabling Actions or Code Security increases instance CPU/memory at least25% for each listed feature over user-tier base requirements; source recommends monitoring and potentially more. Combined sizing method and actual estate capacity still need scope resolution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/moving-a-runner-to-a-group.md",
+      "content_sha256": "ac545749d3c139f97306d13cc5461aa362adc577632be6ac9e7b4b29a123b8ff",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Runner move procedure selects a runner and destination via Runner group; selection is not authorized move or verified changed access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/name-environment.md",
+      "content_sha256": "43790ee2452833626f52726ecb31ab28bae80ce38519237e2c400e41531cdb1b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Environment creation enters name and configures; names case-insensitive, unique within repository and at most255 characters. No environment created or protection activated.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/namespace-retirement-ghecom.md",
+      "content_sha256": "3f76f4ef2b4161569f4afde76bf9e741c866f3ed065fcffa8d9e39f1f1de77a8",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "When a dotcom action is first used, its namespace is retired in the enterprise to prevent creating a matching local organization/repository for abuse. Parent platform applicability, actual retirement and behavior are unverified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/networking-for-larger-runners.md",
+      "content_sha256": "222c86fbcf1d85b153a7f284177853978426af8103f7af047cb90b1eafd3318a",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Larger-runner static public IP configuration checks Assign unique & static public IP address ranges then Save; prior macOS/Azure restrictions still apply and no native setting changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/new-environment.md",
+      "content_sha256": "c02a06c86a300e6343c6c6a3370aec9bf31ada93aa9d4f6b9a3a74c271152b60",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "New environment is a creation UI step only, not proof of protection or approval to create.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/new-starter-workflow.md",
+      "content_sha256": "127d6fd59b5279f219595f26e1d4d25e60f72c7188ac3b24a9a47b254c925a9c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "When repository already has a workflow, New workflow starts another; UI navigation is not approved workflow installation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-custom-claims-aws-restriction.md",
+      "content_sha256": "f7fdc6f57dd11064d90679eef9b95d6c3c28238ea8a04ec41f96af79e5c4190d",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Pinned AWS OIDC guidance says custom claims unsupported. This narrow provider limitation is not a universal inability to constrain standard claims or current live AWS verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-deployment-protection-rules.md",
+      "content_sha256": "0b865457f7f718310047829a065c96fdba1cd9df541f7a7a013c17e812383c3a",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Environment use in workflow/OIDC policy should add protection rules for security, e.g. branch/tag deployment and secret access restrictions. Recommendation is not evidence rules exist or effective cloud trust enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-endpoints.md",
+      "content_sha256": "3539aedc1e0dc169b2a724a449ffbc1a47abb928b5a736ead5d26e4e11f1839d",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Cloud provider must reach instance OIDC discovery and JWKS endpoints at the two placeholder HOSTNAME token-service paths. Accessibility requirement is not authorization to expose endpoints or change provider trust.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSMACOIDC-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-further-reading.md",
+      "content_sha256": "af8500f2b4a253ff391d6eab92d8c281f8c7c68fafbdaf5754541141a5700305",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Further-reading links cover reusable-workflow OIDC and self-hosted runners; linked full bodies remain separate review work.",
+      "accepted_policy": false
+    }
+  ]
+}

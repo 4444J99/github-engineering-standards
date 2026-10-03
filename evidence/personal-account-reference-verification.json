@@ -1,0 +1,46 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 429,
+  "verified_at": "2026-10-03T11:56:41.185Z",
+  "scope": "Complete personal-account reference and five includes; no separate dependency receipts.",
+  "reference_claims_added": 12,
+  "reference_claims": 61177,
+  "claim_bearing_artifacts": 3465,
+  "tests": {
+    "count": 324,
+    "seconds": 1.982,
+    "result": "PASS"
+  },
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "lifecycle_operation_performed": false,
+  "independent_omission_audit": false,
+  "project_complete": false,
+  "gates_open": 9
+}

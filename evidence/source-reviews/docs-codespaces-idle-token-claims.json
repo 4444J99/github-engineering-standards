@@ -1,0 +1,95 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:16:12.733Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/ellipsis-settings.md",
+      "content_sha256": "41a6a95a81837660a1647247ba69f17d679bf59e4b6a41eb5bd567af4e72686d",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The ellipsis step opens the menu for a chosen codespace. It does not specify a mutation itself, establish permission or identify an authorized target.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/emus-create-codespaces.md",
+      "content_sha256": "a6652da7ec171910d4cc66cb0b310f7d9389f7e418639447a4006bbab677f9ae",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The managed-user fragment restricts personal-repository codespace creation but explicitly allows an organization-repository fork when organization-funded use is permitted. This exception qualifies the broad owned-by-managed-user exclusion recorded in DOCS-CODESPACESPAYERSCOPE-006; retain the source tension pending context/version reconciliation rather than treating either fragment as an absolute eligibility certificate. The linked identity article remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/exporting-changes.md",
+      "content_sha256": "b8c4e59fd8c6986e235e3ca0d7cf3abd8502bcf0239681303a4726b086e9e21c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Exhausted quota or budget prevents creating or resuming codespaces billed to that personal, organization or enterprise account, but the source still offers export of work-in-progress to a new branch. This recovery capability is not proof of successful custody, authorization to publish/export or a cost-limit bypass; the export procedure remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/find-address-and-token.md",
+      "content_sha256": "eba9e85f63a276cd2d1d7f5143c3ca0f086de7ab85693f266bcabe59327822ec",
+      "start_line": 1,
+      "end_line": 20,
+      "statement": "The address/token fragment obtains a forwarded-port local address through the Ports UI and separately describes displaying and copying the codespace access token, with an explicit prohibition on sharing it. Treat token-display instructions as sensitive unexecuted data: no token was read, printed, copied or committed. The documented prefix is not a real credential or sufficient token-validation rule; caption text is not screenshot-pixel review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/forwarded-ports-environment-variable.md",
+      "content_sha256": "893a60a7f43fd36002b401e0fdd44b2801abe55d1bad9a982a422038adcd5d6a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Because forwarded-port domains may change, the source recommends an environment variable instead of hardcoding the URL in code or tests. Preserve recommendation strength and moving-domain rationale; the linked variable list is not fully reviewed here and no particular variable or actual endpoint is verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/full-rebuild-tip.md",
+      "content_sha256": "66531f7f832030ce8a0c8bc5bab87b9a595eceb3ce0adf7e0d4d474309bf744a",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "A full rebuild is suggested occasionally to clear cache and use fresh images. This optional tip is not a universal rebuild mandate, trusted-image proof or permission to discard cache and execute setup; linked rebuild behavior remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/gpg-in-active-codespaces.md",
+      "content_sha256": "bde0179940127fcac49e76807dbdd0f38ede67a17fb72271d00933052407e82a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "After GPG verification is enabled, new codespaces from relevant repositories inherit it, while an existing active codespace must stop and restart for it to take effect. Configuration enablement alone does not prove active-instance propagation, an actually signed commit or native signature enforcement; no codespace or GPG setting changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESIDLETOKEN-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/inactivity-definition.md",
+      "content_sha256": "93aa969274289b3a73bbc69c30b59935e07a70987c59496004148301aa20ebe2",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "For idle timeout, personal input and terminal input or output reset the timer; web requests generating terminal output can therefore prolong activity. A shared port without interaction or terminal output still times out at the configured interval. This idle-stop definition is distinct from stopped-instance retention deletion and does not authorize keeping a paid instance alive or verify an actual timeout.",
+      "accepted_policy": false
+    }
+  ]
+}

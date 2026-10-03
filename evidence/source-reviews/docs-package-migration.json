@@ -1,0 +1,170 @@
+[
+  {
+    "artifact_id": "35fe69fbdbcedc743707896a",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/package_registry/container-registry-migration-namespaces.md",
+    "content_sha256": "66f05be960d4882c987c58cfc183fdef3f17c667c8611fb8d6317b2245bbab23",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:18:20.369Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The pinned migration fragment says scripts and Actions workflows using the Docker registry namespace continue working after Container Registry migration. Resolved namespaces are docker.pkg.github.com to ghcr.io for FPT/GHEC and docker.HOSTNAME to containers.HOSTNAME for GHES. Compatibility is a source claim, not a completed migration or tested consumer receipt. Complete source fragment inspected; variables and feature scopes read as context, not additional artifact receipts. Independent semantic assurance, published-version reconciliation and policy adoption remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "99a114fb71d7086f838ec69b",
+        "text_sha256": "92de275fb9cae07e12f32fa57abaa87b4ccf3d9fce6269a24596ee71abc219be",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-1; not accepted policy, execution or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "677fd1bfe11d3f865bff4858",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/package_registry/container-registry-replaces-docker-registry.md",
+    "content_sha256": "bb70bce5481a6d988e7fa72f2107b9b1aaf971d5740d5b39e5fae4195aa18166",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:18:20.369Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The upstream fragment identifies Container Registry as replacing GitHub's Docker registry; this does not authorize migration or establish a particular target's enabled service or present lifecycle status. Complete source fragment inspected; variables and feature scopes read as context, not additional artifact receipts. Independent semantic assurance, published-version reconciliation and policy adoption remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "f18a67da09e8d0fa27fde121",
+        "text_sha256": "473194c39cd8fd6cbf0358580a2e41fbfb8369b53c90f98a4680841e2ee5a629",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-2; not accepted policy, execution or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "eb860bd4bbc49e5181a78991",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/package_registry/create-npmrc-owner-step.md",
+    "content_sha256": "7e7701ea241fef32a4802cb699094d540f1c46baa400bbbf65236ecfd975f5af",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:18:20.369Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The npm configuration step places .npmrc alongside package.json and sets a namespace-specific registry. The packages-npm-v2 feature, FPT/GHEC in the pin, scopes the namespace to a user or organization account; other contexts use the owning repository account. FPT/GHEC endpoint is npm.pkg.github.com; enterprise endpoints depend on subdomain isolation, npm.HOSTNAME versus HOSTNAME/_registry/npm. Placeholders require verified target values; no configuration or credentials were written. Complete source fragment inspected; variables and feature scopes read as context, not additional artifact receipts. Independent semantic assurance, published-version reconciliation and policy adoption remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "9dd5520c33c021f1961f8b60",
+        "text_sha256": "b3b39670acd385903f1437c18d8665d3f923e98dfff05e858d374c8ebb6c8ad7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "01872dddc1a021c14bc7f0c8",
+        "text_sha256": "f6f54a4e3e209054bf3a25a4e22a3fa2f5da579fb4adb20f9f9a6026d5b53863",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "b4e699c0ed0682e7b44ed1f2",
+        "text_sha256": "3240e3f6c025f7776a06bcdee999154b585e4403988381094144a597694bbd85",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "a6e3c71bb84bc5849b4d0bf1",
+        "text_sha256": "bc2eb94ada9b9245da65c8d5b630aaa7094fa0d35cc7526caed96a4cbc85327f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "233d7560e3335f80f426cd3e",
+        "text_sha256": "eca08913a486ad56efc9334e273fc4aad9541647c37d188bf99ad360c3e8c8a8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "1977c472d6da66f7746f6805",
+        "text_sha256": "846c447b1c624039b86899b68138fc8d20de99c67246cef77207fe2179162478",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "c092e210aa1058905e7b2bec",
+        "text_sha256": "29c6288f56f02435aed8e90c2a0557cd666a202f09181ca044bc2d8530c48ffb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "f940202d549155b307827327",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-3; not accepted policy, execution or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "7bf57012c396d8b107aefce4",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/package_registry/default-name.md",
+    "content_sha256": "464f4971fa1426279d1bb58753f41f29fd5b8c3a9b6a6a81ebf7665848ded66a",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:18:20.369Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The default publication association is an existing repository sharing the package name. This fragment alone does not define every registry's association model, demonstrate a real publication or authorize creating or changing repositories. Complete source fragment inspected; variables and feature scopes read as context, not additional artifact receipts. Independent semantic assurance, published-version reconciliation and policy adoption remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "349cea7310f84321d4cea1fa",
+        "text_sha256": "c864117df55724cbd674316a30b7a8929ffe8f377a6a253010f7dcdb121294de",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-4; not accepted policy, execution or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "4b7054afe4442bbd2f643ef6",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/package_registry/delete-account-namespace-retirement.md",
+    "content_sha256": "3785441380d22b52eff5f49b319cdb08fa9a0ecd9e1b4224037c61fb15813986",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:18:20.369Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Deleting an account deletes its namespace's Packages packages and container images and may break dependent projects. For FPT/GHEC public container images with strictly more than 5,000 downloads, the full namespace/image name is permanently retired on account deletion. This conditional consequence is not universal name retirement, a >= threshold, deletion approval or a recovery guarantee. Complete source fragment inspected; variables and feature scopes read as context, not additional artifact receipts. Independent semantic assurance, published-version reconciliation and policy adoption remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "3724c1a7e5967130a808ee2c",
+        "text_sha256": "85dbdcc40b90623c9c78672ea04864e46c4d171c5a90b9debef65e20b14ccf8e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-5; not accepted policy, execution or rights clearance."
+      },
+      {
+        "candidate_id": "f5f8e9ec888d3a8a44ad525f",
+        "text_sha256": "4707cd233ba89700f8775e1eaeaf3ad6b951b05b4a58d06ba477468d019e11a2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-5; not accepted policy, execution or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "8e0a478ca28e9a951312465e",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/package_registry/delete-with-github-token-using-api-beta.md",
+    "content_sha256": "f5dc321dd8b5bc9df96996b992a9ea5f0de7940b1c214af61b8a66d4ab6245ce",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:18:20.369Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Actions workflow REST package deletion and restoration are described as public preview and subject to change; the beta filename does not override the release-phase variable. This note does not supply permissions, executed behavior or mutation approval. Complete source fragment inspected; variables and feature scopes read as context, not additional artifact receipts. Independent semantic assurance, published-version reconciliation and policy adoption remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "bc4d0f7ae2157cb8569c6537",
+        "text_sha256": "9323ff9eca5163d39050d74bd8cd7157013b5fc7502ffdeacb8833a7296c53f8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEMIGRATION-6; not accepted policy, execution or rights clearance."
+      }
+    ]
+  }
+]

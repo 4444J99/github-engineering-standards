@@ -1,0 +1,55 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/19",
+  "verified_at": "2026-10-02T18:43:56Z",
+  "scope": {
+    "core_source_files": 30,
+    "necessary_dependency_files": 1,
+    "full_source_files": 31,
+    "physical_lines": 89,
+    "claim_records": 245,
+    "candidate_mappings": 68,
+    "prior_claim_path_overlap": 0
+  },
+  "claims_sha256": "fbcd686649b4e5d8da76f776cd4837d0594176f41fadf1877d582a7691887f1d",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in 1.305s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid=true; controls=95"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "result": "No errors"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": "valid=true; 48946 reference records; 1089 source artifacts; 7 duplicate relationships"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": "1123/13657 reviewed; errors=[]; project_complete=false; nine gates OPEN; rights0/13657; published denominator18019"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "No errors"
+    }
+  ],
+  "accounting": {
+    "artifact_reviewed": 1123,
+    "artifact_denominator": 13657,
+    "artifact_coverage": 0.08222889360767371,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": "Bounded source extraction, independent audit and reference consolidation only. No purchase, scan, trial, actual UI/render/product/plan entitlement, rights acceptance, native activation or policy adoption. Screenshot alt text is not binary visual review. Expected synthetic published_docs ERROR is negative test output, not real recovery failure."
+}
