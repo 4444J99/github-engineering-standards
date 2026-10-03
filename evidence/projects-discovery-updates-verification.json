@@ -1,0 +1,45 @@
+{
+  "issue": 347,
+  "verified_at": "2026-10-03T09:20:42.350Z",
+  "artifacts_reviewed": 2,
+  "reference_claims_added": 11,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "tests": 324,
+    "test_seconds": 1.971,
+    "controls": 95,
+    "reference_claims": 60585,
+    "claim_bearing_artifacts": 3359,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Discovery not exhaustive estate inventory; status not independently accepted work.",
+    "No actual project changes, policy adoption or rights clearance."
+  ]
+}
