@@ -1,0 +1,161 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T12:43:53.436Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PASSKEYABOUT-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/about-passkeys.md",
+      "content_sha256": "896b157c491c0d761dbc74cc04d476b6a34fe717fa1f511e6ab5b1e0bbfad264",
+      "start_line": 1,
+      "end_line": 48,
+      "statement": "Passkeys provide browser passwordless sign-in, satisfy password and 2FA together, can skip email new-device verification for non-2FA users, and can serve sudo mode and password reset. This does not prove other credentials or all account privileges are revoked, nor authorize IdP-managed credential changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYABOUT-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/about-passkeys.md",
+      "content_sha256": "896b157c491c0d761dbc74cc04d476b6a34fe717fa1f511e6ab5b1e0bbfad264",
+      "start_line": 1,
+      "end_line": 48,
+      "statement": "An authenticator controls public/private cryptographic keys and proves user presence and authorization using PIN, passcode, biometrics or device password. Domain binding and secure browser connection give phishing resistance relative to phishable SMS/TOTP, not immunity to device/provider compromise or complete repository authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYABOUT-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/about-passkeys.md",
+      "content_sha256": "896b157c491c0d761dbc74cc04d476b6a34fe717fa1f511e6ab5b1e0bbfad264",
+      "start_line": 1,
+      "end_line": 48,
+      "statement": "Synced passkeys are usable across devices under the same provider account. Recovery depends on owner access to that provider and its custody; syncing or having a Synced label is not an executed restore test.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYABOUT-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/about-passkeys.md",
+      "content_sha256": "896b157c491c0d761dbc74cc04d476b6a34fe717fa1f511e6ab5b1e0bbfad264",
+      "start_line": 1,
+      "end_line": 48,
+      "statement": "Device-bound passkeys cannot be backed up or moved; FIDO2 hardware keys are device-bound but portable via supported connections. Some platform/browser combinations may require hardware keys; external support tables are pointers, not verified compatibility.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYABOUT-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/about-passkeys.md",
+      "content_sha256": "896b157c491c0d761dbc74cc04d476b6a34fe717fa1f511e6ab5b1e0bbfad264",
+      "start_line": 1,
+      "end_line": 48,
+      "statement": "Nearby-device use may involve Bluetooth, QR or push through a previously registered authenticator. Eligible existing 2FA keys can be upgraded, but eligibility and platform support must be independently confirmed. No feedback post or registration is made.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYINDEX-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/index.md",
+      "content_sha256": "6db696d142373d77efd6c5e17c060778671d7848e1d4da4f88a596ec41fa88bc",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "The passkey index routes to concept, management and sign-in. Its feature dataset supports FPT/GHEC and GHES >=3.14, while the GHES note permits administrator disablement. Navigation does not establish availability on every instance or authorize registration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYMANAGE-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/managing-your-passkeys.md",
+      "content_sha256": "1350880959943c0181ea4c79e5e2433a2eaa500d589f3c7fce5c09c98cad0a5e",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "The resolved registration flow opens Settings, Password and authentication, Add a passkey, authenticates with an existing method if prompted, reviews Add passkey, completes provider prompts and reads successful-registration confirmation before Done. A prompt or button click is not registration success; credential writes require applicable authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYMANAGE-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/managing-your-passkeys.md",
+      "content_sha256": "1350880959943c0181ea4c79e5e2433a2eaa500d589f3c7fce5c09c98cad0a5e",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Upgrade requires the device associated with the existing eligible security key, reviews the named credential and uses Upgrade to passkey followed by provider prompts and success confirmation. Missing upgrade button does not prove permanent ineligibility, and inconsistent platform support may cause failures.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYMANAGE-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/managing-your-passkeys.md",
+      "content_sha256": "1350880959943c0181ea4c79e5e2433a2eaa500d589f3c7fce5c09c98cad0a5e",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "The source suggests removal/re-registration when an upgrade fails. That is a credential-affecting recovery proposal, not automatic permission; retain an independently usable authentication/recovery path and approved exact-target plan before removing a key.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYMANAGE-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/managing-your-passkeys.md",
+      "content_sha256": "1350880959943c0181ea4c79e5e2433a2eaa500d589f3c7fce5c09c98cad0a5e",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Passkey removal selects the intended key's delete control and confirms Delete. Removal needs owner authority and recovery-impact review; deleting the wrong or only usable factor must not be a permitted remediation default.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYMANAGE-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/managing-your-passkeys.md",
+      "content_sha256": "1350880959943c0181ea4c79e5e2433a2eaa500d589f3c7fce5c09c98cad0a5e",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Synced-key recovery uses provider sign-in, whereas lost/wiped device-bound credentials are unrecoverable. At least two devices for device-bound-only use is a best-practice recommendation. Settings labels describe storage type, not proof of independent devices, fresh authentication or durable provider recovery.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYSIGNIN-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/signing-in-with-a-passkey.md",
+      "content_sha256": "0222aa9102ac187cd01e322112d2c5486513ba26e8a5f8c9485fd8010c9add5c",
+      "start_line": 1,
+      "end_line": 42,
+      "statement": "Sign-in requires prior passkey enrollment. The source describes no password, separate 2FA or email new-device verification, with synced use requiring the same provider; these properties do not establish native support for all versions or every account's credential authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYSIGNIN-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/signing-in-with-a-passkey.md",
+      "content_sha256": "0222aa9102ac187cd01e322112d2c5486513ba26e8a5f8c9485fd8010c9add5c",
+      "start_line": 1,
+      "end_line": 42,
+      "statement": "Primary-device sign-in uses the actual product host login with passkey=true, selects Sign in with a passkey and completes browser/platform proof such as PIN or fingerprint. Cloud example URL must not be substituted for an intended GHES host, and a login screen alone is not authenticated session evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PASSKEYSIGNIN-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/authenticating-with-a-passkey/signing-in-with-a-passkey.md",
+      "content_sha256": "0222aa9102ac187cd01e322112d2c5486513ba26e8a5f8c9485fd8010c9add5c",
+      "start_line": 1,
+      "end_line": 42,
+      "statement": "Nearby-device sign-in chooses the nearby authenticator, starts QR/push flow and completes proof on that device. Source process is not a remote agent authorization, proof the right identity signed in, or permission to capture QR/secret material.",
+      "accepted_policy": false
+    }
+  ]
+}
