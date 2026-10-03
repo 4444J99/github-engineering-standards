@@ -109,6 +109,37 @@ Unresolved dependencies and conditional/version rendering remain explicit review
 
 The large source corpus and page-level review queues are workflow artifacts and a separate downloadable evidence bundle; they are not duplicated into every consumer repository.
 
+### Reproduce an assigned source-review partition
+
+Do not bootstrap review workers with a fresh `sync`: its source archives are pinned,
+but its published page lists are live. Freeze the exact existing metadata first:
+
+```sh
+python -m ges.frozen_inputs freeze --sources .cache/sources --corpus .cache/corpus --output .cache/frozen-inputs
+```
+
+The returned capsule fingerprint must be preserved in an independently trusted,
+exact-head receipt. Validation and source-only hydration require that fingerprint;
+the partition identifies exact artifact IDs from that capsule:
+
+```sh
+python -m ges.frozen_inputs validate --capsule .cache/frozen-inputs --capsule-sha256 TRUSTED_SHA256
+python -m ges.frozen_inputs hydrate --capsule .cache/frozen-inputs --capsule-sha256 TRUSTED_SHA256 --partition .cache/partition.json --output .cache/worker
+```
+
+Partition schema: `ges.review-partition.v1`, with `capsule_sha256` and a nonempty,
+unique `artifact_ids` array. Hydration downloads only the assigned pinned source
+archives, preserves original inventory timestamps and page-ledger bytes, and never
+fetches live page lists or runs upstream code. Binary bytes remain cache evidence,
+not executable inputs. Existing output directories are never overwritten.
+
+The capsule is a bounded metadata transport, not a full project backup, an encrypted
+archive, source review, rights clearance or provider admission. Raw source text,
+rendered bodies, credentials and transcripts are not included. Keep capsules and
+hydrated source copies ignored; remote preservation requires separate encrypted
+custody and restoration evidence. The source-review policy currently authorizes
+Codex disposition receipts only; a cloud worker must not impersonate that identity.
+
 ## What is not finished
 
 Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; per-file licensing clearance; all upstream scanner predicates implemented as local deterministic checks; all platform feature/plan adapters; live human-review and exception services; native protection activation and cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
@@ -121,4 +152,9 @@ as automatic checks or 150,903 candidates reviewed. Current catalog controls rem
 
 ## Contributions and governance
 
-See CONTRIBUTING.md, GOVERNANCE.md, AGENTS.md and SECURITY.md. The repository is initially private. No additional license is assigned to upstream material or to a public distribution through this bootstrap.
+See CONTRIBUTING.md, GOVERNANCE.md, AGENTS.md and SECURITY.md. GitHub reports this
+repository as public (verified 2026-10-03). Keep the toolkit public; do not interpret
+visibility as rights clearance or permission to publish raw caches, transcripts or
+private assessments. Restricted preservation material belongs in separately
+encrypted remote custody, not this Git history. No additional license is assigned
+to upstream material through this bootstrap.

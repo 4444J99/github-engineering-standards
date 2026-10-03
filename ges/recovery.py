@@ -164,7 +164,16 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
                  for name, done, total, condition in gates]
     return {'schema_version':'ges.recovery.v1','generated_at':now(),
             'project_complete':all(g['status'] == 'CLOSED' for g in evaluated),
-            'certification_adapter_status':'INCOMPLETE_SEMANTIC_RIGHTS_AND_RUNTIME_ADAPTERS',
+            'certification_adapter_status':'INCOMPLETE_SEMANTIC_AND_RUNTIME_ADAPTERS',
+            'certification_adapters': {
+                'source_fidelity_and_omission': 'NOT_IMPLEMENTED',
+                'claim_reconciliation': 'NOT_IMPLEMENTED',
+                'generalization': 'NOT_IMPLEMENTED',
+                'policy_adoption': 'NOT_IMPLEMENTED',
+                'binding_verification': 'NOT_IMPLEMENTED',
+                'native_and_estate_verification': 'NOT_IMPLEMENTED',
+                'published_assurance': 'IMPLEMENTED_LOCKED_SOURCE_ONLY',
+                'rights_acceptance': 'IMPLEMENTED_PINNED_ARTIFACTS_ONLY'},
             'historical_checkpoint':'30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040',
             'owner_url':'https://github.com/4444J99/github-engineering-standards/pull/1',
             'review_accounting':review_result,'review_receipts_digest':digest(receipts),

@@ -210,6 +210,11 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates:
         complete.add(a['artifact_id'])
     return {'reviewed':len(complete),'inventoried':len(artifacts),
             'review_coverage':len(complete)/len(artifacts) if artifacts else None,'errors':errors,
+            'coverage_unit':'artifact_disposition_receipts',
+            'receipt_count':len(complete),
+            'receipt_coverage':len(complete)/len(artifacts) if artifacts else None,
+            'semantic_truth_certified':False,
+            'independent_omission_certified':False,
             'note':'Review receipts require independent source-to-control audit before exhaustive certification.'}
 
 

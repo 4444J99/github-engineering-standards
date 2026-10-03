@@ -3,7 +3,17 @@
   "candidate_blocks": 150903,
   "catalog_controls": 95,
   "catalog_digest": "c55f7257ae7f92500f4af7e8ae5bde2f5ec25f49c16f13bc676575f7a0248ae8",
-  "certification_adapter_status": "INCOMPLETE_SEMANTIC_RIGHTS_AND_RUNTIME_ADAPTERS",
+  "certification_adapter_status": "INCOMPLETE_SEMANTIC_AND_RUNTIME_ADAPTERS",
+  "certification_adapters": {
+    "binding_verification": "NOT_IMPLEMENTED",
+    "claim_reconciliation": "NOT_IMPLEMENTED",
+    "generalization": "NOT_IMPLEMENTED",
+    "native_and_estate_verification": "NOT_IMPLEMENTED",
+    "policy_adoption": "NOT_IMPLEMENTED",
+    "published_assurance": "IMPLEMENTED_LOCKED_SOURCE_ONLY",
+    "rights_acceptance": "IMPLEMENTED_PINNED_ARTIFACTS_ONLY",
+    "source_fidelity_and_omission": "NOT_IMPLEMENTED"
+  },
   "gates": [
     {
       "closure_condition": "Every artifact has a validated reviewed disposition and independent omission audit",
@@ -201,7 +211,7 @@
       ]
     }
   ],
-  "generated_at": "2026-10-03T16:50:49.702096+00:00",
+  "generated_at": "2026-10-03T17:48:15.165144+00:00",
   "historical_checkpoint": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
   "inventory_artifacts": 13657,
   "justified_exclusions": 0,
@@ -243,11 +253,16 @@
   "queue_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
   "rendered_bodies_acquired": 18019,
   "review_accounting": {
+    "coverage_unit": "artifact_disposition_receipts",
     "errors": [],
+    "independent_omission_certified": false,
     "inventoried": 13657,
     "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "receipt_count": 3560,
+    "receipt_coverage": 0.260672182763418,
     "review_coverage": 0.260672182763418,
-    "reviewed": 3560
+    "reviewed": 3560,
+    "semantic_truth_certified": false
   },
   "review_receipts_digest": "fc1b77dc4b1f4d89269fe5ee6fbde8f3b2d45f9fdfc44569d51742982940ec04",
   "rights_acceptance_accounting": {

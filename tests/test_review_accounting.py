@@ -43,6 +43,14 @@ class ReviewAccounting(unittest.TestCase):
     def test_valid_full_accounting(self):
         self.assertEqual(self.coverage([self.review])['reviewed'], 1)
 
+    def test_receipt_coverage_does_not_claim_semantic_certification(self):
+        report = self.coverage([self.review])
+        self.assertEqual(report['coverage_unit'], 'artifact_disposition_receipts')
+        self.assertEqual(report['receipt_count'], report['reviewed'])
+        self.assertEqual(report['receipt_coverage'], 1.0)
+        self.assertFalse(report['semantic_truth_certified'])
+        self.assertFalse(report['independent_omission_certified'])
+
     def test_foreign_artifact_candidates_do_not_change_local_coverage(self):
         foreign = [dict(self.candidate, artifact_id='other', candidate_id=f'foreign-{i}')
                    for i in range(100)]
