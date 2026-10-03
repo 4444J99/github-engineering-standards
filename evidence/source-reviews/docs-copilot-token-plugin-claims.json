@@ -1,0 +1,95 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:18:45.536Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/content-exclusions-delay.md",
+      "content_sha256": "683913a08de28555505b1f7365ebec306d94ff1b3c6653b02c0c1f12f61dc05c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The content-exclusion delay fragment says changed rules may take up to 30 minutes in IDEs that already loaded settings and allows forcing one's own IDE to reload. A saved change is not immediate enforcement; no reload or effective propagation was observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/content-exclusions-scope.md",
+      "content_sha256": "79a4424da377d774c87bafc754915194cae9f31dbd4e8ac8cffdf6555bab2c6b",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "The scope fragment distinguishes repository administrators' own-repository exclusions affecting enterprise Copilot users working there from organization-owner exclusions affecting seats assigned through their organization. Role authority and affected user population must both be retained.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/content-exclusions-scope.md",
+      "content_sha256": "79a4424da377d774c87bafc754915194cae9f31dbd4e8ac8cffdf6555bab2c6b",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "The scope fragment adds enterprise-owner exclusions for all enterprise Copilot users only within the ghec conditional branch. It cannot be generalized to every edition or to unrelated personal users.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli-pat-steps.md",
+      "content_sha256": "fff6d0390a6e383d71c411586b1907e2bdf016ccc4ef1ad9eb4dbec1cfbde651",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "The CLI token procedure specifies a personal resource owner, not an organization, because Copilot Requests is available on user-owned fine-grained tokens. It offers public-only, all current/future repositories or selected repositories as use-case choices, not a mandate for broad access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli-pat-steps.md",
+      "content_sha256": "fff6d0390a6e383d71c411586b1907e2bdf016ccc4ef1ad9eb4dbec1cfbde651",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "The token procedure specifies Account Copilot Requests permission and ordered environment precedence COPILOT_GITHUB_TOKEN, GH_TOKEN, then GITHUB_TOKEN. Source guidance is not authority to generate, export or disclose credentials; no token was created or read.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/cli-claude-plugin-dir.md",
+      "content_sha256": "e660c18e512bebe0440c385f2b87017493535205c6042b5115912b4921a742c8",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The CLI discovery note adds .claude-plugin/marketplace.json as a lookup location. Discovery alone does not establish trusted content, valid metadata, installation or execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/cli-example-marketplace-file.md",
+      "content_sha256": "d14733785e5cba39f58b0e075c239dea9885608de73992ce2f6dfcf02bcc2478",
+      "start_line": 1,
+      "end_line": 27,
+      "statement": "The marketplace example contains illustrative owner/contact metadata and two versioned entries using relative plugin source paths. Names, email and versions are placeholders, not an actual organization, integrity lock or proof either plugin performs its described function.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTTOKENPLUGIN-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/cli-example-plugin-file.md",
+      "content_sha256": "9e52deb4c2b1c2fc72fc1b43b83e9ed2628fc2e0e419ee0f1a49fd8c17efd307",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "The plugin example references an external schema and includes illustrative identity/contact, version, MIT license and keywords. The declared license is metadata for the example, not proof of upstream grant, per-file compatibility, verified author identity or safe plugin implementation.",
+      "accepted_policy": false
+    }
+  ]
+}
