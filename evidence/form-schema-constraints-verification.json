@@ -1,0 +1,46 @@
+{
+  "issue": 194,
+  "reviewed_at": "2026-10-03T04:21:01.180Z",
+  "artifacts_reviewed": 5,
+  "reference_claims_added": 5,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59360,
+    "claim_bearing_artifacts": 2856,
+    "tests": 324,
+    "test_seconds": 1.984,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Required-field restriction explicitly public-only, not private-repository enforcement.",
+    "Isolated introductions not complete schema; completion not truthful attestation.",
+    "No form submission, template changes, native test, adopted policy, or rights clearance."
+  ]
+}
