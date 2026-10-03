@@ -1,0 +1,29 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:57:09Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-OAUTHTOKENLIMIT-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/oauth-token-limit.md",
+      "content_sha256": "dd76c17f489bd583529ccd58cac2713398a8b4794ddeae9db48bee20f9a5687b",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "Token count is ten per user/application/scope combination and hourly issuance limit is separately ten. Exceeding count revokes within the same combination. With grace feature enabled, choose oldest never-used token older than one minute, otherwise least-recently-used if any used, otherwise oldest even within one minute. Without feature, oldest never-used precedes least-recently-used when all used. Recent protection is qualified, not absolute.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-OAUTHTOKENLIMIT-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/oauth-token-limit.md",
+      "content_sha256": "dd76c17f489bd583529ccd58cac2713398a8b4794ddeae9db48bee20f9a5687b",
+      "start_line": 16,
+      "end_line": 16,
+      "statement": "Hourly rate-limit exhaustion does not revoke the oldest token; it prompts browser reauthorization to review permissions and interrupt potential token-request loops. Prompt appearance is not actual approval or effective token issuance.",
+      "accepted_policy": false
+    }
+  ]
+}
