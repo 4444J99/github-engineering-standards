@@ -1,0 +1,48 @@
+{
+  "issue": 240,
+  "reviewed_at": "2026-10-03T05:44:48.030Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59635,
+    "claim_bearing_artifacts": 3121,
+    "tests": 324,
+    "test_seconds": 1.995,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No actual trust removal, domain approval, trial signup, repository change, accepted policy or rights clearance.",
+    "GHEC-only note branch is not universal GHES denial; custom repository versus organization roles remain distinct.",
+    "CA deletion requires warning/confirmation and affects all CA-signed certificates in previously inspected context.",
+    "Domain approval does not prove DNS ownership; placeholders and caption-only scope preserved.",
+    "Trial include inspected but linked guide and images not reviewed by reference."
+  ]
+}
