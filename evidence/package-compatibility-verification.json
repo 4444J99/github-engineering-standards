@@ -1,0 +1,47 @@
+{
+  "issue": 258,
+  "reviewed_at": "2026-10-03T06:20:12.827Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59751,
+    "claim_bearing_artifacts": 3227,
+    "tests": 324,
+    "test_seconds": 1.987,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Unresolved generic registry replacement versus GHES future-replacement scope retained for reconciliation.",
+    "Package-level inheritance differs from organization defaults; no permissions or enablement changed.",
+    "Maven artifactId and GHEC visibility constraints are pinned source claims, not executed behavior.",
+    "No independent semantic/published assurance, accepted policy, rights clearance or native rollout."
+  ]
+}
