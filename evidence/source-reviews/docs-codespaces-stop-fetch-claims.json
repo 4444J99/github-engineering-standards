@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:29:17.193Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESSTOPFETCH-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/source-control.md",
+      "content_sha256": "2106ffcbf2063430403be6a3f3721d75f2a632093837449ae10156f08984babd",
+      "start_line": 1,
+      "end_line": 75,
+      "statement": "The source-control fragment distinguishes unpublished template work, included publication/branch/PR procedures, selected-or-all staging and Commit & Push, remote Pull, and Push of saved committed changes. Autofetch retrieves new remote commit information rather than applying working-copy changes; its all setting covers registered remotes and period is configurable. Pulled dev container changes require rebuild for runtime application. None of these UI instructions proves successful push, review, merge or safe setup; included fragments have separate receipts but composed rendering and screenshot pixels remain unverified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESSTOPFETCH-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/ssh-server-installed.md",
+      "content_sha256": "90dbf148e6c401c6def955c45756155cbcd2488ee25438017776c81a6f8d17fa",
+      "start_line": 1,
+      "end_line": 11,
+      "statement": "Connecting through SSH requires a running server. The default-image source claims an included automatically started server; for nondefault images it supplies an sshd feature example with major tag 1 and version latest. These moving references are not immutable digests or verified installation, least privilege, exposed-port security or authorization to execute installation. No server or dependency was started.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESSTOPFETCH-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/starting-new-project-template.md",
+      "content_sha256": "5b4579f9e69b643b2ff36580d50ad0d9dcac48a827799388cd8313f755a86dbf",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "For a new project the source optionally suggests a template-created codespace followed by later repository publication. This is a possible workflow, not a required hosting model, verified remote custody or permission to publish.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESSTOPFETCH-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/stopping-a-codespace.md",
+      "content_sha256": "1be8b00681e2bf86d6236221ddf3be416055f8bd147ef1801462eede72697cb7",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Stopping a codespace terminates running processes while retaining saved changes and terminal history, but not visible terminal-window contents. Closing an editor/browser tab alone leaves the remote machine running until inactivity timeout. Running instances incur CPU charges and stopped instances still incur storage costs. Stop/restart may apply changes, but machine-change language must retain the different-versus-same-storage timing in DOCS-CODESPACESTRANSITION-002/003. Suggested deletion after errors is not custody proof or authorization; retained saved files are not protection against eventual instance deletion.",
+      "accepted_policy": false
+    }
+  ]
+}
