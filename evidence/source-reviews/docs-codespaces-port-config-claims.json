@@ -1,0 +1,95 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:19:23.104Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/navigate-to-ports-tab.md",
+      "content_sha256": "1e272ddca01e6b8654606081226f63dede46ad26e1da8882e3220f72b82a4226",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The fragment opens the codespace terminal and Ports tab. UI navigation does not itself forward a port, verify exposure or confer permission to change visibility.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/navigating-to-a-codespace.md",
+      "content_sha256": "f9ccce19d9a4f5a55de09d21095dbb319ce43e9aa56badd958ff97b18fead910",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "The existing-codespace navigation fragment uses an included personal listing and selecting a name, with an alternative repository Code/Codespaces dropdown for active instances. The active-instance dropdown is not necessarily a complete stopped/deleted inventory or access to other users' instances. Include rendering and screenshot pixels remain separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/next-steps-adding-devcontainer.md",
+      "content_sha256": "e632391d3cad8f2903eae609e6f426fde0068542408f4113ab1f032577875a64",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "The advanced-resource list links feature installation, account secrets, GPG verification and forwarding. Merely referencing these topics neither reviews their procedures nor authorizes secrets changes, installation or exposure.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/overwrite-devcontainer-config.md",
+      "content_sha256": "6fb88a83e34c2e2cf26bc9ae644b0ab0592989120ceccdb5aea37697aec4dca4",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The overwrite fragment describes replacing an existing dev container configuration and opening the resulting file in its surrounding workflow. It supplies no custody/precondition safeguards by itself and is not blanket permission to overwrite user files; no file was replaced.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/permanent-codespace-names.md",
+      "content_sha256": "52c9518abd31fa7faec0494fbd1bce2f1972133aaff0eed7a5861542b09f17f1",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "Permanent codespace identity can be obtained from browser URLs, copied listing links, the codespace-name environment value, an installed CLI listing or log fields. Display names differ from permanent names. Examples are placeholders, commands remain unexecuted and no private logs or live identity were acquired; the logs article remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/port-forwarding-adding.md",
+      "content_sha256": "c9f65e62e711afe266d383bc20a74df7c316d756e0d8d12ee2580f422d76df1e",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "Adding forwardPorts to a repository dev container configuration automatically forwards chosen ports for newly created codespaces using it; already-created codespaces must rebuild for changes to apply. NUMBER is a placeholder and the snippet is a property fragment, not standalone validated JSON. Declaration alone is not effective forwarding, public visibility or permission to rebuild/expose.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/port-forwarding-intro.md",
+      "content_sha256": "8081d62103723a31ac67c13abb2bd4e3046cd5908fdd3691ac3363f50239d7ed",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "Application terminal output containing a localhost URL can automatically forward its port; browser/editor clients make a local viewing link and the default forwarding protocol is HTTP. Manual forwarding, labels and organization/public sharing are described capabilities, not authorized exposure. The included restrict-port-visibility note is a necessary unresolved qualifier, so unrestricted sharing or secure transport must not be inferred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCONFIG-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/port-forwarding-labeling.md",
+      "content_sha256": "2d7b32b1eaf8fcddff85338e6b3ac08c857301f99333fd93c0a0e5ee03c767de",
+      "start_line": 1,
+      "end_line": 38,
+      "statement": "Port labels aid identification in browser/editor. A saved label can propagate to future codespaces using the chosen configuration when the port is automatically forwarded; multiple configurations require choosing a file. portsAttributes labels and sample ports are metadata, not access control or verified exposure. Navigation/label-input includes and screenshots remain separate, and no label/configuration changed.",
+      "accepted_policy": false
+    }
+  ]
+}
