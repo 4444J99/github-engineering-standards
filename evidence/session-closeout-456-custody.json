@@ -26,6 +26,13 @@
   },
   "remote_readback": {
     "verified": false,
+    "resumed_attempt_date": "2026-10-03",
+    "resumed_attempt_exit_code": 1,
+    "resumed_attempt_reason": "Google Drive shared-client per-minute query quota: HTTP 403 RATE_LIMIT_EXCEEDED; no additional bytes received.",
+    "preserved_prefix_bytes": 1069543424,
+    "preserved_prefix_sha256": "c8c5a4d92f687f87ee8aac48419b634533b8afda40cd2d2b89735b708eba118d",
+    "preserved_prefix_matches_local_archive": true,
+    "remaining_bytes": 135397408,
     "first_attempt_exit_code": 1,
     "first_attempt_reason": "Shared Google Drive client per-minute query quota: RATE_LIMIT_EXCEEDED",
     "corrective_attempt": "Single-stream read with a 300-second wall deadline; timed out and subprocess terminated.",
@@ -34,13 +41,28 @@
   },
   "restoration": {
     "verified": false,
-    "reason": "Existing 1Password account subsequently reports not signed in; exact new archive decryption awaits renewed existing-account access."
+    "reason": "Full remote ciphertext readback remains incomplete. Local restoration succeeds but does not establish remote custody.",
+    "local_archive_sha256_verified": true,
+    "local_archive_restore_verified": true,
+    "local_restore_date": "2026-10-03",
+    "local_restore_exit_code": 0,
+    "archive_members_read": 49485,
+    "regular_files_fully_read": 49069,
+    "regular_file_bytes_read": 1141201977,
+    "plaintext_written": false,
+    "existing_escrow_check_exit_code": 0
+  },
+  "staging": {
+    "readback_directory_path_sha256": "c0b11d95ffebb859c38861dbdea67416e7cfa7035d77e23f4b4977bd1c791a21",
+    "preserved_original_directory_path_sha256": "39392f2924b6621c498a6c608ce983a946782ebc6274ecc940117fccad774ab3",
+    "private_path_mapping": "Preserved Documents custody-backup receipts; no runtime custody staging.",
+    "runtime_custody_staging_prohibited": true
   },
   "custody_verified": false,
   "checkout_disposition": "RETAIN",
   "raw_copies_deleted": false,
   "private_values_published": false,
-  "next_action": "Renew existing 1Password account access; after Drive quota permits a full remote readback, hash-check ciphertext and decrypt/read every archive member using independently escrowed material, then rerun the published multi-root receipt predicate.",
+  "next_action": "After Drive quota permits readback, retrieve the remaining 135397408 bytes into the Documents readback directory, hash-check the combined preserved remote prefix and tail, then decrypt/read every remote archive member using independently escrowed material and rerun the published multi-root receipt predicate. Do not stage custody in the Codex runtime directory.",
   "project_complete": false,
   "rights_cleared": false
 }

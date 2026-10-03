@@ -1,0 +1,57 @@
+{
+  "schema": "limen.session_closeout.v2",
+  "session_id": "01a10341-92f9-7661-80fd-d57ac4cb146d",
+  "session_root_path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+  "receipt_root_id": "ges",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456",
+  "disposition": "handoff",
+  "scope_roots": [
+    {
+      "id": "ges",
+      "kind": "git",
+      "path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+      "repository": "4444J99/github-engineering-standards",
+      "repository_id": 1400636612,
+      "base_head": "cd39f5daf76d35b76a01cb74668f3aefd9bf4ccf",
+      "publication_branch": "implementation/v0.1.0",
+      "owned_paths": ["evidence/session-closeout-456-custody.json", "evidence/custody-readback-20261003-verification.json"],
+      "retained_work": []
+    },
+    {
+      "id": "preserved-custody",
+      "kind": "retained",
+      "path_sha256": "22b8bed296b33daf531c6407fc6b4ff09c92762dd32540153b38775aa31f037d",
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+    }
+  ],
+  "verification": [
+    {
+      "root_id": "ges",
+      "head": "cd39f5daf76d35b76a01cb74668f3aefd9bf4ccf",
+      "exit_code": 0,
+      "evidence": "evidence/custody-readback-20261003-verification.json",
+      "sha256": "aa2abec90b8b18dce69aefd4f96159aa798b222a0c9aa477ddfee3de4be1d0a1",
+      "command": "GES tests, validate, compile; installed credential-wall; local ciphertext and restore checks"
+    }
+  ],
+  "custody": {
+    "verified": false,
+    "root_ids": ["ges", "preserved-custody"],
+    "evidence": "evidence/session-closeout-456-custody.json",
+    "sha256": "05a437fde30fd0fcb4534b5a9fdba49160cb97a0b3c770ab7e9a38957e7c3a51",
+    "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+  },
+  "checkout_disposition": "RETAIN",
+  "receipt_status": "HANDOFF_REQUIRES_REMOTE_RESTORATION",
+  "project_complete": false,
+  "external_effects": [
+    {
+      "id": "remote-ciphertext-readback",
+      "kind": "read-only-range-download",
+      "verified": false,
+      "evidence": "evidence/session-closeout-456-custody.json",
+      "sha256": "05a437fde30fd0fcb4534b5a9fdba49160cb97a0b3c770ab7e9a38957e7c3a51",
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+    }
+  ]
+}
