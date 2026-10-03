@@ -1,0 +1,268 @@
+[
+  {
+    "artifact_id": "636c765553678b07b7c5f095",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+    "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:10:40.524Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "FPT/GHEC/GHES guide concerns Gradle publication and Java dependencies; GHEC data-residency deployments lack Gradle registry, not all GHEC. GHES package type enablement is site-admin-dependent; the release-stage include is comment-only. Classic-PAT task-scopes and access tokens apply to this registry tutorial, including public package operations. Explicit workflow exceptions permit associated-repository GITHUB_TOKEN publication and granted read access; other private-repository installs use classic PAT at least read:packages. Groovy build.gradle and Kotlin build.gradle.kts support single or multiple packages. Text instructs credential inclusion, but code obtains gpr.user/gpr.key project properties before USERNAME/TOKEN environment fallback; this is not permission to hardcode, expose or commit secrets. GHES REGISTRY_URL depends on isolation: maven.HOSTNAME with subdomain isolation, HOSTNAME/_registry/maven without. Examples prepend https:// and append OWNER/REPOSITORY. Cloud uses maven.pkg.github.com; do not replace registry host universally with GitHub web host. Owners must be lowercase even when account/organization names contain uppercase. USERNAME/TOKEN/OWNER/REPOSITORY are placeholders, not target identities or executed credentials; GHEC managed users retain organization versus personal namespace distinctions. SNAPSHOT support comes through the Maven reusable: consuming POM or settings must enable snapshots. Reference to the Maven guide is not proof the Gradle snippets themselves enable snapshot policy or resolve a safe dependency. Single-package Groovy applies maven-publish and creates gpr MavenPublication from components.java; Kotlin uses maven-publish and register<MavenPublication> from components[\"java\"]. These are build DSL examples despite shell-marked fences; never run as shell ingestion commands. Multiple-package examples declare maven-publish apply false then apply/configure it in subprojects, publishing Java components to the same repository. This supports scoped multi-project publication, not permission to restructure consumer repositories or proof all subprojects expose Java components. Default package-name matching targets an existing repository; com.example.test and OWNER/test are illustrative. Tutorial authenticates then gradle publish and references package viewing; no successful publication, effective permission or verified native enforcement is inferred. Consumption adds implementation com.example:package plus an authenticated Maven repository in Groovy/Kotlin. The illustrated dependency lacks an explicit version; preserve as incomplete contextual example, not immutable production dependency or a tested resolution fixture. Credential precedence and optional Kotlin String casts are example behavior, not tested runtime handling of absent, invalid or expired secrets. Client versions and actual build applicability remain unverified; no Gradle commands or dependency downloads were executed. Outbound Gradle declaring-dependencies, Java workflow, Maven and deletion guides remain separately scoped. No accepted policy, rights clearance, credential modification or publication authority follows from reference review; independent source completeness and published assurance remain open. Full source and required previously reviewed include/variable context read; candidate mapping is not independent extraction completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "b2a1a047fdbf4f7024f103b1",
+        "text_sha256": "a194b0a08589347dc7d35da8dfc146a2222d54cb31edc49c9f177a8babad7851",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "dccbbe73731b5aab0ae49f25",
+        "text_sha256": "ecb6718ecaaf5a69cd7cb05108b5a979e6d6873fdabb1a68dc948bf454dd69ab",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "1312ac02d8d3e97b3ab527d6",
+        "text_sha256": "d18427384b51a74aef9c1ed6d8d47b598175185ad352d6fbf2c52cefc1511181",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "70310a38abeea6dfad2d95da",
+        "text_sha256": "9812ce9f15fb68445dfcc4b85481420ef843c74d04b6c80a1fbb3f3c44071207",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "c4fffe82c9e82f26a0c0901f",
+        "text_sha256": "9d73e60f885ea8a59be8e1e9353a5c22e686dbece7390af81e109175045cf5b8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "1655f2097ec3dcf5d0eaf25a",
+        "text_sha256": "e8d92b6fb2f77310066a142039c703d208d00a3c8071d8d1921fbe28aaf3460d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "9331b855624bd93b6974fe83",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "2e29b2dc548a6969119b3210",
+        "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "6163b4e3b0b3c705cdf9bb3f",
+        "text_sha256": "b5412a158c09ac05d9776d6421980da6e0080802b0fd215302f600f45d411fc7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "24958236b79a4e2f6cd92827",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "5c00d21b55bc92c6d4533fc1",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "e4012b5b057679edeca86ebb",
+        "text_sha256": "2628eed7df3bb06ca2f01651c4d5b2128c61c0fea12ba49615bb290b73f71aff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "b020abff4edfe19effa2504b",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "359328f897abe66823d8ef90",
+        "text_sha256": "1fb22281dd2786ee646a955a988edc5d22cebefde48c83b138376cbffe51e661",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "0f1727597e584c509f56566c",
+        "text_sha256": "2c17a101b81dfafe18943d6d87bac0758e3dfd6ee06fd1c7ff50c0fbea77e4c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "8ac3818f045967534060e7e7",
+        "text_sha256": "ce1d35952382ef33f334bc9ea1ac1e46311ad7d5c199485995628b8052e7975f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "b547ac7490a276dbaee1d607",
+        "text_sha256": "bc3eb21897ed919ad39ed22e259094b275d961b8787ba7d247b665414b286576",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "37de4ef8a8eb7543098e0e4d",
+        "text_sha256": "6970fb40be0f4e73bc496b0f9c28b4430e0723948a9110b77314ae3d3991a230",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "8efea87c74f65d0f40339d59",
+        "text_sha256": "30125b0435a84c3a4be2d61033fcdfa5a2cfb97e8b22d4601dae8c00b9db23ff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "26b68a4b5877a5462a611a46",
+        "text_sha256": "65480cc56252187079019d9440b0170671b92d1bb81c37e5f55071b2decfd970",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "a65b3463fd00e21be66aacd5",
+        "text_sha256": "678c302d368fac15df5c8fdf6aa744fafaf7ee392e654cce1500c645b6594f85",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "6940d4c81b670b1a994e80a6",
+        "text_sha256": "74cf298712ded5a52d47dcbf3a81c11190d9ac79fe753cee34d9cc992885d343",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "f1678ba3a400cea6058d4c4a",
+        "text_sha256": "de7a6e70e9ea5fd74e5c44921335b75ec55a1961a4797917df5087f221b97cf5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "9b4e0b44a3efe9f93ea87bf3",
+        "text_sha256": "d602ae59ffffd93a53ba70a8007fbcbeb2ebc2250532971d72c6fa8c95e1c9d9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "703577457b26cc1008105abf",
+        "text_sha256": "9ceead0bc71d6529048a99d9c017d976a90796a1b6197866e6696125c39ef722",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "f016df2d1b4d4d3af3c37314",
+        "text_sha256": "c0f9b86db5823707f299b707d26faabaa93f3dad76c222f8e341d51de62e4d29",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "2498781a68c3bc4159fe6119",
+        "text_sha256": "4c4c67ccbc8dddf2175007d99977ca01a50dcd22029cb17e207c7e892a65a360",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "d6cb83a3c26979c902f8ad8b",
+        "text_sha256": "1799f4b25d2f54d352244d4feacaf6747a39ac943d2282865e6c482398e6accb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "d66ed30b62fabe3878a040ba",
+        "text_sha256": "12767248e7fb818669af216e546026f712d88c17b88df4ebe98fcba80e3bfc7f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "e81cb6f98c1be320862482fd",
+        "text_sha256": "c0f9b86db5823707f299b707d26faabaa93f3dad76c222f8e341d51de62e4d29",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "d99574bc7bbeb3b023c0c7ce",
+        "text_sha256": "e29266715aa13ebb23a74f5912cf0bcede1ca9e60dabcfbadc1ca07637eb467e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "cbbfd97dd9edd39147190772",
+        "text_sha256": "37c83ef7ea756669256076f9a26a926cae2d68d749620ca91c9db1d15989f874",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "a85456362e4ae9f2047f77ff",
+        "text_sha256": "2562da059f739f33b5638e6461d660b86481c2c140922d2348782fe04fadc02a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "eb6c9c98cdf15b3fa328a768",
+        "text_sha256": "1d9eec70f31e0e006199d358bf86dffb37888dbc212703e68128a86c7befdcc0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "ac93b0b8e133f6f6c536efd1",
+        "text_sha256": "a797c73808e1183ca682605fc85d0cbca7acfb2d20ad03d0f5fd26dc552ce5f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "425bb65548bde30d8a89d00c",
+        "text_sha256": "15aee11596b27f1b5a6656a4ffbb39adb39a0e3c263086b3cea531ad475da09a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "04b54e4c997326734e4f74b2",
+        "text_sha256": "37c83ef7ea756669256076f9a26a926cae2d68d749620ca91c9db1d15989f874",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "87bb3cf71ec864872729a32f",
+        "text_sha256": "8146550ede43e9be63a4fde763704ea10494212b299edaed51684d0392d8451b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "5a8da7f3e12344227eedd483",
+        "text_sha256": "1d9eec70f31e0e006199d358bf86dffb37888dbc212703e68128a86c7befdcc0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "1e3aa3775b26c0611526653b",
+        "text_sha256": "a3c9f0b8a2b993648b35992f49a4b52657a2249be20d12276660a1b431927d0f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "478239b8dd8ff63ae401709f",
+        "text_sha256": "9b5da4bf12a5f6738e5d78ccdad6448b1c8df99396cfa13643b0087f14aaa040",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      },
+      {
+        "candidate_id": "2a953701c55c11711e7381e4",
+        "text_sha256": "8d96adafeec9e83b5d448044327dbfc0e69ef5791d1747000b41e37a3ffdf52f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-GRADLEREGISTRY-1 through -12; reference only, not deployed DSL or accepted policy."
+      }
+    ]
+  }
+]
