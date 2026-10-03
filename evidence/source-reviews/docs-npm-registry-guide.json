@@ -1,0 +1,478 @@
+[
+  {
+    "artifact_id": "0fcb09e903ac2b232458893e",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/working-with-the-npm-registry.md",
+    "content_sha256": "0f4674901c79745dd8a326c1836ae5d27dceb90f12464de25e01689e2f16efe0",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:15:10.906Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "FPT/GHEC/GHES npm guide has instance-admin package-type enablement caveat; GHES release-stage reusable is comment-only. GHEC managed-user organization publication remains distinct from unavailable personal namespace storage. GHEC github.com endpoint npm.pkg.github.com must be replaced with npm.SUBDOMAIN.ghe.com for other enterprise domains. Cloud example host is not universal enterprise endpoint authority. packages-npm-v2 applies FPT/GHEC, not GHES. Non-v2 passage warns over 1,000 published versions may cause performance/timeouts and describes future hard enforcement while existing versions remain readable; this is not proof of an enforced current 1,000-version cap. Non-v2 suggests deleting versions or Support contact when limits are reached; neither suggestion authorizes destructive cleanup, guarantees support resolution or proves recovery of dependent projects. Classic PAT task-scopes and npm authentication are tutorial paths; workflow GITHUB_TOKEN associated-repository publish/granted read exceptions remain. V2 recommends workflow-token migration and separate Actions/Codespaces grants; no credential migration is executed. V2 reusable REST deletion/restoration requires package-admin token and preview qualification; its automatic-admin connection wording remains scoped against detailed post-publication linking retaining existing permissions. A link alone cannot pass effective-admin verification. Authentication user ~/.npmrc authToken entries differ from project scope-routing .npmrc. Source wording mixes per-user and for-project references; the instruction to commit project routing does not authorize committing TOKEN or the credential-bearing user file. GHES auth endpoints depend on isolation: npm.HOSTNAME versus HOSTNAME/_registry/npm. Token-bearing configuration, login prompts and USERNAME/TOKEN/email placeholders are unexecuted and not permission to change or expose credentials. npm CLI >=9 private registry command-line login/logout should use auth-type legacy rather than browser default in this pinned guide. Scope flag is recommended when using npm audit with GitHub Packages not default; neither login nor audit behavior was tested. Names and scopes use lowercase; only scoped @NAMESPACE/PACKAGE-NAME packages are supported. Cloud v2 tarball size must be smaller than 256 MB; do not silently make this a GHES universal size cap or certify equality behavior. Cloud v2 packages are personal/organization scoped, initially private, can have separate granular permissions, and connect via package.json repository metadata. Non-v2 defaults from @owner/package to owner/package repository; explicit repository URL supports multi-package matching. Inheritance note grants linked workflows access subject to feature and org default; matching repository metadata/name does not itself prove linked access, inherited visibility or verified authorization. Local project .npmrc scope mapping and package.json publishConfig are alternative publication-routing methods. The source says routing prevents accidental npmjs publication, but configuration alone is not tested prevention, authorization or behavioral assurance. Publication procedure authenticates, configures routing, verifies scoped name and repository URL, then npm publish. Repository field matches actual web URL, independent of registry endpoint; placeholders and JSON snippets in shell-labelled fences are not executable ingestion commands. Installation declares full scoped package dependencies, adds project mapping and runs npm install. Example ORGANIZATION_NAME/PACKAGE_NAME lacks the @ used by surrounding scoped-name prose; its MIT field and example version are not rights acceptance or verified immutable dependency identity. Installation prose says all requests pass through GitHub Packages, but shown @namespace mapping controls that scope rather than being a proved global registry setting. Preserve this routing wording discrepancy; mixed npmjs scoped/unscoped resolution requires separate client behavior evidence. Multiple namespace mappings allow packages from several organizations/users, not a universal one-organization access ceiling. Registry routing does not grant permissions to those namespaces or certify dependency provenance. GHES access to official registry.npmjs.com is conditional on administrator enablement; do not assume npmjs proxy from generic mixed-dependency prose. No npm commands, package installs/publish, credentials, rights acceptance or native settings occurred; linked npm/workflow/admin guides remain separately scoped. Full source and required includes/features/variables read; accounting is not independently certified extraction/published completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "a34e26290c7187779c5dc4f5",
+        "text_sha256": "63c24f3b2d02eb288a237a0f483c47487003c415d61330b35418797fe71fb6a5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "6d9e33c724299708c0320cd9",
+        "text_sha256": "d8ab4c184be222afea89699a18b0c280a6526e28b567cba63e0c11bc352d1873",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "4d5fbaf86a38ca2aea245156",
+        "text_sha256": "12d04f56e6d3525e8385251a8be68ee2a45f499295e0a7be50eee97c63421a1e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "094e9e8f758997c158aad739",
+        "text_sha256": "d925433224e580d563e57998825a1847c4f297cc7842a06945fb9455810f8770",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "40e3bb9dc8053f70994bc482",
+        "text_sha256": "8fbd2d01f0926d2187c2972c957300c78d0510efc3bd565f4d7b3c6f896f49c7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "70874fb8feacfac7aa9ddc9e",
+        "text_sha256": "98273cef9f0e5592cbef565b6c8344875073358de900299c3eb4d1845aea2524",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "3d8e24d93d66a4072475e585",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "ce36639f4b182e6669d9f63d",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "7af9aeed7c6c1ec93b54c24c",
+        "text_sha256": "2628eed7df3bb06ca2f01651c4d5b2128c61c0fea12ba49615bb290b73f71aff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "855d8f1ec7c454b41bf8c959",
+        "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "52806a37852ddd14b7f6063e",
+        "text_sha256": "2e248cfd9c43084546b2925ab45d22a5c18196c6e41d46d9b902f48381b4d614",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "361b0eda5ef2db82059a6429",
+        "text_sha256": "4a4026c9e095aa2822f54f301ba8a63f1895915426b85aa0a5ff636658825603",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "4718b8e21dd4c347bd7df3de",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "67a72c01350c7c4600f48d27",
+        "text_sha256": "26c95c2ea2012f5dd1556c3562917b2f0d4c7591f3a41f11f51ee46721b1b74a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "f6f2a3b531f3b2d2510cf622",
+        "text_sha256": "30347d25fe96ff7e7c22ddce3370fc253c5aedb3bbd7940bae6b62dd9a675fec",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "74e97bc3c8a1aa77476ed17b",
+        "text_sha256": "f78e4e40c10fa947c08bb7dfd825a82392b107bc9324e94bfb27eb2d6d7fe474",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "22d964375878a09e2cdf6b37",
+        "text_sha256": "003faf2645948736597e9f782acfbcddabee08baf86e5772bdeb0f3710a67f4a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "0baae33b00150a786f5202b7",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "5557d0920722648c5cb93a81",
+        "text_sha256": "c02e9657fff71edde8d81673104d60df35ee1c1af2ea9e09474f55f4c5d2e47e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "fd4d66736628a0719dc18cbe",
+        "text_sha256": "71c6588871611a675a6bd13d9ba7fc760ae49d0075f206228ed4d1cf1222d67f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "3111120beb36056618acc444",
+        "text_sha256": "b7e152da71e33e4dc7f982503d36f71c768884a0ac432ee913111e10ade733ea",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "f963ae1a0a7449cb3a792d18",
+        "text_sha256": "2c17a101b81dfafe18943d6d87bac0758e3dfd6ee06fd1c7ff50c0fbea77e4c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "c7544b8566a160493b3dd13e",
+        "text_sha256": "d0bd22defe522366ce2237c7b58d945b47e4181bac05362bab7501919c8aa265",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "39a609b39b2d4a75bafb26a0",
+        "text_sha256": "04c93fb9818d202e2a6971ddfa0bb76e81af529ef16e5d99206b654567d37924",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "18b8d6328ebd8613bfd6d90a",
+        "text_sha256": "405c1b5d33dc321c1320c9ae8f3fd7f47f86f8da008de7250e7e12151fdfead8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "ce5e635d868423a2f3e90752",
+        "text_sha256": "b98e71c32c37c09944e767b5a94ba2a5a721d2261c18096695600f3a42dce289",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "55a546271bb807bbf812ab57",
+        "text_sha256": "31ee3908013c99e0e158e4923c5c030b29d6c9cdba7027f79cd6d15672014a3c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "fa15a926a356e4814bb9b512",
+        "text_sha256": "69b08389670910ca0ac1a0038ee0a7bd6962b3da11c58bb451db9f94fc4778a4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "8e63271f3187fa1c9f4a5246",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "c367feae1dd2e282d485c82b",
+        "text_sha256": "09c179f9ee726a108030b7cbcf06b7fe7fbff91e84c79ace2fa3299212350a28",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "5f5145d57d0b28cdf0cc59cc",
+        "text_sha256": "8cc5e76e16b1fdde58a55fb5d81cbd120a4c28434227473d5e8c8115f2788082",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "e21bc124af5b62d8a92e0552",
+        "text_sha256": "5ff0d40a25c84f2073813a04e650f822ae1016fea13cf0c009a46bfeb31778ea",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "5055d0804a5aa1ddcb2eeca8",
+        "text_sha256": "405c1b5d33dc321c1320c9ae8f3fd7f47f86f8da008de7250e7e12151fdfead8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "fc922fbc5e06647086f9b00d",
+        "text_sha256": "b4df009b19f8c779bdd2320e661e7ed2b0d4ee36e45327cb1bb6fc74c94005bc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "d4db1f6aa487130585bf927f",
+        "text_sha256": "31ee3908013c99e0e158e4923c5c030b29d6c9cdba7027f79cd6d15672014a3c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "a09b5fbd9f4bff3389ab2cea",
+        "text_sha256": "11e63705b6d563a67c07725697098a5282a0be597e9e7d06d19b1e686a3b158c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "44e703f3a944957c99525220",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "b71fb628285e83c63974c84c",
+        "text_sha256": "b497800d4b5ce2b456968914863eb4eff667398de194a6b0809dc7ef2a86702c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "2a7cb0174eda16482ac514fd",
+        "text_sha256": "f5baf1d7230138ae6cd7c4eb25097809d3deccf984269a28ec9f7c8e0dc56e74",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "5b9ec3cb64ae9245f947d7c4",
+        "text_sha256": "644fe27c91c5efd5b4cf3e01627e738fa77c77de1826ce7842c443363f13ff52",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "f2d3ee131cf6104b58c8e6a6",
+        "text_sha256": "f740bb8c8680679d8032554c99dcfca0a1b11b92df6c2cf2808bf102bde3b3e1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "a8171e55372f58fc1ddca796",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "9d77e01adfae6b51c39bc0a5",
+        "text_sha256": "e2931667427556633fda5ba0df565468368b17272925eda7b99cf6bb16268f85",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "83b5be395d8cd2e179be0b06",
+        "text_sha256": "cb9a85a04ca0947f7844fe7f8a8ed4c0557a52addf08b5064aaeb18eed2c07f2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "de7fca42304617f1b0d65154",
+        "text_sha256": "0c7753062f8ae73027fcebece5614b519e2af0b8f1e4b86a38dda3f5e9a87e57",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "57cd79030d3744f61b92e6bd",
+        "text_sha256": "1c2947d4ca6cb1531e10da231ebdf669c1516bc210987042b130b5c10d822c32",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "bffe8149676c485c62e3e76b",
+        "text_sha256": "0925a6127af899b92b67cc9010d397579f3222f7d4f774c0421d92862d25d2da",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "34a95541885a22859d084f14",
+        "text_sha256": "9ceead0bc71d6529048a99d9c017d976a90796a1b6197866e6696125c39ef722",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "0581e3730d255bac1912240b",
+        "text_sha256": "24f911f9253e8caaeb3a8562dd09d760b3d3bc4d6e02ff2f8ce8d10d171939da",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "6a3c310700f17e0512bf4d7c",
+        "text_sha256": "34e48979119a01631db678bb496de3a352e5b8917861d67f711fe980b087da49",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "a545395efad9fa899dd63fe3",
+        "text_sha256": "635e072e3fbaac6d0d22a86d40c7391a0aed4184a440be6cefb9b731fd939d23",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "10a30298eb0444569a1e254d",
+        "text_sha256": "54a0a0712c06d6ef8142eeff4086cd877a9fbcba37c497754c2f761124c0f3ab",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "78045c312defd482d2bf5e43",
+        "text_sha256": "95c9b761e1e9e077c52061857fbe204b8ef88f4d8576035c163e8a3908f5e0fe",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "2b543332475b284ed607c9e2",
+        "text_sha256": "9410b5270cb538f7bde21ca870e2f1b9ecf950c32ad7b140c2d004acead8d2d1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "cd9042032d930af78ee65d95",
+        "text_sha256": "c77a887cb69df04dcb0182f4df6138dd8eeb700a6c1dcaffa09e9a3545117e4e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "8c38965260125c073703088e",
+        "text_sha256": "2a308ebf3e2eb2a8a1f9b24bf8055a3a5fe16e1a72dc0c410b2fee64056b67b8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "20006186d583a4277735aba8",
+        "text_sha256": "27880b1366e42f73fb7bc4e6eaa075b56e9effeffdf89f365ba06ac910bbf589",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "c3a6493c9b175bfda30eb13d",
+        "text_sha256": "a224221b028dee4898d34b2f1aa25bc85e62e6c7cf1fe9f6f02ba12931196ebf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "d68bc76d76451830d740cce0",
+        "text_sha256": "be3c416863c02b59509879bb21dd7b2d90baf474cb84c4802eaff1eb116d226e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "beabf8ffa190c7de5c3cbe20",
+        "text_sha256": "354d554300b6d0894df0dd41c553212253630afa12c40e53d9d057e2adc64423",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "a0a38c59dae18586bbc550ba",
+        "text_sha256": "54a585374f4a5903c623e2c1978f6daecd20669666df8646b9e2091fbed840db",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "ea984905ab5c8a6408265f30",
+        "text_sha256": "1e55cd2c099e039f939fb60b1477d59bee339b9ba385f0fba2a4232a5d7f3ada",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "ac1da30683295fc1da38b3a1",
+        "text_sha256": "24ac74a78edd72c73d78c29a423e2993fb1195b2e5c3abc296fe5bb8386f7ed5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "c35b372a5f23bec9e08e9549",
+        "text_sha256": "f4213eeb469a6043f9b7a35cdb63a5e56b5bf484cb7ff9d417f0b9a351970233",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "197d471ddfbf2ff7637e8d0a",
+        "text_sha256": "34e48979119a01631db678bb496de3a352e5b8917861d67f711fe980b087da49",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "fd3f50fb1d6a56bcc6f87308",
+        "text_sha256": "af71e169b3f9d8d317b9f1aaeb444d75b0cc9d643d1187cbb8f199eb061234aa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "1460af3b56da6b6ff9be4df4",
+        "text_sha256": "a0f2908a2c6d596222cc89712458927504e0081dca5b03ba6f0dcc0a24178c02",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "d0d092dd966df0cc4b077609",
+        "text_sha256": "ba829cdad3dca0ea7764131dac31aea95b39d98aada3e81a5b439f7b1e0440d9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "d46f8d9516031a48190ff631",
+        "text_sha256": "176c5d9787f1a1a00350d7f0538a9d84fd896a2651d34e14bba80d692a29ac56",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "a6d4c54f913cc453cc5a8b0f",
+        "text_sha256": "e0be3bae3f3fa760c17cf42a18cb297f8491bca8fb3b1587236a20997c9647b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "efd5b0837efb06d7731b5539",
+        "text_sha256": "405c1b5d33dc321c1320c9ae8f3fd7f47f86f8da008de7250e7e12151fdfead8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "0cc6776edd89007b3e7c2560",
+        "text_sha256": "58062fe105b416a14e018788b5700c195f46d6b5fdc2452088b22d58993e41fd",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "d797c3c8c000287b570ea841",
+        "text_sha256": "31ee3908013c99e0e158e4923c5c030b29d6c9cdba7027f79cd6d15672014a3c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "b542a752c7aaf1cdbde15525",
+        "text_sha256": "b33311b9990cae100cbf76e9761333d29a38accbe5d1a1dd3f8178a6d1f8a884",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "c616be98515fcdbbafdba39d",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "c1acdeb70989a5b2eedfceff",
+        "text_sha256": "96dd5a9a348fe660fa1330bc98d993d3fb1d30567402e78f840c9305b246d010",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      },
+      {
+        "candidate_id": "e4881ee481ef433ecd550a37",
+        "text_sha256": "7d05c74bdaa6c0cbb2c89daf931c25d15ec4413fe350d4cfdf0702b94897185d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NPMREGISTRY-1 through -18; not adopted policy or executed client assurance."
+      }
+    ]
+  }
+]
