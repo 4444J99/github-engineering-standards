@@ -1,7 +1,7 @@
 {
   "schema": "ges.session-closeout-evidence.v1",
   "session_id": "01a0fd02-4b38-7122-a489-fe3a5b2f3a04",
-  "observed_at": "2026-10-03T18:35:49Z",
+  "observed_at": "2026-10-03T18:39:01Z",
   "implementation_head": "baaebcb345aa117aca49c63e673c42616b0254c4",
   "verification": [
     {
@@ -48,7 +48,7 @@
   "publication": {
     "repository": "4444J99/github-engineering-standards",
     "branch": "feat/repository-factory",
-    "remote_head_at_readback": "c44e5071f33b13718a2e215a7dc4ba9bcdc5003b",
+    "remote_head_at_readback": "84a1431d5d0fbc4ab865c6e747c6f267a98eb12b",
     "pull_request": {
       "url": "https://github.com/4444J99/github-engineering-standards/pull/455",
       "state": "OPEN",
@@ -57,8 +57,8 @@
       "merge_state_at_readback": "UNSTABLE"
     },
     "checks_at_readback": {
-      "pull_request_event": "Python 3.11 and 3.13 validation jobs passed on c44e5071f33b13718a2e215a7dc4ba9bcdc5003b",
-      "push_event": "Python 3.11 and 3.13 validation jobs failed on the same head with nine stale-outcome assertions",
+      "pull_request_event": "Python 3.11 and 3.13 validation jobs passed on 84a1431d5d0fbc4ab865c6e747c6f267a98eb12b",
+      "push_event": "Python 3.11 failed and Python 3.13 remained in progress on the same head at readback",
       "unchanged_retry_requested": false
     }
   },
@@ -87,15 +87,17 @@
     "protocol_runtime": "5ac33aa1b52bd1d8dfc5ffe5262ca3d7b2d7c211",
     "canonical_predicate": {
       "command": "bash scripts/no-tasks-on-me.sh with exact session, receipt, native transcript, caller scope and factory scope",
-      "attempts": 3,
-      "latest_exit_code": 1,
-      "finding": "session scopes have surviving or unattributed processes",
+      "attempts": 4,
+      "prior_failed_attempts": 3,
+      "final_exit_code": 0,
+      "final_findings": [],
+      "receipt_head_at_final_readback": "84a1431d5d0fbc4ab865c6e747c6f267a98eb12b",
       "process_counts": {
-        "unknown": 32,
-        "shared_service": 22,
+        "unknown": 0,
+        "shared_service": 54,
         "unmeasured": 0
       },
-      "session_released": false,
+      "session_released": true,
       "task_completed": false,
       "estate_completed": false,
       "retirement_authorized": false
@@ -107,16 +109,16 @@
       "unknown": 0,
       "processes_signaled_restarted_or_killed": false
     },
-    "blocker": {
-      "classification": "service-contract/runtime attribution drift between current Domus classification and the immutable Limen predicate",
-      "owner_url": "https://github.com/4444J99/limen/issues/2763",
-      "handoff_url": "https://github.com/4444J99/limen/issues/2763#issuecomment-5972228644",
-      "next_action": "Reconcile installed Limen service contracts or adoption evidence for the reported helper variants, then rerun the same exact-session scoped predicate."
+    "attribution_history": {
+      "prior_mismatch": "Three earlier canonical attempts classified helper variants as unknown after current Domus classified them as shared services.",
+      "resolved_by_final_canonical_readback": true,
+      "process_action_required": false,
+      "record_url": "https://github.com/4444J99/limen/issues/2763#issuecomment-5972228644"
     }
   },
   "status_boundaries": {
     "session_work": "HANDOFF_TO_OPEN_PR",
-    "session_release": "BLOCKED_BY_PROCESS_ATTRIBUTION",
+    "session_release": "PROVEN",
     "task_completion": false,
     "estate_health": "NOT_CLAIMED",
     "checkout_retirement": "NOT_AUTHORIZED"
