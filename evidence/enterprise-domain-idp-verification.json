@@ -1,0 +1,46 @@
+{
+  "issue": 210,
+  "reviewed_at": "2026-10-03T04:49:33.604Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59450,
+    "claim_bearing_artifacts": 2944,
+    "tests": 324,
+    "test_seconds": 1.999,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Approved notification domains do not establish ownership, recipient consent or delivery.",
+    "Historical public-preview text and Entra-only OIDC/CAP scope do not establish live feature state or all-provider restrictions.",
+    "No settings, subscriptions, notifications or identity configuration changed; no policy adoption, rights clearance, rendered assurance or rollout."
+  ]
+}
