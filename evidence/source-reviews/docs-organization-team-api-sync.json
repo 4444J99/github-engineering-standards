@@ -1,0 +1,170 @@
+[
+  {
+    "artifact_id": "e701ec852afaf2013161bdda",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/ssh-ca-ghec-only.md",
+    "content_sha256": "17f8ef66465453c3df63279d6bbf817df8f3db0204382bc601f18ffbd4c0e5fa",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:03:44.269Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "In the FPT/GHEC branch, organization use of SSH certificate authorities requires Enterprise Cloud, with the previously inspected trial include as a pointer. This is branch-specific rather than universal denial of GHES SSH CA support; no entitlement, trial signup, credential registration or trust configuration was verified.",
+    "claim_mappings": [
+      {
+        "candidate_id": "341735c0c25288c9d0047d78",
+        "text_sha256": "f6f54a4e3e209054bf3a25a4e22a3fa2f5da579fb4adb20f9f9a6026d5b53863",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-1; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "926ccc224cb6f3a8ec9a283a",
+        "text_sha256": "cc7b14c95992b328c82ec2eba6f3d4feaedba1a1e648de823ba41c6215f5046a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-1; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "8aa312746a7503f4d1163323",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-1; not adopted policy or verified sync/API behavior."
+      }
+    ]
+  },
+  {
+    "artifact_id": "e8bded95e43277494a50dece",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/team-api.md",
+    "content_sha256": "3f6bd1bef7e4428aafdf2d2fbf396260cfb4ba8fccb764ebc01b8826832abf48",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:03:44.269Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The containing team API endpoints require authenticated membership of the team's organization, and OAuth access tokens require read:org scope. GitHub generates team slug from its name; accepted pull/push permissions map to organization-repository Read/Write roles. This endpoint-context rule is distinct from the enterprise-team API's different token capabilities/scopes. It does not authorize every endpoint, prove slug normalization, define all token types, or establish a successful API observation; linked scope/role references remain separate review work.",
+    "claim_mappings": [
+      {
+        "candidate_id": "d83499e0a2f8f138fed5d516",
+        "text_sha256": "5b6235de3fbff4787ff2748ee6713da18fe3aaeed2286a4bfa082f378e2628ba",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-2; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "fd17a60863f11aab951e0981",
+        "text_sha256": "b6d7432c1a595a0fad75c313648695fe64c4353025efe638d56cfc2220057466",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-2; not adopted policy or verified sync/API behavior."
+      }
+    ]
+  },
+  {
+    "artifact_id": "27538ce942ec72d5c5444c1b",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/team-discussions-deprecation.md",
+    "content_sha256": "bc1ed32a47640e79359141547a2fc323cda218ae6a788eb152c1af9961510cb0",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:03:44.269Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Both FPT/GHEC and GHES branches label Team Discussions retired and point to a historical announcement; GitHub Discussions is identified as an alternative for organization-level discussions. Pinned release/product variables resolve retired and GitHub Discussions. This is not an executed migration, live feature verification, preservation receipt or automatic permission equivalence; outbound pages are not reviewed by reference.",
+    "claim_mappings": [
+      {
+        "candidate_id": "4bfaa07b26c1ec7081aa0b17",
+        "text_sha256": "f2e75da111c001b0c318022f9873dfab061950fa1984f63aa98808d34025a052",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-3; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "0583f91a9ed9743d925e4390",
+        "text_sha256": "31b5e0b6d8655b4a69fad628fa5b8378cb75b3135d037534ec33b6b31ddc8ca4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-3; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "53ba119137a41935c953bb84",
+        "text_sha256": "c202aa79c2b66c34e9f05e273aafc6a3216d7e39a490c8c3d6389970a7a1fd14",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-3; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "d8b537ad731af465d1fd103b",
+        "text_sha256": "15dcb306bef17ff349bf12fff56eb66101a73ddcce7fb80ed5cbdb9eef97a8ac",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-3; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "bd679570fb2786a2ab14c3b4",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-3; not adopted policy or verified sync/API behavior."
+      }
+    ]
+  },
+  {
+    "artifact_id": "65a69fd6b92b8e2e38b1c53f",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/team-notifications.md",
+    "content_sha256": "d658c496a0bce08d5464a288cc2fe1d89500d583f671a113491d2333c3c73deb",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:03:44.269Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The Team notifications Enabled/Disabled choice affects mentions of the team name only, not review-request notifications directed to the team. Disabling mentions must not be generalized to silencing all team notifications or enforcing reviewer coverage; no setting or delivery behavior was tested.",
+    "claim_mappings": [
+      {
+        "candidate_id": "05dfe8e9ad742641bdb0e9e2",
+        "text_sha256": "0cc89b148329dd3e2118bf71e76beec2a451eb0250c3107a6dfc29abc582d96a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-4; not adopted policy or verified sync/API behavior."
+      },
+      {
+        "candidate_id": "2a73b36bd483e202329ee7e0",
+        "text_sha256": "165a8cdd9d2699596c891c6fa79c2a5822a701e211da314ee0e0eb58eeffa004",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-4; not adopted policy or verified sync/API behavior."
+      }
+    ]
+  },
+  {
+    "artifact_id": "b14333ed8f06e13842b85ee5",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/team-synchronization.md",
+    "content_sha256": "3612b5e2e89f13009fbffaa9909afb7bd617e6cecdcb60c845c7f6502bd4b1a6",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:03:44.269Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "In the FPT/GHEC branch, Enterprise Cloud team synchronization can add and remove existing organization members from teams through an IdP. The FPT text points to Cloud documentation; it does not grant the feature to every Free organization. This is not provisioning organization membership, a universal EMU/SCIM mechanism, support on GHES, or verified live sync; the linked guide remains separate review work.",
+    "claim_mappings": [
+      {
+        "candidate_id": "cd8aff2486971119f756c5c4",
+        "text_sha256": "0e184a5958226330aef4b7289258e22d6264b8d423c44c162b64932eb3b44da1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-5; not adopted policy or verified sync/API behavior."
+      }
+    ]
+  },
+  {
+    "artifact_id": "e1fa124552fafad4c7aa6d03",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/team_description.md",
+    "content_sha256": "d03688410d0c6becffe51f3b4db54f63fa6931cde2007eaa73eadf41abccf165",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:03:44.269Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "A team description is optional in the containing creation/editing procedure. Absence of a description is not automatically a failing platform requirement; this does not prove created team identity, mandatory local policy or executed change.",
+    "claim_mappings": [
+      {
+        "candidate_id": "c4cef464d402f57ed47f0249",
+        "text_sha256": "dbbdefbba14b331ebcd0a4965b529bacb81f26e4895775014eb14b99759b7027",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGTEAMAPISYNC-6; not adopted policy or verified sync/API behavior."
+      }
+    ]
+  }
+]
