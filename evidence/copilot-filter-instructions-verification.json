@@ -1,0 +1,46 @@
+{
+  "issue": 152,
+  "reviewed_at": "2026-10-03T03:04:35.227Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 7,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59082,
+    "claim_bearing_artifacts": 2621,
+    "tests": 324,
+    "test_seconds": 1.976,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Different instruction-file support labels require embedding applicability; file existence is not effective loading.",
+    "Extension override and prerelease filter caveats prevent selection/configuration from certifying actual model or public-code filtering.",
+    "No imported instructions executed, settings changed, adoption or rights/native certification."
+  ]
+}
