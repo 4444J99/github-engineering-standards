@@ -1,0 +1,50 @@
+{
+  "issue": 289,
+  "reviewed_at": "2026-10-03T07:22:28.024Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 20,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60049,
+    "claim_bearing_artifacts": 3285,
+    "tests": 324,
+    "test_seconds": 1.979,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false,
+    "package_content_artifacts": 24,
+    "package_content_receipts": 24,
+    "package_content_missing_receipts": 0
+  },
+  "limitations": [
+    "Receipt coverage 24/24 is not independent semantic completeness or published assurance.",
+    "Workflow visibility inheritance conflicts with access guide; GHES runner/host examples remain unverified.",
+    "PR-triggered demo push has no event guard; no source workflow executed.",
+    "No rights clearance, accepted controls or native rollout."
+  ]
+}

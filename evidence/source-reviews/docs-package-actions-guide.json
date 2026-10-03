@@ -1,0 +1,340 @@
+[
+  {
+    "artifact_id": "1d06ba512c11c8a1fa7e411e",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+    "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:22:28.024Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Guide covers package Actions publication/installation across FPT/GHEC/GHES, with managed-user namespace limits and comment-only GHES release-stage include. Actions CI/CD capability descriptions are potential workflows, not deployed enforcement. Granular registries support independently scoped user/organization packages; workflow GITHUB_TOKEN migration is strongly recommended over long-lived PAT. REST deletion/restoration additionally requires package-admin rights and preview scope; a recommendation is not a credential change. Repository-scoped registry flow recommends GITHUB_TOKEN contents read/packages write; installation-token authority is bounded to workflow repository. Fork read-access prose does not prove package grant or permit privileged publication from untrusted fork code. General package workflow access supports push/pull, but token permission, registry permission model and effective package grants remain separate. Declared job permissions do not establish access or acceptance criteria. Default workflow-created package example says it inherits repository visibility and permissions, conflicting with granular access guide default access-but-not-visibility inheritance. Preserve this unresolved context distinction rather than derive visibility universally from repository. Workflow-created package default repository-admin access is documented, but not independently tested; reusable explicitly-connected automatic-admin wording remains qualified against post-publication linking retaining permissions and separate Actions-access grants. Download access table distinguishes public all-workflow, internal enterprise-repository audience and private explicit package read grants; public-repository private-package access can reach forks. Internal package download prose does not grant every repository operation throughout the enterprise. Upload requires granted package write and deletion requires package admin regardless of visibility. These defaults are not proof of successful operations or authorization to mutate packages. CI quality-gated publication is an example intent. Cloud publish-docker reusable has a single build/push job and no independent npm-test step, so prose about build/test does not certify behavior or universally mandatory test execution. Cloud Docker example triggers release-branch pushes, sets contents read/packages write, uses ghcr.io and metadata-derived tags/labels, and optionally grants attestations/id-token write. Attestation feature applies FPT/GHEC; configured digest provenance is not observed trusted verification or rights clearance. SHA-pinning recommendation and third-party terms warning coexist with checkout@v6 and attest@v4 tags; Docker actions use source SHA values. Source examples are not fully immutable pins, audited third-party code or authority to execute. GHES branch builds npm/webpack public artifacts, then dependent matrix npm tests Node 14/16, then Docker publish. It uses ubuntu-latest despite GHES self-hosted requirements; artifact upload/download resolve v3 there while cloud feature resolves v4/v5. These runtime/action versions are historical examples, not validated compatibility. GHES publish example hardcodes docker.pkg.github.com instead of isolation-specific GHES registry hosts, retaining a deployment mismatch. Commit-SHA image tag is not a cryptographic image digest; job dependency alone is not meaningful test or successful publication evidence. Guide predicts package visible minutes after completion and Actions-tab progress; neither timing statement nor UI presence is a native verification receipt. No release push or workflow was triggered. Installing dependencies through PR-push CI is an example, requiring effective token access; cloud Actions package data transfer is described free in pinned text, not authorization for costs or universal current billing advice. Migration adds workflow repository through Actions access, optionally sets role and replaces login PAT with GITHUB_TOKEN. This grant is distinct from repository linking and must be scoped/diffed/verified; credentials and access were not changed. Migration Demo Push triggers main/seed pushes, v-prefixed tags and pull_request; its Docker push step has no event-based condition. Do not deploy as safe PR validation/publishing separation or presume fork restrictions make untrusted publication safe. Migration example hardcodes ghcr.io and ubuntu-latest without GHES/domain branching. It builds local IMAGE_NAME, labels run number, lowercases full image ID, derives version from final ref component, strips v from tags and maps main to latest; PR refs can yield merge and are not approved release versions. Migration shell pipes token to docker login password-stdin and echoes IDs/versions, not source token values. This illustrates avoiding command-line token argument but is not a verified runner secret/log isolation receipt or blanket safe execution. Published workflow/source links and third-party/Docker documentation remain separately scoped. No workflow runs, package install/publish, credentials, native settings, accepted control or rights clearance occurred; source and published completeness need independent audit. Full source and required include/feature/variable context read; accounting is not independent completeness or effective behavior.",
+    "claim_mappings": [
+      {
+        "candidate_id": "0b2d96c9d9d2cdaa456efdbf",
+        "text_sha256": "4c3bcd2c8e6b47bc1d5ea3416e3ea16c9f82fe2edc9e616ae766663c6824675d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "831e271242094dbd73dc2641",
+        "text_sha256": "6d7e2ae1b10ab58928833e888b78c6ca990fe15bb228eb404984ba8933f71f67",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "177866f594a5d47cb1d70226",
+        "text_sha256": "95f195f02235fd4c4833e875222a6cb34d7a2a6af7af4209e25d75ba30650349",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "824231887ebd0861ada3af2c",
+        "text_sha256": "8bb4889ad304405cb432ef4e181303d267035a568ffa6296c940e4f905cb1d67",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "868b249498d9fba2c40f3202",
+        "text_sha256": "b43420c3c663200ced131cda599f8ee334e8570b213424dd54911cb5f6b8dd71",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "89696cffe1cdd9788f5953de",
+        "text_sha256": "6006baf22cc14e91a3e2d69d75675b34b0cd4808743c8c2a073bdcffaa9f1ad9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "da7143d7747327ca2f4a73d7",
+        "text_sha256": "8094afe114620785172aa9d81869f1de3168c8cdfb653164f3709f5ac0f176af",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "a0ae97d562dcaa446e2ef312",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "26d128202ee44f91486c01f1",
+        "text_sha256": "04a759d812dd017be02314427a34961d3fe2e9bd9072e72a2d5f0e11438a114b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "1359e782218c70f2964ec50c",
+        "text_sha256": "1a796becdf172515d48e8ddb909cb3add78060b249d35b7df3a167ec62648dfe",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "1fe6fa2d6186c1c6f9e1e259",
+        "text_sha256": "f0ef277c40fdfaa31ecb4ae0a4c05af6ed60323f9e12c7e62c62f5b05078f5ab",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "a9a9b8ccff999997ef90c04e",
+        "text_sha256": "45e1f4d61aa8b7e8b0fedc21646b1470154bdc6442fefc92a4b28f8d612b0919",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "dc27ffac7008e1b9aa801591",
+        "text_sha256": "3264a875987c4a4f19938a0dc8314cbaeec54fec152b34554aba7096c1c1e932",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "d3c2881aa9b63c3416bc08ff",
+        "text_sha256": "5fae0d70ef15f534bcffa954a51c075bd9413128eef4bcf1aba0f2c140d436b1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "f96ca4d18e07f41f649193ee",
+        "text_sha256": "2e8bbb6698de91638a1148ff0305249547f8a00d41533878c2f3003ea2d4c671",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "47d6848f96323ccf9a3c61c9",
+        "text_sha256": "1e3d11ea9d930bc055ee687c7a076757e32f4b1df74f4b5edcd063ff0d461609",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "b3ffeb9e5abdadb00bbeda39",
+        "text_sha256": "7b7af3cdf474ec3911999a705b19fe8829ff6b1852572d9a4eaa3acc6aff2abd",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "1e4faafb3c6ad2d50beea1cc",
+        "text_sha256": "8410bc2248a2bc6cd7703e17f1f3b44b1977d9be65b87f1a6e77651c21d6cf80",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "7ae13487a0bef3ee837fbc95",
+        "text_sha256": "805a5e0c7f117e0c14a78f945b483a64a32bd45b862d80dd1db0a5b9c8107abf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "80aa710436bfffc8b923e586",
+        "text_sha256": "50be35ee2a0af995ebcf18c6ac94acaee4c92ea49a049c9aefda8d84668a34e2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "9d6965f85ad813ed2ac3ed0b",
+        "text_sha256": "a3976a2085d826f387089d08d21f8b2a7f49b4c6a9e9e370ee0fad28bcc8ba4c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "3634e54ecaa223fd0984b885",
+        "text_sha256": "5df379570a93816a165be58325e3bbea0c370d8d097076116f2978ba3003a2d7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "3ebcc27e7c6fb17376514eba",
+        "text_sha256": "34f58a0c1f69beb1976d7a95058a794d49f1dd2b8318ded555ea15f94348b717",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "e6bebf6bccc0937608e59f4b",
+        "text_sha256": "b74ac131f8194e8eaeee9443e2f2f4e46497ca69e0f3df542131e932b0c06ff4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "7f31cfca5c9747cb207fedea",
+        "text_sha256": "75319b8520c519457c9d8800f000802d4f58104f323f6584eafed2e1a41a876a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "f5678ab092535c854b1ff716",
+        "text_sha256": "8b3154eaf1f99420ea8f6ba4a11d8ddb190e568734e90ed2274da02d4430e1e8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "ac75dd008c0fe3a50ff09f88",
+        "text_sha256": "37c447d0d8b4da16a4304373520b365509dcf69c20d4e9f361d46dacde755488",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "42aa9ca2f0475ead2aaffa01",
+        "text_sha256": "185d7bd41327ac10a93ebd0720d9b0df57f88640e0bcde28f1da2c9bbf668097",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "00f282ce62749234fccf91c2",
+        "text_sha256": "3c92718a8bf48f0c2b479c19f624d804a49519fc6fe680cd96d16df34530bf7f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "45700cf6baf788a4eeaa914f",
+        "text_sha256": "71eb28ed35f3b38e818ea989e9e2e28fad36a205d20f992b56a7067975e2ee8b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "673705bfcccb7450d126a9b3",
+        "text_sha256": "9e4c4053be4b3132ef2e3b2b076447516aeb7a38d4956e22cf6989052233a7b7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "3b6c2903e68d5d2e0508b273",
+        "text_sha256": "3d347ca2a991dd6d07a2b70dc4870029bddf984d97618bd8747cda9064fd6e96",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "3f4c26e18b0f5fee2ab2a347",
+        "text_sha256": "bfc7bb1bf384bdd89d2918ab75891e0b228d86d27ae1f9a62e68845ebda136d2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "4fd48b812151b20e54f175d5",
+        "text_sha256": "79862f442e5b5a500d0f52bc4efcdd8c27d4350dc91ed2a0450a164d7be72359",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "f0eccec68def9c224bce4afb",
+        "text_sha256": "1f921642e57eec674038fab26db8393e7301cda9beedf1f0f12f3a8d7e1f58aa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "c1187eb36262fb1346cb5619",
+        "text_sha256": "644fe27c91c5efd5b4cf3e01627e738fa77c77de1826ce7842c443363f13ff52",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "08c3354829837030e4d21329",
+        "text_sha256": "ae323bcafd47da4df397e8a0aa0afd4e4cee017a901775c14ec138002bb25186",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "94b4bfcbf73fd98a4a12eff8",
+        "text_sha256": "ee329d698232889f6b82ebd0dad67178f6eb1a53d4ca0e3245ec30a7ad0561fc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "5b41014f6a40423dbbe69608",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "c2ea69b2b3694323b14cdaff",
+        "text_sha256": "de677871ab8f13c6e0f22a13fa90b19601ff3a9778335d3c512a76c9d100047f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "154a99609f27b2aa7270f47b",
+        "text_sha256": "24cc585895c9ce9c9b919c128594a1239901286f43c196ac2bd5562f96abcfeb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "4883827975e4bf75297fc5f3",
+        "text_sha256": "d8dd49183208f6159029db1233af05f5ffdb3a1d4b86cca5cb0664bcde4d9c74",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "57ff99cade10fa15534e74ce",
+        "text_sha256": "2beb7aac03436ad7eb5ed997784b225956cc879ca478b2499bfb8fa7f47f75b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "70dc07c835b8e405a2e36c04",
+        "text_sha256": "3d347ca2a991dd6d07a2b70dc4870029bddf984d97618bd8747cda9064fd6e96",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "6b52f6eaeaedcd2e894b4b1b",
+        "text_sha256": "ddf2b1510d0c3cfd5e4ea955107db56e2327f58d716a4d3578f97ba83324b1fa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "f56427abc5468437bb6d3a75",
+        "text_sha256": "2bfd1e2649d719b2f1d1137a6507343170aa8557f342183f61f59c58473322b3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "6f93f04638aef329b028ccf9",
+        "text_sha256": "1d210e61a6b2739beb3063fc43b530a91457aa8b0b1d7517c7689e1d441ee625",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "3057d60adc489ba181d7a415",
+        "text_sha256": "eb144b8efc3e45c4064588fd6a4e9debcdf7b2380bb1782378443521f27bc553",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "2c15bc37fb600bb103d6c43d",
+        "text_sha256": "5b89fa717f1c51775630ada815e2a8bd9bcff63e5991da26bbb6d77d373e046e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "2c2ff56f5e72c6860f3c8e50",
+        "text_sha256": "4c18d772453269fb718dfcc9622b5e529f9f72eb418c8f2e55266def1851f42f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "ebc9886fd4e79718f8154fea",
+        "text_sha256": "c89889278f135ae7d311ce4c1d415f04ce60b180386d52aedf0136432f4207fa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "3f1066c0890b080bd4391a63",
+        "text_sha256": "1c589c4ce13e74052a2bd5293a067ba026971e2667433ef23da7531a945cec3a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "eefa1d2d8d679e3090757c70",
+        "text_sha256": "e5da9f4d3b8fc8af90f6648a33735fe79e9edbe5542e6d137772a0f9d3114b1e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      },
+      {
+        "candidate_id": "4884adbc7c9bd7605f2eb08b",
+        "text_sha256": "018d53da862909dfeed9cb271f85a39a52e741b12a95acb8945fa644876c30a5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACTIONSGUIDE-1 through -20; not adopted or executed workflow."
+      }
+    ]
+  }
+]

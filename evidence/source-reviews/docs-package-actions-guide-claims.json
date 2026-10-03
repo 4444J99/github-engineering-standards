@@ -1,0 +1,227 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T07:22:28.024Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Guide covers package Actions publication/installation across FPT/GHEC/GHES, with managed-user namespace limits and comment-only GHES release-stage include. Actions CI/CD capability descriptions are potential workflows, not deployed enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Granular registries support independently scoped user/organization packages; workflow GITHUB_TOKEN migration is strongly recommended over long-lived PAT. REST deletion/restoration additionally requires package-admin rights and preview scope; a recommendation is not a credential change.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Repository-scoped registry flow recommends GITHUB_TOKEN contents read/packages write; installation-token authority is bounded to workflow repository. Fork read-access prose does not prove package grant or permit privileged publication from untrusted fork code.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "General package workflow access supports push/pull, but token permission, registry permission model and effective package grants remain separate. Declared job permissions do not establish access or acceptance criteria.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Default workflow-created package example says it inherits repository visibility and permissions, conflicting with granular access guide default access-but-not-visibility inheritance. Preserve this unresolved context distinction rather than derive visibility universally from repository.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Workflow-created package default repository-admin access is documented, but not independently tested; reusable explicitly-connected automatic-admin wording remains qualified against post-publication linking retaining permissions and separate Actions-access grants.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Download access table distinguishes public all-workflow, internal enterprise-repository audience and private explicit package read grants; public-repository private-package access can reach forks. Internal package download prose does not grant every repository operation throughout the enterprise.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Upload requires granted package write and deletion requires package admin regardless of visibility. These defaults are not proof of successful operations or authorization to mutate packages.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "CI quality-gated publication is an example intent. Cloud publish-docker reusable has a single build/push job and no independent npm-test step, so prose about build/test does not certify behavior or universally mandatory test execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Cloud Docker example triggers release-branch pushes, sets contents read/packages write, uses ghcr.io and metadata-derived tags/labels, and optionally grants attestations/id-token write. Attestation feature applies FPT/GHEC; configured digest provenance is not observed trusted verification or rights clearance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "SHA-pinning recommendation and third-party terms warning coexist with checkout@v6 and attest@v4 tags; Docker actions use source SHA values. Source examples are not fully immutable pins, audited third-party code or authority to execute.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "GHES branch builds npm/webpack public artifacts, then dependent matrix npm tests Node 14/16, then Docker publish. It uses ubuntu-latest despite GHES self-hosted requirements; artifact upload/download resolve v3 there while cloud feature resolves v4/v5. These runtime/action versions are historical examples, not validated compatibility.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-13",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "GHES publish example hardcodes docker.pkg.github.com instead of isolation-specific GHES registry hosts, retaining a deployment mismatch. Commit-SHA image tag is not a cryptographic image digest; job dependency alone is not meaningful test or successful publication evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-14",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Guide predicts package visible minutes after completion and Actions-tab progress; neither timing statement nor UI presence is a native verification receipt. No release push or workflow was triggered.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-15",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Installing dependencies through PR-push CI is an example, requiring effective token access; cloud Actions package data transfer is described free in pinned text, not authorization for costs or universal current billing advice.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-16",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Migration adds workflow repository through Actions access, optionally sets role and replaces login PAT with GITHUB_TOKEN. This grant is distinct from repository linking and must be scoped/diffed/verified; credentials and access were not changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-17",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Migration Demo Push triggers main/seed pushes, v-prefixed tags and pull_request; its Docker push step has no event-based condition. Do not deploy as safe PR validation/publishing separation or presume fork restrictions make untrusted publication safe.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-18",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Migration example hardcodes ghcr.io and ubuntu-latest without GHES/domain branching. It builds local IMAGE_NAME, labels run number, lowercases full image ID, derives version from final ref component, strips v from tags and maps main to latest; PR refs can yield merge and are not approved release versions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-19",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Migration shell pipes token to docker login password-stdin and echoes IDs/versions, not source token values. This illustrates avoiding command-line token argument but is not a verified runner secret/log isolation receipt or blanket safe execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEACTIONSGUIDE-20",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/managing-github-packages-using-github-actions-workflows/publishing-and-installing-a-package-with-github-actions.md",
+      "content_sha256": "292a1311858ff7f3791193975cfcda88e28599818cb96ef9cc6c4b3fcf3e465a",
+      "start_line": 1,
+      "end_line": 260,
+      "statement": "Published workflow/source links and third-party/Docker documentation remain separately scoped. No workflow runs, package install/publish, credentials, native settings, accepted control or rights clearance occurred; source and published completeness need independent audit.",
+      "accepted_policy": false
+    }
+  ]
+}
