@@ -1,0 +1,40 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:39:26Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-APPSERVICELOG-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/app-services.md",
+      "content_sha256": "f2e8fe2be91027ff20eea995204f45b5acb3abf92ac073ff623fcb2adb5c8420",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "For Apps using third-party services, the source recommends unique service login/password credentials, no shared service accounts across Apps and infrastructure admin access limited to employees with administrative duties. Preserve conditional service scope and employee/staffing assumptions; credential uniqueness and role intent require profile review rather than universal password-only or employer requirements.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPSERVICELOG-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/app_manager_role.md",
+      "content_sha256": "a8210c67c9f81a13efa830201829d4383583bd8d88564f41e105ead03f8a3dec",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Organization owners manage owned App settings by default and may delegate developer-setting access through App-manager permissions. App managers cannot manage third-party applications. Owned-registration management differs from installation control, user authorization and effective repository access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPSERVICELOG-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/apps-logging.md",
+      "content_sha256": "5947b76d78c7d72b42cdd7050f7a48e035afdf08ea4eaeb72c4f2c7f66047cfc",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "App logging/monitoring is advisory; suggested events include authentication/authorization, configuration, object access, permission changes and admin elevation. Logs should consistently timestamp events and identify users/IPs/hosts. Examples are not a mandate to collect all personal data; retention, privacy and effective observation need separate policy review.",
+      "accepted_policy": false
+    }
+  ]
+}
