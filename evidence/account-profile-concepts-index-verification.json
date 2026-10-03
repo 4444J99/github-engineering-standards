@@ -1,0 +1,83 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 411,
+  "verified_at": "2026-10-03T11:27:38.745Z",
+  "scope": "Complete concepts index plus separate receipt-presence census of seven children. This is not independent omission or published-page assurance.",
+  "coverage": {
+    "expected": 8,
+    "receipts": {
+      "content/account-and-profile/concepts/organization-membership.md": {
+        "receipt": "evidence/source-reviews/docs-organization-membership-concept.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/concepts/index.md": {
+        "receipt": "evidence/source-reviews/docs-account-profile-concepts-index.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/concepts/organization-profile.md": {
+        "receipt": "evidence/source-reviews/docs-organization-profile-concept.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/concepts/contributions-on-your-profile.md": {
+        "receipt": "evidence/source-reviews/docs-profile-contributions-concept.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/concepts/account-management.md": {
+        "receipt": "evidence/source-reviews/docs-account-management-concept.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/concepts/username-changes.md": {
+        "receipt": "evidence/source-reviews/docs-username-changes-concept.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/concepts/email-addresses.md": {
+        "receipt": "evidence/source-reviews/docs-email-addresses-concept.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/concepts/personal-profile.md": {
+        "receipt": "evidence/source-reviews/docs-personal-profile-concept.json",
+        "disposition": "REFERENCE_ONLY"
+      }
+    },
+    "missing": []
+  },
+  "reference_claims_added": 1,
+  "reference_claims": 61085,
+  "claim_bearing_artifacts": 3450,
+  "tests": {
+    "count": 324,
+    "seconds": 1.977,
+    "result": "PASS"
+  },
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "independent_omission_audit": false,
+  "project_complete": false,
+  "gates_open": 9
+}
