@@ -1,0 +1,142 @@
+[
+  {
+    "artifact_id": "5492c1cae713dabe1bb5bff6",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+    "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:36:37.090Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "FPT/GHEC Pages custom-domain verification binds publication to repositories owned by verifying personal account or organization; it covers the domain and immediate subdomains, not every descendant hostname or general DNS ownership enforcement. Unverified dangling Pages configuration can permit takeover after repository deletion, plan downgrade or other unlink/disable changes while DNS remains pointed to Pages. Verification is a source-described mitigation, not proof all lifecycle/DNS risks are eliminated. Wildcard DNS is strongly discouraged: verifying apex protects immediate a.example.com but not deeper b.a.example.com under wildcard. Do not treat verified status as recursive wildcard coverage or authority to remove unrelated DNS records. Organization/enterprise domain verification for profile badge and GHEC email-notification restriction is separately scoped from Pages verification. A Verified profile badge must not be promoted to Pages ownership protection or accepted DNS clearance. Verifying a domain owned by the verifier but used by another unverified account/organization immediately releases it from the other Pages websites. Another already-verified owner's domain cannot be released this way; ownership and impact checks are mandatory before any approved native action. Personal Pages domain verification lives in profile settings, not repository settings. Add domain yields a challenge DNS TXT record to create at hosting provider; UI creation does not prove control, ownership or successful verification. DNS propagation may be immediate or take up to 24 hours. dig challenge-USERNAME TXT is a read-only diagnostic example requiring actual user/domain substitution; TXT presence alone does not certify native Verified state or live protected behavior. Organization owners verify through organization settings/Pages, with organization-specific challenge TXT rather than repository settings. Organization membership or repository admin alone does not satisfy documented organization-owner authority. After DNS propagation, Continue verifying/Verify completes the UI procedure; keep challenge TXT in DNS to maintain verified status. Deleting challenge after a screenshot is not a durable verification strategy. No DNS challenge, release, verification, repository/site deletion, billing or publication change performed. Linked provider/domain/profile/enterprise guides remain separately scoped; source claims do not independently certify published assurance, actual anti-takeover behavior, rights or accepted policy. Full source and required include/variable context read; accounting is not independent completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "1e022b77c1b70ccd9d449eb7",
+        "text_sha256": "aca99b38584e35f219268b809f987b0150541eb3797b2013862370b1800c7702",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "32c7d82013a1416952adb2be",
+        "text_sha256": "5a04d1f44018ba070f53d641254c608f36748bafa3a834ec28abdd513944da4d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "e7b1138af7aa68f7b18f2831",
+        "text_sha256": "eaa04449d3466e09525ad965fada396e2a2c34efe28a3bf14c359c9f80e9abce",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "44e7b81ea1e28d251a175ea9",
+        "text_sha256": "9edf4298a02ee271f5fcdb4b6dbf143193b6d212a8a60d86ffc768a4acbd1700",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "c3bd6dce518826593cc3dc2d",
+        "text_sha256": "4380d8628998a90981476c9289658f06638f267c000a59ad205b4d48fd833304",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "1f8b8da836b3d7a800baad57",
+        "text_sha256": "b993f8fad7bfcde593e9864e4768abaacc0063857c9fc79a4c80ddc0c65d92a1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "6e8b9b59f4d0329eebef0d58",
+        "text_sha256": "c4822adba0b031d27a1d044a7668dbfd97693effa4af4da56163346bf4b70ce7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "2ad652675bae534537c6a6ed",
+        "text_sha256": "aba1411e48bc7baec1a1dd78fd3444ec56bd4230e22d69eb07e02d21e04f28c1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "5a530d1c3a100a0ea2da4e3b",
+        "text_sha256": "d34cc912b9d8917b41832c4a2e8d9cffebb2c9c7f029c7fb8169b4d76af00bcf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "a373fe85f6a5cfb87396c80b",
+        "text_sha256": "45c6769b46b818a42879dbae66212fd59cb37fd90142c52661225093beca5ddf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "d7fe40a36a8ae7557ce0b813",
+        "text_sha256": "8f1d2bc9fa4305759f1c85b88a9bfd9a36ab2808c2e9d29f786c6931a96f5210",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "bb7c89dbcd427e42d2c567f7",
+        "text_sha256": "bd0197c5689c4fc809ba3649368654fe9e225adc78945665561f74ecb3e02f80",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "1dbfcab8ca19c3dc767eae1f",
+        "text_sha256": "71ffee965bba1fd6027c4d0ac584c5fabbac4bd59995d4e6630a529c525bcb1c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "f01032a2fcc756b5aa906252",
+        "text_sha256": "92369df1933142fffddc40e19d73f2310bea265ae37b7e1100b987342e12026e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "5daf3f4d40842008e5d8a90a",
+        "text_sha256": "fafd3d0487763e1d4eda98406c4ed4c29c0bcbf328c91d1c201e1f7350cedbd1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "6e359aff3745ad1ea9122ecf",
+        "text_sha256": "ef226e9edbc2069ef0acfbd5573c95dcb1364c408000d6cf5bac72c77fd75eb4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "2a97bdf127a58902a410a458",
+        "text_sha256": "0fec385d98cb8c0ebe9af1cb3f7e48f171751759e2f9253e46fd1b5c44e167c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "33e5d06bfce1fac8771f4fc6",
+        "text_sha256": "8f1d2bc9fa4305759f1c85b88a9bfd9a36ab2808c2e9d29f786c6931a96f5210",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "4f2063115ba2cbc0a90084c1",
+        "text_sha256": "9bfa33a05b432e99a2e866457253a835a281ebcab26dfbc397ec91d56a788706",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "f4014a9d6ec74c424ffc258f",
+        "text_sha256": "0eb2485acca46b2ebe2ec6751b145dfc08973c442ae7a6c676567c767ca90f3b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      },
+      {
+        "candidate_id": "205c147552786130bc1a1134",
+        "text_sha256": "92369df1933142fffddc40e19d73f2310bea265ae37b7e1100b987342e12026e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESDOMAINVERIFY-1 through -10; not actual DNS/ownership verification."
+      }
+    ]
+  }
+]
