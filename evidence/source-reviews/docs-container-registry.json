@@ -1,0 +1,502 @@
+[
+  {
+    "artifact_id": "51a52e629afc5535dfb6a595",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+    "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:38:34.507Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Page scope covers FPT/GHEC/GHES Docker and OCI image storage. GHES Container Registry is described as public preview; site administrators must configure Packages and enable subdomain isolation. GHEC managed users can publish organization-scoped, not personal-scoped packages. No target capability or entitlement verified. GHEC at github.com uses ghcr.io examples; an enterprise on another domain uses containers.SUBDOMAIN.ghe.com. GHES examples resolve containers.HOSTNAME. The ordinary hostname reusable is not sufficient for every GHEC enterprise domain; placeholders require verified target values. Container Registry supports Docker Manifest V2 Schema 2 and OCI formats, including foreign layers such as Windows images. This differs from the legacy registry foreign-layer exclusion; external specifications are not reviewed by reference. Authentication context uses scoped classic PATs and explicit workflow GITHUB_TOKEN paths. Granular registry workflows are strongly advised to migrate to GITHUB_TOKEN; deletion/restoration via REST needs package admin and remains public preview. Actions and cloud Codespaces package grants may be independent. Classic PAT setup requires appropriate read/write/delete package scopes and SSO authorization where required; avoiding incidental broad repo scope is upstream advice. Environment-variable and stdin login examples are not credential approval or executed authentication. Push examples scope named/tagged images to a personal or organization namespace. First publication defaults private; packages may be linked by UI or CLI. Command-line pushes do not automatically link repositories even when names match. Workflow GITHUB_TOKEN publication automatically links its workflow repository; a previously pushed but unconnected package in the same namespace can deny that token push permission. Source labels are recommended to connect CLI publications and support workflow permissions; name matching alone is not a grant. Digest pulls pin a specific image: discover the digest with inspect or pull, optionally remove a local image, then pull an @sha256 reference. Optional local removal is not required universal cleanup or authorized deletion. This supports digest references unlike the reviewed legacy registry. The illustrative digest contains nonhex characters and is not a valid verified SHA-256 value. The version-pull example output includes an extra release path absent from the command. Preserve example defects rather than copying them as executable validated fixtures or real receipts. Pull by image name, explicit version and latest tag are illustrated alternatives; mutable tags are not equivalent to digest identity, verified provenance or safe installation. Build and tag examples use illustrative image IDs/context, not actual artifacts or executed commands. Container metadata supports source repository URL, text-only description capped at 512 characters and SPDX license identifier capped at 256 characters. Claimed licenses and labels are not rights clearance, provenance certification or permission to distribute. Dockerfile LABEL or build-time labels can supply supported metadata. The example MIT license assumes an image actually distributed under those terms; no blanket relicensing or imported attribution removal follows. Inherited access on repository-linked publication is conditional on the FPT/GHEC inheritance feature and organization enablement. Linking/labels are not proof of effective access or approved permission changes. Multi-architecture images reference per-architecture images in a manifest; package descriptions come from manifest annotations. The example build-push step supplies an index description via outputs and matrix platforms, using a SHA-pinned third-party action with separate terms; no matrix, build or push executed. Container Registry troubleshooting specifies 10GB per-layer maximum and ten-minute upload timeout. These differ from legacy registry's 5GB layer cap and possible degradation above 10GB image size; do not merge the limits into one universal threshold. Complete page and necessary include/feature/variable context inspected. Outbound guides/specifications remain separate review; no independent completeness or published assurance.",
+    "claim_mappings": [
+      {
+        "candidate_id": "ad5d79cc6ee0e70ff5ac0344",
+        "text_sha256": "8c2e7e2dd021648a9119917dff68450c263e3381d499d56b84547f4b4b070931",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "84ddc7578dbdaccbbde8500b",
+        "text_sha256": "376aafd84437b0cec108157517cd108755f83b6cc11e1e20f482a4e43fbdc6e5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "08f1946837314a141186d403",
+        "text_sha256": "4867cfd0e9b4c8ecde94685c3c289787bdc099c40dd31226a4b52a6bc0db1a10",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "b1e3368195676c78f68037fa",
+        "text_sha256": "72b9805ba557a490d45a976485d6752254be80d04fb7f02ed0d7f273d0491e94",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "9acfdab07d859567536aaef7",
+        "text_sha256": "df04842c2cc61d7ca92a448491b774a64fe1a3ab26fb2455a10766bbb8636451",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "9341145fff7f0c88d9705d9f",
+        "text_sha256": "a6c43c1c9cf7c9f6998cd885ab27ea6612d3fca07c314d0e73055daa1d47a7d9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "416891749c8cd015cb981879",
+        "text_sha256": "0add32cb9c84a279d49a1cd3b8fe774e8fb386a1f17bc707a39f019a9df582ec",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "a0479256715178d94b6274ad",
+        "text_sha256": "918743dde74d4a7728bdcb47afc4f82d30128e8da530bac843013badba525419",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "34cf4cbfb739d1aed9f35bf4",
+        "text_sha256": "d6e9d3c4b9cc269308f160e4a0e03aeccfd44314271b013bc33bcf296fc49efe",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "7cd51000d09aabc2c2050c1b",
+        "text_sha256": "65f17597abab2b175eec1f3e61ddc4b732b456d63362d6af5278e7522db3150d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "0632e43d8d097ed3fe4a9aaf",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "33282f008356afe25f5c2309",
+        "text_sha256": "b06a348b4081b7fe08dac421025668ad2778dabeb7fdbd2a79d511b9dd858b14",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "a83c64185d16d42f4a7421c8",
+        "text_sha256": "2f5b7f9191d144a2858867d8b0ed688058713193835f7e319ca4a9727532e7b8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "43ae9e68611abc4abe9027f4",
+        "text_sha256": "96dd5a9a348fe660fa1330bc98d993d3fb1d30567402e78f840c9305b246d010",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "b91f604f688b73c43938c8b9",
+        "text_sha256": "701ad12d1c79143620763199906b05b38ef83b135ec9d375df7ace4d020a34cd",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "0d135d629f921f8007b89eaf",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "1245f9f034044f5118e418dd",
+        "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "86f9cac441f6ce5fdcccb377",
+        "text_sha256": "95ad1938f4751e7f01c1f4cfb4c6c9a4f345eada2b90f09062e1b62b98d4d98d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "e15e2a86534f41cc59467386",
+        "text_sha256": "836c5be31f06b6ef7ea906bbec6d5917583f98e83adbf08ceb4094f32b0b846e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "fb84737e4fc4c68bdfe592c4",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "af188cc06b9bf031dc46ef7d",
+        "text_sha256": "0d178dd0006de60c2a1146143e887dba6d4ab1cdf8b8551503223453f75b6266",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "84fa615b798a5c8066c008a9",
+        "text_sha256": "3c4d756fbb1de0c7c75510b463de0199120af1ddc26f358346b66ae2a9fd35cd",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "3aa3c9feeecda7a9043aeee3",
+        "text_sha256": "5764ac38f4ba3496f47df7f883a304be390ccf65c8493ab2e2dea9deed2273cc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "5e13a6cb022942ed0a5d2f4d",
+        "text_sha256": "54c7df706c268d16e9402a6df3b69074a0c3468d23ce54a2dc5b71b919d0cdde",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "f21ba081c1bbe6bc0aaaed85",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "fdb5d131449ab65f19ae4735",
+        "text_sha256": "71c6588871611a675a6bd13d9ba7fc760ae49d0075f206228ed4d1cf1222d67f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "b7dd0741c771e36b90eda794",
+        "text_sha256": "7aca1eebdd236305fccc8e73f71279f482475af7db1dd20cf07b943d1ad356e8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "0100a1c3936dabbb6ba8bb24",
+        "text_sha256": "c3e7672dcfdb4ee600a9499bcb475c83279b62f2707538205a0572388deb9ea0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "3f4d95e9ca8621230f36842a",
+        "text_sha256": "ead2de10157099f7e7c15e5094b31efb9de05260002d9316b5c391e25d20025a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "a9d80893a17e71ac8b7e77c8",
+        "text_sha256": "e066d144743ba4b006045636b840191db753477a69b629c45704fa57403acd03",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "0436f32d212b3b1a4fea5bcf",
+        "text_sha256": "e8afb7080b45eb8a6d8faebd9e5f3f3b9612764a3e6e661a5ebea53e6ddb69b6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "188b016af3cf5ee49a7075ff",
+        "text_sha256": "b5ba190d4e28f0fb972dd6f1abeafb18b4f6d00be43a2d2912474532be7c9e97",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "0d57f37e44541807d2e1231b",
+        "text_sha256": "63c70bfa23ec90f3512bc7af02830f3d74ac7a834025ba209bfb251313e7a060",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "37792f45970f4a604b826650",
+        "text_sha256": "60ae1c1868bbb96e39996f132157902fecd388239eaa050b7ae529ba661a8d5e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "55d340bdc9ac2f27aec988a3",
+        "text_sha256": "67b0fcf5775f0ed7863ddc0dc1deb428aacaf2ff41ee34c52b266a5bfd094247",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "b3229daf0e2f2b81cc12f950",
+        "text_sha256": "148068c264e06fc66387014bc7e5dc99370774d4bcdd9be3c6e25c09eaf979b5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "75f035ae178f587d627349a7",
+        "text_sha256": "2c5ca9e55b0e0067f0bc3c675307caa5be88409e6ac1a237bdc316f640682714",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "a85e146a9bb824ab72796774",
+        "text_sha256": "c021890cb8867587a3635856347978891d15eda8ca5a128f20eaeef25f7ba706",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "dce4eea67dd45088ce4edb3d",
+        "text_sha256": "8b51cba2e06b6f6bf1227c355dbbb4647944b0a37cf8f2e5276f9b528ec236c2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "ee30b776840f6ea53ff8cdca",
+        "text_sha256": "db608caf9985714f8234b01e86acd73e7a3156a694b3fbe39a7721b50d95dc91",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "9da3a5af3c800c467dad69c4",
+        "text_sha256": "00effc0ea900b3f0002b90d896ade3b5a8c6e1efd73e59ff4736844b4ef3ee9e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "f1819562857cf2fe42691f73",
+        "text_sha256": "420375e7be1d65b69d586c0d0ef8eb3885674046fffd588e65467e98e35b303b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "4a4948956c5b8c1bdd0b659a",
+        "text_sha256": "973ce00508d0ca74f88e51a90a82f046a72e8ff63ff9c16139ab537d011da5eb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "ee60a182a6521f0d3cbcef93",
+        "text_sha256": "dfc639a66d3f4349b7cee11dfbebc3fd6ec49f8db8d231184b65a4e774fc68d0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "c71ddc38ce54a01c076f9c11",
+        "text_sha256": "1977a941e9cd388385007d3fc3f176130f21165d03afaf5b6e0c122efbac54b4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "e3fd9c9ea245b7e7fc5c0857",
+        "text_sha256": "30177273c37d6f642cfe1d2355ec4048d26630eee269d30fb01999de80647498",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "735fed1e3fa6b4b43bdf4792",
+        "text_sha256": "e6f3e36c1ed19f94c7f0a7b6656dd889885533517373511cb76de65027d88857",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "73fba94f662fa0e1b7f9727b",
+        "text_sha256": "66fec8998a5b2d0fe3395c5595b92126d32ef41bf030f64840a364e0eff9b1b7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "ef19acdeacfaea655f45893d",
+        "text_sha256": "a98523a497cfb5a172adf148c548fb51c925b8765bf5a90ac7df58136830c8e8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "d59c2208124d25f9461d4532",
+        "text_sha256": "085d9656d4d2ebc0fd33375b89e0faab9c64bfb75905db665e8539ba466561b1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "84c82c8a8bc685927dacfdf0",
+        "text_sha256": "66fec8998a5b2d0fe3395c5595b92126d32ef41bf030f64840a364e0eff9b1b7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "d3602fba0dd7effe811ef6f6",
+        "text_sha256": "9b73783359c8e2f4b0ec44ff6f9404a6c8236328eb6bf81610ced3f53687bc0a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "038ad3ef668ec89b6273ab71",
+        "text_sha256": "66fec8998a5b2d0fe3395c5595b92126d32ef41bf030f64840a364e0eff9b1b7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "21cebb9b41571fed1abef784",
+        "text_sha256": "ae06ad721f9da2ad1b2481377ce5b2d2c15e689de8fd201a6e10f5ed3b0cc633",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "97e56d8474a6ee719bed6f17",
+        "text_sha256": "be3b9bf84358c66a2b6e48f108f98e171b7248bd9da5ca5553129a807d68c52f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "47f453c0f103c8ca31b5e3da",
+        "text_sha256": "acd4baebc519845ebfa5a08ddedce6126b9231c57803803bfefc99cd752833af",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "657aa2365451c80a3f27aefa",
+        "text_sha256": "e8df33c770909dfc3830ddb84376fdc85c6f3972d23310dcedaa91c36b940cae",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "694e738721f0009a0665d712",
+        "text_sha256": "9d209439a7fa92a1c7a4a3090f9d2662c133851b624db76bb14fc72257a3c8bb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "7351a0d8278784b1b9e2caa9",
+        "text_sha256": "94166c5b9e55551cdd612b1276101bb7af33ee5130890d50ac828f325a3f255a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "f0925e651bb0bb1f8069abae",
+        "text_sha256": "b5ba190d4e28f0fb972dd6f1abeafb18b4f6d00be43a2d2912474532be7c9e97",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "5d0ff848740a3472bb980d10",
+        "text_sha256": "79aee78d29e854ce308059d00e9baefd167276545c587fbdd3392a44bb84b06f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "4f3906173dd5e375e222c650",
+        "text_sha256": "6bea6d543386397c58bc762aa66cabfbf4728b1be3fa586a7ad2b715b53b0398",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "87ba0ef775e4d2733e3b797c",
+        "text_sha256": "8acdc3479f6f9de2dcd1cf9bd64a4ae5cab825395604895700154522d10ed372",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "b35f51612b51798f2942ada6",
+        "text_sha256": "3a3f6e7ffa5085e9b125ee36795e0a4caa667f35f8228927beb1fd32764c42a3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "ce6c7e0e620d01874c641234",
+        "text_sha256": "05f25a9767ef7ef59ff3898b87577db32252efe49754c105e03ad47d166f7a06",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "a151ab6fc3d2bec2cc0bc6de",
+        "text_sha256": "ef0f081d76aa5e9e086c063be352c607a24acb5f1cc7bf52e51d8564ef4d197a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "9963903ff86cbb4738a2f352",
+        "text_sha256": "063f51fe95e0434df6068611897e10c380fdd9b7d0497cbcc8ec1009d3c5f814",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "6cb41dfe172d5dcfe983e26e",
+        "text_sha256": "83a8a0585975d39fd038f4239a03fb4df7168c2bf7c51cc6590d19d9e43b9545",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "c63c5f709f943f31dc61b904",
+        "text_sha256": "6bf799406c68f1d3f52920cf0a44c0fe025ea3c4a1aa54063f22eab688ae5d7b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "7536da7e7c5ad49d6d43f432",
+        "text_sha256": "cecdce1eb64b740d68e88d92ff8c83b78b991a44d13f193519ce8248b8afa658",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "3a5d0378e6c1ecbb451bdd0e",
+        "text_sha256": "1c2947d4ca6cb1531e10da231ebdf669c1516bc210987042b130b5c10d822c32",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "e73b970308921e713ef062fa",
+        "text_sha256": "7d4f90f58d8d3aaba74ecec51eb2241519f1e979e0f9fb162139774464e19dea",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "5aa9a06d2edff65a5400df5c",
+        "text_sha256": "3bbe635e540c569f9b11cf4b77e1c0f134348cc0298fa45e0064a2f735a82b43",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "3e933f1efd808af1c516def6",
+        "text_sha256": "03ef76fc18ec95c9a5e7770a825977d5dda140ee8a1ba8c06608efcbb0f660fc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "2b48239267fd9d491c458f7b",
+        "text_sha256": "c182c927b5e114ca0dda801ff887604be281384013c7027dbe56425f87c098be",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "fbb4c27defe00ffc50b5ef6c",
+        "text_sha256": "660504982a144afd8cb920ef735ce762a88c793eda41d78c926c39a9a45c412d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "dcba192ca6e6202b78d2fe6d",
+        "text_sha256": "0341ba1659b227ba4e2c34628d78ca639f3f3f93aa636f10c0475c619bf5b66c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "21c8195ade2dd8463daab468",
+        "text_sha256": "e4a9e32e6a6901c78ad9145a73610a1d70a8ac731e8ca447d423d035f956a6eb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "e155d515d7532d4f2eaeb8f0",
+        "text_sha256": "ba6b69dbc4e17b11e5ae183fa388b572d5201644f5f259d46e04be9ca1f8c0dc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "a09ecf076eb5e5a76585b6e0",
+        "text_sha256": "e9d5f27c5f2d5011e3bafcb49e8d239fc912e3ad2eac6d8f2bd16e09c58bdbd6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      },
+      {
+        "candidate_id": "6a85fe0d1c13613afb9e94b9",
+        "text_sha256": "c075b6c5d8dc3d8298b62a8fb752eaaab938b66bbe90b7d66a99488951d47e4d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONTAINERREGISTRY-1 through -15; not adopted policy, rights or native receipt."
+      }
+    ]
+  }
+]
