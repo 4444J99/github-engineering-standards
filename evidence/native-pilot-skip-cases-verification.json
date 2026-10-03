@@ -1,0 +1,11 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 69,
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 324, "seconds": 1.986, "result": "OK"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "git diff --check", "exit_code": 0}
+  ],
+  "scope": "Pending pilot plan gains three explicit skipped/executed check cases. Local checks do not verify native behavior. No target creation, runner execution, settings mutation, cost approval or scope expansion is authorized by this amendment."
+}

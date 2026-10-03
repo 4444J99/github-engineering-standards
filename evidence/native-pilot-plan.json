@@ -43,6 +43,29 @@
     {"operation": "Read effective policy and actor bypass after apply", "expected": "MATCH_PROPOSAL"},
     {"operation": "Remove pilot ruleset and verify ordinary branch write recovery", "expected": "ACCEPT"}
   ],
+  "additional_required_check_cases": [
+    {
+      "case": "Required job skipped by job condition",
+      "source_claim": "DOCS-ACTIONSSKIPPATH-002",
+      "source_expectation": "Job reports Success and may satisfy native required-check status",
+      "standard_expectation": "Do not certify substantive obligation execution from skipped Success",
+      "observed": null
+    },
+    {
+      "case": "Whole required workflow skipped by path, branch or message filter",
+      "source_claim": "DOCS-ACTIONSPATHPENDING-002",
+      "source_expectation": "Associated check remains Pending and required-success merge is blocked",
+      "standard_expectation": "Retain missing execution and merge eligibility as separate observations",
+      "observed": null
+    },
+    {
+      "case": "Workflow and required job actually execute",
+      "source_claim": "DOCS-ACTIONSSKIPPATH-002",
+      "standard_expectation": "Record exact head, context identity and substantive positive/negative results; status alone does not prove behavior",
+      "observed": null
+    }
+  ],
+  "additional_case_authority": "Planning only. Synthetic runner execution, available Actions entitlement, costs and target-specific approval must be resolved before these cases execute. No approval is inferred from source review or this plan amendment.",
   "recovery": "Retain pilot repository and captured policy preimage; remove only pilot-created ruleset by recorded ID; verify recovery. Repository deletion requires separate authorization.",
   "native_receipts": [],
   "claims_verified_enforcement": false,
