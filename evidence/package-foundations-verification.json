@@ -1,0 +1,48 @@
+{
+  "issue": 254,
+  "reviewed_at": "2026-10-03T06:08:48.498Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59723,
+    "claim_bearing_artifacts": 3203,
+    "tests": 324,
+    "test_seconds": 1.992,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No package build/install/publication/deletion/deployment, credentials, policy adoption or rights clearance.",
+    "License annotation is not legal permission or verified provenance.",
+    "GraphQL excludes granular-permission registries; certain private-version deletion not universal capability.",
+    "Workflow artifacts versus registry publication and optional default-push/release patterns retained.",
+    "npmrc does not authorize committing tokens; GHES enabled-type capability unverified; links not whole-page review."
+  ]
+}
