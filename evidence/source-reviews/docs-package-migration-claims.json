@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T06:18:20.369Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PACKAGEMIGRATION-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/container-registry-migration-namespaces.md",
+      "content_sha256": "66f05be960d4882c987c58cfc183fdef3f17c667c8611fb8d6317b2245bbab23",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The pinned migration fragment says scripts and Actions workflows using the Docker registry namespace continue working after Container Registry migration. Resolved namespaces are docker.pkg.github.com to ghcr.io for FPT/GHEC and docker.HOSTNAME to containers.HOSTNAME for GHES. Compatibility is a source claim, not a completed migration or tested consumer receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEMIGRATION-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/container-registry-replaces-docker-registry.md",
+      "content_sha256": "bb70bce5481a6d988e7fa72f2107b9b1aaf971d5740d5b39e5fae4195aa18166",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The upstream fragment identifies Container Registry as replacing GitHub's Docker registry; this does not authorize migration or establish a particular target's enabled service or present lifecycle status.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEMIGRATION-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/create-npmrc-owner-step.md",
+      "content_sha256": "7e7701ea241fef32a4802cb699094d540f1c46baa400bbbf65236ecfd975f5af",
+      "start_line": 1,
+      "end_line": 22,
+      "statement": "The npm configuration step places .npmrc alongside package.json and sets a namespace-specific registry. The packages-npm-v2 feature, FPT/GHEC in the pin, scopes the namespace to a user or organization account; other contexts use the owning repository account. FPT/GHEC endpoint is npm.pkg.github.com; enterprise endpoints depend on subdomain isolation, npm.HOSTNAME versus HOSTNAME/_registry/npm. Placeholders require verified target values; no configuration or credentials were written.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEMIGRATION-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/default-name.md",
+      "content_sha256": "464f4971fa1426279d1bb58753f41f29fd5b8c3a9b6a6a81ebf7665848ded66a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The default publication association is an existing repository sharing the package name. This fragment alone does not define every registry's association model, demonstrate a real publication or authorize creating or changing repositories.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEMIGRATION-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/delete-account-namespace-retirement.md",
+      "content_sha256": "3785441380d22b52eff5f49b319cdb08fa9a0ecd9e1b4224037c61fb15813986",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Deleting an account deletes its namespace's Packages packages and container images and may break dependent projects. For FPT/GHEC public container images with strictly more than 5,000 downloads, the full namespace/image name is permanently retired on account deletion. This conditional consequence is not universal name retirement, a >= threshold, deletion approval or a recovery guarantee.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEMIGRATION-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/delete-with-github-token-using-api-beta.md",
+      "content_sha256": "f5dc321dd8b5bc9df96996b992a9ea5f0de7940b1c214af61b8a66d4ab6245ce",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Actions workflow REST package deletion and restoration are described as public preview and subject to change; the beta filename does not override the release-phase variable. This note does not supply permissions, executed behavior or mutation approval.",
+      "accepted_policy": false
+    }
+  ]
+}
