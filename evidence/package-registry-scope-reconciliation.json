@@ -1,0 +1,27 @@
+{
+  "issue": 265,
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "status": "PARTIALLY_SCOPED_UNRESOLVED",
+  "accepted_policy": false,
+  "conflicting_claims": ["DOCS-PACKAGEMIGRATION-2", "DOCS-PACKAGECOMPAT-2"],
+  "inspected_parent_context": [
+    {"path": "content/admin/configuring-packages/migrating-your-enterprise-to-the-container-registry-from-the-docker-registry.md", "sha256": "3064af5bd761e669786619d4e77a1e9980f2b365ecc51088f037abf0f46f68ec", "scope": "GHES only; enterprise-owner manual organization migration"},
+    {"path": "content/packages/working-with-a-github-packages-registry/migrating-to-the-container-registry-from-the-docker-registry.md", "sha256": "d3afe63ced9d7744eec09a4064a59934c60c3841ae35c21ddcd4b6a1877396de", "scope": "FPT/GHEC/GHES; end-user migration impact, actor differs by deployment"},
+    {"path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md", "sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881", "scope": "FPT/GHEC replaced branch; GHES legacy operation branch"}
+  ],
+  "findings": [
+    "FPT/GHEC replacement is explicitly described by the containing Docker-registry page; GHEC's missing status clause in the reusable note alone is not denial of replacement.",
+    "GHES enterprise migration page describes an available manual migration with enterprise-owner authority, while the legacy Docker-registry branch describes future supersession. Optional migration availability and compulsory removal are different lifecycle facts; the exact release boundary is not supplied by these fragments.",
+    "The migration-impact page's no-action wording addresses consumers: its GHES actor is an enterprise owner. It must not suppress the separate administrator's manual migration task.",
+    "Migration API changes require REST container queries instead of GraphQL DOCKER queries after migration; namespace compatibility does not imply API compatibility.",
+    "Administrative migration guidance warns of CPU/memory increase, reduced-activity scheduling, interruption from configuration runs and duplicated storage. Name-collision retry guidance includes deletion; none is authorized or executed here."
+  ],
+  "unresolved": [
+    "Exact GHES release-specific replacement/removal boundary and current versus historical wording require version-specific published assurance or authoritative release evidence.",
+    "Parent-page include dependencies, atomic extraction and independent audit remain unfinished; these context reads do not mark parent artifacts reviewed.",
+    "No tested namespace compatibility, API adapter, migration/recovery receipt, rights clearance or adopted policy."
+  ],
+  "gate_closed": false
+}
