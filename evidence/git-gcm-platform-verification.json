@@ -1,0 +1,46 @@
+{
+  "issue": 202,
+  "reviewed_at": "2026-10-03T04:36:12.243Z",
+  "artifacts_reviewed": 3,
+  "reference_claims_added": 4,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59397,
+    "claim_bearing_artifacts": 2892,
+    "tests": 324,
+    "test_seconds": 1.986,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Pinned source references only; no accepted policy or semantic-completeness certification.",
+    "No OAuth authorization, global credential configuration, reset, or Docker installation performed.",
+    "Moving external links and published-page rendering not reviewed; no rights clearance or native rollout evidence."
+  ]
+}
