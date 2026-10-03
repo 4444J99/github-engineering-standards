@@ -1,0 +1,46 @@
+{
+  "issue": 298,
+  "reviewed_at": "2026-10-03T07:43:08.923Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 4,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60122,
+    "claim_bearing_artifacts": 3299,
+    "tests": 324,
+    "test_seconds": 1.984,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Indexes not linked-content review or expanded child applicability.",
+    "No site/hosting/dependency changes; source navigation is not assurance.",
+    "No rights, accepted policy, independent completeness/published assurance or rollout."
+  ]
+}
