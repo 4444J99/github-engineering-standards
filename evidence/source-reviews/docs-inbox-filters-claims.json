@@ -1,0 +1,117 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T10:15:19.824Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-INBOXFILTERS-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "Inbox filter reference declares FPT/GHEC/GHES but author/org and discussion/advisory types are FPT/GHEC conditional. Notification grammar requires surface/platform adapter, not general issue/Projects search reuse.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "Custom filters lack full-text/title search, NOT/minus exclusions, default-filter editing/reordering and allow at most15 custom filters. Unsupported operations must remain explicit, not silently broadened or ignored.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "is:issue/is:pr/is:pull-request all return issues and PRs; cannot distinguish these item types via these queries. Missing distinction must not produce false separate coverage counts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "repo requires exact owner/repository identity. org is organization of notifying repository; author is original thread author, not latest actor or notification sender.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "Supported activity types include check-suite,commit,gist,issue-or-pull-request,release,repository-invitation,vulnerability-alert; cloud advisory/discussion conditionals apply. Type hits are notifications, not exhaustive entities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "is:saved/done/unread/read encode inbox triage, not underlying work acceptance, resolved vulnerability or completed review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "Reasons distinguish assignment,authorship,comment/participation,invitation,manual subscription,direct/team mentions,requested review,security,state-change and CI activity. Event reason does not certify current underlying state or performed response.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "Main lists use repository-vulnerability-alert/security-alert while Dependabot examples use repository_vulnerability_alert/security_alert. Hyphen/underscore syntax conflict remains unresolved; adapter behavior must be independently tested before adopting security coverage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "Dependabot author example app/dependabot spans alerts/security/version PRs and is cloud-author qualifier context; bot origin is not guaranteed trust, correct remediation or safe automatic approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-INBOXFILTERS-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/inbox-filters.md",
+      "content_sha256": "b6e77c80fa3289bacb9f883bae3188ad1f39bf798fd47e6228631c7b89242cc4",
+      "start_line": 1,
+      "end_line": 101,
+      "statement": "Related setup/notification/dependency docs remain separate source review work. No inbox filters or notification state changed; source reference accounting does not certify full notification delivery or published content.",
+      "accepted_policy": false
+    }
+  ]
+}
