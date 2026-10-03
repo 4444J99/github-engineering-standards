@@ -1,0 +1,30 @@
+{
+  "schema": "ges.closeout-attempt.v1",
+  "session_id": "01a10341-92f9-7661-80fd-d57ac4cb146d",
+  "inspected_head": "b988abf",
+  "date": "2026-10-03",
+  "protocol_source": "immutable-runtime",
+  "protocol_revision": "5ac33aa1b52bd1d8dfc5ffe5262ca3d7b2d7c211",
+  "command": "scripts/no-tasks-on-me.sh --session-id 01a10341-92f9-7661-80fd-d57ac4cb146d --worktree NATIVE_GES_ROOT --receipt docs/continuations/issue-456-readback/session-closeout.json --native-transcript EXACT_NATIVE_TRANSCRIPT --scope-root ges=NATIVE_GES_ROOT --scope-root preserved-custody=PRESERVED_DOCUMENTS_ROOT --json",
+  "exit_code": 2,
+  "status": "unmeasured",
+  "reason": "process ownership observation unavailable or invalid",
+  "session_released": false,
+  "task_completed": false,
+  "successor_required": false,
+  "diagnostic": {
+    "command": "domus-process-ownership observe --worktree NATIVE_GES_ROOT --session-id 01a10341-92f9-7661-80fd-d57ac4cb146d",
+    "exit_code": 2,
+    "complete": false,
+    "counts": {"checker": 1, "foreign_session": 2, "owned_survivor": 0, "shared_service": 54, "unknown": 0, "unmeasured": 27},
+    "observed_defect": "process_evidence_conflict",
+    "processes_signaled": false
+  },
+  "owners": {
+    "custody": "https://github.com/4444J99/github-engineering-standards/issues/456",
+    "process_ownership_protocol": "https://github.com/4444J99/limen/issues/2763",
+    "installed_process_ownership": "https://github.com/4444J99/domus-genoma/issues/403"
+  },
+  "next_action": "Owning process-ownership lane reconciles conflicting live process evidence without signaling peer sessions; rerun the identical session predicate after those inputs change. Remote archive custody retains its independent readback and restoration gate under #456.",
+  "checkout_disposition": "RETAIN"
+}
