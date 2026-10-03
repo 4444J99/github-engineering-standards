@@ -1,0 +1,106 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T08:14:13.356Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Local testing guide covers FPT/GHEC/GHES and requires repository read access, not native publishing/admin authority. It presupposes installed Jekyll and an existing Jekyll site.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Bundler/Ruby setup and macOS installation troubleshooting are recommendations; fetching dependencies executes external code and is not authorized merely by documentation. No source setup executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Procedure runs bundle install in publishing source and bundle exec jekyll serve, illustrated with _site output and loopback server on port 4000. Sample console output is not an actual build, test or live-process receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Ruby >=3.0 may lack webrick; source suggests bundle add webrick, which changes dependency manifests/resolution. This is a conditional diagnosis, not an automatically safe dependency edit.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Ruby >=3.2 compatibility errors prompt source suggestion of Ruby <=3.1.x. Historical fallback is not a current supported/security recommendation; no runtime downgrade performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "serve --baseurl=\"\" deliberately overrides configured baseurl for local preview. Successful root preview would not verify project-subpath URLs, deployed custom-domain routes or hosted configuration parity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Browser localhost:4000 preview requires observing actual rendered behavior; build success alone does not prove links, access boundaries, content correctness or hosted publication.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Source recommends updating github-pages to reduce local/hosted rendering differences using bundle update github-pages or gem update. Latest available is not proven equal to a particular GHES/cloud server version or an immutable reproducible dependency set.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESJEKYLLLOCALTEST-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll.md",
+      "content_sha256": "4ac9fe4b707606d65d2a81bd5980fb38245af8b79094e507480d9f634ad917a4",
+      "start_line": 1,
+      "end_line": 80,
+      "statement": "Actions-preferred deployment note does not invalidate local Jekyll testing or prove custom workflow uses the same runtime. All claims reference-only; no dependencies changed, server started, policy accepted, rights cleared or native rollout verified.",
+      "accepted_policy": false
+    }
+  ]
+}
