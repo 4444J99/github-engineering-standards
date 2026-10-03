@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:15:38Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSWORKFLOWFILTER-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/runner-groups-enterprise-organization-access.md",
+      "content_sha256": "d1b271de646f08b657121ec54383c72e761e6f0e2b281e2edb900fdff17b98d8",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise runner-group organization access may allow selected organizations or all enterprise organizations. Only the ghes conditional states private-repository access by default with an override; configuration options are not permission grants.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSWORKFLOWFILTER-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/section-referencing-an-action-from-the-same-repository.md",
+      "content_sha256": "e10f9a4b2a940eb42129d87ffb102dc200a68e47aaec2f5d95b26d835c871635",
+      "start_line": 1,
+      "end_line": 28,
+      "statement": "Local actions resolve relative to the default repository workspace; a nondefault checkout location requires updating the action path. The example checks out the repository before referencing its action directory. Its tree and action.yml presence do not prove implementation behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSWORKFLOWFILTER-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/section-specifying-branches.md",
+      "content_sha256": "1b0e64c6edc83b248a201fcc1b22937d770e0f912eb6440386e3d31c3858dc4b",
+      "start_line": 1,
+      "end_line": 45,
+      "statement": "workflow_run branch filters constrain the triggering workflow's branch, not merely the receiving workflow's branch. Glob special characters require escaping for literal names; the examples use Build requested activity with releases inclusion or canary exclusion.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSWORKFLOWFILTER-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/section-specifying-branches.md",
+      "content_sha256": "1b0e64c6edc83b248a201fcc1b22937d770e0f912eb6440386e3d31c3858dc4b",
+      "start_line": 1,
+      "end_line": 45,
+      "statement": "Branch inclusion and ignore keys cannot coexist for the same event. Ordered negative matches remove earlier inclusion and later positive matches restore it; the final releases/** then alpha exclusion example excludes main. Branch matching alone does not prove upstream success or trusted artifacts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSWORKFLOWFILTER-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/section-specifying-workflows.md",
+      "content_sha256": "c2c0407c591641c264f17434d549c3a38311bf96460f36b3d4843208e9cda721",
+      "start_line": 1,
+      "end_line": 31,
+      "statement": "workflow_run workflow-name filters support glob syntax and escaping. Examples distinguish Build requested activity from completed Build* and escaped Build C++ names. Completed is not synonymous with successful; the linked legacy syntax path requires separate navigation reconciliation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSWORKFLOWFILTER-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/section-triggering-a-workflow-types.md",
+      "content_sha256": "94c917deefd2b802b74e9bc07ad49e05c053c35d2a9b781bac042e72ebb60b21",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Event types narrows activity selection and permits an array; single-activity webhook events do not need this key. The label example selects created and edited but not deleted. The event reference remains separately reviewed evidence.",
+      "accepted_policy": false
+    }
+  ]
+}
