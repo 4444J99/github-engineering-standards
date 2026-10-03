@@ -1,0 +1,117 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T06:13:59.825Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-1-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/apache-maven-snapshot-versions-supported.md",
+      "content_sha256": "bb67944dd9cd53d8f0bd473721c39fc044c3b69b66435f0a5a50f2ecf405c886",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Maven SNAPSHOT downloads are supported when enabled in the consuming POM or Maven settings; support does not establish a local configuration or authorize unstable dependencies.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-2-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate-packages-github-token.md",
+      "content_sha256": "164f1e15f3029dceccdfc21b69f3fb347085b7112720a23b1a8eb808659851f3",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "This fragment points to Actions workflow GITHUB_TOKEN guidance; a link is neither a reviewed guide nor evidence of effective token permissions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-3-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate-packages.md",
+      "content_sha256": "46bf49b5867da3e025b567148c179bbb2689fad3751268a88634c732217f4dc1",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Package publication, installation and deletion require access tokens. Classic personal access tokens support Packages and API authentication with task-dependent scopes; the classic-PAT-only include must be read alongside the explicit workflow GITHUB_TOKEN paths, not as exclusion of those paths.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-3-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate-packages.md",
+      "content_sha256": "46bf49b5867da3e025b567148c179bbb2689fad3751268a88634c732217f4dc1",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Within Actions, GITHUB_TOKEN can publish packages associated with the workflow repository. Installing another private repository's packages uses a classic PAT with at least read:packages, or GITHUB_TOKEN when the workflow repository has package read access. Scope alone is not a verified access grant.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-4-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate-step.md",
+      "content_sha256": "28e4ea9221c19059f08a93dd8d8eaf40c3e694a174c6210a7c6fab2ba1195a8d",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The authentication step points to the containing page's authentication section; it supplies neither client configuration nor an authentication receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-5-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate-to-container-registry-steps.md",
+      "content_sha256": "ae75c56be2d7186c3ed2d93fafa428bcb3206db63eba4c062ad8ea75d171f618",
+      "start_line": 1,
+      "end_line": 28,
+      "statement": "Container authentication uses an appropriately scoped classic PAT, with token SSO authorization when the organization requires SSO. read:packages supports image download and metadata read; write:packages also supports upload and metadata write; delete:packages supports image deletion. No scope was granted or credential changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-5-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate-to-container-registry-steps.md",
+      "content_sha256": "ae75c56be2d7186c3ed2d93fafa428bcb3206db63eba4c062ad8ea75d171f618",
+      "start_line": 1,
+      "end_line": 28,
+      "statement": "The upstream interface may select broad repo scope alongside write:packages; avoiding that extra scope, particularly in Actions, is recommended, with a host-conditional token-creation URL workaround. Saving a token in an environment variable is advice, not authorization to disclose or persist secrets.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-5-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate-to-container-registry-steps.md",
+      "content_sha256": "ae75c56be2d7186c3ed2d93fafa428bcb3206db63eba4c062ad8ea75d171f618",
+      "start_line": 1,
+      "end_line": 28,
+      "statement": "CLI login targets ghcr.io for FPT/GHEC and containers.HOSTNAME for GHES, as resolved from the hostname include. Placeholder credentials and illustrative successful Docker output are not live authentication evidence; no example was executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-6-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate_with_pat_for_v2_registry.md",
+      "content_sha256": "6890b40eae01712aa7f43ec85eb7c5dbd09b6048f0c5afd558b4b8693e369dc2",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "For granular-permission registries, migrating Actions authentication from a personal token to GITHUB_TOKEN is strongly recommended upstream, not an adopted universal migration mandate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEAUTH-6-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/package_registry/authenticate_with_pat_for_v2_registry.md",
+      "content_sha256": "6890b40eae01712aa7f43ec85eb7c5dbd09b6048f0c5afd558b4b8693e369dc2",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Workflow REST deletion or restoration using GITHUB_TOKEN requires package admin permission and is public preview according to the included text, regardless of the beta filename. Workflow-publishing repositories and explicitly connected repositories receive package admin permission; this is not universal repository-admin authority or approval to delete packages.",
+      "accepted_policy": false
+    }
+  ]
+}
