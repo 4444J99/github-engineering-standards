@@ -1,0 +1,46 @@
+{
+  "issue": 134,
+  "reviewed_at": "2026-10-03T02:27:39.854Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 4,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58921,
+    "claim_bearing_artifacts": 2546,
+    "tests": 324,
+    "test_seconds": 1.975,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No setup execution, secrets access, UI mutation or PR creation.",
+    "Textual Source Control include reviewed, not screenshot pixels or composed publication assurance.",
+    "Rights, adoption, effective configuration, remote custody and native enforcement remain separate."
+  ]
+}
