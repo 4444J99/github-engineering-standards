@@ -1,0 +1,106 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T01:05:26.282Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/transfer-to-enterprise.md",
+      "content_sha256": "b168acd954110163c67b36ec99b71d1fc3692d0b51fd542cb98df0ace50314b5",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "Under enterprise-apps-public-beta, private or internal app ownership may transfer from a user or organization to an enterprise the owner belongs to. Visibility becomes internal, allowing installation in enterprise organizations; existing organization installations remain. All user-account installations are removed, described as only the owner's own account given the visibility restriction. Availability is not actual installation; the visibility link remains separate evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/user-access-token-example-request.md",
+      "content_sha256": "d00fe7b648cac7419915195d4e6ff1cae56d5bd695687688bcbb0b67aee7a1be",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "The example uses a previously obtained user access token as a bearer Authorization header on a GET user API request acting for that user, with JSON Accept and version templating. It is a nonexecuted example, not a successful authenticated request or authorization proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/user-access-token-response-parameters.md",
+      "content_sha256": "22bc3638874eeb6fae936c8bbd8834a2a86018ed26806c0c6a1f3e81fd9538c3",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "The response describes ghu_ access tokens and ghr_ refresh tokens; enabled expiry yields access expires_in 28800 seconds and refresh_token_expires_in 15897600 seconds (source calls six months). Disabling user-token expiration omits expires_in, refresh_token and refresh_token_expires_in, rather than requiring null values.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/user-access-token-response-parameters.md",
+      "content_sha256": "22bc3638874eeb6fae936c8bbd8834a2a86018ed26806c0c6a1f3e81fd9538c3",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "The scope response is always empty for this GitHub App user token, whose permissions are constrained by both the app and user, unlike traditional OAuth scope semantics. Empty scope is not lack of access or unrestricted permission; token_type is bearer. Prefixes and response prose are not validation of actual credentials.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/web-app-flow-exchange-code.md",
+      "content_sha256": "aaeb339024922ac6a352ad109acab926cad8d25c5db8b1048aa1e6414b9de423",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "The web flow exchanges an earlier authorization code by POST to the templated OAuth access-token endpoint. Client ID (distinct from app ID), client secret and code are required; redirect_uri must match a registered callback when supplied. Parent links and prerequisites are not inherited reviewed evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/web-app-flow-exchange-code.md",
+      "content_sha256": "aaeb339024922ac6a352ad109acab926cad8d25c5db8b1048aa1e6414b9de423",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "Under pkce_support, code_verifier is strongly recommended generally and required if authorization used code_challenge; it must be the original generating value. Cookie or session storage is architectural guidance, not proof of secure handling.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/web-app-flow-exchange-code.md",
+      "content_sha256": "aaeb339024922ac6a352ad109acab926cad8d25c5db8b1048aa1e6414b9de423",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "repository_id is described as a further single-repository restriction, but ignored if either app or user cannot access that repository. This caveat means supplying an inaccessible ID must not be assumed to enforce narrowing; no exchange was executed or safe fallback established.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/web-app-flow-token-response.md",
+      "content_sha256": "c7dfaa55b39c65ce579f73de2bf5ac2e382fa6c45ef543f63fb12f7e77ba0474",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The token-response fragment introduces a response and includes user-access-token-response-parameters. That dependency was independently fully read in this tranche; this source-only include relationship does not certify rendering or an observed token response.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPTOKENEXCHANGE-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/webhooks-and-apps.md",
+      "content_sha256": "a38fd04c6c171c7f5906b4f074a669669410384ba37272e6650da72e32313fd0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "App registration webhook choices depend on selected permission types: select permissions before subscribing to related events. This dependency does not mandate all permissions or subscriptions, prove event delivery, or authorize app configuration writes.",
+      "accepted_policy": false
+    }
+  ]
+}
