@@ -1,0 +1,92 @@
+[
+  {
+    "artifact_id": "2f1c3079c6e3d9bb98b3af93",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/developer-site/limit_workflow_to_activity_types.md",
+    "content_sha256": "4307ef877c18c02c0a20130de190601be526cc9a1553ac8bbd57c43b6561f5fd",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:19:32.136Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment, branches and required include context read. The activity-filter fragment says all activity types trigger workflows on its surrounding event by default and types can restrict runs, linking to workflow syntax. The event is unspecified in isolation; this is not proof that all GitHub events have identical defaults, that a workflow is configured, or that an actual run occurred.",
+    "claim_mappings": [
+      {
+        "candidate_id": "264cee4b90fddf1c75f9286d",
+        "text_sha256": "981c79eea01d71fd27caf3a299e41d300d51e9d4aecae55f1ca984b82a217642",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-001; no native enablement, permission grant, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "3749dc774427fde03075245f",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/developer-site/multiple_activity_types.md",
+    "content_sha256": "3f873d82167f898f29e92be3e47847a55036eb3935e2a3fbcd74c28163fa31f9",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:19:32.136Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment, branches and required include context read. The short fragment says its surrounding event has multiple triggering activity types without naming the event or enumerating those types. It cannot alone establish an exhaustive trigger matrix or tested event behavior.",
+    "claim_mappings": [
+      {
+        "candidate_id": "fd9a64a7a1397011d977f637",
+        "text_sha256": "3da38c429300079bc5274ee7f494bd90046ca8ec43a7521f118f0fc713d79eaf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-002; no native enablement, permission grant, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "2ec35d6db36c341b53b3d5e3",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/developer-site/pull_request_forked_repos_link.md",
+    "content_sha256": "859ca1add568fe6644d85bfb8b8547b63f49a48da156c0ce9402bf48a464311e",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:19:32.136Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment, branches and required include context read. The fork-workflow fragment describes fork-local workflows as disabled by default until Actions is enabled; the included secret restriction and read-only GITHUB_TOKEN statement constrain fork pull-request context. Base-directed fork PRs send pull_request, issue_comment, pull_request_review_comment, pull_request_review, and pull_request_target to the base rather than PR events on the fork. These source statements are not a complete event-specific privilege model, especially for pull_request_target, and do not authorize executing untrusted fork code. The same fragment conditionally describes possible write-maintainer approval for first-time public contributors in fpt/ghec, requires private-fork workflows to be enabled, and applies fork-like restrictions to Dependabot PR workflows. These prerequisites are not actual approval, workflow enablement, observed secret isolation, or a successful positive/negative native test; linked guides are not reviewed here.",
+    "claim_mappings": [
+      {
+        "candidate_id": "2831fefec2aa37480ac0d62a",
+        "text_sha256": "4b71f80dc993949b4664d702feb62626143bf7c0bc72ee7a665ca90f5d979239",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-003, DOCS-FORKWORKFLOWEVENTS-004; no native enablement, permission grant, adoption, or rights clearance."
+      },
+      {
+        "candidate_id": "9b607292d19ea00b5d7b9b4b",
+        "text_sha256": "ebcdead5588f19944e1eb35b89bcbc0e216f7d0860fcf4684b20d972fddec8c0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-003, DOCS-FORKWORKFLOWEVENTS-004; no native enablement, permission grant, adoption, or rights clearance."
+      },
+      {
+        "candidate_id": "90de7531e3bf4d8b0fa016e3",
+        "text_sha256": "79cdb56925e0e13ac85fbadc7885025d4b12db4000012ba8c2774a321457d292",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-003, DOCS-FORKWORKFLOWEVENTS-004; no native enablement, permission grant, adoption, or rights clearance."
+      },
+      {
+        "candidate_id": "7ad19053ead639492b35b099",
+        "text_sha256": "4cd53c935a1068533e6305f24fdf4dc0d3486f18b246f7240595a079262b3f4e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-003, DOCS-FORKWORKFLOWEVENTS-004; no native enablement, permission grant, adoption, or rights clearance."
+      },
+      {
+        "candidate_id": "3aec675d7c2935e952f209be",
+        "text_sha256": "8b2dd89359a1e03ac5fa26306c3c50fb63ce93138dd70ced230a375b0723c3f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-003, DOCS-FORKWORKFLOWEVENTS-004; no native enablement, permission grant, adoption, or rights clearance."
+      },
+      {
+        "candidate_id": "6d8fc6097a1d26fe3fbe84a2",
+        "text_sha256": "364c0877d563af6b3dc69448b607d58cad897627a4ce68fe795681636fcdbd00",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-FORKWORKFLOWEVENTS-003, DOCS-FORKWORKFLOWEVENTS-004; no native enablement, permission grant, adoption, or rights clearance."
+      }
+    ]
+  }
+]
