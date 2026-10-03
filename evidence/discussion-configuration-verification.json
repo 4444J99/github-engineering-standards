@@ -1,0 +1,46 @@
+{
+  "issue": 204,
+  "reviewed_at": "2026-10-03T04:39:46.013Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59410,
+    "claim_bearing_artifacts": 2904,
+    "tests": 324,
+    "test_seconds": 1.982,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Illustrative YAML is not adopted schema or attestation; bash rendering is not execution.",
+    "Announcement transfer exclusion preserved; no transfers or settings changes performed.",
+    "Only enabling instructions present despite filename; screenshots not inspected; no rights clearance or rollout."
+  ]
+}
