@@ -1,0 +1,83 @@
+{
+  "issue": 437,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "scope": "Account-management navigation source receipt and child receipt census",
+  "reference_claims": 61218,
+  "claim_bearing_artifacts": 3471,
+  "receipt_coverage": {
+    "expected": 9,
+    "receipts": {
+      "content/account-and-profile/how-tos/account-management/converting-a-user-into-an-organization.md": {
+        "receipt": "evidence/source-reviews/docs-account-conversion-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/unlinking-your-email-address-from-a-locked-account.md": {
+        "receipt": "evidence/source-reviews/docs-locked-email-unlinking.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/deleting-your-personal-account.md": {
+        "receipt": "evidence/source-reviews/docs-account-deletion-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md": {
+        "receipt": "evidence/source-reviews/docs-multiple-accounts-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/moving-your-work-to-an-organization.md": {
+        "receipt": "evidence/source-reviews/docs-organization-migration-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/index.md": {
+        "receipt": "evidence/source-reviews/docs-account-management-index.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/merging-multiple-personal-accounts.md": {
+        "receipt": "evidence/source-reviews/docs-account-merge-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/changing-your-username.md": {
+        "receipt": "evidence/source-reviews/docs-username-change-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      }
+    },
+    "missing": [
+      "content/account-and-profile/how-tos/account-management/creating-an-account-on-github.md"
+    ]
+  },
+  "coverage_caveat": "Receipt presence is not independent semantic omission assurance, policy acceptance, or rights clearance. Census counts list-format individual receipts only.",
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.984
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}
