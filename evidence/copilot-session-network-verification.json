@@ -1,0 +1,46 @@
+{
+  "issue": 153,
+  "reviewed_at": "2026-10-03T03:06:07.593Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 7,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59089,
+    "claim_bearing_artifacts": 2627,
+    "tests": 324,
+    "test_seconds": 1.971,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Session removal is not data erasure; no sessions altered.",
+    "Conditional host list is not complete network policy or allowlist authorization.",
+    "Default agent validation intent is not actual vulnerability absence; rights, adoption and native behavior remain unverified."
+  ]
+}
