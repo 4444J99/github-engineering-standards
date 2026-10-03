@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:24:12.761Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ENTERPRISEAUTHSTAGING-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/role-permission-hierarchy.md",
+      "content_sha256": "0993d59ea8c771b1b989e9bfb4ab71fd3ecfcbaf717dfff3ba7769b16cf767f6",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The unnamed containing policy affects repository administrators specifically, while organization owners and security managers can enable security features regardless of that policy setting. This exception is scoped to enablement under this policy, not every security operation or bypass of all independent licensing and restrictions. The role guide is not reviewed and no actual entitlements were tested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEAUTHSTAGING-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/saml-or-ldap.md",
+      "content_sha256": "9882b654350d2e7c064e0c48948e644dd1393cc7e4bf705bf2026d53b7a56aec",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The fragment states SAML or LDAP can be used, but not both. It supplies no instance, feature or version context, so it is not a universal prohibition for every enterprise architecture or independent system. No authentication mechanism was selected.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEAUTHSTAGING-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/secure_two_factor_authentication.md",
+      "content_sha256": "54c24252346a3fa95c8425d073a42b4883ff557835f13df884b5f08d2a1793f6",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The configuration step selects both enterprise-and-organization required 2FA and secure-method-only settings, then Save. The fragment does not enumerate secure methods, affected exceptions, lockout effects or staged rollout, and no saved setting, native enforcement or security change was performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEAUTHSTAGING-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/single-organizations-enterprise-migration.md",
+      "content_sha256": "f94c05ba92772c8136cd4b50af2daf0036cd0841f903f321fa2064e8760e0c39",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "The expiring source note describes an automatic upgrade of single-organization Cloud customers to enterprise accounts at no additional cost. Maintenance comments set a 2027-01-30 expiry and reference an upstream stakeholder, not executable agent instructions. This historical transition is not current contractual pricing, a verified account migration or user authorization; the linked page was not reviewed and no upgrade occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEAUTHSTAGING-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/test-in-staging.md",
+      "content_sha256": "b0dc5ef88429328a249ffc09fab64c96483c630e5367ac7173c89f781898caf0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "GitHub strongly recommends validating new authentication configuration in staging because incorrect configuration can cause downtime. This upstream recommendation is not a completed staging test, isolated environment, backup or rollback receipt; the staging guide is not reviewed and no instance was provisioned or authentication changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEAUTHSTAGING-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/url-substitute-note.md",
+      "content_sha256": "3fcee5fb8e3bb22e687da6f17c90d1259dd65248d06f563cb3a81a2999fab88d",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "For the containing series, data-residency Cloud or GHES users must substitute website references and links with their enterprise dedicated URL. This is contextual substitution guidance, not a verified destination, universal mechanical rewrite of all external links or license to send credentials to an untrusted host; no connection or URL configuration changed.",
+      "accepted_policy": false
+    }
+  ]
+}
