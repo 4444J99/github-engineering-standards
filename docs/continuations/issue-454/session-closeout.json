@@ -1,0 +1,114 @@
+{
+  "schema": "limen.session_closeout.v2",
+  "session_id": "01a0f994-11d8-76b2-ab30-a5aab867e33e",
+  "session_root_path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+  "receipt_root_id": "ges",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456",
+  "disposition": "handoff",
+  "scope_roots": [
+    {
+      "id": "ges",
+      "kind": "git",
+      "path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+      "repository": "4444J99/github-engineering-standards",
+      "repository_id": 1400636612,
+      "base_head": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
+      "publication_branch": "implementation/v0.1.0",
+      "owned_paths": [
+        ".codex/",
+        ".github/",
+        "CHANGELOG.md",
+        "README.md",
+        "TEST_INFRA.md",
+        "TEST_READY.md",
+        "THIRD_PARTY_NOTICES.md",
+        "controls/",
+        "generate_ghqr_controls.py",
+        "generate_wa_controls.py",
+        "generated/",
+        "ges/",
+        "scripts/",
+        "tests/"
+      ],
+      "retained_work": [
+        {
+          "paths": [
+            "docs/",
+            "evidence/",
+            ".cache/",
+            ".agents/"
+          ],
+          "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/454"
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "kind": "git",
+      "path_sha256": "0665800866c86d3ce7d8f083c8a8fbc983ff389e6dc677b50b7573325b0491dd",
+      "repository": "4444J99/limen",
+      "repository_id": 1255213941,
+      "base_head": "b4759bc91d40ee13e14fb0b4b3de1faa55543ec8",
+      "subject_head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
+      "publication_branch": "policy/ges-continuation-20261003",
+      "owned_paths": [
+        "docs/architecture/finite-workspace-recovery.md"
+      ],
+      "retained_work": []
+    }
+  ],
+  "verification": [
+    {
+      "root_id": "ges",
+      "head": "ec1faea650522be408842fabb941afebb9f1ba7c",
+      "exit_code": 0,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "8d39444b85cf22282dd52d2b5270471ac83d3e05c0617ada6772eda2b450ac9d",
+      "command": "GES six-check batch and installed credential-wall check"
+    },
+    {
+      "root_id": "policy",
+      "head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
+      "exit_code": 0,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "8d39444b85cf22282dd52d2b5270471ac83d3e05c0617ada6772eda2b450ac9d",
+      "command": "scripts/verify-scoped.sh --base HEAD --total-timeout-seconds 600"
+    }
+  ],
+  "custody": {
+    "verified": false,
+    "root_ids": [
+      "ges",
+      "policy"
+    ],
+    "evidence": "evidence/session-closeout-456-custody.json",
+    "sha256": "50150d82e463fc93d3908c788831e828cfceee657419adf8342b094fd9f4adc3",
+    "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+  },
+  "checkout_disposition": "RETAIN",
+  "project_complete": false,
+  "handoff_owners": [
+    "https://github.com/4444J99/github-engineering-standards/issues/454",
+    "https://github.com/4444J99/limen/issues/2821",
+    "https://github.com/4444J99/limen/pull/2822"
+  ],
+  "receipt_status": "HANDOFF_REQUIRES_REMOTE_RESTORATION",
+  "external_effects": [
+    {
+      "id": "restricted-ciphertext",
+      "kind": "encrypted-upload-and-recovery",
+      "verified": false,
+      "evidence": "evidence/session-closeout-456-custody.json",
+      "sha256": "50150d82e463fc93d3908c788831e828cfceee657419adf8342b094fd9f4adc3",
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+    },
+    {
+      "id": "policy-integration",
+      "kind": "policy-pr-submission",
+      "verified": false,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "8d39444b85cf22282dd52d2b5270471ac83d3e05c0617ada6772eda2b450ac9d",
+      "owner_url": "https://github.com/4444J99/limen/issues/2821"
+    }
+  ]
+}
