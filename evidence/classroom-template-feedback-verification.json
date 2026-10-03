@@ -1,0 +1,52 @@
+{
+  "issue": 108,
+  "reviewed_at": "2026-10-03T01:37:27.484Z",
+  "artifacts_reviewed": 2,
+  "reference_claims_added": 2,
+  "scope_comparison": {
+    "prefix": "data/reusables/classroom/",
+    "inventory": 55,
+    "disposition_receipts": 55,
+    "missing": [],
+    "independent_completeness_certified": false
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58399,
+    "claim_bearing_artifacts": 2410,
+    "tests": 324,
+    "test_seconds": 1.987,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Receipt coverage is not independent extraction audit, rendered assurance or current service availability.",
+    "No template copies, student feedback, rights acceptance, adopted policy or native behavior."
+  ]
+}
