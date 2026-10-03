@@ -1,0 +1,157 @@
+{
+  "schema_version": "ges.issue-lifecycle-consolidation.v1",
+  "issue": 359,
+  "reviewed_at": "2026-10-03T09:46:56.619Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed issue and milestone subset, not complete six-source reconciliation.",
+  "rows": [
+    {
+      "id": "ISSUE-AUTHORITY-ADAPTER",
+      "claims": [
+        "DOCS-ISSUERELATION1-1",
+        "DOCS-ISSUEFIELDORG1-1",
+        "DOCS-ISSUEFIELDORG2-1",
+        "DOCS-ISSUECLOSURE1-1",
+        "DOCS-ISSUECUSTODY2-1"
+      ],
+      "conflict": "Capabilities use different triage, write, owner/admin and account/enterprise constraints.",
+      "decision": "PROPOSED_OPERATION_SCOPED_AUTHORITY",
+      "requirement": "Bind exact operation, target ownership, platform/version and effective permission; unavailable/missing authority stays unknown or denied.",
+      "negative_test": "Triage must not authorize organization field management or deletion; EMU external target must not pass."
+    },
+    {
+      "id": "ISSUE-RELATION-SEMANTICS",
+      "claims": [
+        "DOCS-ISSUERELATION1-2",
+        "DOCS-ISSUERELATION1-4",
+        "DOCS-ISSUERELATION2-3"
+      ],
+      "conflict": "Hierarchy, prerequisite direction and blocked icons are distinct; transitivity/cycle and closure enforcement unspecified.",
+      "decision": "PENDING_BEHAVIORAL_AUDIT",
+      "requirement": "Model parent/child and blocking edges separately; verify direction and supported graph constraints before enforced workflow adoption.",
+      "negative_test": "Parent association or blocked icon cannot certify prevention of closure/merge."
+    },
+    {
+      "id": "ISSUE-LIFECYCLE-ACCEPTANCE",
+      "claims": [
+        "DOCS-ISSUECLOSURE1-2",
+        "DOCS-ISSUECLOSURE2-6",
+        "DOCS-ISSUERELATION3-2",
+        "DOCS-MILESTONEPROGRESS1-2"
+      ],
+      "conflict": "Closed/not-planned, auto-close and hierarchy/milestone percentages are lifecycle, not verified acceptance.",
+      "decision": "PROPOSED_EVIDENCE_QUALIFIED_COMPLETION",
+      "requirement": "Keep immutable requirement denominator and current criterion-level evidence separate from issue state, duplicates and display percentages.",
+      "negative_test": "Not-planned closure/default-branch merge without acceptance evidence must not improve verified completion."
+    },
+    {
+      "id": "ISSUE-LINK-TARGET",
+      "claims": [
+        "DOCS-ISSUECLOSURE2-1",
+        "DOCS-ISSUECLOSURE2-4",
+        "DOCS-ISSUECLOSURE2-5"
+      ],
+      "conflict": "Description/commit and sidebar origins have different default-branch/repository/unlink semantics.",
+      "decision": "PROPOSED_EXACT_IDENTITY_LINKING",
+      "requirement": "Resolve exact repository/issue/branch/reference origin; preview auto-close effects and preserve human-only closure where policy requires.",
+      "negative_test": "Remembered repository or commit auto-close lacking listed PR link cannot pass target/link verification."
+    },
+    {
+      "id": "ISSUE-STATE-OWNERSHIP",
+      "claims": [
+        "DOCS-ISSUEFIELDORG2-7",
+        "DOCS-ISSUEFIELDORG1-3",
+        "DOCS-PROJECTSISSUEFIELD-4"
+      ],
+      "conflict": "Issue fields are shared truth; custom Project fields local; template assignments unavailable and migration omits copy procedure.",
+      "decision": "PENDING_MIGRATION_DESIGN",
+      "requirement": "Explicitly map old/new field identities and values, copy/verify with authority before view removal; distinguish definition/default/pinning from assignment.",
+      "negative_test": "Same Priority label or removed Project column cannot certify copied issue values."
+    },
+    {
+      "id": "ISSUE-FIELD-DISCLOSURE",
+      "claims": [
+        "DOCS-ISSUEFIELDORG2-5",
+        "DOCS-ISSUEFIELDORG2-6",
+        "DOCS-ISSUEFIELDORG1-4"
+      ],
+      "conflict": "Organization-only restricts surfaces; internal Projects accept only Public fields; Public does not grant private issue access.",
+      "decision": "PROPOSED_SURFACE_SCOPED_VISIBILITY",
+      "requirement": "Verify effective visibility across repository/project/API/timeline/search with authorized member/collaborator/outsider probes.",
+      "negative_test": "Public field setting cannot authorize private issue disclosure; hiding column alone cannot prove access restriction."
+    },
+    {
+      "id": "ISSUE-RECOVERY-LIFECYCLE",
+      "claims": [
+        "DOCS-ISSUEFIELDORG2-4",
+        "DOCS-ISSUEFIELDORG3-3",
+        "DOCS-ISSUECUSTODY2-3",
+        "DOCS-MILESTONELIFECYCLE1-2"
+      ],
+      "conflict": "Permanent definition/value deletion, reversible type disable and issue survival after milestone deletion have different custody implications.",
+      "decision": "PENDING_RECOVERY_PROOF",
+      "requirement": "Classify destructive versus reversible changes; preserve export/identity/dependencies and verify authorized restore or declared irreversible consequences.",
+      "negative_test": "Recreate field or surviving issue must not certify restored values/associations."
+    },
+    {
+      "id": "ISSUE-COPY-TRANSFER",
+      "claims": [
+        "DOCS-ISSUECUSTODY1-2",
+        "DOCS-ISSUECUSTODY1-3",
+        "DOCS-ISSUECUSTODY3-1",
+        "DOCS-ISSUECUSTODY3-2",
+        "DOCS-ISSUECUSTODY3-3"
+      ],
+      "conflict": "Clone new identity/no mention notifications differs transfer redirect/notifications and constrained ownership/disclosure.",
+      "decision": "PROPOSED_CUSTODY_PREFLIGHT",
+      "requirement": "Check both authorities and allowed visibility, map metadata by exact documented identity, read back retained state and audiences.",
+      "negative_test": "Same milestone name with different due date or private-to-public transfer cannot pass; clone cannot claim comments retained."
+    },
+    {
+      "id": "ISSUE-LIMIT-PROFILE",
+      "claims": [
+        "DOCS-ISSUERELATION2-1",
+        "DOCS-ISSUEFIELDORG2-1",
+        "DOCS-ISSUEFIELDORG2-2",
+        "DOCS-MILESTONEPROGRESS1-4"
+      ],
+      "conflict": "Platform numerical limits and enabled default fields are not local workload policy or initialized values.",
+      "decision": "PROPOSED_VERSIONED_PARAMETERS",
+      "requirement": "Pin feature/version and separate capacity limits/default field definitions from adopted workload thresholds; retain unavailable operations.",
+      "negative_test": "Hundred-child limit or default Priority field cannot silently become desired task count/assigned priority."
+    },
+    {
+      "id": "ISSUE-DUPLICATE-AUDIT",
+      "claims": [
+        "DOCS-ISSUECLOSURE3-1",
+        "DOCS-ISSUECLOSURE3-2",
+        "DOCS-ISSUECLOSURE3-3"
+      ],
+      "conflict": "Duplicate timeline marker/Undo records relationships, not semantic equivalence or acceptance.",
+      "decision": "PROPOSED_TRACEABLE_DEDUPLICATION",
+      "requirement": "Require independent scope-equivalence rationale and preserve original identities/history before treating work as duplicate.",
+      "negative_test": "Duplicate comment or Undo cannot certify resolved claims, deleted history or accepted issue."
+    },
+    {
+      "id": "ISSUE-SELECTED-SCOPE",
+      "claims": [
+        "DOCS-MILESTONEPROGRESS2-1",
+        "DOCS-MILESTONELIFECYCLE2-1",
+        "DOCS-MILESTONELIFECYCLE2-2",
+        "DOCS-ISSUEFIELDORG1-5"
+      ],
+      "conflict": "Filters, checkbox selection and reset are display/selection operations, not full denominator acquisition.",
+      "decision": "PROPOSED_COMPLETE_READ_ACCOUNTING",
+      "requirement": "Declare exact search context, pagination, inaccessible scope and selected mutation target set; verify readback without shrinking required denominator.",
+      "negative_test": "Filtered result or cleared search cannot certify all estate items reviewed or state changed."
+    }
+  ],
+  "limitations": [
+    "Requirements and negative tests are proposals, not execution receipts.",
+    "Claim identity verification does not establish independent equivalence or omission completeness.",
+    "No native changes, rights clearance or policy acceptance."
+  ]
+}
