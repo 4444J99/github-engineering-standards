@@ -1,0 +1,94 @@
+{
+  "schema": "limen.session_closeout.v2",
+  "session_id": "01a0fd02-4b38-7122-a489-fe3a5b2f3a04",
+  "session_root_path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+  "receipt_root_id": "factory",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/455",
+  "disposition": "handoff",
+  "scope_roots": [
+    {
+      "id": "caller",
+      "kind": "git",
+      "path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+      "repository": "4444J99/github-engineering-standards",
+      "repository_id": 1400636612,
+      "base_head": "d57adecd556d60a558b668b07af2c967896161e5",
+      "subject_head": "46842fccd2f3c6138b79f23e5d3af589dafb6d64",
+      "publication_branch": "implementation/v0.1.0",
+      "owned_paths": [],
+      "retained_work": [
+        {
+          "paths": [
+            ".codex",
+            "README.md",
+            "docs",
+            "evidence",
+            "ges",
+            "scripts",
+            "tests"
+          ],
+          "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1"
+        }
+      ]
+    },
+    {
+      "id": "factory",
+      "kind": "git",
+      "path_sha256": "f5f9dcb8c11d5fa2e30f76c64cd7735ddcf471c8c48a1545569d1caaec4e4dd8",
+      "repository": "4444J99/github-engineering-standards",
+      "repository_id": 1400636612,
+      "base_head": "4d66bee9c78f67fbd1ef93c953025ebeace8d59a",
+      "publication_branch": "feat/repository-factory",
+      "owned_paths": [
+        "CHANGELOG.md",
+        "README.md",
+        "docs/architecture.md",
+        "docs/repository-scaffolding.md",
+        "examples/repository-spec.json",
+        "factory/artifacts.json",
+        "ges/__main__.py",
+        "ges/render.py",
+        "ges/scaffold.py",
+        "templates/CONTRIBUTING.md",
+        "templates/README.md",
+        "tests/test_scaffold.py"
+      ],
+      "retained_work": []
+    }
+  ],
+  "verification": [
+    {
+      "root_id": "factory",
+      "head": "baaebcb345aa117aca49c63e673c42616b0254c4",
+      "exit_code": 0,
+      "purpose": "completion",
+      "evidence": "docs/continuations/repository-factory-20261002/session-evidence.json",
+      "sha256": "28048f122e163af6ecd6249cc2a9870367c6ef869fa59c2193a7ed7d7c363d2b"
+    }
+  ],
+  "custody": {
+    "verified": true,
+    "root_ids": [
+      "caller",
+      "factory"
+    ],
+    "evidence": "docs/continuations/repository-factory-20261002/session-evidence.json",
+    "sha256": "28048f122e163af6ecd6249cc2a9870367c6ef869fa59c2193a7ed7d7c363d2b"
+  },
+  "external_effects": [
+    {
+      "id": "feature-branch-publication",
+      "kind": "git_ref_publication",
+      "verified": true,
+      "evidence": "docs/continuations/repository-factory-20261002/session-evidence.json",
+      "sha256": "28048f122e163af6ecd6249cc2a9870367c6ef869fa59c2193a7ed7d7c363d2b"
+    },
+    {
+      "id": "pull-request-455",
+      "kind": "github_pull_request",
+      "verified": true,
+      "evidence": "docs/continuations/repository-factory-20261002/session-evidence.json",
+      "sha256": "28048f122e163af6ecd6249cc2a9870367c6ef869fa59c2193a7ed7d7c363d2b"
+    }
+  ]
+}
