@@ -1,0 +1,117 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:26:02.443Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cultural-factors-intro.md",
+      "content_sha256": "792e31660ae0bc50f466e1b876c4c5ca0fc3d1c2d15f4abe934541e810843e10",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The cultural rollout fragment recommends considering social or cultural obstacles and attributes following examples to an ESSP anti-pattern section. The isolated fragment does not supply those examples or evidence a rollout has addressed them.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-configuring-profile.md",
+      "content_sha256": "fd5bf2ebe0f9dcdf0c4f7bbd127538c81659890433f085938a969665b94cfb8c",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "The profile procedure requires a description, makes the name optional with filename fallback stripping .md or .agent.md, and accepts a tool-name/alias list including configured MCP tools. Omission grants all available tools; a behavioral prompt is not an access restriction.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-configuring-profile.md",
+      "content_sha256": "fd5bf2ebe0f9dcdf0c4f7bbd127538c81659890433f085938a969665b94cfb8c",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "The procedure allows agent-specific mcp-servers and limits its model-property guidance to VS Code, JetBrains, Eclipse and Xcode contexts. It must not be assumed the cloud agent honors an IDE-specific model field.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-configuring-profile.md",
+      "content_sha256": "fd5bf2ebe0f9dcdf0c4f7bbd127538c81659890433f085938a969665b94cfb8c",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "The profile target property accepts vscode or github-copilot to limit an environment, with both described as available when omitted. This environment switch is not evidence of safe tool confinement or target deployment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-configuring-profile.md",
+      "content_sha256": "fd5bf2ebe0f9dcdf0c4f7bbd127538c81659890433f085938a969665b94cfb8c",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "The procedure places the prompt in the Markdown body and limits it to 30,000 characters. Description/name, prompt and operational tool configuration serve different functions; none proves intended behavior occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-example-profiles.md",
+      "content_sha256": "c8023f78548476b4c6e66112f56cd1cad8765804efe231265ccdbe96b44513d6",
+      "start_line": 1,
+      "end_line": 44,
+      "statement": "The testing profile example omits tools and explicitly grants all tools despite a test-focused description and prompt restricting production-code changes unless requested. Those prose restrictions do not constitute a sandbox preventing production edits.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-example-profiles.md",
+      "content_sha256": "c8023f78548476b4c6e66112f56cd1cad8765804efe231265ccdbe96b44513d6",
+      "start_line": 1,
+      "end_line": 44,
+      "statement": "The planner example names read, search and edit tools and requests planning documents rather than implementation. Reduced tool selection still permits edits; it is not a read-only guarantee, and imported example instructions were not followed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-examples-list.md",
+      "content_sha256": "0ffe617d85f0f506c2b0527c2ee4e51bba2be017048896d72d0be0feb6ad8cec",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The example-list testing suggestion says read/search/edit might prevent unintended production changes, but edit capability itself is not file-type confinement. Preserve this weak safety claim as intended guidance, not verified enforcement; documentation/Python examples also describe aspirations rather than measured expertise.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-examples-note.md",
+      "content_sha256": "1b634e457c89eeb6ac7b0e5993c3cb2163f236e01849b734da1bd1cfd892f83a",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The library note explicitly calls examples inspiration to adapt to project/language/team needs and points to community contributions. They are not adopted policy, trusted instructions or vetted third-party grants.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTPROFILECONFINEMENT-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/custom-agents-further-reading.md",
+      "content_sha256": "f368629d889b31625f38619be276b5fcc6eecc363b9b52a2c1b96d010d714332",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The further-reading fragment contains three concept/how-to/reference links only. Linked content is not thereby fully reviewed, applicable, adopted or rights-cleared.",
+      "accepted_policy": false
+    }
+  ]
+}
