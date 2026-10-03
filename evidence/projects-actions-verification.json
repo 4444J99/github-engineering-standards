@@ -1,0 +1,51 @@
+{
+  "issue": 330,
+  "verified_at": "2026-10-03T08:50:57.868Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 13,
+  "candidates_accounted_for": 26,
+  "dependency_scope": {
+    "copilot": "FPT/GHEC only; no GHES branch in pinned feature"
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "tests": 324,
+    "test_seconds": 1.981,
+    "controls": 95,
+    "reference_claims": 60436,
+    "claim_bearing_artifacts": 3332,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Reference source review, not independent omission or published certification.",
+    "No credentials, workflow activation, upstream code execution or native writes.",
+    "Quoted jq identifiers are a source-analysis concern, not a reproduced runtime failure.",
+    "No accepted policy, rights clearance or rollout."
+  ]
+}
