@@ -1,0 +1,62 @@
+{
+  "issue": 191,
+  "reviewed_at": "2026-10-03T04:16:26.857Z",
+  "artifacts_reviewed": 2,
+  "reference_claims_added": 2,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59346,
+    "claim_bearing_artifacts": 2843,
+    "tests": 324,
+    "test_seconds": 1.986,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "dependency_context": {
+    "enterprise_variable_lines": [
+      18,
+      19
+    ],
+    "product_variable_lines": [
+      373,
+      374
+    ],
+    "example_domain": "octocorp.ghe.com",
+    "example_git_ssh": "octocorp@octocorp.ghe.com",
+    "product_url_branches": {
+      "fpt_or_ghec": "github.com",
+      "otherwise": "HOSTNAME"
+    },
+    "whole_dependency_files_newly_certified": false
+  },
+  "limitations": [
+    "Example host/user not actual enterprise identity or validated key trust.",
+    "No SSH, remote URL, credentials, native change, adopted policy, or rights clearance."
+  ]
+}
