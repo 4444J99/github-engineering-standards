@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:46:31.738Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTMCPREGISTRY-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp-chat-json-snippet-for-other-ides-remote.md",
+      "content_sha256": "e08a254cd307626db21875bc0f1d3598eb8abc933ff9fedbfaec96513a211e3e",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "The remote-MCP JSON example names a github server at the Copilot MCP endpoint and supplies an Authorization request header with a placeholder bearer PAT. It neither supplies a real credential nor specifies safe storage, token scope, expiry, transport-client compatibility, or authorization to transmit one. No token was created, stored, disclosed, or sent.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPREGISTRY-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp-policy-requirement.md",
+      "content_sha256": "68920ee9f46be28104699667c7696a15b87f39b83a0bd828790c576d72a02ac6",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The pinned prerequisite states that members of organizations or enterprises on Business or Enterprise plans require the MCP-servers policy to be enabled to use MCP with Copilot. This conditional prerequisite complements the disabled-by-default note, but is not a verified current policy value, authority to change it, or proof that other requirements are satisfied.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPREGISTRY-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/about-github-mcp-server.md",
+      "content_sha256": "b8782ba36a7384fbce0aaeba095c440ff46e8975e11ff5f225b2d03e22c29859",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The fragment attributes provision and maintenance of the GitHub MCP server to GitHub and describes context-aware AI integration through MCP. It links to an introductory resource without proving tool security, source implementation review, or destination review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPREGISTRY-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/azure-api-center-url.md",
+      "content_sha256": "9d7de6e43b310659eb5b2a612daacc81b240075ccb6e17652306c4512ddd33d1",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "The Azure API Center fragment specifies a registry base URL containing the service, region, and workspace path, illustrates a default-workspace URL, and warns against adding a v0.1 servers route because Copilot appends the MCP v0.1 path itself. The example is not an owned target; no registry configuration or error behavior was tested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPREGISTRY-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/intro.md",
+      "content_sha256": "b0714e50f415dbe02578fe21c3645f94d5f4199671679450a548ddf739c512d2",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment characterizes MCP as an open standard for sharing context between applications and LLMs and connecting models to data sources and tools. This conceptual description does not attest to a particular protocol version, interoperable implementation, trusted content, or access authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTMCPREGISTRY-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/mcp/mcp-chat-in-ide.md",
+      "content_sha256": "ac820091c7b33c3d504362473624250752dbd36b2d37761c9a872879472a9d21",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment describes using MCP integrations to extend Copilot Chat with tools and services and points to additional conceptual documentation. It is a capability description, not an installed integration, permission grant, tool allowlist, or review of that destination.",
+      "accepted_policy": false
+    }
+  ]
+}
