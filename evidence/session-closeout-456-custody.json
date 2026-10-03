@@ -25,32 +25,23 @@
     "plaintext_sent": false
   },
   "remote_readback": {
-    "verified": false,
-    "resumed_attempt_date": "2026-10-03",
-    "resumed_attempt_exit_code": 1,
-    "resumed_attempt_reason": "Google Drive shared-client per-minute query quota: HTTP 403 RATE_LIMIT_EXCEEDED; no additional bytes received.",
-    "preserved_prefix_bytes": 1069543424,
-    "preserved_prefix_sha256": "c8c5a4d92f687f87ee8aac48419b634533b8afda40cd2d2b89735b708eba118d",
-    "preserved_prefix_matches_local_archive": true,
-    "remaining_bytes": 135397408,
-    "first_attempt_exit_code": 1,
-    "first_attempt_reason": "Shared Google Drive client per-minute query quota: RATE_LIMIT_EXCEEDED",
-    "corrective_attempt": "Single-stream read with a 300-second wall deadline; timed out and subprocess terminated.",
-    "corrective_attempt_exit_code": 124,
-    "remote_readback_file_present": false
+    "verified": true,
+    "exit_code": 0,
+    "ciphertext_bytes": 1204940832,
+    "ciphertext_sha256": "40452c935232540d16ff7770bf68d8fd31d8111e347535289a16cbab130f2783",
+    "history": "Earlier shared-client quota, expired account, deadline and scratch-loss failures retained in issue #456; successful complete readback used the existing project cache."
   },
   "restoration": {
-    "verified": false,
-    "reason": "Full remote ciphertext readback remains incomplete. Local restoration succeeds but does not establish remote custody.",
-    "local_archive_sha256_verified": true,
-    "local_archive_restore_verified": true,
-    "local_restore_date": "2026-10-03",
-    "local_restore_exit_code": 0,
-    "archive_members_read": 49485,
-    "regular_files_fully_read": 49069,
-    "regular_file_bytes_read": 1141201977,
-    "plaintext_written": false,
-    "existing_escrow_check_exit_code": 0
+    "verified": true,
+    "archive_members": 49485,
+    "regular_files": 49069,
+    "plaintext_bytes": 1141201977,
+    "restored_manifest_sha256": "faf9ba12f2c9a1581c65607ac1384c94645a1e4e2068c56e51ae393b2451f20f",
+    "all_regular_members_read": true,
+    "keychain_used": false,
+    "plaintext_extracted": false,
+    "upstream_code_executed": false,
+    "credential_source": "Existing independently held 1Password escrow; transient in-process material supplied through anonymous pipe."
   },
   "staging": {
     "readback_directory_path_sha256": "c0b11d95ffebb859c38861dbdea67416e7cfa7035d77e23f4b4977bd1c791a21",
@@ -58,11 +49,19 @@
     "private_path_mapping": "Preserved Documents custody-backup receipts; no runtime custody staging.",
     "runtime_custody_staging_prohibited": true
   },
-  "custody_verified": false,
+  "custody_verified": true,
   "checkout_disposition": "RETAIN",
   "raw_copies_deleted": false,
   "private_values_published": false,
-  "next_action": "After Drive quota permits readback, retrieve the remaining 135397408 bytes into the Documents readback directory, hash-check the combined preserved remote prefix and tail, then decrypt/read every remote archive member using independently escrowed material and rerun the published multi-root receipt predicate. Do not stage custody in the Codex runtime directory.",
+  "next_action": "Reconcile the exact policy worktree scope and unrelated process ownership through the existing owner; then rerun the installed session predicate. Custody is no longer the outstanding prerequisite.",
   "project_complete": false,
-  "rights_cleared": false
+  "rights_cleared": false,
+  "policy": {
+    "policy_merge_commit": "65ceff671ce2d583ccefaf5772ae2b62df97c105",
+    "policy_remote_content_matches_verified_topic": true,
+    "policy_document_sha256": "cd0ef39f0be865cdf108d6aca5c59168f4e3f1645c6a1d2b8ac5e4f92d0d6c94"
+  },
+  "proof_boundary": "Session-owned GES snapshot and transcript prefix plus the exact policy document/merged Git commit. This is not custody certification for unrelated private Limen sessions or the estate.",
+  "retained_artifact": ".cache/session-custody-456/remote.enc",
+  "local_scratch_history": "Original runtime scratch ciphertext/transcript-prefix copies and first preserved readback prefix disappeared without deletion by this session. Complete new ciphertext readback is present in the ignored project cache."
 }

@@ -63,7 +63,7 @@
       "head": "ec1faea650522be408842fabb941afebb9f1ba7c",
       "exit_code": 0,
       "evidence": "evidence/session-closeout-456-verification.json",
-      "sha256": "8d39444b85cf22282dd52d2b5270471ac83d3e05c0617ada6772eda2b450ac9d",
+      "sha256": "4d98ccfd10b7761c8c58b43bcc174aabdc73b427ab788071e981cfa9007db284",
       "command": "GES six-check batch and installed credential-wall check"
     },
     {
@@ -71,18 +71,18 @@
       "head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
       "exit_code": 0,
       "evidence": "evidence/session-closeout-456-verification.json",
-      "sha256": "8d39444b85cf22282dd52d2b5270471ac83d3e05c0617ada6772eda2b450ac9d",
+      "sha256": "4d98ccfd10b7761c8c58b43bcc174aabdc73b427ab788071e981cfa9007db284",
       "command": "scripts/verify-scoped.sh --base HEAD --total-timeout-seconds 600"
     }
   ],
   "custody": {
-    "verified": false,
+    "verified": true,
     "root_ids": [
       "ges",
       "policy"
     ],
     "evidence": "evidence/session-closeout-456-custody.json",
-    "sha256": "50150d82e463fc93d3908c788831e828cfceee657419adf8342b094fd9f4adc3",
+    "sha256": "d29d81d30357843fd6b6b37e6c8a41649f21289a0603117fafb3c1d1a786d5ad",
     "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
   },
   "checkout_disposition": "RETAIN",
@@ -92,23 +92,25 @@
     "https://github.com/4444J99/limen/issues/2821",
     "https://github.com/4444J99/limen/pull/2822"
   ],
-  "receipt_status": "HANDOFF_REQUIRES_REMOTE_RESTORATION",
+  "receipt_status": "CUSTODY_PROVEN_POLICY_SCOPE_RECONCILIATION_REQUIRED",
   "external_effects": [
     {
       "id": "restricted-ciphertext",
       "kind": "encrypted-upload-and-recovery",
-      "verified": false,
+      "verified": true,
       "evidence": "evidence/session-closeout-456-custody.json",
-      "sha256": "50150d82e463fc93d3908c788831e828cfceee657419adf8342b094fd9f4adc3",
+      "sha256": "d29d81d30357843fd6b6b37e6c8a41649f21289a0603117fafb3c1d1a786d5ad",
       "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
     },
     {
       "id": "policy-integration",
       "kind": "policy-pr-submission",
-      "verified": false,
+      "verified": true,
       "evidence": "evidence/session-closeout-456-verification.json",
-      "sha256": "8d39444b85cf22282dd52d2b5270471ac83d3e05c0617ada6772eda2b450ac9d",
+      "sha256": "4d98ccfd10b7761c8c58b43bcc174aabdc73b427ab788071e981cfa9007db284",
       "owner_url": "https://github.com/4444J99/limen/issues/2821"
     }
-  ]
+  ],
+  "scope_reconciliation_owner": "https://github.com/4444J99/limen/issues/2821",
+  "scope_reconciliation": "The former shared policy checkout moved to another main generation and contains unrelated changes/processes; no checkout reset, scope substitution or admission bypass is authorized by this receipt."
 }
