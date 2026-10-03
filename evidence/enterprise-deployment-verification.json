@@ -1,0 +1,46 @@
+{
+  "issue": 223,
+  "reviewed_at": "2026-10-03T05:11:48.007Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59528,
+    "claim_bearing_artifacts": 3021,
+    "tests": 324,
+    "test_seconds": 1.982,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "HA supplements backups and does not prove recovery; SSH Git access does not grant shell access.",
+    "Enterprise delegation/enforcement and README advice remain separate from adopted policy and actual configuration.",
+    "Upgrade include inspected; no infrastructure, SSH, policy or upgrade changes; no rights clearance or rollout."
+  ]
+}
