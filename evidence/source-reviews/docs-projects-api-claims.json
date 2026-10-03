@@ -1,0 +1,161 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T08:48:31.291Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PROJECTSAPI-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Pinned tutorial applies to FPT/GHEC/GHES and contrasts curl/CLI examples; its cloud api.github.com URLs are not demonstrated GHES endpoint adaptation. CLI include is navigation only; linked API/auth/webhook pages are not certified reviewed by reference.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Queries use read:project and mutations use project in classic-token examples; App installation permission models must not be equated with classic scopes. Linking repositoryId during createProjectV2 additionally requires repository Contents permission. No token creation, scope escalation or auth login executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "CLI variables use -F for typed number/Boolean/null and -f for strings. Placeholder substitution, escaping and target identity require separate implementation verification; sample scripts and response IDs are not receipts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Project numbers with organization/user owner resolve project node IDs. Listing examples return first 20 projects without cursor traversal; they cannot substantiate exhaustive estate inventory.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Field discovery returns first 20 fields; mutations need field ID plus single-select option ID or iteration ID. Common-field projection gives name/ID, not full option/iteration configuration. Sample __typename output is not requested by the shown common-field query.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Item query limits items to 20, field values to 8 and assignees to 10, returning selected text/date/single-select values and draft/issue/PR projections. Missing types and pagination prevent exhaustive assessment or backup claims.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Inaccessible project items can return REDACTED; absence of visible content is unknown permission coverage, never compliant emptiness or authority to reveal private repository content.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Adding existing issue/PR uses content node ID and returns project-item ID; repeated existing item addition returns its existing ID. This idempotency statement does not establish draft creation or arbitrary mutation idempotency.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Source requires separate addProjectV2ItemById and updateProjectV2ItemFieldValue calls; a later update failure can leave the addition present. No atomic transaction or rollback guarantee is supplied.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Draft creation takes title/body and returns project-item ID, not an underlying repository issue receipt. Project setting mutation changes title/readme/description and can change public visibility; tutorial is not approval for publication.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Custom text/number/date heading demonstrates only a text mutation. Single-select updates use option IDs and iteration updates allow active or completed iteration IDs. Unsupported shapes and stale IDs require separate validation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Assignees, labels, milestone and repository belong to underlying issues/PRs, not project item custom-field mutations. Linked assign/label/update/transfer mutations carry distinct repository write permissions and effects; no linked-page coverage or write approval inferred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-13",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "deleteProjectV2Item removes the selected project item; no underlying repository issue deletion or draft recovery guarantee is demonstrated. Creating a project requires owner node ID and name; sample lookup/creation is not actual provisioning.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROJECTSAPI-14",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects.md",
+      "content_sha256": "79a98d59a91d75a4c8fa298f8a54307e9f8397c09224b480ae00799dd41d28ef",
+      "start_line": 1,
+      "end_line": 833,
+      "statement": "Project webhook overview describes HTTP POST to configured endpoint and projects_v2_item reference, not demonstrated delivery, signature validation, retries or authorized receiver deployment. All source claims remain reference evidence, with no accepted policy, rights clearance or native behavior receipt.",
+      "accepted_policy": false
+    }
+  ]
+}
