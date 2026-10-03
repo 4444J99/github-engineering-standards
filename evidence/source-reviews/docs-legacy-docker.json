@@ -1,0 +1,418 @@
+[
+  {
+    "artifact_id": "3c5215aaa3c850c951c6dde0",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+    "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:36:39.487Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The page covers FPT/GHEC/GHES but cloud branches describe legacy docker.pkg.github.com replacement by ghcr.io, granular permissions/storage benefits and automatic image migration. These pinned descriptions are not observed completed migration or present target state. The other branch renders GHES legacy operations. Its source comment about releases without Container Registry is not an additional rendered version predicate; issue 265's lifecycle boundary remains unresolved. The release-stage include contains only a comment identifier, not a release stage. GHES site administrators may enable or disable supported package types; a documented operation is not proof the registry is enabled or permission to activate it. The legacy Docker registry does not support foreign layers, with Windows images as an example. Docker Engine v25 is stated incompatible with GHES Docker Registry, and Container Registry migration is recommended; do not generalize to all Docker/Windows/Container Registry support. Authentication includes require appropriate classic-PAT scopes while preserving explicit Actions GITHUB_TOKEN paths for associated packages and granted package read access. Scope or token type alone does not prove effective target access; referenced guides remain separately reviewed. The credential example recommends local token storage and Docker password-stdin. Subdomain isolation uses docker.HOSTNAME, otherwise HOSTNAME; USERNAME, host and token-file path are placeholders. This is not approval to create plaintext token files, disclose secrets or execute login; no credentials accessed. The upstream legacy image-name note says lowercase letters only. Multiple top-level images and any number of tags per repository are supported; greater-than-10GB images may degrade service and each layer is capped at 5GB. These are distinct limits, not a hard 10GB rejection or current live capacity measurement. The publish flow discovers image name/ID, tags a repository/owner/image/version path and builds only if not already built, using isolation-dependent host formats and explicit build context. No Dockerfile, image, build or namespace verified and no source commands executed. Publishing uses version-tag references, explicitly not IMAGE_NAME:SHA in this legacy flow. Keep this platform-specific source limitation separate from immutable supply-chain policy and do not silently substitute a different registry contract. The example monalisa/octocat repository, image ID, age, size and version are illustrative placeholders, not owned entities or execution receipts. Example build assumes Dockerfile in the current directory and subdomain isolation. Downloads use isolation-dependent Docker pull references and explicit owner/repository/image/tag placeholders; the note likewise requires version rather than SHA references. Installation instructions do not establish artifact safety, permission, rights or executed download. The repeated deprecation include preserves GHES future supersession wording; linked migration, viewing, deletion/restoration and external Docker guides remain outbound references, not entire guides reviewed by mention. Complete page read with previously fully inspected include/variable dependencies. No independent semantic or published assurance, adopted policy or native verification.",
+    "claim_mappings": [
+      {
+        "candidate_id": "c8673fbde76459adf4b9241c",
+        "text_sha256": "84e536997e95012ee9ace238533c5a7e0ec973c0d351016447b33f025c6c1093",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "8992e842985781bc950ffe2a",
+        "text_sha256": "c5349c0af278f76a04fe34b248a37e6c830701adf77420cc393d71a66f75a27d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "09568951e77c8f187edc4709",
+        "text_sha256": "d13f9e6625c4dbeac46345a490dbfdd410e3aefd22ab1587c8a1e81907e0e011",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "23984b3fec8a0a70b719d2c9",
+        "text_sha256": "2786241c513a1ba6cd617c6e731ca3214cb36809c82023a59a53e65fd4ccd31f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "e7ee517e1705d0430fe3b8fd",
+        "text_sha256": "6bd0c6f52205e6db2670728030833964b716daf188fdfe356261f556e4b621ee",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "e51a8e2c0d9d529c9f7fbe41",
+        "text_sha256": "d065c085c12ab718b9b38bfe99cfb129322036fe9d0bce0621a3e1336ad71965",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "a58191774503d5011a464da1",
+        "text_sha256": "402552814460e1898978607d7c905249552b04ffc7105afefe5274ef7deac6db",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "11e8413be9b226b7b1c92386",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "da4827144f20c892bafc3ff0",
+        "text_sha256": "982211aa3ae013586d8a85c08848da08337fe08eb9f73226c547695fb042c2c0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "bfff046ad91feb8a3d84b1b8",
+        "text_sha256": "4f7f2cfdbeab85deda9aa0d035d42da8383615ff87a9f3d51173faa160b9f6cd",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "a9dfaa1f4d71891eedc4e355",
+        "text_sha256": "e591693abf4c4c900a7c61269d586d006b082a7c71befd86366ce11da622f0e3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "7ac1a97bceaaafe4b5d8bdd3",
+        "text_sha256": "1af074cbaf9667ce1e70c31786710ac1cb0602d12b945c6e231399b1dd5b36cb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "bd1921bb12fa9f886ef5a594",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "31a04d6345b1213144054c36",
+        "text_sha256": "2628eed7df3bb06ca2f01651c4d5b2128c61c0fea12ba49615bb290b73f71aff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "a96a13075d06c1a3405c7cd1",
+        "text_sha256": "21057b61e13fec2831b9b4c8748a7407dc679fae0acae92f3ac80913f0a58ae1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "3d5d8990ffd68c271ef26da3",
+        "text_sha256": "b87b5bb1fdaff8fb8402c4587b9c7e4fda25ee2eef0aa23b30ba5a2154506154",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "54ebf71da2a07f8217aa97aa",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "423978be4690db0a9317ed62",
+        "text_sha256": "c8f4b617b4b29d19e08689f5c67c60bb1c1533b695504367350908aeced47adf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "263078bb53848b7ee906c728",
+        "text_sha256": "2c17a101b81dfafe18943d6d87bac0758e3dfd6ee06fd1c7ff50c0fbea77e4c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "d0c3334cc9a5bf575b5ff529",
+        "text_sha256": "aeeb4356dd630a1a0d0f06244468778168c1f7f749aa1f2c0867a08dc3517988",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "b4a0e0476e70b215e62d9ca4",
+        "text_sha256": "79dfb27f7234173d21c934d3d07ec1d10828dce68909f2b3f69c14bce8e1e6c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "d55d7cbea5fe3d72f5722add",
+        "text_sha256": "812c0ea7c6f5d4caf3438d353006dcfcd9251f3440096a558f746a636a43f47b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "48b4df851b01b54cab1b9ae3",
+        "text_sha256": "bb1d60b4d6386e37507c18350f3e25271ce6f6d0096aee069d7502d42abdb635",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "0a19ff425ea5ef3e2a608bb6",
+        "text_sha256": "b876533ad49af36727f0017ff9faee2d6e3a1fb7019491e1e97ca08e0e929c9b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "3c988ab4a119b2da6b3bce46",
+        "text_sha256": "83d338f0ce7726f4a1160682e913617607a992143b55a49de6200c5a7367878a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "49c0170c7d21b73bc34dae7b",
+        "text_sha256": "dcb6ac9fee190acac736d4e7666e635e2d05a1bd7295836dfc388bb6effe14d3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "2469390601d652e14926f9ff",
+        "text_sha256": "bb1d60b4d6386e37507c18350f3e25271ce6f6d0096aee069d7502d42abdb635",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "a967d335ed74d55085284c83",
+        "text_sha256": "13055ecece074d7caa5161177a91efa1ad9dcb2119e74f5ad9842925f4925a12",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "101a925f8744da1cfdbc391e",
+        "text_sha256": "83d338f0ce7726f4a1160682e913617607a992143b55a49de6200c5a7367878a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "171d5f97e22b03ef66b705e7",
+        "text_sha256": "df54574e457ac6c5a85b06cf1619eefcccd8fd79c67af3502f854d5602dd9bc2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "de9b6888b20c66717e15a39b",
+        "text_sha256": "68ac234f49ac867693e52e5f7f83fbdb7eab11af1e075d84efd7ec8e9f9c31d3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "8eb926596040f2cf72a0c737",
+        "text_sha256": "09aac689db302444f0ac3084cd2e58889cf7cda6311104dd6c0d5b0610d8ae02",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "8b24c6eb8348b508d2dda1ff",
+        "text_sha256": "5929b61c10e2e3fce5022b00c3b0a3933a65e173dd5d9b3b0b46e905e97ee063",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "12b2be1bd5d0f2a1ff9ea3c8",
+        "text_sha256": "74c43a8036afa3c6e1629a193ff5466577b2377d03ceaf9ae8c12a47fd6a5082",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "a98b61a29c1489c48993f0c7",
+        "text_sha256": "9ceead0bc71d6529048a99d9c017d976a90796a1b6197866e6696125c39ef722",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "6091de8634304a5ef1d2ddfe",
+        "text_sha256": "de0b25a22cc18cb5c58d5403c3499377002752e85ffb6c00cbf2e5e9e0904d23",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "f531a315c571cc44a3d4e86e",
+        "text_sha256": "eab8e150fa357c952c6c27b805578de5bc5a0798c6cc42acaa6879b361ef47f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "524b2ebddb38f8e78dd41f50",
+        "text_sha256": "cedda44f984447604562d596b46612fad47b5519378400db944ebfd9765a54f9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "4d4d1bdd7c5e468d3eac6e7c",
+        "text_sha256": "02b9d847d0388df12dbbe6af10d7a14c101b8e87822831b752390f40f3934416",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "e11c95cffd9236210766cd97",
+        "text_sha256": "4a7deda6f14b115006c1c85c44436362cf6099c6d1ef427fa28d71ade62b4b8e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "7a3b3156130e3927261d5380",
+        "text_sha256": "cfc2b322582db5ae5dd0b3741c02e5a3228117d97c1147d863fb96462b214e98",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "df4242ba415218ba51175f1a",
+        "text_sha256": "f8447cee8f9893cc3469b85c8b73bf3ebc4aa5afec539d12ef6d184b336172cf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "fed84976d2cf06d0e20c2459",
+        "text_sha256": "dbb1f5cbff8c109f242dd80d2d7651b1deee3ad55e17bf179df56deb8120ecb0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "4b4e81009f417c28923ccd1d",
+        "text_sha256": "02b9d847d0388df12dbbe6af10d7a14c101b8e87822831b752390f40f3934416",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "9d4ff7ac49724d6f959773fe",
+        "text_sha256": "8ec62d8fb859215f4302e913b1a629d9dee5d9510ea7f8c86802769f7d20839b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "7249ca38b5f60b155b39719d",
+        "text_sha256": "cfc2b322582db5ae5dd0b3741c02e5a3228117d97c1147d863fb96462b214e98",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "d757fd73cf39aefbe3bcd812",
+        "text_sha256": "a330d4b22f5977d1516207cc6b708c1fa34650966eb87fe8fa60319cdb2efffe",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "8744c5c3848cf6e3e2c7a2c6",
+        "text_sha256": "48e20b56d3d36f426918fc014380d33a5884a3dd6e941310781715abaa9d50af",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "3c9cb85264fbf3bd9cbcbe9b",
+        "text_sha256": "02b9d847d0388df12dbbe6af10d7a14c101b8e87822831b752390f40f3934416",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "c414d44d316f52d17d6b8617",
+        "text_sha256": "a7b66e3d2e28f15da2c8ae14c290f74e5d2f251ec0f675da7868a62b8c95db27",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "c12cb6d9378993c87ed2245a",
+        "text_sha256": "cfc2b322582db5ae5dd0b3741c02e5a3228117d97c1147d863fb96462b214e98",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "9219d5538aa6f0ec078905a9",
+        "text_sha256": "a58d6e6a06c1425597d8526865e93889327a13a59057fc5331332d705392da0d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "6f097e95afac20c603626d07",
+        "text_sha256": "2e0f5cf5ee87ef753bce80b20ef1a820e0c0d044e1bcf14d0db2e8a6c16aacc5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "1a96b6f21bbde299057c6d3e",
+        "text_sha256": "b0840bb9d5f558b382421e5d2b0290fcb19f5a5e8cdf713a1dc721bc000dd9ff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "aefda67592acbdf2e45be222",
+        "text_sha256": "e742f09915a1f8313ff1eb117768d156f29700e5066d71f5d96afd18e1642187",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "c271ce28cc2bf6db00c004df",
+        "text_sha256": "132e07e2099aa0d5509b19b8f6bac3415467e49e33e56bf475458b8954ddec2c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "9517e457b39b9964a6456b46",
+        "text_sha256": "95489a55cfb7366997205d8b40306ad4f387726a438dccf60484ef87b162e3df",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "26518d1b3ef2a8609d78a61f",
+        "text_sha256": "2efcab30dcb4dce4f75df83b299dbaff6d18f3884b9cc1ae737518394fbf54ae",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "033908029c64ff227e4d3e45",
+        "text_sha256": "09aac689db302444f0ac3084cd2e58889cf7cda6311104dd6c0d5b0610d8ae02",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "eba9a2bc0f0b22f19d0e6726",
+        "text_sha256": "059572ea78aa49999555779133ba35190ecbf50aa6c95287cacddc64bc3d7f79",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "4f45cc8de4e2d760320d9a1c",
+        "text_sha256": "812c0ea7c6f5d4caf3438d353006dcfcd9251f3440096a558f746a636a43f47b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "c9514e5d14e02b6fbbc006f4",
+        "text_sha256": "1c6a54b9302df85a2638ba8be259e0dc3f429fcc1b30779a45a3ce07c0c90392",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "0558558a8b3340ea22c4ed91",
+        "text_sha256": "dcb6ac9fee190acac736d4e7666e635e2d05a1bd7295836dfc388bb6effe14d3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "b8c305eac46294f61789a6c6",
+        "text_sha256": "e8e02c96b55dd04e704f2c52cd3063ac73b1ddac5e5be946859994d46a43b6b3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "408825d583cda1b626a090e9",
+        "text_sha256": "7054fc5e012b0477b5208842e8bb89172ced50eaded64eb2c5ce9d8a59b5a741",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "1d76bcc622a45a744f0647ec",
+        "text_sha256": "8d96adafeec9e83b5d448044327dbfc0e69ef5791d1747000b41e37a3ffdf52f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      },
+      {
+        "candidate_id": "f5abe62fd15367d73e9fe3b4",
+        "text_sha256": "249875841d6d1d24fc0a6dd862c17c4b0a15d85c35b12ae5cf748c422df65bfc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-LEGACYDOCKER-1 through -12; not accepted policy, credentials or execution evidence."
+      }
+    ]
+  }
+]
