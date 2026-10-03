@@ -1,0 +1,48 @@
+{
+  "issue": 248,
+  "reviewed_at": "2026-10-03T05:58:39.182Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59689,
+    "claim_bearing_artifacts": 3169,
+    "tests": 324,
+    "test_seconds": 1.982,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No invitation/app/secret/auth mutation, accepted policy or rights clearance.",
+    "Outside-collaborator app request permission is not approval/install/data access.",
+    "Failed/retry/cancel textual flow not universal expired/deleted invitation semantics; caption not image inspection.",
+    "Repository-access review precedes team addition; placeholders not identity or attestation.",
+    "Secret admin meaning unspecified; secure-2FA dual selection and access-impact confirmation not safe native enforcement proof."
+  ]
+}
