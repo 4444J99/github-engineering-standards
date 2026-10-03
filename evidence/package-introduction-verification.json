@@ -1,0 +1,47 @@
+{
+  "issue": 277,
+  "reviewed_at": "2026-10-03T06:51:35.912Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 12,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59882,
+    "claim_bearing_artifacts": 3268,
+    "tests": 324,
+    "test_seconds": 2.001,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Linked artifacts stores metadata, not package files or independently assured compliance.",
+    "Pinned quota/payment/budget description not live pricing or cost authority.",
+    "GHEC data-residency Maven/Gradle restriction differs from generic GHEC capabilities.",
+    "No billing, credentials, code execution, messages, accepted policy, independent assurance, rights clearance or native rollout."
+  ]
+}
