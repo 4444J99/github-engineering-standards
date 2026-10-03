@@ -1,0 +1,95 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:22:47.418Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/port-forwarding-sharing.md",
+      "content_sha256": "46b094a055104cf6f52215a51251dca06b34ac4cb873c46af6fc9b3b30256e69",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Organization-private port sharing requires Team or Enterprise Cloud in this pinned fragment. Organization members possessing the URL can view that shared application; public sharing lets anyone with URL and port view without authentication. Organization policy can restrict options. This is application-port access, not shared editor ownership, secure application authorization or approval for public exposure; the restriction procedure remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/port-visibility-settings.md",
+      "content_sha256": "f10b294e7216b3c20d72364325d9fad5995dd6f879e4f1d4f31924ba8ab46cb6",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Forwarded-port visibility has private, organization and public modes; private to the user is the stated initial default, organization means repository-owning organization members, and public means anyone knowing URL/port. Preserve plan/policy qualifiers in DOCS-CODESPACESPREBUILDAUTH-001 rather than assuming every mode is available. Defaults are not observed settings.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/prebuilds-billing-for-forks.md",
+      "content_sha256": "47402464782982b6c13015346b7d50092922570ac9b97e7fc4c8e4f7d261afe1",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Fork prebuild storage uses the personal included monthly storage while available, then bills the personal account when exhausted if billing is set up—even if the parent organization pays for the fork's actual codespaces. Runtime payer and prebuild-storage payer must therefore be tracked separately; no costs or billing were authorized or inspected.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/prebuilds-crossreference.md",
+      "content_sha256": "ded8862008450d06b3e11b083fd5f6e3d09b361093a4d3b4eda882cc667f3b28",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Repository administrators can enable prebuilds to accelerate creation. Capability and administrator role do not authorize activation or prove a prebuild exists; the linked explanation remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/prebuilds-definition.md",
+      "content_sha256": "236b2da2bc5b5a153ea57cd5ac4e93d6fb841ba1c39c5c0bc93290ce91d358e0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "A prebuild assembles components for a particular repository, branch and devcontainer configuration combination and can speed creation, especially for complex/large repositories. Do not treat it as one configuration-independent cache or measured performance/security evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/prebuilds-permission-authorization.md",
+      "content_sha256": "d9b7e9f1b8afd0d232d49ad94606b7a5ab8b06762260d1d4afd8f6d391ed97f3",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "Cross-repository permissions declared in configuration trigger a prebuild authorization page whose requested permissions can be expanded for inspection. Authorize and continue grants for prebuild creation; continuing without consent may yield malfunctioning resulting codespaces rather than a guaranteed failure. Users creating codespaces from that prebuild must also grant permissions separately. Admin prebuild consent is not blanket user consent or permission for this agent; linked access details and screenshot pixels remain separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/publishing-template-codespaces.md",
+      "content_sha256": "c8189d8baff19d6a2a3754dc7628ea308504e2d33dbdc54630e523d182d400e3",
+      "start_line": 1,
+      "end_line": 26,
+      "statement": "The template publication procedure stages selected/all changes, commits, publishes a branch, chooses a repository name and explicitly selects private or public visibility. Blank-template Git initialization changes the path through the procedure. The new repository belongs to the codespace-creating account. No procedure grants public publication, indiscriminate staging or rights to distribute source; source-control include, screenshots and actual hosted custody remain separate. No repository was published.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREBUILDAUTH-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/rebuild-command.md",
+      "content_sha256": "147fd5e559874f34396988e471e908568475dda8c65ab34b983e26204dfc1308",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The rebuild command-palette procedure invokes Rebuild Container and includes the separately reviewed full-rebuild tip. This resolves a textual reference, not actual rebuild execution, trusted setup dependencies, successful runtime changes or composed screenshot/rendering assurance.",
+      "accepted_policy": false
+    }
+  ]
+}
