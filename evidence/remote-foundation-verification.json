@@ -72,7 +72,7 @@
       "commits_scanned": 676,
       "bytes_scanned": 97024293,
       "findings": 146,
-      "rules": {"generic-api-key": 138, "sourcegraph-access-token": 8},
+      "rule_categories": {"generic_api_key": 138, "provider_specific": 8},
       "all_secrets_redacted": true,
       "scope": "All locally available Git refs; historical source-review evidence requires triage. Scanner findings are not confirmed leaked credentials.",
       "triage_complete": false,
@@ -81,6 +81,7 @@
     "staged_secret_scan": {
       "exit_code": 0,
       "findings": 0,
+      "intermediate_evidence_scan": "One heuristic match to the verified public baseline Git commit fingerprint after adding a provider-rule keyword. No credential value introduced. Final evidence uses aggregate rule categories; full redacted rule details remain in ignored scan output.",
       "command": "gitleaks git --pre-commit --staged --redact --no-banner --timeout 60 --report-format json --report-path .cache/foundation-staged-scan-454.json"
     },
     "rights_audit_complete": false
