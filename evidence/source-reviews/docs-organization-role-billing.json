@@ -1,0 +1,422 @@
+[
+  {
+    "artifact_id": "be4b7b463de8f0456b02cc80",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/additional-permissions.md",
+    "content_sha256": "8b8d63d9b41dfbecad4775b8acaa949615cd3639f2cb4356594f4ed8f585ab87",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T05:34:40.880Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full fragment inspected, including conditions and links. The additional-permissions catalog separately lists discussion-category creation, editing and deletion, answer marking/unmarking, comment hiding/unhiding, and issue-to-discussion conversion. These are selectable capabilities, not existing grants or directions to mutate discussions; the linked discussion documentation is not reviewed by reference. For issues and pull requests, user assignment/removal and label addition/removal are separately listed permissions; neither implies broader administration. Issue permissions distinguish closing, reopening, deletion and duplicate marking; deletion is not equivalent to closure and none is execution authority. Merge-queue permissions distinguish requesting an individual merge from moving ahead in the queue. Neither proves bypass of checks or a verified queue operation; the linked guide remains separate review work. Pull-request closure, reopening and review-request permissions are listed independently; this is not evidence of approval, merge permission or completed review. Repository capabilities cover milestones; wiki, projects, merge and Pages settings; webhooks; deploy keys; metadata; social preview; protected-tag creation/deletion; branch-protection bypass; and repository-rule editing. Interaction-limit configuration is only in the GHEC branch. Protected-branch commit pushing additionally requires a write base role and retains branch-protection rules, so it is distinct from the separately listed bypass capability. This catalog establishes neither actual permission assignment nor native enforcement. Security permissions distinguish reading, dismissing/reopening and deleting code-scanning alerts; reading and dismissing/reopening Dependabot alerts; and reading, dismissing/reopening or assigning secret-scanning alerts. These operations are distinct from fixing findings or proving scanner health. Only the GHEC conditional branch lists Actions general-settings, runner, secret, variable and environment management, including environment secrets and variables. This does not prove availability or assignment outside that branch, nor authorize secret access or writes.",
+    "claim_mappings": [
+      {
+        "candidate_id": "9dd671057907a3a8ae61336f",
+        "text_sha256": "19a05a6930bbd3f10b01c7b96950e9fdc4763b9ffe16c9372af893adcfa5d0da",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-1; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "bd6380157d5f221c4dfe1e81",
+        "text_sha256": "024222b4e77881aeae8c702d88467460503405c87cc533f5a308fe2a3b930494",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-1; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "55a103d90b0291638aa35586",
+        "text_sha256": "933381eb0e13f8dbed081d8ab8f7d20d6f3a4b87ca0e4614cb0d8dbfdf2e302d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-1; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "6a3839aeec6b9132d02c9136",
+        "text_sha256": "4eb3cdffd45e3ca37aa887534c1a189ff3140028cede9c5d7e122433a554fa8e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-1; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "a08d4b495994e28ab0d69626",
+        "text_sha256": "90620ef4acd9c99347515068133da111a8d8271a9f71df3ad2ed7ea7ce374052",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-1; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "03f2123edfe0539411b71dd1",
+        "text_sha256": "7fb7cd533828b46ea1ce77534863a92036ba1b4dd889f111c7b4f504fd05cded",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-1; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "4b3dc6af37d173f34e3cb9fe",
+        "text_sha256": "edc75f59104d7599fcc03eb395494f24f2c24e5e2cb35a332aaef79ae5e90755",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-1; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "99cbea4cc6a7596f46df9854",
+        "text_sha256": "fa580859ab8b4455be446561a36d0a203c1de52889f3fbab69d5b8bdd03a5a41",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-2; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "6eb5f4e5f4281fca228f95d0",
+        "text_sha256": "64de79b38fe6a6376b4355d0b31a4a8dfd99d702b170e680ada579d25d9969ad",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-2; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "e34a83d3417dc9629ed3b9b2",
+        "text_sha256": "703e413af7f9512ad0c8ea13cc3f799a96f010b7363209e58a438b6756c7b880",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-3; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "ff18d7bd637164deb3aaf60d",
+        "text_sha256": "cb83f213c22726623cd63bbc94a5dd651914d6e5eaa99d362a3fd1b2c365910b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-3; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "738f696ec8ff354dd8e4ffd8",
+        "text_sha256": "37408d2a1effe3b2a802657adcf743f2abd722cfbf70716c50221036a6a0202c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-3; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "12aa75f7382695378effbe7f",
+        "text_sha256": "9a9ddffa9a573de9bde865d9666107814b7451b7b99a73fcf2a711caa9047b41",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-3; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "167b9811c06f2ee8bccf5226",
+        "text_sha256": "03d27088f64e509a632b43ffb3815c35277b07d1910f4526f5f65a090514153c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-4; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "d73ff4f443cd668e944387a8",
+        "text_sha256": "163626e685ca80614963405e416f276ede392a5da9b35e3c624c0c3e12b82d61",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-4; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "70650a8823cbff287f6fee55",
+        "text_sha256": "448ee989f8bb70203c2d3194908b8b9acb8d09b7d93e7e1a47fc390faf958c3b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-4; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "10c9a27ca2e0279fcf20fa28",
+        "text_sha256": "aef3fa1a1563d1b18145fe00ad0269da1d814580805fc80a66fb2af8ad23f69d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-5; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "ff45c6d0a467ff0745bf5f5d",
+        "text_sha256": "10b7235e2c52603d15b43b5f6a71c195147d4d6d7aa6bf15515a1e606c08b3d3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-5; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "cb6a88fc44e61600eab2705a",
+        "text_sha256": "b88c6863a3daa137555e0cb0cbd055274717f1061fd1b2d028ccc327b444aeb1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-5; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "b8ff07fe981d7fadf2d6853f",
+        "text_sha256": "393f55b6abacf1dfae942b64f62cf298e427d123c7cd984a438478364d20a5ac",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "f0f5d9095515d36b1454dbd4",
+        "text_sha256": "12c7ee482fe573efa84a330691e3889ef754bad5008b50e023a53f58d3896861",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "1387c9297adcc66e3860a9a0",
+        "text_sha256": "49ba27d7ddfb9ea0ceab9db4f7a2f05644471491531c24388e8e0f544f1c9281",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "863c79c6ef5b4d24bce4186e",
+        "text_sha256": "5fb3efac7b4778a32618f2e316740b9a460d30509bbc6c27d97ab95cbc2c9881",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "e83082d534beeb0131a81227",
+        "text_sha256": "dd761c17f136cb1b588c9386b5374c69255e561e69ce8a0b75bf9e79e59c97dd",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "7a8afcb9008febe2bb07b47b",
+        "text_sha256": "e63a4647def451a9dacb577605c960ebff0c1a2e02e3259657102e9e58335e3a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "62dbe2b74d3fc2ae1cdd93f4",
+        "text_sha256": "0ab6e20c2bf0dc77126086b939645d8e0b1d8fb04a9faf74abc28bf13ac86cd3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "461729bd2c8c726a5b7bdbde",
+        "text_sha256": "f74e4b763fcdaaff9a856e5495409f8921fbf26d5d308717052d3c43d4fb2d34",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "ef88129191d386789a5118fa",
+        "text_sha256": "64f0dfe743782b9d7bb6b240de530a4d9134488d0450d61ef077c51d60398e12",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "5561e10aea73ca7435b98043",
+        "text_sha256": "fa2632f51b0f162236446b378ac0762895c7e7ef92f91ed4a7c6e45cf401599b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "8ac666a2e692568011215f2c",
+        "text_sha256": "2ea73af8dc0c0b0315559c890b2e66ce427b8ab8195359fb56499ca0fc144466",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "ac9a0a94ebd79084220175db",
+        "text_sha256": "2dcea7936e3472bac634899960194649f7d338dd228853fb8aa2f8175869dd6e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "a79bee7ad1eebff14d42974c",
+        "text_sha256": "4741dab63cfdc8548ecdd04c93ce7275b0699c22d8187a8f2624a7fcc38abf35",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "ef36369a28a2544e91e8d291",
+        "text_sha256": "9133fb9730aa152c3c8881c3366c4347df82f2e298fedee3d1ea3b98af1ada76",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "b58dae07f020913e93803359",
+        "text_sha256": "cbab8fa19a9320a7cf9d038d281143bb066400b44f69791c5210868032eff4e5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "21e04e816c20cb06b69a8f80",
+        "text_sha256": "70ff4f1c02cdb9b495b84598a3f120e1e1e345673405909442ea3bfc9153905a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "b23a2d39fa552d881092450f",
+        "text_sha256": "800b0b1c0145d9559f5c41afc50716b27379c52c5d8dfa11dcedce297ec598b4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-6; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "0ab3d17b3573d58aad8743a3",
+        "text_sha256": "46748887715e40ebe2f832e8b2b9f31846879466e1272802bb34f5f067584d09",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-7; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "0789a9ed16c8e8fdffdfdff0",
+        "text_sha256": "d9f0bf55994fbf0a3b73493ca715c78efff816b36d1499aeb8e92c400d7ac087",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-7; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "19def95731bd4005e98f045f",
+        "text_sha256": "3b1b41c81aa8643843b597f234dd56e9adc36aaef832d087e529fef179660d94",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-7; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "850d6bf9be1c5bbe458a781d",
+        "text_sha256": "0aeb73dc88114488446a1245e37a471af45067ee1a3975ea2b9be9531d0fe1c4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-7; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "8392474535061de266c982d5",
+        "text_sha256": "c03e39714d30c40adbd1e98fba3fd0195f0101275aeabace5620ae310ff84a1c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-7; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "02ecbf7ea5f082876161e369",
+        "text_sha256": "641a8437959607daa7313d2244447a9ff52bc410af26329893cf9dc9f8e7668d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-7; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "acbadc0905bc95e195e5b9ad",
+        "text_sha256": "246044ee87eeb2bb37d72c155bd61c5c8342cb72b1050cc232c500b06bec24e4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-7; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "5dc2edb180e55d27b523452f",
+        "text_sha256": "71d1e8fa8047a125dce44b39bcb409d8dc2069e111ee1b37625a98f18148c285",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-8; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "0c5bfbabc3e7fa9d9e7b06ad",
+        "text_sha256": "904bdc8d925e1a17e90e760c8504b00f20e77c0521afc3e3fc10006fe46698ac",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-8; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "52729ba1fac2779406e4cf2a",
+        "text_sha256": "d420353623441468a8babe1cac73ef7f647c926eb0a9bb578b29bae2b596a12c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-8; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "139c8ffd029e31f0ce5b6576",
+        "text_sha256": "fe434259f0a547a233cd9435d4b2b52623797f04dc4f7b37f21c56cced38c9dc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-8; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "3849f8aafbe0d487b44af478",
+        "text_sha256": "f5ebe370e7f68a29edb1ffde9dad6d2e12b452864501a618c6cbf4e69688a593",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-8; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "6594ab0635fd455679f66e01",
+        "text_sha256": "3674d0a73ad462f25cd3e5afadf7f10413e67078d7f4bd3951f2e20f8229b340",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-8; reference only, not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "740978f57390dbb3debef4ca",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/api-insights-learn-about.md",
+    "content_sha256": "226e7b83ac1171ceb316618840ad99c605c28258b2bfecaa2aad2e7dfba83cc6",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T05:34:40.880Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full fragment inspected, including conditions and links. The API-insights pointer refers to organization API activity and requests exceeding primary rate limits only when api-insights is enabled; the pinned feature file defines GHEC applicability. It is not observed request data, a rate-limit threshold, or linked-guide review.",
+    "claim_mappings": [
+      {
+        "candidate_id": "f8c2d6c6e3f32bc14caaee39",
+        "text_sha256": "3e11c71ec2d0e59692d5011128362505176182853a1ca14d70057300d14eeddf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-9; reference only, not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "fc1a61ad9d2ff3f8a6e1487a",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/app-managers-settings-sidebar.md",
+    "content_sha256": "055deb25754ce2b6de8245d44ffc1aadc2c2b6c51b3c373fb058254d8981d4a2",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T05:34:40.880Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full fragment inspected, including conditions and links. The left-sidebar App managers entry is navigation only, not an app-manager inventory, assigned role, or management permission.",
+    "claim_mappings": [
+      {
+        "candidate_id": "6a8b14eb68a020198d813977",
+        "text_sha256": "a37046a78b94a6eaed8a538fb8349fedcd2984fc8175a3dc2ba8fb92c3ecc1b0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-10; reference only, not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "e5365ae943a6ff80e0d03c8e",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/billing-settings.md",
+    "content_sha256": "e82cf329d6eea004471b8ecceb6d70e4875208e9ed06ca4290c9daadc5c65a04",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T05:34:40.880Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full fragment inspected, including conditions and links. The included chain opens personal Settings, organization selection, then organization Settings, with a More-menu fallback. Billing and licensing navigation is stated for organization owners or billing managers. All three included fragments were inspected, but no image, current role, account financial data, or successful access was verified.",
+    "claim_mappings": [
+      {
+        "candidate_id": "dd850302f28963714de3e7a6",
+        "text_sha256": "45c6769b46b818a42879dbae66212fd59cb37fd90142c52661225093beca5ddf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-11; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "c7833d8e77737cd25ce00020",
+        "text_sha256": "b3dc87df59dc333149e5d9df219d7cf6146754df83a34e960d332addd5963782",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-11; reference only, not adopted policy."
+      },
+      {
+        "candidate_id": "30f0110eb54b544de9d99ee8",
+        "text_sha256": "74919f98de0f52fc1a6cda61e37ba305e0c451515dc8180fdbc80c3010880235",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-11; reference only, not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "d8bb9dc4ad3d8a0fd71ee960",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/billing_plans.md",
+    "content_sha256": "60af68e67810f924e8170ede4e527c4abe995b7fc9d1521846e01b81e83a8263",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T05:34:40.880Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full fragment inspected, including conditions and links. The Billing and licensing entry under Access is navigation, not a billing-plan choice, entitlement, cost acceptance, or rights clearance.",
+    "claim_mappings": [
+      {
+        "candidate_id": "34eef5bf17258bf07001d018",
+        "text_sha256": "aee4f9201d89bccce3c5d18e988bbf08317445cc350a0e374c496019f4a23a04",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-12; reference only, not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "bc2c2ebb8678fd330f068a6a",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/organizations/billing_plans_or_licensing.md",
+    "content_sha256": "fbbe51395cf6f3749f97d9298b37486fcd6a30d9e1dc0e0ee2fa187c2d628b0d",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T05:34:40.880Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full fragment inspected, including conditions and links. The Access sidebar route continues from Billing and licensing to Licensing. This is not an accepted license, allocated seat, distribution permission, or verified entitlement.",
+    "claim_mappings": [
+      {
+        "candidate_id": "09e7e823863b98407d1ffcf3",
+        "text_sha256": "4c1f541fdafc1b534d22511036754ebe596bcf5450c97842f8c9ee49af517a42",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ORGROLEBILLING-13; reference only, not adopted policy."
+      }
+    ]
+  }
+]
