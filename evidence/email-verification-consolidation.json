@@ -1,0 +1,88 @@
+{
+  "schema_version": "ges.email-verification-consolidation.v1",
+  "issue": 418,
+  "reviewed_at": "2026-10-03T11:38:23.613Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed email and username claims only; not full corpus reconciliation.",
+  "rows": [
+    {
+      "id": "EMAIL-LINKAGE-VERIFICATION",
+      "claims": [
+        "DOCS-ACCOUNTMANAGEMENT-6",
+        "DOCS-EMAILIDENTITY-6",
+        "DOCS-EMAILTROUBLE-6"
+      ],
+      "decision": "PROPOSED_SEPARATE_STATE_WITH_UNRESOLVED_SCOPE",
+      "requirement": "Record email linkage separately from exclusive verified association, account type and IdP identity. Shared unverified linkage is documented, but generic uniqueness wording remains unresolved for exact product/account combinations.",
+      "negative_test": "An unverified re-added address cannot certify verified ownership; uniqueness prose cannot alone disprove documented shared linkage."
+    },
+    {
+      "id": "EMAIL-OPERATION-CAPABILITY",
+      "claims": [
+        "DOCS-EMAILIDENTITY-3",
+        "DOCS-EMAILREF-3",
+        "DOCS-EMAILREF-4",
+        "DOCS-EMAILREF-5",
+        "DOCS-EMAILREF-6"
+      ],
+      "decision": "UNRESOLVED_PRODUCT_ACCOUNT_OPERATION_MATRIX",
+      "requirement": "Use exact operation, product/version, account cohort and observed verification state; preserve explicit unavailable operations alongside broad most-actions prose. Independently verify managed-user exceptions and do not derive a universal pass from successful IdP login.",
+      "negative_test": "IdP login or account existence cannot prove PAT generation, OAuth authorization, invitation acceptance or Actions capability."
+    },
+    {
+      "id": "EMAIL-VERIFICATION-RECEIPT",
+      "claims": [
+        "DOCS-EMAILVERIFY-1",
+        "DOCS-EMAILVERIFY-2",
+        "DOCS-EMAILVERIFY-3",
+        "DOCS-EMAILTROUBLE-4",
+        "DOCS-EMAILTROUBLE-5"
+      ],
+      "decision": "PROPOSED_FRESH_IDENTITY_BOUND_EVIDENCE",
+      "requirement": "Distinguish resend request, actual delivery, correct account session, unexpired link and confirmed target address state; redact links/tokens and bind evidence to stable account identity. FPT/GHEC procedure does not provide a GHES implementation.",
+      "negative_test": "A sent-mail record, source screenshot, wrong-account session or expired 24-hour link cannot pass verification."
+    },
+    {
+      "id": "EMAIL-RESTRICTED-RECOVERY",
+      "claims": [
+        "DOCS-EMAILREF-1",
+        "DOCS-EMAILTROUBLE-2",
+        "DOCS-EMAILTROUBLE-3"
+      ],
+      "decision": "PROPOSED_APPROVED_RECOVERY_AND_EXTERNAL_ACCEPTANCE",
+      "requirement": "For the cloud restriction scenario require approved address change/removal, valid nondisposable address verification and separate support review outcome. Preserve recovery impact and custody before mutation; noreply is not a valid-account-email substitute.",
+      "negative_test": "Changing primary address cannot prove restriction lifted or support accepted; noreply cannot waive account email requirements."
+    },
+    {
+      "id": "EMAIL-DOMAIN-DELIVERY",
+      "claims": [
+        "DOCS-EMAILREF-2",
+        "DOCS-EMAILREF-4",
+        "DOCS-EMAILIDENTITY-4"
+      ],
+      "decision": "PROPOSED_SCOPED_DELIVERY_VERIFICATION",
+      "requirement": "Bind organization approved-domain restriction, actual verified recipient address, placeholder handling and observed delivery separately. Delivery evidence is not policy enforcement or rights clearance.",
+      "negative_test": "Verified address outside the approved domain or placeholder API identity cannot establish organization email delivery."
+    },
+    {
+      "id": "EMAIL-NOREPLY-HISTORY",
+      "claims": [
+        "DOCS-EMAILREF-7",
+        "DOCS-EMAILREF-8",
+        "DOCS-USERNAMEREF-7",
+        "DOCS-USERNAMEREF-8"
+      ],
+      "decision": "PROPOSED_HISTORICAL_ATTRIBUTION_AND_SIGNATURE_SPLIT",
+      "requirement": "Track creation/privacy timing and actual noreply format, historical attribution, current commit settings and signature status independently. Boundary dates and unelaborated combinations remain unknown until verified.",
+      "negative_test": "Numeric-ID attribution retention cannot certify retained Verified status; current privacy toggle cannot rewrite old commits."
+    }
+  ],
+  "limitations": [
+    "Negative-test entries are specifications, not implemented or executed tests.",
+    "No account mutation, credential changes, legal clearance or native activation.",
+    "Claim identity verification is not independent semantic equivalence or omission certification."
+  ]
+}
