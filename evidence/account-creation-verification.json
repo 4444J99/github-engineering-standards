@@ -1,0 +1,85 @@
+{
+  "issue": 438,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "scope": "Complete pinned personal-account creation source and reusable dependency inspection",
+  "reference_claims": 61224,
+  "claim_bearing_artifacts": 3472,
+  "receipt_coverage": {
+    "expected": 9,
+    "receipts": {
+      "content/account-and-profile/how-tos/account-management/converting-a-user-into-an-organization.md": {
+        "receipt": "evidence/source-reviews/docs-account-conversion-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/unlinking-your-email-address-from-a-locked-account.md": {
+        "receipt": "evidence/source-reviews/docs-locked-email-unlinking.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/deleting-your-personal-account.md": {
+        "receipt": "evidence/source-reviews/docs-account-deletion-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md": {
+        "receipt": "evidence/source-reviews/docs-multiple-accounts-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/creating-an-account-on-github.md": {
+        "receipt": "evidence/source-reviews/docs-account-creation-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/moving-your-work-to-an-organization.md": {
+        "receipt": "evidence/source-reviews/docs-organization-migration-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/index.md": {
+        "receipt": "evidence/source-reviews/docs-account-management-index.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/merging-multiple-personal-accounts.md": {
+        "receipt": "evidence/source-reviews/docs-account-merge-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      },
+      "content/account-and-profile/how-tos/account-management/changing-your-username.md": {
+        "receipt": "evidence/source-reviews/docs-username-change-procedure.json",
+        "disposition": "REFERENCE_ONLY"
+      }
+    },
+    "missing": []
+  },
+  "coverage_caveat": "Individual receipt presence, not independent semantic omission or published-page assurance. Dependency inspection is not a separate artifact receipt.",
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.98
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}
