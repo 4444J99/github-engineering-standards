@@ -1,0 +1,47 @@
+{
+  "issue": 261,
+  "reviewed_at": "2026-10-03T06:25:12.343Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59769,
+    "claim_bearing_artifacts": 3245,
+    "tests": 324,
+    "test_seconds": 1.98,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Classic-PAT note qualified by explicit workflow GITHUB_TOKEN paths reviewed in issue 255.",
+    "Pinned billing description supplies no numeric allowances, live prices or cost authority.",
+    "GHES clustering limit and navigation fragments are not observed topology, recovery or access receipts.",
+    "No settings, credentials or budgets changed; no policy adoption, independent assurance, rights clearance or native rollout."
+  ]
+}
