@@ -45,7 +45,7 @@
     {
       "id": "policy",
       "kind": "git",
-      "path_sha256": "0665800866c86d3ce7d8f083c8a8fbc983ff389e6dc677b50b7573325b0491dd",
+      "path_sha256": "2ac96ac256a766b52f3b0e65e7f342aeac8806716257b1ecf1d79bd23e8e6bdb",
       "repository": "4444J99/limen",
       "repository_id": 1255213941,
       "base_head": "b4759bc91d40ee13e14fb0b4b3de1faa55543ec8",
@@ -63,7 +63,7 @@
       "head": "ec1faea650522be408842fabb941afebb9f1ba7c",
       "exit_code": 0,
       "evidence": "evidence/session-closeout-456-verification.json",
-      "sha256": "4d98ccfd10b7761c8c58b43bcc174aabdc73b427ab788071e981cfa9007db284",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
       "command": "GES six-check batch and installed credential-wall check"
     },
     {
@@ -71,7 +71,7 @@
       "head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
       "exit_code": 0,
       "evidence": "evidence/session-closeout-456-verification.json",
-      "sha256": "4d98ccfd10b7761c8c58b43bcc174aabdc73b427ab788071e981cfa9007db284",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
       "command": "scripts/verify-scoped.sh --base HEAD --total-timeout-seconds 600"
     }
   ],
@@ -90,9 +90,10 @@
   "handoff_owners": [
     "https://github.com/4444J99/github-engineering-standards/issues/454",
     "https://github.com/4444J99/limen/issues/2821",
-    "https://github.com/4444J99/limen/pull/2822"
+    "https://github.com/4444J99/limen/pull/2822",
+    "https://github.com/4444J99/limen/pull/2827"
   ],
-  "receipt_status": "CUSTODY_PROVEN_POLICY_SCOPE_RECONCILIATION_REQUIRED",
+  "receipt_status": "PUBLISHED_SCOPE_RECONCILED_PENDING_LIVE_PREDICATE",
   "external_effects": [
     {
       "id": "restricted-ciphertext",
@@ -107,10 +108,18 @@
       "kind": "policy-pr-submission",
       "verified": true,
       "evidence": "evidence/session-closeout-456-verification.json",
-      "sha256": "4d98ccfd10b7761c8c58b43bcc174aabdc73b427ab788071e981cfa9007db284",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
+      "owner_url": "https://github.com/4444J99/limen/issues/2821"
+    },
+    {
+      "id": "standing-isolation-policy",
+      "kind": "remote-policy-amendment",
+      "verified": true,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
       "owner_url": "https://github.com/4444J99/limen/issues/2821"
     }
   ],
   "scope_reconciliation_owner": "https://github.com/4444J99/limen/issues/2821",
-  "scope_reconciliation": "The former shared policy checkout moved to another main generation and contains unrelated changes/processes; no checkout reset, scope substitution or admission bypass is authorized by this receipt."
+  "scope_reconciliation": "Session-owned read-only exact published policy checkout manually admitted under merged standing directive PR #2827; shared checkout and unrelated processes preserved; native anchor unchanged."
 }
