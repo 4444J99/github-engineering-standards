@@ -1,0 +1,328 @@
+[
+  {
+    "artifact_id": "af7f9b661074114345656880",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/learn-github-packages/about-permissions-for-github-packages.md",
+    "content_sha256": "a7cadf6b4a8c6c8fd2d66b8f8e2dc50ace38a8d2ac01421ec7139acf5ea08423",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:41:46.298Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Packages may have personal/organization granular scope or repository scope. Granular access and visibility can differ from a linked repository; repository-scoped packages inherit repository permissions and visibility. Container Registry supports granular permissions. Pinned npm-v2, NuGet-v2 and RubyGems-v2 features include FPT/GHEC; their absence selects repository-only entries elsewhere. Maven and Gradle are repository-only. Listed registry classes are not live enabled services. The Docker repository-only entry uses the unusual predicate not fpt or ghec. Preserve the source expression pending renderer/version assurance rather than silently rewriting its boolean meaning or assuming a universal GHES-only display. GHEC Maven/Gradle support excludes internal repository visibility and supports public/private. Package navigation and linking references are not verified access or publication. The visibility include distinguishes package admin, independent grants, public Container Registry anonymous reads and most registries' token authentication; FPT/GHEC inheritance removal precedes granular settings, subject to organization automatic-inheritance defaults. Publishers and organization owners acquire package admin in stated contexts. Personal packages may assign any person a role; organization packages assign members or teams in that organization. Read/write/admin package roles remain distinct from repository roles and actual observed assignments. Classic PAT scope and personal account permission must both satisfy the operation. Download/install requires read:packages and user read; upload/publication requires write:packages and write; deletion requires delete:packages plus read:packages, with admin permission. Scope alone is insufficient. The guide explicitly permits Actions GITHUB_TOKEN publication, installation, deletion and restoration, qualifying classic-PAT-only language by workflow context. REST deletion/restoration remains public preview and must meet package admin conditions reviewed elsewhere; no token permissions granted. Granular packages remain owned by their original account after repository transfer; a linked repository's transfer to another user removes the link. Associated Actions workflows and FPT/GHEC Codespaces lose access; users lose access when permissions were inherited. Do not infer unchanged access from unchanged package ownership. Repository-only packages transfer with the repository; billable usage shifts to its new owner. Removing the former owner as collaborator may remove package access. These consequences do not authorize transfer, billing changes or actual access removal. Maintaining workflow access requires the appropriate token and enabled package Actions access. Workflow-associated packages use GITHUB_TOKEN; inaccessible other private repositories' packages use an appropriately scoped classic PAT. Configured token identity is not a successful access receipt. The FPT/GHEC granular workflow section requires granting Actions access to the workflow-running repositories through package settings. Missing branch text elsewhere is not a universal feature denial; referenced guides and native grants remain separately unverified. The GHEC product include restricts managed-user publication to organization namespaces because personal storage is absent; it does not apply unchanged to GHES or override target authority. No accepted policy, rights clearance or package operations follow. Complete page and necessary include/feature/variable context read. Unusual conditional rendering, independent extraction audit and published assurance remain open.",
+    "claim_mappings": [
+      {
+        "candidate_id": "9a768c2ab705ff1695c7e31e",
+        "text_sha256": "22a10d21d24a49e11f1daf4285d514254d5fcf0c85ac65b5152d9baa42f4ced3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "ea6d6d584ed7f2b52fa7022d",
+        "text_sha256": "dfb3dc8586f0bcfa1f823652e1ceff4cbb74b19ebe6f9c48a6d280355da86d44",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "5a64cb55103840318291878a",
+        "text_sha256": "9d89e568f33518322843d517ae7893a8ae5a27faba76a72ac7f8ff8ef1113f57",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "438c224f807bb23348d3dd0e",
+        "text_sha256": "450c60be9266dc3b157fb8b513be006bdc7e0879589cf74210f276bf22354164",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "434ad72d154e671c0802b367",
+        "text_sha256": "5a1cea5968a316aed3f086895edd9aeb729639d37aa56f085910a857fc9bfd53",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "e42b2556114e37d6637d1160",
+        "text_sha256": "05c3583d958a25e292311c10ccb57d39406375de6db8c1f16ba989419048b607",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "c93cd0e49d8ec3d4cab3882c",
+        "text_sha256": "d580895063ee7688fef2a5f3fd0d7e92b9a9b6ffaafd6fb183638d6443b36f6c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "05fccd65a7f2d513df38f0ef",
+        "text_sha256": "3461c8be363e577921b42f2f9f1addf07708d0dfbb2f715d5dc9224ff1f5f4c9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "8d6294348854a7857a877a14",
+        "text_sha256": "ed77e1fd4f5e4f902f510af2e428ae8f1714c8ce81fd0e2cde2aacd59ab2babe",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "07afe6676fed223e40daed70",
+        "text_sha256": "fded9e9bbf13d75e539093c6ae850e6da24f3aedeb730b2f7065c951569bde25",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "748a61a1c40dee2069978a2b",
+        "text_sha256": "a48415bc9ff842337636f03900ecd5ea6089a0493d85da0e26648f8e11fe7b74",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "813169414bc6031f422d550b",
+        "text_sha256": "5807eb9d8fbafe334ca2501e1bdb774dc311cdad8285f52be7386b764f43e834",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "0ae8c9cc18487cb3e120712b",
+        "text_sha256": "1672541e1a70379e9abc345b6fb2af49bf3451cdb6539b0c925be114ff81c457",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "298b9c903d221b8530a57b04",
+        "text_sha256": "88f9161d6f6ff4a73ac015e7481410c9eecf7e6367298efbd229e41d3f57d93a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "0cc3ff71ddd7599efb3f882f",
+        "text_sha256": "23fbbc635485603d0a88aabe6c487b6179a8f4bdd0bcb334ef87f1fdafa0e8da",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "616e2fa211f094c972e814c0",
+        "text_sha256": "85b025e9111482c7f1a5ecd1dd568a3337783b7052c552fc035ff60d2a7f0495",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "acd776f061501a856039bb1b",
+        "text_sha256": "fcce1621e5e4385a48b20e1c06926c4173a1151372985bcf02dd587552973ba6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "45d31f0911011ff8b9b3f2d6",
+        "text_sha256": "ed77e1fd4f5e4f902f510af2e428ae8f1714c8ce81fd0e2cde2aacd59ab2babe",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "0325d9241ec7a15a9305c7c9",
+        "text_sha256": "bae316ea4bf000445a9ad71139413804ff5ffc9fddc059dfe5272e4bb0206676",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "0db414d57f777f2c1c5216ea",
+        "text_sha256": "0f2d29c00aaf9024f54fc83407a29d738e56ab6a5356948a7c93373c4b89f4ba",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "748b2d62f78e2de5ca585b4d",
+        "text_sha256": "10685476e0cd6e454f6f9fb3b2138f9e2cb6fb484b0c1989e1660f4d77da6bc2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "07168bba3aaae1c2372eb2d8",
+        "text_sha256": "4fff574215ccd140df9e0df8a0a5b2c3007b550eb300f4c5505d0e8ba99287bf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "70d9db808554dc2fbb07e726",
+        "text_sha256": "bb4e54718a4fe1c532eeeb3684e11647729e0788fc3e0a0c063eb2a95e825c21",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "e0695fdc8765fa1de8cba8b6",
+        "text_sha256": "060bf77113106b853dc33f57466f3de46c47ff23ee105ec20e17b81b82ce9e92",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "386af4c2a5204351d5e1c79e",
+        "text_sha256": "652744a2ab28954bbafd780fd76c15c2bd557594532f907f10ead1989727af95",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "e11d7d935341e83d60285676",
+        "text_sha256": "95745c7e0783e407837824e07a2d8ac429e2fe0482be00022faa0eff69d4399d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "69461b33e7b02298b271900b",
+        "text_sha256": "cd3e513c0a92b3651889f533e6d19602bba244dbe890596c5ba3c60516c1f934",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "a6485e381758a033b4285e90",
+        "text_sha256": "2f5e07014940f3ec29d69f3d7010d253a112a42e353b805331a189ec3601221c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "1c8cba176d4ec34ab9ee9bfb",
+        "text_sha256": "b8ec48555607bc6202126c5db642f11cf898151fb6f2aa19d2e28aea19d7e532",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "6128ed98b010e32b17c0ad98",
+        "text_sha256": "a26545960be7dd4f11ca48de12af347d040fe5bc16abb9d2aa5362db97a5e0ef",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "f0c0a10577069ef86d978b02",
+        "text_sha256": "d8e8040b71d572789004ed788fc428ad04dfeb13deb9826a504f1b1527ffc768",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "efbc3064dcdc5934a2f72876",
+        "text_sha256": "e263fc6d5b8eb99e1f7e452543df20e6924568940fba135bdbf6d590901decf2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "86d889d05a7270d5ff78cfeb",
+        "text_sha256": "9b15ed8ea2fc34119f88ddbb222cf5471a679e017c9d3001e8a4304fddec800c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "4008005dc0fac7be815d7927",
+        "text_sha256": "44938bf3798b4adb611b8a809957c3cc07e3188c1e63676bbb2b8953abeee23f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "f67f8c9a793c392ea0f2a17d",
+        "text_sha256": "6bd5b91f8c58937a7bad4b54ee1fb2b4eb43ebb0015ee9f8b0a242a6528603e2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "e81d0bfbfd37f9c6a705418e",
+        "text_sha256": "5871168b2d233f8574909771874700ebce85fc1c85343593c1d29f6a7066bc0e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "c4ce50df8f0c434f2503f58c",
+        "text_sha256": "f8cc3d6416bc5d04e1f5a3612804953361ffeff4d7905a5051298c4cd6e1b6a4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "8df7cce0f2629724bb7050a0",
+        "text_sha256": "7b29f3d1cd66b5076397891a90659af5ceb27a4d42c50cb6f255b09e02cb1c33",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "66c7d143bd23b853eb6787e2",
+        "text_sha256": "56173ea54c24de0f0954f0db4be53aa996521a12cd1e7f5108f374b68b0a48bc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "bb33e1b7ac9447008d0be5e1",
+        "text_sha256": "d2c338a661e627dd9835cd5625841021ec895d3ff7ba5d6f2dde7b690fe5d57d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "39a52add1abaa2f90a652fd2",
+        "text_sha256": "38f8018346f77ba5487b5596f3410185dfd5e5327279b467955308e0352e0d1e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "11e9033eae3898869647d210",
+        "text_sha256": "fbcc643fee03d5852d45e7bcd64a2abafae583b16b7ee6678299b4b4d74facfd",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "576732bd3bf575263dd71f98",
+        "text_sha256": "0c0e2893ca21d4e0e29f5af52a6c5a71201bcd5ac4df1c8203de9f9f212a46e4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "2f8f6bd43762c0377c3bac21",
+        "text_sha256": "f2c0dc57526ea44414ea1bbb4075024986931844422bcd8e3ffe2ec1c41d2e3d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "b2d320df8d0a909e070add7d",
+        "text_sha256": "17b4e8b3f1a535a8052f3667f22dca0c085bbd9b93f11b4e2fab3fa3eb1286ad",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "5cc6b4d89583ce16a763491b",
+        "text_sha256": "9b15ed8ea2fc34119f88ddbb222cf5471a679e017c9d3001e8a4304fddec800c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "0a351d74dbf825c696d5a1bd",
+        "text_sha256": "da6ca2789ded548fe7044e224e5c451c5c0c0c83e8c0e0885675043fca6b0195",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "213394fa1fb15c040dfc1c59",
+        "text_sha256": "3d5f8dab556f7714e4d223827dac63ad43f2d839a3bffce28cac4810b94de500",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "83e7f39ee6ea7d9dc730c3e5",
+        "text_sha256": "a10940074c49342411594bc67307d42015d227c0f5b51ceae0323750dd71598d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "313f635057b1882662c3ba4f",
+        "text_sha256": "f6f54a4e3e209054bf3a25a4e22a3fa2f5da579fb4adb20f9f9a6026d5b53863",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "cd3ab38d6f5711c6a2fcb97a",
+        "text_sha256": "8aba20a5b16ed03aec7c11c22b8574df7b64c7a3ffe7af18131ae8450b61f1a9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      },
+      {
+        "candidate_id": "7be6fc8276fa1e0f4a485a14",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEPERMISSION-1 through -13; not accepted policy or native permissions evidence."
+      }
+    ]
+  }
+]
