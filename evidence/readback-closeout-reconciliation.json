@@ -1,0 +1,30 @@
+{
+  "schema": "ges.closeout-reconciliation.v1",
+  "session_id": "01a10341-92f9-7661-80fd-d57ac4cb146d",
+  "implementation_head": "e27cfcf57592d5a89fdbd0215dcbb9e309f5c23f",
+  "verification": {
+    "implementation_unchanged_since_passing_340_test_batch": true,
+    "prior_checks": "evidence/custody-readback-20261003-verification.json",
+    "local_restore_exit_code": 0,
+    "remote_archive_restore_exit_code": 0,
+    "session_supplement_remote_restore_exit_code": 0,
+    "git_diff_check_exit_code": 0
+  },
+  "process_reconciliation": {
+    "refreshed_operational_receipts": 27,
+    "changed_fields": ["contract_sha256"],
+    "unchanged_and_reverified_fields": ["process_identity", "argv_sha256", "service_id", "host_pid", "host_identity"],
+    "replacement_method": "Current installed process contract derivation and source-owned atomic record function after live identity revalidation",
+    "previous_receipts_preserved_in_encrypted_session_supplement": true,
+    "policy_changed": false,
+    "processes_signaled": false
+  },
+  "historical_failures_retained": [
+    "Initial closeout process_evidence_conflict (27 outdated contract receipts)",
+    "Shared Drive client HTTP 403 RATE_LIMIT_EXCEEDED on range/readback paths",
+    "Drive connector large-file 256 MB download limit",
+    "Drive connector upload denied for insufficient scopes; no scope expansion attempted",
+    "Evidence digest became stale when concurrent original owner published successful restoration"
+  ],
+  "remaining_project_owner": "https://github.com/4444J99/github-engineering-standards/issues/454"
+}

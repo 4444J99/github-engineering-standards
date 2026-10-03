@@ -14,8 +14,13 @@
       "repository_id": 1400636612,
       "base_head": "cd39f5daf76d35b76a01cb74668f3aefd9bf4ccf",
       "publication_branch": "implementation/v0.1.0",
-      "owned_paths": ["evidence/session-closeout-456-custody.json", "evidence/custody-readback-20261003-verification.json"],
-      "retained_work": []
+      "owned_paths": ["docs/continuations/issue-456-readback/predicate-result.json"],
+      "retained_work": [
+        {
+          "paths": ["docs/continuations/issue-454/session-closeout.json", "evidence/session-closeout-456-custody.json", "evidence/session-closeout-456-verification.json"],
+          "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+        }
+      ]
     },
     {
       "id": "preserved-custody",
@@ -27,30 +32,55 @@
   "verification": [
     {
       "root_id": "ges",
-      "head": "cd39f5daf76d35b76a01cb74668f3aefd9bf4ccf",
+      "head": "e27cfcf57592d5a89fdbd0215dcbb9e309f5c23f",
       "exit_code": 0,
       "evidence": "evidence/custody-readback-20261003-verification.json",
       "sha256": "aa2abec90b8b18dce69aefd4f96159aa798b222a0c9aa477ddfee3de4be1d0a1",
-      "command": "GES tests, validate, compile; installed credential-wall; local ciphertext and restore checks"
+      "command": "Reuse passing GES tests, validate, compile and credential-wall; unchanged implementation confirmed at reconciliation head"
+    },
+    {
+      "root_id": "ges",
+      "head": "e27cfcf57592d5a89fdbd0215dcbb9e309f5c23f",
+      "exit_code": 0,
+      "evidence": "evidence/readback-closeout-reconciliation.json",
+      "sha256": "98424459a335af6b356b3dbeb422079a6f0c84ff26dfad1240ec641ba408644f",
+      "command": "Current live process-contract reconciliation; complete remote archive and supplemental restoration; git diff --check"
     }
   ],
   "custody": {
-    "verified": false,
+    "verified": true,
     "root_ids": ["ges", "preserved-custody"],
-    "evidence": "evidence/session-closeout-456-custody.json",
-    "sha256": "05a437fde30fd0fcb4534b5a9fdba49160cb97a0b3c770ab7e9a38957e7c3a51",
+    "evidence": "evidence/readback-closeout-custody.json",
+    "sha256": "623662a2b6388751c15366224fc4efa47bd39a5fbe6b3be0c11c5ed222dda8d2",
     "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
   },
   "checkout_disposition": "RETAIN",
-  "receipt_status": "HANDOFF_REQUIRES_REMOTE_RESTORATION",
+  "receipt_status": "CUSTODY_VERIFIED_SESSION_RELEASE_READY",
+  "scope_note": "This resumed session changed evidence only. The original session's separately owned receipt, custody and policy evidence retain their existing owner; neither original-session release nor project completion is claimed.",
   "project_complete": false,
   "external_effects": [
     {
       "id": "remote-ciphertext-readback",
       "kind": "read-only-range-download",
-      "verified": false,
-      "evidence": "evidence/session-closeout-456-custody.json",
-      "sha256": "05a437fde30fd0fcb4534b5a9fdba49160cb97a0b3c770ab7e9a38957e7c3a51",
+      "verified": true,
+      "evidence": "evidence/readback-closeout-custody.json",
+      "sha256": "623662a2b6388751c15366224fc4efa47bd39a5fbe6b3be0c11c5ed222dda8d2",
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+    },
+    {
+      "id": "session-supplement-custody",
+      "kind": "encrypted-upload-readback-and-restore",
+      "verified": true,
+      "evidence": "evidence/readback-closeout-custody.json",
+      "sha256": "623662a2b6388751c15366224fc4efa47bd39a5fbe6b3be0c11c5ed222dda8d2",
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+    },
+    {
+      "id": "process-receipt-refresh",
+      "kind": "verified-operational-evidence-refresh",
+      "verified": true,
+      "evidence": "evidence/readback-closeout-reconciliation.json",
+      "sha256": "98424459a335af6b356b3dbeb422079a6f0c84ff26dfad1240ec641ba408644f",
       "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
     }
   ]
