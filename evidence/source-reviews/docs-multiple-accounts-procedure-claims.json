@@ -1,0 +1,139 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T12:07:49.027Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "The feature definition makes the multiple-account workstation guide available for FPT/GHEC, not GHES. macOS, Windows and Linux sections describe HTTPS credential separation, not automatic target validation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "HTTPS separation uses per-account PATs and repository-path credential caching. Classic PAT examples use repo scope; fine-grained alternatives bind account/organization desired repositories and read/write contents. Source examples do not authorize new credentials or maximal privileges.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "The helper check reads credential.helper, then branches by configured helper; absence of a recognized helper skips stored-helper clearing. macOS keychain, Git Credential Manager and Windows wincred require distinct erasure mechanisms.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "Credential erasure examples target host-level GitHub credentials and can disrupt other repositories/accounts. The Windows GCM snippet uses backtick-n while the macOS/Linux snippet uses backslash-n; shell-specific syntax needs independent validation, not blind execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "The useHttpPath global configuration caches credentials by full remote repository URL; initial repository access prompts for the authorized account PAT. Cached configuration is not proof of correct credential identity or permission scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "The GIT_SSH_COMMAND wrapper alternative determines repository owner/name from origin, selects the correct key and configures SSH; its example specifies IdentitiesOnly and a key path. Arbitrary remote strings are not trusted identity authority without reconciliation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "Managed-user enterprise and outside-enterprise contribution cannot use the same SSH key. The guide instructs generating a separate filename/key and adding it to the managed account; this requires separate credential authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "SSH host aliases map personal and enterprise keys to github.com and use IdentitiesOnly to constrain agent key choice. The enterprise-looking alias is a local alias, not a separate destination domain.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "SSH connection tests are prescribed separately for the personal host and enterprise alias; test success must be bound to expected returned account identity, not merely connection establishment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "The organization-list reusable opens Organizations; for each managed organization a global insteadOf rewrite routes its SSH prefix through the enterprise alias. Organization naming and global rewrite can affect every matching repository and need scoped approval/diff.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "Linked PAT, SSH generation/addition/testing and Git environment documentation require separate full review. All snippets remain data: no key creation, helper erase, token generation, SSH connection, clone or global configuration change is executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MULTIACCOUNT-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/how-tos/account-management/managing-multiple-accounts.md",
+      "content_sha256": "f6c27acad816771cb64dcabe2a066c35b8998018396c7a2e49a02e1fe50cf3db",
+      "start_line": 1,
+      "end_line": 155,
+      "statement": "Per-repository commit email and authentication identity remain separate, as recorded in DOCS-COMMITEMAIL-4. This guide cannot prove full leak prevention, accepted policy or native enforcement from file existence.",
+      "accepted_policy": false
+    }
+  ]
+}
