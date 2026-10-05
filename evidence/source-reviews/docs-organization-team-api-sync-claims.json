@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T06:03:44.269Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ORGTEAMAPISYNC-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/ssh-ca-ghec-only.md",
+      "content_sha256": "17f8ef66465453c3df63279d6bbf817df8f3db0204382bc601f18ffbd4c0e5fa",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "In the FPT/GHEC branch, organization use of SSH certificate authorities requires Enterprise Cloud, with the previously inspected trial include as a pointer. This is branch-specific rather than universal denial of GHES SSH CA support; no entitlement, trial signup, credential registration or trust configuration was verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTEAMAPISYNC-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/team-api.md",
+      "content_sha256": "3f6bd1bef7e4428aafdf2d2fbf396260cfb4ba8fccb764ebc01b8826832abf48",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The containing team API endpoints require authenticated membership of the team's organization, and OAuth access tokens require read:org scope. GitHub generates team slug from its name; accepted pull/push permissions map to organization-repository Read/Write roles. This endpoint-context rule is distinct from the enterprise-team API's different token capabilities/scopes. It does not authorize every endpoint, prove slug normalization, define all token types, or establish a successful API observation; linked scope/role references remain separate review work.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTEAMAPISYNC-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/team-discussions-deprecation.md",
+      "content_sha256": "bc1ed32a47640e79359141547a2fc323cda218ae6a788eb152c1af9961510cb0",
+      "start_line": 1,
+      "end_line": 15,
+      "statement": "Both FPT/GHEC and GHES branches label Team Discussions retired and point to a historical announcement; GitHub Discussions is identified as an alternative for organization-level discussions. Pinned release/product variables resolve retired and GitHub Discussions. This is not an executed migration, live feature verification, preservation receipt or automatic permission equivalence; outbound pages are not reviewed by reference.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTEAMAPISYNC-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/team-notifications.md",
+      "content_sha256": "d658c496a0bce08d5464a288cc2fe1d89500d583f671a113491d2333c3c73deb",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The Team notifications Enabled/Disabled choice affects mentions of the team name only, not review-request notifications directed to the team. Disabling mentions must not be generalized to silencing all team notifications or enforcing reviewer coverage; no setting or delivery behavior was tested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTEAMAPISYNC-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/team-synchronization.md",
+      "content_sha256": "3612b5e2e89f13009fbffaa9909afb7bd617e6cecdcb60c845c7f6502bd4b1a6",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "In the FPT/GHEC branch, Enterprise Cloud team synchronization can add and remove existing organization members from teams through an IdP. The FPT text points to Cloud documentation; it does not grant the feature to every Free organization. This is not provisioning organization membership, a universal EMU/SCIM mechanism, support on GHES, or verified live sync; the linked guide remains separate review work.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTEAMAPISYNC-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/team_description.md",
+      "content_sha256": "d03688410d0c6becffe51f3b4db54f63fa6931cde2007eaa73eadf41abccf165",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "A team description is optional in the containing creation/editing procedure. Absence of a description is not automatically a failing platform requirement; this does not prove created team identity, mandatory local policy or executed change.",
+      "accepted_policy": false
+    }
+  ]
+}

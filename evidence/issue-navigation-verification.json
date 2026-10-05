@@ -1,0 +1,60 @@
+{
+  "schema_version": "ges.issue-navigation-verification.v1",
+  "verified_at": "2026-10-03T09:56:08.280Z",
+  "issue": 364,
+  "source_indexes": 5,
+  "reference_claims_added": 5,
+  "candidates_accounted": 42,
+  "reference_claims_total": 60722,
+  "claim_bearing_artifacts": 3394,
+  "section_reference_census": {
+    "inventory": 35,
+    "reference_receipts": 29,
+    "pending": [
+      "content/issues/tracking-your-work-with-issues/learning-about-issues/about-issues.md",
+      "content/issues/tracking-your-work-with-issues/learning-about-issues/planning-and-tracking-work-for-your-team-or-project.md",
+      "content/issues/tracking-your-work-with-issues/learning-about-issues/quickstart.md",
+      "content/issues/tracking-your-work-with-issues/using-issues/creating-an-issue.md",
+      "content/issues/tracking-your-work-with-issues/using-issues/filtering-and-searching-issues-and-pull-requests.md",
+      "content/issues/tracking-your-work-with-issues/using-issues/viewing-all-of-your-issues-and-pull-requests.md"
+    ]
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 324,
+    "seconds": 1.985,
+    "result": "OK"
+  },
+  "controls_valid": 95,
+  "gates_open": 9,
+  "project_complete": false,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_changes": false,
+  "independent_assurance": false
+}

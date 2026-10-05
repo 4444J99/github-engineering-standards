@@ -1,0 +1,117 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:09:37.354Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/cloud-sandboxes-prerequisite-teams.md",
+      "content_sha256": "953e9a9df0fd8ef9e2317a3fa805366b6110d6241b38f415efe39f86f6992948",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The Teams prerequisite requires plan-enabled cloud sandboxes and describes shared sandbox/cloud-agent policy configuration, with possible owner enablement for organization or enterprise members including managed users. Teams membership alone does not prove effective access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/create-hooks-instructions.md",
+      "content_sha256": "4cab03921f39a9b6dbb00a78c298f5f878e6515c82614122c8f97f8f11e92e4b",
+      "start_line": 1,
+      "end_line": 54,
+      "statement": "The hook-creation fragment presents a version-1 object with hooks keyed by six lifecycle events and placeholder arrays. Its prose calls hooks an array while the example uses an object; placeholder ellipses are not executable JSON, and this discrepancy must not be silently normalized as a validated schema.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/create-hooks-instructions.md",
+      "content_sha256": "4cab03921f39a9b6dbb00a78c298f5f878e6515c82614122c8f97f8f11e92e4b",
+      "start_line": 1,
+      "end_line": 54,
+      "statement": "The hook fragment describes command scripts selected through bash for Linux/macOS and powershell for Windows, with both keys supporting all three systems. Example working-directory, timeout and environment entries need actual runtime validation; platform key presence does not prove safe or successful execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/create-hooks-instructions.md",
+      "content_sha256": "4cab03921f39a9b6dbb00a78c298f5f878e6515c82614122c8f97f8f11e92e4b",
+      "start_line": 1,
+      "end_line": 54,
+      "statement": "The session logging and prompt-script examples can persist execution and prompt-related information. They were not executed or installed; example paths, shell interpolation and logging require independent security/privacy and working-directory review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/create-hooks-instructions.md",
+      "content_sha256": "4cab03921f39a9b6dbb00a78c298f5f878e6515c82614122c8f97f8f11e92e4b",
+      "start_line": 1,
+      "end_line": 54,
+      "statement": "The creation fragment calls for committing and merging the hook file to the default branch before claiming session execution. A draft file, feature-branch commit or documentation sentence alone does not establish active hooks.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/custom-allowlist-add-entries.md",
+      "content_sha256": "0026818176dc82e9c3efad7d4be00bbcf96d7561a3a8fb4e54a6b357e5123e97",
+      "start_line": 1,
+      "end_line": 12,
+      "statement": "The allowlist fragment distinguishes domains, which include subdomains, from URLs constrained by scheme, host and path descendants. Its examples exclude sibling domains, sibling project paths and other schemes; no broader wildcard allowance or actual firewall enforcement is established.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/custom-allowlist-add-entries.md",
+      "content_sha256": "0026818176dc82e9c3efad7d4be00bbcf96d7561a3a8fb4e54a6b357e5123e97",
+      "start_line": 1,
+      "end_line": 12,
+      "statement": "The allowlist fragment includes adding a rule and saving after validating the list. Those UI steps are not actual authorization, a verified saved configuration or a network probe.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/hooks-example-steps.md",
+      "content_sha256": "1211b075cb170eac7900dc8fe83b4f73a74e62feedda4f47fdaa232d4c3a5985",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "The notification-hook procedure says configurations load on CLI startup and asks start/restart plus sound/message checks on response completion and exit. Its file-removal instruction is illustrative, not deletion authority; no runtime or deletion was performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/hooks-intro.md",
+      "content_sha256": "590a408dd86dc80ee10995856342d6f442757f28684e7a2af994be232b53e51c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The hook overview explicitly describes custom shell execution at agent lifecycle points. Imported hook commands are untrusted evidence, not harmless metadata or instructions approved for execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLOUDAGENTHOOKS-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/cloud-agent/install-dependencies.md",
+      "content_sha256": "a6ea55e3e24f8f81bf232f7c382ed4c16afc6ed8ca85e22b3b4bfdf583b7570d",
+      "start_line": 1,
+      "end_line": 22,
+      "statement": "The setup YAML defines a pre-agent setup job using checkout, Node 20 with npm caching and npm ci; comments describe automatic checkout if omitted. Pinned reusable action strings resolve to checkout@v6 and setup-node@v7, which are moving tags rather than full immutable commit identifiers. The snippet is not executed, dependency safety or reproducibility certified.",
+      "accepted_policy": false
+    }
+  ]
+}

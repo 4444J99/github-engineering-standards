@@ -1,0 +1,123 @@
+{
+  "schema_version": "ges.pages-consolidation.v1",
+  "issue": 314,
+  "reviewed_at": "2026-10-03T08:18:06.355Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "pages_source_receipt_coverage": {
+    "inventory": 29,
+    "receipts": 29,
+    "missing": [],
+    "published_assurance": false,
+    "gate_completion": false
+  },
+  "rows": [
+    {
+      "id": "PAGES-SOURCE-BRANCH",
+      "claims": [
+        "DOCS-PAGESPUBLISHINGSOURCE-2",
+        "DOCS-PAGES404ERRORS-8"
+      ],
+      "conflict": "Publishing-source guidance permits any existing branch; 404 checklist requires main/default.",
+      "decision": "UNRESOLVED",
+      "requirement": "Parameterize selected source branch; verify configured native source and build receipt. Do not impose main-only rule from conflicting checklist.",
+      "negative_test": "Nondefault authorized source must not fail solely because of its name; nonexistent source must not pass."
+    },
+    {
+      "id": "PAGES-ENTRY-FILE",
+      "claims": [
+        "DOCS-PAGES404ERRORS-3",
+        "DOCS-PAGES404ERRORS-4"
+      ],
+      "conflict": "404 HTML-only repository wording is narrower than creation guide Markdown/README and generated artifact options.",
+      "decision": "PROPOSED_SCOPE_QUALIFICATION",
+      "requirement": "Inspect effective deployed artifact entry and source mode, not just repository index.html.",
+      "negative_test": "Repository file with missing artifact entry must not pass; generated entry is not rejected solely for absence in repository."
+    },
+    {
+      "id": "PAGES-DNS-IPV6",
+      "claims": [
+        "DOCS-PAGESDOMAINMANAGEMENT-4",
+        "DOCS-PAGESDOMAINERRORS-8"
+      ],
+      "conflict": "Management procedure treats AAAA optional, summary says all A/AAAA; HTTPS support list omits AAAA.",
+      "decision": "UNRESOLVED",
+      "requirement": "Record provider-supported record type and intended IPv4/IPv6 profile; independently verify current endpoints before implementation.",
+      "negative_test": "Do not require AAAA without adopted profile or infer IPv6 HTTPS unsupported from omission."
+    },
+    {
+      "id": "PAGES-REDIRECT",
+      "claims": [
+        "DOCS-PAGESDOMAINMANAGEMENT-12",
+        "DOCS-PAGESDOMAINERRORS-6"
+      ],
+      "conflict": "Management redirects toward selected apex/www; troubleshooting describes www-to-apex only.",
+      "decision": "PROPOSED_SCOPE_QUALIFICATION",
+      "requirement": "Expected redirect destination follows configured canonical domain; verify actual status, Location and final response.",
+      "negative_test": "Hardcoded apex destination must not pass when canonical domain is www."
+    },
+    {
+      "id": "PAGES-CNAME",
+      "claims": [
+        "DOCS-PAGESDOMAINMANAGEMENT-5",
+        "DOCS-PAGESDOMAINERRORS-2"
+      ],
+      "conflict": "Management settings commit describes source-branch root; troubleshooting says publishing-source root. Custom Actions ignores CNAME.",
+      "decision": "UNRESOLVED_LOCATION_BY_MODE",
+      "requirement": "Separate DNS CNAME from repository CNAME; inspect branch/folder versus custom Actions mode and actual native custom-domain association.",
+      "negative_test": "CNAME file alone must not certify custom Actions domain configuration; docs-folder layout ambiguity remains explicit."
+    },
+    {
+      "id": "PAGES-HTTPS-TIMING",
+      "claims": [
+        "DOCS-PAGESDOMAINMANAGEMENT-11",
+        "DOCS-PAGESDOMAINERRORS-9"
+      ],
+      "conflict": "One hour HTTPS availability versus 24-hour option/DNS propagation are different conditions.",
+      "decision": "PROPOSED_DISTINCT_OBSERVATIONS",
+      "requirement": "Track DNS propagation, certificate state, enforcement setting and effective HTTPS separately with timestamps.",
+      "negative_test": "Checkbox availability or elapsed wait cannot substitute for observed TLS and redirect behavior."
+    },
+    {
+      "id": "PAGES-REPRODUCIBILITY",
+      "claims": [
+        "DOCS-PAGESJEKYLLCREATION-7",
+        "DOCS-PAGESJEKYLLCREATION-6"
+      ],
+      "conflict": "Creation advises ignoring Gemfile.lock and latest supported dependency; reproducibility requires resolved identity evidence.",
+      "decision": "PENDING_POLICY_ADOPTION",
+      "requirement": "Propose reviewed resolved dependencies and runtime identity without silently adopting upstream lock omission.",
+      "negative_test": "Mutable version guidance alone cannot certify reproducible hosted/local parity."
+    },
+    {
+      "id": "PAGES-THEME-LAYOUT",
+      "claims": [
+        "DOCS-PAGESJEKYLLTHEME-8",
+        "DOCS-PAGESJEKYLLTHEME-9"
+      ],
+      "conflict": "Source copy path _default.html differs from destination default.html; copying introduces per-file rights requirements.",
+      "decision": "UNRESOLVED",
+      "requirement": "Verify actual upstream layout identity and license for exact intended reuse before implementation.",
+      "negative_test": "Missing source layout, unknown license or unreviewed copied template cannot be marked verified."
+    },
+    {
+      "id": "PAGES-PROTECTION",
+      "claims": [
+        "DOCS-PAGESPUBLISHINGSOURCE-9",
+        "DOCS-PAGESPUBLISHINGSOURCE-10",
+        "DOCS-PAGESPUBLISHINGSOURCE-11"
+      ],
+      "conflict": "Actions source/environment creation does not associate a unique workflow or install protection; manual trigger deployment condition incompletely specified.",
+      "decision": "PENDING_NATIVE_APPROVAL_AND_EVIDENCE",
+      "requirement": "Verify exact deploying workflow, event/branch identity, effective environment rules and authorized denial/recovery behavior.",
+      "negative_test": "Environment existence, workflow file or recent-run link must not be treated as native enforcement."
+    }
+  ],
+  "limitations": [
+    "Proposals and negative-test requirements are not implemented bindings or test receipts.",
+    "Source receipt coverage is not omission-completeness assurance, policy acceptance or rights clearance.",
+    "No native pilot or estate settings changed."
+  ]
+}

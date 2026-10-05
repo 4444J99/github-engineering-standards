@@ -1,0 +1,27 @@
+{
+  "schema": "ges.rights-exception.v1",
+  "source": "github/github-well-architected",
+  "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+  "path": "content/library/application-security/recommendations/threat-model.md",
+  "artifact_id": "a630e6b4821c833d8736bb9b",
+  "content_sha256": "9eb39ba482335c2c1af6c31c7b960c6eb730101cd5ef75c3512f1a1754f491e7",
+  "source_reference": "https://github.com/github/github-well-architected/blob/a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7/content/library/application-security/recommendations/threat-model.md",
+  "verified_source_spans": [
+    {"lines": [2, 3], "finding": "The article metadata declares GitHub/project-author copyright and MIT."},
+    {"lines": [75, 83], "finding": "The source-integrity scope references a relative assets/image1.png diagram. Its attribution describes derivation from SLSA's version 1.0 supply-chain threat model and separately identifies Community Specification License 1.0."}
+  ],
+  "component_reference": "https://slsa.dev/spec/v1.0/threats",
+  "license_reference_as_linked_by_source": "https://github.com/slsa-framework/slsa/blob/main/LICENSE.md",
+  "license_reference_is_immutable": false,
+  "resolved_component": {"path": "content/library/application-security/recommendations/assets/image1.png", "artifact_id": "325f0fdf25f350255e3de464", "content_sha256": "73e05cc37c418b7a9b50132334d7aa0ba1473fa64c98a87539601be47ecf54f3", "git_blob_sha": "d32baeb4c8a7cd83f01d12b993da675064807818", "size": 39618, "evidence": "Exact relative path resolves to a binary artifact in the pinned corpus inventory; image bytes and embedded notices remain to be independently checked"},
+  "decision": "Do not infer MIT clearance for the derived diagram from the article metadata or repository declaration. Retain independently phrased textual findings and provenance; exclude diagram expression from distributed outputs until component-specific review and applicable rights acceptance.",
+  "remaining": ["Trace the exact original SLSA diagram and adaptation chain against the historical license evidence", "Assess intended distribution obligations and prepare required attribution/disclaimer if expression is included", "Obtain applicable rights acceptance before redistribution"],
+  "component_byte_verification": {"command": "shasum -a 256 .cache/wa-threat-model-image1.png", "observed_sha256": "73e05cc37c418b7a9b50132334d7aa0ba1473fa64c98a87539601be47ecf54f3", "matches_inventory": true},
+  "visual_review": {"complete_image_viewed": true, "finding": "The diagram distinguishes source integrity from build integrity and maps eight labeled attack points across developer, source, build, dependencies, package and consumer. No copyright or license notice is visible within the image; the article caption supplies attribution. Visual review is not license clearance."},
+  "historical_license_review": {"commit": "6b052f41f79f6109b861d377f39089ee8e11cfcc", "committed_at": "2022-09-16T20:49:21Z", "selection": "Latest LICENSE.md path commit returned by upstream commits API with cutoff 2024-05-29; temporal evidence, not a complete original-diagram derivation chain", "url": "https://github.com/slsa-framework/slsa/blob/6b052f41f79f6109b861d377f39089ee8e11cfcc/LICENSE.md", "sha256": "f40b1d00369c21b963293189b4617b5de439a11858541c07c620984634fb63b7", "full_lines_read": 99, "obligations_for_assessment": ["Copyright license and derivative attribution require material name, version and retrieval source", "Third-party technical-information distribution requires a materially similar disclaimer", "Patent licensing has distinct acceptance, exclusion and termination provisions", "Source code is separately licensed; the specification license must not be relabeled MIT", "License text itself declares CC BY 4.0; this is distinct from the licensed specification material"], "accepted_on_user_behalf": false},
+  "diagram_visual_reviewed": true,
+  "license_terms_adjudicated": false,
+  "rights_accepted": false,
+  "redistribution_approved": false,
+  "raw_expression_committed": false
+}

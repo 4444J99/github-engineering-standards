@@ -1,0 +1,52 @@
+{
+  "issue": 174,
+  "reviewed_at": "2026-10-03T03:48:20.054Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59253,
+    "claim_bearing_artifacts": 2753,
+    "tests": 324,
+    "test_seconds": 1.979,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "dependency_context": {
+    "path": "data/variables/copilot.yml",
+    "line": 273,
+    "managed_setting_file": "managed-settings.json",
+    "whole_file_reviewed_by_this_tranche": false
+  },
+  "limitations": [
+    "Subscription-specific MCP policy is not universal governance.",
+    "Preview comparison and cloud-agent limitations are pinned source descriptions, not live security or compatibility tests.",
+    "No secret bypass, credential change, restart, configuration, adopted policy, or rights clearance."
+  ]
+}

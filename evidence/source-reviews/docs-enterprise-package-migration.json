@@ -1,0 +1,154 @@
+[
+  {
+    "artifact_id": "773fac04dd4f0635c2a9b9c4",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/admin/configuring-packages/migrating-your-enterprise-to-the-container-registry-from-the-docker-registry.md",
+    "content_sha256": "3064af5bd761e669786619d4e77a1e9980f2b365ecc51088f037abf0f46f68ec",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:33:24.573Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Page scope is GHES and enterprise owners are the upstream actors permitted to migrate; product_location resolves the server instance. The GHEC-only EMU product fragment renders no additional GHES rule. These source permissions do not authorize an actual migration. The included GHES Container Registry note describes public preview subject to change and requires both Packages and subdomain isolation. Benefits include organization/personal storage, repository association, inherited or granular permissions and anonymous public reads; none demonstrates enabled capabilities. The page requires manual migration of existing Docker-registry images to Container Registry. Generic replacement wording remains qualified by the unresolved GHES lifecycle scope recorded in issue 265, not universal present decommissioning. The historical included availability statement supports organization-image migration in GHES 3.6 and describes user-image migration as future work; it is not current version assurance or coverage of all personal images. Migration can encompass all organizations' Docker images; duration depends on image count and instance load. Successful completion displays a summary and routes future Docker image uploads to Container Registry; no actual success or upload routing observed. Completion email is conditional on site-administrator-configured notifications, not guaranteed delivery or an independently validated migration receipt. Migration increases CPU/memory demand. Starting during reduced activity is upstream advice for user performance, not a universal schedule or approved maintenance window. During migration, enterprise setting changes and administrative ghe-config-apply are prohibited by the warning because configuration runs can restart services and interrupt migration. No administrative command or setting change was performed. Post-migration duplicated images increase storage pressure; a future release is described as removing duplicate files after all migrations. This is not measured disk reclamation, a present cleanup guarantee or authority to delete data. The GHES Enterprise settings, Settings and Packages navigation reaches Start migration; progress/results are displayed and failures identify owning organizations. UI instructions are not actual execution, inventory or full diagnostic receipts. A same-name preexisting Container Registry package can cause migration failure. The source retry sequence deletes the affected container then reruns organization migration, repeating on failure. Preserve destructive/dependency risk: no deletion, retry, guaranteed rollback or bounded operational recovery was authorized or executed. Full source and necessary include/variable context inspected; outbound guides remain separate review. No independent extraction certification, published assurance or adopted policy.",
+    "claim_mappings": [
+      {
+        "candidate_id": "8984ae2300a30538b1870751",
+        "text_sha256": "f3c7bef8a86acf4cc4057bf0093ff95b805379a5c7c129b9278f6808ff6dea08",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "7903ed2c9335360900a8ec2a",
+        "text_sha256": "5decf17230047597ae6d23ad300f4d105f0c1f6deecb2a6f289516bd2a1c2611",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "863031352f6f7ed862996e7e",
+        "text_sha256": "aa98b952acb1d8b2aba0ca35518d44816cc613c5491900e5b8d93fd433da76bb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "ec28d9ae8f718dc3fa547c49",
+        "text_sha256": "b06a348b4081b7fe08dac421025668ad2778dabeb7fdbd2a79d511b9dd858b14",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "801c28f5f41560f95c955a05",
+        "text_sha256": "8b67e2afde98c89132b4358fdb45dd4f6aaa9607b88a7aae161fc428aa3257c7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "9eecfc335cfe72ead5e47fcd",
+        "text_sha256": "ce8aaab25d836f13087eccc13947379ea593065c74ded36124d74a3c1c12f149",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "caa21f33b24f434ac2da0bcd",
+        "text_sha256": "f244a43238667b9f51442543853dbc69b42bda5b77248b5a03c4b7fd655e606c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "4f6824ff2ac7ae8a5894c53a",
+        "text_sha256": "fe2be32c03fb57ca67d58f9f69379dc0760310d4f1db320600b11421a89e1922",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "0117c2b9f9b441999a1d05b1",
+        "text_sha256": "9ed88dc19a5a5638f1c9b1e8fb5ea8b289b304625195053ffa1aad619e4986ad",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "4ae72e3150da81229ced3c1e",
+        "text_sha256": "77c019f33003ee41d8c03b119a800aeafd45ac463002960bcc2d4fe68cd7b86e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "7e4ae38f0d156299825d11a6",
+        "text_sha256": "ac64ce046b9546cbbdbffa909f769df64773ddef35a109c50c6b4b9e088842e9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "d3965ea02c680db27f1204b8",
+        "text_sha256": "3643982649e09579407435a3902f7cc0889eeab2432bcd65da4c45cee99cb910",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "d26a4a80d9a1dbfc49562307",
+        "text_sha256": "cc3d04706cb56d6d90a23af263501133b441be4bd2ae581b39c9a54205fa4b00",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "b678cbf7f61c43420ab6250d",
+        "text_sha256": "65223531525b1025ee823444901c93ad95a675ae57425820b6c5f70c169ae221",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "4f7ce05638f7f610b2b9d73c",
+        "text_sha256": "1813b90cb34e6cac47af338a2261dc329d648c46dc04369226fe12268731752e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "a7c71570d37132e13b81ce08",
+        "text_sha256": "0eff22e7f6984087a47d9aa879e6ec94560f906af8d79b452826531ca88460ba",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "33049ec9d7939a63f5ddf7f5",
+        "text_sha256": "961a4a82c25436d87e0d3ed588e1a0ce8d7d836de920d1b6a5853944f185740d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "52e1c107e039fa325345d4b5",
+        "text_sha256": "a3f82a08af94c74342383fb6ed59094ae428d3c8fe2cb835023a1ded00589603",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "ffd2b6b3dc8eb2a8ee84e266",
+        "text_sha256": "9285364ad5ff51a4e00b1ed62fff798ede72b81193a1b88efad7e9051e6a066a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "35edc6fabc06abee7aec9a00",
+        "text_sha256": "1e6ba0cc3e19faed4c6867e867b9c4145bdf6af3d54d145e138440a6aba5e2e6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "bcfa4d735ef22feba4c837f0",
+        "text_sha256": "815c1ec7f98273207adc1c090f47e90f7b380ef32270f8e886ba7c99d48c7b0c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "58dd9be47a0938d9bcfadfb6",
+        "text_sha256": "b9503eac949b36938ff15dd158fb6fa33870aef768e8940fbe4d59b9a4c81b40",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      },
+      {
+        "candidate_id": "78f5c7efb344b5ae009a265a",
+        "text_sha256": "ac8127d4de357e8e924168f02d95d27a0523aab5c3018be7b2894e6bcadb92d4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-ENTERPRISEPACKAGEMIGRATE-1 through -11; not accepted policy or native receipt."
+      }
+    ]
+  }
+]

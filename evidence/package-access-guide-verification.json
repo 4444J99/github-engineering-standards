@@ -1,0 +1,47 @@
+{
+  "issue": 280,
+  "reviewed_at": "2026-10-03T07:01:59.031Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 19,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59929,
+    "claim_bearing_artifacts": 3271,
+    "tests": 324,
+    "test_seconds": 1.984,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Reference-only; independent extraction completeness and published assurance remain unverified.",
+    "No package access/visibility changes, accepted controls, rights clearance or native rollout.",
+    "Automatic Dependabot access is feature-qualified; GHES >=3.23 is not GHES 3.18-3.22 assurance.",
+    "Existing reusable-fragment evidence retained; new guide uses distinct filenames and claim identifiers."
+  ]
+}

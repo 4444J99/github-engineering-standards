@@ -1,0 +1,77 @@
+{
+  "schema_version": "ges.account-custody-consolidation.v1",
+  "issue": 430,
+  "reviewed_at": "2026-10-03T11:57:53.379Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed account lifecycle claims only; not full six-source consolidation.",
+  "rows": [
+    {
+      "id": "ACCOUNT-DELETION-CUSTODY",
+      "claims": [
+        "DOCS-ACCOUNTDELETE-1",
+        "DOCS-ACCOUNTDELETE-2",
+        "DOCS-ACCOUNTDELETE-3",
+        "DOCS-ACCOUNTDELETE-5",
+        "DOCS-PERSONALACCOUNTREF-1",
+        "DOCS-PERSONALACCOUNTREF-2"
+      ],
+      "decision": "PROPOSED_IRREVERSIBLE_CHANGE_REVIEW",
+      "requirement": "Require exact account/actor approval, ownership continuity, all owned repositories/private forks/wikis/issues/PRs/Pages inventory and tested preservation before deletion. Respect managed-user prohibition and GHES owner consultation. Incomplete source prerequisites stay unresolved; administrator cannot be assumed able to restore deleted content.",
+      "negative_test": "A confirmation dialog or repository-only clone cannot pass complete custody; sole-owner transfer cannot be omitted; backup existence cannot certify restore."
+    },
+    {
+      "id": "ACCOUNT-DELETION-NAMESPACE",
+      "claims": [
+        "DOCS-PERSONALACCOUNTREF-3",
+        "DOCS-PERSONALACCOUNTREF-4",
+        "DOCS-USERNAMEREF-3",
+        "DOCS-USERNAMEREF-4"
+      ],
+      "decision": "PROPOSED_OPERATION_BOUND_DEPENDENCY_PLAN",
+      "requirement": "Distinguish rename transfer from deletion of packages/images and independently inventory consumers. Bind public visibility, prior-week >100 clone/Actions-use counts, Marketplace actions and public-image >5,000 downloads; account-name reuse does not undo pair-specific permanent retirement.",
+      "negative_test": "Rename package-transfer behavior cannot pass deletion recovery; account-name release after 90 days cannot certify retired repository/image names reusable."
+    },
+    {
+      "id": "ACCOUNT-CONVERSION-APPLICABILITY",
+      "claims": [
+        "DOCS-ACCOUNTMANAGEMENT-1",
+        "DOCS-ACCOUNTMANAGEMENT-2",
+        "DOCS-PERSONALACCOUNTREF-5",
+        "DOCS-PERSONALACCOUNTREF-6",
+        "DOCS-PERSONALACCOUNTREF-7"
+      ],
+      "decision": "UNRESOLVED_VERSION_AND_COLLABORATOR_MATRIX",
+      "requirement": "Preserve GHES<3.21 conversion concept against broadly versioned reference side effects and collaborator ambiguity. Exact product/version/operation must be independently resolved before a change; modern movement preserving personal account is not irreversible legacy conversion.",
+      "negative_test": "Broad reference metadata cannot grant conversion on unsupported versions; intact repositories cannot prove credentials/apps/attribution/private forks preserved."
+    },
+    {
+      "id": "ACCOUNT-MERGE-IDENTITY",
+      "claims": [
+        "DOCS-PERSONALACCOUNTREF-8",
+        "DOCS-ACCOUNTMANAGEMENT-7",
+        "DOCS-ACCOUNTIDENTIFY-4"
+      ],
+      "decision": "PROPOSED_SEPARATE_ACCESS_AND_ATTRIBUTION",
+      "requirement": "Inventory repository/org permissions, admin invitations, noreply attribution, issues/PRs/discussions and Achievements separately. Require actual invitation acceptance and scoped access evidence; copied data or account-name clues do not transfer authority.",
+      "negative_test": "Account merge cannot automatically pass inherited permissions, transferred noreply commits or transferred Achievements."
+    },
+    {
+      "id": "ACCOUNT-SERVICE-WRITE-BOUNDARY",
+      "claims": [
+        "DOCS-PERSONALACCOUNTREF-9",
+        "DOCS-PERSONALACCOUNTREF-10"
+      ],
+      "decision": "PROPOSED_ANALYSIS_VS_REMEDIATION_SPLIT",
+      "requirement": "Distinguish read-only scan, observed feature configuration, manifest permissions, findings, optional security-update PR writes and new-repository defaults. Native activation remains approval-gated with scoped before/after and behavior evidence.",
+      "negative_test": "Read-only analysis prose cannot prove security services never write PRs; a defaults checkbox cannot prove current/future estate coverage."
+    }
+  ],
+  "limitations": [
+    "Negative tests are specifications, not implemented or executed tests.",
+    "No account deletion/conversion/merge, credential change or native activation.",
+    "Claim identity checks do not certify semantic equivalence, omission completeness or legal rights."
+  ]
+}

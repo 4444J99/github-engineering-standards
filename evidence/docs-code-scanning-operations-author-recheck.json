@@ -1,0 +1,89 @@
+{
+  "schema_version": "ges.author-repair-recheck.v1",
+  "reviewed_at": "2026-10-02T19:06:54Z",
+  "original_author": "codex:source-review",
+  "independent_original_auditor": "root:independent-source-review",
+  "rechecker": "codex:source-review",
+  "review_scope": "Author recheck of seven specified root corrections only, not an independent audit of the author's original 561 records.",
+  "input": {
+    "path": "evidence/source-reviews/docs-code-scanning-operations-claims.json",
+    "sha256": "f5fbfacfcc9aaf5a04750965f5843584976f5fea4c3d8e57bbd2cc7674b05dc7",
+    "records": 565,
+    "original_sha256": "89043bca17d42ce27680c9e05caba9de4ddc6adcf3b986bc00cb54e29d8634db",
+    "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995"
+  },
+  "findings": [
+    {
+      "claim_id": "DOCS-CODESCANOPS-0012",
+      "path": "data/reusables/code-scanning/alert-default-branch.md",
+      "source_lines": [
+        1,
+        1
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "Absent-default status labels in pull request and in branch, and grey color, are directly supported."
+    },
+    {
+      "claim_id": "DOCS-CODESCANOPS-0041",
+      "path": "data/reusables/code-scanning/billing.md",
+      "source_lines": [
+        1,
+        1
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "The source speaks of Actions code scanning, not only CodeQL; fpt or ghec scope preserved."
+    },
+    {
+      "claim_id": "DOCS-CODESCANOPS-0095",
+      "path": "data/reusables/code-scanning/codeql-languages-bullets.md",
+      "source_lines": [
+        17,
+        17
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "javascript-typescript applies to JavaScript, TypeScript or both."
+    },
+    {
+      "claim_id": "DOCS-CODESCANOPS-0562",
+      "path": "data/reusables/code-scanning/campaigns-click.md",
+      "source_lines": [
+        1,
+        1
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "aria-label goal is supported independently of aria-hidden true."
+    },
+    {
+      "claim_id": "DOCS-CODESCANOPS-0563",
+      "path": "data/reusables/code-scanning/licensing-note.md",
+      "source_lines": [
+        3,
+        3
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "The literal {%- elsif ghec %} preserves both branch ordering and whitespace trimming."
+    },
+    {
+      "claim_id": "DOCS-CODESCANOPS-0564",
+      "path": "data/reusables/code-scanning/licensing-note.md",
+      "source_lines": [
+        5,
+        5
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "The literal {%- elsif ghes %} preserves the subsequent alternative and whitespace trimming."
+    },
+    {
+      "claim_id": "DOCS-CODESCANOPS-0565",
+      "path": "data/reusables/code-scanning/require-actions-ghcs.md",
+      "source_lines": [
+        2,
+        2
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "The literal {%- elsif ghes %} occurs on line2 after the fpt or ghec branch, before line3's GHES eligibility."
+    }
+  ],
+  "remaining_findings": [],
+  "boundary": "Bounded author recheck only. No independent self-audit, full-corpus omission certification, rights clearance, accepted policy, current availability, native execution or gate closure is asserted."
+}

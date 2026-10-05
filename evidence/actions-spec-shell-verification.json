@@ -1,0 +1,54 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 60,
+  "tranche": {
+    "files": 20,
+    "claims": 28,
+    "candidates": 44
+  },
+  "findings": [
+    "Single-CPU hosted runners are containers on shared VM, qualifying fresh/dedicated VM claims.",
+    "Private-runner prose says VMs but includes single-CPU row; Windows arm64 VS2026 image links differ between public/private tables.",
+    "Explicit bash enables pipefail unlike unspecified default bash.",
+    "Runner update deadline and critical-security update can block job queueing."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58153,
+      "source_artifacts": 2194
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2228,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.995,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Twenty full fragments, including 193 substantive lines of runner specification tables and all supported-shell rows. No pricing authority, installation, update, Docker, credentials or native mutation. Independent audit, rendering, rights and adoption remain separate."
+}

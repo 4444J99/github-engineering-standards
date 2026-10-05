@@ -1,0 +1,48 @@
+{
+  "issue": 242,
+  "reviewed_at": "2026-10-03T05:48:11.029Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59647,
+    "claim_bearing_artifacts": 3133,
+    "tests": 324,
+    "test_seconds": 1.988,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No actual invitation, membership grant, sponsorship, accepted policy or rights clearance.",
+    "FPT/GHEC existing members added immediately, nonmembers only after invitation acceptance; other branch remains distinct.",
+    "Mixed-role warning surfaces conflicts but is not denial, resolution or effective-access calculation.",
+    "Caption/navigation do not prove image inspection, inventories or payment authority.",
+    "Pinned product variable context does not certify whole dependency."
+  ]
+}

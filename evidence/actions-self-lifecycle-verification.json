@@ -1,0 +1,54 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 59,
+  "tranche": {
+    "files": 20,
+    "claims": 21,
+    "candidates": 48
+  },
+  "findings": [
+    "Registration UI/sample terminal is not actual readiness; runner application must be active.",
+    "Force removal without host access cannot prove local configurations/services cleaned.",
+    "ARC does not support the default self-hosted label; label recommendation must remain scoped.",
+    "Deleting local .runner permits re-registration but does not prove old remote registration removed or host sanitized."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58125,
+      "source_artifacts": 2174
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2208,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.988,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Twenty full fragments. Source credential-shaped literal not copied; no command execution, token generation, installation, deletion or native change. Independent audits, raster/rendered review, rights and adoption remain separate."
+}

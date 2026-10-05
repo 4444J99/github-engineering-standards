@@ -1,0 +1,128 @@
+[
+  {
+    "artifact_id": "d8a5cc0808ac0c711800769d",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/dependency-review/about-dependency-review-action.md",
+    "content_sha256": "b3805032e6a1faea5d461f7d16f02111f2689b7efd2959939dee0f25dcec6e4e",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:10:01.327Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment and conditional branches read. The fragment describes an Actions dependency-review action reporting pull-request dependency differences, scanning vulnerable versions introduced through package version changes, and warning about associated vulnerabilities. It links to action documentation without reviewing implementation, proving exhaustive detection, or establishing an installed required check.",
+    "claim_mappings": [
+      {
+        "candidate_id": "0566fd669c5545d06465a63e",
+        "text_sha256": "d3d5b989888610489648abe64cc5c87401f2732156a4270483220555323f59b9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-DEPENDENCYREVIEWENFORCEMENT-001; no action installation, required-check assurance, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "a68eade72d2f73b38e8dcdb2",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/dependency-review/about-dependency-review-action2.md",
+    "content_sha256": "d586f6a0ad228d474b357fc08052c6a0b07377ce7d613828b80161bf3eed8dbc",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:10:01.327Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment and conditional branches read. The source says the check fails by default on discovered vulnerable packages, but merge blocking additionally requires the repository owner to require that check to pass. A failure, workflow file, and enforced required status are distinct; none is an observed native receipt here, and the branch-protection destination was not newly reviewed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "914919d3c9d67f4f5c263bf4",
+        "text_sha256": "c460bd706befd0f7d71ad481717b9f02078c40cf49cd6ee930d8aa7b78e5d5ae",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-DEPENDENCYREVIEWENFORCEMENT-002; no action installation, required-check assurance, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "5a943f4b82dca813a944f0be",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/dependency-review/action-enterprise.md",
+    "content_sha256": "63d255ba3844c9bad54b18828e6dfb3f6849268dcfd7583340b393f9a941c7ed",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:10:01.327Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment and conditional branches read. The administrator fragment exists only in the ghes branch and describes enterprise owners adding the action to the enterprise and repository admins adding it to repositories. Outside that branch it renders no assertion. Role capability is not approved installation, actual action availability, or a grant to change protections.",
+    "claim_mappings": [
+      {
+        "candidate_id": "aad76507a8d5dc5160fae1f2",
+        "text_sha256": "b65f8f3200d35d7fcf13e4d3cbc65a046786198aeb9540672c74676393a4fad8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-DEPENDENCYREVIEWENFORCEMENT-003; no action installation, required-check assurance, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "1bc6df1ed75a12269258f26a",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/dependency-review/dependency-review-action-beta-note.md",
+    "content_sha256": "f6ca371a82af3de5fa45fda5da099206393f0f33c51370cc774ffda4bafec2e5",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:10:01.327Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment and conditional branches read. The isolated action note describes public preview subject to change at the pin. It is not current release status, stable behavior certification, or evidence that all consumers or deployments share that lifecycle state.",
+    "claim_mappings": [
+      {
+        "candidate_id": "95ce734d97f8c73dbb0cf813",
+        "text_sha256": "74f308992fd02f472c8bf7adebc7f1319e12257f2641d86ea6ff43db71dbee57",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-DEPENDENCYREVIEWENFORCEMENT-004; no action installation, required-check assurance, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "90c7d22ce4e29b8c049481e7",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/dependency-review/dependency-review-action-overview.md",
+    "content_sha256": "dbc24f9c42a92ed4887d820b4b10a839e537ab4df6b0076be4071b07f8a33958",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:10:01.327Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment and conditional branches read. The overview describes pull-request dependency-change scanning, errors for newly introduced dependencies with known vulnerabilities, and an API comparing dependencies between two revisions. Revision comparison and known-vulnerability detection do not prove all vulnerabilities, transitive completeness, license clearance, required merge enforcement, or a successful actual scan; linked implementation/API destinations were not reviewed here.",
+    "claim_mappings": [
+      {
+        "candidate_id": "8f75277c5ca9bf1ad83bdf2e",
+        "text_sha256": "6a921bc7656de116fb5c3a68412e35fbcd0abd049174c0a090760ffbe92f8c36",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-DEPENDENCYREVIEWENFORCEMENT-005; no action installation, required-check assurance, adoption, or rights clearance."
+      },
+      {
+        "candidate_id": "c97e80f06298ab62c545f47e",
+        "text_sha256": "986fe6f31ba61b7edd2289ada3c38184655abbeac4eaadf0d8552be61415faaf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-DEPENDENCYREVIEWENFORCEMENT-005; no action installation, required-check assurance, adoption, or rights clearance."
+      }
+    ]
+  },
+  {
+    "artifact_id": "3b0f580cdf28d86977d2e422",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/dependency-review/dependency-review-enabled-ghes.md",
+    "content_sha256": "af9b8264e17a8f76471294a1cc241003b31dde8638faedf6de1b17d8ded2c406",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:10:01.327Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete pinned fragment and conditional branches read. The ghes-only fragment says enabling the dependency graph gives users access to dependency review and embeds the short-summary description. Access to the feature is not a required Actions check, approved graph toggle, actual permission, or verified blocking behavior; the include was read for context without newly certifying its artifact.",
+    "claim_mappings": [
+      {
+        "candidate_id": "a451a83f810c8bfb6857869d",
+        "text_sha256": "83c409bd7f17ebd40a6f71529f91da05eb6a1a54552b4c54a1d19d0bd3df8779",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-DEPENDENCYREVIEWENFORCEMENT-006; no action installation, required-check assurance, adoption, or rights clearance."
+      }
+    ]
+  }
+]

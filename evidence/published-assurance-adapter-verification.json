@@ -1,0 +1,91 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/14",
+  "verified_at": "2026-10-02T15:59:17Z",
+  "change": "Optional fail-closed published assurance receipt accounting replaces hard-coded zero; no real certification authority or receipts issued.",
+  "input_code_hashes": {
+    "ges/published_assurance.py": "c08b745fdfa2d32685823e90f73d5c015fee04aef15a9d2850c9f040e76baea8",
+    "ges/recovery.py": "6f97ba3e15514aa85e76ec672425d4a3b636855b4b29cf0bf742a1a1ef5bc340",
+    "tests/test_published_assurance.py": "be9d15961b4337d5cfc4e4a5a5c3f56a64baf895684825c742903a8c93909416",
+    "docs/published-assurance-receipts.md": "1c342ed7c29ee967e86c3b9b8cb2433e3c1f5492f623ba62a19c73708e3228e4"
+  },
+  "tests_added": 24,
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -p test_published_assurance.py -v",
+      "stage": "Before module implementation",
+      "exit_code": 1,
+      "result": "ImportError for absent module; initial test-first scaffold, not behavioral defect proof."
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_published_assurance.py -v",
+      "stage": "Claim-replacement regression before final digest comparison",
+      "exit_code": 1,
+      "tests": 24,
+      "failures": 1,
+      "result": "ValueError not raised: substituted claim document counted between digest and provenance reads."
+    },
+    {
+      "command": "python -m unittest discover -s tests -p test_published_assurance.py -v",
+      "stage": "After digest comparison",
+      "exit_code": 0,
+      "tests": 24,
+      "duration_seconds": 0.154,
+      "result": "OK"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "stage": "Final integrated correction verification",
+      "exit_code": 0,
+      "tests": 294,
+      "duration_seconds": 2.645,
+      "result": "OK; synthetic negative published_docs ERROR remains a fixture, not live acquisition failure."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.published_assurance --help",
+      "exit_code": 0,
+      "result": "CLI loads and documents required inputs; not runtime certification"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 725,
+      "artifact_denominator": 13657,
+      "published_assurance_completed": 0,
+      "published_denominator": 18019,
+      "unresolved_source_instances": 14,
+      "gates_open": 9,
+      "receipt_errors": []
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "independent_review": {
+    "reviewer": "codex:evaluator_review",
+    "author": "codex:root",
+    "scope": "Module/tests/recovery integration inspected; reviewer performed no edits or test execution.",
+    "finding": "Empty Path.parts could raise uncaught IndexError; guard and regression added. Exact claim-file binding required; all five evidence kinds now bind same digest-qualified claim set.",
+    "final_result": "No remaining blocker found in inspected code. Final provenance-read path/digest map compared to advertised claim references; source/body/role/time and denominator checks preserved."
+  },
+  "boundaries": [
+    "Policy remains externally approved trusted authority input; approval_reference string or alias lists do not establish genuine authority.",
+    "Existing source-disposition policy cannot grant certification.",
+    "Synthetic fixture can close only its one published gate; all eight other gates remain open.",
+    "No real page assurance, source semantic completion, rights, accepted control or native behavior certified.",
+    "Locked-source mappings only; fourteen supplemental/deployment identities still require their own complete pathway.",
+    "Use immutable snapshots; this does not prevent all hostile concurrent filesystem races."
+  ],
+  "delivery": "Exact commit and successful push receipt posted to issue14; all authored plan, code, tests, docs and verification committed together."
+}

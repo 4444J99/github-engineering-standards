@@ -1,0 +1,47 @@
+{
+  "issue": 282,
+  "reviewed_at": "2026-10-03T07:06:47.038Z",
+  "reconciliation_rows": 8,
+  "claim_references": 31,
+  "missing_references": 0,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59942,
+    "claim_bearing_artifacts": 3273,
+    "tests": 324,
+    "test_seconds": 1.975,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Proposed scoped decisions and parameterization; not accepted policy or implemented binding.",
+    "Claim existence verified, not independent semantic equivalence or extraction completeness.",
+    "No native or rights approval/clearance."
+  ]
+}

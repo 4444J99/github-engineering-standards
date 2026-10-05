@@ -1,0 +1,142 @@
+[
+  {
+    "artifact_id": "11d6d343954dc8d7821eb3bb",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/migrating-to-the-container-registry-from-the-docker-registry.md",
+    "content_sha256": "d3afe63ced9d7744eec09a4064a59934c60c3841ae35c21ddcd4b6a1877396de",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:35:00.115Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The page covers FPT/GHEC/GHES. Its migration actor is an enterprise owner for GHES and GitHub otherwise. Consumer no-action wording must not cancel the administrator manual migration task reviewed in issue 266; no migration authority is conferred to this agent. The product include permits GHEC managed users to publish in organization namespaces, not their own namespaces because personal storage is unavailable; this clause is conditional, not a GHES claim or general publication approval. The GHES include describes Container Registry as public preview with Packages and subdomain-isolation prerequisites. Benefits include image storage under personal/organization accounts, repository association, inherited/granular permissions and anonymous public reads; no target state verified. Generic replacement and gradual migration statements retain issue 265's unresolved GHES lifecycle boundary; the GHES 3.6 organization-only availability and future user-image migration statement are historical, not current-release assurance. After image migration, the package icon changes from Docker to Container Registry and the pull URL host changes: docker.pkg.github.com to ghcr.io for FPT/GHEC, docker.HOSTNAME to containers.HOSTNAME for GHES. Display changes alone are not verified migration or actual endpoint identity. The namespace include states old Docker namespace scripts and workflows remain compatible after migration. This is not tested consumer behavior or compatibility for every API and credential mode. After migration GraphQL queries with PackageType DOCKER are unavailable; REST queries with package_type container replace them. Namespace continuity does not preserve GraphQL query compatibility; the linked REST guide is not reviewed by reference and no adapter/API was executed. FPT/GHEC billing content is only a pointer, with no price or budget evidence; GHES instead links administrator migration guidance. These outbound references are not full review, cost approval, rollout or rights clearance. Complete page inspected with necessary previously read include/feature/variable context. Independent extraction/published assurance and adopted policy remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "1c9d3a9e79f6cbe3fca5c3aa",
+        "text_sha256": "722fd097400f7bd5060285437a7e7ce6fb21fdb4541245e3792e48d08881f02e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "7c9db13543d4f7eaff7e5eca",
+        "text_sha256": "8e34c9511739ad909a318b193cfd43ac139bc3b1690080b785976cde0e31efa3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "de64784d0069398d2019da91",
+        "text_sha256": "cd6b5dab757dabb2fc2a9097aa5bbffe131630b320d87b6695d8fe5a6fb6af8e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "cfa9af7aebcc952a1c5e4710",
+        "text_sha256": "c79816a068f7f52854d9f0dc226533ba018c08e5e152d8bce744491ab7735313",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "722ce7fbc62742ceee513a51",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "2874a98197b5c96bd3538c3b",
+        "text_sha256": "b06a348b4081b7fe08dac421025668ad2778dabeb7fdbd2a79d511b9dd858b14",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "fa905d495f775a9fb0e3cef5",
+        "text_sha256": "8b67e2afde98c89132b4358fdb45dd4f6aaa9607b88a7aae161fc428aa3257c7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "47a104ce8ef491fedc7fc6ea",
+        "text_sha256": "d2ca3504e74b8ae831417f7dc0bab6a67cc335d63ecba07200c9270b9370c47b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "b1a781ac02d38c2dd3d50181",
+        "text_sha256": "96dd5a9a348fe660fa1330bc98d993d3fb1d30567402e78f840c9305b246d010",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "189cc15b64ad38b3e9cbe117",
+        "text_sha256": "b5a256f50e89d6e9e91e212f2e90b58bc68a42b84a926175e767ace7498e6848",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "e892937e1c4827dea11c2885",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "eed4f28544d1fa8a68038123",
+        "text_sha256": "8659195a17760482112e01220c7cbf25a0d6cd9e66bfd4678e1de73d66349990",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "de5f6e7c7e652569c3825a15",
+        "text_sha256": "d81e8ca33a5622086b18df9fb3f0a2f18b06a6f5587fefbe4a412e62440a97c0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "d660539203db1773e6c67fc9",
+        "text_sha256": "f6a019ae91438538c76032e14e40d8e71e4dfaaa71874e71fa1d7ebc8b019392",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "9262cfaeaeada18f620077dd",
+        "text_sha256": "36e21cc426b27c18b8f8012ed6e50dcc049b6ca815ab0e7589be670a28fcc872",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "9baa4e3b7bbdddff307ec8ab",
+        "text_sha256": "d6483d2d274adf04a5cc296349ef6cbc20ca1ea07de03acb39f2196d29727200",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "08f83cc9f0afa0ecb2953f4f",
+        "text_sha256": "f6f54a4e3e209054bf3a25a4e22a3fa2f5da579fb4adb20f9f9a6026d5b53863",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "2f16aa672e1154cfb2c7f81c",
+        "text_sha256": "f88819c6ce020ab6bfe2906d9e3d72bb33bc9adc85f2b9ddd512b42b3dd2d5b1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "ef6f2782ee1b02f4ec80a102",
+        "text_sha256": "644fe27c91c5efd5b4cf3e01627e738fa77c77de1826ce7842c443363f13ff52",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "52bfe5058863bdb665ebdf84",
+        "text_sha256": "5c2ab3adc6da827e608035ac12a4f255a1573e881b59fb4c588e2bced41268ef",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      },
+      {
+        "candidate_id": "305716ee6a52e57b342913cc",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-CONSUMERPACKAGEMIGRATE-1 through -8; not accepted policy or native migration receipt."
+      }
+    ]
+  }
+]

@@ -1,0 +1,153 @@
+{
+  "schema_version": "ges.projects-consolidation.v1",
+  "issue": 331,
+  "reviewed_at": "2026-10-03T08:52:39.118Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed Projects creation, management and automation subset; not all issues/Projects or six-source reconciliation.",
+  "rows": [
+    {
+      "id": "PROJECT-LINK-AUTHORITY",
+      "claims": [
+        "DOCS-PROJECTSREPOLINK-2",
+        "DOCS-PROJECTSTEAMLINK-2",
+        "DOCS-PROJECTSTEMPLATES-7"
+      ],
+      "conflict": "Repository link is discoverability; team link adds read access.",
+      "decision": "PROPOSED_OPERATION_SEPARATION",
+      "requirement": "Parameterize link type, owner and exact team/project IDs; require access-impact diff for grants.",
+      "negative_test": "Repository link must not imply read grant; team link must not be treated as harmless navigation."
+    },
+    {
+      "id": "PROJECT-EFFECTIVE-ACCESS",
+      "claims": [
+        "DOCS-PROJECTSACCESS-3",
+        "DOCS-PROJECTSACCESS-9",
+        "DOCS-PROJECTSTEAMLINK-5",
+        "DOCS-PROJECTSVISIBILITY-3"
+      ],
+      "conflict": "Removing one grant does not establish complete revocation; project access differs from repository content access.",
+      "decision": "PROPOSED_EFFECTIVE_ACCESS_RECONCILIATION",
+      "requirement": "Reconcile owners/base/individual/team/public/internal grants and test intended reader against project and repository separately.",
+      "negative_test": "Removed grant with alternative access must not pass revocation; REDACTED must remain unknown."
+    },
+    {
+      "id": "PROJECT-VISIBILITY-AUTHORITY",
+      "claims": [
+        "DOCS-PROJECTSACCESS-2",
+        "DOCS-PROJECTSVISIBILITY-4",
+        "DOCS-PROJECTSVISIBILITY-5"
+      ],
+      "conflict": "General admin capability is restricted by effective owner/enterprise policy and product feature scope.",
+      "decision": "PROPOSED_SCOPE_QUALIFICATION",
+      "requirement": "Parameterize owner type, EMU status, platform/version and governing visibility policy; exact approval before audience expansion.",
+      "negative_test": "Admin alone must not imply authority under owner-only restriction; internal must not be assumed universally available."
+    },
+    {
+      "id": "PROJECT-BACKFILL",
+      "claims": [
+        "DOCS-PROJECTSAUTOADD-2",
+        "DOCS-PROJECTSAUTOARCHIVE-6",
+        "DOCS-PROJECTSCREATION-4"
+      ],
+      "conflict": "Auto-add does not backfill on enable; auto-archive and optional creation import affect existing items.",
+      "decision": "PROPOSED_OPERATION_SEPARATION",
+      "requirement": "Describe existing-item impact per operation; snapshot candidate IDs and verify historical/future coverage separately.",
+      "negative_test": "Enabled auto-add cannot pass existing-item coverage; auto-archive enable must expose existing affected items."
+    },
+    {
+      "id": "PROJECT-FILTER-AGE",
+      "claims": [
+        "DOCS-PROJECTSAUTOARCHIVE-4",
+        "DOCS-PROJECTSAUTOARCHIVE-5"
+      ],
+      "conflict": "Age comparator examples conflict with last-period prose; activity includes metadata, not only code.",
+      "decision": "UNRESOLVED",
+      "requirement": "Preserve ambiguity pending independent behavioral audit; parameterize age/timezone and all qualifying update events.",
+      "negative_test": "Boundary timestamps and recent metadata-only updates must not be silently classified from code inactivity."
+    },
+    {
+      "id": "PROJECT-QUOTA-RECOVERY",
+      "claims": [
+        "DOCS-PROJECTSAUTOARCHIVE-7",
+        "DOCS-PROJECTSITEMARCHIVE-5",
+        "DOCS-PROJECTSLIFECYCLE-4"
+      ],
+      "conflict": "Archive retains quota and restore may encounter active automation; closure is not verified automation suspension.",
+      "decision": "PROPOSED_RECOVERY_PRECONDITIONS",
+      "requirement": "Separate archive/close/delete; record workflow state and bounded restoration verification before authorized destructive change.",
+      "negative_test": "Archive cannot claim freed quota; reopen/restore button cannot certify automation disabled or data restored."
+    },
+    {
+      "id": "PROJECT-COPY-PROVENANCE",
+      "claims": [
+        "DOCS-PROJECTSCOPY-2",
+        "DOCS-PROJECTSCOPY-3",
+        "DOCS-PROJECTSCOPY-4",
+        "DOCS-PROJECTSTEMPLATES-4"
+      ],
+      "conflict": "Optional drafts qualify no-items shorthand; copied configuration excludes auto-add and access links; template link is mutable context.",
+      "decision": "PROPOSED_SCOPE_QUALIFICATION",
+      "requirement": "Parameterize draft inclusion and destination; pin reviewed configuration identity and independently reconcile destination access/workflows.",
+      "negative_test": "Copy cannot inherit source permission assurance, auto-add or immutable revision from template link."
+    },
+    {
+      "id": "PROJECT-ENUMERATION",
+      "claims": [
+        "DOCS-PROJECTSAPI-4",
+        "DOCS-PROJECTSAPI-6",
+        "DOCS-PROJECTSACTIONS-7",
+        "DOCS-PROJECTSEXPORT-2"
+      ],
+      "conflict": "Tutorial first-page queries and view TSV are not exhaustive backups or assessments.",
+      "decision": "PROPOSED_COMPLETE_READ_CONTRACT",
+      "requirement": "Traverse every supported connection, record redactions/types and denominators; verify backup restoration separately from view export.",
+      "negative_test": "21st item/field and 11th assignee must not vanish from coverage; filtered TSV cannot certify full recoverability."
+    },
+    {
+      "id": "PROJECT-CREDENTIALS",
+      "claims": [
+        "DOCS-PROJECTSAPI-2",
+        "DOCS-PROJECTSACTIONS-3",
+        "DOCS-PROJECTSACTIONS-4",
+        "DOCS-PROJECTSACTIONS-6"
+      ],
+      "conflict": "Classic scopes, App permissions and repository token are distinct authority models.",
+      "decision": "PROPOSED_PERMISSION_ADAPTERS",
+      "requirement": "Use read-only default and explicit token-kind/project-owner permission matrix; do not mint/escalate credentials automatically.",
+      "negative_test": "Repository token or repository Projects permission cannot certify organization Projects write capability."
+    },
+    {
+      "id": "PROJECT-PARTIAL-WRITES",
+      "claims": [
+        "DOCS-PROJECTSAPI-9",
+        "DOCS-PROJECTSAPI-12",
+        "DOCS-PROJECTSACTIONS-9",
+        "DOCS-PROJECTSACTIONS-11"
+      ],
+      "conflict": "Addition and field updates are separate; underlying issue mutations have broader scope and silent calls lack readback.",
+      "decision": "PROPOSED_PLAN_APPLY_VERIFY_RECOVER",
+      "requirement": "Require exact operation diff, preconditions, per-step receipt, post-readback and recovery design; separate issue from project-item writes.",
+      "negative_test": "Failure after add or one field update must remain partial, not rolled back or PASS without evidence."
+    },
+    {
+      "id": "PROJECT-NATIVE-COVERAGE",
+      "claims": [
+        "DOCS-PROJECTSACTIONS-2",
+        "DOCS-PROJECTSACTIONS-10",
+        "DOCS-PROJECTSBUILTINAUTOMATION-6"
+      ],
+      "conflict": "Repository-local event workflow and built-in config do not prove estate coverage or effective behavior.",
+      "decision": "PENDING_NATIVE_APPROVAL_AND_EVIDENCE",
+      "requirement": "Inventory intended repositories/events and test authorized success/denial/retry/recovery; record freshness and source-version applicability.",
+      "negative_test": "Workflow existence or Todo/Done status cannot certify acceptance, all events or native enforcement."
+    }
+  ],
+  "limitations": [
+    "Requirements and negative tests are proposals, not implemented bindings or test receipts.",
+    "Reference identities do not prove policy equivalence or independent semantic completeness.",
+    "No rights clearance, native pilot or estate change."
+  ]
+}

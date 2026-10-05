@@ -1,0 +1,46 @@
+{
+  "schema": "ges.claim-consolidation-proposal.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "input_documents": ["evidence/published-computer-use-cli-claims.json", "evidence/published-computer-use-app-claims.json"],
+  "input_claim_denominator": 66,
+  "input_page_instance_denominator": 4,
+  "common_statement_groups": [
+    {"claims": ["PD-CLI-001", "PD-APP-001"], "finding": "Both sources identify preview status; retain dated product context, not a project requirement."},
+    {"claims": ["PD-CLI-002", "PD-APP-002"], "finding": "Both identify changeability; neither establishes future stable behavior."},
+    {"claims": ["PD-CLI-004", "PD-APP-004"], "finding": "Both describe local macOS/Windows applicability; no universal platform or remote-session assertion."},
+    {"claims": ["PD-CLI-012", "PD-APP-011"], "finding": "Both recommend specifying the desired outcome."},
+    {"claims": ["PD-CLI-013", "PD-APP-012"], "finding": "Both recommend identifying involved applications."},
+    {"claims": ["PD-CLI-014", "PD-APP-013"], "finding": "Both recommend specifying constraints."},
+    {"claims": ["PD-CLI-017", "PD-APP-018"], "finding": "Both distinguish current-session approval from persistent approval, when a prompt is required."},
+    {"claims": ["PD-CLI-018", "PD-APP-019"], "finding": "Both describe persistent approval for future sessions; no recommendation to persist it universally."},
+    {"claims": ["PD-CLI-019", "PD-APP-020"], "finding": "Both permit declining or canceling requested approval."},
+    {"claims": ["PD-CLI-021", "PD-APP-016"], "finding": "Both instruct checking the requested application against the intended task when approval is prompted."},
+    {"claims": ["PD-CLI-022", "PD-APP-017"], "finding": "Both instruct checking the requested action against the intended task when approval is prompted."}
+  ],
+  "scope_preserving_groups": [
+    {"claims": ["PD-CLI-003", "PD-APP-003"], "relation": "CAPABILITY_CONTEXT", "finding": "Capability summaries are not enablement mandates or independently audited atomization of every interaction primitive."},
+    {"claims": ["PD-CLI-006", "PD-CLI-007", "PD-APP-005", "PD-APP-009"], "relation": "SURFACE_VARIANTS", "finding": "CLI command preference persistence and plugin activation differ from app settings navigation; app also offers the session command. Preserve each entry point and side effect."},
+    {"claims": ["PD-CLI-008", "PD-CLI-009"], "relation": "CLI_EXPLICIT_MANAGED_POLICY", "finding": "CLI explicitly describes organization block reporting and non-overridable local preference. The app how-to's silence is not permission to bypass managed policy; concept-page evidence must be reconciled separately."},
+    {"claims": ["PD-CLI-010", "PD-CLI-011", "PD-CLI-032", "PD-APP-006", "PD-APP-007", "PD-APP-008", "PD-APP-033", "PD-APP-034"], "relation": "COMMON_PREREQUISITES_DISTINCT_EVIDENCE", "finding": "Accessibility and Screen Recording remain separate macOS permissions. App explains purpose, recheck and granted-state display; CLI troubleshooting specifically names the helper. Do not collapse declared prerequisites into effective grants."},
+    {"claims": ["PD-CLI-015", "PD-CLI-016", "PD-APP-014", "PD-APP-015"], "relation": "SURFACE_VARIANTS", "finding": "CLI permission mode/status and app Tool Permissions/Sessions settings are distinct control surfaces. No setting was inspected or changed."},
+    {"claims": ["PD-CLI-005", "PD-CLI-026", "PD-CLI-030", "PD-CLI-031", "PD-APP-010"], "relation": "OVERLAPPING_NOT_EQUIVALENT", "finding": "CLI status includes skills while app status names plugin/MCP. CLI disablement verification and separate plugin/connectivity diagnosis are extra scope; none proves completed work or correct target access."},
+    {"claims": ["PD-CLI-020", "PD-CLI-023", "PD-APP-023", "PD-APP-024", "PD-APP-025", "PD-APP-026"], "relation": "COMPATIBLE_WITH_ADDITIONAL_SCOPE", "finding": "CLI describes saved approval sharing to app and deny precedence. App describes grants originating in either surface, individual removal and future-only effects; retain same-computer scope and non-revocation of existing session grants."},
+    {"claims": ["PD-CLI-024", "PD-APP-021", "PD-APP-022", "PD-APP-027", "PD-APP-028"], "relation": "DISTINCT_OPERATIONS_NOT_CONTRADICTION", "finding": "CLI uses two Escape presses; app uses Stop or one Escape. These are interruption variants, not interchangeable shortcuts. App separately requires session termination for session-grant revocation."},
+    {"claims": ["PD-CLI-025", "PD-APP-029", "PD-APP-030"], "relation": "SURFACE_VARIANTS", "finding": "Feature disablement has command and settings routes. Neither cited off/toggle instruction establishes deletion of saved grants or revocation of all current-session permissions."},
+    {"claims": ["PD-CLI-027", "PD-CLI-028", "PD-CLI-029", "PD-APP-031", "PD-APP-032"], "relation": "DIFFERENT_FAILURE_CONTEXT", "finding": "CLI unavailability and absent app settings have account/platform checks, with CLI additionally requiring local-session confirmation. Preserve failure context rather than infer a successful fallback."}
+  ],
+  "generalization_proposals": [
+    {"function": "Session/application authorization", "proposal": "Define the authorized target application, action, outcome and constraints; distinguish current-session and persistent grants and keep explicit denial effective.", "applicability": "Only consumers using desktop-agent capabilities; human approval boundaries remain separate", "required_evidence": "Actual scoped permission state and accountable task authorization, not a command string or settings-file existence"},
+    {"function": "Permission lifecycle", "proposal": "Model interruption, saved-grant removal, feature disablement and session termination as separate operations with separate postconditions.", "applicability": "Adapt per supported client/OS; keep both CLI and app interruption variants", "required_evidence": "Positive and negative runtime observations for each intended postcondition; no mutation without applicable approval"},
+    {"function": "Managed-policy inheritance", "proposal": "Resolve effective organization/enterprise policy before local capability enablement.", "applicability": "Organization-managed consumers; solo profiles still require local task authorization", "required_evidence": "Effective policy readback, including unavailable/permission-denied outcomes as unresolved rather than PASS"},
+    {"function": "Prerequisite verification", "proposal": "Check actual OS-helper permissions and component status separately, and do not equate enabled components with successful operation.", "applicability": "OS-specific prerequisite adapters, not a universal macOS rule", "required_evidence": "Correct helper identity and actual effective grants/connectivity on the scoped target"}
+  ],
+  "remaining": ["Independent semantic equivalence and omission audit", "Reconcile concept-page and enterprise managed-policy claims", "Review canonical control/template/profile impact before adoption", "Implement and verify applicable operational adapters", "Component-specific rights decisions and accountable acceptance"],
+  "claims_removed_from_denominator": 0,
+  "canonical_controls_changed": 0,
+  "independent_semantic_certification": false,
+  "source_revision_verified": false,
+  "rights_accepted": false,
+  "native_behavior_verified": false,
+  "accepted_policy": false
+}

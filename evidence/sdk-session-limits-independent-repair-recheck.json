@@ -1,0 +1,185 @@
+{
+  "schema_version": "ges.independent-repair-recheck.v1",
+  "reviewer": "codex:independent-source-audit",
+  "reviewed_at": "2026-10-02T13:18:25Z",
+  "scope": "Only five parent/10child repairs, six event-table marker observations137–142, and precision correction010; no candidate accounting/global certification.",
+  "prior_audit": {
+    "path": "evidence/sdk-session-limits-independent-claim-audit.json",
+    "sha256": "3ac786851e88ff3f649683ebf1e8b55cd8d86aef45ec6a3687b0623aed4f1896",
+    "original_snapshots": 136,
+    "immutable": true
+  },
+  "input": {
+    "path": "evidence/source-reviews/docs-sdk-session-limits-claims.json",
+    "sha256": "40ebb0ecb1f2d6375680d2fdbc6a65fdbb6e6829f13fe0e72c00374f060e640d",
+    "record_count": 152
+  },
+  "source": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/session-limits.md",
+    "content_sha256": "16432f77a8785452db37cc2f719aef87bd8139326e08713efbc4ad03e1a2fcf1"
+  },
+  "verified_ids": [
+    {
+      "claim_id": "DOCS-SDKLIMITS-010",
+      "span": [
+        19,
+        19
+      ],
+      "source_strength": "INFORMATIONAL_CONSTRAINT"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-046-A01",
+      "span": [
+        73,
+        73
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-046-A02",
+      "span": [
+        73,
+        73
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-056-A01",
+      "span": [
+        80,
+        80
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-056-A02",
+      "span": [
+        80,
+        80
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-079-A01",
+      "span": [
+        119,
+        119
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-079-A02",
+      "span": [
+        119,
+        119
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-087-A01",
+      "span": [
+        125,
+        125
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-087-A02",
+      "span": [
+        125,
+        125
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-092-A01",
+      "span": [
+        136,
+        136
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-092-A02",
+      "span": [
+        136,
+        136
+      ],
+      "source_strength": "EXAMPLE"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-137",
+      "span": [
+        166,
+        166
+      ],
+      "source_strength": "INFORMATIONAL_CONSTRAINT"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-138",
+      "span": [
+        167,
+        167
+      ],
+      "source_strength": "INFORMATIONAL_CONSTRAINT"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-139",
+      "span": [
+        167,
+        167
+      ],
+      "source_strength": "INFORMATIONAL_CONSTRAINT"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-140",
+      "span": [
+        167,
+        167
+      ],
+      "source_strength": "INFORMATIONAL_CONSTRAINT"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-141",
+      "span": [
+        168,
+        168
+      ],
+      "source_strength": "INFORMATIONAL_CONSTRAINT"
+    },
+    {
+      "claim_id": "DOCS-SDKLIMITS-142",
+      "span": [
+        168,
+        168
+      ],
+      "source_strength": "INFORMATIONAL_CONSTRAINT"
+    }
+  ],
+  "outcomes": [
+    {
+      "repair": "Five parent/10child atoms",
+      "result": "SUPPORTED",
+      "detail": "Separate constructors/wrappers and illustrative values match exact Go73/80 Java119/125 Rust136 occurrences."
+    },
+    {
+      "repair": "Six table marker observations",
+      "result": "SUPPORTED",
+      "detail": "Fields lacking '?' are preserved as literal table facts, without claiming inspected generated schema or runtime mandatory guarantees."
+    },
+    {
+      "repair": "010 blocking",
+      "result": "SUPPORTED",
+      "detail": "Post-return cap exhaustion precedes next-model-call blocking as source-described behavior, not observed enforcement or a hard cost cap."
+    }
+  ],
+  "remaining_findings_within_specified_scope": [],
+  "bounded_result": "SPECIFIED_REPAIRS_SUPPORTED; ready for integration only.",
+  "limitations": [
+    "No other files edited.",
+    "No code, costs, credentials, native policies or rights changed.",
+    "No whole-source/global omission pass or candidate mapping certification."
+  ]
+}

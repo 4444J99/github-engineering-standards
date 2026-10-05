@@ -1,0 +1,84 @@
+{
+  "schema_version": "ges.independent-claim-repair-recheck.v1",
+  "reviewer": "codex:independent-source-audit",
+  "reviewed_at": "2026-10-02T14:23:20Z",
+  "scope": "Only parent238 and four directory-occurrence children; no full snapshot or candidate/global certification.",
+  "input": {
+    "path": "evidence/source-reviews/docs-sdk-skills-claims.json",
+    "sha256": "9f6bac4a5a8ca96a8b4587076fe49c13568ceb2a23494417c7f32df7c80e94f5",
+    "record_count": 258
+  },
+  "supplement": {
+    "path": "evidence/sdk-skills-directory-span-supplement.json",
+    "sha256": "b84514ecf3927c10214de99a509ebe529e9b2515285963b88ce5898e6a440101"
+  },
+  "prior_recheck": {
+    "path": "evidence/sdk-interaction-batch-independent-repair-recheck.json",
+    "sha256": "4a2c8c9bcd1c597cef028cb09c1a5d4debd32c8911f6845fb368f6b97098a42e",
+    "skills_input_record_count": 254,
+    "immutable": true
+  },
+  "source": {
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+    "content_sha256": "493a1c4b353fb9aad825e5f7a88c23dac6f6189a550fe748798c31b8ec69ac59"
+  },
+  "checks": [
+    {
+      "claim_id": "DOCS-SDKSKILLS-238",
+      "span": [
+        42,
+        261
+      ],
+      "strength": "GROUPED_CONTEXT",
+      "result": "SUPPORTED_GROUPED_CONTEXT",
+      "rationale": "Original comparative statement and bounds preserved; broad context is not atomic occurrence support."
+    },
+    {
+      "claim_id": "DOCS-SDKSKILLS-238-A01",
+      "span": [
+        43,
+        43
+      ],
+      "strength": "EXAMPLE",
+      "result": "SUPPORTED",
+      "rationale": "Exact initial TypeScript leaf-path occurrence retained as inert example."
+    },
+    {
+      "claim_id": "DOCS-SDKSKILLS-238-A02",
+      "span": [
+        44,
+        44
+      ],
+      "strength": "EXAMPLE",
+      "result": "SUPPORTED",
+      "rationale": "Exact initial TypeScript leaf-path occurrence retained as inert example."
+    },
+    {
+      "claim_id": "DOCS-SDKSKILLS-238-A03",
+      "span": [
+        261,
+        261
+      ],
+      "strength": "INFORMATIONAL_CONSTRAINT",
+      "result": "SUPPORTED",
+      "rationale": "Exact later parent/immediate-child discovery clause retained as upstream information."
+    },
+    {
+      "claim_id": "DOCS-SDKSKILLS-238-A04",
+      "span": [
+        261,
+        261
+      ],
+      "strength": "INFORMATIONAL_CONSTRAINT",
+      "result": "SUPPORTED",
+      "rationale": "Exact later parent/immediate-child discovery clause retained as upstream information."
+    }
+  ],
+  "remaining_actionable_failures": [],
+  "bounded_result": "All five specified records supported at exact current digest. Directory-discovery tension remains unresolved context rather than inferred loader behavior.",
+  "limitations": [
+    "No source execution, installation or configuration changes.",
+    "No candidate disposition, rights/native/adoption/global omission assurance."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": "ges.email-types-verification.v1",
+  "issue": 377,
+  "source_guides": 1,
+  "claims_added": 7,
+  "candidates_accounted": 26,
+  "reference_claims": 60828,
+  "claim_bearing_artifacts": 3406,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "unit_tests": {
+    "tests": 324,
+    "seconds": 1.972,
+    "result": "OK"
+  },
+  "validated_controls": 95,
+  "project_complete": false,
+  "gates_open": 9,
+  "rights_cleared": false,
+  "policy_adopted": false,
+  "native_enforcement_verified": false,
+  "notes": [
+    "Reference evidence only; the source does not establish mandatory security-email delivery overrides."
+  ]
+}

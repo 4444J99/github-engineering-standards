@@ -1,0 +1,604 @@
+[
+  {
+    "artifact_id": "c53018122c6b8f33ff696487",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/working-with-the-nuget-registry.md",
+    "content_sha256": "ff6aed30dd47984c135dca348bff863d7451f62e761c5e33b2682481ca2faa1c",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:17:22.345Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "NuGet dotnet publication/consumption guide covers FPT/GHEC/GHES; package type may be disabled by GHES site admins and release-stage include is comment-only. Managed users can publish organization namespaces, not personal storage. GHEC github.com uses nuget.pkg.github.com, alternate enterprise domains nuget.SUBDOMAIN.ghe.com. Example URLs require deployment resolution; no endpoint observation follows from source placeholders. packages-nuget-v2 applies FPT/GHEC only, enabling personal/organization granular scope and independent Actions/Codespaces access. Non-v2 namespace is the repository owner; do not assert cloud granular capability for GHES. General authentication reusable allows GITHUB_TOKEN associated-repository publication or read-granted access and classic PAT at least read:packages for other private installs. V2 workflow-token migration is recommended, not an executed credential change. The workflow source-add example uses GITHUB_TOKEN and store-password-in-clear-text instead of hardcoded PAT. Runtime cleartext storage still needs ephemeral credential handling, cleanup and no-log protections; token substitution and job context do not establish safe execution. Workflow and generic source-add examples unconditionally use nuget.HOSTNAME on GHES, while config sections branch to HOSTNAME/_registry/nuget when isolation is disabled. Preserve the missing isolation-specific command adapter rather than certify universal source-add configuration. PAT tutorial project nuget.config defines a named github source and Username/ClearTextPassword, with clear removing prior sources. This credential-bearing project file is not authorized for commit; source removal can affect resolution and is not a harmless default. Cloud endpoint uses namespace/index.json; GHES config isolated nuget.HOSTNAME versus non-isolated HOSTNAME/_registry/nuget. Source host is separate from repository web URL and namespace must match the actual owner/scope. V2 nupkg archive must be smaller than 2.147 GB. Scope is cloud feature branch; exact-equality behavior and all-platform cap are not independently certified. Source-add PAT command and --api-key examples are unexecuted and carry secret exposure risk. V2 packages initially private can have independent granular permissions and associate via csproj RepositoryUrl. Existing-package linking is separate; metadata association does not prove inheritance/admin access or publication authority. PAT/API-key tutorial creates console project, packs Release and pushes versioned nupkg through source github. Version, project name and source require resolution; none of the commands were run and no roundtrip receipt exists. Config publication requires repository OWNER to match authentication NAMESPACE when linking in v2 and generally in non-v2. Version increment, pack/nuspec creation and push remain procedural examples, not measured release provenance. Csproj examples use netcoreapp3.0 and author/company/description placeholders. Historical framework is not a current supported-runtime recommendation; example source-specific identities are not adopted consumer configuration. Same RepositoryUrl in several project files links multiple packages to one repository. MY_APP and MY_OTHER_APP illustrate this, not a mandate to merge consumer repositories or an observed multi-package publication. Consumption adds PackageReference with explicit name/version and performs dotnet restore. Configured dependency/version and successful file parsing do not prove resolution, origin, license clearance or behavioral safety. Non-v2 troubleshooting ties push failure to RepositoryUrl and requires nuspec repository type/url fields. These diagnostics do not provide a verified current client adapter or automatic remediation. The troubleshooting section unconditionally says GITHUB_TOKEN cannot access other private repository-based packages, whereas the authentication reusable explicitly permits granted read access. Preserve this scope/wording tension: repository-based limitation must not erase granular package grants, and no broad credential creation is authorized. Public restore intermittent 403 may arise from querying all configured sources when GitHub authentication fails, blocking packages not in that feed. This is a conditional diagnosis, not proof of every 403 cause or permission to disable the feed. Package Source Mapping routes PACKAGE-ID-PREFIX.* to github and wildcard others to nuget.org by most-specific match, with separate isolation configs. Add each relevant prefix; correct patterns can reduce dependency confusion but are not tested assurance for a real target. Source-mapping examples do not include credentials and must compose with reviewed authentication; guide's claims need actual client-version, routing and denial tests. Linked Microsoft source-mapping/client docs and deletion/token guides remain separately scoped; no client execution, publication, rights acceptance or native rollout occurred. Full source and required previously reviewed include/variable and new feature context read; candidate accounting is not independent completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "812c75115377e0df46b8818a",
+        "text_sha256": "5186d322752e990a780f96bdcd567ecfee9e355b5d40ab20976e2ef6b0293240",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "c789d260b179629a64fd01a8",
+        "text_sha256": "a9bff5f684fadb7602539e058b88921accf1c437b705f3e71d3fdb724139907c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "150f58ce14161ac602718555",
+        "text_sha256": "a3cc14d5b78dc8b940142398f5b3a850f55f6e7fe48b84ac4b853bd6244499f4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e581c6a95e9cb07c697b10e0",
+        "text_sha256": "71ee65ce80270a69df3235205c7ddbefe5e431922b1e66cb26b54699c1d4681f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "8e5289db8e3363dc6854b0fb",
+        "text_sha256": "db15408237366f59e3d1c066d00b1d9b9a88a855c60954e8d252c2c90f6e32ee",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "1b59ac037e7260880e042904",
+        "text_sha256": "8e22f14311a7340b9183bd7b80877284e30086515bbfec7663581cdfac7bc7fb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "cb84e156cd2cabace07dae1e",
+        "text_sha256": "2db6eeeceb156991331ef7f3ad11f320573226eafeded7d1579470ae3c7a45ed",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "c495829f702005aaec37d908",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "c1626cc08205bc8eb4e464aa",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "3de4527b43183422505bdc33",
+        "text_sha256": "2628eed7df3bb06ca2f01651c4d5b2128c61c0fea12ba49615bb290b73f71aff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "2c1b177024d31918a682bee4",
+        "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "3d4b54f0c724922603051702",
+        "text_sha256": "ba85eac7d17dc51ab6f0429bd2d03eb9f27d4b2d3c44165294a18a51bd5ac062",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "075c03bb20c617fa99065296",
+        "text_sha256": "73dab0f70f0a9f2c4160ee039b5a57cf7875a01cf93cd4944cde871a0a4fddf8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "2ad79fdb3329dba77f6fc593",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "fd4a3a32caf33beb5df4a3a7",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "16d2b1a14761a7a94d061a45",
+        "text_sha256": "0a85af530ac0b148af911e944c8b93f0a4af3485e0280f56022665ac770daf84",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "437bebfb8057feadb6b3bd64",
+        "text_sha256": "56c502874c6fbeaa467e5b270ef8f598725cc977c8391cf1ad1a968939d979dc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "19f5718e257349aa89b5cd67",
+        "text_sha256": "0fafa4de8735d69c45634940e9ade462ed55b27892987d7b4853b54ac968b9e7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "326fa836e00380c97960ada5",
+        "text_sha256": "50281c23050126a9e01d73b22d72581e535249dd0490a4cd9a572aeea65748ae",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "72e0fcb8264f9d0ef87670ac",
+        "text_sha256": "8f6b4bc8f79d1105ec85fab158bfa7e66f50c37e5626692177d05af3421252ad",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "4fe35ca9c08793fd1a2903e1",
+        "text_sha256": "d5cb8dddf90cb11dc67585bf3512cdf6b6544a969e00c41bcb7aae020a26ff02",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "b6f67678b2f358638d39a61e",
+        "text_sha256": "eab89eac7b9a9411f7ccda135330a245aee40bfd465688f16da3f671fc8f3b77",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "fe5472124a3848fa0151ff87",
+        "text_sha256": "7aca1eebdd236305fccc8e73f71279f482475af7db1dd20cf07b943d1ad356e8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "419eca4476b11eaf654e8061",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "07816e9f7b6bf47358a747fc",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "281c8f624069942d79462fd6",
+        "text_sha256": "2c17a101b81dfafe18943d6d87bac0758e3dfd6ee06fd1c7ff50c0fbea77e4c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e9dd0b3e682467a152327740",
+        "text_sha256": "4fb2e2cac1c122d0b36b4adeb6b66b572f3635f71432cbeebdb6a4d7972d99ab",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "c6e8deefdfd3264492be3966",
+        "text_sha256": "17977b10f6d0c07a65295090a0970ae4e24872ada378b86ea0f98994a502cae1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "ac3a430b77b5a88f8a5b7ebb",
+        "text_sha256": "a719790131960f73a000c10c925c4d134d0ab028094693f71db1499894988f4d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "d6503ce882b71610ef91ad27",
+        "text_sha256": "fe6762aa778b7dff255c1125c62073f73f0f6347160117c63676863cf0ae32b4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "644d965f5f4fff1e83e34386",
+        "text_sha256": "7877510f7f94500f4e543a02b6eaf4216f0cbf579653509bb59e4d686483011f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "d6b4c653824f69e428af1b3c",
+        "text_sha256": "d9ac5dc9bef726a9c7d27a31a9544b670c668faacb36d64655f94a0d7f7d82d8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "cd577f9ac036aeab64210671",
+        "text_sha256": "29a2876bab72eaa2dc29e80298845f5af5b2d27f65b1dd96cd4d8b6bd2a4637a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "380258922678bb0a90ad471f",
+        "text_sha256": "69ffe02f6449ca6e6c5b45069f6dcd3766eb8aaabc8197aa4a49d918719e55d8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "1c3a381d74979bf4d0e91c1f",
+        "text_sha256": "31ee3908013c99e0e158e4923c5c030b29d6c9cdba7027f79cd6d15672014a3c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e156a77e5362fae0675819b5",
+        "text_sha256": "71ef9d6f9b32f777c35f4fd6f4ee3c45bce517a33fdfa84bed4c1f4ac05bed6e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "486f239e8bf607de2d8afaa2",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "b52dde988f26884d2038c880",
+        "text_sha256": "eab89eac7b9a9411f7ccda135330a245aee40bfd465688f16da3f671fc8f3b77",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "86d04ec4838ae44aeef0aa3e",
+        "text_sha256": "03ad533deae922fa41e4f988e13e23c94b9ff5035749df1785dbd768466e805d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "cfd752ce9b5d11d7605810c0",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "424ad3721e4a91b4005633dc",
+        "text_sha256": "fd7e2f4eb95ade00a25b9cdaca111b3e590ae8bd1b1aae2231a7f4c58b17e46b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "7782168e72dd33169fcc009f",
+        "text_sha256": "b7a2238823d0158edfa9fbca8bdf2e2ea1ea74976c43cff9f0ad661ae4d1bf3d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e6e1cb865ae3417944ccbdcb",
+        "text_sha256": "c80fb0b961800ab642dd76fa185b28c0f27f890e6e3049d5e0a00589237037d6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "7b13da22a6f248c7b45a44f9",
+        "text_sha256": "eab89eac7b9a9411f7ccda135330a245aee40bfd465688f16da3f671fc8f3b77",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "922b40439b83eedcebbc44ba",
+        "text_sha256": "3a0de2d20abc3de02c2de9c50309672adf8981b508277c357b42ffdc98a0885e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "4e8ac0231d69c5799592b75a",
+        "text_sha256": "cb9a85a04ca0947f7844fe7f8a8ed4c0557a52addf08b5064aaeb18eed2c07f2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "ca485b8be2c09ff855a40520",
+        "text_sha256": "fdfd7c7e4befaf4ef5e25fe09da5249545b0e326540fe81981f0972b8c229500",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "752faaa4f96b5c9a9f52ffe0",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "446a872cf7e7edbba05d2229",
+        "text_sha256": "8a79968253f7944223c20fb7c4b8b1ccae3e42f26ebbf83a19ebbea2ce78c703",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "6edc6021bcb8ae5eea8f983d",
+        "text_sha256": "b3962a5c7d1baa9ae1578f8c1d18218d12d2f2f5ce743cb3fd9bb60e38b116fa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "50707266b7c0019b2016c643",
+        "text_sha256": "a965fafe2bdbeb64b126e6cbefaa8a3468e0e348bfd562097ef7b7fac9e4cfdb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "aed835b7c260659b3b9a3ae2",
+        "text_sha256": "d64607dec50b834ddacf98c7b88068d707a4a69956d15d9dcc48baa6338a6f6a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "dceb4c9b4b91db1f0be50f8a",
+        "text_sha256": "9a83e84e7d3d9d3d9b327ace640a19e33070027d620ec009a8b91111f6a51ef1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "3cb8137549b598254e4d104b",
+        "text_sha256": "2c14f3b2ddd6a51703b11be3ad82c1fa58287881366fd47c49934c502eb6c20c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e21e31bd2edd4d57df0c3695",
+        "text_sha256": "8f131cbf6a6b6c7ee1468c2198ed1d3f6d8c49e94f2ab00f51a0675563a6c30e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "474c72ba0086777341647794",
+        "text_sha256": "9ceead0bc71d6529048a99d9c017d976a90796a1b6197866e6696125c39ef722",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "a866c4e3cb9e63b97c4a3814",
+        "text_sha256": "828129342b7acafe7d780d691d26736a24063fbc680a9ddee8885dcdaa145775",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e2659b02bf58465142a5ce53",
+        "text_sha256": "1c2947d4ca6cb1531e10da231ebdf669c1516bc210987042b130b5c10d822c32",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "4ef3fc0bc2c65d96ca286a1b",
+        "text_sha256": "c0f9b86db5823707f299b707d26faabaa93f3dad76c222f8e341d51de62e4d29",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "aec02a5f5b8c15e6a8218007",
+        "text_sha256": "b3962a5c7d1baa9ae1578f8c1d18218d12d2f2f5ce743cb3fd9bb60e38b116fa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e37ed8851933826cec2b0e97",
+        "text_sha256": "a965fafe2bdbeb64b126e6cbefaa8a3468e0e348bfd562097ef7b7fac9e4cfdb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "4b9eea1fc1c07f30810e532b",
+        "text_sha256": "2bbbddf4146a49ada24c9eaacd63b347f37788734eafb52798c759e3505191cc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "b0d2f98dfd338a096658fd11",
+        "text_sha256": "7d1415559f38bd66cd6883b89848a0a779087a7d7f29d6baf35ef40f1a76ca20",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "9f21ecae8541c1e545a6d93e",
+        "text_sha256": "3102fdeecd20c3794603a016f4d5406d783b31ab3e27c5d4b58438561437e1b8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "910b35b611f80443ca9e162b",
+        "text_sha256": "9b0eb618c49b035bced782ed4b75f5cb96f5b361e27e33edafef2ffd6eb25dc6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "3f2dbc237db1417d76e89ad6",
+        "text_sha256": "0bdfc874186d9e72bb4b314b4036381ca76515be7a7e08917530ebfdc46dc854",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "379e8f2f7f419da2d7ab4d66",
+        "text_sha256": "648962ee6a1bc5cb2b695668b05e5d42f1f3ebdad571d4408c1c4d3235051c34",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "276aca2f4b0f495ca61ebc71",
+        "text_sha256": "d64607dec50b834ddacf98c7b88068d707a4a69956d15d9dcc48baa6338a6f6a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "1d59778f135255cc289b1235",
+        "text_sha256": "9a83e84e7d3d9d3d9b327ace640a19e33070027d620ec009a8b91111f6a51ef1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "dcaca441de5745fddbf8a4f3",
+        "text_sha256": "ae12071695f2eb100b4c6eb5565f52e7729ff0426c450f0bb7a5f2c73814c083",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "dd1f18056566070433d802a6",
+        "text_sha256": "d5eba9d11ad3a725d99f3443ad0a1261aea93a87dda9f1bb4cd060d91d20bea9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "fd77e97b043b355849ce8ec7",
+        "text_sha256": "9ceead0bc71d6529048a99d9c017d976a90796a1b6197866e6696125c39ef722",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "c2902021710529e1893e72e3",
+        "text_sha256": "d4862346f78ba45bc30e9ccb2603b8f94cfbf21b4b026b8ffd9e70ccbd91aff3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "e671d1d16c6da19fe77e620d",
+        "text_sha256": "3f79b622ce5a6297692b5fdc0f23eaf3a4d6dee4fcfbc678f05251261ec60605",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "955494a106313519b4974c05",
+        "text_sha256": "f3d552866c8b09c5631512b3725d89c52186ff6c166f3e6b35a932a0eeab965e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "30de463e4bc464c5e5860688",
+        "text_sha256": "5dc4f6f09218d6c86340f0a73432fb97df93e9edcbd8e8e62cfcf10a94a99de3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "668c986b0d8259c46ef91426",
+        "text_sha256": "8091b6754f90d6d322d97a847ad1ce26320f76296cafcededeff08f98e5f62e7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "d51ed269acfe6772df9a4e82",
+        "text_sha256": "c0f9b86db5823707f299b707d26faabaa93f3dad76c222f8e341d51de62e4d29",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "dc3bba1aec2152d7c1e7b7cf",
+        "text_sha256": "07755ec58cb3a0ae604cecb1ab419e47aa73f6ab275a5e4efe147e8d3578e08c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "17a183e379dadce2f7e70612",
+        "text_sha256": "638e360e4fd3320a6df9f88b6ee7e328c6f1b630498fe0a609745e8d8fff64ea",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "55999c2c92d577287211d475",
+        "text_sha256": "1e84f4e84fb83a2c8daf192a2df3e0a5032f58bbcd2b20afdf8d96c8b30b80fa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "90a1fd4c18449e04121da13b",
+        "text_sha256": "bb60e02ee16bdfa7913523c9f3bc573b8f93266f099865aac725ee4cf176cb19",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "ea4aa40a5e1fc1d9517c0641",
+        "text_sha256": "938d0e821d87494d832c888a4026f92cb0146aa58a15b9d57ca0f6443e4d575c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "895686744c34d430f2cb2bb5",
+        "text_sha256": "8a86598ad351857f3a2ae4251ff0bff6a5c3572cef8e41a606c1a35217f81437",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "cb4ca86d26dc687d838d6a51",
+        "text_sha256": "467d32905d1556023cd891d65328772c8c65f96e4572790065ff28ebe9ee7d3e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "fd5543d1a6119aacec6a9dc1",
+        "text_sha256": "02e9a51817ca13ee5d7c06a39309bc9c3108470ea03939204dbe9e9ed8d20c74",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "7edba719407012a9daa36f3b",
+        "text_sha256": "2e7a3fa46b673db0214490199aed35b7556d0d1b5a41afd246d646ef51c99860",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "f10113ce94ecd8615748802a",
+        "text_sha256": "447541c54764419ee215fd2437426def74b0406e540854b2fba1970ef00e6c41",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "0dab41c03a9c411b57dddec0",
+        "text_sha256": "337f6ae4c6675f98c831765903a30fb56cf16eab6a598042dd139c63fb2082d8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "37b1c7eef042496ee95fd5ac",
+        "text_sha256": "52ff9ef2aecfb0adcc30db04497310af8ef23d51df91c577801dc26006a4310f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "02affd34a267547d375a572b",
+        "text_sha256": "d9ac5dc9bef726a9c7d27a31a9544b670c668faacb36d64655f94a0d7f7d82d8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "68a1891cd59a8e68aff9d1d4",
+        "text_sha256": "29a2876bab72eaa2dc29e80298845f5af5b2d27f65b1dd96cd4d8b6bd2a4637a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "5002700469baf5617bb9a690",
+        "text_sha256": "3f814a69ea6b90db55b7d5e2120ac8794e447c2ad6dc9743befa81456a4aedbf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "1dfa90c97ee3b023ace70f9b",
+        "text_sha256": "31ee3908013c99e0e158e4923c5c030b29d6c9cdba7027f79cd6d15672014a3c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "84d052849809288d26b95cb4",
+        "text_sha256": "117d7c831585f22808b8a6f10a64b2bf4607328555a1a2dff66b9a69a8ba3af6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "8fd4172ad5bc5021470daaf7",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "103040d3d94b191d21ab9fb0",
+        "text_sha256": "9f6821b158047d5782569765f39f538d3c451004846db2e56ac1cb805a03842a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      },
+      {
+        "candidate_id": "58f9d5d300dcdd9d27d14974",
+        "text_sha256": "8d96adafeec9e83b5d448044327dbfc0e69ef5791d1747000b41e37a3ffdf52f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-NUGETREGISTRY-1 through -20; not adopted policy or operational client verification."
+      }
+    ]
+  }
+]

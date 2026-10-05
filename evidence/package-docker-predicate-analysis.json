@@ -1,0 +1,32 @@
+{
+  "issue": 273,
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "status": "STATIC_PREPROCESSING_TRACED_RENDERING_UNVERIFIED",
+  "accepted_policy": false,
+  "claim_id": "DOCS-PACKAGEPERMISSION-3",
+  "predicate": "not fpt or ghec",
+  "implementation": {
+    "path": "src/content-render/liquid/ifversion.ts",
+    "sha256": "27885e4faa65cf4b039d28fe495a54b4e21d12e042c9dc1efb317fc8de738b59"
+  },
+  "observed_code": [
+    "handleNots replaces only the not token and immediately following version name with the negation of equality to currentVersionObj.shortName; it does not negate the entire remaining expression.",
+    "render invokes handleNots before handleOperators, then handleVersionNames for markdownRequested contexts, then passes the resulting condition to LiquidJS Value.",
+    "handleVersionNames maps recognized deployment tokens individually to true or false."
+  ],
+  "markdown_preprocessing_trace": [
+    {"version": "fpt", "after_not": "false or ghec", "after_names": "false or false"},
+    {"version": "ghec", "after_not": "true or ghec", "after_names": "true or true"},
+    {"version": "ghes", "after_not": "true or ghec", "after_names": "true or false"}
+  ],
+  "inference": "Under ordinary boolean-or evaluation, the predicate selects GHEC and GHES, not GHES alone. The package-permissions Docker entry therefore retains a potential GHEC matrix inconsistency with the replacement statements; do not silently interpret it as not (fpt or ghec).",
+  "limitations": [
+    "Static source inspection only; upstream code and dependencies were not executed or installed.",
+    "LiquidJS evaluation, non-Markdown environment bindings and version-specific published output remain unverified.",
+    "The implementation file was read to interpret a dependency; no whole-file semantic review receipt or independent audit is asserted.",
+    "No source correction, accepted policy, rights clearance, native binding or gate closure."
+  ],
+  "gate_closed": false
+}

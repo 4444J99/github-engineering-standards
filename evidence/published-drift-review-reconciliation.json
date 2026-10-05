@@ -1,0 +1,35 @@
+{
+  "schema": "ges.published-drift-reconciliation.v1",
+  "locked_docs_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "published_ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+  "unmatched_instances": 14,
+  "distinct_paths": 7,
+  "acquired_instances": 14,
+  "body_read_records": 14,
+  "receipt_reconciliation_errors": [],
+  "review_artifacts": [
+    "evidence/published-computer-use-concept-body-review.json",
+    "evidence/published-computer-use-howtos-body-review.json",
+    "evidence/published-dynamic-workflows-concept-body-review.json",
+    "evidence/published-dynamic-workflows-howto-body-review.json",
+    "evidence/published-code-review-body-review.json",
+    "evidence/published-drift-accessibility-review.json"
+  ],
+  "reconciliation_method": "Select all ledger instances with no source_matches; verify their unique IDs, version and body digest against review records and actual cached gzip bytes. Fourteen distinct review records match all fourteen unmatched instances. This verifies identity accounting and body-read receipts, not independent semantic completeness.",
+  "source_history_reference": "evidence/published-source-drift.json",
+  "finding": "The unmatched instances have separately pinned drift-source investigations and full-body read observations. Do not invent matches in the original locked source tree: supplement commits have divergent histories and their deployed identity remains unproven.",
+  "next_required_work": [
+    "Extract atomic claims with exact rendered-body spans and candidate disposition accounting",
+    "Independently audit omitted actionable claims and reconcile source versus rendered expansions",
+    "Resolve remaining reusable, conditional, variable, linked-reference and asset dependencies",
+    "Establish deployment-source identity or an explicitly accepted reconciliation decision without altering the locked denominator",
+    "Complete component-specific rights decisions, adopted-policy mappings and actual binding verification"
+  ],
+  "locked_source_matches_added": 0,
+  "locked_inventory_review_increment": 0,
+  "published_denominator": 18019,
+  "source_revision_verified": false,
+  "semantic_review_complete": false,
+  "rights_accepted": false,
+  "acceptance_gate_closed": false
+}

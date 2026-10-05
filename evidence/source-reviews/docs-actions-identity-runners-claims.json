@@ -1,0 +1,260 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:38:53Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/github_token-input-example.md",
+      "content_sha256": "3bce83eb74561afa803ad4c2a73c15cd9fca85891bd886d9829ce23985262e92",
+      "start_line": 1,
+      "end_line": 19,
+      "statement": "Manual-dispatch issue example provides GITHUB_TOKEN via GH_TOKEN environment, uses ubuntu-latest and contents read/issues write, then creates an issue in github.repository. GH_TOKEN is shown as env despite prose calling it input; example is not executed or broadly adopted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/gradle-workflow-steps.md",
+      "content_sha256": "a79d49e09250127b37142f3dca0c3c45146d2b4e89f39c6a1ec633b7cc28cd38",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Gradle workflow checks out source, configures JDK and setup-gradle caching/execution summaries. Cache and summary functionality are source capabilities, not test results or trusted linked-action review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/hosted-runner-security-admonition.md",
+      "content_sha256": "9d354e0f1281a66033755c81472173f8190dea4825b7c8ecef2e74d401fb8808",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Hosted-runner admonition wraps a shared security fragment in WARNING. Correct parent rendering and included warning body require separate resolution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/hosted-runner-security.md",
+      "content_sha256": "2cb87dc555b1c024d93e3a0950295780b53519f34b60236920e862d259cf555d",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "For fixed-IP hosted runners, private repositories are recommended; fork PR workflows may execute dangerous code on them. Private visibility alone does not prove safe workflow execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/if-supported-contexts.md",
+      "content_sha256": "8adfeb069cd9e2d31d9dd04079ac5f7ff3c77a1d334f0cfa31d24aaa555f4bbd",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Conditionals permit supported contexts/expressions only; availability is key-specific and separately linked, not unrestricted context usage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/inputs-vs-github-event-inputs.md",
+      "content_sha256": "39241a4151d87b046567798754a6735f3b8a62ec3710b5b35ba52cc0c8679a56",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "inputs preserves Boolean types unlike github.event.inputs strings; choice is one selected string. Top-level input limit is 25 on FPT/GHEC and 10 otherwise; payload maximum is 65,535 characters, not bytes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/installing-actions-importer.md",
+      "content_sha256": "b639c75f951c41d9b9da9cba1ec504cc2919505dead3b92c86ff9e1e0d6aeebf",
+      "start_line": 1,
+      "end_line": 21,
+      "statement": "Importer installation uses gh extension install followed by help inspection; listed commands update/version/configure/audit/forecast/dry-run/migrate have distinct capabilities. Help availability is not migration verification; no extension installed or credentials configured.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/internal-actions-summary.md",
+      "content_sha256": "320144c9834e6ac6c4348a6fd1cd5f9c7c6ad46450c51686608e5e7f3b49b4dd",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Conditional internal-actions sharing stores actions in an internal repository with configured same-organization or enterprise-organization workflow access, without public publication. Internal visibility alone does not enable sharing or grant redistribution rights.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/introducing-enterprise.md",
+      "content_sha256": "0fc93c3be7a5ee458094ad098a28633e69570da914703832ed618a5f15fc8727",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise Actions introduction calls for a plan before setup; linked planning guidance is not implicitly reviewed or actual rollout approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/invalid-workflow-files.md",
+      "content_sha256": "823d635d5d172655802145a47f73125f93c5cf55678cffe909a8c8929a9c398b",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Invalid files in .github/workflows generate failed runs for each new commit according to the source; only valid workflow files should be committed. File existence alone does not show valid behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/ip-allow-list-self-hosted-runners.md",
+      "content_sha256": "7586487876b1e2fbc6564e4b0979145889482f3f63ca24896ff8f749caabf084",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "IP allow-list Actions use requires self-hosted or conditionally static-IP larger hosted runners; Azure private networking uses subnet IPs. Load balancer single-range approach is recommended to reduce list size; runner IP/ranges must be allowed for enterprise communication, not actually configured here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/java-jvm-architecture.md",
+      "content_sha256": "6548db404b203c92c44c26c4c00ee55714b809dcd282d8bcca825660a9fbd2a2",
+      "start_line": 1,
+      "end_line": 18,
+      "statement": "Java template uses OpenJDK8 x64 PATH; setup-java can select x64/x86 and other versions. Example selects Java11 Temurin x64 through separate action includes. Values are template choices, not universal Java requirements or tested runtime.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jfrog-json-configuring-identity-mappings.md",
+      "content_sha256": "b30596ede9f63dd8a83f31a97a9953a84b8316efd9d5b9e9fb8450f74b80c3cd",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "JFrog identity mapping example matches issuer https://token.actions.githubusercontent.com and placeholder repository octo-org/octo-repo, conditionally event_name push for Dependabot OIDC support. It is inert trust data, not approved identity mapping or proof of secure claim verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jit-runner-removal.md",
+      "content_sha256": "17f4e20ec55fbaacb70b44a9ab33f8357c3453a62ff53ece9d5f4b05212e4b9b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "JIT runners execute one job; never-used JIT runners are automatically removed. Earlier removal requires removing them on GitHub, and no timeout or actual removal receipt is supplied.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/about-matrix-strategy.md",
+      "content_sha256": "f6f758cf8dbb5fd78f8e7c8b4127d4003d7c209e57ee5e263c822522f614e6f5",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Matrix variables generate multiple job runs from combinations, e.g. language/OS testing. Configuration alone does not prove combinations completed or all requirements tested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-custom-images.md",
+      "content_sha256": "243ff61a027fc07d9e561ee4c0c4cc1d602bc37aef40a4234b86ff5670b22781",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "jobs.<job_id>.snapshot uses string or mapping syntax to generate images; each snapshot job creates a separate image and each successful run creates a version. Single-image guidance puts all steps in one job; image generation is not authorized or observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-github-hosted.md",
+      "content_sha256": "69b3f67bcbf25f2f7c56e321111c7217c22bc5f4550c3e15cadc7338afb26899",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "Hosted-runner material includes GHES limitation; non-GHES jobs use fresh runs-on image instances, labels/group names and separately included supported labels. Team/GHE Cloud larger runners offer added resources/architectures, not actual entitlement or provisioned capacity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-github-hosted.md",
+      "content_sha256": "69b3f67bcbf25f2f7c56e321111c7217c22bc5f4550c3e15cadc7338afb26899",
+      "start_line": 15,
+      "end_line": 29,
+      "statement": "-latest means GitHub latest stable image, not newest vendor OS. Beta/deprecated images are as-is and excluded from SLA/warranty; beta may lack support. Ubuntu-latest is illustrative.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-group.md",
+      "content_sha256": "8ff1635674cf23507909a25e0d2f0dcf5eb3d208467e84ac9ea7589b09a3521b",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "runs-on selects any runner within a group and may combine labels for finer control; FPT/GHEC group members are larger hosted or self-hosted runners.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-group.md",
+      "content_sha256": "8ff1635674cf23507909a25e0d2f0dcf5eb3d208467e84ac9ea7589b09a3521b",
+      "start_line": 9,
+      "end_line": 23,
+      "statement": "Group-only, group-plus-label and conditional GHEC/GHES prefix examples are separate includes. No example bodies or effective group access are certified by this fragment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-overview.md",
+      "content_sha256": "e4a3877596f2fb9ff81163075758c70f0ef20a55cebde3d4cec7dba4c41d284a",
+      "start_line": 1,
+      "end_line": 14,
+      "statement": "runs-on chooses hosted/larger/self-hosted on FPT/GHEC versus self-hosted otherwise; string, variable, array or group/labels mapping supported. Array values are conjunctive: matching all labels, not any label or multiple-machine execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-022",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-overview.md",
+      "content_sha256": "e4a3877596f2fb9ff81163075758c70f0ef20a55cebde3d4cec7dba4c41d284a",
+      "start_line": 17,
+      "end_line": 44,
+      "statement": "String and variable labels can mix; chosen-os dispatch example selects Ubuntu/macOS label on a self-hosted runner. Expressions require quotes unlike simple labels; multiple-machine runs require strategy rather than runs-on array. Example echo is inert.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSIDENTRUN-023",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/jobs/choosing-runner-self-hosted.md",
+      "content_sha256": "3e4a5a178a32957378aec8ca79b28fa47caec5328a9d222cb649977dcd31c259",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Self-hosted selection includes a label guidance reusable and shows [self-hosted, linux], with concept/use links. Example does not instantiate a runner, review included guidance or prove label access.",
+      "accepted_policy": false
+    }
+  ]
+}

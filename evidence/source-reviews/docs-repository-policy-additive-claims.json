@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:22:24.582Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-REPOPOLICYADDITIVE-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-more-flexible.md",
+      "content_sha256": "e3081f7376a1317db6cd7c77ef24cd19e85c4e570d0d2c655feb875ccc060cd3",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Organization repository policies can control creators, new repository naming and allowed visibility with more flexible user and repository targeting than member-privilege policies. This is not actual policy coverage, a replacement of existing restrictions or adopted requirements; the linked guide is not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYADDITIVE-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-policies-section.md",
+      "content_sha256": "46bbb544b098ee66d8adcfb137a4b486fa0bbe8cdec9824bfbcae357069f3598",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Selected restrictions apply to targeted repositories when active, with allowlisted users or teams able to bypass. Restrict names uses regex for must-match or must-not-match patterns and specifies RE2; the kebab-case example is illustrative and Test pattern accepts a pattern and test value. One example test is not comprehensive validation or native enforcement; bypasses remain material, the external RE2 guide is not reviewed and no pattern or policy was configured.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYADDITIVE-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-preview.md",
+      "content_sha256": "c5aa7eb60c7fcc7ab3e8c497d9f6a9a638ce657e7173c409073c6b32f46d628d",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The pinned note describes repository policies as public preview and limits combined policies plus rulesets to 75 per organization and separately 75 per enterprise. It does not allow 75 of each category, certify current quota or prove actual estate capacity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYADDITIVE-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-with-custom-properties.md",
+      "content_sha256": "783d05258f34cdf1891dd24723e603eab45f52dc69262fe85f5eb8134e85f15f",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Combining policies with custom repository properties is recommended for targeting, with sensitive or production-data labels used in an example preventing public visibility. The label itself is not verified data classification, exhaustive sensitive-repository coverage or assurance every actor is blocked given other bypass guidance; no properties or visibility settings changed and the linked guide is not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYADDITIVE-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-with-existing-policies.md",
+      "content_sha256": "8bc67fc42baca29dcf25ed0c9ea4ee3a5bf7c2203d2e8be73b22c1ce8069f005",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "Repository policies do not override existing member-privilege policies: overlapping restrictions are additive and the most restrictive applies across member-privilege and enterprise/organization repository policies. Flexible targeting and actor bypass are listed advantages. Bypass of one policy does not establish bypass of every independently applicable restriction; effective behavior remains untested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYADDITIVE-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repository-caching-config-summary.md",
+      "content_sha256": "543f810878a43828273ac93f2f8f3404aadfcecfcc43164f2889c7fbacdcb2fe",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Repository caching is configured through a special replica type called a repository cache. Cache existence is not backup, complete replication, recoverability, verified freshness or failover evidence; no replica was created.",
+      "accepted_policy": false
+    }
+  ]
+}

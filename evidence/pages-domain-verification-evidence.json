@@ -1,0 +1,47 @@
+{
+  "issue": 295,
+  "reviewed_at": "2026-10-03T07:36:37.090Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 10,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60101,
+    "claim_bearing_artifacts": 3292,
+    "tests": 324,
+    "test_seconds": 1.977,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Immediate subdomain protection is not recursive wildcard protection.",
+    "Challenge TXT presence/profile badge is not native Pages verification receipt.",
+    "Domain release affects other sites; no DNS/verification/publication mutations executed.",
+    "No independent completeness/published assurance, rights, accepted policy or rollout."
+  ]
+}

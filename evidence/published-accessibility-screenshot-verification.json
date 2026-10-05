@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "issue": 28,
+  "review": "evidence/published-accessibility-screenshot-review.json",
+  "screenshots_inspected": 13,
+  "additional_visual_claims": 4,
+  "verification": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 324, "seconds": 2.019, "result": "OK"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "git diff --check", "exit_code": 0}
+  ],
+  "scope_boundary": "Local regression checks do not certify screenshot omission completeness, supplemental authority, published assurance, rights clearance or native enforcement. The published_docs ERROR printed by the unit suite is expected synthetic fixture output; the suite returned OK."
+}

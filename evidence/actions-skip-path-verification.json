@@ -1,0 +1,47 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 65,
+  "tranche": {
+    "files": 3,
+    "claims": 4,
+    "candidates": 9
+  },
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58217,
+      "source_artifacts": 2242
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2276,
+      "inventoried": 13657,
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.985,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Three complete fragments; required skipped-job success is not behavior evidence. No workflow execution, native mutation, rights approval or policy acceptance."
+}

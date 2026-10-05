@@ -1,0 +1,45 @@
+{
+  "schema_version": "ges.issue-lifecycle-consolidation-verification.v1",
+  "verified_at": "2026-10-03T09:47:36.395Z",
+  "issue": 359,
+  "proposed_rows": 11,
+  "missing_claim_ids": [],
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 324,
+    "seconds": 1.973,
+    "result": "OK"
+  },
+  "controls_valid": 95,
+  "gates_open": 9,
+  "project_complete": false,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_changes": false,
+  "independent_assurance": false
+}

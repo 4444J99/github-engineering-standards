@@ -1,0 +1,62 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:31:00.425Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESPREVIEW-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/template-codespaces-default-editor.md",
+      "content_sha256": "579d88992b0971fd5231b265eae2b9924bd2d029b2229a61399a60598897799f",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Template-created new codespaces open in the web editor regardless of the generic personal-editor preference; existing instances may reopen in any supported editor. This entry-point exception qualifies DOCS-CODESPACESTRANSITION-001 rather than proving a universally honored default. Supported-editor and reopen details remain in a separate linked article.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREVIEW-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/tips-included-usage.md",
+      "content_sha256": "1c48083d9027025f38749c0cae9484171528f7afda1d71501ac971a2a002c10b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The included-usage fragment points to a troubleshooting article for conserving allowed usage. It gives no concrete saving mechanism, current quota, pricing or authority to modify financial settings; the linked article remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREVIEW-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/troubleshooting-simple-browser.md",
+      "content_sha256": "e49fb131141b77c3c65310d3411a290bbb33ed94319dc2a7a78b8ec0e8dbe0d5",
+      "start_line": 1,
+      "end_line": 50,
+      "statement": "An application can preview in the embedded Simple Browser automatically when the port's onAutoForward is openPreview, or manually through Preview in Editor. Diagnose mismatch by checking the actual application port, creation-time translation of devcontainer port attributes into editor machine settings and possible dotfiles overwrites. The example port/label are illustrative and configuration existence is not runtime success. The source describes inspecting settings, but no private file was read or command executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREVIEW-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/troubleshooting-simple-browser.md",
+      "content_sha256": "e49fb131141b77c3c65310d3411a290bbb33ed94319dc2a7a78b8ec0e8dbe0d5",
+      "start_line": 1,
+      "end_line": 50,
+      "statement": "A blank/error embedded preview can be caused by CSP frame-ancestors restrictions; this is a possible cause, not an observed diagnosis. The source offers a local CSP change or opening a regular browser tab. Do not adopt weakening CSP as a general remediation or claim the alternative always works: preserve security policy and verify the actual cause. Linked CSP documentation, dotfiles instructions and screenshot pixels remain separate; no application or CSP changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPREVIEW-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/trusted-repos-step.md",
+      "content_sha256": "b4a7d57fc02521849803e9007b19dcc0de324e51e384f8199206aabb8588a45c",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The trusted-repository step offers all versus selected repositories for the shared GPG/Settings Sync list and recommends a selected list. This UI choice is not a repository trust audit or approval to expand trust; preserve recommendation strength and independent feature-switch distinctions from DOCS-CODESPACESTRUSTSYNC-003. The linked security rationale remains separate.",
+      "accepted_policy": false
+    }
+  ]
+}

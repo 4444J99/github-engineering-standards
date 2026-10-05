@@ -1,0 +1,31 @@
+{
+  "schema": "ges.published-body-review.v1",
+  "ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+  "method": "Read acquired bodies including all seven tool-surface sections; reread truncated output in bounded sections and recompute SHA-256. Compare version bodies after replacing only the enterprise-cloud internal-link prefix",
+  "instances": [
+    {"page_id": "61bb0b8339b159c297a3a06b", "version": "enterprise-cloud@latest", "path": "/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/use-code-review", "sha256": "465afc4f85887483d973619dc8a97b16ffe2eb3e28e3e8368e414d90bc22231a", "bytes": 28777, "lines": 396, "full_body_read": true},
+    {"page_id": "862c555e4307225e8ae08e5b", "version": "free-pro-team@latest", "path": "/en/copilot/how-tos/use-copilot-agents/use-code-review", "sha256": "426114367d2b984b51b11baaaa65a1e0b2d05355533cebab6ef914fc2eef7735", "bytes": 28225, "lines": 396, "full_body_read": true}
+  ],
+  "observations": [
+    "Introduction describes review feedback and GitHub Actions-based agentic capability, not independent correctness certification. Organization access without an individual license is conditional on administrator enablement.",
+    "Web review requests and severity labels are separate from enforcement. The default comment review does not satisfy required approvals; optional configured approving reviews can count, while overview approval assessments alone cannot.",
+    "Approvals are described as off by default, with enterprise/organization/repository and file-path configuration. New commits dismiss a Copilot approval. No approval setting or review request was changed here.",
+    "Suggested fixes can be applied directly or delegated to a cloud agent when both capabilities are enabled; new-PR versus same-PR commits are distinct mutations. Comment responses are visible to people but not to Copilot in this source.",
+    "Re-review after new pushes requires explicit re-request or automatic-review/new-push configuration; resolving or downvoting a comment does not prevent its repetition. Lite/Balanced effort descriptions do not independently establish coverage.",
+    "Repository-wide, path-specific and agent-context instruction files have different scopes. The source says head-branch instructions and skills are used, exposing a trust boundary for adversarial PR content; imported samples remain inert.",
+    "Skills/MCP configuration is separate from proof of actual context use. Comment attribution and session logs are evidence to inspect, not permission to enable integrations. MCP review use is described as independently configurable.",
+    "Dedicated code-review setup workflow takes precedence over shared cloud-agent setup when present; code-review firewall configuration is separate from cloud-agent firewall. Ephemeral environments do not prove safe dependency execution.",
+    "VS Code selected-code versus all-uncommitted-change review have different scope; applying suggestions does not automatically commit them. Visual Studio requires the documented 17.14 baseline, and an empty comment result is not a proof of no defects.",
+    "Mobile requests review of an existing PR. Xcode uses the documented extension baseline and staged/unstaged plus file-selection controls; accepting or dismissing comments does not prove complete code coverage.",
+    "JetBrains eligibility, plugin, authentication and local-change review prerequisites differ from GitHub CLI installed/authenticated PR-request commands. No install, authentication, request or sample action was executed.",
+    "Screenshots, linked concepts/configuration/API guides and client-specific prerequisites remain separate review dependencies; all seven surface sections appearing in a Markdown body does not prove which browser tab is displayed."
+  ],
+  "source_review_reference": "evidence/published-source-drift.json",
+  "remaining": ["Independent atomic claim and omission reconciliation", "Reusable and feature-conditional resolution", "Linked configuration and client reference review", "Screenshot visual and rights review", "Deployment-source identity", "Operational enforcement and rights acceptance"],
+  "source_revision_verified": false,
+  "all_actionable_claims_extracted": false,
+  "native_behavior_verified": false,
+  "rights_accepted": false,
+  "accepted_policy": false,
+  "raw_expression_committed": false
+}

@@ -1,0 +1,48 @@
+{
+  "issue": 252,
+  "reviewed_at": "2026-10-03T06:05:18.199Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59713,
+    "claim_bearing_artifacts": 3193,
+    "tests": 324,
+    "test_seconds": 2.003,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No team/access/discussion mutation, policy adoption or rights clearance.",
+    "Caption/navigation not image inspection, inventories or configuration evidence.",
+    "Team visibility lacks enumerated choices/effects; name not validated creation identity.",
+    "Teams fragment now full disposition, not merely prior include reference.",
+    "Legacy Team discussions navigation versus same-pin retirement remains unresolved context/published-review work."
+  ]
+}

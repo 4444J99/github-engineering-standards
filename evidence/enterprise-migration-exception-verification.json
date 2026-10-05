@@ -1,0 +1,46 @@
+{
+  "issue": 218,
+  "reviewed_at": "2026-10-03T05:03:02.942Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59499,
+    "claim_bearing_artifacts": 2992,
+    "tests": 324,
+    "test_seconds": 1.996,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Migration CAP exemption guidance is non-adopted and requires separate security decisions, not bypass authority.",
+    "Filename does not establish preview status or universal platform scope; containing feature context remains limited.",
+    "No license, messaging, CAP, migration or settings changes; no policy adoption, rights clearance or rollout."
+  ]
+}

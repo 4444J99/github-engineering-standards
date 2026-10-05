@@ -1,0 +1,46 @@
+{
+  "issue": 109,
+  "reviewed_at": "2026-10-03T01:39:23.014Z",
+  "artifacts_reviewed": 5,
+  "reference_claims_added": 5,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58404,
+    "claim_bearing_artifacts": 2415,
+    "tests": 324,
+    "test_seconds": 1.988,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Autopilot/yolo source example was not executed and does not waive approvals or resource limits.",
+    "No source setup, extension installation, credentials or native changes.",
+    "Independent audit, rendered assurance, rights and adoption remain separate."
+  ]
+}

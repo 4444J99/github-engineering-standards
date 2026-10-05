@@ -1,0 +1,550 @@
+[
+  {
+    "artifact_id": "22547c6fa934f6cbe6f3a40f",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/learn-github-packages/deleting-and-restoring-a-package.md",
+    "content_sha256": "bddd8ad3269b0fbce02f127150fa40c434d74128e90822172c7d0f13be2dcb9e",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:59:12.854Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "FPT/GHEC/GHES page applicability is qualified by Packages product access and includes; managed-user personal package namespaces are unavailable, not all organization publishing. The GHES release-stage fragment is a source comment, not an enforced release restriction. With required access, private packages and private versions can be deleted. Public entire packages require no version exceeding 5,000 downloads; public version deletion requires that version not exceeding 5,000. The strict greater-than boundary must not be changed to greater-than-or-equal. Public package deletion may break dependent projects. A public package with any version above 5,000 downloads requires Support assistance rather than a documented direct deletion path; assistance is not guaranteed permission or a successful deletion receipt. Restoration is conditional on a deletion age within 30 days and an available original namespace; the later restoration section additionally requires the version not to have been reused. A general restoration capability is not guaranteed recovery for every deletion. REST manages packages. Classic-PAT-only reusable guidance is qualified by the explicit granular-registry workflow GITHUB_TOKEN deletion/restoration exception; that token requires package admin permission and the feature is public preview. A publishing workflow's repository receives package admin by default in this flow; an existing package not published by a workflow requires granting that repository admin first. Repository job permissions alone do not prove package admin or authorize granting access. Granular packages with separate permissions require package admin for deletion; inherited repository packages require repository admin. Some registries only support repository scoping; package and repository admin roles are not interchangeable without inheritance evidence. Repository-scoped version deletion requires repository admin; navigate through repository Packages and manage versions, select deletion, and type the package name to confirm consequences. Navigation and typed confirmation are procedure, not authorization or execution evidence. GraphQL deletePackageVersion is limited by the reusable private-version/repository-scoped registry support; granular registries do not support this API path. The example requires classic PAT read:packages, delete:packages and repo scopes, not permission to broaden existing credentials. The GraphQL example is unexecuted: prose and mutation version IDs differ in base64 padding and HOSTNAME/graphql is an unresolved endpoint placeholder. Repository packages connection lookup requires read:packages and repo; no complete live package census has been verified. GraphQL cannot directly delete an entire package. Deleting every version makes it cease appearing in the UI; nonappearance must not be promoted to proof of full entity destruction or storage reclamation. FPT/GHEC user- and organization-scoped version UI flows select the package and version and require name/consequence confirmation. These conditional subsections do not establish a GHES adapter or prove effective access. Entire repository-scoped deletion requires owning-repository admin and danger-zone message/name confirmation. User- and organization-scoped entire-package UI flows separately navigate package settings/options and require name/consequence confirmation; they preserve scope-specific access rules. FPT/GHEC restoration permissions differ: repository-scoped requires repository admin, personal-scoped must belong to the restoring personal account, and organization-scoped requires admin on the deleted package. These are restoration-specific conditions, not blanket organization-owner authority. The GHES conditional within Restoring packages literally specifies permission to delete, not restore. Preserve the wording mismatch as unresolved rather than silently certifying a GHES restoration permission rule. A restored package retains its namespace. The source suggests deleting a new package occupying that namespace first; that is a separate destructive action requiring scoped authorization, dependency/custody review and recovery checks, not an automatic safe rollback. Organization settings can restore a package in an organization-owned repository or granular organization scope; personal settings apply to an owned repository or personal scope. Packages/Deleted Packages/Restore requires name confirmation and still depends on time, namespace, version and permission conditions. Version restoration uses the package landing page, settings/manage versions, Deleted view and Restore with consequence confirmation. No package was deleted/restored, no recovery tested, no rights cleared and no accepted control or native deployment follows; outbound REST/GraphQL/permission/token guides remain separately scoped. Full source and required include/variable context read; candidate accounting is not independent extraction completeness or published-content assurance.",
+    "claim_mappings": [
+      {
+        "candidate_id": "46d0b842ad3868cd6c4564ab",
+        "text_sha256": "a7d8f3a175bf7f97606586dc82b7e5a7950ad573c076899c8b0700aef099958c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "367f1e441f2fe221f5de0da0",
+        "text_sha256": "10e4b5b7c63ce97e3bc4dc0c22c8963ca855f8d2773bb2d2254f7a4ab1748c53",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "2a53ef8c0aff1ce2b8952236",
+        "text_sha256": "276366ca8b9a668b8472489f0ba14c1b4ab5f338ca3ec8c729a494f3e990c02c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "88e94ad1929f12b879e3cbb1",
+        "text_sha256": "d5228379a46fa017dedb8c908e43e48490f21d544c0d0354e3da0e13c3cad5d6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "00202a8055f1401a4d242aa5",
+        "text_sha256": "7ceca93a0db3ff5559bb41213f0ed58d24102a4c3b55159a35ec5421d022481a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "e1c3a6c201c85128cea0e9c6",
+        "text_sha256": "8094afe114620785172aa9d81869f1de3168c8cdfb653164f3709f5ac0f176af",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "be84a654eeaa06e8bcc3a165",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "2dba8f990b9dcdd2f7645709",
+        "text_sha256": "dd39d3f7d5a33da58ebe7e2b34a046a1a9897efaffe634a028219e68cf07037e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "058d40a69ae40f5f56d56631",
+        "text_sha256": "efa257826c7809b41ecd404eb47f3e4abf4ccfc0ced7da19895943aa920d583a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "a606776f88085eb5d6e469d0",
+        "text_sha256": "eed1375fff21bf19aed153af683548c33047d844144f4e6785dafe7dec924698",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "3ce6c8709eed56d179b96205",
+        "text_sha256": "99212996d85b14ba846f14e7703432bcd7a70130166f11be5f8fa1aa7bc7160e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "7b9c6a51deac133f5bad8581",
+        "text_sha256": "9b48c27a51c4b840d0d1807cf08ea90553bdd75f6a87199d88c6d43eec5f8766",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "239fc34f10d468efea8061ee",
+        "text_sha256": "6df1cac6dac307a5e52f5f944cd7322e67809d3c2633bf9f6c17ddd3831a8753",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "1e9d60a0d5ad6f00c8d86b0f",
+        "text_sha256": "8ae6e63aa3f1cdd6636ad542784ab05dce0440c01e183935fcb64302f52acddb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "4086da7c2ae481028247a0d0",
+        "text_sha256": "b5aa250f97e83ac534f1b667ea847e5b031fca0f72e990b0a5d664e6384cd37b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "8acef2364debbf36ad730fe5",
+        "text_sha256": "56d517ca6281f2250aeece3d0a2688924164604c6b057d50ad3bdc3d83709698",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "0354867023ed04c9cc11731d",
+        "text_sha256": "bb4e54718a4fe1c532eeeb3684e11647729e0788fc3e0a0c063eb2a95e825c21",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "2d14ee73f62f20e53f4ed8e7",
+        "text_sha256": "da33ea0d5151c0427261b846f237313017908e927a6ca1740eb0e64312eddd7e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "772a5ed8f93c3d7b1aa70f3c",
+        "text_sha256": "9b15ed8ea2fc34119f88ddbb222cf5471a679e017c9d3001e8a4304fddec800c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "ddbee6bb6728f3e6eda18465",
+        "text_sha256": "c036eec43b63f506e98e3971d7ad6fefd915d4fb9b522d5fbc6b452b487df9ee",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "d480b94f9c9389a94e314f60",
+        "text_sha256": "f1e81915477da60676d316826ab087de1f810ac88bc6fa8a59a6a285025ed424",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "099add661f0f6e89f0855de6",
+        "text_sha256": "18c679479cde1d23a9e18648fb5c7f0fc084c7d838ca7ff2e5a1f3c0c19b17a4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "57317ab0633adcf19af24b2d",
+        "text_sha256": "1488e26a108b51a80c686983e15315eb70f2f92575b6a518fbd881ac41e30d9c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "e5530fcc649f5f5a06039088",
+        "text_sha256": "a3977a205e7cfa9f35f2f93978e087684e2a7ea8ba4d2ef224ddaa7e0801efea",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "04775990621bc402b6103cf9",
+        "text_sha256": "49c835770bcdcfe28823a82a28797b0c8239ce0d955d469dc7d2dbc46a6e2486",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "606e2ad2ef10704a2a37aa4c",
+        "text_sha256": "2024386df48b420a0b885e8b6dbc8ac697e1a76a980e4fe1ad3c343cd539d144",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "186169df5c7a6e2a8493c074",
+        "text_sha256": "5b93b05a1ed4310819319924e34619161ad04d1cef48a24163a75a360ae5890b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "f515fba26299e464935b8fc1",
+        "text_sha256": "c270b8a64e6b3ace785dcf04a06dc004f40dd26709525575104434993cdce3df",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "c3077ea4f11d3186e4c1eaca",
+        "text_sha256": "6dbb5455f0c0c1168d25189324491b847f836ff6e932569d8e53eafa45f7c56c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "a717dc1c73281d0186a725b9",
+        "text_sha256": "ac0e00d9183585a6babb7cc87eb13b3088f9c5077e518239c0d39a8d8caa3d1f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "8d7938d1e63ad458bc66c834",
+        "text_sha256": "0d7f2ce4e8a7ce126999c35c64115cd77f51b6144050e5f3c457ef5376e8d230",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "10af65d22d4315181754f35e",
+        "text_sha256": "a856e53d78b6503dd692a1cbd1622662f787645e4d95bcba959560729ffadc7c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "08dbf9e112bcf20c4d83c5b5",
+        "text_sha256": "056226924688bebcd694319c8c48cb5e74e84b76d8d55fca5ec578490e45364b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "caee98fa01b359478c4ebd0f",
+        "text_sha256": "6c33bf9a36c2b44143babfdf48c78ef2e4065c9fb8d4f6fea158552ab09df638",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "94c969d43a5ca832bea4dc02",
+        "text_sha256": "3f3fc097abd9ab1c7d374fc9b63f6b36c638df31d544c9ea60b5899cbc1fe74c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "7c07d4ac0bfe3c0e11358daf",
+        "text_sha256": "f2004405f5485b471c9c3e3e9e984cae9e2b992c99b1d2fac0d051a077a80037",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "01dd17484747f0df116a8182",
+        "text_sha256": "f6f54a4e3e209054bf3a25a4e22a3fa2f5da579fb4adb20f9f9a6026d5b53863",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "e21cc130923984cfc04c7dde",
+        "text_sha256": "2ca9a623c18f9b6f60be7469dbc39e67184141e6bdb4e856787ef4215f3ccb74",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "c3f0a6b4e3dbee6e9f860c02",
+        "text_sha256": "d098993fd0210b88d909ee9d59c3733f6935290bc7e5a387adf3f3bf25cf3251",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "ef048ce25ddb2e9758422b2e",
+        "text_sha256": "54441d5db8749af74a7fab1eebb671d09585aad07b67fe995a24abcf76ca1d81",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "e8d7131b1ae02e6b1180b4a7",
+        "text_sha256": "c270b8a64e6b3ace785dcf04a06dc004f40dd26709525575104434993cdce3df",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "a797dda79097221d56478094",
+        "text_sha256": "137c4b2b0bb6c0571a83b974d4e2c0de4c982b89f1054be888b038c092cb393d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "62b29f8849dc9c87f292c639",
+        "text_sha256": "ff08351e59105d4bc9703fe105bad1fb8e680479aabf1cefe3501349d7c18bd6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "30c8c929943049ecb67ab197",
+        "text_sha256": "73df69260d51b41967f7e3db591e2f18b840c5c749484c464fbf25032c63c433",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "ce2fef4d0696c93e8810cc47",
+        "text_sha256": "49038b60f77c24c34a62ae7a33b437e1fb6cd0a6f2b16bc30603bbe7ee54f87e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "7c1d76eff48e812d6c5520ea",
+        "text_sha256": "c43a3582a41789565ea65f514c0bc9327190da256803dcd62aad4edd8572d57d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "070b114562541d7d42e5d79c",
+        "text_sha256": "c270b8a64e6b3ace785dcf04a06dc004f40dd26709525575104434993cdce3df",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "32f79ec284064ecb608537c6",
+        "text_sha256": "137c4b2b0bb6c0571a83b974d4e2c0de4c982b89f1054be888b038c092cb393d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "ef27c2da9905338e0cc642eb",
+        "text_sha256": "d0015d8534278a21316d9f932eb72b8009e19d82462c66a0826d44b5994bb41a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "96a4fbf0c8c27464491e4cf4",
+        "text_sha256": "91503d2fec965f6fc4db797ba221b62f16450c509b94df3e9e3dd53de53721ef",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "d6c6a44d7a40b565ba436658",
+        "text_sha256": "a950d1dc90ff133a443ac75b4be7ff816773526b682573dc29dc7e6770eae417",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "d66d8174b3bfd59d10346412",
+        "text_sha256": "b942716d5c5193c2b857a3321eeb9895485ed77f620d0bd6ac08d76871620c72",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "bbedc1c1059fb8f0644b39a7",
+        "text_sha256": "459bce02975aec39af247847df11613aa0503a91140d18efb7d558b61a48e4ca",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "e9e73eb67530763fad355fb3",
+        "text_sha256": "585c8490ab8cefc20194365b5efab235428103e7d5356cd3f6f84a605628df9b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "45979ad768b05149d692b2ce",
+        "text_sha256": "25ab65fcd2af8dbfe27c907f45050a360a44e0287ca3c61b2d7c9bc493d152ca",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "9bd54b9601ebbdd63d5c8cf9",
+        "text_sha256": "4f1401f6ea85ed3b0e937eee5501f475f1be7d90ef7f34a5859d7394485f0b58",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "6b4eff70a8c1603be955e7d0",
+        "text_sha256": "d4499a8983d51ab9a29730af0734d1cda6abd71f6e11277c07ea7947c6c28e65",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "dbe625fbb3eaac5c499d84db",
+        "text_sha256": "72f8d3394d1672f1fc1a877d3ffdbc01391de02790fe26f0e8776a842ad263af",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "665ee7895a30510549af6bba",
+        "text_sha256": "585c8490ab8cefc20194365b5efab235428103e7d5356cd3f6f84a605628df9b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "44f85bfa9515f92bcb2b225f",
+        "text_sha256": "5fd9882e24e2b921ffc3edb52f1c520f1dd1d44ff1191415eda57e248e5f34b3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "f46a9570ce43ecd60db7b3c9",
+        "text_sha256": "4f1401f6ea85ed3b0e937eee5501f475f1be7d90ef7f34a5859d7394485f0b58",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "6a4a05dc4830f2fc680acef7",
+        "text_sha256": "d4499a8983d51ab9a29730af0734d1cda6abd71f6e11277c07ea7947c6c28e65",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "dae44dcdc727642cb698dd16",
+        "text_sha256": "72f8d3394d1672f1fc1a877d3ffdbc01391de02790fe26f0e8776a842ad263af",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "0099a31b8d59407a5cd2ac1e",
+        "text_sha256": "45d825e74ef49a4cfbe231382b70205cdf4d44dd0d4e016d0ea51033e9beb573",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "f0d5ee0069e4b149ca7ade04",
+        "text_sha256": "b5aa250f97e83ac534f1b667ea847e5b031fca0f72e990b0a5d664e6384cd37b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "d317e9807f89f0103668b1bb",
+        "text_sha256": "83ceafe3c70a6a076b0b950544f3573b42e50ef7d61caf2aac4e47c7e758702e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "a2c4705974b0e39f8f9d31d5",
+        "text_sha256": "e16e79b1416b2f78013a4628a0f10322d3bfccbd058501f9367b5ec03442ba1a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "b8366e2ad9fcdb52395980f8",
+        "text_sha256": "6aab7b2b6adc2425916e8b8e7cc104bb336ab2e5b9fff88adee5f2c18cbc52e0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "f99131c1027b08649fde8f04",
+        "text_sha256": "c421a6eeb8603e5aad25ab328d12a4e4b39e1a45a894cc095b8358de2aa918a2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "93c5c0020aef80e4594f929c",
+        "text_sha256": "8b89fa40e984d5d1255f0d4e5702b91cfca79d31863a4261dea946f26511ec8b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "f34e8097abd1c677639e5757",
+        "text_sha256": "e74c9b11a405c3a01d3ca57f3cf27b60a8eb51c325da38de5c97a74943aba831",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "87ff69f2abc0b975e31a4f9c",
+        "text_sha256": "5f00f6a8a7debc330a83b7243f38395b2b7cc1fbe86e2ca8065ee194465089ca",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "249eb803376b746af1e4fe42",
+        "text_sha256": "e833f2cf8bff30711ba7788bf52cf81e3f1ea2753d2af32c820f3279aa37ad32",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "b42027db166835da3c22c3f8",
+        "text_sha256": "242a76d26b8de408f7a443f84916ede67bfc5fed2fe512b7216a0e8c65521e63",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "4af4f418d8dbf4f1feaa5b01",
+        "text_sha256": "3a29bda12d62864718f05b7384d1dbaea7f1ebedb63b00661cde809d75b0ca67",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "fbb71898e5203cb7d5992199",
+        "text_sha256": "282fbbe18ac9873cca02d43be3511dcd011fd07ef26dfba8ad2eb2e475cd6f9d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "1074db654cc2228b76d7d77f",
+        "text_sha256": "5c5f0be5802bdab2b694d185f1f53f97e86af50b1b2f3f2475387aa95b5e5d4b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "909c124c8014749cb1db6d51",
+        "text_sha256": "b89bcc5a755f94189216eb07aa022cc65640d9dc73f732a2dff49dd422db52e7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "8e2c9207ea0d3eabd6754bdf",
+        "text_sha256": "d156119edabd1dbbc103f787ed2026ceda55ee7150b7f508653b5c92955e122f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "88e7c1276bd66e0044118611",
+        "text_sha256": "476cf9fce2b04c4db854a9f203157292695513d59ce8cff2477f6ca2ba127df8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "46412f9a36d651b562628400",
+        "text_sha256": "506272e80f227981c0c77ec59f70bdcf320d274402634e134300669febc2b79b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "b51e19199856788ceff40c6a",
+        "text_sha256": "45c6769b46b818a42879dbae66212fd59cb37fd90142c52661225093beca5ddf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "23085dedec4bf2b40fc4968d",
+        "text_sha256": "961a4a82c25436d87e0d3ed588e1a0ce8d7d836de920d1b6a5853944f185740d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "9d3bc7c0f14cc8a56b422b70",
+        "text_sha256": "d156119edabd1dbbc103f787ed2026ceda55ee7150b7f508653b5c92955e122f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "7ede679cac63e95adb978f50",
+        "text_sha256": "476cf9fce2b04c4db854a9f203157292695513d59ce8cff2477f6ca2ba127df8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "7d6c0aebdff2bf1e77e33007",
+        "text_sha256": "dedbe5e724138a41adc26d736ecb944568d6c4419f2f7af45b9e470b143d0760",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "d2d63260fe4a37c71a17214b",
+        "text_sha256": "0e96f169250424ec614810254f5bf544033965274fdb98c63d626c3988efae13",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "929c2128d2a81da4532c03d9",
+        "text_sha256": "bdf594feafb1b1d9c43cef4be17a43c2d47c715430e13ab12a3505e0cc6ff347",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      },
+      {
+        "candidate_id": "5f6cff6071a6e09d30d46e2b",
+        "text_sha256": "d5b998e6f23044f427492815f4412ff30b7b6b861b5b39f7f6392f148f0e5783",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGERECOVERY-1 through -18; reference only, not adopted policy or destructive execution evidence."
+      }
+    ]
+  }
+]

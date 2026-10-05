@@ -1,0 +1,49 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/8",
+  "source_lines": 282,
+  "claim_records": 246,
+  "grouped_context": 5,
+  "atomic_reference_records": 241,
+  "candidate_dispositions": 48,
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 257,
+      "result": "OK; synthetic negative fixture prints published_docs ERROR"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true,
+      "reference_claims": 44477,
+      "source_artifacts": 689
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 720,
+      "denominator": 13657,
+      "receipt_errors": [],
+      "gates_open": 9
+    }
+  ],
+  "boundaries": [
+    "Five quickstart language examples, not six",
+    "No actual SDK execution",
+    "No accepted policy, rights clearance or native proof",
+    "No linked-body or global omission certification"
+  ],
+  "delivery": "Exact commit/push receipt posted in issue #8"
+}

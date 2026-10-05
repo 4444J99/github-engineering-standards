@@ -1,0 +1,47 @@
+{
+  "issue": 272,
+  "reviewed_at": "2026-10-03T06:43:26.165Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 11,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59864,
+    "claim_bearing_artifacts": 3266,
+    "tests": 324,
+    "test_seconds": 1.989,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Packaged source metadata/section existence differs from actual native repository connection.",
+    "GHES source-label host mismatch and example image-ID mismatch retained as unverified source defects.",
+    "Unlink/relink can affect inherited access; no operation or recovery receipt.",
+    "No Docker, secrets, linking, publication, policy adoption, independent assurance, rights clearance or native rollout."
+  ]
+}

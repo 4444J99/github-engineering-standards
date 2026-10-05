@@ -1,0 +1,585 @@
+[
+  {
+    "artifact_id": "0e6b7ad168e9eaca8b12c4a0",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/plugin-directories.md",
+    "content_sha256": "069c18db7491f4ce376f5310137f64ea78c86f87e9432a1cd31d0511f35849c7",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T13:48:41Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete284-line root read, all84candidate dispositions and234reference records consolidated once. Independent audit and specified repair recheck are bounded, not runtime/global omission assurance. Process launch, per-session config and trusted host startup scopes remain distinct; flags, plugins and snippets were not installed or executed.",
+    "independent_audit": "evidence/sdk-plugin-directories-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-plugin-directories-independent-repair-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "f463cb76cc79e5c7ed8c65cd",
+        "text_sha256": "bd2987de52dcb10b99c5653c5e6ef6db8ea0043c953e6cf56d017c29dd45e939",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-001: Plugin directory can bundle skills. DOCS-SDKPLUGIN-002: Plugin directory can bundle hooks. DOCS-SDKPLUGIN-003: Plugin directory can bundle MCP servers. DOCS-SDKPLUGIN-004: Plugin directory can bundle custom agents. DOCS-SDKPLUGIN-005: Plugin directory can bundle LSP configuration. DOCS-SDKPLUGIN-006: Plugin capabilities sit behind one manifest. DOCS-SDKPLUGIN-007: Pointing SDK at a plugin directory loads its contributed extensions. DOCS-SDKPLUGIN-008: Reusable packs avoid per-extension host wiring. DOCS-SDKPLUGIN-009: Source declares Free/Pro/Team applicability. DOCS-SDKPLUGIN-010: Source declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "808bf3b9343417825239dcb6",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "01d8678ae48a39069d50afb1",
+        "text_sha256": "97b9f523876aeda8e2f8b30ca2bb209f860aa9db495cd5700b6a0aa746cf9575",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-192-A01: The guide covers plugin folder layout. DOCS-SDKPLUGIN-192-A02: The guide covers loading plugins from directories. DOCS-SDKPLUGIN-192-A03: The guide compares plugin directories with individual extension registration. DOCS-SDKPLUGIN-192-A04: The guide covers deterministic plugin sets.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "b8d5b6958043a8643de7219b",
+        "text_sha256": "d216331574d9bda30bec664abf54e38a09d1f6d4210917592b4d09b7e4eba2ea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "6282ff5623485f4ab02d45b5",
+        "text_sha256": "41a7d8c5ce59b86025863a51c833706aac084cb9f42399cda00ec372da5eb5a4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-011: Source recommends distributing capability bundles as a unit. DOCS-SDKPLUGIN-012: Illustrative reviewer pack includes a skill. DOCS-SDKPLUGIN-013: Illustrative reviewer pack includes a preToolUse lint hook. DOCS-SDKPLUGIN-014: Illustrative reviewer pack includes a custom agent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "c5b80860e3f516fc91e60542",
+        "text_sha256": "f37544246ffce779dc2f2408a62f3aeaf832779a3a36fed9eaef44afeedfd60a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-015: Vendoring packs into a repository is suggested for deterministic clone behavior.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "d95ebd667b8e0f2c9b291e97",
+        "text_sha256": "e8da3e82ea59217df5dfe0bf150010851a89644c1e9c126872b6fa213f785394",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-016: Local development is suggested before marketplace publishing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "bca49a2c660660da4c89448f",
+        "text_sha256": "d4e3266cd356ce127ca93c70697120bbf11768eb66681cc9cd93a6216b000cd0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-017: Local checkouts can override marketplace plugins for testing. DOCS-SDKPLUGIN-018: Local checkouts can extend marketplace plugins for testing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "018c1fe1daec84b8005f44b6",
+        "text_sha256": "95eb14a02a121ad620f1e96bd3568e8cee68621dd14c28a0ada65c87fb844420",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-019: One MCP server can be registered inline using mcpServers. DOCS-SDKPLUGIN-020: One hook can be registered inline using hooks. DOCS-SDKPLUGIN-021: One custom agent can be registered inline using customAgents. DOCS-SDKPLUGIN-022: Source recommends plugin directories for three or more related extensions shipping together.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "61135fb519c7bc5998776e46",
+        "text_sha256": "206def0035070b416ad89aad0766bbc82a780641b05a4162c33bb7902d51d72f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-023-A01: The CLI scans a plugin directory for plugin.json. DOCS-SDKPLUGIN-023-A02: The CLI also recognizes a root-level SKILL.md as a plugin entry point.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "9afff93717e643e9c7813943",
+        "text_sha256": "1dfd842cade6f19c622d14e7175331e4b01941e02635c5466f10a4759f623b23",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-024: Example requires manifest unless using the SKILL-only form. DOCS-SDKPLUGIN-025: Example top-level SKILL.md is optional. DOCS-SDKPLUGIN-026: Example hooks.json is optional. DOCS-SDKPLUGIN-027: Example .mcp.json is optional. DOCS-SDKPLUGIN-028: Example agents directory is optional. DOCS-SDKPLUGIN-029: Example custom agents use one Markdown file per agent. DOCS-SDKPLUGIN-030: Example agent filename is code-reviewer.md. DOCS-SDKPLUGIN-031: Example additional skills directory is optional. DOCS-SDKPLUGIN-032: Example nested skill uses lint-fix/SKILL.md.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "020840d5ed498bc15b239803",
+        "text_sha256": "af4928c7990f5cd1a2a60b764e5d169bd593c41c55f39030f81a5d2f21d75d2b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-033: Manifest may live at .github/plugin.json. DOCS-SDKPLUGIN-034: Manifest may live at .github/plugin/plugin.json. DOCS-SDKPLUGIN-035: Hooks subsystem has its own optional loader. DOCS-SDKPLUGIN-036: MCP subsystem has its own optional loader. DOCS-SDKPLUGIN-037: LSP subsystem has its own optional loader. DOCS-SDKPLUGIN-038: Skills subsystem has its own optional loader. DOCS-SDKPLUGIN-039: Agents subsystem has its own optional loader. DOCS-SDKPLUGIN-040: Plugin only needs contributed subsystem parts. DOCS-SDKPLUGIN-194: Alternative manifest placement lets a plugin live inside an existing repository without changing its root layout.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "18e2a358e44a6a8fbe0e5685",
+        "text_sha256": "d3007429a8924fb54b8e35f91114784ca9c6347af7a213fdca078a66cd395790",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-041: Full manifest schema is referred to CLI /plugin runtime documentation; its body is not reviewed by this reference.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "ec64a5bcb8b2abbd32f2b93e",
+        "text_sha256": "48b77da14585873d45d70aa8ef099faae2d1910824bc6de2190f387c1554d2bc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-042: SDK-spawned CLI loads directories through --plugin-dir path. DOCS-SDKPLUGIN-043: Languages expose launch flags through extra arguments. DOCS-SDKPLUGIN-044: Repeating the flag loads multiple plugins.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "0ecf92e456b7d7435cfb5197",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "58ffa0ae3786f8e28b9f0d27",
+        "text_sha256": "3ff88a2f7628b45cc5bb0f0ee113c69d46d40bbd262a07d781553e543eb0cbec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-045: TypeScript example imports CopilotClient. DOCS-SDKPLUGIN-046: TypeScript example imports RuntimeConnection. DOCS-SDKPLUGIN-048: TypeScript connection uses an args array. DOCS-SDKPLUGIN-049: TypeScript example registers the code-reviewer directory with --plugin-dir. DOCS-SDKPLUGIN-050: TypeScript example registers the lint-fix directory with --plugin-dir. DOCS-SDKPLUGIN-051: TypeScript example awaits client.start. DOCS-SDKPLUGIN-047-A01: The TypeScript example constructs a CopilotClient. DOCS-SDKPLUGIN-047-A02: The TypeScript example chooses RuntimeConnection.forStdio.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "97e0fc143666fc742d39e812",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "1327ba1eb303d8f49334e1ad",
+        "text_sha256": "025cb1ba09d3e92bdefd8e281dbcb375719369592634921421fab3a4bb5e5f98",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-193: Python example has docs-validate wrap-async presentation marker; not runtime verification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "0af6a2f6dbba9725bf412e44",
+        "text_sha256": "4b7bebcaf4861b98f23f04d88be51e179911b124e0a10134c7f3ce4ac026601d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-052: Python example imports CopilotClient. DOCS-SDKPLUGIN-053: Python example imports StdioRuntimeConnection. DOCS-SDKPLUGIN-055: Python connection uses an args tuple. DOCS-SDKPLUGIN-056: Python example registers the code-reviewer directory with --plugin-dir. DOCS-SDKPLUGIN-057: Python example registers the lint-fix directory with --plugin-dir. DOCS-SDKPLUGIN-058: Python example awaits client.start. DOCS-SDKPLUGIN-054-A01: The Python example constructs a CopilotClient. DOCS-SDKPLUGIN-054-A02: The Python example chooses StdioRuntimeConnection.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "90d33b5b2560b5423943cf47",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "c414ad6c46544c87c9f01dd4",
+        "text_sha256": "4bb23e763a6c12b32f7dff5953ae7ed1e0aa6e9d3988c61a7d4436d1864e834e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-059: Go example constructs a client with ClientOptions. DOCS-SDKPLUGIN-060: Go example uses StdioConnection. DOCS-SDKPLUGIN-061: Go launch arguments are a string slice. DOCS-SDKPLUGIN-062: Go example registers the code-reviewer directory with --plugin-dir. DOCS-SDKPLUGIN-063: Go example registers the lint-fix directory with --plugin-dir. DOCS-SDKPLUGIN-064: Go example starts with context. DOCS-SDKPLUGIN-065: Go example checks a non-nil start error. DOCS-SDKPLUGIN-066: Go example returns a start error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "99c5b1172877d932bf24cac9",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "c9c90c7ed001b653e6e5f3c1",
+        "text_sha256": "4f25e903611366c3a98f90470970fbbe30bc87d28f1eb9fbd036ed71e7affc6b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-067: .NET example imports GitHub.Copilot. DOCS-SDKPLUGIN-068: .NET example constructs a client with ClientOptions. DOCS-SDKPLUGIN-069: .NET example declares await-using client disposal scope. DOCS-SDKPLUGIN-071: .NET example registers the code-reviewer directory with --plugin-dir. DOCS-SDKPLUGIN-072: .NET example registers the lint-fix directory with --plugin-dir. DOCS-SDKPLUGIN-073: .NET example awaits StartAsync. DOCS-SDKPLUGIN-070-A01: The .NET example chooses RuntimeConnection.ForStdio. DOCS-SDKPLUGIN-070-A02: The .NET example supplies the connection's args array.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "1e1a4ca7fb75b479df6a2c8a",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "c06f516c7c1725bb5e5b069f",
+        "text_sha256": "15004af277bbf920abc5abd262957cdad56c47ce457bd4b1cd071e3f9e9178e9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-075: Java example registers the code-reviewer directory with --plugin-dir. DOCS-SDKPLUGIN-076: Java example registers the lint-fix directory with --plugin-dir. DOCS-SDKPLUGIN-077: Java example constructs a client from options. DOCS-SDKPLUGIN-078: Java example invokes client.start. DOCS-SDKPLUGIN-079: Java example waits with get. DOCS-SDKPLUGIN-074-A01: The Java example constructs CopilotClientOptions. DOCS-SDKPLUGIN-074-A02: The Java example calls setCliArgs. DOCS-SDKPLUGIN-074-A03: The Java example supplies a String array of launch arguments.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "b1627064d5e7a30067d84018",
+        "text_sha256": "9963cf6807f8462e34a5520765fb42ab1aa0dd51a28a555f52d73a3bede242b2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "094b8389511b3cb344cf82d6",
+        "text_sha256": "1f23815e196e098786c1be6dcd5a431389d9bfa5d59b3909567043dc5fc2db15",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-080: Rust example imports Client. DOCS-SDKPLUGIN-081: Rust example imports ClientOptions. DOCS-SDKPLUGIN-083: Rust example registers the code-reviewer directory with --plugin-dir. DOCS-SDKPLUGIN-084: Rust example registers the lint-fix directory with --plugin-dir. DOCS-SDKPLUGIN-085: Rust example awaits startup. DOCS-SDKPLUGIN-086: Rust example propagates startup failure with question-mark syntax. DOCS-SDKPLUGIN-082-A01: The Rust example calls Client::start. DOCS-SDKPLUGIN-082-A02: The Rust example sets extra launch arguments with with_extra_args.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "a0fa7c5b1260138abce73dec",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "ec0e8cfa8e0db7cf605299df",
+        "text_sha256": "a48861ed4296d0d6aeea8f193e104f1d6ace9d0f69d9870ec672c7ecc10b34bc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-087: Bundled CLI defaults to stdio runtime connection. DOCS-SDKPLUGIN-088: For external URI runtimes, supply --plugin-dir when starting the runtime server. DOCS-SDKPLUGIN-089: SDK does not forward --plugin-dir to runtimes it did not spawn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "c015567969c02df916c9d39a",
+        "text_sha256": "d71383dfcf1b437d1259a74edbc034e95e30c35ef386affbb54f6be00f5e486e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-090: Launch flag fixes one plugin set for the CLI process. DOCS-SDKPLUGIN-091: Launch plugin set applies to sessions created against that process. DOCS-SDKPLUGIN-092: Session config allows different session plugin sets. DOCS-SDKPLUGIN-093: Session config can target a runtime not spawned by the SDK. DOCS-SDKPLUGIN-094: Directories travel in session.create JSON-RPC payload. DOCS-SDKPLUGIN-095: Directories travel in session.resume JSON-RPC payload. DOCS-SDKPLUGIN-096: Session directories travel as RPC data, not process arguments. DOCS-SDKPLUGIN-195: When different sessions need different plugin sets, the source directs supplying directories through session configuration. DOCS-SDKPLUGIN-196: When the SDK did not spawn the runtime, the source directs supplying directories through session configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "992568cb653ec5160c621b7c",
+        "text_sha256": "76529da39eb9b8eaf754cbab293fdd90c7c174990fa8118e7cdbb70266dfb711",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-097: Session example imports CopilotClient. DOCS-SDKPLUGIN-098: Session example constructs a client. DOCS-SDKPLUGIN-099: Session example awaits client startup. DOCS-SDKPLUGIN-100: Session example awaits createSession. DOCS-SDKPLUGIN-101: Session example sets pluginDirectories to an illustrative code-reviewer path.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "bcb8c631f8e1d40065f7f6c5",
+        "text_sha256": "757d26a00314e4fcb94c77b3a6e796675b62e3c9c449688b92cc8cfc520bd8f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-102: Relative session paths resolve against workingDirectory when set. DOCS-SDKPLUGIN-103: Unset workingDirectory makes relative paths use runtime working directory. DOCS-SDKPLUGIN-104: Absolute session paths are recommended. DOCS-SDKPLUGIN-105: Unresolved session entries are logged. DOCS-SDKPLUGIN-106: Unresolved session entries are skipped. DOCS-SDKPLUGIN-107: Unresolved entries do not fail session creation. DOCS-SDKPLUGIN-108: Explicit session plugin agents load even with enableConfigDiscovery false. DOCS-SDKPLUGIN-109: Explicit session plugin rules load even with enableConfigDiscovery false. DOCS-SDKPLUGIN-110: Session plugin precedence is below project sources. DOCS-SDKPLUGIN-111: Session plugin precedence is above personal/home sources. DOCS-SDKPLUGIN-197: The session plugin-directories option is an explicit opt-in, not automatic configuration discovery.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "74b889279c7329c38bff67ab",
+        "text_sha256": "748d9720f4d14c5e99a16949ce82a52177617b144a006ac3a610546955cd28c5",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "7864f99028710d52109fc297",
+        "text_sha256": "561023dce8b18bda134a3dd661c9fc3accef6fb6c432fd23d1e7a2f0d5fa1cac",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "fab8b5c748eaf1f25e6c17fa",
+        "text_sha256": "4199ba454d6d3ae83657120c2bb6bd674eefc0dd7d3cd4cc844171dc6725135b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "0f990ca9a1cb3ea4e8dc274a",
+        "text_sha256": "6ff0698a50a38770286a359a790fca6f463f4f0c6c2df142207e5ba6da42aee1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-112: TypeScript session option is pluginDirectories string array.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "d3b3879262ae63e5504453de",
+        "text_sha256": "8acf9af2dc31dcafabcd4945f6f07b8fa7dbd541380fcbafb2aab38996e0d445",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-113: Python session option is plugin_directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "ab21db1ef1d8b2fe881d8ed3",
+        "text_sha256": "d74b7d387852ba2b7ae44caf26ea5165169794843db0f554220cab2fbab243ca",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-114: Go session option is PluginDirectories string slice.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "c400cf4e6665bbcb71f9932b",
+        "text_sha256": "de1339a65c415b9608dd9b0ecf4bf1602f0073a39124104ad515858db8764542",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-115: .NET session option is PluginDirectories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "ec681e652babdbbe8ff0c73a",
+        "text_sha256": "7d4a820323eb51f025efd7f519d81aa8e4f845b0ae2ca14c68943ce76d49aed8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-116: Java session option uses setPluginDirectories with List.of.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "c826d723742d3857368c73b8",
+        "text_sha256": "0ce51c89e8a0511fe110c0500928aace910b3c2f6c6e8bc15f477e9640de7986",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-117: Rust session option uses with_plugin_directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "eb0d87a601d15e4604af27e4",
+        "text_sha256": "3977b1ba39bb5ac15661c929db9c24106141f6c576d4a9f2f8cfd74c6363a42f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-118: Host-shipped trusted plugins can be registered as a client startup option. DOCS-SDKPLUGIN-120: Startup set is sent after connection. DOCS-SDKPLUGIN-121: Startup set is sent after protocol verification. DOCS-SDKPLUGIN-122: Startup set is sent before start returns. DOCS-SDKPLUGIN-123: Startup set is sent before session creation is possible. DOCS-SDKPLUGIN-124: Trusted startup paths must be absolute. DOCS-SDKPLUGIN-125: Unset startup option makes no RPC call. DOCS-SDKPLUGIN-126: Empty startup option makes no RPC call. DOCS-SDKPLUGIN-119-A01: The SDK sends the complete host-bundled plugin set. DOCS-SDKPLUGIN-119-A02: The SDK preserves the ordering of that startup plugin set.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "c04941de682988a03a43683b",
+        "text_sha256": "748d9720f4d14c5e99a16949ce82a52177617b144a006ac3a610546955cd28c5",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "795455f638aa7c79733fd748",
+        "text_sha256": "27bc008165ba872582a71e4ca6e824f83f8d8d1a1aa0f2a7eba6daf80f69e7ad",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "e7899b96d85c78bedac243cc",
+        "text_sha256": "4199ba454d6d3ae83657120c2bb6bd674eefc0dd7d3cd4cc844171dc6725135b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "7779f0fd8ef52dee2d3e539f",
+        "text_sha256": "efa4322cc6fb9b4a58f6bc566cf9777979b9410144f1a8f29cde963bc92d3fb8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-127: TypeScript startup option is builtinPluginDirectories string array.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "7f9874b811a1e04f3485f320",
+        "text_sha256": "9a948d3bcd0e81d335397af7492434e3127b5d118376bc043abf2fb2ca2017aa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-128: Python startup option is builtin_plugin_directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "ad882d41accf1a42f5196315",
+        "text_sha256": "53c83369177b4a12dc7589412208475d374ee08179ded95cf3b6b3a9a71de292",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-129: Go startup option is BuiltinPluginDirectories string slice.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "9b886d3857de3dd3d847e60e",
+        "text_sha256": "6c99ec777e2400e57fe28adce7e1129aa6b9e0b1ef509f3c251574254c0041f8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-130: .NET startup option is BuiltinPluginDirectories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "6f27d702ec0145f5fb9988b7",
+        "text_sha256": "b4fcdbb7348e090485199335db77c8d3c2978d2ce6a113f584475f68a6b7fe94",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-131: Java startup option uses setBuiltinPluginDirectories with List.of Path.of.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "493ffc4107e06a3b6ff7e27c",
+        "text_sha256": "8e56e695560a5b1444b9dcfbfda35e06bb7a03defe7d26f9a2ff56ffc9e7b667",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-132: Rust startup option uses with_builtin_plugin_directories.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "292092128dbb9b8a81a56905",
+        "text_sha256": "958a7f5de61e4445cf3b9facd6ead6d62fa1685859652257d0cd35328066a641",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-133: Builtin registration is a trust boundary for host-bundled controlled plugins. DOCS-SDKPLUGIN-134: Builtin registration differs from ordinary CLI --plugin-dir. DOCS-SDKPLUGIN-135: Builtin startup registration works with an existing runtime. DOCS-SDKPLUGIN-136: Builtin startup registration travels over JSON-RPC, not forwarded process arguments. DOCS-SDKPLUGIN-198: The host-bundled registration trust boundary applies to plugins controlled by the host application.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "e6d718edc4ac075e78f2e406",
+        "text_sha256": "e8e5e7801af9935712e4e815b1d61aeb67b88975202c3dadc2aaf3de21820a1a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-137: Source broadly describes loaded extensions as client-session-visible; this does not erase earlier per-session configuration scope. DOCS-SDKPLUGIN-138: Runtime merges plugin extensions with inline registrations.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "049445d22818431eda17f772",
+        "text_sha256": "2fc3fdea2cc54de03b565f0a7264ed0ebd0e3dc806b4a050c1e6071275eb11c0",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "9c14982a9242b7d2fd312d1f",
+        "text_sha256": "4199ba454d6d3ae83657120c2bb6bd674eefc0dd7d3cd4cc844171dc6725135b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "a63be2908ade52227c89a5b0",
+        "text_sha256": "beea5b18c132cf8378d5f6a0273d60c9bb3704f8108a54be9ccefe2198fa8fc9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-139: Root SKILL.md contributes a skill. DOCS-SDKPLUGIN-140: Nested skills/*/SKILL.md contributes skills. DOCS-SDKPLUGIN-141: Skills appear in session.skills.list. DOCS-SDKPLUGIN-142: Skills can be injected by name.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "58c9043ac56ae8f13c7195ad",
+        "text_sha256": "1cb4f1b2033292be44c9692510eb1aedcc0eea0cbcafe568683b916e3b04b060",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-143: Agents under agents/*.md are dispatchable through task(agent_type).",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "bc09636c2ea79051de75dd15",
+        "text_sha256": "63b9df17d4a6a509e56c6dd9fae8723410b9a43407e90f6abc350e2ab0c8d60b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-144: Plugin hooks.json hooks fire alongside SDK-registered hooks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "bb62a43b55c88f78768340f6",
+        "text_sha256": "6e9c4121ca8ffb9e8b49c29b87055ea572010e2a240b278c7d26121ff259d58e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-145: Plugin .mcp.json contributes tools reachable through session.mcp.*. DOCS-SDKPLUGIN-146: Plugin .mcp.json contributes resources reachable through session.mcp.*.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "3f046f15e0a5191deb418ff7",
+        "text_sha256": "ffa248c8fce910fbcd93d4f838a9f1ae405b505cf7d77d650d49862086c4b9c2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-147: Plugin .lsp.json contributes servers initialized through session.lsp.initialize.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "3bb31d0cf8d48d1a74c56f00",
+        "text_sha256": "c537ffa4af1e7149534a2fba4c3aa3d504a576ef77ad2c7da6eafc326e5bd3cb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-148: Plugin agents can be dispatched by agent_type. DOCS-SDKPLUGIN-149: Source says runtime fires subagentStart for plugin sub-agents. DOCS-SDKPLUGIN-150: Source says runtime fires subagentStop for plugin sub-agents. DOCS-SDKPLUGIN-151: Fleet link is not inherited linked-body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "a0573c517bad01c42a948e97",
+        "text_sha256": "de458fffa1d3d712e3e6f7eb6ff3abb3bae09fea3dd13afb8f6dc804952eabbb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-199: The source compares two installation routes as appearing the same from a session's perspective, without equating their persistence or trust scopes.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "18bb935f4f84f67a47ba15ac",
+        "text_sha256": "7fdb82e52bf1d98d7d16d531fef881392f40d1afd6a0e3823e1b93c9f3733246",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-153: Persistent plugins are ambient to sessions sharing user config. DOCS-SDKPLUGIN-154: Persistent plugins participate in discovery rules. DOCS-SDKPLUGIN-152-A01: Marketplace/direct-repository plugins may be installed persistently through the CLI /plugin command. DOCS-SDKPLUGIN-152-A02: Marketplace/direct-repository plugins may be configured through installedPlugins user settings.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "6e21706ba2a329afda33798e",
+        "text_sha256": "2ca1b46a251b5faf98d431c0a9f3d180a6546342a79199a92d9c5fdd5f63a5e2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-155: Launch-flag plugins are explicit. DOCS-SDKPLUGIN-156: Launch-flag plugins are ephemeral to the launched CLI process. DOCS-SDKPLUGIN-157: Launch-flag plugins take precedence over ambient discovery. DOCS-SDKPLUGIN-158: Marketplace deduplication applies when cache paths match. DOCS-SDKPLUGIN-159: Same-cache-path references do not load that plugin twice.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "5076aafa7ba73d76ccd85661",
+        "text_sha256": "aeba78f6d00b46575fbb7cf03021c6f7768134aa10c5f1ea593258960bf2beb8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-160: Source usually recommends --plugin-dir for SDK application-controlled sets rather than machine user state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "78906c34575b63243895286b",
+        "text_sha256": "17006a6ad57e5883312cff26e35f8bc172bc4c9758ad2539adeb206789e322dc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-161: Conditional COPILOT_PLUGIN_DIR_ONLY=true suppresses automatic discovery. DOCS-SDKPLUGIN-162: Source says directory-only mode loads only --plugin-dir entries. DOCS-SDKPLUGIN-200: Directory-only mode is configured in the runtime environment, not in a per-session plugin option.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "77bdafa207614ee6c24ca8ab",
+        "text_sha256": "92d749a3134155de5d134ee0a0b992ae895e3af59bef2bc4c83040e0d6f5e031",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "b3598262af809d3c01d81268",
+        "text_sha256": "bf3cd01cd40e753005ff738226780b77d7ebe2b505fe4d825b0d912dad0d84ed",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-163: Inert TypeScript example sets the environment value to string true. DOCS-SDKPLUGIN-165: Deterministic example sets one code-reviewer launch directory. DOCS-SDKPLUGIN-166: Deterministic example awaits client.start. DOCS-SDKPLUGIN-164-A01: The deterministic example constructs a CopilotClient. DOCS-SDKPLUGIN-164-A02: The deterministic example chooses RuntimeConnection.forStdio.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "7889cb0e96a6169a448365f5",
+        "text_sha256": "88ac44c1aa8fc3c222104590e9ccc4cc0bca8b59eb14eff0aa53db1beb4285c3",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "7ac4ff702601d63c0797c5f7",
+        "text_sha256": "22baaf5f9110785209d14e78717dd9cd5f36f7ec040e4b50169072937ac16dfa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-167: Source recommends directory-only mode in CI. DOCS-SDKPLUGIN-168: Source recommends directory-only mode in headless servers. DOCS-SDKPLUGIN-169: Source recommends directory-only mode for host-config-independent reproducibility.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "09d43a1b75e5bc95484c02e2",
+        "text_sha256": "1d6618e020f0917c25152cd52d559bcd15b450dac9fe1d60c673fcd02c798e68",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-170: Source recommends inspecting plugin list after session creation to check directory pickup; this is not effective-behavior verification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "8e9f6eaaeb91187df168268f",
+        "text_sha256": "92d749a3134155de5d134ee0a0b992ae895e3af59bef2bc4c83040e0d6f5e031",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "750e46b6384096d89bea7712",
+        "text_sha256": "32337f4bcb706b51488526e76bf5266c45d0b65e168607d3ce3a635534538f5b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-171: Inspection example awaits session.rpc.plugins.list. DOCS-SDKPLUGIN-172: Inspection example iterates plugins.plugins. DOCS-SDKPLUGIN-173: Inspection example prints plugin.name. DOCS-SDKPLUGIN-174: Inspection example renders plugin.enabled as enabled or disabled.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "7e0003b7c9829e509cf45b24",
+        "text_sha256": "88ac44c1aa8fc3c222104590e9ccc4cc0bca8b59eb14eff0aa53db1beb4285c3",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Source-read presentation/list/table introduction, lint comment, table separator, language-tab or details marker only; operative claims are separately extracted."
+      },
+      {
+        "candidate_id": "c59825910c25960ad93091af",
+        "text_sha256": "a2b1d7d35dfdb9c28f895d841f6d6696cae8f7028c51ebbdbe7e99fae6d00da1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-175: Launch plugins list their supplied directory as cache path. DOCS-SDKPLUGIN-176: Marketplace plugins are tagged with registry source.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "12f9263edaab5c9c6fe070dc",
+        "text_sha256": "6b0015b26ca59e0a6fbb59dada4bf6d3c6ba8007a2e48f1bb1cfa46606d46d85",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-177: Directory existence alone does not qualify a plugin without manifest or top-level skill. DOCS-SDKPLUGIN-178-A01: Troubleshooting suggests a plugin.json manifest at the directory root. DOCS-SDKPLUGIN-178-A02: Troubleshooting also permits a manifest under .github. DOCS-SDKPLUGIN-178-A03: Alternatively troubleshooting suggests a top-level SKILL.md.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "a70a675b1048f810d7149bbd",
+        "text_sha256": "3b809462c6cf3f721448b3f6368b58c7cb283d5631b93b5422b588851a65bd42",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-180: Source suggests session.rpc.skills.reload to pick up changes. DOCS-SDKPLUGIN-181: Source says reload avoids restarting. DOCS-SDKPLUGIN-179-A01: For missing plugin agents, ensure the manifest declares its agents. DOCS-SDKPLUGIN-179-A02: For missing plugin skills, ensure the manifest declares its skills. DOCS-SDKPLUGIN-179-A03: Alternatively use the implicit agents/*.md layout. DOCS-SDKPLUGIN-179-A04: Alternatively use the implicit skills/*/SKILL.md layout. DOCS-SDKPLUGIN-201: The missing-agents troubleshooting occurrence explicitly names agents/*.md as an implicit layout. DOCS-SDKPLUGIN-202: The missing-skills troubleshooting occurrence explicitly names skills/*/SKILL.md as an implicit layout.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "d9a60419a2d4285f39055805",
+        "text_sha256": "4ba52b5fcdf9d057fefca6256d21ce1c0837e45921b8ad73eab710a18a06b43a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-182: Deduplication uses cache_path for same directory referenced by marketplace and launch flag. DOCS-SDKPLUGIN-183: Different directories containing the same plugin both load. DOCS-SDKPLUGIN-184-A01: For duplicated plugin contributions, remove one duplicate reference. DOCS-SDKPLUGIN-184-A02: Alternatively use COPILOT_PLUGIN_DIR_ONLY=true.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "1a417ed5ed9a1f0a171cff67",
+        "text_sha256": "444b07f51d6f712ec789518de7e1f554df630a16be3f15058cf93bb1e3c7e806",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-185: Extra args are forwarded only when SDK spawns CLI. DOCS-SDKPLUGIN-186: External server launch must receive --plugin-dir itself.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "f308905eccc0d71163a2bfb9",
+        "text_sha256": "e012c746d1dd2f33de8e3d7e4dc4883dea25701fdf382c7cc0d4ea49990b3a8e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-187: Related custom-agent link references plugin agent authoring, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "c007e50412d8ef80ae50bb33",
+        "text_sha256": "b53b6a96d77d9959b84bd797ad846e01a6e6483fa0f441fe1407e41c77e85c30",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-188: Related skill link references loading/tier ordering, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "2b6e2d88b9e9256110cddc0a",
+        "text_sha256": "cf4892520c08953496e752ebf9a09f7cab58feff38d5678f1bbd469aac0c7047",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-189: Related hooks link describes plugin hooks alongside SDK hooks, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "2afe7a524c060bd0905744b2",
+        "text_sha256": "07f686c2dc93521de9a4e610caed5dd7d126bac1fb09196b05aa4bd1fbb95c8c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-190: Related MCP link describes integration like inline registration, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      },
+      {
+        "candidate_id": "7a50f95b3dcb06c5e3254b61",
+        "text_sha256": "ab57a7cd2cef5c17728931928b2a26bfbb352ad2aa4d6df1f4f8eb9319c1ede8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPLUGIN-191: Related fleet link describes plugin-agent dispatch, not inherited body review.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-plugin-directories-claims.json"
+      }
+    ]
+  }
+]

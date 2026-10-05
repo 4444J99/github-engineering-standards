@@ -1,0 +1,249 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:32:58Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-minio-storage-credential-fields.md",
+      "content_sha256": "a0cdabbca260acd0e18a85fa7b238c6a7b70e50f3acfcbf6780601625eb2f508",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "MinIO storage fields include service URL with illustrative port 9000, S3 bucket and MINIO_ACCESS_KEY/MINIO_SECRET_KEY values. Field names and placeholders are not real credentials or authorized configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-no-internet-actions.md",
+      "content_sha256": "f0d5d71d650012b31619b058d2dee1210008445d6e47eb433bf80811398657d8",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "GHES Actions is designed for environments lacking full internet access; by default workflows cannot use dotcom/Marketplace actions. Offline design is not proof all dependencies work without network preparation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-oidc-prereqs.md",
+      "content_sha256": "ff3cde243123b32f8eb446a963490bfda5cb3a1b0b091b9f0187d9543a23811b",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "When storage authentication uses OIDC, instance token discovery and JWKS URLs under /_services/token/.well-known/openid-configuration and /_services/token/.well-known/jwks must be publicly reachable for the provider. This conditional exposure requirement is not authorization to publish endpoints or the whole instance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-postinstall-nextsteps.md",
+      "content_sha256": "bedde57e60fa327203f5e15a4ae4c6daac6bfecf454a1fc21886ff1add02aa6d",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Successful configuration run enables Actions; subsequent access-policy and self-hosted-runner setup is separately linked. Source expectation does not prove successful installation, readiness or native enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-s3-permission.md",
+      "content_sha256": "d2b7ae85f299181fa763e9ed906168fce6708e435b4c577b2bb4ed55ffbfe470",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Bucket access-key permissions include s3:PutObject, GetObject, ListBucketMultipartUploads, ListMultipartUploadParts, AbortMultipartUpload, DeleteObject and ListBucket; destructive object access is a described requirement, not an actual granted permission.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-s3-permission.md",
+      "content_sha256": "d2b7ae85f299181fa763e9ed906168fce6708e435b4c577b2bb4ed55ffbfe470",
+      "start_line": 10,
+      "end_line": 11,
+      "statement": "kms:GenerateDataKey and kms:Decrypt are additional permissions only when KMS encryption is enabled; do not require unconditional KMS grants or infer encryption configured.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-s3-storage-credential-fields.md",
+      "content_sha256": "b1487d79d686999c48946324bb39bb7f5a1134ef46cdc0e1915745220c0d242f",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "S3 setup fields specify regional service URL (us-west-2 example), bucket and access-key ID/secret; endpoint documentation is separately linked. No credential fetched, persisted or created.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-s3-storage-setup.md",
+      "content_sha256": "ddc37250262273fee611f3e4b9d85eba276906bcd9ede4f9f6fc67decf9c3898",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise artifact/log setup selects Amazon S3 Setup; the UI step does not establish authorized storage, correct credentials or successful writes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-s3-tech-partners.md",
+      "content_sha256": "ab67c12dae6da93ecb598c57c23f9db8311a93750e61c804325aea7af8c85b00",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Other S3-compatible GHES storage products are partner self-validated; Technology Partnership providers own support/documentation. Self-validation and linked partner inventory are not an independent compatibility certificate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-self-signed-cert.md",
+      "content_sha256": "451c77cef95f149b8f81774c9ed754418de41de46b9438cf32e81ab2de3f9b9a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Trusted-authority TLS is strongly recommended for GHES. Self-signed certificates can work with extra self-hosted-runner configuration but are not recommended for production; this is not an absolute impossibility claim.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-setup-prereq.md",
+      "content_sha256": "c449c05a0c7864b73b0fd54e9dcc1753bf75071157b16b67d7eac35e3f27dba1",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "GHES self-hosted setup actions may need a prepared tools cache when runners lack internet. Conditional source scope and linked preparation remain distinct from observed cache completeness.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-storage-about-oidc.md",
+      "content_sha256": "43669203361d1078d89da5264e65b790995f946c16e4bc59f940b244d4905ff8",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "GHES external storage authentication may use OIDC or traditional secrets; OIDC is recommended where possible to avoid managing long-lived secrets. After trust setup, provider short-lived tokens expire automatically; trust, availability and privilege scope are not certified here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-storage-about.md",
+      "content_sha256": "95aea1e37e2ee9914696c3a3bf2d49a9eb4fbc77b78db5e3e68067c2754ae206",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "External Actions storage overview includes a shared storage-contents fragment and links external requirements; standalone reference does not establish reviewed requirements or working provider setup.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-storage-contents.md",
+      "content_sha256": "1382e985c499ddd6996e8a79fe8a424bfd66c7822d03e0c13b93c631a4171855",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "External blob storage holds workflow-generated logs, caches and user-uploaded build artifacts; storage category is not an assurance of retention, integrity or recovery.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/enterprise-storage-ha-backups.md",
+      "content_sha256": "42e8dde30e1df657c6ed4d82291303c3dd09aed49f0fbf31a2690168caf9b29b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "GHES backup and high-availability configurations do not protect external Actions artifacts/logs; data protection and replication depend on the external provider. Provider choice alone is not proof of configured backups or tested restoration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/entitlement-minutes-emus.md",
+      "content_sha256": "19f003cd02d82b802ab6dbc6e2b63649bd10b1871cb86309214c4f09cec9a6fb",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Managed users lack hosted-runner entitlement minutes; the source suggests fork and pull request into an organization for nonmember contributions, running workflows on organization runners. This does not override actual fork, PR approval or runner-access policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/environment-deployment-event.md",
+      "content_sha256": "d6f5d2772ffd4c77dbf6e58e9246b6631a5913c104d12d0b05feec0a7d2f8335",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "An environment-referencing job creates a deployment with environment name and status records carrying environment, optional environment_url and job state. These records do not alone prove real deployment success or required protection checks.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/environment-variables-are-fixed.md",
+      "content_sha256": "c3590daec13630fd33b816fa763c14b8a8afe071f89344c84bd05469d7d9bbac",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Default GITHUB_* and RUNNER_* environment values cannot be overwritten. CI may currently be overwritten but future support is not guaranteed; pinned behavior is not permission to falsify runtime identity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/environment-variables-as-case-sensitive.md",
+      "content_sha256": "ae3cce007866803e1bd39d9fe31da0337f974971119e6996e868aed8eb9023d1",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Treat environment variables as case sensitive as a portability practice regardless of OS/shell behavior; recommendation is separate from actual case semantics.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/expression-syntax-if.md",
+      "content_sha256": "ef79fd815739aaeececacfe58efa116c61e1678e85684ed8eb91ee9cbb020196",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "An if conditional automatically evaluates expressions, allowing omission of expression delimiters in that context but not everywhere.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/expression-syntax-if.md",
+      "content_sha256": "ef79fd815739aaeececacfe58efa116c61e1678e85684ed8eb91ee9cbb020196",
+      "start_line": 3,
+      "end_line": 11,
+      "statement": "Expressions beginning with ! must use expression delimiters or quoted/parenthesized escaping because ! is YAML-reserved; illustrated startsWith negation tests tag references. Source example is inert and not executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSTORAGEEXPR-022",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/expressions-syntax-evaluation.md",
+      "content_sha256": "dee13c6e26bbaab4ec7ede24e725374cbf32a43b554d479b8746ead8ff589d39",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Expression evaluation requires specific syntax to distinguish it from a literal string; exact syntax and allowed positions depend on parent context rather than this standalone reminder.",
+      "accepted_policy": false
+    }
+  ]
+}

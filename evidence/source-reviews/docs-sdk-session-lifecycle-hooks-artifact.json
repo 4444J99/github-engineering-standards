@@ -1,0 +1,691 @@
+[
+  {
+    "artifact_id": "4b5a2bd90ac2dc9631b8dea8",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/hooks/session-lifecycle.md",
+    "content_sha256": "224b168a0e00ecaecd2c343bf4f3cd89e70c4f212311798cdd692d3d7014521a",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T15:36:24Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Entire500 source lines read, independently checked as recorded in audit; all101 candidate blocks dispositioned. Atomic source APIs, examples, recommendations and limitations retained. Only this pinned source review; no actual SDK execution, adopted policy, rights clearance, published assurance or global omission certification.",
+    "independent_audit": "evidence/sdk-hook-lifecycle-error-prompt-independent-audit.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "3f35dee166e7680e470697d0",
+        "text_sha256": "ed3e55ad94e13162c5d9fcb7432c387f55729d512ccf3b3eae900618b76c3147",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-001: Lifecycle hooks respond to session start. DOCS-SDKLIFEHOOK-002: Lifecycle hooks respond to session end. DOCS-SDKLIFEHOOK-003: The guide declares fpt scope. DOCS-SDKLIFEHOOK-004: The guide declares Enterprise Cloud scope.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "89e5d79a6b735e9a5d3018e0",
+        "text_sha256": "d5b00fd784d6d61b52cd34153b66a074ceb676dc4597a0496545d07c70c90f3a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-005: An older lifecycle route redirects here.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "80ca55abeb8735c942fd960b",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "c3eb2008d11649a4c5669517",
+        "text_sha256": "01b100a13dc8ca3535985a1f2e64d2f158862fe18a6ca23a22f24825c535ca13",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-006: Lifecycle hooks initialize starting context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "fd5e226a5e67e012ca63b012",
+        "text_sha256": "46887fb928c69ad369b8926ba5cd8344f3b10f1527956100d29f1311e7066818",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-007: Lifecycle hooks clean up ending-session resources.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "d0c110c16323675f10280537",
+        "text_sha256": "c2286b1f7637bd64506f3bec1c4a9285933b16bc72ead5b89407dcb361f01a29",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-008: Lifecycle hooks track metrics. DOCS-SDKLIFEHOOK-009: Lifecycle hooks track analytics.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "67ea17300c7587a30430a76d",
+        "text_sha256": "7e9177c3a79252ffc727b79b745d3ac3e28c1ca34d2317394b16066a3eff4243",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-010: Lifecycle hooks support dynamic configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "52ec50061b5fa376347d4a50",
+        "text_sha256": "fd4da4672c1d64e3c4af2c6776a9c01af1cb48905c2ef9a7698a319e1d30e9e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-011: Session-start runs for new sessions. DOCS-SDKLIFEHOOK-012: Session-start runs for resumed sessions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "1487fd6540749f3506e7610d",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "fa919899f5352ef96d1f072d",
+        "text_sha256": "834382bad9f7c7a09e2cf01c3c4f71374b92905d3c544ff9729bab97e0b20011",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-014: TypeScript input is SessionStartHookInput. DOCS-SDKLIFEHOOK-015: TypeScript invocation is HookInvocation. DOCS-SDKLIFEHOOK-016: TypeScript returns Promise. DOCS-SDKLIFEHOOK-017: TypeScript output union includes SessionStartHookOutput. DOCS-SDKLIFEHOOK-018: TypeScript output union includes null. DOCS-SDKLIFEHOOK-019: TypeScript output union includes undefined.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "c8c55f1f2f64896e0fc05add",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "796665b81c388f2eb46817e7",
+        "text_sha256": "d72369307b740d56784b701473c015608fc7b30be56b76fad1b03ffbc0eb944c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-020: Python input is SessionStartHookInput. DOCS-SDKLIFEHOOK-021: Python invocation is dict[str,str]. DOCS-SDKLIFEHOOK-022: Python returns Awaitable. DOCS-SDKLIFEHOOK-023: Python output union includes SessionStartHookOutput. DOCS-SDKLIFEHOOK-024: Python output union includes None.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "f0fe958eb37716cda82e635d",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "338959acb9f371f00a2117de",
+        "text_sha256": "fd1c3331708a2bd346573a1012da7ae3aa60a6945ca3391964532464525dc218",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-025: Go input is SessionStartHookInput. DOCS-SDKLIFEHOOK-026: Go invocation is HookInvocation. DOCS-SDKLIFEHOOK-027: Go output is a SessionStartHookOutput pointer. DOCS-SDKLIFEHOOK-028: Go return includes error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "435214cce7998d161ee75295",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "5ee6c7cfa9c7735c5f040094",
+        "text_sha256": "ce3f0815a55dbec3e5a2ea812f1d0167e96b9d2104a474a0d0a9aeaa2d09f9ca",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-029: .NET returns Task. DOCS-SDKLIFEHOOK-030: .NET output type is SessionStartHookOutput. DOCS-SDKLIFEHOOK-031: .NET output is nullable. DOCS-SDKLIFEHOOK-032: .NET input is SessionStartHookInput. DOCS-SDKLIFEHOOK-033: .NET invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "2b5fc802afdc5fb22a70fddd",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "7dbee80a16d59c85f682fd75",
+        "text_sha256": "b3474f68e2a259f9824cacd0f44b21ee13f434c963dd23bb40ea0eaaac6eeb1f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-034: Java interface is marked FunctionalInterface. DOCS-SDKLIFEHOOK-035: Java method is named handle. DOCS-SDKLIFEHOOK-036: Java returns CompletableFuture. DOCS-SDKLIFEHOOK-037: Java future output is SessionStartHookOutput. DOCS-SDKLIFEHOOK-038: Java input is SessionStartHookInput. DOCS-SDKLIFEHOOK-039: Java invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "923c1e163263db4d7f44c7fd",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "e188572869018f2a2f8bda52",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "607caa601e4c62f1d7d184d0",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "1b238156fd2e2dcdfec1f9f7",
+        "text_sha256": "0eade3e9d88ccfe76d15cfe3867b8af447bbbb6c9b1ecc441a0e53eb2fb14f05",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-066: Start timestamp has number type. DOCS-SDKLIFEHOOK-067: Start timestamp represents Unix hook-triggering time. DOCS-SDKLIFEHOOK-319: The start input table does not explicitly specify timestamp units.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "8ad047ee5bfd995c6d6305f8",
+        "text_sha256": "d318e68b8c59de72cfd8ba7263c245b33b73ba5b0e3a9a83fa9797914d0374bb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-068: Start cwd has string type. DOCS-SDKLIFEHOOK-069: Start cwd represents current working directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "f40662e8f3447feb6e57b047",
+        "text_sha256": "6a041932297f4562e88bdc85f12c96781df7f9954c5957f053e98272678f5868",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-070: Start source has startup/resume/new union type. DOCS-SDKLIFEHOOK-071: Start source represents session start route. DOCS-SDKLIFEHOOK-309: Start source permits startup. DOCS-SDKLIFEHOOK-310: Start source permits resume. DOCS-SDKLIFEHOOK-311: Start source permits new.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "8f7c07b72cc6ac935372005b",
+        "text_sha256": "7a440bdefcb5703b82ea9266dc1d0676dfa2df49617ee65c0d8f739c4da264bf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-072: initialPrompt has string or undefined type. DOCS-SDKLIFEHOOK-073: initialPrompt represents optional starting prompt.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "b38ad987dcf20b19c62c6307",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "d6cfd99502b01200d1631f48",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "8177796b4c5d1537bb026c63",
+        "text_sha256": "15f3199e36ad1b94fcd8765a2fdc5a3942f6f135dd4d59f2eb34b48301483bec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-074: Start additionalContext has string type. DOCS-SDKLIFEHOOK-075: Start additionalContext represents context added at startup.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "5bebcbcd8dd683d58fbc8146",
+        "text_sha256": "00ec50f8de0fe77e2ef690f83f17d2a0c024dd3e8fbd05abf471df25f2a94ce2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-076: modifiedConfig has object type. DOCS-SDKLIFEHOOK-077: modifiedConfig represents session configuration override.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "910316bf16b63ab892040221",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "d4f965f907140c4096156f15",
+        "text_sha256": "abfaa69230080aae60bd6aa768af7369f5d033a58f24aa517c4d73c80faf6ea0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-100: TypeScript context example awaits session creation. DOCS-SDKLIFEHOOK-101: TypeScript start callback is asynchronous. DOCS-SDKLIFEHOOK-102: TypeScript callback accepts input and invocation. DOCS-SDKLIFEHOOK-103: TypeScript logs session ID. DOCS-SDKLIFEHOOK-104: TypeScript logs start source. DOCS-SDKLIFEHOOK-105: TypeScript awaits detectProjectType. DOCS-SDKLIFEHOOK-106: TypeScript passes cwd to project detection. DOCS-SDKLIFEHOOK-107: TypeScript returns additionalContext. DOCS-SDKLIFEHOOK-108: Context interpolates project type. DOCS-SDKLIFEHOOK-109: Context interpolates main language. DOCS-SDKLIFEHOOK-110: Context interpolates package manager. DOCS-SDKLIFEHOOK-111: Context removes outer whitespace with trim. DOCS-SDKLIFEHOOK-290: detectProjectType is undefined in the excerpt; no actual project inspection is demonstrated.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "3ac597923ecbf187dc6cae5a",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "b50a9a691b02d8fe65082f5b",
+        "text_sha256": "994da55969d4e1734d2fa395dcc6187baaee723b423aa6cd7b25788af3e43007",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-112: Python imports PermissionHandler. DOCS-SDKLIFEHOOK-113: Python start callback is asynchronous. DOCS-SDKLIFEHOOK-114: Python callback accepts input_data and invocation. DOCS-SDKLIFEHOOK-115: Python reads invocation session_id. DOCS-SDKLIFEHOOK-116: Python logs start source. DOCS-SDKLIFEHOOK-117: Python awaits detect_project_type. DOCS-SDKLIFEHOOK-118: Python passes cwd to project detection. DOCS-SDKLIFEHOOK-119: Python returns additionalContext. DOCS-SDKLIFEHOOK-120: Python context interpolates project type. DOCS-SDKLIFEHOOK-121: Python context interpolates language. DOCS-SDKLIFEHOOK-122: Python context accesses packageManager with camel-case spelling. DOCS-SDKLIFEHOOK-123: Python context removes outer whitespace with strip. DOCS-SDKLIFEHOOK-124: Python awaits session creation. DOCS-SDKLIFEHOOK-125: Python installs approve_all as an inert permission callback. DOCS-SDKLIFEHOOK-126: Python maps on_session_start into hooks. DOCS-SDKLIFEHOOK-291: detect_project_type is undefined in the excerpt; no actual project inspection is demonstrated.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "734bd3974d94e19592a880f3",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "1462fa2dca445592c865729e",
+        "text_sha256": "ccb609b2d88dcd8e56c2b2c1509bb4d55b23c268dd92d4e8c969753c3c5d458f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-127: Resume-context example awaits session creation. DOCS-SDKLIFEHOOK-128: Resume-context start callback is asynchronous. DOCS-SDKLIFEHOOK-129: Resume-context branch checks source equals resume. DOCS-SDKLIFEHOOK-130: Resume-context awaits loadSessionState. DOCS-SDKLIFEHOOK-131: Resume-context loader receives session ID. DOCS-SDKLIFEHOOK-132: Resume-context returns additionalContext. DOCS-SDKLIFEHOOK-133: Context labels the session resumed. DOCS-SDKLIFEHOOK-134: Context interpolates previous lastTopic. DOCS-SDKLIFEHOOK-135: Context joins previous openFiles with comma-space. DOCS-SDKLIFEHOOK-136: Resume context is trimmed. DOCS-SDKLIFEHOOK-137: Nonresume fallback returns null. DOCS-SDKLIFEHOOK-292: loadSessionState is undefined; previous-state recovery is not demonstrated. DOCS-SDKLIFEHOOK-312: The resume excerpt does not validate the loaded state before using it. DOCS-SDKLIFEHOOK-313: The resume excerpt assumes openFiles supports join.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "064f809d1c238f90d1e06e51",
+        "text_sha256": "d7cc70eabb5924d14afe6ed4c417deba2620f7d808a94f541b1c0b8ce9ba07e3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-138: Preference example awaits session creation. DOCS-SDKLIFEHOOK-139: Preference start callback is asynchronous. DOCS-SDKLIFEHOOK-140: Preference callback awaits loadUserPreferences. DOCS-SDKLIFEHOOK-141: Preference context parts start empty. DOCS-SDKLIFEHOOK-142: Language context requires truthy preferred language. DOCS-SDKLIFEHOOK-143: Language context interpolates preferred language. DOCS-SDKLIFEHOOK-144: Code-style context requires truthy codeStyle. DOCS-SDKLIFEHOOK-145: Code-style context interpolates codeStyle. DOCS-SDKLIFEHOOK-146: Concise context requires verbosity exactly concise. DOCS-SDKLIFEHOOK-147: The inert concise preference asks for brief answers. DOCS-SDKLIFEHOOK-148: Preference output returns additionalContext. DOCS-SDKLIFEHOOK-149: Preference parts are joined with newline. DOCS-SDKLIFEHOOK-293: loadUserPreferences is undefined; preference acquisition is not demonstrated. DOCS-SDKLIFEHOOK-314: The preferences excerpt does not validate the loaded preference object.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "bf7d9e82b409578431436cbd",
+        "text_sha256": "b3ef8f19f2b3b5c65cff50859637a494d955b999e7fd4372488f776170bd1c47",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-013: Session-end runs when a session ends.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "87c0c93a172dea1e2a305d63",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "9a69fdb529488c6e4ea14b23",
+        "text_sha256": "bfc480130c1ce01fc484dcc330557f9e6855182d5920fe7488c5b29b6c797f11",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-040: TypeScript input is SessionEndHookInput. DOCS-SDKLIFEHOOK-041: TypeScript invocation is HookInvocation. DOCS-SDKLIFEHOOK-042: TypeScript returns Promise. DOCS-SDKLIFEHOOK-043: TypeScript output union includes SessionEndHookOutput. DOCS-SDKLIFEHOOK-044: TypeScript output union includes null. DOCS-SDKLIFEHOOK-045: TypeScript output union includes undefined.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "c2451f9820b3376e006ed9bb",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "12023214875de0e0db1457cc",
+        "text_sha256": "43b7e84d4e8e353d15da16779f16f5ba02dcefd0d91e690a9b65f3f97be9ec7b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-046: Python input is SessionEndHookInput. DOCS-SDKLIFEHOOK-047: Python invocation is dict[str,str]. DOCS-SDKLIFEHOOK-048: Python returns Awaitable. DOCS-SDKLIFEHOOK-049: Python output union includes SessionEndHookOutput. DOCS-SDKLIFEHOOK-050: Python output union includes None.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "7e5e9524634f9c33a52ab463",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "757d0f6a691cbb7ac1fe86ab",
+        "text_sha256": "3dfabbc8d7a538d1328c804c65e9d159c671ec734ebd94bb97564721c89488bc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-051: Go input is SessionEndHookInput. DOCS-SDKLIFEHOOK-052: Go invocation is HookInvocation. DOCS-SDKLIFEHOOK-053: Go output is a SessionEndHookOutput pointer. DOCS-SDKLIFEHOOK-054: Go return includes error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "ccb4a980bac7f308e8caca28",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "886105a926f540df98b06183",
+        "text_sha256": "ea4e7421fca19c8ecd745026a56ad27613ffb4e8b7dbcadebd2b669cde1e99db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-055: .NET returns Task. DOCS-SDKLIFEHOOK-056: .NET output type is SessionEndHookOutput. DOCS-SDKLIFEHOOK-057: .NET output is nullable. DOCS-SDKLIFEHOOK-058: .NET input is SessionEndHookInput. DOCS-SDKLIFEHOOK-059: .NET invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "add529439786efcb6fcfc3f3",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "e2504d73e9bdd8e37b6ef967",
+        "text_sha256": "ee961ab6ece49ef1b3420a614b801b04c9ba66e78cca40e98583ee48ba010e5a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-060: Java interface is marked FunctionalInterface. DOCS-SDKLIFEHOOK-061: Java method is named handle. DOCS-SDKLIFEHOOK-062: Java returns CompletableFuture. DOCS-SDKLIFEHOOK-063: Java future output is SessionEndHookOutput. DOCS-SDKLIFEHOOK-064: Java input is SessionEndHookInput. DOCS-SDKLIFEHOOK-065: Java invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "ca0d46b043b225a6caa5718c",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "7d10555ac88eb2c7fe302be0",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "bc8f3ead2da496cc56da7cca",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "a8c496d3de6e4dd1ffbd1dfe",
+        "text_sha256": "0eade3e9d88ccfe76d15cfe3867b8af447bbbb6c9b1ecc441a0e53eb2fb14f05",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-078: End timestamp has number type. DOCS-SDKLIFEHOOK-079: End timestamp represents Unix hook-triggering time. DOCS-SDKLIFEHOOK-320: The end input table does not explicitly specify timestamp units.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "250a5055ab7693ef5a6c498b",
+        "text_sha256": "d318e68b8c59de72cfd8ba7263c245b33b73ba5b0e3a9a83fa9797914d0374bb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-080: End cwd has string type. DOCS-SDKLIFEHOOK-081: End cwd represents current working directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "a44740d304ca47ed188e36bf",
+        "text_sha256": "d385fb9f68aeb6123fd5c1db3465a082beb0d8d70483ab0291bc7566916e44e2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-082: End reason has string type. DOCS-SDKLIFEHOOK-083: End reason represents why the session ended.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "d8fc58e14f91202a6510f638",
+        "text_sha256": "d39c7a5c6db75da56b151bdb91a36e1d8fdf1230e3e550d022e1d026e92750ff",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-084: finalMessage has string or undefined type. DOCS-SDKLIFEHOOK-085: finalMessage represents last session message.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "04bf814c5dda459e7c1c394d",
+        "text_sha256": "ead969f08c14740c444b75e04ca7d7a296cf22cb2caf3fe43ed376e9d4506de8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-086: End error has string or undefined type. DOCS-SDKLIFEHOOK-087: End error represents error message for error termination.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "ec649e5087974027187da7a9",
+        "text_sha256": "85ecdb88a2e6419fd0cf16e78e4383afe13f6c58ad137420b3e318fa1140a402",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "1ca0a174134832d11309856b",
+        "text_sha256": "66a722b4b1035490ac69ab5e0b54ecad926345df13f05983abcbdf41c587c2cc",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "7a6cd6e7a6f241651dbd92c0",
+        "text_sha256": "59b08b2c991260ffe59ec83602e6c1f4057afc7a7de9944595c55e8709090339",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-094: Complete reason denotes normal completion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "4313cc1a5cbee3438efb9751",
+        "text_sha256": "0e7d411379496b73d10a24dd224da7b3c90b0f45513b5313eac565db01edfa19",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-095: Error reason denotes error termination.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "1bb83c13049bfb57e65bb1e1",
+        "text_sha256": "a2a07367a3b1c78cee6feecea400d223682d4999ab5b20a620179ecfd8c72784",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-096: Abort reason includes user abort. DOCS-SDKLIFEHOOK-097: Abort reason includes code abort.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "78b1813a42582510f60ef899",
+        "text_sha256": "0a82d77c1bb9cded6fd4d03ae539aefcf0bf95bfb6a47060ff9b1db0e019660e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-098: Timeout reason denotes timed-out session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "083fdbbc10eab8eb4d00bf5c",
+        "text_sha256": "b04aa85542ddc691421d6dddb6a547cb52d08c363734e45a9d3315c5831a50f5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-099: User_exit denotes explicit user termination.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "8a38c3c63d2610579734533a",
+        "text_sha256": "5c0ef493cdbaf23f2961ea6400832e1d455f46da5ea258d994182a3008f45f57",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "0174895586f3e26d740adc38",
+        "text_sha256": "63ca19e1a742606873e313b1ec6ef03f47a33ecdf43b438f6a07cc95df54ec18",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "917f8db350a736b8db4f6ec9",
+        "text_sha256": "09dbbe2429ef776e3db7f557ff970a87ab06b80f1b14fc49c92c8dd670de0af6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-088: End suppressOutput has boolean type. DOCS-SDKLIFEHOOK-089: End suppressOutput represents final-output suppression.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "2ae8408bc0bfc5cd844d4632",
+        "text_sha256": "05799f36b7ca5ff795cc2cd86684247fedd7eec1eef6eaa39d5d20233138ef6a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-090: cleanupActions has string[] type. DOCS-SDKLIFEHOOK-091: cleanupActions represents actions to perform.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "ff6399d91ecd5b2438ef128d",
+        "text_sha256": "2e22102c2097942c69e8c5056c7a1db592a99be29d70fe322375d9a3b8d472e8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-092: sessionSummary has string type. DOCS-SDKLIFEHOOK-093: sessionSummary represents logging or analytics summary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "deb8ec9201d325e72adf1a3b",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "ca4935f495a2ebd72236cb9e",
+        "text_sha256": "3ac856c56a1ac666a34e5a70eb64f52c552f5cecc81c8b6d397a998ec94d7903",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-150: TypeScript metrics allocates a Map. DOCS-SDKLIFEHOOK-151: Metrics Map key type is string. DOCS-SDKLIFEHOOK-152: Metrics Map value type is number. DOCS-SDKLIFEHOOK-153: TypeScript metrics awaits session creation. DOCS-SDKLIFEHOOK-154: Metrics start callback is asynchronous. DOCS-SDKLIFEHOOK-155: Metrics stores input timestamp by session ID. DOCS-SDKLIFEHOOK-156: Metrics start returns null. DOCS-SDKLIFEHOOK-157: Metrics end callback is asynchronous. DOCS-SDKLIFEHOOK-158: Metrics looks up the session start time. DOCS-SDKLIFEHOOK-159: Duration subtracts start time when it is truthy. DOCS-SDKLIFEHOOK-160: Duration falls back to zero for a falsy start time. DOCS-SDKLIFEHOOK-161: Metrics awaits recordMetrics. DOCS-SDKLIFEHOOK-162: Metric payload includes session ID. DOCS-SDKLIFEHOOK-163: Metric payload includes duration. DOCS-SDKLIFEHOOK-164: Metric payload includes end reason. DOCS-SDKLIFEHOOK-165: Metrics deletes its start-time entry. DOCS-SDKLIFEHOOK-166: Metrics end returns null. DOCS-SDKLIFEHOOK-294: recordMetrics is undefined; successful metric persistence is not demonstrated. DOCS-SDKLIFEHOOK-297: A zero start timestamp is treated as missing by the truth-value duration check. DOCS-SDKLIFEHOOK-299: The metric entry deletion follows the awaited helper without shown finally-style cleanup on rejection. DOCS-SDKLIFEHOOK-315: The TypeScript metric Map shows no crash-recovery persistence.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "f6523d16cef6cdcf9991c173",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "546e2cc3f988ec6314602235",
+        "text_sha256": "0a0ac0b0c84d98cbee6a631cd12a18bd06b9f4973cc47db3668bbcf49821cb21",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-167: Python metrics imports PermissionHandler. DOCS-SDKLIFEHOOK-168: Python metrics starts an empty dictionary. DOCS-SDKLIFEHOOK-169: Python metrics start callback is asynchronous. DOCS-SDKLIFEHOOK-170: Python metrics stores timestamp under invocation session_id. DOCS-SDKLIFEHOOK-171: Python start returns None. DOCS-SDKLIFEHOOK-172: Python metrics end callback is asynchronous. DOCS-SDKLIFEHOOK-173: Python end looks up start time. DOCS-SDKLIFEHOOK-174: Python duration subtracts when start_time is truthy. DOCS-SDKLIFEHOOK-175: Python duration otherwise falls back to zero. DOCS-SDKLIFEHOOK-176: Python awaits record_metrics. DOCS-SDKLIFEHOOK-177: Python metric payload uses session_id. DOCS-SDKLIFEHOOK-178: Python metric payload includes duration. DOCS-SDKLIFEHOOK-179: Python metric payload uses end_reason. DOCS-SDKLIFEHOOK-180: Python removes the start entry with None fallback. DOCS-SDKLIFEHOOK-181: Python end returns None. DOCS-SDKLIFEHOOK-182: Python metrics awaits session creation. DOCS-SDKLIFEHOOK-183: Python metrics installs approve_all as inert permission callback. DOCS-SDKLIFEHOOK-184: Python metrics registers its start callback. DOCS-SDKLIFEHOOK-185: Python metrics registers its end callback. DOCS-SDKLIFEHOOK-295: record_metrics is undefined; successful metric persistence is not demonstrated. DOCS-SDKLIFEHOOK-298: Python zero start_time is treated as missing by its truth-value duration check. DOCS-SDKLIFEHOOK-300: Python metric entry removal follows the awaited helper without shown finally-style cleanup on failure. DOCS-SDKLIFEHOOK-316: The Python metric dictionary shows no crash-recovery persistence.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "b9fff256aa67e417fb9059bc",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "fa9a59a01b587d50ab11925b",
+        "text_sha256": "abe566c05178ab13475c3e1ee7dd52aba818e7569407246cf34ccfaa3cfbb349",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-186: Cleanup example allocates a session-keyed Map. DOCS-SDKLIFEHOOK-187: Cleanup resource tempFiles is a string array. DOCS-SDKLIFEHOOK-188: Cleanup example awaits session creation. DOCS-SDKLIFEHOOK-189: Cleanup start callback is asynchronous. DOCS-SDKLIFEHOOK-190: Cleanup initializes a session resource entry. DOCS-SDKLIFEHOOK-191: Cleanup initializes an empty temporary-file list. DOCS-SDKLIFEHOOK-192: Cleanup start returns null. DOCS-SDKLIFEHOOK-193: Cleanup end callback is asynchronous. DOCS-SDKLIFEHOOK-194: Cleanup retrieves resources by session ID. DOCS-SDKLIFEHOOK-195: Cleanup runs its resource branch only for a truthy entry. DOCS-SDKLIFEHOOK-196: Cleanup iterates registered temporary files. DOCS-SDKLIFEHOOK-197: Cleanup awaits unlink for each file. DOCS-SDKLIFEHOOK-198: Cleanup catches unlink failures with an empty callback. DOCS-SDKLIFEHOOK-199: Cleanup deletes its resource entry. DOCS-SDKLIFEHOOK-200: Cleanup logs session ID. DOCS-SDKLIFEHOOK-201: Cleanup logs end reason. DOCS-SDKLIFEHOOK-202: Cleanup end returns null. DOCS-SDKLIFEHOOK-301: Unlink failures are swallowed before the resource entry is removed; actual deletion is not proven. DOCS-SDKLIFEHOOK-302: The cleanup excerpt shows no code appending temporary-file paths to its initially empty list. DOCS-SDKLIFEHOOK-303: The fs binding is not defined in the displayed excerpt.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "ca5de22ec03d08a1c7c2d52b",
+        "text_sha256": "84c8f2f5a7b7300f6ae4603384727df61abf37d7add539078ab5eedaa194240e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-203: State-save example awaits session creation. DOCS-SDKLIFEHOOK-204: State-save end callback is asynchronous. DOCS-SDKLIFEHOOK-205: State-save excludes the error end reason. DOCS-SDKLIFEHOOK-206: State-save awaits saveSessionState. DOCS-SDKLIFEHOOK-207: State-save passes session ID. DOCS-SDKLIFEHOOK-208: State-save records endTime from timestamp. DOCS-SDKLIFEHOOK-209: State-save records cwd. DOCS-SDKLIFEHOOK-210: State-save records reason. DOCS-SDKLIFEHOOK-211: State-save returns null. DOCS-SDKLIFEHOOK-296: saveSessionState is undefined; durable saved state is not demonstrated. DOCS-SDKLIFEHOOK-307: The displayed saved-state object does not include lastTopic. DOCS-SDKLIFEHOOK-308: The displayed saved-state object does not include openFiles. DOCS-SDKLIFEHOOK-317: The save-state branch includes non-error reasons rather than restricting to complete.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "dffb1159203945382e3007a0",
+        "text_sha256": "372977cc3bffc1cfd69918a534b1575abcba8f39def325e8593ea08314ba0417",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-212: Summary allocates an empty Record. DOCS-SDKLIFEHOOK-213: Summary Record keys are strings. DOCS-SDKLIFEHOOK-214: Summary prompts counter is number. DOCS-SDKLIFEHOOK-215: Summary tools counter is number. DOCS-SDKLIFEHOOK-216: Summary startTime is number. DOCS-SDKLIFEHOOK-217: Summary example awaits session creation. DOCS-SDKLIFEHOOK-218: Summary start callback is asynchronous. DOCS-SDKLIFEHOOK-219: Summary initializes data for session ID. DOCS-SDKLIFEHOOK-220: Summary prompt count starts at zero. DOCS-SDKLIFEHOOK-221: Summary tool count starts at zero. DOCS-SDKLIFEHOOK-222: Summary startTime comes from input timestamp. DOCS-SDKLIFEHOOK-223: Summary start returns null. DOCS-SDKLIFEHOOK-224: Summary submitted-prompt callback is asynchronous. DOCS-SDKLIFEHOOK-225: Summary submitted-prompt callback ignores its first argument. DOCS-SDKLIFEHOOK-226: Submitted-prompt callback increments prompt count. DOCS-SDKLIFEHOOK-227: Submitted-prompt callback returns null. DOCS-SDKLIFEHOOK-228: Summary pre-tool callback is asynchronous. DOCS-SDKLIFEHOOK-229: Summary pre-tool callback ignores its first argument. DOCS-SDKLIFEHOOK-230: Pre-tool callback increments tool count. DOCS-SDKLIFEHOOK-231: Pre-tool callback returns allow. DOCS-SDKLIFEHOOK-232: Summary end callback is asynchronous. DOCS-SDKLIFEHOOK-233: Summary end retrieves session data. DOCS-SDKLIFEHOOK-234: Summary logs session ID. DOCS-SDKLIFEHOOK-235: Summary duration subtracts start time. DOCS-SDKLIFEHOOK-236: Summary duration divides by1000 and labels seconds. DOCS-SDKLIFEHOOK-237: Summary logs prompt count. DOCS-SDKLIFEHOOK-238: Summary logs tool-call count. DOCS-SDKLIFEHOOK-239: Summary logs end reason. DOCS-SDKLIFEHOOK-240: Summary log text is trimmed. DOCS-SDKLIFEHOOK-241: Summary deletes session data. DOCS-SDKLIFEHOOK-242: Summary end returns null. DOCS-SDKLIFEHOOK-304: Prompt counting assumes a session data entry already exists. DOCS-SDKLIFEHOOK-305: Tool counting assumes a session data entry already exists. DOCS-SDKLIFEHOOK-306: Summary logging assumes session data exists rather than guarding a missing entry. DOCS-SDKLIFEHOOK-318: Dividing duration by1000 assumes millisecond-scale timestamps in this example. DOCS-SDKLIFEHOOK-321: The summary allow decision is inert example data, not workspace permission approval.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "24522cb2e316db1d8cd2e832",
+        "text_sha256": "081726f9e306ca18f96b417b8f7ddb172348dd00e0fba633812609cafa976137",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-243: Agent-stop runs at a natural top-level end of turn. DOCS-SDKLIFEHOOK-244: Agent-stop is separate from session-end. DOCS-SDKLIFEHOOK-245: The session remains active after agent-stop. DOCS-SDKLIFEHOOK-246: Agent-stop can request another agent turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "5226d3ad5439c8a64ea1dd8e",
+        "text_sha256": "4c2f15dcb0a200d9ed7d029ae67a19d5963adecc482bb0b99a0f9dc918d4470a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "0fceb02500ffb47149635458",
+        "text_sha256": "dac58df96fc53f3c65e7e32a0df5005f1619498663017c764691ceb374b58e99",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "c9730fa9419db1c2ade4cbe8",
+        "text_sha256": "ed5c327504090c82db5a90c603beb1f108669a8902e45908505b0cf69e0cbf90",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-247: TypeScript agent-stop handler is onAgentStop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "46ad4d7fba4c893a590bd43b",
+        "text_sha256": "30257f3f35d3969d2f6edbe271d64c2bd1da9d1e30aa541ced9cd7bd607abf17",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-248: Python handler is on_agent_stop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "54732183dcd014b35d180f64",
+        "text_sha256": "7fe55b8df1d6b0de69e73e78ddeaac11887df1ca4fbdd4037365a1bd4497c4af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-249: Go handler is OnAgentStop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "beb88120b155ec71e0331a8c",
+        "text_sha256": "d1eb3a16e147a03e14a35110c5dd7e112cc388937465e087244649d7ab57e6b5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-250: .NET handler is OnAgentStop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "2d28114679eb21a8dacd2bd3",
+        "text_sha256": "e9c7ed75d953644b4a79b122f5d41db3838fbc4a26fdbf46dbcdf1f3e159dba6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-251: Rust handler is on_agent_stop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "0ed4bad7810c8294f7dbc653",
+        "text_sha256": "e19d5c7a08cde6b7b93181819aa1f1e681d1af38241632bfe6f83e1c3eee3b4b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-252: Java registration is setOnAgentStop.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "304adcc0be5ed14ebc2e5186",
+        "text_sha256": "1c2bee1f773e41574b28619e3b69bbdaebceaa346bac1d08f1b8abc1a9c67d01",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-253: Agent-stop members follow language-specific casing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "69e751cef249d2f3242b228c",
+        "text_sha256": "68481617d4455490b4d307ee3397a880ec36029f7c468f7073f390a8de7b38fc",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "6456f111428ba6f1e5fc0dda",
+        "text_sha256": "0a382e2cf46b0e43def8a8f269de1fc3e2a676d3069e082b9b316f986717ca90",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment. Source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "2407599d47dec1c79b92f8ca",
+        "text_sha256": "fdd17b49b2ba07de4a22b5912aaf70787a53a1331138578775871c507aea0947",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-254: Agent-stop field represents why the agent stopped. DOCS-SDKLIFEHOOK-255: Node.js/Python accesses this field as stopReason. DOCS-SDKLIFEHOOK-256: Go/.NET accesses this field as StopReason. DOCS-SDKLIFEHOOK-257: Rust accesses this field as stop_reason. DOCS-SDKLIFEHOOK-258: Java accesses this field as getStopReason(). DOCS-SDKLIFEHOOK-269: end_turn is an example stop reason.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "8057c455f69ba22e6fef01fd",
+        "text_sha256": "c80522e96cb340711b65d7ffdbb86f05d9399e2c546b8a73eae1f7dafadb0467",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-259: Agent-stop field represents on-disk transcript path. DOCS-SDKLIFEHOOK-260: Node.js/Python accesses this field as transcriptPath. DOCS-SDKLIFEHOOK-261: Go/.NET accesses this field as TranscriptPath. DOCS-SDKLIFEHOOK-262: Rust accesses this field as transcript_path. DOCS-SDKLIFEHOOK-263: Java accesses this field as getTranscriptPath().",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "8bc96cc2a210b437054e415a",
+        "text_sha256": "a8dcc4cbdf141a0402f03f414a07cb504a61ec4e0d8331f1ee9f57da6caabd94",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-264: Agent-stop field represents whether an earlier block caused continuation. DOCS-SDKLIFEHOOK-265: Node.js/Python accesses this field as stopHookActive. DOCS-SDKLIFEHOOK-266: Go/.NET accesses this field as StopHookActive. DOCS-SDKLIFEHOOK-267: Rust accesses this field as stop_hook_active. DOCS-SDKLIFEHOOK-268: Java accesses this field as getStopHookActive().",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "6983bbf47cf52a2ed835afd3",
+        "text_sha256": "c473eaae2a5138224a2844f165795c92fffb7ca70d47fb799e9d6a538785bb83",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-270: No output allows the agent to stop. DOCS-SDKLIFEHOOK-271: A block decision enqueues another user message. DOCS-SDKLIFEHOOK-272: A block decision continues the agent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "57a9bceee809a4ddf0ec2ce9",
+        "text_sha256": "e379e2e1dc703a6c331e7ab43a6804f36c6da48733a62bfd3247b719823f5c0c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-273: JSON example sets decision to block. DOCS-SDKLIFEHOOK-274: The inert reason asks for final validation and repair.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "0f765d347af71f30bd8a5b4f",
+        "text_sha256": "fdb4e2b25fa2f36bfdd8bacd2e7fab6c43703a194494acfc342e6c2bebfdbd79",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-275: Consult the active-stop member to avoid repeatedly blocking a hook-induced continuation. DOCS-SDKLIFEHOOK-276: The runtime caps consecutive block decisions. DOCS-SDKLIFEHOOK-322: The source does not give the numerical consecutive-block cap.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "2d8d92e88b60a54395debfa9",
+        "text_sha256": "32d5e3e172baff731377b8233928f5e1afe794a18ce3f72a668206cd8893eb61",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-277: Keep start hooks fast. DOCS-SDKLIFEHOOK-278: Users wait for startup readiness.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "3bc29ce8179bb1b1a0a44f33",
+        "text_sha256": "9835632fc3febc427743a6f5d23ad70fc1385090c292be61cda4f1697d8b1910",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-279: Handle every end reason. DOCS-SDKLIFEHOOK-280: Do not assume clean termination. DOCS-SDKLIFEHOOK-281: Handle error termination. DOCS-SDKLIFEHOOK-282: Handle abort termination.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "932e36daf3622d08ef5c1742",
+        "text_sha256": "272ab3acd8d73c4cbe3fd4f2a8bb26be5af6c5c101c3c2512c77663f18b38165",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-283: Free session-allocated resources in end hooks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "1def7c0232ae13ed9dc0c7a3",
+        "text_sha256": "0ae50220797a251a77a1a80f35d631b22d76e5fb4afc2eba28b01807e41ab3f1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-284: Keep tracked session state lightweight.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "cb04912932f8d593d3714384",
+        "text_sha256": "572f37514c31d7cb7b1e1324f2c4258238ce38ca7b4827aefc3565f9b34efb05",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-285: Make cleanup idempotent. DOCS-SDKLIFEHOOK-286: A process crash may prevent session-end hook invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "422216d51278e06d7a4e0180",
+        "text_sha256": "62930d51334dcfd405fdfeb544b4195ae684e6ffb91ac40c0774b4298cfd12fa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-287: Hooks-index navigation does not review the linked body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "b6b756f37d9618744eddb596",
+        "text_sha256": "33d53a97f0902be16a5741e59edde64a30298ff6aba517cace00379fadca9b44",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-288: Error-handling navigation does not review the linked body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      },
+      {
+        "candidate_id": "93be29f3ad179915af8137a0",
+        "text_sha256": "fd32214e5d998cf5d1596ad2be9cf284588faf4ec30ee19e7d357e4516bec8c3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKLIFEHOOK-289: Debugging navigation does not review the linked body.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-session-lifecycle-hooks-claims.json"
+      }
+    ]
+  }
+]

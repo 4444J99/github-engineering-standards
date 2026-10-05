@@ -1,0 +1,60 @@
+{
+  "issue": 448,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/changing-your-two-factor-authentication-method.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/disabling-two-factor-authentication-for-your-personal-account.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md"
+  ],
+  "reusable_fragments_inspected": 22,
+  "feature_datasets_inspected": [
+    "data/features/mandatory-2fa-dotcom-contributors.yml",
+    "data/features/2fa-recovery-flow.yml"
+  ],
+  "added_reference_claims": 22,
+  "reference_claims": 61372,
+  "claim_bearing_artifacts": 3515,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.976
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "unresolved": [
+    "Source states three business days and 3–5 day waiting period without reconciling units.",
+    "Recovery-factor prior enrollment does not guarantee current availability.",
+    "Exact current mandatory enrollment cohort and human review outcomes are not observed."
+  ],
+  "coverage_caveat": "Four individual source receipts only; not complete authentication corpus, published assurance, policy acceptance or tested real recovery.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false,
+  "credentials_accessed": false
+}

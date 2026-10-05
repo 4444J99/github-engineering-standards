@@ -1,0 +1,532 @@
+[
+  {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility.md",
+    "content_sha256": "96eb8710c74c44e2ae99a6224196b0156df1605b70b3fd6b39f9e70f55d97463",
+    "artifact_id": "0d71ce42d0c64808545126ff",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:01:59.031Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Package visibility and access can inherit from repository-scoped registries, whereas granular registries allow separately scoped package settings. Read/write/admin mean download/metadata read, upload and metadata write, or management/deletion/grant authority respectively; publishers and organization owners obtain package admin in the documented flow. In granular registries a package can be published without repository linking. In the FPT/GHEC packages-inherit-permissions branch, a repository linked before publication supplies default access inheritance, not visibility inheritance, and linked workflows get access. Linking an already-published package from settings retains existing access unless inheritance is explicitly selected. Organization disabling of default inheritance is an exception; a matching source label or repository link alone does not certify effective access. Repository-scoped-only registries always link and inherit repository permissions. Where inheritance applies, grant/remove operations are made through repository permissions; separate granular settings require removing inheritance. Non-feature branches describe inheritance as a choice rather than default. Package admins can grant personal-scoped user roles but cannot grant teams personal-package access. Private/internal organization-scoped packages restrict grants to organization members/teams; selected users or teams receive access without first accepting invitations. Organization-scoped package admins grant read/write/admin roles to users and organization teams via package settings and role selection. Procedural role assignment is not evidence that those rights were exercised or permission changes authorized. The source recommends inheritance for simpler management, not as an unconditional adopted security obligation. Changing how package access is obtained overwrites existing permissions, so a switch requires explicit before/after access and recovery evidence. Personal/organization inheritance settings use the Manage access or Inherited access section checkbox; names depend on current state. Feature-gated organization owners may disable automatic inheritance for new packages; package admins can still override inheritance on individual packages. Workflow access grants belong to the repository containing the workflow and can cover multiple repositories independent of source-code ownership. Feature-gated linked workflows automatically receive access unless organization default inheritance is disabled; explicit repository grants and linking are distinct. Automatic Dependabot package pulling through a repository access grant is conditional on org-automatic-registry-access: FPT/GHEC and GHES >=3.23 in the pinned feature definition. It is not asserted for GHES 3.18-3.22; no PAT or dependabot.yml registry configuration is needed only within that qualified path. Workflow job permissions with packages scope can further limit rights but do not independently prove package access. Granting a public repository private-package access may expose packages to its forks; no access was granted and no fork isolation was verified. Personal and organization workflow-access procedures add the workflow repository and select its role; GHES uses Actions access navigation, cloud Manage Actions access. Role dropdown/source UI labels are not an operational permission receipt. FPT/GHEC Codespaces seamless access covers qualifying granular registries and same-repository packages with inheritance selected. Otherwise grant the repository launching the codespace; multiple source-independent repositories may be added and removed under Manage Codespaces access. Initial personal-scoped visibility is private. The guide's public/private UI descriptions are constrained by its explicit irreversible rule: once made public a package cannot be made private again. Name/consequence confirmation is not public-publication authority or a reversible rollback. For granular registries organization Package Creation settings choose allowed public/private/internal publication by members. Internal visibility can extend to all enterprise members, not just the organization; registry and platform limits still apply. GHEC Maven/Gradle support public/private repository visibility but not internal; do not generalize the granular package creation controls into unsupported registry capability. GHES Container Registry remains preview and requires Packages plus subdomain isolation. Organization packages initially private can receive user/team roles; public visibility is irreversible here. Internal option is excluded for FPT and enterprise membership expands its audience. The source's only-you initial wording must be read alongside organization owners' automatic admin, not as denial of owner access. Most registries require authentication even for public pulls, while public Container Registry packages allow anonymous pulling. Generic PAT or GITHUB_TOKEN references remain qualified by separate classic-token/workflow support and scopes; visibility is not licensing clearance. GHEC managed users can publish in organization namespaces but not personal namespaces. All UI/source examples remain unexecuted; no permission, visibility, identity, cost, native enforcement or rights changes occur. Linked guides and published render assurance remain separately reviewable. Full source and required include/feature/variable context read; accounting does not certify independent semantic completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "17850c7bb7b967d71c959a22",
+        "text_sha256": "96fa1630ad36eca8ff4f7be35157c6d9260b8e0593c0307c6c421e6884e0592c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "e9bff21c41d966fc900fc03f",
+        "text_sha256": "c0c88ad0cf417cb8e561754768735d6b24d40c219c2688ab27e2c5f348ee2e9d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "3e83169c7f4a87dca8d4c570",
+        "text_sha256": "70a39647842e5340aef710c3fa7d09a677c5637d966b1dab453b8ffd9fc39fac",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "c6f6b4db240080489d06d207",
+        "text_sha256": "1c327be5b65cf32831a190b5e316350d8885ee284a5accd4ed0cfd8408c91e2a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "20249f52b81ed2934bc522f1",
+        "text_sha256": "9e3069d0286684f6b82347efadfe566c4cd28a54cd844a244afb1a80d56c8e4a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "fa6e7a0c4a63673721c882ee",
+        "text_sha256": "331cf477faabae905d29ce3325bb8168399e6ca9fb097da66802079b8f221f14",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "ed9201af4bfd740efdb4968e",
+        "text_sha256": "e1a54b90de323db75887753ded77ee8e3ef4b3f0425fcc31f5475cff7d973df6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "ebbe28e20ca205ab510ea58d",
+        "text_sha256": "ca0882f22aad2452e5cbbd12fdea6d8fea42af726395152d046fa409a9d59729",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "b279a0131c0a0149e6da8eb4",
+        "text_sha256": "e42124038b2a0c5398b69bb9faac4525548d20ddcd2b8c4904b10c0a588ac0b6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "3019b6863d0bbaab3ada16c1",
+        "text_sha256": "52a71fcb031302addd0fb2dcf4e30b8d858467a5f2d56c7876a8f69ffb2e9fea",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "c5947554fcc040c96373292a",
+        "text_sha256": "25f151718f42d0ac1be465ef686b590637f8704e37a770a17b4a4ad9e9c3aff7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "a61b3ac00783af3d723169b3",
+        "text_sha256": "10685476e0cd6e454f6f9fb3b2138f9e2cb6fb484b0c1989e1660f4d77da6bc2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "dcc881dd17328ef3cd016655",
+        "text_sha256": "3c681305e28483f1573466e3fd50dc2f909632095da118915299a4e4bada73b7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "ae5acd0ad6ac38ecb84f9dc7",
+        "text_sha256": "91d90da6e36fb50c9dc3e4bd43cd821b64b60cdd55c9a2e3ec2cc362b8a0a296",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "84fcdf0befebc77f0eb693fd",
+        "text_sha256": "05e01ffc3cf2044a66b8b9e4b051a3651da527b59bbba1dc796cffd205d733aa",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "a54c97ca2bc6c42389dc2f7a",
+        "text_sha256": "45d86e71c3ab9ff4207e67f2177c61b61a2545b812b20d725fd256e4d630b23b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "f8a77e19d11c7e43a62b6b74",
+        "text_sha256": "09ef443aa1bfc6ac89ea0fdfac3d4e44429506704aac6c4685f26391e9ae63de",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "d937340f298857426614b25a",
+        "text_sha256": "91d90da6e36fb50c9dc3e4bd43cd821b64b60cdd55c9a2e3ec2cc362b8a0a296",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "8f8bf765a1d3815608c84bba",
+        "text_sha256": "b31a9f9ecc27567df1cf9865c367b99b90aa4c7edce99105d4593cfc847f0e44",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "9c50173765fc87bfd1481c4f",
+        "text_sha256": "dfc20f54cc392932ac62a3254e43cae898327d61a61cf6ea01444ac078ecb08f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "fa94e3d36430e12aaab19f06",
+        "text_sha256": "33ed1332ba7f53c6062e4e166eafaad72c4398fb10622764838e58e9f21b468f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "cce9f08070e44fbec5746817",
+        "text_sha256": "f24e4abd0f4eb2e66dabc80c1a406157327d713f9b69164405999e86dd53849d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "4f82eda253c494424a7fdc53",
+        "text_sha256": "9665eba020b20bd48bdc4e820fe7ab2547508246e733fb0e3353f54b7ae7e26d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "97f8c460fb35b0c71f970b96",
+        "text_sha256": "3d592ad78c9acbf2fbae601565d07da2bfd235e1043013ddb01fa3383cfa8f91",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "98a000fd0d31b05658416205",
+        "text_sha256": "706a1c448947c0cb8241e89d283088b96fd86268ae8987a4420532c40492edb0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "e7c4613d0d8c0afd85a9eed2",
+        "text_sha256": "ee34ae4b7053a1771eb9a8d93f6110e09a2080f1063b2a538af7e090db0b344f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "ecc611069a1eacdcd613293a",
+        "text_sha256": "319508b6a1c64530267b7e93ef45190f9987250d68de8fea5d45e00053b796c3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "b60370133af1622b450e636e",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "dd831401f67f02f558feafe0",
+        "text_sha256": "344002e731dbf30f14148398d0c17fb53ea728008f7f36cdd84cfd5c45b925cc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "3eaf45bcbd385665a9e3f709",
+        "text_sha256": "ee34ae4b7053a1771eb9a8d93f6110e09a2080f1063b2a538af7e090db0b344f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "bb9d32e7d79505ec8e01996a",
+        "text_sha256": "d9346603002b5c44b7e79bee7e47686a519343187d2c9653d5656732991ffc52",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "f8f9bdb2868015baca72a57c",
+        "text_sha256": "53adb387729c86851b3a4d802b643717ba14ff27a57b37dafcace20ff10b9db4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "5a0e8d136735b5185fc455df",
+        "text_sha256": "0fec385d98cb8c0ebe9af1cb3f7e48f171751759e2f9253e46fd1b5c44e167c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "1438c89a9155ce8e3e7c4aec",
+        "text_sha256": "34ab3074ab00b916757483bb072fa44b5ab5f4365f3e827febab3925556ecffc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "d5cf40c01fed188be5d496d6",
+        "text_sha256": "44a95f7999be50b0ca879e8015fec48b7b39cd01190a387aa3f0c5d706b20a02",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "04b3067b5387cb52355310d7",
+        "text_sha256": "fc8c37e8ff5f5086e7b3e5c52c92f9d3339f637a7033448a4c1c2bc19c3435b1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "73f01de2f0039761fb3307ef",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "0ee5487fd928cffaa5221830",
+        "text_sha256": "1111fac4bb6b3e700a27bad4d1bd3f01cce808db02662cabbb57e9fb48ce040d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "fc2f62df57a67a0acac5fe98",
+        "text_sha256": "0fd23c8a05190105ab710eecdf09bfae4a5c5e82ebb8e934882d3df32dd402f2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "6c5e2fc42081e9dc55af6c0b",
+        "text_sha256": "489851e1638f906cc98f188393bce49462119d19e93ba16edbff2a5043145e3b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "bb2959795f9c057905332286",
+        "text_sha256": "df161cf3a700da5c35254be7fb0cf36806b2b7cac7964371b2f120514d488ec1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "51a49a9c11129bd8d61d9a91",
+        "text_sha256": "9b431cec93ed16c4767b563708f116f174c76aba4374fe9bf976c9ae3787403f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "1500bcfac16889fd21a148fa",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "d650e4e332f5d7b8fd1d6d2e",
+        "text_sha256": "9e970ba6aecbe5e75695d7a09e4bd9ac0e1a6c94f444e2c6994b827d961c2ef2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "e02e1831708250be86294469",
+        "text_sha256": "4f80e0ca26f91275d982bc73b660842d8a214f3bd5f9907be9d3c89807f54be4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "086cd1adb264f411d62cc662",
+        "text_sha256": "8aee6eeb2aecd6d135840490c437f5bd284eb544e2ce240a17cff953c08a22b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "ad340786f35c89017d11f214",
+        "text_sha256": "493a4ce9d3e7fb03b7ae03e10506cd33d1398395cf6808f3d4c4579df816ee15",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "f2fee21d0b35b0fa8bf593c5",
+        "text_sha256": "f640d218c90eeccf83120edf1bf30766afffa6777eef5a2a6be217af227ca393",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "0a13de64d7c3a70867e4d237",
+        "text_sha256": "927ffcbfb7f381290225b2dd75c67984b2f15f736038773ecd9293594c3c54bc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "c538893f8f1cb9799c64e913",
+        "text_sha256": "dfb8312e1b044918250bc2e455dd58e6e43be22095ce897fc367a25ac925d8b5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "8a0e4f7345d6d2c6e53639f5",
+        "text_sha256": "f6f54a4e3e209054bf3a25a4e22a3fa2f5da579fb4adb20f9f9a6026d5b53863",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "392e082471317bb9e9a41216",
+        "text_sha256": "15eb6d76ab7ad214737368e15524d03baf746f5e7ad9df06740da6a2310da818",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "8ff5a4aa60e9dccaf9b58d41",
+        "text_sha256": "9b0fac4b854b669f18dcb3bdeba3edab257e3c2453732970712a9da3acb8334d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "87279f33cb7262cdcf87d47f",
+        "text_sha256": "bfc851c7654ffe117bee982f39667a6318f20c90ae85f31f7550cc81ec1992d7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "0908d28e6d9819f1c532e459",
+        "text_sha256": "8efc01381afb907a7db27a327674ab24b8f668f124f9a61f8e27742117a68eff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "190650e2e8f6cc7695f928c5",
+        "text_sha256": "b2bdc833cc84d576e24fb2e42453d441360c16f48f8c1f5375fb5a5e081c883e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "a4e2d13935744afc89d734ca",
+        "text_sha256": "053259fdb4c2bac6f31c11efca93938a7ca264470b6497207aea2f2304c4e461",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "f7d84ad8187dc0d6744bb0de",
+        "text_sha256": "d3a2d6c302d9574f61e010e5d356d605b3ef39e6b7770c5660189ba3eee71038",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "77d41b7f43f766cc429192f7",
+        "text_sha256": "ee4cc1ac9bca3b0c382fcbda129b6e9173f67f8f09c2a1cc9711778487142a83",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "b099fd56ffc13524f582f01b",
+        "text_sha256": "09c0e2caca19fc39207343bba9c7f307cc0caa6b7a057dd9ac5443049da79f56",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "e6b6e8a411f756b7c67bea85",
+        "text_sha256": "bfc30ad8a18e00726638cdc6796fed919d5fd7d87bba5f73950d31db4a97256c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "082070f440dec8a052562eea",
+        "text_sha256": "f23651de88e21b9f85652d1d3f499303b47f07299e4848b1b105d94b499daca0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "a5ef43f0f6e6ad1b080c4413",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "ef379e5deb461a6372c9b960",
+        "text_sha256": "683c46debfb0ee3ec4998d25a654589359a230328e0bdf9eb4293d613a3c012c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "843841251818409d9353ace8",
+        "text_sha256": "b2bdc833cc84d576e24fb2e42453d441360c16f48f8c1f5375fb5a5e081c883e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "ec66e980dabac8d6c62c00b0",
+        "text_sha256": "c8213101ba50127d8b369a1c484db6727de5869e8514be4726d9cb44173d2066",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "e45711a7352081fff3f82952",
+        "text_sha256": "1e0c5b9c6b6abd8cc43773bf92f7e8a237f0c3886592a8e2dfaf152bf1a6f903",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "63a86024a25f261c33645af0",
+        "text_sha256": "9016a769479625f735c03de3403f38e4e9e2e7322aa246f533a9b4dded39f968",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "b25a6992e20814094fe62a2f",
+        "text_sha256": "a6d3375565d749c60a4833866ddcbd8cd47389c1398da1f70acb880adff5027c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "325d7086dd4494c42188a90c",
+        "text_sha256": "72d8110a5d487c26a277a2493679c06b7c0d8268c0881c1cf6299e3528163931",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "aae51c86032a898839a94bc7",
+        "text_sha256": "b5d80335c13d126db57fe53732c4fa9a3232af0ca2d63d0196c9222733254be2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "7305c2690ebc3b622be33fd4",
+        "text_sha256": "2f3bc578fdff7717e2d6e16cdaa1c4c7cd3014ec906a4c48a9916a443611306b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "6824a21c8f651fd06f60df74",
+        "text_sha256": "0fec385d98cb8c0ebe9af1cb3f7e48f171751759e2f9253e46fd1b5c44e167c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "dc6a9a5f134a1e837398f29f",
+        "text_sha256": "b89bcc5a755f94189216eb07aa022cc65640d9dc73f732a2dff49dd422db52e7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "19a78219555d38db1f6bba97",
+        "text_sha256": "49314f4905ad0019f5f4aad982c53d3454ba12c82d3d79f8ca0a865076b69f72",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "d486de435eb3a24a2b3f35ec",
+        "text_sha256": "0f9684bf12574d51030f2d5068d3bf2b8a8571afb20874c9da1eba3367fda075",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "82897ecbd0ebd97024efbd49",
+        "text_sha256": "6e6b5d4f8aab6b9f2b9da8ccbd90c1f6d6fa3800d95e665c8439152484ca6de3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "f5ffb262ab49fc1095f849ee",
+        "text_sha256": "1ed6a1d73a8714c58daef364bc472f60b5e85dcfb7d0cf4ea5576d200bcbdb12",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "e04d991ce060b6d9f5f55a5f",
+        "text_sha256": "21cc368374c9a52862b266fecb66c1a2498520909d2996598b8e931bd2d8d681",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "98c3e5e9bd134bb2d5ff220b",
+        "text_sha256": "d21799bb4a51269b1e6ffca3fa46ba40a265d5ef6e6054032461f1d536d02e3c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "85d3696b15e601c6d95677a8",
+        "text_sha256": "c8cf092412bed42faec84e066aa29ead370234e1b4f37bb3a7b8cb3562e72c3f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "12864d6849273fcc31491476",
+        "text_sha256": "53b5d296b005fa0f0824c5a0ddfdc1d4f97799831e0042be80e2d189053b4b75",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "f18b78f3eb5a4f9dcea74a21",
+        "text_sha256": "e2d9825180453887a82fabe408b749a9206bf760a5ca7c530b6147437df8002a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "a5decc492c8e385ca55eafd0",
+        "text_sha256": "541e757ceb5ef9bdab4ed46f87a79803047810f65c30af376cf35c961d58789f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "d306f7164f0ffcd05472ba29",
+        "text_sha256": "6e3cebf47cf9223b2c33e8b882b4ea1e088fd2e002c5807aaab3ca46ed33860d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      },
+      {
+        "candidate_id": "f29e00ca5d0649c886e46f2c",
+        "text_sha256": "dc89ec399f818fcf76ba6e3b3e967255f0313097432f04e4aaba23d3740dcfcb",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEACCESSGUIDE-1 through -19; not adopted policy or effective access verification."
+      }
+    ]
+  }
+]

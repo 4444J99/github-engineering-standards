@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "issue": 31,
+  "artifacts": 20,
+  "claims": 42,
+  "candidates": 40,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.12242805887090868,
+    "reviewed": 1672
+  },
+  "claim_accounting": {
+    "reference_claims": 57268,
+    "source_artifacts": 1638,
+    "duplicate_relationships": 7
+  },
+  "open_findings": [
+    {
+      "path": "data/reusables/repositories/create-push-ruleset-step.md",
+      "line": 2,
+      "finding": "Push-ruleset menu label is paired with branch-target prose.",
+      "disposition": "UNRESOLVED_SOURCE_WORDING",
+      "policy_changed": false
+    }
+  ],
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2.004,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "Standalone fragment dispositions do not certify linked-page review, raster omissions, applicability, rights, adoption or enforcement."
+  ]
+}

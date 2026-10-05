@@ -1,0 +1,47 @@
+{
+  "issue": 184,
+  "reviewed_at": "2026-10-03T04:05:05.315Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59315,
+    "claim_bearing_artifacts": 2813,
+    "tests": 324,
+    "test_seconds": 1.978,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Version compatibility and Mac limitation are pinned historical descriptions, not current support guidance.",
+    "Local language toggles are not content exclusion or organization enforcement.",
+    "Chat/model coupling retained separately from inline suggestions.",
+    "No software, settings, credentials, screenshot assurance, adopted policy, or rights clearance."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "ges.independent-reference-claim-audit.v1",
+  "reviewer": "codex:root-independent-review",
+  "reviewed_at": "2026-10-02T05:32:00Z",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/debugging.md",
+  "source_lines_reviewed": 544,
+  "snapshot": {
+    "claims_path": "evidence/source-reviews/docs-sdk-debugging-claims.json",
+    "claims_sha256": "3106b39b7c71c813f4ebe219d3dccc03ea0fefbe307e520758cfb3e120f74b4f",
+    "claim_count": 139,
+    "artifacts_sha256": "e289ac7b17f47c599669591f501c458f07428193af7c1714bb9e3ac7d4546099",
+    "consolidation_sha256": "f578f9497b3481307f6c6be6cef5f21fe715afd2918f12132896dc37acc7c114"
+  },
+  "findings": [
+    {
+      "claim_id": "DOCS-SDKDEBUG-005",
+      "span": [
+        29,
+        29
+      ],
+      "finding": "Source line29 instructs verbose logging but does not state log sensitivity; that safeguard belongs to reviewer context, not the attributed source statement.",
+      "replacement": "Enable verbose logging as the stated first debugging step."
+    },
+    {
+      "claim_id": "DOCS-SDKDEBUG-040",
+      "span": [
+        227,
+        227
+      ],
+      "finding": "The CLI antecedent is Copilot CLI, not the separate GitHub CLI executable.",
+      "replacement": "Not-authenticated error is attributed to the Copilot CLI lacking authentication with GitHub."
+    }
+  ],
+  "omitted_example_fields": [
+    {
+      "proposed_claim_id": "DOCS-SDKDEBUG-140",
+      "start_line": 345,
+      "end_line": 345,
+      "statement": "The standalone MCP initialization example specifies JSON-RPC version 2.0."
+    },
+    {
+      "proposed_claim_id": "DOCS-SDKDEBUG-141",
+      "start_line": 345,
+      "end_line": 345,
+      "statement": "The standalone MCP initialization example assigns request ID 1."
+    }
+  ],
+  "repair_status": "ROOT_REPAIRS_APPLIED_RECHECK_PENDING",
+  "scope_boundary": "Bounded independent read of the full debugging source against the original 139 claims and consolidation. No installed-runtime, linked-source, rights, accepted-policy or whole-corpus certification.",
+  "semantic_truth_certified": false,
+  "omission_completeness_certified": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "global_gate_closed": false
+}

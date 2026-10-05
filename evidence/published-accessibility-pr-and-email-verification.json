@@ -1,0 +1,12 @@
+{
+  "issue": 28,
+  "pr_root": {"candidate_claims": 46, "source_digest": "MATCH", "span_digests": "computed from exact wrapper content", "independent_audit_complete": false},
+  "email_audit": {"auditor": "codex:evaluator_review", "full_root_lines": 89, "claims": 14, "original_claims_sha256": "e6386b77a1ae9e2efdf38355bce1d9854b5fa494e97ee3e14acbfc06dff058f0", "source_and_span_digests": "MATCH", "correction": "Effective user.email read is not proof of a locally stored repository setting", "correction_recheck_complete": false},
+  "attribution_recheck": {"claims": 38, "claims_sha256": "c088f8cf89fcd25c3d6d7c2884fe9cfc50a69593a582539dd657bf8c16d2bff1", "source_and_span_digests": "MATCH", "specified_corrections_supported": true, "unresolved_examples_preserved": true},
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 324, "seconds": 2.027, "result": "OK"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0}
+  ],
+  "boundary": "Source extraction and scoped audit only; no assurance or adopted policy."
+}

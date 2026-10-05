@@ -1,0 +1,274 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T04:21:01Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-code-review-procedure-claims.json"
+  ],
+  "input_claims": 82,
+  "groups": [
+    {
+      "id": "CODE-REVIEW-SCOPE-AND-SOURCE",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-001",
+        "DOCS-CODEREVIEW-PROCEDURE-002",
+        "DOCS-CODEREVIEW-PROCEDURE-003",
+        "DOCS-CODEREVIEW-PROCEDURE-004",
+        "DOCS-CODEREVIEW-PROCEDURE-063"
+      ],
+      "decision": "Retain cloud/entitlement and enabled-unlicensed-member scope. Relocated basename/title is not source-publication equivalence; referenced access/concept content remains separate."
+    },
+    {
+      "id": "CODE-REVIEW-REQUEST-NOT-COMPLETION",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-005",
+        "DOCS-CODEREVIEW-PROCEDURE-006",
+        "DOCS-CODEREVIEW-PROCEDURE-007",
+        "DOCS-CODEREVIEW-PROCEDURE-012",
+        "DOCS-CODEREVIEW-PROCEDURE-013",
+        "DOCS-CODEREVIEW-PROCEDURE-015"
+      ],
+      "decision": "UI/REST requests and typical latency are not completed review, defect absence or approval. Manual and automatic-review setup are separate effective states."
+    },
+    {
+      "id": "CODE-REVIEW-HEAD-FRESHNESS",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-014",
+        "DOCS-CODEREVIEW-PROCEDURE-016",
+        "DOCS-CODEREVIEW-PROCEDURE-024"
+      ],
+      "decision": "Changed-head review and approval dismissal differ from comment resolution. Require exact-head evidence and re-review configuration; suppressed/repeated comments do not prove remediation."
+    },
+    {
+      "id": "CODE-REVIEW-APPROVAL-MERGE-SEMANTICS",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-008",
+        "DOCS-CODEREVIEW-PROCEDURE-021",
+        "DOCS-CODEREVIEW-PROCEDURE-022",
+        "DOCS-CODEREVIEW-PROCEDURE-023",
+        "DOCS-CODEREVIEW-PROCEDURE-025",
+        "DOCS-CODEREVIEW-PROCEDURE-026",
+        "DOCS-CODEREVIEW-PROCEDURE-051"
+      ],
+      "decision": "Default Comment and overview assessment do not satisfy merge rules. Preview approving-review behavior requires explicit enablement, inherited policy and path applicability; no native human-approval substitution is presumed."
+    },
+    {
+      "id": "CODE-REVIEW-REMEDIATION-AND-DISCUSSION",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-009",
+        "DOCS-CODEREVIEW-PROCEDURE-010",
+        "DOCS-CODEREVIEW-PROCEDURE-011"
+      ],
+      "decision": "Applying suggestions or using Fix with Copilot can mutate code or create a separate PR. Follow-up human comments are not model-visible discussion. Maintain reviewed plan/diff and exact target intent."
+    },
+    {
+      "id": "CODE-REVIEW-EFFORT-AND-ADMINISTRATION",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-017",
+        "DOCS-CODEREVIEW-PROCEDURE-018",
+        "DOCS-CODEREVIEW-PROCEDURE-019",
+        "DOCS-CODEREVIEW-PROCEDURE-020"
+      ],
+      "decision": "Lite and Balanced are differing review strategies, not assurance levels. Per-review, personal and authorized automatic defaults must be distinguished."
+    },
+    {
+      "id": "CODE-REVIEW-INSTRUCTION-TRUST",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-027",
+        "DOCS-CODEREVIEW-PROCEDURE-052",
+        "DOCS-CODEREVIEW-PROCEDURE-053",
+        "DOCS-CODEREVIEW-PROCEDURE-054",
+        "DOCS-CODEREVIEW-PROCEDURE-055",
+        "DOCS-CODEREVIEW-PROCEDURE-056",
+        "DOCS-CODEREVIEW-PROCEDURE-057",
+        "DOCS-CODEREVIEW-PROCEDURE-062",
+        "DOCS-CODEREVIEW-PROCEDURE-066"
+      ],
+      "decision": "Repository-wide/path-specific/multiple instruction sources and head-branch origin must be recorded. A malicious or edited PR can change review guidance. Never treat instruction-file existence as native enforcement or imported examples as executor authority."
+    },
+    {
+      "id": "CODE-REVIEW-MCP-USE-AND-EVIDENCE",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-028",
+        "DOCS-CODEREVIEW-PROCEDURE-029",
+        "DOCS-CODEREVIEW-PROCEDURE-030",
+        "DOCS-CODEREVIEW-PROCEDURE-058",
+        "DOCS-CODEREVIEW-PROCEDURE-059",
+        "DOCS-CODEREVIEW-PROCEDURE-060"
+      ],
+      "decision": "Configured/default MCP and relevant skills are not proven use. Reviewer MCP enablement is separate from cloud-agent enablement. Require comment attributions/session logs and scoped tool/credential access."
+    },
+    {
+      "id": "CODE-REVIEW-ENVIRONMENT-AND-NETWORK",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-031",
+        "DOCS-CODEREVIEW-PROCEDURE-032",
+        "DOCS-CODEREVIEW-PROCEDURE-033"
+      ],
+      "decision": "Ephemeral environment is not sandbox proof. Dedicated review workflow overrides shared setup; reviewer firewall settings are distinct from cloud-agent firewall and need separate effective verification."
+    },
+    {
+      "id": "CODE-REVIEW-FEEDBACK-AND-ASSET-CONTEXT",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-034",
+        "DOCS-CODEREVIEW-PROCEDURE-061"
+      ],
+      "decision": "Feedback improvement wording is not a data-training/retention agreement. SVG/editorial context does not carry an independently reviewed image grant or operational control."
+    },
+    {
+      "id": "CODE-REVIEW-VSCODE-BOUNDARY",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-035",
+        "DOCS-CODEREVIEW-PROCEDURE-036",
+        "DOCS-CODEREVIEW-PROCEDURE-037",
+        "DOCS-CODEREVIEW-PROCEDURE-038"
+      ],
+      "decision": "Highlighted selection and uncommitted-change reviews have distinct coverage. Applied suggestions are not automatically committed, and UI comments are not merge approvals."
+    },
+    {
+      "id": "CODE-REVIEW-VISUALSTUDIO-BOUNDARY",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-039",
+        "DOCS-CODEREVIEW-PROCEDURE-040",
+        "DOCS-CODEREVIEW-PROCEDURE-041"
+      ],
+      "decision": "Visual Studio17.14 prerequisite is surface-specific. No-comment output and dismissed UI comments do not certify clean code; linked vendor setup is separate evidence."
+    },
+    {
+      "id": "CODE-REVIEW-MOBILE-BOUNDARY",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-042"
+      ],
+      "decision": "Mobile request workflow triggers PR review rather than an independently verified local editing/approval capability."
+    },
+    {
+      "id": "CODE-REVIEW-XCODE-BOUNDARY",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-043",
+        "DOCS-CODEREVIEW-PROCEDURE-044",
+        "DOCS-CODEREVIEW-PROCEDURE-045"
+      ],
+      "decision": "Xcode extension0.41 prerequisite, staged/unstaged selection and deselected files bound coverage. Accept/Dismiss actions are code decisions, not correctness assurance."
+    },
+    {
+      "id": "CODE-REVIEW-JETBRAINS-BOUNDARY",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-046",
+        "DOCS-CODEREVIEW-PROCEDURE-047",
+        "DOCS-CODEREVIEW-PROCEDURE-064",
+        "DOCS-CODEREVIEW-PROCEDURE-065",
+        "DOCS-CODEREVIEW-JETBRAINS-001",
+        "DOCS-CODEREVIEW-JETBRAINS-002",
+        "DOCS-CODEREVIEW-JETBRAINS-003",
+        "DOCS-CODEREVIEW-JETBRAINS-004",
+        "DOCS-CODEREVIEW-JETBRAINS-005",
+        "DOCS-CODEREVIEW-JETBRAINS-006",
+        "DOCS-CODEREVIEW-JETBRAINS-007",
+        "DOCS-CODEREVIEW-JETBRAINS-008",
+        "DOCS-CODEREVIEW-JETBRAINS-009",
+        "DOCS-CODEREVIEW-JETBRAINS-010",
+        "DOCS-CODEREVIEW-JETBRAINS-011",
+        "DOCS-CODEREVIEW-JETBRAINS-012",
+        "DOCS-CODEREVIEW-JETBRAINS-013",
+        "DOCS-CODEREVIEW-JETBRAINS-014",
+        "DOCS-CODEREVIEW-JETBRAINS-015",
+        "DOCS-CODEREVIEW-JETBRAINS-016"
+      ],
+      "decision": "Verify listed IDE identity, installed plugin and sign-in separately; a compatibility-list entry or dismissed comment is not actual review/enforcement."
+    },
+    {
+      "id": "CODE-REVIEW-GITHUBCLI-BOUNDARY",
+      "claims": [
+        "DOCS-CODEREVIEW-PROCEDURE-048",
+        "DOCS-CODEREVIEW-PROCEDURE-049",
+        "DOCS-CODEREVIEW-PROCEDURE-050"
+      ],
+      "decision": "Authenticated GitHub CLI reviewer requests are distinct from Copilot CLI session tooling; explicit PR/branch target context is required and examples are inert."
+    }
+  ],
+  "related_evidence": [
+    "evidence/published-code-review-cloud-reference-claims.json",
+    "evidence/published-code-review-fpt-reference-claims.json",
+    "evidence/enterprise-policy-claim-consolidation.json"
+  ],
+  "generalized_review_model": {
+    "read_only_default": true,
+    "profiles": {
+      "solo": "Own PR/change context, plan/entitlement and deliberate bot-review request; human review policy remains independently adopted.",
+      "organization": "Member licensing exceptions, organization enablement, inherited enterprise policies, repository rulesets/path applicability and authorized owners.",
+      "enterprise": "Preserve enterprise override/delegation rules and cross-organization effective seat/billing/permission scope; no universal restrictive merge rule."
+    },
+    "dimensions": [
+      "source pin versus acquired published body",
+      "surface/client/version and selected review range",
+      "exact PR/head SHA and changed-head re-review",
+      "review event type versus overview approval assessment",
+      "preview approvals enabled and applicable file-path rules",
+      "head-branch instruction/skill identities and trust",
+      "reviewer-specific MCP/tool/credential configuration and actual use",
+      "dedicated versus shared setup workflow precedence",
+      "review-specific organization/repository firewall",
+      "comment severity/effort versus independently verified defects",
+      "cost-bearing Actions/agent execution and actual approval"
+    ],
+    "unknown": "Missing authorization, entitlement, effective policy, matching head, event type, target coverage, context use or environment restrictions is UNVERIFIED, not PASS."
+  },
+  "proposed_behavior_checks": [
+    {
+      "case": "comment_not_approval",
+      "required": "A default Comment/overview assessment does not increment required approving-review count.",
+      "observed": false
+    },
+    {
+      "case": "enabled_approval_path_scope",
+      "required": "Explicitly enabled approving review counts only for the configured target/file scope; other paths remain unmet.",
+      "observed": false
+    },
+    {
+      "case": "changed_head",
+      "required": "A new commit dismisses the approving review and only a matching-head review satisfies the configured rule.",
+      "observed": false
+    },
+    {
+      "case": "head_instruction_change",
+      "required": "Log the head-branch instruction/skill digest and verify unexpected changes are not mistaken for trusted base policy.",
+      "observed": false
+    },
+    {
+      "case": "mcp_reviewer_disable",
+      "required": "Disable reviewer MCP only under approved plan; observe no reviewer tool calls while preserving separately configured cloud-agent behavior.",
+      "observed": false
+    },
+    {
+      "case": "review_firewall_independence",
+      "required": "Verify reviewer network permissions independently of cloud-agent firewall, including denied destinations.",
+      "observed": false
+    },
+    {
+      "case": "setup_precedence",
+      "required": "Inspect effective setup identity when dedicated review workflow and shared setup both exist, without executing untrusted imported examples.",
+      "observed": false
+    },
+    {
+      "case": "recovery",
+      "required": "Restore approved review configuration and validate prior functionality and exact-head rule behavior after negative tests.",
+      "observed": false
+    }
+  ],
+  "verification": {
+    "accepted_policy": false,
+    "rights_accepted": false,
+    "source_revision_verified": false,
+    "independent_omission_audit_passed": false,
+    "native_behavior_verified": false,
+    "acceptance_gate_closed": false
+  },
+  "remaining_work": [
+    "Integrate code-review concept/configuration, cost and limits claims",
+    "Independent full-source claim fidelity/omission and mapping audit",
+    "Canonical control/profile/template applicability and policy acceptance review",
+    "Per-file rights clearance",
+    "Explicit scoped target approval, native positive/negative and recovery receipts"
+  ]
+}

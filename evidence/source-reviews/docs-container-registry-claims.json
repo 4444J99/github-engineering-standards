@@ -1,0 +1,172 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T06:38:34.507Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Page scope covers FPT/GHEC/GHES Docker and OCI image storage. GHES Container Registry is described as public preview; site administrators must configure Packages and enable subdomain isolation. GHEC managed users can publish organization-scoped, not personal-scoped packages. No target capability or entitlement verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "GHEC at github.com uses ghcr.io examples; an enterprise on another domain uses containers.SUBDOMAIN.ghe.com. GHES examples resolve containers.HOSTNAME. The ordinary hostname reusable is not sufficient for every GHEC enterprise domain; placeholders require verified target values.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Container Registry supports Docker Manifest V2 Schema 2 and OCI formats, including foreign layers such as Windows images. This differs from the legacy registry foreign-layer exclusion; external specifications are not reviewed by reference.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Authentication context uses scoped classic PATs and explicit workflow GITHUB_TOKEN paths. Granular registry workflows are strongly advised to migrate to GITHUB_TOKEN; deletion/restoration via REST needs package admin and remains public preview. Actions and cloud Codespaces package grants may be independent.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Classic PAT setup requires appropriate read/write/delete package scopes and SSO authorization where required; avoiding incidental broad repo scope is upstream advice. Environment-variable and stdin login examples are not credential approval or executed authentication.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Push examples scope named/tagged images to a personal or organization namespace. First publication defaults private; packages may be linked by UI or CLI. Command-line pushes do not automatically link repositories even when names match.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Workflow GITHUB_TOKEN publication automatically links its workflow repository; a previously pushed but unconnected package in the same namespace can deny that token push permission. Source labels are recommended to connect CLI publications and support workflow permissions; name matching alone is not a grant.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Digest pulls pin a specific image: discover the digest with inspect or pull, optionally remove a local image, then pull an @sha256 reference. Optional local removal is not required universal cleanup or authorized deletion. This supports digest references unlike the reviewed legacy registry.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "The illustrative digest contains nonhex characters and is not a valid verified SHA-256 value. The version-pull example output includes an extra release path absent from the command. Preserve example defects rather than copying them as executable validated fixtures or real receipts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Pull by image name, explicit version and latest tag are illustrated alternatives; mutable tags are not equivalent to digest identity, verified provenance or safe installation. Build and tag examples use illustrative image IDs/context, not actual artifacts or executed commands.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Container metadata supports source repository URL, text-only description capped at 512 characters and SPDX license identifier capped at 256 characters. Claimed licenses and labels are not rights clearance, provenance certification or permission to distribute.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Dockerfile LABEL or build-time labels can supply supported metadata. The example MIT license assumes an image actually distributed under those terms; no blanket relicensing or imported attribution removal follows.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-13",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Inherited access on repository-linked publication is conditional on the FPT/GHEC inheritance feature and organization enablement. Linking/labels are not proof of effective access or approved permission changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-14",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Multi-architecture images reference per-architecture images in a manifest; package descriptions come from manifest annotations. The example build-push step supplies an index description via outputs and matrix platforms, using a SHA-pinned third-party action with separate terms; no matrix, build or push executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CONTAINERREGISTRY-15",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-container-registry.md",
+      "content_sha256": "d1f7de9fc50f97f2e4272f4bc209145ea16cc960c9271da723d47c91c5c1390d",
+      "start_line": 1,
+      "end_line": 251,
+      "statement": "Container Registry troubleshooting specifies 10GB per-layer maximum and ten-minute upload timeout. These differ from legacy registry's 5GB layer cap and possible degradation above 10GB image size; do not merge the limits into one universal threshold.",
+      "accepted_policy": false
+    }
+  ]
+}

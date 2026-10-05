@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:13:27.937Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ENTERPRISECONFIGTRUST-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/apply-configuration.md",
+      "content_sha256": "9c3dc9ea1e50647f7e41370337af70df25083fc6875f87ac6521169594ed4683",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "The example runs ghe-config-apply and waits for completion, explicitly warning that services may restart and users may experience brief downtime. Invocation and waiting alone are not successful configuration, health, rollback or approval evidence. The command was not executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISECONFIGTRUST-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/best-practices.md",
+      "content_sha256": "8d8482aeb654e197ac7bc1a386bf89fcbb12038806d4847712d1fbf524895db2",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment only links enterprise organizational best practices. It provides no independent control requirements or adopted standards, and the linked full guide is not reviewed by this pointer.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISECONFIGTRUST-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/certificate-authority-usage.md",
+      "content_sha256": "7fdd192a96e8642d5d866d8983605d5599ac39c77377146d29ba6a6251c6362c",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "An SSH certificate authority can be uploaded to only one GitHub account and cannot be reused across organization or enterprise accounts. Distinct authorities at enterprise and child organization levels can both support access to that organization's repositories. This is not blanket user authorization, proof of valid certificates or exclusive organization-only trust; no CA was uploaded or credentials changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISECONFIGTRUST-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/collectd-metrics-future.md",
+      "content_sha256": "27fcd1a31ff94d6d1791b3fab8cf2d9de7b7757759e6e1cc663d9dcd341b7975",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "Inside the ghes-opentelemetry condition, collectd is default and supported for the described release, while OpenTelemetry is available from GHES 3.18. Future collectd closing-down and retirement are expected without a specified release, and migration is recommended for long-term monitoring. Expected lifecycle is not current retirement or a fixed deadline, and the linked guide is not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISECONFIGTRUST-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/constantly-improving.md",
+      "content_sha256": "fc668ba3b3043fe9fd14ac2a4a571608e6a8cbc238ecd1d9af88e54228e50872",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment describes GHES feature and patch releases as introducing functionality and bug fixes. It is not a guarantee every defect is repaired, proof of version compatibility, a security release obligation or a successful estate upgrade.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISECONFIGTRUST-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/create-an-enterprise-account.md",
+      "content_sha256": "7f8c3b211b3d68b0458de3eb555fd1fabff26420125d2e618dba4bff20f1fe38",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "The source encourages single-organization Enterprise Cloud users to create an enterprise account. Maintenance comments bound the content to an expiry date of 2027-01-30 and reference an upstream release stakeholder; those comments are not instructions to contact anyone or inspect unrelated issues. This recommendation is not a mandatory migration, current entitlement or authority to create a potentially cost-bearing account; no account was created.",
+      "accepted_policy": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 407,
+  "verified_at": "2026-10-03T11:21:16.340Z",
+  "scope": "Complete pinned account-management concept; linked procedures not reviewed through reference.",
+  "reference_claims_added": 13,
+  "reference_claims": 61063,
+  "claim_bearing_artifacts": 3447,
+  "tests": {
+    "count": 324,
+    "seconds": 1.981,
+    "result": "PASS"
+  },
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "lifecycle_operation_performed": false,
+  "independent_omission_audit": false,
+  "project_complete": false,
+  "gates_open": 9
+}

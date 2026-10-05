@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:34:18.117Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESPORTCLIENT-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/using-github-cli.md",
+      "content_sha256": "06ceae95f8edc89d48ee64652abade11c2ccf799c197e694d328acebc57b5ed1",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "An installed GitHub CLI can work with Codespaces and the fragment includes CLI installation guidance. Installation is conditional, not a universal mandate or execution authority; textual include provenance and composed rendering are separate, and no CLI installation occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCLIENT-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/using-tools-to-access-ports-1.md",
+      "content_sha256": "2d829b670cf38687ec8b96b91c15d16efac3c639f3238dafb841a6e217ae75b0",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "Forwarded applications have a codespace-and-port remote URL, while desktop forwarding of a private port additionally provides a local endpoint. The source says localhost and public remote requests need no platform authentication, whereas private remote requests require the codespace access token. This transport distinction does not assert the application has no own authentication or authorize exposing it. Token creation occurs at start, remains stable during the session and regenerates after stop/restart; no token or request was acquired. The formatting comment is upstream data, not an instruction governing this repository.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCLIENT-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/using-tools-to-access-ports-2.md",
+      "content_sha256": "9f27e2cc7e169a0cd79335ec96b4063f19dc171b671d0c56a802a1030e7c6d70",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "The curl and REST-client examples send the previously obtained address and token using X-Github-Token, with GET and header configuration in the client flow. ADDRESS/TOKEN are placeholders and screenshots describe dummy tokens, not live credentials. Treat this as sensitive unexecuted reference: no copied token, shell-history exposure or HTTP request occurred, and caption review is not image-pixel review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESPORTCLIENT-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/view-all-templates-step.md",
+      "content_sha256": "1d7f6d9b3d89a832eb342a9c435919697b63a62415ff34bf791d92383f7b9750",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The template-list UI expands See all in the quick-start template section. Listing capability is not template trust, full corpus ingestion, creation permission or current catalog verification; screenshot pixels remain separate.",
+      "accepted_policy": false
+    }
+  ]
+}

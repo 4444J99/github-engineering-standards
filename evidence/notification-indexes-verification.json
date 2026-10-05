@@ -1,0 +1,54 @@
+{
+  "schema_version": "ges.notification-indexes-verification.v1",
+  "issue": 386,
+  "source_artifacts": 8,
+  "claims_added": 8,
+  "candidates_accounted": 57,
+  "reference_claims": 60891,
+  "claim_bearing_artifacts": 3423,
+  "section_census": {
+    "source_artifacts": 24,
+    "reference_receipts": 22,
+    "pending_paths": [
+      "content/subscriptions-and-notifications/concepts/about-notifications.md",
+      "content/subscriptions-and-notifications/get-started/configuring-notifications.md"
+    ]
+  },
+  "independent_semantic_assurance": false,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 324,
+    "seconds": 1.99,
+    "result": "OK"
+  },
+  "controls": 95,
+  "project_complete": false,
+  "gates_open": 9,
+  "accepted_policy": false,
+  "rights_cleared": false
+}

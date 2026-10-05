@@ -1,0 +1,46 @@
+{
+  "issue": 128,
+  "reviewed_at": "2026-10-03T02:17:48.050Z",
+  "artifacts_reviewed": 8,
+  "reference_claims_added": 8,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58885,
+    "claim_bearing_artifacts": 2510,
+    "tests": 324,
+    "test_seconds": 1.985,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No installation, connection, creation, publication or deletion.",
+    "Unpublished-machine restriction narrows generic machine-change applicability; target behavior unverified.",
+    "Links, include rendering, current image versions, rights, adoption and assurance remain separate."
+  ]
+}

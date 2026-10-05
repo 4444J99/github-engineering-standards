@@ -1,0 +1,194 @@
+[
+  {
+    "artifact_id": "a1ca21de5fe34d855571f889",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-accounts/emu-azure-admin-consent.md",
+    "content_sha256": "10464b359d0e6e2fdf54868fe1aa367ba32a536c0e3d961049db5940d014ab60",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:54:47.437Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full pinned fragment reviewed, including all warnings, conditions and exception requirements. The Entra OIDC application sequence requests organization-wide consent and installation after IdP sign-in, explicitly requiring Entra global admin rights before accepting. This is not ordinary user consent or project approval to install an IdP application; no sign-in, consent or installation occurred. No policy adoption, rights clearance, published-page assurance or native verification claimed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "f33a17670dc9a769e9fafda8",
+        "text_sha256": "f2fac82ce3ae21539d05808581905c2a7ddf899fbc4bc5e56a2e45d939fcccbc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-1; not adopted policy."
+      },
+      {
+        "candidate_id": "b04ccbf9c133afce0e16b60f",
+        "text_sha256": "a8a49214be65714b7384de59f35ec0b2f3d3836a0c4cc754388a3f2f1f4cc34b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-1; not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "bc5ec73faab3b85da3ee8a96",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-accounts/emu-cap-public-preview.md",
+    "content_sha256": "eb4a23d0add9796a6855ec8d1d810a350b728362df58202408d88c9a8e883659",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:54:47.437Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full pinned fragment reviewed, including all warnings, conditions and exception requirements. The pinned note describes CAP web-session protection as public preview, optional extended protection available when IdP CAP support is already enabled. When enabled and IP conditions fail, users can still view and filter user-owned resources but cannot view result details for notifications, searches, personal dashboards or starred repositories. This is not total invisibility or a universal access-denial guarantee; no live opt-in or enforcement was verified. No policy adoption, rights clearance, published-page assurance or native verification claimed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "144198a6333d1db0532cf8e6",
+        "text_sha256": "43b48caebc6627617bd2c2b0449cc33f7b16969cb69f2a46d512af2c2ed5d37e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-2; not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "057c3a306c1ab6c434add6ac",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-accounts/emu-cap-validates.md",
+    "content_sha256": "3c4f5d1eb369e5f0bfb466d2e6aead7cf84d01e417fbaececd2761f81819bec1",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:54:47.437Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full pinned fragment reviewed, including all warnings, conditions and exception requirements. When an enterprise uses OIDC SSO, the fragment describes automatic use of IdP CAP IP conditions for web UI interactions or IP changes and each authentication with a user-associated PAT or SSH key. This claim concerns IP conditions, not every CAP dimension or all app/service identities. Its broad web wording requires reconciliation with the separate optional preview extension; no actual event or denial was tested. No policy adoption, rights clearance, published-page assurance or native verification claimed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "c75cf733ec7803d88d861a13",
+        "text_sha256": "16e21e4fd953572081e43c01fa8b14980bb52c287c2975c21479e620896b6078",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-3; not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "35fbfe917335f9d5148d826d",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-accounts/emu-configure-authentication.md",
+    "content_sha256": "a66ad4f267e6f8a44eb4fa00f2d2d025b2e4cf02998474c59a6028095806407b",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:54:47.437Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full pinned fragment reviewed, including all warnings, conditions and exception requirements. Entra permits OIDC or SAML with an upstream recommendation for OIDC and CAP support. For multiple enterprises from one tenant, the first may use either, but additional enterprises must use SAML. Other IdPs such as Okta or PingFederate require SAML in this EMU context. These provider and tenant-scoped requirements are not accepted project configuration; linked full guides are not reviewed by this receipt. No policy adoption, rights clearance, published-page assurance or native verification claimed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "4e07a51176ed628e4dfdb885",
+        "text_sha256": "198e8ca0742994f2e43c5e98460a3688dca53139ac62fadc6a8ac315914f9912",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      },
+      {
+        "candidate_id": "050d73c0b51e9dec95719b83",
+        "text_sha256": "b9e4131ea5f63f39b7113de3a21887e518d3f5be75521664e07d736bbe50b5ac",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      },
+      {
+        "candidate_id": "6df6322f30396ded2c637ee7",
+        "text_sha256": "aac20ea72f8e58edd090afc07b2297a83013cc55bb6f16838f2bcd65f3a0902a",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      },
+      {
+        "candidate_id": "30a17110e6db76e17e15bb3f",
+        "text_sha256": "e98cbaacd2a951bbc2f7cf35688ebd4017a5bf2e87b50c61b6bdcb70f078f43d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      },
+      {
+        "candidate_id": "2a79515b39f4fa65bf6cf1ea",
+        "text_sha256": "d93be57bb40f918ecb0e3dd809e7b778bf2925cc01ed7b0e31d7745242a546d0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      },
+      {
+        "candidate_id": "66868f1074a568cb918f273e",
+        "text_sha256": "f3fe5fb077f1d9d6d8708c8be74fa44f9ce8f02947838452c5bb52214c82d5cf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      },
+      {
+        "candidate_id": "b8d55984ccd2a39264f6805d",
+        "text_sha256": "db0b7bdb54c74429f8a7fa88acaedb77421dd0f801de66eac1954a4246dabf27",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      },
+      {
+        "candidate_id": "f3a77a540c7871d72dca81e9",
+        "text_sha256": "2446e8b35c9f511a20a74c8431b1aa35da40ed530f4cf95741f694510d1cb64b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-4; not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "c11cef1d381491a9f96c8bd8",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-accounts/emu-configure-provisioning.md",
+    "content_sha256": "4826dbe76a07b68a00afcb14a058052df81f9a046ebcbfa9973113f4a8cc964a",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:54:47.437Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full pinned fragment reviewed, including all warnings, conditions and exception requirements. After authentication configuration, SCIM provisioning can be configured so the IdP creates managed accounts. Authentication and provisioning remain separate stages; the fragment does not prove provisioning, synchronization or deprovisioning success. The linked full SCIM guide is not reviewed and no accounts were created. No policy adoption, rights clearance, published-page assurance or native verification claimed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "5013121b0efd5833206203a0",
+        "text_sha256": "a05ffc3971fb353ae9073cebc3ae4b97414614d3ade9514ae9389541f863d894",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-5; not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "c369d7861ef3d77466ee32b7",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "data/reusables/enterprise-accounts/emu-create-a-pat.md",
+    "content_sha256": "121a8e0358509504e81be6c0357c36c8e8a144fb5455fbeec31a151e87df4531",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T04:54:47.437Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Full pinned fragment reviewed, including all warnings, conditions and exception requirements. The provisioning token guidance requires creation while signed in as the setup user, at least scim:enterprise scope and no expiration, and links to classic PAT creation. This specialized upstream exception must not become a universal non-expiring-token recommendation or silently override accepted credential policy; additional least-privilege and custody decisions remain pending. No token or secret was created, accessed or changed. No policy adoption, rights clearance, published-page assurance or native verification claimed.",
+    "claim_mappings": [
+      {
+        "candidate_id": "6fec6d6ad6df79ab39d9a595",
+        "text_sha256": "b28916e025cba2ff475039192bea02a8e55450fd9ee771646cfd8e6059f8bf44",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-6; not adopted policy."
+      },
+      {
+        "candidate_id": "e05ba3fdd3f4aa360e4b0877",
+        "text_sha256": "c6f37456e4c549483351c6b9dafe93147c0ce09ef2d840b86a46f4d6f8436a16",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-6; not adopted policy."
+      },
+      {
+        "candidate_id": "1f756ca330617820488ae19a",
+        "text_sha256": "4a5225a62ecf49b2680d8299ebd4cea095145c75c25c417b1ece25b17a6f1711",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-6; not adopted policy."
+      },
+      {
+        "candidate_id": "64a9e620df3273c8ccce2ccd",
+        "text_sha256": "1587659a2d5ddba2f19ae582998fdf950d0bdd10d1c0ba669cb5915271397a85",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-6; not adopted policy."
+      },
+      {
+        "candidate_id": "7d227b292df9ce4630d44af4",
+        "text_sha256": "d0851ba7babd9ad543a2a3873db90fd5ae482fff66c7835ab9ec86740f758f0e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-EMUAUTHCAP-6; not adopted policy."
+      }
+    ]
+  }
+]

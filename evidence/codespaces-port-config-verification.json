@@ -1,0 +1,46 @@
+{
+  "issue": 129,
+  "reviewed_at": "2026-10-03T02:19:23.104Z",
+  "artifacts_reviewed": 8,
+  "reference_claims_added": 8,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58893,
+    "claim_bearing_artifacts": 2518,
+    "tests": 324,
+    "test_seconds": 1.973,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No forwarding, exposure, overwrite, rebuild, private logs or live identity acquired.",
+    "Visibility-restriction include remains a necessary qualifier, not proof of unrestricted sharing.",
+    "Includes, links, screenshot pixels, rights, adoption and independent/native assurance remain separate."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "ges.bounded-independent-code-review.v1",
+  "reviewer": "codex:independent-review",
+  "reviewer_identity": "/root/evaluator_review",
+  "implementation_author_identity": "/root",
+  "reviewed_at": "2026-10-02T18:32:24Z",
+  "inputs": [
+    {
+      "path": "ges/rights_acceptance.py",
+      "sha256": "620594f48ded58c1a22ab03db8e910247520c3b2cc78dbc276d04dcc313efdcc"
+    },
+    {
+      "path": "ges/recovery.py",
+      "sha256": "6348f47ee1f1dfe2dd04ccf94f6de257d5f5a38e174c2673c1878076c4be14b9"
+    },
+    {
+      "path": "tests/test_rights_acceptance.py",
+      "sha256": "50cc182c15f9cd2ba0397c2985d42103cd90916bfb5bd3b1990b2f63f68b2160"
+    },
+    {
+      "path": "docs/rights-acceptance-receipts.md",
+      "sha256": "485e7ac784adb73db5a54d7337c7448cb074a7e5dec7f52653f6df9d235bafe5"
+    }
+  ],
+  "scope": "Rights attestation adapter, recovery integration, authored tests and operator documentation only. No actual rights grants, legal conclusions, human approvals, publication or project-wide completion.",
+  "method": "Read repaired adapter and integration plus tests/documentation; reviewed inherited evidence-path checks and rights triage identity handling. No implementation edits or additional tests run by this reviewer.",
+  "supported_repairs": [
+    "Policy binds exact inventory digest, intended use and distribution scope, preventing unrelated private-reference scope from clearing a different intended target.",
+    "Full-distribution condition stays false for partial receipt sets.",
+    "Expiry is timezone-bearing, future and bound into every exact evidence subject.",
+    "Literal boolean decisions reject numeric/string substitutes; identities and independent roles are enforced.",
+    "Attestation acquisition/current-time bounds and ordered decision sequence are checked.",
+    "Final digest re-read rejects substituted evidence under immutable snapshot assumptions."
+  ],
+  "findings": [
+    {
+      "id": "RIGHTS-INTEGRATION-INVENTORY-001",
+      "severity": "BLOCKER_FOR_INVENTORY_CERTIFICATION",
+      "path": "ges/recovery.py",
+      "detail": "Corpus artifact rows are collapsed into artifacts_by_id before rights_accounting receives list(values). Duplicate artifact IDs can disappear before the adapter's duplicate validation; policy inventory digest then binds a deduplicated subset rather than original complete rows.",
+      "proposed_repair": "Read original rows, reject duplicate artifact IDs and source/commit/path identities before dict construction, pass original full rows to rights_accounting. Compare exact corpus identities/digests against locked source inventories to prevent same-count missing/extra substitution.",
+      "suggested_tests": [
+        "Recovery rejects duplicate corpus artifact IDs before receipts/policy can count.",
+        "Recovery rejects foreign/missing/substituted corpus artifact identity despite matching inventory counts."
+      ]
+    }
+  ],
+  "authority_boundary": "Separately approved policy authenticity, human identity and legal substance remain trusted external judgments. A JSON name or digest does not establish actual human approval. These limits are not represented as an automated legal decision.",
+  "remaining_scope": "Additional root integration repairs and tests pending; no global gate or actual per-file rights closure endorsed."
+}

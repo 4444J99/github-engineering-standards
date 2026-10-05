@@ -1,0 +1,137 @@
+{
+  "schema_version": "ges.identity-lifecycle-consolidation.v1",
+  "issue": 409,
+  "amendment_issues": [414],
+  "reviewed_at": "2026-10-03T11:24:06.029Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed account/profile concepts, username procedure and reference only; not full six-source consolidation.",
+  "rows": [
+    {
+      "id": "IDENTITY-STABLE-CUSTODY",
+      "claims": [
+        "DOCS-USERNAMECHANGE-2",
+        "DOCS-USERNAMECHANGE-4",
+        "DOCS-USERNAMECHANGE-5",
+        "DOCS-USERNAMECHANGE-8",
+        "DOCS-USERNAMECHANGE-9",
+        "DOCS-USERNAMEREF-5",
+        "DOCS-USERNAMEREF-6"
+      ],
+      "conflict": "Repository redirects, profile/gist URLs and CODEOWNERS have different rename behavior.",
+      "decision": "PROPOSED_ID_BOUND_MIGRATION",
+      "requirement": "Use stable target identities and inventory all remotes, profile/gist links, mentions and ownership references before approved rename; preview changes, verify current owner and destination, repair references and record post-change behavior including redirect latency. Redirect is not custody.",
+      "negative_test": "A working old repository redirect cannot pass a rename audit with stale CODEOWNERS or broken gist/profile links; a reclaimed name must not preserve trust."
+    },
+    {
+      "id": "IDENTITY-DISCLOSURE-SCOPE",
+      "claims": [
+        "DOCS-PERSONALPROFILE-2",
+        "DOCS-PERSONALPROFILE-3",
+        "DOCS-PERSONALPROFILE-5",
+        "DOCS-PERSONALPROFILE-6",
+        "DOCS-PERSONALPROFILE-7",
+        "DOCS-PERSONALPROFILE-8"
+      ],
+      "conflict": "Private profile does not hide all fields or create selective-user visibility; cloud warning and pronouns have separate scopes.",
+      "decision": "PROPOSED_FIELD_LEVEL_REVIEW",
+      "requirement": "Inventory optional public fields, product/version and intended audience; let the identity owner approve disclosure and verify actual visibility separately from repository access. Do not require personal disclosure as compliance evidence.",
+      "negative_test": "FPT private profile with public bio or README must not pass a universal nondisclosure claim; GHES cannot inherit cloud-only pronoun availability."
+    },
+    {
+      "id": "IDENTITY-EMAIL-CONFLICT",
+      "claims": [
+        "DOCS-ACCOUNTMANAGEMENT-6",
+        "DOCS-EMAILIDENTITY-5",
+        "DOCS-EMAILIDENTITY-6",
+        "DOCS-EMAILIDENTITY-7"
+      ],
+      "conflict": "Unqualified single-account email association conflicts with the managed-user unverified shared-email exception.",
+      "decision": "UNRESOLVED_ACCOUNT_TYPE_MATRIX",
+      "requirement": "Preserve both claims and independently verify exact account type, enterprise identity provider, email linkage and verification state. Unknown combinations stay unknown; any change requires approved identity-impact plan.",
+      "negative_test": "Shared unverified EMU email cannot be rejected solely by generic uniqueness prose, nor accepted as verified third-party identity proof."
+    },
+    {
+      "id": "IDENTITY-AUTHENTICATION-VS-ATTRIBUTION",
+      "claims": [
+        "DOCS-USERNAMECHANGE-7",
+        "DOCS-ACCOUNTMANAGEMENT-6",
+        "DOCS-ACCOUNTMANAGEMENT-7",
+        "DOCS-EMAILIDENTITY-3",
+        "DOCS-EMAILIDENTITY-4",
+        "DOCS-EMAILIDENTITY-8",
+        "DOCS-EMAILIDENTITY-11",
+        "DOCS-USERNAMEREF-7",
+        "DOCS-USERNAMEREF-8"
+      ],
+      "conflict": "Email verification, placeholder API identity, commit attribution and account authentication prove different things.",
+      "decision": "PROPOSED_SEPARATE_EVIDENCE",
+      "requirement": "Bind observations to stable account identity and current verification/authentication state; record commit-email history separately and check third-party reliance. Attribution or a contribution graph is not authenticated authorship or recovered account custody.",
+      "negative_test": "Connected commit history or placeholder API email cannot pass authentication/recovery; noreply commits cannot be assumed reconnectable. Numeric-ID noreply attribution retention cannot certify preserved Verified signature status."
+    },
+    {
+      "id": "IDENTITY-DESTRUCTIVE-LIFECYCLE",
+      "claims": [
+        "DOCS-ACCOUNTMANAGEMENT-1",
+        "DOCS-ACCOUNTMANAGEMENT-2",
+        "DOCS-ACCOUNTMANAGEMENT-3",
+        "DOCS-ACCOUNTMANAGEMENT-4",
+        "DOCS-ACCOUNTMANAGEMENT-5",
+        "DOCS-USERNAMECHANGE-1"
+      ],
+      "conflict": "Legacy conversion, modern migration and deletion differ version, preservation and collaboration semantics; legacy collaborator descriptions are ambiguous.",
+      "decision": "UNRESOLVED_LEGACY_COLLABORATOR_MATRIX",
+      "requirement": "Require exact platform/authentication/version, explicit target approval, ownership continuity, retained repositories and external participation inventory, plan/diff/apply/verify and proven recovery before lifecycle mutation. Conversion/migration are not interchangeable.",
+      "negative_test": "GHES >=3.21 cannot inherit legacy conversion; deleting owned content cannot certify deletion of external comments; sole-owner precondition cannot be skipped."
+    },
+    {
+      "id": "IDENTITY-WORKSTATION-SEPARATION",
+      "claims": [
+        "DOCS-ACCOUNTMANAGEMENT-9",
+        "DOCS-ACCOUNTMANAGEMENT-10",
+        "DOCS-ACCOUNTMANAGEMENT-11",
+        "DOCS-ACCOUNTMANAGEMENT-12"
+      ],
+      "conflict": "Single personal identity recommendation coexists with mandatory managed-user separation; protocol choice alone does not prove correct identity.",
+      "decision": "PROPOSED_PROFILED_CREDENTIAL_BOUNDARY",
+      "requirement": "Profile actual managed-user requirement and destination visibility; read-only verify repository-scoped identity and remote before approved writes. Keep secrets out of evidence and test wrong-account prevention without granting new credentials.",
+      "negative_test": "SSH or HTTPS URL alone cannot pass identity separation; a personal account's public capability cannot authorize managed-user public contribution."
+    },
+    {
+      "id": "IDENTITY-RENAME-AUTHORITY",
+      "claims": ["DOCS-USERNAMECHANGE-1", "DOCS-USERNAMERENAME-1", "DOCS-USERNAMERENAME-2", "DOCS-USERNAMEREF-1", "DOCS-USERNAMEREF-2"],
+      "conflict": "GHES concept introduces built-in only, procedure allows LDAP self-change, and reference requires LDAP administrator change. GHEC managed users cannot self-rename.",
+      "decision": "UNRESOLVED_THREE_WAY_AUTHENTICATION_AUTHORITY",
+      "requirement": "Bind exact platform, version, authentication mode and actor; preserve all source statements and require independent authority verification before proposing rename. An unresolved LDAP matrix remains unknown, not permission or denial inferred from a preferred page.",
+      "negative_test": "LDAP procedure alone cannot authorize self-rename; reference alone cannot certify every version's behavior; personal-account permission cannot grant managed-user rename."
+    },
+    {
+      "id": "IDENTITY-NAMESPACE-DEPENDENCIES",
+      "claims": ["DOCS-USERNAMEREF-3", "DOCS-USERNAMEREF-4", "DOCS-USERNAMECHANGE-4"],
+      "conflict": "Permanent retirement is conditional and pair-specific, while package transfer can still break consumers and other repository redirects can be superseded.",
+      "decision": "PROPOSED_THRESHOLD_AND_CONSUMER_INVENTORY",
+      "requirement": "Before approved rename inventory public Marketplace actions, prior-week clone/Actions-use counts, packages, image visibility/downloads and dependent consumers. Preserve exact >100 and >5,000 thresholds and product scope; unknown telemetry remains unknown. Verify dependency repair and do not assume rollback can recreate a permanently retired name.",
+      "negative_test": "Exactly 100 uses or 5,000 downloads cannot trigger a strictly greater threshold; private images cannot inherit public-image retirement; namespace transfer cannot prove downstream consumers work or rollback restores retired names."
+    },
+    {
+      "id": "IDENTITY-COMMIT-PRIVACY",
+      "claims": [
+        "DOCS-EMAILIDENTITY-8",
+        "DOCS-EMAILIDENTITY-9",
+        "DOCS-EMAILIDENTITY-10",
+        "DOCS-ACCOUNTMANAGEMENT-8"
+      ],
+      "conflict": "New commit-email settings do not rewrite historical commits or transfer educational benefits; cloud push-block/privacy features differ GHES.",
+      "decision": "PROPOSED_CURRENT_AND_HISTORICAL_SCOPE",
+      "requirement": "Inventory web and local Git settings plus historical exposure separately; preserve product-specific noreply and push-block capability, and validate approved privacy changes behaviorally. Educational entitlement and old content remain separate.",
+      "negative_test": "Changing current email cannot mark historical commits scrubbed, GHES cloud privacy supported or educational benefits transferred."
+    }
+  ],
+  "limitations": [
+    "Negative-test entries are specifications, not implemented or executed tests.",
+    "Claim identity validation does not establish semantic equivalence or omission completeness.",
+    "No rights clearance, identity mutation, credential change, public publication or native rollout."
+  ]
+}

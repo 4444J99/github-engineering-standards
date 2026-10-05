@@ -1,0 +1,12 @@
+{
+  "issue": 28,
+  "email_root": {"candidate_claims": 14, "source_digest": "MATCH", "span_digests": "computed from exact source bytes", "independent_audit_complete": false},
+  "attribution_audit": {"auditor": "codex:evaluator_review", "full_root_lines": 118, "reusable_lines": 1, "original_claims": 34, "source_and_span_digests": "MATCH", "original_claims_sha256": "a097d7b52c6aec38cc968ee03248c44f4dec6787cf6749cc5d7eb6bc8e89a023", "corrected_claims": 38, "correction_recheck_complete": false},
+  "corrections": ["Restored short and meaningful message qualifiers", "Attached GHES exclusion to organization procedures and prerequisites", "Added four trailer syntax claims", "Preserved illustrative command discrepancies and unproven signing configuration"],
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 324, "seconds": 1.984, "result": "OK after attribution evidence corrections"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0}
+  ],
+  "boundary": "Root-local extraction and audit corrections only; no policy adoption or assurance increment."
+}

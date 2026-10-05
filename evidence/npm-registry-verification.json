@@ -1,0 +1,47 @@
+{
+  "issue": 286,
+  "reviewed_at": "2026-10-03T07:15:10.906Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 18,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60001,
+    "claim_bearing_artifacts": 3277,
+    "tests": 324,
+    "test_seconds": 2.03,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "User credential versus project routing file wording and global-routing versus scope examples remain unresolved.",
+    "Non-v2 future version cap is not certified current enforcement; v2 cloud limits not universal GHES limits.",
+    "No npm commands, installs, publication or credentials executed.",
+    "Reference only; no independent completeness/published assurance, rights, accepted policy or native rollout."
+  ]
+}

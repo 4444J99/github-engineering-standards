@@ -1,0 +1,300 @@
+[
+  {
+    "artifact_id": "bd91ca4dc6e939b9556476d8",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/remote-sessions.md",
+    "content_sha256": "491af1dce1d1a3d8a0acacb0832e7faa2b1522b6ca28a0ea21aa5600fdba4b42",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T13:30:00Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete227-line pinned-source read, all41candidate dispositions and168reference records consolidated once. Exactlyfive language example sets are present; no sixth inferred. Local synchronization and sharing toggles are not hosted execution or data deletion evidence; snippets/permission contracts/QR packages were not executed or validated at runtime.",
+    "independent_audit": "evidence/sdk-remote-sessions-independent-claim-audit.json",
+    "repair_recheck": "evidence/sdk-remote-sessions-independent-repair-recheck.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "401d9aee3ffb53d84c218f11",
+        "text_sha256": "d0b5c55269e7bfd2d33b52239f5492c071f709192a4581ec6b0190854f81394e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-001: Remote sessions synchronize locally running work to GitHub. DOCS-SDKREMOTE-002: Agents-panel access can reach locally running sessions. DOCS-SDKREMOTE-003: Mobile access can reach locally running sessions. DOCS-SDKREMOTE-004: Enabled remote SDK produces a session-log URL. DOCS-SDKREMOTE-005: Session URL can be shared as a link. DOCS-SDKREMOTE-006: Session URL can be rendered as QR code. DOCS-SDKREMOTE-007: Source declares Free/Pro/Team applicability. DOCS-SDKREMOTE-008: Source declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "d5b622b5fbeca1c84120497b",
+        "text_sha256": "122622261fd3c66488d04655a58d4856dec0c309fb1d1661e7b6adac3c27e115",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-009: Former remote-session route redirects to this guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "71103eeec4c01817119e77af",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments or language tab markers; operative text and code contracts are separately extracted."
+      },
+      {
+        "candidate_id": "d2b3c74232e7d7ab1afcbf06",
+        "text_sha256": "6a4a6c87fe2de153a2fa345d6ae483ac215b3fcf695bf35539df204a1e18210f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-010: Hosted-compute execution uses separate cloud-sessions guide.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "e7a6172a93cae4110a0229c4",
+        "text_sha256": "3c11e1810af5a0a6f88f7951761050ab17ec6f55aa5843c5c5c0ffccc9da1118",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-011: Remote sessions require authenticated user. DOCS-SDKREMOTE-012: GitHub token is one authentication alternative. DOCS-SDKREMOTE-013: Logged-in user is another authentication alternative.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "113fd75e3927df4b0b932730",
+        "text_sha256": "a7fc080665b52d5e3636b1c46b377e35b969e80fdb06001fbfeb809133b85be3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-014: Remote session working directory must be a GitHub repository.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "0397198e96b44ba4015e49dd",
+        "text_sha256": "e7e32f2aec85ebced8ede8fe66ed7a160e509fb7c6011378e1abe4925ce4cf48",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-015: Always-on mode sets enableRemoteSessions true when creating client. DOCS-SDKREMOTE-016: Always-on GitHub-repository sessions automatically receive a remote URL.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "8a1f0eb5d289c2ad57c8d5c2",
+        "text_sha256": "3dba3c6882adc60aad323b0ae86a2b616e15a66aaeab7571376379bd1e5d097a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments or language tab markers; operative text and code contracts are separately extracted."
+      },
+      {
+        "candidate_id": "6729ee788d704cae50d51ac6",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-037: TypeScript always-on example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "1043b9d060719d5558f97e58",
+        "text_sha256": "e6d4d7b7aa7be0478145e9916d1c58e8dd4ee565ff7e3d8f0225479db4dd4ccc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-038: TypeScript imports CopilotClient. DOCS-SDKREMOTE-039: TypeScript constructs client. DOCS-SDKREMOTE-040: TypeScript enables enableRemoteSessions. DOCS-SDKREMOTE-041: TypeScript creates session. DOCS-SDKREMOTE-042: TypeScript awaits creation. DOCS-SDKREMOTE-043: TypeScript uses illustrative /path/to/github-repo workingDirectory. DOCS-SDKREMOTE-044: TypeScript permission handler is async. DOCS-SDKREMOTE-045: TypeScript example returns allowed true; permission shape is source data, not validated approval contract. DOCS-SDKREMOTE-046: TypeScript subscribes to session.info. DOCS-SDKREMOTE-047: TypeScript filters remote infoType. DOCS-SDKREMOTE-048: TypeScript logs event URL.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "2e0e22cf71a89091f9514322",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-049: Python always-on example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "24ed11a44e5cd45d846e1230",
+        "text_sha256": "49e373329324c484943f77e5c0df4f6d0afb401e7fc205e03517892e1a3baefa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-050: Python imports CopilotClient. DOCS-SDKREMOTE-051: Python constructs client. DOCS-SDKREMOTE-052: Python enables enable_remote_sessions. DOCS-SDKREMOTE-053: Python creates session via create_session. DOCS-SDKREMOTE-054: Python awaits creation. DOCS-SDKREMOTE-055: Python uses illustrative /path/to/github-repo working_directory. DOCS-SDKREMOTE-056: Python permission lambda receives request argument. DOCS-SDKREMOTE-057: Python permission lambda returns allowed True; not a validated approval contract. DOCS-SDKREMOTE-058: Python defines on_event callback. DOCS-SDKREMOTE-059: Python filters session.info event type. DOCS-SDKREMOTE-060: Python filters remote info_type. DOCS-SDKREMOTE-061: Python prints event URL. DOCS-SDKREMOTE-062: Python registers on_event callback.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "c5f8896098c09baf727d28b7",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-063: Go always-on example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "e711402e45facf307aae4af1",
+        "text_sha256": "d5c65e3acbde2ba8fd5a10ac7a52094248536ec3fa91fd47e0461d929c23d40c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-064: Go constructs client with ClientOptions. DOCS-SDKREMOTE-065: Go enables EnableRemoteSessions. DOCS-SDKREMOTE-066: Go creates session with context. DOCS-SDKREMOTE-067: Go uses SessionConfig. DOCS-SDKREMOTE-068: Go discards creation error with blank identifier. DOCS-SDKREMOTE-069: Go uses illustrative /path/to/github-repo WorkingDirectory. DOCS-SDKREMOTE-070: Go permission handler receives PermissionRequest. DOCS-SDKREMOTE-071: Go permission handler receives PermissionInvocation. DOCS-SDKREMOTE-072: Go handler returns PermissionDecision. DOCS-SDKREMOTE-073: Go handler signature returns error. DOCS-SDKREMOTE-074: Go returns PermissionDecisionApproveOnce without scope validation shown. DOCS-SDKREMOTE-075: Go permission handler returns nil error. DOCS-SDKREMOTE-076: Go registers session event callback. DOCS-SDKREMOTE-077: Go filters session.info event type. DOCS-SDKREMOTE-078: Go example comment requests checking infoType; executable field check is not shown. DOCS-SDKREMOTE-079: Go example comment requests URL extraction; executable extraction is not shown. DOCS-SDKREMOTE-157: The Go always-on example registers a callback on the returned session without a displayed creation-error check.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "ecb7698bcc665c3aa9539077",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-080: C# always-on example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "3245a7ac2563a436604a1d5b",
+        "text_sha256": "9aeb485a9ffd481209ad489b57c219c978793e3abe06565c18bf0363f9ca33bd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-081: C# constructs client with CopilotClientOptions. DOCS-SDKREMOTE-082: C# enables EnableRemoteSessions. DOCS-SDKREMOTE-083: C# creates session using CreateSessionAsync. DOCS-SDKREMOTE-084: C# awaits creation. DOCS-SDKREMOTE-085: C# uses SessionConfig. DOCS-SDKREMOTE-086: C# uses illustrative /path/to/github-repo WorkingDirectory. DOCS-SDKREMOTE-087: C# permission handler receives request argument. DOCS-SDKREMOTE-088: C# permission handler receives invocation argument. DOCS-SDKREMOTE-089: C# wraps decision with Task.FromResult. DOCS-SDKREMOTE-090: C# approves once without scope validation shown. DOCS-SDKREMOTE-091: C# registers SessionEvent callback. DOCS-SDKREMOTE-092: C# narrows event to SessionInfoEvent. DOCS-SDKREMOTE-093: C# filters remote InfoType. DOCS-SDKREMOTE-094: C# prints remote URL. DOCS-SDKREMOTE-160: The C# always-on example shows no client-disposal scope. DOCS-SDKREMOTE-161: The C# always-on example shows no session-disposal scope.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "d7e46661e77de500f9aa5fa6",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-095: Rust always-on example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "5a7ea42b596d2ee57fc58941",
+        "text_sha256": "98247065280c5d336621b26d51303e51fd3b7af5ba55699fc4474f5eec8cdae1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-096: Rust imports Client. DOCS-SDKREMOTE-097: Rust imports ClientOptions. DOCS-SDKREMOTE-098: Rust imports SessionConfig. DOCS-SDKREMOTE-099: Rust imports PermissionResult. DOCS-SDKREMOTE-100: Rust starts Client. DOCS-SDKREMOTE-101: Rust creates ClientOptions. DOCS-SDKREMOTE-102: Rust enables remote sessions with with_enable_remote_sessions(true). DOCS-SDKREMOTE-103: Rust awaits startup. DOCS-SDKREMOTE-104: Rust propagates startup error using question-mark operator. DOCS-SDKREMOTE-105: Rust creates session. DOCS-SDKREMOTE-106: Rust SessionConfig uses illustrative /path/to/github-repo. DOCS-SDKREMOTE-107: Rust attaches permission handler. DOCS-SDKREMOTE-108: Rust handler ignores request argument. DOCS-SDKREMOTE-109: Rust handler ignores invocation argument. DOCS-SDKREMOTE-110: Rust handler is asynchronous. DOCS-SDKREMOTE-111: Rust returns approve_once decision. DOCS-SDKREMOTE-112: Rust wraps decision in Ok. DOCS-SDKREMOTE-113: Rust awaits creation. DOCS-SDKREMOTE-114: Rust propagates creation error using question-mark operator. DOCS-SDKREMOTE-115: Rust subscribes to session events. DOCS-SDKREMOTE-116: Rust awaits event receive. DOCS-SDKREMOTE-117: Rust loops while received result is Ok. DOCS-SDKREMOTE-118: Rust filters session.info event type. DOCS-SDKREMOTE-119: Rust comment requests info_type check; executable check is not shown. DOCS-SDKREMOTE-120: Rust comment requests URL extraction; executable extraction is not shown. DOCS-SDKREMOTE-159-A01: The Rust receiver snippet shows no diagnostic branch for receive failure. DOCS-SDKREMOTE-159-A02: The Rust while-let Ok receiver loop stops on a non-Ok result.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "4c2f01c2c630a0202537da9a",
+        "text_sha256": "6d60ddfe749050f92a981af548b594f306076991c137ba536f34ccc9ef6ac46d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments or language tab markers; operative text and code contracts are separately extracted."
+      },
+      {
+        "candidate_id": "aff3a4435148a2af40e6d81b",
+        "text_sha256": "26a4b5f79c5da49ecc7e9d2d9f56c07415dd2497e088ac825dd777dd3aca147e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-017: Use session.rpc.remote.enable for mid-session remote access. DOCS-SDKREMOTE-018: Use session.rpc.remote.disable to stop remote access. DOCS-SDKREMOTE-019: Enable API corresponds to CLI remote-on command. DOCS-SDKREMOTE-020: Disable API corresponds to CLI remote-off command.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "ec9825770bf4fb80731d080d",
+        "text_sha256": "3dba3c6882adc60aad323b0ae86a2b616e15a66aaeab7571376379bd1e5d097a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments or language tab markers; operative text and code contracts are separately extracted."
+      },
+      {
+        "candidate_id": "4d47aebf1c67d9261c094c8b",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-121: TypeScript toggle example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "a1ca212c119703c039dbac64",
+        "text_sha256": "69150a1ade195da04efcb88304296a22435bc79eefdc6141a2f4ad7d6fc88c0b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-122: TypeScript calls remote.enable. DOCS-SDKREMOTE-123: TypeScript awaits enabling. DOCS-SDKREMOTE-124: TypeScript logs returned URL. DOCS-SDKREMOTE-125: TypeScript calls remote.disable. DOCS-SDKREMOTE-126: TypeScript awaits disabling. DOCS-SDKREMOTE-162: TypeScript toggle comment labels the disable operation as stopping sharing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "f71347e3021eb3bcc27c8999",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-127: Python toggle example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "8c47ef2573b0d5a8b09308f0",
+        "text_sha256": "38f1f0ee465362c55fe93e083200f1ee5acdf5ac62f562aa9870a30eb2850c41",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-128: Python calls remote.enable. DOCS-SDKREMOTE-129: Python awaits enabling. DOCS-SDKREMOTE-130: Python prints returned URL. DOCS-SDKREMOTE-131: Python calls remote.disable. DOCS-SDKREMOTE-132: Python awaits disabling. DOCS-SDKREMOTE-163: Python toggle comment labels the disable operation as stopping sharing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "c490343202f94e71867ba42a",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-133: Go toggle example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "461e98a73a39c12b97f6039d",
+        "text_sha256": "91f260004288bb9787c0a8abb868ba6a269a4b16c8d89fa2b01be6a86334c6b4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-134: Go calls RPC.Remote.Enable with context. DOCS-SDKREMOTE-135: Go captures enable error without a shown check. DOCS-SDKREMOTE-136: Go checks URL pointer is nonnil. DOCS-SDKREMOTE-137: Go dereferences URL pointer. DOCS-SDKREMOTE-138: Go prints remote URL. DOCS-SDKREMOTE-139: Go calls RPC.Remote.Disable with context. DOCS-SDKREMOTE-140: Go assigns disable error without a shown check. DOCS-SDKREMOTE-158: The Go toggle example accesses result.URL before checking the returned enable error. DOCS-SDKREMOTE-164: Go toggle comment labels the disable operation as stopping sharing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "470f6153b07168f2333df151",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-141: C# toggle example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "ba32e56c11420988a4d83b5e",
+        "text_sha256": "64879425128fd6241e5eff4b2b1b7614e8a9530b43dbe2910f41dde0fd651bbf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-142: C# calls Remote.EnableAsync. DOCS-SDKREMOTE-143: C# awaits enabling. DOCS-SDKREMOTE-144: C# prints returned URL. DOCS-SDKREMOTE-145: C# calls Remote.DisableAsync. DOCS-SDKREMOTE-146: C# awaits disabling. DOCS-SDKREMOTE-165: C# toggle comment labels the disable operation as stopping sharing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "fd94cfcbc02074587a659c85",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-147: Rust toggle example has docs-validate skip marker; not a runtime test.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "d7fc2b617cbad64ab01c5433",
+        "text_sha256": "beca4d9e8009bd6f5e39b55ae1efad87b1c6e9a1374463663b3045c6a1f63350",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-148: Rust calls remote enable through session.rpc(). DOCS-SDKREMOTE-149: Rust awaits enabling. DOCS-SDKREMOTE-150: Rust propagates enable error using question-mark operator. DOCS-SDKREMOTE-151: Rust filters present Some URL. DOCS-SDKREMOTE-152: Rust borrows optional URL. DOCS-SDKREMOTE-153: Rust prints remote URL. DOCS-SDKREMOTE-154: Rust calls remote disable through session.rpc(). DOCS-SDKREMOTE-155: Rust awaits disabling. DOCS-SDKREMOTE-156: Rust propagates disable error using question-mark operator. DOCS-SDKREMOTE-166: Rust toggle comment labels the disable operation as stopping sharing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "7cdd20e53dd6fbe1fa557042",
+        "text_sha256": "6d60ddfe749050f92a981af548b594f306076991c137ba536f34ccc9ef6ac46d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Presentation-only lint comments or language tab markers; operative text and code contracts are separately extracted."
+      },
+      {
+        "candidate_id": "9846b823cfb3a3d074cea90f",
+        "text_sha256": "e1d0d498a648e54ed7cd6b8a5e6b9636322108f7ac2a75c16f9d55c0a8d13b74",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-021: Remote session URL can be rendered as QR code. DOCS-SDKREMOTE-022: SDK provides remote URL rather than a required QR library. DOCS-SDKREMOTE-023: Choose preferred QR-code library for rendering.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "d7d6b12bd8a15eb396459026",
+        "text_sha256": "6b513bc54d99743e010d5677b5ad3ea93fc17d495e44294f8c304d7cc733c326",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-024: TypeScript qrcode package is a referenced rendering option; linked package not ingested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "5c2d055f1f1ef8ba304cf3c0",
+        "text_sha256": "63d34a6128edb43cc0ee194228605fb2ad76c04617bfc4521dacdf5609243fad",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-025: Python qrcode package is a referenced rendering option; linked package not ingested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "ab517838f13ace6da2c328d7",
+        "text_sha256": "e2c8700480bbbea51a14f134a8946892f1d9e069eb4eaa87eeb8dda8cc20efdb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-026: Go go-qrcode package is a referenced rendering option; linked repository not ingested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "1cac4413806a8d207f7647df",
+        "text_sha256": "e91e2f530210a0d02ceb37f1fa4231cad53071c9c5845549ba537ea2140d167d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-027: C# QRCoder package is a referenced rendering option; linked package not ingested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "bbf22c455bfd1e952af2b8c3",
+        "text_sha256": "0c53a5ba87b40842bcf0c9e10a803e2119a38701e48094e208fe9703c2506497",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-028: Rust qrcode package is a referenced rendering option; linked package not ingested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "757df19c68138b74325a520c",
+        "text_sha256": "7c2e54189a53bc5473e7c848591b61c81f0e2ee9b26f082a040861befdedf162",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-029: enableRemoteSessions applies when SDK starts the runtime as child process. DOCS-SDKREMOTE-030: enableRemoteSessions applies when SDK starts runtime as in-process host. DOCS-SDKREMOTE-031: enableRemoteSessions is ignored on connection to an already-running runtime.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "176f6af6f830fdcf9ac65357",
+        "text_sha256": "11c6e6bd927539015275ceb9713bbebe84533171064b8d4a0ca961d4b7a6e6a9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-032: Non-GitHub working directories cause silent remote-setup skip in always-on mode. DOCS-SDKREMOTE-033: Non-GitHub working directories cause error in on-demand mode.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      },
+      {
+        "candidate_id": "b164f9e7c549deca5984d62e",
+        "text_sha256": "079767540088ba96c47aa87d484777c920b30df2e78157005432e3b75f6303eb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKREMOTE-034: Remote sessions require authentication at the notes occurrence. DOCS-SDKREMOTE-035: Ensure gitHubToken is configured when that authentication alternative is selected. DOCS-SDKREMOTE-036: Ensure useLoggedInUser is configured when that authentication alternative is selected.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json"
+      }
+    ]
+  }
+]

@@ -1,0 +1,804 @@
+[
+  {
+    "artifact_id": "c7a8f8d0e903c32878dc8d07",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/mcp-debugging.md",
+    "content_sha256": "78f568ef7ede8951576c44591e49add4cc3e116644285ba96d216e23e83e3664",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T05:21:19Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete419-line MCP guide read, all checklists, protocol and logging snippets, platform changes and issue-disclosure instructions. No packages/scripts/servers/traffic capture, privilege/protection changes, secret collection or public disclosure performed. Pinned examples not current protocol claims; no policy, native, rights or independent omission certification.",
+    "claim_mappings": [
+      {
+        "candidate_id": "7b8a06261c8424bfe8000ba7",
+        "text_sha256": "1d218844a40d8b6a08b08c7e2620139daa10e20d2c8fc8ce3edc2477261e8a24",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-001: The guide covers MCP-server debugging within Copilot SDK. DOCS-SDKMCPDEBUG-002: The guide declares Free/Pro/Team and Enterprise Cloud versions. DOCS-SDKMCPDEBUG-003: A former MCP debugging route is declared as a redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "bf8ea006bac986af8f19b40c",
+        "text_sha256": "27aa80fd63bcf2fa4bbef0b8d406db057f47e4316841051655b485704a1a7016",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-003: A former MCP debugging route is declared as a redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "389dbba48df41cacc668968d",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "cca6e8f28533e3ffa151df2c",
+        "text_sha256": "24f4dc631cf6cb82bfc77e22d1b3b7f184eb5ea597ca279442f961769b351fac",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "cfa20c37109fe8b923e0b678",
+        "text_sha256": "3cafa03d9932ee3afe2c162c9b7669d899ead7ca1a129e930b4178a88ade15ab",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "1a43299036d1b35b0c47a982",
+        "text_sha256": "1ee8b1cd4e87f41aa9e478040a5807e3305f4e192ca2cabe1afe686a3f16451d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "0a3d024bd68cd79fbf3848f9",
+        "text_sha256": "cea3687ffbff0bc7eb37c64aa69e238696b4704a7b0d20a55b8d7deabbb9d51a",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "6cc237c7178acc975bc88705",
+        "text_sha256": "146a495c3a2eda58f54acfd8691b13b86a4dfc396506480c21e3c8d6c5e61a42",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "e24fea3c07c2670881a06130",
+        "text_sha256": "ba8c45215b8a494153375578c8245c4c9af7b3e54374698d7fcc36acb62d07d1",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "d75b362aab9e802e034eeb2e",
+        "text_sha256": "ef8e7adc1df5d3378254f3be47ba7910909a8b53f84af4fee8e5cc11e055b829",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-004: Verify the server executable exists. DOCS-SDKMCPDEBUG-005: Verify the server executable can run.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "274e1dd84e4337b9e73db69e",
+        "text_sha256": "b4ef062a759428cfe270717b29222911fca66046765c78d40a242dfaf7868571",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-006: Verify command path correctness, preferring an absolute path when uncertain. DOCS-SDKMCPDEBUG-006-A01: Verify command path correctness. DOCS-SDKMCPDEBUG-006-A02: Prefer absolute paths when uncertain.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "566b9743b3719161f80985bb",
+        "text_sha256": "517926e55b1ba308e0d9817ffaea3e6d6f55ea2f0a4cb35e3ccbb7819aaf3039",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-007: Verify intended tools are enabled. DOCS-SDKMCPDEBUG-010: The checklist permits wildcard or named tools; wildcard is not a mandatory all-tools policy.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "147631efd02f2c4e1552598b",
+        "text_sha256": "2623f64acc726003b98320fe132424e43b18788c3075838bda94720285edecdf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-008: Verify correct initialize response.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "51f29ea8da18e6903e78ab56",
+        "text_sha256": "dfbcb1f2db88623755ad8a5d92b6a8b0d30add0e3a25551a93c4f95ac80ecb94",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-009: Check Windows antivirus/firewall process blocking.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "6a1526258b475e6bfe6ba4a6",
+        "text_sha256": "1678c615849a162dab1d542be286e23c9e3a9abfa2c2b0108e46e2e23608ae5e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-011: The source procedure adds diagnostic environment variables to server config; no environment was changed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "4092ccf61f2d67e785fc8602",
+        "text_sha256": "5a4c54a870c7e3bc53b93f147c76b036d5f51263fc2426ed3faf3ecc362f914c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-012: The logging example chooses a local server. DOCS-SDKMCPDEBUG-013: The logging example names a placeholder server executable. DOCS-SDKMCPDEBUG-014: The logging example supplies an empty argument list. DOCS-SDKMCPDEBUG-015: The logging example sets MCP_DEBUG to the string '1'; actual server support is not demonstrated. DOCS-SDKMCPDEBUG-016: The logging example enables wildcard DEBUG logging. DOCS-SDKMCPDEBUG-017: The logging example sets Node-specific NODE_DEBUG to mcp.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "68c95080527a40ab789c8d23",
+        "text_sha256": "cfa6d577c1858032f3220a3d62ff7562c373db221b973fd5372320f9538fe416",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-018: The source directs independent MCP testing before SDK integration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "8c04adf752c29344421d731a",
+        "text_sha256": "594df4af9da56e82b31069c7d80f1b7ff600f054f0af225689ac3438e0fcbe8f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-019: The manual procedure sends initialize through stdin.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "a20533bfa673e33f711dd649",
+        "text_sha256": "5c17a3f9192c3cfde46fe335e065729797a2bc87115f47aa2cb8001267172f6e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-020: The Unix initialization example pipes a JSON-RPC request into a placeholder server; not executed. DOCS-SDKMCPDEBUG-021: The Windows initialization example pipes a request to a placeholder executable; not executed. DOCS-SDKMCPDEBUG-022: The initialize request example uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-023: The example uses request ID1. DOCS-SDKMCPDEBUG-024: The initialize example advertises protocol2024-11-05, not verified current support. DOCS-SDKMCPDEBUG-025: The initialize example supplies empty client capabilities. DOCS-SDKMCPDEBUG-026: The initialize example identifies a test client. DOCS-SDKMCPDEBUG-139: Initialize example test client reports version1.0. DOCS-SDKMCPDEBUG-143: Initialize request uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-144: Initialize request uses ID1. DOCS-SDKMCPDEBUG-145: Initialize request selects method initialize. DOCS-SDKMCPDEBUG-146: Initialize request advertises protocol2024-11-05. DOCS-SDKMCPDEBUG-147: Initialize request supplies empty client capabilities. DOCS-SDKMCPDEBUG-148: Initialize request names client test. DOCS-SDKMCPDEBUG-149: Initialize request identifies client version1.0.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "90bb483559963da4d0898da3",
+        "text_sha256": "83f00dcbc4981ec853be55596e21a6dba9949989008ab2c080e20e2e71381192",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "6b003b5726fa20046f209d2d",
+        "text_sha256": "12370409cd1fdefb87de1b1312f63fb041efb92273bd23ec6c039a1152bc5c7f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-027: The expected response example echoes request ID1. DOCS-SDKMCPDEBUG-028: The response example returns protocol2024-11-05. DOCS-SDKMCPDEBUG-029: The response example advertises tools capability. DOCS-SDKMCPDEBUG-030: The response example includes server name/version. DOCS-SDKMCPDEBUG-030-A01: Expected initialize response includes server name. DOCS-SDKMCPDEBUG-030-A02: Expected initialize response includes server version. DOCS-SDKMCPDEBUG-140: Expected-response example uses JSON-RPC2.0.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "3591fd3de1978bcb041a1db3",
+        "text_sha256": "7c8882796055636e8cd63bdeadce9615cc3231fd8b97a70f911fe2ab130ecb32",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-031: Tool listing is directed after initialization.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "fe38b16aa7929e6e29e7acbf",
+        "text_sha256": "398e26bfabe68185681108259ecb367c73f9c9c283149990e59fb5550394e92d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-032: The standalone tools/list example starts a fresh piped invocation without a shown preceding handshake; it is not a verified persistent protocol test. DOCS-SDKMCPDEBUG-033: The tools/list request example uses request ID2. DOCS-SDKMCPDEBUG-141: tools/list request example supplies empty params. DOCS-SDKMCPDEBUG-157: tools/list request uses JSON-RPC2.0.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "9b49b47ffb0ec246c8244dfa",
+        "text_sha256": "83f00dcbc4981ec853be55596e21a6dba9949989008ab2c080e20e2e71381192",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "637a736f233e530928906fdd",
+        "text_sha256": "4f307387c30c91371ed8de8352cbaad06049f1ad06bf43d1190714c5c23aa9e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-034: The expected tool-list response example includes a name. DOCS-SDKMCPDEBUG-035: The expected tool-list response example includes a description. DOCS-SDKMCPDEBUG-036: The expected tool-list response example includes a placeholder input schema. DOCS-SDKMCPDEBUG-142: tools/list expected-response example correlates request ID2. DOCS-SDKMCPDEBUG-162: Expected tools/list response uses JSON-RPC2.0.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "c3b0fa87de0115539ce17de3",
+        "text_sha256": "741688969009f8820b834e34f208efb59f51d452652f76e8de739b1573954d1c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-037: An interactive test-script wrapper is suggested; no file or executable was created.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "807b0a73258b801a37727cd3",
+        "text_sha256": "64aa61af27b81da32f3247e793e019f57c29f5d7f569a57fa266fb7c8d5526e9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-038: The script stores the first argument as SERVER but does not show using that variable to launch a server. DOCS-SDKMCPDEBUG-039: The script writes an initialize request. DOCS-SDKMCPDEBUG-040: The script writes notifications/initialized. DOCS-SDKMCPDEBUG-041: The script writes a tools/list request. DOCS-SDKMCPDEBUG-042: The script keeps input open by copying stdin. DOCS-SDKMCPDEBUG-150: Initialize request uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-151: Initialize request uses ID1. DOCS-SDKMCPDEBUG-152: Initialize request selects method initialize. DOCS-SDKMCPDEBUG-153: Initialize request advertises protocol2024-11-05. DOCS-SDKMCPDEBUG-154: Initialize request supplies empty client capabilities. DOCS-SDKMCPDEBUG-155: Initialize request names client test. DOCS-SDKMCPDEBUG-156: Initialize request identifies client version1.0. DOCS-SDKMCPDEBUG-158: tools/list request uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-159: Request ID is2. DOCS-SDKMCPDEBUG-160: Request method is tools/list. DOCS-SDKMCPDEBUG-161: Request params are empty. DOCS-SDKMCPDEBUG-163: Initialized notification uses JSON-RPC2.0. DOCS-SDKMCPDEBUG-164: Initialized notification example has no request ID.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "9e0df479bf521accc420ebb5",
+        "text_sha256": "2bad3eeaf33caffe3bc9b482b4934ed19eb4ec3614c12373e1a5c5f8948217da",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "f43f4ab17e30c04860023d5a",
+        "text_sha256": "114a3987ba0ca21cffef4194bafce849f3ab0f21f0e84315ceb4f061a535c051",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-043: The example pipes test-script output to a server.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "0d4861c0713cc6f2a544d156",
+        "text_sha256": "c83198a98517b48431d8a061a7a1c938b6cc155abf86ed372d71af024af01895",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-044: No tools and no log errors are described as startup-failure symptoms. DOCS-SDKMCPDEBUG-044-A01: Startup-failure symptoms include no tools appearing. DOCS-SDKMCPDEBUG-044-A02: Startup-failure symptoms include no errors in logs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "f315196945f819b764aeea16",
+        "text_sha256": "950d0b5c07c078c53460a13f3aebe6c6c8025996552538811992e7949579867a",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "30480bce63d8438d10e92602",
+        "text_sha256": "ee01d82e37b250060b4113712d3ae130dd1f45ed3e6a71eec58aa23d758a6960",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "2f4d69f54e397da5628449ef",
+        "text_sha256": "56b72f1df06861994450a1c96a6fb700fc0fa12cd2f3c4bb969f832b08f8940d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "257481f2bd7c47a9dba30942",
+        "text_sha256": "66756c95d08e88d36d8cc863a1e3afbe89d0bfbefc5a662d209f8aa579c3c5dc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-045: Incorrect command paths are diagnosed with absolute-path selection.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "731f364e7d805095e99030d3",
+        "text_sha256": "ae756392a66abd29f79dbd011c93d9c8ca0711de3e66789a51e76117c86c0a9c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-046: The source suggests chmod for missing execution permission; this mutation was not authorized or performed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "99d23cd935b75551af438be6",
+        "text_sha256": "dcad6a636bf0a93aab37b65dc07a6748ada2f75d58e401a71cdf784f1476b832",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-047: Missing dependencies are diagnosed through library checking or independent execution; neither was run. DOCS-SDKMCPDEBUG-047-A01: For dependency problems inspect shared libraries with Linux ldd. DOCS-SDKMCPDEBUG-047-A02: Independent server execution is an alternative diagnostic.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "7d370b8c6e135b52cc6c4893",
+        "text_sha256": "51b8538e0e108e52ef5130f6372ac36863a4496be9ab9aa7a03d80ee1a704c37",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-048: Working-directory issues are diagnosed with explicit cwd configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "e883e8b8e68ccdef6c067b52",
+        "text_sha256": "c7c0d51f98e664a4a7c43ba945f4759a8ad1dc87f16a80302bf0cfd18a3902d3",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "fb5b2a09de9d2d1911e262ca",
+        "text_sha256": "7e448229b37c87d2c51932ee3384761dc571ec7fed4f4e071c4d0dd5f40e3f3c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-049: The manual debug example changes to an expected working directory. DOCS-SDKMCPDEBUG-050: The manual debug example runs a placeholder command with arguments.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "c4869b1b4390c534b8dff77c",
+        "text_sha256": "24d026c95ee3e644a3db21eec5f6c4c347ff65b0e060551f499f41c891afefc8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-051: Running process without available tools is a distinct symptom from startup failure.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "cae0d9eff1c7eee1fcd852c0",
+        "text_sha256": "950d0b5c07c078c53460a13f3aebe6c6c8025996552538811992e7949579867a",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "f93409011a341b02b77b16d1",
+        "text_sha256": "48ae46d535561a885cf40b44e825ca1f6939c15cbb14adaa8113ea8706da0bdf",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "566daee7a794109ecad11909",
+        "text_sha256": "17f158e8a592b70188b6d2739dc9e5f5aeddf2176105ed9b8d233eb5d79b2519",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-052: The tools configuration example uses wildcard enablement or named tools; no wildcard was adopted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "7c416d68c26d29891ac7b2b5",
+        "text_sha256": "6da5b54033c685b64208d4e44904605adda6f625a4d704a77725b288f61ed3de",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "d7a9e8fd75f149d06d6d22a3",
+        "text_sha256": "ac6545a1ea4074de6b599cfc9beb95c785236bd00d77ce31f92e9204c118f84e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-053: The source directs manual tools/list testing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "d9aafcffeb728f49a0099870",
+        "text_sha256": "243521109490518586d9185dfd6a897f735085ca0facb436e3af4bf1b2b500ce",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-054: The source directs checking server tools/list implementation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "f711f7d67c048098f6165091",
+        "text_sha256": "8ec31af2736c3fe0d67cf605548cf595a5546492fbbde98c7997574d68b5c3ad",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "9e5151546489071f68906275",
+        "text_sha256": "e0be4165f0a9d7e8449c74d07f3895ab0089becdc38fd75254858e617691960a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-055: The server must correctly respond to initialize.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "111ed3725db3b3ac0c4473c0",
+        "text_sha256": "c3ab130a9c854f79fa792a1313e8722dc337fb85191a565b0398208e5d7f3e0c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-056: The server must handle notifications/initialized.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "04004112d72eebed31c425c2",
+        "text_sha256": "57c1c0832fce1ec2b891c82b660286e159315e0f62a1c8aa652fcd4579aa57af",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-057: Listed tools not selected by the model are described as a separate symptom.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "eadd685cf0ca699a32a88036",
+        "text_sha256": "950d0b5c07c078c53460a13f3aebe6c6c8025996552538811992e7949579867a",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "1e9711369a13ce90ae3028e9",
+        "text_sha256": "9e6eb3c28445d1d44f79f86d8b889cbaf345486e3e2f1dec91d964e5bfdf07a7",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "0fffec129fbc102dea47bf5a",
+        "text_sha256": "73e2c63687d847fcecf35c0a2b10863a2e75874d47e89fe7344dfebb9f1d67ac",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-058: The vague prompt example asks about weather without naming tool use. DOCS-SDKMCPDEBUG-059: The clearer prompt example explicitly requests weather-tool use; no tool was invoked.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "0dfdd66269cbbaaefdab8fe0",
+        "text_sha256": "78c2d73aa6e14cf5e2150dd942d79cf2872aa43cb2abd6a2fbb9ad5b743de549",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "aaab0e17c2fd859291c50a34",
+        "text_sha256": "5ccf4359c9426a8c8995ac47b14f5d9a4cdb3baffcdc706d74f88a43ce3ecb39",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-060: The poor description example has an unspecified tool purpose. DOCS-SDKMCPDEBUG-061: The improved example describes a city-weather tool and its outputs. DOCS-SDKMCPDEBUG-061-A01: Improved tool example identifies city weather purpose. DOCS-SDKMCPDEBUG-061-A02: Improved example describes temperature output. DOCS-SDKMCPDEBUG-061-A03: Improved example describes humidity output. DOCS-SDKMCPDEBUG-061-A04: Improved example describes conditions output.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "135e3261972fbe1e06430275",
+        "text_sha256": "3bd4fa53bb62dd72a6838f5155bcae9456d3bf2ead5aa6e01ed60119daf39bdd",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "685d3e5953592d6fef2a565c",
+        "text_sha256": "a15ca452a49319bc36bae53e636ddf9d54b9aa9dc2ffe2dc5d142f6a31545837",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-062: Tool inputSchema must be valid JSON Schema.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "0677da1c914817f3fb8d1e0e",
+        "text_sha256": "c0a5a8fb66f12167214ad4d5a2b3fb973119c856161845944df87af4832f603e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-063: Required input fields must appear in the required array.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "97a7ce0a93b57c4692609113",
+        "text_sha256": "ae3f6ec7c155e9f0b40dc1c577f04dbed251f8e6d6d27808935173bd1c9355c2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-064: The guide identifies tool-call timeout errors as a distinct symptom.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "2874731b15b1be8b363290fe",
+        "text_sha256": "78d6a9e44311631f6f8d2d322e070d8e12c2def108e99285082a70ab776aa6f3",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "98b4ce829943e0ad0c4d564b",
+        "text_sha256": "601c23252d7d234c23039b45cf177224b437c7559bfd4a35c8d375272b83b022",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-065: Increasing timeout is a suggested diagnostic adjustment, not an unlimited-time policy.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "01950f04d93cfc2ebe1a5fc2",
+        "text_sha256": "7fc2adc1f4a0836488416db7913d1e4c137a7a055c1ff35347e70dc20ea1880a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-066: The example sets timeout300000milliseconds/five minutes; this is not an adopted global limit.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "ddcef45c65de2b4ee793e34a",
+        "text_sha256": "8d8209dff4445eb69ae049e6ebceff2253ca3ea66b2f2346d11285a6bfe32d33",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "a9730ae0abb5753ca63ea531",
+        "text_sha256": "f10d119e686196db8fbd1389b3b73bb356082b6fa9d8c028939cda511bd7314a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-067: Progress logging is suggested to find performance bottlenecks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "360ef8fd725a7497ab62d56c",
+        "text_sha256": "8b02f4f368677d771eb891ef713eb6106aae3b63ade067ab43505a55dd7193bd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-068: Async work is suggested as a performance option.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "750e2f5de1aa0e6dfd75e01a",
+        "text_sha256": "27f704bbc805ac79d0c0ff835a6210f5c95077902fa2add6e5c7e00183804044",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-069: Blocking I/O is directed for inspection.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "685199ac259c2603f60c3b7e",
+        "text_sha256": "15c77c99d008c243e5bc819446f23baca5131476249a2519ab542f5fd460e66a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-070: Streaming is suggested for long-running tools only when supported.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "dcafa99b880004b54487430c",
+        "text_sha256": "3751717702b1991dc355b8c5df572151dbf69b372ba0eaba9426d34e04e6f539",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-071: Parse and invalid-request errors are listed as JSON-RPC symptoms. DOCS-SDKMCPDEBUG-071-A01: JSON-RPC symptoms include parse errors. DOCS-SDKMCPDEBUG-071-A02: JSON-RPC symptoms include invalid-request errors.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "1ed53b6e8d10f3e7d05bba87",
+        "text_sha256": "b39f27dac3cdbdff0e1097218c65acee7018a89a208fe9a1bcff34c4fab431a2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "23a25784c740c9580b5c31d8",
+        "text_sha256": "25dcd8301cbfb4c28ef20c5e5446ecb8734e1cc02fd65187aa8c4aff4477962e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "0f2f79a49088c0b6ae061e35",
+        "text_sha256": "8d3233fb15d5f346944df9ed5c90d5f4abae53b90959704d1a8fd7151da26e1a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-072: Debug output on stdout rather than stderr is listed as a possible protocol error cause.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "e2ec3e43322e06004c0956ee",
+        "text_sha256": "4f7f7e73e5c8d60d21ab6d8d1285ee0ff4b54f1837eabdb7afc06a11252f7cd6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-073: Extra newline/whitespace is listed as a possible framing issue; this is not proof all JSON whitespace is forbidden.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "77b903af3b1641d987c29101",
+        "text_sha256": "a11f9ff01d0e4e935cbf8d673857e5435741d7e90303c04819035e60b4246e05",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-074: The incorrect example logs diagnostics to stdout. DOCS-SDKMCPDEBUG-075: The corrected example logs diagnostics to stderr.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "3883128098d086b85e9495b9",
+        "text_sha256": "ea6513448ee43a62debc0ce8713648e83a82be59b60f42fa250db832cc71d82e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "a93ac9a5adbcd9a04b04e992",
+        "text_sha256": "3c859fbb2cd6203ac692cc641d9798856694adc90f8b1b94b5379b2ec51d9275",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-076: The source directs UTF-8 message encoding.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "69d68fdb9f0131ead82dc552",
+        "text_sha256": "6cccbad770ce4171dc32752aa0c1475bd41cf10da2ee254293e7be5f4503715d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-077: The source directs avoiding byte-order marks.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "9795142406879c2f1afe83d4",
+        "text_sha256": "826b9134475964f3158d1f313964f67db368056ea35326eb324d4d9c87176634",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "394c3c6e04829b380ff8454d",
+        "text_sha256": "02229fef90d7435f2f00b7d3fb88749992bdd3f59d26caf6e440cf6e586ece51",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-078: Each protocol message must be a complete JSON object.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "91b5ef0f482925232f306aad",
+        "text_sha256": "0aca1907510d5914de934d6da4e9f85c8bc91abc0e0eda00374c1d56184636e9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-079: The source directs one newline-delimited message per line.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "6795b92bd67ac93edddd90df",
+        "text_sha256": "2dcf5ffd2afb1fb8304bf5e8d0d6a04b69befa3916b101d8a1f4a6b37fe5c3d6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-080: The .NET executable example uses a full Windows.exe path. DOCS-SDKMCPDEBUG-081: The executable example supplies empty arguments. DOCS-SDKMCPDEBUG-082: The executable example sets a working directory. DOCS-SDKMCPDEBUG-083: The executable example enables all tools. DOCS-SDKMCPDEBUG-084: The DLL example launches dotnet. DOCS-SDKMCPDEBUG-085: The DLL example passes a full DLL path. DOCS-SDKMCPDEBUG-086: The DLL example sets its working directory. DOCS-SDKMCPDEBUG-087: The DLL example enables all tools.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "0fba61c590c23cfb83700410",
+        "text_sha256": "d32b41311e7ac68905118d3b370fc803078ce1846d431cba92cfc38d46fc7d7f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-088: The Windows npx example invokes cmd. DOCS-SDKMCPDEBUG-089: The example uses /c npx and automatic package acquisition via -y; no package was fetched. DOCS-SDKMCPDEBUG-090: The example passes a filesystem-server package name. DOCS-SDKMCPDEBUG-091: The example provides an allowed path. DOCS-SDKMCPDEBUG-092: The npx example enables all tools. DOCS-SDKMCPDEBUG-093: The Windows example describes cmd/c wrapping for npx. DOCS-SDKMCPDEBUG-089-A01: Windows example wraps npx with cmd/c. DOCS-SDKMCPDEBUG-089-A02: Windows example uses npx-y automatic acquisition; not executed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "2f42ff950f852f43f3e951b6",
+        "text_sha256": "a4c869464be5daf31684af13b85911999e38b1875d44451fb3905f312a9f2e8f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-094: Windows raw strings or forward slashes are recommended for paths. DOCS-SDKMCPDEBUG-094-A01: Raw Windows path strings are an option. DOCS-SDKMCPDEBUG-094-A02: Forward-slash paths are an alternative.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "9de83a5581d4faa4f005f21c",
+        "text_sha256": "ee4d5534f5db098d35af7844422721d67d583973237a4be620b4dbb96fc42501",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-095: Avoiding spaces in paths when possible is recommended.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "b7baabcbc328bc88d3ff070f",
+        "text_sha256": "f03ae03441cfc75bb0c3d89659c883cd5478d53ffafdc994f8d3e9b3aa543ba7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-096: Required path spaces need proper quoting.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "41332a9fc84d6289ddc56a96",
+        "text_sha256": "4284d28a3c1e89089334a29c0fe6d1e2b9e6361883813b73ecbd95e579abac2e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "a11cb43698118687e23855f9",
+        "text_sha256": "9e1a81b5de425a5a38fe809ec4b7375c4005e09b95780b67dc0093d274a6c5e3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-097: The article lists newly acquired executables as possibly blocked by antivirus.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "5cbb4dfeaddd66308e655c9f",
+        "text_sha256": "0e5f7303aa83a837e1dac7da2805635b37f948c2ae6bc56b4c6245de6c6a0059",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-098: The article lists stdin/stdout processes as possibly blocked by antivirus.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "c7f9557417c5fe115f61bb42",
+        "text_sha256": "d9b3af5328ed8d48413408c4479e0b226233b18613f8a6a96b3be5681652b88d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-099: The source suggests executable antivirus exclusions; this is a protection change requiring applicable approval, not authorized ingestion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "cd519d206c6ad3a421d3929e",
+        "text_sha256": "3e703b47b8ec726132626c621c2e4964c1e6d0e19c5eeb362b335960be2bfc29",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-100: The macOS example removes quarantine metadata from a server executable; it was not executed or accepted as a safe default.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "5cd40b7ccdf97044133ab373",
+        "text_sha256": "fdb20504130b3f7739dcfedf652b3d23809ac2c65a4d8fb555911d634f09a99c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-101: The source notes GUI applications may lack Homebrew's path. DOCS-SDKMCPDEBUG-102: The macOS example uses a full Homebrew Node path. DOCS-SDKMCPDEBUG-103: The example passes a server-script path to Node.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "4f926e3d3374fdf80f8d0e7e",
+        "text_sha256": "de248023fcf749fcd406eef54f5407237de3c2b52a794e1c3615c06f28b48824",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-104: The Linux example changes executable permission; no permission was changed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "3930e8f9bd99274ffe4a2e3e",
+        "text_sha256": "f004cf5b7d14ee05d7d5f4dac93329dd95be422aa2ebb0a561769aef596c9f7e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-105: The Linux example checks shared libraries with ldd. DOCS-SDKMCPDEBUG-106: The Debian/Ubuntu example installs a placeholder library; no package was installed. DOCS-SDKMCPDEBUG-107: The RHEL/CentOS example installs a placeholder library; no package was installed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "efecbd4a9c7fffd80283b3dc",
+        "text_sha256": "d77d5c9c98db96b16e6976ccf98ed11220ebf1ac6c1f579528d59fea3884203d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-108: The source suggests a wrapper capturing all MCP communication, which can expose sensitive payloads; no traffic was collected.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "eaffdfa0671a39c7af158dc0",
+        "text_sha256": "7628437bcb36655832dd3ca18245a2237d2e62faf06ec356800ce53af93d97a6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-109: The wrapper example creates a timestamp-derived relative log name. DOCS-SDKMCPDEBUG-110: The wrapper captures the server path argument. DOCS-SDKMCPDEBUG-111: The wrapper shifts positional arguments. DOCS-SDKMCPDEBUG-112: The wrapper appends a session header. DOCS-SDKMCPDEBUG-113: The wrapper logs the server path. DOCS-SDKMCPDEBUG-114: The wrapper logs arguments without shown redaction. DOCS-SDKMCPDEBUG-115: The wrapper tees stdin to a log. DOCS-SDKMCPDEBUG-116: The wrapper invokes the actual server. DOCS-SDKMCPDEBUG-117: The wrapper appends server stderr to the same log. DOCS-SDKMCPDEBUG-118: The wrapper tees stdout to the log and caller without shown redaction or bounded retention. DOCS-SDKMCPDEBUG-118-A01: Wrapper tees server stdout to log. DOCS-SDKMCPDEBUG-118-A02: Wrapper forwards stdout to caller.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "345714f66b009299de77c5c7",
+        "text_sha256": "5344cf58445cd21d5cf7307f8a8d2859e44900e892b72b6bacce6f4d75d8ca2c",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "f80958fd55f4705fe897d799",
+        "text_sha256": "0e3e9f5a69b5542e1ce6e0464e9cd6c017a413438ca03b26c4bf0f836d2ee61d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-119: The configuration example launches the wrapper. DOCS-SDKMCPDEBUG-120: The wrapper configuration passes an actual server path and arguments.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "066f59d00eecc06bcaeff68d",
+        "text_sha256": "251d4b8f3bee3be8789ae1856380ab8320f4ca33829f8dda732ab34431dfa724",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-121: The source recommends official MCP Inspector for interactive inspection.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "fd6568f112b6fef95e132f14",
+        "text_sha256": "b7238de6aba870ca5bcadb7b10a4bc55eac1ddaee9045024dbf76735dcb9cb7e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-122: The Inspector example invokes an npx package with a server path; no download or process was launched.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "e2b2ab8e01ea311035551129",
+        "text_sha256": "c3c0e51eece2b3dc92d30a3467862c25a71a16f1756e8e05eca9a845bdb5d50e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/code-syntax context read; no extra execution or protocol guarantee inferred."
+      },
+      {
+        "candidate_id": "db8d447297554c375b33eefc",
+        "text_sha256": "828895b24d157a2cfe0fc12a24913151928f4395bf7736e6f44c55ae2bdd25a9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-123: Inspector is described as allowing test requests.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "6437e18a104fdb3393925c77",
+        "text_sha256": "a91eae9049ffe34ae27da75485585eb744c106fe58901c2f87a85a866eb938d9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-124: Inspector is described as showing responses.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "398523a5ca7e6643d62e3a43",
+        "text_sha256": "a2b86b1e4007fb9fc3f3a2bb8d3f6a665f64beae9c5177f0288dccbf5a2fba84",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-125: Inspector is described as inspecting tool schemas.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "9e03c4e570736b9a09a9efe7",
+        "text_sha256": "9fbf964156f63611231da894ab2ed7bdffb6187c14564babd12453a2247c8104",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-126: The source directs checking MCP protocol compatibility with the SDK.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "7a5aa691a934db8ef4d00499",
+        "text_sha256": "2a6b7a5f98422af66e0d58148dc40825c7b93d9f2973bfb61fce7b566f494993",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-127: The initialize-response example shows protocol2024-11-05; it is a pinned-source example, not current protocol certification.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "49642dc93ed61089d3080c26",
+        "text_sha256": "7418a9dd92cdc948726671c5dc3f46c5b6cfa4fa94531bf9f492f3544f7ea80f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-128: Updating the server library is suggested for version mismatch; no library was changed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "300dc85e69fabe63836fcaf8",
+        "text_sha256": "00890901a020ffe5112666e9d626435182d4516040e658ef05afdf4847dd9248",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-129: The guide requests diagnostic information when seeking help, not permission to disclose secrets or private payloads.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "165e53de5bf50042509e45ac",
+        "text_sha256": "5e6d49668fb8de708b00ba940f27838eae930c94f7555f155300925745ce869b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-130: Collect SDK language/version context. DOCS-SDKMCPDEBUG-130-A01: Collect SDK language context. DOCS-SDKMCPDEBUG-130-A02: Collect SDK version context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "569adcf8dfb9b9262a7aa1a2",
+        "text_sha256": "2b68812e2d46c35e58a9b9fb8ce8a1f9f60968d14936cb8f4c4626f058b7eb8d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-131: Collect CLI version context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "905817fb5af2192c63497f32",
+        "text_sha256": "ffffc555a2161db49a0739784ce82b532cf4a2244b8a853a4bcd6f255af77d02",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-132: Collect server implementation/type context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "05cb96d8b4085945c3465a4b",
+        "text_sha256": "f144f48b62de06ac53949e2238530a01d17f469ae8aac2b543201821f236897d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-133: Collect full MCP configuration with secrets redacted. DOCS-SDKMCPDEBUG-133-A01: Collect full MCP configuration. DOCS-SDKMCPDEBUG-133-A02: Redact configuration secrets before sharing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "09a3c16f4879f95f52538e44",
+        "text_sha256": "dcdc4b66fcb7fdbe6bcece05b1823b497d2087c362b1042823c2b60506809952",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-134: Collect manual initialize results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "5ec90ca7d3238726f837f172",
+        "text_sha256": "62c5004821bd2d3b1ea88d680ce44f1556b47ba54a42fb9f119a3d271756e52a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-135: Collect manual tools/list results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "f3f67fcd840103527ab0a96d",
+        "text_sha256": "3e9a0eb36fa95ba49598afbc93ea58456152dfe1f3169c884df6767eefa6f1cc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-136: Collect SDK logs.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "fb25fd3e8b52e51e296f4f5e",
+        "text_sha256": "4e82cf5f12d31ecfa7580cfb0b3a86f375edb9823e3a3ecb0341e0bc7315d24f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-137: Collect error messages.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "ce6cd6d83bc66d68140873e4",
+        "text_sha256": "cfa9f06317799014abf5a47dd2a3f17cde384fefaf3a42cce59c89ae9aa91098",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-138: MCP configuration, SDK debugging and protocol-specification links remain separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "7f3297861aae46f1137670af",
+        "text_sha256": "ac82f2ae12e5280a9099559c2315be87307471abef8fcabc91eb610fdc74d420",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-138: MCP configuration, SDK debugging and protocol-specification links remain separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      },
+      {
+        "candidate_id": "75f94ac2c4f21b9e878baf47",
+        "text_sha256": "fe82fc72753daf85fa903a247db8503199375c782ca5c076f631bea0e2221d05",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKMCPDEBUG-138: MCP configuration, SDK debugging and protocol-specification links remain separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-mcp-debugging-claims.json"
+      }
+    ]
+  }
+]

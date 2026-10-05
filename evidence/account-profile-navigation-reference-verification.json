@@ -1,0 +1,74 @@
+{
+  "issue": 444,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/account-and-profile/how-tos/index.md",
+    "content/account-and-profile/index.md",
+    "content/account-and-profile/reference/index.md",
+    "content/account-and-profile/reference/profile-reference.md"
+  ],
+  "coverage": {
+    "all_account_profile": {
+      "expected": 69,
+      "receipt_present": 60,
+      "missing": [
+        "content/account-and-profile/get-started/account.md",
+        "content/account-and-profile/get-started/index.md",
+        "content/account-and-profile/get-started/personal-dashboard-quickstart.md",
+        "content/account-and-profile/get-started/profile.md",
+        "content/account-and-profile/reference/personal-dashboard.md",
+        "content/account-and-profile/reference/profile-contributions-reference.md",
+        "content/account-and-profile/tutorials/index.md",
+        "content/account-and-profile/tutorials/personalize-your-profile.md",
+        "content/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume.md"
+      ]
+    },
+    "how_tos": {
+      "expected": 46,
+      "receipt_present": 46
+    }
+  },
+  "reusable_fragments_inspected": 3,
+  "feature_datasets_inspected": [
+    "data/features/profile-pronouns.yml"
+  ],
+  "added_reference_claims": 16,
+  "reference_claims": 61312,
+  "claim_bearing_artifacts": 3502,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.976
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_caveat": "List-format individual source receipts only; not independent semantic omission audit, accepted control coverage, published assurance, rights or effective behavior.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}

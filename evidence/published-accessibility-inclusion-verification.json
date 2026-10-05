@@ -1,0 +1,12 @@
+{
+  "issue": 28,
+  "inclusion_map": {"root_sources": 4, "occurrences": 39, "claim_bindings": 77, "independent_map_audit_complete": false},
+  "pr_audit": {"auditor": "codex:evaluator_review", "full_root_lines": 170, "original_claims": 46, "original_claims_sha256": "c96ee50191f9d5d40bcf2b8b34388892adf6de42616e464a762ebdaf66746943", "source_and_span_digests": "MATCH", "corrected_claims": 50, "corrections": ["Preserved literal CLI flags and aliases", "Added comma-separated labels and reviewers, repeated reviewer option and team syntax", "Recorded parent permission qualifications in inclusion map"], "correction_recheck_complete": false},
+  "email_recheck": {"claims": 14, "claims_sha256": "27dee3e757bb9287aad8ce497cdd8ec94866f04cb8c7e910f3242a2160a5d940", "effective_value_correction_supported": true, "source_and_span_digests": "MATCH"},
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 324, "seconds": 2.009, "result": "OK"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0}
+  ],
+  "boundary": "No full renderer, source-deployment identity, original pinned review increment or page assurance."
+}

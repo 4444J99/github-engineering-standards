@@ -1,0 +1,139 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T06:36:39.487Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The page covers FPT/GHEC/GHES but cloud branches describe legacy docker.pkg.github.com replacement by ghcr.io, granular permissions/storage benefits and automatic image migration. These pinned descriptions are not observed completed migration or present target state.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The other branch renders GHES legacy operations. Its source comment about releases without Container Registry is not an additional rendered version predicate; issue 265's lifecycle boundary remains unresolved. The release-stage include contains only a comment identifier, not a release stage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "GHES site administrators may enable or disable supported package types; a documented operation is not proof the registry is enabled or permission to activate it.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The legacy Docker registry does not support foreign layers, with Windows images as an example. Docker Engine v25 is stated incompatible with GHES Docker Registry, and Container Registry migration is recommended; do not generalize to all Docker/Windows/Container Registry support.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "Authentication includes require appropriate classic-PAT scopes while preserving explicit Actions GITHUB_TOKEN paths for associated packages and granted package read access. Scope or token type alone does not prove effective target access; referenced guides remain separately reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The credential example recommends local token storage and Docker password-stdin. Subdomain isolation uses docker.HOSTNAME, otherwise HOSTNAME; USERNAME, host and token-file path are placeholders. This is not approval to create plaintext token files, disclose secrets or execute login; no credentials accessed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The upstream legacy image-name note says lowercase letters only. Multiple top-level images and any number of tags per repository are supported; greater-than-10GB images may degrade service and each layer is capped at 5GB. These are distinct limits, not a hard 10GB rejection or current live capacity measurement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The publish flow discovers image name/ID, tags a repository/owner/image/version path and builds only if not already built, using isolation-dependent host formats and explicit build context. No Dockerfile, image, build or namespace verified and no source commands executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "Publishing uses version-tag references, explicitly not IMAGE_NAME:SHA in this legacy flow. Keep this platform-specific source limitation separate from immutable supply-chain policy and do not silently substitute a different registry contract.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The example monalisa/octocat repository, image ID, age, size and version are illustrative placeholders, not owned entities or execution receipts. Example build assumes Dockerfile in the current directory and subdomain isolation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "Downloads use isolation-dependent Docker pull references and explicit owner/repository/image/tag placeholders; the note likewise requires version rather than SHA references. Installation instructions do not establish artifact safety, permission, rights or executed download.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-LEGACYDOCKER-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-docker-registry.md",
+      "content_sha256": "ebdd5e173bc90addef848172bda701d894892b385089418c2c36ed847ad39881",
+      "start_line": 1,
+      "end_line": 199,
+      "statement": "The repeated deprecation include preserves GHES future supersession wording; linked migration, viewing, deletion/restoration and external Docker guides remain outbound references, not entire guides reviewed by mention.",
+      "accepted_policy": false
+    }
+  ]
+}

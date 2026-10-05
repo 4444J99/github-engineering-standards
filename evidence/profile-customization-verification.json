@@ -1,0 +1,55 @@
+{
+  "issue": 440,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "scope": "Four complete profile-customization source files",
+  "artifact_paths": [
+    "content/account-and-profile/how-tos/profile-customization/index.md",
+    "content/account-and-profile/how-tos/profile-customization/managing-your-profile-readme.md",
+    "content/account-and-profile/how-tos/profile-customization/pinning-items-to-your-profile.md",
+    "content/account-and-profile/how-tos/profile-customization/setting-your-profile-to-private.md"
+  ],
+  "section_receipts": {
+    "present": 4,
+    "expected": 4
+  },
+  "dependency_fragments_inspected": 7,
+  "added_reference_claims": 10,
+  "reference_claims": 61234,
+  "claim_bearing_artifacts": 3476,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 2.004
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_caveat": "Receipt presence and dependency inspection do not establish independent semantic omission completeness, published-version assurance, rights clearance or actual visibility behavior.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}

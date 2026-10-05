@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:46:17Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-APPINSTALLTOKEN-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/general-apps-restrictions.md",
+      "content_sha256": "a3af8ef0f4757bda61698eda538c730322df0e37ca22f95b09f034c58a8d8fea",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Under fpt/ghec, this fragment requires user OAuth workflow scope plus repository write/admin permission for workflow modification. Preserve parent App/authentication context; do not infer universal exclusion of other credential types or authorize workflow writes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPINSTALLTOKEN-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/generate-installation-access-token.md",
+      "content_sha256": "71a995a16ec1345afcfb9f9cda11b06bf541d804c8f7d91275ea5b4161db00c5",
+      "start_line": 1,
+      "end_line": 35,
+      "statement": "Installation authentication uses an App JWT and the correct installation ID obtained from webhook or installation APIs; enterprise lookup requires App installations under its feature conditional. The source's settings paragraph switches to App ID, which differs from client ID and is not interchangeable with installation ID.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPINSTALLTOKEN-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/generate-installation-access-token.md",
+      "content_sha256": "71a995a16ec1345afcfb9f9cda11b06bf541d804c8f7d91275ea5b4161db00c5",
+      "start_line": 1,
+      "end_line": 35,
+      "statement": "Installation-token request repositories/repository_ids optionally restrict access, up to 500 repositories, never beyond installation grants; omitted scope uses all granted repositories. Permission narrowing likewise cannot exceed grants, but enterprise installation tokens cannot be narrowed and retain all granted enterprise permissions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPINSTALLTOKEN-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/generate-installation-access-token.md",
+      "content_sha256": "71a995a16ec1345afcfb9f9cda11b06bf541d804c8f7d91275ea5b4161db00c5",
+      "start_line": 1,
+      "end_line": 35,
+      "statement": "Response includes token, expiry, permissions and applicable repositories; installation token lifetime is one hour. API version and authentication syntax depend on contextual variables/includes. Commands are examples, not authorized token minting, secure secret handling or live capability receipts.",
+      "accepted_policy": false
+    }
+  ]
+}

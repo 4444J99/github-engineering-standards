@@ -1,0 +1,47 @@
+{
+  "issue": 231,
+  "reviewed_at": "2026-10-03T05:29:23.417Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 4,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59574,
+    "claim_bearing_artifacts": 3067,
+    "tests": 324,
+    "test_seconds": 1.979,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Reference-only review; no accepted policy or rights clearance.",
+    "The linked Markdown guide and screenshot image are not reviewed by reference.",
+    "Saving requires successful endpoint verification; no actual endpoint verification or native mutation was performed.",
+    "Navigation is not a repository census or enforced setting."
+  ]
+}

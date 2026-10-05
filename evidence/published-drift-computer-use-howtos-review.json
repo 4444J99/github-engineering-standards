@@ -1,0 +1,48 @@
+{
+  "schema": "ges.published-drift-review.v1",
+  "source": "github/docs",
+  "supplement_commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9",
+  "review_scope": "External drift supplement, not artifacts of the original locked tree",
+  "full_reads": [
+    {
+      "path": "content/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use.md",
+      "content_sha256": "c079a5e6d2d075008f94a15b59b6225f575a62381c31a9e46f38449665b5bc4b",
+      "full_source_lines_read": 84,
+      "source_reference": "https://github.com/github/docs/blob/af7c0325c64f604d2988dbe6e66f3bd9d620e5e9/content/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use.md",
+      "observations": [
+        {"lines": [21, 25], "statement": "Desktop interactions are described for local macOS and Windows sessions; GUI-only workflows are examples, not evidence of support for remote sessions or all operating systems."},
+        {"lines": [29, 35], "statement": "The status command reports plugin, MCP server and associated skill enablement; enablement status alone does not prove effective application access or completed work."},
+        {"lines": [39, 47], "statement": "Enablement persists a local preference and activates the bundled plugin, but cannot override an organization-managed disablement; macOS needs Accessibility and Screen Recording permissions."},
+        {"lines": [51, 60], "statement": "Requests should identify outcome, applications and constraints. The illustrative read-only prompt is not authorization to control an application in this review."},
+        {"lines": [62, 62], "statement": "The active CLI permission mode controls approval prompting. Current-session permission and saved future-session approval are distinct choices, with decline/cancel available."},
+        {"lines": [64, 64], "statement": "Saved application approval also applies to the app on the same computer. Confirm requested application and action; explicit deny rules take precedence."},
+        {"lines": [66, 68], "statement": "The documented CLI interruption uses two Escape presses; this is an operation interrupt, not proof that permission has been revoked."},
+        {"lines": [72, 78], "statement": "Disabling the feature should be followed by checking plugin and MCP-server status; neither operation was executed here."},
+        {"lines": [82, 84], "statement": "Troubleshooting distinguishes account/platform/session eligibility, plugin enablement, MCP connectivity and both macOS permissions; a single enabled component does not establish full readiness."}
+      ]
+    },
+    {
+      "path": "content/copilot/how-tos/github-copilot-app/computer-use.md",
+      "content_sha256": "5d7bcae3bd40304602289da8b15a83763fc24cc61c9b297aeee513fc807286a4",
+      "full_source_lines_read": 72,
+      "source_reference": "https://github.com/github/docs/blob/af7c0325c64f604d2988dbe6e66f3bd9d620e5e9/content/copilot/how-tos/github-copilot-app/computer-use.md",
+      "observations": [
+        {"lines": [18, 22], "statement": "The app supports the described desktop interaction capability in local macOS and Windows sessions; the concept page supplies broader limitations."},
+        {"lines": [26, 34], "statement": "App enablement and macOS prerequisites are separate controls: Accessibility supports application control and Screen Recording supports visual inspection. Status rechecking is distinct from granting permission."},
+        {"lines": [38, 49], "statement": "Outcome/application/constraint framing and checking the requested application and action are recommended. App Tool Permissions determine approval prompts and session versus persistent grants."},
+        {"lines": [51, 51], "statement": "Stop or one Escape press interrupts the current app operation; this differs from the CLI's two-Escape instruction."},
+        {"lines": [55, 61], "statement": "Persistent application approval is shared between app and CLI on the same computer. Removing it only changes future sessions and does not revoke an existing session grant."},
+        {"lines": [61, 61], "statement": "Stopping the current operation and ending its session are distinct: ending the session revokes access granted to that session, according to the source."},
+        {"lines": [65, 67], "statement": "Settings and the session command provide feature-disablement entry points; no settings or permissions were changed during review."},
+        {"lines": [71, 72], "statement": "Account/platform availability and two separately granted macOS prerequisites require confirmation; absent controls cannot be represented as successful enablement."}
+      ]
+    }
+  ],
+  "remaining_dependencies": ["Gated-feature entitlement fragments", "Computer-use preview fragment and product variables", "Feature-version resolver", "Tool-permission how-to", "Four published page-version bodies and render provenance"],
+  "claims_atomicity_and_omissions_independently_certified": false,
+  "locked_inventory_review_increment": 0,
+  "rendered_source_identity_verified": false,
+  "rights_accepted": false,
+  "native_behavior_verified": false,
+  "accepted_policy": false
+}

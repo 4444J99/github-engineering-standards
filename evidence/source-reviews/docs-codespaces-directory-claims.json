@@ -1,0 +1,29 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:37:53.660Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESDIRECTORY-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/workspaces-directory.md",
+      "content_sha256": "6eca44b1bffa0291656d005520066651bdd120f8abe39ae475d72e6dd953e176",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The cloned repository lives in a persistent /workspaces mount whose edits, additions and deletions survive stop/start and container rebuild. Persistence includes accidental deletion effects, not backup or protection from whole-codespace deletion. Outside /workspaces, image-dependent directories generally preserve changes across stop/start but not rebuild, with /tmp explicitly excepted from this generalization; the fragment does not fully specify that exception's retention. Non-root write access may be restricted while many images permit sudo root access, not a universal privilege grant or recommendation to elevate. No files, programs or privileges changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESDIRECTORY-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/your-codespaces-procedure-step.md",
+      "content_sha256": "4039578e5b1eb8aeac94fa31700bc9e2d217a0c00fe02f2020fac7d990af1242",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The global-navigation Codespaces entry opens the personal Your codespaces page. This navigation step is not authenticated inventory evidence, estate-wide listing completeness or permission to modify instances; no UI action occurred.",
+      "accepted_policy": false
+    }
+  ]
+}

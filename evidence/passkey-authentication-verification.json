@@ -1,0 +1,59 @@
+{
+  "issue": 449,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/authentication/authenticating-with-a-passkey/about-passkeys.md",
+    "content/authentication/authenticating-with-a-passkey/index.md",
+    "content/authentication/authenticating-with-a-passkey/managing-your-passkeys.md",
+    "content/authentication/authenticating-with-a-passkey/signing-in-with-a-passkey.md"
+  ],
+  "section_receipts": {
+    "present": 4,
+    "expected": 4
+  },
+  "reusable_fragments_inspected": 7,
+  "feature_datasets_inspected": [
+    "data/features/passkeys.yml"
+  ],
+  "added_reference_claims": 14,
+  "reference_claims": 61386,
+  "claim_bearing_artifacts": 3519,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 4.302
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope_correction": "Issue initial description mentioned IdP/native-auth restrictions; these four sources establish personal-owner scope, GHES >=3.14 and possible admin disablement, not independent IdP compatibility assurance.",
+  "coverage_caveat": "Four source receipts only; not complete authentication corpus, published assurance, recovery restore proof or accepted policy.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false,
+  "credentials_accessed": false
+}

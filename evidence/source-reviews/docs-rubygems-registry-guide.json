@@ -1,0 +1,388 @@
+[
+  {
+    "artifact_id": "c15e95afc399ee8a7fb790ea",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/working-with-a-github-packages-registry/working-with-the-rubygems-registry.md",
+    "content_sha256": "f0907ac6b7815121ea8596caa7a1495da6a26a7f9ffb079b72d5902d09396dd0",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:12:54.607Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "RubyGems publication and Bundler consumption cover FPT/GHEC/GHES; GHES administrators may disable the package type and release-stage reusable is comment-only. Managed users may publish to organizations, not personal namespaces. GHEC github.com uses rubygems.pkg.github.com; another enterprise domain requires rubygems.SUBDOMAIN.ghe.com. The article's cloud examples require this override rather than establishing a universal github.com endpoint. Prerequisites are RubyGems >=2.4.1 and Bundler >=1.6.4 in the pinned guide. Version commands and Bundler 1.13.7 sample output are unexecuted historical examples, not current installed-version observations or recommendations. Classic PAT task-scopes apply to registry authentication; general reusable preserves GITHUB_TOKEN associated-repository publication and read-granted install exceptions. Public RubyGems operations require authentication here, unlike anonymous public Container Registry pulls. packages-rubygems-v2 applies FPT/GHEC only: it enables granular personal/organization scope, recommends workflow GITHUB_TOKEN over PAT and supports separate Actions/Codespaces grants. Do not infer GHES v2 capability from an inactive GHES branch nested in that feature. The v2 reusable describes REST deletion/restoration with package-admin GITHUB_TOKEN in public preview and automatic admin for publishing/explicitly connected repositories. This wording must remain qualified against post-publication linking retaining existing permissions in the access guide; linkage alone is not a verified admin grant. Publishing tutorial stores a github Bearer credential in ~/.gem/credentials; installation sources embed USERNAME:TOKEN in URLs and bundle config credentials. These examples risk secret persistence/history/output exposure and are not permission to run them, commit credential files or expose tokens. GHES isolation changes RubyGems registry URL: rubygems.HOSTNAME when enabled, HOSTNAME/_registry/rubygems otherwise, both wrapped with https:// in examples. NAMESPACE is v2 package owner on cloud versus repository owner in non-v2 scope. Optional gem sources --add configures a global registry source; Bundler config associates credentials with a namespace source. Global client-state changes are separate from a project-specific dependency declaration and require intentional reviewed configuration. Cloud v2 publication defaults private and permits granular package permissions; non-v2 default targets existing repository with gem name. Linked access inheritance is conditional on feature and org default, not visibility inheritance or universally guaranteed effective access. Build uses gem build GEM_NAME.gemspec; push uses --key github, namespace host and illustrative GEM_NAME-0.0.1.gem. Maximum uncompressed metadata.gz must be less than 2 MB per variable; exceeding the limit fails, and the exact-equality boundary is not independently verified. Cloud v2 github_repo metadata associates a repository at publication and allows multiple gems per repository; non-v2 metadata overrides default name-based matching. Source SSH URL metadata is not a tested connection/access or immutable artifact identity receipt. Installation uses a gemrc source or Bundler Gemfile source block scoped to chosen gems alongside rubygems.org/rails. Versions below Bundler 1.7.0 require the documented global source alternative; source precedence and dependency provenance remain untested. The final gem install example pins illustrative version 0.1.1, while the earlier push example is 0.0.1. These are separate examples, not a demonstrated publish/install roundtrip; Gemfile examples omit explicit versions and do not certify immutable resolution. Linked RubyGems creation, Bundler, workflow-security and package-deletion guides remain separately scoped. No upstream client commands, credential changes, dependency downloads, package publication, accepted policy, rights clearance or native enforcement occurred. Full source and required include/feature/variable context read; mapping candidates is not independent extraction or published completeness assurance.",
+    "claim_mappings": [
+      {
+        "candidate_id": "ac9e253072cbc0f83d799687",
+        "text_sha256": "7324d64e2c6b1b08176ab3422d7036968cefefac9dd198711954a8b25b34edd0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "cecf011d46fe41fa1b7a5bd1",
+        "text_sha256": "f2c66bce1665c90add1fc85c213c1c81d5fbedd455f4c2d1d2ffbf018da9ee46",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "594ecf3b223b669d05314166",
+        "text_sha256": "280292a7c7305daf6f6036b8f4e5f41a9dfa0188533f629269586314cad17cf6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "3edacbc3f867aacc08534b1f",
+        "text_sha256": "82829224304c615c06b055d265098ca53f15b7a9dd59b30fe239060447d9f073",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "16c9fdb915f885eda764dbd7",
+        "text_sha256": "66e03458255924e1ff99cf05ba13e393af41866f5788dfc104b5f3192fd8dadc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "33009aa5985b62588baae5bf",
+        "text_sha256": "670a6dc3af68339654bca365eef7314c6903ea1cb5eb73602f1191267a6709e8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "700c16a9aee706967b3b11bb",
+        "text_sha256": "5d403f36b8bbfc3adf4655dda04bf7a98854b4f310628b4851bc2738ddfaf9f1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "6e0e733a703f44d8ce7149c6",
+        "text_sha256": "8a6c91a79226292cbcf43d67de6ccaa1ad872aa5893df2850a04fec7a5cba4f6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "9d55e87027a4ad1af5d9b5e6",
+        "text_sha256": "2628eed7df3bb06ca2f01651c4d5b2128c61c0fea12ba49615bb290b73f71aff",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d49c43d39219b4781b1322f1",
+        "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "8efde039354b19569e0c99a8",
+        "text_sha256": "e54a3f7f45b70374e49d7120c87ef511809505dad89309c50feca2688106869e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "f08f196f8f320f0714b9a243",
+        "text_sha256": "dc962b5977d50585c946d62f142dfe8aa19f055dbcee515c5993b36a961c9b2e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "1a1249709e5fd2da0d9651c5",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "2ebf49c846433ea059aecf18",
+        "text_sha256": "56d73436cbad82e133a93ba9c37e300af024b77738425f91ed98bd52f713db3b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "c2862c3c4247603b06609fde",
+        "text_sha256": "520b3ef204efc146e91040532415814c36f555079287c0d38db8cf0d150c4457",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "1efa3a052569c433daa901ec",
+        "text_sha256": "a80bc7a588ebfab1854c9435b6365e20514943b5eacc1a9a45a5f28ff1d4e638",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "b4c37d5c649000f8e385ab08",
+        "text_sha256": "947107102bbaaa336a5a3804e6cbfc8855b981c223b2f5b0facf4b16ddfb8515",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "9f98846691fc899f873ee868",
+        "text_sha256": "9376d072cc505275ef6f62d4fa2883614f698942569bd4cfe0187ef150d29465",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "8b36e146f96ee1229ac7ba54",
+        "text_sha256": "ba1da87cef74f25d0323a98df83a6f6534496beabefa556a2d64599aa0d80190",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "2ee7bd06fd3e860f0d8887d0",
+        "text_sha256": "71c6588871611a675a6bd13d9ba7fc760ae49d0075f206228ed4d1cf1222d67f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d7f49cc6d5655c3ef28421d0",
+        "text_sha256": "7aca1eebdd236305fccc8e73f71279f482475af7db1dd20cf07b943d1ad356e8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "ff58dfb2cad0ba31b2dfbd7a",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "69765cce8ff99cca0122f03a",
+        "text_sha256": "2c17a101b81dfafe18943d6d87bac0758e3dfd6ee06fd1c7ff50c0fbea77e4c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d45b7da40b7f23ed3e7b534c",
+        "text_sha256": "583dce68931a37f625289d55ac8241e350d5f0c94f53c301d513670bcada0007",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "9ca0457ef22f5cd32cebfb6e",
+        "text_sha256": "c17e32cc28d64b947d63f7913a950b6eef29d3ae4771bfec72ff54c80639ce8e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "3575842f97ffd4bf2f1239a1",
+        "text_sha256": "37fab463597152bf860af25ec5e0ed21e71fce93d924878ee15cb265611daaa2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "57d9f8617ae263ad5d8b3d32",
+        "text_sha256": "d77b4b8ed99cd6660e28b2f2e39c7c5ab07430545381e2e8c5f23fbf36275b27",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "9c5a95a4641ffa6155c32870",
+        "text_sha256": "16aad195dab6776792c0a391fc826170aaa7c25999b1e62782bd9d0866b2e21d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "29cdc4798e70e7cc1c8030ba",
+        "text_sha256": "05ecb83ed9752c806ee7e17039675a62dcfbb8a3c3f0f8cf17089eca244c1361",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "6478518ab2f5673ae16b5433",
+        "text_sha256": "fe6762aa778b7dff255c1125c62073f73f0f6347160117c63676863cf0ae32b4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "92b55eb68de4383d522d695c",
+        "text_sha256": "80b55a341355ef10bcfb3f36504d9e96b2d98ff667f047c9352a8281c5457050",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "93ec14d4cf38b41a34d9997c",
+        "text_sha256": "1ae33fd63623506c8e513efa782334cb3e54186b34e8cba6a2ce5b45062d1603",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "ddbd7e0c47b4ca84e843c999",
+        "text_sha256": "622aa4e15fc33201a9af78f970b3ae81e5267b0e9ef6eeb7d0b4a7ddcd390a07",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "0e2171f654fea7ee9c3df776",
+        "text_sha256": "e61d3ab991157a4bd33f3cf30743ae661f86d29d40dc272ba036561a8612296d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "e541bb94431622e3e166897a",
+        "text_sha256": "b633af8461afa8f1dfc370c4ce2c2ca347161a310a55df6f55f8eb02d9048bc7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "5173af739e5d799a96deaa0e",
+        "text_sha256": "199ac5fefe2ffe8051fe4f40902597402523d556b77331f2dfb48c62d11aacf5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "d23b0d363bc109ba49bc8cb5",
+        "text_sha256": "d38be4b6206276bc0b96459f5501ec79bf8a83930b83a0cbdb65f8e4ebc7868b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "8a087431ce1fa211bd101c66",
+        "text_sha256": "1c2947d4ca6cb1531e10da231ebdf669c1516bc210987042b130b5c10d822c32",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "c3b0338fe97dfab454730d1e",
+        "text_sha256": "c0f9b86db5823707f299b707d26faabaa93f3dad76c222f8e341d51de62e4d29",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "4ae834511746a09c0a0d1188",
+        "text_sha256": "ccbd373ae1611711d11913e55ffb53fe516aa299f4bffff00449488a5315c142",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "9a1de31366ed73a361dcbed4",
+        "text_sha256": "e01737b1105640af7a577ab5f3643c796db92d5c878317f9157f2079f73f739c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "c4687ab2cd3fa87de121efda",
+        "text_sha256": "b2e76dc2dbb518764be9db93a5c57b7368e94560c6f9575ae6b5a13518936c8e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "e8fb6851c4e8f754bd453ea9",
+        "text_sha256": "05876090f547ffe004f03ef4400118f1d16811bb5b79531754eef5c6a43f7eb9",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "e75b05046791b01b0f4ad3a5",
+        "text_sha256": "6febf628f1d8dfeb53361b3fb38aba77eefcbd26e739c031d32b1d4a6066bc74",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "99323de974f64856f79dd529",
+        "text_sha256": "ba1da87cef74f25d0323a98df83a6f6534496beabefa556a2d64599aa0d80190",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "76c6a1952b726b058e92027d",
+        "text_sha256": "3b1f2a2b3132900875f40fac8505de5dd1b4843e53d823af0820306f4c80f780",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "140d0b81dd87ace4292fcc28",
+        "text_sha256": "c06c001533914426a50c3dd2e227ea32fceef838aa146aa85638d4e09244e48c",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "5ee82f5204eb2f6fee2b8568",
+        "text_sha256": "c3bdf6d4b9acf1bc389bd68bec30cf1d674e188f72f53e8b1cd2c92a3606bf0f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "0b2f1e00981db056ec4adcc7",
+        "text_sha256": "1b08b34faf929d8efc0f132cf60218213a08c0b13494494773adde8ef78e7eb3",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "59381e6edfeaf929eb4e0fa0",
+        "text_sha256": "644fe27c91c5efd5b4cf3e01627e738fa77c77de1826ce7842c443363f13ff52",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "cb460a89ecdb4a6e5f2fbd5a",
+        "text_sha256": "cd780446d21b5c199d314fe3378100eb570b95649ec054631f9590d1b0f418ab",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "65325919d59b46d7f7ea8d21",
+        "text_sha256": "72fe05333851a468a4bb83baa599b328b5a1b7a2988712bbeed717edcd3dac9d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "b781287873e4e7fe3db5d50f",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "421a4570e3a9705a61d35257",
+        "text_sha256": "744df6ad9532d2d9f4bcd262dcf11cf4518c5371064d3dce2e251dbc48e2b3b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "e29a92d55ff225ab0f5f6d7d",
+        "text_sha256": "c0f9b86db5823707f299b707d26faabaa93f3dad76c222f8e341d51de62e4d29",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "adb5419b68e4f74d135c818f",
+        "text_sha256": "86e94a1569bb13b7ee758a4b78accb5763ee8817280fd491a917ad6dc84c10cf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "51f6c121407d709058f56089",
+        "text_sha256": "01098f3b70c34c5a18c56911d1cdb1ea3449348909954f5e4c79dde8ab7ed02f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "7359f50b0b0b4614e964e597",
+        "text_sha256": "257f866e5c5fe73d541368428bedae640666d2f58a7e050e607431bc1196d842",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "e9cab41787bba19ab92f2c0c",
+        "text_sha256": "f10b1c31fe4506034ec5c33e6ba19cd2683828f59fc601f68999b181d9a7f91b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "6be23a0587db2b2f69373e79",
+        "text_sha256": "e15dd20cc36f5aa2ed80390a878cee07e6923cb9f94f55fd81f7d4fda6543279",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "480cde3b834eba22b7ebd1cc",
+        "text_sha256": "9a428e85f133cde4161e977f306de9e8fa98d75019b7ba9b064be3af031c8b94",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      },
+      {
+        "candidate_id": "fff576ed50490fafe887100b",
+        "text_sha256": "8d96adafeec9e83b5d448044327dbfc0e69ef5791d1747000b41e37a3ffdf52f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-RUBYGEMSREGISTRY-1 through -15; not adopted policy or executed client behavior."
+      }
+    ]
+  }
+]

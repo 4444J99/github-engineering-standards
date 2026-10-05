@@ -1,0 +1,117 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T07:36:37.090Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "FPT/GHEC Pages custom-domain verification binds publication to repositories owned by verifying personal account or organization; it covers the domain and immediate subdomains, not every descendant hostname or general DNS ownership enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "Unverified dangling Pages configuration can permit takeover after repository deletion, plan downgrade or other unlink/disable changes while DNS remains pointed to Pages. Verification is a source-described mitigation, not proof all lifecycle/DNS risks are eliminated.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "Wildcard DNS is strongly discouraged: verifying apex protects immediate a.example.com but not deeper b.a.example.com under wildcard. Do not treat verified status as recursive wildcard coverage or authority to remove unrelated DNS records.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "Organization/enterprise domain verification for profile badge and GHEC email-notification restriction is separately scoped from Pages verification. A Verified profile badge must not be promoted to Pages ownership protection or accepted DNS clearance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "Verifying a domain owned by the verifier but used by another unverified account/organization immediately releases it from the other Pages websites. Another already-verified owner's domain cannot be released this way; ownership and impact checks are mandatory before any approved native action.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "Personal Pages domain verification lives in profile settings, not repository settings. Add domain yields a challenge DNS TXT record to create at hosting provider; UI creation does not prove control, ownership or successful verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "DNS propagation may be immediate or take up to 24 hours. dig challenge-USERNAME TXT is a read-only diagnostic example requiring actual user/domain substitution; TXT presence alone does not certify native Verified state or live protected behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "Organization owners verify through organization settings/Pages, with organization-specific challenge TXT rather than repository settings. Organization membership or repository admin alone does not satisfy documented organization-owner authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "After DNS propagation, Continue verifying/Verify completes the UI procedure; keep challenge TXT in DNS to maintain verified status. Deleting challenge after a screenshot is not a durable verification strategy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESDOMAINVERIFY-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages.md",
+      "content_sha256": "80a29ab3a26c6480aa1c00ef28e0eb89335d4423b48514320ac88ffbf6a8ad93",
+      "start_line": 1,
+      "end_line": 62,
+      "statement": "No DNS challenge, release, verification, repository/site deletion, billing or publication change performed. Linked provider/domain/profile/enterprise guides remain separately scoped; source claims do not independently certify published assurance, actual anti-takeover behavior, rights or accepted policy.",
+      "accepted_policy": false
+    }
+  ]
+}

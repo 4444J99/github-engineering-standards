@@ -1,0 +1,662 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/code-security/responsible-use/security-and-quality-ai-features.md",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:47:14Z",
+  "review_scope": "Complete 352-line pinned application card read in two nontruncated overlapping ranges. Atomic capability, limitation, validation and responsibility assertions; referenced reusable/outbound dependencies remain separate. No full candidate accounting, independent omission audit, runtime assurance, rights or adopted policy.",
+  "claims": [
+    {
+      "claim_id": "DOCS-SECAI-001",
+      "start_line": 5,
+      "end_line": 6,
+      "statement": "Application-card applicability is feature-gated, not an unconditional declaration for all versions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-002",
+      "start_line": 35,
+      "end_line": 37,
+      "statement": "For GHES the card covers generic secret detection only; cloud Autofix, regex generation and Code Quality assertions must not be inherited.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-003",
+      "start_line": 44,
+      "end_line": 45,
+      "statement": "Cloud Autofix proposes fixes for CodeQL alerts on pull requests and the default branch; proposals are not accepted changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-004",
+      "start_line": 46,
+      "end_line": 46,
+      "statement": "Generic secret detection targets unstructured secrets beyond deterministic patterns.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-005",
+      "start_line": 48,
+      "end_line": 50,
+      "statement": "Cloud regex generation and Code Quality are distinct capabilities, not generic-secret equivalents.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-006",
+      "start_line": 53,
+      "end_line": 53,
+      "statement": "Autofix is available for CodeQL analysis without a Copilot subscription.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-007",
+      "start_line": 55,
+      "end_line": 55,
+      "statement": "Developers evaluate proposed fixes for suitability and preservation of intended behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-008",
+      "start_line": 58,
+      "end_line": 58,
+      "statement": "Generic findings enter a separate generic-alert list for maintainers/security-manager triage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-009",
+      "start_line": 58,
+      "end_line": 58,
+      "statement": "Generic secret detection does not require a Copilot subscription.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-010",
+      "start_line": 61,
+      "end_line": 61,
+      "statement": "Regex generator returns up to three candidates from description and optional examples; outputs need dry-run validation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-011",
+      "start_line": 61,
+      "end_line": 61,
+      "statement": "Regex generation does not require a Copilot subscription.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-012",
+      "start_line": 63,
+      "end_line": 63,
+      "statement": "Code Quality combines deterministic CodeQL quality queries with LLM analysis; the two are not interchangeable coverage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-013",
+      "start_line": 63,
+      "end_line": 63,
+      "statement": "Cloud Code Quality findings use pull-request bot comments and a default-branch AI dashboard as different reporting surfaces.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-014",
+      "start_line": 63,
+      "end_line": 63,
+      "statement": "AI-generated coverage workflows are an optional capability, not proof CI was executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-015",
+      "start_line": 66,
+      "end_line": 66,
+      "statement": "English is the primary supported language for these AI security features.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-016",
+      "start_line": 93,
+      "end_line": 93,
+      "statement": "Autofix language support covers a subset of default/security-extended CodeQL queries; language support alone does not cover every alert.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-017",
+      "start_line": 97,
+      "end_line": 97,
+      "statement": "Generated regex candidates include AI-produced descriptions; descriptions also require verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-018",
+      "start_line": 98,
+      "end_line": 98,
+      "statement": "CodeQL quality queries analyze changed pull-request code and periodically the full default branch.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-019",
+      "start_line": 99,
+      "end_line": 99,
+      "statement": "LLM quality analysis operates on recently changed files after default-branch pushes, not a guaranteed complete repository census.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-020",
+      "start_line": 113,
+      "end_line": 114,
+      "statement": "Generic-secret alerts support credential triage; a finding is not credential remediation evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-021",
+      "start_line": 117,
+      "end_line": 117,
+      "statement": "Generated patterns should be dry-run tested before deployment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-022",
+      "start_line": 126,
+      "end_line": 127,
+      "statement": "Autofix uses internal Copilot APIs to generate both code and explanatory text.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-023",
+      "start_line": 129,
+      "end_line": 129,
+      "statement": "Generic-secret detection uses models, not only deterministic credential regexes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-024",
+      "start_line": 132,
+      "end_line": 132,
+      "statement": "Regex descriptions/examples are processed through LLMs and Copilot API; input-data handling must be reviewed separately.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-025",
+      "start_line": 134,
+      "end_line": 134,
+      "statement": "CodeQL quality queries do not use an LLM; LLM analysis and Autofix use separate modeled pathways.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-026",
+      "start_line": 136,
+      "end_line": 136,
+      "statement": "Model identity, supported models, hosting and training-data information are delegated to linked sources; not fully resolved by this card.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-027",
+      "start_line": 138,
+      "end_line": 139,
+      "statement": "Pinned Autofix data is stated not to train LLMs and governed by Advanced Security terms; this is feature-specific, not universal AI data clearance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-028",
+      "start_line": 146,
+      "end_line": 150,
+      "statement": "Autofix prompts include SARIF, source/sink/flow snippets, approximately first-ten file lines and query help; not necessarily the entire codebase.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-029",
+      "start_line": 151,
+      "end_line": 153,
+      "statement": "Autofix model output is stored/displayed as a suggestion, not proof of implemented remediation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-030",
+      "start_line": 160,
+      "end_line": 160,
+      "statement": "Generic detection input is repository text plus a meta prompt; users do not interact directly with the model.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-031",
+      "start_line": 160,
+      "end_line": 160,
+      "statement": "Multiple models may validate a generic finding; this is a capability statement, not an actual target validation receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-032",
+      "start_line": 162,
+      "end_line": 163,
+      "statement": "Generic detection verifies returned strings exist in input and labels its alerts separately; this does not establish credential validity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-033",
+      "start_line": 168,
+      "end_line": 169,
+      "statement": "Regex generation sends descriptions and optional examples to an LLM through Copilot API.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-034",
+      "start_line": 170,
+      "end_line": 170,
+      "statement": "Regex candidates can be similar and miss intended instances; three candidates do not imply three independently effective patterns.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-035",
+      "start_line": 171,
+      "end_line": 171,
+      "statement": "Explicit result selection copies expression/examples to the form for dry-run testing; selection is not deployment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-036",
+      "start_line": 175,
+      "end_line": 178,
+      "statement": "Cloud quality LLM analyzes recently changed files with context and displays findings; suggested changes remain optional.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-037",
+      "start_line": 182,
+      "end_line": 185,
+      "statement": "Pull-request quality Autofix consumes CodeQL findings and context and posts a bot suggestion only if a fix can be generated.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-038",
+      "start_line": 193,
+      "end_line": 193,
+      "statement": "Autofix is nondeterministic; identical input can yield varied or no viable suggestions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-039",
+      "start_line": 194,
+      "end_line": 194,
+      "statement": "Complex multifile flows and subtle logic can exceed model capability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-040",
+      "start_line": 195,
+      "end_line": 195,
+      "statement": "Large-context truncation can prevent attempted fixes; absent output is not a clean assessment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-041",
+      "start_line": 196,
+      "end_line": 196,
+      "statement": "Autofix does not cover every alert type or language.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-042",
+      "start_line": 197,
+      "end_line": 197,
+      "statement": "Operational capacity and failed internal testing can suppress suggestions; no suggestion does not mean no vulnerability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-043",
+      "start_line": 198,
+      "end_line": 198,
+      "statement": "Non-English code/comments may have lower fix success due to English-centric training/evaluation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-044",
+      "start_line": 199,
+      "end_line": 199,
+      "statement": "Suggested fixes can contain syntax errors.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-045",
+      "start_line": 200,
+      "end_line": 200,
+      "statement": "Suggested fixes can target incorrect locations and introduce syntax errors.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-046",
+      "start_line": 201,
+      "end_line": 201,
+      "statement": "Syntactically valid suggestions can alter program semantics and cannot infer author intent.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-047",
+      "start_line": 202,
+      "end_line": 202,
+      "statement": "Suggestions may leave vulnerabilities unresolved or introduce new vulnerabilities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-048",
+      "start_line": 203,
+      "end_line": 203,
+      "statement": "Fixes may only partially remediate security or preserve functionality.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-049",
+      "start_line": 204,
+      "end_line": 204,
+      "statement": "Dependency suggestions can be insecure, unsupported or fabricated; verify dependency changes before merge.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-050",
+      "start_line": 209,
+      "end_line": 209,
+      "statement": "AI secret detection can miss credentials; users retain responsibility for code security.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-051",
+      "start_line": 210,
+      "end_line": 212,
+      "statement": "AI secret detection may skip test-like paths and listed language extensions under stated conditions; these are coverage gaps, not N/A evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-052",
+      "start_line": 217,
+      "end_line": 217,
+      "statement": "Regex coverage depends on description clarity and may omit intended tokens.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-053",
+      "start_line": 218,
+      "end_line": 218,
+      "statement": "Generated regexes may be invalid or inappropriate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-054",
+      "start_line": 219,
+      "end_line": 219,
+      "statement": "Regex generator targets structured predictable formats, not free-form matching.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-055",
+      "start_line": 220,
+      "end_line": 220,
+      "statement": "Non-English prompts may lower regex generation performance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-056",
+      "start_line": 221,
+      "end_line": 221,
+      "statement": "Similar returned regexes reduce effective diversity of candidate patterns.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-057",
+      "start_line": 225,
+      "end_line": 225,
+      "statement": "Code Quality inherits model limitations including incomplete detection, false positives, suggestion accuracy and bias; linked agent guidance remains independent.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-058",
+      "start_line": 226,
+      "end_line": 226,
+      "statement": "Quality Autofix is best effort, not guaranteed for each finding.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-059",
+      "start_line": 227,
+      "end_line": 227,
+      "statement": "Quality Autofix suggestions must be reviewed and edited as necessary before acceptance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-060",
+      "start_line": 237,
+      "end_line": 237,
+      "statement": "Evaluation uses independent runs to address nondeterminism and reports resolution, token efficiency, latency and tool reliability; no local target certificate follows.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-061",
+      "start_line": 237,
+      "end_line": 237,
+      "statement": "Pinned evaluation policy excludes real user queries/customer code without permission; not a blanket data processing authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-062",
+      "start_line": 241,
+      "end_line": 241,
+      "statement": "Models undergo staged comparison against baselines across key metrics before release.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-063",
+      "start_line": 246,
+      "end_line": 250,
+      "statement": "Risk/safety and evaluation-data details depend on separate reusable fragments that require review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-064",
+      "start_line": 255,
+      "end_line": 255,
+      "statement": "The described Autofix harness includes over 2300 covered public-repository alerts; benchmark scope is not target-wide security assurance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-065",
+      "start_line": 257,
+      "end_line": 262,
+      "statement": "Harness checks fixed alerts, new alerts, syntax errors and test-output changes separately.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-066",
+      "start_line": 264,
+      "end_line": 264,
+      "statement": "Spot-checking and manual triage supplement harness success; passing CI alone is insufficient fix correctness.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-067",
+      "start_line": 266,
+      "end_line": 269,
+      "statement": "Red teaming/filtering and continuing generic-secret efficacy monitoring are mitigations, not absence-of-risk proofs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-068",
+      "start_line": 272,
+      "end_line": 272,
+      "statement": "Regex dry-run validation is a preproduction safeguard, not exhaustive pattern effectiveness evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-069",
+      "start_line": 274,
+      "end_line": 274,
+      "statement": "Quality LLM and Autofix reuse other evaluation frameworks; shared infrastructure does not prove every target finding.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-070",
+      "start_line": 280,
+      "end_line": 280,
+      "statement": "Autofix requires explicit human review/acceptance and verification of intended behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-071",
+      "start_line": 281,
+      "end_line": 282,
+      "statement": "Content filtering and internal testing can withhold suggestions; neither makes absent results a passing assessment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-072",
+      "start_line": 283,
+      "end_line": 283,
+      "statement": "Autofix is allowed by default for CodeQL repositories but can be disabled at enterprise, organization and repository scopes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-073",
+      "start_line": 284,
+      "end_line": 284,
+      "statement": "No-training statement applies to Autofix and retains governing terms.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-074",
+      "start_line": 286,
+      "end_line": 286,
+      "statement": "False-positive alert volume feeds generic-secret improvement without access to secret literals; the card does not authorize exposing credentials elsewhere.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-075",
+      "start_line": 288,
+      "end_line": 289,
+      "statement": "Generated regexes require dry run, explicit import and manual save/enable; generator does not deploy automatically.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-076",
+      "start_line": 290,
+      "end_line": 290,
+      "statement": "Code Quality supports thumbs-up/down feedback; feedback is not binding policy adoption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-077",
+      "start_line": 297,
+      "end_line": 298,
+      "statement": "Consequential-use and legal/regulatory assessment guidance are separate reusable dependencies.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-078",
+      "start_line": 300,
+      "end_line": 300,
+      "statement": "Review suggested fixes for actual vulnerability remediation and intended behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-079",
+      "start_line": 301,
+      "end_line": 301,
+      "statement": "After committing a fix, verify CI passes and the alert resolves before merge.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-080",
+      "start_line": 302,
+      "end_line": 302,
+      "statement": "Verify dependency security/support and behavior, using dependency-review tooling where appropriate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-081",
+      "start_line": 304,
+      "end_line": 304,
+      "statement": "Verify each suspected false-positive generic alert before closing it with that reason; do not blanket-dismiss AI findings.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-082",
+      "start_line": 306,
+      "end_line": 306,
+      "statement": "Dry-run generated patterns against representative repositories before organization-wide deployment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-083",
+      "start_line": 307,
+      "end_line": 307,
+      "statement": "Use specific descriptions and diverse example strings to improve generated regex quality.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-084",
+      "start_line": 308,
+      "end_line": 308,
+      "statement": "Review every generated regex and description, modify as needed, and retain responsibility for adopted patterns.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-085",
+      "start_line": 309,
+      "end_line": 309,
+      "statement": "Verify quality findings and Autofix applicability before accepting changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-086",
+      "start_line": 310,
+      "end_line": 310,
+      "statement": "Provide quality-feedback signals to improve suggestions; this is advisory, not enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-087",
+      "start_line": 312,
+      "end_line": 312,
+      "statement": "Human oversight must check AI output against expectations because it can be inaccurate, incomplete, biased or irrelevant.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-088",
+      "start_line": 313,
+      "end_line": 314,
+      "statement": "Overreliance and sensitive-domain agent caution are delegated to separate reusable guidance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-089",
+      "start_line": 316,
+      "end_line": 316,
+      "statement": "Establish pull-request CI before enabling Autofix to check functional behavior after fixes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-090",
+      "start_line": 317,
+      "end_line": 317,
+      "statement": "Use pull-request dependency review to detect risky Autofix dependency changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-091",
+      "start_line": 318,
+      "end_line": 318,
+      "statement": "Review organization Autofix suggestion metrics with an explicit time window; suggestion counts are not verified fix counts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-092",
+      "start_line": 320,
+      "end_line": 320,
+      "statement": "Evaluate generic-secret false-positive volume and establish alert triage processes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SECAI-093",
+      "start_line": 322,
+      "end_line": 323,
+      "statement": "Monitor Code Quality suggestion volume/quality and adjust enablement for organizational needs.",
+      "accepted_policy": false
+    }
+  ]
+}

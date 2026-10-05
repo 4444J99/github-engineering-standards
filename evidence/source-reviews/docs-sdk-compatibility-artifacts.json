@@ -1,0 +1,1321 @@
+[
+  {
+    "artifact_id": "1c78ba941a3d5d9d56b04930",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+    "content_sha256": "b15ab8bef5f43c8f31d4a8cbb2efb952ad401eb9bc02ca2647cb86e97f30ffff",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T05:13:39Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Complete314-line compatibility article read: all available/CLI-only table entries, experimental boundaries, workarounds, protocol versions and examples. No handler registration, permissions, RPCs, CLI export, plan writes/deletion or issue creation executed. No current installed-runtime, policy adoption, rights or independent omission certification.",
+    "claim_mappings": [
+      {
+        "candidate_id": "0cabb6efe73db980317d376f",
+        "text_sha256": "966b293f76f8df84312d14faa127976ea5c21dc52df197f92814aa2f4b8caa55",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-001: The article compares SDK-accessible and CLI-only features. DOCS-SDKCOMPAT-002: The article declares Free/Pro/Team and Enterprise Cloud versions. DOCS-SDKCOMPAT-003: The article declares a former SDK/CLI compatibility path redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a85d01ad1fef3de00950c00b",
+        "text_sha256": "e2c48d36d6bf43927c4febfc8d2c69a1c233561b5d860677acd2c85b4c427e4b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-003: The article declares a former SDK/CLI compatibility path redirect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "175760cacda9301b1e6ece79",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "eb5205c92b6c07f7bea0953a",
+        "text_sha256": "c9dcfe94bcb5e91da11d34a26176cc5cd182c05bcf9c00204450dcbbf8f5f4f5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-004: SDK communicates with CLI through JSON-RPC. DOCS-SDKCOMPAT-005: A feature must be explicitly exposed through the protocol to be SDK-accessible. DOCS-SDKCOMPAT-006: Many terminal-interactive features are unavailable programmatically.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "d97f8d4256e546d74be0cae8",
+        "text_sha256": "fea18fea5c0dced379df5f4b011cf6d841ca548d6b83d6e4acf82ec13fd459d5",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "543730fa22f1b81f3fca6e49",
+        "text_sha256": "4cc7cfe9e57dacfa599754cf0eb205887a8e11b5e99298ec98ae782880c2c7a0",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "161e29c8f5d28b611a583a54",
+        "text_sha256": "58531990d5b736369b2166d65cfb646b7a7df106635927e3f2fe0d026af48ef3",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "0b2a119a2d0572b82dc354f5",
+        "text_sha256": "ffa133cce41732970e9d8ff0ce37a5ff18859acf6048a8b811ee70823ab9e3ea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-007: The source lists session creation through createSession as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-073: Session creation is described as supporting full configuration.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "038f889b3e201656030be4f8",
+        "text_sha256": "67166f3b826b7ca153616f46f67fad6f364a6bb3a6d23ea36d44a0e8f7708644",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-008: The source lists session resume through resumeSession as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-074: Resume is described as supporting infinite-session workspaces.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "d6430039c8c586a8bac62fea",
+        "text_sha256": "458245359c92a8852b2db83f8c6fe9dde73ce0ac576c3fa8e399adb5476c442b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-009: The source lists session disconnect through disconnect as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-075: Disconnect releases memory rather than demonstrating disk deletion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "46f8789422be6863e2c4f991",
+        "text_sha256": "c3f14ccde850246388d8a919618077cf4295da0974527b1bc8a4be037ebd44e1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-010: The source lists deprecated session destruction through destroy as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-076: The deprecated destroy method should be replaced with disconnect.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "3d9909ab919d1140baf16fe4",
+        "text_sha256": "b3650f31a68cbf665be2d2bfaea3b25903071a6109ce6c28410cac348cc318ec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-011: The source lists permanent session deletion through deleteSession as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-077: Session deletion removes stored state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "37f5e946d357cc45bfdcf6be",
+        "text_sha256": "878c0ca8edca7854940ef968087753f403e228caa8bd145acc2201dd0d7fbabe",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-012: The source lists stored session listing through listSessions as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-078: The listing method includes stored sessions.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "6b27c5d960e1f41869d42332",
+        "text_sha256": "4829975e20ed71eb058e4b7fe53aa1d245cab993e1ee22c479efdedd1ef76f8c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-013: The source lists last-session identity through getLastSessionId as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "be06004ef834c4a92368b0dd",
+        "text_sha256": "17484bd68acbdde4518c02cd4dc22ccbbc930c42564f28dd0d84f3940878e5a9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-014: The source lists foreground-session query through getForegroundSessionId as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "18e82e0ae8ecb6ce318a8122",
+        "text_sha256": "64b108b2fe350f888053371df93ae5346b2c1c79e7e628e7308de5bde4a520c8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-015: The source lists foreground-session selection through setForegroundSessionId as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "45be95b5d61d4ce0a8142b75",
+        "text_sha256": "6a500d7a5bb1fa9204d86890331c78c6a601f0feb4cff7fef174899d0c150d82",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "a0a79b03ca0cac59050d258d",
+        "text_sha256": "a69a159e9b903cbcde3b50caf72eaac560ebb9fb229c891eae86b67ef1f58075",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-016: The source lists message sending through send as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "dc596243fe6b5ed7e5c9ef38",
+        "text_sha256": "1cfd96a2e413172035ae659547659c4fdeb8f95d680349dd14262adb85ef4e22",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-017: The source lists send-and-wait through sendAndWait as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-079: Send-and-wait blocks until completion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "7725e1dfe3c873b18fb16715",
+        "text_sha256": "564dd402dcd0a2903c6be9e203d8c9852fdcde995d45dcc7e9dd0ce31e2dc37f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-018: The source lists mid-turn message steering through send immediate mode as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-080: Immediate steering injects input without aborting the turn.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "40491e8d65de57fdbaeb65aa",
+        "text_sha256": "c4e7e3f0969d150dec2a3159f4d71205e801a1a55f4e98efafd68b5811bd8d21",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-019: The source lists message queueing through send enqueue mode as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-081: Enqueue buffers messages for sequential processing and is the default.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "e2f6b29d6479339adf7737f3",
+        "text_sha256": "683dc073b5a10eb212e5c77b430c8b27aad6857c06b7854d4eaf8494f2944dc2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-020: The source lists file attachments through send attachment file as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-082: File-image attachments are auto-encoded. DOCS-SDKCOMPAT-083: File-image attachments are resized.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "f9cd4bde5a764f37a2dc7bd0",
+        "text_sha256": "bb106c54f43cfc130b147dce9ed1b2895a20bfb7c46a4e2cde3f0dfe29218a4d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-021: The source lists directory attachments through send attachment directory as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-084: Directory attachments add directory context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "9902cd040e032c7a182d8432",
+        "text_sha256": "2a9416e4511ba3fd76d946ab4fa4fa761e0113a4c27be6ccf89779891ab589c1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-022: The source lists event history through getEvents as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-085: getEvents returns session events.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "6e8f7af70f78e21601975aa5",
+        "text_sha256": "4d8ac1b6b8129674c731f98c37923e87a83d3408b475607f2b4e8312b63383ed",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-023: The source lists in-flight cancellation through abort as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-086: Abort cancels an in-flight request rather than demonstrating permanent session deletion.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "6dc9e4f5b56ac8b83b29bea0",
+        "text_sha256": "59a502cbc007c8fb211dcb97144fe557018d7210265b3f86839ae68047bc830d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "13bf9e260b972f7ab242a649",
+        "text_sha256": "23e3b3ee67b165f76d13235d37efbb811708bc21f07a942bbbc816d3d7c7b19b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-024: The source lists custom tool registration through registerTools as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-087: Custom tools support JSON Schema.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a76a9fbbcf964f615f9862da",
+        "text_sha256": "93eb29c17d920150c22fe7923f8da6f8f8207fed84b7ff0a8f714a37401792bf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-025: The source lists pre-tool permission control through onPreToolUse as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-088: Pre-tool control supports allow, deny and ask outcomes.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "36778929b9b62201d61311b4",
+        "text_sha256": "f43d35f58b68ab56e45df262df83ab57e3d896f7a6ef9bb85d364a42cc10ab38",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-026: The source lists tool-result modification through onPostToolUse as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "2835311c609c7475110ffe1c",
+        "text_sha256": "cf53c954f1d9f91dc7539ba2664484434700119bcb46291f4e234fcc22c760ea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-027: The source lists tool filtering through availableTools/excludedTools as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "92ad5b39328d9d6138b3f2cf",
+        "text_sha256": "080a9406912e4f07aac62b6cd442112d6de3a037858a6a50345239eca3f02486",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "d23cc157b40aaade5692bd85",
+        "text_sha256": "309c4a092a2b6cae3b39073fc83704f624a7cd900d482b0155d3e3b32dcc4120",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-028: The source lists model listing through listModels as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-089: Model listing includes capability metadata. DOCS-SDKCOMPAT-090: Model listing includes billing metadata. DOCS-SDKCOMPAT-091: Model listing includes policy metadata.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "5e8c5af2e009c6e869fdce5a",
+        "text_sha256": "ff3d2ba7a5f621a0fef4c75b07fb29bcdd22c209924df4e35528b6bd90bce9f6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-029: The source lists creation-time model selection through model session config as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-092: Creation-time model configuration is per-session.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "49bf48d87616098ccdcd0d28",
+        "text_sha256": "efc302a640690a16a148991e71447d876246196fc912a157c91620e694c13d07",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-030: The source lists mid-session model switching through setModel/model.switchTo as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "829a40cec4a9a7bfd306d7a9",
+        "text_sha256": "ef61f32330ff6b7300b67b4b5b038337cd0e6c814ea083e9892911c8567e1127",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-031: The source lists active model query through model.getCurrent as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "84149de1a22c90323b9a16b4",
+        "text_sha256": "530a7967c56e1f6a91ea783dd9651c4cb6d3663c7ae215bb585fd62f79dffdb2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-032: The source lists supported-model reasoning effort through reasoningEffort as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-093: Reasoning effort is limited to supported models.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "b4495c4ee774266d2094e3e6",
+        "text_sha256": "afb4fe6c2bf219d40973ddca1f4290951c218720c78d8bf78ea24b3b25573535",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "c90cc275cc40a121ad82c047",
+        "text_sha256": "fd430fcbd6272a421f45efdff60ec1c1d7f67de9bd95eb075bf2ccd8bd5567ee",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-033: The source lists agent-mode query through mode.get as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "87656c61461b840c33b114b3",
+        "text_sha256": "5d6e29edac10938ccf1a5424bf1ff54d389541bc31bbef3678c87b7467d0b954",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-034: The source lists agent-mode change through mode.set as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ac36f850a98f0d1abda5489d",
+        "text_sha256": "21e7449105c9e991c5e883e798447d91aaa232f2a12837449fd77ba03186945d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "306c8329576600ace8ad4dc8",
+        "text_sha256": "09335f687a8242c3702130b6819c40cb4443216d6126217f792ef02a1112237d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-035: The source lists plan reading through plan.read as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-094: Plan read returns content. DOCS-SDKCOMPAT-095: Plan read returns path.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c17a5b2c079934e54ee89e25",
+        "text_sha256": "e312feac1ae5fa6731506b0a886e3bc3cffaaa02d96fbbffa2abe995217069b4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-036: The source lists plan updates through plan.update as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-096: Plan updates write planning state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "442924fde47f9434e9a58f3c",
+        "text_sha256": "53e2d5b77b68947ed9f6a33245cfa826c64e079f1b0930686f079ba548bde589",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-037: The source lists plan deletion through plan.delete as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-097: Plan deletion removes planning state.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ceb51ad5da1a4ed75c5f3ec8",
+        "text_sha256": "fe6a9a5e5439b72afcd9fd99a01dde1f22dbac0703e59e244681eaa66899099e",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "5b2a428baf0633e2dfd12906",
+        "text_sha256": "5c9b1eb59e925ca92f125f0b85f1ca299d4d3df2ffbd6e077a7b8c143bdd3659",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-038: The source lists workspace-file listing through workspace.listFiles as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ac0595c290635cd6a2487e8e",
+        "text_sha256": "ad923143a59e8626a0d8bfdc7b5dda16b5372754ae752a2970492068ecd1c624",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-039: The source lists workspace-file reading through workspace.readFile as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a854768260368c940695ecd9",
+        "text_sha256": "567947d2d33c2aa66cd8704d138cf59d9f5c46b76c61bd921a24ce7c550de08b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-040: The source lists workspace-file creation through workspace.createFile as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "452b3d5127cc7b82d3174854",
+        "text_sha256": "6c0e3909cd06055c5fdd5ce822f642cdfb99a271ec97a30ca5229143540e0804",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "a1c473d447b64dcfb4e6761d",
+        "text_sha256": "c05e8b5f1ccc777bf8691dc6039b8baabd04c54d62229fed6fd26b01f4d17f25",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-041: The source lists authentication-status query through getAuthStatus as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "bf251363d10ba6af52396ee6",
+        "text_sha256": "81537398031031329a366cb7d8a162511eceb25181d75f0b6f768d4ec3489ef7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-042: The source lists programmatic user-token authentication through gitHubToken as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "59d0247c3f768c72a9819c65",
+        "text_sha256": "ce137f2bc74bbf1f76a502e669a97bd630b358a98eb8bcbd23f294b90e42ab6d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "dfe60f57acea0e19defdc0f8",
+        "text_sha256": "04963d87955668ca9ea5284b3f967c9d18427ffad41c3b11bf4871659d27d617",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-043: The source lists server ping through ping as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-098: Ping reports a server timestamp.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "192f5bc9e99f3a03b93440a7",
+        "text_sha256": "8927787ae842aa04f45714b975438813e970da2578c864d9cf648f79c2bb43a0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-044: The source lists server status through getStatus as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-099: Status reports protocol version. DOCS-SDKCOMPAT-100: Status reports server information.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "dee8be08606adb02db53df7f",
+        "text_sha256": "1d61cfda0d4c2083981a3b629297a887429f8edb18cda851759c3188454cc4e8",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "14a7d5c24460689bea1e49a0",
+        "text_sha256": "71a7afdbbe3acd841c17c2855ca08c4a0a8746747f143242a4f235ee9295b166",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-045: The source lists local/stdio MCP servers through mcpServers as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-101: Local MCP configuration can spawn processes; importing the article does not authorize spawning.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "596563e0788e95a33ef721ba",
+        "text_sha256": "ac1c3bbce102df8ea9b21b2f216a490e73f421feba7b5f78d12f788d1359c341",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-046: The source lists remote HTTP/SSE MCP servers through mcpServers as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-102: Remote MCP configuration connects to services; no connection was made.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a9aa5e5f1be6c13616a82447",
+        "text_sha256": "80dd6157c717fb37662bc83c2556e94be6bd27e7bc8821b579b7f8ef18a9833b",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "5ac0063b586c9a38fcac1c5a",
+        "text_sha256": "4b8c718a27bd26a2b0ea2f81cb09bf4cc00e31dc41c918573140b4233d92189e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-047: The source lists pre-tool hooks through onPreToolUse as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-103: Pre-tool hooks can modify arguments.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "f84e063fd4d7b7d68f13f810",
+        "text_sha256": "c517349c4a22be3a9efac9ce76588972bfbb4e48e8e210e50a06119f79bf28c4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-048: The source lists successful post-tool hooks through onPostToolUse as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "edd9dc2c74b30a21992b8ad7",
+        "text_sha256": "c19cc75a781311c7c39c463ec718b3d5941d397a106693fc361795de8acf0fee",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-049: The source lists failed post-tool hooks through onPostToolUseFailure as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-104: Failed-tool hooks observe failures. DOCS-SDKCOMPAT-105: Failed-tool hooks may inject retry guidance.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "61aaba1e894decb762bc659c",
+        "text_sha256": "9ed6478804ba8268056258d70703feba7d475ba306d4e66947c524ba48cf2af5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-050: The source lists prompt modification through onUserPromptSubmitted as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "57206345d9a34cffc4e93b03",
+        "text_sha256": "1bfcfc82016a7d38c145b936fb07b0c22d9b16a5965f377bb8f5cbc06a02ec69",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-051: The source lists session lifecycle hooks through onSessionStart/onSessionEnd as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-106: Lifecycle hooks carry source/reason context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c64508249f563e2ed08c289c",
+        "text_sha256": "ddfaff629de1edadc8edcfb30a01e02f8517b7c336fef843d007bd03087a95f8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-052: The source lists custom error handling through onErrorOccurred as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "3a8674e326259708ff72a6d9",
+        "text_sha256": "008babde0aca0ade7c4f5533f6b83fa1122e40c586c24c4152ea8094c73f263b",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "59da3ebc41b3a344aaf7d4bf",
+        "text_sha256": "4f0d483bfc62e7652645a1ff0acef502345443e3146e2fb43cf987f0755cb6cc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-053: The source lists session event subscription through on/once as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-107: The article advertises more than40event types; no installed event count was measured.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "17c6f8ae9a050e7b9834670a",
+        "text_sha256": "79e373224548367a64beab4468bda4b7a7ea9bb69a562535444a8a51f38ad5cf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-054: The source lists streaming delta events through streaming as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "4040e82dbf10a2391dd54f3c",
+        "text_sha256": "31b4c7f30deb5a262b6a7b797a497cec7975bf515ea9c8455e8db5640cbff0e4",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "4aa3c860b0650b9996e988b1",
+        "text_sha256": "a9505afc70bf292b78e912dd8da773644e7b08d8d96ddf789236b2f4d5c4f39b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-055: The source lists custom agents through customAgents as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "3d467a2db8893d2e5f1eea9e",
+        "text_sha256": "f75955ca6da80e5f2e92ab8ea2137efd2506503b5c5c8d62b0e458182dc494fe",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-056: The source lists custom system prompts through systemMessage as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-108: System prompts may append or replace.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c7ff4058210b19c02da9504d",
+        "text_sha256": "12e14d1ee79e5b00eb23773ceb2d0ec214e539eddb07549a8ebe15ab9eab1e62",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-057: The source lists BYOK providers through provider as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "4ccde3ff0d878dd9e8233140",
+        "text_sha256": "e278f749821bed0ee41b3dc6df2c011504a61d5e65470e15eb188e9661a3d92d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-058: The source lists automatic context compaction through infiniteSessions as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "f3473f7f9111d370446e89ab",
+        "text_sha256": "ae872f4d7c7bf2dc4cbb05aba9ee228b01a6b061520559b9a942fd038804e005",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-059: The source lists permission handlers through onPermissionRequest as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-109: Permission handlers can approve or deny requests. DOCS-SDKCOMPAT-110: Optional decisionContext attaches auto-approval telemetry, not external authorization.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "7b6bbdd4f6382f8b3b55859f",
+        "text_sha256": "e88e1d6cbc2550331f29a77f0f66290647e86e0a21f4a7d56ad3fec6e46d4b9a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-060: The source lists user-input handling through onUserInputRequest as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "4fd6985c9da02b7f916b4a82",
+        "text_sha256": "e488d47d56eac04b8846f1099f37645d263298bafb9d9ef8bb785d623ca754e0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-061: The source lists custom skill directories through skillDirectories as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "f2a115968185e47cc154baf9",
+        "text_sha256": "bc14ffcd0685cc88eeb410b33e42093962e268c2679a272ee98b1d0420d04772",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-062: The source lists skill exclusion through disabledSkills as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "dc374b491bbb8baf3f8330a4",
+        "text_sha256": "2b0ccb06fd02ea0f763551b11314d792062c883f633ad78a1752679ce7d5277c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-063: The source lists configuration-directory override through configDir as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "308df8ca4bf9a6594129def3",
+        "text_sha256": "1053b968356282b354820dfb0b8f49d63d703dd70f3932d52ab33e8aa0e33341",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-064: The source lists application User-Agent identification through clientName as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "39aac074d29b6e43602ed681",
+        "text_sha256": "45b61261378b0639601b1f08e3268e9144e181d39dc2e89f4984ca03f1eef67e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-065: The source lists session working directory through workingDirectory as SDK-accessible; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "4879816a5994c7d085e5aeb9",
+        "text_sha256": "4093a7d8b20f0b97c28166bc085d89c923ce9da5883b4a212a8ea880f80dacb4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-066: The source lists additional-directory access through additionalDirectories as SDK-accessible; this is not installed-runtime validation. DOCS-SDKCOMPAT-111: Additional directories grant access beyond working-directory scope. DOCS-SDKCOMPAT-112: Additional directory grants must be supplied again on resume.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "12f5a0466eed095b0584cf97",
+        "text_sha256": "8e13991e8d37db2be8dc3b384bb5624cad0dcfa9577e81aeedc1db3c2e10777a",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "7669cce0cd37134096d37dfc",
+        "text_sha256": "e1ba8caf9538ebac08ad42ede9155f98da7366d9140a1a0d03c878159c66c497",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-067: The source lists experimental agent management through agent RPCs as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "15fd3368de3e89acdc993c01",
+        "text_sha256": "bb37f25b749b01573e5ba4525d1b4e5e958525f6b64a7eb3e8cbb6e1b52e057e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-068: The source lists experimental parallel fleet execution through fleet.start as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "55e58ab2f77ab1cd3969a56a",
+        "text_sha256": "8b3264ad458a734abad894d88e69e6657d4681b07341946403aab1187204ec5e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-069: The source lists experimental manual compaction through history.compact as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "2b3111b026e11427fa740aa3",
+        "text_sha256": "b4a20e78f5b2a2d9f2d9eab58b34525d10709c9dc431e746cd5bd4d39372d371",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-070: The source lists experimental context clearing through history.clearContext as SDK-accessible in the experimental section; this is not installed-runtime validation. DOCS-SDKCOMPAT-113: Context clearing replaces conversation context from a terminal tool.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "979836ccede3e6542a87de8d",
+        "text_sha256": "61aed4083d7182bae521f9df3468e69d5f7737578ca26139c1f4b66763eb4c86",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-071: The source lists experimental history truncation through history.truncate as SDK-accessible in the experimental section; this is not installed-runtime validation. DOCS-SDKCOMPAT-114: History truncation removes events onward from a selected point.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "464a8ce4455dd821972d1183",
+        "text_sha256": "e24c8a3184b60f38eecb00d56840be3f1a4df97e43069692efc64dbdc5febedb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-072: The source lists experimental session forking through sessions.fork as SDK-accessible in the experimental section; this is not installed-runtime validation. DOCS-SDKCOMPAT-115: Forking selects a history point.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "5313166008c400b777a65928",
+        "text_sha256": "a1df3ad961f89babde2919bb1c53f178595c52238e39e69d540e9b91d7a50824",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "53bdf71388448ed70fc95a27",
+        "text_sha256": "a066659045b519f34f3fddcc4772f9a3689a4f9ddb5abf0a3f08d7faaf510d75",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "7b438c7fd0b7d8b2f8013431",
+        "text_sha256": "357eeea17669bb6adc1aebb16dcd10c8da5002d64f781ab6c71afc684045656d",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "732a328a90d7cbe1625dcf43",
+        "text_sha256": "0c787ed8fdbddc2946263dbfefd463588e27d5c92ae8e8f86dbddb3d08406a49",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-116: The source lists file export as CLI-only: share is not exposed in protocol. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ebcb2f9fbff8f7516dcb118b",
+        "text_sha256": "4416a845758943d5ef5737a11679e8dd5e77b61d54e0cb6a23a955b5933af227",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-117: The source lists gist export as CLI-only: share-gist is not exposed in protocol. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "5cb9f86c74d252c1c2d66f9b",
+        "text_sha256": "d6d34cb013703237959ccd52cf08f26622dafa3df7241dcf417e5ba1aac84396",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "5bc7e15b493e49a5eacf5b83",
+        "text_sha256": "25392d0fd1094ed2753bc5b5d5e60b314736dafeb41bd65ca2aca2c5e561ba87",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-118: The source lists slash commands as CLI-only: terminal UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "51a8132bcc9b55bd1a436780",
+        "text_sha256": "9f216dfd051e93361db5a27111ba9a468627f64f8b38ee748ecb93029d06ed52",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-119: The source lists agent picker as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "9cf13bbdd32459e4dfe99401",
+        "text_sha256": "731e3b096e715032015813ef49d78a4ee0666331cb7acf19cf7ade400d26ddab",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-120: The source lists diff dialog as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "1582b454bf439cbbe58ec9b0",
+        "text_sha256": "20d35aaac80059e8eb64ae157c118884c28eb0883771e5b7738dbbee1370f3eb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-121: The source lists feedback dialog as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "cddf04f59c02e38f615b0b22",
+        "text_sha256": "c3180d327462b828f538cb16adb79ef2f2acd22d42dddc35c403116a768fea80",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-122: The source lists theme picker as CLI-only: terminal UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "9f69a3217431bdfbb470e16e",
+        "text_sha256": "9b24469956f05a1c4c534ab03f4778a537f36fca59328be6f3e4e83782ff16d0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-123: The source lists interactive model picker as CLI-only: interactive UI; SDK model switching is separate. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "b6003341d00aa20a959c1608",
+        "text_sha256": "9a2fa59867706282ab526be44b29fe7a43fe872052228cd9f04e81ce085066f0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-124: The source lists clipboard copy as CLI-only: terminal-specific behavior. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "90535339886d825109a873b2",
+        "text_sha256": "34031ccd7af6ca707ca026c00d1648a7539a9cd2f683161170c34d5250d55b89",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-125: The source lists context UI as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "54ff94625e426ef951e482a2",
+        "text_sha256": "e0a081ccd79e4a169d5a578a2144ee7015e2da8127d09868f31e3d6b51f2c346",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "00e05db9f0c84b043d43b321",
+        "text_sha256": "720af3c441e125fd609984787b6bdd29770b8f8802a4b8276a9e1fb20211a987",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-126: The source lists deep research as CLI-only: terminal workflow with web search. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "4ca9b6cfdc285e24e0c109d6",
+        "text_sha256": "0aa95c5d6e57e9f631886b7e4e0e3ee33185e4919f5c8f059b6ae65c13f653a5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-127: The source lists chronicle history tools as CLI-only: terminal workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "593789795b8fb7c573bfc5d3",
+        "text_sha256": "6c824db9124b825638756d68be5cbae5cf1fcedf01dc2e5a6f5e478ef2dd7dd5",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "4a00610ffd3ced4501ef6400",
+        "text_sha256": "8c505611deff199d6c290aa98b1a065a8ab86b99a11996d8e5ee7297ffa54037",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-128: The source lists color output as CLI-only: terminal-specific behavior. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "7a222ddc8df794822c8f14e7",
+        "text_sha256": "916dd7c9662dbdcbd9bf2d91249cc673318f3a9e746278a63bea4542184cf63c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-129: The source lists screen-reader mode as CLI-only: CLI accessibility mode. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "5b7000708791fd3b8b2b7f8b",
+        "text_sha256": "e37a0aaef4149723ddad6e01254c4c9642d75eebf5754e90151dc83124974334",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-130: The source lists rich diff rendering as CLI-only: terminal rendering. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "45d94693c463eeb747b12154",
+        "text_sha256": "642982985d999e3b82689079c1a003346de9979221080f628372cf6e851f4aaf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-131: The source lists startup banner as CLI-only: visual UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "1ec24396702a277e65586800",
+        "text_sha256": "fae43a2b9805a61226270c17f5d7ac7a1a6dda6a6893e63faeb40a66c0aed32a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-132: The source lists streamer mode as CLI-only: terminal display. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "0f540b3871d6b24fca19149c",
+        "text_sha256": "5ff89ba24a5d6644ca1b9d8a2de1eb96bab07beca81ff0bd68f427c9af58633a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-133: The source lists alternate screen buffer as CLI-only: terminal rendering. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "d611454b2a87bf3e4f0c21a8",
+        "text_sha256": "297bc3d076da4f9715ac85ae4f8ff9b7fc53d071f95771711cd21f97c9874f47",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-134: The source lists mouse support as CLI-only: terminal input. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ff7dfc147aa2fc142ae6cc93",
+        "text_sha256": "66b028968c01e3d3adf8ea9e262411e9b6977733c73c434eecdec72b18285f77",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "d724f95891c0d4545c87b711",
+        "text_sha256": "fd878a9b30800496113f7eeef18402ff96a8c443646199391fdaa92252f60673",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-135: The source lists allow-all-paths shortcut as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "0e67fc9eba81c078c9c5c8f3",
+        "text_sha256": "1bf0e5a223756bba875aa4649b0c0f3f26c3e2daa6fc851f4721b9376a56a3f3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-136: The source lists allow-all-URLs shortcut as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ae9d505b5945f22a36c31e17",
+        "text_sha256": "d0efca29fd5ad8200de5666a6367771564680069999bcfb56d20e2cdc953323e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-137: The source lists allow-all/yolo shortcuts as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "95622627815ecdfd34c0da28",
+        "text_sha256": "2fc000a6f4712eacef8efa0a3d734baec34740bdfd3798b11dc6e4dbb99cd989",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-138: The source lists allow/deny-tool flags as CLI-only: use pre-tool hook instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "2ba47b0d2c8a5565b692ccc8",
+        "text_sha256": "1c556eee253eb1b8da78618a96df4a63e48fad1a1a8cc215b7c90a19cdabadda",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-139: The source lists allow/deny-URL flags as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c8a501e8aa77f17dbddbe69a",
+        "text_sha256": "031dc2eb45d12460e86f2aa466466fa6654f2be1e126add2a685fda8eb28eb49",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-140: The source lists reset-allowed-tools UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "599a40fea2677a1cf8104866",
+        "text_sha256": "e789dd8d66fad69c34148b73c7673b8bd8b1a86bc59a5090d0af9ff06fe2f943",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "008db93a26892544c88f8e1a",
+        "text_sha256": "2d88758178e7d6e256ca4041cdfd9f39f2e3276716e0b5b1f8d3e50947fcbc65",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-141: The source lists add-directory UI/flag as CLI-only: session configuration is separate. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "f497f6d6e8eb1078d822dbb2",
+        "text_sha256": "53bf4f2f6ad3b42b135d1abda105890077981549befd5ff76d39502bbe1403dd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-142: The source lists list-directories UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "4fec097638a43070f6a6019e",
+        "text_sha256": "35ceacce064d5bd24135c0b93a76ffcc0415e74e88813d44f440f7c704b13da4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-143: The source lists change-directory UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c2e4269cc0762ffa49ed32fe",
+        "text_sha256": "d491b96f26f218014884b5076e4a4df34dba6dd15a8737075bc99175a062b3c7",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "f26143846ef763c46b94be95",
+        "text_sha256": "b49b98ef952c57ecbdffdb33263242c90b56b6e8f4592a81bda134ec5c851346",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-144: The source lists plugin commands as CLI-only: interactive management. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "571538396b7e8893e6c438db",
+        "text_sha256": "d3b2b00df73680ad6ee7b8f65874d555df8ae139d062b9c09145485323e51e9d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-145: The source lists MCP-management UI as CLI-only: interactive management. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "b7c57ef8f99a15ca59bf22e6",
+        "text_sha256": "1a64dbea5bd83936df6027f472f3c2af7e9a74c0fc0cebdef0b2d9614b1d388c",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "a2cceb23927587c4640e3dfb",
+        "text_sha256": "13e206f81390a24da8fce61ea2eb8e47f217e1bab0f991bcf1b9fc503685be7d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-146: The source lists login/device flow as CLI-only: CLI authentication. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "9a40178a4fc119d3036c9b7a",
+        "text_sha256": "1bb204beda024acb8b20ca6806c109093ed4562e1dc6f2277d3bf19def4ad58b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-147: The source lists logout as CLI-only: direct CLI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "429543762a95f6ea7d48c510",
+        "text_sha256": "1995b30ae7d57a47495359299e4134854ebb6af416bcd8283fe0ec31a17455d0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-148: The source lists user-info UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "56f5faa0c84436877d4fe0d3",
+        "text_sha256": "185ebf1bd083f4a27b584169b16303dc278c44715654aba9ae5bfedb331a4815",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "3ca14b3f6e106248edff7bcb",
+        "text_sha256": "b5fea71d8a55bc4593936f9e60183e174a94ebb3712dba623ea887f0db247902",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-149: The source lists clear-conversation UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c77a18caa2c6edb8cac7f3b1",
+        "text_sha256": "16b43868bd626d37d734498055c7a2f6f17969640d2bd426bb712beaff5d4f04",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-150: The source lists interactive plan view as CLI-only: use plan RPC instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "b6f0843f4d2a18900c93c8fd",
+        "text_sha256": "dacc7ca9c1847b339b03b726cb2f3a360c06d16accea1b04f7a0b8414e8ae78b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-151: The source lists session/resume/rename UI as CLI-only: terminal workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "af280531b84f2c8cd573866d",
+        "text_sha256": "907a484fb570283973400e52ab4e519ae3378f99ac28ef824b1881a6304ea019",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-152: The source lists interactive fleet mode as CLI-only: use fleet RPC instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "b4b29d0e564fa162ba8c585c",
+        "text_sha256": "d4ca97e3089f65f66c2968bff74bc5bb035da72da5539b0815c713e8dc06d96b",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "a4189a0cdd985442c01473ff",
+        "text_sha256": "102e0bcd13571eb9ca93071fc66192215cb16b82fc119828036364500ef19c6e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-153: The source lists skill-management UI as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "b2aeab528be0a9134be08074",
+        "text_sha256": "f4f5ed44ed053a513447c9de388db72ea8cb3c6d16899ae2650bde43842c525c",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "31b0f302466d05f929e01437",
+        "text_sha256": "d10129aa21c79f0b58a9b93ccc293a97dfb781e3cd9540b937d314cad83e81c7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-154: The source lists background-task UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "8f2bcea087effaaa26a8c0b8",
+        "text_sha256": "635db0dd585aa821f30f4509de58267c9920278621f4c7cbeb0e9051da806933",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "24206be96d1d02fd6a5e5887",
+        "text_sha256": "11303af86d0c18bdb821aba3fc287fa9a795bd08fff1e8b873bc86efe5b10f78",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-155: The source lists usage UI as CLI-only: SDK usage events are separate. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "2a2ea9d60d6715ab2a2793c2",
+        "text_sha256": "489e6b46d1e0291b94e46966ea130d0a5caf0a06c59900813a49de4488b10bd2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "fc2d52047845e482f18a6754",
+        "text_sha256": "d6f00075231579c2e3bfe2a1b741b75014f08dbf6ba65959f1a87f0621dc42df",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-156: The source lists review command as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "fe47a617c96c22ef89db84bb",
+        "text_sha256": "7c981ae4586728abe317e4e56c71916d285d1b2b15fac31238efb686fe018ae2",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "8d46109f5593d633fe945601",
+        "text_sha256": "20417b4d11cdc453b9b519908dace93a33fd00d895b209a15ca98764740bc60c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-157: The source lists delegate-to-PR UI as CLI-only: terminal workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a6d55bccfdf8652ae14781ca",
+        "text_sha256": "1f8baddc5c32d2f149dd7e3f081994d30f64c6de0f99955e29636bafada470ad",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "f4e0deb2442680e99e3a09e4",
+        "text_sha256": "79dec60eab51d8cf2f58f289e3a6445d0e8c47ee8e10b29a76294fcd846ccece",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-158: The source lists shell integration as CLI-only: shell-specific. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "8c134ecf006c0723f9981b70",
+        "text_sha256": "d46d2ccfbb0fe149f6f7a930ae6d97e68b1965fe67667e8249d7c31d7c566505",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "e99e183650fa554396b25f0e",
+        "text_sha256": "05403c5f250cf9c376ecc6bbb6b1a00533a4c8cffa0de2986a25cd67d7dd4692",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-159: The source lists experimental toggle as CLI-only: runtime flag. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "bdb5bf4562e74a5904518213",
+        "text_sha256": "8b6628127af4f6e98bcec745d471305cb23265683673200a684136667b1aea7f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-160: The source lists custom-instruction disable flag as CLI-only: CLI flag. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "fe210f2dc143abdd02d6a4b5",
+        "text_sha256": "9fc59bc9d0cde3d6a111a7d2f97ad4abac8182a989b1254f5a5bb09b563b2e9c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-161: The source lists diagnose command as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a5cdde770b49aa500227ed1f",
+        "text_sha256": "099f525e89b0e9ac162102a8bf2f22a81bb27b7f90199c6ea83b2e658f82e36a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-162: The source lists instruction management UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ae314c0801073186a65fd85b",
+        "text_sha256": "91610eea0c4d32dee66a9291c6d9e032c1632beaef5269a6a298ac9746fc3f68",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-163: The source lists debug-log collection as CLI-only: diagnostic tool. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "79fbe408040266a0ef095116",
+        "text_sha256": "9ee40055b71040bfcf8f1f7df9ab0fc8bb69155f63fd6b347e5772c754a2cd56",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-164: The source lists workspace reindex UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c88c6e0a007034c969b36b40",
+        "text_sha256": "3343fa6e131468a5fa6efe93706a1ef92d55d78a8e6d1d70276862c63b0a4216",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-165: The source lists IDE integration as CLI-only: IDE workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "f18693784dcb716f051f41d4",
+        "text_sha256": "625f99130c0a22a01ae464625e0af63a79d01a099f0f48afed7aef7ee5ccc1ed",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "6456d7490f6a406be8b15cee",
+        "text_sha256": "5ac9be49292fe786f6bc1115af0228b86c07a8d34c71b0f4953c38aa8ba9464c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-166: The source lists single-shot prompt mode as CLI-only: CLI execution mode. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a4b5214a4602df4e945cc5d2",
+        "text_sha256": "817067f9d57935107711585977a80f4a5c7000b87e567a1c393e2d32a5b02cdd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-167: The source lists interactive prompt mode as CLI-only: CLI auto-execution then UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "0c04cbdc5f492c672b75a47f",
+        "text_sha256": "e5586819c894390660a59731290f0dc7f18da383a2b6e8a6004f70c8cf545c3a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-168: The source lists silent output as CLI-only: CLI script-friendly mode. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "80526b3779a83d05ada361f5",
+        "text_sha256": "3d759f047a8af9bd90f8849e5f2f9a332767aa51d3a98393367505dd7db8fb78",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-169: The source lists continue-session flag as CLI-only: CLI most-recent resume. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "7edcefc34598221a56787678",
+        "text_sha256": "2b56823b4c1020fac93a25b0049a7fbb6ddc880ecc78480d89ac17bceea2b904",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-170: The source lists agent-selection flag as CLI-only: CLI flag. CLI-only does not imply the SDK lacks the separately named equivalent.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "17ee61ef44b36a8ad9405904",
+        "text_sha256": "ebdcfbd16f8e6dcafc9e2be97449f4bb1b49d05f13c8bffcb7b4b4b3d1d7454d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-171: Fleet execution is exposed through a runtime RPC for parallel sub-agents. DOCS-SDKCOMPAT-172: Fleet is suggested for independent concurrent subtasks summarized by the main session. DOCS-SDKCOMPAT-173: The full fleet guide is linked; its content is not reviewed merely by this reference.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "550dcdebf1a19202ab41d4d9",
+        "text_sha256": "9485104ceeef3f8f8c5630579ed52bfdfaa7c788e996dc81ae4e2a0dcbf8f2c3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-174: SDK does not expose the CLI share export option.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "553a1653a3f24bcecc9d9057",
+        "text_sha256": "dbc514a927a2c86e95c26de91308f2e6ee92194bfcf5eec2b713f0f3068bf348",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-175: Manual session-event collection is a suggested export alternative.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "2bdebd4e8e4679a15ea42adb",
+        "text_sha256": "4200cfe1334d83cd8675d95a6783dfbf5654f2035fcac184a15e5a69369d1a76",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-176: The event-export example accumulates subscribed events in memory. DOCS-SDKCOMPAT-177: The export example separately retrieves event history. DOCS-SDKCOMPAT-178: The export example leaves Markdown formatting to the application.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "d4e8939d216a8a2b872ed7ff",
+        "text_sha256": "8ab1629d69bfdec79b8dcea7ae1380443c2bf50ed7ce7a038647e801f0571868",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-179: Direct CLI export is suggested for one-off use; no export was run.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "fc7702739e6b6f2c1b8f71b8",
+        "text_sha256": "644c4dc5589fac1c79d0098e5dbefba721cbc7ac9e7034ecbcb7c8b3ea2a5f07",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-180: SDK permission requests are deny-by-default. DOCS-SDKCOMPAT-181: File writes are described as denied without a permission handler. DOCS-SDKCOMPAT-182: Shell commands are described as denied without a permission handler. DOCS-SDKCOMPAT-183: URL fetches are described as denied without a permission handler.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "988f21600612e9bd6f04a566",
+        "text_sha256": "7dc7fabd4de14d1e47eeda92667e9b2d1e5cdaf970d69413f746e49477a37a5e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-184: The source directs permission handlers instead of CLI broad-grant shortcuts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "b89c31c100e51b5bc57dd98e",
+        "text_sha256": "3dfa322b7ff7c47db2bc3fd7a2a5b2b7652eb546562682c56a7308f8247f9097",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-185: The example installs approveAll; this broad source example is not project permission approval or proof of least privilege.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "712ec7f7940a6cfd08065081",
+        "text_sha256": "fd99abd50c9624773ac09fb20ed24af17e6b4089aec335c82f8bd4bc07428fde",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-186: Usage events are directed instead of terminal usage commands.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "4946b681d39f2245a2fae003",
+        "text_sha256": "0d708f5aaacf0a5bdbc6f8a3058f5ba69e31a1fb0b4ba4471f45d90c8eaf67d4",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-187: The usage example subscribes to assistant.usage. DOCS-SDKCOMPAT-188: The usage example reads input token count. DOCS-SDKCOMPAT-189: The usage example reads output token count.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "5c1a2026bd9107888f76faf7",
+        "text_sha256": "16d44cec25511f674399dc4f1fc6e0d0ad4cda5cbd608cccd0cbf3824b63e1e2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-190: The source suggests automatic compaction or manual compaction instead of terminal compact commands.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "a2ccb0b445ce88792f45ecb9",
+        "text_sha256": "7a2da549f8e0bab7ffa58372da4ae575669bc14c501f72a7db6ebfa3fc005ab9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-191: The compaction example enables infinite sessions. DOCS-SDKCOMPAT-192: The example background-compaction threshold is80percent context utilization. DOCS-SDKCOMPAT-193: The example buffer threshold blocks/compacts at95percent utilization. DOCS-SDKCOMPAT-194: The example manually triggers the experimental compact RPC. DOCS-SDKCOMPAT-195: The example reports removed tokens. DOCS-SDKCOMPAT-196: The example reports removed messages.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c853cb5383d428e3d46bb371",
+        "text_sha256": "e72bb9fab281950b4053f117a59242b0dbccf76d9cd9c4f1b75329acf63466db",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-197: Compaction thresholds are0–1ratios, not absolute token counts.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "eae0c4242f3334267e0b5e72",
+        "text_sha256": "b67d51b1f2ec99c98eb1e59af65c27f4da690d5a47fecbe57100fe87d87c4650",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "332a842bc546c2cee706e471",
+        "text_sha256": "6f18e2501ac4a0e5e6538b4b1e172dd5dbf182b1ff0c60bea2b94eacf96964df",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-198: The plan example reads planning state. DOCS-SDKCOMPAT-199: The plan example checks existence before printing content. DOCS-SDKCOMPAT-200: The plan example overwrites plan content with a placeholder plan; no plan was changed. DOCS-SDKCOMPAT-201: The plan example deletes planning state; no deletion was performed.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "95c35216a13d5d7f8f738f3e",
+        "text_sha256": "1384258d914b9f33abd668d338fe169a2cf189b38fc621b6d97064e68d654ea8",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-202: Steering injects input into the current turn without abort.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "ff5325e28d5557a6edb0a0d2",
+        "text_sha256": "b177eb963af7fac02752dc2e8a3ed7da0eab07856fce555f08f2f6cefc42d8a6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-203: The steering example uses immediate mode. DOCS-SDKCOMPAT-204: The next-turn example omits a mode and therefore uses default enqueue behavior.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c26513df2317604699d6a9bc",
+        "text_sha256": "1a803fa44ad7e8797660d8fee86e202bb1c514df0da5c6dce31b64f1f5f314ba",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-205: SDK access is restricted to CLI protocol-exposed features.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "14a928b39c194284e00be62b",
+        "text_sha256": "2d81d2666438463e08d3990adc861c2094e4f6b6a8ac3445fffec324ac61c9dc",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-206: The source recommends checking SDK alternatives for unavailable CLI features.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "6f71e499e688986a916c5dba",
+        "text_sha256": "9b6ffc7c3b61f652ba2666672e8cfdd81c28d5f7646535916a926756f5cf7438",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-207: The source recommends direct CLI for one-off unavailable operations; that recommendation does not authorize executing them.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "7d5fd8eb056aa9842e100ff1",
+        "text_sha256": "bf56a0ca8c21331ea01f367fe5932a89c2633573ee8717496d1b622ec68dc0a9",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-208: Requesting protocol support by issue is suggested; no issue was created.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "75cdde6725dc6ab501ccc5bd",
+        "text_sha256": "81fdca23cd75e7bbd1c4760d4a1df71c3052efa2934f279ef2004122f5637eea",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "61d2ea82fdc67296c6c46c8a",
+        "text_sha256": "e59d871faf1b40b7d8b83b0f2450c491f21091d9ee34304a7302fb0545bfdce8",
+        "disposition": "REFERENCE",
+        "rationale": "Editorial/section/table-category/syntax context fully reviewed without extra feature or permission inference."
+      },
+      {
+        "candidate_id": "f2cf7e968d51d0cc5b913a32",
+        "text_sha256": "62696148383608888f133a00dcf2de87af1c1c2c0764139cb0afb8ed0d38c763",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-209: The compatibility table lists CLI protocolv3 as fully supported by SDKv2–v3.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "887161e3409688cb9c842ade",
+        "text_sha256": "609e777d2631b52056200b0670112fcb514b795394deb558097a774f3edf1b9f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-210: The compatibility table lists CLI protocolv2 as supported through automatic adapters.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "5e9763fd06b156474daca5ef",
+        "text_sha256": "d81cd13d45392c5940ee71152232bc61240a0f933d37bfc7e3aad349b477635e",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-211: SDK negotiates protocol version at startup. DOCS-SDKCOMPAT-212: The source states SDK protocol support spans versions2through3. DOCS-SDKCOMPAT-213: On protocolv2 the SDK adapts tool.call into itsv3event model. DOCS-SDKCOMPAT-214: On protocolv2 the SDK adapts permission.request into itsv3event model. DOCS-SDKCOMPAT-215: The source describes automatic adapters as requiring no code changes; installed behavior is not tested.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "82e453efbbdcdf3817433cba",
+        "text_sha256": "2ed42b101e606dafa5c9a41722ddd14546354ac7825d51e3afe682424d8c5f32",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-216: The source directs runtime version checking.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c6a1ac9e700642a8a0b2bed6",
+        "text_sha256": "0de8af5eb59055812d68e2cfc75134f6824f6d85467ede79bff8e26d626621ea",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-217: The version example reads protocolVersion from getStatus; no runtime was contacted.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "0487c4b3360acff8935f57e5",
+        "text_sha256": "74a3b2c7febb72c5a8495bc9c441b51b9853a449cb467b6ffee536bd203437dd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-218: Quickstart, hooks, MCP and debugging links are separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "c506657cb1a927fbbc7b415c",
+        "text_sha256": "e23b0b1375d5b4a5ecd8294dd6e5461cd95215ce60b91960158d984467e36bf3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-218: Quickstart, hooks, MCP and debugging links are separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "2f0d9682585dde23bada5041",
+        "text_sha256": "74b4b6cf5379bb3796e980e3fda444bb20e9f254714240cd967fc399070efdbd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-218: Quickstart, hooks, MCP and debugging links are separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      },
+      {
+        "candidate_id": "1af9556c47922a7e811a8380",
+        "text_sha256": "fd32214e5d998cf5d1596ad2be9cf284588faf4ec30ee19e7d357e4516bec8c3",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKCOMPAT-218: Quickstart, hooks, MCP and debugging links are separately scoped references.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-compatibility-claims.json"
+      }
+    ]
+  }
+]

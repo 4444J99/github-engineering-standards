@@ -1,0 +1,95 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:00:21.603Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/skills-compared.md",
+      "content_sha256": "663b2c3c907fecc1ac8671153f2213f81359fd16eafb07d87c3249b14d629f14",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "The comparison recommends broadly relevant simple repository conventions in custom instructions and task-specific detailed guidance in skills, with a repository-instructions link. This upstream design advice is not project policy, proof of applicability matching, or authorization to follow imported instructions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/skills-using.md",
+      "content_sha256": "62186b0a92b1335b5c2d244ce8b5386e4fe68aafdfc870c62e6d17c9ff38c4ab",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The fragment describes choosing skills based on the user prompt and skill description, injecting SKILL.md into agent context, and potentially using bundled scripts/examples. Context injection is not verification of trust, script safety, permission, or correct execution; no imported skill or script was executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/sku-isolation.md",
+      "content_sha256": "795361ad764d52010816ae0b97ba6f1af0bd2f41602fd893a9dc4f4e427ddf81",
+      "start_line": 1,
+      "end_line": 36,
+      "statement": "The SKU-isolation fragment describes owner-controlled corporate firewall allow/block rules distinguishing Business/Enterprise from individual Pro/Pro Plus/Max/Free access within that network. It lists affected inline-suggestion clients (VS Code, Visual Studio, JetBrains, Vim/NeoVim), Chat clients (VS Code, Visual Studio, JetBrains and GitHub), Mobile apps, and CLI. Network scope is not enforcement off that network or an observed estate-wide control.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/sku-isolation.md",
+      "content_sha256": "795361ad764d52010816ae0b97ba6f1af0bd2f41602fd893a9dc4f4e427ddf81",
+      "start_line": 1,
+      "end_line": 36,
+      "statement": "The source says plan-specific routing is enabled for all users and only corresponding Business/Enterprise users can connect to those endpoints. This is an upstream routing assertion, not proof that a firewall is configured, identities are isolated against bypass, or all required hostname access is currently valid; the linked allowlist is not reviewed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/sku-isolation.md",
+      "content_sha256": "795361ad764d52010816ae0b97ba6f1af0bd2f41602fd893a9dc4f4e427ddf81",
+      "start_line": 1,
+      "end_line": 36,
+      "statement": "The configuration describes client floors of VS Code Chat 0.17, JetBrains Copilot 1.5.6.5692, and Visual Studio 2022 17.11; allowing wildcard business and/or enterprise githubcopilot.com hosts, both where both plans exist; and blocking wildcard individual hosts. Wildcards cover multiple required subdomains. Historical minima and patterns are not live supported-version guidance or tested firewall semantics; no network or client changes were made.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/stop-response-generation.md",
+      "content_sha256": "598e3a1c95f086e9fbc999fa4eb74157aa823bd198a30a159c8b36465f144bbf",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment describes an optional Stop control after question submission to halt the response. It does not promise reversal of already transmitted data, cancellation of every downstream tool, deletion, or recovered credits; no response was submitted or stopped.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/subagent-intro.md",
+      "content_sha256": "8e5a466145af6e3fb8e93c39594212edc66d34688d3c0c709ad737e16a95c857",
+      "start_line": 1,
+      "end_line": 8,
+      "statement": "The subagent fragment describes delegation within a chat session to a separate context window, independent work without feedback pauses, and final-result return. It recommends complex research, document-heavy processing, or independent alternatives and states the same tools/model as the main session with no further subagent creation. Context separation is not filesystem/process isolation, reduced permissions, current product behavior, remote persistence, or authorization to delegate; no agent was launched.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTSKUCONTEXT-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/suggestions-new-tab.md",
+      "content_sha256": "09b8b5d75eec381611b0caa1f9bd234bb0156754df9f0423fd67cc8e57d87a4a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment offers multiple suggestions in a new tab when initial suggestions are unwanted. It supplies no actual generated alternatives, acceptance action, quality comparison, rights assurance, or completion receipt.",
+      "accepted_policy": false
+    }
+  ]
+}

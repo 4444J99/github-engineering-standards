@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:20:26.733Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-REPOPOLICYBYPASS-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-alternative.md",
+      "content_sha256": "089ed98814e093cd5b15de2d4a34f4790db6b015e8b22ade0e8aef89aea24572",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The repo-policy-rules conditional recommends repository policies for enterprise lifecycle governance with flexible affected users and targeted organizations/repositories. Recommendation is upstream authority, not an accepted mandatory control or proof of active enforcement; the linked full guide is not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYBYPASS-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-delegated-bypass.md",
+      "content_sha256": "9fd60b0fc931d6bd468687d7c2e9917f969cecdf1095fa3dafae23d980c859d9",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "The conditional delegated-bypass feature is public preview. Repository administrators request deletion or visibility changes from designated reviewers; approval immediately completes the requested change, denial prevents it but permits a new request. Enterprise or organization owners configure a role/team bypass list. Approval can directly trigger destructive or exposure changes and requires scoped human authority; no list, approval or change was performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYBYPASS-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-enforcement.md",
+      "content_sha256": "a1654d3c72feb393e2e9b5013dfb6401ef20e702d7190917fd4ae8ee5595dc29",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Policy creation can use Disabled to avoid enforcement or Active otherwise. A stored active setting would still require target, exception and behavior verification; policy existence alone is not enforcement. No activation occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYBYPASS-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-examples.md",
+      "content_sha256": "cc95581310b394aeea9af96c1de8ffaefc9fb2f1c81f39d0e6902e1d28f9a958",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Illustrative policies cover naming such as kebab-case, deletion except by organization admins, public creation restricted to an open-source organization and preventing public-to-private changes to avoid potential metadata loss. These are examples, not adopted names, role grants, required visibility or assurance that all metadata loss is prevented.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYBYPASS-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-intro.md",
+      "content_sha256": "7cf1a06bb7eb13144556ed882b5a5b1ee422beeb5f29c759bd2dcb927c378fbd",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "The introduction lists five restriction dimensions: permitted visibility for creation and changes, creators, deleters, transfers out of an organization and repository naming. Flexible user/repository targeting is described, not a complete permissions model or verified estate coverage. No repository lifecycle operation occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-REPOPOLICYBYPASS-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/repo-policy-rules-manage-bypass-request.md",
+      "content_sha256": "cb8c6c8d06a44444fd7b2fc11b771cd34e0e92e89a8d8e154c76872a5ed4215e",
+      "start_line": 1,
+      "end_line": 17,
+      "statement": "The public-preview management fragment describes Policy settings bypass-request filters by approver, requester, timeframe and status; Cancelled, Completed, Denied, Expired and Open distinguish cancellation, approved-and-pushed commits, denial, seven-day expiry and unreviewed or approved-but-unpushed requests. Email notifications and a seven-day reviewer window lead to a contributor push or removal of restricted content. This commit-push workflow conflicts in scope with the adjacent deletion/visibility fragment's immediate completion on approval. The mismatch remains unresolved; these statuses are not used as repository-lifecycle completion evidence and no notifications, requests, approvals or pushes of restricted content were performed.",
+      "accepted_policy": false
+    }
+  ]
+}

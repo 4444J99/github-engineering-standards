@@ -1,0 +1,90 @@
+{
+  "issue": 270,
+  "reviewed_at": "2026-10-03T06:40:13.541Z",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "status": "PROPOSED_SCOPED_RECONCILIATION",
+  "accepted_policy": false,
+  "independently_audited": false,
+  "rows": [
+    {
+      "dimension": "foreign_layers",
+      "legacy": {
+        "claim": "DOCS-LEGACYDOCKER-4",
+        "value": "Unsupported, including Windows-image foreign layers"
+      },
+      "container": {
+        "claim": "DOCS-CONTAINERREGISTRY-3",
+        "value": "Supported; Docker Manifest V2 Schema 2 and OCI"
+      },
+      "decision": "Different registry capabilities, not a source contradiction."
+    },
+    {
+      "dimension": "image_reference",
+      "legacy": {
+        "claim": "DOCS-LEGACYDOCKER-9",
+        "value": "Legacy push and pull require VERSION, not SHA reference"
+      },
+      "container": {
+        "claim": "DOCS-CONTAINERREGISTRY-8",
+        "value": "Digest-specific @sha256 pulls supported"
+      },
+      "decision": "Do not impose legacy tag-only restriction on Container Registry or claim tag identity equals digest identity."
+    },
+    {
+      "dimension": "layer_size",
+      "legacy": {
+        "claim": "DOCS-LEGACYDOCKER-7",
+        "value": "5 GB layer cap; images greater than 10 GB may degrade service"
+      },
+      "container": {
+        "claim": "DOCS-CONTAINERREGISTRY-15",
+        "value": "10 GB layer cap and ten-minute upload timeout"
+      },
+      "decision": "Layer caps, image-size warning and upload deadline are separate units and registry scopes."
+    },
+    {
+      "dimension": "repository_association",
+      "legacy": {
+        "claim": "DOCS-LEGACYDOCKER-8",
+        "value": "Owner/repository/image/version namespace in legacy flow"
+      },
+      "container": {
+        "claim": "DOCS-CONTAINERREGISTRY-6",
+        "value": "CLI push does not automatically connect a repository even when names match"
+      },
+      "decision": "A name or source URL is not a verified access grant; workflow linking and inherited effects need explicit target observations."
+    },
+    {
+      "dimension": "hostname",
+      "legacy": {
+        "claim": "DOCS-LEGACYDOCKER-6",
+        "value": "GHES docker.HOSTNAME with isolation, HOSTNAME without"
+      },
+      "container": {
+        "claim": "DOCS-CONTAINERREGISTRY-2",
+        "value": "ghcr.io at github.com; alternate GHEC containers.SUBDOMAIN.ghe.com; GHES containers.HOSTNAME"
+      },
+      "decision": "Resolve deployment/domain/isolation explicitly; do not use the generic reusable as universal enterprise endpoint authority."
+    },
+    {
+      "dimension": "migration_API",
+      "legacy": {
+        "claim": "DOCS-CONSUMERPACKAGEMIGRATE-7",
+        "value": "GraphQL PackageType DOCKER unavailable after migration"
+      },
+      "container": {
+        "claim": "DOCS-CONSUMERPACKAGEMIGRATE-7",
+        "value": "REST package_type container used after migration"
+      },
+      "decision": "Namespace compatibility does not preserve API query compatibility; adapter remains unimplemented/unverified."
+    }
+  ],
+  "unresolved": [
+    "GHES release-specific lifecycle boundary remains unresolved in issue 265.",
+    "Malformed illustrative Container Registry digest is not an executable fixture.",
+    "Per-target permissions, actual capabilities, native behavior and recovery require independent evidence.",
+    "Rights, policy acceptance, operational bindings and estate rollout are not established by this comparison."
+  ],
+  "gate_closed": false
+}

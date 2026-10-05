@@ -1,0 +1,49 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 49,
+  "tranche": {
+    "files": 20,
+    "claims": 22,
+    "candidates": 46
+  },
+  "external_issue_creation": "First GraphQL request failed; live issue list confirmed no new issue before successful retry.",
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 57897,
+      "source_artifacts": 1974
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2008,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.992,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Twenty full standalone fragments. Conditional KMS/OIDC requirements, external-storage recovery gap, context/expression scope and credential placeholders preserved. No credentials, public endpoint exposure, provider configuration or native writes. Independent audits, rendering, rights and adoption remain separate."
+}

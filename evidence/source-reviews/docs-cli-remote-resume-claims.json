@@ -1,0 +1,62 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T01:43:21.168Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CLIREMOTERESUME-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/cli/public-preview-sandbox.md",
+      "content_sha256": "1c17ca704f0241c8a899a195838854c6e3dc362c6f08c7211d8027646bae3a65",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Both cloud and local Copilot sandboxes are described as public-preview and subject to change. This broader note includes cloud as well as local scope, but proves neither enabled isolation, availability, safe execution nor a cost grant.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLIREMOTERESUME-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/cli/remote-access-reconnection.md",
+      "content_sha256": "1c46c028ca732ad5aef33d97243f2d825c443000a87dc814a418aa7935a80567",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Continuing or resuming a CLI session that previously had remote control enabled automatically reenables remote control. Prior session state therefore matters; resume must not be assumed local-only. The fragment does not establish authentication, connection recipients, consent freshness or actual remote control here; neither example was executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLIREMOTERESUME-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/cli/remote-access-slash-commands.md",
+      "content_sha256": "7925bee587afeb312f321eba7489e92621dfad6898fb6b77f7062b46b0a6bf2d",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The pinned remote-interface note says slash commands such as allow-all are unavailable there at that snapshot. An interface limitation is not proof that every approval bypass is impossible, equivalent local/remote capabilities or verified permission enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLIREMOTERESUME-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/cli/sandbox-on-windows.md",
+      "content_sha256": "0971b0643bee4b030bcca1b1273cec07149b8b4410d94da29f480635329cf0a4",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Windows local sandboxing requires a Windows Insiders build according to the pinned prerequisite. Presence of that build alone does not prove sandbox availability or isolation; this is not an instruction to enroll or change the operating system.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CLIREMOTERESUME-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/cli/tools-needing-approval.md",
+      "content_sha256": "eec79647e14b58abbc1618d71c491fa9d2b9808392003da9b3db65a72ac18a06",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The contextless fragment lists touch, chmod, node and sed as examples associated with tools needing approval. It does not supply a complete command policy, action-specific authorization or proof that other commands are safe; read/write behavior depends on actual invocation and parent context remains separate.",
+      "accepted_policy": false
+    }
+  ]
+}

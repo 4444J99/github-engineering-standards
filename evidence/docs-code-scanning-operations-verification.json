@@ -1,0 +1,55 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/20",
+  "verified_at": "2026-10-02T19:08:48Z",
+  "scope": {
+    "core_source_files": 62,
+    "necessary_dependency_files": 1,
+    "full_source_files": 63,
+    "physical_lines": 279,
+    "claim_records": 565,
+    "candidate_mappings": 162,
+    "prior_claim_path_overlap": 0
+  },
+  "claims_sha256": "f5fbfacfcc9aaf5a04750965f5843584976f5fea4c3d8e57bbd2cc7674b05dc7",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in 1.294s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid=true; controls=95"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "result": "No errors"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": "valid=true; 49511 reference records; 1152 source artifacts; 7 duplicate relationships"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": "1186/13657 reviewed; errors=[]; project_complete=false; nine gates OPEN; rights 0/13657; published denominator 18019"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "No errors"
+    }
+  ],
+  "accounting": {
+    "artifact_reviewed": 1186,
+    "artifact_denominator": 13657,
+    "artifact_coverage": 0.08684191257230724,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": "Bounded full-source extraction, independent fidelity audit and reference dispositions only. No query-table coverage inherited through a link/include, no renderer/version assurance, installed action, code scan, uploaded SARIF, billing/license agreement, changed credentials, native activation, rights acceptance or policy adoption. Coverage is artifact review, not overall completion. Synthetic published_docs ERROR is expected negative-test output, not actual recovery failure."
+}

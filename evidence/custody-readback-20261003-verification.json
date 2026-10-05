@@ -1,0 +1,20 @@
+{
+  "schema": "ges.custody-readback-verification.v1",
+  "session_id": "01a10341-92f9-7661-80fd-d57ac4cb146d",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456",
+  "implementation_head": "cd39f5daf76d35b76a01cb74668f3aefd9bf4ccf",
+  "checks": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 340},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "python3 scripts/credential-wall.py --check (verified installed Limen protocol)", "exit_code": 0, "registered_secret_atoms": 31},
+    {"command": "python3 scripts/check-arca-escrow.py (existing Limen source)", "exit_code": 0, "accepted": true},
+    {"command": "python3 resume_readback.py (private Documents readback directory)", "exit_code": 0, "readback_subprocess_exit_code": 1, "remote_ciphertext_verified": false},
+    {"command": "python3 verify_local_restore.py (private Documents readback directory)", "exit_code": 0, "regular_files_fully_read": 49069, "plaintext_written": false}
+  ],
+  "remote_custody_verified": false,
+  "checkout_disposition": "RETAIN",
+  "project_complete": false,
+  "blocker": "Drive HTTP 403 RATE_LIMIT_EXCEEDED prevented remaining-byte readback.",
+  "next_action": "Reuse preserved remote prefix; retrieve the remaining 135397408 bytes when Drive access permits, verify combined SHA-256 and fully decrypt/read the remote archive. Existing owner #456 remains open."
+}

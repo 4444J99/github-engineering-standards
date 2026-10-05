@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "issue": 37,
+  "artifacts": 20,
+  "claims": 27,
+  "candidates": 28,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.13121476166068682,
+    "reviewed": 1792
+  },
+  "claim_accounting": {
+    "reference_claims": 57529,
+    "source_artifacts": 1758,
+    "duplicate_relationships": 7
+  },
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.997,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "Alias files reviewed as standalone expressions only; referenced bodies and rendering not implicitly reviewed.",
+    "No secrets, actual account settings, disclosure or native operation recorded."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "ges.published-drift-dependency-review.v1",
+  "source": "github/docs",
+  "full_reads": [
+    {"commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9", "path": "data/reusables/gated-features/copilot-cli.md", "sha256": "93f6a35254b013f6a38ec915cb85ba866677f0103b54a6c1cfd0ff84b5002108", "lines": 1, "finding": "The source declares CLI availability across Copilot plans, with organization-provided access additionally dependent on enabling organization policy. Plan entitlement does not prove local computer-use permission."},
+    {"commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9", "path": "data/reusables/gated-features/github-app.md", "sha256": "180e715aa3d70b956328c59400d9f560ab8ef040a5fafbb309381020e7d802a4", "lines": 1, "finding": "The fragment declares plan-level app availability; it does not certify account rollout, desktop access or enterprise-policy permission."},
+    {"commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9", "path": "data/reusables/copilot/computer-use-preview-note.md", "sha256": "de511ca15886c2fa518b4500c74b333375a2b2d69b887b9f6bf6211ae4a0ce35", "lines": 1, "finding": "Computer use is identified as changeable preview functionality through a release-phase variable."},
+    {"commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9", "path": "data/features/copilot.yml", "sha256": "157e6d71d022063792e597caf29d15b978ba3bcdd3be897163ffb868e05916b5", "lines": 3, "finding": "The feature declaration lists fpt and ghec wildcard versions only, not GHES. It is source applicability data rather than proof of account availability or deployment."},
+    {"commit": "8a740f91003acd5929c05995a0ee4e44a36af9fd", "path": "data/features/copilot.yml", "sha256": "157e6d71d022063792e597caf29d15b978ba3bcdd3be897163ffb868e05916b5", "lines": 3, "finding": "The dynamic-workflow supplement uses the same fpt/ghec feature declaration; the original published denominator remains intact."},
+    {"commit": "8a740f91003acd5929c05995a0ee4e44a36af9fd", "path": "data/reusables/public-preview/public-preview.md", "sha256": "07828daf6ee3bf1827abb567b7985f86b5630cef7fe860f99437d9898876abc5", "lines": 1, "finding": "The generic reusable identifies the feature as changeable preview functionality and references the release-phase variable."},
+    {"commit": "8a740f91003acd5929c05995a0ee4e44a36af9fd", "path": "data/variables/release-phases.yml", "sha256": "bdb2e5aae5096ba5f22663ec179ccb0b3040d2393153c443139fc8dbce768cd8", "lines": 29, "finding": "public_preview resolves to public preview. Other release-phase definitions are labels, not assertions that these reviewed features have a DPA, general availability or retired status."},
+    {"commit": "8a740f91003acd5929c05995a0ee4e44a36af9fd", "path": "data/variables/copilot.yml", "sha256": "8d274044b1764b53d1c1a7af13fb04e901d6aab4fc344fe1538b298db5bed2b2", "lines": 275, "finding": "Relevant labels resolve CLI, app and SDK names. Unrelated historical plan prices, quotas, model labels and endpoints are not adopted as current recommendations, permissions or validated integration behavior."},
+    {"commit": "af7c0325c64f604d2988dbe6e66f3bd9d620e5e9", "path": "data/variables/copilot.yml", "sha256": "8d274044b1764b53d1c1a7af13fb04e901d6aab4fc344fe1538b298db5bed2b2", "lines": 275, "finding": "Complete text matches the separately read dynamic-workflow supplement variable file. This equality is limited to these exact bytes, not all deployment dependencies."}
+  ],
+  "remaining": ["Product-name and AI-credit variables in product.yml", "Release-phase variables at the computer-use supplement commit", "Actual version resolver behavior", "Linked managed-policy and permission references", "Published bodies and deployment-source provenance", "File-specific rights and attribution decisions"],
+  "method": "Read complete UTF-8 source bytes from explicit GitHub raw commit URLs and compute SHA-256; no upstream code was executed",
+  "locked_inventory_review_increment": 0,
+  "rendered_source_identity_certified": false,
+  "current_entitlement_verified": false,
+  "rights_cleared": false,
+  "accepted_policy": false
+}

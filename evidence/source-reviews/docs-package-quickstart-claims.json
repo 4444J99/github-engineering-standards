@@ -1,0 +1,117 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T06:53:25.313Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "The guide covers FPT/GHEC/GHES, but its GHES include requires self-hosted runners and excludes GitHub-hosted runners. The unconditional ubuntu-latest workflow conflicts with that caveat and is not a validated GHES deployment adapter.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "GHEC managed users cannot publish to their own account-owned repository in this flow; the guide asks for a personal github.com account. This does not cancel the separate organization-namespace publishing capability or authorize creating identities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "The setup creates/clones a Node repository, adds a console hello-world example, initializes a scoped npm package and lockfile, and commits files. Source commands are untrusted examples, not permission to install dependencies, create repositories or execute code.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "The illustrated npm test script is exit 0, so its green result proves no behavior. The prose promise of testing before publication must not be adopted as verified quality assurance; actual negative and meaningful functional tests remain necessary.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "The example triggers on release created, builds with npm ci/test, then publishes after the build job. It uses checkout@v6/setup-node@v7 and Node 20. Tags/runtime versions are historical example values, not reviewed immutable pins or current recommendations.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "Publication grants packages write and contents read and uses GITHUB_TOKEN as NODE_AUTH_TOKEN. Configured job permissions and dependency ordering are not effective package access, approved publication or an observed successful release.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "The GHES workflow registry example uses npm.YOUR-HOSTNAME.com while cloning uses YOUR-HOSTNAME; later npmrc/publishConfig examples remain npm.pkg.github.com without a GHES branch. Preserve inconsistent placeholder/registry context rather than copying into a target configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "npmrc and publishConfig are alternatives for scope/registry configuration; illustrative git-add prose containing or is not an executable literal instruction. No configuration written or credentials committed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "Release creation is the suggested demonstration trigger, and package navigation is the viewing path. Neither a release event, green exit-0 test nor UI existence independently proves publication, safety or access; no release created or package published.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PACKAGEQUICKSTART-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/quickstart.md",
+      "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+      "start_line": 1,
+      "end_line": 150,
+      "statement": "Installing published packages and expanded multi-registry/event/container workflows are outbound follow-up concepts, not executed dependencies or mandated universal architecture. Linked guides remain separate review; no rights or policy acceptance follows.",
+      "accepted_policy": false
+    }
+  ]
+}

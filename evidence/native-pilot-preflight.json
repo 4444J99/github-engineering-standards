@@ -1,0 +1,27 @@
+{
+  "schema": "ges.native-pilot-preflight.v1",
+  "mode": "READ_ONLY",
+  "proposal": "evidence/native-pilot-plan.json",
+  "observations": [
+    {
+      "command": "gh api repos/4444J99/ges-enforcement-pilot-20261001 --jq '{full_name,private,permissions,default_branch}'",
+      "exit_code": 1,
+      "http_status": 404,
+      "interpretation": "Proposed target not visible to this authenticated read; this does not by itself prove nonexistence or permission to create."
+    },
+    {
+      "command": "gh api repos/4444J99/github-engineering-standards --jq '{full_name,private,permissions,default_branch}'",
+      "exit_code": 0,
+      "full_name": "4444J99/github-engineering-standards",
+      "private": true,
+      "default_branch": "main",
+      "permissions": {"admin": true, "maintain": true, "pull": true, "push": true, "triage": true},
+      "interpretation": "Existing project access verified; permissions are capability evidence, not authority to mutate other targets."
+    }
+  ],
+  "native_mutations": [],
+  "approval": "PENDING_SCOPED_USER_RESPONSE",
+  "effective_rules_verified": false,
+  "behavior_verified": false,
+  "recovery_verified": false
+}

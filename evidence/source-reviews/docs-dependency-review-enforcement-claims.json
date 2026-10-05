@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:10:01.327Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-DEPENDENCYREVIEWENFORCEMENT-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-review/about-dependency-review-action.md",
+      "content_sha256": "b3805032e6a1faea5d461f7d16f02111f2689b7efd2959939dee0f25dcec6e4e",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment describes an Actions dependency-review action reporting pull-request dependency differences, scanning vulnerable versions introduced through package version changes, and warning about associated vulnerabilities. It links to action documentation without reviewing implementation, proving exhaustive detection, or establishing an installed required check.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYREVIEWENFORCEMENT-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-review/about-dependency-review-action2.md",
+      "content_sha256": "d586f6a0ad228d474b357fc08052c6a0b07377ce7d613828b80161bf3eed8dbc",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The source says the check fails by default on discovered vulnerable packages, but merge blocking additionally requires the repository owner to require that check to pass. A failure, workflow file, and enforced required status are distinct; none is an observed native receipt here, and the branch-protection destination was not newly reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYREVIEWENFORCEMENT-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-review/action-enterprise.md",
+      "content_sha256": "63d255ba3844c9bad54b18828e6dfb3f6849268dcfd7583340b393f9a941c7ed",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The administrator fragment exists only in the ghes branch and describes enterprise owners adding the action to the enterprise and repository admins adding it to repositories. Outside that branch it renders no assertion. Role capability is not approved installation, actual action availability, or a grant to change protections.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYREVIEWENFORCEMENT-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-review/dependency-review-action-beta-note.md",
+      "content_sha256": "f6ca371a82af3de5fa45fda5da099206393f0f33c51370cc774ffda4bafec2e5",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The isolated action note describes public preview subject to change at the pin. It is not current release status, stable behavior certification, or evidence that all consumers or deployments share that lifecycle state.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYREVIEWENFORCEMENT-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-review/dependency-review-action-overview.md",
+      "content_sha256": "dbc24f9c42a92ed4887d820b4b10a839e537ab4df6b0076be4071b07f8a33958",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The overview describes pull-request dependency-change scanning, errors for newly introduced dependencies with known vulnerabilities, and an API comparing dependencies between two revisions. Revision comparison and known-vulnerability detection do not prove all vulnerabilities, transitive completeness, license clearance, required merge enforcement, or a successful actual scan; linked implementation/API destinations were not reviewed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYREVIEWENFORCEMENT-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-review/dependency-review-enabled-ghes.md",
+      "content_sha256": "af9b8264e17a8f76471294a1cc241003b31dde8638faedf6de1b17d8ded2c406",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The ghes-only fragment says enabling the dependency graph gives users access to dependency review and embeds the short-summary description. Access to the feature is not a required Actions check, approved graph toggle, actual permission, or verified blocking behavior; the include was read for context without newly certifying its artifact.",
+      "accepted_policy": false
+    }
+  ]
+}

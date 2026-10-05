@@ -1,0 +1,249 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T12:41:17.321Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-2FACHANGE-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/changing-your-two-factor-authentication-method.md",
+      "content_sha256": "a2fbd9e46b618aa0522fcfc3f5df5b795ed9215de25f829c73bcce1febf33948",
+      "start_line": 1,
+      "end_line": 103,
+      "statement": "Method reconfiguration or addition without disabling 2FA preserves recovery codes and membership in 2FA-required organizations. This safe migration path differs from disable/re-enable, but describes intended behavior rather than executed continuity proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FACHANGE-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/changing-your-two-factor-authentication-method.md",
+      "content_sha256": "a2fbd9e46b618aa0522fcfc3f5df5b795ed9215de25f829c73bcce1febf33948",
+      "start_line": 1,
+      "end_line": 103,
+      "statement": "TOTP changes use Settings, Password and authentication, Edit, scan QR or manually enter the setup secret, enter a valid new code and Save. Only after successful save should the existing device method be replaced; secret/QR contents must not enter evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FACHANGE-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/changing-your-two-factor-authentication-method.md",
+      "content_sha256": "a2fbd9e46b618aa0522fcfc3f5df5b795ed9215de25f829c73bcce1febf33948",
+      "start_line": 1,
+      "end_line": 103,
+      "statement": "Manual TOTP parameters are TOTP, GitHub:username label, encoded setup secret, issuer GitHub, SHA1, six digits and thirty-second period. These source parameters are not a mandate to weaken other providers, collect real secrets or claim time synchronization verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FACHANGE-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/changing-your-two-factor-authentication-method.md",
+      "content_sha256": "a2fbd9e46b618aa0522fcfc3f5df5b795ed9215de25f829c73bcce1febf33948",
+      "start_line": 1,
+      "end_line": 103,
+      "statement": "SMS change/addition is FPT/GHEC-only and requires CAPTCHA, country/phone input, sent code and verification, with new CAPTCHA if number changes. Carrier cost, unsupported countries, interception/phishing and deliverability risks qualify the strong preference for TOTP and security-key backups.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FACHANGE-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/changing-your-two-factor-authentication-method.md",
+      "content_sha256": "a2fbd9e46b618aa0522fcfc3f5df5b795ed9215de25f829c73bcce1febf33948",
+      "start_line": 1,
+      "end_line": 103,
+      "statement": "Adding more than one authentication and recovery method is recommended, not proof redundancy works. Preferred method selects what appears first at a challenge, not removal of alternatives or phishing resistance. Source addition instructions do not authorize credential changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FARECOVERYCONFIG-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods.md",
+      "content_sha256": "25d47c8382d6309b34ef76dc3dac8e87544a8cd28d86f787899563cbd1409260",
+      "start_line": 1,
+      "end_line": 83,
+      "statement": "The guide strongly recommends two or more authentication methods plus recovery methods, listing recovery-code file, authentication SSH keys, PATs and verified devices. Backup setup and current recovery-factor availability are distinct; none is verified by file existence alone.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FARECOVERYCONFIG-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods.md",
+      "content_sha256": "25d47c8382d6309b34ef76dc3dac8e87544a8cd28d86f787899563cbd1409260",
+      "start_line": 1,
+      "end_line": 83,
+      "statement": "Recovery codes are one-time secrets, downloaded at setup or afterward, and should not be shared/distributed; secure password-manager storage is recommended. Download, Print or Copy are storage choices, not proof of secure custody or permission to collect codes in project evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FARECOVERYCONFIG-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods.md",
+      "content_sha256": "25d47c8382d6309b34ef76dc3dac8e87544a8cd28d86f787899563cbd1409260",
+      "start_line": 1,
+      "end_line": 83,
+      "statement": "Generating new recovery codes or disabling/re-enabling 2FA changes codes; editing without disabling does not. Each used code cannot be reused, the listed set has sixteen, and generating a fresh set invalidates every previously generated code; replacement needs approved custody and recovery sequence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FARECOVERYCONFIG-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods.md",
+      "content_sha256": "25d47c8382d6309b34ef76dc3dac8e87544a8cd28d86f787899563cbd1409260",
+      "start_line": 1,
+      "end_line": 83,
+      "statement": "TOTP backup processes vary by provider; links to 1Password, Google and Microsoft are pointers, not imported implementations or executed restore tests. A backup feature is not proof of retained, decryptable, owner-accessible recovery.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FARECOVERYCONFIG-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication-recovery-methods.md",
+      "content_sha256": "25d47c8382d6309b34ef76dc3dac8e87544a8cd28d86f787899563cbd1409260",
+      "start_line": 1,
+      "end_line": 83,
+      "statement": "The SSH-key recovery pointer specifies authentication key type, not signing-only type. The PAT pointer targets classic tokens and repo scope; this broad capability needs least-privilege review and explicit credential authorization, not automatic token creation or proof all PAT types/scopes recover an account.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FADISABLE-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/disabling-two-factor-authentication-for-your-personal-account.md",
+      "content_sha256": "6936105e66c0107280b118c2a1b664a57397471afc23db76b5ae372bc3bf7f12",
+      "start_line": 1,
+      "end_line": 47,
+      "statement": "The mandatory contributor feature is FPT/GHEC: members of the source-defined required-enrollment cohort cannot disable 2FA and are directed to modify configuration instead. Dated rollout prose does not establish the current target's cohort or grant bypass.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FADISABLE-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/disabling-two-factor-authentication-for-your-personal-account.md",
+      "content_sha256": "6936105e66c0107280b118c2a1b664a57397471afc23db76b5ae372bc3bf7f12",
+      "start_line": 1,
+      "end_line": 47,
+      "statement": "Members, and cloud billing managers, lose repository access where organizations require 2FA if they disable it; the source says re-enabling regains access. Access restoration and role continuity still need independent observation; disablement is not authorized by this review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FADISABLE-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/disabling-two-factor-authentication-for-your-personal-account.md",
+      "content_sha256": "6936105e66c0107280b118c2a1b664a57397471afc23db76b5ae372bc3bf7f12",
+      "start_line": 1,
+      "end_line": 47,
+      "statement": "Outside collaborators of 2FA-required organizations must first leave or be removed from organization repositories before disabling. This is an access-loss precondition, not permission to remove memberships or transfer ownership.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FADISABLE-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/disabling-two-factor-authentication-for-your-personal-account.md",
+      "content_sha256": "6936105e66c0107280b118c2a1b664a57397471afc23db76b5ae372bc3bf7f12",
+      "start_line": 1,
+      "end_line": 47,
+      "statement": "The Settings, Password and authentication disable menu may require password or another 2FA challenge. Strong recommendation to retain/re-enable 2FA does not authorize temporary weakening or certify safe recovery; no disable operation occurs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "Cloud warning states support cannot restore access when 2FA credentials/recovery methods are lost; exhausted recovery can leave permanent account loss. Email unlinking/reuse is separate from recovering the old account, repositories, permissions or profile.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "One-time recovery codes can restore entry through login/social-login cloud alternative, More options, recovery code and Verify. Unknown password may first require reset; an invalid-code error does not justify bypass or invent a success receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "An already-added passkey satisfies password and 2FA and can recover without knowing the password. A previously configured security key is described as a secondary authentication method; those capabilities and password prerequisites must not be conflated.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "Cloud legacy fallback SMS may still restore access, but new fallback-number configuration is no longer supported; multiple authentication methods are recommended instead. Existing fallback functionality does not authorize enrollment of a removed feature.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "Cloud assisted recovery with known password and absent ordinary 2FA/codes can require OTP to primary/backup verified mail, then previously verified device, SSH key or PAT. Prior use does not guarantee availability: factors may be unavailable for security and inactive SSH keys may have been removed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "The guide and resolved review notice say up to/within three business days, while adjacent text describes a 3–5 day waiting period. Preserve this timing discrepancy and do not invent an exact deadline or promise approval; ordinary 2FA/recovery codes can still restore entry during waiting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "The passwordless recovery branch is FPT/GHEC via 2fa-recovery-flow. Reset request uses primary/backup recipients with all verified addresses as backup absent a selected one, and a reset link valid for three hours; passwordless assisted recovery still requires a recovery factor and support review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-2FALOST-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials.md",
+      "content_sha256": "15f2b9c5c85ffcc88c27d4bbf613f677db489e71f89b32ba4317401167ef6c97",
+      "start_line": 1,
+      "end_line": 108,
+      "statement": "Support reviews and emails approval or denial; an approved link must complete recovery, while denial offers support contact. Sending request/email, choosing factor or waiting is not completed recovery. No request, mailbox access, credentials or real support approval is produced.",
+      "accepted_policy": false
+    }
+  ]
+}

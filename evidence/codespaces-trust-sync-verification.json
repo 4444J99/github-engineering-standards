@@ -1,0 +1,46 @@
+{
+  "issue": 133,
+  "reviewed_at": "2026-10-03T02:26:06.337Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 4,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58917,
+    "claim_bearing_artifacts": 2542,
+    "tests": 324,
+    "test_seconds": 1.974,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No secret acquisition, runtime restart, trust-list or synchronization changes.",
+    "Shared trust list is distinct from independently enabled features and actual live propagation.",
+    "Linked/context/rendered assurance, rights, adoption and independent/native verification remain separate."
+  ]
+}

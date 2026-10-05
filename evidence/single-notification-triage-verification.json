@@ -1,0 +1,45 @@
+{
+  "schema_version": "ges.single-notification-triage-verification.v1",
+  "issue": 383,
+  "source_guides": 1,
+  "claims_added": 6,
+  "candidates_accounted": 21,
+  "reference_claims": 60865,
+  "claim_bearing_artifacts": 3413,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 324,
+    "seconds": 1.975,
+    "result": "OK"
+  },
+  "controls": 95,
+  "project_complete": false,
+  "gates_open": 9,
+  "accepted_policy": false,
+  "rights_cleared": false
+}

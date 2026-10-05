@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:20:58Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSPATHDIFF-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-a-workflow-paths3.md",
+      "content_sha256": "26fa46e1e3de51d10a95423d3fbda7d50ffaa643be59e3bf0e332dabc343aba5",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "paths-ignore suppresses a run only when every changed path matches an ignore pattern; any unmatched path triggers even when other paths are ignored. The docs/** example concerns the root docs directory, not every nested directory named docs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPATHDIFF-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-a-workflow-paths4.md",
+      "content_sha256": "4145cd45dfffe859f4f2dabbc11b9a5acff71826a57f3d02eab5b4765c2d4a77",
+      "start_line": 1,
+      "end_line": 18,
+      "statement": "Include and ignore path keys cannot coexist for one event. Negative include patterns require a positive pattern; negative matches remove earlier inclusion and later positives re-include. The sub-project example excludes its docs subtree but a simultaneous eligible source change still triggers.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPATHDIFF-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-a-workflow-paths5.md",
+      "content_sha256": "6771c5f2dfc4d67f143585fc5cafec209827d158f82419ff050ab3df148c6bf9",
+      "start_line": 1,
+      "end_line": 16,
+      "statement": "No changed files means no filtered run. PR file lists use three-dot comparison against the last base synchronization; existing-branch pushes compare head/base using two dots and new-branch pushes use the specified ancestor-parent base.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPATHDIFF-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-a-workflow-paths5.md",
+      "content_sha256": "6771c5f2dfc4d67f143585fc5cafec209827d158f82419ff050ab3df148c6bf9",
+      "start_line": 1,
+      "end_line": 16,
+      "statement": "Pushes exceeding 1000 commits or diff-generation timeout always trigger. Changed-file lists exceeding the version-dependent actions-paths-filter-limit bound (3000 when enabled, otherwise 300) can miss matching files beyond the returned prefix and fail to trigger. More-specific filters or simpler diffs are proposed mitigations, not proof of exhaustive matching.",
+      "accepted_policy": false
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:15:06.146Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ENTERPRISETEAMSCOPES-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/create-enterprise-account.md",
+      "content_sha256": "84f3c557618b99b92c213018e90dd2d0e0e441abe1a6359108aeae7e45f436de",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment links to enterprise trial setup. Navigation is not a created enterprise, selected account type, free ongoing entitlement, authorized billing or permission to enroll; the external setup page is not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISETEAMSCOPES-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/custom-properties-intro.md",
+      "content_sha256": "a2437ae5d3a10cf04e260f6120304fd118d70087e9cddb6323df6ca360bd7ec6",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Custom properties are described as structured metadata for repositories and organizations supporting organization, governance and automation. Metadata presence is not validated truth, accepted policy, operational binding or enforced governance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISETEAMSCOPES-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/enterprise-team-api.md",
+      "content_sha256": "0d8cef253bb849ff6a76880f3209c7d338c0ffc0c2a9bf855f863719f8fdf09a",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The described enterprise-team endpoints require authenticated membership of the team's enterprise and classic PAT read:enterprise scope for GET or admin:enterprise for other APIs; fine-grained PATs and GitHub App tokens are explicitly incompatible. These endpoint-specific restrictions must not be replaced by generic enterprise App capabilities from another fragment. Team slugs derive from names with ent: prefix. No actual token, endpoint call, membership or scope was verified or changed; the linked scope guide is not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISETEAMSCOPES-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/enterprise-teams-can.md",
+      "content_sha256": "93ed808fd9e8a45854cb8e34f68b460ea3740bcd5eff479e506b4a2652ebd84c",
+      "start_line": 1,
+      "end_line": 12,
+      "statement": "Enterprise teams may receive predefined or custom enterprise roles, organization addition with additional admin-granted access, and ruleset bypass access. Non-GHES branches additionally allow enterprise Copilot Business licensing and opt-in-preview model access; mentions, assignment or PR review requests are feature-gated by enterprise-teams-ga. Capabilities are not actual grants, universal bypass entitlement, required review or permission to incur costs; no team or bypass was changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISETEAMSCOPES-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/enterprise-teams-limits.md",
+      "content_sha256": "cdf8cab38ca01a5e71f333ae1a77851360cf45729e1b24d6a2684f91cbdd2a93",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The limits are 2,500 teams per enterprise, 5,000 users per team and assignment to at most 15,000 organizations on GHES versus 1,000 otherwise. These are separate dimensions and historical product limits, not desired estate size, verified live capacity or creation authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISETEAMSCOPES-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/enterprise-types.md",
+      "content_sha256": "f83370b288b73cfbb9ee2dfd945d9842d1d2f96e1da3e0fb2793b2dd615abf57",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Enterprise Cloud trial setup presents personal-account and managed-user enterprise types. The choice guide link gains a latest Cloud prefix outside GHEC; neither the link nor the list selects an estate identity model, proves reversibility or authorizes a trial. The linked full guide is not reviewed.",
+      "accepted_policy": false
+    }
+  ]
+}

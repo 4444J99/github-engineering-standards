@@ -1,0 +1,57 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/17",
+  "verified_at": "2026-10-02T18:21:30Z",
+  "scope": {
+    "core_source_files": 63,
+    "necessary_dependency_files": 2,
+    "full_source_files": 65,
+    "physical_source_lines": 220,
+    "claim_records": 651,
+    "operative_claims": 648,
+    "nonoperative_grouped_context": 3,
+    "candidate_mappings": 145,
+    "prior_claim_path_overlap": 0
+  },
+  "claims_sha256": "56d243c77d2125b0dcfc6203f3bc8848731d70ac32a33f474f411bac94d8cc46",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "294 tests in 1.249s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid=true; controls=95"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "result": "exit 0"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": "valid=true; reference_claims=48701; source_artifacts=1058; duplicate_relationships_validated=7"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": "reviewed=1092/13657; errors=[]; gates_open=9; project_complete=false; published_pages=18019"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "exit 0"
+    }
+  ],
+  "accounting": {
+    "reviewed": 1092,
+    "inventoried": 13657,
+    "review_coverage": 0.07995899538698104,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": "Bounded semantic source review and audit only. Not overall completion percentage, current entitlement, rendering proof, accepted policy, global omission certificate, rights clearance, published-page assurance or native rollout. Expected synthetic published_docs ERROR test fixture is not real recovery output."
+}

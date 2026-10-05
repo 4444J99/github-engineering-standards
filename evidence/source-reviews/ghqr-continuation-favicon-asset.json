@@ -1,0 +1,71 @@
+[
+  {
+    "artifact_id": "5fcc8279cd6aac33bdfc150d",
+    "source": "microsoft/ghqr",
+    "path": "docs/static/favicons/favicon.ico",
+    "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+    "content_sha256": "e4ec53fe5ebed2b34af622ea29d6c176b7c2503b011282f208ccc595e819e243",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T02:46:16Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Inspected the exact pinned9969byteICO in full: SHA256 matched inventory, one image directory entry covers the completePNG payload with no trailing container bytes, everyPNG chunk parsed andCRC checked, and the sole256x256image was visually inspected. No actionable engineering policy text or requirement was present. This is a retained supporting-asset review, not an exclusion or rights clearance; artwork origin/trademark/per-file attribution remain unresolved. Full visual/byte observations are separately recorded in companion evidence. No upstream execution, acceptedpolicy/nativeproof or independent omission certification.",
+    "claim_mappings": [],
+    "asset_review": {
+      "reviewer": "codex:source-review",
+      "reviewed_at": "2026-10-02T02:46:16Z",
+      "method": "Fetched exact pinned raw URL to temporary storage; checked all file bytes with SHA256 and parsed ICO directory and every embedded PNG chunk; converted with macOS sips for visual inspection, never executed upstream code.",
+      "bytes": 9969,
+      "sha256": "e4ec53fe5ebed2b34af622ea29d6c176b7c2503b011282f208ccc595e819e243",
+      "ico": {
+        "reserved": 0,
+        "type": 1,
+        "image_count": 1,
+        "width": 256,
+        "height": 256,
+        "planes": 1,
+        "bits_per_pixel": 32,
+        "payload_offset": 22,
+        "payload_size": 9947,
+        "container_trailing_bytes": 0
+      },
+      "png": {
+        "sha256": "252ae64407fd3702a33559e6160eab07a6ef7fb743b8e1127be609c319693608",
+        "chunks": [
+          {
+            "type": "IHDR",
+            "bytes": 13,
+            "crc_valid": true
+          },
+          {
+            "type": "orNT",
+            "bytes": 1,
+            "crc_valid": true
+          },
+          {
+            "type": "IDAT",
+            "bytes": 9877,
+            "crc_valid": true
+          },
+          {
+            "type": "IEND",
+            "bytes": 0,
+            "crc_valid": true
+          }
+        ],
+        "payload_consumed": 9947,
+        "text_metadata_chunks": []
+      },
+      "visual_observation": "A single square purple/magenta-to-blue gradient icon containing an abstract white curved geometric glyph. No visible words, engineering requirements, diagrams, credential data or other actionable policy content were observed. Glyph creator, trademark identity and permission for redistribution were not established.",
+      "operative_policy_claims": 0,
+      "disposition": "REFERENCE_ONLY_SUPPORTING_ASSET",
+      "rights_clearance": "NOT_CLEARED",
+      "rights_rationale": "Repository license text does not independently establish the favicon artwork origin, any trademark permission or per-file license attribution. Do not redistribute or blanket-clear this asset without separate provenance/rights review.",
+      "limits": [
+        "Visual/source inspection is not a malware, steganography or hidden-message certification.",
+        "No binary exclusion from the172artifact denominator.",
+        "Asset observation is separate from source-policy acceptance, native enforcement and independent omission certification."
+      ]
+    }
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "issue": 29,
+  "artifacts_reviewed": 12,
+  "reference_claims_added": 35,
+  "candidates_mapped": 23,
+  "review_accounting": {
+    "reviewed": 1632,
+    "denominator": 13657,
+    "percent": 11.949915794098265
+  },
+  "claim_accounting": {
+    "reference_claims": 57183,
+    "source_artifacts": 1598,
+    "validated_duplicates": 7
+  },
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "initial_exit_code": 2,
+      "initial_error": "Missing claims: docs-repository-capability-fragment-claims.json",
+      "correction": "Flattened authored claims with per-claim source identity to the existing required schema.",
+      "final_exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2.017,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "Full standalone fragment review does not certify parent-page version rendering, raster omissions, independent extraction completeness, rights or policy acceptance."
+  ]
+}

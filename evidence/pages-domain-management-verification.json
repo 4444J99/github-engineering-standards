@@ -1,0 +1,47 @@
+{
+  "issue": 303,
+  "reviewed_at": "2026-10-03T07:57:50.209Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 18,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60193,
+    "claim_bearing_artifacts": 3304,
+    "tests": 324,
+    "test_seconds": 1.996,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Reference-only historical source; endpoint values not refreshed for implementation.",
+    "IPv6 procedure/summary discrepancy preserved, not silently reconciled.",
+    "No DNS, domain, certificate, repository or publishing mutation.",
+    "Published assurance, rights and approved native rollout remain unverified."
+  ]
+}

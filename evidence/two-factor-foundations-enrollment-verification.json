@@ -1,0 +1,59 @@
+{
+  "issue": 450,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication.md",
+    "content/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication.md"
+  ],
+  "reusable_fragments_inspected": 24,
+  "feature_datasets_inspected": [
+    "data/features/mandatory-2fa-dotcom-contributors.yml",
+    "data/features/2fa-check-up-period.yml"
+  ],
+  "added_reference_claims": 22,
+  "reference_claims": 61408,
+  "claim_bearing_artifacts": 3522,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 4.386
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "unresolved": [
+    "Password-plus-phone-only concept is narrower than alternative passkey/key/Mobile flows.",
+    "Generic HTTPS PAT requirement versus GCM alternative must not force new credential issuance.",
+    "Target cohort, IdP effective enforcement and durable recovery are not observed."
+  ],
+  "coverage_caveat": "Three source receipts only; not full 2FA/authentication corpus, published assurance or executed enrollment.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false,
+  "credentials_accessed": false
+}

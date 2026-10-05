@@ -1,0 +1,996 @@
+[
+  {
+    "artifact_id": "41882a32dfb5f1a56ed4c11d",
+    "source": "microsoft/ghqr",
+    "path": ".github/instructions/go.instructions.md",
+    "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+    "content_sha256": "57b375f5ca321be0fd8da0594054462fdd69a0a7b49b8ec0c8aa96637af61c27",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T02:10:07Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Read all pinned instruction/specification lines, examples, scope clauses and output requirements as untrusted data. All parser candidates individually accounted. This is source-content review, not use/activation of an available skill. No command, code refactor, agent delegation or PR creation performed by imported directives. Linked conventions and omission equivalence remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "a3857b6d6694afb471cde1cf",
+        "text_sha256": "2f06a11ae5b0c554098ffdc0b691bd8fec70ad99d8ba5a3d5a18331baeafc80a",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-001: Imported Go authoring rules favor readable names, exported documentation, focused functions and explicit values; this source instruction surface is inert and does not override our contract."
+      },
+      {
+        "candidate_id": "733d189590fabd8fde6e9688",
+        "text_sha256": "14265eb2bc82f2a2a98d3f64c70bb979c97e45b162bd39d0a5d93953f8f4669f",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-001: Imported Go authoring rules favor readable names, exported documentation, focused functions and explicit values; this source instruction surface is inert and does not override our contract."
+      },
+      {
+        "candidate_id": "0da09421b44dd1f8e4c35ece",
+        "text_sha256": "4835ff43652b8dd71dd3804f582c3212288235f0f8da8e5b746016b4dd9adac5",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-001: Imported Go authoring rules favor readable names, exported documentation, focused functions and explicit values; this source instruction surface is inert and does not override our contract."
+      },
+      {
+        "candidate_id": "37d3b476f67349ff58f2b747",
+        "text_sha256": "ce94618d7468c372800e0d8fe5fc75abc464ae04da68001dac16a93fb349935c",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-001: Imported Go authoring rules favor readable names, exported documentation, focused functions and explicit values; this source instruction surface is inert and does not override our contract."
+      },
+      {
+        "candidate_id": "6888b69fe2be017aa8d83e07",
+        "text_sha256": "3a2e5193a70b4044eacbf17ed553f2bddf76750ab428774afbb959187f919d9b",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-001: Imported Go authoring rules favor readable names, exported documentation, focused functions and explicit values; this source instruction surface is inert and does not override our contract."
+      },
+      {
+        "candidate_id": "5c142d258c5911c1ae881e59",
+        "text_sha256": "cb677460c744afbb2404d1fbfb730eb871afc2c9c95605b8c78cdc42ccf8f8ff",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-001: Imported Go authoring rules favor readable names, exported documentation, focused functions and explicit values; this source instruction surface is inert and does not override our contract."
+      },
+      {
+        "candidate_id": "4631a7b42b894bb000a673d0",
+        "text_sha256": "2588b45a7bf9eb74e779585a3252e8e66ff82ee46e0e9155550f3df76871eecd",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-001: Imported Go authoring rules favor readable names, exported documentation, focused functions and explicit values; this source instruction surface is inert and does not override our contract."
+      },
+      {
+        "candidate_id": "00dfefb0ce14e8998ed7083b",
+        "text_sha256": "cfc3bde8b8e938d6f5d403d53bb84e99763a0c5de8dff2e0dfdd358c4bfd2ec9",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-002: Errors should be checked immediately, wrapped with context and identified with sentinel/type checks rather than ignored."
+      },
+      {
+        "candidate_id": "99145ecd6e43209bd1947448",
+        "text_sha256": "bb06f0b7e9b297b1958b00a3e904fe54ca8eed3b58020ffe042399fc169179d1",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-002: Errors should be checked immediately, wrapped with context and identified with sentinel/type checks rather than ignored."
+      },
+      {
+        "candidate_id": "07c9c854e5d216c001daac9f",
+        "text_sha256": "096aff4e6d4c4e0c2611639ed0b6bf16c51540f8b000e6dbbcccb30b97b45711",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-002: Errors should be checked immediately, wrapped with context and identified with sentinel/type checks rather than ignored."
+      },
+      {
+        "candidate_id": "b3b703dcaaecbe7c0179509e",
+        "text_sha256": "3d86c85620b07016e262ad8f80191d34eae4bdbf849bec5dd47cdc0d58dd9bab",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-002: Errors should be checked immediately, wrapped with context and identified with sentinel/type checks rather than ignored."
+      },
+      {
+        "candidate_id": "2af734c10d1e0fd7cc1d83d2",
+        "text_sha256": "8586b999ccb5714648f977ce078200150f793ff6cc6e9215e1db9dc1e6fc2c29",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-003: Evaluator guidance requires nil guards, unavailable-data outcomes and distinct active issues/proactive recommendations with typed severity/category; unavailable inputs cannot clear a gate."
+      },
+      {
+        "candidate_id": "c064c164d8904765593a94a4",
+        "text_sha256": "29b845da18abbfbe55a7738fdb01c58474f7b913b407219490e0f19b283b43ac",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-003: Evaluator guidance requires nil guards, unavailable-data outcomes and distinct active issues/proactive recommendations with typed severity/category; unavailable inputs cannot clear a gate."
+      },
+      {
+        "candidate_id": "94c1cf1362be3b597d4b7b29",
+        "text_sha256": "2a0fae9dee0daeb37f5b0613a334a974fa06fde7ebce9453aa5ab43fb373e7b6",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-003: Evaluator guidance requires nil guards, unavailable-data outcomes and distinct active issues/proactive recommendations with typed severity/category; unavailable inputs cannot clear a gate."
+      },
+      {
+        "candidate_id": "ad2bd615d6da60fdb7029676",
+        "text_sha256": "3203e9ac22ce15e932931ef2e146daca6f7bb65dfc4a844cd2bbf14c1742dd65",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-003: Evaluator guidance requires nil guards, unavailable-data outcomes and distinct active issues/proactive recommendations with typed severity/category; unavailable inputs cannot clear a gate."
+      },
+      {
+        "candidate_id": "9bac40ee14de881ee4e581b0",
+        "text_sha256": "cec70bde341f87ad9e1c724f65bd0bf69513ba14722a888b770c4f402cf9f93e",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-003: Evaluator guidance requires nil guards, unavailable-data outcomes and distinct active issues/proactive recommendations with typed severity/category; unavailable inputs cannot clear a gate."
+      },
+      {
+        "candidate_id": "520122bbcd1923a509a161f7",
+        "text_sha256": "9a44469119fc40e7a167a349fb7493a70c0dcd7f4e455ab7b0e8d4c4bbdb71c1",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-004: List APIs should exhaust pagination and respect rate limits with backoff; stated collection practices require actual implementation verification."
+      },
+      {
+        "candidate_id": "f6598462132aff9d914e543e",
+        "text_sha256": "f908f87382ebf7538ee78ccebfb356fd4929e705c8858c08f0377b2468f13f54",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-004: List APIs should exhaust pagination and respect rate limits with backoff; stated collection practices require actual implementation verification."
+      },
+      {
+        "candidate_id": "f0099a79b82ad1b6895599cc",
+        "text_sha256": "101500b9b573c1c433ba742851fec652fc10df0d9c1dc542223333dc4e5b7736",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-004: List APIs should exhaust pagination and respect rate limits with backoff; stated collection practices require actual implementation verification."
+      },
+      {
+        "candidate_id": "545d9ae525acb04933f7f3ee",
+        "text_sha256": "53b48cd0d2546a1c1da1a92d602de20c41c5b4671b7efcccfe9ce0d1391a07b4",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-004: List APIs should exhaust pagination and respect rate limits with backoff; stated collection practices require actual implementation verification."
+      },
+      {
+        "candidate_id": "2c7d10239b9994eccbba39e5",
+        "text_sha256": "9f6b92824afcb286b48b5da44ed27a9d66517fa665750bf3b3e1097996d6c7fe",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "caee984b8617699c62e08596",
+        "text_sha256": "14499c8f1c7a7c651f8c3d040abf5217e262de3985d8a749a44615b97c41c451",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "df3779e9df3e662f4d35928a",
+        "text_sha256": "ba32dcbe7da833e227ebd1fc97db2d4e572d7d6916afdca776c6e37474f68b91",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "a492d3a4f1aa5193e8352659",
+        "text_sha256": "dd8b14023cf2297b9c465e692021b77419ea4135a739f15cb74979581c8530ac",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "001aa30c06c00a9f3fd55436",
+        "text_sha256": "c4daddfbd1398de01a1e1ddcd92687450bf34500798df6e13c7f8b21f3d5f517",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "2cc7aa268a9da31226301636",
+        "text_sha256": "18b2df90388016367facbe025d6b222dd400dc83fbdf306c8ace4916f5f499a4",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "032f19a2046b2bec8ead5a59",
+        "text_sha256": "54a1463ca32f2eb320dc30e48002b9b807b62a72e9038c3b74c07b91bfa6b095",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "3d3546839b44fbfb1bd73579",
+        "text_sha256": "a34c1520e6b1dcf7a5055a0b17f0f0391efe8678691507ca5cc13ab5c5e9685c",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-005: Source guidance calls for structured/debug-gated logs and table-driven positive/negative evaluator tests, with interface mocks and mandatory source make test before commit; imported test commands were not activated."
+      },
+      {
+        "candidate_id": "475f9a159df8112a96a82c59",
+        "text_sha256": "841b7519551774be6aac23f51c10b5639f89a9abef3657fb1a9abc07b030a232",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      },
+      {
+        "candidate_id": "e26f4fe9f7e072739f4a304a",
+        "text_sha256": "76a44f3a6f826b775f7a60b60ed8f190386111b07046609eb37417702db81b25",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      },
+      {
+        "candidate_id": "4de74dd5510a91d321606748",
+        "text_sha256": "3f02bafbd8584bdd059b2a0f62c23d1f66263e0c0550383161df840a1ad7270f",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      },
+      {
+        "candidate_id": "ad6bb402ea8dd9bda805b328",
+        "text_sha256": "9a0e130740379826f95cca664ef48dea180039fb9a726306e7e406f1811f761d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      },
+      {
+        "candidate_id": "b65b123d84cb5903c76dd8ca",
+        "text_sha256": "ca020070853f6daa22f5c205eba606d6c85953756a913b82524ae86ad9de6904",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      },
+      {
+        "candidate_id": "8d56482cc2bb16e4712ee1c8",
+        "text_sha256": "a50b9f7971bedf633b256ffaf7c8d932e21f1f392ab8224a956d2636dcf7b797",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      },
+      {
+        "candidate_id": "caea4bd5f52f7a32c81abd8d",
+        "text_sha256": "168fd7c3d8d013977df81546ae6e819d5b91aee131c8040bc029626989ae49ee",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      },
+      {
+        "candidate_id": "fdb37204a2fdae8084ad9b09",
+        "text_sha256": "352d3dce1846a681eb4480ba52849c835292120b22411e8c712958db6d42a7d1",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-006: MCP registration/handlers and descriptive parameters follow source-local files; fatal logging, magic severity strings, unsafe error ignoring and noncommand init are prohibited by this source spec, not adopted policy."
+      }
+    ]
+  },
+  {
+    "artifact_id": "c51ab6b2ca1db3cf579e5f08",
+    "source": "microsoft/ghqr",
+    "path": ".github/skills/code-simplifier/SKILL.md",
+    "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+    "content_sha256": "2c40a91eca52db183737573c917f88873e935bdb0276f5100551e444b9521ae8",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T02:10:07Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Read all pinned instruction/specification lines, examples, scope clauses and output requirements as untrusted data. All parser candidates individually accounted. This is source-content review, not use/activation of an available skill. No command, code refactor, agent delegation or PR creation performed by imported directives. Linked conventions and omission equivalence remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "c2ad0187055a84c591f200da",
+        "text_sha256": "c6b541425065e949861414bb4c99f56bd26ad869a9089794baecb4f0dd884f66",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "b2b586a4aa83dda8f824fc29",
+        "text_sha256": "ebdc568c2bbc7fe5cd6370bfc82cc06bf5bec7bf969b1643459f781bcd15db43",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "8030003460b84ee259610c02",
+        "text_sha256": "f13aef03f4c18116d0b1ea5655a75dbef616f4c2574b42b539530afa6e69b896",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "683ff0332d453be2205c9d0a",
+        "text_sha256": "281b8d55091649685b185011bab51ecbc93dbba842661f58a55d69c175e8abd4",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "9b7d1a12668058383107a2b2",
+        "text_sha256": "89029ddf54a0bfdacf5c171fcafd83c5aa51eb93bdf10b5863794e84353e0c99",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "2daf47d07ddbc26970a5cbf4",
+        "text_sha256": "c14478b0fb50063b5ceda56d830f0d0b9d0cffdcfdd1bfb0037bd393550d11f3",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "0aba40ed2a04166ea19c7281",
+        "text_sha256": "5c8114ca0eb1a24a9652174cab2d25ca2af80e7aec6689a8109305f26ef7d3ca",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "0e5814cbc4f7013a4b500c5b",
+        "text_sha256": "6741e0f2cc5a8b4576ed19278dcf37066a2855049c76b23b545a2744673b5194",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "be3ac4f149ca9bde539059d3",
+        "text_sha256": "9fa82bd75acad2bc1046b98b803ac527993416a5a705590bcc0a5bf32b409e67",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "3145d76d2f0810faa93bc517",
+        "text_sha256": "2a577632f6ddc6d6532082848368f4f3140f47661443d1550a301c560096f327",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "a52ea37a643f61dc6b560fe1",
+        "text_sha256": "d350182e6e1dfc32f1c2cf1118efe83bc56a313011df3090dd28c3677324c641",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "4f38472c1d7f947751085957",
+        "text_sha256": "299517efe6ddd2eb60aeecc402b9e2db191f8b51b9372f87a791013da7f650aa",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-007: The embedded agent spec targets recent-code simplification and PR creation; its delegated powers and scheduled workflow are not activated during evidence review."
+      },
+      {
+        "candidate_id": "93249e14bf66405b495afd0c",
+        "text_sha256": "2497fc24932045cd6c4543005d9afe75c2905ff652b8a54ab70999232116c5ef",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "3a9e11da17bf0aeca879f3d3",
+        "text_sha256": "4a9736a06a9d095f33df288e7fb438eba6480bed391c78359e3a868fc00d8c8f",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "f5fa5572c0abf5cd10589a59",
+        "text_sha256": "a06b41595deef006d4623233f6761f470e77f9280fec6c0e993e5c997a1499c6",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "cd63a08390800a5298cd6a5a",
+        "text_sha256": "7084577cbd54bc25445c6a3b8d48c11024f51f3f631099d170929ca13cbe1011",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "8fdae05e992cb2b42a5e79fc",
+        "text_sha256": "ab744a3860290bb24542734f6f8d33f89f994057ebb3e16d7cef92b8047cd0f7",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "77fc591d99cd934c1bdcc1e6",
+        "text_sha256": "7a8f92496c1262df73c64f2068aa816da4bec2979ed477e28fa391919159a815",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "5a8e6e2eae28cbab37992c85",
+        "text_sha256": "92e81a3ad8cee61066682a72f175c747559374ac90c29f5a9f33b365c51b8b62",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "9e6778f5c7321026a86f28d8",
+        "text_sha256": "951780107d99f1419acfd035b31a066bb177bfc80c39c11b929d6d9c5d7840d4",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "15565bce9d6fa2d271a50dba",
+        "text_sha256": "13a8258a9d1e13163b357aded24c613de80a7a971911cc44f131f4568d023257",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "23424564bf7c1be30dc75663",
+        "text_sha256": "1bb7f8da230e1c8aad8e44a54a1e1d54338b4c48cfafcd208a7641386188f425",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "6ec72881d2db5aa5bb3be133",
+        "text_sha256": "30a1ce80f07e5f2c2fd0bdb9b29ddd16c3ac8e0b471690f602c0eae55094d2fe",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "fc29904f60944f3ffcf16451",
+        "text_sha256": "b038c949b15f944720e38b91852defaf38cddef7a6a995acaee679a28fe262b8",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "63eb2f008c6a57c07868b557",
+        "text_sha256": "b7ea5f63208d016a343e5608c457a7ee7d9a12b6b90df5ba094016264f4f6477",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "dbbec3b1a83daeb36a0ee62e",
+        "text_sha256": "49241a016ab57f4117fe24bd83a7b150a8c1176c299519575a78533e1757ec71",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "9e7560d04da13c8a2738ad23",
+        "text_sha256": "f179a8592f6cd5661b799e70cb2443089f3d2116a80025515915db2a39b7cf2f",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "2b087c9791e6cc32896f560c",
+        "text_sha256": "f928db6d6252667eab266ed4603d1da07db293a32db14d80fd43494376997eaa",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "d6060ca029df7fc99c7b0639",
+        "text_sha256": "5a1d3605038ee9c990364438e854fe797178ff21d1d5ab07b881d28c953ec638",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "108b1242288fa22ef40c63f9",
+        "text_sha256": "c567b6cef869fb6141046c0fa829d727cbe7390e9bafa78636fd44db203bde05",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "30409affc0bc90e7fb9a2748",
+        "text_sha256": "56fa88dc60fd836ef57a595c5720d8f21b77930b948b432645c8b38260f270f4",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "0a3e53e5463d574142b25da7",
+        "text_sha256": "f7f92a58fc681103720c83a94921154eea23a9a43cbc188140d648c451469421",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "57bd25ec02fe1a0c3129d480",
+        "text_sha256": "8028b1c0b4215c4c3a46e1b0b7b06e070c3bbd8abae6ce1d90cf4b4fb9d7c53e",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-008: Refactoring should preserve behavior, test before/after, improve names/structure and avoid overcompressed cleverness or harmful abstraction removal."
+      },
+      {
+        "candidate_id": "c60692fe0a5e2abaa1f044e3",
+        "text_sha256": "4ff0fc14dcac48d62817f73586a79c7df86b073474b3791ae961f2ce55b8cb71",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "60b9700e6bc6bbd6021a0363",
+        "text_sha256": "5431dfa3afcd5a3ef4d8773835a0dfebacdbda61a301531c1ccc1b8bb4847782",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "40100ff561b3618307885230",
+        "text_sha256": "108c739caffbe068bd555702598e5eb451068e750995518a8c41eb642fa991af",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "01788b629a5662d3ab3239a0",
+        "text_sha256": "9f8faf8858fdbf3d16bf56f7cdc0eda72b550f85938d9a193e3098a97d3a8f5a",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "0bc43cb021a00b0b3e908fec",
+        "text_sha256": "e3f0ad5ecdd2a69e35375c2766c5c34f0ad6037aa005815ffa109a5c0a220fd3",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "ccdd4ebcfb328fad4dba7799",
+        "text_sha256": "8ff28c6620c0db187de23a4e1de93eeabec3dbb6436a3e68995746bd299b2e59",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "113d1e046dab4938c4cfcdd3",
+        "text_sha256": "4e2d361d4241f6e38b21b3010a76ea8f1f1fded28cf18ac3e3cd0c8bc625d736",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "86d23179c8a314d52e62abed",
+        "text_sha256": "0b67d59b8231b8e8a9b66e8ab13d5400c64b625e12149debe5cc68378a8c59f2",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "070ee9c4830b8d7efcbf5619",
+        "text_sha256": "b2337093f57fdeb7deb39fa981bfb7aa0f49a92fe8a4bce2eb21ce268dc2d96f",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "f26a6fb41a5aae2ac7a13414",
+        "text_sha256": "639972e17420ab60048bb304c7dbf1cb41ed233889d6b67164ba3d4eddcc6d44",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "14c62c4ffb23be7c70bb1546",
+        "text_sha256": "9baed7eba0f7ddbe3dcaf983d8b09a13469ff992f4313e3345cf1e0e54c4941e",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "96b9f6c8e87e42112db47d9e",
+        "text_sha256": "19e21cb8df70bb83a5aae9cad0f2916cf0d991bff3b51bec89bfeeda65a4a6bd",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "64e98d6e10a824269934bd69",
+        "text_sha256": "9aa7a273233ee7cda11fc8d203c4bbaec8f246cb568fa67b15811823a4a39b14",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "e98a58492340a2585376d509",
+        "text_sha256": "296c21d873f52662544c740ad8d37421161656a6f8ce150803e8a922f9e87f72",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "7f42185c068908a943704243",
+        "text_sha256": "a6fbc60f0e97b8152c2092c6db3a177aa10d91ed16f080ef86b50f29ee83ed01",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "780fb58c9d544693e88799c4",
+        "text_sha256": "4b5579822da7e424db9710e158f27769ffbdc6d3d806f02388eafec7e5141826",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "9862b4b1f2fdd1367cdc7d4f",
+        "text_sha256": "b37dc387be0a959802b13d5bad565f3171269106c20b010a9439abb93217cb55",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "c21448f02e9ef9a456eaa6fa",
+        "text_sha256": "b1a415dcbe1f8406fefc9b8b656b0774c5959de1eecc3d8db309514f353930c4",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "e07705daeb2a71d54f79a179",
+        "text_sha256": "bb53dc2bfeb593e0987ab3bbd491cbab48f882d90058f5c498d28ac7421014db",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "7dfe2a653cbca604a191ded7",
+        "text_sha256": "49366c676e405a79f9363099dde9f69452780bbc04bddc273219f3a26febd1e8",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "49b7d16d090ed5cb70b1e1cf",
+        "text_sha256": "494584aa37d2d8355282ad12db8b019958248c8c6afd3d890ded6e18ec88f7af",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "28e0b03e600ed401b2cfa904",
+        "text_sha256": "a637a76209253fa41d52a8ae358248a227b7259db03c1c024749379dfb0d1bd5",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-009: Source procedure combines filesystem, local commits and remote PRs over a24hour window, deduplicates source files and excludes tests/locks/generated/vendor; recentness/exclusions cannot shrink this project's exhaustive corpus denominator."
+      },
+      {
+        "candidate_id": "e627a22249ea5d621b8405e4",
+        "text_sha256": "a964d0f3a5c4d791f8c8caf4b09b3fcdd3dac8b63ba06ba7df44615afb582be6",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "03502ed3f326c4e46b85260f",
+        "text_sha256": "d93267fc3e45fd05a0932ad60832350d4117797f308be916e37ed37e4af24872",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "a6af460e18893317322296e0",
+        "text_sha256": "82941bc49df3da38b2ce63586bfd9c81dad3e4b71fb17d29a7a9675d5a1fd419",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "532ab1875c7cccaa2a94d9f6",
+        "text_sha256": "c6c341082e9d6164984e10b5bb219086a856c2779e6557dedeb1cc3842f10ef6",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "04c38843fa1a8011a1e3e4ba",
+        "text_sha256": "06db72697ad8960b1dd00054945c85ec052c8ee6f72d75b87e3169b9431f0329",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "b958194fa583aaac9bc55ec8",
+        "text_sha256": "92dd62de7223d3a56e5a2b12578c5eca2946dfba27776ab9e20799b0ed64ad2c",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "ae7dbd7d2c53cabdad23a145",
+        "text_sha256": "654350b39fc90375e8c7b168517f92bb7a4cdf27866022bb486acc7b325639f7",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "719a18e5847844aae1ecac6f",
+        "text_sha256": "fbed40b2e802892aa4c1adffa188f469bb0e2b45f5478edc7336e0ae6c79b014",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "028aa73955d82ee370f4e6ec",
+        "text_sha256": "6418115c5312ae90e0f916dd6efcf7996a00b6b4e4d7b5a34ecb847a989751aa",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "cabd00c6bb99a290f064581b",
+        "text_sha256": "cfdfa3ad797b8fec6d231684bdbd520d6e9cf782e292c2a40a5ff0dbe256a5e0",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "effe2a91cb02ee05d2e9e17f",
+        "text_sha256": "0ea9699a8ba43f5617e604a07506fb29f67c103b3253fe3c6b5dcd52c33fe15f",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "71bcfefd17c60a4cb02c8af3",
+        "text_sha256": "30514b66076b916f02e62e1eebace0fa2966914ebe4690f70a0130d1f8b5b379",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "4fdf55b931fb586c7d4dee22",
+        "text_sha256": "6acf730fa315ccbec0fe86a1b78eea554841b8acf85dce4cf46c1e6e4255eebc",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "39fe6acc8f0b9ee86dbe8de5",
+        "text_sha256": "220ccda449cdc8bc6e17d065adef02f83ca70be26cbe0d889ef91b48b6a9166a",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "2aa1026f7efbe43cf9c13422",
+        "text_sha256": "496e048b82c09b2a0be0d4a8bd9dcb30340b0cc22fa476e5c74bac501d887ed1",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "9466ea1bef7aca37b74443d9",
+        "text_sha256": "847e377847531bbdcca5a3d0d50576f0b684385304c633a582a7250cb0cd7c71",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "a1e48ddaadd781e3d26fabdf",
+        "text_sha256": "d7946cf64a06b533c1d0eb04728bd5558161b48ebcd2421fed5ee1e5211ce0fb",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "bad55c36e6826224b54d360e",
+        "text_sha256": "65007b547bbf7a369ddb5f42d3d8755e7ead1a45f059de46f1994787b4915b8d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "268fe0d1e56f0318047d2a17",
+        "text_sha256": "cf6426b31af88d1f6cc2546b160711970a88933a4646a682f1d6d7791af0f490",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-010: The source requests project conventions and per-file reasoning before narrow edits; imported edit instructions confer no implementation authority here."
+      },
+      {
+        "candidate_id": "732d697d405a350ddff28b2d",
+        "text_sha256": "1ce8e4d6d8be8908e5fdf9bc90b0c1c358caf0565aa402002df803325be4baed",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "7d828d383dec9892a0a5214c",
+        "text_sha256": "f834794b80f902248887f62f5025f461e610e63375f1c5bdf548533dd834016d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "7a1de472d9b504824f94df90",
+        "text_sha256": "5fb14519046f929fa4d7d26febfe91918cf39d2e0f623c72ed4f67cbafa338d7",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "44f2a113ae887adb8104f334",
+        "text_sha256": "f88187c55eee17ec93377e4d1bc91db19cd8989c7e849871a4e5198afa222212",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "db8db1a55ff7e4a2e46df2e3",
+        "text_sha256": "2e948f12b933218051275228e75d2276454e477c966f06fcabd06f79de2d658b",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "9a200ae3543b30a76b494f9a",
+        "text_sha256": "e3187c785a8c6dd3be4c2b67ea9fed7b8c8b36c83da800322763ec569f1d26cb",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "f54047ca3e01dcb7e31b3115",
+        "text_sha256": "d9488ecebb5d66894d466e47e5ddc43aa9430e9a23b2dd8f32ffbfd76edef444",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "97faf7068a991abbf46e9304",
+        "text_sha256": "54a1ef91b0b55c576e43dc1955ddb2ada5b15b76dcbc2272c05cb09c1a91849e",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "84e0eed3f87926830a76f9ac",
+        "text_sha256": "4893dff6432a8cf9e495ba6db37c82bc689036a45e4519f7a389ad3eeb718b80",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "74e7644c98f36d63965f64f7",
+        "text_sha256": "a1f599efdf7e18fe29f396f0e4e3d15caced7ef686ce44063a55ae6585cdba7d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "97d939149329ee0dfccc86e0",
+        "text_sha256": "33180fdd0b5e75c6d607fe29180058f5622da1f7f02d58e76d4a3ec97cf2c921",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "cebeb421a5fd4768302af58a",
+        "text_sha256": "08cbff8e611e709c071049129c90970cb3516e0f2aa3bfd581e7d6de533cb363",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-011: After refactoring the source asks for tests, lint and build with failure-driven correction; a green existing suite alone cannot prove identical semantics."
+      },
+      {
+        "candidate_id": "35d8e5667e64dff1b3cac0a5",
+        "text_sha256": "ba7de18d108b533079b2e1aec58f4b25c2dcc4ef04985e44a9b1df3752a1c62f",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "7f6dc6252108bceb8ba24710",
+        "text_sha256": "7a3e6025f8123c87e799a5b5bd341beba348c6d8a27e9953805f5f9f2f4808b6",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "ccaf4e16a2d4136d07094d33",
+        "text_sha256": "c06ca78864542666cf5a4aff958a3bdf4305209986fa41308b795862c5f07865",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "473b3abc7cd1ef530bbc633e",
+        "text_sha256": "5448326d8e286db3e92429052f2251947fe65c3899a579676826b3f262696ac7",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "47c1a0e0ad901eaaeb37e42a",
+        "text_sha256": "f13a911b01fe350905da3b5195df8597ad63bdda7356de95849d1fc13f08a162",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "9453e006cd2baee0fb5b1433",
+        "text_sha256": "f3b46f7aae904e36b93a1267f1df34e246a4e0b0d1f0033910c5e3a9a9961cac",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "db03c5c27f71890ace0f71d7",
+        "text_sha256": "8128051358826d48649c92f748a9effeac47ec3c784e3547768e8b03cb2f05eb",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "76f4e627cd52192269bd4be7",
+        "text_sha256": "a5a7e1e258f2fd48032510fcb09e8f83350cecf422b183cf6907f08e188c7664",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "85bd6aab007252d417e17e00",
+        "text_sha256": "5c316f270105e66c9e64287a7f28ba0d8d50635caba196cd107804102c2d0b4d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "144e51076a19cfa8e2da3044",
+        "text_sha256": "be494a51bb6cd60d11a548dded21a59d8ea9587d90e4fcf136d52d71792ce5b3",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-012: PR creation is conditioned on beneficial changes and available checks, with a templated green report; no-tests/no-lint allowances and placeholders are not equivalent to fulfilled acceptance evidence."
+      },
+      {
+        "candidate_id": "1ba98b66f1cf5e4163767d28",
+        "text_sha256": "81e362ee99f1ae56aac633559a4e7db63951fdc7ef621bc763607a0fb76b3fe1",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-013: Examples simplify nesting and preserve explicit branch ordering; example transformations require domain-specific equivalence tests before use."
+      },
+      {
+        "candidate_id": "f26455181d994d973ebc6995",
+        "text_sha256": "4253e465755f504e505a712bd1170963b3e6b12ca161eeb1a0d35a0b46f7af5d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-013: Examples simplify nesting and preserve explicit branch ordering; example transformations require domain-specific equivalence tests before use."
+      },
+      {
+        "candidate_id": "e906ccbce2bcdbf0c9467334",
+        "text_sha256": "15df0019216665309b410879b724a42c96d4e24c258cfcd5112c58280cdf174c",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-014: The Python example replaces None/length checks with general truthiness, which may change behavior for other falsy types; its exact-functionality claim remains conditional on a verified input contract."
+      },
+      {
+        "candidate_id": "b6ecf821ea13b5b4115e0478",
+        "text_sha256": "87965086e9d31656792d3c30ef8ee984c75850710e81f0577c4e10b3eddbee5a",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-015: Name improvements, recent-change focus, stable public APIs and narrow edits are source-local maintainability advice."
+      },
+      {
+        "candidate_id": "2ff30d90a66f5546af6eb02b",
+        "text_sha256": "cf31ba83a459999b6c193d8c4d48ed4bb7ebbd2b5f9b9440f155db2e005390f8",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-015: Name improvements, recent-change focus, stable public APIs and narrow edits are source-local maintainability advice."
+      },
+      {
+        "candidate_id": "357f7d2e10031b14585d5619",
+        "text_sha256": "a9c23b9567230f677618cb77f5baaefa4b9a94386dfa74466f10e4fc63f11ec1",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-015: Name improvements, recent-change focus, stable public APIs and narrow edits are source-local maintainability advice."
+      },
+      {
+        "candidate_id": "e38c1a3ee6885ce4510781e6",
+        "text_sha256": "982968813143c363185e23d9d48fba4ab1716a2d6942949cad38dc9409563bd1",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-015: Name improvements, recent-change focus, stable public APIs and narrow edits are source-local maintainability advice."
+      },
+      {
+        "candidate_id": "d8cf4e5b930150bb2943e914",
+        "text_sha256": "ce30d097a95bf1c02f836a40285f71d5003b8528945041f9c30a137a558d5a21",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-015: Name improvements, recent-change focus, stable public APIs and narrow edits are source-local maintainability advice."
+      },
+      {
+        "candidate_id": "3c5cfcd56d8f70a20f6f39aa",
+        "text_sha256": "b6c456bfdecd377bb3526030bec16257daa5104952fe9c687fac3fb161e8a699",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-015: Name improvements, recent-change focus, stable public APIs and narrow edits are source-local maintainability advice."
+      },
+      {
+        "candidate_id": "1e51044dc278ac708722b761",
+        "text_sha256": "c92c8bd575095a5ee7d165afd6b4da654de9170cc6084cd7f098587658ce5d2b",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "f362e86f32f9aae532e4732d",
+        "text_sha256": "18c1f624a79757e0a9c376edd12b5bd78c6216dc49a61390f87f85fed668bd82",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "48abda0a794f4470af879f28",
+        "text_sha256": "b26b4c03ea00e24b286d3bf19043d156875e44e9c463f0d6cb3acfd974526d0e",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "c6ab9c78eef6f846916faeb1",
+        "text_sha256": "9607184031b273815b44b1196fdcd029589505efe00a279ef0ccace415b7515c",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "cb06655adaaebfd2afd357ed",
+        "text_sha256": "183c1e18a0f1cb5ebec2ece68b851952183440942a91cad0217abaadebc61e9d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "26b66188573110b300015a1b",
+        "text_sha256": "5e84727d7d3fd0454da247a0d4fb8b7d00f466a6a96b405a5aa7cf1fac3e292a",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "d97f18991806d45fd16a634f",
+        "text_sha256": "e178926d0fda1dedf5cef0b782d0eaeea5c4103206a732b1d221720e07f1050c",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "bf78135c5ae7963b89e6ae2b",
+        "text_sha256": "34a57cbb37b27759776e8d8795744fddc6997fb9005cdddf6a8cbfc5bf03b395",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "39a695be6b64d77fa5540d73",
+        "text_sha256": "e2e23a4212d0b556ad7c2ef95e4324e81d6a6ea778ba7e861c8d9fd4d84e0524",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "d1ef136ec626d71a67181782",
+        "text_sha256": "9e2ede7ff40fc1abb6721f7ef9526817b77e115207c81c9edc0a1fd70e64a960",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "dab24de8ea3a62b500894dd4",
+        "text_sha256": "b6a319d111c12f10604de6aa3e30afbf5aa52d4ff91cf2e582e79a04e4bd5271",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "cd8b326e6dd30845f39c8e97",
+        "text_sha256": "a7108ccf0dfc918869a7e611969efa80338e42ca55113df16e2618dfd4a84d2a",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "8de69cf1f4c8450a1f4ca2fa",
+        "text_sha256": "1b524c3d685b3f90c3116d9b994632c4b52e262aaf7666d45d18a18290d6c296",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "5d4bf1878808f13b3c4248f9",
+        "text_sha256": "d3f32cccf66ba44d3151fcb912579dead03ed017efbde73bc7f6bc5568e2360d",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "0ebf8442142a3a3ff18738f5",
+        "text_sha256": "020524f0c026361c9a5515cc8ea758424ad820558cf76a90f87dd83882907526",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "d427670927dc6ffae377050d",
+        "text_sha256": "76acd3b19ab42095655f16e2972ba45e2107e2dd67e131b0a74234f7e7189137",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "00272a263d8aa9d9366b5d86",
+        "text_sha256": "b292583a30ab6cc3ffe72ff78050ae81552d53d1d2f4db38d17ea462a1b509a0",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "222e393ef6e38b034c8f6d5e",
+        "text_sha256": "bc0e353e37a976a21873f0bca77b60ca6565123fbdf8dc016f8d1734abe29527",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "a45e9ff27196c7768218ae09",
+        "text_sha256": "59cb42dc7e80324ac7dd89da1b00fec30249c7911f8ac2b86c726b5dde2b0fda",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      },
+      {
+        "candidate_id": "10074ca8a2ed86740cc2e6a7",
+        "text_sha256": "94a951a584bea3548b9f2ad2bba7030c7af5cc0592f9f7fb060ce694ca135372",
+        "disposition": "REFERENCE",
+        "rationale": "GHQR-CONT-SPEC-016: The spec exits for no benefit or failing/risky changes and demands status or a PR; this imported MUST does not grant publication authority, adoption or completion certification."
+      }
+    ]
+  }
+]

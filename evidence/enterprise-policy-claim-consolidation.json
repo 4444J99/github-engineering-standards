@@ -1,0 +1,700 @@
+{
+  "schema": "ges.reference-consolidation.v1",
+  "status": "REVIEWED_REFERENCE_PROPOSAL_NOT_ADOPTED",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T04:04:02Z",
+  "source_documents": [
+    "evidence/source-reviews/docs-enterprise-policy-claims.json",
+    "evidence/source-reviews/docs-policy-conflicts-claims.json",
+    "evidence/source-reviews/docs-policy-surfaces-claims.json",
+    "evidence/source-reviews/docs-default-availability-claims.json",
+    "evidence/source-reviews/docs-enterprise-configuration-claims.json",
+    "evidence/source-reviews/docs-enterprise-model-access-claims.json",
+    "evidence/source-reviews/docs-enterprise-model-lifecycle-claims.json",
+    "evidence/source-reviews/docs-enterprise-model-compliance-claims.json"
+  ],
+  "input_claims": 320,
+  "groups": [
+    {
+      "id": "POLICY-SEAT-AND-REPOSITORY-SCOPE",
+      "claims": [
+        "DOCS-ENTPOL-001",
+        "DOCS-ENTPOL-008",
+        "DOCS-ENTPOL-009",
+        "DOCS-POLCONFLICT-001",
+        "DOCS-POLCONFLICT-002",
+        "DOCS-POLCONFLICT-003"
+      ],
+      "decision": "Separate cloud feature declaration, licensed-seat governance, all-user repository exceptions and enterprise delegation. Neither seat inventory alone nor repository ownership alone determines all policies."
+    },
+    {
+      "id": "POLICY-ENTERPRISE-FIRST",
+      "claims": [
+        "DOCS-ENTPOL-003",
+        "DOCS-ENTPOL-004",
+        "DOCS-ENTPOL-005",
+        "DOCS-ENTPOL-006",
+        "DOCS-ENTPOL-007"
+      ],
+      "decision": "Enterprise policies are evaluated first; retain explicit enable/disable/delegate choices, cloud-agent selected-organization exception, and separate default for directly enterprise-assigned users."
+    },
+    {
+      "id": "POLICY-CONFLICT-RULES",
+      "claims": [
+        "DOCS-ENTPOL-010",
+        "DOCS-ENTPOL-011",
+        "DOCS-ENTPOL-012",
+        "DOCS-ENTPOL-013",
+        "DOCS-ENTPOL-014",
+        "DOCS-ENTPOL-015",
+        "DOCS-POLCONFLICT-004",
+        "DOCS-POLCONFLICT-005",
+        "DOCS-POLCONFLICT-025",
+        "DOCS-POLCONFLICT-026",
+        "DOCS-POLCONFLICT-027"
+      ],
+      "decision": "Usually least-restrictive within an enterprise and usually most-restrictive across enterprises are qualified summaries. Use per-policy organization rules; preserve Team-model billing organization, plan transition, enterprise-specific AI-credit usage and unspecified Spark exception instead of inventing merge semantics."
+    },
+    {
+      "id": "POLICY-MOST-RESTRICTIVE-ORG",
+      "claims": [
+        "DOCS-POLCONFLICT-006",
+        "DOCS-POLCONFLICT-007",
+        "DOCS-POLCONFLICT-008",
+        "DOCS-POLCONFLICT-009",
+        "DOCS-POLCONFLICT-010"
+      ],
+      "decision": "Metrics API, non-GitHub semantic indexing, public-code privacy and unlicensed-member code review use most-restrictive organization combination. Semantic indexing requires all organizations explicitly Enabled; Unconfigured means disabled. Metrics reference link is ghec-conditional."
+    },
+    {
+      "id": "POLICY-LEAST-RESTRICTIVE-ORG",
+      "claims": [
+        "DOCS-POLCONFLICT-011",
+        "DOCS-POLCONFLICT-012",
+        "DOCS-POLCONFLICT-013",
+        "DOCS-POLCONFLICT-014",
+        "DOCS-POLCONFLICT-015",
+        "DOCS-POLCONFLICT-016",
+        "DOCS-POLCONFLICT-017",
+        "DOCS-POLCONFLICT-018",
+        "DOCS-POLCONFLICT-019",
+        "DOCS-POLCONFLICT-020",
+        "DOCS-POLCONFLICT-021",
+        "DOCS-POLCONFLICT-022",
+        "DOCS-POLCONFLICT-023",
+        "DOCS-POLCONFLICT-024"
+      ],
+      "decision": "Retain all fourteen individually extracted least-restrictive table policies, including web search, client/agent features, MCP and previews. Any enabled organization enables user access only within the policy's actual scope, enterprise constraints and supported surfaces."
+    },
+    {
+      "id": "POLICY-SURFACE-VS-FUNCTION",
+      "claims": [
+        "DOCS-ENTPOL-002",
+        "DOCS-ENTPOL-018",
+        "DOCS-ENTPOL-019",
+        "DOCS-ENTPOL-020",
+        "DOCS-POLSURFACE-001",
+        "DOCS-POLSURFACE-002",
+        "DOCS-POLSURFACE-003",
+        "DOCS-POLSURFACE-004",
+        "DOCS-POLSURFACE-005",
+        "DOCS-POLSURFACE-006",
+        "DOCS-POLSURFACE-007",
+        "DOCS-POLSURFACE-008"
+      ],
+      "decision": "Client policies are independently configured and table support is policy applicability, not equivalent functionality. Cloud-agent Internet access survives a nonapplicable web-search policy. Public-code agent support is annotate-only and cannot prove blocking, copyright clearance or network isolation."
+    },
+    {
+      "id": "POLICY-DEFAULT-ACTIVATION",
+      "claims": [
+        "DOCS-ENTPOL-016",
+        "DOCS-ENTPOL-017",
+        "DOCS-ENTPOLDEP-001",
+        "DOCS-ENTPOLDEP-002",
+        "DOCS-ENTPOLDEP-003",
+        "DOCS-ENTPOLDEP-004"
+      ],
+      "decision": "Separate unconfigured GA feature and model defaults from explicit choices, preview status and effective target settings. Preserve the pin's staged model-active/feature-coming-soon text and October22 editorial expiry; neither supplies a runtime activation receipt."
+    },
+    {
+      "id": "POLICY-DRIFT-AND-AUTHORITY",
+      "claims": [
+        "DOCS-ENTPOL-021",
+        "DOCS-ENTPOL-022",
+        "DOCS-ENTPOL-023",
+        "DOCS-ENTPOL-024",
+        "DOCS-ENTPOL-025"
+      ],
+      "decision": "Review enterprise owner/custom AI-control roles and organization granular roles separately. Audit policy and organization-enablement changes; observed drift, approved change and effective behavior remain distinct."
+    },
+    {
+      "id": "POLICY-LINKED-PROCEDURES",
+      "claims": [
+        "DOCS-ENTPOL-026",
+        "DOCS-POLCONFLICT-028"
+      ],
+      "decision": "Enterprise/organization setting procedures remain separately reviewed dependencies; no link certifies a setting, rights or world coverage."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-01",
+      "claims": [
+        "DOCS-POLSURFACE-009",
+        "DOCS-POLSURFACE-010",
+        "DOCS-POLSURFACE-011",
+        "DOCS-POLSURFACE-012",
+        "DOCS-POLSURFACE-013",
+        "DOCS-POLSURFACE-014",
+        "DOCS-POLSURFACE-015",
+        "DOCS-POLSURFACE-016"
+      ],
+      "decision": "Editor preview features: IDEs only; other seven table surfaces not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-02",
+      "claims": [
+        "DOCS-POLSURFACE-017",
+        "DOCS-POLSURFACE-018",
+        "DOCS-POLSURFACE-019",
+        "DOCS-POLSURFACE-020",
+        "DOCS-POLSURFACE-021",
+        "DOCS-POLSURFACE-022",
+        "DOCS-POLSURFACE-023",
+        "DOCS-POLSURFACE-024"
+      ],
+      "decision": "Web search: IDEs and GitHub Chat supported; cloud agent, third-party agents, CLI, app, review and Spark not supported. Not network isolation. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-03",
+      "claims": [
+        "DOCS-POLSURFACE-025",
+        "DOCS-POLSURFACE-026",
+        "DOCS-POLSURFACE-027",
+        "DOCS-POLSURFACE-028",
+        "DOCS-POLSURFACE-029",
+        "DOCS-POLSURFACE-030",
+        "DOCS-POLSURFACE-031",
+        "DOCS-POLSURFACE-032"
+      ],
+      "decision": "Custom model configuration: IDEs, CLI, app and GitHub Chat supported; cloud agent, third-party agents, review and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-04",
+      "claims": [
+        "DOCS-POLSURFACE-033",
+        "DOCS-POLSURFACE-034",
+        "DOCS-POLSURFACE-035",
+        "DOCS-POLSURFACE-036",
+        "DOCS-POLSURFACE-037",
+        "DOCS-POLSURFACE-038",
+        "DOCS-POLSURFACE-039",
+        "DOCS-POLSURFACE-040"
+      ],
+      "decision": "Public-code suggestions: IDEs supported; cloud and third-party agents annotate-only; CLI, app, GitHub Chat, review and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-05",
+      "claims": [
+        "DOCS-POLSURFACE-041",
+        "DOCS-POLSURFACE-042",
+        "DOCS-POLSURFACE-043",
+        "DOCS-POLSURFACE-044",
+        "DOCS-POLSURFACE-045",
+        "DOCS-POLSURFACE-046",
+        "DOCS-POLSURFACE-047",
+        "DOCS-POLSURFACE-048"
+      ],
+      "decision": "Copilot MCP servers: IDEs, cloud agent, third-party agents, CLI, app and review supported; GitHub Chat and Spark not supported. Separate GitHub MCP third-party-host governance still applies. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-06",
+      "claims": [
+        "DOCS-POLSURFACE-049",
+        "DOCS-POLSURFACE-050",
+        "DOCS-POLSURFACE-051",
+        "DOCS-POLSURFACE-052",
+        "DOCS-POLSURFACE-053",
+        "DOCS-POLSURFACE-054",
+        "DOCS-POLSURFACE-055",
+        "DOCS-POLSURFACE-056"
+      ],
+      "decision": "Registry-only MCP: IDEs, CLI and app supported; remaining five table surfaces not supported. MCP enablement is not registry-only restriction. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-07",
+      "claims": [
+        "DOCS-POLSURFACE-057",
+        "DOCS-POLSURFACE-058",
+        "DOCS-POLSURFACE-059",
+        "DOCS-POLSURFACE-060",
+        "DOCS-POLSURFACE-061",
+        "DOCS-POLSURFACE-062",
+        "DOCS-POLSURFACE-063",
+        "DOCS-POLSURFACE-064"
+      ],
+      "decision": "Content exclusion: IDEs, cloud agent, CLI, app, GitHub Chat and review supported; third-party agents and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-08",
+      "claims": [
+        "DOCS-POLSURFACE-065",
+        "DOCS-POLSURFACE-066",
+        "DOCS-POLSURFACE-067",
+        "DOCS-POLSURFACE-068",
+        "DOCS-POLSURFACE-069",
+        "DOCS-POLSURFACE-070",
+        "DOCS-POLSURFACE-071",
+        "DOCS-POLSURFACE-072"
+      ],
+      "decision": "Model configuration: IDEs, cloud agent, third-party agents, CLI, app and GitHub Chat supported; review and Spark not supported. Distinct from custom-model configuration. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "POLICY-SURFACE-ROW-09",
+      "claims": [
+        "DOCS-POLSURFACE-073",
+        "DOCS-POLSURFACE-074",
+        "DOCS-POLSURFACE-075",
+        "DOCS-POLSURFACE-076",
+        "DOCS-POLSURFACE-077",
+        "DOCS-POLSURFACE-078",
+        "DOCS-POLSURFACE-079",
+        "DOCS-POLSURFACE-080"
+      ],
+      "decision": "Copilot Memory: Cloud agent, third-party agents, CLI and review supported; IDEs, app, GitHub Chat and Spark not supported. These are pinned applicability declarations, not actual settings or native behavior."
+    },
+    {
+      "id": "DEFAULT-ARTICLE-SCOPE",
+      "claims": [
+        "DOCS-DEFAULTPOL-001",
+        "DOCS-DEFAULTPOL-002"
+      ],
+      "decision": "Business/Enterprise cloud scope and separate default-policy reusable are not actual target entitlements."
+    },
+    {
+      "id": "DEFAULT-SCHEDULED-ACTIVATION",
+      "claims": [
+        "DOCS-DEFAULTPOL-003",
+        "DOCS-DEFAULTPOL-004",
+        "DOCS-DEFAULTPOL-005",
+        "DOCS-DEFAULTPOL-006"
+      ],
+      "decision": "The pin supplies October22,2026 activation for configurable/not-yet-active feature defaults and impact-count banner; enabled-by-default is a scheduled source assertion, not live runtime proof. Preserve explicit configuration before activation."
+    },
+    {
+      "id": "DEFAULT-GA-LIFECYCLE",
+      "claims": [
+        "DOCS-DEFAULTPOL-007",
+        "DOCS-DEFAULTPOL-008",
+        "DOCS-DEFAULTPOL-009",
+        "DOCS-DEFAULTPOL-010"
+      ],
+      "decision": "Distinguish new GA, preview-to-GA transition and existing Unconfigured GA features; explicit settings do not silently become delegated defaults."
+    },
+    {
+      "id": "DEFAULT-ENTERPRISE-ORG-INHERITANCE",
+      "claims": [
+        "DOCS-DEFAULTPOL-011",
+        "DOCS-DEFAULTPOL-012"
+      ],
+      "decision": "Enterprise Unconfigured and organization delegated-but-unconfigured states are distinct; no generic default rule supersedes explicit upstream choice."
+    },
+    {
+      "id": "DEFAULT-FEATURE-EXCEPTIONS",
+      "claims": [
+        "DOCS-DEFAULTPOL-013",
+        "DOCS-DEFAULTPOL-014",
+        "DOCS-DEFAULTPOL-015",
+        "DOCS-DEFAULTPOL-016",
+        "DOCS-DEFAULTPOL-017",
+        "DOCS-DEFAULTPOL-018",
+        "DOCS-DEFAULTPOL-019"
+      ],
+      "decision": "Exclude previews, residency/FedRAMP restrictive model policies and cloud session storage. Feature scope includes Features & clients plus code review and Copilot MCP pages; UI grouping is not a universal feature set."
+    },
+    {
+      "id": "DEFAULT-MODEL-EXCLUSIONS",
+      "claims": [
+        "DOCS-DEFAULTPOL-020",
+        "DOCS-DEFAULTPOL-021",
+        "DOCS-DEFAULTPOLDEP-001",
+        "DOCS-DEFAULTPOLDEP-002",
+        "DOCS-DEFAULTPOLDEP-003",
+        "DOCS-DEFAULTPOLDEP-004",
+        "DOCS-DEFAULTPOLDEP-005",
+        "DOCS-DEFAULTPOLDEP-006",
+        "DOCS-DEFAULTPOLDEP-007"
+      ],
+      "decision": "Model-default delegation differs from feature-default activation. Pre-GA, open-weight, retention-excluded Fable and nonconforming residency/FedRAMP models stay disabled by default; explicit scoped manual enablement is a different approved workflow. Default choice does not clear retention or model rights."
+    },
+    {
+      "id": "DEFAULT-EXPLICIT-CHOICE",
+      "claims": [
+        "DOCS-DEFAULTPOL-022",
+        "DOCS-DEFAULTPOL-023"
+      ],
+      "decision": "An applicable enterprise/organization can disable default enablement or individually disable a feature/model; procedure does not authorize or verify a change."
+    },
+    {
+      "id": "DEFAULT-DEPENDENCIES",
+      "claims": [
+        "DOCS-DEFAULTPOL-024",
+        "DOCS-DEFAULTPOL-025"
+      ],
+      "decision": "Feature/model settings and release monitoring remain independently reviewed dependencies; release awareness is not effective policy."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-AUTHORITY",
+      "claims": [
+        "DOCS-ENTCONFIG-001",
+        "DOCS-ENTCONFIG-002",
+        "DOCS-ENTCONFIG-003",
+        "DOCS-ENTCONFIG-005"
+      ],
+      "decision": "Declared enterprise-owner role, plan scope, licensed seats and delegation must be reconciled with concept-level custom permissions and effective enterprise constraints. A generic navigation GHES branch does not widen the cloud article scope."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-PROCEDURES",
+      "claims": [
+        "DOCS-ENTCONFIG-006",
+        "DOCS-ENTCONFIG-007",
+        "DOCS-ENTCONFIG-008",
+        "DOCS-ENTCONFIG-009",
+        "DOCS-ENTCONFIG-010",
+        "DOCS-ENTCONFIG-011",
+        "DOCS-ENTCONFIG-012",
+        "DOCS-ENTCONFIG-013",
+        "DOCS-ENTCONFIGDEP-001"
+      ],
+      "decision": "Retain target selection, AI controls and distinct Agents/Copilot/Features & clients/MCP pages. Dropdown, toggle and named-policy configurations are procedures, not approved writes or behavior receipts. No immediate control does not imply no policy."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-MCP",
+      "claims": [
+        "DOCS-ENTCONFIG-014"
+      ],
+      "decision": "The reused MCP note preserves GA-only scope and third-party-host GitHub MCP exclusion; enterprise navigation does not erase this boundary."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-PUBLIC-CODE",
+      "claims": [
+        "DOCS-ENTCONFIG-015",
+        "DOCS-ENTCONFIGDEP-002",
+        "DOCS-ENTCONFIGDEP-003"
+      ],
+      "decision": "Business users' described Allowed default and Privacy route require actual effective-setting review. Public-code availability does not grant output license or blocking assurance on annotate-only surfaces."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-FEEDBACK",
+      "claims": [
+        "DOCS-ENTCONFIG-016"
+      ],
+      "decision": "Feedback opt-in requires GitHub.com feature enablement and remains separate from AI-training consent or provider data-retention agreement."
+    },
+    {
+      "id": "ENTERPRISE-CONFIG-LINKED-REVIEW",
+      "claims": [
+        "DOCS-ENTCONFIG-004",
+        "DOCS-ENTCONFIG-017"
+      ],
+      "decision": "First-time adoption guidance and reviewed conflict/surface references supply context only; no live setting or approval is certified."
+    },
+    {
+      "id": "MODEL-MODE-SCOPE",
+      "claims": [
+        "DOCS-MODELACCESS-001",
+        "DOCS-MODELACCESS-002",
+        "DOCS-MODELACCESS-003",
+        "DOCS-MODELACCESS-004",
+        "DOCS-MODELACCESS-005",
+        "DOCS-MODELACCESS-006",
+        "DOCS-MODELACCESS-007"
+      ],
+      "decision": "Retain enterprise-wide baseline, organization delegation/targeted rules and opt-in preview team mode as different policy mechanisms. Generic owner metadata/navigation never verifies target permissions."
+    },
+    {
+      "id": "MODEL-DEFAULT-AND-ORG-RULES",
+      "claims": [
+        "DOCS-MODELACCESS-009",
+        "DOCS-MODELACCESS-010",
+        "DOCS-MODELACCESS-011"
+      ],
+      "decision": "Unconfigured delegated models follow the applicable default policy; targeted organization rule precedence beyond the procedure remains unresolved, not inferred from global least/most-restrictive rules."
+    },
+    {
+      "id": "MODEL-TEAM-UNION-NOT-DENY",
+      "claims": [
+        "DOCS-MODELACCESS-012",
+        "DOCS-MODELACCESS-014",
+        "DOCS-MODELACCESS-015",
+        "DOCS-MODELACCESS-016",
+        "DOCS-MODELACCESS-017"
+      ],
+      "decision": "Enterprise Disabled bounds all grants; enterprise Enabled remains enabled. Team Optional is not deny. Multiple memberships union their grants; no team Disabled override exists in this procedure."
+    },
+    {
+      "id": "MODEL-MIGRATION-AND-ROLLBACK",
+      "claims": [
+        "DOCS-MODELACCESS-013",
+        "DOCS-MODELACCESS-018",
+        "DOCS-MODELACCESS-019",
+        "DOCS-MODELACCESS-020",
+        "DOCS-MODELACCESS-021",
+        "DOCS-MODELACCESS-022",
+        "DOCS-MODELACCESS-023"
+      ],
+      "decision": "Prepared team settings are inactive before opt-in; organization-delegated access can regress during migration. Preview rollback restores pre-opt-in enterprise state and loses subsequent policy changes. Require approved before/after snapshots and behavior/recovery proof."
+    },
+    {
+      "id": "MODEL-AGENT-APP-SCOPE",
+      "claims": [
+        "DOCS-MODELACCESS-008",
+        "DOCS-MODELACCESS-024",
+        "DOCS-MODELACCESS-025",
+        "DOCS-MODELACCESSDEP-002",
+        "DOCS-MODELACCESSDEP-003"
+      ],
+      "decision": "Default agent-app scope follows its installation organization/personal account; enterprise-team mode moves app model decisions to enterprise controls. App grants are distinct from team membership grants; partner app classification is not trust or authorization."
+    },
+    {
+      "id": "MODEL-CONFIGURATION-AND-SURFACES",
+      "claims": [
+        "DOCS-MODELACCESS-026",
+        "DOCS-MODELACCESSDEP-001"
+      ],
+      "decision": "Model configuration navigation and surface references are source context, not an effective configuration or client enforcement receipt."
+    },
+    {
+      "id": "MODEL-ADOPTION-EVIDENCE",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-001",
+        "DOCS-MODELLIFECYCLE-002",
+        "DOCS-MODELLIFECYCLE-003",
+        "DOCS-MODELLIFECYCLE-008",
+        "DOCS-MODELLIFECYCLE-009",
+        "DOCS-MODELLIFECYCLE-010",
+        "DOCS-MODELLIFECYCLE-014",
+        "DOCS-MODELLIFECYCLE-021",
+        "DOCS-MODELLIFECYCLE-038"
+      ],
+      "decision": "Keep capabilities, plans, policy, responsible-use and release monitoring as separate sources. A source recommendation to pilot does not approve a target or supply runtime evidence."
+    },
+    {
+      "id": "MODEL-CAPABILITY-CATEGORIES",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-004",
+        "DOCS-MODELLIFECYCLE-005",
+        "DOCS-MODELLIFECYCLE-006",
+        "DOCS-MODELLIFECYCLE-007"
+      ],
+      "decision": "Assistive approval and agentic autonomy are descriptive source categories. Customization and provider support vary by surface; built-in protections are unverified until behavior-tested."
+    },
+    {
+      "id": "MODEL-RELEASE-AND-DPA-SCOPE",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-015",
+        "DOCS-MODELLIFECYCLE-016",
+        "DOCS-MODELLIFECYCLE-017",
+        "DOCS-MODELLIFECYCLE-018",
+        "DOCS-MODELLIFECYCLE-019",
+        "DOCS-MODELLIFECYCLE-020"
+      ],
+      "decision": "Invitation/eligibility/opt-in and preview change risk remain explicit. Website preview policy does not govern all surfaces. Many DPA-covered previews is not all previews or per-use rights clearance."
+    },
+    {
+      "id": "MODEL-UTILITY-POLICY-EXCEPTION",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-011",
+        "DOCS-MODELLIFECYCLE-022",
+        "DOCS-MODELLIFECYCLE-023",
+        "DOCS-MODELLIFECYCLE-024",
+        "DOCS-MODELLIFECYCLE-025",
+        "DOCS-MODELLIFECYCLE-026",
+        "DOCS-MODELLIFECYCLE-027",
+        "DOCS-MODELLIFECYCLE-028",
+        "DOCS-MODELLIFECYCLE-029",
+        "DOCS-MODELLIFECYCLE-039"
+      ],
+      "decision": "Utility models are automatic across plans/surfaces, hidden from user selection and cannot be individually disabled. Ordinary model deny, billing-line absence and premium-unit controls must not certify no processing; disabling Copilot entirely is the described exception."
+    },
+    {
+      "id": "MODEL-BASE-AUTOMATIC-TRANSITION",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-012",
+        "DOCS-MODELLIFECYCLE-030",
+        "DOCS-MODELLIFECYCLE-031",
+        "DOCS-MODELLIFECYCLE-032",
+        "DOCS-MODELLIFECYCLE-033",
+        "DOCS-MODELLIFECYCLE-034",
+        "DOCS-MODELLIFECYCLE-035"
+      ],
+      "decision": "Base applies to Business/Enterprise, supplies default when no models are enabled and has a documented 60-day automatic transition. Preserve announcement, client upgrade and enablement stages; pin dates are not current target proof."
+    },
+    {
+      "id": "MODEL-LTS-SUPPORT-BOUNDARY",
+      "claims": [
+        "DOCS-MODELLIFECYCLE-013",
+        "DOCS-MODELLIFECYCLE-036",
+        "DOCS-MODELLIFECYCLE-037"
+      ],
+      "decision": "One-year support runs from designation and describes availability, not frozen behavior, immutable pricing or independently verified contractual acceptance."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-ELIGIBILITY",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-001",
+        "DOCS-MODELCOMPLIANCE-002",
+        "DOCS-MODELCOMPLIANCE-003",
+        "DOCS-MODELCOMPLIANCE-006",
+        "DOCS-MODELCOMPLIANCE-007",
+        "DOCS-MODELCOMPLIANCE-009",
+        "DOCS-MODELCOMPLIANCE-010",
+        "DOCS-MODELCOMPLIANCE-017",
+        "DOCS-MODELCOMPLIANCE-020",
+        "DOCS-MODELCOMPLIANCE-023"
+      ],
+      "decision": "Separate Enterprise Cloud/residency eligibility, US FedRAMP precondition and listed model membership. Current overlapping US lists do not equate geographic residency permanently with certification."
+    },
+    {
+      "id": "MODEL-REGIONAL-ENFORCEMENT-CLAIMS",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-008",
+        "DOCS-MODELCOMPLIANCE-011",
+        "DOCS-MODELCOMPLIANCE-012",
+        "DOCS-MODELCOMPLIANCE-013",
+        "DOCS-MODELCOMPLIANCE-014",
+        "DOCS-MODELCOMPLIANCE-015"
+      ],
+      "decision": "Routing, authentication, processing and logs/storage claims are upstream assertions under enabled enforcement. Verify endpoints, client behavior and storage before effective compliance attestation."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-CLIENT-FEATURE-SCOPE",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-004",
+        "DOCS-MODELCOMPLIANCE-016",
+        "DOCS-MODELCOMPLIANCE-021",
+        "DOCS-MODELCOMPLIANCE-022",
+        "DOCS-MODELCOMPLIANCE-024",
+        "DOCS-MODELCOMPLIANCE-025",
+        "DOCS-MODELCOMPLIANCE-026",
+        "DOCS-MODELCOMPLIANCE-027"
+      ],
+      "decision": "Compatible clients and region deployment timing bound availability. General 2025+ heuristic is not an exact compatibility matrix; listed models can be utility-only. Future GA alternatives do not prove preview support."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-COST-AND-APPROVAL",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-005",
+        "DOCS-MODELCOMPLIANCE-018",
+        "DOCS-MODELCOMPLIANCE-019",
+        "DOCS-MODELCOMPLIANCE-028",
+        "DOCS-MODELCOMPLIANCE-029",
+        "DOCS-MODELCOMPLIANCE-030"
+      ],
+      "decision": "FedRAMP and residency policies are distinct and disabled by default. Source pricing says ten percent extra credits for enforced requests; do not infer stacked surcharges, utility billing or authorize cost-bearing enablement."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-US-LIST",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-US-001",
+        "DOCS-MODELCOMPLIANCE-US-002",
+        "DOCS-MODELCOMPLIANCE-US-003",
+        "DOCS-MODELCOMPLIANCE-US-004",
+        "DOCS-MODELCOMPLIANCE-US-005",
+        "DOCS-MODELCOMPLIANCE-US-006",
+        "DOCS-MODELCOMPLIANCE-US-007",
+        "DOCS-MODELCOMPLIANCE-US-008",
+        "DOCS-MODELCOMPLIANCE-US-009",
+        "DOCS-MODELCOMPLIANCE-US-010",
+        "DOCS-MODELCOMPLIANCE-US-011"
+      ],
+      "decision": "Retain eleven pinned US model occurrences separately; membership is not independently certified or observed target allowance."
+    },
+    {
+      "id": "MODEL-COMPLIANCE-EU-LIST",
+      "claims": [
+        "DOCS-MODELCOMPLIANCE-EU-001",
+        "DOCS-MODELCOMPLIANCE-EU-002",
+        "DOCS-MODELCOMPLIANCE-EU-003",
+        "DOCS-MODELCOMPLIANCE-EU-004",
+        "DOCS-MODELCOMPLIANCE-EU-005",
+        "DOCS-MODELCOMPLIANCE-EU-006",
+        "DOCS-MODELCOMPLIANCE-EU-007",
+        "DOCS-MODELCOMPLIANCE-EU-008",
+        "DOCS-MODELCOMPLIANCE-EU-009",
+        "DOCS-MODELCOMPLIANCE-EU-010",
+        "DOCS-MODELCOMPLIANCE-EU-011",
+        "DOCS-MODELCOMPLIANCE-EU-012",
+        "DOCS-MODELCOMPLIANCE-EU-013",
+        "DOCS-MODELCOMPLIANCE-EU-014",
+        "DOCS-MODELCOMPLIANCE-EU-015",
+        "DOCS-MODELCOMPLIANCE-EU-016",
+        "DOCS-MODELCOMPLIANCE-EU-017",
+        "DOCS-MODELCOMPLIANCE-EU-018",
+        "DOCS-MODELCOMPLIANCE-EU-019",
+        "DOCS-MODELCOMPLIANCE-EU-020",
+        "DOCS-MODELCOMPLIANCE-EU-021"
+      ],
+      "decision": "Retain twenty-one pinned EU variable identities separately; resolve names and version/feature/client availability before target or rendered-page certification."
+    }
+  ],
+  "related_evidence": [
+    "evidence/account-policy-claim-consolidation.json",
+    "evidence/organization-policy-claim-consolidation.json",
+    "evidence/ai-model-hosting-claim-consolidation.json"
+  ],
+  "generalized_effective_policy_review": {
+    "read_only_default": true,
+    "evaluation_dimensions": [
+      "product/version and current entitlement",
+      "seat-grant organization/enterprise and direct assignment",
+      "billing organization for Team model policy",
+      "explicit upstream policy versus delegated/default state",
+      "specific policy merge rule and exceptions",
+      "target surface and applicability support",
+      "agent-app/CLI independent client controls",
+      "annotate versus blocking semantics",
+      "effective repository grants",
+      "dated activation/default changes",
+      "actual actor authorization and audit changes",
+      "organization mode versus opt-in enterprise-team preview",
+      "enterprise Disabled/Enabled boundary and union of team grants",
+      "agent-app installation scope versus enterprise app grants",
+      "migration activation and pre-opt-in rollback snapshot",
+      "utility model non-disableability, hidden processing and separate rate limits",
+      "base-model designation, client upgrade and automatic enablement timeline",
+      "LTS designation and bounded support period",
+      "website preview policy versus per-feature/client scope and DPA coverage",
+      "region/account eligibility and separately scoped FedRAMP restriction",
+      "compatible client and regional endpoint behavior",
+      "residency of inference versus logs/telemetry storage",
+      "explicit approval for compliance enforcement credit-cost change"
+    ],
+    "unknown": "If rule, permission, seat/billing identity, effective setting, surface or exception is unverified, report UNVERIFIED rather than PASS.",
+    "no_universal_merge_rule": true,
+    "no_generic_web_policy_network_isolation": true,
+    "no_annotate_mode_blocking_assumption": true,
+    "changes": "Explicit scoped approval and reviewed plan/diff/apply/verify with rollback/recovery; no native change authorized by source ingestion.",
+    "no_team_optional_as_deny": true,
+    "no_rollback_preserves_later_model_changes": true,
+    "no_model_deny_as_complete_processing_denial": true,
+    "no_unbilled_usage_as_no_processing": true,
+    "no_residency_as_universal_certification": true
+  },
+  "verification": {
+    "all_input_claims_mapped_once": true,
+    "source_level_accounting": true,
+    "independent_atomicity_and_omission_certified": false,
+    "linked_and_rendered_assurance_complete": false,
+    "current_activation_verified": false,
+    "operational_binding_verified": false,
+    "rights_cleared": false,
+    "policy_adopted": false,
+    "native_enforcement_verified": false
+  },
+  "remaining_work": [
+    "Review Spark/AI-credit exceptions, remaining model variable/dependency meanings and surface limitations independently; model-access/lifecycle, default-availability and enterprise procedures are source-accounted, not runtime-certified.",
+    "Reconcile all remaining source claims and templates/profiles before acceptance.",
+    "Validate model/plan variables and page-version rendering.",
+    "Independently audit policy atomicity/omissions and exact mapping equivalence.",
+    "Collect approved effective target policy and positive/negative/bypass/recovery behavior evidence."
+  ]
+}

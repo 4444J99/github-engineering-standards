@@ -1,0 +1,20 @@
+{
+  "issue": 28,
+  "attribution_root": {"candidate_claims": 34, "source_digest": "MATCH", "span_digests": "computed from exact source wrapper", "independent_omission_audit_complete": false},
+  "linked_fragment_correction_recheck": {
+    "auditor": "codex:evaluator_review",
+    "claims": 39,
+    "fragments": 21,
+    "source_and_span_digests": "MATCH",
+    "claims_sha256": "91afbab3c0f60fb23e3663e414894c469af85efff83830351348a13cde306657",
+    "specified_corrections_supported": true,
+    "remaining_findings_within_repair_scope": 0,
+    "boundary": "Parent occurrence applicability, captions/assets/links and deployment identity not certified by this repair recheck."
+  },
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 324, "seconds": 2.003, "result": "OK"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0}
+  ],
+  "boundary": "No original pinned corpus credit or published assurance increment."
+}

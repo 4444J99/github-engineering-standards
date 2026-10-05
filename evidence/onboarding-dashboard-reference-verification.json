@@ -1,0 +1,65 @@
+{
+  "issue": 445,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/account-and-profile/get-started/account.md",
+    "content/account-and-profile/get-started/index.md",
+    "content/account-and-profile/get-started/personal-dashboard-quickstart.md",
+    "content/account-and-profile/get-started/profile.md",
+    "content/account-and-profile/reference/personal-dashboard.md",
+    "content/account-and-profile/reference/profile-contributions-reference.md"
+  ],
+  "account_profile_receipt_coverage": {
+    "expected": 69,
+    "receipt_present": 66,
+    "missing": [
+      "content/account-and-profile/tutorials/index.md",
+      "content/account-and-profile/tutorials/personalize-your-profile.md",
+      "content/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume.md"
+    ]
+  },
+  "reusable_fragments_inspected": 5,
+  "feature_datasets_inspected": [
+    "data/features/feed.yml",
+    "data/features/home-dashboard-view.yml"
+  ],
+  "added_reference_claims": 21,
+  "reference_claims": 61333,
+  "claim_bearing_artifacts": 3508,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 1.972
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_caveat": "List-format receipt presence only; not independent omission completeness, published assurance, policy adoption, legal clearance or effective behavior.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "issue": 185,
+  "reviewed_at": "2026-10-03T04:06:39.446Z",
+  "artifacts_reviewed": 2,
+  "reference_claims_added": 2,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59317,
+    "claim_bearing_artifacts": 2815,
+    "tests": 324,
+    "test_seconds": 1.979,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "prefix_census": {
+    "prefix": "data/reusables/copilot/",
+    "source": "github/docs",
+    "artifacts": 263,
+    "receipt_covered": 263,
+    "remaining": 0,
+    "semantic_completeness_certified": false
+  },
+  "limitations": [
+    "Prefix receipt coverage is not whole-corpus completion or semantic certification.",
+    "Navigation only: no configured MCP, credentials, native action, adopted policy, or rights clearance."
+  ]
+}

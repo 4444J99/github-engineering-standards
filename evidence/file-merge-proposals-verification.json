@@ -1,0 +1,47 @@
+{
+  "issue": 198,
+  "reviewed_at": "2026-10-03T04:27:13.986Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59379,
+    "claim_bearing_artifacts": 2875,
+    "tests": 324,
+    "test_seconds": 1.988,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Merge/confirmation UI not approvals or successful merge evidence.",
+    "Optional deletion not exact-target custody or deletion authority.",
+    "Identical proposal fragments separately accounted, not context equivalence certification.",
+    "No UI mutation, branch deletion, PR merge, screenshot assurance, adoption, or rights clearance."
+  ]
+}
