@@ -1,0 +1,36 @@
+{
+  "schema": "ges.closeout-attempt.v1",
+  "session_id": "01a10341-92f9-7661-80fd-d57ac4cb146d",
+  "inspected_head": "8bcb8cda38190e26c5161b91edde53014be9a5cd",
+  "date": "2026-10-03",
+  "protocol_source": "immutable-runtime",
+  "protocol_revision": "5ac33aa1b52bd1d8dfc5ffe5262ca3d7b2d7c211",
+  "command": "scripts/no-tasks-on-me.sh --session-id 01a10341-92f9-7661-80fd-d57ac4cb146d --worktree NATIVE_GES_ROOT --receipt docs/continuations/issue-456-readback/session-closeout.json --native-transcript EXACT_NATIVE_TRANSCRIPT --scope-root ges=NATIVE_GES_ROOT --scope-root preserved-custody=PRESERVED_DOCUMENTS_ROOT --json",
+  "exit_code": 0,
+  "status": "session_released",
+  "findings": [],
+  "session_released": true,
+  "task_completed": false,
+  "successor_required": false,
+  "diagnostic": {
+    "command": "domus-process-ownership observe --worktree NATIVE_GES_ROOT --session-id 01a10341-92f9-7661-80fd-d57ac4cb146d",
+    "exit_code": 0,
+    "complete": true,
+    "counts": {"checker": 2, "foreign_session": 0, "owned_survivor": 0, "shared_service": 84, "unknown": 0, "unmeasured": 0},
+    "process_count": 0,
+    "processes_signaled": false
+  },
+  "owners": {
+    "custody": "https://github.com/4444J99/github-engineering-standards/issues/456",
+    "process_ownership_protocol": "https://github.com/4444J99/limen/issues/2763",
+    "installed_process_ownership": "https://github.com/4444J99/domus-genoma/issues/403"
+  },
+  "historical_attempt": {"inspected_head": "b988abf", "exit_code": 2, "status": "unmeasured", "reason": "process ownership observation unavailable or invalid", "unmeasured_processes": 27},
+  "remote_custody_verified": true,
+  "retained_keeper_state_complete": true,
+  "nonterminal_session_obligations": 0,
+  "retirement_authorized": false,
+  "estate_completed": false,
+  "next_action": "No resumed-session obligations remain. Original session and project work retain their existing owner; no successor launch or checkout retirement is required or authorized.",
+  "checkout_disposition": "RETAIN"
+}
