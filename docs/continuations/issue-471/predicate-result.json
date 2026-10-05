@@ -1,0 +1,21 @@
+{
+  "schema": "ges.session-closeout-observation.v1",
+  "session_id": "01a10de7-db22-7ca2-adbf-bac969f730ef",
+  "inspected_receipt_head": "95f7e73abc92c555076cba8f63a6cf42fc8369b5",
+  "protocol_root_commit": "ff6b2714a013e82c3132205183ca10302a0ce0c3",
+  "command": "Installed scripts/no-tasks-on-me.sh with exact native session ID, native anchor, transcript witness, published v2 receipt and all three declared scope roots",
+  "exit_code": 1,
+  "session_released": false,
+  "task_completed": false,
+  "retirement_authorized": false,
+  "findings": ["session scopes have surviving or unattributed processes"],
+  "process_observation": {"complete": true, "process_count": 12, "counts": {"checker": 1, "foreign_session": 0, "owned_survivor": 0, "shared_service": 73, "unknown": 12, "unmeasured": 0}},
+  "independent_read_only_process_recheck": {"command": "domus-process-ownership observe with native anchor and exact session ID", "exit_code": 1, "unknown": 12, "owned_survivor": 0},
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/471",
+  "implementation_owner_url": "https://github.com/4444J99/github-engineering-standards/pull/472",
+  "next_action": "Recover exact native ownership and responsible-host evidence for the unresolved interactive process trees through Domus process ownership; preserve concurrent sessions. Rerun the installed session predicate using the same native anchor, transcript witness and scope roots only after relevant ownership evidence changes.",
+  "acceptance_predicate": "Installed no-tasks-on-me.sh exits 0 twice on unchanged owned evidence; no unknown, unmeasured or owned surviving process remains.",
+  "checkout_disposition": "RETAIN",
+  "processes_signaled": false,
+  "note": "Publication, scope ownership and unchanged implementation verification were accepted by the checker. Process ownership is the sole measured finding. This published handoff is not terminal closeout."
+}
