@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:17:22Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSSKIPPATH-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/section-triggering-a-workflow.md",
+      "content_sha256": "c38997788ada22de41a09d43a019cc9d1d218a084bd30b53e269260d6b72b03a",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Workflow on selects triggering events, including one or multiple events or schedules, with file/ref restrictions described by dependent sections. Included event examples and linked event reference require separate review; a trigger definition is not proof of a run.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSKIPPATH-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/skipped-job-status-checks-passing.md",
+      "content_sha256": "101a19c7dfded38329e6322156ffd50faa3dcdf47b1c7bcb6727a5c208174f86",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "A skipped job reports Success and does not block PR merging even when required. Native status acceptance must not be confused with proof the underlying obligation executed; enforcement testing must exercise skipped paths.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSKIPPATH-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-a-workflow-paths1.md",
+      "content_sha256": "da7a9a62f9f7705e068e12a68e261bccc69f0387174328c84d225c91b9f2e193",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "Changed-path filters apply to push and pull_request but are not evaluated for tag pushes. Include and ignore path keys are mutually exclusive for the same event; mixed filtering uses include patterns with negatives.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSKIPPATH-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-a-workflow-paths1.md",
+      "content_sha256": "da7a9a62f9f7705e068e12a68e261bccc69f0387174328c84d225c91b9f2e193",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "Ordered negative path matches exclude earlier inclusion and later positives re-include. Branch and path filters require both predicates; path matching uses wildcard globs rather than arbitrary regular expressions. Linked syntax remains separate evidence.",
+      "accepted_policy": false
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "ges.session-closeout-verification.v1",
+  "session_id": "01a0f994-11d8-76b2-ab30-a5aab867e33e",
+  "ges_verification_head": "ec1faea650522be408842fabb941afebb9f1ba7c",
+  "policy_verification_head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 340,
+      "seconds": 2.265
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 61427,
+      "source_artifacts": 3526
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": "credential-wall.py --check (verified installed protocol)",
+      "exit_code": 0,
+      "registered_secret_atoms": 31
+    },
+    {
+      "command": "scripts/verify-scoped.sh --base HEAD --total-timeout-seconds 600 (policy repository)",
+      "exit_code": 0,
+      "passed_gates": [
+        "syntax-changed",
+        "diff-hygiene",
+        "check-docs-exports",
+        "check-note-links"
+      ]
+    }
+  ],
+  "reuse": "Policy verification is reused from its unchanged exact implementation head. GES checks were run again for this custody/receipt tranche.",
+  "handoff": {
+    "project_complete": false,
+    "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/454",
+    "remaining": "Original nine gates, authentic rights/adoption decisions and approved enforcement remain unfinished."
+  },
+  "external_effects": {
+    "policy_pr": "https://github.com/4444J99/limen/pull/2822",
+    "policy_pr_state": "MERGED",
+    "head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
+    "merge_submission": "Registry-declared single-owner fast lane, exact verified topic head merged with --squash --match-head-commit; no admin bypass.",
+    "scheduler_enabled": false,
+    "providers_launched": false,
+    "native_changes": false,
+    "merge_commit": "65ceff671ce2d583ccefaf5772ae2b62df97c105",
+    "local_or_installed_policy_adoption_verified": false,
+    "standing_isolation_policy": {
+      "pr": "https://github.com/4444J99/limen/pull/2827",
+      "state": "MERGED",
+      "head": "c1c5c0768f52ebeab63785dc19b4103e059f50d7",
+      "merge_commit": "1bc457fcde30cd28467da76133848d0722fd3f48",
+      "exact_remote_bytes_verified": true,
+      "scope": "Documentation-only manual closeout admission; automatic runtime guards unchanged",
+      "verification": "Additive-policy, whitespace and unchanged acceptance-boundary assertions passed; exact remote content readback matched"
+    }
+  },
+  "history_scan_triage": {
+    "findings": 146,
+    "metadata_matches": 146,
+    "credential_values_published": false,
+    "rules_suppressed": false,
+    "receipt": "https://github.com/4444J99/github-engineering-standards/issues/454#issuecomment-5972007750",
+    "rights_clearance": false
+  },
+  "scope_reconciliation": {
+    "required": false,
+    "protected_unrelated_checkout_changes": true,
+    "manual_isolation_admission": true,
+    "admission_owner": "https://github.com/4444J99/github-engineering-standards/issues/456#issuecomment-5972954686",
+    "policy_path_sha256": "2ac96ac256a766b52f3b0e65e7f342aeac8806716257b1ecf1d79bd23e8e6bdb",
+    "exact_subject_head_preserved": true,
+    "actual_allocated_bytes": 102813696,
+    "maximum_bytes": 268435456,
+    "remaining_free_bytes": 14834688000,
+    "deadline_epoch": 1791059410,
+    "checkout_disposition": "RETAIN",
+    "retention_owner": "https://github.com/4444J99/limen/issues/2821"
+  }
+}

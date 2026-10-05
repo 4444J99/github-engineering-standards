@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:26:06.337Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODESPACESTRUSTSYNC-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/secrets-on-start.md",
+      "content_sha256": "936a3871d85d9e21e47ac3d31db099d5e876055ce9feb209d297b5dab64bc094",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Newly created secrets become available on new codespace creation or restart; using a newly created hosted secret in a running instance requires stopping and restarting that instance. Secret creation alone is not evidence of live propagation, authorized access or successful application use. The stopping procedure remains separate; no secret or runtime changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESTRUSTSYNC-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/setting-up-project-intro.md",
+      "content_sha256": "ebf5d8ada4373368c6fff4881da7cee7d5f2cb0d87de59a0c8f95584ea962d1f",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The incomplete introductory sentence belongs to a tutorial using the web editor to open a project and modify predefined dev container configuration, with later applicability to the user's repository through web or desktop editors. Tutorial learning intent is not a verified setup, universal policy or permission to execute installation; the introduction link remains separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESTRUSTSYNC-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/settings-sync-and-gpg.md",
+      "content_sha256": "b4269947ab0a015e134d3359398c72847d831bc2a252321de97136d7a149186e",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "GPG verification and Settings Sync share a trusted-repository list, so with both features enabled a selected GPG-trusted repository also gets sync and newly trusting for sync enables GPG verification for that repository. The feature enable/disable switches remain independent. The source recommends replacing all-repository GPG trust with a selected trusted list, not certifying every selected repository as safe. The linked security section, actual trust scope and live propagation remain separate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODESPACESTRUSTSYNC-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codespaces/settings-sync-link.md",
+      "content_sha256": "35c8e95545954e0d820148f5a672e31f06c3f02613da3210060d706f6d697a31",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Settings Sync can share the context-defined settings across web and desktop codespaces. The web client defaults to disabled and must enable sync for pushing/pulling changes. This general default must be read with the trusted-repository/both-features qualifiers in DOCS-CODESPACESTRUSTSYNC-003 rather than treated as proof of a particular instance's current state. The antecedent settings scope and linked preference article remain separate; no synchronization changed.",
+      "accepted_policy": false
+    }
+  ]
+}

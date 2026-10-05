@@ -1,0 +1,29 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:16:26.857Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-RESIDENCYDOMAINSSH-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-data-residency/access-domain.md",
+      "content_sha256": "829acb668cc2326ca41e232f334de7df4944316704a7f5ca714077bd5bafd59b",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The domain note warns that article commands/examples use product_url while the user's GitHub deployment may use another domain, illustrated by octocorp.ghe.com. The inspected product_url variable resolves to github.com for fpt/ghec and HOSTNAME otherwise. These are source example/placeholder branches, not the actual enterprise host, validated endpoint, or authorization to retarget commands.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-RESIDENCYDOMAINSSH-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise-data-residency/ssh-user.md",
+      "content_sha256": "0eb2bb4e73ae3568e8420194c6a37ae8f81cce6c162c7098cef2ae6ae36f9b60",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The SSH note describes substituting git at product_url with the illustrated octocorp user at octocorp.ghe.com when using a different domain. This changes both the example SSH user and host, not just DNS, but is not a finding about the user's actual enterprise SSH identity, key trust, credentials, or remote parity. No SSH connection or remote configuration was changed.",
+      "accepted_policy": false
+    }
+  ]
+}

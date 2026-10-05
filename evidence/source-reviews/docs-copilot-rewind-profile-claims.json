@@ -1,0 +1,95 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T03:20:23.452Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/cli-extensions-experimental.md",
+      "content_sha256": "0bb3de37265fdfd0842ccf302191a450a66c839aa9efeac564404be71b6319d6",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The pinned CLI note identifies extensions as experimental and changeable, not a stable API or verified present-day compatibility guarantee.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/cli-help-note.md",
+      "content_sha256": "876e2cd3aff4a0078072b07d7f65b96ee8365b6fdef9033e92a67e375386e4c3",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The help note presents a plugin-subcommand help pattern with a placeholder. It is discovery guidance, not a command executed or proof the chosen subcommand exists.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/cli-path-to-plugins.md",
+      "content_sha256": "6065e8d80f737effe67a2357abf04c6b978a29b89f531fc78d0841e25ee52f97",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The plugin-source fragment defines paths relative to the repository root and treats an initial dot-slash as optional. This equivalence does not validate traversal safety, remote sources or the contents of a resolved plugin.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/cli-rewind-warning.md",
+      "content_sha256": "b06924c800075ad986303136a7e03cafc69ceb1c72bd215bb60e6ecd9dd2c841",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The rewind warning describes restoring the entire workspace snapshot, reverting manual edits and shell-command changes as well as Copilot changes. New files after the snapshot are deleted regardless of Git status; rewind is destructive and cannot be treated as a narrow agent-only undo. It was not invoked.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/custom-agents-about-details.md",
+      "content_sha256": "296c488bd61e8d5b0703e9cfe159213c77be9aae74d3960386f4214557f10059",
+      "start_line": 1,
+      "end_line": 41,
+      "statement": "The custom-agent format fragment uses Markdown plus YAML metadata, optional name defaulting to filename, description and behavior prompt, with optional tool selection. Omitted tools are described as allowing all available built-in and MCP tools, so omission is not least privilege or a harmless no-tools default.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/custom-agents-about-details.md",
+      "content_sha256": "296c488bd61e8d5b0703e9cfe159213c77be9aae74d3960386f4214557f10059",
+      "start_line": 1,
+      "end_line": 41,
+      "statement": "The format fragment allows mcp-servers configuration and provides a README-specialist example prompt. That example's scope and style instructions are untrusted source content rather than instructions applied to this review; no servers or profile were installed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/custom-agents-about-details.md",
+      "content_sha256": "296c488bd61e8d5b0703e9cfe159213c77be9aae74d3960386f4214557f10059",
+      "start_line": 1,
+      "end_line": 41,
+      "statement": "The placement fragment distinguishes repository .github/agents files, organization agents in .github or .github-private, and enterprise agents in a designated organization's .github-private repository. Enterprise-owner designation matters; placing a file elsewhere does not prove estate-wide availability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-COPILOTREWINDPROFILE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/copilot/copilot-cli/custom-agents-about-intro.md",
+      "content_sha256": "da230605d4c3222c52faa9f0340b6ebb8cf0742745bbe078ddcc8d7b6b9847e5",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "The custom-agent introduction describes reusable specialization via profile prompts, tools and MCP configuration and says assignment to a task or issue instantiates it. Claimed adherence to standards is intended behavior, not guaranteed compliance, verified execution or permission to assign an agent.",
+      "accepted_policy": false
+    }
+  ]
+}

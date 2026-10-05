@@ -1,0 +1,263 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:41:44Z",
+  "review_scope": "One complete enterprise collector artifact.",
+  "candidate_count": 0,
+  "claim_count": 11,
+  "claims": [
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-001",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 17,
+      "end_line": 66,
+      "statement": "Enterprise settings require GraphQL and retain identifying/display metadata; the result has no independently checked target-pin or collection-completeness marker.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L17-L66",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-002",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 68,
+      "end_line": 102,
+      "statement": "The source infers managed-user status from a nonnil enterprise identity-provider object and returns false without error when that query is inaccessible. Identity-provider presence is not independent proof of managed-user model or enforcedMFA, and denied evidence is not verifiedfalse.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L68-L102",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-003",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 104,
+      "end_line": 164,
+      "statement": "Enterprise organization discovery follows100-node GraphQL cursor pages and propagates query failures, preserving names and descriptions. Successful visible discovery is not independent certification of every estate organization or inaccessible scope.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L104-L164",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-004",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 166,
+      "end_line": 204,
+      "statement": "Suspicious detection uses a fixed list of repository destruction, member removal, OAuth revocation, organization deletion/transfer and enterprise organization removal. Flexible org parsing retains only the first array element; these heuristics and projection can omit other security events or multi-organization context.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L166-L204",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-005",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 206,
+      "end_line": 240,
+      "statement": "Audit collection requests only the latest100events with no cursor or thirty-day datefilter, skips malformed entries and records suspicious action/actor/org/user but not parsed event time. A scanned count is not complete thirty-day audit or detection coverage.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L206-L240",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-006",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 242,
+      "end_line": 307,
+      "statement": "Enterprise security collection requests only first100open alerts per dependency/code/secret family without pagination. Any successful family marks the whole aggregate available, while request/API errors are swallowed and inaccessible families retain zero counts. Complete alerts or grantedpermissions are not established.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L242-L307",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-007",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 310,
+      "end_line": 333,
+      "statement": "Enterprise GHAS settings return nil for absentRESTclients or403/404 and otherwise preserve defaultstrings. Missing permissions are not a pass, and source cascading-default language doesnot prove effective existingrepository configuration.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L310-L333",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-008",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 335,
+      "end_line": 358,
+      "statement": "Budget requests use10items per page and explicitly pin APIversion2026-03-10 according to the source. This required-version statement is a pinned upstream assertion, not live vendor-contractverification.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L335-L358",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-009",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 360,
+      "end_line": 389,
+      "statement": "Budget collection loops on response has_next_page, concatenates entries and reports its own listlength asTotalCount instead of reconciling the returnedtotal_count.403/404 at any page yields unavailable, othererrorspropagate; cursorcycle/pagebounds and fulltotal reconciliation are not shown.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L360-L389",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-010",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 391,
+      "end_line": 420,
+      "statement": "A full enterprise scan requiresGraphQL, settings and organization discovery to succeed, while managed-user probing can returnfalse without error. Core identity/discovery success is narrower than completed security assessment.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L391-L420",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-ENTCOL-011",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise.go",
+      "artifact_id": "e0fa1b039f2ef28007e6367c",
+      "content_sha256": "b90766d4d67b3d04f9513963c943713aefe0be1b253db106a57e724c0e7a4e71",
+      "start_line": 422,
+      "end_line": 456,
+      "statement": "Audit, security alerts, GHAS defaults and budget failures are merelywarned before whole-enterprise completion is returned. Optional unavailable components must remain explicitunknown evidence ratherthan acceptedclean results.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise.go#L422-L456",
+      "source_authority": "Pinned enterprise collector implementation and comments, source-only inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "API contracts are pinned assertions, not current vendor verification.",
+        "No live collection, actual credentials or native enforcement proof."
+      ]
+    }
+  ],
+  "conflicts_and_limits": [
+    "ENTCOL-005latest100audit without30dayfilter/cursor/time projection contradicts comprehensiveperiod wording.",
+    "ENTCOL-006first100peralertfamily andaggregateany-success losespartialpermission/pagecompleteness.",
+    "ENTCOL-002IdPpresence anddeniedfalse donotproveEMU/MFA.",
+    "ENTCOL-009returnedbudgettotal discarded;011optionalerrorsallowcomplete log."
+  ],
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "independent_omission_certification": false
+}

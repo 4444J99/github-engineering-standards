@@ -1,0 +1,54 @@
+{
+  "schema_version": "ges.issue-relationship-review-verification.v1",
+  "verified_at": "2026-10-03T09:34:42.463Z",
+  "issue": 353,
+  "source_guides": 3,
+  "reference_claims_added": 12,
+  "candidates_accounted": 76,
+  "reference_claims_total": 60635,
+  "claim_bearing_artifacts": 3368,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 324,
+    "seconds": 1.982,
+    "result": "OK"
+  },
+  "controls_valid": 95,
+  "project_complete": false,
+  "gates_open": 9,
+  "semantic_truth_certified": false,
+  "omission_completeness_certified": false,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_changes": false,
+  "limitations": [
+    "Pinned source reference review; no published body assurance.",
+    "CLI examples were not executed against a target.",
+    "Lifecycle progress does not certify independent acceptance."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "issue": 173,
+  "reviewed_at": "2026-10-03T03:46:31.738Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59247,
+    "claim_bearing_artifacts": 2747,
+    "tests": 324,
+    "test_seconds": 1.977,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "PAT header is placeholder only; no credential action or endpoint contact.",
+    "Azure example not owned target or tested registry configuration.",
+    "Historical policy prerequisite not current tenant verification.",
+    "No adopted policy, linked-resource assurance, or rights clearance."
+  ]
+}

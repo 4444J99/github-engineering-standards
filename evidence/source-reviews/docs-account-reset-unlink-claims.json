@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:34:40Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACCOUNTRESETUNLINK-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/accounts/request-password-reset-link.md",
+      "content_sha256": "9f614c59b8a89f9c5921a24eaf3867304d8adc538fc519a6c08c644dd3626650",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Reset requests use primary or backup addresses; absent a specifically chosen backup, verified addresses count as backups. The emailed reset link must be used within three hours of receipt; checking spam is suggested if absent. Request initiation is not successful credential recovery.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACCOUNTRESETUNLINK-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/accounts/set-profile-picture.md",
+      "content_sha256": "04aba9e1545f2e0eac49628920a9cb7fef2ff5b870f1d1e893cf471fbc76a82e",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Profile-photo procedure uploads, crops and sets an image through the Edit control. Screenshot caption and icon metadata identify UI cues but do not independently review the raster or prove a photo was changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACCOUNTRESETUNLINK-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/accounts/start-automated-recovery-with-password.md",
+      "content_sha256": "bb8d4673c7100fa97e9179a8652be979f802c32374bea209916862d346857387",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Recovery with password may require an email OTP sent to primary/backup addresses, with all verified addresses defaulting to backups unless one was selected. Email verification is one step, not recovered account access; broad 'each email' wording is qualified by the explicit primary/backup note.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACCOUNTRESETUNLINK-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/accounts/start-automated-recovery-without-password.md",
+      "content_sha256": "c40c40bf2729336b8e17bb48d3a5b20770f6d13218c1e65e2f2f4971c8525c1a",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Without-password recovery entry follows the 2FA prompt and acknowledgement. This short fragment does not bypass identity verification or prove recovery completion.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACCOUNTRESETUNLINK-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/accounts/unlinking-email-address.md",
+      "content_sha256": "f5912013cd8d090e963beb9e4e944a0422759a88777209df66185196fadd067d",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "Email unlink requires verification links and final confirmation for selected inboxes, after which linking to new or existing accounts is optional. Screenshot caption is not raster certification. Payments on the locked account require separate support cancellation; sponsorship receipt/migration also needs support coordination. Unlinking alone does not cancel charges or recover the old account.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACCOUNTRESETUNLINK-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/accounts/you-must-know-your-password.md",
+      "content_sha256": "747ee7b2088447ddd5be24e708ec42a5b1ebcceed3375207e9a88a08d20f82a5",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Unknown-password 2FA recovery has feature-dependent behavior: 2fa-recovery-flow begins with reset request; the other branch says the stated steps cannot proceed and points to verified-address reset. Preserve both branches, not a universal recovery prohibition or guarantee.",
+      "accepted_policy": false
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T07:10:40.524Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "FPT/GHEC/GHES guide concerns Gradle publication and Java dependencies; GHEC data-residency deployments lack Gradle registry, not all GHEC. GHES package type enablement is site-admin-dependent; the release-stage include is comment-only.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Classic-PAT task-scopes and access tokens apply to this registry tutorial, including public package operations. Explicit workflow exceptions permit associated-repository GITHUB_TOKEN publication and granted read access; other private-repository installs use classic PAT at least read:packages.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Groovy build.gradle and Kotlin build.gradle.kts support single or multiple packages. Text instructs credential inclusion, but code obtains gpr.user/gpr.key project properties before USERNAME/TOKEN environment fallback; this is not permission to hardcode, expose or commit secrets.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "GHES REGISTRY_URL depends on isolation: maven.HOSTNAME with subdomain isolation, HOSTNAME/_registry/maven without. Examples prepend https:// and append OWNER/REPOSITORY. Cloud uses maven.pkg.github.com; do not replace registry host universally with GitHub web host.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Owners must be lowercase even when account/organization names contain uppercase. USERNAME/TOKEN/OWNER/REPOSITORY are placeholders, not target identities or executed credentials; GHEC managed users retain organization versus personal namespace distinctions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "SNAPSHOT support comes through the Maven reusable: consuming POM or settings must enable snapshots. Reference to the Maven guide is not proof the Gradle snippets themselves enable snapshot policy or resolve a safe dependency.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Single-package Groovy applies maven-publish and creates gpr MavenPublication from components.java; Kotlin uses maven-publish and register<MavenPublication> from components[\"java\"]. These are build DSL examples despite shell-marked fences; never run as shell ingestion commands.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Multiple-package examples declare maven-publish apply false then apply/configure it in subprojects, publishing Java components to the same repository. This supports scoped multi-project publication, not permission to restructure consumer repositories or proof all subprojects expose Java components.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Default package-name matching targets an existing repository; com.example.test and OWNER/test are illustrative. Tutorial authenticates then gradle publish and references package viewing; no successful publication, effective permission or verified native enforcement is inferred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Consumption adds implementation com.example:package plus an authenticated Maven repository in Groovy/Kotlin. The illustrated dependency lacks an explicit version; preserve as incomplete contextual example, not immutable production dependency or a tested resolution fixture.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Credential precedence and optional Kotlin String casts are example behavior, not tested runtime handling of absent, invalid or expired secrets. Client versions and actual build applicability remain unverified; no Gradle commands or dependency downloads were executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GRADLEREGISTRY-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-gradle-registry.md",
+      "content_sha256": "6dfdf33a2d3d1f9937df25e0cd452097c64b787f42de475fa9a33031a2e53d71",
+      "start_line": 1,
+      "end_line": 226,
+      "statement": "Outbound Gradle declaring-dependencies, Java workflow, Maven and deletion guides remain separately scoped. No accepted policy, rights clearance, credential modification or publication authority follows from reference review; independent source completeness and published assurance remain open.",
+      "accepted_policy": false
+    }
+  ]
+}

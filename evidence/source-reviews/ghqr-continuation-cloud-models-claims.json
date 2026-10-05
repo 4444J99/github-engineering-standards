@@ -1,0 +1,263 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:37:50Z",
+  "review_scope": "Three complete enterprise, organization and repository entity-model files.",
+  "candidate_count": 0,
+  "claim_count": 11,
+  "claims": [
+    {
+      "claim_id": "GHQR-CONT-MODEL-001",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise_types.go",
+      "artifact_id": "019997660e2d54e13f7c5fbb",
+      "content_sha256": "1ea155256a18f78b53512d23e34d4551b2a5b13d0701cce0a118b6f5c5d59d6f",
+      "start_line": 8,
+      "end_line": 43,
+      "statement": "Enterprise records separate settings, organizations, audit, aggregate alerts, GHAS defaults and budgets. Budget models carry total/list/availability, product scope/entity/amount/stop and alert recipients, but no currency, collection timestamp, complete-page marker or endpoint-error cause.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise_types.go#L8-L43",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-002",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise_types.go",
+      "artifact_id": "019997660e2d54e13f7c5fbb",
+      "content_sha256": "1ea155256a18f78b53512d23e34d4551b2a5b13d0701cce0a118b6f5c5d59d6f",
+      "start_line": 45,
+      "end_line": 82,
+      "statement": "Enterprise aggregate alerts use counts plus one availability Boolean; managed-user status is a Boolean metadata claim, and audit retains scanned totals and actor/action/time/org/user entries. These shapes alone cannot prove full collection, IdPMFA or suspicious detection quality.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise_types.go#L45-L82",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-003",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/enterprise_types.go",
+      "artifact_id": "019997660e2d54e13f7c5fbb",
+      "content_sha256": "1ea155256a18f78b53512d23e34d4551b2a5b13d0701cce0a118b6f5c5d59d6f",
+      "start_line": 84,
+      "end_line": 96,
+      "statement": "Seven enterprise security-default strings allow organization override according to the source comment; nil settings are documented as inaccessible. The model does not represent inherited effective repository settings or per-field permission uncertainty.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/enterprise_types.go#L84-L96",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-004",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/organization_types.go",
+      "artifact_id": "d0563b8f24c5e8429acc96b4",
+      "content_sha256": "1357af170df2c6c6c88e30d2c07068d4677eba64fd68d53175680f6190f29397",
+      "start_line": 6,
+      "end_line": 44,
+      "statement": "Organization data separates parent, settings and optionalAI/Actions/alerts/security-manager components. Visibility and seven new-repository defaults use ordinary Boolean/string values, so omitted fields can collapse to false/empty; managed-user metadata is not providerMFA attestation.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/organization_types.go#L6-L44",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-005",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/organization_types.go",
+      "artifact_id": "d0563b8f24c5e8429acc96b4",
+      "content_sha256": "1357af170df2c6c6c88e30d2c07068d4677eba64fd68d53175680f6190f29397",
+      "start_line": 46,
+      "end_line": 62,
+      "statement": "Copilot models retain billing, assignment, public suggestions, chat/CLI policies and seat activity counts. The source interprets billing404 as no subscription, but the shape carries no independent error cause, activity period or count-completeness proof.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/organization_types.go#L46-L62",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-006",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/organization_types.go",
+      "artifact_id": "d0563b8f24c5e8429acc96b4",
+      "content_sha256": "1357af170df2c6c6c88e30d2c07068d4677eba64fd68d53175680f6190f29397",
+      "start_line": 64,
+      "end_line": 88,
+      "statement": "Actions settings carry allowed action/default token policies and approval capability, alerts have a single availability flag, and security-manager state is Boolean. Comments equating403/404 with unlicensedGHAS must not erase missing-permission or other API causes.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/organization_types.go#L64-L88",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-007",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/repository_types.go",
+      "artifact_id": "4d83440903e28030992efbe1",
+      "content_sha256": "5e4e3315b57df4ed7055450de073d992da8bf98c36e461c93e18755a20826744",
+      "start_line": 6,
+      "end_line": 42,
+      "statement": "Repository models retain parent scopes, identity, description/push date, features, access, security/protection/metadata, collaborators/keys and config existence. Ordinary access/featureBooleans and omitted slices do not preserve all unknown-versus-observed-empty distinctions or pinned target revision.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/repository_types.go#L6-L42",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-008",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/repository_types.go",
+      "artifact_id": "4d83440903e28030992efbe1",
+      "content_sha256": "5e4e3315b57df4ed7055450de073d992da8bf98c36e461c93e18755a20826744",
+      "start_line": 44,
+      "end_line": 77,
+      "statement": "Security models retain a generic feature error string but dependency alerts carry only enabled/count/severity, and CODEOWNERS carries existence/path. Metadata license is an identifier, not per-file rights clearance; these shapes do not validate meaningful policy contents or native enforcement.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/repository_types.go#L44-L77",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-009",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/repository_types.go",
+      "artifact_id": "4d83440903e28030992efbe1",
+      "content_sha256": "5e4e3315b57df4ed7055450de073d992da8bf98c36e461c93e18755a20826744",
+      "start_line": 79,
+      "end_line": 102,
+      "statement": "Legacy default-branch protection models expose approval/review/status contexts, history, force/deletion and signatures. They omit explicit administrator bypass, exemption actors, multiple protected branch coverage and observation completeness.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/repository_types.go#L79-L102",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-010",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/repository_types.go",
+      "artifact_id": "4d83440903e28030992efbe1",
+      "content_sha256": "5e4e3315b57df4ed7055450de073d992da8bf98c36e461c93e18755a20826744",
+      "start_line": 104,
+      "end_line": 132,
+      "statement": "Collaborator models retain login/role, deploy keys title/read-only/verified, and Dependabot/CodeQL config models only existence/path; Discussions is Boolean. File existence is not executable configuration validity or authenticated key/access inventory completeness.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/repository_types.go#L104-L132",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-MODEL-011",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/repository_types.go",
+      "artifact_id": "4d83440903e28030992efbe1",
+      "content_sha256": "5e4e3315b57df4ed7055450de073d992da8bf98c36e461c93e18755a20826744",
+      "start_line": 134,
+      "end_line": 148,
+      "statement": "Ruleset protection is distinct from legacy protection and retains matching review/status/history/force/signature fields plus count. The comment referencesREST while the inspected pipeline usesGraphQLbatch enrichment; model presence does not prove effective union, bypass constraints or enforcement state.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/scanners/repository_types.go#L134-L148",
+      "source_authority": "Pinned cloud entity schema and comments, inert source inspection.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Typed shape is not evidence completeness or semantic evaluator equivalence.",
+        "Scope/availability/defaults remain distinct from adopted policy and native enforcement."
+      ]
+    }
+  ],
+  "conflicts_and_limits": [
+    "MODEL-004/007ordinaryBooleans and omittedslices lose unknown versus observedempty.",
+    "MODEL-006403/404 comment cannot establishunlicensed status or grantedpermissions.",
+    "MODEL-008/010existence/path insufficient nativeconfigvalidation,licenseidentifier≠rights.",
+    "MODEL-009/011protected defaultbranch models omitbypass and fullbranch/union semantics."
+  ],
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "independent_omission_certification": false
+}

@@ -1,0 +1,48 @@
+{
+  "issue": 233,
+  "reviewed_at": "2026-10-03T05:32:43.957Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59586,
+    "claim_bearing_artifacts": 3079,
+    "tests": 324,
+    "test_seconds": 1.982,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "No accepted policy, rights clearance, native mutation, certificate issuance, or DNS change.",
+    "Navigation include fully inspected, without counting dependency as whole-file reviewed.",
+    "Linked SSH-CA issuing context inspected; whole-page coverage and all conditional branches remain unverified.",
+    "Domain submission is not successful verification; team choice is optional and not accepted membership.",
+    "Individual certificate revocation is distinct from removing CA trust, which invalidates all certificates signed by that CA."
+  ]
+}

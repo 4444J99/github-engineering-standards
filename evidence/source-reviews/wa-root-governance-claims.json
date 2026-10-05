@@ -1,0 +1,1419 @@
+{
+  "schema_version": "ges.reference_claims.v1",
+  "source": "github/github-well-architected",
+  "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-01T23:18:52Z",
+  "artifact_count": 4,
+  "generic_candidate_count": 88,
+  "independent_reference_statement_count": 54,
+  "adoption_status": "UNADOPTED_REFERENCE",
+  "digest_convention": "content_sha256 hashes full pinned file; span_sha256 hashes LF-joined exact source lines including indentation with no appended LF.",
+  "rights_observations": [
+    {
+      "path": "LICENSE",
+      "lines": "1–21",
+      "notice": "MIT; copyright GitHub, Inc.",
+      "clearance_status": "OBSERVED_NOTICE_ONLY"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "lines": "70–74",
+      "notice": "Adapted from Contributor Covenant version1.4; external attribution links",
+      "clearance_status": "INHERITED_RIGHTS_UNVERIFIED"
+    },
+    {
+      "path": "README.md",
+      "lines": "140–148",
+      "notice": "References repository MIT license and contributor acknowledgements; remote assets and montage remain separate",
+      "clearance_status": "PER_FILE_AND_ASSET_RIGHTS_UNVERIFIED"
+    },
+    {
+      "path": "SECURITY.md",
+      "lines": "29–31",
+      "notice": "Links vendor legal safe-harbor policy without reproducing or validating its terms",
+      "clearance_status": "LINKED_TERMS_UNVERIFIED"
+    }
+  ],
+  "limitations": [
+    "Only the four entire pinned root artifacts were inspected; no linked document, site, asset or current program terms were certified.",
+    "Development/setup/test scripts were read as references but never executed.",
+    "Independent paraphrases include descriptive and legal-notice observations; they are not all engineering obligations.",
+    "Proposed mappings do not establish exact catalog coverage, accepted policy, native enforcement or independent omission certification."
+  ],
+  "unresolved_decisions": [
+    "Verify inherited Contributor Covenant adaptation rights and preserve attribution before reuse.",
+    "Review per-file and externally hosted asset rights independently of the repository MIT notice.",
+    "Replace owner-specific conduct/security reporting contacts for each consumer and verify channel ownership.",
+    "Verify current safe-harbor and bug-bounty scope without representing the pinned text as present legal authority.",
+    "Generalize Codespaces/Hugo/Node/static-site commands and ports only where consumer toolchain context applies."
+  ],
+  "claims": [
+    {
+      "claim_id": "WA-ROOT-REF-001",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 5,
+      "end_line": 10,
+      "span_sha256": "a18d525548caa8ccea53fac86e1eb28f1d8c0fd325436de48907442d256e1e03",
+      "candidate_ids": [
+        "b351486e66dc05e13517ae5f"
+      ],
+      "statement": "Maintain harassment-free participation across the listed personal characteristics.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-002",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 17,
+      "end_line": 17,
+      "span_sha256": "bf8acff24531f09861865e9511ac300b74e549e2763888ad80ad7f927f2d5632",
+      "candidate_ids": [
+        "dc2e4d4938730f9f2ed6dc7e"
+      ],
+      "statement": "Use welcoming and inclusive language.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-003",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 18,
+      "end_line": 18,
+      "span_sha256": "f1ded03f92fde5c10c87222d2d1f41ddf410263cce0733dacf94ebe628de555f",
+      "candidate_ids": [
+        "a9b085568372a9ecfa30c256"
+      ],
+      "statement": "Respect differing viewpoints and experiences.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-004",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 19,
+      "end_line": 19,
+      "span_sha256": "a8187a176cdee8833a43085c21640b70c563bb5ea1795caac68e1aceb4e2f13a",
+      "candidate_ids": [
+        "a1ba3475aa001dd5a958eb1a"
+      ],
+      "statement": "Receive constructive criticism respectfully.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-005",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 20,
+      "end_line": 20,
+      "span_sha256": "df94da7b9113aa258134c41d34dade9cf739484cbd25258d1d4c67a946a4b044",
+      "candidate_ids": [
+        "6b2b39ca59eb6d0500595bd6"
+      ],
+      "statement": "Prioritize community interests.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-006",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 21,
+      "end_line": 21,
+      "span_sha256": "a53c6528a0cf95ce9e0f17642d771209c20936448fcc96a359d2d7a015248e00",
+      "candidate_ids": [
+        "5939ab5d9568a1b347db3ab8"
+      ],
+      "statement": "Treat community participants with empathy.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-007",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 25,
+      "end_line": 26,
+      "span_sha256": "bf3d8a3562572ca811641432151765f40afc9fe5e7595fbe070c3be7b970439b",
+      "candidate_ids": [
+        "dc8dbd09b87ad561018b2e42"
+      ],
+      "statement": "Prohibit sexualized expression and unwelcome sexual advances.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-008",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 27,
+      "end_line": 27,
+      "span_sha256": "1bbbd033b44e9a79b6eea51f37db57c5205f915405795c23817c65f8a71cec72",
+      "candidate_ids": [
+        "accf963d0168e731389e4f50"
+      ],
+      "statement": "Prohibit trolling, derogatory comments and personal or political attacks.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-009",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 28,
+      "end_line": 28,
+      "span_sha256": "b272295188b048ee37c19f273f138409d6bb262ec986f1fd78d277d1b7e9ae76",
+      "candidate_ids": [
+        "cea91d4b9dfb5a3d9872d782"
+      ],
+      "statement": "Prohibit public and private harassment.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-010",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 29,
+      "end_line": 30,
+      "span_sha256": "846825f36fddff695eab1917440cf44ed968d2dd019efefaf37fa923ab5c2cf4",
+      "candidate_ids": [
+        "abf5101e8ebdfb4fac983667"
+      ],
+      "statement": "Require permission before disclosing another person’s private information.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-011",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 31,
+      "end_line": 32,
+      "span_sha256": "249d0c2f71647e54cb1eb4ca2c089b5de6a65fc003bdd2e08d08b381db4c16c6",
+      "candidate_ids": [
+        "7795a03256e72d87ff990e6f"
+      ],
+      "statement": "Prohibit other professionally inappropriate conduct.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-012",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 36,
+      "end_line": 38,
+      "span_sha256": "26b92c50a1b206b6807aa0cc9b50c91f5dca459786e27208b3f392c823c2382a",
+      "candidate_ids": [
+        "4ce4b76a8877c56ac2f5d0e9"
+      ],
+      "statement": "Assign maintainers responsibility for explaining conduct standards.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-013",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 36,
+      "end_line": 38,
+      "span_sha256": "26b92c50a1b206b6807aa0cc9b50c91f5dca459786e27208b3f392c823c2382a",
+      "candidate_ids": [
+        "4ce4b76a8877c56ac2f5d0e9"
+      ],
+      "statement": "Respond to misconduct with appropriate and fair corrective action.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-014",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 40,
+      "end_line": 44,
+      "span_sha256": "e1c43cc60ad2ae00d0308c43b40e7b156b2369413dd011659fd02c4d65a1d741",
+      "candidate_ids": [
+        "7d829a9660461527d8bd1cb7"
+      ],
+      "statement": "Authorize maintainers to moderate nonconforming contributions and impose proportionate bans.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-015",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 48,
+      "end_line": 53,
+      "span_sha256": "f9c00f58c8ff08b7b9d7124806f95b506574b8da8fcd3da7054bb261ab653b1f",
+      "candidate_ids": [
+        "884ba6391406151626e752ad"
+      ],
+      "statement": "Apply conduct policy inside project spaces and during public representation of the project.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-016",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 57,
+      "end_line": 58,
+      "span_sha256": "b4e8faba7e172cce82342d19d5fb52a4d533a095f43501500bb2b04face76015",
+      "candidate_ids": [
+        "4597e482b677abc9794396a2"
+      ],
+      "statement": "Provide a misconduct reporting route to the responsible team.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-017",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 58,
+      "end_line": 60,
+      "span_sha256": "403b8501fada69a6628501f37621f2303549fa033c1a91b585111566be92d9d6",
+      "candidate_ids": [
+        "4597e482b677abc9794396a2"
+      ],
+      "statement": "Investigate conduct complaints and respond appropriately to their circumstances.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-018",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 60,
+      "end_line": 61,
+      "span_sha256": "e02e9042034d2fa794a19612a3c0bb8f6d6510b53f8b470ec88c3e0f58bf6915",
+      "candidate_ids": [
+        "4597e482b677abc9794396a2"
+      ],
+      "statement": "Protect incident reporters’ confidentiality.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-019",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 64,
+      "end_line": 66,
+      "span_sha256": "d274cc641b5c2d4cafd6d752bcc48e4d804e587579fbe5b5e34fb5f50cdc3b5b",
+      "candidate_ids": [
+        "9b8c1729299bbe9f66237a30"
+      ],
+      "statement": "Allow project leadership to hold maintainers accountable for bad-faith enforcement.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-020",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "CODE_OF_CONDUCT.md",
+      "artifact_id": "09b2d3303ed7e22ca985782c",
+      "content_sha256": "3b90b6c1b812cb0194bb2a98ff8c13d4353f4430937dce45d3a25bef069fe507",
+      "start_line": 70,
+      "end_line": 74,
+      "span_sha256": "27575297d5b3d3cfc6762e8253370035ad123d3d7c845dc71f2a2e8ddf1697ef",
+      "candidate_ids": [
+        "f584821fe8dbf9ce6481accc",
+        "07761a0fbff9e6ff5fac8b3b"
+      ],
+      "statement": "Identify the inherited Contributor Covenant 1.4 source and preserve attribution when reusing the adapted policy.",
+      "source_strength": "INHERITED_ATTRIBUTION_EVIDENCE",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Adapted Contributor Covenant 1.4 policy, with attribution links at lines70–74 and owner-specific reporting contact. No standalone SPDX or license notice is present in this file; attribution must be preserved separately and inherited adaptation rights remain unverified. Moderation requires accountable human judgment.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-COM-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-021",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "LICENSE",
+      "artifact_id": "b1105d534c53f3a3dd31891c",
+      "content_sha256": "2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7",
+      "start_line": 5,
+      "end_line": 10,
+      "span_sha256": "176724182789ddbdec948a49b09687d5ae28687dbda2b302cea4de43c41e4d99",
+      "candidate_ids": [],
+      "statement": "Observe the repository’s declared permission to use, modify and redistribute covered software subject to its notice conditions.",
+      "source_strength": "LICENSE_TEXT_EVIDENCE",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Observed repository-level MIT notice attributed to GitHub, Inc.; grant/disclaimer is source legal text evidence, not legal acceptance or blanket per-file clearance. Third-party adaptations, assets and external content require separate rights review.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-RIGHTS-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-022",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "LICENSE",
+      "artifact_id": "b1105d534c53f3a3dd31891c",
+      "content_sha256": "2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7",
+      "start_line": 12,
+      "end_line": 13,
+      "span_sha256": "89fdc900e69446e48038e9db01dd71e62566997bd91135f0afbecc07ae997c8a",
+      "candidate_ids": [],
+      "statement": "Retain the copyright and permission notice in redistributed copies or substantial portions.",
+      "source_strength": "LICENSE_TEXT_EVIDENCE",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Observed repository-level MIT notice attributed to GitHub, Inc.; grant/disclaimer is source legal text evidence, not legal acceptance or blanket per-file clearance. Third-party adaptations, assets and external content require separate rights review.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-RIGHTS-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-023",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "LICENSE",
+      "artifact_id": "b1105d534c53f3a3dd31891c",
+      "content_sha256": "2510b446bc1f0cf9702453075d20cd88631e20e5642658edb7325d9c1eb534f7",
+      "start_line": 15,
+      "end_line": 21,
+      "span_sha256": "e4ff189cc3bc689dddde31b2da0bd537eeca865d6a680556d1c31f6be77a182b",
+      "candidate_ids": [],
+      "statement": "Preserve the license’s warranty disclaimer and limitation-of-liability terms when reproducing the license notice.",
+      "source_strength": "LICENSE_TEXT_EVIDENCE",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Observed repository-level MIT notice attributed to GitHub, Inc.; grant/disclaimer is source legal text evidence, not legal acceptance or blanket per-file clearance. Third-party adaptations, assets and external content require separate rights review.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-RIGHTS-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-024",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 7,
+      "end_line": 7,
+      "span_sha256": "559014ee8984e609f9d923bdc8cc364d84e091b83544b1e96d4d5d3c62af825b",
+      "candidate_ids": [
+        "0f22e93a77e5950c2df0d8c2"
+      ],
+      "statement": "Route reports to the relevant maintainers while distinguishing this repository from the vendor bug-bounty reward scope.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-025",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 11,
+      "end_line": 11,
+      "span_sha256": "631a2a866f5146f50fdd2511b83da3bd2d0caa15d8a83a2eba4833db92087e79",
+      "candidate_ids": [
+        "7b0bdc17170d4b716c62f31c"
+      ],
+      "statement": "Keep vulnerability reports out of public issues, discussions and pull requests.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-026",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 13,
+      "end_line": 15,
+      "span_sha256": "0342ca80531b7284acf480875eadd35ce6b16c262bfe8672512ccd731a6fe3d6",
+      "candidate_ids": [
+        "003665e86d6f5c61a6850434",
+        "c7e684877f0b1d206293ce20"
+      ],
+      "statement": "Use the owner’s coordinated-disclosure reporting channel for suspected vulnerabilities.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-027",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 17,
+      "end_line": 19,
+      "span_sha256": "3e49eba9f725ed8d263a1f6aab6b9972784a9ab834e76d3f3d768d241585405f",
+      "candidate_ids": [
+        "134c736a4914427d683da1be",
+        "e119ff8a9b4a54adf8c2a3d8"
+      ],
+      "statement": "Include the vulnerability category when available.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-028",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 17,
+      "end_line": 20,
+      "span_sha256": "f47d6416152b86fb94351b3ee41a651ac926b64f88cea72c1f7259731f282421",
+      "candidate_ids": [
+        "134c736a4914427d683da1be",
+        "e119ff8a9b4a54adf8c2a3d8",
+        "dada4900e1b57e39cca9938e"
+      ],
+      "statement": "Identify affected source-file paths when available.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-029",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 17,
+      "end_line": 21,
+      "span_sha256": "bb8038623e408e1ada4f90d51764ce71fa8bff99eb1ede779cbd6438bdc7c7ff",
+      "candidate_ids": [
+        "134c736a4914427d683da1be",
+        "e119ff8a9b4a54adf8c2a3d8",
+        "dada4900e1b57e39cca9938e",
+        "5d79ef11606657219c1f5cee"
+      ],
+      "statement": "Identify the affected revision or precise source location when available.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-030",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 17,
+      "end_line": 22,
+      "span_sha256": "66785a12b463496f87b20eda385c2c0301b4b094dea61ce4dd7b7dc2f178ce52",
+      "candidate_ids": [
+        "134c736a4914427d683da1be",
+        "e119ff8a9b4a54adf8c2a3d8",
+        "dada4900e1b57e39cca9938e",
+        "5d79ef11606657219c1f5cee",
+        "c99c08b16b7aab5040c8d718"
+      ],
+      "statement": "Describe special configuration required for reproduction when available.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-031",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 17,
+      "end_line": 23,
+      "span_sha256": "cf535aa80a454062eaa93a3a3a07f89625fde0e870e9eef08cfe1934c60f6b77",
+      "candidate_ids": [
+        "134c736a4914427d683da1be",
+        "e119ff8a9b4a54adf8c2a3d8",
+        "dada4900e1b57e39cca9938e",
+        "5d79ef11606657219c1f5cee",
+        "c99c08b16b7aab5040c8d718",
+        "bf2c983f6a48a57c7724fe9a"
+      ],
+      "statement": "Provide a reproducible sequence when available.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-032",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 17,
+      "end_line": 24,
+      "span_sha256": "2ee62cd6d86d76c5d0336511775a8c31ace5c4cdaa6b853af3b587ef639167a9",
+      "candidate_ids": [
+        "134c736a4914427d683da1be",
+        "e119ff8a9b4a54adf8c2a3d8",
+        "dada4900e1b57e39cca9938e",
+        "5d79ef11606657219c1f5cee",
+        "c99c08b16b7aab5040c8d718",
+        "bf2c983f6a48a57c7724fe9a",
+        "514627b1804df9b635c19b9f"
+      ],
+      "statement": "Provide proof-of-concept material when feasible.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-033",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 17,
+      "end_line": 25,
+      "span_sha256": "ed3a31dd2549c10b8c9d738436f991de7510667ec99dca0d04b9b3443fcde10f",
+      "candidate_ids": [
+        "134c736a4914427d683da1be",
+        "e119ff8a9b4a54adf8c2a3d8",
+        "dada4900e1b57e39cca9938e",
+        "5d79ef11606657219c1f5cee",
+        "c99c08b16b7aab5040c8d718",
+        "bf2c983f6a48a57c7724fe9a",
+        "514627b1804df9b635c19b9f",
+        "91f8078bf256229cd1e45cdc"
+      ],
+      "statement": "Describe impact and plausible exploitation when available.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-034",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "SECURITY.md",
+      "artifact_id": "0578a139c260032f5091c630",
+      "content_sha256": "a1cc61acbe2041c3e4f3839a92e9c0ccab2f153acc21e9005d49678b77e16d9e",
+      "start_line": 29,
+      "end_line": 31,
+      "span_sha256": "e09d0e685ec9eacc94c7cd70b9aa98f99e31f92852fb5a32f6019389d11079fc",
+      "candidate_ids": [
+        "6fcafe804a80694404eb982c"
+      ],
+      "statement": "Direct reporters to the vendor’s applicable safe-harbor policy reference.",
+      "source_strength": "SOURCE_LOCAL_POLICY",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "GitHub-owned-repository reporting policy and owner-specific disclosure address; parameterize consumer contacts. Information is requested as available, not mandatory in every report. Bug-bounty scope and safe-harbor link are unverified current legal/program terms; no reporting or testing authority is inferred.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-SEC-001",
+        "GES-SEC-011"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-035",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 14,
+      "end_line": 14,
+      "span_sha256": "49dba46dc6ef2e4be194eeabdf714a7ff35459411f182d2ff1ffe4addf71dbd3",
+      "candidate_ids": [
+        "72a3ea89967e359fa5a159d6"
+      ],
+      "statement": "Preserve the framework’s identity as opinionated, community-driven architecture guidance rather than platform requirements.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-036",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 18,
+      "end_line": 21,
+      "span_sha256": "29d4f08e29c0b6466bd2992f9bfcfd7ed7663bc23677e0808c2f0aa033492738",
+      "candidate_ids": [
+        "f5dd697a0119972a6287bff3",
+        "2cbf7186d9fcef0b16c2e1c3",
+        "89f8284879cb6366f5126558",
+        "8b75b161a6553a25615839b1"
+      ],
+      "statement": "Provide discoverable site, discussion and contribution-guide entry points.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-037",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 31,
+      "end_line": 33,
+      "span_sha256": "5cd87fcc9aceb5dd8c56bd682146d2353397a49c2de9b6842291eb586575dfe8",
+      "candidate_ids": [
+        "d9170577b020332234aa3b96"
+      ],
+      "statement": "Offer Codespaces as a contribution environment option.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-038",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 35,
+      "end_line": 41,
+      "span_sha256": "7f18e4bfc08cb84ce88949554116b8b84f6cb305239dafbb915e5140cc65132f",
+      "candidate_ids": [
+        "b2dcc52ddb7232065733b65d",
+        "0362454dc9f0ed3d436f4b7f"
+      ],
+      "statement": "Place new articles in a selected framework pillar using the source’s article-generation convention.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-039",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 43,
+      "end_line": 49,
+      "span_sha256": "896e2e1dc7ae25955efd94ea656717980ddc5df5a49fb3255bf04364ebb26992",
+      "candidate_ids": [
+        "8d132be7a5bca64f5aba1fc9",
+        "80a4a210ef23978d983df0cc"
+      ],
+      "statement": "Document how contributors preview the site in Codespaces.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-040",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 55,
+      "end_line": 58,
+      "span_sha256": "4016f980d0cfa18737599f41c107bb4c52a423beedf2132ac75f733f1132767f",
+      "candidate_ids": [
+        "811b632227010a8c56518519",
+        "cecf5b6a4fe8007f4a643206",
+        "fb84e40f62dd13b5ea6fc487"
+      ],
+      "statement": "Link to framework overview and content taxonomy documentation.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-041",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 64,
+      "end_line": 64,
+      "span_sha256": "1759d59276431ebd0ae948f863f1146d87fb43b327044027e3c91ac6e1c752a7",
+      "candidate_ids": [
+        "de944b48f5b232c174772e40"
+      ],
+      "statement": "Offer local development as an alternative to the recommended Codespaces environment.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-042",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 68,
+      "end_line": 72,
+      "span_sha256": "b36de85b523eaa0e3aa32a5fd27b39a2ef459d7bfe2394e43be227f7887280b8",
+      "candidate_ids": [
+        "c67875ff60c9b00dc1fc0adf",
+        "0e258856d9145e437b844b30",
+        "d1063fbcada0c20722d884f5",
+        "a6e3af122f60788006d03577"
+      ],
+      "statement": "Document the local tool prerequisites.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-043",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 76,
+      "end_line": 86,
+      "span_sha256": "d9f156e8195304f846fb109552743b8d34e3c1273b16c8b1cd5322f5336455e4",
+      "candidate_ids": [
+        "50874fe9922f1a2db05c77cb",
+        "f85ffc183d0f432786ff8ce9",
+        "c8f2abfb2643ee4fe1cb0705",
+        "56b5b012f302ac1d88f77536"
+      ],
+      "statement": "Document repository acquisition and workspace initialization steps.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-044",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 90,
+      "end_line": 97,
+      "span_sha256": "b3cd41e9bb20d0d3de5d805ed43ce1a33877831f5bd3cfdfbff856c954aff597",
+      "candidate_ids": [
+        "46f41e95f503507f6f9e1c5c",
+        "d580d38af8a5481d04c2a39c",
+        "5ba53571c4b0642bb5bb54bd"
+      ],
+      "statement": "Document the site launch command and local endpoint.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-045",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 99,
+      "end_line": 104,
+      "span_sha256": "eec4c6787f3688f9adaa9cfab3e523ae3d3761495fba0ae16ad179004b8285ef",
+      "candidate_ids": [
+        "86baba4577d973f9c5d025a6",
+        "2983d1345a059e08354e59e9",
+        "6b9159bbfdb21bee97089c46"
+      ],
+      "statement": "Explain local change reload and alternate port configuration.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-046",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 106,
+      "end_line": 106,
+      "span_sha256": "3055240fd93e6f3b943dab28100497b9c2b2fc22712d9cbd2704f350d58ad6b2",
+      "candidate_ids": [
+        "58312f19098b3fb99c017115"
+      ],
+      "statement": "Use development-server output to diagnose errors.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-047",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 110,
+      "end_line": 114,
+      "span_sha256": "b5256f5648eb91e7d1dba872dfeaf095739444d7539ab5d765a4b4ccd1d457fd",
+      "candidate_ids": [
+        "db4baee789cc7bdbcf0481cc",
+        "168594f0149ef3df8a38bf8c"
+      ],
+      "statement": "Configure the local site URL before running tests.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-CI-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-048",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 116,
+      "end_line": 120,
+      "span_sha256": "bdd139235e85ed2143a0d823f6afde9caf4cc7b3093e25ebc54ebd70d60e0e88",
+      "candidate_ids": [
+        "b3ec847619ed4549340cff76",
+        "6ddfef26a41ccbace57bd97a"
+      ],
+      "statement": "Document the command for the complete test suite.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-CI-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-049",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 122,
+      "end_line": 126,
+      "span_sha256": "c43d1933dc862102a5a218df12fa0aaf8a252372a0facee136eed4192e73eab1",
+      "candidate_ids": [
+        "17d4ad985f938a6bd4d6c7f8",
+        "f9c5e5fa444b88a127079a7d"
+      ],
+      "statement": "Document how to run functional tests separately.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-CI-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-050",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 128,
+      "end_line": 132,
+      "span_sha256": "e64d7ca1784c9560729e7d432a4b767d93fadf5a21e3ed9af9c0bab1e188d68b",
+      "candidate_ids": [
+        "5276c1bb962c7be9321b46d7",
+        "d9e0d85f6769de82b2860355"
+      ],
+      "statement": "Document the lint command.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-CI-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-051",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 134,
+      "end_line": 134,
+      "span_sha256": "fb01f4213bd6e4a400909c5989252c8e25fc98d1d8afc50555e75b618222e774",
+      "candidate_ids": [
+        "7a0da14f73e742bfe236e88c"
+      ],
+      "statement": "Review test output and resolve failures before submitting changes.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-CI-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-052",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 136,
+      "end_line": 136,
+      "span_sha256": "edef2c000f14f56c8488e92ab71847089281a65377eb23903d7e8b7c2497b9b7",
+      "candidate_ids": [
+        "2b98624b859d7b6822a41a1b"
+      ],
+      "statement": "Direct contributors to detailed development instructions.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-DOC-003",
+        "GES-COM-004"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-053",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 140,
+      "end_line": 142,
+      "span_sha256": "fb80ec9a9e7cd4504b669e58c26fecea397cb7b284cd35ad3b07838c15b9d02b",
+      "candidate_ids": [
+        "9b01b5b0e15161b4aeca2953"
+      ],
+      "statement": "Expose the project’s declared MIT license and authoritative notice file.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-RIGHTS-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    },
+    {
+      "claim_id": "WA-ROOT-REF-054",
+      "source": "github/github-well-architected",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "path": "README.md",
+      "artifact_id": "735a70fb06cd9a767b5577ee",
+      "content_sha256": "ba5fd706676acb3d7ab2236c1fff747a1f625a47ab6690171f6cea232425d71d",
+      "start_line": 144,
+      "end_line": 148,
+      "span_sha256": "d1ba5a66c5377d8734e3525231241f1c6d45f10d866f132ff724fb56a6bd5a55",
+      "candidate_ids": [
+        "29671644b22b413cf93bb2ab",
+        "b23c6abdf53d79bfe67bcea9"
+      ],
+      "statement": "Acknowledge contributors through the project’s attribution resources.",
+      "source_strength": "SOURCE_LOCAL_GUIDANCE_OR_DESCRIPTION",
+      "source_authority": "PINNED_SOURCE_NOT_ADOPTED_CONSUMER_POLICY",
+      "scope_caveats": "Framework static-site contribution instructions are source-local examples; Codespaces, Hugo, Node/npm, tools scripts, site URL and ports are not universal standards. All commands were read as data; no upstream execution. External badges/assets, contributor montage and linked materials were not independently inspected or cleared.",
+      "adoption_status": "UNADOPTED_REFERENCE",
+      "proposed_control_ids": [
+        "GES-RIGHTS-001"
+      ],
+      "mapping_status": "PROPOSED_REQUIRES_SCOPE_BINDING_AND_RIGHTS_REVIEW",
+      "canonical_control_ids": []
+    }
+  ]
+}

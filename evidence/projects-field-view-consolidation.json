@@ -1,0 +1,138 @@
+{
+  "schema_version": "ges.projects-field-view-consolidation.v1",
+  "issue": 352,
+  "reviewed_at": "2026-10-03T09:28:45.306Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "related_consolidation": "evidence/projects-source-consolidation.json",
+  "scope": "Reviewed Projects field/view/metric subset; not certified complete six-source reconciliation.",
+  "rows": [
+    {
+      "id": "PROJECT-FILTER-DIRECTION",
+      "claims": [
+        "DOCS-PROJECTSFILTERING-7",
+        "DOCS-PROJECTSAUTOARCHIVE-4"
+      ],
+      "conflict": "View greater-than age examples say older while archive less-than examples also use last-period prose; syntax/prose disagree.",
+      "decision": "UNRESOLVED",
+      "requirement": "Independently test exact qualifier/comparator/timezone/platform before adopting inactivity predicate.",
+      "negative_test": "Recent/old boundary fixtures must not be inverted by prose; unresolved comparator cannot pass."
+    },
+    {
+      "id": "PROJECT-FILTER-ADAPTER",
+      "claims": [
+        "DOCS-PROJECTSFILTERING-3",
+        "DOCS-PROJECTSFILTERING-12",
+        "DOCS-PROJECTSAUTOADD-4"
+      ],
+      "conflict": "View negated no/text wildcard differs from automation subset; wildcard text cloud-only.",
+      "decision": "PROPOSED_SCOPED_GRAMMAR",
+      "requirement": "Parameterize UI view/chart/auto-add/auto-archive and platform feature adapters; reject unsupported qualifier visibly.",
+      "negative_test": "GHES text wildcard and auto-add negated no cannot silently share general search parser."
+    },
+    {
+      "id": "PROJECT-DISPLAY-WRITE",
+      "claims": [
+        "DOCS-PROJECTSVIEWMANAGEMENT-3",
+        "DOCS-PROJECTSTABLELAYOUT-3",
+        "DOCS-PROJECTSBOARDLAYOUT-4",
+        "DOCS-PROJECTSROADMAPLAYOUT-1"
+      ],
+      "conflict": "Unsaved view privacy does not cover actual drag/group field writes.",
+      "decision": "PROPOSED_OPERATION_SEPARATION",
+      "requirement": "Classify presentation configuration versus project/issue data mutation, exact target identities and write authority.",
+      "negative_test": "Unsaved dot must not defer or privatize item writes; hiding field cannot certify denied access."
+    },
+    {
+      "id": "PROJECT-ADVISORY-LIMIT",
+      "claims": [
+        "DOCS-PROJECTSBOARDLAYOUT-2",
+        "DOCS-PROJECTSPRACTICES-5"
+      ],
+      "conflict": "Board limit recommended for focus but explicitly permits excess from people/automation.",
+      "decision": "PROPOSED_DETECT_ONLY_BINDING",
+      "requirement": "Represent column limit as detection threshold; separate authorized enforced WIP control if desired.",
+      "negative_test": "Configured limit with successful excess addition cannot certify blocking enforcement."
+    },
+    {
+      "id": "PROJECT-METRIC-DENOMINATOR",
+      "claims": [
+        "DOCS-PROJECTSINSIGHTS1-2",
+        "DOCS-PROJECTSINSIGHTS1-4",
+        "DOCS-PROJECTSHIERARCHYFIELD-4",
+        "DOCS-PROJECTSTABLELAYOUT-7"
+      ],
+      "conflict": "Archived/deleted items omitted from charts; lifecycle Completed and sub-issue progress not independent acceptance.",
+      "decision": "PROPOSED_EVIDENCE_QUALIFIED_METRICS",
+      "requirement": "Declare item identity, filtered/archive/redaction scope, units, freshness and independent acceptance evidence; maintain immutable full denominator separately.",
+      "negative_test": "Archiving must not improve full completion percentage by shrinking denominator; closed-not-planned cannot count accepted work."
+    },
+    {
+      "id": "PROJECT-DEFAULT-STATE",
+      "claims": [
+        "DOCS-PROJECTSDATEFIELD-4",
+        "DOCS-PROJECTSTEXTNUMBERFIELD-4",
+        "DOCS-PROJECTSSELECTFIELD-5",
+        "DOCS-PROJECTSADDITEMS-8"
+      ],
+      "conflict": "Date lacks defaults while text/number/select defaults affect new items; grouped/filtered creation also sets values.",
+      "decision": "UNRESOLVED_PRECEDENCE",
+      "requirement": "Parameterize field type and origin/default/group/filter initialization; independently verify conflicting values and existing-item nonbackfill.",
+      "negative_test": "New value conflict cannot silently certify desired state; removing default must not claim existing values cleared."
+    },
+    {
+      "id": "PROJECT-REPOSITORY-STATE",
+      "claims": [
+        "DOCS-PROJECTSISSUEFIELD-4",
+        "DOCS-PROJECTSBULKEDIT-6",
+        "DOCS-PROJECTSDRAFTCONVERT-2"
+      ],
+      "conflict": "Issue field edits sync repository state; project drafts/conversion carry different authority.",
+      "decision": "PROPOSED_OWNER_SCOPED_WRITES",
+      "requirement": "Separate repository issue state from project custom fields, exact conversion destination/audience and per-operation permissions.",
+      "negative_test": "Project writer role alone cannot certify authorized repository write or conversion disclosure."
+    },
+    {
+      "id": "PROJECT-RECOVERY-GUARANTEE",
+      "claims": [
+        "DOCS-PROJECTSBULKEDIT-5",
+        "DOCS-PROJECTSFIELDDELETE-2",
+        "DOCS-PROJECTSITERATIONFIELD-5"
+      ],
+      "conflict": "Undo button/field or iteration deletion procedures do not establish durable complete recovery.",
+      "decision": "PENDING_BEHAVIORAL_AUDIT",
+      "requirement": "Capture old values/identity/dependencies and authorized recovery evidence; unspecified restoration remains unknown.",
+      "negative_test": "Undo UI alone must not pass recovery; iteration deletion must not invent item restoration."
+    },
+    {
+      "id": "PROJECT-REPORT-FRESHNESS",
+      "claims": [
+        "DOCS-PROJECTSSTATUSUPDATE-3",
+        "DOCS-PROJECTSPRACTICES-10",
+        "DOCS-PROJECTSOVERVIEW-2"
+      ],
+      "conflict": "Carried-forward status/dates and automatic sync are not fresh independently verified evidence.",
+      "decision": "PROPOSED_AUTHORITATIVE_STATE_BINDING",
+      "requirement": "Parameterize authoritative field/source, owner, measured time and freshness; distinguish report author from acceptance authority.",
+      "negative_test": "New report with unchanged inherited values or stale sync must not refresh underlying assessment automatically."
+    },
+    {
+      "id": "PROJECT-ALIAS-IDENTITY",
+      "claims": [
+        "DOCS-PROJECTSLANDING1-3",
+        "DOCS-PROJECTSLANDING1-4"
+      ],
+      "conflict": "Classic article redirects to landing do not preserve capability parity or reviewed body identity.",
+      "decision": "PENDING_PUBLISHED_ASSURANCE",
+      "requirement": "Verify every declared page-version/redirect/body mapping independently; retain unresolved migration claims.",
+      "negative_test": "Redirect success cannot certify old article semantics or multiply reviewed source counts."
+    }
+  ],
+  "limitations": [
+    "Rows and negative tests are proposals, not execution receipts.",
+    "Source reference identities do not establish semantic equivalence or independent completeness.",
+    "No native changes, rights clearance or acceptance."
+  ]
+}

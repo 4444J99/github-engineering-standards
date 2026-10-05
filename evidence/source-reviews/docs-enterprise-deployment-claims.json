@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:11:48.007Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ENTERPRISEDEPLOYMENT-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/about-deployment-methods.md",
+      "content_sha256": "a6055b9a54ae44a42b72b4c5450a6ab8d967d4c58b5deb12f43283402dde4ff0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment presents Enterprise Cloud and Enterprise Server as two deployment options, with FPT/GHEC wording pointing to Server in a data center or supported cloud and GHES wording pointing to Cloud on the website. It does not establish deployment equivalence, data residency, a selected estate architecture or current support for any arbitrary cloud. The linked plan page is not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEDEPLOYMENT-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/about-ha.md",
+      "content_sha256": "e9a322151a73585590e1dfb596b305915c4550154d62d7f2b5a10bc0f0b5a45f",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "High availability is presented as optional support for disaster recovery supplementary to backups, or network and write performance for geographically distributed users. HA is not a replacement for backups, proven recovery, measured performance or a guarantee of no data loss; no topology was configured or tested.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEDEPLOYMENT-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/about-policies.md",
+      "content_sha256": "27b8eaaea03cfa0f563ecd23c837c9b2b987c635f16fdbf4e9e7301c703a93fa",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Enterprise policies control organization-level policy options: non-enforcement delegates configuration to organization owners, while chosen enforced options apply to enterprise-owned organizations. Non-enforcement is not absence of every organization restriction, and enforcement scope is not all unrelated estate repositories. No policy values, inheritance or bypass behavior were verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEDEPLOYMENT-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/about-readmes.md",
+      "content_sha256": "1029b15cc865e1f45617a2d8cacdce1d73844c15550a94355ef4ac43e94ff8bf",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Creating an enterprise README is recommended to explain organizations, resource links, settings and policies. This upstream should is advisory, not an accepted mandatory control; README existence or prose is not accurate policy inventory, manual attestation or native enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEDEPLOYMENT-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/about-ssh-ports.md",
+      "content_sha256": "4b057ff3dd21514d9724e5d712275fa8f37beb6bade062480cd5889f619e323f",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The GHES fragment distinguishes two SSH access paths: site administrators can use an administrative shell for utilities and maintenance, while users access Git data without shell access. It supplies no numeric ports or universal repository write entitlement. Linked network, shell and SSH guides are not reviewed, and no connection or maintenance command was run.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ENTERPRISEDEPLOYMENT-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/enterprise/about-upgrades.md",
+      "content_sha256": "17ba28ff346be7b28fb9137cfc2d097d0b767bde22d44073d11889385aeb40cf",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The inspected improvement include describes feature and patch releases; the upgrade fragment assigns instance-upgrade responsibility and requires planning and communication, appropriate package selection and data backup before performing an upgrade. These prerequisites are not verified backups, compatible package selection, successful upgrade or rollback evidence; the linked full guide is not reviewed and no upgrade occurred.",
+      "accepted_policy": false
+    }
+  ]
+}

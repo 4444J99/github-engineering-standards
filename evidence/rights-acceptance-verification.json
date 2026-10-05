@@ -1,0 +1,75 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/18",
+  "verified_at": "2026-10-02T18:35:22Z",
+  "scope": "Optional exact-project-use rights attestation adapter, paired recovery integration and inventory integrity; no actual rights grants or approval receipts.",
+  "test_first_evidence": {
+    "command": "python -m unittest discover -s tests -p test_rights_acceptance.py -v",
+    "exit_code": 1,
+    "result": "Import failed before implementation: ModuleNotFoundError ges.rights_acceptance; not 18 behavioral failures."
+  },
+  "corrective_history": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 1,
+      "result": "322 tests; two existing published-assurance recovery fixtures lacked the new explicit rights queue/source-acquisition metadata. Fixtures corrected without approvals or weaker predicates."
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "322 tests passed; subsequently added two duplicate/substitution integration regressions for final 324."
+    }
+  ],
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -p test_rights_acceptance.py -v",
+      "exit_code": 0,
+      "result": "28 targeted rights tests passed in 0.025s"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in 1.279s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid=true; controls=95"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "result": "No errors"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": "project_complete=false; gates_open=9; rights completed=0/13657; rights/distribution acceptance unknown; reviewed=1092/13657; published_pages=18019"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": "valid=true; reference_claims=48701; source_artifacts=1058; duplicate_relationships_validated=7"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "No errors"
+    }
+  ],
+  "review_evidence": [
+    "evidence/rights-acceptance-independent-review.json",
+    "evidence/rights-acceptance-integration-recheck.json"
+  ],
+  "accounting": {
+    "rights_completed": 0,
+    "rights_denominator": 13657,
+    "rights_acceptance": null,
+    "authorized_distribution_decision": null,
+    "artifact_reviews": 1092,
+    "artifact_denominator": 13657,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": "Synthetic positives only. External authority-policy authenticity, human identity, substantive legal judgment and actual publication are not machine certified. Published-body rights remain separate. Review records retain original findings and later repair chronology; no fake approval grant supplied. Expected synthetic published_docs ERROR output is a negative fixture, not real recovery failure."
+}

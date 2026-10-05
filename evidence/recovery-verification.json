@@ -1,0 +1,36 @@
+{
+  "schema_version": "ges.verification.v1",
+  "implementation_head": "168abf90dfbc78fab36240cae8e33b041a80e0cc",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 153,
+      "evidence": "evidence/recovery-tests.txt",
+      "sha256": "f78b885011d08ca275914d0fe96a2fdec9dfc2f4be6d07c074367626ffd3e7e4"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "controls": 95
+      }
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python /Users/4jp/.local/share/limen/runtimes/875f19907e1ea155fad2a49e25aaf578b0ad8f8e/source/scripts/credential-wall.py --check",
+      "exit_code": 0,
+      "result": "31 secret atoms registered"
+    }
+  ],
+  "native_enforcement_tests_run": false,
+  "project_complete": false
+}

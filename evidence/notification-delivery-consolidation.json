@@ -1,0 +1,90 @@
+{
+  "schema_version": "ges.notification-delivery-consolidation.v1",
+  "issue": 380,
+  "reviewed_at": "2026-10-03T10:29:25.209Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed notification claims only; not full six-source reconciliation.",
+  "rows": [
+    {
+      "id": "NOTIFY-DELIVERY-ENFORCEMENT",
+      "claims": [
+        "DOCS-DELIVERYPREF-1-1",
+        "DOCS-DELIVERYPREF-1-3",
+        "DOCS-SECORGNOTIFY-2-1"
+      ],
+      "conflict": "Personal notification selection is not scanner enablement or workflow enforcement.",
+      "decision": "PROPOSED_SEPARATE_BINDINGS",
+      "requirement": "Assess subscription, delivery preference, scanner capability and effective enforcement separately with exact recipient/repository scope.",
+      "negative_test": "Failed-only preference cannot satisfy required-check enforcement; enabled scanner cannot imply recipient subscription."
+    },
+    {
+      "id": "NOTIFY-RECIPIENT-AUTHORITY",
+      "claims": [
+        "DOCS-SECORGNOTIFY-2-5",
+        "DOCS-SECORGNOTIFY-2-6",
+        "DOCS-SECORGNOTIFY-2-7"
+      ],
+      "conflict": "Security-alert access, owner administration and commit-author overrides differ.",
+      "decision": "PROPOSED_RECIPIENT_MATRIX",
+      "requirement": "Parameterize role, repository administration, alert access and event identity; preserve author preference override narrowly.",
+      "negative_test": "Organization owner without repository administration cannot inherit listed admin notification guarantee; author override cannot apply to all watchers."
+    },
+    {
+      "id": "NOTIFY-EMAIL-ROUTING",
+      "claims": [
+        "DOCS-SECORGNOTIFY-1-2",
+        "DOCS-SECORGNOTIFY-1-3",
+        "DOCS-SECORGNOTIFY-1-4"
+      ],
+      "conflict": "Routing alone does not enable delivery; GHES address prose conflicts with verified-address steps.",
+      "decision": "UNRESOLVED_ADDRESS_REQUIREMENT",
+      "requirement": "Keep address verification, approved-domain restriction, delivery opt-in and product interface separate; disputed GHES behavior remains unknown pending independent observation.",
+      "negative_test": "Configured route cannot pass if delivery disabled or approved-domain verification missing; conflict cannot become assumed supported behavior."
+    },
+    {
+      "id": "NOTIFY-EVENT-COVERAGE",
+      "claims": [
+        "DOCS-SECORGNOTIFY-2-2",
+        "DOCS-SECORGNOTIFY-2-3",
+        "DOCS-SECORGNOTIFY-2-4"
+      ],
+      "conflict": "Trigger severity, event granularity and digest capacity differ complete alert inventory.",
+      "decision": "PROPOSED_FULL_DENOMINATOR",
+      "requirement": "Track all known target alerts separately from delivered notifications, retaining new-versus-updated event distinction and digest limits.",
+      "negative_test": "Ten-repository digest cannot certify all estate alerts; missing notification on vulnerability update cannot prove absence of vulnerability."
+    },
+    {
+      "id": "NOTIFY-MARKETING-SCOPE",
+      "claims": [
+        "DOCS-EMAILTYPES-3",
+        "DOCS-DELIVERYPREF-2-1",
+        "DOCS-DELIVERYPREF-2-4",
+        "DOCS-SECORGNOTIFY-2-6"
+      ],
+      "conflict": "Marketing opt-out and explicit secret-author override are category-specific.",
+      "decision": "PROPOSED_CATEGORY_BOUNDARIES",
+      "requirement": "Treat optional marketing subscription as personal preference, separate account/security delivery; do not invent general mandatory-security overrides.",
+      "negative_test": "Marketing unsubscribe cannot prove security disabled; unspecified delivery rule cannot inherit secret-author exception."
+    },
+    {
+      "id": "NOTIFY-OPERATIONAL-EVIDENCE",
+      "claims": [
+        "DOCS-DELIVERYPREF-1-4",
+        "DOCS-SECORGNOTIFY-1-5",
+        "DOCS-SECORGNOTIFY-2-7"
+      ],
+      "conflict": "Procedure and preferences do not demonstrate actual delivery or recovery.",
+      "decision": "PROPOSED_AUTHORIZED_CANARY",
+      "requirement": "Require authorized event/recipient/time/target and observed delivery evidence, freshness, negative case and recovery test; no automatic settings mutation.",
+      "negative_test": "Saved preference or documented assignment trigger without observed recipient delivery remains not verified."
+    }
+  ],
+  "limitations": [
+    "Negative tests specify future bindings; they were not implemented or executed in this tranche.",
+    "Identity validation is not semantic equivalence or completeness assurance.",
+    "Native delivery tests and settings changes remain approval-gated; no rights clearance."
+  ]
+}

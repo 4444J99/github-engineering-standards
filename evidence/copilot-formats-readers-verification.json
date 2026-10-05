@@ -1,0 +1,48 @@
+{
+  "issue": 182,
+  "reviewed_at": "2026-10-03T04:01:51.740Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59303,
+    "claim_bearing_artifacts": 2801,
+    "tests": 324,
+    "test_seconds": 1.993,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Format and language lists are not tested compatibility or accuracy.",
+    "Paid completion billing scope is not current universal unlimited usage.",
+    "Incomplete function header not executed; no image uploaded or prompt submitted.",
+    "Listed metrics roles not actual access or private-data collection authority.",
+    "No adopted policy, native changes, or rights clearance."
+  ]
+}

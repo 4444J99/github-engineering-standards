@@ -1,0 +1,263 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:36:40Z",
+  "review_scope": "Five complete spreadsheet protection, budgets, enterpriseGHAS and fixture artifacts.",
+  "candidate_count": 0,
+  "claim_count": 11,
+  "claims": [
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-001",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/branch_protection.go",
+      "artifact_id": "338fff6c859f7ec71cf0c60d",
+      "content_sha256": "2829a9aff64b8b6bab9732f2250bf917ae037a5704fbc4b5a0002aaf38e4d135",
+      "start_line": 16,
+      "end_line": 63,
+      "statement": "Protection tables include every convertible repository and sort by name, showing branch/source, reviews, status, force/deletion and signature fields. The table is a representation of supplied facts, not active-branch coverage or bypass verification.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/branch_protection.go#L16-L63",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-002",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/branch_protection.go",
+      "artifact_id": "338fff6c859f7ec71cf0c60d",
+      "content_sha256": "2829a9aff64b8b6bab9732f2250bf917ae037a5704fbc4b5a0002aaf38e4d135",
+      "start_line": 65,
+      "end_line": 117,
+      "statement": "Protection resolution selects legacy protection first, then rulesets, otherwise None. The effective label does not merge simultaneous restrictions and maps absent observations to unprotected rather than explicitly unknown.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/branch_protection.go#L65-L117",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-003",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/branch_protection.go",
+      "artifact_id": "338fff6c859f7ec71cf0c60d",
+      "content_sha256": "2829a9aff64b8b6bab9732f2250bf917ae037a5704fbc4b5a0002aaf38e4d135",
+      "start_line": 119,
+      "end_line": 144,
+      "statement": "Rows show required status checks as Yes whenever the status-check object exists, without checking its context list, and render zero-value permissions as No. Object existence does not prove meaningful required checks or observed false permissions.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/branch_protection.go#L119-L144",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-004",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/branch_protection_test.go",
+      "artifact_id": "802ab23b668cd3cf3293e38a",
+      "content_sha256": "e13dd7aa33f21f5258aaf507dba59fa7ae97eef34d16203f390b88e17f26db5f",
+      "start_line": 12,
+      "end_line": 135,
+      "statement": "Three synthetic fixture cases assert legacy precedence even with a ruleset, ruleset-only behavior and unprotected output across fixed columns. They encode presentation intent but do not test effective union, empty-status-context adequacy or permission uncertainty.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/branch_protection_test.go#L12-L135",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-005",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/budgets.go",
+      "artifact_id": "23a4772cbef4a33a4eb60e17",
+      "content_sha256": "68d7176f5eda86dbebdc9c48ba4b2bc82eaa4352cf1b96b221c6eab61d2dda5a",
+      "start_line": 16,
+      "end_line": 69,
+      "statement": "Budget tables preserve explicit no-access versus available-empty rows, show product/entity/scope/type, amount, usage stops, alerting/recipients and IDs. The no-access label cannot establish whether the actual cause is permissions or feature availability.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/budgets.go#L16-L69",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-006",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/budgets.go",
+      "artifact_id": "23a4772cbef4a33a4eb60e17",
+      "content_sha256": "68d7176f5eda86dbebdc9c48ba4b2bc82eaa4352cf1b96b221c6eab61d2dda5a",
+      "start_line": 71,
+      "end_line": 110,
+      "statement": "Budget rows skip nil entries and display each supplied amount, usage-stop flag and alert recipients, defaulting absent alert configuration to No and sorting by enterprise/entity. Reported amount dollars and contact data require real currency/custody context; no full-pagination assertion is made here.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/budgets.go#L71-L110",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-007",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/budgets_ghas_test.go",
+      "artifact_id": "ef213815f0bd5e1908d1234a",
+      "content_sha256": "5437bdc7a63331ff65ec6ae1f9d06dfd7bb7a9ad319d5e8fc16f6d80c316a66c",
+      "start_line": 13,
+      "end_line": 91,
+      "statement": "Synthetic budget fixtures compare typed and JSON-map rows for two budgets, require explicit unavailable rows and distinguish available zero budgets. They do not prove authenticated enterprise billing access or actual usage prevention.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/budgets_ghas_test.go#L13-L91",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-008",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/budgets_ghas_test.go",
+      "artifact_id": "ef213815f0bd5e1908d1234a",
+      "content_sha256": "5437bdc7a63331ff65ec6ae1f9d06dfd7bb7a9ad319d5e8fc16f6d80c316a66c",
+      "start_line": 93,
+      "end_line": 133,
+      "statement": "Synthetic GHAS fixtures compare typed/map rendering of enabled, disabled, not-set and empty settings and require all missing-setting cells to display Not available. These are finite formatting checks, not security enforcement receipts.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/budgets_ghas_test.go#L93-L133",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-009",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/budgets_ghas_test.go",
+      "artifact_id": "ef213815f0bd5e1908d1234a",
+      "content_sha256": "5437bdc7a63331ff65ec6ae1f9d06dfd7bb7a9ad319d5e8fc16f6d80c316a66c",
+      "start_line": 135,
+      "end_line": 160,
+      "statement": "Fixture helpers JSON-round-trip values and compare column arrays exactly. Representation equivalence for fixtures does not prove offline replay retains all original scan identities or evaluator families.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/budgets_ghas_test.go#L135-L160",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-010",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/ghas.go",
+      "artifact_id": "40ccf60b757a9a3e4a1e5b44",
+      "content_sha256": "14311ad83b042392fe860af88589a0ecc06292ab067b36fe45d329a012af8397",
+      "start_line": 15,
+      "end_line": 43,
+      "statement": "The GHAS sheet shows seven enterprise security-default settings; empty strings are displayed not_set. A missing field converted to empty cannot by itself distinguish explicitly unset from unobserved, and the comment describing cascading policy is not proof of every repository being enforced.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/ghas.go#L15-L43",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    },
+    {
+      "claim_id": "GHQR-CONT-EXCELDETAIL-011",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/renderers/excel/ghas.go",
+      "artifact_id": "40ccf60b757a9a3e4a1e5b44",
+      "content_sha256": "14311ad83b042392fe860af88589a0ecc06292ab067b36fe45d329a012af8397",
+      "start_line": 45,
+      "end_line": 93,
+      "statement": "Missing enterprise GHAS objects remain visible with Not available cells, while malformed enterprise conversion omits the row. Sorted settings preserve source values but do not verify licensing, inherited applicability, permissions or existing repository security coverage.",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/renderers/excel/ghas.go#L45-L93",
+      "source_authority": "Pinned detailed spreadsheet source and complete synthetic fixture cases, static review.",
+      "source_strength": "IMPLEMENTATION_REFERENCE",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "NOT_A_POLICY_MAPPING",
+      "contexts": [
+        "Supplied configuration presentation does not establish effective native protection.",
+        "No upstream tests/workbook execution or rights/policy adoption."
+      ]
+    }
+  ],
+  "conflicts_and_limits": [
+    "EXCELDETAIL-002 legacy-first effective label does not merge ruleset controls and absent evidence becomesNone.",
+    "EXCELDETAIL-003 required-status-object exists≠meaningful required contexts.",
+    "EXCELDETAIL-010 empty→not_set lacks explicit unobserved distinction;defaults≠enforcement.",
+    "EXCELDETAIL-005/011 explicit unavailable display is preserved, notPASS."
+  ],
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "independent_omission_certification": false
+}

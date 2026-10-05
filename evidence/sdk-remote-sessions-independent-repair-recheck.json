@@ -1,0 +1,146 @@
+{
+  "schema_version": "ges.independent-repair-recheck.v1",
+  "reviewer": "codex:independent-source-audit",
+  "reviewed_at": "2026-10-02T13:28:50Z",
+  "scope": "Only10 added observations157–166 plus159 grouped-parent/two-child split; no candidate-map or runtime audit.",
+  "prior_audit": {
+    "path": "evidence/sdk-remote-sessions-independent-claim-audit.json",
+    "sha256": "c7887afbddd970edbbee41213cfa4b2157e27723a9ea0a42507c6c8d45a2dadf",
+    "original_snapshots": 156,
+    "immutable": true
+  },
+  "input": {
+    "path": "evidence/source-reviews/docs-sdk-remote-sessions-claims.json",
+    "sha256": "3e5713305db8a041d14b7955746801dc5f24056abf451a49abb522939d3844b5",
+    "record_count": 168
+  },
+  "source": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/remote-sessions.md",
+    "content_sha256": "491af1dce1d1a3d8a0acacb0832e7faa2b1522b6ca28a0ea21aa5600fdba4b42"
+  },
+  "verified_records": [
+    {
+      "claim_id": "DOCS-SDKREMOTE-157",
+      "source_span": [
+        77,
+        84
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-158",
+      "source_span": [
+        176,
+        177
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-159",
+      "source_span": [
+        132,
+        136
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-160",
+      "source_span": [
+        96,
+        110
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-161",
+      "source_span": [
+        96,
+        110
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-162",
+      "source_span": [
+        155,
+        156
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-163",
+      "source_span": [
+        167,
+        168
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-164",
+      "source_span": [
+        181,
+        182
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-165",
+      "source_span": [
+        193,
+        194
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-166",
+      "source_span": [
+        207,
+        208
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-159-A01",
+      "source_span": [
+        132,
+        136
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    },
+    {
+      "claim_id": "DOCS-SDKREMOTE-159-A02",
+      "source_span": [
+        132,
+        136
+      ],
+      "source_strength": "EXAMPLE",
+      "outcome": "SUPPORTED_WITHIN_SPECIFIED_SCOPE"
+    }
+  ],
+  "details": [
+    "Go callback/result access error-check limitations are observations of shown code, not guarantees of failure.",
+    "C# disposal absence is limited to the shown sample.",
+    "Rust159 preserves grouped context and two atomic observations: missing diagnostic branch and non-Ok loop termination.",
+    "Five comment occurrences now preserve source wording about stopping sharing, without asserting an unverified RPC nondeletion guarantee."
+  ],
+  "remaining_findings_within_specified_scope": [],
+  "bounded_result": "SPECIFIED_REPAIRS_SUPPORTED; ready for integration only.",
+  "limitations": [
+    "No other files edited.",
+    "No runtime/RPC/sharing/publication/cost/native/rights/policy/global certification.",
+    "Candidate accounting and whole-source omission assurance remain separate."
+  ]
+}

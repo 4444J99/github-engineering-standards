@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "issue": 39,
+  "artifacts": 20,
+  "claims": 38,
+  "candidates": 64,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.13385077249762026,
+    "reviewed": 1828
+  },
+  "claim_accounting": {
+    "reference_claims": 57603,
+    "source_artifacts": 1794,
+    "duplicate_relationships": 7
+  },
+  "dependency_progress": {
+    "repository_aliases": [
+      "data/reusables/repositories/settings-sidebar-actions-general.md",
+      "data/reusables/repositories/settings-sidebar-actions-runners.md"
+    ],
+    "target_bodies_independently_read": true,
+    "rendered_expansion_verified": false
+  },
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2.003,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "Pinned announcements and billing descriptions are not live deployment or rate verification.",
+    "No billing inspection, paid provision, deployment, policy adoption, rights clearance or native enforcement performed."
+  ]
+}

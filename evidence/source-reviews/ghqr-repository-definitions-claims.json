@@ -1,0 +1,939 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-01T23:04:33Z",
+  "review_scope": "Five complete repository recommendation YAML files excluding separately reviewed branch_protection.yaml",
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "artifact_count": 5,
+  "definition_count": 20,
+  "candidate_count": 0,
+  "atomic_claim_count": 29,
+  "claims": [
+    {
+      "claim_id": "GHQR-REPO-001",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-001",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-001",
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "start_line": 1,
+      "end_line": 10,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L1-L10",
+      "statement": "Review repository administration grants against a locally justified maximum; the source flags more than three direct administrators.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNMAPPED_THRESHOLD_AND_DIRECT_ACCESS_PREDICATE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-002",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-001",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-001",
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "start_line": 1,
+      "end_line": 10,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L1-L10",
+      "statement": "Use the least privileges necessary for repository administration.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-003",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-001",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-001",
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "start_line": 1,
+      "end_line": 10,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L1-L10",
+      "statement": "Consider team roles with limited permissions instead of direct administrator assignments.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-004",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-002",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-002",
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "start_line": 12,
+      "end_line": 21,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L12-L21",
+      "statement": "Prefer auditable team-based access where the target organization and collaborator model support it.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-005",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-003",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-003",
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "start_line": 23,
+      "end_line": 32,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L23-L32",
+      "statement": "Use deployment keys with read-only access when their task does not require writes.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNMAPPED_DEPLOY_KEY_READ_ONLY_PREDICATE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-006",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-003",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-003",
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "start_line": 23,
+      "end_line": 32,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L23-L32",
+      "statement": "Evaluate application credentials or workload identity federation for write operations.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ACT-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-007",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-004",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-004",
+      "definition_start_line": 34,
+      "definition_end_line": 43,
+      "start_line": 34,
+      "end_line": 43,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L34-L43",
+      "statement": "Establish that each deployment key belongs to an authorized system.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNMAPPED_DEPLOY_KEY_CUSTODY_PREDICATE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-008",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-004",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-004",
+      "definition_start_line": 34,
+      "definition_end_line": 43,
+      "start_line": 34,
+      "end_line": 43,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L34-L43",
+      "statement": "Propose removal of unidentified deployment keys only through authorized remediation.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNMAPPED_KEY_REMOVAL_REMEDIATION",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-009",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/access.yaml",
+      "source_definition_id": "repo-acc-005",
+      "structured_requirement_id": "SRC-GHQR-repo-acc-005",
+      "definition_start_line": 45,
+      "definition_end_line": 54,
+      "start_line": 45,
+      "end_line": 54,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/access.yaml#L45-L54",
+      "statement": "Assess migration from deployment keys to application or federated deployment credentials for improved attribution and rotation.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ACT-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-010",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/community.yaml",
+      "source_definition_id": "repo-comm-001",
+      "structured_requirement_id": "SRC-GHQR-repo-comm-001",
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "start_line": 1,
+      "end_line": 10,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/community.yaml#L1-L10",
+      "statement": "Consider a dedicated discussion forum for questions and community announcements.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "info",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-011",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/features.yaml",
+      "source_definition_id": "repo-feat-001",
+      "structured_requirement_id": "SRC-GHQR-repo-feat-001",
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "start_line": 1,
+      "end_line": 10,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/features.yaml#L1-L10",
+      "statement": "Provide an appropriate structured feedback or bug-reporting channel when both native issues and discussions are disabled.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-COM-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-012",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/features.yaml",
+      "source_definition_id": "repo-feat-002",
+      "structured_requirement_id": "SRC-GHQR-repo-feat-002",
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "start_line": 12,
+      "end_line": 21,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/features.yaml#L12-L21",
+      "statement": "Evaluate automatic deletion of integrated branches as an explicit cleanup policy.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNMAPPED_AUTO_DELETE_SETTING_CONFLICTS_WITH_OPTIONAL_CLEANUP",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-013",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/metadata.yaml",
+      "source_definition_id": "repo-meta-001",
+      "structured_requirement_id": "SRC-GHQR-repo-meta-001",
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "start_line": 1,
+      "end_line": 10,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/metadata.yaml#L1-L10",
+      "statement": "Give the repository a concise description explaining its purpose.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ID-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-014",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/metadata.yaml",
+      "source_definition_id": "repo-meta-002",
+      "structured_requirement_id": "SRC-GHQR-repo-meta-002",
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "start_line": 12,
+      "end_line": 21,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/metadata.yaml#L12-L21",
+      "statement": "Assign relevant repository topics to support discovery.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-ID-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-015",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/metadata.yaml",
+      "source_definition_id": "repo-meta-002",
+      "structured_requirement_id": "SRC-GHQR-repo-meta-002",
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "start_line": 12,
+      "end_line": 21,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/metadata.yaml#L12-L21",
+      "statement": "Verify any claimed topic-based organization targeting capability separately from topic presence.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNVERIFIED_PLATFORM_TOPIC_TARGETING_CLAIM",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-016",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/metadata.yaml",
+      "source_definition_id": "repo-meta-003",
+      "structured_requirement_id": "SRC-GHQR-repo-meta-003",
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "start_line": 23,
+      "end_line": 32,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/metadata.yaml#L23-L32",
+      "statement": "Review repository lifecycle status after prolonged inactivity; the source uses a one-year commit threshold.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNMAPPED_DORMANCY_THRESHOLD",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-017",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/metadata.yaml",
+      "source_definition_id": "repo-meta-003",
+      "structured_requirement_id": "SRC-GHQR-repo-meta-003",
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "start_line": 23,
+      "end_line": 32,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/metadata.yaml#L23-L32",
+      "statement": "Consider archiving a repository only after confirming it is inactive and obtaining lifecycle authorization.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_POLICY_DECISION",
+      "unresolved_mapping": "UNMAPPED_ARCHIVAL_POLICY_AND_AUTHORITY",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-018",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-001",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-001",
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "start_line": 1,
+      "end_line": 10,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L1-L10",
+      "statement": "Enable dependency vulnerability notifications where relevant and available.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-019",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-002",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-002",
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "start_line": 12,
+      "end_line": 21,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L12-L21",
+      "statement": "Give critical dependency vulnerabilities immediate remediation priority using updates or patches.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-020",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-003",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-003",
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "start_line": 23,
+      "end_line": 32,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L23-L32",
+      "statement": "Prioritize remediation of high-severity dependency vulnerabilities.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-021",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-004",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-004",
+      "definition_start_line": 34,
+      "definition_end_line": 43,
+      "start_line": 34,
+      "end_line": 43,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L34-L43",
+      "statement": "Document a working vulnerability reporting procedure in the security policy.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-022",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-005",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-005",
+      "definition_start_line": 45,
+      "definition_end_line": 54,
+      "start_line": 45,
+      "end_line": 54,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L45-L54",
+      "statement": "Assign ownership for sensitive repository paths.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-023",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-005",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-005",
+      "definition_start_line": 45,
+      "definition_end_line": 54,
+      "start_line": 45,
+      "end_line": 54,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L45-L54",
+      "statement": "Verify that ownership assignments are combined with effective required review.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-024",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-006",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-006",
+      "definition_start_line": 56,
+      "definition_end_line": 65,
+      "start_line": 56,
+      "end_line": 65,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L56-L65",
+      "statement": "Provide appropriate configuration for automated dependency version-update proposals.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-DEP-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-025",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-007",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-007",
+      "definition_start_line": 67,
+      "definition_end_line": 76,
+      "start_line": 67,
+      "end_line": 76,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L67-L76",
+      "statement": "Evaluate vulnerability alerts separately from automated update configuration.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-026",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-007",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-007",
+      "definition_start_line": 67,
+      "definition_end_line": 76,
+      "start_line": 67,
+      "end_line": 76,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L67-L76",
+      "statement": "Configure automated dependency updates where applicable.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-DEP-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-027",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-008",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-008",
+      "definition_start_line": 78,
+      "definition_end_line": 87,
+      "start_line": 78,
+      "end_line": 87,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L78-L87",
+      "statement": "Run applicable static security analysis for proposed changes rather than infer execution from a configuration file.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-028",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-009",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-009",
+      "definition_start_line": 89,
+      "definition_end_line": 98,
+      "start_line": 89,
+      "end_line": 98,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L89-L98",
+      "statement": "Consider project-specific security queries when the default analysis does not cover relevant risks.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "info",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "CONTEXTUAL_OPTION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    },
+    {
+      "claim_id": "GHQR-REPO-029",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/security.yaml",
+      "source_definition_id": "repo-sec-009",
+      "structured_requirement_id": "SRC-GHQR-repo-sec-009",
+      "definition_start_line": 89,
+      "definition_end_line": 98,
+      "start_line": 89,
+      "end_line": 98,
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/security.yaml#L89-L98",
+      "statement": "Review false-positive path exclusions with scope and security justification.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "info",
+      "source_enabled": true,
+      "source_obligation": "RECOMMENDATION_NOT_LOCAL_MUST",
+      "source_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-003"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_FULL_PREDICATE_EQUIVALENCE",
+      "contexts": [
+        "Repository target with relevant capability and permissions",
+        "Source severity is a triage label rather than adopted policy",
+        "Collection and actual enforcement require independent verification"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "definition_ids": [
+        "repo-feat-002"
+      ],
+      "issue": "Automatic branch deletion is recommended here; tmcw treats cleanup as optional. A local lifecycle decision must preserve custody and active work.",
+      "disposition": "UNRESOLVED_CROSS_SOURCE_POLICY"
+    },
+    {
+      "definition_ids": [
+        "repo-acc-001"
+      ],
+      "issue": "More than three administrators is a scanner threshold, not a universally adopted access limit. Team administration may still be excessive.",
+      "disposition": "UNRESOLVED_PROFILE_THRESHOLD"
+    },
+    {
+      "definition_ids": [
+        "repo-meta-003"
+      ],
+      "issue": "No commits for a year does not establish abandonment; stable libraries, retained evidence or dependencies may still require an active repository.",
+      "disposition": "UNRESOLVED_LIFECYCLE_POLICY"
+    },
+    {
+      "definition_ids": [
+        "repo-sec-004",
+        "repo-sec-005",
+        "repo-sec-008"
+      ],
+      "issue": "Missing filename or chosen scanner is not proof of absent reporting, absent ownership enforcement or absent all security analysis. File presence likewise does not prove effective execution.",
+      "disposition": "UNVERIFIED_SCANNER_PREDICATE_LIMIT"
+    },
+    {
+      "definition_ids": [
+        "repo-meta-002"
+      ],
+      "issue": "The description associates topics with properties and ruleset targeting; this platform capability assertion needs authoritative validation.",
+      "disposition": "UNVERIFIED_PLATFORM_CLAIM"
+    },
+    {
+      "definition_ids": [
+        "repo-acc-002"
+      ],
+      "issue": "Organization teams may be unavailable or unsuitable for outside collaborators and personal repositories.",
+      "disposition": "APPLICABILITY_PROFILE_REQUIRED"
+    },
+    {
+      "definition_ids": [
+        "repo-sec-009"
+      ],
+      "issue": "Path exclusions can reduce security coverage and require explicit review rather than automatic removal of findings.",
+      "disposition": "HUMAN_SECURITY_REVIEW"
+    }
+  ],
+  "unresolved": [
+    "No independent omission or source-to-control certification",
+    "Exact scanner implementations and native enforcement not reviewed in this partition",
+    "Several definitions have no exact canonical predicate and are explicitly unmapped",
+    "Per-file rights clearance is not established",
+    "Capability, billing, permissions and remediation authority must be reviewed before any activation",
+    "Source severity, administrator threshold and dormancy duration remain distinct from adopted strength and local parameters"
+  ]
+}

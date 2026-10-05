@@ -1,0 +1,17 @@
+{
+  "schema_version": "ges.verification-checkpoint.v1",
+  "implementation_commit": "ca3a89a7c520516145499fc27c46c3a3022da69e",
+  "scope": "Local implementation and uncommitted source-review checkpoint; not CI, merge, release or native enforcement",
+  "observed_date": "2026-10-01",
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests_run": 163, "result": "OK", "duration_seconds": 1.680},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "git diff --check", "exit_code": 0},
+    {"command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --output evidence/recovery-status.json", "exit_code": 0, "reviewed_artifacts": 55, "inventory_artifacts": 13657, "review_accounting_errors": [], "gates_open": 9}
+  ],
+  "accepted_controls": 0,
+  "project_complete": false,
+  "native_protection_changes": false,
+  "publication_approval": false
+}

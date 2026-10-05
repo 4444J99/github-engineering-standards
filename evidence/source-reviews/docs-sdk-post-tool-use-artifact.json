@@ -1,0 +1,406 @@
+[
+  {
+    "artifact_id": "42e63fde6fd039cfb2c09d67",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/hooks/post-tool-use.md",
+    "content_sha256": "c199e07307812c28b32effd292983a8c5f744b7ced75877a12d19e7ba2e110e6",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T15:07:05Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Entire382line guide read. Root independently checked worker claims and repaired grouped examples and wide comparison context. All58candidate blocks dispositioned; five signatures/logging languages, failure variant and seven result patterns accounted for. Source success/type tensions explicit. No code execution, rights, accepted policy or global omission certification.",
+    "independent_audit": "evidence/sdk-post-tool-use-independent-audit.json",
+    "claim_mappings": [
+      {
+        "candidate_id": "30307701a6ef6ec34160b1ce",
+        "text_sha256": "215074210a25ada56d28db0a577d5717b13773fb54683e942b2cefae7494a40b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-001: onPostToolUse runs after successful tool execution. DOCS-SDKPOSTTOOL-002: The guide declares fpt version applicability. DOCS-SDKPOSTTOOL-003: The guide declares Enterprise Cloud applicability.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "a24dde237e7db8c93a382cd3",
+        "text_sha256": "21027aee8678e04fe368700d5222aee7c54a5a691b72c165aafb1f398bb93bb2",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-004: The earlier post-tool-use route redirects here.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "02e9098d50bb3ebf1357d2ba",
+        "text_sha256": "a9e5cb8124fc51eee1eac60c3d60a5e20f36625a7dd66c6093ed66161f3d9824",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "d308460057f836de1bc14e8d",
+        "text_sha256": "5a26dc05643fdbfd4a189170ff67fdd17a585b392537fb4a4abedbe8f7a83604",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-005: The hook can transform tool results. DOCS-SDKPOSTTOOL-006: The hook can filter tool results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "95d5e0aaa9ecc9049f1e9979",
+        "text_sha256": "ca75837b3dc3c0ab41bb27a4806abac1272735bd71107daad6306a826bcc95b1",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-007: The hook can log execution for auditing.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "35be10410a84e1d6fddf0db5",
+        "text_sha256": "d6e730bb51e51fde95fbfe77aa70ff3177b265b15641db018555008dc5481d12",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-008: The hook can add result-dependent context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "3f644fdb99a3846701432bbe",
+        "text_sha256": "03e35b1b905d5f7aefa0a0ccb808ac2285af45ea2c8c9e42d62076a84103a556",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-009: The hook can suppress conversation results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "63bdcafc8cb971b5d62cde58",
+        "text_sha256": "7155f15df60ada31ea5c14cc47c58a40ee0738848c4d4ee8a80ab95584afc7ec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-010: The success hook does not fire for failed tool executions. DOCS-SDKPOSTTOOL-011: Failed calls are observed through the separate failure hook. DOCS-SDKPOSTTOOL-012: JavaScript failure registration uses onPostToolUseFailure. DOCS-SDKPOSTTOOL-013: Python failure registration uses on_post_tool_use_failure. DOCS-SDKPOSTTOOL-014: Go failure registration uses OnPostToolUseFailure. DOCS-SDKPOSTTOOL-015: .NET failure registration uses OnPostToolUseFailure. DOCS-SDKPOSTTOOL-016: Rust failure registration uses on_post_tool_use_failure. DOCS-SDKPOSTTOOL-017: Failure input includes sessionId. DOCS-SDKPOSTTOOL-018: Failure input includes toolName. DOCS-SDKPOSTTOOL-019: Failure input includes toolArgs. DOCS-SDKPOSTTOOL-020: Failure input includes error. DOCS-SDKPOSTTOOL-021: Failure input includes timestamp. DOCS-SDKPOSTTOOL-022: Failure input includes workingDirectory. DOCS-SDKPOSTTOOL-023: Failure error is a string. DOCS-SDKPOSTTOOL-024: Failure error is extracted from the failed tool result. DOCS-SDKPOSTTOOL-025: Failure output may provide additionalContext. DOCS-SDKPOSTTOOL-026: Failure additionalContext has string type. DOCS-SDKPOSTTOOL-027: Failure context injects model guidance. DOCS-SDKPOSTTOOL-028: Retry guidance is an example of failure-hook context. DOCS-SDKPOSTTOOL-029: The failure variant has a dedicated navigation anchor.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "76ba6fc3ad7db482ed7efdf4",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "ea736ca4a9fed53d17767596",
+        "text_sha256": "8ecd2125cd509be907d99c4162738ef67abf1662df5f42ec1aeb1a1345fed159",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-030: TypeScript handler input is PostToolUseHookInput. DOCS-SDKPOSTTOOL-031: TypeScript invocation is HookInvocation. DOCS-SDKPOSTTOOL-032: TypeScript handler returns a Promise. DOCS-SDKPOSTTOOL-033: TypeScript result union includes PostToolUseHookOutput. DOCS-SDKPOSTTOOL-034: TypeScript result union includes null. DOCS-SDKPOSTTOOL-035: TypeScript result union includes undefined.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "f96d403fe514eb796e1f1a5c",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "7074dea04562f2575f600de8",
+        "text_sha256": "b6e453ab8fe75b9a356a3476559ec58fee7c915fbed49444ab9cdbd02354c15b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-036: Python callable input is PostToolUseHookInput. DOCS-SDKPOSTTOOL-037: Python invocation is dict[str,str]. DOCS-SDKPOSTTOOL-038: Python handler returns an Awaitable. DOCS-SDKPOSTTOOL-039: Python output union includes PostToolUseHookOutput. DOCS-SDKPOSTTOOL-040: Python output union includes None.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "73fb4af5dfddbd7a4fa7cf12",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "0b6614ab334557c59c8a23a7",
+        "text_sha256": "dbbaa88b450158da541f755f3d1928e8a901278e75559274cec8b3684b36b630",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-041: Go input is PostToolUseHookInput. DOCS-SDKPOSTTOOL-042: Go invocation is HookInvocation. DOCS-SDKPOSTTOOL-043: Go returns a PostToolUseHookOutput pointer. DOCS-SDKPOSTTOOL-044: Go return signature includes error.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "3b7164cbee37f01e9e0898da",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "c3b3f3e1274234308dcb4f1d",
+        "text_sha256": "9543936595f5d570fe9c90fae5a790d11af86fe877430e095d476137d4d9bc40",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-045: .NET handler returns a Task. DOCS-SDKPOSTTOOL-046: .NET result type is PostToolUseHookOutput. DOCS-SDKPOSTTOOL-047: .NET result is nullable. DOCS-SDKPOSTTOOL-048: .NET input is PostToolUseHookInput. DOCS-SDKPOSTTOOL-049: .NET invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "41be50cb16252a2ffa6d7a35",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "f7ff5463c55eede96749bc0b",
+        "text_sha256": "83982ba7c1e962d4564d0642713bddc4138b2cb763ab36931c9f9dabf6b103d5",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-050: Java interface is marked FunctionalInterface. DOCS-SDKPOSTTOOL-051: Java handler method is named handle. DOCS-SDKPOSTTOOL-052: Java handler returns CompletableFuture. DOCS-SDKPOSTTOOL-053: Java future result type is PostToolUseHookOutput. DOCS-SDKPOSTTOOL-054: Java input is PostToolUseHookInput. DOCS-SDKPOSTTOOL-055: Java invocation is HookInvocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "a10ae86f2527d29cec51593b",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "3856245584661cef7367ddab",
+        "text_sha256": "edf133d642f36aa7a095feb9eecf6243390471cc3f9e355cc074d6f255299014",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "067b27e3ff17dd978c685016",
+        "text_sha256": "c226b85dbc6c5eff068b011a0557a0a005b572bd509400c3df803ff6e233f46f",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "b972d52d9c7c6e6e727b6931",
+        "text_sha256": "60ef6b32339d9aeeb0f272725b77d0530bfa803b4be5781528592acbbc4f5b14",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-056: timestamp is documented with SDK timestamp type. DOCS-SDKPOSTTOOL-057: timestamp describes hook-triggering time.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "54f5a5f0cb0a6d3d4aea162d",
+        "text_sha256": "7dba950bb60db271e9d0ccdc3cbf5968d8a903f118082437fc9a1b9254cf2cbb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-058: workingDirectory is documented with string type. DOCS-SDKPOSTTOOL-059: workingDirectory describes current working directory.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "4dbfff1cc64e9c01baa2f90d",
+        "text_sha256": "45c96521d5dcda8fbdc67deaf6400759cd911f1ead62780fdf262aea8a640094",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-060: toolName is documented with string type. DOCS-SDKPOSTTOOL-061: toolName describes executed tool name.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "2f607bc457b05fc5af7e9dd5",
+        "text_sha256": "db32852d93ae31f451e6e3174300451f2ea6d2d75a397cc761e8aac258b347fd",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-062: toolArgs is documented with object type. DOCS-SDKPOSTTOOL-063: toolArgs describes arguments passed to the tool.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "e76bb463c96e269baf2ee656",
+        "text_sha256": "52c4c8906089481d0577dbf97cbb65034793603bcd20f83f1366f9e941728544",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-064: toolResult is documented with object type. DOCS-SDKPOSTTOOL-065: toolResult describes returned tool result.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "f1435e44b70b4fc38d743529",
+        "text_sha256": "b1b6c98d0fb33893c972a0cb00ca5f042bb391576fe2ef62dcf830b22b66939a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-072: Returning null passes the original result through unchanged. DOCS-SDKPOSTTOOL-073: Returning undefined passes the original result through unchanged. DOCS-SDKPOSTTOOL-074: An output object can supply any of the listed fields.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "9ead27ae918a5a8b321e522d",
+        "text_sha256": "d5df167389f516a0e4059dbe741e591506d40ca17b8f39b41d521d4d0a786fdf",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "d11e19b7d4d4280e39c04324",
+        "text_sha256": "ed13afddfcd039eb73b250a7d3d6a9cd640fb83bb07bbbb15234ab5837993f95",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "c1cd030086e82a228316a41c",
+        "text_sha256": "e462cc76cc2acc524b2eb98ce37b23ce63bf7ff574521f7e5829227a40ce139f",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-066: modifiedResult is documented with object type. DOCS-SDKPOSTTOOL-067: modifiedResult describes replacement result.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "4af0187f7fb1f6ae13bf2fbf",
+        "text_sha256": "270add36a5c1fc03330acce85a2f503fd3894a53dff75b02699386f4089ed35c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-068: additionalContext is documented with string type. DOCS-SDKPOSTTOOL-069: additionalContext describes additional conversation context.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "5ee5bcaf8498f795f8978f11",
+        "text_sha256": "9b517ea38efdec5b9981ecad0376979fa705a0872643b58ab2bc8eff2a3ae67c",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-070: suppressOutput is documented with boolean type. DOCS-SDKPOSTTOOL-071: suppressOutput describes whether the result is hidden from conversation. DOCS-SDKPOSTTOOL-075: True suppressOutput omits the result from the conversation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "bc82a8c53323b2d99aa16ffb",
+        "text_sha256": "669792588937cc2f6482744e210ce2412603146c58e91af498d7aaa7212ae329",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "5e0c5fe8b29dcafd4fde3636",
+        "text_sha256": "d0b8cbd6f4b184f53a5d5c5722818a2e967a5e8f9fc2a12653c5dc5879e761cf",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-076: TypeScript logging awaits session creation. DOCS-SDKPOSTTOOL-077: TypeScript logging configures hooks. DOCS-SDKPOSTTOOL-078: TypeScript post-tool callback is asynchronous. DOCS-SDKPOSTTOOL-079: TypeScript callback accepts input and invocation. DOCS-SDKPOSTTOOL-080: TypeScript logs invocation.sessionId. DOCS-SDKPOSTTOOL-081: TypeScript logs input.toolName. DOCS-SDKPOSTTOOL-082: TypeScript JSON-serializes logged arguments. DOCS-SDKPOSTTOOL-083: TypeScript JSON-serializes logged results. DOCS-SDKPOSTTOOL-084: TypeScript returns null for unchanged pass-through. DOCS-SDKPOSTTOOL-273: TypeScript logging excerpt shows no redaction of logged arguments. DOCS-SDKPOSTTOOL-274: TypeScript logging excerpt shows no redaction of logged results. DOCS-SDKPOSTTOOL-275: TypeScript logging excerpt does not define its client; it is not standalone setup. DOCS-SDKPOSTTOOL-306: TypeScript logging excerpt shows no actual prompt send. DOCS-SDKPOSTTOOL-307: TypeScript logging excerpt shows no observed hook invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "3a3685490bce45a3796d5933",
+        "text_sha256": "cfe3084489ff53bfd744212de5a9b781499bf6a620705d9412d625c29597a0a7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "24cdccc830307a1332b15a74",
+        "text_sha256": "597c51b3ec159d428304b7299996a82565bb92132cb952af7698d4cf611c2b97",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-085: Python imports PermissionHandler. DOCS-SDKPOSTTOOL-086: Python post-tool callback is asynchronous. DOCS-SDKPOSTTOOL-087: Python callback accepts input_data and invocation. DOCS-SDKPOSTTOOL-088: Python reads the invocation session_id dictionary key. DOCS-SDKPOSTTOOL-089: Python logs the toolName dictionary field. DOCS-SDKPOSTTOOL-090: Python logs toolArgs using string interpolation. DOCS-SDKPOSTTOOL-091: Python logs toolResult using string interpolation. DOCS-SDKPOSTTOOL-092: Python returns None for unchanged pass-through. DOCS-SDKPOSTTOOL-093: Python awaits session creation. DOCS-SDKPOSTTOOL-094: Python configures approve_all as an inert permission handler. DOCS-SDKPOSTTOOL-095: Python installs its callback under on_post_tool_use. DOCS-SDKPOSTTOOL-277: Python logging excerpt shows no redaction of logged arguments. DOCS-SDKPOSTTOOL-278: Python logging excerpt shows no redaction of logged results. DOCS-SDKPOSTTOOL-279: Python logging excerpt does not define its client; it is not standalone setup. DOCS-SDKPOSTTOOL-308: Python logging excerpt shows no actual prompt send. DOCS-SDKPOSTTOOL-309: Python logging excerpt shows no observed hook invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "ba545e2c27931bba02f47cad",
+        "text_sha256": "12433f2314bc14b37cfbd5bdd5920316911e446214e637037db9aacbfd2da581",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "423f9a35527aa8d02b822f3e",
+        "text_sha256": "4dddc586e681b5e438dc4993d91c8037e097b4d3caebfd7e71e859310cf674ec",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-096: Go creates a session. DOCS-SDKPOSTTOOL-097: Go uses a background context. DOCS-SDKPOSTTOOL-098: Go constructs SessionConfig. DOCS-SDKPOSTTOOL-099: Go configures SessionHooks. DOCS-SDKPOSTTOOL-100: Go callback input is PostToolUseHookInput. DOCS-SDKPOSTTOOL-101: Go callback invocation is HookInvocation. DOCS-SDKPOSTTOOL-102: Go callback returns a PostToolUseHookOutput pointer. DOCS-SDKPOSTTOOL-103: Go callback return includes error. DOCS-SDKPOSTTOOL-104: Go logs inv.SessionID. DOCS-SDKPOSTTOOL-105: Go logs input.ToolName. DOCS-SDKPOSTTOOL-106: Go formats arguments with %v. DOCS-SDKPOSTTOOL-107: Go formats results with %v. DOCS-SDKPOSTTOOL-108: Go returns nil hook output. DOCS-SDKPOSTTOOL-109: Go returns nil callback error. DOCS-SDKPOSTTOOL-140: The Go logging example discards its creation error. DOCS-SDKPOSTTOOL-281: Go logging excerpt shows no redaction of logged arguments. DOCS-SDKPOSTTOOL-282: Go logging excerpt shows no redaction of logged results. DOCS-SDKPOSTTOOL-283: Go logging excerpt does not define its client; it is not standalone setup. DOCS-SDKPOSTTOOL-310: Go logging excerpt shows no actual prompt send. DOCS-SDKPOSTTOOL-311: Go logging excerpt shows no observed hook invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "88ee7bf9de925a5dca1ff373",
+        "text_sha256": "3adcfe582f805e9f0f29b8a80c8bedf3da24594db595261f09e0aac2d6b9eeea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "4384250f7d61273d1a443afc",
+        "text_sha256": "5e4a0d1ce03260effc98a687780205a787f54c9aa907955b09ab71ec99ef5878",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-110: .NET awaits session creation. DOCS-SDKPOSTTOOL-111: .NET constructs SessionConfig. DOCS-SDKPOSTTOOL-112: .NET configures SessionHooks. DOCS-SDKPOSTTOOL-113: .NET callback accepts input and invocation. DOCS-SDKPOSTTOOL-114: .NET logs invocation.SessionId. DOCS-SDKPOSTTOOL-115: .NET logs input.ToolName. DOCS-SDKPOSTTOOL-116: .NET interpolates arguments. DOCS-SDKPOSTTOOL-117: .NET interpolates results. DOCS-SDKPOSTTOOL-118: .NET wraps its output in Task.FromResult. DOCS-SDKPOSTTOOL-119: .NET Task result type is PostToolUseHookOutput. DOCS-SDKPOSTTOOL-120: .NET Task result is nullable. DOCS-SDKPOSTTOOL-121: .NET returns null output. DOCS-SDKPOSTTOOL-285: .NET logging excerpt shows no redaction of logged arguments. DOCS-SDKPOSTTOOL-286: .NET logging excerpt shows no redaction of logged results. DOCS-SDKPOSTTOOL-287: .NET logging excerpt does not define its client; it is not standalone setup. DOCS-SDKPOSTTOOL-312: .NET logging excerpt shows no actual prompt send. DOCS-SDKPOSTTOOL-313: .NET logging excerpt shows no observed hook invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "f8b880f82df41f92bc827d48",
+        "text_sha256": "fb5590fdeec3d1e8ea839e9ded1e98d34eeb81852679018649304fcc849a6d5e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "2f7a18de5f852a25c9b631be",
+        "text_sha256": "de17d0149aed2764a3abdf02e9179e6d8c4b3d559c887a1773cb4e0d407548e7",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-122: Java logging example has a docs-validate skip marker.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "3239771fd82a770b1a5793da",
+        "text_sha256": "4d1cb215a9af96a24191f3ba4d3827d967c769fadb5e3fcd31cd3eda303371fb",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-123: Java imports Copilot types with a wildcard. DOCS-SDKPOSTTOOL-124: Java imports RPC types with a wildcard. DOCS-SDKPOSTTOOL-125: Java imports CompletableFuture. DOCS-SDKPOSTTOOL-126: Java constructs SessionHooks. DOCS-SDKPOSTTOOL-127: Java installs its post-tool callback. DOCS-SDKPOSTTOOL-128: Java callback accepts input and invocation. DOCS-SDKPOSTTOOL-129: Java logs invocation.getSessionId(). DOCS-SDKPOSTTOOL-130: Java logs input.getToolName(). DOCS-SDKPOSTTOOL-131: Java logs tool arguments. DOCS-SDKPOSTTOOL-132: Java logs tool results. DOCS-SDKPOSTTOOL-133: Java returns an already completed future. DOCS-SDKPOSTTOOL-134: Java future contains null output. DOCS-SDKPOSTTOOL-135: Java invokes session creation. DOCS-SDKPOSTTOOL-136: Java constructs SessionConfig. DOCS-SDKPOSTTOOL-137: Java installs APPROVE_ALL as an inert permission handler. DOCS-SDKPOSTTOOL-138: Java installs its hooks on the configuration. DOCS-SDKPOSTTOOL-139: Java waits for creation using get. DOCS-SDKPOSTTOOL-289: Java logging excerpt shows no redaction of logged arguments. DOCS-SDKPOSTTOOL-290: Java logging excerpt shows no redaction of logged results. DOCS-SDKPOSTTOOL-291: Java logging excerpt does not define its client; it is not standalone setup. DOCS-SDKPOSTTOOL-314: Java logging excerpt shows no actual prompt send. DOCS-SDKPOSTTOOL-315: Java logging excerpt shows no observed hook invocation.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "0827cee026ca93502d5b948a",
+        "text_sha256": "02d40c090dbc6c7c557b64787e6d090c4f5ba3780f6f858b58e093ee921ecc72",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Read presentation-only table header/separator, language-tab wrapper or lint comment; source prose and examples extracted separately."
+      },
+      {
+        "candidate_id": "dd9dc0723f9e1026d7f9df21",
+        "text_sha256": "99a1e7ef4b2d66a4d548183ab4b234e3daa1ce37d69eba1c60d5278db072ab4b",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-141: The first redaction pattern matches api-key naming with optional underscore or hyphen. DOCS-SDKPOSTTOOL-142: The API-key pattern uses global matching. DOCS-SDKPOSTTOOL-143: The API-key pattern uses case-insensitive matching. DOCS-SDKPOSTTOOL-144: The second redaction pattern targets password labels. DOCS-SDKPOSTTOOL-145: The password pattern uses global matching. DOCS-SDKPOSTTOOL-146: The password pattern uses case-insensitive matching. DOCS-SDKPOSTTOOL-147: The third redaction pattern targets secret labels. DOCS-SDKPOSTTOOL-148: The secret pattern uses global matching. DOCS-SDKPOSTTOOL-149: The secret pattern uses case-insensitive matching. DOCS-SDKPOSTTOOL-150: Redaction pattern awaits session creation. DOCS-SDKPOSTTOOL-151: Redaction callback is asynchronous. DOCS-SDKPOSTTOOL-152: Redaction runs only when toolResult is a string. DOCS-SDKPOSTTOOL-153: Redaction initializes a working string from the original result. DOCS-SDKPOSTTOOL-154: Redaction iterates the configured patterns. DOCS-SDKPOSTTOOL-155: Each match is replaced with a redacted marker. DOCS-SDKPOSTTOOL-156: A replacement output is returned only when the working string changed. DOCS-SDKPOSTTOOL-157: Redaction supplies the string through modifiedResult. DOCS-SDKPOSTTOOL-158: Redaction otherwise returns null. DOCS-SDKPOSTTOOL-243: The pattern accepts double quote, whitespace, colon or equals separators after its label. DOCS-SDKPOSTTOOL-245: The matched value is restricted to word characters and hyphens. DOCS-SDKPOSTTOOL-246: The pattern accepts double quote, whitespace, colon or equals separators after its label. DOCS-SDKPOSTTOOL-248: The matched value is restricted to word characters and hyphens. DOCS-SDKPOSTTOOL-249: The pattern accepts double quote, whitespace, colon or equals separators after its label. DOCS-SDKPOSTTOOL-251: The matched value is restricted to word characters and hyphens. DOCS-SDKPOSTTOOL-252: The sample patterns cover selected label/value strings, not every possible secret representation. DOCS-SDKPOSTTOOL-295: Pattern permits an optional single or double opening quote. DOCS-SDKPOSTTOOL-296: Pattern permits an optional single or double closing quote. DOCS-SDKPOSTTOOL-297: Pattern permits an optional single or double opening quote. DOCS-SDKPOSTTOOL-298: Pattern permits an optional single or double closing quote. DOCS-SDKPOSTTOOL-299: Pattern permits an optional single or double opening quote. DOCS-SDKPOSTTOOL-300: Pattern permits an optional single or double closing quote.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "c25820d55df635c8e0223eeb",
+        "text_sha256": "d6f51bb4c6ec3d61df6cb6d46a7214c280ccfe0b5051e2280ded01ca4c333a83",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-159: Truncation sets an illustrative maximum length of10000. DOCS-SDKPOSTTOOL-160: Truncation awaits session creation. DOCS-SDKPOSTTOOL-161: Truncation callback is asynchronous. DOCS-SDKPOSTTOOL-162: Truncation JSON-serializes the tool result. DOCS-SDKPOSTTOOL-163: Truncation checks serialized string length against the maximum. DOCS-SDKPOSTTOOL-164: Truncation supplies a modifiedResult object. DOCS-SDKPOSTTOOL-165: The replacement marks truncated true. DOCS-SDKPOSTTOOL-166: The replacement records original serialized length. DOCS-SDKPOSTTOOL-167: The replacement keeps a prefix bounded by MAX_RESULT_LENGTH. DOCS-SDKPOSTTOOL-168: The replacement appends an ellipsis to the retained prefix. DOCS-SDKPOSTTOOL-169: Truncation adds context reporting the original length. DOCS-SDKPOSTTOOL-170: Truncation context reports the configured maximum as its character target. DOCS-SDKPOSTTOOL-171: Untruncated results return null. DOCS-SDKPOSTTOOL-254: The truncation count applies to the JSON-serialized string, not original payload bytes. DOCS-SDKPOSTTOOL-255: The truncation excerpt assumes JSON.stringify produces a string before reading its length; no undefined-result branch is shown. DOCS-SDKPOSTTOOL-256: The truncation excerpt shows no recovery for serialization errors. DOCS-SDKPOSTTOOL-257: The content adds an ellipsis beyond the retained prefix, so the context character target is not the full replacement length.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "11ec254c6c4ea3e3efb98316",
+        "text_sha256": "294aba413ffefc05b655ed343a7d581c17d54a2c6df0d4a9f1b2721ffeb6fb46",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-172: Result-context pattern awaits session creation. DOCS-SDKPOSTTOOL-173: Result-context callback is asynchronous. DOCS-SDKPOSTTOOL-174: File-hint branch requires toolName read_file. DOCS-SDKPOSTTOOL-175: File-hint branch requires a truthy toolResult.error. DOCS-SDKPOSTTOOL-176: The inert file hint suggests creating a missing file. DOCS-SDKPOSTTOOL-177: The inert file hint suggests checking its path. DOCS-SDKPOSTTOOL-178: Shell-hint branch requires toolName shell. DOCS-SDKPOSTTOOL-179: Shell-hint branch compares optional exitCode with zero using strict inequality. DOCS-SDKPOSTTOOL-180: The inert shell hint suggests checking dependencies. DOCS-SDKPOSTTOOL-181: Result-context fallback returns null. DOCS-SDKPOSTTOOL-258: Error-shaped payload hints appear in a success-hook example; the excerpt does not establish that failed executions trigger this hook. DOCS-SDKPOSTTOOL-259: An absent exitCode yields undefined in the comparison and is not equal to zero; the shown condition does not require an explicit nonzero code.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "b3dd434a7be8af56360c8da6",
+        "text_sha256": "aef27e2776b71c5749e227b09fce2ecec471f49f1d3c27ff9eae29f482aeb773",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-182: Stack-filter pattern awaits session creation. DOCS-SDKPOSTTOOL-183: Stack-filter callback is asynchronous. DOCS-SDKPOSTTOOL-184: Stack filtering requires a truthy error field. DOCS-SDKPOSTTOOL-185: Stack filtering requires a truthy stack field. DOCS-SDKPOSTTOOL-186: Stack filtering supplies a modifiedResult object. DOCS-SDKPOSTTOOL-187: The replacement preserves the error field. DOCS-SDKPOSTTOOL-188: The stack is split on newline. DOCS-SDKPOSTTOOL-189: The split stack is reduced to its first three entries. DOCS-SDKPOSTTOOL-190: The retained stack entries are joined with newline. DOCS-SDKPOSTTOOL-191: Stack-filter fallback returns null. DOCS-SDKPOSTTOOL-260: The stack-error pattern appears in the success hook rather than the separately documented failure hook. DOCS-SDKPOSTTOOL-261: The stack example does not validate stack as a string before splitting it. DOCS-SDKPOSTTOOL-262: The stack replacement retains error and shortened stack, without copying other result fields. DOCS-SDKPOSTTOOL-263: Keeping three stack lines does not establish secret removal or privacy clearance.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "2ef287ae367563d289f8b949",
+        "text_sha256": "27e84f642ba7329b218c6b974862c8a634f38468be8d57356647f8a52a959c2a",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-192: Audit example declares an AuditEntry interface. DOCS-SDKPOSTTOOL-193: AuditEntry timestamp has Date type. DOCS-SDKPOSTTOOL-194: AuditEntry sessionId has string type. DOCS-SDKPOSTTOOL-195: AuditEntry toolName has string type. DOCS-SDKPOSTTOOL-196: AuditEntry args has unknown type. DOCS-SDKPOSTTOOL-197: AuditEntry result has unknown type. DOCS-SDKPOSTTOOL-198: AuditEntry success has boolean type. DOCS-SDKPOSTTOOL-199: The audit array is typed AuditEntry[]. DOCS-SDKPOSTTOOL-200: The audit array starts empty. DOCS-SDKPOSTTOOL-201: Audit pattern awaits session creation. DOCS-SDKPOSTTOOL-202: Audit callback is asynchronous. DOCS-SDKPOSTTOOL-203: Audit callback accepts input and invocation. DOCS-SDKPOSTTOOL-204: Audit callback appends a record. DOCS-SDKPOSTTOOL-205: Audit timestamp is copied from input.timestamp. DOCS-SDKPOSTTOOL-206: Audit sessionId is copied from invocation.sessionId. DOCS-SDKPOSTTOOL-207: Audit toolName is copied from input.toolName. DOCS-SDKPOSTTOOL-208: Audit args are copied from input.toolArgs. DOCS-SDKPOSTTOOL-209: Audit result is copied from input.toolResult. DOCS-SDKPOSTTOOL-210: Audit success is calculated by negating optional error-field truthiness. DOCS-SDKPOSTTOOL-211: The source comment describes optional database or file persistence. DOCS-SDKPOSTTOOL-212: The audit callback awaits saveAuditLog on the whole audit array. DOCS-SDKPOSTTOOL-213: The audit callback returns null. DOCS-SDKPOSTTOOL-265: The audit example copies raw arguments without shown redaction. DOCS-SDKPOSTTOOL-266: The audit success Boolean is derived from an error field, not independently observed execution success. DOCS-SDKPOSTTOOL-269: The audit example shows no stored-log access-control configuration. DOCS-SDKPOSTTOOL-294: The audit example copies raw results without shown redaction. DOCS-SDKPOSTTOOL-301: Audit sample shows no timestamp conversion before assigning input.timestamp to its Date-declared timestamp field. DOCS-SDKPOSTTOOL-302: saveAuditLog is undefined in the displayed source. DOCS-SDKPOSTTOOL-303: Audit persistence durability is not demonstrated. DOCS-SDKPOSTTOOL-304: Audit array has no shown size bound. DOCS-SDKPOSTTOOL-305: Audit array has no shown retention policy.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "f2346ccf5e867b844afffc77",
+        "text_sha256": "0163dc19a39b3c98f25b5345c87b40d28dbe2145fc6a08ed64c7cc7a89f7bf35",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-214: The noisy-tool list includes list_directory. DOCS-SDKPOSTTOOL-215: The noisy-tool list includes search_codebase. DOCS-SDKPOSTTOOL-216: Noisy-result pattern awaits session creation. DOCS-SDKPOSTTOOL-217: Noisy-result callback is asynchronous. DOCS-SDKPOSTTOOL-218: Noisy-result handling requires tool-name membership. DOCS-SDKPOSTTOOL-219: Noisy-result handling tests whether toolResult is an array. DOCS-SDKPOSTTOOL-220: An array result is used directly as the item collection. DOCS-SDKPOSTTOOL-221: A nonarray result falls back to its items property. DOCS-SDKPOSTTOOL-222: A falsy items property falls back to an empty array. DOCS-SDKPOSTTOOL-223: Noisy-result handling returns a modifiedResult object. DOCS-SDKPOSTTOOL-224: The replacement summary interpolates item count. DOCS-SDKPOSTTOOL-225: The replacement firstFew retains up to five item entries. DOCS-SDKPOSTTOOL-226: Noisy-result fallback returns null. DOCS-SDKPOSTTOOL-270: The noisy-results example modifies the result; it does not set suppressOutput. DOCS-SDKPOSTTOOL-271: The noisy-results example does not validate a truthy items property as an array before length and slice operations. DOCS-SDKPOSTTOOL-272: The noisy-result replacement retains a summary and prefix rather than copying the full original result.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "c78ce66fae565eb8c47ed45a",
+        "text_sha256": "2900745336e5b8eb84600ed9f1d9d6c0540c68a43a5e3206517aec6d8c99a8d6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-227: Return null when no result changes are needed. DOCS-SDKPOSTTOOL-228: The source describes null as more efficient than an empty object. DOCS-SDKPOSTTOOL-229: The source describes null as more efficient than returning the same result.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "156c53275c3fe6d32b9ae2dd",
+        "text_sha256": "ec7c10162af94175c3e602ec9fe0d3d8f552af5c01d3147fdb932b357d61f40d",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-230: Result modifications can change model interpretation. DOCS-SDKPOSTTOOL-231: Modify results only when necessary.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "912614f461fd08dcedde2e7c",
+        "text_sha256": "55d39e75478c9d7398671850abd3c22905bff459109ffa3c1a4ea81992ef2614",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-232: Use additionalContext for interpretive hints instead of changing results.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "24184b1a7396b777ade55c01",
+        "text_sha256": "084fb176e6b97ee2ffc609cb70642665f7d0414c2485801eedabecf88a1c68c0",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-233: Tool results may include sensitive data. DOCS-SDKPOSTTOOL-234: Consider logging privacy. DOCS-SDKPOSTTOOL-235: Redact sensitive content before logging.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "a4880c116a944ed42baa41b2",
+        "text_sha256": "17de03f2d6264b6c892ac8d57746e1ba186e7b99c8ff8e00f2394cd15ccd2b08",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-236: Post-tool hooks run synchronously. DOCS-SDKPOSTTOOL-237: Keep hooks fast. DOCS-SDKPOSTTOOL-238: Perform heavy processing asynchronously. DOCS-SDKPOSTTOOL-239: Batch heavy processing as an alternative.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "642e3acbb4ed372859fe0de2",
+        "text_sha256": "62930d51334dcfd405fdfeb544b4195ae684e6ffb91ac40c0774b4298cfd12fa",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-240: The hooks index link does not confer body-review completeness.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "28e6c120edbc9c3a0efd58ce",
+        "text_sha256": "a3dd05f76ffb42eb7c2d5fd825c8044d62dca3212115d268b8ebf4fcbf18f2a6",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-241: The pre-tool guide link does not confer body-review completeness.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      },
+      {
+        "candidate_id": "575584c18c8fb3aa151c309e",
+        "text_sha256": "33d53a97f0902be16a5741e59edde64a30298ff6aba517cace00379fadca9b44",
+        "disposition": "REFERENCE",
+        "rationale": "DOCS-SDKPOSTTOOL-242: The error-handling link does not confer body-review completeness.",
+        "supporting_claims": "evidence/source-reviews/docs-sdk-post-tool-use-claims.json"
+      }
+    ]
+  }
+]

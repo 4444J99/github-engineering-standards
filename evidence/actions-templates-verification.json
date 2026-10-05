@@ -1,0 +1,53 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 62,
+  "tranche": {
+    "files": 10,
+    "claims": 14,
+    "candidates": 28
+  },
+  "findings": [
+    "Security template category and enqueued/dequeued PR activities are conditional on fpt or ghec.",
+    "Metadata requires name and description; optional root-file patterns are availability predicates, not runtime verification.",
+    "Dependabot fragment's absolute secrets language requires event-specific reconciliation; linked catalogs and guides are not certified."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58191,
+      "source_artifacts": 2224
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2258,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.994,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Ten complete pinned reusable fragments read. No upstream execution, workflow activation, credential change, policy adoption, rights approval or external catalog certification."
+}

@@ -1,0 +1,46 @@
+{
+  "issue": 337,
+  "verified_at": "2026-10-03T09:03:07.901Z",
+  "artifacts_reviewed": 2,
+  "reference_claims_added": 9,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "tests": 324,
+    "test_seconds": 1.975,
+    "controls": 95,
+    "reference_claims": 60491,
+    "claim_bearing_artifacts": 3342,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Progress denominator/recursive aggregation and empty-type applicability unspecified.",
+    "Display review not independent extraction completeness or native acceptance.",
+    "No native mutations, rights clearance or accepted policy."
+  ]
+}

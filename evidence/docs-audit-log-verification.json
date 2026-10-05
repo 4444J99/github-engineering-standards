@@ -1,0 +1,69 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 25,
+  "verified_at": "2026-10-02T20:48:31.622Z",
+  "scope": {
+    "files": 43,
+    "physical_lines": 438,
+    "bytes": 37259,
+    "records": 602,
+    "parser_candidates": 339,
+    "prior_exact_path_overlap": 0
+  },
+  "claims_sha256": "f409eea9659499f12974e3db569738be9f4dbdac1600147907f45afe45eb2a75",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in 1.266s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid true; 95 controls"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": "valid true; 55578 reference claims; 1503 source artifacts; 7 validated duplicate relationships; semantic truth and global omission not certified"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": "project_complete false; gates_open 9; inventory_artifacts 13657; published_pages 18019"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "additional_checks": {
+    "consolidated_records": 602,
+    "unique_consolidated_records": 602,
+    "candidate_span_digests_checked": 339,
+    "candidate_span_digest_mismatches": 0,
+    "prior_exact_path_overlap": 0,
+    "structural_candidates_without_physical_claim_overlap": 14,
+    "author_recheck_inspected": true
+  },
+  "accounting": {
+    "reviewed_artifacts": 1537,
+    "denominator": 13657,
+    "coverage": 0.1125430182324083,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Category taxonomy is not evidence that any event occurred; delete_repos label versus creation-description mismatch remains explicit.",
+    "Git seven-day retention, other up-to-seven-month prose, 180-day tables and GHES indefinite/configured retention remain separate source scopes; display defaults are not retention.",
+    "Availability matrix icons describe source-local interfaces, not executed checks; Git JSON-only export and REST search limitations preserved.",
+    "Token hashes, example values, commands, IAM and bucket guidance are inert; no credentials, storage, costs or endpoint writes performed.",
+    "Nested enterprise-licensing-language is terminology, not category availability; outer ghec or ghes retained.",
+    "Streaming is not retroactive; privacy account-agreement prose is not project legal permission.",
+    "Linked destinations and binaries are not reviewed by reference; no rendered-version assurance or current feature entitlement inferred."
+  ]
+}

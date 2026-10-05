@@ -1,0 +1,45 @@
+{
+  "issue": 112,
+  "reviewed_at": "2026-10-03T01:45:40.297Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 93,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 58507,
+    "claim_bearing_artifacts": 2429,
+    "tests": 324,
+    "test_seconds": 2.014,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Query identifiers/category/severity are metadata, not implemented predicates or reviewed linked query help.",
+    "No suggested fixes applied or upstream scanners executed; independent audit, rights, rendering and adoption remain separate."
+  ]
+}

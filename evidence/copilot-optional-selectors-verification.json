@@ -1,0 +1,60 @@
+{
+  "issue": 176,
+  "reviewed_at": "2026-10-03T03:51:42.446Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59265,
+    "claim_bearing_artifacts": 2765,
+    "tests": 324,
+    "test_seconds": 1.973,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "dependency_context": {
+    "model_variables": {
+      "copilot_gpt_53_codex": "GPT-5.3-Codex",
+      "copilot_gpt_54": "GPT-5.4",
+      "copilot_gpt_54_nano": "GPT-5.4 nano"
+    },
+    "variable_lines": [
+      229,
+      230,
+      232
+    ],
+    "third_party_note": "Paid-plan availability described by pinned include; not verified access.",
+    "whole_dependency_files_newly_certified": false
+  },
+  "limitations": [
+    "No agent launch, profile creation, model invocation, or cost authorization.",
+    "New-conversation UI is not old-conversation deletion or retention assurance.",
+    "No current model availability, adopted policy, linked-resource assurance, or rights clearance."
+  ]
+}

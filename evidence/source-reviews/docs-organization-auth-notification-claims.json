@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:57:02.954Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ORGAUTHNOTIFY-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/removed_outside_collaborators.md",
+      "content_sha256": "a3a5236a458847a9877ad1430536adc2db79de0dbeaedc60a278ec7a73f32042",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "When the containing change prompts about members or outside collaborators being removed, read that information before confirming. The fragment does not identify the triggering change, removed people, scope or recovery procedure. A confirmation instruction is not consent for actual removals; no membership changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGAUTHNOTIFY-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/repo-creation-constants.md",
+      "content_sha256": "3e5a485173f70a58b541720db5673ac3d5d9fa4771fde221e153e83cb6a041a0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment broadly states that organization owners can create every repository type and outside collaborators cannot create repository types in the containing organization context. Its owner statement must not be treated as overriding independent enterprise repository policies or product visibility limits; the broad wording requires reconciliation with independently reviewed enterprise restrictions and the linked visibility guide. No permission bypass or universal owner capability is certified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGAUTHNOTIFY-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/repository-defaults.md",
+      "content_sha256": "1aba0fdb3e83aab5f032264bf9000efe9459c29baa34a2d547cd147293f1f76a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The settings route uses the inspected Code, planning, and automation include, then Repository and General. It is navigation, not a repository-default value, complete settings census, changed configuration or proof of enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGAUTHNOTIFY-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/require-ssh-cert.md",
+      "content_sha256": "ef9ac980e2478fd93aff10517024a0b02416083413316d420588a7aa5da4bc54",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Requiring SSH certificates is optional and submitted by selecting the option then Save. The stated effect prevents user repository authentication over HTTPS or unsigned SSH keys; the GHEC branch says even externally authorized unsigned keys are blocked. The requirement explicitly exempts authorized GitHub Apps including user-to-server tokens, deploy keys, and trusted GitHub features including Actions and, for FPT/GHEC, Codespaces. Product variables resolve those names from the pinned file. These exceptions preclude universal certificate-only access claims; no native activation, negative authentication test, credential change or exception-grant audit was performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGAUTHNOTIFY-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/require_two_factor_authentication.md",
+      "content_sha256": "128e884fd767429dac83b01ed623fb23e81c5ebf114cd9ec20ac285ff1b91bfa",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The organization 2FA requirement is selected and saved in the containing flow. The fragment alone supplies no applicability context, secure-method definition, affected-member removal behavior, IdP-managed exception, staged rollout or recovery evidence. A UI selection is not actual enforced 2FA or permission to change authentication.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGAUTHNOTIFY-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/restrict-email-notifications.md",
+      "content_sha256": "f2278a80233db32f22fdbe12eedb379b72d7899f7db1c66abe065adab5ed6b49",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The email-notification setting restricts destinations to approved OR verified domains. Approval is not proof of DNS ownership, and the disjunction must not be strengthened to requiring both. This is not domain verification, actual notification-delivery testing, enforced setting state or authority to change notifications.",
+      "accepted_policy": false
+    }
+  ]
+}

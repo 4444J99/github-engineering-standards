@@ -1,0 +1,242 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T03:57:35Z",
+  "review_scope": "Complete 114-line model-access procedure and three one-line reusable artifacts read. Organization/team modes, union semantics, app scope, preview migration and rollback retained. Dependencies previously reviewed are not duplicated; linked team creation and actual settings remain unverified.",
+  "claims": [
+    {
+      "claim_id": "DOCS-MODELACCESS-001",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 5,
+      "end_line": 9,
+      "statement": "Declared scope is the Copilot cloud feature and Business/Enterprise plans, administered by enterprise owners; neither metadata nor navigation verifies actual permissions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-002",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 13,
+      "end_line": 18,
+      "statement": "Enterprise-wide enabled/disabled settings form a baseline; granular organization delegation and opt-in enterprise-team control are distinct modes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-003",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 17,
+      "end_line": 17,
+      "statement": "Default organization mode permits organization decisions and enterprise targeted rules; these are separate control paths.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-004",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 18,
+      "end_line": 18,
+      "statement": "Enterprise-team granular control is explicitly an opt-in preview, not generally enabled state.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-005",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 22,
+      "end_line": 24,
+      "statement": "The procedure recommends explicit enterprise-wide decisions for universally allowed or forbidden models, delegating only granular access; example cost/compliance choices are not adopted policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-006",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 26,
+      "end_line": 29,
+      "statement": "Enterprise access, AI-controls and Copilot sidebar includes are navigation dependencies, not authorization or completed configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-007",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 30,
+      "end_line": 34,
+      "statement": "Enterprise model statuses distinguish Enabled for all users/apps, Disabled for all users/apps and delegated organizational or team/app decisions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-008",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "Agent-app model access is a separate reusable dependency whose default installation scope changes in enterprise-team mode.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-009",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 40,
+      "end_line": 44,
+      "statement": "Unconfigured models use Delegate to Default Policy; an enabled default policy makes them available to everyone, while explicit disabling or scoped delegation can limit access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-010",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 48,
+      "end_line": 50,
+      "statement": "Organization instructions apply only outside the enterprise-team preview; delegated unconfigured organization models inherit that organization's released-model default policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-011",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 52,
+      "end_line": 59,
+      "statement": "Targeted organization rules select organizations and allowed models before creating the rule; the procedure does not independently specify conflict ordering between multiple targeted rules.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-012",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 63,
+      "end_line": 63,
+      "statement": "Opting into enterprise-team mode deactivates organization-level model settings and removes organization owners' model-policy management.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-013",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 65,
+      "end_line": 65,
+      "statement": "Preview rollback restores the pre-opt-in policy state and discards later enterprise-level model-policy changes; recovery must capture both states rather than assume preservation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-014",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 67,
+      "end_line": 69,
+      "statement": "Enterprise-team grants are additive but cannot re-enable a model disabled at enterprise level.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-015",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 70,
+      "end_line": 70,
+      "statement": "Enterprise-wide enabled models remain enabled for teams; team settings are not a deny override.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-016",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 71,
+      "end_line": 72,
+      "statement": "A user's effective team allowance is the union of enabled models across all memberships plus enterprise grants; one enabling team suffices.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-017",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 73,
+      "end_line": 73,
+      "statement": "Team settings have no explicit Disabled option; delegated models default to Optional, meaning not currently enabled for that team, not an overriding deny.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-018",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 77,
+      "end_line": 77,
+      "statement": "The preparation recommendation is to recreate and enhance organizational access using enterprise teams before opting in; training or cost examples do not establish actual eligibility.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-019",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 79,
+      "end_line": 79,
+      "statement": "Prepared team default-model settings do not take effect until preview opt-in.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-020",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 81,
+      "end_line": 81,
+      "statement": "Enterprise-wide explicit Enabled/Disabled choices persist at opt-in, but organization-delegated models become unavailable until enabled for specific teams; migration can cause access regression.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-021",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 81,
+      "end_line": 83,
+      "statement": "The procedure calls for filtering delegated models and choosing teams; the linked team-creation article remains independently unreviewed through this reference.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-022",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 87,
+      "end_line": 90,
+      "statement": "The enterprise-team-mode toggle is a documented opt-in action; no actual toggle or protection change is performed by this review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-023",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 96,
+      "end_line": 99,
+      "statement": "Team grants require the enterprise model status Delegate to Enterprise Teams/Apps, then enabling selected models on the team's Default models tab.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-024",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 103,
+      "end_line": 105,
+      "statement": "Agent apps are separately described and require delegated enterprise-team/app status for app-specific model grants.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-025",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 107,
+      "end_line": 110,
+      "statement": "App model configuration changes Optional to Enabled for each chosen model through Configure app models; app allowance is distinct from membership allowance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESS-026",
+      "path": "content/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-availability-of-default-models.md",
+      "start_line": 112,
+      "end_line": 114,
+      "statement": "The supported-surfaces reference limits interpretation of policy coverage; linking it is not evidence of client enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESSDEP-001",
+      "path": "data/reusables/enterprise-accounts/configure-allowed-models.md",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Configure models is the navigation action for model availability; opening a configuration view does not enact policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESSDEP-002",
+      "path": "data/reusables/copilot/model-access-agent-apps.md",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "By default agent apps inherit models enabled in their installation organization or personal account; enterprise-team mode instead controls app models at enterprise level.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MODELACCESSDEP-003",
+      "path": "data/reusables/copilot/agent-apps-intro.md",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Agent apps are partner-built GitHub Apps exposing delegated agents alongside the cloud agent and other third-party agents; this classification does not establish trust, permissions or model access.",
+      "accepted_policy": false
+    }
+  ]
+}

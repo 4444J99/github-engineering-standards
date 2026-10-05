@@ -1,0 +1,67 @@
+{
+  "issue": 177,
+  "reviewed_at": "2026-10-03T03:53:32.289Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59271,
+    "claim_bearing_artifacts": 2771,
+    "tests": 324,
+    "test_seconds": 1.977,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "dependency_context": {
+    "path": "data/variables/copilot.yml",
+    "price_lines": [
+      26,
+      28,
+      30
+    ],
+    "credit_lines": [
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
+    ],
+    "whole_file_newly_certified": false
+  },
+  "limitations": [
+    "Pinned credit/price values are not live billing guidance or entitlement verification.",
+    "Plan approval described by source is not actual approval or enforced read-only behavior.",
+    "Open in Editor described as agent session, not passive view.",
+    "No purchase, paid conversion, agent execution, adoption, or rights clearance."
+  ]
+}

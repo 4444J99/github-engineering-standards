@@ -1,0 +1,27 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 24,
+  "phase": "full-source-reading checkpoint; extraction/independent audit pending",
+  "verified_at": "2026-10-02T20:05:10.331Z",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "observed": "324 tests in1.334s OK; trailing published_docs ERROR is synthetic negative fixture."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "observed": "valid true,95controls"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "observed": "completed without output"
+    }
+  ],
+  "limitations": [
+    "No completed full-review receipts issued yet.",
+    "No rights/native/adoption/global gate claim."
+  ]
+}

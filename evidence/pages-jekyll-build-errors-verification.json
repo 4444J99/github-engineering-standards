@@ -1,0 +1,46 @@
+{
+  "issue": 310,
+  "reviewed_at": "2026-10-03T08:10:43.249Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 12,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60271,
+    "claim_bearing_artifacts": 3311,
+    "tests": 324,
+    "test_seconds": 1.976,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Malformed Ruby example and historical Ruby 2.3 not executed.",
+    "Notification absence not build/deploy success.",
+    "No credentials, external CI activation, rights clearance or native rollout."
+  ]
+}

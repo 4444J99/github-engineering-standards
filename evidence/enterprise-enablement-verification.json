@@ -1,0 +1,46 @@
+{
+  "issue": 219,
+  "reviewed_at": "2026-10-03T05:04:37.632Z",
+  "artifacts_reviewed": 6,
+  "reference_claims_added": 6,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59505,
+    "claim_bearing_artifacts": 2998,
+    "tests": 324,
+    "test_seconds": 1.988,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Screenshot caption is not image inspection; navigation does not prove estate census.",
+    "Conditional enablement communication is not actual saved configuration or verified rollout.",
+    "Preview Entra support does not explicitly establish exclusivity; no messages or settings changed, rights clearance or adoption."
+  ]
+}

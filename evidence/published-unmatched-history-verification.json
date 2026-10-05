@@ -1,0 +1,51 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 28,
+  "verified_at": "2026-10-02T21:33:10.930Z",
+  "evidence": "evidence/published-unmatched-history.json",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in1.356s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "controls": 95
+      }
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "history_api_commands": {
+    "exact_commands_recorded_in": "evidence/published-unmatched-history.json",
+    "commit_detail_requests": 3,
+    "compare_requests": 3,
+    "observed_exit_codes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "observed_results": {
+    "added_routes": 6,
+    "renamed_routes": 1,
+    "page_instances_accounted_for_by_route_history": 14,
+    "exact_published_build_identities_verified": 0,
+    "assurance_receipts_added": 0,
+    "original_denominators_preserved": true
+  },
+  "limitations": "Route-history evidence, not deployed-build identity, semantic equivalence, licensing permission or gate closure."
+}

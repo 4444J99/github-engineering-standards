@@ -1,0 +1,98 @@
+{
+  "schema_version": "ges.remote-foundation-verification.v1",
+  "issue": 454,
+  "baseline_commit": "fe10b5a340b7c694cb2508e2b61eab0b28cbf71f",
+  "observed_repository_visibility": "PUBLIC",
+  "freeze": {
+    "inventory_artifacts": 13657,
+    "published_pages": 18019,
+    "candidate_blocks": 150903,
+    "inventory_digest": "eaa9c32da3762d0947864cc12aac1857b13d65d15e08aaf3ed44f8f89dc62cb8",
+    "published_ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+    "semantic_review_performed": false,
+    "provider_dispatched": false,
+    "remote_custody_verified": false,
+    "capsule_sha256": "0a177df2e99bd3add5a8701a2f3a1e1ebd0ca1ba51fdb1676947a79f21ea1d83"
+  },
+  "hydration": {
+    "assigned_artifacts": 1,
+    "source": "tmcw/github-best-practices",
+    "partition_sha256": "57cfb06bb56d4f7f0e1ee93dcdcbd728d0e972e5e18472cba829ff2ece011927",
+    "original_inventory_and_page_bytes_preserved": true,
+    "live_page_list_fetches": 0,
+    "source_code_executed": false,
+    "output": ".cache/worker-454"
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 340,
+    "seconds": 2.338,
+    "result": "OK",
+    "synthetic_receipts_are_not_real_certification": true
+  },
+  "current_accounting": {
+    "artifact_disposition_receipts": 3560,
+    "inventory_artifacts": 13657,
+    "reference_claims": 61427,
+    "claim_bearing_artifacts": 3526,
+    "accepted_controls": 0,
+    "rights_acceptances": 0,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "exposure_scope": {
+    "tracked_restricted_path_check": "No tracked .cache, .agents, *.raw.jsonl.gz, *.pem, *.key or .env* paths; no .cache path history in local available refs.",
+    "public_history_secret_scan": {
+      "exit_code": 1,
+      "commits_scanned": 676,
+      "bytes_scanned": 97024293,
+      "findings": 146,
+      "rule_categories": {"generic_api_key": 138, "provider_specific": 8},
+      "all_secrets_redacted": true,
+      "scope": "All locally available Git refs; historical source-review evidence requires triage. Scanner findings are not confirmed leaked credentials.",
+      "triage_complete": false,
+      "command": "gitleaks git --redact --no-banner --log-opts=--all --report-format json --report-path .cache/public-history-scan-454.json"
+    },
+    "staged_secret_scan": {
+      "exit_code": 0,
+      "findings": 0,
+      "intermediate_evidence_scan": "One heuristic match to the verified public baseline Git commit fingerprint after adding a provider-rule keyword. No credential value introduced. Final evidence uses aggregate rule categories; full redacted rule details remain in ignored scan output.",
+      "command": "gitleaks git --pre-commit --staged --redact --no-banner --timeout 60 --report-format json --report-path .cache/foundation-staged-scan-454.json"
+    },
+    "rights_audit_complete": false
+  },
+  "remote_custody_verified": false,
+  "provider_dispatched": false,
+  "remaining_dependencies": [
+    "Full frozen-corpus preservation with encrypted remote readback, key recovery and independent restoration.",
+    "Limen-owned bounded Jules deadline and provider eligibility; do not bypass admission.",
+    "Semantic/reconciliation/generalization/adoption/binding/native/estate adapters and real evidence.",
+    "Published supplemental identity and page-body rights coverage."
+  ],
+  "checkout_disposition": "RETAIN"
+}

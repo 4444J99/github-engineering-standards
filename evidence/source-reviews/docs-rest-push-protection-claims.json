@@ -1,0 +1,17 @@
+{
+  "schema_version":"ges.source-claims-review.v1",
+  "source":"github/docs","commit":"56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer":"codex:source-review","reviewed_at":"2026-10-02T01:50:38Z",
+  "path":"content/code-security/concepts/secret-security/push-protection-from-the-rest-api.md",
+  "review_scope":"Full 35-line article read; permission include already reviewed separately. Endpoint links and their referenced API version remain unresolved contracts, not executed mutations. No actual response or exhaustive API coverage certificate.",
+  "claims":[
+    {"claim_id":"DOCS-PUSHREST-001","start_line":6,"end_line":9,"statement":"The article declares fpt, ghec and ghes applicability; feature declarations do not establish actual target endpoint support.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHREST-002","start_line":21,"end_line":21,"statement":"REST protection is described for supported secrets, not all sensitive values or arbitrary API content.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHREST-003","start_line":23,"end_line":23,"statement":"The Create a blob endpoint is explicitly included in the documented REST push-protection scope.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHREST-004","start_line":23,"end_line":23,"statement":"The Create or update file contents endpoint is separately included; blob behavior alone cannot certify this path.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHREST-005","start_line":25,"end_line":25,"statement":"A supported secret in requests to those endpoints is documented to produce a 409 secret-detection error; a generic conflict response alone is not proof of this specific cause.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHREST-006","start_line":29,"end_line":29,"statement":"The documented non-bypass recovery removes the secret from request content before retry; a retry without content review is not completed remediation.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHREST-007","start_line":30,"end_line":30,"statement":"The article documents a distinct Create a push protection bypass endpoint; endpoint existence does not authorize bypass or establish actor eligibility.","accepted_policy":false},
+    {"claim_id":"DOCS-PUSHREST-008","start_line":23,"end_line":30,"statement":"The three API contract links select version 2022-11-28; endpoint semantics and permissions require review for that contract and the exact deployed target rather than silent substitution of current defaults.","accepted_policy":false}
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:59:57Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-auto-removal.md",
+      "content_sha256": "09d149061d40281719f45f0fbb510b70ee2c8963afed5edd25921e76b44f88d4",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Disconnected self-hosted runner automatically removed after more than14days; ephemeral runner after more than1day. Thresholds describe connectivity, not idle-job duration or host cleanup assurance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-check-installation-success.md",
+      "content_sha256": "dd6cd8747dc885f49e0691b5e4c7a4fa06437c35aa0fc9746850ce1d61eb0284",
+      "start_line": 2,
+      "end_line": 8,
+      "statement": "Added runner/status appears in version-dependent Runners or Self-hosted runners UI; active connected application is required to accept jobs. Listing alone is not readiness, and sample connected-output include is not live evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-check-mac-linux.md",
+      "content_sha256": "e0f12e78ba443037f58765a2605fd58a5c08964c3a5899993638d9548e531c18",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Connectivity-check example invokes config.sh with check, URL and PAT argument containing an illustrative credential-shaped literal. Do not copy the literal, acquire a token or execute; CLI token argument also requires secret-handling review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-configure.md",
+      "content_sha256": "3fb5adb311001ede4a2ace51cb60a5ef7ada18a451f193f38bd03ff79d58642e",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "Configuration chooses OS/architecture, references screenshot then download/install instructions. Windows service setup needs administrator shell and recommends C:\\actions-runner for system-account access. Raster not visually reviewed, and no setup run.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-configure.md",
+      "content_sha256": "3fb5adb311001ede4a2ace51cb60a5ef7ada18a451f193f38bd03ff79d58642e",
+      "start_line": 12,
+      "end_line": 16,
+      "statement": "Setup downloads/extracts app, configures destination URL with registration token expiring1hour, optionally installs Windows service or later Linux/macOS service, and starts connection. Registration token is distinct from job/scoped tokens and no credential generated.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-connected-output.md",
+      "content_sha256": "3f45fb52468b606d8c7a91e7d56392f18aafcfddf3147ea3e092304319116dbf",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Connected to GitHub and 2019 timestamp Listening for Jobs are illustrative terminal output; not an actual runner validation receipt or current heartbeat.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-group-limit.md",
+      "content_sha256": "2e10caebad4cc2bdcf3a3eee145bd514b26ba0fec72622c05660ff74ae9b1a81",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner group maximum10,000 self-hosted runners blocks new additions at limit according to source. Not actual group inventory or exception approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-labels-runs-on.md",
+      "content_sha256": "52d5badac42629fcaa6d7d880f5d36a0287dd99c2b31e4396f5045c95caaabd4",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Default self-hosted label can be omitted by no-default-labels; recommended label array starts self-hosted and matches every label conjunctively. ARC does not support self-hosted label, so universal label prescription would break its applicability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-management-permissions-required.md",
+      "content_sha256": "5a7a2c1efc50666bcaa4b7e4348a935fc3f9f4807cfcea83f3a952541217760a",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Runner management roles vary: personal repository owner; organization owner; organization repository owner or repo admin; GHEC enterprise owner; GHES site admin. Parent platform location statements and conditional custom-role alternatives elsewhere require reconciliation, not actual authority grants.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-navigate-repo-and-org.md",
+      "content_sha256": "86ae1b32ebc7e74dc46695f5b501b3bbb70274fca9fcd126d579f9abe0f9f241",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Organization/repository Settings navigation is a UI step, not authorization or proof of runner configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-navigate-to-org.md",
+      "content_sha256": "7556207bd378e2408388b2ca2550dc826fddf46310983767fa79c3abded79f74",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Organization runner navigation opens registered organization Settings and shared runners sidebar include. Included body and observed target remain separately reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-navigate-to-repo.md",
+      "content_sha256": "10187498fe2e6e0666ebbe8af6639008c9c18aa83458e01f4b4af1c1f1bb814d",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Repository runner navigation opens registered repository Settings and an organizations sidebar reusable; actual rendered suitability and target access are not proven.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-networking-to-dotcom.md",
+      "content_sha256": "8156cba20b2b735e48817bf30735e139a974bc8df814aa72440dbb545a86cc29",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Dotcom actions require outbound runner connectivity, plus GHES instance outbound when applicable; no dotcom inbound connections required. This is directional requirement, not live network observation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-ports-protocols.md",
+      "content_sha256": "5741e0c11444ba2089ec3488084f076db6e4a57ecb9f5d9301f17ceb6e49ce3d",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner connection uses HTTPS443, with GHES also HTTP80 described; GHES HTTPS requires configured TLS. HTTP source support is not an adopted policy allowing insecure enterprise traffic.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-public-repo-access.md",
+      "content_sha256": "56dcf3f927c0f8dad67cd2d50e4ee394c447bdb0812614385d219dc76d8ea203",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Public repositories default denied group-runner use for security but settings may override; capability to override is not approval to expose runner to public fork code.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-removal-impact.md",
+      "content_sha256": "af6600b9fb98d17943cb81dadd1fd875324f0cda312b6dd9ab2673e89a96a665",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Permanent removal differs from temporary host shutdown/stopping run app, which leaves assigned runner Offline and no jobs until restarted. No stop/removal authorized or performed; future automatic disconnection removal still matters.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-remove-label-steps.md",
+      "content_sha256": "72113d91771d92f534744dedd01ccb6171e67aa49467996a04a201b1ab0efc60",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Unassigning label clicks a checkmarked assigned label via shared settings. No target label removed or access effect verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-removing-a-runner-updated.md",
+      "content_sha256": "d75dd07d55be0aea8d288d361683eb4aa5cde218dd3aa1e3ee87b68e2fdd7691",
+      "start_line": 1,
+      "end_line": 12,
+      "statement": "Accessible-host removal uses OS-specific command with URL/time-limited token, removing GitHub registration, app configuration and services when applicable. Without host access, Force remove deletes GitHub registration only; no claim remote host artifacts/services cleaned.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-reqs-docker.md",
+      "content_sha256": "1316623c095f4229611835780bb2eabb84924a822122d960691c2c276963c4e6",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Docker container actions on self-hosted require Linux and installed Docker, not a universal Docker requirement for all actions or authorization to install.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-reusing.md",
+      "content_sha256": "3093840aa90dcd02bbed3d52fb5a8b5e7c3bc2606275035b52ff1009d2356665",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "When unable to remove registration in GitHub, source suggests deleting local .runner to re-register machine without re-download. This does not prove old remote registration removed or host sanitized; destructive source fallback is not executed or authorized.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSSELFLIFECYCLE-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-security-admonition.md",
+      "content_sha256": "568547d8a9810281e3659085e602a1241e71e71c5aa7a252dbe4e1c5918d973d",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "Self-hosted security admonition wraps shared security fragment and links secure-use; actual warning content/parent rendering remain separate and no linked page implicitly reviewed.",
+      "accepted_policy": false
+    }
+  ]
+}

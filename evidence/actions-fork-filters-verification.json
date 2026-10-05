@@ -1,0 +1,53 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 63,
+  "tranche": {
+    "files": 10,
+    "claims": 16,
+    "candidates": 40
+  },
+  "findings": [
+    "First-time contributor approval has an innocuous-merged-contribution bypass caveat.",
+    "The pinned pull_request_target blocking announcement is dated November 2, 2026, not evidence of current effective enforcement.",
+    "Branch/tag filtering preserves mutually exclusive keys, ref-type defaults, joint path predicates and ordered negative/positive matches."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58207,
+      "source_artifacts": 2234
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2268,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.988,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Ten complete pinned reusable fragments read; no settings changed or workflows executed. Source claims do not certify current platform rollout, parent rendering, independent omission audit, rights or adoption."
+}

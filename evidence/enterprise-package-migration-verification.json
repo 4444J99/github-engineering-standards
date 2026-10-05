@@ -1,0 +1,47 @@
+{
+  "issue": 266,
+  "reviewed_at": "2026-10-03T06:33:24.573Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 11,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59805,
+    "claim_bearing_artifacts": 3261,
+    "tests": 324,
+    "test_seconds": 1.978,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "GHES migration lifecycle/release boundary unresolved in issue 265.",
+    "Destructive collision retry advice is source data, not deletion authority or verified recovery.",
+    "No migration, administrative changes, cleanup, package deletion or upstream command execution.",
+    "No independent semantic/published assurance, policy adoption, rights clearance or native rollout."
+  ]
+}

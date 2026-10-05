@@ -1,0 +1,62 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:13:11.185Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-DEPENDENCYSUBMISSIONSCOPE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-submission/about-dependency-submission.md",
+      "content_sha256": "a5399e8ed21a3b07a5ff4216b736502210453ca29ed8d38c3bffd78f6d40d23b",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The fragment says submitted dependencies are unavailable in organization dependency insights and adds visibility in dependency review for fpt/ghec. Its included note asserts API integration outside ghes and nothing within ghes. This categorical insights statement is stronger than the previously reviewed may-be-incomplete maintenance warning; the scope discrepancy remains unresolved, not an exhaustive inventory finding.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYSUBMISSIONSCOPE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-submission/api-premade-actions.md",
+      "content_sha256": "51f1681ccc211e584027436ba7b7d6e75a52dfd927882cbfbbb9d37542ca0bbd",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The premade-action fragment recommends adding an action to gather dependencies, convert them to the required snapshot format, and submit to the API. Convenience is not trusted implementation, complete detector coverage, approved write permission, safe build execution, or a successful submission receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYSUBMISSIONSCOPE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-submission/dependency-submission-link.md",
+      "content_sha256": "a52ee95ce5ed2f04a4312756b421ae94dba8071e48b4217c37dd8b119d4a34d8",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The link fragment describes submission from package managers/ecosystems beyond static manifest/lockfile support and resulting detector/time metadata, with a usage-guide link. Submission extensibility does not automatically discover every dependency, validate detector correctness, or prove freshness/completeness; the destination was not reviewed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYSUBMISSIONSCOPE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-submission/premade-action-table.md",
+      "content_sha256": "b8c3e1c751d2daa5fdd7d306926881efeac4a998b062aa01d8a5dd773a24b78e",
+      "start_line": 1,
+      "end_line": 55,
+      "statement": "The table lists Go, Gradle, Maven, Mill, Mix/Elixir, Scala/Sbt, and Component Detection for NuGet/others, with additional Vcpkg/Conan/Conda/Crates support claimed in a note. The Go row contains an unterminated octicon/aria-label expression and an extra cell relative to the two-column header, so maintainer attribution/rendering is unresolved rather than certified. Marketplace/action destinations were not reviewed or executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-DEPENDENCYSUBMISSIONSCOPE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/dependency-submission/premade-action-table.md",
+      "content_sha256": "b8c3e1c751d2daa5fdd7d306926881efeac4a998b062aa01d8a5dd773a24b78e",
+      "start_line": 1,
+      "end_line": 55,
+      "statement": "The full Go workflow example runs on main pushes using ubuntu-latest, contents-write permission, empty GOPROXY/GOPRIVATE placeholders, checkout/setup-go includes, Go >=1.18, and an unpinned go-dependency-submission v2 tag. It targets illustrative module/build paths; omission of the target is described as including all module build targets and potentially tests/tooling. Those scope choices and mutable references do not prove estate coverage or authorize execution/write access; no example workflow was installed or run.",
+      "accepted_policy": false
+    }
+  ]
+}

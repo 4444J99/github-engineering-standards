@@ -1,0 +1,106 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T10:16:59.442Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "Email-header reference declares FPT/GHEC/GHES and describes client filtering/forwarding capability, not authorization to forward private notifications or install mail rules.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "Expected From is notifications@github.com for FPT, github.com or subdomain.ghe.com for GHEC and administrator-configured no-reply for GHES. Header value alone is not authenticated sender evidence; tenant/platform identity must remain explicit.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "X-GitHub-Recipient and Recipient-Address identify intended recipient when mail appears misdirected; email setup may deliver another user's notifications. Receipt by inbox owner does not grant underlying access/disclosure authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "To identifies thread reply endpoint; replying adds conversation comment. Reply is external write needing exact thread/recipient and authority checks, not a passive acknowledgment or read-only operation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "Cc includes subscriber and reason address with product-specific suffix. Reasons include assign/author/ci_activity/comment/manual/mention/push/review_requested/security_alert/state_change/subscribed/team_mention/your_activity; email underscore vocabulary differs inbox hyphen grammar.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "CI-activity reason specifically describes triggered workflow completion, not success or required-check acceptance. Security/review/state reasons are event routing signals, not current evaluated control outcomes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "List-Id prose format OWNER/REPOSITORY <REPOSITORY.OWNER> differs example's product-url suffix; preserve ambiguity and actual parser fixtures instead of inventing exact normalized identity from prose.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "Severity fragment describes severity for Dependabot alerts and low/moderate/high/critical levels; header severity is source classification, not risk acceptance, actual remediation or complete vulnerability inventory.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-NOTIFICATIONHEADERS-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/subscriptions-and-notifications/reference/email-notification-headers.md",
+      "content_sha256": "96a4b12ebdad5d3e1e71a557f00e29c22fa49300c57a6c60e121e0dba8c9e357",
+      "start_line": 1,
+      "end_line": 23,
+      "statement": "No real personal mail inspected/forwarded, reply sent or filter installed. Actual delivery/authentication/privacy and current target coverage remain independently verified work.",
+      "accepted_policy": false
+    }
+  ]
+}

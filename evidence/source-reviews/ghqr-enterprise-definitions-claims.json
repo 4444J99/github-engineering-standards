@@ -1,0 +1,872 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-01T23:08:03Z",
+  "review_scope": "Four complete pinned enterprise recommendation YAML artifacts",
+  "artifact_count": 4,
+  "definition_count": 16,
+  "candidate_count": 0,
+  "atomic_claim_count": 22,
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "claims": [
+    {
+      "claim_id": "GHQR-ENT-001",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/audit_log.yaml",
+      "source_definition_id": "ent-log-001",
+      "structured_requirement_id": "SRC-GHQR-ent-log-001",
+      "start_line": 1,
+      "end_line": 10,
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "definition_sha256": "aafc14550b03728ee243061f5d9e50544f9d36840598402fcf746fbdd1c15628",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/audit_log.yaml#L1-L10",
+      "statement": "Promptly investigate enterprise audit events that may indicate unauthorized destructive or identity activity.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Audit API and settings authority",
+        "Approved log destination",
+        "Verified event scope and freshness"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-002",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/audit_log.yaml",
+      "source_definition_id": "ent-log-001",
+      "structured_requirement_id": "SRC-GHQR-ent-log-001",
+      "start_line": 1,
+      "end_line": 10,
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "definition_sha256": "aafc14550b03728ee243061f5d9e50544f9d36840598402fcf746fbdd1c15628",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/audit_log.yaml#L1-L10",
+      "statement": "Apply authorized incident remediation when investigation confirms compromise.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-007"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Audit API and settings authority",
+        "Approved log destination",
+        "Verified event scope and freshness"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-003",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/audit_log.yaml",
+      "source_definition_id": "ent-log-002",
+      "structured_requirement_id": "SRC-GHQR-ent-log-002",
+      "start_line": 12,
+      "end_line": 21,
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "definition_sha256": "4d23327e72e0bf1e20cc38fd97a87f1e400d8d89bb595deffdd82df80fed94d9",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/audit_log.yaml#L12-L21",
+      "statement": "Manually verify enterprise audit streaming configuration and its approved destination.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "EXPLICIT_MANUAL_VERIFICATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Audit API and settings authority",
+        "Approved log destination",
+        "Verified event scope and freshness"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-004",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/audit_log.yaml",
+      "source_definition_id": "ent-log-002",
+      "structured_requirement_id": "SRC-GHQR-ent-log-002",
+      "start_line": 12,
+      "end_line": 21,
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "definition_sha256": "4d23327e72e0bf1e20cc38fd97a87f1e400d8d89bb595deffdd82df80fed94d9",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/audit_log.yaml#L12-L21",
+      "statement": "Verify that the destination actually receives current events; configured streaming alone does not establish delivery.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "EXPLICIT_MANUAL_VERIFICATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-GOV-008"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Audit API and settings authority",
+        "Approved log destination",
+        "Verified event scope and freshness"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-005",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/budgets.yaml",
+      "source_definition_id": "ent-budget-001",
+      "structured_requirement_id": "SRC-GHQR-ent-budget-001",
+      "start_line": 1,
+      "end_line": 10,
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "definition_sha256": "e247eac0a3f8db4602e9f8f1a1d1acdec9aacfbf8cad0548bf8bef1c6a9d43f6",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/budgets.yaml#L1-L10",
+      "statement": "Establish enterprise spending governance through appropriate budget configuration.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise billing platform support",
+        "Billing manager authority",
+        "Budget policy and recipient decisions",
+        "Disruption review before hard caps"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-006",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/budgets.yaml",
+      "source_definition_id": "ent-budget-001",
+      "structured_requirement_id": "SRC-GHQR-ent-budget-001",
+      "start_line": 1,
+      "end_line": 10,
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "definition_sha256": "e247eac0a3f8db4602e9f8f1a1d1acdec9aacfbf8cad0548bf8bef1c6a9d43f6",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/budgets.yaml#L1-L10",
+      "statement": "Consider organization or cost-center budgets where delegated spending requires them.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise billing platform support",
+        "Billing manager authority",
+        "Budget policy and recipient decisions",
+        "Disruption review before hard caps"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-007",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/budgets.yaml",
+      "source_definition_id": "ent-budget-002",
+      "structured_requirement_id": "SRC-GHQR-ent-budget-002",
+      "start_line": 12,
+      "end_line": 21,
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "definition_sha256": "6488be75d2f7816ef1e55c851039520d6aaa689ac54d1fb2cc0c4579f32fcc1c",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/budgets.yaml#L12-L21",
+      "statement": "Configure budget-threshold notifications for accountable billing recipients.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise billing platform support",
+        "Billing manager authority",
+        "Budget policy and recipient decisions",
+        "Disruption review before hard caps"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-008",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/budgets.yaml",
+      "source_definition_id": "ent-budget-003",
+      "structured_requirement_id": "SRC-GHQR-ent-budget-003",
+      "start_line": 23,
+      "end_line": 32,
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "definition_sha256": "2b1d169a4e9bf3ffa050237d48295d93e92b57826316025e5a6455d23306676a",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/budgets.yaml#L23-L32",
+      "statement": "Use supported usage-prevention controls where an approved policy requires hard cost limits.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_recommendation_strength": "CONDITIONAL_HARD_CAP_OR_ADVISORY_POLICY",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise billing platform support",
+        "Billing manager authority",
+        "Budget policy and recipient decisions",
+        "Disruption review before hard caps"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-009",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/budgets.yaml",
+      "source_definition_id": "ent-budget-003",
+      "structured_requirement_id": "SRC-GHQR-ent-budget-003",
+      "start_line": 23,
+      "end_line": 32,
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "definition_sha256": "2b1d169a4e9bf3ffa050237d48295d93e92b57826316025e5a6455d23306676a",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/budgets.yaml#L23-L32",
+      "statement": "Ensure advisory budgets expose overages through alerting.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_recommendation_strength": "CONDITIONAL_HARD_CAP_OR_ADVISORY_POLICY",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise billing platform support",
+        "Billing manager authority",
+        "Budget policy and recipient decisions",
+        "Disruption review before hard caps"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-010",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/ghas.yaml",
+      "source_definition_id": "ent-ghas-001",
+      "structured_requirement_id": "SRC-GHQR-ent-ghas-001",
+      "start_line": 1,
+      "end_line": 10,
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "definition_sha256": "bb14c2eece9cdb20f08ad89c734ca0592e2c77692c61e46ed50ad8469aef5233",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/ghas.yaml#L1-L10",
+      "statement": "Review licensed enterprise security feature defaults and the approval needed for enterprise-wide activation.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "IMPERATIVE_SOURCE_RECOMMENDATION_REQUIRES_FEATURE_REVIEW",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise product and feature support",
+        "Applicable licensing and cost approval",
+        "Enterprise administrative authority",
+        "Verified effective inheritance and repository coverage"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-011",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/ghas.yaml",
+      "source_definition_id": "ent-ghas-002",
+      "structured_requirement_id": "SRC-GHQR-ent-ghas-002",
+      "start_line": 12,
+      "end_line": 21,
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "definition_sha256": "7ab47a1d69f2d2865096124d8d659df5199752dbb1082c4cef44e5f6097fedf5",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/ghas.yaml#L12-L21",
+      "statement": "Review enterprise defaults for secret detection and verify effective repository coverage.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "IMPERATIVE_SOURCE_RECOMMENDATION_REQUIRES_FEATURE_REVIEW",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Enterprise product and feature support",
+        "Applicable licensing and cost approval",
+        "Enterprise administrative authority",
+        "Verified effective inheritance and repository coverage"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-012",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/ghas.yaml",
+      "source_definition_id": "ent-ghas-003",
+      "structured_requirement_id": "SRC-GHQR-ent-ghas-003",
+      "start_line": 23,
+      "end_line": 32,
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "definition_sha256": "2eed6755bf0ea561bbcbc669c4ecd046b3049bf723c797e71923323a17435b7d",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/ghas.yaml#L23-L32",
+      "statement": "Review secret push-protection defaults and validate effective blocking at intended repositories.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "IMPERATIVE_SOURCE_RECOMMENDATION_REQUIRES_FEATURE_REVIEW",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise product and feature support",
+        "Applicable licensing and cost approval",
+        "Enterprise administrative authority",
+        "Verified effective inheritance and repository coverage"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-013",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/ghas.yaml",
+      "source_definition_id": "ent-ghas-004",
+      "structured_requirement_id": "SRC-GHQR-ent-ghas-004",
+      "start_line": 34,
+      "end_line": 43,
+      "definition_start_line": 34,
+      "definition_end_line": 43,
+      "definition_sha256": "dc047434871ddf19ea06146d617483b022ac0d52d5e03ff65883b6867c383009",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/ghas.yaml#L34-L43",
+      "statement": "Review enterprise dependency-vulnerability notification defaults and repository inheritance.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "IMPERATIVE_SOURCE_RECOMMENDATION_REQUIRES_FEATURE_REVIEW",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Enterprise product and feature support",
+        "Applicable licensing and cost approval",
+        "Enterprise administrative authority",
+        "Verified effective inheritance and repository coverage"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-014",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/ghas.yaml",
+      "source_definition_id": "ent-ghas-005",
+      "structured_requirement_id": "SRC-GHQR-ent-ghas-005",
+      "start_line": 45,
+      "end_line": 54,
+      "definition_start_line": 45,
+      "definition_end_line": 54,
+      "definition_sha256": "51fee4938fcab75096c61a8d5ee1f541f44894c04ed241ca3c1166ea13ec2d6e",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/ghas.yaml#L45-L54",
+      "statement": "Review enterprise automated security-update proposals and confirm applicable repository operation.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_recommendation_strength": "IMPERATIVE_SOURCE_RECOMMENDATION_REQUIRES_FEATURE_REVIEW",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-DEP-001"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Enterprise product and feature support",
+        "Applicable licensing and cost approval",
+        "Enterprise administrative authority",
+        "Verified effective inheritance and repository coverage"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-015",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/ghas.yaml",
+      "source_definition_id": "ent-ghas-006",
+      "structured_requirement_id": "SRC-GHQR-ent-ghas-006",
+      "start_line": 56,
+      "end_line": 65,
+      "definition_start_line": 56,
+      "definition_end_line": 65,
+      "definition_sha256": "e9167efee0781a19376d3b7be907461f20788d5c7ed525ca2d61cbdf0bf0e654",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/ghas.yaml#L56-L65",
+      "statement": "Review dependency-graph availability and enterprise defaults needed for applicable dependency analysis.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "medium",
+      "source_enabled": true,
+      "source_recommendation_strength": "IMPERATIVE_SOURCE_RECOMMENDATION_REQUIRES_FEATURE_REVIEW",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-002"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Enterprise product and feature support",
+        "Applicable licensing and cost approval",
+        "Enterprise administrative authority",
+        "Verified effective inheritance and repository coverage"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-016",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/ghas.yaml",
+      "source_definition_id": "ent-ghas-007",
+      "structured_requirement_id": "SRC-GHQR-ent-ghas-007",
+      "start_line": 67,
+      "end_line": 76,
+      "definition_start_line": 67,
+      "definition_end_line": 76,
+      "definition_sha256": "3f93ecf4835083ff0b628e8e946e09db1f01648e4d5e10a07e9db72073ab915f",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/ghas.yaml#L67-L76",
+      "statement": "Review generic-secret pattern detection for custom credentials against false-positive costs and applicable feature support.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "low",
+      "source_enabled": true,
+      "source_recommendation_strength": "IMPERATIVE_SOURCE_RECOMMENDATION_REQUIRES_FEATURE_REVIEW",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [],
+      "mapping_status": "UNMAPPED_REQUIRES_CANONICAL_CONTROL_AND_BINDING",
+      "prerequisites": [
+        "Enterprise product and feature support",
+        "Applicable licensing and cost approval",
+        "Enterprise administrative authority",
+        "Verified effective inheritance and repository coverage"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-017",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/security_alerts.yaml",
+      "source_definition_id": "ent-alert-001",
+      "structured_requirement_id": "SRC-GHQR-ent-alert-001",
+      "start_line": 1,
+      "end_line": 10,
+      "definition_start_line": 1,
+      "definition_end_line": 10,
+      "definition_sha256": "3c4b58430117ab611b63ecf2e3e7dade7facd102de92466fcdea3d631624617e",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/security_alerts.yaml#L1-L10",
+      "statement": "Prioritize prompt remediation of critical dependency findings across the affected enterprise repositories.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Complete accessible enterprise repository coverage",
+        "Scoped current alert evidence",
+        "Authorized incident and credential operations"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-018",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/security_alerts.yaml",
+      "source_definition_id": "ent-alert-002",
+      "structured_requirement_id": "SRC-GHQR-ent-alert-002",
+      "start_line": 12,
+      "end_line": 21,
+      "definition_start_line": 12,
+      "definition_end_line": 21,
+      "definition_sha256": "24d4bfa13466419438ab5ba8f38232ef0dbc96fe21a9ed58242ffcaad33c5f93",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/security_alerts.yaml#L12-L21",
+      "statement": "Prioritize remediation of high-severity dependency findings across affected enterprise repositories.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Complete accessible enterprise repository coverage",
+        "Scoped current alert evidence",
+        "Authorized incident and credential operations"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-019",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/security_alerts.yaml",
+      "source_definition_id": "ent-alert-003",
+      "structured_requirement_id": "SRC-GHQR-ent-alert-003",
+      "start_line": 23,
+      "end_line": 32,
+      "definition_start_line": 23,
+      "definition_end_line": 32,
+      "definition_sha256": "d853531a0449ef14ace45bb7841778969ec1db18e880a5ceb18165e57b739fcd",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/security_alerts.yaml#L23-L32",
+      "statement": "Triage open static-analysis findings and address confirmed security risks across affected repositories.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "high",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Complete accessible enterprise repository coverage",
+        "Scoped current alert evidence",
+        "Authorized incident and credential operations"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-020",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/security_alerts.yaml",
+      "source_definition_id": "ent-alert-004",
+      "structured_requirement_id": "SRC-GHQR-ent-alert-004",
+      "start_line": 34,
+      "end_line": 43,
+      "definition_start_line": 34,
+      "definition_end_line": 43,
+      "definition_sha256": "d3552ebc09b12d9a599db30e6b60ff60307e76a94e347b95652eed6d8d426e23",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/security_alerts.yaml#L34-L43",
+      "statement": "Revoke exposed credentials through authorized incident response.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Complete accessible enterprise repository coverage",
+        "Scoped current alert evidence",
+        "Authorized incident and credential operations"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-021",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/security_alerts.yaml",
+      "source_definition_id": "ent-alert-004",
+      "structured_requirement_id": "SRC-GHQR-ent-alert-004",
+      "start_line": 34,
+      "end_line": 43,
+      "definition_start_line": 34,
+      "definition_end_line": 43,
+      "definition_sha256": "d3552ebc09b12d9a599db30e6b60ff60307e76a94e347b95652eed6d8d426e23",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/security_alerts.yaml#L34-L43",
+      "statement": "Rotate affected credentials and dependent consumers through authorized recovery.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-004"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Complete accessible enterprise repository coverage",
+        "Scoped current alert evidence",
+        "Authorized incident and credential operations"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    },
+    {
+      "claim_id": "GHQR-ENT-022",
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/enterprise/security_alerts.yaml",
+      "source_definition_id": "ent-alert-004",
+      "structured_requirement_id": "SRC-GHQR-ent-alert-004",
+      "start_line": 34,
+      "end_line": 43,
+      "definition_start_line": 34,
+      "definition_end_line": 43,
+      "definition_sha256": "d3552ebc09b12d9a599db30e6b60ff60307e76a94e347b95652eed6d8d426e23",
+      "definition_digest_method": "sha256 of complete definition lines with source LF and terminal newline",
+      "source_reference": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/enterprise/security_alerts.yaml#L34-L43",
+      "statement": "Close secret-exposure findings only after remediation is confirmed.",
+      "source_authority": "COMMUNITY_SCANNER_RECOMMENDATION",
+      "source_severity": "critical",
+      "source_enabled": true,
+      "source_recommendation_strength": "SOURCE_RECOMMENDATION",
+      "adopted_obligation": null,
+      "accepted_policy": false,
+      "proposed_control_ids": [
+        "GES-SEC-006"
+      ],
+      "mapping_status": "PROPOSED_INTENT_ALIGNMENT_NOT_ENTERPRISE_PREDICATE_EQUIVALENCE",
+      "prerequisites": [
+        "Complete accessible enterprise repository coverage",
+        "Scoped current alert evidence",
+        "Authorized incident and credential operations"
+      ],
+      "limitations": [
+        "Definition review does not validate collector/scanner behavior",
+        "Source severity is not adopted obligation",
+        "Exact target scope and effective enforcement remain unverified"
+      ]
+    }
+  ],
+  "conflicts": [
+    {
+      "definition_ids": [
+        "ent-log-001"
+      ],
+      "issue": "Repository deletion, member removal and token revocation can be authorized lifecycle or security actions. Event names are investigation triggers, not proof of compromise.",
+      "disposition": "CONTEXT_AND_ACTOR_REVIEW_REQUIRED"
+    },
+    {
+      "definition_ids": [
+        "ent-log-002"
+      ],
+      "issue": "Source mentions 180-day retention; actual retention depends on product, event type and platform version and was not verified here. Missing streaming verification cannot become PASS.",
+      "disposition": "UNVERIFIED_PLATFORM_AND_MANUAL_EVIDENCE"
+    },
+    {
+      "definition_ids": [
+        "ent-budget-001",
+        "ent-budget-003"
+      ],
+      "issue": "Budget presence does not guarantee a hard spending limit. Supported usage prevention may disrupt delivery; advisory vs enforced cost policy requires authority and review.",
+      "disposition": "UNRESOLVED_FINOPS_POLICY"
+    },
+    {
+      "definition_ids": [
+        "ent-ghas-001"
+      ],
+      "issue": "Source groups security capabilities under a GHAS license and implies uniform enterprise availability. Feature packaging, repository visibility and licensing must be validated before purchasing or activation.",
+      "disposition": "UNVERIFIED_FEATURE_AND_LICENSE_SCOPE"
+    },
+    {
+      "definition_ids": [
+        "ent-ghas-002",
+        "ent-ghas-003",
+        "ent-ghas-004",
+        "ent-ghas-005",
+        "ent-ghas-006",
+        "ent-ghas-007"
+      ],
+      "issue": "Enterprise defaults do not establish actual settings or enforcement for every organization and repository; exceptions, overrides and existing targets require evidence.",
+      "disposition": "UNVERIFIED_INHERITANCE_AND_TARGET_COVERAGE"
+    },
+    {
+      "definition_ids": [
+        "ent-alert-001",
+        "ent-alert-002",
+        "ent-alert-003",
+        "ent-alert-004"
+      ],
+      "issue": "Missing permissions, unknown repositories and truncated alert pages must remain visible rather than count as a clean enterprise.",
+      "disposition": "COMPLETE_SCOPE_EVIDENCE_REQUIRED"
+    },
+    {
+      "definition_ids": [
+        "ent-alert-004"
+      ],
+      "issue": "Credential revocation and rotation are consequential writes and require incident authority, consumer recovery and verified completion.",
+      "disposition": "AUTHORITY_REQUIRED_BEFORE_REMEDIATION"
+    }
+  ],
+  "unresolved": [
+    "Enterprise budget, license, push protection and generic-secret objectives have no exact canonical binding and remain unmapped",
+    "Proposed generic intent alignment does not supply enterprise-native implementation",
+    "Product-version and plan capability verification",
+    "Independent source-to-control and omission audits",
+    "Rights scope and redistribution review",
+    "Authorized billing, native enforcement and credential-change approvals"
+  ]
+}

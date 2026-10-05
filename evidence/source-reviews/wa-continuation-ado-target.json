@@ -1,0 +1,1264 @@
+[
+  {
+    "artifact_id": "ff58001b2291f12477b8f5c3",
+    "source": "github/github-well-architected",
+    "path": "content/library/scenarios/migrations/azure-devops-migration-guide/03-target-environment.md",
+    "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+    "content_sha256": "95655db51e6118cb422dd9541cc48de7fd5a49f0aaf54175e18afa26543c594e",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-02T01:31:26Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Read all319lines of pinned target setup, including tracker repetitions, identity models, recovery, conditional Boards/Pipelines integration, team controls, audit/filtering, policy targeting, templates, packages and knowledge transfer. Captured33 independently paraphrased claims and208 individually dispositioned candidates. No upstream instructions executed, identity/config changes, template adoption, linked-page, native validation or rights certification.",
+    "claim_mappings": [
+      {
+        "candidate_id": "121c64402d15b6bbe859a433",
+        "text_sha256": "cb3f91d54eee30e53e35b2b99905f70f169ed549fd78909d3dac2defc9ed8d3b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 1-1 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "ca5f1a5c7711c07b7f9ddc50",
+        "text_sha256": "9bf13ccea9466993f756fc5c0c08d0927bb8b713544360e86c8d120d4daa06b3",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 4-8 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "e2f91a98c26b31054e79e66d",
+        "text_sha256": "0f103e117faf87482513cd13076c6cdfe2e6d2d3576efed807701a8d9a12889b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-001: Prepare the authorized target environment before migration; configuration alone does not establish reliable operation."
+      },
+      {
+        "candidate_id": "6696adfe73aa7c87ff43167c",
+        "text_sha256": "107e1b3e58db53d926f57695a451602f96f8b2bd950386e0a367ce375e9f71f2",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 14-14 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "f9e37f3af7228ba671c43add",
+        "text_sha256": "81966bbdce03c8154e86a32d4723eca52ea82b00752a4ce482b0ad3dda8cb68d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 15-15 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "6052f42a84f2c163d3b70ba8",
+        "text_sha256": "28e677447d911ee5edbefcc6f3141d3c2e50751388a663367d96e8404eef87c7",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 16-16 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "5f8a53edae8a579668dbcf5c",
+        "text_sha256": "5c8704b644baab51fea9612dcc27bbe29f0ab9d251d6c729304135db302d5865",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 17-17 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "f3afed2bd41e0744eb99e019",
+        "text_sha256": "5954b4c1281c9b6b9319d15dddb5af4dcd30a5e0dae190cf630b81dad98149d1",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 18-18 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "1b3f2022e499e860bb7d9750",
+        "text_sha256": "339b5ae799538b17aad621effee9e708b8ad575652d167d2ca6a7d42f423b04e",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 19-19 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "39d6cc681d48e9f9d966bb8e",
+        "text_sha256": "2d9d0fce023dbf651bf24e455c24ac4b018844cf73fb6e34e2b7c4401961b91b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 20-20 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "0f54b909b289d53bfbb58f48",
+        "text_sha256": "b3e3c42cba715ed362345c48e5204bea97b3090242ccad5c20be3e914050d0a4",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 24-24 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "f624f7192ae8e3849a61c173",
+        "text_sha256": "efb02bd0bd43a25d02229388a6a1872ab20b2680d813bee2d8440c9860b8f09a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "f0552856b070888eca4842fe",
+        "text_sha256": "6ee292f08b1ac3b5952303519eec9aa4b3b3f57ccabfc2170660172653ff667f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "bba9ab617f717a8901cf7c8d",
+        "text_sha256": "396efbcdaa1ca76a18bdc649c1284b573eaa753631265efb0ff6aa9a18ccea09",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "71aae0f364c5897e9cf52b90",
+        "text_sha256": "b28f69b230e2e38ef58997e767385b4231a6e610b1f19547c77dbfe02e8d1452",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "cc98e1926a918af9cf145fde",
+        "text_sha256": "e380d29e108c4b1867eab2ea08f7cea552066c4d380dbf589b51b8e700e3ab2c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "3de7c5d43da8f8939ff87215",
+        "text_sha256": "d190552e91150efe25f2c9fcd6820819ec0bd34cc0db5522951b12772fc1df1e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "13752c00e8a9fd60892bdfeb",
+        "text_sha256": "d2e00337873bc807acaedeadcd219f46f3b2d0b2d3923ccb3fc63a2526df410f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "5273bb2ba71b15f63e567085",
+        "text_sha256": "16971f36650f54050b7cde203090e8761b7ace84148d92a3715651e37ae0bf51",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "1900a01b5af0e4a7b6156c3e",
+        "text_sha256": "c56866ef1da71434a21696528bf4e856fde252499bc02420996eced2b13294a0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-002: Track actual enterprise, identity, integrations, ownership, security/compliance, templates/packages and documentation readiness separately."
+      },
+      {
+        "candidate_id": "5d64c21ca24ad9088b67e604",
+        "text_sha256": "22b51474378b3099c6294de7c321a14ccb861711b294bbddea95ec0f57209fd0",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 38-38 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "9b7b05db6dafef7181a0f2b3",
+        "text_sha256": "6e8aa964fdc3cd7dd8f8e8dd7845fee97dfb6bdab2bddfe89188c5aac37e2dea",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 40-40 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "02d3cdec19e391e0d001191c",
+        "text_sha256": "70695377572ddb9cc04454b73d5eb404ad24a10b49878ff3156d6a31051e5589",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 41-41 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "468f9b4f9956ddf3453281d6",
+        "text_sha256": "7fceb1ad46bf7bf770cdc8637aa031af25757f6564b26bc1003cba0eb953c757",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 42-42 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "9f7aedd5cb781a4f8793da2d",
+        "text_sha256": "c5512846edfaf0b0207ce7dc18dd15504f7eca126135fd532d7d71a7b4e22c7b",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 43-43 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "43fd958ec154d2ab1383b097",
+        "text_sha256": "f890dbd294b7ae9558ec99ec8a33ca4633b9d9e3155d267d118aa42eae1b86ab",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 44-44 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "844b08e32dffd393c449b07f",
+        "text_sha256": "e69cc4bd61447b8b76e729f90334119a9d4286b83fcff94831ac94f6039ebcec",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 45-45 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "97b962625d130a59e0b87941",
+        "text_sha256": "6962be431b373d2a2d2eea89ca66adb1c7065da2e73a0d6988f87129ba23b2fc",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 46-46 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "6acbe1279801959c0b5ab1ce",
+        "text_sha256": "3068c8644afa036399793d912b750843b6c1a53af451c09fb8956840e19d3652",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 47-47 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "47bd64479fba71a032fb8fac",
+        "text_sha256": "d69035a4b2a9b4d78516775dc51fdaa9e2e12c121f11476ab59f55c6f165c62a",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 48-48 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "c1a78c2e9de06a9a0c5a7011",
+        "text_sha256": "1cda4b1282b510d485ac3e54b010fa2473d47e2eec5bb98807a290915d62b13d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 49-49 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "3507151ca245cf536b904bc9",
+        "text_sha256": "b9f28c8f22dd3f315e2b0dcd75301c8d4b45eb2205751e3b139c3e84e202e549",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 50-50 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "2e49a7185cdd6576af4a16c9",
+        "text_sha256": "f0efedb008500d28c3354610c4f545b9644dc4458bbb7f114b1aa061e36fa285",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 51-51 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "79fb3890a4ffd0aa8a498e64",
+        "text_sha256": "f16085aaf0e49e5efb485428bad4945f4f6c953d61c06b08f7de3869835ce69f",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 52-52 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "966663f1ecf2073cafbbf106",
+        "text_sha256": "7d3c401f6947b660849457ade2d32b1499e3aa1ef20b278d7c9d1444a1f24778",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 58-58 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "0e5b9add2fc2171a0b0adaaa",
+        "text_sha256": "43a26addb7c0ebadccc243de53fcf6ffafe037d1ec4da6ced7ef0f9c6ae296bc",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "d0798c359dd11969bf44c9e8",
+        "text_sha256": "8a8813944f93b760e687023aacf6e88811ae4385b12e9d1fd356bab2607c591c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "dcc6b0b638e7e1a08f91a20a",
+        "text_sha256": "7717c35e16c36b5b3a498b915aff9962b05b0dd4d9b54400e393490e39041889",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "f7c75bc819a786ff6d7d7c04",
+        "text_sha256": "9ef906aa418b31a7a9b7ddb765a1b64ad45aac30fe1127257c944538bb1bfab1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "715fd827330fe555f2ba81cd",
+        "text_sha256": "9c664df490277894185a775b38f67c5c6a9232c61d3687ee942c38627ace32a6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "191f18d071a93b21a7145d57",
+        "text_sha256": "b4f49ce1b2d271397ab8408e7c70403cb93fe89a5f69408161044caca26468d8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "e28cbc75e1a0512f82ab901f",
+        "text_sha256": "f73760963f8d4ab2dffd33634fe687a3ddd83715ca66fed6333cea5341d2e238",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "aae22fdfbb1fb06362785482",
+        "text_sha256": "1a95f0020d35d009a43ccd4999dbd18e001b73f3332eed2a5926cac13dd3e259",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "04421ef1dddd6cd102a6854a",
+        "text_sha256": "19048dd64e055838ffb300b6391df86d629313f39937224dd282fcdad0850967",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "01799edc46c2e1faac684628",
+        "text_sha256": "80e63ac0fd136e81ea1d5d82701de24c7aaa69231531bfdc512af44f8f47711d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "9dc5babb86754d1731059ea2",
+        "text_sha256": "e4061d5f5ae4c8e41e9863981020f683442642508b1dd4dc0810b90cd08418c9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-003: Define reviewed enterprise-wide policy, audit and security baselines including repository creation and access authority."
+      },
+      {
+        "candidate_id": "9fa35cedaf209f9a25c8a89a",
+        "text_sha256": "a10dd4aa0276a8556105f1c8ac74e5baca1c0c6591f58e244de1193b6dba1eab",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "f54122079f977014a793f290",
+        "text_sha256": "edb10a6d8d503960f71708645573f79e407a486412a8dbe9efbe9d4957fe07c7",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "419b1360cbceb3a927b9b085",
+        "text_sha256": "a7dae4690330fad3c5c0134f705f775bdab76b6ab56b842abf72108a0ee95f4e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "543ad72a890f50e0cace181a",
+        "text_sha256": "f5aaf5e2f81e58db9bdb7903131748331f15661e8f7eaa84fb8ef4ee79b17fc0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "7a1c52a3939b40a33899832e",
+        "text_sha256": "805223535a0f84f6671301469851e9f6ddf237a7f5bd88955c857918adff39c6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "c696ceb433f0867cb355fd0f",
+        "text_sha256": "8447b81ac878330b5acc040c62613a099cd1c90b7fd4749648f5c7b6a14dd4ad",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "da89519c401f7fb8229538a3",
+        "text_sha256": "a5b31abd935a447876535deac98747ec866aaf5082a8b1267564ea1aaccb769f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "b0fdf36f0617200fc74951c4",
+        "text_sha256": "fec6f0c48e9526a773a41f9b45c53ff2d4f873831cc8fdfa53212a8bfa496cd8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "9992b0cf03759a98c19a4727",
+        "text_sha256": "8dd41048c886e16059ea22446c3754fb949790bd568028601b4a396c151756d2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "0d7327fd179354f639a7b544",
+        "text_sha256": "2bee868e36e7bc632ef0033c40475dfaf4b47842e8d69119ee13f991cfad6f58",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-004: Choose standard personal-account SAML or managed identity deliberately; the source states data-residency Cloud requires managed users."
+      },
+      {
+        "candidate_id": "37a7144581461324f3f2af21",
+        "text_sha256": "79912f93827528ec93815b88fb26565f46b0caa7131797dfaa125e6a99941b52",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-005: Configure supported identity-provider provisioning and group/team synchronization."
+      },
+      {
+        "candidate_id": "5d99c60d110d75d4e6a98df3",
+        "text_sha256": "30c88aea31987cffdf75c517d905eb6a7f785df5b0641906e66d9f57bb3a63cb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-005: Configure supported identity-provider provisioning and group/team synchronization."
+      },
+      {
+        "candidate_id": "99e0bc99c2b93f765b8e02c5",
+        "text_sha256": "8625e5706ef988cc3647d673a27010fa98937915979deba41d78fdac6c22139d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-005: Configure supported identity-provider provisioning and group/team synchronization."
+      },
+      {
+        "candidate_id": "48d23a02778d9457a9a34ebf",
+        "text_sha256": "be5f4f9086630a619983d229b271c07bb53538cb2b37fa772dd6e92fd8ec94a4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-005: Configure supported identity-provider provisioning and group/team synchronization."
+      },
+      {
+        "candidate_id": "fbb293522d88502e21e347e1",
+        "text_sha256": "d3b173163238836e19828420da64cfbe376c520804acd2b7f58cff26f6a7c398",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-006: Establish multifactor, session-management and access-review requirements."
+      },
+      {
+        "candidate_id": "a97d5e54a45284dbbcda44bb",
+        "text_sha256": "31cb747e24fd09d3c62dc19cc61191cf55dc306889657627bf49a02f57a7f2c5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-006: Establish multifactor, session-management and access-review requirements."
+      },
+      {
+        "candidate_id": "c50bb36338aaa69066bdd69a",
+        "text_sha256": "a33cc13d903654213b15b05a11a763b3db71e8280af5f561164ac50e9dae29c2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-006: Establish multifactor, session-management and access-review requirements."
+      },
+      {
+        "candidate_id": "93c731ee2a54541f85835337",
+        "text_sha256": "71d153bd656c9c0f64b1a302d348d1bbb33cdd515fc2b3eee97c96081ab1ae76",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-006: Establish multifactor, session-management and access-review requirements."
+      },
+      {
+        "candidate_id": "cacbbeca25f3a452d1f96027",
+        "text_sha256": "48d7c8335140125924c129162792b66570951d2a002285939db013541cb510f4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-007: Prepare controlled identity-recovery and provider-outage procedures without storing recovery credentials in review evidence."
+      },
+      {
+        "candidate_id": "7066711984976b20d58e0cee",
+        "text_sha256": "ddafb345c44f32568ae262b9acff3766c63729fc15ef60e25aaac5e004c1584d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-007: Prepare controlled identity-recovery and provider-outage procedures without storing recovery credentials in review evidence."
+      },
+      {
+        "candidate_id": "16ee5430df97733cb8e58ac3",
+        "text_sha256": "207e08f587f62802168d16d6ca4d0d356aa113118f58eaf7958a95aa7ff12dc7",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-007: Prepare controlled identity-recovery and provider-outage procedures without storing recovery credentials in review evidence."
+      },
+      {
+        "candidate_id": "6f4ad96e107d87972e2e1cec",
+        "text_sha256": "5e78c363bf7d32d87621b674946bd94da4e668e5e79c31a8aff1544ef2e465a2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-008: Monitor authentication, provisioning, identity integration health and relevant API consumption."
+      },
+      {
+        "candidate_id": "eb87dd66ef2fd52f309c4306",
+        "text_sha256": "41223774abdbb17be884ca0fee4b594d57adb5e8e76b26ce12d28cf875bd6536",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-008: Monitor authentication, provisioning, identity integration health and relevant API consumption."
+      },
+      {
+        "candidate_id": "0be95c537822238803ebd5c2",
+        "text_sha256": "59643f2ea2d03e1c04e8cc9fdbd8ff08a03ce875c1114a1b63f16aa65476222b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-008: Monitor authentication, provisioning, identity integration health and relevant API consumption."
+      },
+      {
+        "candidate_id": "012776e611e8e521e3d1b067",
+        "text_sha256": "31bebe1fb396c7da109e36972b5eb4d453752356b052a4bbf2c9ae534bbfc261",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-008: Monitor authentication, provisioning, identity integration health and relevant API consumption."
+      },
+      {
+        "candidate_id": "8f9f981a861822cda1152f9e",
+        "text_sha256": "998d187e54b4e37d10648e7e0587f4fb00d897d2988886db7fda6998db0d492c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-008: Monitor authentication, provisioning, identity integration health and relevant API consumption."
+      },
+      {
+        "candidate_id": "3ac958d9c78a5b4a8b676265",
+        "text_sha256": "40329bd429d0fa16101f9168e9f7f26509000e76457b6fc43795b27fa9886b0d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-009: Prepare retained integrations according to assessment and approved charter and test authentication and permissions outside production before repository migration."
+      },
+      {
+        "candidate_id": "c984b55008b7a2c03bacb1ea",
+        "text_sha256": "08d909ba9aec97344b48678c4e6e2dd66983a52490d89e5398033c04bb57480f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-009: Prepare retained integrations according to assessment and approved charter and test authentication and permissions outside production before repository migration."
+      },
+      {
+        "candidate_id": "7bcdac1d4733830f8b08ae76",
+        "text_sha256": "66c647b931d3a0e6fd39e0a7847a7fe319b69f68072bcdeb069f15d982b16976",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-009: Prepare retained integrations according to assessment and approved charter and test authentication and permissions outside production before repository migration."
+      },
+      {
+        "candidate_id": "273e4d8ac3af9ba27a3f8817",
+        "text_sha256": "3f5c4dd81172d6bc164699570b7494139c3fb8def56fd3084c75115b66d79f5c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-009: Prepare retained integrations according to assessment and approved charter and test authentication and permissions outside production before repository migration."
+      },
+      {
+        "candidate_id": "4fe9284090e844f40b0f04d1",
+        "text_sha256": "aeafae5e7080d2430ffb42ccdfe3d49e5d2beb23e52c315d74845b4ab8fea435",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-009: Prepare retained integrations according to assessment and approved charter and test authentication and permissions outside production before repository migration."
+      },
+      {
+        "candidate_id": "8dad626b12e65f159f94bc6d",
+        "text_sha256": "a40f010ebe1e51d3da719ce168fd3030f72a674a2183a1d36ecf79597dcbbd13",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-010: Where Boards remains in use, configure reviewed application access, linking conventions, notifications and webhooks and prove commit/reference linking."
+      },
+      {
+        "candidate_id": "6fcadeea0a882bed7d0791b7",
+        "text_sha256": "c8f797243976b258990d6f30dda8f04e73630b04c8f119e8a6c5aacc50c03764",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-010: Where Boards remains in use, configure reviewed application access, linking conventions, notifications and webhooks and prove commit/reference linking."
+      },
+      {
+        "candidate_id": "584dc7edc62a357dfe3338ea",
+        "text_sha256": "05341faf83263a7cc8f5a8de6373103ad9247be36354231ed017a10878fe5217",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-010: Where Boards remains in use, configure reviewed application access, linking conventions, notifications and webhooks and prove commit/reference linking."
+      },
+      {
+        "candidate_id": "d475a63c057008ec80765b4b",
+        "text_sha256": "56608415e555ea7ba2ae813b6851816019ca274a1e192f70d4ba51425935a8e0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-010: Where Boards remains in use, configure reviewed application access, linking conventions, notifications and webhooks and prove commit/reference linking."
+      },
+      {
+        "candidate_id": "3b4c43b61f36cebcbc606a56",
+        "text_sha256": "5900f9d6fc9b179a764191826987bc183cba7a06edea5d9419fb9c2efa04c250",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-010: Where Boards remains in use, configure reviewed application access, linking conventions, notifications and webhooks and prove commit/reference linking."
+      },
+      {
+        "candidate_id": "761da348e7565c05adc15be2",
+        "text_sha256": "1b077ff26ef8841cae8e36d3c2cca58a2297b08f4f7f117dfc8b863eed31315f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-010: Where Boards remains in use, configure reviewed application access, linking conventions, notifications and webhooks and prove commit/reference linking."
+      },
+      {
+        "candidate_id": "a0860ebfe705dc072e879a96",
+        "text_sha256": "5463f937839e77a02e317f379e84295274e115a976900acc558d909f6ff8eae9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-011: Where Pipelines remains in use, choose application or scoped user authentication consciously, accounting for execution identity."
+      },
+      {
+        "candidate_id": "76a0fd2b9ddfcf828c3fb5ce",
+        "text_sha256": "59704c456bbdb08a7e02da0d5024299b7f4cca41592c77c6709abebc653f499e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-011: Where Pipelines remains in use, choose application or scoped user authentication consciously, accounting for execution identity."
+      },
+      {
+        "candidate_id": "0222fc3bf54ccee2d6a55966",
+        "text_sha256": "ae9b58d665ac6cb000d947280403edfd667632eb459a66fa79d4f1543bd9406b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-011: Where Pipelines remains in use, choose application or scoped user authentication consciously, accounting for execution identity."
+      },
+      {
+        "candidate_id": "500bb2de20847bd83b254ca4",
+        "text_sha256": "57dc914e1a865f2d4974f14f626123b5262bdc0dee0c2e3b12d7998fef9ce2d1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-011: Where Pipelines remains in use, choose application or scoped user authentication consciously, accounting for execution identity."
+      },
+      {
+        "candidate_id": "49f5e7a05c2f42c307b9e396",
+        "text_sha256": "0f58064950eae94f4d9ead4430ceb34b91e4a1d484922e168e7d9be989012759",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-011: Where Pipelines remains in use, choose application or scoped user authentication consciously, accounting for execution identity."
+      },
+      {
+        "candidate_id": "24af27a80b4e8afdd9bc0536",
+        "text_sha256": "52149c017bd5ab8068ddaa8e96f8a0e3cd98d29e36509d2754d86c98e7defae0",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-012: Configure repository connections and build-trigger policy and actually test triggers and authentication."
+      },
+      {
+        "candidate_id": "5a1403e20eab401095cbd543",
+        "text_sha256": "60cc241ec32e6f49a715f6057a512256a8b08d3600f726ce3fdbbba6330cd34d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-012: Configure repository connections and build-trigger policy and actually test triggers and authentication."
+      },
+      {
+        "candidate_id": "ebe98c9a66ab0029f2d07558",
+        "text_sha256": "e8d6d93e577e709b0cfd3a08b22e15f2b1b9c0473c48982c5b70dd7334ab074a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-012: Configure repository connections and build-trigger policy and actually test triggers and authentication."
+      },
+      {
+        "candidate_id": "b2992860ecaa84eac8a801be",
+        "text_sha256": "1e2b60efeffb3e2b5d2538689175b78c50fd13082e6a479b70e2ce0bd6136d54",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-013: Design target organization boundaries from source assessment, business needs, growth and data segregation rather than copying incidental hierarchy."
+      },
+      {
+        "candidate_id": "93ae7b119a0cff07fd06deb0",
+        "text_sha256": "fde5ca51d70ab4792acbcc92b735bfa0ad6da5d066e35335486db632054e31ba",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-013: Design target organization boundaries from source assessment, business needs, growth and data segregation rather than copying incidental hierarchy."
+      },
+      {
+        "candidate_id": "001ffa27b611bdc59caaf3aa",
+        "text_sha256": "1c9c9f2d11eb316d37ebaf9d3dbb390f9aeb45930e9e01fec49b250dd5fa88c5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-013: Design target organization boundaries from source assessment, business needs, growth and data segregation rather than copying incidental hierarchy."
+      },
+      {
+        "candidate_id": "d37809d8b98947b7d891dfde",
+        "text_sha256": "ebdaded38337153d0cb1ffdc693e3e8ce1947145884c7584ee3872a80f2b7b4f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-013: Design target organization boundaries from source assessment, business needs, growth and data segregation rather than copying incidental hierarchy."
+      },
+      {
+        "candidate_id": "53cf1a1864a1d754cf9d1f5b",
+        "text_sha256": "2b3b07a2a2334553d5d94e4cf20959761c11b1eda808e9d6b54d2a380842a384",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-013: Design target organization boundaries from source assessment, business needs, growth and data segregation rather than copying incidental hierarchy."
+      },
+      {
+        "candidate_id": "d5e92ecd6f151beed7c2af4e",
+        "text_sha256": "c271ef275f4508b1f92690538821e789bbe9b3ca9e3067c5e17cfc6c5d872855",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-013: Design target organization boundaries from source assessment, business needs, growth and data segregation rather than copying incidental hierarchy."
+      },
+      {
+        "candidate_id": "151167c601b7effc4f5c413e",
+        "text_sha256": "b51f427c055ece90f73b1234e07b7791d60244af5e4cbae075622094de7ef96e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-014: Configure intentional repository/project/team creation access, base permissions and default naming policy."
+      },
+      {
+        "candidate_id": "9d01cc88017106109b675602",
+        "text_sha256": "3d2714da96ce09ec65600997400ac395ec5d3084e0f5b1b72c00c7abf833465a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-014: Configure intentional repository/project/team creation access, base permissions and default naming policy."
+      },
+      {
+        "candidate_id": "a68ca885d6c12051bfda2545",
+        "text_sha256": "fdb4a761bc2ed6a23aba4c2ed927e5b75dc2d29cf31d4b10f80e180b3891a72a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-014: Configure intentional repository/project/team creation access, base permissions and default naming policy."
+      },
+      {
+        "candidate_id": "0354141540de74e47f454c6e",
+        "text_sha256": "b6c129742ff2c2210aaff3437763a3a4eb53bdf2b2e54b84ecabfebe22edf18a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-014: Configure intentional repository/project/team creation access, base permissions and default naming policy."
+      },
+      {
+        "candidate_id": "128b42329c55440aa73b190c",
+        "text_sha256": "fd7cfef6633e90e028011a5aa99187932eff474ff820f60daa320c015f5c1937",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-014: Configure intentional repository/project/team creation access, base permissions and default naming policy."
+      },
+      {
+        "candidate_id": "fa042cb7dc16060d8dd45d85",
+        "text_sha256": "99f47003abe3a2303f8ec74504c032066c46de8705674bcde3b580f9e783b9d5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-014: Configure intentional repository/project/team creation access, base permissions and default naming policy."
+      },
+      {
+        "candidate_id": "6d448c9b10b7ad3678f2d704",
+        "text_sha256": "e113677e7d949a22f37ff40e1fad389c01d99efcdeef4f5e6e6ff4a400d1e54a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-015: Define team purpose, delegated maintenance, appropriate capabilities and clear names; the source's custom-team-role wording requires supported-feature verification."
+      },
+      {
+        "candidate_id": "4fefcdc91982cdacecc04b68",
+        "text_sha256": "9be15b34aa225d07f70620e3bc5fe4ea52b46cc413a41d58c2d1ce5ed9f5cee4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-015: Define team purpose, delegated maintenance, appropriate capabilities and clear names; the source's custom-team-role wording requires supported-feature verification."
+      },
+      {
+        "candidate_id": "a945ef8c2b5d390dc2ada5a2",
+        "text_sha256": "0421a08acfa9b2847b51d937be5ed3a1658416c555c73d7440c396e60c47ec5d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-015: Define team purpose, delegated maintenance, appropriate capabilities and clear names; the source's custom-team-role wording requires supported-feature verification."
+      },
+      {
+        "candidate_id": "368ecf987d34cb41e29323b1",
+        "text_sha256": "d58c996839a7f69bf1bd11a31fb64306d04edfe2364a9d1826a7167ef593707d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-015: Define team purpose, delegated maintenance, appropriate capabilities and clear names; the source's custom-team-role wording requires supported-feature verification."
+      },
+      {
+        "candidate_id": "f779cde93b0c9121413c0f05",
+        "text_sha256": "78c8ccc96c69d98a682708582569bde654d4d7084d8d4db81360275d0438b669",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-015: Define team purpose, delegated maintenance, appropriate capabilities and clear names; the source's custom-team-role wording requires supported-feature verification."
+      },
+      {
+        "candidate_id": "b46b2f104b702bdac25beb49",
+        "text_sha256": "a38e5a3c929f7f932ab351a50debbdbb9c9508a60c0515efaf99eecad38dd6ee",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-015: Define team purpose, delegated maintenance, appropriate capabilities and clear names; the source's custom-team-role wording requires supported-feature verification."
+      },
+      {
+        "candidate_id": "fd2c42b3d995ad4c53bf57bf",
+        "text_sha256": "cbda19e0c29f296fa0be61066d6a17b1f8a13eea6e7c0334e40de735df3e9cd3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "d646d2d7431c8e03e83abaa8",
+        "text_sha256": "8e32ed65f4f2b9cca9e957543db1910d187a5ebc2f7ff465e618b74feba6c2aa",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "c454c34f7d73b34821ebb361",
+        "text_sha256": "2c3c131a05ea4d69a1aaa479f46f1781b608ab61116965b98b8b13fb8f4d54cd",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "028ef95422085e5c7cc459a4",
+        "text_sha256": "92dba8f7c929bbf44ab29ef96b5b8a9a90878d725f03a1ba8d19e280d06cde23",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "f2c3a126b842943cd127a216",
+        "text_sha256": "c31ae5eb4b450b98b667fc970bab66e9f720c4a4862c39d4296b50fe43224976",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "8c2a27e159757b2d088bc16e",
+        "text_sha256": "10bf66486438ab9edd83d2b3c02dfdab9bde30b6d276f63fe599e43cce12a223",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "4d3f7837bb6b34ea210882d0",
+        "text_sha256": "14f1e869845f339876c7593e6cdf7f72d16fa09c99626722adce705627093a74",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "b390d1846692589865ce0b1e",
+        "text_sha256": "2b3d04819cc6fc7f4b8e6020c23666affb45384ac989312d6deb9fce712cd78c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "138bfe4e61fe9d811781a0c0",
+        "text_sha256": "67c839bd199cc14284c38191e3ffd83b71cf981470f82ffc5c161c7984259ae5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-016: Use account-model-appropriate membership synchronization and test lifecycle automation and conflict handling."
+      },
+      {
+        "candidate_id": "b66704b134bdae44fc62037c",
+        "text_sha256": "86fbc245128d12f18fc6b749d59130970b5933a8d858c7513381ee5fcd4b3ad3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-017: Configure an authorized audit destination and monitoring, and prove actual log delivery; filtering must preserve required event custody."
+      },
+      {
+        "candidate_id": "7ba73e6b4e82b5c4a3844921",
+        "text_sha256": "c0a8f427ba569c2dbd2d9efb97ce7955511423d00db9405a72dffede35867ccf",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-017: Configure an authorized audit destination and monitoring, and prove actual log delivery; filtering must preserve required event custody."
+      },
+      {
+        "candidate_id": "e8cbaf9aaa3565b637b464a6",
+        "text_sha256": "1cc0fe0efc662867507e8b39b5250eabb00b02c4af5589677d61c4057eb0ac68",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-017: Configure an authorized audit destination and monitoring, and prove actual log delivery; filtering must preserve required event custody."
+      },
+      {
+        "candidate_id": "5e9ac9e2aacab1b5c7c6956c",
+        "text_sha256": "b3775e2091cc576fae1e4ccf310dabf00f2cffda8b405dcfbdcf692c59db7fc1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-017: Configure an authorized audit destination and monitoring, and prove actual log delivery; filtering must preserve required event custody."
+      },
+      {
+        "candidate_id": "3c15186874defa3907876152",
+        "text_sha256": "dd50fa6925b656a8867b902d37826d77dbe4ec05fff354f8076d2173877d861a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-017: Configure an authorized audit destination and monitoring, and prove actual log delivery; filtering must preserve required event custody."
+      },
+      {
+        "candidate_id": "a037d1ec1875550e0cbc9881",
+        "text_sha256": "21c98436ded395a55736ef4f3064a54c330ac52ae45e4ea4b2c5c529184b4918",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-018: Set retention and backup/access/reporting arrangements consistent with actual sink capability and legal policy, not assumed mutable vendor defaults."
+      },
+      {
+        "candidate_id": "da9bf3de439627f13e0c4615",
+        "text_sha256": "cb2ad903dd55729243595c4c8fb002eeba9b2110df7e1ee81de4abdf9683cee9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-018: Set retention and backup/access/reporting arrangements consistent with actual sink capability and legal policy, not assumed mutable vendor defaults."
+      },
+      {
+        "candidate_id": "fa8f461c6f386dbf96b84a94",
+        "text_sha256": "aa3b31d6bf5771f816dfc8b3bc943a81409db1ce91ca4593ffccd16873328314",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-018: Set retention and backup/access/reporting arrangements consistent with actual sink capability and legal policy, not assumed mutable vendor defaults."
+      },
+      {
+        "candidate_id": "3aa4ab98b2dec9ca970de55c",
+        "text_sha256": "2f2bd54c8266845347449e2a634a5c90efbf6443fc67a7f902969c28233a310e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-018: Set retention and backup/access/reporting arrangements consistent with actual sink capability and legal policy, not assumed mutable vendor defaults."
+      },
+      {
+        "candidate_id": "a9fc7d9031585c1b877b85bb",
+        "text_sha256": "d81de73cf1c3404c7724b7bd1b696cd28cd9b09695adfc0875f7cc95581e510f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-018: Set retention and backup/access/reporting arrangements consistent with actual sink capability and legal policy, not assumed mutable vendor defaults."
+      },
+      {
+        "candidate_id": "371a7d9a4674d1eeca8ebece",
+        "text_sha256": "390e6d5a7ca02f3dca6f727017237866ef8d9228c1e0993a7b02ab3d9f0388f5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-019: Assign reporting cadence, stakeholders, templates and substantive review."
+      },
+      {
+        "candidate_id": "24b7b16b81a2030e595515e5",
+        "text_sha256": "5483dc6bab04d29be756c975a5d3e77e658c69424ca2a8a1ffdde5cc2d49d1e1",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-019: Assign reporting cadence, stakeholders, templates and substantive review."
+      },
+      {
+        "candidate_id": "adf4f1174e1560645b43c9a4",
+        "text_sha256": "6ff59054f281d44d327927e5207d3d0c21aaaf3f457562d7a009f9fed8b8aa5f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-019: Assign reporting cadence, stakeholders, templates and substantive review."
+      },
+      {
+        "candidate_id": "62aa09b39b6fbdde72fb6d4e",
+        "text_sha256": "c20e41e5555557837913fb3c05a3e75271c82e23e1db8b203c5b1f9258efb677",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-019: Assign reporting cadence, stakeholders, templates and substantive review."
+      },
+      {
+        "candidate_id": "274d47d06cfc6a0d01908e96",
+        "text_sha256": "e2564c36022a665877a07a749b95752ccd70cb5e97f5118ed584cd0bf0037cf5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-019: Assign reporting cadence, stakeholders, templates and substantive review."
+      },
+      {
+        "candidate_id": "25d5502ecfd10f3168f728ba",
+        "text_sha256": "bae3326e439bbe588ecf0715ef3a5c5bc2aaa88506bb679d9ff1d30edd168a82",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-020: Control repository visibility, forks, issues, destructive operations and transfers under deliberate policy."
+      },
+      {
+        "candidate_id": "b56b611b2e8179eb3fb17545",
+        "text_sha256": "510325f879066639270193137884325e87880d6f745854e7f181d0d696535224",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-020: Control repository visibility, forks, issues, destructive operations and transfers under deliberate policy."
+      },
+      {
+        "candidate_id": "bfea4646d78996ba8c8f0440",
+        "text_sha256": "ad66346b849152d656ede6e0185db6afb2d4d488979579c25f5604022b928c0e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-020: Control repository visibility, forks, issues, destructive operations and transfers under deliberate policy."
+      },
+      {
+        "candidate_id": "10b64c9dd86ff25cc0483e88",
+        "text_sha256": "ebd2833446b1f3af3c09a765327c78d85e0f3fd1ce23aef50f148256dc8dffd3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-020: Control repository visibility, forks, issues, destructive operations and transfers under deliberate policy."
+      },
+      {
+        "candidate_id": "6b2aa71be9f5dc9b1ee7ae8b",
+        "text_sha256": "8ecaf01963cdd39660ba91b6a1af936a0d82bfa7573e82039b24a9b7c1f7a658",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-020: Control repository visibility, forks, issues, destructive operations and transfers under deliberate policy."
+      },
+      {
+        "candidate_id": "e8a93d917372945d9a03a9f3",
+        "text_sha256": "7a50231d8ae06ab093bea4f1639ec2e2bd4282f3959d9b9dd1bea0e6a4cb5422",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-020: Control repository visibility, forks, issues, destructive operations and transfers under deliberate policy."
+      },
+      {
+        "candidate_id": "a659427359cfd409399ef55b",
+        "text_sha256": "9c08661e9f585333bdb00acfd2c5f4dbe016c0b6bef685a55d7648e645bfd06d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-020: Control repository visibility, forks, issues, destructive operations and transfers under deliberate policy."
+      },
+      {
+        "candidate_id": "bf7d539b5fdf41c0e4f930ce",
+        "text_sha256": "6ebe9a93532973cbc5b02edfef1ab936d4ec34ac780ce4ff0cc05e33c0559ed2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-021: Use structured repository attributes to represent environment, criticality and applicable regulation; labels alone do not prove compliance."
+      },
+      {
+        "candidate_id": "717da8990a2662e3c835e54d",
+        "text_sha256": "8c3046309b931871cb3f28850be0ecea1b30c8c5b648695c1653aa1a698c427c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-021: Use structured repository attributes to represent environment, criticality and applicable regulation; labels alone do not prove compliance."
+      },
+      {
+        "candidate_id": "1d09e388683974cc13826f66",
+        "text_sha256": "68c6aab23e72a8671a0139af073b8e9ef36db5b1f5e9a4e1da02ad16ae5d37ac",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-021: Use structured repository attributes to represent environment, criticality and applicable regulation; labels alone do not prove compliance."
+      },
+      {
+        "candidate_id": "a5b2901459d5d5f0ac989a73",
+        "text_sha256": "d44552d6c0cf8efc44386b9fd31a2b138e7e2c85f42174251d1604a29441732b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-021: Use structured repository attributes to represent environment, criticality and applicable regulation; labels alone do not prove compliance."
+      },
+      {
+        "candidate_id": "a6a6a99c5bc82dab33993d41",
+        "text_sha256": "5ce12bf4f3c932225c21252e77ce0eea22afb0635378e2b624d7f1ccf934fd37",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-021: Use structured repository attributes to represent environment, criticality and applicable regulation; labels alone do not prove compliance."
+      },
+      {
+        "candidate_id": "357d975d60ed1e091cd23cd4",
+        "text_sha256": "402c89833b9f119c40d214edaf44f985a57d9178112f77a3f23bbd8c28f64b77",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-022: Define risk-appropriate effective rulesets for tags, pushes, required workflows, signatures and attribute-based targeting."
+      },
+      {
+        "candidate_id": "2eba0e5edfcc4a4a08721bc9",
+        "text_sha256": "e69e2eff833ceab5457958adb9c360004b77dc02a0dabbf41a97cc5cf00ce038",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-022: Define risk-appropriate effective rulesets for tags, pushes, required workflows, signatures and attribute-based targeting."
+      },
+      {
+        "candidate_id": "29d9e96dfbdc40b173e5b3ef",
+        "text_sha256": "3d864c99561563e56ed8bc6a574c4c87669a2ed880fa642d4e75d4cb1f0e9e7d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-022: Define risk-appropriate effective rulesets for tags, pushes, required workflows, signatures and attribute-based targeting."
+      },
+      {
+        "candidate_id": "63e1a86c6ee72192d30bd287",
+        "text_sha256": "d8eb54cffd45a54ac582393ef06c8d499c6a27e155b7084c91aa035ed9a5f85a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-022: Define risk-appropriate effective rulesets for tags, pushes, required workflows, signatures and attribute-based targeting."
+      },
+      {
+        "candidate_id": "bd282de9b171653b318486aa",
+        "text_sha256": "d3f9a53408c213a6b0588593b0d6fdf7bee2a88776d8a4f6a42ed2d9a51bdf24",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-022: Define risk-appropriate effective rulesets for tags, pushes, required workflows, signatures and attribute-based targeting."
+      },
+      {
+        "candidate_id": "8d577f427ac5268049a8f06b",
+        "text_sha256": "62bfc43be172e407fc432794a197036e1c9902fab57bb692ff2f1c745154d809",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-022: Define risk-appropriate effective rulesets for tags, pushes, required workflows, signatures and attribute-based targeting."
+      },
+      {
+        "candidate_id": "f9a7ac8b0c89501012c9825f",
+        "text_sha256": "ef48261e8e9735cab458086a7f4449793db330d9f62f5638b08f227676674429",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-022: Define risk-appropriate effective rulesets for tags, pushes, required workflows, signatures and attribute-based targeting."
+      },
+      {
+        "candidate_id": "02a135be1442f00e3b7d2985",
+        "text_sha256": "3441a1700d8d42604ce455ffa04dc28081ea8dae8721c3de0d796e80bba2a064",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-023: Configure token lifetime and access restrictions and supported fine-grained credentials."
+      },
+      {
+        "candidate_id": "d574bbc6b03fce5f162fcb59",
+        "text_sha256": "e6c12f57bb51dc8d09cb8ce11000e80fd63ea3a136b83c21fb4aa080f43715a6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-023: Configure token lifetime and access restrictions and supported fine-grained credentials."
+      },
+      {
+        "candidate_id": "fa6919a7150aa1d68f30c003",
+        "text_sha256": "dc9c3767a94824e9ae514525ebfd4ab44b2e1064caa21fcc2a216226d6138e15",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-023: Configure token lifetime and access restrictions and supported fine-grained credentials."
+      },
+      {
+        "candidate_id": "ab5662d18ce28aa2ffbf4312",
+        "text_sha256": "723292099995e5ceea9df1fb4a5b7e3f6586fbf3eb2bd6874ec4418252576328",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-023: Configure token lifetime and access restrictions and supported fine-grained credentials."
+      },
+      {
+        "candidate_id": "8398773e9004200b1022ccc1",
+        "text_sha256": "5fdea00a9c3db25088233123de304c62dbd6243c3c9b8bc434def83f9c1dd5bd",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-024: Consider reusable repository starters for suitable project types while preserving independently owned consumers."
+      },
+      {
+        "candidate_id": "de2e518ff35f05c7c0e6bc34",
+        "text_sha256": "f875e19d3607e69544bac78515ea7520a321d422a3e268d2ccd35c23274027e4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-024: Consider reusable repository starters for suitable project types while preserving independently owned consumers."
+      },
+      {
+        "candidate_id": "d4f95065be489129271e1dbc",
+        "text_sha256": "4b720048bebc82759a2d5568c258d6492ef5f0fc0d1688edcd3adeeb9995b526",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-024: Consider reusable repository starters for suitable project types while preserving independently owned consumers."
+      },
+      {
+        "candidate_id": "2be625b5ddc3d96d7f7dcb40",
+        "text_sha256": "a98004c608938e71f8a187d42dd21d7c7e9276fe17629f213235596c97a4e84a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-024: Consider reusable repository starters for suitable project types while preserving independently owned consumers."
+      },
+      {
+        "candidate_id": "e23fd07906272e3ecd62dd2f",
+        "text_sha256": "6c657af2297d7d11f1e73900c26551c70ca5873ad6ada7b30da534c0e46774ce",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-024: Consider reusable repository starters for suitable project types while preserving independently owned consumers."
+      },
+      {
+        "candidate_id": "1a652b5522ad5401a103fa78",
+        "text_sha256": "2696de3ee5b0096d683613c818ffa864996b8545ce7012013be3ec9c1b1b505f",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "24e8ff70b1c9bf3e856283db",
+        "text_sha256": "2cbb6d4c86258d35d4e10fecf0cc7928206025b8d7e604e4ada553ce44ed539a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "a0d8aecf69b740e81292ba2f",
+        "text_sha256": "5533da232759cfd274b483d4bea8ddecb035f9e5de413fbc1b6df246eaf235b2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "1971daa9afaff9fa3f2b8b75",
+        "text_sha256": "0c5646bc690161ed34a6be4d9927d06644a43d3fa54481eb3d2caa8bb7041829",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "fda66dc8bdbc65281b6cbbf6",
+        "text_sha256": "a7ff28fd47d726e184cdab0a4d9fb03b04413bd2f67e16bcab65a97c22ef831c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "797300398494e5c7afc51dad",
+        "text_sha256": "ffb077046845c105e434fb43b1f429c92df46eac3345238792878363e5e926e6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "c2ef69f36b804a6762972dbc",
+        "text_sha256": "c7a32874c5bb3a0513ed61eb2d82bfb0cfa257b3fab906bcb16b8b92091f5e10",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "3eee16de1c659d05ffd7f1a2",
+        "text_sha256": "efaadd687a730b1d91021cb5ed34ee660ef0586f33d547c78ce2b6e0163f1ca7",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-025: Provide reviewed documentation, contribution, issue/review, security, license and branch defaults; template existence is not enforcement and license choices require actual rights."
+      },
+      {
+        "candidate_id": "2d3cb8e55d70030231a78d6e",
+        "text_sha256": "11f4447f20529e3079ab8e42cbc2a1a8e3bbd730ef3b7b5d26fec4ee325a773e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-026: Configure only needed authorized monitoring, deployment and artifact integrations."
+      },
+      {
+        "candidate_id": "de04c8dfca69e96a55dcdcff",
+        "text_sha256": "f29151419a243d180628f0edd1ccef43a3870d801eb40879caa7c99bf0b3a9cc",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-026: Configure only needed authorized monitoring, deployment and artifact integrations."
+      },
+      {
+        "candidate_id": "f67344f50a8440c4a3c7527c",
+        "text_sha256": "d0d0e4121e057fd3a2dad6a52e138ce0c25ab6ccb4e7556102947f7075698408",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-026: Configure only needed authorized monitoring, deployment and artifact integrations."
+      },
+      {
+        "candidate_id": "5928a39d4ca5b760efe8121b",
+        "text_sha256": "f8cf113879619ac4debeadee7e497d0aba3229766f2cf1f92fb48b93d17aadeb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-026: Configure only needed authorized monitoring, deployment and artifact integrations."
+      },
+      {
+        "candidate_id": "db1c4da4735f28c7576a5e14",
+        "text_sha256": "f9ea8f9a8c3da142b18dc0a6f2a02a74ec49df997e2ebc6e07085160a731579c",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-027: The source states cloud-agent functionality depends on enabled Actions; verify current prerequisite and avoid automatic feature activation."
+      },
+      {
+        "candidate_id": "cd4c15fb1b2b277ccd28a4ac",
+        "text_sha256": "09499d962452f2abcdd1a5a273c5f78d5b4efe78f2e5bc8f4f5bde2bed1e7260",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-028: Define environments with actual approval and deployment protection gates appropriate to their risk."
+      },
+      {
+        "candidate_id": "200347ad4b069e12182869af",
+        "text_sha256": "4c9cfa5d7352dbc66ee1721f47ed9f7e6fefc4b7ab55b34f55f6bef23ce14709",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-028: Define environments with actual approval and deployment protection gates appropriate to their risk."
+      },
+      {
+        "candidate_id": "8b8881774d1531804eb1c981",
+        "text_sha256": "ba681fa13447465c43be702eaa4c8b575b2c13eace158b3c54c64220eb45babb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-028: Define environments with actual approval and deployment protection gates appropriate to their risk."
+      },
+      {
+        "candidate_id": "1dee16b2810da8941d40bf09",
+        "text_sha256": "73c32cb01197309320342d68e4abd92e2fefff75ea201009e245ffcaf412aa34",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-028: Define environments with actual approval and deployment protection gates appropriate to their risk."
+      },
+      {
+        "candidate_id": "21255b25d053e725b3297b5d",
+        "text_sha256": "7e61781a9a17b8d7f8a6e67b57e2963c1867188bc36c9c566b558bb43769c3ed",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-028: Define environments with actual approval and deployment protection gates appropriate to their risk."
+      },
+      {
+        "candidate_id": "82d9e71a0f29d335107f6a1f",
+        "text_sha256": "a359249d3dc4054581a332f92dfd3cf68f88d930aca9e93872ad51ca9a63266d",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-029: Consider maintained shared build, test, release, security and dependency workflows, accounting for actual private-repository licensing."
+      },
+      {
+        "candidate_id": "f918868dc5e23c09aaa1c214",
+        "text_sha256": "019c80f9742d6490e236960fc041175b8e1527b31392a748a05cb7c72b8999c7",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-029: Consider maintained shared build, test, release, security and dependency workflows, accounting for actual private-repository licensing."
+      },
+      {
+        "candidate_id": "159cf37206eea3149bb5f312",
+        "text_sha256": "0f4425abbd2053c111042e478513564f924942241c8fa134cc22e923376728a4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-029: Consider maintained shared build, test, release, security and dependency workflows, accounting for actual private-repository licensing."
+      },
+      {
+        "candidate_id": "f0fb16512841060dee2d306c",
+        "text_sha256": "f551d29f43e90537fe87b7f018e7d96e7bf5178aa869d03a3c212f299398dcf8",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-029: Consider maintained shared build, test, release, security and dependency workflows, accounting for actual private-repository licensing."
+      },
+      {
+        "candidate_id": "f72df78a7fb69b05ce961a3f",
+        "text_sha256": "ce17a195a7704d31f7e25bedb18e33f420cefb79d02221833589dd42b1f09e50",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-029: Consider maintained shared build, test, release, security and dependency workflows, accounting for actual private-repository licensing."
+      },
+      {
+        "candidate_id": "931f1feb689622e3761a70c9",
+        "text_sha256": "a349872c0620ab48365e8fcf6172facc9cea14c4438a0f6a87b5dcec661d61d9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-029: Consider maintained shared build, test, release, security and dependency workflows, accounting for actual private-repository licensing."
+      },
+      {
+        "candidate_id": "ce99b8da10b6450e37112112",
+        "text_sha256": "8a5d0129e724ddb962c0988b7f849036fa3c8e3089de4064d3b739a11c5b7dfb",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-030: Configure approved package access, retention and CI/CD integration without treating retention policy as deletion authority."
+      },
+      {
+        "candidate_id": "4cc1d44b3813cc15afa17079",
+        "text_sha256": "ba1ef578f581c3b66e8526903d3da6072c0e008c509ed215fc26b44cf821fbf3",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-030: Configure approved package access, retention and CI/CD integration without treating retention policy as deletion authority."
+      },
+      {
+        "candidate_id": "c42362c32d230fb907d90667",
+        "text_sha256": "89e10f91431c5eb6a195d17a7c095d1edb7a9cbf617dbb15c90acdf6e434313e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-030: Configure approved package access, retention and CI/CD integration without treating retention policy as deletion authority."
+      },
+      {
+        "candidate_id": "0196662b781fba7fb0033718",
+        "text_sha256": "ba228805f7bb16a430045106002798875964bc609eb6027d83845d0fcc2da5b5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-030: Configure approved package access, retention and CI/CD integration without treating retention policy as deletion authority."
+      },
+      {
+        "candidate_id": "3b1080c484aca03e67a3b9b2",
+        "text_sha256": "bbbd17fdec555bfe08670823d73eaefc6849ff508a8e3a504aa413c0d6834ee9",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-030: Configure approved package access, retention and CI/CD integration without treating retention policy as deletion authority."
+      },
+      {
+        "candidate_id": "d476d184e542d96ca8d48819",
+        "text_sha256": "c4519dd2baa6013606dda02213a365516cd57a0e3f3e2d0e03008a11180cecfe",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-031: Document effective identity, security, enforcement and audit/compliance configuration."
+      },
+      {
+        "candidate_id": "15a9d7ae0fe0183320464844",
+        "text_sha256": "61a8904391087be1a42401b4732df83b3f3d39c3ecdb6e57e6cc0ab66aa6c090",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-031: Document effective identity, security, enforcement and audit/compliance configuration."
+      },
+      {
+        "candidate_id": "28fd206455c5b0a506c5e176",
+        "text_sha256": "af7da5b17cb351b72e599222ac7cc3ba33abfb24008e0c0a95ec300babdd3b6a",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-031: Document effective identity, security, enforcement and audit/compliance configuration."
+      },
+      {
+        "candidate_id": "67dae661695bfffe0ac2d0f4",
+        "text_sha256": "96cde95513c2f228296702c892bf373cee7a6a1e8ed84b0e353fbf0aec9161ae",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-031: Document effective identity, security, enforcement and audit/compliance configuration."
+      },
+      {
+        "candidate_id": "b6d8420b8cede688de184f15",
+        "text_sha256": "424cc87d08a749aca4dec5161b358e6e8f0c9a1d0475cf5c254dc9cfa44745d6",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-031: Document effective identity, security, enforcement and audit/compliance configuration."
+      },
+      {
+        "candidate_id": "d44f95705e4eaf7a6ad68a20",
+        "text_sha256": "9a8938faad14151908c6f4e2bf06832e581c0f5424738dcbf8f8aec30939f421",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "b4a13b0581f2c54d9bc1a981",
+        "text_sha256": "99ff14e786d7e0c3517a07ba2e83357fd2de8bf31a8413b5c4a5b99bf37d8ae7",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "4474fbd7e9c99a6162474978",
+        "text_sha256": "a5a58d1e4089d936adcaddfd156e8f1a1b99731de201ca3e704978b46e047e22",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "62ec17e4d0d31831114953f5",
+        "text_sha256": "e00738c82f360a850f13b88b482d02483e18542487fe0393fac2eaa5dff80f70",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "d8cc3b4cce94f983797afe2f",
+        "text_sha256": "3ab18dadb8c627f191d6b3c72716b56226a118c5b9bc0c4a2c1ac68691307275",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "a7ce599523be704279b3958c",
+        "text_sha256": "1584b0e9c0b15890c811dfef7e61bebae7f8b3e426eb09e86b8a4cdc8af51b26",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "6da05901cc3938dbf9a02d31",
+        "text_sha256": "64c57b26fd405adeb915dd6f796989d6c704bf6ec7f4ab286f556e6881290838",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "d11463d160488920eb9d6ab1",
+        "text_sha256": "801a10f71abdc5cf84922c7a933b49a23667915b91d9a914a149faa322a496a5",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "9482d8e106ec07c4a1185681",
+        "text_sha256": "73170ac4bdd41c0fb7b82f0131566f47bc38fc66a0e4c14f8cb68c2ce10ed52b",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "8ecfef08ea8ef99b3dbed280",
+        "text_sha256": "d89ef24fae59e5fb954831c32ffa16ae11cab5c3240aa43bf8ab13ae4024cd7e",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-032: Maintain migration/onboarding guides, tool and workflow translation, integration documentation, support knowledge and escalation."
+      },
+      {
+        "candidate_id": "9dfddfe3a32fd0105edc20d0",
+        "text_sha256": "4ac1f2e3efe9beaf5e1d0885ec543cdc566e459b78394203501fde0313cf152d",
+        "disposition": "NO_ACTIONABLE_CONTENT",
+        "rationale": "Lines 315-315 contain frontmatter, table/category labels, learning-resource navigation or introduction, not an additional specific target-configuration objective. Full surrounding recommendations are separately retained."
+      },
+      {
+        "candidate_id": "5179df8a62fcd38a885bb738",
+        "text_sha256": "6cc727fdf39b65f59daaab72451cdb82e347aebbedee451291509fee69004ba4",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-033: The guide refers next to security guidance and migration testing without certifying those linked resources."
+      },
+      {
+        "candidate_id": "32044bd73f8a87f3e628776e",
+        "text_sha256": "92ad8e45b21142db16ba1ec70353d2d1524507bb16ec7f397d3894eebeba27a2",
+        "disposition": "REFERENCE",
+        "rationale": "WA-CONT-ADOTGT-033: The guide refers next to security guidance and migration testing without certifying those linked resources."
+      }
+    ]
+  }
+]

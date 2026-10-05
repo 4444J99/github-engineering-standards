@@ -1,0 +1,21 @@
+{
+  "schema_version": "ges.verification-checkpoint.v1",
+  "base_commit": "00b108ad0aea0dd8bea3dceeb5dfa0297c74fda3",
+  "observed_at": "2026-10-02T00:02:45Z",
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests_run": 208, "duration_seconds": 1.240, "result": "OK"},
+    {"command": "python -m ges validate", "exit_code": 0, "controls": 95, "valid": true},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "git diff --check", "exit_code": 0},
+    {"command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --output evidence/recovery-status.json", "exit_code": 0, "gates_open": 9, "project_complete": false}
+  ],
+  "scope": "Condition-based construction diagnostics, not final semantic or runtime certification",
+  "limitations": [
+    "Semantic, rights, adoption, native and estate evidence adapters remain unfinished and explicitly unknown.",
+    "The positive gate unit test uses an isolated fixture; it is not a production completion receipt.",
+    "Partial counts, missing scope, zero denominators and missing independent audit cannot close a gate."
+  ],
+  "checkout_disposition": "RETAIN_ACTIVE",
+  "native_protection_changes": false,
+  "project_complete": false
+}

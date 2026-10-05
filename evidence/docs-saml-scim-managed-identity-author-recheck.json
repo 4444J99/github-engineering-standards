@@ -1,0 +1,52 @@
+{
+  "schema_version": "ges.author-repair-recheck.v1",
+  "reviewed_at": "2026-10-02T20:20:43Z",
+  "original_author": "/root/evaluator_review",
+  "independent_original_auditor": "/root",
+  "rechecker": "/root/evaluator_review",
+  "review_scope": "Author recheck of three specified repairs only; root's independent complete original-source audit remains separate.",
+  "input": {
+    "path": "evidence/source-reviews/docs-saml-scim-managed-identity-claims.json",
+    "sha256": "783ee8b9a014d2cb4b9bd02cb9673f99c2e1f184128f7ff9db7b3557de47d274",
+    "records": 550,
+    "original_sha256": "b5818f4cfb1490131b38343abec875c6e6699c47fcb3693541ab5469abcb7980",
+    "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995"
+  },
+  "findings": [
+    {
+      "claim_id": "DOCS-IDPROV-0299",
+      "path": "data/reusables/scim/ghec-open-scim-operation-differentiation.md",
+      "source_sha256": "1aa8a7c7832e5c94394923ca9faffbd3276a562704049581077fd2759af51ff2",
+      "source_lines": [
+        1,
+        1
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "The object provisioned is user accounts for the enterprise, not an enterprise account itself; EMU restriction remains separately recorded."
+    },
+    {
+      "claim_id": "DOCS-IDPROV-0210",
+      "path": "data/reusables/saml/resources-without-sso.md",
+      "source_sha256": "dddbcc60b1ac0660744a8667886e9595c9845b411674bf58845383bf39b7a17c",
+      "source_lines": [
+        3,
+        3
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "Public repository overview and file viewing is explicitly exempt from IdP authentication; corrected grammar preserves that scoped exception."
+    },
+    {
+      "claim_id": "DOCS-IDPROV-0212",
+      "path": "data/reusables/saml/resources-without-sso.md",
+      "source_sha256": "dddbcc60b1ac0660744a8667886e9595c9845b411674bf58845383bf39b7a17c",
+      "source_lines": [
+        5,
+        5
+      ],
+      "outcome": "SUPPORTED",
+      "rationale": "Public Git read operations, with cloning as example, are explicitly exempt from IdP authentication; grammatical repair changes no scope."
+    }
+  ],
+  "remaining_findings": [],
+  "boundary": "Bounded author recheck, not independent self-certification or global omission/gate assurance. No current runtime truth, native validation, rights clearance, credential operation, policy adoption or actual provisioning is asserted."
+}

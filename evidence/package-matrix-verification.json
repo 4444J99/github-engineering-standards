@@ -1,0 +1,53 @@
+{
+  "issue": 264,
+  "reviewed_at": "2026-10-03T06:30:22.020Z",
+  "artifacts_reviewed": 3,
+  "reference_claims_added": 9,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59794,
+    "claim_bearing_artifacts": 3260,
+    "tests": 324,
+    "test_seconds": 1.981,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "package_reusable_census": {
+    "inventory": 63,
+    "with_receipts": 63,
+    "remaining": 0,
+    "independent_semantic_assurance": false
+  },
+  "limitations": [
+    "Complete prefix receipt coverage is not independent extraction completeness, reconciliation or accepted policy.",
+    "Package roles, inheritance prerequisites, eligible identities and workflow grants are not native observations.",
+    "Classic/fine-grained token compatibility requires contextual qualification; public Container Registry anonymous exception retained.",
+    "No configuration, permissions, publication, rights clearance, actual attestation or native rollout."
+  ]
+}

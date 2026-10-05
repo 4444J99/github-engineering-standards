@@ -1,0 +1,106 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T01:03:12.820Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/optional_feature_activation.md",
+      "content_sha256": "d33f9d9daa0d953710b9bcd4348fcbee0c225e1fe2d287e22c1c9c82745095b5",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Optional-feature activation is an intentional settings opt-in for the selected app feature, not a universal enablement requirement or evidence that activation occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/reauthorize-apps-saml.md",
+      "content_sha256": "500a673660861425bc59ed62d69906d75adc24b37f13532f49bef756602c6627",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "After SAML SSO enablement, OAuth and GitHub App authorizations may require revocation and reauthorization before organization access. The qualifier is conditional, not an instruction to revoke every app; the linked parent article remains separate evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/redirect-uri-wildcard-matching.md",
+      "content_sha256": "c0822a5f2316a3a7f67aac9b8a72c9281f3675c7d681c12d6070fbb890a843c3",
+      "start_line": 1,
+      "end_line": 20,
+      "statement": "With wildcard callback matching enabled, host excluding subdomains and port must match and paths allow the callback itself and subdirectories. Examples permit subdomains and nested paths but reject unrelated paths, root, different ports and different domains. Disabled wildcard matching requires an exact redirect/callback match; configuration is per callback URL.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/redirect-uri-wildcard-matching.md",
+      "content_sha256": "c0822a5f2316a3a7f67aac9b8a72c9281f3675c7d681c12d6070fbb890a843c3",
+      "start_line": 1,
+      "end_line": 20,
+      "statement": "Historical migration retains wildcard matching for a single callback URL enabled before August 3, 2026 on fpt/ghec or GHES 3.24 on the other branch, explaining all prior OAuth Apps and some GitHub Apps. Disabling unnecessary wildcard matching is a recommendation; pinned migration prose does not prove a target setting or deployed release.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/redirect-uri-wildcard-security-warning.md",
+      "content_sha256": "d6b9f630e2e39679c4d53eac2cd3282abb0b5058ce61559e6e8431b21ac7440f",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Wildcard callbacks risk authorization-code delivery into attacker-controlled subdomains or paths. The source advises enabling only when necessary and with control of every possible subdomain and path; the RFC link is recorded, not independently reviewed or adopted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/repo-admin-install-restriction.md",
+      "content_sha256": "62e0df93da9ad63970b6e14344dbf5555724678e7f202c2ed5984fe77c2ade6c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Repository admins may install an app only without organization or repository-administration permissions and only on repositories they administer. The fpt/ghec or GHES greater than 3.19 branch allows owners to restrict this route, requiring an owner installation request instead; a request is not approval or effective installation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/settings-step-personal-orgs.md",
+      "content_sha256": "42af622f11035c02af9ef93ed97c350c158ff78f518669b4d7eaadd5158724a3",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Personal-owned app settings are reached through account Settings; organization-owned settings through Your organizations and the selected organization Settings. Navigation does not confer ownership or authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/settings-step.md",
+      "content_sha256": "5c07180928e38a1790947525eb47663b5438d11b9b06469a4688f4a1731ee315",
+      "start_line": 1,
+      "end_line": 11,
+      "statement": "Personal and organization settings routes remain distinct. Enterprise ownership navigation exists only under enterprise-apps-public-beta: ghec managed users use Your enterprise, personal accounts Your enterprises then Settings; ghes uses Enterprise settings. Conditional navigation is not general feature availability or access proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCALLBACKSCOPE-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/state_description.md",
+      "content_sha256": "51c43662c9c895a6ac091b42d1b20fb851c91774250146ecd3b14b96f06af176",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The state fragment describes an unguessable random string for cross-site request forgery protection. This isolated definition does not establish generation entropy, request/response binding, validation, replay defense or actual enforcement.",
+      "accepted_policy": false
+    }
+  ]
+}

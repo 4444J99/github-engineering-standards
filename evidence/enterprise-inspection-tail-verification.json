@@ -1,0 +1,52 @@
+{
+  "issue": 222,
+  "reviewed_at": "2026-10-03T05:09:56.344Z",
+  "artifacts_reviewed": 5,
+  "reference_claims_added": 5,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59522,
+    "claim_bearing_artifacts": 3015,
+    "tests": 324,
+    "test_seconds": 1.981,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false,
+    "enterprise_accounts_prefix": {
+      "total": 97,
+      "with_receipts": 97,
+      "remaining": 0,
+      "semantic_completeness_certified": false
+    }
+  },
+  "limitations": [
+    "Dormant list excludes suspended users and site administrators.",
+    "97 of 97 prefix receipts are not semantic completeness, rendered assurance or resolved contradictions.",
+    "No policies, accounts or subscriptions changed; no policy adoption, rights clearance or rollout."
+  ]
+}

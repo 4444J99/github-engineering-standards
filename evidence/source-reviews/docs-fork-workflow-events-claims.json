@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:19:32.136Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-FORKWORKFLOWEVENTS-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/developer-site/limit_workflow_to_activity_types.md",
+      "content_sha256": "4307ef877c18c02c0a20130de190601be526cc9a1553ac8bbd57c43b6561f5fd",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The activity-filter fragment says all activity types trigger workflows on its surrounding event by default and types can restrict runs, linking to workflow syntax. The event is unspecified in isolation; this is not proof that all GitHub events have identical defaults, that a workflow is configured, or that an actual run occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-FORKWORKFLOWEVENTS-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/developer-site/multiple_activity_types.md",
+      "content_sha256": "3f873d82167f898f29e92be3e47847a55036eb3935e2a3fbcd74c28163fa31f9",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The short fragment says its surrounding event has multiple triggering activity types without naming the event or enumerating those types. It cannot alone establish an exhaustive trigger matrix or tested event behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-FORKWORKFLOWEVENTS-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/developer-site/pull_request_forked_repos_link.md",
+      "content_sha256": "859ca1add568fe6644d85bfb8b8547b63f49a48da156c0ce9402bf48a464311e",
+      "start_line": 1,
+      "end_line": 18,
+      "statement": "The fork-workflow fragment describes fork-local workflows as disabled by default until Actions is enabled; the included secret restriction and read-only GITHUB_TOKEN statement constrain fork pull-request context. Base-directed fork PRs send pull_request, issue_comment, pull_request_review_comment, pull_request_review, and pull_request_target to the base rather than PR events on the fork. These source statements are not a complete event-specific privilege model, especially for pull_request_target, and do not authorize executing untrusted fork code.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-FORKWORKFLOWEVENTS-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/developer-site/pull_request_forked_repos_link.md",
+      "content_sha256": "859ca1add568fe6644d85bfb8b8547b63f49a48da156c0ce9402bf48a464311e",
+      "start_line": 1,
+      "end_line": 18,
+      "statement": "The same fragment conditionally describes possible write-maintainer approval for first-time public contributors in fpt/ghec, requires private-fork workflows to be enabled, and applies fork-like restrictions to Dependabot PR workflows. These prerequisites are not actual approval, workflow enablement, observed secret isolation, or a successful positive/negative native test; linked guides are not reviewed here.",
+      "accepted_policy": false
+    }
+  ]
+}

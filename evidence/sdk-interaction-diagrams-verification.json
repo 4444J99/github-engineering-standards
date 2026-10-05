@@ -1,0 +1,15 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/5",
+  "recorded_at": "2026-10-02T14:37:04Z",
+  "commands": [
+    {"command": "python -m unittest discover -s tests -v", "exit_code": 0, "tests": 255, "result": "OK; printed published_docs ERROR is synthetic negative fixture output"},
+    {"command": "python -m ges validate", "exit_code": 0, "valid": true, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "python -m ges recovery --help", "exit_code": 2, "result": "Unsupported top-level subcommand; diagnostic only. Correct module invocation below succeeded."},
+    {"command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json", "exit_code": 0, "reviewed_artifacts": 717, "inventory_artifacts": 13657, "receipt_errors": [], "gates_open": 9}
+  ],
+  "tranche": {"new_full_visual_reviews": 2, "atomic_visual_observations": 27, "independent_review": "SUPPORTED_NO_SCOPED_OMISSION_FOUND"},
+  "boundaries": ["No raw images committed", "No SDK execution", "No accepted policy", "No rights clearance", "No global gate closure"],
+  "delivery": "Commit and push identity is recorded separately in issue #5"
+}

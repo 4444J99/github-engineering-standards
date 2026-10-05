@@ -1,0 +1,52 @@
+{
+  "schema_version": "ges.triage-workflow-verification.v1",
+  "issue": 385,
+  "claims_added": 9,
+  "candidates_accounted": 32,
+  "reference_claims": 60883,
+  "claim_bearing_artifacts": 3415,
+  "conflict": {
+    "status": "UNRESOLVED",
+    "claims": [
+      "DOCS-TRIAGEWORKFLOW-6",
+      "DOCS-INBOXTRIAGE-5"
+    ],
+    "subject": "Done inclusion in is:read"
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 324,
+    "seconds": 1.976,
+    "result": "OK"
+  },
+  "controls": 95,
+  "project_complete": false,
+  "gates_open": 9,
+  "accepted_policy": false,
+  "rights_cleared": false
+}

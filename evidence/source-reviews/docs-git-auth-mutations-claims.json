@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T04:31:50.418Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-GITAUTHMUTATIONS-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/git/no-credential-manager.md",
+      "content_sha256": "a835fdc28e3fe3b9775471ca12ab17b2d5cc24b1af54ef8e8515715a95d28438",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment infers no credential manager from output lacking a manager name and permits proceeding. Isolated output interpretation does not establish exhaustive configuration/precedence, absence of authentication mechanisms, valid credentials, or a complete diagnostic; it is not a verified account finding.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GITAUTHMUTATIONS-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/git/open-terminal.md",
+      "content_sha256": "ccb18456ce02f30b9626824bcb0570c00d854028be0d017600085a35543b6a79",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment only directs opening Terminal. It contains no shell command, privilege request, task target, execution receipt, or authority to run subsequent imported instructions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GITAUTHMUTATIONS-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/git/provide-credentials.md",
+      "content_sha256": "d1f72047755cbea021bee3d04a85210af547db703814a9342bad7c8f1675485a",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The credential fragment describes an initial Git access prompt, supplying an accessible account's PAT, and caching by full remote URL with subsequent repository access/write. This depends on surrounding credential configuration and actual token permissions; read access is not automatically write authority and a PAT is not universally required by every transport. No token was requested, transmitted, stored, or exposed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GITAUTHMUTATIONS-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/git/remove-git-remote.md",
+      "content_sha256": "98f8aa38af64592f647f92258242717a81e15ac342c23f2c3657a1adcee477dd",
+      "start_line": 1,
+      "end_line": 10,
+      "statement": "The remote-removal example lists fetch/push remotes and removes origin, while its prose asks for removal of any configured remotes. The illustrated origin and hostname are not verified project targets, and losing remote configuration is not custody/parity proof. The broad instruction is not adopted; no remote was removed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GITAUTHMUTATIONS-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/git/reset-head-to-previous-commit-codeblock.md",
+      "content_sha256": "e31c964a257313182fd6128aa7e0c674d8ad62fe0a89b3b290471a77b8e563b2",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The soft-reset fragment proposes moving HEAD to the preceding commit before recommitting a modified file. It is a history-ref mutation and not a universal safe response: branch state, prior commit, published history, and staged changes must be resolved before such action. No reset or history rewrite occurred; the fragment's ordering does not provide complete validated staging instructions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-GITAUTHMUTATIONS-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/git/stage_for_commit.md",
+      "content_sha256": "8324d93fc9de7d338eaa2e675e8c5f8eb7843ecb20e6c6b014efeafabfd0326e",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The staging fragment describes staging a file locally but names no exact file or diff, content review, credentials, commit, remote push, or release. Stage presence alone is not accepted policy, verified correctness, or completion evidence.",
+      "accepted_policy": false
+    }
+  ]
+}

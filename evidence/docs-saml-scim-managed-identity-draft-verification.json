@@ -1,0 +1,41 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 24,
+  "phase": "author draft checkpoint; root independent semantic audit pending",
+  "verified_at": "2026-10-02T20:13:00.355Z",
+  "input": {
+    "path": "evidence/source-reviews/docs-saml-scim-managed-identity-claims.json",
+    "sha256": "b5818f4cfb1490131b38343abec875c6e6699c47fcb3693541ab5469abcb7980",
+    "records": 550,
+    "files": 95,
+    "physical_lines": 259,
+    "bytes": 40109
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "observed": "324tests in1.284s OK; trailing published_docs ERROR is synthetic negative fixture."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "observed": "valid true95controls"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "observed": "completed without output"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "observed": "valid true;54976 records;1460 claim-bearing artifacts; provenance not semantic truth."
+    }
+  ],
+  "full_review_receipts_issued": false,
+  "independent_audit_complete": false,
+  "rights_cleared": false,
+  "policy_adopted": false,
+  "native_enforcement_verified": false
+}

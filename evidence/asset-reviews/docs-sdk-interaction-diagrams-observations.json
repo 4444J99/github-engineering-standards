@@ -1,0 +1,319 @@
+{
+  "schema": "ges.source-asset-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T14:34:43Z",
+  "policy_adoption": "NONE",
+  "rights_clearance": "NOT_CLEARED",
+  "independent_omission_certification": false,
+  "asset_observations": [
+    {
+      "artifact_id": "b298d8b1a2515fafeba532a1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "assets/images/help/copilot/copilot-sdk/features-image-input-diagram-0.png",
+      "content_sha256": "174e1199c7ed8139d49b2699c995e0267556fd8a4ff7f5cb1a8bc9a4d0c35c32",
+      "byte_count": 81072,
+      "inspection": "Root inspected the entire decoded image at original resolution; downloaded-byte SHA-256 and size match pinned inventory.",
+      "actors": [
+        "Your App",
+        "SDK Session",
+        "Copilot Runtime",
+        "Vision Model"
+      ],
+      "actor_layout": "Named lifelines repeat at the bottom; sequence flows downward.",
+      "operative_source_claims": [
+        {
+          "id": "DOCS-SDKASSET-1-001",
+          "title": "App to session request",
+          "statement": "Illustrated send request supplies a prompt.",
+          "location": "top request arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-002",
+          "title": "File attachment type",
+          "statement": "Illustrated attachment is file type.",
+          "location": "top request arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-003",
+          "title": "Attachment path",
+          "statement": "Illustrated file attachment supplies a path.",
+          "location": "top request arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-004",
+          "title": "Session to runtime",
+          "statement": "Session forwards the file attachment using JSON-RPC.",
+          "location": "second arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-005",
+          "title": "Disk read",
+          "statement": "Runtime reads the file from disk.",
+          "location": "first runtime loop",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-006",
+          "title": "Image detection",
+          "statement": "Runtime detects image content.",
+          "location": "second runtime loop",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-007",
+          "title": "Base64 conversion",
+          "statement": "Runtime converts detected image content to base64.",
+          "location": "second runtime loop",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-008",
+          "title": "Conditional resize",
+          "statement": "Runtime resizes if necessary.",
+          "location": "third runtime loop",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-009",
+          "title": "Model-specific limits",
+          "statement": "Resize annotation references model-specific limits.",
+          "location": "third runtime loop",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-010",
+          "title": "Model request",
+          "statement": "Runtime sends an image_url content block to the vision model.",
+          "location": "runtime to model arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-011",
+          "title": "Encoded content",
+          "statement": "Illustrated content block uses base64.",
+          "location": "runtime to model arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-012",
+          "title": "Model response",
+          "statement": "Model returns a response referencing the image.",
+          "location": "model to runtime dashed arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-013",
+          "title": "Assistant event",
+          "statement": "Runtime returns assistant.message events to the session.",
+          "location": "runtime to session dashed arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-1-014",
+          "title": "Application events",
+          "statement": "Session returns an event stream to the application.",
+          "location": "session to app dashed arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        }
+      ],
+      "limitations": "Illustrates a file-path happy path only. Blob route, permission/capability checks, errors, size units, quality reduction and oversized-image skip behavior are not depicted. Their absence here is not evidence of runtime absence. image_url is an illustrative label, not a universal provider wire contract.",
+      "rights": "Image-specific origin and permission unresolved; no redistribution or rights clearance."
+    },
+    {
+      "artifact_id": "3a89e75e95ded54421a756eb",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "assets/images/help/copilot/copilot-sdk/features-steering-and-queueing-diagram-0.png",
+      "content_sha256": "5ade33aa959607e1748ffef2245174dbeffdb70c89b52c1a044db97b0bea82c9",
+      "byte_count": 82429,
+      "inspection": "Root inspected the entire decoded image at original resolution; downloaded-byte SHA-256 and size match pinned inventory.",
+      "actors": [
+        "User",
+        "Session",
+        "Agent"
+      ],
+      "actor_layout": "Named lifelines repeat at the bottom; sequence flows downward.",
+      "operative_source_claims": [
+        {
+          "id": "DOCS-SDKASSET-2-001",
+          "title": "Initial message",
+          "statement": "User sends an initial authentication-refactoring prompt to the session.",
+          "location": "first user to session arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-002",
+          "title": "Initial turn",
+          "statement": "Session starts an agent turn.",
+          "location": "first session to agent arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-003",
+          "title": "Busy interval",
+          "statement": "Highlighted band identifies the agent as busy.",
+          "location": "yellow band",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-004",
+          "title": "Correction prompt",
+          "statement": "User supplies a correction requesting a different authentication approach.",
+          "location": "second user to session arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-005",
+          "title": "Immediate mode",
+          "statement": "Correction request sets immediate delivery mode.",
+          "location": "second user to session arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-006",
+          "title": "Steering delivery",
+          "statement": "Session depicts steering injected into the current turn.",
+          "location": "dashed session to agent arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-007",
+          "title": "Follow-up prompt",
+          "statement": "User supplies a documentation follow-up prompt.",
+          "location": "third user to session arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-008",
+          "title": "Enqueue mode",
+          "statement": "Follow-up request sets enqueue delivery mode.",
+          "location": "third user to session arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-009",
+          "title": "Queue destination",
+          "statement": "Session queues the follow-up for the next turn.",
+          "location": "session self-loop",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-010",
+          "title": "First completion",
+          "statement": "Agent completes the first depicted turn.",
+          "location": "first agent to session return",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-011",
+          "title": "Steering incorporation",
+          "statement": "First completion annotation depicts incorporation of steering.",
+          "location": "first agent to session return",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-012",
+          "title": "Queued processing",
+          "statement": "Session sends the queued message for processing.",
+          "location": "second session to agent arrow",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        },
+        {
+          "id": "DOCS-SDKASSET-2-013",
+          "title": "Second completion",
+          "statement": "Agent completes the subsequent depicted turn.",
+          "location": "last agent to session return",
+          "strength": "Illustrative reference, not adopted normative policy",
+          "mapping_status": "PROPOSED_ONLY",
+          "canonical_control_ids": [],
+          "adopted_policy": false
+        }
+      ],
+      "limitations": "Illustrated incorporation is a happy path, not guaranteed interruption or prevention of committed tool calls. Reviewed prose preserves best-effort steering and late fallback to queue front. No acknowledgement/messageId, source provenance, billing, idle, queue-boundary or failed-send branch is shown. Example authentication prompts are inert illustrations, not local authorization.",
+      "rights": "Image-specific origin and permission unresolved; no redistribution or rights clearance."
+    }
+  ]
+}

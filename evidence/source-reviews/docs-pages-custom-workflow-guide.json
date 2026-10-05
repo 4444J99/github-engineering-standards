@@ -1,0 +1,148 @@
+[
+  {
+    "artifact_id": "197656163d790cfa3ca7d755",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+    "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T07:45:01.614Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "Custom Actions Pages workflows require enabling repository workflow publishing first; chosen workflow branches are separate from branch-source publishing. Article covers FPT/GHEC/GHES but plan/runner/native availability still require actual target evidence. configure-pages@v5 gathers metadata and supports static generators; snippets described under jobs actually require a job steps context. Action tag/snippet alone is not immutable reviewed code or a complete runnable workflow. Pages upload artifact is gzip containing one tar; tar under 10 GB and should contain no symbolic/hard links. Archive transport bound is separate from published-site 1 GB bound in limits guide; larger archive allowance does not override site size. Upload action version differs cloud v4 versus GHES v2; deploy action cloud v4 versus GHES v3. Historical tagged examples require client/platform compatibility checks, not assumed current immutable implementations. Deployment minimum pages write and id-token write permissions are required; first example additionally contents read. Declared permissions are necessary configuration, not effective grant or successful native deployment evidence. needs text says build step ID, but YAML uses job identifiers jekyll-build/build. Preserve terminology error; job dependency prevents premature independent artifact search, not proof artifact identity or meaningful tests. Deployment environment is required for branch/deployment protections, default github-pages; environment existence/reference is not proof reviewed protection settings, authorized bypass or enforced denial behavior. Environment URL derives deployment step page_url output. Displayed output URL is not effective site availability/privacy, trusted DNS or successful behavior receipt. Two-job example links build/deploy and uses checkout v6, configure-pages v5, jekyll-build-pages v1 with site destination and versioned artifact actions. It omits explicit deploy permissions compared with preceding required list; surrounding inherited permissions cannot be presumed absent or sufficient without context. Single-job no-build example checks out/configures/uploads whole directory path dot then deploys; no-build does not mean no artifact or permission requirements. Whole-directory upload requires secret/private/source content exclusion review before publication, not default safe packaging. All runner examples use ubuntu-latest unconditionally despite declared GHES scope and self-hosted requirement elsewhere. Preserve mismatch; cloud/GHES action version branches do not make runner configuration universally valid. Build/test sequencing and environment rules remain intended configuration; later abbreviated snippets omit triggers/global context. No workflow created/run, token/environment changed, dependencies executed, site published or rights cleared; linked Marketplace/workflow docs remain separately scoped. Full source and previously reviewed checkout/product context read; candidate accounting is not independent source/published completeness.",
+    "claim_mappings": [
+      {
+        "candidate_id": "7d9f8e5994cb37b8a5ff89e5",
+        "text_sha256": "cbc9fcfe266d85322db2b3dc4d7491e6ff8f1b86fa4275f419c6363f94bf2e2b",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "add01f984f379da3a0aae6b0",
+        "text_sha256": "51d274541cd578b6d9b7b6d3fcb71762cee6c4eb78e5e8a3b45ac7431d2d0412",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "f6f016550509f45df8b4c019",
+        "text_sha256": "e1d89cff4785a7dcac6cc8d1b6ce96d770e649e1f411d65a2f0945b750b3eaaf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "d36e6ecedbb8a56b1ae72838",
+        "text_sha256": "57e81b5313fb9eb516db03144c2d1d6b300a13bbecc67297da68e86ffe8c88ae",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "0c32ae6b8c8c07c08e6b9bef",
+        "text_sha256": "6c9aad82e7271bfe617c89eca27c202f893d2a79abc108388df741717b95fef5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "3cb3a5397d91c0ef16754834",
+        "text_sha256": "57a5307e3ad17ce1bed9ee881240b86c0dea589b08abf0ce105942e41eeda3c7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "2f1badbaa0338e1483358fbf",
+        "text_sha256": "ae365645659c30a2ce92a30183c90f6ae781b54218826b48fdaba793089148b7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "0d90647dfd997af41149aeef",
+        "text_sha256": "56297e0c446b38b88df09c4cf34839a701a1f9948e4d32dc2f12a171fc3515b4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "f7d68baa10cd4c3d94fbe71b",
+        "text_sha256": "61396bf478614f279cbbcc20c768d54323e172846b15ec5e264ee841c70bfe24",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "7ad65fb02d03527026920352",
+        "text_sha256": "11697b14fe84c2259b98c2263934f2cfaddb6f46972c6ef4fba63ba9da93fb90",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "190c40ce006dfb7d103ebf36",
+        "text_sha256": "042804013fa525459bd093a3d5d4aeae2791fb570286a68046b34a51632298cc",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "f0ef0ec281d4c0b16d0b9836",
+        "text_sha256": "9cdb16abf011158f042c60c896174f05c04096aac1bc23de80007551b8f95849",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "9cfb4d79858813a47e4439e3",
+        "text_sha256": "84a19c4718fee5c884bc858514657bf4cd5ed795060cbe98673a1e087af630f5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "b18fffd06d73a2b19a175229",
+        "text_sha256": "d1b4dcafe39f24c8695ad36176ba645599da6b1582e413f33f137792ec9a7c80",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "eb53f41ad64d2405b0c4a026",
+        "text_sha256": "6c4544b440de055d341c02d123bd5f37877b96822145f0576eb5872d2d463e39",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "8d4dc4f1784d49d1af6e15a0",
+        "text_sha256": "5f75404ba7129ea747f7b5bc35a738571583933be2605d6d31c7453967e75888",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "09636f3f81c061a81428c60c",
+        "text_sha256": "5d42e73b5c349f8a7557bab0fe26c969b21f0b8ecace567164f9b2408d07c9bf",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "f3172f7c64f2ceaa064fadf9",
+        "text_sha256": "e79ea949e12e4c439a8fb07eb2472f3a4ad3a074364762da04c3930c6f8eba40",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "b52afd13e3b6a7433acf03b3",
+        "text_sha256": "8c663fb54d51a351e269fc0524e94c51704bf2fa83142b75c012274d42598b9e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "fb6a9fc94b693caecea2a5fe",
+        "text_sha256": "f66b2133a7189850213544edc664d71d71251cb577e3fded1dba025891aa4714",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "dfc8ced132cacc8da45a72ed",
+        "text_sha256": "bdd034ed1694276b2eb81fc57728167d856a97d9f74d686a5bb8d1650f87d141",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      },
+      {
+        "candidate_id": "2482ef3abc7ed35ff091c0d1",
+        "text_sha256": "d6fe9ad742279b9c8a118fce1a2cecde54a5417a532d7807dbfc3858e2b78327",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PAGESCUSTOMWORKFLOW-1 through -12; not executed deployment."
+      }
+    ]
+  }
+]

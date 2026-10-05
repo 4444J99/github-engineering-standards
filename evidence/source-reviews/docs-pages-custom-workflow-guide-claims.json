@@ -1,0 +1,139 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T07:45:01.614Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Custom Actions Pages workflows require enabling repository workflow publishing first; chosen workflow branches are separate from branch-source publishing. Article covers FPT/GHEC/GHES but plan/runner/native availability still require actual target evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "configure-pages@v5 gathers metadata and supports static generators; snippets described under jobs actually require a job steps context. Action tag/snippet alone is not immutable reviewed code or a complete runnable workflow.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Pages upload artifact is gzip containing one tar; tar under 10 GB and should contain no symbolic/hard links. Archive transport bound is separate from published-site 1 GB bound in limits guide; larger archive allowance does not override site size.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Upload action version differs cloud v4 versus GHES v2; deploy action cloud v4 versus GHES v3. Historical tagged examples require client/platform compatibility checks, not assumed current immutable implementations.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Deployment minimum pages write and id-token write permissions are required; first example additionally contents read. Declared permissions are necessary configuration, not effective grant or successful native deployment evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "needs text says build step ID, but YAML uses job identifiers jekyll-build/build. Preserve terminology error; job dependency prevents premature independent artifact search, not proof artifact identity or meaningful tests.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Deployment environment is required for branch/deployment protections, default github-pages; environment existence/reference is not proof reviewed protection settings, authorized bypass or enforced denial behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Environment URL derives deployment step page_url output. Displayed output URL is not effective site availability/privacy, trusted DNS or successful behavior receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Two-job example links build/deploy and uses checkout v6, configure-pages v5, jekyll-build-pages v1 with site destination and versioned artifact actions. It omits explicit deploy permissions compared with preceding required list; surrounding inherited permissions cannot be presumed absent or sufficient without context.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Single-job no-build example checks out/configures/uploads whole directory path dot then deploys; no-build does not mean no artifact or permission requirements. Whole-directory upload requires secret/private/source content exclusion review before publication, not default safe packaging.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "All runner examples use ubuntu-latest unconditionally despite declared GHES scope and self-hosted requirement elsewhere. Preserve mismatch; cloud/GHES action version branches do not make runner configuration universally valid.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PAGESCUSTOMWORKFLOW-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages.md",
+      "content_sha256": "687dee02817159c3ae718d7519008c038b1db8cf10ed4d4451b3da320e12c492",
+      "start_line": 1,
+      "end_line": 166,
+      "statement": "Build/test sequencing and environment rules remain intended configuration; later abbreviated snippets omit triggers/global context. No workflow created/run, token/environment changed, dependencies executed, site published or rights cleared; linked Marketplace/workflow docs remain separately scoped.",
+      "accepted_policy": false
+    }
+  ]
+}

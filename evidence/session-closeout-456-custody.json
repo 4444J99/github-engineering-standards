@@ -1,0 +1,67 @@
+{
+  "schema": "ges.session-custody.v1",
+  "session_id": "01a0f994-11d8-76b2-ab30-a5aab867e33e",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456",
+  "scope": "Complete GES checkout including Git history, ignored source/render caches and agent evidence, plus an exact native transcript prefix. Policy implementation and later closeout receipts are separately preserved on their exact GitHub branches.",
+  "snapshot_head": "46842fccd2f3c6138b79f23e5d3af589dafb6d64",
+  "ciphertext_bytes": 1204940832,
+  "ciphertext_sha256": "40452c935232540d16ff7770bf68d8fd31d8111e347535289a16cbab130f2783",
+  "remote_object": "gdrive:limen-custody/sessions/40452c935232540d16ff7770bf68d8fd31d8111e347535289a16cbab130f2783.enc",
+  "encryption": "Existing ARCA AES-256-CBC/PBKDF2, 200000 iterations; existing 1Password escrow supplied the sealing material via anonymous pipe. No new credentials or escrow created.",
+  "escrow_check": {
+    "command": "python3 scripts/check-arca-escrow.py",
+    "exit_code": 0,
+    "accepted": true,
+    "scope": "one-bounded-committed-archive",
+    "ciphertext_bytes": 4128,
+    "plaintext_bytes": 1759,
+    "regular_files": 1
+  },
+  "quota_free_bytes": 5145167321814,
+  "upload": {
+    "exit_code": 0,
+    "additive": true,
+    "immutable": true,
+    "plaintext_sent": false
+  },
+  "remote_readback": {
+    "verified": true,
+    "exit_code": 0,
+    "ciphertext_bytes": 1204940832,
+    "ciphertext_sha256": "40452c935232540d16ff7770bf68d8fd31d8111e347535289a16cbab130f2783",
+    "history": "Earlier shared-client quota, expired account, deadline and scratch-loss failures retained in issue #456; successful complete readback used the existing project cache."
+  },
+  "restoration": {
+    "verified": true,
+    "archive_members": 49485,
+    "regular_files": 49069,
+    "plaintext_bytes": 1141201977,
+    "restored_manifest_sha256": "faf9ba12f2c9a1581c65607ac1384c94645a1e4e2068c56e51ae393b2451f20f",
+    "all_regular_members_read": true,
+    "keychain_used": false,
+    "plaintext_extracted": false,
+    "upstream_code_executed": false,
+    "credential_source": "Existing independently held 1Password escrow; transient in-process material supplied through anonymous pipe."
+  },
+  "staging": {
+    "readback_directory_path_sha256": "c0b11d95ffebb859c38861dbdea67416e7cfa7035d77e23f4b4977bd1c791a21",
+    "preserved_original_directory_path_sha256": "39392f2924b6621c498a6c608ce983a946782ebc6274ecc940117fccad774ab3",
+    "private_path_mapping": "Preserved Documents custody-backup receipts; no runtime custody staging.",
+    "runtime_custody_staging_prohibited": true
+  },
+  "custody_verified": true,
+  "checkout_disposition": "RETAIN",
+  "raw_copies_deleted": false,
+  "private_values_published": false,
+  "next_action": "Reconcile the exact policy worktree scope and unrelated process ownership through the existing owner; then rerun the installed session predicate. Custody is no longer the outstanding prerequisite.",
+  "project_complete": false,
+  "rights_cleared": false,
+  "policy": {
+    "policy_merge_commit": "65ceff671ce2d583ccefaf5772ae2b62df97c105",
+    "policy_remote_content_matches_verified_topic": true,
+    "policy_document_sha256": "cd0ef39f0be865cdf108d6aca5c59168f4e3f1645c6a1d2b8ac5e4f92d0d6c94"
+  },
+  "proof_boundary": "Session-owned GES snapshot and transcript prefix plus the exact policy document/merged Git commit. This is not custody certification for unrelated private Limen sessions or the estate.",
+  "retained_artifact": ".cache/session-custody-456/remote.enc",
+  "local_scratch_history": "Original runtime scratch ciphertext/transcript-prefix copies and first preserved readback prefix disappeared without deletion by this session. Complete new ciphertext readback is present in the ignored project cache."
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "ges.author-repair-recheck.v1",
+  "reviewed_at": "2026-10-02T19:58:16Z",
+  "original_author": "/root/evaluator_review",
+  "independent_original_auditor": "/root",
+  "rechecker": "/root/evaluator_review",
+  "review_scope": "Bounded author recheck of six specific root wording corrections, not independent self-audit of original extraction.",
+  "input": {
+    "path": "evidence/source-reviews/docs-identity-authentication-signing-claims.json",
+    "sha256": "705d04c18e5475531c8685b689287499ddf3b513a2661bc196d5531716334943",
+    "records": 698,
+    "original_sha256": "33e751692acc593fa326d182ef9fa01b21b2bbbb1c44917a4464f8d235c64953",
+    "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995"
+  },
+  "findings": [
+    {
+      "claim_id": "DOCS-AUTHIDENT-0126",
+      "path": "data/reusables/identity-and-permissions/ip-allow-lists-address-inheritance.md",
+      "source_lines": [
+        3,
+        3
+      ],
+      "source_sha256": "e43ea79b938153fbc946329e1f17b5959f52f6f909a9e849d209e362a6e24813",
+      "outcome": "SUPPORTED",
+      "rationale": "Edited repairs the typo without changing the source prohibition on editing inherited app addresses."
+    },
+    {
+      "claim_id": "DOCS-AUTHIDENT-0470",
+      "path": "data/reusables/two_fa/manual-totp-app-setup.md",
+      "source_lines": [
+        7,
+        7
+      ],
+      "source_sha256": "e829fe9f5c5e73640194a82ffc31a627c054851b4af61a5a34d465fc52934c8b",
+      "outcome": "SUPPORTED",
+      "rationale": "SHA1 is expressly a default, not an inferred invariant or adopted cryptographic policy."
+    },
+    {
+      "claim_id": "DOCS-AUTHIDENT-0471",
+      "path": "data/reusables/two_fa/manual-totp-app-setup.md",
+      "source_lines": [
+        8,
+        8
+      ],
+      "source_sha256": "e829fe9f5c5e73640194a82ffc31a627c054851b4af61a5a34d465fc52934c8b",
+      "outcome": "SUPPORTED",
+      "rationale": "Six digits are expressly the source default."
+    },
+    {
+      "claim_id": "DOCS-AUTHIDENT-0472",
+      "path": "data/reusables/two_fa/manual-totp-app-setup.md",
+      "source_lines": [
+        9,
+        9
+      ],
+      "source_sha256": "e829fe9f5c5e73640194a82ffc31a627c054851b4af61a5a34d465fc52934c8b",
+      "outcome": "SUPPORTED",
+      "rationale": "Thirty seconds is expressly the source default period."
+    },
+    {
+      "claim_id": "DOCS-AUTHIDENT-0492",
+      "path": "data/reusables/two_fa/sms-warning.md",
+      "source_lines": [
+        4,
+        4
+      ],
+      "source_sha256": "fec8abd2c566c58bf6cbcac363a44acc73cc258c9a7b6a806279342a256d25f7",
+      "outcome": "SUPPORTED",
+      "rationale": "Strong recommendation for TOTP over SMS preserved without upgrading it to a mandatory requirement."
+    },
+    {
+      "claim_id": "DOCS-AUTHIDENT-0493",
+      "path": "data/reusables/two_fa/sms-warning.md",
+      "source_lines": [
+        4,
+        4
+      ],
+      "source_sha256": "fec8abd2c566c58bf6cbcac363a44acc73cc258c9a7b6a806279342a256d25f7",
+      "outcome": "SUPPORTED",
+      "rationale": "Strong recommendation for security-key backups over SMS preserved separately."
+    }
+  ],
+  "remaining_findings": [],
+  "boundary": "Only the specified author-recheck repairs are supported. Root's independent original audit is separate. No global omission/gate certification, rights clearance, native validation, policy adoption or current platform truth is asserted."
+}

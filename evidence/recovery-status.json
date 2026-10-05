@@ -1,0 +1,456 @@
+{
+  "accepted_controls": 0,
+  "candidate_blocks": 150903,
+  "catalog_controls": 95,
+  "catalog_digest": "c55f7257ae7f92500f4af7e8ae5bde2f5ec25f49c16f13bc676575f7a0248ae8",
+  "certification_adapter_status": "INCOMPLETE_SEMANTIC_AND_RUNTIME_ADAPTERS",
+  "certification_adapters": {
+    "binding_verification": "NOT_IMPLEMENTED",
+    "claim_reconciliation": "NOT_IMPLEMENTED",
+    "generalization": "NOT_IMPLEMENTED",
+    "native_and_estate_verification": "NOT_IMPLEMENTED",
+    "policy_adoption": "NOT_IMPLEMENTED",
+    "published_assurance": "IMPLEMENTED_LOCKED_SOURCE_ONLY",
+    "rights_acceptance": "IMPLEMENTED_PINNED_ARTIFACTS_ONLY",
+    "source_fidelity_and_omission": "NOT_IMPLEMENTED"
+  },
+  "gates": [
+    {
+      "closure_condition": "Every artifact has a validated reviewed disposition and independent omission audit",
+      "completed": 3560,
+      "conditions": {
+        "coverage_complete": false,
+        "independent_omission_audit": null,
+        "pinned_git_trees_match": true,
+        "review_receipts_valid": true
+      },
+      "denominator": 13657,
+      "evaluation": "INCOMPLETE",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "exhaustive_artifact_accounting",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
+      "remaining": 10097,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "independent_omission_audit"
+      ]
+    },
+    {
+      "closure_condition": "Every page has rendered/version/dependency review; retrieval alone is insufficient",
+      "completed": 0,
+      "conditions": {
+        "all_bodies_durably_acquired": true,
+        "all_source_paths_reconciled": false,
+        "coverage_complete": false,
+        "version_include_and_render_assurance": null
+      },
+      "denominator": 18019,
+      "evaluation": "INCOMPLETE",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "published_content_assurance",
+      "incomplete_conditions": [
+        "coverage_complete",
+        "all_source_paths_reconciled"
+      ],
+      "remaining": 18019,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "version_include_and_render_assurance"
+      ]
+    },
+    {
+      "closure_condition": "Full-artifact omission review and atomic claims; candidate count is not a claim denominator",
+      "completed": 3560,
+      "conditions": {
+        "atomic_claim_fidelity_audit": null,
+        "coverage_complete": false,
+        "independent_source_to_claim_omission_audit": null
+      },
+      "denominator": 13657,
+      "evaluation": "INCOMPLETE",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "semantic_extraction",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
+      "remaining": 10097,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "atomic_claim_fidelity_audit",
+        "independent_source_to_claim_omission_audit"
+      ]
+    },
+    {
+      "closure_condition": "All structured occurrences mapped with exact provenance; remaining unstructured claims also reviewed",
+      "completed": 0,
+      "conditions": {
+        "coverage_complete": false,
+        "exact_claim_mapping_and_conflict_review": null,
+        "unstructured_claim_denominator_certified": null
+      },
+      "denominator": 605,
+      "evaluation": "INCOMPLETE",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "consolidation",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
+      "remaining": 605,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "exact_claim_mapping_and_conflict_review",
+        "unstructured_claim_denominator_certified"
+      ]
+    },
+    {
+      "closure_condition": "Every definition and proposal has reviewed scope, policy, parameters and conflicts",
+      "completed": 0,
+      "conditions": {
+        "coverage_complete": false,
+        "profiles_parameters_and_templates_reviewed": null
+      },
+      "denominator": 688,
+      "evaluation": "INCOMPLETE",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "generalization",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
+      "remaining": 688,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "profiles_parameters_and_templates_reviewed"
+      ]
+    },
+    {
+      "closure_condition": "Accepted controls have all required tested bindings and accountable review procedures",
+      "completed": 0,
+      "conditions": {
+        "accepted_policy_exists": false,
+        "all_required_bindings_verified": null,
+        "coverage_complete": null
+      },
+      "denominator": 0,
+      "evaluation": "INCOMPLETE",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "operational_completeness",
+      "incomplete_conditions": [
+        "accepted_policy_exists"
+      ],
+      "remaining": 0,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "coverage_complete",
+        "all_required_bindings_verified"
+      ]
+    },
+    {
+      "closure_condition": "Approved target inventory, positive/negative behavior tests and recovery receipts",
+      "completed": 0,
+      "conditions": {
+        "approved_target_inventory": null,
+        "coverage_complete": null,
+        "positive_negative_bypass_and_recovery_evidence": null
+      },
+      "denominator": null,
+      "evaluation": "UNVERIFIED",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "native_enforcement",
+      "incomplete_conditions": [],
+      "remaining": null,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "coverage_complete",
+        "approved_target_inventory",
+        "positive_negative_bypass_and_recovery_evidence"
+      ]
+    },
+    {
+      "closure_condition": "Per-file rights review and approved distribution; inventory notices alone insufficient",
+      "completed": 0,
+      "conditions": {
+        "authorized_distribution_decision": null,
+        "coverage_complete": false,
+        "per_file_rights_acceptance": null
+      },
+      "denominator": 13657,
+      "evaluation": "INCOMPLETE",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "rights_and_publication",
+      "incomplete_conditions": [
+        "coverage_complete"
+      ],
+      "remaining": 13657,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "per_file_rights_acceptance",
+        "authorized_distribution_decision"
+      ]
+    },
+    {
+      "closure_condition": "Explicit authorized inventory and effective-policy/behavior evidence per target",
+      "completed": 0,
+      "conditions": {
+        "approved_estate_inventory": null,
+        "coverage_complete": null,
+        "fresh_effective_enforcement_and_drift_evidence": null
+      },
+      "denominator": null,
+      "evaluation": "UNVERIFIED",
+      "evidence": "evidence/recovery-status.json",
+      "gate": "estate_rollout",
+      "incomplete_conditions": [],
+      "remaining": null,
+      "status": "OPEN",
+      "unverified_conditions": [
+        "coverage_complete",
+        "approved_estate_inventory",
+        "fresh_effective_enforcement_and_drift_evidence"
+      ]
+    }
+  ],
+  "generated_at": "2026-10-03T18:53:38.859997+00:00",
+  "historical_checkpoint": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
+  "inventory_artifacts": 13657,
+  "justified_exclusions": 0,
+  "ledger": {
+    "dependencies_with_path_match": 56956,
+    "dependency_references": 61801,
+    "docs_source_markdown_files": 3742,
+    "full_semantic_review_complete": false,
+    "generated_or_unresolved_page_instances": 14,
+    "published_page_version_instances": 18019,
+    "published_source_path_matches": 18005,
+    "source_artifacts_referenced_by_canonical_controls": 30,
+    "structured_requirements_by_source": {
+      "github/github-well-architected": 476,
+      "microsoft/ghqr": 129
+    },
+    "structured_source_requirements": 605
+  },
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1",
+  "profiles": 6,
+  "project_complete": false,
+  "published_assurance_accounting": {
+    "completed": 0,
+    "denominator": 18019,
+    "ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+    "native_behavior_verified": false,
+    "policy_adopted": false,
+    "policy_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "receipts_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "rights_cleared": false,
+    "schema": "ges.published-assurance-accounting.v1",
+    "scope": "Validated authorized assurance attestations only; reviewer judgments are not independently proved by machine validation.",
+    "semantic_truth_automatically_certified": false,
+    "validated_page_ids": [],
+    "version_include_and_render_assurance": null
+  },
+  "published_pages": 18019,
+  "quarantined_proposals": 593,
+  "queue_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
+  "rendered_bodies_acquired": 18019,
+  "review_accounting": {
+    "coverage_unit": "artifact_disposition_receipts",
+    "errors": [],
+    "independent_omission_certified": false,
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "receipt_count": 3560,
+    "receipt_coverage": 0.260672182763418,
+    "review_coverage": 0.260672182763418,
+    "reviewed": 3560,
+    "semantic_truth_certified": false
+  },
+  "review_receipts_digest": "fc1b77dc4b1f4d89269fe5ee6fbde8f3b2d45f9fdfc44569d51742982940ec04",
+  "rights_acceptance_accounting": {
+    "authority_authenticity_automatically_certified": false,
+    "authorized_distribution_decision": null,
+    "completed": 0,
+    "denominator": 13657,
+    "findings_digest": "bdd078b4730f1c2b4027203a96520ed3345f3e5f45fd103e0b7910c854e2e52b",
+    "inventory_digest": "eaa9c32da3762d0947864cc12aac1857b13d65d15e08aaf3ed44f8f89dc62cb8",
+    "legal_truth_automatically_certified": false,
+    "per_file_rights_acceptance": null,
+    "policy_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "publication_performed": false,
+    "published_body_rights_cleared": false,
+    "receipts_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "schema": "ges.rights-acceptance-accounting.v1",
+    "scope": "Accountable attestations for the exact specified use/distribution only; not blanket reuse or publication permission.",
+    "validated_artifact_ids": []
+  },
+  "schema_version": "ges.recovery.v1",
+  "sources": [
+    {
+      "artifacts": 172,
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 172,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 172,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "microsoft/ghqr",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 172
+    },
+    {
+      "artifacts": 1,
+      "commit": "801411757531a8880cb315148160fde3079d7227",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 1,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 1,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "tmcw/github-best-practices",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 1
+    },
+    {
+      "artifacts": 13,
+      "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 13,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 13,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "jlcanovas/gh-best-practices-template",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 13
+    },
+    {
+      "artifacts": 8,
+      "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 8,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 8,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "atapas/model-repo",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 8
+    },
+    {
+      "artifacts": 244,
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 244,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 244,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "github/github-well-architected",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 243
+    },
+    {
+      "artifacts": 13219,
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "git_tree_reconciliation": {
+        "archive_artifacts": 13219,
+        "blob_mismatches": [],
+        "extra_in_archive": [],
+        "git_tree_artifacts": 13219,
+        "missing_from_archive": [],
+        "status": "MATCH"
+      },
+      "repository": "github/docs",
+      "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
+      "reviewed_artifacts": 3123
+    }
+  ],
+  "structured_requirements": 605,
+  "structured_requirements_by_source": {
+    "github/github-well-architected": 476,
+    "microsoft/ghqr": 129
+  },
+  "templates": 22,
+  "unresolved_published_pages": [
+    {
+      "page_id": "fb2d1529188708434c9e82d5",
+      "path": "/en/enterprise-cloud@latest/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-page-to-your-repository",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "24d6d3361a7d841be2902bc1",
+      "path": "/en/enterprise-cloud@latest/copilot/concepts/agents/computer-use",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "12c0ddffdeef1e4ca3a615e0",
+      "path": "/en/enterprise-cloud@latest/copilot/concepts/agents/dynamic-workflows",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "7c9198ecee3fa2501c8923b0",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "ad38504de28b9a070caa2d35",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/github-copilot-app/computer-use",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "61bb0b8339b159c297a3a06b",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/use-code-review",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "50f4b6577d5cb4323a9296b9",
+      "path": "/en/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/use-dynamic-workflows",
+      "version": "enterprise-cloud@latest"
+    },
+    {
+      "page_id": "c1d4c5026518ee542c59f39c",
+      "path": "/en/communities/setting-up-your-project-for-healthy-contributions/adding-an-accessibility-page-to-your-repository",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "44b445ba08f53dd7efdd23c0",
+      "path": "/en/copilot/concepts/agents/computer-use",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "779f25a16e6824273350ec7d",
+      "path": "/en/copilot/concepts/agents/dynamic-workflows",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "a3a9141c5aef7cccda5d04b3",
+      "path": "/en/copilot/how-tos/copilot-cli/use-copilot-cli/computer-use",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "c6df7f68e2a0ce1a79a96e24",
+      "path": "/en/copilot/how-tos/github-copilot-app/computer-use",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "862c555e4307225e8ae08e5b",
+      "path": "/en/copilot/how-tos/use-copilot-agents/use-code-review",
+      "version": "free-pro-team@latest"
+    },
+    {
+      "page_id": "089c304c4892722ffb3be72a",
+      "path": "/en/copilot/how-tos/use-copilot-agents/use-dynamic-workflows",
+      "version": "free-pro-team@latest"
+    }
+  ]
+}

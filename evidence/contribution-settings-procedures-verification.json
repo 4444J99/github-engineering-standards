@@ -1,0 +1,66 @@
+{
+  "issue": 443,
+  "status": "VERIFIED_REFERENCE_ONLY",
+  "artifact_paths": [
+    "content/account-and-profile/how-tos/contribution-settings/index.md",
+    "content/account-and-profile/how-tos/contribution-settings/manage-visibility-settings-for-private-contributions-and-achievements.md",
+    "content/account-and-profile/how-tos/contribution-settings/sharing-contributions-from-github-enterprise-server.md",
+    "content/account-and-profile/how-tos/contribution-settings/showing-an-overview-of-your-activity-on-your-profile.md",
+    "content/account-and-profile/how-tos/contribution-settings/troubleshooting-missing-contributions.md",
+    "content/account-and-profile/how-tos/contribution-settings/viewing-commit-details-from-your-timeline.md",
+    "content/account-and-profile/how-tos/contribution-settings/viewing-contributions-on-your-profile.md"
+  ],
+  "section_receipts": {
+    "present": 7,
+    "expected": 7
+  },
+  "reusable_fragments_inspected": 7,
+  "feature_datasets_inspected": [
+    "data/features/hide-individual-achievements.yml",
+    "data/features/ghecom-github-connect.yml"
+  ],
+  "added_reference_claims": 22,
+  "reference_claims": 61296,
+  "claim_bearing_artifacts": 3498,
+  "tests": {
+    "passed": 324,
+    "duration_seconds": 2.006
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "unresolved": [
+    "GHES sign-in instruction names Enterprise Cloud twice.",
+    "Data-residency destination and reusable GitHub.com wording need rendered agreement verification.",
+    "Example local +0900 dates substituted into UTC query day ranges without conversion explanation."
+  ],
+  "coverage_caveat": "Receipt presence, not independent semantic omission audit, published-version assurance or actual disclosure/access behavior.",
+  "project_complete": false,
+  "gates_open": 9,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_enforcement_verified": false
+}

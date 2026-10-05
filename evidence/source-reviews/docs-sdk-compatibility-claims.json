@@ -1,0 +1,1972 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T05:13:39Z",
+  "review_scope": "Complete314-line compatibility article read: all available/CLI-only table entries, experimental boundaries, workarounds, protocol versions and examples. No handler registration, permissions, RPCs, CLI export, plan writes/deletion or issue creation executed. No current installed-runtime, policy adoption, rights or independent omission certification.",
+  "claims": [
+    {
+      "claim_id": "DOCS-SDKCOMPAT-001",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 5,
+      "end_line": 6,
+      "statement": "The article compares SDK-accessible and CLI-only features.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-002",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 7,
+      "end_line": 9,
+      "statement": "The article declares Free/Pro/Team and Enterprise Cloud versions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-003",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 10,
+      "end_line": 11,
+      "statement": "The article declares a former SDK/CLI compatibility path redirect.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-004",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 20,
+      "end_line": 20,
+      "statement": "SDK communicates with CLI through JSON-RPC.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-005",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 20,
+      "end_line": 20,
+      "statement": "A feature must be explicitly exposed through the protocol to be SDK-accessible.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-006",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 20,
+      "end_line": 20,
+      "statement": "Many terminal-interactive features are unavailable programmatically.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-007",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 29,
+      "end_line": 29,
+      "statement": "The source lists session creation through createSession as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-008",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 30,
+      "end_line": 30,
+      "statement": "The source lists session resume through resumeSession as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-009",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 31,
+      "end_line": 31,
+      "statement": "The source lists session disconnect through disconnect as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-010",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 32,
+      "end_line": 32,
+      "statement": "The source lists deprecated session destruction through destroy as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-011",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 33,
+      "end_line": 33,
+      "statement": "The source lists permanent session deletion through deleteSession as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-012",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 34,
+      "end_line": 34,
+      "statement": "The source lists stored session listing through listSessions as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-013",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 35,
+      "end_line": 35,
+      "statement": "The source lists last-session identity through getLastSessionId as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-014",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 36,
+      "end_line": 36,
+      "statement": "The source lists foreground-session query through getForegroundSessionId as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-015",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 37,
+      "end_line": 37,
+      "statement": "The source lists foreground-session selection through setForegroundSessionId as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-016",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 39,
+      "end_line": 39,
+      "statement": "The source lists message sending through send as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-017",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 40,
+      "end_line": 40,
+      "statement": "The source lists send-and-wait through sendAndWait as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-018",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 41,
+      "end_line": 41,
+      "statement": "The source lists mid-turn message steering through send immediate mode as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-019",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 42,
+      "end_line": 42,
+      "statement": "The source lists message queueing through send enqueue mode as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-020",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 43,
+      "end_line": 43,
+      "statement": "The source lists file attachments through send attachment file as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-021",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 44,
+      "end_line": 44,
+      "statement": "The source lists directory attachments through send attachment directory as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-022",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 45,
+      "end_line": 45,
+      "statement": "The source lists event history through getEvents as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-023",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 46,
+      "end_line": 46,
+      "statement": "The source lists in-flight cancellation through abort as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-024",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 48,
+      "end_line": 48,
+      "statement": "The source lists custom tool registration through registerTools as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-025",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 49,
+      "end_line": 49,
+      "statement": "The source lists pre-tool permission control through onPreToolUse as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-026",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 50,
+      "end_line": 50,
+      "statement": "The source lists tool-result modification through onPostToolUse as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-027",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 51,
+      "end_line": 51,
+      "statement": "The source lists tool filtering through availableTools/excludedTools as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-028",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 53,
+      "end_line": 53,
+      "statement": "The source lists model listing through listModels as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-029",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 54,
+      "end_line": 54,
+      "statement": "The source lists creation-time model selection through model session config as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-030",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 55,
+      "end_line": 55,
+      "statement": "The source lists mid-session model switching through setModel/model.switchTo as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-031",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 56,
+      "end_line": 56,
+      "statement": "The source lists active model query through model.getCurrent as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-032",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 57,
+      "end_line": 57,
+      "statement": "The source lists supported-model reasoning effort through reasoningEffort as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-033",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 59,
+      "end_line": 59,
+      "statement": "The source lists agent-mode query through mode.get as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-034",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 60,
+      "end_line": 60,
+      "statement": "The source lists agent-mode change through mode.set as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-035",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 62,
+      "end_line": 62,
+      "statement": "The source lists plan reading through plan.read as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-036",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 63,
+      "end_line": 63,
+      "statement": "The source lists plan updates through plan.update as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-037",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 64,
+      "end_line": 64,
+      "statement": "The source lists plan deletion through plan.delete as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-038",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 66,
+      "end_line": 66,
+      "statement": "The source lists workspace-file listing through workspace.listFiles as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-039",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 67,
+      "end_line": 67,
+      "statement": "The source lists workspace-file reading through workspace.readFile as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-040",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 68,
+      "end_line": 68,
+      "statement": "The source lists workspace-file creation through workspace.createFile as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-041",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 70,
+      "end_line": 70,
+      "statement": "The source lists authentication-status query through getAuthStatus as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-042",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 71,
+      "end_line": 71,
+      "statement": "The source lists programmatic user-token authentication through gitHubToken as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-043",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 73,
+      "end_line": 73,
+      "statement": "The source lists server ping through ping as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-044",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 74,
+      "end_line": 74,
+      "statement": "The source lists server status through getStatus as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-045",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 76,
+      "end_line": 76,
+      "statement": "The source lists local/stdio MCP servers through mcpServers as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-046",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 77,
+      "end_line": 77,
+      "statement": "The source lists remote HTTP/SSE MCP servers through mcpServers as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-047",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 79,
+      "end_line": 79,
+      "statement": "The source lists pre-tool hooks through onPreToolUse as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-048",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 80,
+      "end_line": 80,
+      "statement": "The source lists successful post-tool hooks through onPostToolUse as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-049",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 81,
+      "end_line": 81,
+      "statement": "The source lists failed post-tool hooks through onPostToolUseFailure as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-050",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 82,
+      "end_line": 82,
+      "statement": "The source lists prompt modification through onUserPromptSubmitted as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-051",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 83,
+      "end_line": 83,
+      "statement": "The source lists session lifecycle hooks through onSessionStart/onSessionEnd as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-052",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 84,
+      "end_line": 84,
+      "statement": "The source lists custom error handling through onErrorOccurred as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-053",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 86,
+      "end_line": 86,
+      "statement": "The source lists session event subscription through on/once as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-054",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 87,
+      "end_line": 87,
+      "statement": "The source lists streaming delta events through streaming as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-055",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 89,
+      "end_line": 89,
+      "statement": "The source lists custom agents through customAgents as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-056",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 90,
+      "end_line": 90,
+      "statement": "The source lists custom system prompts through systemMessage as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-057",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 91,
+      "end_line": 91,
+      "statement": "The source lists BYOK providers through provider as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-058",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 92,
+      "end_line": 92,
+      "statement": "The source lists automatic context compaction through infiniteSessions as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-059",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 93,
+      "end_line": 93,
+      "statement": "The source lists permission handlers through onPermissionRequest as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-060",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 94,
+      "end_line": 94,
+      "statement": "The source lists user-input handling through onUserInputRequest as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-061",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 95,
+      "end_line": 95,
+      "statement": "The source lists custom skill directories through skillDirectories as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-062",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 96,
+      "end_line": 96,
+      "statement": "The source lists skill exclusion through disabledSkills as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-063",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 97,
+      "end_line": 97,
+      "statement": "The source lists configuration-directory override through configDir as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-064",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 98,
+      "end_line": 98,
+      "statement": "The source lists application User-Agent identification through clientName as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-065",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 99,
+      "end_line": 99,
+      "statement": "The source lists session working directory through workingDirectory as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-066",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 100,
+      "end_line": 100,
+      "statement": "The source lists additional-directory access through additionalDirectories as SDK-accessible; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-067",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 102,
+      "end_line": 102,
+      "statement": "The source lists experimental agent management through agent RPCs as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-068",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 103,
+      "end_line": 103,
+      "statement": "The source lists experimental parallel fleet execution through fleet.start as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-069",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 104,
+      "end_line": 104,
+      "statement": "The source lists experimental manual compaction through history.compact as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-070",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 105,
+      "end_line": 105,
+      "statement": "The source lists experimental context clearing through history.clearContext as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-071",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 106,
+      "end_line": 106,
+      "statement": "The source lists experimental history truncation through history.truncate as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-072",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 107,
+      "end_line": 107,
+      "statement": "The source lists experimental session forking through sessions.fork as SDK-accessible in the experimental section; this is not installed-runtime validation.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-073",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 29,
+      "end_line": 29,
+      "statement": "Session creation is described as supporting full configuration.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-074",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 30,
+      "end_line": 30,
+      "statement": "Resume is described as supporting infinite-session workspaces.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-075",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 31,
+      "end_line": 31,
+      "statement": "Disconnect releases memory rather than demonstrating disk deletion.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-076",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 32,
+      "end_line": 32,
+      "statement": "The deprecated destroy method should be replaced with disconnect.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-077",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 33,
+      "end_line": 33,
+      "statement": "Session deletion removes stored state.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-078",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 34,
+      "end_line": 34,
+      "statement": "The listing method includes stored sessions.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-079",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 40,
+      "end_line": 40,
+      "statement": "Send-and-wait blocks until completion.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-080",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 41,
+      "end_line": 41,
+      "statement": "Immediate steering injects input without aborting the turn.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-081",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 42,
+      "end_line": 42,
+      "statement": "Enqueue buffers messages for sequential processing and is the default.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-082",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 43,
+      "end_line": 43,
+      "statement": "File-image attachments are auto-encoded.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-083",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 43,
+      "end_line": 43,
+      "statement": "File-image attachments are resized.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-084",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 44,
+      "end_line": 44,
+      "statement": "Directory attachments add directory context.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-085",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 45,
+      "end_line": 45,
+      "statement": "getEvents returns session events.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-086",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 46,
+      "end_line": 46,
+      "statement": "Abort cancels an in-flight request rather than demonstrating permanent session deletion.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-087",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 48,
+      "end_line": 48,
+      "statement": "Custom tools support JSON Schema.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-088",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 49,
+      "end_line": 49,
+      "statement": "Pre-tool control supports allow, deny and ask outcomes.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-089",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 53,
+      "end_line": 53,
+      "statement": "Model listing includes capability metadata.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-090",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 53,
+      "end_line": 53,
+      "statement": "Model listing includes billing metadata.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-091",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 53,
+      "end_line": 53,
+      "statement": "Model listing includes policy metadata.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-092",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 54,
+      "end_line": 54,
+      "statement": "Creation-time model configuration is per-session.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-093",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 57,
+      "end_line": 57,
+      "statement": "Reasoning effort is limited to supported models.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-094",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 62,
+      "end_line": 62,
+      "statement": "Plan read returns content.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-095",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 62,
+      "end_line": 62,
+      "statement": "Plan read returns path.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-096",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 63,
+      "end_line": 63,
+      "statement": "Plan updates write planning state.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-097",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 64,
+      "end_line": 64,
+      "statement": "Plan deletion removes planning state.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-098",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 73,
+      "end_line": 73,
+      "statement": "Ping reports a server timestamp.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-099",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 74,
+      "end_line": 74,
+      "statement": "Status reports protocol version.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-100",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 74,
+      "end_line": 74,
+      "statement": "Status reports server information.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-101",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 76,
+      "end_line": 76,
+      "statement": "Local MCP configuration can spawn processes; importing the article does not authorize spawning.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-102",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 77,
+      "end_line": 77,
+      "statement": "Remote MCP configuration connects to services; no connection was made.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-103",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 79,
+      "end_line": 79,
+      "statement": "Pre-tool hooks can modify arguments.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-104",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 81,
+      "end_line": 81,
+      "statement": "Failed-tool hooks observe failures.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-105",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 81,
+      "end_line": 81,
+      "statement": "Failed-tool hooks may inject retry guidance.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-106",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 83,
+      "end_line": 83,
+      "statement": "Lifecycle hooks carry source/reason context.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-107",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 86,
+      "end_line": 86,
+      "statement": "The article advertises more than40event types; no installed event count was measured.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-108",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 90,
+      "end_line": 90,
+      "statement": "System prompts may append or replace.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-109",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 93,
+      "end_line": 93,
+      "statement": "Permission handlers can approve or deny requests.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-110",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 93,
+      "end_line": 93,
+      "statement": "Optional decisionContext attaches auto-approval telemetry, not external authorization.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-111",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 100,
+      "end_line": 100,
+      "statement": "Additional directories grant access beyond working-directory scope.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-112",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 100,
+      "end_line": 100,
+      "statement": "Additional directory grants must be supplied again on resume.",
+      "source_strength": "REQUIREMENT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-113",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 105,
+      "end_line": 105,
+      "statement": "Context clearing replaces conversation context from a terminal tool.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-114",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 106,
+      "end_line": 106,
+      "statement": "History truncation removes events onward from a selected point.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-115",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 107,
+      "end_line": 107,
+      "statement": "Forking selects a history point.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-116",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 114,
+      "end_line": 114,
+      "statement": "The source lists file export as CLI-only: share is not exposed in protocol. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-117",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 115,
+      "end_line": 115,
+      "statement": "The source lists gist export as CLI-only: share-gist is not exposed in protocol. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-118",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 117,
+      "end_line": 117,
+      "statement": "The source lists slash commands as CLI-only: terminal UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-119",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 118,
+      "end_line": 118,
+      "statement": "The source lists agent picker as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-120",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 119,
+      "end_line": 119,
+      "statement": "The source lists diff dialog as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-121",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 120,
+      "end_line": 120,
+      "statement": "The source lists feedback dialog as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-122",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 121,
+      "end_line": 121,
+      "statement": "The source lists theme picker as CLI-only: terminal UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-123",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 122,
+      "end_line": 122,
+      "statement": "The source lists interactive model picker as CLI-only: interactive UI; SDK model switching is separate. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-124",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 123,
+      "end_line": 123,
+      "statement": "The source lists clipboard copy as CLI-only: terminal-specific behavior. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-125",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 124,
+      "end_line": 124,
+      "statement": "The source lists context UI as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-126",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 126,
+      "end_line": 126,
+      "statement": "The source lists deep research as CLI-only: terminal workflow with web search. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-127",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 127,
+      "end_line": 127,
+      "statement": "The source lists chronicle history tools as CLI-only: terminal workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-128",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 129,
+      "end_line": 129,
+      "statement": "The source lists color output as CLI-only: terminal-specific behavior. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-129",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 130,
+      "end_line": 130,
+      "statement": "The source lists screen-reader mode as CLI-only: CLI accessibility mode. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-130",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 131,
+      "end_line": 131,
+      "statement": "The source lists rich diff rendering as CLI-only: terminal rendering. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-131",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 132,
+      "end_line": 132,
+      "statement": "The source lists startup banner as CLI-only: visual UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-132",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 133,
+      "end_line": 133,
+      "statement": "The source lists streamer mode as CLI-only: terminal display. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-133",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 134,
+      "end_line": 134,
+      "statement": "The source lists alternate screen buffer as CLI-only: terminal rendering. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-134",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 135,
+      "end_line": 135,
+      "statement": "The source lists mouse support as CLI-only: terminal input. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-135",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 137,
+      "end_line": 137,
+      "statement": "The source lists allow-all-paths shortcut as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-136",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 138,
+      "end_line": 138,
+      "statement": "The source lists allow-all-URLs shortcut as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-137",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 139,
+      "end_line": 139,
+      "statement": "The source lists allow-all/yolo shortcuts as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-138",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 140,
+      "end_line": 140,
+      "statement": "The source lists allow/deny-tool flags as CLI-only: use pre-tool hook instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-139",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 141,
+      "end_line": 141,
+      "statement": "The source lists allow/deny-URL flags as CLI-only: use SDK permission handler instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-140",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 142,
+      "end_line": 142,
+      "statement": "The source lists reset-allowed-tools UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-141",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 144,
+      "end_line": 144,
+      "statement": "The source lists add-directory UI/flag as CLI-only: session configuration is separate. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-142",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 145,
+      "end_line": 145,
+      "statement": "The source lists list-directories UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-143",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 146,
+      "end_line": 146,
+      "statement": "The source lists change-directory UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-144",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 148,
+      "end_line": 148,
+      "statement": "The source lists plugin commands as CLI-only: interactive management. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-145",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 149,
+      "end_line": 149,
+      "statement": "The source lists MCP-management UI as CLI-only: interactive management. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-146",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 151,
+      "end_line": 151,
+      "statement": "The source lists login/device flow as CLI-only: CLI authentication. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-147",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 152,
+      "end_line": 152,
+      "statement": "The source lists logout as CLI-only: direct CLI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-148",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 153,
+      "end_line": 153,
+      "statement": "The source lists user-info UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-149",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 155,
+      "end_line": 155,
+      "statement": "The source lists clear-conversation UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-150",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 156,
+      "end_line": 156,
+      "statement": "The source lists interactive plan view as CLI-only: use plan RPC instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-151",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 157,
+      "end_line": 157,
+      "statement": "The source lists session/resume/rename UI as CLI-only: terminal workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-152",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 158,
+      "end_line": 158,
+      "statement": "The source lists interactive fleet mode as CLI-only: use fleet RPC instead. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-153",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 160,
+      "end_line": 160,
+      "statement": "The source lists skill-management UI as CLI-only: interactive UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-154",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 162,
+      "end_line": 162,
+      "statement": "The source lists background-task UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-155",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 164,
+      "end_line": 164,
+      "statement": "The source lists usage UI as CLI-only: SDK usage events are separate. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-156",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 166,
+      "end_line": 166,
+      "statement": "The source lists review command as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-157",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 168,
+      "end_line": 168,
+      "statement": "The source lists delegate-to-PR UI as CLI-only: terminal workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-158",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 170,
+      "end_line": 170,
+      "statement": "The source lists shell integration as CLI-only: shell-specific. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-159",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 172,
+      "end_line": 172,
+      "statement": "The source lists experimental toggle as CLI-only: runtime flag. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-160",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 173,
+      "end_line": 173,
+      "statement": "The source lists custom-instruction disable flag as CLI-only: CLI flag. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-161",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 174,
+      "end_line": 174,
+      "statement": "The source lists diagnose command as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-162",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 175,
+      "end_line": 175,
+      "statement": "The source lists instruction management UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-163",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 176,
+      "end_line": 176,
+      "statement": "The source lists debug-log collection as CLI-only: diagnostic tool. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-164",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 177,
+      "end_line": 177,
+      "statement": "The source lists workspace reindex UI as CLI-only: terminal command. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-165",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 178,
+      "end_line": 178,
+      "statement": "The source lists IDE integration as CLI-only: IDE workflow. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-166",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 180,
+      "end_line": 180,
+      "statement": "The source lists single-shot prompt mode as CLI-only: CLI execution mode. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-167",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 181,
+      "end_line": 181,
+      "statement": "The source lists interactive prompt mode as CLI-only: CLI auto-execution then UI. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-168",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 182,
+      "end_line": 182,
+      "statement": "The source lists silent output as CLI-only: CLI script-friendly mode. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-169",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 183,
+      "end_line": 183,
+      "statement": "The source lists continue-session flag as CLI-only: CLI most-recent resume. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-170",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 184,
+      "end_line": 184,
+      "statement": "The source lists agent-selection flag as CLI-only: CLI flag. CLI-only does not imply the SDK lacks the separately named equivalent.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-171",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 190,
+      "end_line": 190,
+      "statement": "Fleet execution is exposed through a runtime RPC for parallel sub-agents.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-172",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 190,
+      "end_line": 190,
+      "statement": "Fleet is suggested for independent concurrent subtasks summarized by the main session.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-173",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 190,
+      "end_line": 190,
+      "statement": "The full fleet guide is linked; its content is not reviewed merely by this reference.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-174",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 194,
+      "end_line": 194,
+      "statement": "SDK does not expose the CLI share export option.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-175",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 196,
+      "end_line": 196,
+      "statement": "Manual session-event collection is a suggested export alternative.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-176",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 199,
+      "end_line": 200,
+      "statement": "The event-export example accumulates subscribed events in memory.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-177",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 202,
+      "end_line": 202,
+      "statement": "The export example separately retrieves event history.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-178",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 203,
+      "end_line": 203,
+      "statement": "The export example leaves Markdown formatting to the application.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-179",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 206,
+      "end_line": 206,
+      "statement": "Direct CLI export is suggested for one-off use; no export was run.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-180",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 210,
+      "end_line": 210,
+      "statement": "SDK permission requests are deny-by-default.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-181",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 210,
+      "end_line": 210,
+      "statement": "File writes are described as denied without a permission handler.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-182",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 210,
+      "end_line": 210,
+      "statement": "Shell commands are described as denied without a permission handler.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-183",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 210,
+      "end_line": 210,
+      "statement": "URL fetches are described as denied without a permission handler.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-184",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 212,
+      "end_line": 212,
+      "statement": "The source directs permission handlers instead of CLI broad-grant shortcuts.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-185",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 216,
+      "end_line": 216,
+      "statement": "The example installs approveAll; this broad source example is not project permission approval or proof of least privilege.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-186",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 222,
+      "end_line": 222,
+      "statement": "Usage events are directed instead of terminal usage commands.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-187",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 225,
+      "end_line": 225,
+      "statement": "The usage example subscribes to assistant.usage.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-188",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 227,
+      "end_line": 227,
+      "statement": "The usage example reads input token count.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-189",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 228,
+      "end_line": 228,
+      "statement": "The usage example reads output token count.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-190",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 235,
+      "end_line": 235,
+      "statement": "The source suggests automatic compaction or manual compaction instead of terminal compact commands.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-191",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 241,
+      "end_line": 241,
+      "statement": "The compaction example enables infinite sessions.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-192",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 242,
+      "end_line": 242,
+      "statement": "The example background-compaction threshold is80percent context utilization.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-193",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 243,
+      "end_line": 243,
+      "statement": "The example buffer threshold blocks/compacts at95percent utilization.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-194",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 248,
+      "end_line": 248,
+      "statement": "The example manually triggers the experimental compact RPC.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-195",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 249,
+      "end_line": 249,
+      "statement": "The example reports removed tokens.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-196",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 249,
+      "end_line": 249,
+      "statement": "The example reports removed messages.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-197",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 253,
+      "end_line": 253,
+      "statement": "Compaction thresholds are0–1ratios, not absolute token counts.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-198",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 261,
+      "end_line": 261,
+      "statement": "The plan example reads planning state.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-199",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 262,
+      "end_line": 263,
+      "statement": "The plan example checks existence before printing content.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-200",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 267,
+      "end_line": 267,
+      "statement": "The plan example overwrites plan content with a placeholder plan; no plan was changed.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-201",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 270,
+      "end_line": 270,
+      "statement": "The plan example deletes planning state; no deletion was performed.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-202",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 275,
+      "end_line": 275,
+      "statement": "Steering injects input into the current turn without abort.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-203",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 279,
+      "end_line": 279,
+      "statement": "The steering example uses immediate mode.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-204",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 282,
+      "end_line": 282,
+      "statement": "The next-turn example omits a mode and therefore uses default enqueue behavior.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-205",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 287,
+      "end_line": 287,
+      "statement": "SDK access is restricted to CLI protocol-exposed features.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-206",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 289,
+      "end_line": 289,
+      "statement": "The source recommends checking SDK alternatives for unavailable CLI features.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-207",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 290,
+      "end_line": 290,
+      "statement": "The source recommends direct CLI for one-off unavailable operations; that recommendation does not authorize executing them.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-208",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 291,
+      "end_line": 291,
+      "statement": "Requesting protocol support by issue is suggested; no issue was created.",
+      "source_strength": "RECOMMENDATION",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-209",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 297,
+      "end_line": 297,
+      "statement": "The compatibility table lists CLI protocolv3 as fully supported by SDKv2–v3.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-210",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 298,
+      "end_line": 298,
+      "statement": "The compatibility table lists CLI protocolv2 as supported through automatic adapters.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-211",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 300,
+      "end_line": 300,
+      "statement": "SDK negotiates protocol version at startup.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-212",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 300,
+      "end_line": 300,
+      "statement": "The source states SDK protocol support spans versions2through3.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-213",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 300,
+      "end_line": 300,
+      "statement": "On protocolv2 the SDK adapts tool.call into itsv3event model.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-214",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 300,
+      "end_line": 300,
+      "statement": "On protocolv2 the SDK adapts permission.request into itsv3event model.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-215",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 300,
+      "end_line": 300,
+      "statement": "The source describes automatic adapters as requiring no code changes; installed behavior is not tested.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-216",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 302,
+      "end_line": 302,
+      "statement": "The source directs runtime version checking.",
+      "source_strength": "PROCEDURE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-217",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 305,
+      "end_line": 306,
+      "statement": "The version example reads protocolVersion from getStatus; no runtime was contacted.",
+      "source_strength": "EXAMPLE",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-SDKCOMPAT-218",
+      "path": "content/copilot/how-tos/copilot-sdk/troubleshooting/compatibility.md",
+      "start_line": 311,
+      "end_line": 314,
+      "statement": "Quickstart, hooks, MCP and debugging links are separately scoped references.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false
+    }
+  ]
+}

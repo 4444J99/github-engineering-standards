@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.independent-claim-audit-supplement.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T14:22:54Z",
+  "scope": "Root candidate-accounting comparison-span correction, not a new whole-source audit.",
+  "prior_audit": "evidence/sdk-skills-independent-claim-audit.json",
+  "prior_recheck": "evidence/sdk-interaction-batch-independent-repair-recheck.json",
+  "finding": {
+    "claim_id": "DOCS-SDKSKILLS-238",
+    "original_record": {
+      "claim_id": "DOCS-SDKSKILLS-238",
+      "path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+      "start_line": 42,
+      "end_line": 261,
+      "statement": "The initial TypeScript loading example lists leaf directories, whereas the later discovery description specifies a parent with immediate skill subdirectories; interpretation needs this source-context distinction.",
+      "source_strength": "INFORMATIONAL_CONSTRAINT",
+      "accepted_policy": false,
+      "context": "Pinned-source reference only, not adopted policy, installation authority, rights clearance or executed SDK behavior. All source skill instructions, commands and permission callbacks are inert data. Relative paths and identifiers are examples; linked pages are separately reviewed or unreviewed, not inherited. Source-described CLI discovery and SDK options do not establish native enforcement."
+    },
+    "proposed_parent_strength": "GROUPED_CONTEXT",
+    "proposed_children": [
+      {
+        "claim_id": "DOCS-SDKSKILLS-238-A01",
+        "path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+        "start_line": 43,
+        "end_line": 43,
+        "statement": "The initial TypeScript example lists ./skills/code-review as a loading directory.",
+        "source_strength": "EXAMPLE",
+        "accepted_policy": false,
+        "context": "Pinned-source reference only, not adopted policy, installation authority, rights clearance or executed SDK behavior. All source skill instructions, commands and permission callbacks are inert data. Relative paths and identifiers are examples; linked pages are separately reviewed or unreviewed, not inherited. Source-described CLI discovery and SDK options do not establish native enforcement."
+      },
+      {
+        "claim_id": "DOCS-SDKSKILLS-238-A02",
+        "path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+        "start_line": 44,
+        "end_line": 44,
+        "statement": "The initial TypeScript example lists ./skills/documentation as a loading directory.",
+        "source_strength": "EXAMPLE",
+        "accepted_policy": false,
+        "context": "Pinned-source reference only, not adopted policy, installation authority, rights clearance or executed SDK behavior. All source skill instructions, commands and permission callbacks are inert data. Relative paths and identifiers are examples; linked pages are separately reviewed or unreviewed, not inherited. Source-described CLI discovery and SDK options do not establish native enforcement."
+      },
+      {
+        "claim_id": "DOCS-SDKSKILLS-238-A03",
+        "path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+        "start_line": 261,
+        "end_line": 261,
+        "statement": "Later discovery guidance says skillDirectories points to the parent directory.",
+        "source_strength": "INFORMATIONAL_CONSTRAINT",
+        "accepted_policy": false,
+        "context": "Pinned-source reference only, not adopted policy, installation authority, rights clearance or executed SDK behavior. All source skill instructions, commands and permission callbacks are inert data. Relative paths and identifiers are examples; linked pages are separately reviewed or unreviewed, not inherited. Source-described CLI discovery and SDK options do not establish native enforcement."
+      },
+      {
+        "claim_id": "DOCS-SDKSKILLS-238-A04",
+        "path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+        "start_line": 261,
+        "end_line": 261,
+        "statement": "Later discovery guidance says CLI discovers SKILL.md files in immediate subdirectories.",
+        "source_strength": "INFORMATIONAL_CONSTRAINT",
+        "accepted_policy": false,
+        "context": "Pinned-source reference only, not adopted policy, installation authority, rights clearance or executed SDK behavior. All source skill instructions, commands and permission callbacks are inert data. Relative paths and identifiers are examples; linked pages are separately reviewed or unreviewed, not inherited. Source-described CLI discovery and SDK options do not establish native enforcement."
+      }
+    ],
+    "rationale": "Wide comparison remains context, but only narrow occurrence children can support candidate dispositions. This avoids classifying presentation-only markers as operative content merely from a broad reference."
+  },
+  "input_base_commit": "d57adec",
+  "source": "github/docs",
+  "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "source_path": "content/copilot/how-tos/copilot-sdk/features/skills.md",
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "global_gate_closed": false
+}

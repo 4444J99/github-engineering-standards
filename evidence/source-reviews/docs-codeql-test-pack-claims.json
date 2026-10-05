@@ -1,0 +1,29 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T02:00:22.357Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODEQLTESTPACK-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codeql-cli/man-pages-version-note.md",
+      "content_sha256": "2485a26b79b5fa0ffb25df0326bd5099b901513be6edcd0d0c4bc81940802f4b",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "The manual note describes the most recent CodeQL CLI release at the source snapshot and links releases; installed older releases may expose different options, inspectable through their help. This is version-specific documentation, not current-release verification, installed compatibility or authority to execute upstream tooling.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODEQLTESTPACK-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/codeql-cli/test-qlpack.md",
+      "content_sha256": "ce0e732581cbebf653ec9aab8223e2e21c9834175a419ff59be7f91d87f759c5",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "The test-pack example depends on my-custom-queries using caret 1.2.3, described as at least 1.2.3 and below 2.0.0. Its actual extractor value is java-kotlin while prose calls it Java; preserve the value rather than substituting java. tests dot discovers all pack QL files only with strict-test-discovery when test run is invoked. Typically omitting version is described as preventing accidental publication, not a verified access-control gate or absolute guarantee. Example identities are placeholders; no pack was installed, tested or published.",
+      "accepted_policy": false
+    }
+  ]
+}

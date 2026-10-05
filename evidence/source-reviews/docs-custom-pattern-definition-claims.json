@@ -1,0 +1,193 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T02:33:10Z",
+  "path": "content/code-security/how-tos/secure-your-secrets/customize-leak-detection/define-custom-patterns.md",
+  "review_scope": "Full 94-line definition article read. Twenty-six reference assertions retain version/entitlement/creator restrictions, scope-specific dry runs, publishing versus optional push enablement and post-creation coverage. New details/results/selection/process/AI feature dependencies remain unresolved; no complete-artifact accounting, rights, adoption or native receipt.",
+  "claims": [
+    {
+      "claim_id": "DOCS-PATDEF-001",
+      "start_line": 5,
+      "end_line": 6,
+      "statement": "Custom-pattern definition depends on product entitlement and actor permission fragments; metadata alone is not effective access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-002",
+      "start_line": 13,
+      "end_line": 16,
+      "statement": "The article declares fpt, GHES and ghec versions; included feature conditions still constrain particular operations.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-003",
+      "start_line": 22,
+      "end_line": 28,
+      "statement": "AI-assisted regex generation is feature-conditioned and delegates to a separate generation procedure; it is not unconditional availability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-004",
+      "start_line": 26,
+      "end_line": 26,
+      "statement": "AI generation accepts a text description of the desired detection pattern.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-005",
+      "start_line": 26,
+      "end_line": 26,
+      "statement": "Optional example strings can guide generation; example content is not detection-recall evidence or authorization to submit real secrets.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-006",
+      "start_line": 32,
+      "end_line": 32,
+      "statement": "Repository custom-pattern definition requires Secret Protection enabled on that repository.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-007",
+      "start_line": 37,
+      "end_line": 38,
+      "statement": "Repository pattern creation uses a new-pattern operation and a separate pattern-details fragment, not existing-pattern enablement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-008",
+      "start_line": 39,
+      "end_line": 39,
+      "statement": "Repository dry runs identify matches without generating alerts; absence of alerts during this test is expected, not no-match proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-009",
+      "start_line": 42,
+      "end_line": 42,
+      "statement": "Push protection for the newly defined repository pattern is optional and separately enabled.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-010",
+      "start_line": 45,
+      "end_line": 45,
+      "statement": "The repository Enable button is unavailable until the dry run succeeds and the pattern is published; publication and enforcement are distinct states.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-011",
+      "start_line": 47,
+      "end_line": 47,
+      "statement": "Post-creation repository scanning behavior is delegated to another reusable, not fully specified by this article.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-012",
+      "start_line": 51,
+      "end_line": 51,
+      "statement": "Organization definition requires secret scanning enabled for the repositories intended to be scanned.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-013",
+      "start_line": 51,
+      "end_line": 51,
+      "statement": "Security configurations are described as a way to enable scanning across organization repositories; this is not estate-wide mutation approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-014",
+      "start_line": 59,
+      "end_line": 59,
+      "statement": "Organization dry runs target selected repositories without creating alerts, not necessarily the full organization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-015",
+      "start_line": 63,
+      "end_line": 65,
+      "statement": "Organization push protection is optionally enabled and subject to a separate publication/scope/disruption note.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-016",
+      "start_line": 67,
+      "end_line": 67,
+      "statement": "The organization post-creation description includes complete Git history on all branches; target selection and actual scan completion still require independent evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-017",
+      "start_line": 67,
+      "end_line": 67,
+      "statement": "Organization owners and repository administrators receive findings and can review alerts in the affected repository; no delivery or access receipt was observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-018",
+      "start_line": 71,
+      "end_line": 75,
+      "statement": "The enterprise secret-scanning enablement prerequisite is explicitly under the GHES conditional and must not be silently applied identically to cloud versions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-019",
+      "start_line": 78,
+      "end_line": 78,
+      "statement": "At enterprise scope only the pattern creator may edit and dry-run the pattern; enterprise ownership alone does not erase this restriction.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-020",
+      "start_line": 79,
+      "end_line": 79,
+      "statement": "Enterprise dry-run permission eligibility delegates to a separately reviewed permission fragment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-021",
+      "start_line": 84,
+      "end_line": 86,
+      "statement": "Enterprise pattern definition selects Security features and New pattern, then includes separate pattern details.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-022",
+      "start_line": 87,
+      "end_line": 88,
+      "statement": "Enterprise dry runs produce matches without alerts and delegate repository selection to a separate enterprise selection fragment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-023",
+      "start_line": 91,
+      "end_line": 92,
+      "statement": "Enterprise pattern push protection is optional and subject to its separate prerequisite/disruption note.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-024",
+      "start_line": 94,
+      "end_line": 94,
+      "statement": "Enterprise post-creation scanning is limited to repositories in its organizations with Secret Protection enabled; it is not unconditional whole-estate coverage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-025",
+      "start_line": 94,
+      "end_line": 94,
+      "statement": "The enterprise post-creation description includes entire Git history on all branches within that eligible repository set.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PATDEF-026",
+      "start_line": 94,
+      "end_line": 94,
+      "statement": "Organization owners and repository administrators are described as notified and able to review repository alerts; actual notification and access remain unverified.",
+      "accepted_policy": false
+    }
+  ]
+}

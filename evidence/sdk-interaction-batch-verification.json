@@ -1,0 +1,81 @@
+{
+  "schema_version": "ges.bounded-source-review-batch-verification.v1",
+  "reviewer": "codex:source-review",
+  "verified_at": "2026-10-02T14:26:49Z",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/2",
+  "base_draft_commit": "d57adec",
+  "scope": "Three complete text-artifact reviews,238candidate dispositions,851reference records and specified independent repairs. Separate diagrams, published-page assurance, rights, acceptance and runtime gates remain outside this receipt.",
+  "measurement": {
+    "first_recorded_batch_clock": "2026-10-02T14:08:55Z",
+    "verified_clock": "2026-10-02T14:26:49Z",
+    "observed_window_seconds": 1074,
+    "new_completed_text_artifacts": 3,
+    "completed_text_artifacts_per_observed_hour": 10.05586592178771,
+    "caveat": "Preparation and225-record image draft effort predate the first recorded clock. This is observed output within that window, not full end-to-end labor, an overall percentage, a baseline speedup or forecast."
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 255,
+      "result": "OK; synthetic published_docs ERROR is expected negative-fixture output, not live acquisition."
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true,
+      "reference_claims": 44107,
+      "source_artifacts": 686,
+      "semantic_truth_certified": false,
+      "omission_completeness_certified": false
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed_artifacts": 715,
+      "inventory_artifacts": 13657,
+      "review_accounting_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "exact_recheck_input_matches": [
+    {
+      "path": "evidence/source-reviews/docs-sdk-image-input-claims.json",
+      "expected_sha256": "1093e027e11b251a39563dd1fd90e8a01a2bc6de384d8a81f28284aaef01eb8f",
+      "current_sha256": "1093e027e11b251a39563dd1fd90e8a01a2bc6de384d8a81f28284aaef01eb8f",
+      "matches": true
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-steering-queueing-claims.json",
+      "expected_sha256": "290d0a4aa8bb1095ee9a68f3005e117c9a7464719c45c06e425c6d4aa3c11534",
+      "current_sha256": "290d0a4aa8bb1095ee9a68f3005e117c9a7464719c45c06e425c6d4aa3c11534",
+      "matches": true
+    },
+    {
+      "path": "evidence/source-reviews/docs-sdk-skills-claims.json",
+      "expected_sha256": "9f6bac4a5a8ca96a8b4587076fe49c13568ceb2a23494417c7f32df7c80e94f5",
+      "current_sha256": "9f6bac4a5a8ca96a8b4587076fe49c13568ceb2a23494417c7f32df7c80e94f5",
+      "matches": true
+    }
+  ],
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "global_gate_closed": false,
+  "project_complete": false
+}

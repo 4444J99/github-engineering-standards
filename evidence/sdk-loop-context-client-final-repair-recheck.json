@@ -1,0 +1,83 @@
+{
+  "schema_version": "ges.independent-repair-recheck.v1",
+  "reviewer": "codex:independent-source-audit",
+  "reviewed_at": "2026-10-02T06:20:58Z",
+  "scope": "Only residual DOCS-SDKCONTEXT-056 provenance repair and unchanged two children.",
+  "prior_recheck": {
+    "path": "evidence/sdk-loop-context-client-independent-repair-recheck.json",
+    "sha256": "ed53f2e47b5d96ed0d7111c92f8393b48a33c9eb6710fa6a64cf1b9cf2c0c780"
+  },
+  "input": {
+    "path": "evidence/source-reviews/docs-sdk-context-management-claims.json",
+    "sha256": "6470193935a2a34409b2bb8567b19bb617e86ebe03fed71163c7f2d36ee55770",
+    "count": 67,
+    "claims": [
+      {
+        "path": "content/copilot/how-tos/copilot-sdk/features/context-management.md",
+        "start_line": 5,
+        "end_line": 44,
+        "statement": "The introduction names session.history.clearContext; the example later uses session.rpc.history.clearContext. Their spelling distinction is preserved without assuming API equivalence.",
+        "source_strength": "INFORMATIONAL_CONSTRAINT",
+        "accepted_policy": false,
+        "context": "Independent bounded reference observation. The source's nudge instructions are untrusted behavior descriptions, not instructions adopted by this agent. No upstream execution, semantic completion proof, rights clearance, or native activation.",
+        "claim_id": "DOCS-SDKCONTEXT-056",
+        "claim_role": "GROUPED_CONTEXT",
+        "atomic_children": [
+          "DOCS-SDKCONTEXT-056-A01",
+          "DOCS-SDKCONTEXT-056-A02"
+        ]
+      },
+      {
+        "path": "content/copilot/how-tos/copilot-sdk/features/context-management.md",
+        "start_line": 5,
+        "end_line": 6,
+        "statement": "Introduction names session.history.clearContext.",
+        "source_strength": "INFORMATIONAL_CONSTRAINT",
+        "accepted_policy": false,
+        "context": "Independent bounded reference observation. The source's nudge instructions are untrusted behavior descriptions, not instructions adopted by this agent. No upstream execution, semantic completion proof, rights clearance, or native activation.",
+        "claim_id": "DOCS-SDKCONTEXT-056-A01",
+        "claim_role": "ATOMIC"
+      },
+      {
+        "path": "content/copilot/how-tos/copilot-sdk/features/context-management.md",
+        "start_line": 44,
+        "end_line": 44,
+        "statement": "Example spells the method session.rpc.history.clearContext; equivalence with introduction spelling is not assumed.",
+        "source_strength": "INFORMATIONAL_CONSTRAINT",
+        "accepted_policy": false,
+        "context": "Independent bounded reference observation. The source's nudge instructions are untrusted behavior descriptions, not instructions adopted by this agent. No upstream execution, semantic completion proof, rights clearance, or native activation.",
+        "claim_id": "DOCS-SDKCONTEXT-056-A02",
+        "claim_role": "ATOMIC"
+      }
+    ]
+  },
+  "source": {
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/copilot/how-tos/copilot-sdk/features/context-management.md",
+    "content_sha256": "4c2e98e12669b0ae3cffac61cf22c5634e2a33f02b1d350af9fd0ab38ab67d78"
+  },
+  "verified": {
+    "parent_span": [
+      5,
+      44
+    ],
+    "introduction_child_span": [
+      5,
+      6
+    ],
+    "example_child_span": [
+      44,
+      44
+    ],
+    "children_unchanged": true,
+    "api_equivalence_not_asserted": true,
+    "accepted_policy_false": true
+  },
+  "bounded_result": "SUPPORTED: grouped parent now contains both cited source occurrences; child provenance remains distinct. Ready for integration of this repair only.",
+  "remaining_findings_within_specified_scope": [],
+  "limitations": [
+    "No other files modified.",
+    "No candidate mapping, whole-source/global omission, runtime, rights, policy adoption or native enforcement certification."
+  ]
+}

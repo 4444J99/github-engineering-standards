@@ -1,0 +1,54 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": "https://github.com/4444J99/github-engineering-standards/issues/16",
+  "verified_at": "2026-10-02T18:09:43Z",
+  "scope": {
+    "full_source_files": 274,
+    "source_lines": 1458,
+    "claim_records": 1345,
+    "operative_claims": 1338,
+    "nonoperative_grouped_context": 7,
+    "candidate_mappings": 12,
+    "new_conflicts": 2
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "294 tests in 1.296s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": "valid=true; controls=95"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "result": "exit 0"
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "result": "valid=true; reference_claims=48050; source_artifacts=993; duplicate_relationships_validated=7"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "result": "reviewed=1027/13657; errors=[]; gates_open=9; project_complete=false; published_pages=18019"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "exit 0"
+    }
+  ],
+  "accounting": {
+    "reviewed": 1027,
+    "inventoried": 13657,
+    "review_coverage": 0.07519953137585121,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": "Bounded source and independent claim reviews only. Not overall completion percentage, policy adoption, global omission certification, published-page assurance, rights clearance or native rollout. Synthetic negative test output reporting published_docs ERROR is expected fixture output, not the real recovery result."
+}

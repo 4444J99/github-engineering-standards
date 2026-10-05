@@ -1,0 +1,161 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T07:08:53.264Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Guide covers FPT/GHEC/GHES Maven Java publication/dependencies; GHEC data-residency deployments explicitly lack Maven registry, not every GHEC deployment. GHES site admins may enable/disable package types; source presence is not effective availability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "GHEC managed-user organization publishing remains distinct from unavailable personal namespace storage. GHES release-stage reusable is comment-only, not a preview predicate or disablement instruction.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Maven authentication requires an access token for public/private/internal package operations in this guide. Classic PAT task-scopes are required for the tutorial; explicit workflow exceptions use GITHUB_TOKEN for associated-repository publication and granted read access, otherwise classic PAT read:packages for other private-repository installs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "settings.xml maps repository IDs to server IDs with username/token credentials; multiple repositories may map separately. Source instructs a local credential-bearing file but does not authorize exposing, committing or creating tokens; no settings changed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Repository owner in Maven URLs must be lowercase even when the GitHub account/organization name has uppercase letters. Host, owner and repository placeholders require target-specific resolution and are not executable identities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "SNAPSHOT versions are supported; downloading them requires enabling snapshots in consuming POM or settings.xml. The sample profile activates github, includes Maven Central and enables snapshots; configured flag is not resolved dependency or safety evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "FPT/GHEC endpoint example is https://maven.pkg.github.com/OWNER/REPOSITORY. GHES subdomain isolation uses https://maven.HOSTNAME/OWNER/REPOSITORY; non-isolated uses HOSTNAME/_registry/maven path. Preserve isolation as an endpoint dimension.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "The non-isolated settings.xml URL omits a scheme, whereas the non-isolated distributionManagement example includes https://HOSTNAME/_registry/maven/OWNER/REPOSITORY. This inconsistency remains unresolved; do not copy the missing-scheme example as verified endpoint configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Default publication targets an existing repository sharing the package name; the example com.example:test maps to OWNER/test. Explicit distributionManagement repository URL overrides repository matching and supports multiple packages in one repository; namespace does not prove ownership or permissions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Maven artifactId should contain lowercase letters, digits or hyphens; uppercase artifact names produce the documented 422 response. Owner-name normalization and artifactId grammar are separate checks, not a universal rule for all coordinate fields.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Publishing edits POM distributionManagement and runs mvn deploy, followed by viewing the package. These examples were not executed; publication authority, scopes, effective repository access and successful behavior remain unverified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Installation adds dependencies to the consuming POM and authenticates before mvn install. The example uses com.example:test:1.0.0-SNAPSHOT; it is illustrative, not an immutable verified production dependency or license clearance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-13",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "The guide permits owner-wide wildcard repository URL https://maven.pkg.github.com/OWNER/* or isolated GHES counterpart for dependencies across repositories. It does not grant access to every repository or provide a non-isolated wildcard adapter; missing permission is not pass.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-MAVENREGISTRY-14",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/packages/working-with-a-github-packages-registry/working-with-the-apache-maven-registry.md",
+      "content_sha256": "e5e900048567d23912155f7c3a371ca8b818e0dd52fb66d741f0207a1bf435cc",
+      "start_line": 1,
+      "end_line": 205,
+      "statement": "Outbound Maven getting-started/POM/naming references and Gradle/deletion guides are separately scoped. No dependency installation, upstream script execution, credential/publication change, rights acceptance, accepted control or native enforcement receipt follows.",
+      "accepted_policy": false
+    }
+  ]
+}

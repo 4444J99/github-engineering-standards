@@ -1,0 +1,161 @@
+{
+  "issue": 282,
+  "reviewed_at": "2026-10-03T07:06:47.038Z",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "status": "PROPOSED_SCOPED_RECONCILIATION",
+  "accepted_policy": false,
+  "independently_audited": false,
+  "claim_references_verified": true,
+  "rows": [
+    {
+      "dimension": "visibility_inheritance",
+      "claims": [
+        "DOCS-PACKAGEPUBLISHGUIDE-3",
+        "DOCS-PACKAGEACCESSGUIDE-2",
+        "DOCS-PACKAGEACCESSGUIDE-4"
+      ],
+      "decision": "General repository-linked sharing prose does not override granular registry access-only inheritance; resolve registry permission model before deriving visibility.",
+      "parameters": [
+        "registry",
+        "permission_model",
+        "package_visibility",
+        "repository_visibility"
+      ],
+      "verification": "Observe package and repository visibility separately; missing package visibility stays unknown."
+    },
+    {
+      "dimension": "authentication",
+      "claims": [
+        "DOCS-PACKAGEPUBLISHGUIDE-6",
+        "DOCS-PACKAGEINSTALLGUIDE-4",
+        "DOCS-PACKAGEACCESSGUIDE-18",
+        "DOCS-PACKAGERECOVERY-5"
+      ],
+      "decision": "Classic PAT tutorial is scoped, not universal: eligible workflows use GITHUB_TOKEN and public Container Registry pulls may be anonymous.",
+      "parameters": [
+        "operation",
+        "registry",
+        "visibility",
+        "execution_context",
+        "token_type",
+        "token_scopes"
+      ],
+      "verification": "Check task-specific credential and effective package rights without exposing tokens; no automatic token creation."
+    },
+    {
+      "dimension": "access_link_timing",
+      "claims": [
+        "DOCS-PACKAGEACCESSGUIDE-2",
+        "DOCS-PACKAGEACCESSGUIDE-3",
+        "DOCS-PACKAGEACCESSGUIDE-8",
+        "DOCS-PACKAGEACCESSGUIDE-9"
+      ],
+      "decision": "Pre-publication linked defaults, post-publication linking and org default disabling are distinct; org default does not prevent package overrides.",
+      "parameters": [
+        "linked_before_publication",
+        "org_inheritance_default",
+        "package_inheritance",
+        "workflow_repository"
+      ],
+      "verification": "Observe actual inheritance and workflow grant; names/source labels alone cannot pass."
+    },
+    {
+      "dimension": "permission_mutation",
+      "claims": [
+        "DOCS-PACKAGEACCESSGUIDE-7",
+        "DOCS-PACKAGEACCESSGUIDE-11",
+        "DOCS-PACKAGEACCESSGUIDE-13"
+      ],
+      "decision": "Switching inheritance overwrites permissions; workflow/fork and Codespaces audiences require separate before/after observations.",
+      "parameters": [
+        "previous_grants",
+        "desired_grants",
+        "fork_audience",
+        "codespace_repositories"
+      ],
+      "verification": "Approved plan/diff includes revoked and added access, denial tests and recovery; no grants applied in this tranche."
+    },
+    {
+      "dimension": "public_visibility_recovery",
+      "claims": [
+        "DOCS-PACKAGEACCESSGUIDE-14",
+        "DOCS-PACKAGEACCESSGUIDE-17",
+        "DOCS-PACKAGERECOVERY-16"
+      ],
+      "decision": "Public visibility is irreversible in the guide; namespace-occupant deletion is another destructive operation, not ordinary automatic rollback.",
+      "parameters": [
+        "visibility_transition",
+        "namespace_occupancy",
+        "recovery_strategy",
+        "authorization_target"
+      ],
+      "verification": "Do not promise private rollback; require exact publication approval and independently scoped destructive recovery approval."
+    },
+    {
+      "dimension": "deletion_and_restore",
+      "claims": [
+        "DOCS-PACKAGERECOVERY-2",
+        "DOCS-PACKAGERECOVERY-4",
+        "DOCS-PACKAGERECOVERY-7",
+        "DOCS-PACKAGERECOVERY-14",
+        "DOCS-PACKAGERECOVERY-15"
+      ],
+      "decision": "Preserve greater-than-5000 public download restriction, 30-day window and namespace/version availability with scope-specific admins; GHES restore-role wording remains unresolved.",
+      "parameters": [
+        "package_scope",
+        "version_download_count",
+        "deletion_time",
+        "namespace_available",
+        "version_available",
+        "effective_admin"
+      ],
+      "verification": "Threshold units and target IDs must match; missing counts/permissions/time are unknown, not allowed; GHES restoration adapter not certified."
+    },
+    {
+      "dimension": "enterprise_and_features",
+      "claims": [
+        "DOCS-PACKAGEINSTALLGUIDE-3",
+        "DOCS-PACKAGEPUBLISHGUIDE-7",
+        "DOCS-PACKAGEACCESSGUIDE-10",
+        "DOCS-PACKAGEACCESSGUIDE-15",
+        "DOCS-PACKAGEACCESSGUIDE-16",
+        "DOCS-PACKAGEACCESSGUIDE-19"
+      ],
+      "decision": "Deployment/version/registry capabilities and identity namespaces remain separate. Internal can include enterprise-wide audience; GHES >=3.23 automatic Dependabot is not proof for 3.18-3.22.",
+      "parameters": [
+        "deployment",
+        "version",
+        "enabled_registry_types",
+        "enterprise_membership",
+        "managed_user",
+        "namespace_owner"
+      ],
+      "verification": "Resolve feature predicates and effective target enablement; registry incompatibility is explicit capability gap, not objective exemption."
+    },
+    {
+      "dimension": "assurance_and_advisories",
+      "claims": [
+        "DOCS-PACKAGEPUBLISHGUIDE-2",
+        "DOCS-PACKAGEPUBLISHGUIDE-5",
+        "DOCS-PACKAGEINSTALLGUIDE-2",
+        "DOCS-PACKAGERECOVERY-11"
+      ],
+      "decision": "Metadata, instructions, UI absence and possible advisory alerts are not executable behavior, rights, deletion or remediation proof.",
+      "parameters": [
+        "artifact_identity",
+        "advisory_id",
+        "affected_targets",
+        "evidence_timestamp",
+        "rights_use"
+      ],
+      "verification": "Require operation-specific positive/negative observations and exact-use rights evidence; source advice is not adopted policy."
+    }
+  ],
+  "unresolved": [
+    "GHES restoration permission wording and release-specific rendering remain unverified.",
+    "Parameters and verification requirements are proposals, not implemented bindings or accepted controls.",
+    "Per-file rights, published assurance, effective native access and estate rollout remain incomplete."
+  ],
+  "gate_closed": false
+}

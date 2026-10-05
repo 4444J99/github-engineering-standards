@@ -1,0 +1,49 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 55,
+  "commit_retry": "Initial commit hook classified prose about the id-token permission as a secret assignment. No credential was present. Rephrased that claim without assignment syntax, without bypassing the hook; reran required verification before retrying commit.",
+  "tranche": {
+    "files": 20,
+    "claims": 21,
+    "candidates": 49
+  },
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58040,
+      "source_artifacts": 2094
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2128,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.993,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Twenty full fragments. Token fetch separated from resource writes, trust conditions and Dependabot dynamic event preserved; output UTF-16 limits, indirect private access, role boundaries and rerun SHA behavior retained. No cloud/credential/native mutations; independent audits, rendering, rights and adoption remain separate."
+}

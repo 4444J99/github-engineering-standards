@@ -1,0 +1,232 @@
+[
+  {
+    "artifact_id": "f5c9675f075a9ffcf3863f1e",
+    "source": "github/docs",
+    "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+    "path": "content/packages/quickstart.md",
+    "content_sha256": "8e6207cc529db3f8a559e526e8b1be3751e4886ab26016482300abb0cc5e8079",
+    "reviewer": "codex:source-review",
+    "reviewed_at": "2026-10-03T06:53:25.313Z",
+    "disposition": "REFERENCE_ONLY",
+    "all_claims_accounted_for": true,
+    "rationale": "The guide covers FPT/GHEC/GHES, but its GHES include requires self-hosted runners and excludes GitHub-hosted runners. The unconditional ubuntu-latest workflow conflicts with that caveat and is not a validated GHES deployment adapter. GHEC managed users cannot publish to their own account-owned repository in this flow; the guide asks for a personal github.com account. This does not cancel the separate organization-namespace publishing capability or authorize creating identities. The setup creates/clones a Node repository, adds a console hello-world example, initializes a scoped npm package and lockfile, and commits files. Source commands are untrusted examples, not permission to install dependencies, create repositories or execute code. The illustrated npm test script is exit 0, so its green result proves no behavior. The prose promise of testing before publication must not be adopted as verified quality assurance; actual negative and meaningful functional tests remain necessary. The example triggers on release created, builds with npm ci/test, then publishes after the build job. It uses checkout@v6/setup-node@v7 and Node 20. Tags/runtime versions are historical example values, not reviewed immutable pins or current recommendations. Publication grants packages write and contents read and uses GITHUB_TOKEN as NODE_AUTH_TOKEN. Configured job permissions and dependency ordering are not effective package access, approved publication or an observed successful release. The GHES workflow registry example uses npm.YOUR-HOSTNAME.com while cloning uses YOUR-HOSTNAME; later npmrc/publishConfig examples remain npm.pkg.github.com without a GHES branch. Preserve inconsistent placeholder/registry context rather than copying into a target configuration. npmrc and publishConfig are alternatives for scope/registry configuration; illustrative git-add prose containing or is not an executable literal instruction. No configuration written or credentials committed. Release creation is the suggested demonstration trigger, and package navigation is the viewing path. Neither a release event, green exit-0 test nor UI existence independently proves publication, safety or access; no release created or package published. Installing published packages and expanded multi-registry/event/container workflows are outbound follow-up concepts, not executed dependencies or mandated universal architecture. Linked guides remain separate review; no rights or policy acceptance follows. Full page and required include/variable context read; independent source completeness and published assurance remain separate.",
+    "claim_mappings": [
+      {
+        "candidate_id": "7c3aa2548a5f8977c388f1b5",
+        "text_sha256": "ebdac5f27abd37aecfc10e504a91789fb144a5d899bc4bd23d001d6f472cea81",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "6f5f2058fbf8d3320bd88b98",
+        "text_sha256": "dfb3dc8586f0bcfa1f823652e1ceff4cbb74b19ebe6f9c48a6d280355da86d44",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "5e287aaffb985cde8f5776f0",
+        "text_sha256": "716945c4c70e95aa6301e07b3a2bb78c193ad9a15c50796c8658454b63db4791",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "361ff62d5248125404458831",
+        "text_sha256": "17d4f5ec7ba9387ef9567260c4d77560bb3f44ac54d77b4f88117e375a339897",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "5fbe1102aab225b210a49cf1",
+        "text_sha256": "67c7b632cb860add1ad3590de0c598dbde3a251749b512c12be5a61fbfa32ab0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "4aa45da8c27b6c2477f28cc4",
+        "text_sha256": "693c7b5622154847a5775f5dbd438851b63ba4272ef98be40cb15aa68837c349",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "88928dc78fb397619b2fa277",
+        "text_sha256": "3911e559d47124ac1b1c60a452c892cf8a3d177a2c6db2451649ad1be09a47b2",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "ba5190bbd139410b80eaf7e4",
+        "text_sha256": "8631dfba6bf051248840321744d1e9a9bfcae7b4e47e84cfa626a835f465167f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "e7c24381124bc70e69755610",
+        "text_sha256": "f6f971a6a1fbe04dd7271f24bea3270000e3211b8e6f9ab75c4072bef091ab23",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "dba5ed2334c154d5f597c039",
+        "text_sha256": "30dc9e8ff29922c10888a446f4ebf95db91be6c1142b5cb8821f646d3146e6a1",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "f701e02985aa4e667eac57ab",
+        "text_sha256": "7b5bed98d196efcb052b5572f4f279f9cbb168338b69d2f3aeca09ba8f8843d8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "d74302cca5ae3da770b64f89",
+        "text_sha256": "33162634e9fc12b5c8df5c2b7baf9b0b3dfeaeffc2f3bc5a2971311fd2a2bd93",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "64b980b171399e19d5e5c41e",
+        "text_sha256": "345134834fad2f80afff579023f6f1c5255a7cb0ec6dc094871fe6b4572485c8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "ad8bae23f298e2b6acf2ad81",
+        "text_sha256": "82888b8802bd5f9d179c3102fa7512e547d42f4f5cd432cea5124e8b92f24811",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "059762e586246b2d418cc38c",
+        "text_sha256": "d1dbca46b4fde827590d3fda66ef14af17698ef9ccb8ad209793c4ef37652419",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "ff11f340a0b78eb23da1b68c",
+        "text_sha256": "24bfe9d3e28ecee5cb45cff42693357e3f8515ec99ce78ed77bb5f4dd074f36f",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "b89f9c30f5de159ec27c4d47",
+        "text_sha256": "5b25496c694c5700c6bf28ff256d27326b36b6d2588e1250c66f9541c0634ea6",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "3b62060938ceea896b168f73",
+        "text_sha256": "c5f1adf203dfea187b3612840f380815020434a81e438b795f8cacee61dbb108",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "5d26891df49e0ef5aa4e66ef",
+        "text_sha256": "be518571d547593a880263c50d3906190c585038597e2ccd46c64a9abf3d1b8d",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "e9ee76a75dcf6e6a83c2fcb6",
+        "text_sha256": "729b49bd193e254f1733e3377221525885a4f701c66e3404d5aa37d80dfe7094",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "b2b1122c82bb9481cfdbd1b1",
+        "text_sha256": "21f8d76953e8e7a87f796539cc4c37e0687e5cdb709c79f6312126062a1eef01",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "108990ba5ff51b1e54a85877",
+        "text_sha256": "3ac655451d091ec2c9f309173a1a8a7ddcc37fe81311181c883844d64cb22c3e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "f3100fe3bc2f5d360c6dc8cd",
+        "text_sha256": "c4ecb9a460f95bf91c87cd6e0139643d2564f0c6eadad1794b3d86aedd2d4b39",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "e3c2a1169189321cc390b042",
+        "text_sha256": "b9c9e43670a23af0857614be01a7c8b2e3666b6e82bd08123e6971e4aee486b7",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "6d13f0b971d725bffadda9a9",
+        "text_sha256": "31a93981a270667fff7e36f50e8598fad2592911487e66b11f333e03148b7760",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "3d933ba169369a7b73e0e1e4",
+        "text_sha256": "d0f957d019b79f12d949641670bd9e8e085c1acbfdacd37086033cd17c461dd8",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "97127b3d1d4d5e8a12ac704d",
+        "text_sha256": "856e85c54f37011e5ba57423ef3fb2596d4a304cbd3c2e550938c8033e382e82",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "155656ce3f265a40c5b44759",
+        "text_sha256": "465ed6b65e1bbceeb4b214bb4ff746edf1e824cf1bf6fcd01d4d4b25855bcb7e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "9af67b95dd43e565a92aa011",
+        "text_sha256": "150b957f4c71aafa633838cc55bc574388396aafa48f069c9869e07b09bea35e",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "520754a3757df2cca1c28b19",
+        "text_sha256": "7f05d9ddfe276cacbf686bdfb3de24914c746d2f6f68126c0d8a69e3258b82d5",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "46fd4fcd1d372865757fa5e1",
+        "text_sha256": "bbb435193f1cc5b9ab09e6c72d6b353cbe8ad3f179697ad10b7351d03540f704",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "1a217953460f2f73aa85c5ca",
+        "text_sha256": "e5e8548d2db86b1524c12cb02549b6225763a74e80ccb069cb21cbe0c13af9c4",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "d0df704ead041435b7e860b4",
+        "text_sha256": "062fc0acbca3ab7bf57a0408bc9401bb1e9ffa0424e72e9aa2290223648bbc10",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "b37687dc81870380bdcb8548",
+        "text_sha256": "cc1ad5429c0050708486659752498531373f0e1e9da6f76672e6cd6cc4e73606",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "9852398de5f11d1bf8f7fc8f",
+        "text_sha256": "2f4fef440d9df284de55ea0af18ac369e9bfe0cb3fd03713fcb857117cdec408",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      },
+      {
+        "candidate_id": "56655a5f927b886d59be5595",
+        "text_sha256": "f3ad56b4eece0aec3944f0807556baa4dd39dd2b56f95c2221ea773a936b69f0",
+        "disposition": "REFERENCE",
+        "rationale": "Accounted for by DOCS-PACKAGEQUICKSTART-1 through -10; not adopted policy or executed publication/test receipt."
+      }
+    ]
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T05:44:48.030Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ORGTRUSTAPPROVAL-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/custom-repo-roles-ghec-only.md",
+      "content_sha256": "1f4822c357cad04fde218cbd36ca8e3511b555923792e8a08049c4980ba8e7ff",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "The note emitted in the GHEC branch says organizations using GitHub Enterprise Cloud can create custom repository roles, and includes a free-trial pointer inspected in full. This branch-scoped restriction is not a universal denial of GHES support, a custom organization-role rule, an actual entitlement, or authorization to start a trial. Product names resolve from the pinned product variables; the linked trial guide is not reviewed by reference.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTRUSTAPPROVAL-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/custom-role-repo-perms-preview-note.md",
+      "content_sha256": "cd87588c319b95c2fed520ef9e9f54585e7a36e09e96db17436c5efbc723e6c9",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Adding repository permissions to a custom organization role is labeled public preview and subject to change; the release-phase variable resolves to public preview. This applies to custom organization roles, not every custom repository role, and is neither general availability nor validated access on a live target.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTRUSTAPPROVAL-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/delete-ssh-ca.md",
+      "content_sha256": "e15884722ff78b0d5356cab8651c922ddacc40a491a4678ab7d3a60abafbfbff",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Deleting an SSH CA requires selecting that CA, reading a warning, and explicitly confirming deletion. The fragment alone does not supply recovery or warning details. Previously inspected pinned SSH-CA context says removing CA trust invalidates all certificates it signed, not just a single compromised certificate. No CA or credential was changed, and the fragment is not deletion authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTRUSTAPPROVAL-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/deleted-repos.md",
+      "content_sha256": "1427cf7f1a7773cc9f2dccd181e880dbc8bf5ea6c9e4c0e755edfc9ac3ab742f",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Deleted repositories is a navigation entry, not a list of deleted repositories, proof of recoverability or restoration availability, retention duration, or instruction to delete anything.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTRUSTAPPROVAL-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/domains-approve-domain.md",
+      "content_sha256": "375e276d063a371f0f3a05774431b632d5f3982a79b2917a6f2b3fd999df31a3",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Domain approval requires reading its information before confirming Approve DOMAIN; DOMAIN is a placeholder. This is administrative approval, not verified DNS ownership, an actual approval receipt, or rights clearance. No domain was approved.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ORGTRUSTAPPROVAL-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/organizations/domains-approve-it-instead.md",
+      "content_sha256": "4c9aa5129b54bf1c816dcd81489f20f7b6587557f94d99bea2a1cf72101eb039",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "The domain-verification screen offers Approve it instead when verification cannot be completed. The screenshot caption describes that link without image inspection. This preserves approval versus verification as distinct paths, not proof of ownership, an automatic security bypass, or authority to approve an unowned domain.",
+      "accepted_policy": false
+    }
+  ]
+}

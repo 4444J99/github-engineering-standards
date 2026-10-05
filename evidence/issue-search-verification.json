@@ -1,0 +1,53 @@
+{
+  "schema_version": "ges.issue-search-verification.v1",
+  "verified_at": "2026-10-03T10:08:38.594Z",
+  "issue": 371,
+  "source_guides": 1,
+  "reference_claims_added": 14,
+  "candidates_accounted": 156,
+  "reference_claims_total": 60787,
+  "claim_bearing_artifacts": 3401,
+  "section_reference_census": {
+    "inventory": 87,
+    "reference_receipts": 87,
+    "pending": []
+  },
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "tests": {
+    "count": 324,
+    "seconds": 1.982,
+    "result": "OK"
+  },
+  "controls_valid": 95,
+  "gates_open": 9,
+  "project_complete": false,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_changes": false,
+  "independent_assurance": false
+}

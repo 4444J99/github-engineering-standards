@@ -1,0 +1,46 @@
+{
+  "issue": 325,
+  "reviewed_at": "2026-10-03T08:37:36.839Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 7,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 60391,
+    "claim_bearing_artifacts": 3325,
+    "tests": 324,
+    "test_seconds": 1.983,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Team linkage grants read; unlike repository listing.",
+    "Removing team grant not full effective revocation proof.",
+    "No native changes, rights clearance or accepted policy."
+  ]
+}

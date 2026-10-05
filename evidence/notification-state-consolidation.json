@@ -1,0 +1,103 @@
+{
+  "schema_version": "ges.notification-state-consolidation.v1",
+  "issue": 389,
+  "reviewed_at": "2026-10-03T10:44:48.503Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "related_consolidation": "evidence/notification-delivery-consolidation.json",
+  "scope": "Reviewed notification source claims only; not full corpus reconciliation.",
+  "rows": [
+    {
+      "id": "NOTIFY-STATE-CUSTODY",
+      "claims": [
+        "DOCS-INBOXTRIAGE-3",
+        "DOCS-NOTIFYCONCEPT-11",
+        "DOCS-SINGLETRIAGE-1",
+        "DOCS-NOTIFYCONFIG-4"
+      ],
+      "conflict": "Saved and Done retention differs durable conversation/evidence custody.",
+      "decision": "PROPOSED_DURABLE_EVIDENCE",
+      "requirement": "Store authorized event identity, timestamp, revision and independently evaluated acceptance separately from notification read/Done/Saved states; preserve retention limits.",
+      "negative_test": "Done cannot certify task acceptance; unsaved old notification cannot be assumed recoverable after disappearance."
+    },
+    {
+      "id": "NOTIFY-DONE-QUERY-CONFLICT",
+      "claims": [
+        "DOCS-TRIAGEWORKFLOW-6",
+        "DOCS-INBOXTRIAGE-5",
+        "DOCS-NOTIFYCONFIG-18"
+      ],
+      "conflict": "Tutorial includes Done in is:read; inbox guide excludes it.",
+      "decision": "UNRESOLVED_VERSIONED_BEHAVIOR",
+      "requirement": "Retain both claims and exact product/version; independent scoped observation required before binding query semantics.",
+      "negative_test": "Do not certify complete Done inventory from is:read or suppress contrary source claim."
+    },
+    {
+      "id": "NOTIFY-INBOX-PREREQUISITES",
+      "claims": [
+        "DOCS-NOTIFYCONFIG-1",
+        "DOCS-NOTIFYCONFIG-7",
+        "DOCS-INBOXTRIAGE-1"
+      ],
+      "conflict": "Shared fragment demands Email plus platform settings while page describes independent email opt-out/platform updates.",
+      "decision": "UNRESOLVED_CHANNEL_CONJUNCTION",
+      "requirement": "Represent channel preferences independently and mark disputed necessity unknown until observed exact platform/version behavior.",
+      "negative_test": "Disabled email cannot automatically imply missing web inbox without substantiated condition; enabled email alone cannot imply inbox."
+    },
+    {
+      "id": "NOTIFY-RESUBSCRIPTION",
+      "claims": [
+        "DOCS-NOTIFYCONCEPT-4",
+        "DOCS-INBOXTRIAGE-4",
+        "DOCS-SINGLETRIAGE-5",
+        "DOCS-SUBSCRIPTIONS-2-4"
+      ],
+      "conflict": "Default triggers and contextual unsubscribe/custom watch reactivation lists differ.",
+      "decision": "PROPOSED_EVENT_TRANSITION_MATRIX",
+      "requirement": "Parameterize subscription origin, transition, event, mention/team/review/participation scope and product version; preserve unwatch versus ignore distinction.",
+      "negative_test": "Unsubscribe or custom event selection cannot certify permanent silence or exhaustive absence of reactivation."
+    },
+    {
+      "id": "NOTIFY-BULK-SCOPE",
+      "claims": [
+        "DOCS-INBOXTRIAGE-6",
+        "DOCS-SUBSCRIPTIONS-1-5",
+        "DOCS-NOTIFYCONFIG-5"
+      ],
+      "conflict": "Selected inbox operations and owner-scoped unwatch differ full estate inventory.",
+      "decision": "PROPOSED_EXACT_TARGET_PLAN",
+      "requirement": "Preview actual selected IDs/owner/operation with permission checks and explicit change approval; retain full denominator outside visible results.",
+      "negative_test": "Filtered page or ten-thousand watch ceiling cannot certify complete target coverage; Unwatch all cannot mutate unapproved owner."
+    },
+    {
+      "id": "NOTIFY-REPLY-WRITE-PRIVACY",
+      "claims": [
+        "DOCS-NOTIFYCONFIG-10",
+        "DOCS-NOTIFYCONFIG-11"
+      ],
+      "conflict": "Reply-to identifies account/thread and posting is a write; sanitation is partial.",
+      "decision": "PROPOSED_SCOPED_REPLY_AUTHORITY",
+      "requirement": "Protect reply identity, validate destination and authorized content before posting, preview redacted diff and verify resulting comment without assuming complete sanitation.",
+      "negative_test": "Email read authority cannot authorize comment posting; signatures, attachments or secret content cannot be assumed safely scrubbed."
+    },
+    {
+      "id": "NOTIFY-SYNC-LATENCY",
+      "claims": [
+        "DOCS-NOTIFYCONFIG-2",
+        "DOCS-NOTIFYCONFIG-8",
+        "DOCS-NOTIFYCONFIG-15"
+      ],
+      "conflict": "Read synchronization requires image loading; GHES outbound email and background fetch affect delivery.",
+      "decision": "PROPOSED_OBSERVED_CHANNEL_HEALTH",
+      "requirement": "Track client image policy, outbound capability, recipient/event/time and actual freshness; distinguish notification read from human review.",
+      "negative_test": "Image blocking cannot pass sync; configured push cannot prove immediate delivery or accepted review."
+    }
+  ],
+  "limitations": [
+    "Negative tests are proposed specifications, not implemented/executed bindings.",
+    "Conflicts require independent versioned behavior evidence before resolution.",
+    "No policy acceptance, rights clearance, subscription changes or native activation."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "issue": 43,
+  "artifacts": 20,
+  "claims": 43,
+  "candidates": 71,
+  "review_accounting": {
+    "errors": [],
+    "inventoried": 13657,
+    "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
+    "review_coverage": 0.13970857435747236,
+    "reviewed": 1908
+  },
+  "claim_accounting": {
+    "reference_claims": 57745,
+    "source_artifacts": 1874,
+    "duplicate_relationships": 7
+  },
+  "unresolved_findings": [
+    {
+      "source": "data/reusables/actions/arc-app-post-install-set-secrets.md",
+      "lines": [
+        7,
+        13
+      ],
+      "conflicting_source": "data/reusables/actions/actions-runner-controller-security-practices-secret.md",
+      "finding": "from-literal private-key CLI example conflicts with guidance against plaintext CLI secret values.",
+      "example_executed": false,
+      "accepted_remediation": false
+    }
+  ],
+  "verification": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "valid": true
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "gates_open": 9
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 2.021,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "limits": [
+    "No credential generation, infrastructure change or upstream code execution.",
+    "Claim extraction and conflicts are not independent omission certification, rights clearance or accepted policy."
+  ]
+}

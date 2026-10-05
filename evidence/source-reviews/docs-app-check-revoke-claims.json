@@ -1,0 +1,29 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:42:44Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-APPCHECKREVOKE-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/checks-availability.md",
+      "content_sha256": "091e074eb8b0b281525745a624f1627aa6b51fc91c4683ae46412e22d0a1ad98",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The fragment limits REST Checks write capability to GitHub Apps; OAuth Apps and authenticated users can view runs/suites but not create them in its stated context. Commit statuses are a suggested alternative, not equivalent check-suite authority or evidence of substantive tests. Exact credential type and endpoint permissions require separate operational verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-APPCHECKREVOKE-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/apps/deletes_ssh_keys.md",
+      "content_sha256": "559af51e0abb2d8021f55085eb8d0a259d758849b95a4e87ca6abacaa64944d4",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Revoking all OAuth App permissions deletes SSH keys that App generated for the user, including generated deploy keys. Preserve generated-key scope rather than asserting every user key is deleted; revocation requires dependency/recovery planning and is not authorized by reading this warning.",
+      "accepted_policy": false
+    }
+  ]
+}

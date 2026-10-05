@@ -1,0 +1,52 @@
+{
+  "issue": 189,
+  "reviewed_at": "2026-10-03T04:13:11.185Z",
+  "artifacts_reviewed": 4,
+  "reference_claims_added": 5,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59338,
+    "claim_bearing_artifacts": 2835,
+    "tests": 324,
+    "test_seconds": 1.974,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "dependency_context": {
+    "checkout": "actions/checkout@v6",
+    "setup_go": "actions/setup-go@v5",
+    "dependency_submission": "actions/go-dependency-submission@v2",
+    "includes_read_not_newly_certified": true
+  },
+  "limitations": [
+    "Unterminated Go table octicon and insights-visibility scope discrepancy preserved.",
+    "Write-enabled workflow and mutable action tags not installed or executed.",
+    "No submission, comprehensive dependency assurance, adopted policy, or rights clearance."
+  ]
+}

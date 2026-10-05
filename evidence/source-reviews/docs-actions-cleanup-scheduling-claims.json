@@ -1,0 +1,227 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:57:26Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-ip-reputation-note.md",
+      "content_sha256": "09c288a10c51e75c784405004ccc56789ca077b12b300493c2fe6dec115eb21f",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Runner IP note repeats NOTE markup and warns dynamically assigned shared IPs may be flagged due to unrelated activity; linked troubleshooting is not fully reviewed by this reference.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-ip-reputation.md",
+      "content_sha256": "24f732d9a08bbda97a2c45eb8f4d2837a088cbb62180ca653eeaa365680836d7",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Hosted dynamic shared IP ranges appear in Meta API actions/actions_macos; unrelated tenant activity may influence third-party reputation. GitHub does not control list accuracy/freshness; Meta ranges help verify membership, not prove traffic benign. Microsoft-owned security concerns route to MSRC, with no external report submitted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-label-settings.md",
+      "content_sha256": "8c79fca0a9fe7d7aa8ca04876d82bceeef58f5221bbe838046f7be0a83d1a095",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Label-settings gear is a UI step, not label mutation authority or complete label procedure.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-name-description.md",
+      "content_sha256": "382a291a54210453a15b480878a6009d0fefa1d697bfc6b9e501055ee84c340e",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner name may collide across repository and organization runners within one run; name alone is insufficient unique target identity.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-os-description.md",
+      "content_sha256": "fc716fac953cf9d63ed5b2ee3b370cc12691d44b5983ba6fa500f087554d1fa9",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner OS values are Linux, Windows or macOS, preserving exact case; actual runtime and architecture remain unobserved.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-temp-directory-description.md",
+      "content_sha256": "62afdae5ca0f8dc1eac4c7251880f567cbcb607ea57877c3ec8f45bc344b1fa8",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Runner temporary directory is emptied at job start/end except files the runner account lacks permission to delete. Cleanup intention is not guaranteed isolation or proof of sensitive-file removal.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-tool-cache-description.md",
+      "content_sha256": "c3e00b1455e784516c876ca46c5f348a1814ee07bda9fbfeec1bad36468a9358",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Tool-cache path contains preinstalled hosted tools, with separate image inventory reference; path presence is not complete tool/version validation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runner-workflow-continuity.md",
+      "content_sha256": "8b0cf81a13fe468d1d8f953768f4e043fb010169304a4178977923ea488b6e3a",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Service unavailability discards triggered workflow if not queued within30minutes; example31minutes not processed. Triggered/queued/executed are distinct, not guaranteed eventual execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/runners-etc-hosts-file.md",
+      "content_sha256": "4f45fb0298fba216dde73df743bab1a5f1bb04d222d9708b1ca22d720b635825",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Hosted hosts file redirects various mining/malicious domains to localhost, with example names; selected blocking is not exhaustive network security or policy authority to mutate hosts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/schedule-delay.md",
+      "content_sha256": "569912134ce43127706c32290fafa64b43edc2e0d9ed9bff0d524b67ef3fb182",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Scheduled events can delay at high load, notably hour boundaries, and queued jobs can be dropped. Scheduling off-boundary reduces likelihood but is not guaranteed delivery or verified recurrence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/scheduled-workflows-disabled.md",
+      "content_sha256": "6807a2535e9a27e6b4f5db5b8666ef4090c768b93ce5ad7d275fbf940aa93b86",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Public fork schedules default disabled; public repository schedules auto-disable after60days without activity. Auto-disable may occur; private repository behavior is not implied by the stated public case.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/scoped-token-note.md",
+      "content_sha256": "ac7efee7020a0117c6f5f5d0ae9fa19b33e4c9f558ca96008b6b560ab8d06eb6",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Shared-action download receives scoped read-only installation token expiring after1hour. This is not GITHUB_TOKEN's distinct lifetime or actual observed credential.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/secrets-and-variables-org-permissions.md",
+      "content_sha256": "eb518c58396ac2e7af6b17fc8874df08b156059d51645bd69d2c8b79cf1c6795",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Conditional custom-role UI may omit secret/variable tabs by permission; owners or users with both managers see both. Missing tab is not proof secrets absent or authorization to expose them.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/secrets-org-level-overview.md",
+      "content_sha256": "b250f2aebbbcad3d72ce643dd0870866ac520103faa80e62815c29c4083bb7b1",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Organization secrets share across repository workflows and centralized updates affect all users of that secret. Shared update is a broad impact requiring scoped authority and actual propagation verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/secrets-redaction-warning.md",
+      "content_sha256": "edafe13c1190d0dfba219e19fb76830c7cae82517592fd9756dd668cff74bc8b",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Used secrets are automatically redacted in job logs, but intentionally printing secrets should be avoided. Redaction is not blanket safety for transformed values, artifacts or exported contexts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/section-using-unique-names-for-runner-groups.md",
+      "content_sha256": "909c59800ba13707bab3f47f94e71df026fd9cf67ac0bdd4c8fed39bd6c2fc13",
+      "start_line": 2,
+      "end_line": 17,
+      "statement": "GHEC/GHES group names must be unique across organization/enterprise visible scope; duplicates warn and ambiguous workflows fail. Rename or org/organization/ent/enterprise prefixes resolve scope; neither automatic rename nor assumed unique runner names follows. Prefix example include separately unresolved.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/select-a-larger-runner.md",
+      "content_sha256": "e25d3091c45ce311eb5fa6b30079a30b843e87c5bafc7059a564df5310233ea5",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Selecting a larger runner for editing is navigation only, not authorization for subsequent settings changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-add-to-enterprise.md",
+      "content_sha256": "e473e44dacc2ae9bdf9be556ec07ab03cc890487813f4112684440362c519f94",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Enterprise self-hosted creation uses navigation includes, conditional New runner/New self-hosted runner labels and shared configure fragment. No included configuration body implicitly reviewed, token generated or runner installed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-architecture.md",
+      "content_sha256": "26c0061d500c0a0623cda251a393fcc7c099fb3015a287dd970c7bde6b0c8a8c",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Self-hosted runner application connects machine to GitHub; software connectivity alone is not trusted isolation, successful job pickup or authorized installation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSCLEANUPSCHED-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/self-hosted-runner-assign-label-steps.md",
+      "content_sha256": "7b49d5228b8ec13e6dbf6c7a0fe6cfc8da94da7b9aa7eda2f89d18d18c9d2b2a",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "Assigning existing self-hosted label uses shared gear settings then Find or create a label selection. Parent runner identity and actual assignment remain unverified.",
+      "accepted_policy": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 54,
+  "tranche": {
+    "files": 20,
+    "claims": 20,
+    "candidates": 42
+  },
+  "findings": [
+    "matrix-variable-example prose references matrix.env but actual YAML defines matrix.site/datacenter; mismatch preserved.",
+    "Minimum hardware and feature resource increments are instance-context guidance, not universal runner capacity.",
+    "Merge queues require merge_group separately from push/pull_request for required checks."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 58019,
+      "source_artifacts": 2074
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2108,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.985,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Twenty full fragments. No source example execution, provisioning, identity mapping, endpoint exposure or native writes. Independent rendering/audit, rights and policy adoption remain separate."
+}

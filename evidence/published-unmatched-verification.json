@@ -1,0 +1,48 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "issue": 28,
+  "verified_at": "2026-10-02T21:31:00.194Z",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "result": "324 tests in1.335s; OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "controls": 95
+      }
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output .cache/published-unmatched-recovery.json",
+      "exit_code": 0,
+      "result": {
+        "project_complete": false,
+        "gates_open": 9,
+        "inventory_artifacts": 13657,
+        "published_pages": 18019
+      }
+    }
+  ],
+  "observations": {
+    "body_identities_and_digests_checked": 14,
+    "full_bodies_read": 14,
+    "source_text_artifacts_searched": 11418,
+    "version_pairs_compared": 7,
+    "new_assurance_receipts": 0,
+    "source_matches_accepted": 0,
+    "artifact_coverage_changed": false
+  },
+  "limitations": "Reconciliation evidence identifies candidate rename and absent routes. Does not certify origin, pinned render equivalence, exhaustive claims, rights or assurance. Full objective remains active."
+}

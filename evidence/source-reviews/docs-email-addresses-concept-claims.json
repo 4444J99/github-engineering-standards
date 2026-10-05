@@ -1,0 +1,139 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T11:22:15.041Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "The concept applies to FPT, GHEC and GHES and describes primary, backup, commit and noreply addresses. It says any number of addresses may be added and local Git commit email must be added to account settings to connect commits.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "A primary address can be changed, but not directly to an address already configured as the backup address. The linked procedure is not reviewed or executed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Personal-account email can be verified at signup or on addition; undeliverable or bouncing addresses become unverified. Most actions remain available, but verification is recommended to reduce exploitation risk from third-party apps using insecure authentication methods.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Managed-user email is not automatically verified. Until verification, certain operations including the Users and Emails REST APIs use an enterprise-shortcode placeholder; providers or third-party applications may mishandle that placeholder.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Once a managed-user email is verified it cannot be used to sign up for a personal GitHub.com account. This constraint concerns email verification and account type, not a general authority grant.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "The managed-user note permits reuse with another account after unverifying the email in the managed account. The address stays linked to the managed identity and IdP sign-in remains possible, but email-only third-party identification can be affected.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "The managed-user shared-email exception requires reconciliation with DOCS-ACCOUNTMANAGEMENT-6's unqualified one-account email statement; neither claim is silently discarded or generalized across account types.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Commit email associates commits with accounts. Web-operation commit email is configured on GitHub while command-line email is configured in Git; changing either does not rewrite the address on previous commits.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "For GHES the passage explicitly says future web operations use the new address by default. The shared historical-address statement applies across products.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-10",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "FPT and GHEC describe command-line noreply configuration in Git, web noreply through Keep my email address private, and an option to block command-line pushes exposing personal email. These options are not asserted for GHES by this passage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-11",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Contribution attribution and graph association require a connected account email, with the cloud noreply alternative. Attribution is not proof of author identity, credential security or accepted policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-EMAILIDENTITY-12",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/account-and-profile/concepts/email-addresses.md",
+      "content_sha256": "2140d7e47810707063ff0277a3ad0c96388be0fcfe665efd9fea40b44310d9c6",
+      "start_line": 1,
+      "end_line": 63,
+      "statement": "Linked email procedures, API pages and reference material are pointers, not independently reviewed here. No verification state, address, privacy setting or credentials are changed.",
+      "accepted_policy": false
+    }
+  ]
+}

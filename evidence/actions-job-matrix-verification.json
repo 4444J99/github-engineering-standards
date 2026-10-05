@@ -1,0 +1,53 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 52,
+  "tranche": {
+    "files": 20,
+    "claims": 29,
+    "candidates": 88
+  },
+  "findings": [
+    "pull_request_target read/write exception must be resolved alongside fork token settings, not lost through generic fork rules.",
+    "Conditional deployment:false qualifies the previously reviewed deployment-object statement and is incompatible with custom protection rules.",
+    "Matrix fail-fast prose is qualified by per-job continue-on-error example; output order is not guaranteed."
+  ],
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "reference_claims": 57978,
+      "source_artifacts": 2034
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "reviewed": 2068,
+      "inventoried": 13657,
+      "review_errors": [],
+      "gates_open": 9,
+      "project_complete": false
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 324,
+      "seconds": 1.985,
+      "result": "OK"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "scope": "Twenty full fragments. Matrix arithmetic, secret output redaction, contextual permission exceptions, container restrictions and job/workflow/environment expression differences preserved. No workflow or upstream command executed; independent audits, rendering, rights and adoption remain separate."
+}

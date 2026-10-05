@@ -1,0 +1,62 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T01:49:13.910Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-CODEQUALITYMETRICS-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/code-quality/metrics-definitions-table.md",
+      "content_sha256": "c6a0f1d44755f3e115fca7183968e42b1fe06421c65513a6b804d8ecfacd10c8",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "Reliability assesses correct, predictable and consistent intended behavior, including safe error handling and normal/edge cases; example domains are performance, concurrency, error handling and correctness. Maintainability assesses understandable, modifiable and extensible code over time, with examples including dead code, readability, complexity, naming conflict and separation of concerns. These qualitative dimensions are not defined numeric scores, complete scanner coverage or observed quality.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODEQUALITYMETRICS-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/code-quality/model-usage.md",
+      "content_sha256": "00868b240ccb4981064ffa2c2449329f2eeec37f7a6043adac5cf3b51ce2f5eb",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The product description attributes consistent analysis to a tuned mixture of models, prompts and system behavior and says model switching is unsupported because it may compromise reliability/accuracy. This product-specific limitation is not a universal ban on model choice or independent measured accuracy; underlying model identities and runtime settings remain unspecified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODEQUALITYMETRICS-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/code-quality/recent-suggestions-preview-note.md",
+      "content_sha256": "e2b8c4ba82cbe88a821340a9f8616fa7bf1848da6e218f18c073b9150e9fdd1e",
+      "start_line": 1,
+      "end_line": 2,
+      "statement": "The Recent suggestions page for recently changed files is public-preview and subject to change at the pinned snapshot. This scope is not whole-repository coverage, current feature availability or a verified remediation queue.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODEQUALITYMETRICS-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/code-quality/review-comment-and-autofix.md",
+      "content_sha256": "7d43cd3dbfb6461d971be9f264b856c2f7250dc29a466f901e06a8fd811d78f2",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "The source explicitly calls for careful review of a comment and suggested autofix for logic, security and style. Generated content or syntactic validity alone does not satisfy this substantive review requirement, and no real autofix review or approval was performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-CODEQUALITYMETRICS-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/code-quality/severity-levels-table.md",
+      "content_sha256": "a09508ad3c919cfa28394b250de42e77ba09b6eeab347ffc9ffcca58234cabc6",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "The severity table distinguishes Error as high risk of bugs/failure/major maintainability impact, Warning as moderate quality/reliability impact and Note as low-severity improvement/recommendation. Earlier query tables use Recommendation, not Note; retain this terminology gap for reconciliation rather than silently equating distinct labels. Source severity is not adopted policy strength, a verified finding or a merge gate.",
+      "accepted_policy": false
+    }
+  ]
+}

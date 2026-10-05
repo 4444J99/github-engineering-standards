@@ -1,0 +1,173 @@
+{
+  "schema_version": "ges.account-profile-operational-consolidation.v1",
+  "issue": 447,
+  "reviewed_at": "2026-10-03T12:38:14.972Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed account/profile section; not complete six-source conflict reconciliation or native policy.",
+  "rows": [
+    {
+      "id": "ACCOUNT-DISCLOSURE-MATRIX",
+      "claims": [
+        "DOCS-PROFILEPERSONALIZE-1",
+        "DOCS-PROFILEPERSONALIZE-4",
+        "DOCS-PROFILEPERSONALIZE-7",
+        "DOCS-PROFILEREF-1",
+        "DOCS-PROFILEREF-2",
+        "DOCS-PROFILEREF-8",
+        "DOCS-HIRINGSTATUS-1"
+      ],
+      "decision": "PROPOSED_FIELD_AUDIENCE_AND_OWNER_APPROVAL",
+      "requirement": "Keep each field optional except source-required display name, which need not be real-world identity. Profile product/version, field, audience, expiration and managed identity; require owner approval before disclosure and independently observe intended audiences. Private profile does not erase history or public-repository activity.",
+      "negative_tests": [
+        "Missing optional bio/pronouns/hiring must not fail compliance.",
+        "Private profile cannot pass total historical/API erasure.",
+        "Default-public status without expiry cannot pass restricted time-bound disclosure."
+      ]
+    },
+    {
+      "id": "ACCOUNT-PRESENTATION-VS-ACCESS",
+      "claims": [
+        "DOCS-ORGMEMBERVIS-1",
+        "DOCS-ORGACCESS-2",
+        "DOCS-ORGROLEVIEW-2",
+        "DOCS-PROFILEPINS-1",
+        "DOCS-PROFILEREF-7",
+        "DOCS-DASHREF-2"
+      ],
+      "decision": "PROPOSED_SEPARATE_CUSTODY_ACCESS_AND_DISPLAY",
+      "requirement": "Use stable target identity and authenticated role/resource evidence for access; treat pins, top repositories, organization mentions and hidden membership as presentation only. Enforce combined six-pin maximum and eligibility separately from authorization.",
+      "negative_tests": [
+        "Hidden membership cannot certify departure or loss of access.",
+        "Top-list/pinned repository cannot certify ownership.",
+        "Enterprise owner title cannot certify uniform organization resource access."
+      ]
+    },
+    {
+      "id": "ACCOUNT-MANAGED-ACTOR-MATRIX",
+      "claims": [
+        "DOCS-ACCOUNTCREATE-1",
+        "DOCS-ACCOUNTCREATE-4",
+        "DOCS-PROFILEREF-4",
+        "DOCS-PROFILEREF-11",
+        "DOCS-PROFILEPERSONALIZE-1",
+        "DOCS-CONTRIBMISSING-4",
+        "DOCS-ENTERPRISELEAVE-1"
+      ],
+      "decision": "UNRESOLVED_SELF_SERVICE_VS_MANAGED_CONTEXT",
+      "requirement": "Profile account provisioning, IdP, host and version before proposing signup, name/email changes, Gravatar or departure. Preserve specific managed-user exclusions over generic personal self-service prose; unresolved operation eligibility stays unknown. Display-name and username authority remain separate.",
+      "negative_tests": [
+        "Personal Name field cannot authorize managed IdP mutation.",
+        "Generic historical email relinking cannot bypass managed primary-email limits.",
+        "Managed user cannot inherit personal self-removal or signup rights."
+      ]
+    },
+    {
+      "id": "ACCOUNT-DEPARTURE-CONTINUITY",
+      "claims": [
+        "DOCS-JOBTRANSITION-1",
+        "DOCS-JOBTRANSITION-3",
+        "DOCS-JOBTRANSITION-4",
+        "DOCS-JOBTRANSITION-5",
+        "DOCS-JOBTRANSITION-6",
+        "DOCS-ORGLEAVE-2",
+        "DOCS-ORGLEAVE-3",
+        "DOCS-ENTERPRISELEAVE-4"
+      ],
+      "decision": "PROPOSED_ORDERED_CUSTODY_AND_APPROVAL_PLAN",
+      "requirement": "Before approved departure establish retained mailbox/authentication/recovery, successor ownership, billing handoff, repository custody and exact organization/enterprise roles. Preview diffs, bound each mutation and verify afterward. Destructive local cleanup requires candidate-specific parity, worktree dependency and restore evidence; no upstream placeholder execution.",
+      "negative_tests": [
+        "Leaving organization cannot pass billing handoff or enterprise removal.",
+        "Replacing 2FA without recovery verification cannot pass continuity.",
+        "A fork/upstream link or remote existence cannot authorize local deletion."
+      ]
+    },
+    {
+      "id": "ACCOUNT-CONTRIBUTION-EVIDENCE",
+      "claims": [
+        "DOCS-CONTRIBREF-2",
+        "DOCS-CONTRIBREF-3",
+        "DOCS-CONTRIBREF-6",
+        "DOCS-CONTRIBREF-7",
+        "DOCS-CONTRIBMISSING-2",
+        "DOCS-CONTRIBMISSING-3",
+        "DOCS-CONTRIBVIEW-2",
+        "DOCS-DASHREF-1"
+      ],
+      "decision": "PROPOSED_BOUNDED_DISPLAY_MEASURE_NOT_COMPLIANCE",
+      "requirement": "Represent qualification as conjunctive commit criteria plus disjunctive relationship requirements; report graph/time-window caps and unknown display limits. Keep attribution, mailbox verification, authenticated authorship, repository custody and productivity separate. Profile/display absence is not proof of missing artifacts.",
+      "negative_tests": [
+        "Linked author email alone cannot pass all commit criteria.",
+        "Historical graph restoration without mailbox access cannot pass mailbox custody.",
+        "One-month calendar selection or four-update dashboard cannot claim exhaustive activity."
+      ]
+    },
+    {
+      "id": "ACCOUNT-DATE-AND-SHARING-ASSURANCE",
+      "claims": [
+        "DOCS-CONTRIBTIMELINE-2",
+        "DOCS-CONTRIBREF-8",
+        "DOCS-CONTRIBREF-9",
+        "DOCS-CONTRIBREF-10",
+        "DOCS-CONTRIBSHARE-1",
+        "DOCS-CONTRIBSHARE-2",
+        "DOCS-CONTRIBSHARE-3",
+        "DOCS-CONTRIBSHARE-5"
+      ],
+      "decision": "UNRESOLVED_TIMEZONE_AND_RENDERED_CONNECTION_MATRIX",
+      "requirement": "Preserve author/commit/event timezone distinctions and independently verify UTC query bounds, destination rendering, exact GHES version and two-account sign-in. Require owner Connect enablement, authentic user agreement and separate authorization for count sharing. Record 90-day scope and measured freshness rather than hourly request cadence.",
+      "negative_tests": [
+        "A +0900 calendar day cannot automatically be substituted for UTC day bounds.",
+        "Hourly update requests cannot pass fresh successful sync.",
+        "Duplicated cloud sign-in wording cannot certify both environments authenticated."
+      ]
+    },
+    {
+      "id": "ACCOUNT-SECURITY-BULK-SCOPE",
+      "claims": [
+        "DOCS-ACCOUNTSECURITYSET-1",
+        "DOCS-ACCOUNTSECURITYSET-2",
+        "DOCS-ACCOUNTSECURITYSET-3",
+        "DOCS-PROFILEREF-5",
+        "DOCS-ACCESSIBILITYPREF-3"
+      ],
+      "decision": "PROPOSED_SETTINGS_EFFECT_CLASSIFICATION",
+      "requirement": "Classify personal display preferences, review-routing effects, bulk current-repository changes and future defaults separately. Security enable/disable requires exact owned target inventory, applicable explicit approval, diff, capability preconditions, behavioral verification and recovery plan; defaults do not prove current enforcement.",
+      "negative_tests": [
+        "Future default cannot pass existing-repository coverage.",
+        "Enable all dialog cannot certify protection effectiveness.",
+        "Busy preference cannot be treated as blocking all manual review requests."
+      ]
+    },
+    {
+      "id": "ACCOUNT-INTEGRATION-AND-AGENT-AUTHORITY",
+      "claims": [
+        "DOCS-JIRAPERSONAL-1",
+        "DOCS-JIRAPERSONAL-2",
+        "DOCS-JIRAPERSONAL-3",
+        "DOCS-ORGOAUTHREQUEST-1",
+        "DOCS-ORGOAUTHREQUEST-2",
+        "DOCS-ORGOAUTHREQUEST-3",
+        "DOCS-DASHQUICK-3",
+        "DOCS-DASHREF-4",
+        "DOCS-PROFILERESUME-4",
+        "DOCS-PROFILERESUME-7",
+        "DOCS-PROFILERESUME-8"
+      ],
+      "decision": "PROPOSED_EXPLICIT_WRITE_COST_AND_DISCLOSURE_BOUNDARY",
+      "requirement": "Treat third-party registration/linkage, personal OAuth authorization, org requests/approval, AI sessions, dependency automation and public sharing as distinct scoped actions. Verify callback target/permissions and protect secrets; requests are not approval, session lists not live completion, generated text not truth and latest versions not tested safety. Preserve product/preview scope.",
+      "negative_tests": [
+        "OAuth request or personal authorization cannot pass organization approval.",
+        "Dashboard session row cannot certify a running remote agent or achieved goal.",
+        "Copied AI README/latest dependency version cannot pass verified operational behavior."
+      ]
+    }
+  ],
+  "limitations": [
+    "Negative-test entries are specifications, not implemented or executed tests.",
+    "Source identity validation is not semantic equivalence or independent omission assurance.",
+    "No authentic human policy acceptance, rights clearance, identity/credential changes or rollout is supplied."
+  ]
+}

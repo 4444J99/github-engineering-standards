@@ -1,0 +1,47 @@
+{
+  "schema_version": "ges.tranche-verification.v1",
+  "issue": 413,
+  "verified_at": "2026-10-03T11:31:16.049Z",
+  "scope": "Complete username reference and two namespace includes; dependency inspection does not create separate receipts.",
+  "reference_claims_added": 9,
+  "reference_claims": 61100,
+  "claim_bearing_artifacts": 3452,
+  "tests": {
+    "count": 324,
+    "seconds": 1.975,
+    "result": "PASS"
+  },
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "unresolved_conflict": "LDAP administrator-only reference versus self-rename procedure; concept introduces built-in-only.",
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "account_renamed": false,
+  "independent_omission_audit": false,
+  "project_complete": false,
+  "gates_open": 9
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "ges.locked-email-recovery-consolidation.v1",
+  "issue": 435,
+  "reviewed_at": "2026-10-03T12:06:00.275Z",
+  "status": "PROPOSED_NOT_ADOPTED",
+  "accepted_policy": false,
+  "implemented_bindings": false,
+  "independent_semantic_audit": false,
+  "scope": "Reviewed account/email recovery claims only; not full six-source consolidation.",
+  "rows": [
+    {
+      "id": "RECOVERY-ACCESS-VS-UNLINK",
+      "claims": [
+        "DOCS-LOCKEDUNLINK-1",
+        "DOCS-LOCKEDUNLINK-2",
+        "DOCS-ACCOUNTMANAGEMENT-7"
+      ],
+      "decision": "PROPOSED_EXPLICIT_TERMINAL_STATE",
+      "requirement": "Before any approved unlinking record independently reviewed loss of all access and exhausted authorized recovery routes. Distinguish original-account access, email unlinking and new-account linkage; repositories/permissions/profile remain with the old identity.",
+      "negative_test": "Unlinked email or new account cannot pass original-account recovery or mark 2FA disabled."
+    },
+    {
+      "id": "RECOVERY-MAILBOX-RECIPIENTS",
+      "claims": [
+        "DOCS-LOCKEDUNLINK-3",
+        "DOCS-LOCKEDUNLINK-4",
+        "DOCS-LOCKEDUNLINK-5",
+        "DOCS-BACKUPEMAIL-3"
+      ],
+      "decision": "PROPOSED_SCOPED_RECIPIENT_AND_CONTROL_CHECK",
+      "requirement": "Record approved mailbox control and recipient scope without committing actual addresses. Primary/backup selection and default all-verified fallback determine reset/OTP recipients; observed setting alone is not delivery.",
+      "negative_test": "A specifically selected backup cannot imply OTP delivery to all addresses; absent explicit selection cannot silently exclude other verified addresses."
+    },
+    {
+      "id": "RECOVERY-TOKEN-FRESHNESS",
+      "claims": [
+        "DOCS-LOCKEDUNLINK-5",
+        "DOCS-LOCKEDUNLINK-6",
+        "DOCS-EMAILTROUBLE-4"
+      ],
+      "decision": "PROPOSED_TOKEN_TYPE_BOUND_EXPIRY",
+      "requirement": "Bind timestamp and freshness to token type: reset link three hours and ordinary verification link 24 hours. Unlink/OTP expiry not supplied remains unknown. Never record secret token values in committed evidence.",
+      "negative_test": "A four-hour reset cannot pass using a 24-hour verification threshold; unknown unlink expiry cannot be fabricated as three or 24 hours."
+    },
+    {
+      "id": "RECOVERY-UNLINK-CONFIRMATION",
+      "claims": [
+        "DOCS-LOCKEDUNLINK-7",
+        "DOCS-LOCKEDUNLINK-8"
+      ],
+      "decision": "PROPOSED_PER_ADDRESS_POSTCONDITION",
+      "requirement": "Separate links sent to all addresses, chosen mailbox link activation, final confirmation and observed resulting linkage. Optional new-account association is distinct and requires its own authorization/evidence.",
+      "negative_test": "Link dispatch cannot prove every email removed; confirmation for one mailbox cannot certify all-address unlinking."
+    },
+    {
+      "id": "RECOVERY-PAYMENT-CONTINUITY",
+      "claims": [
+        "DOCS-LOCKEDUNLINK-8",
+        "DOCS-ACCOUNTMANAGEMENT-4",
+        "DOCS-PERSONALACCOUNTREF-1"
+      ],
+      "decision": "PROPOSED_OPERATION_SPECIFIC_EXTERNAL_RECEIPT",
+      "requirement": "Distinguish deletion billing termination from locked-email unlinking, which may require support cancellation or sponsorship migration. File exact user-authorized support work separately; request submission is not external acceptance.",
+      "negative_test": "Unlinking cannot inherit deletion's immediate billing termination or certify sponsorship migration."
+    }
+  ],
+  "limitations": [
+    "Negative-test entries are specifications, not implemented or executed tests.",
+    "No credentials, tokens, addresses or actual private assessment details recorded.",
+    "No recovery, unlinking, billing changes, support messages, native activation or rights clearance."
+  ]
+}

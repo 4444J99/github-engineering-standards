@@ -1,0 +1,45 @@
+{
+  "issue": 341,
+  "verified_at": "2026-10-03T09:10:15.654Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 8,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "tests": 324,
+    "test_seconds": 1.974,
+    "controls": 95,
+    "reference_claims": 60526,
+    "claim_bearing_artifacts": 3347,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "Reference only; automatic field mapping and displayed horizon not complete verification.",
+    "No native writes, rights clearance or accepted policy."
+  ]
+}

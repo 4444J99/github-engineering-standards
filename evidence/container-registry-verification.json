@@ -1,0 +1,47 @@
+{
+  "issue": 269,
+  "reviewed_at": "2026-10-03T06:38:34.507Z",
+  "artifacts_reviewed": 1,
+  "reference_claims_added": 15,
+  "checks": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "results": {
+    "reference_claims": 59840,
+    "claim_bearing_artifacts": 3264,
+    "tests": 324,
+    "test_seconds": 1.991,
+    "valid_controls": 95,
+    "gates_open": 9,
+    "project_complete": false
+  },
+  "limitations": [
+    "GHEC alternate enterprise-domain hostname requires target-specific resolution.",
+    "Malformed example digest and version output-path mismatch retained, not copied as verified examples.",
+    "Digest/foreign-layer/capacity differences from legacy registry preserved by registry scope.",
+    "No Docker, credentials, removal, publication, adopted policy, independent assurance, rights clearance or native rollout."
+  ]
+}

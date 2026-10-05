@@ -1,0 +1,238 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-02T23:49:03Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-link-to-intro.md",
+      "content_sha256": "b3291a1fb90b6904f8d4da60881384a043794e083258b430142457e4dd3cbe46",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "OIDC primer link covers concepts/architecture/benefits; link is not full primer review or cloud trust proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-on-ghecom.md",
+      "content_sha256": "31653f3c7f7e660e26acc5f8d45df3a0608dce25e65e21eaa7f4de784dcce759",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "GHEC data-residency guidance requires substituting certain OIDC values; linked substitutions are separately unresolved, so dotcom issuer values must not be blindly applied.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-permissions-token.md",
+      "content_sha256": "0e691d8acb3ed1cfbdf74ae928fa1352a54dccf628cd7838362885d2cdbfff3f",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "OIDC requesting job/workflow needs the write access level for the id-token permission to fetch/use a JWT; this scope alone gives no resource modification rights. External short-lived authentication and detailed permission configuration require separate provider trust.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/oidc-security-notice.md",
+      "content_sha256": "60c63facf810e1c7c8fbc720f68c05591784bab3aa7736d3421240aecf6c9279",
+      "start_line": 1,
+      "end_line": 4,
+      "statement": "Before OIDC use, plan predictable token allocation and define at least one trust condition blocking untrusted repositories. Conditional Dependabot update tokens carry event_name dynamic; workflow-only trust should allow expected event names where provider supports event conditions. Minimum condition count alone does not prove secure scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-005",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/on-multiple-example.md",
+      "content_sha256": "d34abdbaf56fbce864a6f8d5c7015a83ac4a710048ce3fb350536614adcb1974",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "Multiple on events are alternatives, not conjunctions; push/fork example triggers on either and simultaneous triggering events can produce multiple runs, not automatic deduplication.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-006",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/on-single-example.md",
+      "content_sha256": "a85febe099f152ad87f424b2560e9e0a02739a8867f90030eb5ff9b6213ea86f",
+      "start_line": 1,
+      "end_line": 5,
+      "statement": "Simple on: push example accepts pushes to any repository branch; parent event branch/tag/filter nuances remain separately scoped.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-007",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/onboarding-next-steps.md",
+      "content_sha256": "f99d228fa233a1e60d714b5651f46e59521ce16967867b9fb03988b71e341ca5",
+      "start_line": 1,
+      "end_line": 9,
+      "statement": "Onboarding links cover templates, CI, packages, deployment, tasks and advanced runners/CLI/concurrency/matrices; certification reference is feature-conditional. Marketing automation breadth is not exhaustive implementation evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-008",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/org-access-to-github-hosted-runners.md",
+      "content_sha256": "469d152cddc1e77c5a4d83dc5ce96aaabc2d7abafabf0c4d5bac60fb8939bc99",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Organization access to a larger runner is controlled through its assigned group's organization policy, not a per-runner sharing guarantee or observed permissions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-009",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/org-roles-for-gh-actions.md",
+      "content_sha256": "8485117acc779fad21b1b5e55755692c55b88a9a72ef23abf8904fc4c44a8f96",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Organization role permissions separate Actions General policy management excluding self-hosted settings, runner/group management including creation restrictions, secret administration and variable administration. One role does not imply all other administrative rights.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-010",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/org-to-enterprise-actions-permissions.md",
+      "content_sha256": "0265573251197d870465737df3212c00b751202ef7bb176fd3632474d11025bb",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Source says organization Actions write permissions require manually setting enterprise write permissions, with repository/organization links. Parent transfer/inheritance context is unidentified, so this must not become a universal privilege escalation requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-011",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/output-limitations.md",
+      "content_sha256": "579167a5b394ad791316313dafbbe53cf0d9cb459f718f82536bb13273ed0956",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Output limit is1MB per job and50MB total per workflow run, approximated using UTF-16 encoding; count is not plain UTF-8 bytes or guarantee of secret output delivery.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-012",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/outside-collaborators-actions.md",
+      "content_sha256": "09e8fa5299c32a64360a6ba37f1e53d27608dcbe5ce5d75403a6550733b02587",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Sharing a private action/workflow repository across workflows may expose indirect access through run logs to outside collaborators of consumer repositories despite no direct private-repository access. Sharing access is a confidentiality review decision, not automatic safety.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-013",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/partial-reruns-with-reusable.md",
+      "content_sha256": "470ab38ad57d6aaa4742f5afa7ef7bea9d8b132c0874e17357b95ae8ec882904",
+      "start_line": 1,
+      "end_line": 6,
+      "statement": "Public reusable workflows allow SHA/tag/branch refs. For non-SHA refs, rerunning all jobs uses the specified reference, whereas failed/specific-job reruns use the first attempt's commit SHA; reproducibility depends on rerun mode.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-014",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/pass-inputs-to-reusable-workflows.md",
+      "content_sha256": "b0f8a4b5ac2cf1a04b02937bb75fa01c2f36d1f7be52d08c7471d7da24d1743b",
+      "start_line": 1,
+      "end_line": 15,
+      "statement": "Reusable input values passed via job with must match declared boolean/number/string types; named secrets use secrets. Example main ref and PAT secret name are placeholders, not immutable trust or approved credential use.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-015",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/pass-inputs-to-reusable-workflows.md",
+      "content_sha256": "b0f8a4b5ac2cf1a04b02937bb75fa01c2f36d1f7be52d08c7471d7da24d1743b",
+      "start_line": 17,
+      "end_line": 30,
+      "statement": "Same-organization/enterprise reusable calls may use secrets: inherit to pass secrets implicitly. Eligibility is not approval to expose all inherited secrets or proof of downstream safe handling.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-016",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/permissions-statement-environment.md",
+      "content_sha256": "b857402b889912f88b6ffa394c669c6094b8e4db01444191ccf22ae64df355c0",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Environment configuration requires owner for personal repositories and admin for organization repositories; source requirement is not an actual granted permission or blanket authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-017",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/permissions-statement-secrets-and-variables-organization.md",
+      "content_sha256": "902ec33ead810661dced748b28f9536188db659bd7ee252ce2e1ed7520a59225",
+      "start_line": 1,
+      "end_line": 3,
+      "statement": "Organization secrets/variables creation permits owners and conditionally appropriate custom-role secret/variable managers. Broad prose 'or' is not proof secret-management grants variable-management or vice versa; individual roles remain distinct.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-018",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/permissions-statement-secrets-environment.md",
+      "content_sha256": "f93b39b0871d8473f17c4e88f20e759a8cac68986683fb081d0fb4b2bd2c102f",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Environment secrets/variables creation requires personal repository owner or organization repository admin; availability and actual authority remain separately observed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-019",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/permissions-statement-secrets-variables-repository.md",
+      "content_sha256": "a11ffeb186a5b031974bcf41194f9b356ac35271a1d7b65788fd703fb30255ae",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Organization repository secret/variable creation requires write when repo-ci-cd-admin feature applies, otherwise admin; personal repository needs collaborator. Preserve feature branch rather than universalizing write or admin.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-020",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/policy-label-for-select-actions-workflows.md",
+      "content_sha256": "8e562d9e1597526097903cd4a945a6e49209288ae35c0438724e9a0b17d4d498",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "Selected actions/workflow policy UI label depends on workflow-policy feature and enterprise versus owner scope; older branch says Allow select actions. Label is not actual policy selection or enforcement proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSOIDCTRUST-021",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/postgres-environment-variables.md",
+      "content_sha256": "8fd2ef422b51a0f8d5713a500b31292348acb47efbd3944f4e59a5ac9ab46dec",
+      "start_line": 1,
+      "end_line": 1,
+      "statement": "PostgreSQL example client.js uses POSTGRES_HOST/POSTGRES_PORT supplied at Connect to PostgreSQL step. Parent script/service behavior is separately linked, not executed or verified by variable presence.",
+      "accepted_policy": false
+    }
+  ]
+}

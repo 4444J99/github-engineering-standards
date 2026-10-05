@@ -1,0 +1,31 @@
+{
+  "schema_version": "ges.verification.v1",
+  "implementation_head": "e3e888b0815a86f63e8e7d195a2ac775d89ce520",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 155,
+      "evidence": "evidence/final-recovery-tests.txt",
+      "sha256": "a6321933ef58c14b7924b6697d1d02e123fd2ff891752c195b5f0e4102a678db"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "controls": 95
+      }
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "project_complete": false,
+  "native_enforcement_tests_run": false
+}

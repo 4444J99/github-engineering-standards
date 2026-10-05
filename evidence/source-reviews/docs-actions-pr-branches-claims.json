@@ -1,0 +1,51 @@
+{
+  "schema_version": "ges.source-claims-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-03T00:24:58Z",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONSPRBRANCH-001",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-workflow-branches1.md",
+      "content_sha256": "971b8b7bac34d93f924ef2d4f9c39d19f23a3b9439927581d38f2c99db334187",
+      "start_line": 1,
+      "end_line": 7,
+      "statement": "pull_request and pull_request_target branch filters constrain the PR target branch. Include and ignore keys cannot coexist for the same event; joint branch/path filters require both predicates. Literal glob-special characters require escaping. Trigger matching does not establish trust of PR code.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRBRANCH-002",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-workflow-branches2.md",
+      "content_sha256": "eef67e9c08eb030989465e51d377d8d06d48798e4e51f3f08d78d61435791137",
+      "start_line": 1,
+      "end_line": 19,
+      "statement": "The inclusion example matches target ref names main, mona/octocat or releases/**, not arbitrary head branches. Example values are not adopted branch naming policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRBRANCH-003",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-workflow-branches2.md",
+      "content_sha256": "eef67e9c08eb030989465e51d377d8d06d48798e4e51f3f08d78d61435791137",
+      "start_line": 1,
+      "end_line": 19,
+      "statement": "Whole-workflow skips through branch/path/message filters leave checks Pending and block required-success PR merges. Included required-workflow guidance and linked pages remain separate evidence; this is not a runtime receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONSPRBRANCH-004",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/actions/workflows/triggering-workflow-branches3.md",
+      "content_sha256": "3d58b1e1662538a7f7c574fd68ce907bc4803793d92c05de85ab58e4f6bf02e9",
+      "start_line": 1,
+      "end_line": 13,
+      "statement": "branches-ignore suppresses PR workflows whose target ref matches the exclusion; the example excludes mona/octocat and releases/**-alpha. It does not prohibit those branches or assert the triggering contributor code is safe.",
+      "accepted_policy": false
+    }
+  ]
+}
