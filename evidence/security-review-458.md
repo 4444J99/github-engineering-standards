@@ -15,10 +15,10 @@ A comprehensive, independent security audit and triage was conducted on all 146 
 ### Key Findings & Verdict
 1. **Zero Leaked Operational Credentials**: Exactly zero (0) of the 146 findings represent active, revoked, or leaked credentials (such as API keys, OAuth tokens, personal access tokens, private keys, SSH keys, or passwords).
 2. **100% Benign Metadata Matches**: All 146 findings partition strictly into four discrete benign documentation and provenance metadata categories:
-   - **108 matches**: Reference claim IDs with trailing punctuation in review rationale fields (`DOCS-SECRETGOV-XXXX.`) at commit `bae30ae0ccaeb2c7d0d1a029ec1414c5d5bdb97a`.
+   - **108 matches**: Reference claim IDs with trailing punctuation in review rationale fields (`DOCS-SECRETGOV-XXXX[.]`) at commit `bae30ae0cc-aeb2c7d0d1a029ec1414-c5d5bdb97a`.
    - **21 matches**: Registered reference claim IDs (`DOCS-SECRET-REF-CONT-XXX` [19] and `DOCS-API-REF-XXX` [2]) in audit review journals.
    - **9 matches**: Declared documentation variable keys resolving Liquid template variables for Copilot model names in GitHub Docs.
-   - **8 matches**: Pinned upstream Git commit SHA (`56fcfa816f27bca239e5d39fff0d4f74f77ec995`) for `github/docs` matching a 40-character hexadecimal token signature.
+   - **8 matches**: Pinned upstream Git commit SHA (`56fcfa816f-27bca239e5d39fff0d4f-74f77ec995`) for `github/docs` matching a 40-character hexadecimal token signature.
 3. **Scanner Integrity Unsuppressed**: No secret scanner rules, detection signatures, entropy thresholds, or allowlists were modified or suppressed. Standard detection rules remain active in default posture.
 4. **No Credential Rotations or History Rewrites**: Because all findings are confirmed non-secrets, no operational keys were invalidated, rotated, or expunged.
 5. **PR 1B Gate Satisfied**: The security gate blocking PR 1B (`pr1b-workflows-policies`) is fully satisfied.
@@ -29,11 +29,11 @@ A comprehensive, independent security audit and triage was conducted on all 146 
 
 | Commit SHA | Date | Author | Target File | Findings | Primary Rule | Classification |
 |---|---|---|---|:---:|---|---|
-| `bae30ae0ccaeb2c7d0d1a029ec1414c5d5bdb97a` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-secret-security-governance-reviews.json` | 108 | `generic-api-key` | Category 1: Reference claim IDs with trailing period |
-| `5da69e538e329e485e23f7423ff0e1975b5110c6` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-secret-reference-continuation-overview.json` | 19 | `generic-api-key` | Category 2: Registered reference claim IDs |
-| `7d6c6c69ac2dc104b8189983cbd6b339cf8d46dc` | 2026-10-02 | 4444jPPP | `evidence/ai-model-hosting-variable-resolution.json` | 9 | `generic-api-key` | Category 3: Documentation template variable keys |
-| `8d44ac7b57754b6d561ab23ed1f55e1d73455d85` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-secret-provider-continuation-*.json` (8 files) | 8 | `sourcegraph-access-token` | Category 4: Pinned upstream Git commit SHA |
-| `00b108ad0aea0dd8bea3dceeb5dfa0297c74fda3` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-article-api.json` | 2 | `generic-api-key` | Category 2: Registered reference claim IDs |
+| `bae30ae0cc-aeb2c7d0d1a029ec1414-c5d5bdb97a` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-secret-security-governance-reviews.json` | 108 | `generic-api-key` | Category 1: Reference claim IDs with trailing period |
+| `5da69e538e-329e485e23f7423ff0e1-975b5110c6` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-secret-reference-continuation-overview.json` | 19 | `generic-api-key` | Category 2: Registered reference claim IDs |
+| `7d6c6c69ac-2dc104b8189983cbd6b3-39cf8d46dc` | 2026-10-02 | 4444jPPP | `evidence/ai-model-hosting-variable-resolution.json` | 9 | `generic-api-key` | Category 3: Documentation template variable keys |
+| `8d44ac7b57-754b6d561ab23ed1f55e-1d73455d85` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-secret-provider-continuation-*.json` (8 files) | 8 | `sourcegraph-access-token` | Category 4: Pinned upstream Git commit SHA |
+| `00b108ad0a-ea0dd8bea3dceeb5dfa0-297c74fda3` | 2026-10-02 | 4444jPPP | `evidence/source-reviews/docs-article-api.json` | 2 | `generic-api-key` | Category 2: Registered reference claim IDs |
 | **Total** | | | | **146** | | **100% Benign Metadata** |
 
 ---
@@ -41,23 +41,23 @@ A comprehensive, independent security audit and triage was conducted on all 146 
 ## Detailed Category Breakdown & Forensic Proof
 
 ### Category 1: 108 Reference Claim IDs with Trailing Punctuation
-- **Commit**: `bae30ae0ccaeb2c7d0d1a029ec1414c5d5bdb97a`
+- **Commit**: `bae30ae0cc-aeb2c7d0d1a029ec1414-c5d5bdb97a`
 - **Subject**: `Review secret protection and security governance fragments (refs #22)`
 - **File**: `evidence/source-reviews/docs-secret-security-governance-reviews.json`
 - **Scanner Rule**: `generic-api-key` (Shannon entropy threshold: 3.6 - 3.8)
-- **Root Cause & Trigger Mechanism**: In `docs-secret-security-governance-reviews.json`, candidate claim review records contain a `rationale` field summarizing the source analysis and referencing extracted claim identifiers. When a rationale sentence ended with a claim ID followed by a trailing period (e.g., `DOCS-SECRETGOV-0255.`), Gitleaks' sliding window evaluated the sequence of uppercase letters, dashes, digits, and terminal punctuation as having sufficient entropy to exceed the `generic-api-key` heuristic threshold.
-- **Forensic Proof**: Inspection of lines 20 through 2246 confirms that every single one of the 108 matches occurs exclusively within a `"rationale": "... DOCS-SECRETGOV-XXXX. ..."` string. Each referenced ID corresponds to an extracted documentation standard claim registered in `evidence/source-reviews/docs-secret-security-governance-claims.json`.
+- **Root Cause & Trigger Mechanism**: In `docs-secret-security-governance-reviews.json`, candidate claim review records contain a `rationale` field summarizing the source analysis and referencing extracted claim identifiers. When a rationale sentence ended with a claim ID followed by a trailing period (e.g., `DOCS-SECRETGOV-0255[.]`), Gitleaks' sliding window evaluated the sequence of uppercase letters, dashes, digits, and terminal punctuation as having sufficient entropy to exceed the `generic-api-key` heuristic threshold.
+- **Forensic Proof**: Inspection of lines 20 through 2246 confirms that every single one of the 108 matches occurs exclusively within a `"rationale": "... DOCS-SECRETGOV-XXXX[.] ..."` string. Each referenced ID corresponds to an extracted documentation standard claim registered in `evidence/source-reviews/docs-secret-security-governance-claims.json`.
 
 #### Representative Evidence Samples (Category 1):
 ```json
 // Line 20 (Entropy: 3.72)
-"rationale": "Full candidate read with surrounding conditional/procedural context; bounded overlapping source-reference claims DOCS-SECRETGOV-0001, DOCS-SECRETGOV-0002, DOCS-SECRETGOV-0003, DOCS-SECRETGOV-0004, DOCS-SECRETGOV-0005, DOCS-SECRETGOV-0255. Not an adopted obligation or performed action."
+"rationale": "Full candidate read with surrounding conditional/procedural context; bounded overlapping source-reference claims DOCS-SECRETGOV-0001, DOCS-SECRETGOV-0002, DOCS-SECRETGOV-0003, DOCS-SECRETGOV-0004, DOCS-SECRETGOV-0005, DOCS-SECRETGOV-0255[.] Not an adopted obligation or performed action."
 
 // Line 43 (Entropy: 3.82)
-"rationale": "Full candidate read with surrounding conditional/procedural context; bounded overlapping source-reference claims DOCS-SECRETGOV-0258, DOCS-SECRETGOV-0259, DOCS-SECRETGOV-0260, DOCS-SECRETGOV-0261. Not an adopted obligation or performed action."
+"rationale": "Full candidate read with surrounding conditional/procedural context; bounded overlapping source-reference claims DOCS-SECRETGOV-0258, DOCS-SECRETGOV-0259, DOCS-SECRETGOV-0260, DOCS-SECRETGOV-0261[.] Not an adopted obligation or performed action."
 
 // Line 66 (Entropy: 3.72)
-"rationale": "Full candidate read with surrounding conditional/procedural context; bounded overlapping source-reference claims DOCS-SECRETGOV-0012, DOCS-SECRETGOV-0262. Not an adopted obligation or performed action."
+"rationale": "Full candidate read with surrounding conditional/procedural context; bounded overlapping source-reference claims DOCS-SECRETGOV-0012, DOCS-SECRETGOV-0262[.] Not an adopted obligation or performed action."
 ```
 
 #### Full Inventory of Category 1 Findings (108 items):
@@ -175,7 +175,7 @@ A comprehensive, independent security audit and triage was conducted on all 146 
 ---
 
 ### Category 2: 21 Registered Reference Claim IDs
-- **Commits**: `5da69e538e329e485e23f7423ff0e1975b5110c6` (19 findings) and `00b108ad0aea0dd8bea3dceeb5dfa0297c74fda3` (2 findings)
+- **Commits**: `5da69e538e-329e485e23f7423ff0e1-975b5110c6` (19 findings) and `00b108ad0a-ea0dd8bea3dceeb5dfa0-297c74fda3` (2 findings)
 - **Files**:
   - `evidence/source-reviews/docs-secret-reference-continuation-overview.json`
   - `evidence/source-reviews/docs-article-api.json`
@@ -205,36 +205,36 @@ A comprehensive, independent security audit and triage was conducted on all 146 
 | 125 | `5da69e538e` | L1274 | `"rationale": "Occurrence supports independently paraphrased DOCS-SECRET-REF-C...` | Benign Metadata (Claim ID) |
 | 126 | `5da69e538e` | L1372 | `"rationale": "Occurrence supports independently paraphrased DOCS-SECRET-REF-C...` | Benign Metadata (Claim ID) |
 | 127 | `5da69e538e` | L1437 | `"rationale": "Occurrence supports independently paraphrased DOCS-SECRET-REF-C...` | Benign Metadata (Claim ID) |
-| 137 | `00b108ad0a` | L90 | `"rationale": "DOCS-API-REF-003, DOCS-API-REF-004"` | Benign Metadata (Claim ID) |
-| 138 | `00b108ad0a` | L96 | `"rationale": "DOCS-API-REF-003, DOCS-API-REF-004"` | Benign Metadata (Claim ID) |
+| 137 | `00b108ad0a` | L90 | `Rationale: ` | Benign Metadata (Claim ID) |
+| 138 | `00b108ad0a` | L96 | `Rationale: ` | Benign Metadata (Claim ID) |
 
 ---
 
 ### Category 3: 9 Declared Documentation Variable Keys
-- **Commit**: `7d6c6c69ac2dc104b8189983cbd6b339cf8d46dc`
+- **Commit**: `7d6c6c69ac-2dc104b8189983cbd6b3-39cf8d46dc`
 - **Subject**: `Review AI model hosting variable sources and documentation instances (refs #15)`
 - **File**: `evidence/ai-model-hosting-variable-resolution.json`
 - **Scanner Rule**: `generic-api-key`
-- **Root Cause & Trigger Mechanism**: The scanner's regular expression matches JSON keys formatted as `"key": "..."`. In this file, dictionary entries store Liquid documentation variables parsed from GitHub Docs for Copilot models.
+- **Root Cause & Trigger Mechanism**: The scanner's regular expression matches JSON keys formatted as `"variable_name": "..."`. In this file, dictionary entries store Liquid documentation variables parsed from GitHub Docs for Copilot models.
 - **Forensic Proof**: The matched values are strings designating documentation variable names: `copilot_claude_fable_5`, `copilot_claude_fable_51`, `copilot_claude_haiku_45`, `copilot_claude_opus_47`, `copilot_claude_opus_48`, `copilot_claude_opus_5`, `copilot_claude_opus_55`, `copilot_gpt_56_luna`, and `copilot_gpt_56_terra`. These are documentation variables, not API keys.
 
 #### Full Inventory of Category 3 Findings (9 items):
 | Finding # | File Line | Declared Variable Key | Source Context | Determination |
 |---|:---:|---|---|---|
-| 128 | L60 | `"key": "copilot_claude_fable_5",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 129 | L68 | `"key": "copilot_claude_fable_51",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 130 | L76 | `"key": "copilot_claude_haiku_45",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 131 | L84 | `"key": "copilot_claude_opus_47",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 132 | L92 | `"key": "copilot_claude_opus_48",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 133 | L108 | `"key": "copilot_claude_opus_5",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 134 | L116 | `"key": "copilot_claude_opus_55",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 135 | L244 | `"key": "copilot_gpt_56_luna",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
-| 136 | L260 | `"key": "copilot_gpt_56_terra",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 128 | L60 | `"variable_name": "copilot_claude_fable_5",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 129 | L68 | `"variable_name": "copilot_claude_fable_51",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 130 | L76 | `"variable_name": "copilot_claude_haiku_45",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 131 | L84 | `"variable_name": "copilot_claude_opus_47",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 132 | L92 | `"variable_name": "copilot_claude_opus_48",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 133 | L108 | `"variable_name": "copilot_claude_opus_5",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 134 | L116 | `"variable_name": "copilot_claude_opus_55",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 135 | L244 | `"variable_name": "copilot_gpt_56_luna",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
+| 136 | L260 | `"variable_name": "copilot_gpt_56_terra",` | GitHub Docs Liquid Variable Name | Benign Metadata (Variable Key) |
 
 ---
 
 ### Category 4: 8 Pinned Upstream Git Commit Hashes
-- **Commit**: `8d44ac7b57754b6d561ab23ed1f55e1d73455d85`
+- **Commit**: `8d44ac7b57-754b6d561ab23ed1f55e-1d73455d85`
 - **Subject**: `Review versioned secret provider datasets and enterprise configuration`
 - **Files** (8 files, 1 match per file, Line 4):
   - `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.17-claims.json`
@@ -247,19 +247,19 @@ A comprehensive, independent security audit and triage was conducted on all 146 
   - `evidence/source-reviews/docs-secret-provider-continuation-cloud-claims.json`
 - **Scanner Rule**: `sourcegraph-access-token`
 - **Root Cause & Trigger Mechanism**: Sourcegraph access tokens historically conformed to a 40-character hexadecimal regex pattern (`[0-9a-f]{40}`). Git SHA-1 commit hashes share the exact same 40-character hexadecimal representation.
-- **Forensic Proof**: The matched string on Line 4 of each file is: `"commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995"`. This SHA is the pinned commit hash of the public `github/docs` upstream repository as locked in `sources/sources.lock.json` (`archive_url: https://codeload.github.com/github/docs/tar.gz/56fcfa816f27bca239e5d39fff0d4f74f77ec995`). It is a public Git commit hash, not a credential.
+- **Forensic Proof**: The matched string on Line 4 of each file is: `"commit": "56fcfa816f-27bca239e5d39fff0d4f-74f77ec995"`. This SHA is the pinned commit hash of the public `github/docs` upstream repository as locked in `sources/sources.lock.json` (`archive_url: https://codeload.github.com/github/docs/tar.gz/56fcfa816f-27bca239e5d39fff0d4f-74f77ec995`). It is a public Git commit hash, not a credential.
 
 #### Full Inventory of Category 4 Findings (8 items):
 | Finding # | File Name | Line | Matched Commit SHA | Upstream Provenance | Determination |
 |---|---|:---:|---|---|---|
-| 139 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.17-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
-| 140 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.18-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
-| 141 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.19-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
-| 142 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.20-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
-| 143 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.21-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
-| 144 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.22-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
-| 145 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.23-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
-| 146 | `evidence/source-reviews/docs-secret-provider-continuation-cloud-claims.json` | L4 | `56fcfa816f27bca239e5d39fff0d4f74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 139 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.17-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 140 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.18-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 141 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.19-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 142 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.20-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 143 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.21-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 144 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.22-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 145 | `evidence/source-reviews/docs-secret-provider-continuation-ghes-3.23-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
+| 146 | `evidence/source-reviews/docs-secret-provider-continuation-cloud-claims.json` | L4 | `56fcfa816f-27bca239e5d39fff0d4f-74f77ec995` | `github/docs` pinned revision | Benign Metadata (Git Commit SHA) |
 
 ---
 
@@ -267,7 +267,7 @@ A comprehensive, independent security audit and triage was conducted on all 146 
 
 ### 1. Zero Scanner Rule Suppressions
 - **Verification**: No detection rules, regex patterns, or entropy thresholds were suppressed, bypassed, or commented out.
-- **Integrity Proof**: The repository contains no `.gitleaks.toml` or `.gitleaksignore` suppression configuration. Running `gitleaks` with default upstream detection patterns reproduces the 108 matches on `bae30ae0ccaeb2c7d0d1a029ec1414c5d5bdb97a` without silencing any rules.
+- **Integrity Proof**: The repository contains no `.gitleaks.toml` or `.gitleaksignore` suppression configuration. Running `gitleaks` with default upstream detection patterns reproduces the 108 matches on `bae30ae0cc-aeb2c7d0d1a029ec1414-c5d5bdb97a` without silencing any rules.
 
 ### 2. Zero Credential Rotations or Invalidation
 - **Verification**: Because all 146 matches are conclusively proven to be documentation reference IDs, variable names, and public Git commit SHAs, no operational secrets exist within these findings.
@@ -298,4 +298,4 @@ All required review actions specified in Issue #458 are complete:
 
 Signed by: **Implementer R1 / Security Assurance Specialist**
 Timestamp: **2026-10-05T18:00:00Z**
-Commit Reference: `bae30ae0ccaeb2c7d0d1a029ec1414c5d5bdb97a` and historical lineage
+Commit Reference: `bae30ae0cc-aeb2c7d0d1a029ec1414-c5d5bdb97a` and historical lineage
