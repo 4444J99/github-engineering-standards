@@ -1,0 +1,125 @@
+{
+  "schema": "limen.session_closeout.v2",
+  "session_id": "01a0f994-11d8-76b2-ab30-a5aab867e33e",
+  "session_root_path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+  "receipt_root_id": "ges",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456",
+  "disposition": "handoff",
+  "scope_roots": [
+    {
+      "id": "ges",
+      "kind": "git",
+      "path_sha256": "6b34db455abc0ea80fce0e009dab66d48d393ba4a2eb6bebd6d2d7ef25b6ed94",
+      "repository": "4444J99/github-engineering-standards",
+      "repository_id": 1400636612,
+      "base_head": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
+      "publication_branch": "implementation/v0.1.0",
+      "owned_paths": [
+        ".codex/",
+        ".github/",
+        "CHANGELOG.md",
+        "README.md",
+        "TEST_INFRA.md",
+        "TEST_READY.md",
+        "THIRD_PARTY_NOTICES.md",
+        "controls/",
+        "generate_ghqr_controls.py",
+        "generate_wa_controls.py",
+        "generated/",
+        "ges/",
+        "scripts/",
+        "tests/"
+      ],
+      "retained_work": [
+        {
+          "paths": [
+            "docs/",
+            "evidence/",
+            ".cache/",
+            ".agents/"
+          ],
+          "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/454"
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "kind": "git",
+      "path_sha256": "2ac96ac256a766b52f3b0e65e7f342aeac8806716257b1ecf1d79bd23e8e6bdb",
+      "repository": "4444J99/limen",
+      "repository_id": 1255213941,
+      "base_head": "b4759bc91d40ee13e14fb0b4b3de1faa55543ec8",
+      "subject_head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
+      "publication_branch": "policy/ges-continuation-20261003",
+      "owned_paths": [
+        "docs/architecture/finite-workspace-recovery.md"
+      ],
+      "retained_work": []
+    }
+  ],
+  "verification": [
+    {
+      "root_id": "ges",
+      "head": "ec1faea650522be408842fabb941afebb9f1ba7c",
+      "exit_code": 0,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
+      "command": "GES six-check batch and installed credential-wall check"
+    },
+    {
+      "root_id": "policy",
+      "head": "58520a5490ba4b2d90307d16717f1c2a3764c18e",
+      "exit_code": 0,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
+      "command": "scripts/verify-scoped.sh --base HEAD --total-timeout-seconds 600"
+    }
+  ],
+  "custody": {
+    "verified": true,
+    "root_ids": [
+      "ges",
+      "policy"
+    ],
+    "evidence": "evidence/session-closeout-456-custody.json",
+    "sha256": "d29d81d30357843fd6b6b37e6c8a41649f21289a0603117fafb3c1d1a786d5ad",
+    "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+  },
+  "checkout_disposition": "RETAIN",
+  "project_complete": false,
+  "handoff_owners": [
+    "https://github.com/4444J99/github-engineering-standards/issues/454",
+    "https://github.com/4444J99/limen/issues/2821",
+    "https://github.com/4444J99/limen/pull/2822",
+    "https://github.com/4444J99/limen/pull/2827"
+  ],
+  "receipt_status": "PUBLISHED_SCOPE_RECONCILED_PENDING_LIVE_PREDICATE",
+  "external_effects": [
+    {
+      "id": "restricted-ciphertext",
+      "kind": "encrypted-upload-and-recovery",
+      "verified": true,
+      "evidence": "evidence/session-closeout-456-custody.json",
+      "sha256": "d29d81d30357843fd6b6b37e6c8a41649f21289a0603117fafb3c1d1a786d5ad",
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/456"
+    },
+    {
+      "id": "policy-integration",
+      "kind": "policy-pr-submission",
+      "verified": true,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
+      "owner_url": "https://github.com/4444J99/limen/issues/2821"
+    },
+    {
+      "id": "standing-isolation-policy",
+      "kind": "remote-policy-amendment",
+      "verified": true,
+      "evidence": "evidence/session-closeout-456-verification.json",
+      "sha256": "6636a16e6dbebd71ae23561db665845f336fe6571226e763fcf176562d0052e3",
+      "owner_url": "https://github.com/4444J99/limen/issues/2821"
+    }
+  ],
+  "scope_reconciliation_owner": "https://github.com/4444J99/limen/issues/2821",
+  "scope_reconciliation": "Session-owned read-only exact published policy checkout manually admitted under merged standing directive PR #2827; shared checkout and unrelated processes preserved; native anchor unchanged."
+}
