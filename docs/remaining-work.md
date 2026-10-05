@@ -24,8 +24,13 @@ unverified prerequisites. Every gate lists `incomplete_conditions` and
 OPEN. Zero or undeclared denominators cannot pass. Pinned tree matching and
 durable-body acquisition are observed checks, not semantic certification.
 
-Semantic, rights, adoption, native and estate certification adapters are still
-unfinished. Their required inputs remain explicitly unknown; the reporter does
-not invent failed audits or permit a boolean sidecar to close them. Gate evaluation
-is not itself source review or native verification. See the individual conditions
-in `evidence/recovery-status.json` for the actual outstanding work.
+Source-fidelity/omission and exact-claim reconciliation now have fail-closed,
+digest-bound receipt validators. In the absence of separately authorized
+receipts, their required inputs remain explicitly unknown. Structured-occurrence
+reconciliation, generalization, adoption, binding, native-enforcement, and estate
+adapters remain unfinished; rights and published-content adapters retain their
+narrower documented scopes.
+The reporter does not invent failed audits or permit a boolean sidecar to close
+any gate. Gate evaluation is not itself source review or native verification.
+See the individual conditions in `evidence/recovery-status.json` for the actual
+outstanding work.

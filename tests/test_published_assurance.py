@@ -287,6 +287,21 @@ class PublishedAssurance(unittest.TestCase):
         self.assertEqual(gate['completed'], 0)
         self.assertEqual(gate['status'], 'OPEN')
         self.assertIsNone(gate['conditions']['version_include_and_render_assurance'])
+        self.assertEqual(result['source_fidelity_accounting']['inventoried'], 1)
+        self.assertEqual(result['source_fidelity_accounting']['reviewed'], 0)
+        self.assertIsNone(
+            result['source_fidelity_accounting']['atomic_claim_fidelity_audit'])
+        self.assertIsNone(
+            result['claim_reconciliation_accounting']['known_claim_denominator'])
+        self.assertEqual(
+            result['certification_adapters']['source_fidelity_and_omission'],
+            'IMPLEMENTED_PINNED_ARTIFACT_RECEIPTS_ONLY')
+        self.assertEqual(
+            result['certification_adapters']['claim_reconciliation'],
+            'IMPLEMENTED_PROVENANCE_BOUND_CLAIM_RECEIPTS_ONLY')
+        self.assertEqual(
+            result['certification_adapters']['structured_occurrence_reconciliation'],
+            'NOT_IMPLEMENTED')
 
     def test_recovery_rejects_duplicate_corpus_before_rights_accounting(self):
         sources, corpus, _, _ = self.recovery_fixture()
