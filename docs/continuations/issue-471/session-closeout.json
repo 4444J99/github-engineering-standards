@@ -1,0 +1,47 @@
+{
+  "schema": "limen.session_closeout.v2",
+  "session_id": "01a10de7-db22-7ca2-adbf-bac969f730ef",
+  "session_root_path_sha256": "e4523ef74d137e7ee36222f28cae398ef34afa3fa4494c1840893103db2e3674",
+  "receipt_root_id": "ges",
+  "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/471",
+  "disposition": "handoff",
+  "scope_roots": [
+    {
+      "id": "anchor",
+      "kind": "retained",
+      "path_sha256": "e4523ef74d137e7ee36222f28cae398ef34afa3fa4494c1840893103db2e3674",
+      "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/471",
+      "retained_work": [{"paths": ["github-engineering-standards/github-engineering-standards/"], "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/471"}]
+    },
+    {
+      "id": "ges",
+      "kind": "git",
+      "path_sha256": "80d5e9e6b8108918dd1c57c0738f11bfacd3674452f33704bd78a2376c89292a",
+      "repository": "4444J99/github-engineering-standards",
+      "repository_id": 1400636612,
+      "base_head": "1dab672892563537daf6c3a1ed1e66f90d06a60e",
+      "publication_branch": "feat/semantic-certification-contracts",
+      "owned_paths": ["docs/claim-reconciliation-receipts.md", "docs/remaining-work.md", "docs/source-fidelity-receipts.md", "evidence/recovery-status.json", "ges/claim_reconciliation.py", "ges/recovery.py", "ges/source_fidelity.py", "tests/test_claim_reconciliation.py", "tests/test_published_assurance.py", "tests/test_rights_acceptance.py", "tests/test_source_fidelity.py"],
+      "retained_work": []
+    },
+    {
+      "id": "source",
+      "kind": "git",
+      "nested_in": "anchor",
+      "path_sha256": "c5ff824a27dd7c7d12b502753bb8586d6cdcd207f7f16bcd08b69e0896e11b42",
+      "repository": "4444J99/github-engineering-standards",
+      "repository_id": 1400636612,
+      "base_head": "1dab672892563537daf6c3a1ed1e66f90d06a60e",
+      "subject_head": "1dab672892563537daf6c3a1ed1e66f90d06a60e",
+      "publication_branch": "main",
+      "owned_paths": [],
+      "retained_work": [{"paths": ["scripts/semantic_review.py", "evidence/semantic-review-dispositions.json"], "owner_url": "https://github.com/4444J99/github-engineering-standards/issues/471"}]
+    }
+  ],
+  "verification": [{"root_id": "ges", "head": "5f0e249cfd895cb9423e8ab6aa67cc8f659f62b3", "exit_code": 0, "command": "Unchanged implementation verification batch and installed credential-wall check", "evidence": "evidence/session-closeout-471-verification.json", "sha256": "a2f8977aa79c9fbe8ca7ace8e72fc8905529828472a3b8d67d819a0d2a7e8c9a"}],
+  "custody": {"verified": true, "root_ids": ["anchor", "ges", "source"], "evidence": "evidence/session-closeout-471-custody.json", "sha256": "fef3d7937d5c71fd2df55c3c2dcb4495102e29c5039402f793a14dcac43f08cc"},
+  "checkout_disposition": "RETAIN",
+  "project_complete": false,
+  "handoff_owner": "https://github.com/4444J99/github-engineering-standards/pull/472",
+  "external_effects": [{"id": "implementation-publication", "kind": "branch-and-pr-publication", "verified": true, "evidence": "evidence/session-closeout-471-verification.json", "sha256": "a2f8977aa79c9fbe8ca7ace8e72fc8905529828472a3b8d67d819a0d2a7e8c9a"}]
+}
