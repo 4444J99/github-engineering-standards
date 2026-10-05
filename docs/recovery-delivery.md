@@ -142,7 +142,7 @@ python -m ges ledger --snapshots .cache/sources --corpus .cache/corpus
 python -m ges.structured_review --ledger .cache/corpus/structured-source-requirements.json --accounting evidence/structured-review-accounting.json --review-policy evidence/source-review-policy.json --sources .cache/sources
 python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json
 python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --output evidence/recovery-status.json
-python -m ges coverage --artifacts .cache/corpus/artifacts.jsonl --candidates .cache/corpus/candidates.jsonl --reviews reviews.json --review-policy review-policy.json
+python -m ges coverage --artifacts .cache/corpus/artifacts.jsonl --candidates .cache/corpus/candidates.jsonl --reviews reviews.json --review-policy evidence/source-review-policy.json
 python -m ges impact --old old/artifacts.jsonl --new new/artifacts.jsonl --output .cache/impact.json
 ```
 

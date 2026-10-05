@@ -42,7 +42,7 @@ A change is **only** "Verified" when ALL of the following are true:
 4. **Human code review approval**: At least one explicit human review approval on the merged PR
 5. **Human security review** (where applicable): For changes touching security policies, workflows, or secret-handling — explicit security reviewer sign-off on historical findings triage (e.g., the 146 historical secret-scan entries)
 6. **Organization acceptance**: Explicit acknowledgment by the repository owner (@4444J99) that the merged state meets acceptance criteria for the delivered scope
-7. **No open gates for merged scope**: All 9 gates documented in `docs/remaining-work.md` are either satisfied or explicitly deferred with recorded rationale for the merged scope
+7. **No open gates for merged scope**: All 9 gates documented in `docs/remaining-work.md` are either satisfied **for the merged scope** or explicitly deferred with recorded rationale **identifying them as outside the merged scope**. Deferring an in-scope gate does not close it; the gate remains open and must be tracked.
 
 ### What is NOT "Verified"
 

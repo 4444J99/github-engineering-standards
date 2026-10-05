@@ -27,6 +27,8 @@ Exact commits and artifact digests are in `sources/sources.lock.json` and the ac
 
 Python 3.11 or newer is required. The supported interface is `python -m ges` from this repository root; a standalone installed wheel is not provided.
 
+**Note**: The commands below require the complete toolkit (ges/, tests/, requirements.txt) from the full repository. For a documentation-only checkout (PR 1A), see the full repository at `implementation/v0.1.0` branch.
+
 ```sh
 python -m venv .venv
 . .venv/bin/activate
