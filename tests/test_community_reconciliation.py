@@ -40,7 +40,7 @@ class CommunityReconciliationTests(unittest.TestCase):
         original = {p['id']: p for p in (json.loads(line) for line in
                     (self.root / B0 / 'ledger/propositions.jsonl').read_text().splitlines())}
         self.assertEqual({r['proposition_id'] for r in rows}, set(original))
-        self.assertEqual(len(rows), 216)
+        self.assertEqual(len(rows), 227)
         decisions = [json.loads(line) for line in outputs['decisions.jsonl'].splitlines()]
         indexed, controls, _ = inputs(list(original.values()), [])
         for row in rows:
@@ -99,7 +99,7 @@ class CommunityReconciliationTests(unittest.TestCase):
     def test_conflicts_remain_residual(self):
         outputs = build(self.root)
         residual = json.loads(outputs['residual.json'])
-        self.assertEqual(len(residual['pending_decision_reviews']), 216)
+        self.assertEqual(len(residual['pending_decision_reviews']), 227)
         self.assertEqual(len(residual['conflicts']), 4)
         self.assertTrue(all(r['counterpart_ids'] for r in residual['conflicts']))
 

@@ -186,6 +186,30 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
+## semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117
+
+DISTINCT: MAY participants — report abusive, harassing or otherwise unacceptable behavior through the source-defined enforcement contacts
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 80, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1c937a5b82ca4410ab6e542da49675a34ba4c6b78e71fc664f54ef43c18ddff9", "start_line": 75}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "report", "consequences": [], "exceptions": [], "modality": "MAY", "object": "abusive, harassing or otherwise unacceptable behavior through the source-defined enforcement contacts", "parameters": ["Source contact is bound in the span, not a GES destination"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
+
+## semantic-proposition:0977403933e1ee6523e7df5d6f655132f124430b694e09ed587d71b27d396580
+
+DISTINCT: MAY contributors — submit pull requests to the project
+
+Retain this source-local proposition independently: MAY contributors must retain its distinct predicate, applicability, conditions and alternatives. submit pull requests to the project.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907", "end_line": 37, "path": "CONTRIBUTING.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "3809ba96e345942b1d460625e0b0e3fe59d113bc5c033f6869c60b2f11c14e40", "start_line": 33}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "submit", "consequences": [], "exceptions": [], "modality": "MAY", "object": "pull requests to the project", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Governance references are internal dependencies, not approval evidence"], "scope": ["jlcanovas/gh-best-practices-template", "CONTRIBUTING.md"], "subject": "contributors"}}`
+
+Relationships: `[]`
+
 ## semantic-proposition:097f8e363fe0ec382aec886e2f3f67021c4ecd8bb909cc684a081f979b1fccd6
 
 DISTINCT: MUST maintainers — use temporary ban for serious violations including sustained misconduct
@@ -209,6 +233,18 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "illustrate", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "empty later owner entry exempting apps/github from root apps ownership", "parameters": ["/apps/ @octocat", "/apps/github"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODEOWNERS"], "subject": "CODEOWNERS example"}}`
 
 Relationships: `[]`
+
+## semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c
+
+DISTINCT: MUST community leaders — take responsibility moderation of nonconforming contributions and communication of reasons when appropriate
+
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 49, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "8ce250ea4e0d82921b06445448e99e414b7b1f2b17c113616d1ce0449f0b1372", "start_line": 46}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "take responsibility", "consequences": [], "exceptions": [], "modality": "MUST", "object": "moderation of nonconforming contributions and communication of reasons when appropriate", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Responsibility does not mandate each available response"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162", "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929", "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
 
 ## semantic-proposition:0c11dd0c560d06a61a766831816e8d704ff983ce6c6748eb8d31f8b2f6b43013
 
@@ -342,6 +378,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:986b7c607dfc2d963628001dacbdc340f21ae09301712d9daf29bdec69e64ca8", "semantic-proposition:d6461f6d28d14fab9e3cf56326ea0a252689e6f157f2212dc841ef541cea6b24"], "rationale": "Community-interest guidance differs in explicit comparison with individual interests; retain that difference."}]`
 
+## semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162
+
+DISTINCT: MAY maintainers — choose corrective measures removing, editing or rejecting nonconforming contributions, or temporarily or permanently banning participants for inappropriate, threatening, offensive or harmful behavior
+
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 50, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "224ba9c47fb3e8ae7dc7427f7dbc94f9f1d99981015ddd6f976969e878d2f509", "start_line": 48}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "choose corrective measures", "consequences": [], "exceptions": [], "modality": "MAY", "object": "removing, editing or rejecting nonconforming contributions, or temporarily or permanently banning participants for inappropriate, threatening, offensive or harmful behavior", "parameters": ["temporary or permanent bans"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c", "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929", "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
+
 ## semantic-proposition:1c1982ad1fae3a4e6cf7a666ab340d9dbd8daad9bcdafc54e19d6a8a6b91e26d
 
 DISTINCT: MAY question author — ask a question through the supplied issue prompt
@@ -425,30 +473,6 @@ Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "MUST", "object": "private written correction for inappropriate/unprofessional/unwelcome behavior", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Explain violation; public apology may be requested"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "leaders"}}`
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:8dde6e4fc5c1174464c4f6fe00787f69a7b514531dac1275d3995c8671870572"], "rationale": "Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates."}]`
-
-## semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c
-
-DISTINCT: MAY maintainers — moderate or ban nonconforming contributions and inappropriate, threatening, offensive or harmful participants
-
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 62, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "a750d578a48e98269b2cbe7f9057b10d4b762a2ca6e0e26544170a8c079f0c46", "start_line": 58}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "moderate or ban", "consequences": [], "exceptions": [], "modality": "MAY", "object": "nonconforming contributions and inappropriate, threatening, offensive or harmful participants", "parameters": ["temporary or permanent ban"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "maintainers"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
-
-## semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9
-
-DISTINCT: MUST participants and project team — report and investigate unacceptable behavior with appropriate response and reporter confidentiality
-
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 80, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1c937a5b82ca4410ab6e542da49675a34ba4c6b78e71fc664f54ef43c18ddff9", "start_line": 75}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "report and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior with appropriate response and reporter confidentiality", "parameters": ["Source contact is bound in the span, not a GES destination"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Further enforcement policies may be posted separately"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants and project team"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07", "semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
 
 ## semantic-proposition:27553762bc8e81ea584a1bf8ec4aca89e02f9d5ed0c9c74c59cdeca8ebfe11fa
 
@@ -582,17 +606,29 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:93e50bd54ea4deab1e887ca031aeb14c374e48bb3d69c4776518019cce2c062e", "semantic-proposition:dc9bfc2336a131cde0e7e983980976538713a7f0b78370c4ed1786ca69b7ec16"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
 
+## semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72
+
+DISTINCT: MUST maintainers — take responsibility appropriate moderation of nonconforming contributions and inappropriate, threatening, offensive or harmful behavior
+
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 62, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "a750d578a48e98269b2cbe7f9057b10d4b762a2ca6e0e26544170a8c079f0c46", "start_line": 58}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "take responsibility", "consequences": [], "exceptions": [], "modality": "MUST", "object": "appropriate moderation of nonconforming contributions and inappropriate, threatening, offensive or harmful behavior", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["The source grants a right and responsibility; no particular sanction is universally required"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "maintainers"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c", "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929", "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
+
 ## semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c
 
 DISTINCT: MUST community leaders — clarify and enforce acceptable behavior through fair corrective action
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "98ec25c43139061cb3e923cd5ece83d8dc4aaddc19d42daa5e51cc2f6841215f", "start_line": 41}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "clarify and enforce", "consequences": [], "exceptions": [], "modality": "MUST", "object": "acceptable behavior through fair corrective action", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c", "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162", "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72", "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929", "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
 
 ## semantic-proposition:345f7cd268645eb1992c15501dc81850450d896d607c5ca8ef5c58ca46d6626f
 
@@ -615,6 +651,18 @@ Retain an independent source-local proposition: reporter — SHOULD provide desk
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "0c8d64f29fb4536513653bf8c97da30f3340e2041b91c8952db1515d6b23a7b3", "end_line": 35, "path": ".github/ISSUE_TEMPLATE/bug_report.md", "repository": "atapas/model-repo", "span_sha256": "106f1b094b2eb8b8ac21aad854cde6cb69e5c16bfb5966f48639da3f9079fca5", "start_line": 26}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "provide", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "desktop or smartphone environment details", "parameters": ["OS", "browser", "version", "smartphone device"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Example values are placeholders, not supported platform declarations"], "scope": ["atapas/model-repo", ".github/ISSUE_TEMPLATE/bug_report.md"], "subject": "reporter"}}`
+
+Relationships: `[]`
+
+## semantic-proposition:36891051d48a4851c2a190a7557d097c0d58ce80dc950a3ad095cfade4acf976
+
+DISTINCT: MUST issue-discussion participants — follow the linked code of conduct
+
+Retain this source-local proposition independently: MUST issue-discussion participants must retain its distinct predicate, applicability, conditions and alternatives. follow the linked code of conduct.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 23, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "78b0d22a51872d9ffb790d8c23e9cb193dc5f551d4d49fc7c479e97b45ed050e", "start_line": 23}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "follow", "consequences": [], "exceptions": [], "modality": "MUST", "object": "the linked code of conduct", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Participating in issue discussion"], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "issue-discussion participants"}}`
 
 Relationships: `[]`
 
@@ -702,6 +750,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[]`
 
+## semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b
+
+DISTINCT: MUST project team — protect reporter confidentiality
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 80, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1c937a5b82ca4410ab6e542da49675a34ba4c6b78e71fc664f54ef43c18ddff9", "start_line": 75}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "protect", "consequences": [], "exceptions": [], "modality": "MUST", "object": "reporter confidentiality", "parameters": [], "polarity": "POSITIVE", "preconditions": ["An incident is reported"], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "project team"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
+
 ## semantic-proposition:416582a26d6ffdd2fb365b7545785296a2776bb84cb62ef7e4263dd06f243ef1
 
 DISTINCT: SHOULD repository owner — choose visibility of Releases, Packages and Environments tabs
@@ -726,18 +786,6 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:475a38c4d57ce34ce748fa5da082a9375234cbb80972ff213f2b58ac820cd37b"], "rationale": "Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule."}]`
 
-## semantic-proposition:4463ee475b590661ef0fb61909e337267a874b10a9c3fc6c12e71e19438eb497
-
-DISTINCT: MAY contributors and maintainers — submit and assess pull requests under the linked project governance rules
-
-Retain an independent source-local proposition: contributors and maintainers — MAY submit and assess pull requests under the linked project governance rules. No equivalent or superseding proposition is asserted in this batch.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907", "end_line": 37, "path": "CONTRIBUTING.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "3809ba96e345942b1d460625e0b0e3fe59d113bc5c033f6869c60b2f11c14e40", "start_line": 33}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "submit and assess", "consequences": [], "exceptions": [], "modality": "MAY", "object": "pull requests under the linked project governance rules", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Governance references are internal dependencies, not approval evidence"], "scope": ["jlcanovas/gh-best-practices-template", "CONTRIBUTING.md"], "subject": "contributors and maintainers"}}`
-
-Relationships: `[]`
-
 ## semantic-proposition:475a38c4d57ce34ce748fa5da082a9375234cbb80972ff213f2b58ac820cd37b
 
 DISTINCT: MUST contributor — follow the code of conduct in all project interactions
@@ -749,6 +797,18 @@ Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "follow", "consequences": [], "exceptions": [], "modality": "MUST", "object": "the code of conduct in all project interactions", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "contributor"}}`
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:436ea8d9de93085d32e8ee4ed3ba6d35f20b3402fc83e2c5bf434d030c6a7e6a"], "rationale": "Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule."}]`
+
+## semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121
+
+DISTINCT: MAY participants — report abusive, harassing or otherwise unacceptable behavior through the source-defined enforcement contacts
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 67, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "e5a167b46e04beb2fce1b1a5e2e7d8d7cd2059479415550e7c8ec7e7f0b4de21", "start_line": 61}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "report", "consequences": [], "exceptions": [], "modality": "MAY", "object": "abusive, harassing or otherwise unacceptable behavior through the source-defined enforcement contacts", "parameters": ["Source email is bound in span; no GES reporting recipient"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
 
 ## semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f
 
@@ -886,13 +946,13 @@ Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-pro
 
 DISTINCT: SHOULD repository owner — adapt or remove CITATION.cff for paper citation
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
+Retain this source-local proposition independently. Optional consideration of scholarly citation and adapt-or-remove guidance are related to the conditional CFF recommendation that users of this software cite the supplied metadata. Preserve that user/use condition and placeholder authors, identifiers and versions; examples are not consumer facts.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 116, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "cc03ea594e8fe6caf28064a9f07fccff92a96f881f33a0517019a4fe09922c32", "start_line": 114}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt or remove", "consequences": [], "exceptions": ["Otherwise remove the file"], "modality": "SHOULD", "object": "CITATION.cff for paper citation", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Related paper and intent to facilitate citation"], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164", "semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are complemented by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164", "semantic-proposition:b20cba5f59c6dbf65f710d37f59a87d10441577ceb64206fb4484d2a53465e3b"], "rationale": "Optional consideration of scholarly citation and adapt-or-remove guidance are related to the conditional CFF recommendation that users of this software cite the supplied metadata. Preserve that user/use condition and placeholder authors, identifiers and versions; examples are not consumer facts."}]`
 
 ## semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76
 
@@ -1062,6 +1122,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[{"classification": "COMPLEMENTARY", "counterpart_ids": ["semantic-proposition:27553762bc8e81ea584a1bf8ec4aca89e02f9d5ed0c9c74c59cdeca8ebfe11fa"], "rationale": "Optional security-policy selection and conditional adaptation are different actions. Adapt the policy when choosing to cover vulnerability reporting; otherwise removal is permitted. Both instructions can be satisfied, so no conflicting outcome is asserted."}]`
 
+## semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226
+
+DISTINCT: MAY maintainers — choose corrective measures nonconforming contributions and inappropriate, threatening, offensive or harmful participants
+
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 62, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "a750d578a48e98269b2cbe7f9057b10d4b762a2ca6e0e26544170a8c079f0c46", "start_line": 58}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "choose corrective measures", "consequences": [], "exceptions": [], "modality": "MAY", "object": "nonconforming contributions and inappropriate, threatening, offensive or harmful participants", "parameters": ["temporary or permanent ban"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["May remove, edit or reject nonconforming contributions; temporary or permanent bans are permitted alternatives, not mandatory sanctions"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "maintainers"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c", "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162", "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929", "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
+
 ## semantic-proposition:6b8daeae2909449abc663607531b9ae5552a202ed8cc99bdefe8e1af90c9699c
 
 DISTINCT: MAY project participants — rename optionally an existing master primary branch
@@ -1194,18 +1266,6 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
-## semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4
-
-DISTINCT: MUST maintainers — clarify and moderate unacceptable behavior fairly, including contribution removal or participant bans
-
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 50, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "224ba9c47fb3e8ae7dc7427f7dbc94f9f1d99981015ddd6f976969e878d2f509", "start_line": 48}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "clarify and moderate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior fairly, including contribution removal or participant bans", "parameters": ["temporary or permanent bans"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
-
 ## semantic-proposition:7b2716f3ba345f9161547e2e5e85637140c40ac9e23188a0fd1b6eaa0460692e
 
 DISTINCT: PROHIBITED participants — use sexualized language or imagery and unwelcome attention or advances
@@ -1314,29 +1374,17 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived 
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
-## semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd
-
-DISTINCT: SHOULD participants — give and accept constructive feedback
-
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 26, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7b3f3a657791bfa3fe208f1d3d64d0065362a575f293cb136b106260921909bf", "start_line": 20}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "give and accept", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "constructive feedback", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
-
 ## semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164
 
 DISTINCT: MAY repository owner — consider citation file for related paper
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
+Retain this source-local proposition independently. Optional consideration of scholarly citation and adapt-or-remove guidance are related to the conditional CFF recommendation that users of this software cite the supplied metadata. Preserve that user/use condition and placeholder authors, identifiers and versions; examples are not consumer facts.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 27, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "dbac77e3acd83326d11033417f43cd3ed9216ab8068428c20810a43de76814fd", "start_line": 27}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "consider", "consequences": [], "exceptions": [], "modality": "MAY", "object": "citation file for related paper", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source coulds category"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are complemented by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:b20cba5f59c6dbf65f710d37f59a87d10441577ceb64206fb4484d2a53465e3b"], "rationale": "Optional consideration of scholarly citation and adapt-or-remove guidance are related to the conditional CFF recommendation that users of this software cite the supplied metadata. Preserve that user/use condition and placeholder authors, identifiers and versions; examples are not consumer facts."}]`
 
 ## semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f
 
@@ -1356,7 +1404,7 @@ DISTINCT: MUST maintainers — use warning with consequences and timed no-contac
 
 Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source.
 
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 86, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "73406e11b26a51756ece0868b7fc59712ff1c635449761dca8096177344b7e28", "start_line": 85}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 86, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "5e5c2aae3af4ec58c03ca15d9b6d0f4ead519e3c184f17ddf9f4ea8a814d9187", "start_line": 84}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": ["Violation may cause temporary or permanent ban"], "exceptions": [], "modality": "MUST", "object": "warning with consequences and timed no-contact restrictions for incidents or series of actions", "parameters": ["specified period; no fixed duration"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No unsolicited contact including enforcers and external channels"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
 
@@ -1506,6 +1554,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[]`
 
+## semantic-proposition:94f588ebea50fbff53cbaf97c1f623472dfeeb7952881a6e9bef61da9e216268
+
+DISTINCT: PROHIBITED participants — engage in trolling, insulting or derogatory comments, and personal or political attacks
+
+Retain this source-local proposition independently. All three source spans include trolling, insulting or derogatory comments, and personal or political attacks. Retain their distinct source scopes and versions; insulting and derogatory are shared alternatives, not a difference between sources.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, insulting or derogatory comments, and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:be9b0d9464ccba8b789905857c933dea84f66a309d26b8ccce8d056e51b75e4e", "semantic-proposition:cd1a24955818bba80e95a4f3d7153c6879be82661d14e9d1522746640c87d82a"], "rationale": "All three source spans include trolling, insulting or derogatory comments, and personal or political attacks. Retain their distinct source scopes and versions; insulting and derogatory are shared alternatives, not a difference between sources."}]`
+
 ## semantic-proposition:96eb9373dac6a3ba81eb3e0208755d7a9fdf3e061e71d374e9dc7e1ef92d8b05
 
 DISTINCT: MUST contributor — update README interface changes including variables, ports, useful paths and container parameters
@@ -1642,13 +1702,13 @@ Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-pro
 
 DISTINCT: MUST maintainers — clarify and correct unacceptable behavior appropriately and fairly
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 56, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1dc9893bc49e520784a6dcd6800e9dee763cabf9bb7e0184d3fa2cc4a5e06e1e", "start_line": 54}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "clarify and correct", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior appropriately and fairly", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c", "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162", "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226", "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929", "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
 
 ## semantic-proposition:a0ecb40145c983a611359fcd3806314b8109e21a76a4924dd049e83263061df3
 
@@ -1732,7 +1792,7 @@ Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "conte
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "accept", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "constructive criticism gracefully", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:ce4d5d766d9c91c82f5487c5bb2382bee9d8a9b05b66029a254603a73ff1b075", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
 
 ## semantic-proposition:a7a2faf49987ce4dfcbfa1c96927d3dfa569b24ab8ab1d81f43c9dd9a3389ca7
 
@@ -1830,18 +1890,6 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived 
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1cecb5afb21e996f63a4dc3aec5df84d23eb66cd4d8a8cd5abb31551ceb5169d", "semantic-proposition:53e67e234764545f48b50cfd82f628e1efb0bf3c87aedefabd40add401c0a851"], "rationale": "Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning."}]`
 
-## semantic-proposition:affdb8a1c7f2e661cd9795852dab57033568491ba9dcb61dbaf29bc991c6ef3e
-
-DISTINCT: PROHIBITED participants — engage in trolling, derogatory comments and personal or political attacks
-
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, derogatory comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:bd42f67eb7788294eebb3f7d7347b9a5834c371f81d56d320d188a5430b31e2b", "semantic-proposition:d4da34ce3bf4197e2c82180ffc7b9149a43cb83ee7d4fa034603b39d5df81dac"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
-
 ## semantic-proposition:b036001bfa4ebb5f7fb298d98481018f13c2bb96e6b1b9a0f4fd50be5b507bfc
 
 DISTINCT: MUST repository owner — edit or adapt license choice
@@ -1877,6 +1925,18 @@ Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "follow", "consequences": [], "exceptions": [], "modality": "MUST", "object": "project code style", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source template attestation; not an observed result"], "scope": ["atapas/model-repo", ".github/pull_request_template.md"], "subject": "pull-request author"}}`
 
 Relationships: `[]`
+
+## semantic-proposition:b20cba5f59c6dbf65f710d37f59a87d10441577ceb64206fb4484d2a53465e3b
+
+DISTINCT: SHOULD software user — cite the software using the supplied CFF software and preferred article metadata
+
+Retain this source-local proposition independently. Optional consideration of scholarly citation and adapt-or-remove guidance are related to the conditional CFF recommendation that users of this software cite the supplied metadata. Preserve that user/use condition and placeholder authors, identifiers and versions; examples are not consumer facts.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b61bac9eed8e8b770fbf76c91faf923c20fee14d7c6d00f474d8ff78e56c56fb", "end_line": 32, "path": "CITATION.cff", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "b61bac9eed8e8b770fbf76c91faf923c20fee14d7c6d00f474d8ff78e56c56fb", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "cite", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "the software using the supplied CFF software and preferred article metadata", "parameters": ["cff-version=1.2.0", "preferred-citation.type=article", "Example software version 1.0.0", "Example release 2021-11-16", "Example article year 2022"], "polarity": "POSITIVE", "preconditions": ["Uses this software"], "qualifiers": ["Names and ORCIDs are placeholders; title, version, DOI, date, URL, journal and pagination are example data, not consumer facts"], "scope": ["jlcanovas/gh-best-practices-template", "CITATION.cff"], "subject": "software user"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164"], "rationale": "Optional consideration of scholarly citation and adapt-or-remove guidance are related to the conditional CFF recommendation that users of this software cite the supplied metadata. Preserve that user/use condition and placeholder authors, identifiers and versions; examples are not consumer facts."}]`
 
 ## semantic-proposition:b2dad4a1a384a97359075a2be0cafd103d465bb2f6c0d481a11e4435f427ebad
 
@@ -1986,17 +2046,17 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0068bc452cf1e28c4359c1c178aa42b215be4734235fa643184fd104376030f2"], "rationale": "Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders."}]`
 
-## semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07
+## semantic-proposition:bc08f2c490f6391b5901c2ef4d4eb1fad96a835c4c54cc3852d268a76fc75ef2
 
-DISTINCT: MUST participants and leaders — report and investigate unacceptable behavior promptly and fairly while protecting reporter privacy/security
+DISTINCT: MAY collaborators and maintainers — propose and discuss issues and open issue discussions
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
+Retain this source-local proposition independently: MAY collaborators and maintainers must retain its distinct predicate, applicability, conditions and alternatives. propose and discuss issues and open issue discussions.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 67, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "e5a167b46e04beb2fce1b1a5e2e7d8d7cd2059479415550e7c8ec7e7f0b4de21", "start_line": 61}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 23, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "78b0d22a51872d9ffb790d8c23e9cb193dc5f551d4d49fc7c479e97b45ed050e", "start_line": 23}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "report and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior promptly and fairly while protecting reporter privacy/security", "parameters": ["Source email is bound in span; no GES reporting recipient"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants and leaders"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "propose and discuss", "consequences": [], "exceptions": [], "modality": "MAY", "object": "issues and open issue discussions", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "collaborators and maintainers"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9", "semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
+Relationships: `[]`
 
 ## semantic-proposition:bcae8bfe4b2dfaf08cb9b284c7e526530b19aa247f98380ecb17a352b4e47af5
 
@@ -2010,6 +2070,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:719b64fb50665fb2ac9a31c32a8a99def7fadd770c3f418b12429af5c0fc0930", "semantic-proposition:df3f5d7e8f7bc1cba290bb8cda18896d39a797c42d3be8fe1477f37c6b4cc07f"], "rationale": "Respect for differing views and experiences overlaps without identical source scope or wording."}]`
 
+## semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8
+
+DISTINCT: MAY participants — report abusive, harassing or otherwise unacceptable behavior through the source-defined enforcement contacts
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 69, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "345db621913cd9260e972cc435de38fe6e9a6e070435cd0fbeb160e597640836", "start_line": 61}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "report", "consequences": [], "exceptions": [], "modality": "MAY", "object": "abusive, harassing or otherwise unacceptable behavior through the source-defined enforcement contacts", "parameters": ["USER1", "USER2", "USER3"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
+
 ## semantic-proposition:bce1a8bda9e4ea8d01cc99f6298307ce8f9d49f762066d7f08c1fe41c0e6cfba
 
 DISTINCT: MUST pull-request author — confirm dependent changes merged and published downstream
@@ -2022,18 +2094,6 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
-## semantic-proposition:bd42f67eb7788294eebb3f7d7347b9a5834c371f81d56d320d188a5430b31e2b
-
-DISTINCT: PROHIBITED participants — engage in trolling, derogatory comments and personal or political attacks
-
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, derogatory comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:affdb8a1c7f2e661cd9795852dab57033568491ba9dcb61dbaf29bc991c6ef3e", "semantic-proposition:d4da34ce3bf4197e2c82180ffc7b9149a43cb83ee7d4fa034603b39d5df81dac"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
-
 ## semantic-proposition:bd5bc0b89624b928f0922711341bf756fbb0570eb18d871670a70585a0af2eeb
 
 REFERENTIAL: DESCRIPTIVE governance template — attribute acceptance of change responsibility to contributor through approval wording
@@ -2045,6 +2105,18 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": ["Approver role versus contributor responsibility is not fully clear in the source wording"], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "attribute", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "acceptance of change responsibility to contributor through approval wording", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "governance template"}}`
 
 Relationships: `[]`
+
+## semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929
+
+DISTINCT: MAY community leaders — choose corrective measures removing, editing or rejecting nonconforming contributions
+
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 49, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "8ce250ea4e0d82921b06445448e99e414b7b1f2b17c113616d1ce0449f0b1372", "start_line": 46}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "choose corrective measures", "consequences": [], "exceptions": [], "modality": "MAY", "object": "removing, editing or rejecting nonconforming contributions", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c", "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162", "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
 
 ## semantic-proposition:bddc1a14de696ce681b05e1ad843e6e04becec64ff7f6524d121196fa8d7584a
 
@@ -2070,6 +2142,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:097f8e363fe0ec382aec886e2f3f67021c4ecd8bb909cc684a081f979b1fccd6"], "rationale": "Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project."}]`
 
+## semantic-proposition:be9b0d9464ccba8b789905857c933dea84f66a309d26b8ccce8d056e51b75e4e
+
+DISTINCT: PROHIBITED participants — engage in trolling, insulting or derogatory comments, and personal or political attacks
+
+Retain this source-local proposition independently. All three source spans include trolling, insulting or derogatory comments, and personal or political attacks. Retain their distinct source scopes and versions; insulting and derogatory are shared alternatives, not a difference between sources.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, insulting or derogatory comments, and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:94f588ebea50fbff53cbaf97c1f623472dfeeb7952881a6e9bef61da9e216268", "semantic-proposition:cd1a24955818bba80e95a4f3d7153c6879be82661d14e9d1522746640c87d82a"], "rationale": "All three source spans include trolling, insulting or derogatory comments, and personal or political attacks. Retain their distinct source scopes and versions; insulting and derogatory are shared alternatives, not a difference between sources."}]`
+
 ## semantic-proposition:c26f198e889eb4dc7eb78107dbfb7a5b0883917dbb42d5f2a8b6528447ab053c
 
 REFERENTIAL: DESCRIPTIVE issue template — set issue template name
@@ -2094,27 +2178,15 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived 
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
 
-## semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e
+## semantic-proposition:c896a94589f22a80aa4c693c4a4b1319f1e13d1b541ee44177a12e11f4ba966d
 
-DISTINCT: MUST participants and project team — report and investigate unacceptable behavior through maintainer contacts, appropriate response and reporter confidentiality
+DISTINCT: MUST project maintainers — review and address received contributions under the linked project governance rules
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
+Retain this source-local proposition independently: MUST project maintainers must retain its distinct predicate, applicability, conditions and alternatives. review and address received contributions under the linked project governance rules.
 
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 69, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "345db621913cd9260e972cc435de38fe6e9a6e070435cd0fbeb160e597640836", "start_line": 61}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907", "end_line": 37, "path": "CONTRIBUTING.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "3809ba96e345942b1d460625e0b0e3fe59d113bc5c033f6869c60b2f11c14e40", "start_line": 33}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "report and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior through maintainer contacts, appropriate response and reporter confidentiality", "parameters": ["USER1", "USER2", "USER3"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants and project team"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9", "semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
-
-## semantic-proposition:c989526098ddd79efccb930eb72c52f54e32e14e03baff8a249d22a7409bbacb
-
-DISTINCT: MAY collaborators and maintainers — propose and discuss issues subject to the code of conduct
-
-Retain an independent source-local proposition: collaborators and maintainers — MAY propose and discuss issues subject to the code of conduct. No equivalent or superseding proposition is asserted in this batch.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 23, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "78b0d22a51872d9ffb790d8c23e9cb193dc5f551d4d49fc7c479e97b45ed050e", "start_line": 23}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "propose and discuss", "consequences": [], "exceptions": [], "modality": "MAY", "object": "issues subject to the code of conduct", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "collaborators and maintainers"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "review and address", "consequences": [], "exceptions": [], "modality": "MUST", "object": "received contributions under the linked project governance rules", "parameters": [], "polarity": "POSITIVE", "preconditions": ["A contribution is received"], "qualifiers": ["Governance references are internal dependencies, not approval evidence"], "scope": ["jlcanovas/gh-best-practices-template", "CONTRIBUTING.md"], "subject": "project maintainers"}}`
 
 Relationships: `[]`
 
@@ -2142,6 +2214,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01", "semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776", "semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
 
+## semantic-proposition:cd1a24955818bba80e95a4f3d7153c6879be82661d14e9d1522746640c87d82a
+
+DISTINCT: PROHIBITED participants — engage in trolling, insulting or derogatory comments, and personal or political attacks
+
+Retain this source-local proposition independently. All three source spans include trolling, insulting or derogatory comments, and personal or political attacks. Retain their distinct source scopes and versions; insulting and derogatory are shared alternatives, not a difference between sources.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, insulting or derogatory comments, and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:94f588ebea50fbff53cbaf97c1f623472dfeeb7952881a6e9bef61da9e216268", "semantic-proposition:be9b0d9464ccba8b789905857c933dea84f66a309d26b8ccce8d056e51b75e4e"], "rationale": "All three source spans include trolling, insulting or derogatory comments, and personal or political attacks. Retain their distinct source scopes and versions; insulting and derogatory are shared alternatives, not a difference between sources."}]`
+
 ## semantic-proposition:ce11547b84128cda63b864547e9023f5cb126728c015db99aaa6cfa08ff7ece5
 
 DISTINCT: MUST repository owner — edit or adapt governance rules
@@ -2153,6 +2237,18 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "edit or adapt", "consequences": [], "exceptions": [], "modality": "MUST", "object": "governance rules", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source musts category; local adoption remains separate"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:d0269d064c4b97dac959524e29c63481024cf5c38751376fca42c899e37419e0"], "rationale": "Governance adaptation preserves must-category wording and should-level details for authority, timing and admission."}]`
+
+## semantic-proposition:ce4d5d766d9c91c82f5487c5bb2382bee9d8a9b05b66029a254603a73ff1b075
+
+DISTINCT: SHOULD participants — give and accept constructive feedback
+
+Retain this source-local proposition independently: SHOULD participants must retain its distinct predicate, applicability, conditions and alternatives. give and accept constructive feedback.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 26, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7b3f3a657791bfa3fe208f1d3d64d0065362a575f293cb136b106260921909bf", "start_line": 20}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "give and accept", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "constructive feedback", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Give constructive feedback and accept it gracefully"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
 
 ## semantic-proposition:ce57e57c9db42c28687ca212a418f2d5b29ac35f8c970e2276980a5502c58322
 
@@ -2274,17 +2370,17 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[]`
 
-## semantic-proposition:d4da34ce3bf4197e2c82180ffc7b9149a43cb83ee7d4fa034603b39d5df81dac
+## semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40
 
-DISTINCT: PROHIBITED participants — engage in trolling, insulting comments and personal or political attacks
+DISTINCT: MUST project team — review and investigate all received complaints
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 69, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "345db621913cd9260e972cc435de38fe6e9a6e070435cd0fbeb160e597640836", "start_line": 61}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, insulting comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "review and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "all received complaints", "parameters": [], "polarity": "POSITIVE", "preconditions": ["A complaint is received"], "qualifiers": ["Respond as necessary and appropriate to the circumstances", "Further enforcement policies may be posted separately"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "project team"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:affdb8a1c7f2e661cd9795852dab57033568491ba9dcb61dbaf29bc991c6ef3e", "semantic-proposition:bd42f67eb7788294eebb3f7d7347b9a5834c371f81d56d320d188a5430b31e2b"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
 
 ## semantic-proposition:d6175ddf9eb6c5e3f8edb384b325b84a7fd3172494336add728064b03458ac78
 
@@ -2358,17 +2454,17 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:3083e421dbf320a411b5f14de2b54f10d74c2ea5348218fc7f13e44d958f7073", "semantic-proposition:93e50bd54ea4deab1e887ca031aeb14c374e48bb3d69c4776518019cce2c062e"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
 
-## semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be
+## semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035
 
-DISTINCT: SHOULD template author — request citation using the supplied CFF 1.2.0 software and preferred article metadata
+DISTINCT: MUST maintainers — clarify and take responsibility fair appropriate corrective action and moderation of unacceptable behavior
 
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
+Retain this source-local proposition independently. Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact.
 
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b61bac9eed8e8b770fbf76c91faf923c20fee14d7c6d00f474d8ff78e56c56fb", "end_line": 32, "path": "CITATION.cff", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "b61bac9eed8e8b770fbf76c91faf923c20fee14d7c6d00f474d8ff78e56c56fb", "start_line": 1}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 50, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "224ba9c47fb3e8ae7dc7427f7dbc94f9f1d99981015ddd6f976969e878d2f509", "start_line": 48}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "request", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "citation using the supplied CFF 1.2.0 software and preferred article metadata", "parameters": ["cff-version=1.2.0", "preferred-citation.type=article", "Example software version 1.0.0", "Example release 2021-11-16", "Example article year 2022"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Names and ORCIDs are placeholders; title, version, DOI, date, URL, journal and pagination are example data, not consumer facts"], "scope": ["jlcanovas/gh-best-practices-template", "CITATION.cff"], "subject": "template author"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "clarify and take responsibility", "consequences": [], "exceptions": [], "modality": "MUST", "object": "fair appropriate corrective action and moderation of unacceptable behavior", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Responsibility does not mandate every listed sanction"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are complemented by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c", "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162", "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929"], "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."}]`
 
 ## semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d
 
@@ -2418,6 +2514,18 @@ Preserved AST/applicability: `{"ambiguities": ["Conflicts with README and LICENS
 
 Relationships: `[{"classification": "CONFLICTING", "counterpart_ids": ["semantic-proposition:7c1b58c56afdbad1aadb30c7cf293a4eeaa1d112f1c95cafb486f328015b0421"], "rationale": "README declares CC BY 4.0 while guidelines describe CC-BY-SA as the starting license. Retain the documented source identity inconsistency; LICENSE.md remains B0 reference-only evidence, and no publication permission is decided."}]`
 
+## semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4
+
+DISTINCT: MUST community leaders — review and investigate all received complaints
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 67, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "e5a167b46e04beb2fce1b1a5e2e7d8d7cd2059479415550e7c8ec7e7f0b4de21", "start_line": 61}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "review and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "all received complaints", "parameters": [], "polarity": "POSITIVE", "preconditions": ["A complaint is received"], "qualifiers": ["Promptly and fairly"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
+
 ## semantic-proposition:e953052abf0e062502a47740ddae2690af333729bf85be6d1e8dba5aa0723a8d
 
 REFERENTIAL: DESCRIPTIVE CODEOWNERS example — illustrate last matching pattern taking precedence over global owners for JavaScript changes
@@ -2442,18 +2550,6 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived 
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431", "semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33", "semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
 
-## semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234
-
-DISTINCT: MUST community leaders — moderate nonconforming contributions and communicate reasons when appropriate
-
-Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 49, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "8ce250ea4e0d82921b06445448e99e414b7b1f2b17c113616d1ce0449f0b1372", "start_line": 46}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "moderate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "nonconforming contributions and communicate reasons when appropriate", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
-
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
-
 ## semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9
 
 DISTINCT: SHOULD participants — show empathy for other participants
@@ -2476,7 +2572,7 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "give and accept", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "constructive feedback gracefully", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd", "semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773", "semantic-proposition:ce4d5d766d9c91c82f5487c5bb2382bee9d8a9b05b66029a254603a73ff1b075"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
 
 ## semantic-proposition:f2383cb4a985c55dbe08d710674cdb806afa673003e21c31d2da36c7ca410dd5
 
@@ -2489,6 +2585,18 @@ Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "harassment-free participation regardless of the enumerated personal characteristics", "parameters": ["characteristic:age", "characteristic:body size", "characteristic:disability", "characteristic:ethnicity", "characteristic:gender identity and expression", "characteristic:level of experience", "characteristic:nationality", "characteristic:personal appearance", "characteristic:race", "characteristic:religion", "characteristic:sexual identity and orientation"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Covenant 1.4-derived pledge; scope and enumeration preserved in source span"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "contributors and maintainers"}}`
 
 Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6ce3efeb81184d9fa9ffae8d8903be6b3de70f856d783c9569c25bc73b1d713c", "semantic-proposition:8e75625620c4a6f75886f9e52a960f14e52660c202084f784303a7cb3cdfacc2", "semantic-proposition:9f4018de5c2e6bb1678d501bb94b0302aa571a839b2dd20ee1ea92997a83be6c"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
+
+## semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e
+
+DISTINCT: MUST project team — review and investigate all received complaints
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 80, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1c937a5b82ca4410ab6e542da49675a34ba4c6b78e71fc664f54ef43c18ddff9", "start_line": 75}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "review and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "all received complaints", "parameters": [], "polarity": "POSITIVE", "preconditions": ["A complaint is received"], "qualifiers": ["Respond as necessary and appropriate to the circumstances", "Further enforcement policies may be posted separately"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "project team"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
 
 ## semantic-proposition:f2f1083e08f9af5c8af382be6bf92f6fe94b8dafbce9eab53ced3124106ca35a
 
@@ -2597,3 +2705,27 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "document", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "security-supported versions", "parameters": ["Examples: supported 5.1.x and 4.0.x; unsupported 5.0.x and <4.0"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No real supported version promise is inferred"], "scope": ["jlcanovas/gh-best-practices-template", "SECURITY.md"], "subject": "maintainer"}}`
 
 Relationships: `[]`
+
+## semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b
+
+DISTINCT: MUST community leaders — protect reporter privacy and security
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 67, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "e5a167b46e04beb2fce1b1a5e2e7d8d7cd2059479415550e7c8ec7e7f0b4de21", "start_line": 61}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "protect", "consequences": [], "exceptions": [], "modality": "MUST", "object": "reporter privacy and security", "parameters": [], "polarity": "POSITIVE", "preconditions": ["An incident is reported"], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`
+
+## semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179
+
+DISTINCT: MUST project team — protect reporter confidentiality
+
+Retain this source-local proposition independently. Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 69, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "345db621913cd9260e972cc435de38fe6e9a6e070435cd0fbeb160e597640836", "start_line": 61}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "protect", "consequences": [], "exceptions": [], "modality": "MUST", "object": "reporter confidentiality", "parameters": [], "polarity": "POSITIVE", "preconditions": ["An incident is reported"], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "project team"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117", "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b", "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121", "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8", "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40", "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4", "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e", "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b"], "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."}]`

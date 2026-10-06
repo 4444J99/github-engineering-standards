@@ -1,9 +1,9 @@
 # C0 — Community reconciliation, correction revision 2
 
-Status: staged, HOLD. Frozen B0 input: `2bdc382e15965a5b6c85fba8a7a18bb283941479`.
+Status: staged, HOLD. Frozen B0 input: `b2f73d3df70dcd08a72de6e0d7d7a0ca28278b9f`.
 The original C0 manifest/annotations remain unchanged as revision-1 evidence.
-`evidence/semantics/c0/input-manifest.v2.json` and `annotations.v2.json` bind
-corrected B0 files, its explicit old/new ID map, and all 216 proposition IDs.
+`evidence/semantics/c0/input-manifest.v3.json` and `annotations.v3.json` bind
+corrected B0 files, its explicit old/new ID map, and all 227 proposition IDs.
 The nine new issue-template bindings each have a source-only decision proposal.
 All 207 former IDs were deliberately migrated; no source pins were refreshed.
 

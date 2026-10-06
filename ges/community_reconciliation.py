@@ -14,12 +14,12 @@ from .semantics import canonical_bytes, stable_id, validate_record
 
 BASE = Path('evidence/semantics/c0')
 B0 = Path('evidence/semantics/b0')
-MANIFEST = BASE / 'input-manifest.v2.json'
-ANNOTATIONS = BASE / 'annotations.v2.json'
+MANIFEST = BASE / 'input-manifest.v3.json'
+ANNOTATIONS = BASE / 'annotations.v3.json'
 CLASSES = {'DISTINCT', 'SPECIALIZED', 'REFERENTIAL', 'CONFLICTING'}
 PROPOSED = {'status': 'PROPOSED', 'reviewer': None, 'evidence_reference': None}
 INPUT_FILES = {str(B0 / name) for name in (
-    'input-manifest.v2.json', 'annotations.v2.json', 'revision-v2.json', 'ledger/propositions.jsonl',
+    'input-manifest.v3.json', 'annotations.v3.json', 'revision-v3.json', 'ledger/propositions.jsonl',
     'ledger/occurrences.jsonl', 'ledger/receipt.json')}
 
 
@@ -49,7 +49,7 @@ def build(root: Path) -> dict[str, bytes]:
     require(set(manifest) == {'schema', 'b0_commit', 'files', 'proposition_ids',
                              'annotations_digest'}, 'Malformed C0 manifest')
     require(manifest['schema'] == 'ges.c0-input.v1', 'Wrong C0 input schema')
-    require(manifest['b0_commit'] == '2bdc382e15965a5b6c85fba8a7a18bb283941479',
+    require(manifest['b0_commit'] == 'b2f73d3df70dcd08a72de6e0d7d7a0ca28278b9f',
             'Unexpected B0 revision')
     require(set(manifest['files']) == INPUT_FILES, 'Incomplete B0 input membership')
     for name, digest in manifest['files'].items():
