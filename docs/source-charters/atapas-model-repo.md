@@ -11,6 +11,9 @@ prospective contributors.
 Evidence: [README, lines 32–33](https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/README.md#L32-L33),
 [examples, lines 51–101](https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/README.md#L51-L101),
 [contributions, lines 133–138](https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/README.md#L133-L138),
+[roadmap, lines 106–121](https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/README.md#L106-L121),
+[deployment, lines 123–130](https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/README.md#L123-L130),
+[support, lines 140–146](https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/README.md#L140-L146),
 [contribution process, lines 3–17](https://github.com/atapas/model-repo/blob/9aa52517830a0e10043116ff768af8fabeeb4347/CONTRIBUTING.md#L3-L17).
 
 ## GES interpretation: authority and limits
