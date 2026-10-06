@@ -1,0 +1,192 @@
+{
+  "schema": "ges.c0-independent-correction-review.v1",
+  "created_at": "2026-10-06T22:23:55.752782+00:00",
+  "status": "PASS",
+  "review_result": "PASS_FOR_BOUNDED_C0_SOURCE_RECONCILIATION_QUALITY_REVIEW",
+  "acceptance_status": "HOLD_PENDING_SEPARATE_AUTHORIZED_ACCEPTANCE_GATES",
+  "reviewer": {
+    "agent_task": "/root/bounded_independent_review",
+    "role": "independent semantic and omission reviewer",
+    "root_native_session_witness": "01a11342-68e2-7851-9636-9af99289c0d7",
+    "native_session_witness_owner": "root agent; not represented as an independent reviewer native session",
+    "human_review": false,
+    "source_acceptance_or_policy_adoption_authority_claimed": false
+  },
+  "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+  "base_checkout_commit": "949b3a4c35366f8785f1dd3cbd5c6ae177117efc",
+  "reviewed_inputs_state": "V3 C0 inputs were uncommitted at review; byte digests identify exact reviewed state.",
+  "b0_commit": "b2f73d3df70dcd08a72de6e0d7d7a0ca28278b9f",
+  "input_bindings": [
+    {
+      "path": "evidence/semantics/c0/input-manifest.v3.json",
+      "sha256": "0015293832fd49c0d6b1a622ec2d6c9007762a5d5fc0bba0f188208b79508b69"
+    },
+    {
+      "path": "evidence/semantics/c0/annotations.v3.json",
+      "sha256": "d0adc94afe191122dea9a76e50ec87989e29eac4582040f9476775d2dd5a40f9"
+    },
+    {
+      "path": "evidence/semantics/c0/ledger/decisions.jsonl",
+      "sha256": "dc9c4f6f57907f062fa2fbb4dbc8056917ca2d50fa0a27213e43a39135eb2568"
+    },
+    {
+      "path": "evidence/semantics/c0/ledger/relationships.json",
+      "sha256": "ca81e4753005b5cc902473d7718f22b96f951dcc0f479e9fc8c3e88bec4c76ea"
+    },
+    {
+      "path": "evidence/semantics/b0/input-manifest.v3.json",
+      "sha256": "8032311085ccf54fc08f25d38698e17f52f74d2c384f5e0f879d43fb2b13506f"
+    },
+    {
+      "path": "evidence/semantics/b0/annotations.v3.json",
+      "sha256": "3fc70b579e6113975936f1835d98f123f0bca5c7948464b4186969eb69258250"
+    },
+    {
+      "path": "evidence/semantics/b0/revision-v3.json",
+      "sha256": "234fe8fd72aa14e19d8f8dd9da46d0d1d0350a374c64abad4ae2236da2496289"
+    },
+    {
+      "path": "evidence/semantics/b0/ledger/propositions.jsonl",
+      "sha256": "db23331d8f1180a2b94355051c70457bf520e4abc14d7a421021bb1f75e636d9"
+    },
+    {
+      "path": "evidence/semantics/b0/ledger/occurrences.jsonl",
+      "sha256": "3323a57837d6d647d0f907b556949b5e129a0c068393dc661be728b128bb2017"
+    }
+  ],
+  "prior_full_source_review": {
+    "path_in_b0_checkout": "evidence/semantics/b0/independent-review-v2-full.json",
+    "source_artifacts": 22,
+    "source_lines": 1550,
+    "v2_propositions_and_decisions": 216
+  },
+  "b0_v3_quality_review": {
+    "path_in_b0_checkout": "evidence/semantics/b0/independent-review-v3.json",
+    "sha256": "b3647a6aefb275b7262475990ed3c15fc710facc98480f3cbecf9ce74a0a6f79",
+    "result": "PASS"
+  },
+  "scope": {
+    "propositions_and_decisions": 227,
+    "classification_counts": {
+      "DISTINCT": 184,
+      "REFERENTIAL": 39,
+      "CONFLICTING": 4
+    },
+    "changed_authored_decisions_rechecked": 30,
+    "new_successor_propositions_rechecked": 24,
+    "unique_changed_relationship_groups_rechecked": 5,
+    "changed_decision_proposition_ids": [
+      "semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117",
+      "semantic-proposition:0977403933e1ee6523e7df5d6f655132f124430b694e09ed587d71b27d396580",
+      "semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c",
+      "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162",
+      "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72",
+      "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c",
+      "semantic-proposition:36891051d48a4851c2a190a7557d097c0d58ce80dc950a3ad095cfade4acf976",
+      "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b",
+      "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121",
+      "semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd",
+      "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226",
+      "semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164",
+      "semantic-proposition:94f588ebea50fbff53cbaf97c1f623472dfeeb7952881a6e9bef61da9e216268",
+      "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83",
+      "semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773",
+      "semantic-proposition:b20cba5f59c6dbf65f710d37f59a87d10441577ceb64206fb4484d2a53465e3b",
+      "semantic-proposition:bc08f2c490f6391b5901c2ef4d4eb1fad96a835c4c54cc3852d268a76fc75ef2",
+      "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8",
+      "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929",
+      "semantic-proposition:be9b0d9464ccba8b789905857c933dea84f66a309d26b8ccce8d056e51b75e4e",
+      "semantic-proposition:c896a94589f22a80aa4c693c4a4b1319f1e13d1b541ee44177a12e11f4ba966d",
+      "semantic-proposition:cd1a24955818bba80e95a4f3d7153c6879be82661d14e9d1522746640c87d82a",
+      "semantic-proposition:ce4d5d766d9c91c82f5487c5bb2382bee9d8a9b05b66029a254603a73ff1b075",
+      "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40",
+      "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035",
+      "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4",
+      "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1",
+      "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e",
+      "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b",
+      "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"
+    ],
+    "changed_relationship_groups": [
+      {
+        "classification": "RELATED",
+        "proposition_ids": [
+          "semantic-proposition:090aebafe51788349509b26ff4f0873e111ff42dad28e0adbf1995da82a6d117",
+          "semantic-proposition:3f0a81bed1553ffe21e24b21c4ec7708da0485b1d3ac68f883cf5a9bd3a76c7b",
+          "semantic-proposition:47f885cae0bc3d457506fa2d282a2e97a93986c47ee6a249fb2cd3bcd0c8d121",
+          "semantic-proposition:bcbe959e5f1647bddb517495e71e423e0ef9bff29cb772dda4a12db08142e4e8",
+          "semantic-proposition:d40054cb010cc444c9c6591fd14a4de2c1bf768e32a5415aaf656158c9131c40",
+          "semantic-proposition:e852b2c0fbc77f5562095eb59e2fe29c0dba3ed1354c500dc25320d7931ae0b4",
+          "semantic-proposition:f29a51d8060821fc1190469e49bd0c4e6119365a161f7588d49dd3365934fe4e",
+          "semantic-proposition:fcf1693abe70245d4aa25aef1a5085e5929f8035957c67ad418cd15905ba230b",
+          "semantic-proposition:fd13844aa858f2fe1fab2127933a5087a13a1a69dd6ba0fa03f4eb21eb2bd179"
+        ],
+        "rationale": "Permission for participants to report is separate from the enforcement team duty to investigate received complaints and protect reporters. Prompt/fair handling, separately posted policy qualifications, privacy/security wording and literal versus placeholder source contacts remain source-local; no real GES recipient is installed."
+      },
+      {
+        "classification": "RELATED",
+        "proposition_ids": [
+          "semantic-proposition:0b8ed648166f8d0e4100e8b2cf12de181ab148f5dd6d0a285050e781773fc37c",
+          "semantic-proposition:1ba6cf7417e28bfed54c03f6b3285b3f39b37ddde24e3498cbc1f11ad1567162",
+          "semantic-proposition:31336b8c1cac5b35be437e86f7a5e54289b35f2ba5113c1352de11bcda4ecf72",
+          "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c",
+          "semantic-proposition:69e286d8c0f86f9907785d6737130efcc686246d140569004b8101efb20e9226",
+          "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83",
+          "semantic-proposition:bdb1429b4517d19083fe56d63031610d8a61119756aeb31d9913793b5b362929",
+          "semantic-proposition:dd375949167c4e1e47c2efb1ae7e531cf789168a346b6a4033b1def446ebb035"
+        ],
+        "rationale": "Moderation duties remain distinct from permission to choose corrective measures, remove/edit/reject contributions or impose a temporary/permanent ban. Responsibility does not mandate every discretionary sanction; actor, source scope and reason-communication conditions remain intact."
+      },
+      {
+        "classification": "RELATED",
+        "proposition_ids": [
+          "semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd",
+          "semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164",
+          "semantic-proposition:b20cba5f59c6dbf65f710d37f59a87d10441577ceb64206fb4484d2a53465e3b"
+        ],
+        "rationale": "Optional consideration of scholarly citation and adapt-or-remove guidance are related to the conditional CFF recommendation that users of this software cite the supplied metadata. Preserve that user/use condition and placeholder authors, identifiers and versions; examples are not consumer facts."
+      },
+      {
+        "classification": "RELATED",
+        "proposition_ids": [
+          "semantic-proposition:94f588ebea50fbff53cbaf97c1f623472dfeeb7952881a6e9bef61da9e216268",
+          "semantic-proposition:be9b0d9464ccba8b789905857c933dea84f66a309d26b8ccce8d056e51b75e4e",
+          "semantic-proposition:cd1a24955818bba80e95a4f3d7153c6879be82661d14e9d1522746640c87d82a"
+        ],
+        "rationale": "All three source spans include trolling, insulting or derogatory comments, and personal or political attacks. Retain their distinct source scopes and versions; insulting and derogatory are shared alternatives, not a difference between sources."
+      },
+      {
+        "classification": "RELATED",
+        "proposition_ids": [
+          "semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773",
+          "semantic-proposition:ce4d5d766d9c91c82f5487c5bb2382bee9d8a9b05b66029a254603a73ff1b075",
+          "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"
+        ],
+        "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."
+      }
+    ],
+    "all227_membership_and_full_source_proposition_preservation_compared": true,
+    "frozen_B0_bytes_and_pinned_B0_commit_match": true
+  },
+  "method": [
+    "Read all24 successor proposition ASTs and revised decision rationales. Rechecked every changed authored decision and all five unique changed relationship groups against original source spans already read in full and re-read for B0 v3.",
+    "Reporting relationships preserve voluntary participant reporting, conditional enforcement duties, appropriate or prompt/fair response, reporter confidentiality or privacy/security, source contacts and separately posted-policy qualifications.",
+    "Moderation relationships preserve required responsibility and permissible corrective alternatives without imposing every sanction or a mandatory ban.",
+    "Citation relationships preserve software-user/use condition and example metadata; trolling relationships now correctly retain both insulting and derogatory across all three sources; feedback relationship preserves graceful acceptance.",
+    "Compared all227 IDs, all227 complete source-proposition copies, all decisions with authored rationales, no lost fields or control references, reciprocal supplemental links, and pinned B0 commit byte bindings.",
+    "Earlier full-scope C0 review read all216 classifications/relationships, including the two retained source tensions and compatible security-policy selection/adaptation. Unchanged source classifications remain within that reviewed coverage.",
+    "Tests and structural counts supplement review; they do not supply semantic truth or reviewer authority."
+  ],
+  "open_semantic_findings": [],
+  "nonblocking_editorial_observation": "Generic unlinked new-record rationales use awkward wording such as MAY contributors must retain its distinct predicate. Their preservation instruction is separate from the correctly retained source AST; readability can be improved without changing source meaning.",
+  "retained_source_tensions": [
+    "CC BY4.0 versus guidelines CC-BY-SA starting-license identity remains unresolved source inconsistency, not legal clearance.",
+    "Optional earlier starring versus later promotional must remains source modal tension, not enforceable platform/GES policy."
+  ],
+  "limits": [
+    "Automated quality PASS is not independent human approval, organization acceptance, legal permission, policy adoption, merged-main verification, remote CI acceptance or native enforcement.",
+    "All227 source proposition and decision review fields remain PROPOSED; this receipt does not silently promote their review lifecycle.",
+    "No source outside the22-artifact B0/C0 batch or external linked page was included in this reconciliation verdict."
+  ],
+  "mutation_scope": "Only this independent review receipt written; no source annotations, decisions, relationships, controls, templates, commits or publication changed by reviewer."
+}

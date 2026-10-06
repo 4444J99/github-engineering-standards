@@ -1,0 +1,82 @@
+{
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/about-actions-policies.md",
+  "content_sha256": "5b58973de951a566f9365197ac907faf736a9f6a81c18310e2262e0365d322bd",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T22:24:38.647645+00:00",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-1",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 1,
+      "end_line": 15,
+      "span_sha256": "019ec6deb0eb8702d6b5e98b2de4de8d78f2c86e4c794ce1ea56407ea7861dd6",
+      "statement": "This source page is gated by workflow-execution-protections: its pinned feature definition includes fpt/ghec and GHES >=3.23. Redirects are navigation metadata; they do not establish availability on older GHES versions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-2",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 19,
+      "end_line": 21,
+      "span_sha256": "a44222cf591e73fcdfcf36d3dc159bc0041bdfe3f2b01e61d223bce86c5f4818",
+      "statement": "Actions policies are configured under Policies, separately from General settings, at repository, organization or enterprise level. The source currently describes workflow execution protections only; planned future policies are not implemented evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-3",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 25,
+      "end_line": 30,
+      "span_sha256": "a510c347e66a237f0fab23b6f45695ea82983bcde55d8807d0bd33a79f5cb9be",
+      "statement": "Workflow execution protections can allowlist actors and permitted events, restricting pull_request_target, manual dispatch and low-trust actors and overriding misconfigured workflow files. These are described capabilities, not proof that this estate enables them.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-4",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 32,
+      "end_line": 36,
+      "span_sha256": "d17477ae90ba6d4077d728760cdf45d5ea2edb6018e19a8f25b12dc8963f408a",
+      "statement": "When protections are enforced, disallowed workflow runs fail with an error. The workflow_dispatch error is an illustrative example, not an observed negative test.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-5",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 38,
+      "end_line": 46,
+      "span_sha256": "295f8150fdbf90d4d87dd8366df1ab6705e93186a0fc1457ae2b09f51b370499",
+      "statement": "The conditional default-pull-req-target-policy reusable states a default public-repository pull_request_target block will be enforced on November 2, 2026. The source expiry comment and fpt/ghec feature gate are retained; this future source assertion does not establish present enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-6",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 50,
+      "end_line": 50,
+      "span_sha256": "10d951498400185cce6382f268544a601ca56b7e81fbbad1114dc6f4c227e06e",
+      "statement": "Actor rules cover individual users, repository roles, GitHub Apps, Copilot and Dependabot. The described default allows users with write access to trigger workflows; explicit actor rules can separate code contribution from workflow execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-7",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 51,
+      "end_line": 53,
+      "span_sha256": "324eeaefdcb121e9f3c2d53c063957cfa68a730cc93cb112cfce13cec826c17a",
+      "statement": "Event rules govern allowed events, including push, pull_request, pull_request_target and workflow_dispatch. Planned additional rules remain future intent.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-ABOUT-ACTIONS-POLICIES-8",
+      "artifact_id": "dd71b11d63ec7e16bcb2c7f4",
+      "start_line": 55,
+      "end_line": 59,
+      "span_sha256": "850fafb24d4db0fb3d2cd87d3fb6310792c84e69abaf2c1217a5d67978011574",
+      "statement": "Configuration and REST policy links are references for next steps; their linked bodies were not reviewed or executed in this five-file pilot.",
+      "accepted_policy": false
+    }
+  ]
+}

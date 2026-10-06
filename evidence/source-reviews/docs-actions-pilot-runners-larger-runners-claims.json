@@ -1,0 +1,82 @@
+{
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/runners/larger-runners.md",
+  "content_sha256": "a65ae32e4f07c0b166bafe513fc8803df822c8ba7013b4f0ede07208e3547a22",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T22:24:38.647645+00:00",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-1",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 1,
+      "end_line": 16,
+      "span_sha256": "614562e54fb29ab4b806a8caee84056fbaae0c54587f9f3cbb2cd0c20a6ba837",
+      "statement": "The permissions reusable limits larger runners to organizations and enterprises on Team or GitHub Enterprise Cloud plans. Frontmatter listing GHES is not support evidence; the body has a separate GHES unsupported branch.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-2",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 18,
+      "end_line": 22,
+      "span_sha256": "22d43da09c92a678777f103660c2be4c32cbb21629738740cf427afd5ef9bb31",
+      "statement": "For GHES, the reusable recommends self-hosted runners and explicitly states GitHub-hosted runners are unsupported. The source directs readers to Enterprise Cloud documentation about larger runners.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-3",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 24,
+      "end_line": 26,
+      "span_sha256": "56e7e3a33d10294d6c445b86df8992c6414aa6b2fd36894c3953921d598ca515",
+      "statement": "In the non-GHES branch, the include describes GitHub-managed virtual machines with preinstalled tools and more RAM/CPU/disk, static IPs, grouping, autoscaling and GPU runners; Azure networking is feature-gated inside that include.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-4",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 28,
+      "end_line": 34,
+      "span_sha256": "3d374e8c8f3684eedf6b28b2be5b2b608ac6f31116523e13669410d7646efc6d",
+      "statement": "All larger runners in this branch support runner groups controlling repository access, demand-based autoscaling, and job concurrency limits.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-5",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 36,
+      "end_line": 40,
+      "span_sha256": "658604f25a4aebb3fe847c5f6b26116a5a6eaea281428af2db2a830c6b28ac68",
+      "statement": "Static IP ranges for firewall allowlists, custom images and Azure private networking are limited here to Linux and Windows runners; these are not universal platform claims.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-6",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 43,
+      "end_line": 55,
+      "span_sha256": "0b95572265c9562115b3125f8cd735ec5aebe6b5ac12042162df3d671b7d59f0",
+      "statement": "Under default-setup-larger-runners (fpt/ghec), consider larger runners for code-scanning default setup when standard scans are slow, hit memory/disk errors, or require size/image/concurrency customization without self-hosting. This is conditional recommendation rather than mandatory configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-7",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 57,
+      "end_line": 62,
+      "span_sha256": "e48996d53d81ac8e8cefc7bcfde1d461eeaabe19fec1d3d14b817ec1103096ad",
+      "statement": "Larger runners never use included private-repository minutes and are billed per executed minute in both public/private repositories. The include states unused configured larger runners incur no workflow execution charge; rates themselves are only linked, not asserted.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-LARGER-RUNNERS-8",
+      "artifact_id": "73e6b0530b475f2fb5c3cef1",
+      "start_line": 64,
+      "end_line": 71,
+      "span_sha256": "cfc1f866275565d92bfeb2fa8dbc91c3b0e18291074b8e37f4d07b859496171d",
+      "statement": "Manage/reference links are next steps; the final conditional terminator preserves non-GHES applicability. No runner was created, started, billed or configured.",
+      "accepted_policy": false
+    }
+  ]
+}

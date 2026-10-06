@@ -1,0 +1,64 @@
+{
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/runners/private-networking.md",
+  "content_sha256": "0aebf212934e3aeffdbc3ae2230d0f1424aac051a59d77900e1303ef1e71ef38",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T22:24:38.647645+00:00",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-PRIVATE-NETWORKING-1",
+      "artifact_id": "3930fde5ba72a1980b57c7f2",
+      "start_line": 1,
+      "end_line": 18,
+      "span_sha256": "ae2d109fc01bb730da1d89562702e20fe19b88ffcace8a6a66c2871ec8899e31",
+      "statement": "The intro describes connecting hosted runners to private resources; frontmatter lists fpt/ghec/ghes, but the included GHES note states hosted runners are unsupported and self-hosted runners should be used.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-PRIVATE-NETWORKING-2",
+      "artifact_id": "3930fde5ba72a1980b57c7f2",
+      "start_line": 20,
+      "end_line": 24,
+      "span_sha256": "f73e1ccc6db8dd69deae8f013db13894970083d74ce005d4939dfda13cee8f3f",
+      "statement": "Hosted runners normally reach the public internet and are shared across GitHub customers. The reusable says private networking can configure hosted runners to be exclusively used to connect to your private network/resources while running your workflows. This source wording does not prove blocked public egress, dedicated infrastructure or an isolation guarantee. The page presents several approaches with distinct advantages/disadvantages, not one mandatory architecture.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-PRIVATE-NETWORKING-3",
+      "artifact_id": "3930fde5ba72a1980b57c7f2",
+      "start_line": 26,
+      "end_line": 28,
+      "span_sha256": "943ebb66d3c09f28f1712c247dd44a8a916fb4daa05035e313524049cceae057",
+      "statement": "An API Gateway approach can use OIDC tokens to authenticate the workflow outside Actions. The how-to is linked; no trust policy or gateway was implemented.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-PRIVATE-NETWORKING-4",
+      "artifact_id": "3930fde5ba72a1980b57c7f2",
+      "start_line": 30,
+      "end_line": 32,
+      "span_sha256": "aaad882939e85b4aabe868ca53bfa528810740384bf1032735360806207d5304",
+      "statement": "When separate API Gateway infrastructure is undesirable, WireGuard can create an overlay by running it both on the runner and private service. This is an alternative with a stated condition, not a universal requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-PRIVATE-NETWORKING-5",
+      "artifact_id": "3930fde5ba72a1980b57c7f2",
+      "start_line": 34,
+      "end_line": 44,
+      "span_sha256": "a1724b5fc56e6ed5a69350ff30ea10aeca16fe716a6fd14e8d449e3319a4ecc0",
+      "statement": "Azure VNET networking is gated by actions-private-networking-azure-vnet. In fpt, organization owners on Team may configure it at organization level. The include describes GitHub-managed CI/CD with control over networking policies; Azure documentation is linked, not imported.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-RUNNERS-PRIVATE-NETWORKING-6",
+      "artifact_id": "3930fde5ba72a1980b57c7f2",
+      "start_line": 46,
+      "end_line": 51,
+      "span_sha256": "4a8b2ebecbc9e2c1b28332f3663720b1c150917c6355d7fe4a6d9ee210ef974e",
+      "statement": "In the ghec branch, enterprises/organizations on Enterprise Cloud or Team may configure Azure private networking. Both how-to links and nested conditional boundaries remain explicit; no estate networking approval or rollout is inferred.",
+      "accepted_policy": false
+    }
+  ]
+}
