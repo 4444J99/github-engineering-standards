@@ -2,21 +2,21 @@
 
 HOLD — all decisions PROPOSED; zero approvals or policy adoption.
 
-SPECIALIZED denotes related source-specific variants, not directional subsumption.
+RELATED/COMPLEMENTARY links do not change a DISTINCT or REFERENTIAL disposition. SPECIALIZED requires an explicit base-to-refinement direction.
 REFERENCE in A5 retains a proposition as source evidence; it does not exclude actionable guidance.
 No duplicates or supersessions are asserted across differing scope/applicability.
 
 ## semantic-proposition:0068bc452cf1e28c4359c1c178aa42b215be4734235fa643184fd104376030f2
 
-SPECIALIZED: SHOULD repository owner — adapt CONTRIBUTING.md to explain participation and submission
+DISTINCT: SHOULD repository owner — adapt CONTRIBUTING.md to explain participation and submission
 
-Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 48, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "89784c67479af951c3f4c905529d6b0fc38d41de0eb3589b95f7695143044aff", "start_line": 44}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "CONTRIBUTING.md to explain participation and submission", "parameters": ["YOUR-ORGANIZATION", "YOUR-PROJECT"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source misspells CONTIBUTING.md in prose; target is CONTRIBUTING.md"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:bae7d78cba4471ef4d1e8e17dc8c2f95957fb2ac551394a7ddae8fe7c7aeaf02"], "rationale": "Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:bae7d78cba4471ef4d1e8e17dc8c2f95957fb2ac551394a7ddae8fe7c7aeaf02"], "rationale": "Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders."}]`
 
 ## semantic-proposition:0091ef4376e186320ca579d166f239e2422f8dcc90d5bd8d7e456bc1beaef54d
 
@@ -32,27 +32,27 @@ Relationships: `[]`
 
 ## semantic-proposition:01e668f06c84b8d3d3f7eb8bf65830ad6f36e003158e165a4b2100dcd7c962f4
 
-SPECIALIZED: MAY other project leaders — allow temporary or permanent repercussions for bad-faith enforcement failures
+DISTINCT: MAY other project leaders — allow temporary or permanent repercussions for bad-faith enforcement failures
 
-Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 73, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "48c162f1c30b5a819c80264adc3a4e1a05a981234501cdb119ea4a7f0f9bd602", "start_line": 71}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "allow", "consequences": [], "exceptions": [], "modality": "MAY", "object": "temporary or permanent repercussions for bad-faith enforcement failures", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "other project leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:8ebf41fe05d620f5ebb2e390b7097a3a3ed39f3bf12fa61b69f8f1aa3e9a1d94"], "rationale": "Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:8ebf41fe05d620f5ebb2e390b7097a3a3ed39f3bf12fa61b69f8f1aa3e9a1d94"], "rationale": "Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences."}]`
 
 ## semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4
 
-SPECIALIZED: SHOULD pull-request author — summarize change, linked/fixed issue, motivation, context and required dependencies
+DISTINCT: SHOULD pull-request author — summarize change, linked/fixed issue, motivation, context and required dependencies
 
-PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "215fecebc0056f8126c91a008934166f518bbe1526e3d5203531b6274299d675", "end_line": 5, "path": ".github/pull_request_template.md", "repository": "atapas/model-repo", "span_sha256": "fa5ee4efb32c17d11ea051e3a652fa3f08a79ef13384b024b37a4ac64b55e20d", "start_line": 3}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "summarize", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "change, linked/fixed issue, motivation, context and required dependencies", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", ".github/pull_request_template.md"], "subject": "pull-request author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
 
 ## semantic-proposition:025423f92fa92972acfcbb6ddf5b54070c15eca327f92162d4cf6133fa9e2d8f
 
@@ -66,41 +66,53 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
+## semantic-proposition:028cb440b315e12ff0e0451a12bb7f502466078329372f1f83c3067d16bb229a
+
+DISTINCT: PROHIBITED participants — publish publishing private information without explicit permission
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "publish", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "publishing private information without explicit permission", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:5d89ef58f1152525c616a8116fbb9f1142091143a1ab591779ef46336abdffbd", "semantic-proposition:6e09a4a717d0ef8618f5ae4ac6bdc58652001ac0683b1030698fabdb4b8e6534"], "rationale": "Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes."}]`
+
 ## semantic-proposition:02fe131e0ddf9cd3d42c1f087c282e7139ab05b22d47911a326e426f3fc729ef
 
-SPECIALIZED: MUST maintainers — use permanent community public-interaction ban for patterns of violation, harassment or class-based aggression
+DISTINCT: MUST maintainers — use permanent community public-interaction ban for patterns of violation, harassment or class-based aggression
 
-Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 96, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "1dad45834632ab66ee3f3d2eeadfaae436046ca5fef8113b40c34c31c83272da", "start_line": 94}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "MUST", "object": "permanent community public-interaction ban for patterns of violation, harassment or class-based aggression", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:03964f849751dfa69d47f5cb2ef4308ffe9f06cbd1549c53b4329eb235a21601"], "rationale": "Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:03964f849751dfa69d47f5cb2ef4308ffe9f06cbd1549c53b4329eb235a21601"], "rationale": "Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other."}]`
 
 ## semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22
 
-SPECIALIZED: SHOULD project participants — record changes in an issue before creating a pull request
+DISTINCT: SHOULD project participants — record changes in an issue before creating a pull request
 
-Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 45, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "fd787b7e5f1451ed728a23c837642fe654efeb77ef016b2d50504de437905a2b", "start_line": 45}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "record", "consequences": [], "exceptions": ["The tiniest changes"], "modality": "SHOULD", "object": "changes in an issue before creating a pull request", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
 ## semantic-proposition:03964f849751dfa69d47f5cb2ef4308ffe9f06cbd1549c53b4329eb235a21601
 
-SPECIALIZED: MUST leaders — use permanent community public-interaction ban for patterns of violation, harassment or class-based aggression
+DISTINCT: MUST leaders — use permanent community public-interaction ban for patterns of violation, harassment or class-based aggression
 
-Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 113, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "68daedc0e691eda26a7bb6627daba6eef02f79803e26726538afa481b836fbb5", "start_line": 108}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "MUST", "object": "permanent community public-interaction ban for patterns of violation, harassment or class-based aggression", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:02fe131e0ddf9cd3d42c1f087c282e7139ab05b22d47911a326e426f3fc729ef"], "rationale": "Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:02fe131e0ddf9cd3d42c1f087c282e7139ab05b22d47911a326e426f3fc729ef"], "rationale": "Permanent-ban guidance shares the misconduct pattern but assigns different source-local leadership roles; neither conduct version supersedes the other."}]`
 
 ## semantic-proposition:066f4f7336fa149491fdbe8d036fe73c830a0c5ecc167f2f692508f3e1362cb9
 
@@ -128,15 +140,15 @@ Relationships: `[]`
 
 ## semantic-proposition:0809500a491391df7e3d569177a86b8f5f5642aaa37a2e7b78bbf912d1913512
 
-SPECIALIZED: SHOULD pull-request author — describe considered alternatives
+DISTINCT: SHOULD pull-request author — describe considered alternatives
 
-Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "2ac638530c56711a57688b78aed79e808bd206335877e94c139aace84c8e9970", "end_line": 11, "path": ".github/pull_request_template.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "9aa4ce6a1ed8c7edf8173552a7f575f66850b0693414124972d8e0d458d26dea", "start_line": 9}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "considered alternatives", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Alternatives exist"], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", ".github/pull_request_template.md"], "subject": "pull-request author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:d0ad8ce7c2bb71c33fd3619189222f11f52957614f5fc10f51fa5ef8b7bd8727", "semantic-proposition:e0a92102e1b4669d3d664ac37b86901a6e46b18f874fcc41c2f1a140035e3bea"], "rationale": "Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:d0ad8ce7c2bb71c33fd3619189222f11f52957614f5fc10f51fa5ef8b7bd8727", "semantic-proposition:e0a92102e1b4669d3d664ac37b86901a6e46b18f874fcc41c2f1a140035e3bea"], "rationale": "Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing."}]`
 
 ## semantic-proposition:081409215805f4e5f5a7804dc7a3b11e2c0b27209121daf481b4c0afef9ad229
 
@@ -152,15 +164,15 @@ Relationships: `[]`
 
 ## semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01
 
-SPECIALIZED: SHOULD participants — show empathy and kindness
+DISTINCT: SHOULD participants — show empathy and kindness
 
-Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 33, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "757bfd5273cefb59917a86fb0b320d907e93e6e917e0f13e3a9f93af8f483334", "start_line": 28}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "show", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "empathy and kindness", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:cc357b938c1a1da5f121260ffced3a6d5f50a118c4c8ed8935510dc496be1767", "semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776", "semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:cc357b938c1a1da5f121260ffced3a6d5f50a118c4c8ed8935510dc496be1767", "semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776", "semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
 
 ## semantic-proposition:0868d60e6055ff94cc113c18b0ed3699745f559aaec090fea3feef1331f73e7a
 
@@ -176,15 +188,15 @@ Relationships: `[]`
 
 ## semantic-proposition:097f8e363fe0ec382aec886e2f3f67021c4ecd8bb909cc684a081f979b1fccd6
 
-SPECIALIZED: MUST maintainers — use temporary ban for serious violations including sustained misconduct
+DISTINCT: MUST maintainers — use temporary ban for serious violations including sustained misconduct
 
-Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 91, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "f54ffc301e7630668e1294891f2ae706dd71ee1dfd9f7cbe3b543d8787f9924c", "start_line": 89}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": ["Violating restrictions may cause permanent ban"], "exceptions": [], "modality": "MUST", "object": "temporary ban for serious violations including sustained misconduct", "parameters": ["specified period; no fixed duration"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No community interaction or public/private contact with involved people including enforcers"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:be2176bda7d72a972b14963521e1932b0231aa49b55c6395b9efb444bef3dcb4"], "rationale": "Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:be2176bda7d72a972b14963521e1932b0231aa49b55c6395b9efb444bef3dcb4"], "rationale": "Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project."}]`
 
 ## semantic-proposition:0a5e5b5dfa90f7e5fb7b4f64228b20b4816e46f2d8aa51ec6e37fa0f52084e5a
 
@@ -224,27 +236,27 @@ Relationships: `[]`
 
 ## semantic-proposition:0e8541d6dcccc73b218d9fa055348d33755adc6b153390116a26f2732f394bf5
 
-SPECIALIZED: SHOULD project participants — write meaningful commit messages
+DISTINCT: SHOULD project participants — write meaningful commit messages
 
-Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 104, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "9bd2acf4b26ac2553de7a27562576f9bb106faec2812a6f1b5dfb6f397ff9c93", "start_line": 104}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "write", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "meaningful commit messages", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Rigid grammar is not required"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:4be68e7e45e38d45af75c12b417ae771c8560f44988e9b235ceb99b9a056d8f3", "semantic-proposition:f3ff9668a240b8a5a2c507ae7331dddcf00460aac4a0a5f1caeee2b1868e7dfa"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:4be68e7e45e38d45af75c12b417ae771c8560f44988e9b235ceb99b9a056d8f3", "semantic-proposition:f3ff9668a240b8a5a2c507ae7331dddcf00460aac4a0a5f1caeee2b1868e7dfa"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
 
 ## semantic-proposition:0f286f7b74b41bc5cc73092a3b91816011ec12ddb5c85a16c315fdc22475d11c
 
-SPECIALIZED: SHOULD participants — use welcoming inclusive language
+DISTINCT: SHOULD participants — use welcoming inclusive language
 
-Inclusive-language guidance remains source-local across the contribution and conduct documents.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Inclusive-language guidance remains source-local across the contribution and conduct documents.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 39, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "9465024e8cb4b47befe0d034c8ece409641cf6fce1fa6e21527a12522c2258d1", "start_line": 35}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "welcoming inclusive language", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:9266fa993dba3186ee5377665df0b4b68c5a1942a81953f41a1708993a16ce4e"], "rationale": "Inclusive-language guidance remains source-local across the contribution and conduct documents."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:9266fa993dba3186ee5377665df0b4b68c5a1942a81953f41a1708993a16ce4e"], "rationale": "Inclusive-language guidance remains source-local across the contribution and conduct documents."}]`
 
 ## semantic-proposition:11d28751b0e31db605d83ca57dd2fd9617a40282e7ce1e639aca5a3d777b3fc7
 
@@ -260,15 +272,15 @@ Relationships: `[]`
 
 ## semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3
 
-SPECIALIZED: SHOULD repository owner — adapt then activate funding file and sponsorship button
+DISTINCT: SHOULD repository owner — adapt then activate funding file and sponsorship button
 
-Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 110, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "645719460a922b1e09c959da32176def6a0f9474da1fb24c70839d3d4b1507c5", "start_line": 104}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt then activate", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "funding file and sponsorship button", "parameters": ["FUNDING.yml", "Settings / General / Sponsorship"], "polarity": "POSITIVE", "preconditions": ["Funding feature is selected"], "qualifiers": ["Root file location is a source assertion; no setting changed"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
 
 ## semantic-proposition:1339572c50667d53c69043aec12314c083d4830300573d4254caf26fef94a577
 
@@ -284,123 +296,111 @@ Relationships: `[]`
 
 ## semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5
 
-SPECIALIZED: SHOULD pull-request author — describe implemented solution
+DISTINCT: SHOULD pull-request author — describe implemented solution
 
-PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "2ac638530c56711a57688b78aed79e808bd206335877e94c139aace84c8e9970", "end_line": 7, "path": ".github/pull_request_template.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "6bbadef4ea87a2fda00e6f42ee7165b595c558813bedcfd47e25955fa9dd9ba3", "start_line": 5}]`
 
 Preserved AST/applicability: `{"ambiguities": ["Prompt says implemented solution but answer hint says proposed solution; retain both readings for C0"], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "implemented solution", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", ".github/pull_request_template.md"], "subject": "pull-request author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
 
 ## semantic-proposition:18018c3d2f51c64f579146b297e730c20a8870c50771665b970e073334adbf77
 
-SPECIALIZED: SHOULD repository owner — consider issue/pull-request templates
+DISTINCT: SHOULD repository owner — consider issue/pull-request templates
 
-Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 21, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "6e21d0426c4749dc043e0eab7513435274c83f0ae98eccd3191bf83973e65280", "start_line": 21}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "consider", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "issue/pull-request templates", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source shoulds category"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:b62a8c771e89b598eece178077f095d788a571316d69fd4cce0cfaa1abd32221"], "rationale": "Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted."}]`
-
-## semantic-proposition:183bf337651ff9b6b2cfa68689e8683d48baa172e055aa3c62a6c6edbb9576f2
-
-SPECIALIZED: PROHIBITED participants — avoid public or private harassment
-
-Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "public or private harassment", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:6901a5ceda16838921e6391cfdd5f0ff3a47aa501dc8f3308a4a9789eb6f0ef2", "semantic-proposition:7dd372944da500c199a2249e65761fe00af6caccfe3a578425f0eda8abbbcedd"], "rationale": "Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:b62a8c771e89b598eece178077f095d788a571316d69fd4cce0cfaa1abd32221"], "rationale": "Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted."}]`
 
 ## semantic-proposition:1a7f490828ca2776364f819aee55f6362a3de19f34fc01ec859f1a6836bfcb21
 
-SPECIALIZED: MUST project participants — veto pull requests with failing tests
+DISTINCT: MUST project participants — veto pull requests with failing tests
 
-Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 33, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "dab57f16986c8e079f41887abe2cbe5c32994af11ec4408b22d2cac71a41ea3f", "start_line": 33}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "veto", "consequences": [], "exceptions": ["Tests may fail in development branches"], "modality": "MUST", "object": "pull requests with failing tests", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Repository has tests"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:3c45c72ad7a3bef1764116b9e0875c02f26063599c11462edf7d0cbd933e879c", "semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f", "semantic-proposition:b04690db7fd8a0e144ed53ef536afd3912c82bb3caf25f0d67a40accc0e003f2"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:3c45c72ad7a3bef1764116b9e0875c02f26063599c11462edf7d0cbd933e879c", "semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f", "semantic-proposition:b04690db7fd8a0e144ed53ef536afd3912c82bb3caf25f0d67a40accc0e003f2"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
 
 ## semantic-proposition:1b98edd4dbf95e557c9fdffbeeb8751189d29120d763c9c59aabaf1b558bd620
 
-SPECIALIZED: SHOULD participants — prioritize community interests
+DISTINCT: SHOULD participants — prioritize community interests
 
-Community-interest guidance differs in explicit comparison with individual interests; retain that difference.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Community-interest guidance differs in explicit comparison with individual interests; retain that difference.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 39, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "9465024e8cb4b47befe0d034c8ece409641cf6fce1fa6e21527a12522c2258d1", "start_line": 35}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "prioritize", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "community interests", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:986b7c607dfc2d963628001dacbdc340f21ae09301712d9daf29bdec69e64ca8", "semantic-proposition:d6461f6d28d14fab9e3cf56326ea0a252689e6f157f2212dc841ef541cea6b24"], "rationale": "Community-interest guidance differs in explicit comparison with individual interests; retain that difference."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:986b7c607dfc2d963628001dacbdc340f21ae09301712d9daf29bdec69e64ca8", "semantic-proposition:d6461f6d28d14fab9e3cf56326ea0a252689e6f157f2212dc841ef541cea6b24"], "rationale": "Community-interest guidance differs in explicit comparison with individual interests; retain that difference."}]`
 
 ## semantic-proposition:1c1982ad1fae3a4e6cf7a666ab340d9dbd8daad9bcdafc54e19d6a8a6b91e26d
 
-SPECIALIZED: MAY question author — ask a question through the supplied issue prompt
+DISTINCT: MAY question author — ask a question through the supplied issue prompt
 
-Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a6dba91fa5b37b2fb9a8e04801285423766e9fcad526eb6a8f427ed4a63c4396", "end_line": 9, "path": ".github/ISSUE_TEMPLATE/question.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "1c883c412ecb99fc9a7c88f1082194292ac9e26c3cf75bc79e02459320569877", "start_line": 7}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "ask", "consequences": [], "exceptions": [], "modality": "MAY", "object": "a question through the supplied issue prompt", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/question.md"], "subject": "question author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:61af504542ab7adae3459d4aec4f3c7e2b9253dfd14d088ff759ec4e77708b1c"], "rationale": "Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:61af504542ab7adae3459d4aec4f3c7e2b9253dfd14d088ff759ec4e77708b1c"], "rationale": "Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue."}]`
 
 ## semantic-proposition:1ccb50d1b1f156565fa37a51d7c01c9e911344c848e5b0c6f41f4fd4b90a90a1
 
-SPECIALIZED: MUST maintainers — assign issue labels and maintainer/contributor assignees
+DISTINCT: MUST maintainers — assign issue labels and maintainer/contributor assignees
 
-Label/assignee duties specialize issue and PR administration separately.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Label/assignee duties specialize issue and PR administration separately.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 25, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "0c4c337863ad3ff804e849a1412e99a3d496a2ce8b02c51a22f91a582a51ec47", "start_line": 25}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "assign", "consequences": [], "exceptions": [], "modality": "MUST", "object": "issue labels and maintainer/contributor assignees", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:5d47a0d9e956790934c9ad113328b06aa2fc6c577dc386fb9f85128edc54d10a"], "rationale": "Label/assignee duties specialize issue and PR administration separately."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:5d47a0d9e956790934c9ad113328b06aa2fc6c577dc386fb9f85128edc54d10a"], "rationale": "Label/assignee duties describe issue and PR administration separately."}]`
 
 ## semantic-proposition:1cecb5afb21e996f63a4dc3aec5df84d23eb66cd4d8a8cd5abb31551ceb5169d
 
-SPECIALIZED: MAY project participants — use optionally release attachments or external storage such as S3
+DISTINCT: MAY project participants — use optionally release attachments or external storage such as S3
 
-Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 126, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "a5ace811df5ec324efbc8f4514aee73f5f4f004388d93076c9646957eb379491", "start_line": 126}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "use optionally", "consequences": [], "exceptions": [], "modality": "MAY", "object": "release attachments or external storage such as S3", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Files need not be versioned or stored in Git"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:53e67e234764545f48b50cfd82f628e1efb0bf3c87aedefabd40add401c0a851", "semantic-proposition:afd78843383f4c838e0d09f3587aeed5a1e33118f7c23c5c5c498f6726b74e75"], "rationale": "Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:53e67e234764545f48b50cfd82f628e1efb0bf3c87aedefabd40add401c0a851", "semantic-proposition:afd78843383f4c838e0d09f3587aeed5a1e33118f7c23c5c5c498f6726b74e75"], "rationale": "Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning."}]`
 
-## semantic-proposition:1d289445aee7d57aa7c8c419c9ed9c24b98aadc091b46a254347e85784fbdba1
+## semantic-proposition:200772466abc4757a236f08a9f3497675f69ff560dd67412b1e0f9cb80f35b6d
 
-SPECIALIZED: MUST contributors and maintainers — pledge harassment-free participation regardless of the enumerated personal characteristics
+DISTINCT: PROHIBITED participants — engage in other professionally inappropriate conduct
 
-Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 28, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "f9c0e38a9c8c8c4510db64ca3327a332f054e2cde3f2b084ca5797b784818d39", "start_line": 23}]`
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "harassment-free participation regardless of the enumerated personal characteristics", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Covenant 1.4-derived pledge; scope and enumeration preserved in source span"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "contributors and maintainers"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "other professionally inappropriate conduct", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:31ea8e22be5a509bb9ab0ccb80613326b87afd6b2c0ba942072d193d737355d8", "semantic-proposition:87c48b409721f459cde668183ad7c0f0cc5c101075f81fafd6925630393170a0", "semantic-proposition:93b3aff9bb79ce6b681d373dc95a752406c32ea85706d201667d376fcc00224d"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2faf105699e8496431e60662e02c563efe6726e759a2e3808ff1f18f00bae0fe", "semantic-proposition:9aa5f5329986cf76be8def6f6f01b6457f3e6d3ed33eb8d0bc7359dbff9517db"], "rationale": "Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes."}]`
 
-## semantic-proposition:217074c1d5a6d4b05ea470e61865f6f3fb53efcbfde25478b4249edd8a184069
+## semantic-proposition:2128e9de2e0cd4a03cf0a9f89d62830e384eb463d461c4dcabee64c0a5b6832d
 
-CONFLICTING: SHOULD repository owner — adapt or remove SECURITY.md describing vulnerability reporting
+DISTINCT: PROHIBITED participants — engage in public or private harassment
 
-Security is placed in the optional coulds category but its file-adaptation instruction is a should with a removal exception. The same-file policy-strength tension remains open; no mandatory security policy is inferred.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition.
 
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 100, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "2dd8f768983ca9e4f0dca1a1069e934d6f53197be5bf1f51d09f0e026f71fe2d", "start_line": 96}]`
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt or remove", "consequences": [], "exceptions": ["Remove if the project does not cover this topic"], "modality": "SHOULD", "object": "SECURITY.md describing vulnerability reporting", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "public or private harassment", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "CONFLICTING", "counterpart_ids": ["semantic-proposition:27553762bc8e81ea584a1bf8ec4aca89e02f9d5ed0c9c74c59cdeca8ebfe11fa"], "rationale": "Security is placed in the optional coulds category but its file-adaptation instruction is a should with a removal exception. The same-file policy-strength tension remains open; no mandatory security policy is inferred."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:f48b9e2f14655d45a3639fbd65c926b4260be7e3f9700bdbe39ef99168782dcb", "semantic-proposition:f76fac07f8b1350cce73db5df7559e063818f8074850febd9462f983fe3406a0"], "rationale": "Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition."}]`
 
 ## semantic-proposition:237dee03fb3e218d1826213bad600cd8ae3b454eecaeee858312ac1ddeaeaa29
 
@@ -416,51 +416,51 @@ Relationships: `[]`
 
 ## semantic-proposition:25f0422f4fc05c8cacdee2adc8f9a20a6c7ddaf3f3a1531fcb025917803c31af
 
-SPECIALIZED: MUST leaders — use private written correction for inappropriate/unprofessional/unwelcome behavior
+DISTINCT: MUST leaders — use private written correction for inappropriate/unprofessional/unwelcome behavior
 
-Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 81, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "892043dd6e1920b0d474c4762b3a64bb4c1b3f377c7cc8adf7c25267a52ba01a", "start_line": 71}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "MUST", "object": "private written correction for inappropriate/unprofessional/unwelcome behavior", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Explain violation; public apology may be requested"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:8dde6e4fc5c1174464c4f6fe00787f69a7b514531dac1275d3995c8671870572"], "rationale": "Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:8dde6e4fc5c1174464c4f6fe00787f69a7b514531dac1275d3995c8671870572"], "rationale": "Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates."}]`
 
 ## semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c
 
-SPECIALIZED: MAY maintainers — moderate or ban nonconforming contributions and inappropriate, threatening, offensive or harmful participants
+DISTINCT: MAY maintainers — moderate or ban nonconforming contributions and inappropriate, threatening, offensive or harmful participants
 
-Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 62, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "a750d578a48e98269b2cbe7f9057b10d4b762a2ca6e0e26544170a8c079f0c46", "start_line": 58}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "moderate or ban", "consequences": [], "exceptions": [], "modality": "MAY", "object": "nonconforming contributions and inappropriate, threatening, offensive or harmful participants", "parameters": ["temporary or permanent ban"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
 
 ## semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9
 
-SPECIALIZED: MUST participants and project team — report and investigate unacceptable behavior with appropriate response and reporter confidentiality
+DISTINCT: MUST participants and project team — report and investigate unacceptable behavior with appropriate response and reporter confidentiality
 
-Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 80, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1c937a5b82ca4410ab6e542da49675a34ba4c6b78e71fc664f54ef43c18ddff9", "start_line": 75}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "report and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior with appropriate response and reporter confidentiality", "parameters": ["Source contact is bound in the span, not a GES destination"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Further enforcement policies may be posted separately"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants and project team"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07", "semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07", "semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
 
 ## semantic-proposition:27553762bc8e81ea584a1bf8ec4aca89e02f9d5ed0c9c74c59cdeca8ebfe11fa
 
-CONFLICTING: MAY repository owner — consider security policy
+DISTINCT: MAY repository owner — consider security policy
 
-Security is placed in the optional coulds category but its file-adaptation instruction is a should with a removal exception. The same-file policy-strength tension remains open; no mandatory security policy is inferred.
+Retain selection and adaptation as separate, compatible actions under their explicit applicability. No mandatory security policy or modal conflict is inferred.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 25, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "6e219d73067d5b5eeefef49e4f07e2d8c43042ad609cce73af5c1c1f1711c309", "start_line": 25}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "consider", "consequences": [], "exceptions": [], "modality": "MAY", "object": "security policy", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source coulds category"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "CONFLICTING", "counterpart_ids": ["semantic-proposition:217074c1d5a6d4b05ea470e61865f6f3fb53efcbfde25478b4249edd8a184069"], "rationale": "Security is placed in the optional coulds category but its file-adaptation instruction is a should with a removal exception. The same-file policy-strength tension remains open; no mandatory security policy is inferred."}]`
+Relationships: `[{"classification": "COMPLEMENTARY", "counterpart_ids": ["semantic-proposition:6942d739fd4cd9e7b4c97bb18ede417430994e625136f83b736b1a369d657311"], "rationale": "Optional security-policy selection and conditional adaptation are different actions. Adapt the policy when choosing to cover vulnerability reporting; otherwise removal is permitted. Both instructions can be satisfied, so no conflicting outcome is asserted."}]`
 
 ## semantic-proposition:2b7def0f614525b679e2b307e1f1aa2b9c0328bdadbcc5cbd00bcb95a8cfad15
 
@@ -474,17 +474,41 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[]`
 
+## semantic-proposition:2c33dcedf6607b110eb950a07fd2d9d94ff3e4b27b296f0342c3262948d478f9
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template about
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "0c8d64f29fb4536513653bf8c97da30f3340e2041b91c8952db1515d6b23a7b3", "end_line": 8, "path": ".github/ISSUE_TEMPLATE/bug_report.md", "repository": "atapas/model-repo", "span_sha256": "7106d6a46e9ee32b29135cbbf0d8a4dfef8bcf733b338d159a5f75926f9c7ab3", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template about", "parameters": ["frontmatter.about=Create a report to help us improve"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["atapas/model-repo", ".github/ISSUE_TEMPLATE/bug_report.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
+
 ## semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e
 
-SPECIALIZED: SHOULD project participants — use the well-written pull-request description as primary explanation of changes
+DISTINCT: SHOULD project participants — use the well-written pull-request description as primary explanation of changes
 
-PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt. Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt. Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 108, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "28ad77a4ff54035426091b8ade9c402aff49f98d0bb5ae292cee637231193b25", "start_line": 108}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "the well-written pull-request description as primary explanation of changes", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Commit messages need not be fine art"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}, {"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:0e8541d6dcccc73b218d9fa055348d33755adc6b153390116a26f2732f394bf5", "semantic-proposition:4be68e7e45e38d45af75c12b417ae771c8560f44988e9b235ceb99b9a056d8f3", "semantic-proposition:f3ff9668a240b8a5a2c507ae7331dddcf00460aac4a0a5f1caeee2b1868e7dfa"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}, {"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0e8541d6dcccc73b218d9fa055348d33755adc6b153390116a26f2732f394bf5", "semantic-proposition:4be68e7e45e38d45af75c12b417ae771c8560f44988e9b235ceb99b9a056d8f3", "semantic-proposition:f3ff9668a240b8a5a2c507ae7331dddcf00460aac4a0a5f1caeee2b1868e7dfa"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
+
+## semantic-proposition:2c97f29e96f7a56ea065a3616aa66119cce78571dec65ab81de38c451ff1523e
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template about
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "1f48c52f209a971b8e7eae4120144d28fcf8ee38a7778a7b4d8cf1ab356617d2", "end_line": 8, "path": ".github/ISSUE_TEMPLATE/feature_request.md", "repository": "atapas/model-repo", "span_sha256": "7cba44591d17ed2e1bf38a5528cfe13697ed1bd3e0c6795327a99e0594a5cb4e", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template about", "parameters": ["frontmatter.about=Suggest an idea for this project"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["atapas/model-repo", ".github/ISSUE_TEMPLATE/feature_request.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
 
 ## semantic-proposition:2d0f2401df3e1978063ea6ce8f5043cf3fb5500fbf55451394509be5d3460f01
 
@@ -500,27 +524,39 @@ Relationships: `[]`
 
 ## semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431
 
-SPECIALIZED: SHOULD project participants — separate cosmetic work, unrelated fixes and features into separate issues or pull requests
+DISTINCT: SHOULD project participants — separate cosmetic work, unrelated fixes and features into separate issues or pull requests
 
-Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 90, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "b92139ea6d30046e8a8dc464186655ba56da878b83889149044e49fca43b09c7", "start_line": 88}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "separate", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "cosmetic work, unrelated fixes and features into separate issues or pull requests", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Discovery does not belong to the current idea"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33", "semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b", "semantic-proposition:ead9cd2f5bcab669c1da8572ba6e368c1cd9e9a5ac5595e7211d6a59893553c2"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33", "semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b", "semantic-proposition:ead9cd2f5bcab669c1da8572ba6e368c1cd9e9a5ac5595e7211d6a59893553c2"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
 
 ## semantic-proposition:2f3680e51c628e278812960d1e27bb6c6f03c90977370b5be7335db7d5b281e2
 
-SPECIALIZED: SHOULD repository owner — adapt CODE_OF_CONDUCT.md including behavior and reporting contacts
+DISTINCT: SHOULD repository owner — adapt CODE_OF_CONDUCT.md including behavior and reporting contacts
 
-Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 56, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "3a2f6cac6eab23028ae7940169884a81bfeb8a9909a4d145c498293e6a631440", "start_line": 52}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "CODE_OF_CONDUCT.md including behavior and reporting contacts", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:d9cbbf723ffaf200818c8fb8c7a1b1a647b63bdba9b3c931c657b45b72d79ecb"], "rationale": "Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:d9cbbf723ffaf200818c8fb8c7a1b1a647b63bdba9b3c931c657b45b72d79ecb"], "rationale": "Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization."}]`
+
+## semantic-proposition:2faf105699e8496431e60662e02c563efe6726e759a2e3808ff1f18f00bae0fe
+
+DISTINCT: PROHIBITED participants — engage in other professionally inappropriate conduct
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "other professionally inappropriate conduct", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:200772466abc4757a236f08a9f3497675f69ff560dd67412b1e0f9cb80f35b6d", "semantic-proposition:9aa5f5329986cf76be8def6f6f01b6457f3e6d3ed33eb8d0bc7359dbff9517db"], "rationale": "Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes."}]`
 
 ## semantic-proposition:30400257c2df3ce2f826b540fe33f349cfad2376aa5b58bb24467ab6b510867b
 
@@ -536,51 +572,39 @@ Relationships: `[{"classification": "CONFLICTING", "counterpart_ids": ["semantic
 
 ## semantic-proposition:3083e421dbf320a411b5f14de2b54f10d74c2ea5348218fc7f13e44d958f7073
 
-SPECIALIZED: MUST maintainers — apply conduct rules in project spaces and public representation
+DISTINCT: MUST maintainers — apply conduct rules in project spaces and public representation
 
-Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 71, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "db8250bc810819a6b91a7caf89b36fc35e218a66bd89420752d892b94ec2c869", "start_line": 66}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "apply", "consequences": [], "exceptions": [], "modality": "MUST", "object": "conduct rules in project spaces and public representation", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Examples: project email, official social accounts or appointed representatives; maintainers may clarify representation"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:93e50bd54ea4deab1e887ca031aeb14c374e48bb3d69c4776518019cce2c062e", "semantic-proposition:dc9bfc2336a131cde0e7e983980976538713a7f0b78370c4ed1786ca69b7ec16"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
-
-## semantic-proposition:31ea8e22be5a509bb9ab0ccb80613326b87afd6b2c0ba942072d193d737355d8
-
-SPECIALIZED: MUST members, contributors and leaders — pledge harassment-free inclusive healthy participation regardless of enumerated characteristics
-
-Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 6, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "01d45d4dd637c3083246e86bcefbd9808d5cfa789d26f3ef84b32daeca0ed8c8", "start_line": 4}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "harassment-free inclusive healthy participation regardless of enumerated characteristics", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Short version includes caste and visible/invisible disability"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "members, contributors and leaders"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1d289445aee7d57aa7c8c419c9ed9c24b98aadc091b46a254347e85784fbdba1", "semantic-proposition:87c48b409721f459cde668183ad7c0f0cc5c101075f81fafd6925630393170a0", "semantic-proposition:93b3aff9bb79ce6b681d373dc95a752406c32ea85706d201667d376fcc00224d"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:93e50bd54ea4deab1e887ca031aeb14c374e48bb3d69c4776518019cce2c062e", "semantic-proposition:dc9bfc2336a131cde0e7e983980976538713a7f0b78370c4ed1786ca69b7ec16"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
 
 ## semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c
 
-SPECIALIZED: MUST community leaders — clarify and enforce acceptable behavior through fair corrective action
+DISTINCT: MUST community leaders — clarify and enforce acceptable behavior through fair corrective action
 
-Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "98ec25c43139061cb3e923cd5ece83d8dc4aaddc19d42daa5e51cc2f6841215f", "start_line": 41}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "clarify and enforce", "consequences": [], "exceptions": [], "modality": "MUST", "object": "acceptable behavior through fair corrective action", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
 
 ## semantic-proposition:345f7cd268645eb1992c15501dc81850450d896d607c5ca8ef5c58ca46d6626f
 
-SPECIALIZED: SHOULD project participants — default new primary branch name to main
+DISTINCT: SHOULD project participants — default new primary branch name to main
 
-Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 21, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "07edccda9b68dc27a55839f1887d8828547bef0026423fe5262b726c3bc31dcc", "start_line": 21}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "default", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "new primary branch name to main", "parameters": ["main"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:6b8daeae2909449abc663607531b9ae5552a202ed8cc99bdefe8e1af90c9699c"], "rationale": "Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6b8daeae2909449abc663607531b9ae5552a202ed8cc99bdefe8e1af90c9699c"], "rationale": "Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows."}]`
 
 ## semantic-proposition:35afe8c2c3330c1f8d93dd9cc48818e278efc29e5e9ef4a0522e7322cd230800
 
@@ -596,51 +620,39 @@ Relationships: `[]`
 
 ## semantic-proposition:37539ce9733cdfbf043a6e4a75e2a66c73be3a11d4853dfb15122dc59006a170
 
-SPECIALIZED: SHOULD issue author — provide proposed solution
+DISTINCT: SHOULD issue author — provide proposed solution
 
-Proposed and desired solutions are parallel prompts for different issue types and source-local templates.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Proposed and desired solutions are parallel prompts for different issue types and source-local templates.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a1f028fd0f7eee898fbbd8d070315a6a272d9aea10f65b92dac8d533c5638c17", "end_line": 13, "path": ".github/ISSUE_TEMPLATE/proposal.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "b2e2f3d391a696bd917d10e6a7e464518500eb19da026095c344de5b6ba726fa", "start_line": 11}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "provide", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "proposed solution", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/proposal.md"], "subject": "issue author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:60f99d1ce7f47462bea9c4bfdd7f2f906e56c4d51a51294d9fe99ee4ff87278a"], "rationale": "Proposed and desired solutions are parallel prompts for different issue types and source-local templates."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:60f99d1ce7f47462bea9c4bfdd7f2f906e56c4d51a51294d9fe99ee4ff87278a"], "rationale": "Proposed and desired solutions are parallel prompts for different issue types and source-local templates."}]`
 
 ## semantic-proposition:38d9e9255e66084a702b77a061db0f2cf1600474af1d21229ab4629f81ed262d
 
-SPECIALIZED: SHOULD project participants — use labels for categories and milestones for dated bounded work
+DISTINCT: SHOULD project participants — use labels for categories and milestones for dated bounded work
 
-Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 64, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "faaa689adce4ea0a346d9b6dd7e3489d8bc98755aa34b380ca994a94f70885d5", "start_line": 63}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "labels for categories and milestones for dated bounded work", "parameters": ["Example labels: bug, feature", "Example milestone: New feature sprint"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:d80b422b070fae3a3d33db1a231d601a72127da81ddfe4039d48d88d1344c466"], "rationale": "Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:f686003fc87143e65b95501cd293fc2ca76e0acb733f54c77e1a21efee583939"], "rationale": "Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism."}]`
 
 ## semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33
 
-SPECIALIZED: SHOULD project participants — keep pull requests short, within a few days and focused on one idea
+DISTINCT: SHOULD project participants — keep pull requests short, within a few days and focused on one idea
 
-Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 90, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "b92139ea6d30046e8a8dc464186655ba56da878b83889149044e49fca43b09c7", "start_line": 88}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "keep", "consequences": ["Large diffs impede review, conflict handling and regression diagnosis"], "exceptions": ["Large ideas may need longer diffs"], "modality": "SHOULD", "object": "pull requests short, within a few days and focused on one idea", "parameters": ["A few days; no exact numeric threshold"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431", "semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b", "semantic-proposition:ead9cd2f5bcab669c1da8572ba6e368c1cd9e9a5ac5595e7211d6a59893553c2"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
-
-## semantic-proposition:3af19ca07d23bc0b3c9f4a5b98c62277d71ffdd411d528056cc42db3b4e91070
-
-SPECIALIZED: PROHIBITED participants — avoid private information disclosure without explicit permission
-
-Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "private information disclosure without explicit permission", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:ac4979a6484cf0715ae55c68fe36781f21c8e0af03a0654dc65bd8e2526b6f38", "semantic-proposition:ca4e91daef67b731bbba0d19637d478fc878a2cd2ab748850ae148b8bd805b22"], "rationale": "Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431", "semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b", "semantic-proposition:ead9cd2f5bcab669c1da8572ba6e368c1cd9e9a5ac5595e7211d6a59893553c2"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
 
 ## semantic-proposition:3c26851e223216d5c140388a4eab9873d5a9fc96813ba1fd7d468befdf93ab40
 
@@ -656,27 +668,27 @@ Relationships: `[]`
 
 ## semantic-proposition:3c45c72ad7a3bef1764116b9e0875c02f26063599c11462edf7d0cbd933e879c
 
-SPECIALIZED: MUST project participants — maintain a passing main-branch test suite
+DISTINCT: MUST project participants — maintain a passing main-branch test suite
 
-Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 33, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "dab57f16986c8e079f41887abe2cbe5c32994af11ec4408b22d2cac71a41ea3f", "start_line": 33}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "maintain", "consequences": [], "exceptions": [], "modality": "MUST", "object": "a passing main-branch test suite", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Repository has tests"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1a7f490828ca2776364f819aee55f6362a3de19f34fc01ec859f1a6836bfcb21", "semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f", "semantic-proposition:b04690db7fd8a0e144ed53ef536afd3912c82bb3caf25f0d67a40accc0e003f2"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1a7f490828ca2776364f819aee55f6362a3de19f34fc01ec859f1a6836bfcb21", "semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f", "semantic-proposition:b04690db7fd8a0e144ed53ef536afd3912c82bb3caf25f0d67a40accc0e003f2"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
 
 ## semantic-proposition:3de46cee0429fa173e1c9629f138c205382647470bb332cdf6af1f2304081c81
 
-SPECIALIZED: MUST repository owner — edit or adapt project description
+DISTINCT: MUST repository owner — edit or adapt project description
 
-Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 11, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "0c8b69b34980fc4e63f80541843f77545b17319411040b3f5dac2f00cf3d3ac0", "start_line": 11}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "edit or adapt", "consequences": [], "exceptions": [], "modality": "MUST", "object": "project description", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source musts category; local adoption remains separate"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:982e7c9341cb21477124cab32d5356718f1ea587abc43210ce272e2a75c3df85"], "rationale": "Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:982e7c9341cb21477124cab32d5356718f1ea587abc43210ce272e2a75c3df85"], "rationale": "Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold."}]`
 
 ## semantic-proposition:3eeafa86518088a83e9331db7c4bbba745e4b0993a44c06e1eea9a1c01f821a3
 
@@ -704,27 +716,15 @@ Relationships: `[]`
 
 ## semantic-proposition:436ea8d9de93085d32e8ee4ed3ba6d35f20b3402fc83e2c5bf434d030c6a7e6a
 
-SPECIALIZED: MUST participants — follow the code of conduct when participating
+DISTINCT: MUST participants — follow the code of conduct when participating
 
-Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "e275e420804025a8fda3625a7a296a3baa5a0f179ab8239c7978798b0052b48f", "end_line": 24, "path": "README.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "11b2d3174fa0877639d89b28dae096ccf21bb01c7be91132db8341ee693f91a0", "start_line": 22}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "follow", "consequences": [], "exceptions": [], "modality": "MUST", "object": "the code of conduct when participating", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "README.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:475a38c4d57ce34ce748fa5da082a9375234cbb80972ff213f2b58ac820cd37b"], "rationale": "Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule."}]`
-
-## semantic-proposition:44431fcdd4e33b3ed3478a64653fc2642036df49c0f015bdc9b8b15265043377
-
-SPECIALIZED: PROHIBITED participants — avoid other professionally inappropriate conduct
-
-Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "other professionally inappropriate conduct", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:9a745252ccc68d81c02ebb8c6053a2df2c57f2b9187e560eaa462dbde6aa05c8", "semantic-proposition:fdfbd6a953c7f288eaf60f400d3baeb2d3c2759b0f3542e3f3a85520306d49f3"], "rationale": "Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:475a38c4d57ce34ce748fa5da082a9375234cbb80972ff213f2b58ac820cd37b"], "rationale": "Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule."}]`
 
 ## semantic-proposition:4463ee475b590661ef0fb61909e337267a874b10a9c3fc6c12e71e19438eb497
 
@@ -740,27 +740,27 @@ Relationships: `[]`
 
 ## semantic-proposition:475a38c4d57ce34ce748fa5da082a9375234cbb80972ff213f2b58ac820cd37b
 
-SPECIALIZED: MUST contributor — follow the code of conduct in all project interactions
+DISTINCT: MUST contributor — follow the code of conduct in all project interactions
 
-Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 6, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "ab2a8aed2c564bd685c6cd485b4d9f0a2d847b2a7d3dcf1e57eaa59b615c8937", "start_line": 6}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "follow", "consequences": [], "exceptions": [], "modality": "MUST", "object": "the code of conduct in all project interactions", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "contributor"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:436ea8d9de93085d32e8ee4ed3ba6d35f20b3402fc83e2c5bf434d030c6a7e6a"], "rationale": "Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:436ea8d9de93085d32e8ee4ed3ba6d35f20b3402fc83e2c5bf434d030c6a7e6a"], "rationale": "Participation requires the locally linked conduct policy; source-specific policies are not a universal adopted rule."}]`
 
 ## semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f
 
-SPECIALIZED: MAY repository owner — consider funding configuration
+DISTINCT: MAY repository owner — consider funding configuration
 
-Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 26, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "8dcef1de05d4210a31fd25c79456a3df72db1253ba05dacfc77bfbc5dd1a02e9", "start_line": 26}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "consider", "consequences": [], "exceptions": [], "modality": "MAY", "object": "funding configuration", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source coulds category"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
 
 ## semantic-proposition:48de8e4361223d91529803334613923c8e56c96a20fb831a77cc24377da84260
 
@@ -788,15 +788,15 @@ Relationships: `[]`
 
 ## semantic-proposition:4be68e7e45e38d45af75c12b417ae771c8560f44988e9b235ceb99b9a056d8f3
 
-SPECIALIZED: MAY project participants — leave discretionary squash, merge or rebase
+DISTINCT: MAY project participants — leave discretionary squash, merge or rebase
 
-Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 76, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "1c14146d0d5d1bc6e7269f48411db1d0f4c0c62b189e6fe8b3a80447adb0fa89", "start_line": 74}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "leave discretionary", "consequences": [], "exceptions": [], "modality": "MAY", "object": "squash, merge or rebase", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Different history tradeoffs; fancy history manipulation may waste effort"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:0e8541d6dcccc73b218d9fa055348d33755adc6b153390116a26f2732f394bf5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:f3ff9668a240b8a5a2c507ae7331dddcf00460aac4a0a5f1caeee2b1868e7dfa"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0e8541d6dcccc73b218d9fa055348d33755adc6b153390116a26f2732f394bf5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:f3ff9668a240b8a5a2c507ae7331dddcf00460aac4a0a5f1caeee2b1868e7dfa"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
 
 ## semantic-proposition:4d3f3fc7016b5ad2414e501217a264d7a2470c5c872fb8e0aedfd4ef8656cfa1
 
@@ -812,15 +812,15 @@ Relationships: `[]`
 
 ## semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f
 
-SPECIALIZED: DESCRIPTIVE funding template — illustrate supported funding keys and substitution instructions
+REFERENTIAL: DESCRIPTIVE funding template — illustrate supported funding keys and substitution instructions
 
-Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "74eedd61a6e8bfdb213829cedbcaf93579bf6aef703981b14e692fb40486e8e7", "end_line": 13, "path": "FUNDING.yml", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "89b8bbb10f36e35faeaab4719f23f0e4e83dcaac2b03e4d4be90a58f85aeee9a", "start_line": 3}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "illustrate", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "supported funding keys and substitution instructions", "parameters": ["github: up to 4 sponsor-enabled usernames", "custom: up to 4 URLs", "patreon, open_collective, ko_fi, liberapay, issuehunt, otechie: single username", "tidelift: platform/package", "community_bridge and lfx_crowdfunding: project name"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Keys are source-era examples; B0 does not refresh platform support"], "scope": ["jlcanovas/gh-best-practices-template", "FUNDING.yml"], "subject": "funding template"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
 
 ## semantic-proposition:4f3d21e5bd8dec78d18ffd14bda6b75b89ca0efed760dd2cbfe146e46892f1da
 
@@ -848,63 +848,63 @@ Relationships: `[]`
 
 ## semantic-proposition:53188c3cc33172714533a89914548b6ada4cd58f56dba5d16d0487aaf4a61971
 
-SPECIALIZED: MAY project participants — offer optionally a Kanban Projects view
+DISTINCT: MAY project participants — offer optionally a Kanban Projects view
 
-Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 55, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "ce26f1131100ee83e17182d3c360cf3340c5cd607a5aa1bb3363b84352042bf6", "start_line": 55}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "offer optionally", "consequences": [], "exceptions": [], "modality": "MAY", "object": "a Kanban Projects view", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Author sees potential manager value without developer/design impact"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:bddc1a14de696ce681b05e1ad843e6e04becec64ff7f6524d121196fa8d7584a"], "rationale": "Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:bddc1a14de696ce681b05e1ad843e6e04becec64ff7f6524d121196fa8d7584a"], "rationale": "Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained."}]`
 
 ## semantic-proposition:53888d0999bc168e78b94ad9f1b47fe98003e10db70a3b13723ed373f4071e50
 
-SPECIALIZED: SHOULD repository owner — define and check CODEOWNERS and necessary write permissions against linked platform documentation
+DISTINCT: SHOULD repository owner — define and check CODEOWNERS and necessary write permissions against linked platform documentation
 
-Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 72, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "6b5137ac0685d04957aa9e4ab39ee20ac3ef5751280abae774e217d382cc202c", "start_line": 68}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "define and check", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "CODEOWNERS and necessary write permissions against linked platform documentation", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source claims review requests occur for owned code; enforcement prerequisites not established by template"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:8e17ff56a50fb9d4449e7fa47ac598e02458af76c13f30aef51d1168d68519ed", "semantic-proposition:f2f5fe250f654079981c8a39ead77d76a1e2f1461b86ec4c79a76c2e03c5314a"], "rationale": "Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:8e17ff56a50fb9d4449e7fa47ac598e02458af76c13f30aef51d1168d68519ed", "semantic-proposition:f2f5fe250f654079981c8a39ead77d76a1e2f1461b86ec4c79a76c2e03c5314a"], "rationale": "Considering ownership is complemented by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed."}]`
 
 ## semantic-proposition:53e67e234764545f48b50cfd82f628e1efb0bf3c87aedefabd40add401c0a851
 
-SPECIALIZED: SHOULD project participants — avoid large binary history in ordinary Git
+DISTINCT: SHOULD project participants — avoid large binary history in ordinary Git
 
-Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 122, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "966135d7e383172d8a8712153d4914c755fb2d18cf8b88baedea8268dc4b8417", "start_line": 122}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "avoid", "consequences": ["Every version increases repository size and cloning/storage cost"], "exceptions": [], "modality": "SHOULD", "object": "large binary history in ordinary Git", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1cecb5afb21e996f63a4dc3aec5df84d23eb66cd4d8a8cd5abb31551ceb5169d", "semantic-proposition:afd78843383f4c838e0d09f3587aeed5a1e33118f7c23c5c5c498f6726b74e75"], "rationale": "Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1cecb5afb21e996f63a4dc3aec5df84d23eb66cd4d8a8cd5abb31551ceb5169d", "semantic-proposition:afd78843383f4c838e0d09f3587aeed5a1e33118f7c23c5c5c498f6726b74e75"], "rationale": "Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning."}]`
 
 ## semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd
 
-SPECIALIZED: SHOULD repository owner — adapt or remove CITATION.cff for paper citation
+DISTINCT: SHOULD repository owner — adapt or remove CITATION.cff for paper citation
 
-Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 116, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "cc03ea594e8fe6caf28064a9f07fccff92a96f881f33a0517019a4fe09922c32", "start_line": 114}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt or remove", "consequences": [], "exceptions": ["Otherwise remove the file"], "modality": "SHOULD", "object": "CITATION.cff for paper citation", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Related paper and intent to facilitate citation"], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164", "semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164", "semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are complemented by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
 
 ## semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76
 
-SPECIALIZED: MAY contributor — merge or delegate a pull request after two other developers sign off
+DISTINCT: MAY contributor — merge or delegate a pull request after two other developers sign off
 
-Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 17, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "7c8b1bb0c6228431ae32b7ead2947ef0b2244b9c8a2d16f9a31192c1329c36b0", "start_line": 16}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "merge or delegate", "consequences": [], "exceptions": ["Without permission request the second reviewer to merge"], "modality": "MAY", "object": "a pull request after two other developers sign off", "parameters": ["2 other developers"], "polarity": "POSITIVE", "preconditions": ["Two other developer sign-offs"], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "contributor"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:a99b77a40359d468b19859c0df0259a4f5b3c9bfc1cab066d3305ea33b05c089", "semantic-proposition:b42003b15c2e3ff4d051bf901e5253dd039f6747c1ed219843519c67705be961", "semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:a99b77a40359d468b19859c0df0259a4f5b3c9bfc1cab066d3305ea33b05c089", "semantic-proposition:b42003b15c2e3ff4d051bf901e5253dd039f6747c1ed219843519c67705be961", "semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
 
 ## semantic-proposition:56e99a199e597592847baddf683cbea61d20c510c05cb17fa68b68f8e99cc7b5
 
@@ -956,15 +956,27 @@ Relationships: `[]`
 
 ## semantic-proposition:5d47a0d9e956790934c9ad113328b06aa2fc6c577dc386fb9f85128edc54d10a
 
-SPECIALIZED: MUST maintainers — assign pull-request labels and assignees
+DISTINCT: MUST maintainers — assign pull-request labels and assignees
 
-Label/assignee duties specialize issue and PR administration separately.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Label/assignee duties specialize issue and PR administration separately.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 33, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "d020b5e0b0d190b84334b0f124ae7125e43cb0f6d1ba42c02ee9f872c57ad1cf", "start_line": 33}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "assign", "consequences": [], "exceptions": [], "modality": "MUST", "object": "pull-request labels and assignees", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1ccb50d1b1f156565fa37a51d7c01c9e911344c848e5b0c6f41f4fd4b90a90a1"], "rationale": "Label/assignee duties specialize issue and PR administration separately."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1ccb50d1b1f156565fa37a51d7c01c9e911344c848e5b0c6f41f4fd4b90a90a1"], "rationale": "Label/assignee duties describe issue and PR administration separately."}]`
+
+## semantic-proposition:5d89ef58f1152525c616a8116fbb9f1142091143a1ab591779ef46336abdffbd
+
+DISTINCT: PROHIBITED participants — publish private information disclosure without explicit permission
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "publish", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "private information disclosure without explicit permission", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:028cb440b315e12ff0e0451a12bb7f502466078329372f1f83c3067d16bb229a", "semantic-proposition:6e09a4a717d0ef8618f5ae4ac6bdc58652001ac0683b1030698fabdb4b8e6534"], "rationale": "Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes."}]`
 
 ## semantic-proposition:5e184bcc226a1545901af898d5975bab446c04427792cf493fb44349f71df5ba
 
@@ -980,27 +992,39 @@ Relationships: `[]`
 
 ## semantic-proposition:60f99d1ce7f47462bea9c4bfdd7f2f906e56c4d51a51294d9fe99ee4ff87278a
 
-SPECIALIZED: SHOULD requester — describe desired solution
+DISTINCT: SHOULD requester — describe desired solution
 
-Proposed and desired solutions are parallel prompts for different issue types and source-local templates.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Proposed and desired solutions are parallel prompts for different issue types and source-local templates.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "1f48c52f209a971b8e7eae4120144d28fcf8ee38a7778a7b4d8cf1ab356617d2", "end_line": 14, "path": ".github/ISSUE_TEMPLATE/feature_request.md", "repository": "atapas/model-repo", "span_sha256": "1b39f64cb54a0cbc406008891b13d2a5c66cef4612a99ca3c73a1fc547b1c920", "start_line": 13}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "desired solution", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", ".github/ISSUE_TEMPLATE/feature_request.md"], "subject": "requester"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:37539ce9733cdfbf043a6e4a75e2a66c73be3a11d4853dfb15122dc59006a170"], "rationale": "Proposed and desired solutions are parallel prompts for different issue types and source-local templates."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:37539ce9733cdfbf043a6e4a75e2a66c73be3a11d4853dfb15122dc59006a170"], "rationale": "Proposed and desired solutions are parallel prompts for different issue types and source-local templates."}]`
 
 ## semantic-proposition:61af504542ab7adae3459d4aec4f3c7e2b9253dfd14d088ff759ec4e77708b1c
 
-SPECIALIZED: SHOULD question author — ask clear concise questions with useful information through the question issue template
+DISTINCT: SHOULD question author — ask clear concise questions with useful information through the question issue template
 
-Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907", "end_line": 11, "path": "CONTRIBUTING.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "562dd430fd311d964aa5c051d7cb54184bcf6f7e6dad82ac4e51468dbbc64be8", "start_line": 9}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "ask", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "clear concise questions with useful information through the question issue template", "parameters": ["YOUR-ORGANIZATION", "YOUR-PROJECT"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CONTRIBUTING.md"], "subject": "question author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1c1982ad1fae3a4e6cf7a666ab340d9dbd8daad9bcdafc54e19d6a8a6b91e26d"], "rationale": "Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1c1982ad1fae3a4e6cf7a666ab340d9dbd8daad9bcdafc54e19d6a8a6b91e26d"], "rationale": "Optional question submission is complemented by clarity/information guidance; optional participation is not turned into a required issue."}]`
+
+## semantic-proposition:632e9999915fb8627ed4fdb237b4b731d55b721d518f584fdbcb4bbcc06d361b
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template name
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "0c8d64f29fb4536513653bf8c97da30f3340e2041b91c8952db1515d6b23a7b3", "end_line": 8, "path": ".github/ISSUE_TEMPLATE/bug_report.md", "repository": "atapas/model-repo", "span_sha256": "7106d6a46e9ee32b29135cbbf0d8a4dfef8bcf733b338d159a5f75926f9c7ab3", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template name", "parameters": ["frontmatter.name=Bug report"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["atapas/model-repo", ".github/ISSUE_TEMPLATE/bug_report.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
 
 ## semantic-proposition:67354deb32f502da3064e46377507434aade6e18e9a14836c47222f22cfb235c
 
@@ -1016,51 +1040,63 @@ Relationships: `[]`
 
 ## semantic-proposition:6753fb346daf0e594532c7da908c9fb04a9310ef5a2493e2188f42c83a0713ac
 
-SPECIALIZED: MUST repository owner — edit or adapt README
+DISTINCT: MUST repository owner — edit or adapt README
 
-README adaptation is specialized by required presentation topics and installation only when needed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. README adaptation is specialized by required presentation topics and installation only when needed.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 16, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "f0c9af38db4bbca74f05e2b9b3fb8661e8807e92d59c43a570d7cd27df6163ee", "start_line": 16}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "edit or adapt", "consequences": [], "exceptions": [], "modality": "MUST", "object": "README", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source musts category; local adoption remains separate"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:cecd429bed4c70abd2c4f8e3235dcc14e046475998cdaefa3c67e444d5a0fffc"], "rationale": "README adaptation is specialized by required presentation topics and installation only when needed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:cecd429bed4c70abd2c4f8e3235dcc14e046475998cdaefa3c67e444d5a0fffc"], "rationale": "README adaptation is complemented by required presentation topics and installation only when needed."}]`
 
-## semantic-proposition:6901a5ceda16838921e6391cfdd5f0ff3a47aa501dc8f3308a4a9789eb6f0ef2
+## semantic-proposition:6942d739fd4cd9e7b4c97bb18ede417430994e625136f83b736b1a369d657311
 
-SPECIALIZED: PROHIBITED participants — avoid public or private harassment
+DISTINCT: SHOULD repository owner — adapt SECURITY.md describing vulnerability reporting
 
-Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition.
+Retain selection and adaptation as separate, compatible actions under their explicit applicability. No mandatory security policy or modal conflict is inferred.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 100, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "2dd8f768983ca9e4f0dca1a1069e934d6f53197be5bf1f51d09f0e026f71fe2d", "start_line": 96}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "public or private harassment", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt", "consequences": [], "exceptions": ["Otherwise the source permits removal of SECURITY.md"], "modality": "SHOULD", "object": "SECURITY.md describing vulnerability reporting", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Project chooses to cover vulnerability reporting"], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:183bf337651ff9b6b2cfa68689e8683d48baa172e055aa3c62a6c6edbb9576f2", "semantic-proposition:7dd372944da500c199a2249e65761fe00af6caccfe3a578425f0eda8abbbcedd"], "rationale": "Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition."}]`
+Relationships: `[{"classification": "COMPLEMENTARY", "counterpart_ids": ["semantic-proposition:27553762bc8e81ea584a1bf8ec4aca89e02f9d5ed0c9c74c59cdeca8ebfe11fa"], "rationale": "Optional security-policy selection and conditional adaptation are different actions. Adapt the policy when choosing to cover vulnerability reporting; otherwise removal is permitted. Both instructions can be satisfied, so no conflicting outcome is asserted."}]`
 
 ## semantic-proposition:6b8daeae2909449abc663607531b9ae5552a202ed8cc99bdefe8e1af90c9699c
 
-SPECIALIZED: MAY project participants — rename optionally an existing master primary branch
+DISTINCT: MAY project participants — rename optionally an existing master primary branch
 
-Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 21, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "07edccda9b68dc27a55839f1887d8828547bef0026423fe5262b726c3bc31dcc", "start_line": 21}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "rename optionally", "consequences": [], "exceptions": [], "modality": "MAY", "object": "an existing master primary branch", "parameters": ["master", "main"], "polarity": "POSITIVE", "preconditions": ["Maintainer considers renaming important"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:345f7cd268645eb1992c15501dc81850450d896d607c5ca8ef5c58ca46d6626f"], "rationale": "Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:345f7cd268645eb1992c15501dc81850450d896d607c5ca8ef5c58ca46d6626f"], "rationale": "Defaulting a new branch to main differs from optionally renaming an existing master branch; no forced migration follows."}]`
 
 ## semantic-proposition:6c3ef4d4f2a71d47ede077ddf887c4424efe90135956cda2983328be7a4c6502
 
-SPECIALIZED: SHOULD project participants — choose same-branch development or merge prerequisite then branch from main
+DISTINCT: SHOULD project participants — choose same-branch development or merge prerequisite then branch from main
 
-Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 15, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "8cd486e6fb13ea12166169996fd1454efa42417b0846bba3f8b2ab4cf84e99f9", "start_line": 15}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "choose", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "same-branch development or merge prerequisite then branch from main", "parameters": [], "polarity": "POSITIVE", "preconditions": ["One feature depends on another"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:7c3403c3ff73b05121b6b222393c2aad0ac19a89943e21ee95c29dcd1f423dce", "semantic-proposition:da0476f1e8c3aa0f2c2ccd2d8ef02f138b13736ac7ded86b662a5224343e95c4"], "rationale": "Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:ac9c18e23e12c49967a893d7c0a5b8f523e8fee8880a2b5377c03c5fdb2b3582", "semantic-proposition:da0476f1e8c3aa0f2c2ccd2d8ef02f138b13736ac7ded86b662a5224343e95c4"], "rationale": "Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives."}]`
+
+## semantic-proposition:6ce3efeb81184d9fa9ffae8d8903be6b3de70f856d783c9569c25bc73b1d713c
+
+DISTINCT: MUST members, contributors and leaders — pledge harassment-free inclusive healthy participation regardless of enumerated characteristics
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 13, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7769c3089e7916c5ffb2ae27fe240c614db302b1c066459c00b04c7b978bd3d7", "start_line": 5}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "harassment-free inclusive healthy participation regardless of enumerated characteristics", "parameters": ["characteristic:age", "characteristic:body size", "characteristic:visible or invisible disability", "characteristic:ethnicity", "characteristic:sex characteristics", "characteristic:gender identity and expression", "characteristic:level of experience", "characteristic:education", "characteristic:socio-economic status", "characteristic:nationality", "characteristic:personal appearance", "characteristic:race", "characteristic:religion", "characteristic:sexual identity and orientation"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Covenant 2.0-derived pledge; enumeration bound to source span"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "members, contributors and leaders"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:8e75625620c4a6f75886f9e52a960f14e52660c202084f784303a7cb3cdfacc2", "semantic-proposition:9f4018de5c2e6bb1678d501bb94b0302aa571a839b2dd20ee1ea92997a83be6c", "semantic-proposition:f2383cb4a985c55dbe08d710674cdb806afa673003e21c31d2da36c7ca410dd5"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
 
 ## semantic-proposition:6d46b6276bd7ed16c1b622e3eb202a296171356dea9fce375b941ac1c9287562
 
@@ -1073,6 +1109,18 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "illustrate", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "patterns followed by owners, with wildcard default owners unless a later match overrides", "parameters": ["*", "@global-owner1", "@global-owner2"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODEOWNERS"], "subject": "CODEOWNERS example"}}`
 
 Relationships: `[]`
+
+## semantic-proposition:6e09a4a717d0ef8618f5ae4ac6bdc58652001ac0683b1030698fabdb4b8e6534
+
+DISTINCT: PROHIBITED participants — publish private information disclosure without explicit permission
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "publish", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "private information disclosure without explicit permission", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:028cb440b315e12ff0e0451a12bb7f502466078329372f1f83c3067d16bb229a", "semantic-proposition:5d89ef58f1152525c616a8116fbb9f1142091143a1ab591779ef46336abdffbd"], "rationale": "Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes."}]`
 
 ## semantic-proposition:6e628982dc46dd79f431d60dfb96eab73ba79d345fc865c8d184ff8336214ceb
 
@@ -1100,15 +1148,15 @@ Relationships: `[]`
 
 ## semantic-proposition:719b64fb50665fb2ac9a31c32a8a99def7fadd770c3f418b12429af5c0fc0930
 
-SPECIALIZED: SHOULD participants — respect different viewpoints and experiences
+DISTINCT: SHOULD participants — respect different viewpoints and experiences
 
-Respect for differing views and experiences overlaps without identical source scope or wording.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Respect for differing views and experiences overlaps without identical source scope or wording.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 39, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "9465024e8cb4b47befe0d034c8ece409641cf6fce1fa6e21527a12522c2258d1", "start_line": 35}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "respect", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "different viewpoints and experiences", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:bcae8bfe4b2dfaf08cb9b284c7e526530b19aa247f98380ecb17a352b4e47af5", "semantic-proposition:df3f5d7e8f7bc1cba290bb8cda18896d39a797c42d3be8fe1477f37c6b4cc07f"], "rationale": "Respect for differing views and experiences overlaps without identical source scope or wording."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:bcae8bfe4b2dfaf08cb9b284c7e526530b19aa247f98380ecb17a352b4e47af5", "semantic-proposition:df3f5d7e8f7bc1cba290bb8cda18896d39a797c42d3be8fe1477f37c6b4cc07f"], "rationale": "Respect for differing views and experiences overlaps without identical source scope or wording."}]`
 
 ## semantic-proposition:72d3c816b62fc4a7a905e746ce8c3b8d54b8635f7546359240bea789cda0371d
 
@@ -1136,27 +1184,39 @@ Relationships: `[]`
 
 ## semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d
 
-SPECIALIZED: SHOULD issue author — use the proposal issue template when no existing issue describes the problem
+DISTINCT: SHOULD issue author — use the proposal issue template when no existing issue describes the problem
 
-Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907", "end_line": 23, "path": "CONTRIBUTING.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "90db427ef6e4153683b5a958a7b6528fd34bb1320c5a1cab25e0fff265e76cc0", "start_line": 23}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "the proposal issue template when no existing issue describes the problem", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CONTRIBUTING.md"], "subject": "issue author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
 ## semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4
 
-SPECIALIZED: MUST maintainers — clarify and moderate unacceptable behavior fairly, including contribution removal or participant bans
+DISTINCT: MUST maintainers — clarify and moderate unacceptable behavior fairly, including contribution removal or participant bans
 
-Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 50, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "224ba9c47fb3e8ae7dc7427f7dbc94f9f1d99981015ddd6f976969e878d2f509", "start_line": 48}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "clarify and moderate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior fairly, including contribution removal or participant bans", "parameters": ["temporary or permanent bans"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+
+## semantic-proposition:7b2716f3ba345f9161547e2e5e85637140c40ac9e23188a0fd1b6eaa0460692e
+
+DISTINCT: PROHIBITED participants — use sexualized language or imagery and unwelcome attention or advances
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "sexualized language or imagery and unwelcome attention or advances", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:9faf990c63438d6ec3c456dcab554b6f2a166f617ecbf12d6dae68c38f7f8a13"], "rationale": "Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence."}]`
 
 ## semantic-proposition:7c1b58c56afdbad1aadb30c7cf293a4eeaa1d112f1c95cafb486f328015b0421
 
@@ -1169,18 +1229,6 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": ["guidelines.md says CC-BY-SA while README and LICENSE.md say Attribution 4.0"], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "declare", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "CC BY 4.0 licensing and reuse description", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Reference-only assertion; no D3 rights clearance"], "scope": ["jlcanovas/gh-best-practices-template", "README.md"], "subject": "README"}}`
 
 Relationships: `[{"classification": "CONFLICTING", "counterpart_ids": ["semantic-proposition:e365a85130cfb6e48b9ac62e1a6f3c703b26dc1fd2a62e5cf41084093d8c0e97"], "rationale": "README declares CC BY 4.0 while guidelines describe CC-BY-SA as the starting license. Retain the documented source identity inconsistency; LICENSE.md remains B0 reference-only evidence, and no publication permission is decided."}]`
-
-## semantic-proposition:7c3403c3ff73b05121b6b222393c2aad0ac19a89943e21ee95c29dcd1f423dce
-
-SPECIALIZED: PROHIBITED project participants — avoid branch ancestry beyond the described occasional child of a feature branch
-
-Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives.
-
-Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 15, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "8cd486e6fb13ea12166169996fd1454efa42417b0846bba3f8b2ab4cf84e99f9", "start_line": 15}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "avoid", "consequences": ["Deeper ancestry impairs review, maintenance and merging"], "exceptions": [], "modality": "PROHIBITED", "object": "branch ancestry beyond the described occasional child of a feature branch", "parameters": [], "polarity": "NEGATIVE", "preconditions": ["Source product-development context"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:6c3ef4d4f2a71d47ede077ddf887c4424efe90135956cda2983328be7a4c6502", "semantic-proposition:da0476f1e8c3aa0f2c2ccd2d8ef02f138b13736ac7ded86b662a5224343e95c4"], "rationale": "Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives."}]`
 
 ## semantic-proposition:7cc1bcc7b0c08af8acd5f7540ee7d54b4cec7dde06c65603e119ce8743ad0b7a
 
@@ -1218,18 +1266,6 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[]`
 
-## semantic-proposition:7dd372944da500c199a2249e65761fe00af6caccfe3a578425f0eda8abbbcedd
-
-SPECIALIZED: PROHIBITED participants — avoid public or private harassment
-
-Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "public or private harassment", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:183bf337651ff9b6b2cfa68689e8683d48baa172e055aa3c62a6c6edbb9576f2", "semantic-proposition:6901a5ceda16838921e6391cfdd5f0ff3a47aa501dc8f3308a4a9789eb6f0ef2"], "rationale": "Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition."}]`
-
 ## semantic-proposition:7e1f2649dbc489d8e161f908b657639bb039a4bb7bf4df1a2a8f23bb7889763d
 
 CONFLICTING: MUST README — urge starring as motivation in promotional must wording
@@ -1254,89 +1290,77 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
-## semantic-proposition:7fd5b777fe54d09974108575a3f5300c608adfe87632b10111c7a90e11722cfb
+## semantic-proposition:807965f4de80b5f078016f79e8c6863d358c077cedb83375ade771bc7e2c662f
 
-SPECIALIZED: PROHIBITED participants — avoid trolling, insulting comments and personal or political attacks
+DISTINCT: PROHIBITED participants — use discriminatory jokes or language
 
-Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
+Retain an independent source-local proposition: participants — PROHIBITED avoid discriminatory jokes or language. No equivalent or superseding proposition is asserted in this batch.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, insulting comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "discriminatory jokes or language", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:b3ee3b0c477a0685b9b9483f2d091818e0f67a1ce829b7ab85563e113123ec73", "semantic-proposition:f4dd7a4697ec6b6981ccdc0d2dcae6422b071c2ebae5fa45f11066cbb9363f18"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
+Relationships: `[]`
 
 ## semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001
 
-SPECIALIZED: SHOULD project participants — link pull requests to the preceding issue
+DISTINCT: SHOULD project participants — link pull requests to the preceding issue
 
-Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 45, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "fd787b7e5f1451ed728a23c837642fe654efeb77ef016b2d50504de437905a2b", "start_line": 45}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "link", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "pull requests to the preceding issue", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Ideally use a closing Fixes reference"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
-
-## semantic-proposition:87c48b409721f459cde668183ad7c0f0cc5c101075f81fafd6925630393170a0
-
-SPECIALIZED: MUST members, contributors and leaders — pledge harassment-free inclusive healthy participation regardless of enumerated characteristics
-
-Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 13, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7769c3089e7916c5ffb2ae27fe240c614db302b1c066459c00b04c7b978bd3d7", "start_line": 5}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "harassment-free inclusive healthy participation regardless of enumerated characteristics", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Covenant 2.0-derived pledge; enumeration bound to source span"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "members, contributors and leaders"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1d289445aee7d57aa7c8c419c9ed9c24b98aadc091b46a254347e85784fbdba1", "semantic-proposition:31ea8e22be5a509bb9ab0ccb80613326b87afd6b2c0ba942072d193d737355d8", "semantic-proposition:93b3aff9bb79ce6b681d373dc95a752406c32ea85706d201667d376fcc00224d"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
 ## semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd
 
-SPECIALIZED: SHOULD participants — give and accept constructive feedback
+DISTINCT: SHOULD participants — give and accept constructive feedback
 
-Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 26, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7b3f3a657791bfa3fe208f1d3d64d0065362a575f293cb136b106260921909bf", "start_line": 20}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "give and accept", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "constructive feedback", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
 
 ## semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164
 
-SPECIALIZED: MAY repository owner — consider citation file for related paper
+DISTINCT: MAY repository owner — consider citation file for related paper
 
-Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 27, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "dbac77e3acd83326d11033417f43cd3ed9216ab8068428c20810a43de76814fd", "start_line": 27}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "consider", "consequences": [], "exceptions": [], "modality": "MAY", "object": "citation file for related paper", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source coulds category"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are complemented by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
 
 ## semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f
 
-SPECIALIZED: SHOULD project participants — resolve causes of nondeterministic test failure
+DISTINCT: SHOULD project participants — resolve causes of nondeterministic test failure
 
-Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 33, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "dab57f16986c8e079f41887abe2cbe5c32994af11ec4408b22d2cac71a41ea3f", "start_line": 33}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "resolve", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "causes of nondeterministic test failure", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Flaky tests cause failures"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1a7f490828ca2776364f819aee55f6362a3de19f34fc01ec859f1a6836bfcb21", "semantic-proposition:3c45c72ad7a3bef1764116b9e0875c02f26063599c11462edf7d0cbd933e879c", "semantic-proposition:b04690db7fd8a0e144ed53ef536afd3912c82bb3caf25f0d67a40accc0e003f2"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1a7f490828ca2776364f819aee55f6362a3de19f34fc01ec859f1a6836bfcb21", "semantic-proposition:3c45c72ad7a3bef1764116b9e0875c02f26063599c11462edf7d0cbd933e879c", "semantic-proposition:b04690db7fd8a0e144ed53ef536afd3912c82bb3caf25f0d67a40accc0e003f2"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
 
 ## semantic-proposition:8b6cd2331fc1f45d4fbb2fdd33e0d43dfc5de84860bf96b3055ff88142bb2d20
 
-SPECIALIZED: MUST maintainers — use warning with consequences and timed no-contact restrictions for incidents or series of actions
+DISTINCT: MUST maintainers — use warning with consequences and timed no-contact restrictions for incidents or series of actions
 
-Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 86, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "73406e11b26a51756ece0868b7fc59712ff1c635449761dca8096177344b7e28", "start_line": 85}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": ["Violation may cause temporary or permanent ban"], "exceptions": [], "modality": "MUST", "object": "warning with consequences and timed no-contact restrictions for incidents or series of actions", "parameters": ["specified period; no fixed duration"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No unsolicited contact including enforcers and external channels"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:a35df41727b4bb2b50af96fdf3ed9cfd5d99dcea8779e308856c2b7650ee6a97"], "rationale": "Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:a35df41727b4bb2b50af96fdf3ed9cfd5d99dcea8779e308856c2b7650ee6a97"], "rationale": "Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source."}]`
 
 ## semantic-proposition:8d0ddbbbcfa76b92d5829125da6fa9eeb2767cc78ab27b7fb219f05c5487b676
 
@@ -1352,39 +1376,63 @@ Relationships: `[]`
 
 ## semantic-proposition:8dde6e4fc5c1174464c4f6fe00787f69a7b514531dac1275d3995c8671870572
 
-SPECIALIZED: MUST maintainers — use private written correction for inappropriate/unprofessional/unwelcome behavior
+DISTINCT: MUST maintainers — use private written correction for inappropriate/unprofessional/unwelcome behavior
 
-Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 81, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "309890f056a93d497e43d9519b5dc65332666da714d8a539a684abcc171ca279", "start_line": 76}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "MUST", "object": "private written correction for inappropriate/unprofessional/unwelcome behavior", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Explain violation; public apology may be requested"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:25f0422f4fc05c8cacdee2adc8f9a20a6c7ddaf3f3a1531fcb025917803c31af"], "rationale": "Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:25f0422f4fc05c8cacdee2adc8f9a20a6c7ddaf3f3a1531fcb025917803c31af"], "rationale": "Private correction is parallel conduct guidance; leadership identity and applicability differ, so these are not exact duplicates."}]`
 
 ## semantic-proposition:8e17ff56a50fb9d4449e7fa47ac598e02458af76c13f30aef51d1168d68519ed
 
-SPECIALIZED: MUST template-defined team owners — require explicit repository write access for team ownership
+DISTINCT: MUST template-defined team owners — require explicit repository write access for team ownership
 
-Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "5f81d760176abcc6875aaae4a02019d868f1b2e3059b11481c4f0327a2c77225", "end_line": 28, "path": "CODEOWNERS", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "f9db9a6e6ed9832a8e4b8c0399c0a43bc2767ae2a40b0eb765d3dfb73808e1b1", "start_line": 24}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "require", "consequences": [], "exceptions": [], "modality": "MUST", "object": "explicit repository write access for team ownership", "parameters": ["@org/team-name", "*.txt @octo-org/octocats"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Borrowed platform statement remains community evidence; verify against Docs in C4"], "scope": ["jlcanovas/gh-best-practices-template", "CODEOWNERS"], "subject": "template-defined team owners"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:53888d0999bc168e78b94ad9f1b47fe98003e10db70a3b13723ed373f4071e50", "semantic-proposition:f2f5fe250f654079981c8a39ead77d76a1e2f1461b86ec4c79a76c2e03c5314a"], "rationale": "Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:53888d0999bc168e78b94ad9f1b47fe98003e10db70a3b13723ed373f4071e50", "semantic-proposition:f2f5fe250f654079981c8a39ead77d76a1e2f1461b86ec4c79a76c2e03c5314a"], "rationale": "Considering ownership is complemented by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed."}]`
+
+## semantic-proposition:8e75625620c4a6f75886f9e52a960f14e52660c202084f784303a7cb3cdfacc2
+
+DISTINCT: MUST contributors and maintainers — pledge respectful harassment-free contribution through issues, features, documentation, pull requests and other activities
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 21, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "f72a0c4eca08263b5134fc4f9181af74ca94b8ffe9c5a0c2b0c369b0896b84c3", "start_line": 19}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "respectful harassment-free contribution through issues, features, documentation, pull requests and other activities", "parameters": ["characteristic:age", "characteristic:body size", "characteristic:disability", "characteristic:ethnicity", "characteristic:sex characteristics", "characteristic:gender identity and expression", "characteristic:level of experience", "characteristic:education", "characteristic:socio-economic status", "characteristic:nationality", "characteristic:personal appearance", "characteristic:race", "characteristic:religion", "characteristic:sexual identity and orientation"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Long pledge has a different enumerated characteristic list from short version"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "contributors and maintainers"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6ce3efeb81184d9fa9ffae8d8903be6b3de70f856d783c9569c25bc73b1d713c", "semantic-proposition:9f4018de5c2e6bb1678d501bb94b0302aa571a839b2dd20ee1ea92997a83be6c", "semantic-proposition:f2383cb4a985c55dbe08d710674cdb806afa673003e21c31d2da36c7ca410dd5"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
+
+## semantic-proposition:8e78a4026bb6cb0c1aa38a80f77a1e7bb5507c36bdef09f9ddbbb4284c986d5d
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template name
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a6dba91fa5b37b2fb9a8e04801285423766e9fcad526eb6a8f427ed4a63c4396", "end_line": 5, "path": ".github/ISSUE_TEMPLATE/question.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "a59136f7cc0ede3069e3dd00bb3c3d26f61c82418d9574ccab806ae7d43ffd4c", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template name", "parameters": ["frontmatter.name=Question"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/question.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
 
 ## semantic-proposition:8ebf41fe05d620f5ebb2e390b7097a3a3ed39f3bf12fa61b69f8f1aa3e9a1d94
 
-SPECIALIZED: MAY other project leaders — allow temporary or permanent leadership consequences for bad-faith enforcement failures
+DISTINCT: MAY other project leaders — allow temporary or permanent leadership consequences for bad-faith enforcement failures
 
-Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 84, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "48c162f1c30b5a819c80264adc3a4e1a05a981234501cdb119ea4a7f0f9bd602", "start_line": 82}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "allow", "consequences": [], "exceptions": [], "modality": "MAY", "object": "temporary or permanent leadership consequences for bad-faith enforcement failures", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "other project leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:01e668f06c84b8d3d3f7eb8bf65830ad6f36e003158e165a4b2100dcd7c962f4"], "rationale": "Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:01e668f06c84b8d3d3f7eb8bf65830ad6f36e003158e165a4b2100dcd7c962f4"], "rationale": "Bad-faith enforcement consequences are discretionary and source-local, including temporary/permanent leadership consequences."}]`
 
 ## semantic-proposition:8edfc2bd46ccd2725261a051a488e496b3cd2475569838880b17b331284cb2ab
 
@@ -1400,15 +1448,15 @@ Relationships: `[]`
 
 ## semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22
 
-SPECIALIZED: MAY README — invite optionally coffee support through the source-specific support link
+DISTINCT: MAY README — invite optionally coffee support through the source-specific support link
 
-Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "cfd165c08d9ef794e79fee309f841657ee2ed01daec8af3637940d5e201845c3", "end_line": 146, "path": "README.md", "repository": "atapas/model-repo", "span_sha256": "6d9142e6a6d52e994dd94b9b56cb243d917bd9a8e41d069ee0044f48651d3e1b", "start_line": 142}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "invite optionally", "consequences": [], "exceptions": [], "modality": "MAY", "object": "coffee support through the source-specific support link", "parameters": ["greenroots"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No universal donation obligation"], "scope": ["atapas/model-repo", "README.md"], "subject": "README"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
 
 ## semantic-proposition:922b4deae39129c716df06c7e85e5d83bdd5af610cc8253b9497df3ebd85cd96
 
@@ -1424,39 +1472,27 @@ Relationships: `[]`
 
 ## semantic-proposition:9266fa993dba3186ee5377665df0b4b68c5a1942a81953f41a1708993a16ce4e
 
-SPECIALIZED: SHOULD participants — use welcoming inclusive language
+DISTINCT: SHOULD participants — use welcoming inclusive language
 
-Inclusive-language guidance remains source-local across the contribution and conduct documents.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Inclusive-language guidance remains source-local across the contribution and conduct documents.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 33, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "757bfd5273cefb59917a86fb0b320d907e93e6e917e0f13e3a9f93af8f483334", "start_line": 28}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "welcoming inclusive language", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:0f286f7b74b41bc5cc73092a3b91816011ec12ddb5c85a16c315fdc22475d11c"], "rationale": "Inclusive-language guidance remains source-local across the contribution and conduct documents."}]`
-
-## semantic-proposition:93b3aff9bb79ce6b681d373dc95a752406c32ea85706d201667d376fcc00224d
-
-SPECIALIZED: MUST contributors and maintainers — pledge respectful harassment-free contribution through issues, features, documentation, pull requests and other activities
-
-Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 21, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "f72a0c4eca08263b5134fc4f9181af74ca94b8ffe9c5a0c2b0c369b0896b84c3", "start_line": 19}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "respectful harassment-free contribution through issues, features, documentation, pull requests and other activities", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Long pledge has a different enumerated characteristic list from short version"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "contributors and maintainers"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1d289445aee7d57aa7c8c419c9ed9c24b98aadc091b46a254347e85784fbdba1", "semantic-proposition:31ea8e22be5a509bb9ab0ccb80613326b87afd6b2c0ba942072d193d737355d8", "semantic-proposition:87c48b409721f459cde668183ad7c0f0cc5c101075f81fafd6925630393170a0"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0f286f7b74b41bc5cc73092a3b91816011ec12ddb5c85a16c315fdc22475d11c"], "rationale": "Inclusive-language guidance remains source-local across the contribution and conduct documents."}]`
 
 ## semantic-proposition:93e50bd54ea4deab1e887ca031aeb14c374e48bb3d69c4776518019cce2c062e
 
-SPECIALIZED: MUST maintainers and participants — apply and enforce conduct rules in all project spaces for every participant at all times
+DISTINCT: MUST maintainers and participants — apply and enforce conduct rules in all project spaces for every participant at all times
 
-Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 56, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "f290e56e9516b723086b8a592b3b9e3a6c0d3f1bcb41108bd80ef2e8ff96dd26", "start_line": 54}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "apply and enforce", "consequences": [], "exceptions": [], "modality": "MUST", "object": "conduct rules in all project spaces for every participant at all times", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "maintainers and participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:3083e421dbf320a411b5f14de2b54f10d74c2ea5348218fc7f13e44d958f7073", "semantic-proposition:dc9bfc2336a131cde0e7e983980976538713a7f0b78370c4ed1786ca69b7ec16"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:3083e421dbf320a411b5f14de2b54f10d74c2ea5348218fc7f13e44d958f7073", "semantic-proposition:dc9bfc2336a131cde0e7e983980976538713a7f0b78370c4ed1786ca69b7ec16"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
 
 ## semantic-proposition:944813e96e72951c97755c4b54dc4a4db816d10626dec15c6ac321bc3d15db0a
 
@@ -1482,6 +1518,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
+## semantic-proposition:96f8e3eaa0066dd11387eee270a99c750a22f8abc86df01fcfea75d3b38827ef
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template labels
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a6dba91fa5b37b2fb9a8e04801285423766e9fcad526eb6a8f427ed4a63c4396", "end_line": 5, "path": ".github/ISSUE_TEMPLATE/question.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "a59136f7cc0ede3069e3dd00bb3c3d26f61c82418d9574ccab806ae7d43ffd4c", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template labels", "parameters": ["frontmatter.labels=question"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/question.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
+
 ## semantic-proposition:98215faef7db118ddf84fb9a089b38e323102e68efc657c17c17a9d9668a2f95
 
 REFERENTIAL: DESCRIPTIVE README — declare MIT license with link to local LICENSE
@@ -1496,39 +1544,39 @@ Relationships: `[]`
 
 ## semantic-proposition:982e7c9341cb21477124cab32d5356718f1ea587abc43210ce272e2a75c3df85
 
-SPECIALIZED: SHOULD repository owner — edit About description and at least three tags, plus website URL when present
+DISTINCT: SHOULD repository owner — edit About description and at least three tags, plus website URL when present
 
-Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 38, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "96c2eb679b754dac225a571f63dee52b59c3909c93d813a4c8a24ddf112b6483", "start_line": 36}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "edit", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "About description and at least three tags, plus website URL when present", "parameters": ["at least 3 tags"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:3de46cee0429fa173e1c9629f138c205382647470bb332cdf6af1f2304081c81"], "rationale": "Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:3de46cee0429fa173e1c9629f138c205382647470bb332cdf6af1f2304081c81"], "rationale": "Project description adaptation is complemented by About tags and conditional website configuration; retain the source-specific at-least-three-tags threshold."}]`
 
 ## semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9
 
-SPECIALIZED: SHOULD pull-request author — describe the issue addressed by the pull request
+DISTINCT: SHOULD pull-request author — describe the issue addressed by the pull request
 
-PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "2ac638530c56711a57688b78aed79e808bd206335877e94c139aace84c8e9970", "end_line": 3, "path": ".github/pull_request_template.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "d6a1c963df68c9d7f9db638de816daac7dbc0b0b9bc95a82cfaa1e635910ebe1", "start_line": 1}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "the issue addressed by the pull request", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", ".github/pull_request_template.md"], "subject": "pull-request author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
 
 ## semantic-proposition:986b7c607dfc2d963628001dacbdc340f21ae09301712d9daf29bdec69e64ca8
 
-SPECIALIZED: SHOULD participants — prioritize the overall community rather than individual interests
+DISTINCT: SHOULD participants — prioritize the overall community rather than individual interests
 
-Community-interest guidance differs in explicit comparison with individual interests; retain that difference.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Community-interest guidance differs in explicit comparison with individual interests; retain that difference.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 26, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7b3f3a657791bfa3fe208f1d3d64d0065362a575f293cb136b106260921909bf", "start_line": 20}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "prioritize", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "the overall community rather than individual interests", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1b98edd4dbf95e557c9fdffbeeb8751189d29120d763c9c59aabaf1b558bd620", "semantic-proposition:d6461f6d28d14fab9e3cf56326ea0a252689e6f157f2212dc841ef541cea6b24"], "rationale": "Community-interest guidance differs in explicit comparison with individual interests; retain that difference."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1b98edd4dbf95e557c9fdffbeeb8751189d29120d763c9c59aabaf1b558bd620", "semantic-proposition:d6461f6d28d14fab9e3cf56326ea0a252689e6f157f2212dc841ef541cea6b24"], "rationale": "Community-interest guidance differs in explicit comparison with individual interests; retain that difference."}]`
 
 ## semantic-proposition:9914a5d030c3fbc60abe9387d5623a1599eef41c2bfd881bb373ecd976ad194b
 
@@ -1542,29 +1590,29 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
-## semantic-proposition:9a745252ccc68d81c02ebb8c6053a2df2c57f2b9187e560eaa462dbde6aa05c8
+## semantic-proposition:9aa5f5329986cf76be8def6f6f01b6457f3e6d3ed33eb8d0bc7359dbff9517db
 
-SPECIALIZED: PROHIBITED participants — avoid other professionally inappropriate conduct
+DISTINCT: PROHIBITED participants — engage in other professionally inappropriate conduct
 
-Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "other professionally inappropriate conduct", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "other professionally inappropriate conduct", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:44431fcdd4e33b3ed3478a64653fc2642036df49c0f015bdc9b8b15265043377", "semantic-proposition:fdfbd6a953c7f288eaf60f400d3baeb2d3c2759b0f3542e3f3a85520306d49f3"], "rationale": "Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:200772466abc4757a236f08a9f3497675f69ff560dd67412b1e0f9cb80f35b6d", "semantic-proposition:2faf105699e8496431e60662e02c563efe6726e759a2e3808ff1f18f00bae0fe"], "rationale": "Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes."}]`
 
-## semantic-proposition:9b3581dee852be85c346a49007154da28070996215bda16e5dacec61d168473c
+## semantic-proposition:9f4018de5c2e6bb1678d501bb94b0302aa571a839b2dd20ee1ea92997a83be6c
 
-SPECIALIZED: PROHIBITED participants — avoid sexualized language or imagery and sexual attention or advances of any kind
+DISTINCT: MUST members, contributors and leaders — pledge harassment-free inclusive healthy participation regardless of enumerated characteristics
 
-Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 6, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "01d45d4dd637c3083246e86bcefbd9808d5cfa789d26f3ef84b32daeca0ed8c8", "start_line": 4}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "sexualized language or imagery and sexual attention or advances of any kind", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "harassment-free inclusive healthy participation regardless of enumerated characteristics", "parameters": ["characteristic:age", "characteristic:body size", "characteristic:visible or invisible disability", "characteristic:ethnicity", "characteristic:sex characteristics", "characteristic:gender identity and expression", "characteristic:level of experience", "characteristic:education", "characteristic:socio-economic status", "characteristic:nationality", "characteristic:personal appearance", "characteristic:race", "characteristic:caste", "characteristic:color", "characteristic:religion", "characteristic:sexual identity and orientation"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Short version includes caste and visible/invisible disability"], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "members, contributors and leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:a64896c0bcc4d77fc3b31ea7e8e82fc19688fc8d367abe43ec402150a7172043"], "rationale": "Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6ce3efeb81184d9fa9ffae8d8903be6b3de70f856d783c9569c25bc73b1d713c", "semantic-proposition:8e75625620c4a6f75886f9e52a960f14e52660c202084f784303a7cb3cdfacc2", "semantic-proposition:f2383cb4a985c55dbe08d710674cdb806afa673003e21c31d2da36c7ca410dd5"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
 
 ## semantic-proposition:9fad09f5b507d22cb9a739a7d4fb56d3b7d3c671f9b8e1e56950ae8b9f3af845
 
@@ -1578,17 +1626,29 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
+## semantic-proposition:9faf990c63438d6ec3c456dcab554b6f2a166f617ecbf12d6dae68c38f7f8a13
+
+DISTINCT: PROHIBITED participants — use sexualized language or imagery and sexual attention or advances of any kind
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "sexualized language or imagery and sexual attention or advances of any kind", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:7b2716f3ba345f9161547e2e5e85637140c40ac9e23188a0fd1b6eaa0460692e"], "rationale": "Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence."}]`
+
 ## semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83
 
-SPECIALIZED: MUST maintainers — clarify and correct unacceptable behavior appropriately and fairly
+DISTINCT: MUST maintainers — clarify and correct unacceptable behavior appropriately and fairly
 
-Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 56, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1dc9893bc49e520784a6dcd6800e9dee763cabf9bb7e0184d3fa2cc4a5e06e1e", "start_line": 54}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "clarify and correct", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior appropriately and fairly", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
 
 ## semantic-proposition:a0ecb40145c983a611359fcd3806314b8109e21a76a4924dd049e83263061df3
 
@@ -1616,15 +1676,15 @@ Relationships: `[]`
 
 ## semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf
 
-SPECIALIZED: SHOULD issue author — search open issues before filing a problem or feature
+DISTINCT: SHOULD issue author — search open issues before filing a problem or feature
 
-Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907", "end_line": 19, "path": "CONTRIBUTING.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "35fc9514e94a528fe322ec8d1a3d36e2f0621b502cb414031c4687263f4e16a8", "start_line": 19}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "search", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "open issues before filing a problem or feature", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CONTRIBUTING.md"], "subject": "issue author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
 ## semantic-proposition:a2937f92429e841029c0afff2e10315edc378b9b842959b26221ad7b1f6ef54d
 
@@ -1640,99 +1700,111 @@ Relationships: `[]`
 
 ## semantic-proposition:a2eba302ef01f3a3e0f7e0cb818f262829dff6a359bf912d938be0da39a50d7f
 
-SPECIALIZED: DESCRIPTIVE funding example — configure one GitHub sponsor account
+REFERENTIAL: DESCRIPTIVE funding example — configure one GitHub sponsor account
 
-Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "8ca043d78f4a8dccc9e346bee4ad9d2250a6ec0287aa6e5fe8eabfd6ad81c09f", "end_line": 3, "path": ".github/FUNDING.yml", "repository": "atapas/model-repo", "span_sha256": "e106d2e431eb0477a39d140d8085047bccf816d11736592a0d24399545dda147", "start_line": 3}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "configure", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "one GitHub sponsor account", "parameters": ["atapas"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Literal source identity, not a consumer recipient"], "scope": ["atapas/model-repo", ".github/FUNDING.yml"], "subject": "funding example"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:12eb0d8d0e51bf1f3d23a35ebe00c27ebba8c75b17d218e8d9b6d6c674b3efa3", "semantic-proposition:48952d712c806f1bf1f9698989e9275fd364cf759dc2402875c25d03cd60878f", "semantic-proposition:4d99d3b09db42bf15e22d97dba0def1704ab59dc96a3f82128c9de8b8963cd3f", "semantic-proposition:8f25cb12afa89114e99ec231d48d0b77da696af99018f085ce985698966a8a22"], "rationale": "Optional funding selection, conditional activation, funding-key examples, literal sponsor identity and coffee-support invitation differ. Preserve recipients as examples and do not configure consumer funding."}]`
 
 ## semantic-proposition:a35df41727b4bb2b50af96fdf3ed9cfd5d99dcea8779e308856c2b7650ee6a97
 
-SPECIALIZED: MUST leaders — use warning with consequences and timed no-contact restrictions for incidents or series of actions
+DISTINCT: MUST leaders — use warning with consequences and timed no-contact restrictions for incidents or series of actions
 
-Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 93, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "0884610b39c6137c8a73fe7b95fedf4c1869ca3f0f8c66878bea0525daf938d3", "start_line": 85}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": ["Violation may cause temporary or permanent ban"], "exceptions": [], "modality": "MUST", "object": "warning with consequences and timed no-contact restrictions for incidents or series of actions", "parameters": ["specified period; no fixed duration"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No unsolicited contact including enforcers and external channels"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:8b6cd2331fc1f45d4fbb2fdd33e0d43dfc5de84860bf96b3055ff88142bb2d20"], "rationale": "Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:8b6cd2331fc1f45d4fbb2fdd33e0d43dfc5de84860bf96b3055ff88142bb2d20"], "rationale": "Warning guidance preserves no-contact channels, unspecified duration and possible later bans in each source."}]`
 
 ## semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773
 
-SPECIALIZED: SHOULD participants — accept constructive criticism gracefully
+DISTINCT: SHOULD participants — accept constructive criticism gracefully
 
-Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 39, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "9465024e8cb4b47befe0d034c8ece409641cf6fce1fa6e21527a12522c2258d1", "start_line": 35}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "accept", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "constructive criticism gracefully", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd", "semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
 
-## semantic-proposition:a64896c0bcc4d77fc3b31ea7e8e82fc19688fc8d367abe43ec402150a7172043
+## semantic-proposition:a7a2faf49987ce4dfcbfa1c96927d3dfa569b24ab8ab1d81f43c9dd9a3389ca7
 
-SPECIALIZED: PROHIBITED participants — avoid sexualized language or imagery and unwelcome attention or advances
+REFERENTIAL: DESCRIPTIVE issue template — set issue template name
 
-Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence.
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
 
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a1f028fd0f7eee898fbbd8d070315a6a272d9aea10f65b92dac8d533c5638c17", "end_line": 5, "path": ".github/ISSUE_TEMPLATE/proposal.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "c7c055b87cd7f7482d3f2da0c534ce76876315e518afcd891b15e7e4b456673e", "start_line": 1}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "sexualized language or imagery and unwelcome attention or advances", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template name", "parameters": ["frontmatter.name=Proposal & Issue Report"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/proposal.md"], "subject": "issue template"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:9b3581dee852be85c346a49007154da28070996215bda16e5dacec61d168473c"], "rationale": "Sexual conduct prohibitions differ: attention/advances of any kind versus unwelcome attention/advances. Preserve both predicates; do not claim equivalence."}]`
+Relationships: `[]`
+
+## semantic-proposition:a83c3ec6ad80b72677ef9b767ae6efa43e177094f8270d8e34a514355c4ac03d
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template about
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a1f028fd0f7eee898fbbd8d070315a6a272d9aea10f65b92dac8d533c5638c17", "end_line": 5, "path": ".github/ISSUE_TEMPLATE/proposal.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "c7c055b87cd7f7482d3f2da0c534ce76876315e518afcd891b15e7e4b456673e", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template about", "parameters": ["frontmatter.about=Suggest an idea for improving"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/proposal.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
 
 ## semantic-proposition:a99b77a40359d468b19859c0df0259a4f5b3c9bfc1cab066d3305ea33b05c089
 
-SPECIALIZED: SHOULD project participants — prefer pull-request author performing integration
+DISTINCT: SHOULD project participants — prefer pull-request author performing integration
 
-Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 84, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "1b864a89dd0002b0876f56854d8f85f15acdb7c75f61944a732829ca7f267580", "start_line": 80}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "prefer", "consequences": ["Author knows deployed changes and owns immediate post-merge failure repair"], "exceptions": ["Restricted commit access requires authorized integrator", "Absence or urgent integration"], "modality": "SHOULD", "object": "pull-request author performing integration", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Author has permission"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76", "semantic-proposition:b42003b15c2e3ff4d051bf901e5253dd039f6747c1ed219843519c67705be961", "semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76", "semantic-proposition:b42003b15c2e3ff4d051bf901e5253dd039f6747c1ed219843519c67705be961", "semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
 
 ## semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba
 
-SPECIALIZED: SHOULD contributor — discuss planned changes with owners before modifying the repository through issue, email or another method
+DISTINCT: SHOULD contributor — discuss planned changes with owners before modifying the repository through issue, email or another method
 
-Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 4, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "1332072cf75b06c24aae4b38998b64f7abe7c0b324093603029a679fd101d8c3", "start_line": 3}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "discuss", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "planned changes with owners before modifying the repository through issue, email or another method", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "contributor"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
-## semantic-proposition:ac4979a6484cf0715ae55c68fe36781f21c8e0af03a0654dc65bd8e2526b6f38
+## semantic-proposition:ac9c18e23e12c49967a893d7c0a5b8f523e8fee8880a2b5377c03c5fdb2b3582
 
-SPECIALIZED: PROHIBITED participants — avoid private information disclosure without explicit permission
+DISTINCT: PROHIBITED project participants — create branch ancestry beyond the described occasional child of a feature branch
 
-Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives.
 
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 15, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "8cd486e6fb13ea12166169996fd1454efa42417b0846bba3f8b2ab4cf84e99f9", "start_line": 15}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "private information disclosure without explicit permission", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "create", "consequences": ["Deeper ancestry impairs review, maintenance and merging"], "exceptions": [], "modality": "PROHIBITED", "object": "branch ancestry beyond the described occasional child of a feature branch", "parameters": [], "polarity": "NEGATIVE", "preconditions": ["Source product-development context"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:3af19ca07d23bc0b3c9f4a5b98c62277d71ffdd411d528056cc42db3b4e91070", "semantic-proposition:ca4e91daef67b731bbba0d19637d478fc878a2cd2ab748850ae148b8bd805b22"], "rationale": "Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6c3ef4d4f2a71d47ede077ddf887c4424efe90135956cda2983328be7a4c6502", "semantic-proposition:da0476f1e8c3aa0f2c2ccd2d8ef02f138b13736ac7ded86b662a5224343e95c4"], "rationale": "Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives."}]`
 
 ## semantic-proposition:accb9d966d6975b92ddbe9e8b9decf86957f0fb5b88a5c346f8ef3c0726b6543
 
-SPECIALIZED: MUST maintainers — answer issues within 48 hours
+DISTINCT: MUST maintainers — answer issues within 48 hours
 
-Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 27, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "9a667a50334e3159d348eba9e3a5809892719e34ba201a930e0e8989890bcc78", "start_line": 27}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "answer", "consequences": [], "exceptions": [], "modality": "MUST", "object": "issues within 48 hours", "parameters": ["48 hours"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source template promise, not a GES service level"], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:ba7d93faddc0e18efbd4df5f4dd69b4b1cccaeeac0bdc0196e1a38acc459b1a9"], "rationale": "Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:ba7d93faddc0e18efbd4df5f4dd69b4b1cccaeeac0bdc0196e1a38acc459b1a9"], "rationale": "Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise."}]`
 
 ## semantic-proposition:aee77883998e6dbbf9033e92355d43a984892f0a4cfb975d23f85aae3d4ed4da
 
@@ -1748,15 +1820,27 @@ Relationships: `[]`
 
 ## semantic-proposition:afd78843383f4c838e0d09f3587aeed5a1e33118f7c23c5c5c498f6726b74e75
 
-SPECIALIZED: SHOULD project participants — configure Git LFS for the kinds of large files that require versioning
+DISTINCT: SHOULD project participants — configure Git LFS for the kinds of large files that require versioning
 
-Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 124, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "22aee417af9e739249d5ab1c3e7b75bb8b7df157716bd46ac11e2a6f3d2cd563", "start_line": 124}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "configure", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "Git LFS for the kinds of large files that require versioning", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Large files must be versioned and kept in the repository"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1cecb5afb21e996f63a4dc3aec5df84d23eb66cd4d8a8cd5abb31551ceb5169d", "semantic-proposition:53e67e234764545f48b50cfd82f628e1efb0bf3c87aedefabd40add401c0a851"], "rationale": "Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1cecb5afb21e996f63a4dc3aec5df84d23eb66cd4d8a8cd5abb31551ceb5169d", "semantic-proposition:53e67e234764545f48b50cfd82f628e1efb0bf3c87aedefabd40add401c0a851"], "rationale": "Large-file advice distinguishes ordinary Git history, LFS for versioned files and optional release/external storage for files not needing Git versioning."}]`
+
+## semantic-proposition:affdb8a1c7f2e661cd9795852dab57033568491ba9dcb61dbaf29bc991c6ef3e
+
+DISTINCT: PROHIBITED participants — engage in trolling, derogatory comments and personal or political attacks
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, derogatory comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:bd42f67eb7788294eebb3f7d7347b9a5834c371f81d56d320d188a5430b31e2b", "semantic-proposition:d4da34ce3bf4197e2c82180ffc7b9149a43cb83ee7d4fa034603b39d5df81dac"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
 
 ## semantic-proposition:b036001bfa4ebb5f7fb298d98481018f13c2bb96e6b1b9a0f4fd50be5b507bfc
 
@@ -1772,15 +1856,15 @@ Relationships: `[]`
 
 ## semantic-proposition:b04690db7fd8a0e144ed53ef536afd3912c82bb3caf25f0d67a40accc0e003f2
 
-SPECIALIZED: MUST pull-request author — pass new and existing unit tests locally
+DISTINCT: MUST pull-request author — pass new and existing unit tests locally
 
-Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "215fecebc0056f8126c91a008934166f518bbe1526e3d5203531b6274299d675", "end_line": 37, "path": ".github/pull_request_template.md", "repository": "atapas/model-repo", "span_sha256": "bd27b3a9913c52888e6066bf36c34c905bd0e680902f9c5fe63f1d152c78a157", "start_line": 37}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "pass", "consequences": [], "exceptions": [], "modality": "MUST", "object": "new and existing unit tests locally", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source template attestation; not an observed result"], "scope": ["atapas/model-repo", ".github/pull_request_template.md"], "subject": "pull-request author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1a7f490828ca2776364f819aee55f6362a3de19f34fc01ec859f1a6836bfcb21", "semantic-proposition:3c45c72ad7a3bef1764116b9e0875c02f26063599c11462edf7d0cbd933e879c", "semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1a7f490828ca2776364f819aee55f6362a3de19f34fc01ec859f1a6836bfcb21", "semantic-proposition:3c45c72ad7a3bef1764116b9e0875c02f26063599c11462edf7d0cbd933e879c", "semantic-proposition:8aac08345d3d3a6f49610507942453c3edafabcb652f1e466d3610614bea9f1f"], "rationale": "Test health covers merge veto, main-branch passing suite, nondeterminism repair and local attestations. Preserve repository-has-tests conditions and development-branch exception; no execution is inferred."}]`
 
 ## semantic-proposition:b0eeb5ae53df2f40e10ddfe586efd5fe2f2f8ce0140152ec2d8713d285686293
 
@@ -1818,41 +1902,29 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
-## semantic-proposition:b3ee3b0c477a0685b9b9483f2d091818e0f67a1ce829b7ab85563e113123ec73
-
-SPECIALIZED: PROHIBITED participants — avoid trolling, derogatory comments and personal or political attacks
-
-Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, derogatory comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:7fd5b777fe54d09974108575a3f5300c608adfe87632b10111c7a90e11722cfb", "semantic-proposition:f4dd7a4697ec6b6981ccdc0d2dcae6422b071c2ebae5fa45f11066cbb9363f18"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
-
 ## semantic-proposition:b42003b15c2e3ff4d051bf901e5253dd039f6747c1ed219843519c67705be961
 
-SPECIALIZED: MUST maintainers — require two maintainer approvals before merge
+DISTINCT: MUST maintainers — require two maintainer approvals before merge
 
-Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 40, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "ff65d0cae45b1723e71873b88f0d2d15b2730b636cf4cc5a8c03e7c99e5d79d9", "start_line": 37}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "require", "consequences": [], "exceptions": ["One maintainer approval suffices after more than 14 days open"], "modality": "MUST", "object": "two maintainer approvals before merge", "parameters": ["2 maintainers", "1 maintainer", "more than 14 days"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76", "semantic-proposition:a99b77a40359d468b19859c0df0259a4f5b3c9bfc1cab066d3305ea33b05c089", "semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76", "semantic-proposition:a99b77a40359d468b19859c0df0259a4f5b3c9bfc1cab066d3305ea33b05c089", "semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
 
 ## semantic-proposition:b62a8c771e89b598eece178077f095d788a571316d69fd4cce0cfaa1abd32221
 
-SPECIALIZED: MAY repository owner — adapt optionally issue and pull-request templates under .github
+DISTINCT: MAY repository owner — adapt optionally issue and pull-request templates under .github
 
-Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 82, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "5d959899f5268471f80f53c19c2f43149fe961abf7b0bdad1917dcdc0f8acd18", "start_line": 76}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt optionally", "consequences": [], "exceptions": [], "modality": "MAY", "object": "issue and pull-request templates under .github", "parameters": [".github/ISSUE_TEMPLATE", ".github"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:18018c3d2f51c64f579146b297e730c20a8870c50771665b970e073334adbf77"], "rationale": "Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:18018c3d2f51c64f579146b297e730c20a8870c50771665b970e073334adbf77"], "rationale": "Considering templates is should-category guidance; adapting optional templates is may guidance. Consideration and activation are different actions, so no contradiction is asserted."}]`
 
 ## semantic-proposition:b6b1c1c7ffd037aa6e4f6ee469a91f45e2c3bf5e4a054b86cec7cabc61da46fb
 
@@ -1868,15 +1940,15 @@ Relationships: `[]`
 
 ## semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6
 
-SPECIALIZED: SHOULD issue author — describe detected issue or problem
+DISTINCT: SHOULD issue author — describe detected issue or problem
 
-Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a1f028fd0f7eee898fbbd8d070315a6a272d9aea10f65b92dac8d533c5638c17", "end_line": 9, "path": ".github/ISSUE_TEMPLATE/proposal.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "2037ed5fc2494011a268d659d624f2c560a1774d23dffd93406e68451f9912a1", "start_line": 7}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "detected issue or problem", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/proposal.md"], "subject": "issue author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22", "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d", "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001", "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf", "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba"], "rationale": "Issue-first planning, searching existing issues, proposal problem description and linking PRs are complementary. Preserve tiniest-change exception and atapas issue/email/other discussion alternatives."}]`
 
 ## semantic-proposition:b824cdb6320b941ee778b27224bbc81cd7f662a008c1e265be49a887264ac09a
 
@@ -1892,51 +1964,51 @@ Relationships: `[]`
 
 ## semantic-proposition:ba7d93faddc0e18efbd4df5f4dd69b4b1cccaeeac0bdc0196e1a38acc459b1a9
 
-SPECIALIZED: MUST maintainers — answer pull requests within 48 hours
+DISTINCT: MUST maintainers — answer pull requests within 48 hours
 
-Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 35, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "b3815e1ddb85d930bb16fb27b3dc3830e5985129cba1653ad86df1cee3b58650", "start_line": 35}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "answer", "consequences": [], "exceptions": [], "modality": "MUST", "object": "pull requests within 48 hours", "parameters": ["48 hours"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:accb9d966d6975b92ddbe9e8b9decf86957f0fb5b88a5c346f8ef3c0726b6543"], "rationale": "Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:accb9d966d6975b92ddbe9e8b9decf86957f0fb5b88a5c346f8ef3c0726b6543"], "rationale": "Issue and PR response duties each retain the template-specific 48-hour target; neither becomes a GES service promise."}]`
 
 ## semantic-proposition:bae7d78cba4471ef4d1e8e17dc8c2f95957fb2ac551394a7ddae8fe7c7aeaf02
 
-SPECIALIZED: MUST repository owner — edit or adapt contribution guidelines
+DISTINCT: MUST repository owner — edit or adapt contribution guidelines
 
-Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 12, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "51f27d536210725e2c956d3fd3f0e07dd5ff0d4e030072b805c9f2e53381fc6d", "start_line": 12}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "edit or adapt", "consequences": [], "exceptions": [], "modality": "MUST", "object": "contribution guidelines", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source musts category; local adoption remains separate"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:0068bc452cf1e28c4359c1c178aa42b215be4734235fa643184fd104376030f2"], "rationale": "Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0068bc452cf1e28c4359c1c178aa42b215be4734235fa643184fd104376030f2"], "rationale": "Contribution-guideline adaptation is expressed both as a must-category requirement and a concrete should instruction; retain both strengths and the project placeholders."}]`
 
 ## semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07
 
-SPECIALIZED: MUST participants and leaders — report and investigate unacceptable behavior promptly and fairly while protecting reporter privacy/security
+DISTINCT: MUST participants and leaders — report and investigate unacceptable behavior promptly and fairly while protecting reporter privacy/security
 
-Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 67, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "e5a167b46e04beb2fce1b1a5e2e7d8d7cd2059479415550e7c8ec7e7f0b4de21", "start_line": 61}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "report and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior promptly and fairly while protecting reporter privacy/security", "parameters": ["Source email is bound in span; no GES reporting recipient"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants and leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9", "semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9", "semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
 
 ## semantic-proposition:bcae8bfe4b2dfaf08cb9b284c7e526530b19aa247f98380ecb17a352b4e47af5
 
-SPECIALIZED: SHOULD participants — respect different opinions, viewpoints and experiences
+DISTINCT: SHOULD participants — respect different opinions, viewpoints and experiences
 
-Respect for differing views and experiences overlaps without identical source scope or wording.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Respect for differing views and experiences overlaps without identical source scope or wording.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 26, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7b3f3a657791bfa3fe208f1d3d64d0065362a575f293cb136b106260921909bf", "start_line": 20}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "respect", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "different opinions, viewpoints and experiences", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:719b64fb50665fb2ac9a31c32a8a99def7fadd770c3f418b12429af5c0fc0930", "semantic-proposition:df3f5d7e8f7bc1cba290bb8cda18896d39a797c42d3be8fe1477f37c6b4cc07f"], "rationale": "Respect for differing views and experiences overlaps without identical source scope or wording."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:719b64fb50665fb2ac9a31c32a8a99def7fadd770c3f418b12429af5c0fc0930", "semantic-proposition:df3f5d7e8f7bc1cba290bb8cda18896d39a797c42d3be8fe1477f37c6b4cc07f"], "rationale": "Respect for differing views and experiences overlaps without identical source scope or wording."}]`
 
 ## semantic-proposition:bce1a8bda9e4ea8d01cc99f6298307ce8f9d49f762066d7f08c1fe41c0e6cfba
 
@@ -1949,6 +2021,18 @@ Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "confirm", "consequences": [], "exceptions": [], "modality": "MUST", "object": "dependent changes merged and published downstream", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source template attestation; not an observed result"], "scope": ["atapas/model-repo", ".github/pull_request_template.md"], "subject": "pull-request author"}}`
 
 Relationships: `[]`
+
+## semantic-proposition:bd42f67eb7788294eebb3f7d7347b9a5834c371f81d56d320d188a5430b31e2b
+
+DISTINCT: PROHIBITED participants — engage in trolling, derogatory comments and personal or political attacks
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, derogatory comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:affdb8a1c7f2e661cd9795852dab57033568491ba9dcb61dbaf29bc991c6ef3e", "semantic-proposition:d4da34ce3bf4197e2c82180ffc7b9149a43cb83ee7d4fa034603b39d5df81dac"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
 
 ## semantic-proposition:bd5bc0b89624b928f0922711341bf756fbb0570eb18d871670a70585a0af2eeb
 
@@ -1964,51 +2048,63 @@ Relationships: `[]`
 
 ## semantic-proposition:bddc1a14de696ce681b05e1ad843e6e04becec64ff7f6524d121196fa8d7584a
 
-SPECIALIZED: SHOULD project participants — derive Projects progress from issues rather than parallel notes
+DISTINCT: SHOULD project participants — derive Projects progress from issues rather than parallel notes
 
-Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 59, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "d6bc0d0b1ed0eb779d6b4d8e13a164b27db610a34f099b8c0f1b83ffce6b684b", "start_line": 57}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "derive", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "Projects progress from issues rather than parallel notes", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Best case includes automated movement as pull requests resolve issues"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:53188c3cc33172714533a89914548b6ada4cd58f56dba5d16d0487aaf4a61971"], "rationale": "Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:53188c3cc33172714533a89914548b6ada4cd58f56dba5d16d0487aaf4a61971"], "rationale": "Optional Projects presentation is complemented by issue-derived progress when used; optional view availability is retained."}]`
 
 ## semantic-proposition:be2176bda7d72a972b14963521e1932b0231aa49b55c6395b9efb444bef3dcb4
 
-SPECIALIZED: MUST leaders — use temporary ban for serious violations including sustained misconduct
+DISTINCT: MUST leaders — use temporary ban for serious violations including sustained misconduct
 
-Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 104, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "060bc7db3647510585350cc693e23b77c5442c98b3f52ce048ed3579c9e5d018", "start_line": 97}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "use", "consequences": ["Violating restrictions may cause permanent ban"], "exceptions": [], "modality": "MUST", "object": "temporary ban for serious violations including sustained misconduct", "parameters": ["specified period; no fixed duration"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No community interaction or public/private contact with involved people including enforcers"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:097f8e363fe0ec382aec886e2f3f67021c4ecd8bb909cc684a081f979b1fccd6"], "rationale": "Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:097f8e363fe0ec382aec886e2f3f67021c4ecd8bb909cc684a081f979b1fccd6"], "rationale": "Temporary-ban guidance retains no-contact scope, unspecified duration and escalation consequences in each project."}]`
+
+## semantic-proposition:c26f198e889eb4dc7eb78107dbfb7a5b0883917dbb42d5f2a8b6528447ab053c
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template name
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "1f48c52f209a971b8e7eae4120144d28fcf8ee38a7778a7b4d8cf1ab356617d2", "end_line": 8, "path": ".github/ISSUE_TEMPLATE/feature_request.md", "repository": "atapas/model-repo", "span_sha256": "7cba44591d17ed2e1bf38a5528cfe13697ed1bd3e0c6795327a99e0594a5cb4e", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template name", "parameters": ["frontmatter.name=Feature request"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["atapas/model-repo", ".github/ISSUE_TEMPLATE/feature_request.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
 
 ## semantic-proposition:c3cffdd46526529b4fe52da84168114332ba537c5a195801ed78e8b4bb8ae357
 
-SPECIALIZED: SHOULD project participants — describe issues and pull requests for other readers, including solo projects
+DISTINCT: SHOULD project participants — describe issues and pull requests for other readers, including solo projects
 
-PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 41, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "feea21dd2985b4a94bd369d0fd902ab677ca080de4876304c228826836458794", "start_line": 39}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "issues and pull requests for other readers, including solo projects", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Avoid author knowledge assumptions; an external concept link is reference-only"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:01f29e4d6e5415c42b7ac03e405f550cbd039af3648c0529024084a7ebe1e0f4", "semantic-proposition:16699d8d8f97318331befa0dd39a6a0df2394edc20bc2576af2ff34587ab80d5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:985ff89acd5fd5bc91a0d8f8cd273fbf321dce8495b0b92812636175bbdaf1f9"], "rationale": "PR communication combines issue/motivation/dependencies, implemented solution and reader context. Tmcw prefers the PR description over polished commit art; this does not replace any prompt."}]`
 
 ## semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e
 
-SPECIALIZED: MUST participants and project team — report and investigate unacceptable behavior through maintainer contacts, appropriate response and reporter confidentiality
+DISTINCT: MUST participants and project team — report and investigate unacceptable behavior through maintainer contacts, appropriate response and reporter confidentiality
 
-Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 69, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "345db621913cd9260e972cc435de38fe6e9a6e070435cd0fbeb160e597640836", "start_line": 61}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "report and investigate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "unacceptable behavior through maintainer contacts, appropriate response and reporter confidentiality", "parameters": ["USER1", "USER2", "USER3"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants and project team"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9", "semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9", "semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07"], "rationale": "Reporting/investigation overlaps, but promptness, privacy/security and literal versus placeholder reporting contacts differ. No real GES recipient is installed."}]`
 
 ## semantic-proposition:c989526098ddd79efccb930eb72c52f54e32e14e03baff8a249d22a7409bbacb
 
@@ -2022,53 +2118,41 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[]`
 
-## semantic-proposition:ca4e91daef67b731bbba0d19637d478fc878a2cd2ab748850ae148b8bd805b22
-
-SPECIALIZED: PROHIBITED participants — avoid publishing private information without explicit permission
-
-Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "publishing private information without explicit permission", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:3af19ca07d23bc0b3c9f4a5b98c62277d71ffdd411d528056cc42db3b4e91070", "semantic-proposition:ac4979a6484cf0715ae55c68fe36781f21c8e0af03a0654dc65bd8e2526b6f38"], "rationale": "Privacy prohibitions preserve explicit-permission requirements and their respective participant scopes."}]`
-
 ## semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b
 
-SPECIALIZED: SHOULD issue author — file one problem or feature per issue with reproduction information where possible
+DISTINCT: SHOULD issue author — file one problem or feature per issue with reproduction information where possible
 
-Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907", "end_line": 29, "path": "CONTRIBUTING.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "dcfcd04dd4e505d3152dc56e6ca970bbc9928898d087252974e343d7f9ed15cc", "start_line": 27}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "file", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "one problem or feature per issue with reproduction information where possible", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CONTRIBUTING.md"], "subject": "issue author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431", "semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33", "semantic-proposition:ead9cd2f5bcab669c1da8572ba6e368c1cd9e9a5ac5595e7211d6a59893553c2"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431", "semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33", "semantic-proposition:ead9cd2f5bcab669c1da8572ba6e368c1cd9e9a5ac5595e7211d6a59893553c2"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
 
 ## semantic-proposition:cc357b938c1a1da5f121260ffced3a6d5f50a118c4c8ed8935510dc496be1767
 
-SPECIALIZED: SHOULD participants — show empathy towards community members
+DISTINCT: SHOULD participants — show empathy towards community members
 
-Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 33, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "757bfd5273cefb59917a86fb0b320d907e93e6e917e0f13e3a9f93af8f483334", "start_line": 28}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "show", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "empathy towards community members", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01", "semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776", "semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01", "semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776", "semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
 
 ## semantic-proposition:ce11547b84128cda63b864547e9023f5cb126728c015db99aaa6cfa08ff7ece5
 
-SPECIALIZED: MUST repository owner — edit or adapt governance rules
+DISTINCT: MUST repository owner — edit or adapt governance rules
 
-Governance adaptation preserves must-category wording and should-level details for authority, timing and admission.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Governance adaptation preserves must-category wording and should-level details for authority, timing and admission.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 14, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "d757fa556a8358051495c0b83d9b14f528889582fa4728cdae666fd5caa3deb3", "start_line": 14}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "edit or adapt", "consequences": [], "exceptions": [], "modality": "MUST", "object": "governance rules", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source musts category; local adoption remains separate"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:d0269d064c4b97dac959524e29c63481024cf5c38751376fca42c899e37419e0"], "rationale": "Governance adaptation preserves must-category wording and should-level details for authority, timing and admission."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:d0269d064c4b97dac959524e29c63481024cf5c38751376fca42c899e37419e0"], "rationale": "Governance adaptation preserves must-category wording and should-level details for authority, timing and admission."}]`
 
 ## semantic-proposition:ce57e57c9db42c28687ca212a418f2d5b29ac35f8c970e2276980a5502c58322
 
@@ -2084,39 +2168,39 @@ Relationships: `[]`
 
 ## semantic-proposition:cecd429bed4c70abd2c4f8e3235dcc14e046475998cdaefa3c67e444d5a0fffc
 
-SPECIALIZED: SHOULD repository owner — summarize description, conditional installation, repository structure, usage, contribution/governance, conduct and license in README
+DISTINCT: SHOULD repository owner — summarize description, conditional installation, repository structure, usage, contribution/governance, conduct and license in README
 
-README adaptation is specialized by required presentation topics and installation only when needed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. README adaptation is specialized by required presentation topics and installation only when needed.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 128, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "c2340f9f63c70674753bca3e40c930881ed56dd2c8aacc881dab813332a67e96", "start_line": 120}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "summarize", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "description, conditional installation, repository structure, usage, contribution/governance, conduct and license in README", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Installation only if required"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:6753fb346daf0e594532c7da908c9fb04a9310ef5a2493e2188f42c83a0713ac"], "rationale": "README adaptation is specialized by required presentation topics and installation only when needed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6753fb346daf0e594532c7da908c9fb04a9310ef5a2493e2188f42c83a0713ac"], "rationale": "README adaptation is complemented by required presentation topics and installation only when needed."}]`
 
 ## semantic-proposition:d0269d064c4b97dac959524e29c63481024cf5c38751376fca42c899e37419e0
 
-SPECIALIZED: SHOULD repository owner — adapt GOVERNANCE.md covering decision authority, timing and leadership admission
+DISTINCT: SHOULD repository owner — adapt GOVERNANCE.md covering decision authority, timing and leadership admission
 
-Governance adaptation preserves must-category wording and should-level details for authority, timing and admission.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Governance adaptation preserves must-category wording and should-level details for authority, timing and admission.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 64, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "a3997653763864fd8c4445f3266dce9942c6d75a6a79d47c0c35a41d0e42b870", "start_line": 60}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "adapt", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "GOVERNANCE.md covering decision authority, timing and leadership admission", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:ce11547b84128cda63b864547e9023f5cb126728c015db99aaa6cfa08ff7ece5"], "rationale": "Governance adaptation preserves must-category wording and should-level details for authority, timing and admission."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:ce11547b84128cda63b864547e9023f5cb126728c015db99aaa6cfa08ff7ece5"], "rationale": "Governance adaptation preserves must-category wording and should-level details for authority, timing and admission."}]`
 
 ## semantic-proposition:d0ad8ce7c2bb71c33fd3619189222f11f52957614f5fc10f51fa5ef8b7bd8727
 
-SPECIALIZED: SHOULD issue author — describe considered alternatives
+DISTINCT: SHOULD issue author — describe considered alternatives
 
-Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a1f028fd0f7eee898fbbd8d070315a6a272d9aea10f65b92dac8d533c5638c17", "end_line": 17, "path": ".github/ISSUE_TEMPLATE/proposal.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "cd8ebab5177fda913ef175fc84d90c9db4d686fc4253cb39490642395a3347ec", "start_line": 15}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "considered alternatives", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Alternatives exist"], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/proposal.md"], "subject": "issue author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:0809500a491391df7e3d569177a86b8f5f5642aaa37a2e7b78bbf912d1913512", "semantic-proposition:e0a92102e1b4669d3d664ac37b86901a6e46b18f874fcc41c2f1a140035e3bea"], "rationale": "Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0809500a491391df7e3d569177a86b8f5f5642aaa37a2e7b78bbf912d1913512", "semantic-proposition:e0a92102e1b4669d3d664ac37b86901a6e46b18f874fcc41c2f1a140035e3bea"], "rationale": "Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing."}]`
 
 ## semantic-proposition:d0e450d8fbabc1b7a133cdfd63b1d16a7f8c068398b855632f2e2ae3abd7aef3
 
@@ -2130,17 +2214,29 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
+## semantic-proposition:d105baf3a66fc6d444a7e35a097be73e26140c1842de0c1d14e20c4836260df5
+
+DISTINCT: PROHIBITED participants — use violent threats or language directed at another person
+
+Retain an independent source-local proposition: participants — PROHIBITED avoid violent threats or language directed at another person. No equivalent or superseding proposition is asserted in this batch.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "use", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "violent threats or language directed at another person", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[]`
+
 ## semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776
 
-SPECIALIZED: SHOULD participants — show empathy and kindness
+DISTINCT: SHOULD participants — show empathy and kindness
 
-Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 26, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "7b3f3a657791bfa3fe208f1d3d64d0065362a575f293cb136b106260921909bf", "start_line": 20}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "show", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "empathy and kindness", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01", "semantic-proposition:cc357b938c1a1da5f121260ffced3a6d5f50a118c4c8ed8935510dc496be1767", "semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01", "semantic-proposition:cc357b938c1a1da5f121260ffced3a6d5f50a118c4c8ed8935510dc496be1767", "semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
 
 ## semantic-proposition:d28b5849c24430e7d48f0c2ebc38fee2ba6ae3ce44bc86d3d659baa31c3417b7
 
@@ -2178,65 +2274,65 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable c
 
 Relationships: `[]`
 
+## semantic-proposition:d4da34ce3bf4197e2c82180ffc7b9149a43cb83ee7d4fa034603b39d5df81dac
+
+DISTINCT: PROHIBITED participants — engage in trolling, insulting comments and personal or political attacks
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, insulting comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:affdb8a1c7f2e661cd9795852dab57033568491ba9dcb61dbaf29bc991c6ef3e", "semantic-proposition:bd42f67eb7788294eebb3f7d7347b9a5834c371f81d56d320d188a5430b31e2b"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
+
+## semantic-proposition:d6175ddf9eb6c5e3f8edb384b325b84a7fd3172494336add728064b03458ac78
+
+REFERENTIAL: DESCRIPTIVE issue template — set issue template about
+
+Retain the source-defined nonempty issue-template frontmatter binding as implementation evidence, not consumer configuration or adopted GES policy.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "a6dba91fa5b37b2fb9a8e04801285423766e9fcad526eb6a8f427ed4a63c4396", "end_line": 5, "path": ".github/ISSUE_TEMPLATE/question.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "a59136f7cc0ede3069e3dd00bb3c3d26f61c82418d9574ccab806ae7d43ffd4c", "start_line": 1}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "set", "consequences": [], "exceptions": [], "modality": "DESCRIPTIVE", "object": "issue template about", "parameters": ["frontmatter.about=Ask something"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source-local template binding; no consumer setting is applied"], "scope": ["jlcanovas/gh-best-practices-template", ".github/ISSUE_TEMPLATE/question.md"], "subject": "issue template"}}`
+
+Relationships: `[]`
+
 ## semantic-proposition:d6461f6d28d14fab9e3cf56326ea0a252689e6f157f2212dc841ef541cea6b24
 
-SPECIALIZED: SHOULD participants — prioritize community interests
+DISTINCT: SHOULD participants — prioritize community interests
 
-Community-interest guidance differs in explicit comparison with individual interests; retain that difference.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Community-interest guidance differs in explicit comparison with individual interests; retain that difference.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 33, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "757bfd5273cefb59917a86fb0b320d907e93e6e917e0f13e3a9f93af8f483334", "start_line": 28}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "prioritize", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "community interests", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:1b98edd4dbf95e557c9fdffbeeb8751189d29120d763c9c59aabaf1b558bd620", "semantic-proposition:986b7c607dfc2d963628001dacbdc340f21ae09301712d9daf29bdec69e64ca8"], "rationale": "Community-interest guidance differs in explicit comparison with individual interests; retain that difference."}]`
-
-## semantic-proposition:d79887bdcba6f9d19709b6679ff89ab38202f2f283ea6bb24baab538668b9c4a
-
-DISTINCT: PROHIBITED participants — avoid violent threats or language directed at another person
-
-Retain an independent source-local proposition: participants — PROHIBITED avoid violent threats or language directed at another person. No equivalent or superseding proposition is asserted in this batch.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "violent threats or language directed at another person", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[]`
-
-## semantic-proposition:d80b422b070fae3a3d33db1a231d601a72127da81ddfe4039d48d88d1344c466
-
-SPECIALIZED: PROHIBITED project participants — avoid categorical unbounded milestones
-
-Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism.
-
-Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 68, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "18ed90a4677c5cd1aeaabe7332d5602cef6c70f43db14a9c0991a6abd39b65f1", "start_line": 66}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "avoid", "consequences": ["Progress cannot complete and deadline semantics are unsuitable"], "exceptions": [], "modality": "PROHIBITED", "object": "categorical unbounded milestones", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:38d9e9255e66084a702b77a061db0f2cf1600474af1d21229ab4629f81ed262d"], "rationale": "Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:1b98edd4dbf95e557c9fdffbeeb8751189d29120d763c9c59aabaf1b558bd620", "semantic-proposition:986b7c607dfc2d963628001dacbdc340f21ae09301712d9daf29bdec69e64ca8"], "rationale": "Community-interest guidance differs in explicit comparison with individual interests; retain that difference."}]`
 
 ## semantic-proposition:d9cbbf723ffaf200818c8fb8c7a1b1a647b63bdba9b3c931c657b45b72d79ecb
 
-SPECIALIZED: MUST repository owner — edit or adapt code of conduct
+DISTINCT: MUST repository owner — edit or adapt code of conduct
 
-Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 13, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "170aa5f3a2acc82d1adaff04cb288acf2994cc495cb79dbdb2019b654f079bfb", "start_line": 13}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "edit or adapt", "consequences": [], "exceptions": [], "modality": "MUST", "object": "code of conduct", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source musts category; local adoption remains separate"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2f3680e51c628e278812960d1e27bb6c6f03c90977370b5be7335db7d5b281e2"], "rationale": "Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2f3680e51c628e278812960d1e27bb6c6f03c90977370b5be7335db7d5b281e2"], "rationale": "Conduct-file adaptation combines a must-category entry with concrete should guidance and reporting-contact customization."}]`
 
 ## semantic-proposition:da0476f1e8c3aa0f2c2ccd2d8ef02f138b13736ac7ded86b662a5224343e95c4
 
-SPECIALIZED: MAY project participants — allow primary and feature branches and occasional child branches for proposed review improvements
+DISTINCT: MAY project participants — allow primary and feature branches and occasional child branches for proposed review improvements
 
-Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 13, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "57aca24220a6454249cea6f64650c000a7ca35898d90b33f10d26bba944e1471", "start_line": 11}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "allow", "consequences": [], "exceptions": [], "modality": "MAY", "object": "primary and feature branches and occasional child branches for proposed review improvements", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:6c3ef4d4f2a71d47ede077ddf887c4424efe90135956cda2983328be7a4c6502", "semantic-proposition:7c3403c3ff73b05121b6b222393c2aad0ac19a89943e21ee95c29dcd1f423dce"], "rationale": "Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6c3ef4d4f2a71d47ede077ddf887c4424efe90135956cda2983328be7a4c6502", "semantic-proposition:ac9c18e23e12c49967a893d7c0a5b8f523e8fee8880a2b5377c03c5fdb2b3582"], "rationale": "Branch topology allows primary/features and an occasional child for review improvement, while limiting deeper ancestry; prerequisite handling retains its alternatives."}]`
 
 ## semantic-proposition:db206dfb22e1be9c7676aed142a3109fd9cc5349e4c63cf69b6bea4acd69d6ce
 
@@ -2252,63 +2348,63 @@ Relationships: `[]`
 
 ## semantic-proposition:dc9bfc2336a131cde0e7e983980976538713a7f0b78370c4ed1786ca69b7ec16
 
-SPECIALIZED: MUST participants — apply conduct rules within community spaces and official public representation
+DISTINCT: MUST participants — apply conduct rules within community spaces and official public representation
 
-Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 57, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "da2c36d04f073d150af33f358ccf8875935b431d05bee02d97e48d5b91a2bd0c", "start_line": 53}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "apply", "consequences": [], "exceptions": [], "modality": "MUST", "object": "conduct rules within community spaces and official public representation", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Examples: official email, social account and appointed events"], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:3083e421dbf320a411b5f14de2b54f10d74c2ea5348218fc7f13e44d958f7073", "semantic-proposition:93e50bd54ea4deab1e887ca031aeb14c374e48bb3d69c4776518019cce2c062e"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:3083e421dbf320a411b5f14de2b54f10d74c2ea5348218fc7f13e44d958f7073", "semantic-proposition:93e50bd54ea4deab1e887ca031aeb14c374e48bb3d69c4776518019cce2c062e"], "rationale": "Conduct applicability includes project/community spaces and official representation; retain differing actor and public-representation examples."}]`
 
 ## semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be
 
-SPECIALIZED: SHOULD template author — request citation using the supplied CFF 1.2.0 software and preferred article metadata
+DISTINCT: SHOULD template author — request citation using the supplied CFF 1.2.0 software and preferred article metadata
 
-Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b61bac9eed8e8b770fbf76c91faf923c20fee14d7c6d00f474d8ff78e56c56fb", "end_line": 32, "path": "CITATION.cff", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "b61bac9eed8e8b770fbf76c91faf923c20fee14d7c6d00f474d8ff78e56c56fb", "start_line": 1}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "request", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "citation using the supplied CFF 1.2.0 software and preferred article metadata", "parameters": ["cff-version=1.2.0", "preferred-citation.type=article", "Example software version 1.0.0", "Example release 2021-11-16", "Example article year 2022"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Names and ORCIDs are placeholders; title, version, DOI, date, URL, journal and pagination are example data, not consumer facts"], "scope": ["jlcanovas/gh-best-practices-template", "CITATION.cff"], "subject": "template author"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are specialized by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:55738ad32c5d3fae226f67367b387fe7214f853b30f61256a92999125295b5cd", "semantic-proposition:89247a9d44e58f1a777d247459ea38211fceb282a42a25a31b64fd0b56e0c164"], "rationale": "Optional paper-citation consideration and adapt-or-remove guidance are complemented by CFF example metadata; example authors, identifiers and versions are not consumer facts."}]`
 
 ## semantic-proposition:df1d8a163fd5dbbc8effc2e935db58de96ff8ff60dab765456105fcd8548fd7d
 
-SPECIALIZED: MUST maintainers — block merge while a maintainer opposes the pull request
+DISTINCT: MUST maintainers — block merge while a maintainer opposes the pull request
 
-Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e", "end_line": 43, "path": "GOVERNANCE.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "9c09bc935c926af5e082a6880ecbe6b3e4f945c5d885cffdcf7214863ba3e755", "start_line": 43}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "block", "consequences": [], "exceptions": ["Opposition may be removed after discussion or changes"], "modality": "MUST", "object": "merge while a maintainer opposes the pull request", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "GOVERNANCE.md"], "subject": "maintainers"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76", "semantic-proposition:a99b77a40359d468b19859c0df0259a4f5b3c9bfc1cab066d3305ea33b05c089", "semantic-proposition:b42003b15c2e3ff4d051bf901e5253dd039f6747c1ed219843519c67705be961"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:568ac038cf9a6fae9062eebd3e64a96dee4ed560f7f0398b77a9c0d64a4f4b76", "semantic-proposition:a99b77a40359d468b19859c0df0259a4f5b3c9bfc1cab066d3305ea33b05c089", "semantic-proposition:b42003b15c2e3ff4d051bf901e5253dd039f6747c1ed219843519c67705be961"], "rationale": "Merge authority differs: author integration preference, two other developer sign-offs with delegation, two maintainer approvals with >14-day one-approval exception, and an opposition veto. These are scoped policies, not a single universal threshold."}]`
 
 ## semantic-proposition:df3f5d7e8f7bc1cba290bb8cda18896d39a797c42d3be8fe1477f37c6b4cc07f
 
-SPECIALIZED: SHOULD participants — respect different viewpoints and experiences
+DISTINCT: SHOULD participants — respect different viewpoints and experiences
 
-Respect for differing views and experiences overlaps without identical source scope or wording.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Respect for differing views and experiences overlaps without identical source scope or wording.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 33, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "757bfd5273cefb59917a86fb0b320d907e93e6e917e0f13e3a9f93af8f483334", "start_line": 28}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "respect", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "different viewpoints and experiences", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:719b64fb50665fb2ac9a31c32a8a99def7fadd770c3f418b12429af5c0fc0930", "semantic-proposition:bcae8bfe4b2dfaf08cb9b284c7e526530b19aa247f98380ecb17a352b4e47af5"], "rationale": "Respect for differing views and experiences overlaps without identical source scope or wording."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:719b64fb50665fb2ac9a31c32a8a99def7fadd770c3f418b12429af5c0fc0930", "semantic-proposition:bcae8bfe4b2dfaf08cb9b284c7e526530b19aa247f98380ecb17a352b4e47af5"], "rationale": "Respect for differing views and experiences overlaps without identical source scope or wording."}]`
 
 ## semantic-proposition:e0a92102e1b4669d3d664ac37b86901a6e46b18f874fcc41c2f1a140035e3bea
 
-SPECIALIZED: SHOULD requester — describe alternative solutions or features considered
+DISTINCT: SHOULD requester — describe alternative solutions or features considered
 
-Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "1f48c52f209a971b8e7eae4120144d28fcf8ee38a7778a7b4d8cf1ab356617d2", "end_line": 17, "path": ".github/ISSUE_TEMPLATE/feature_request.md", "repository": "atapas/model-repo", "span_sha256": "ecb519885028b5144d3cca4d1a2f6e37cbe5bfdbb317f3b6334a04f132b75459", "start_line": 16}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "describe", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "alternative solutions or features considered", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", ".github/ISSUE_TEMPLATE/feature_request.md"], "subject": "requester"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:0809500a491391df7e3d569177a86b8f5f5642aaa37a2e7b78bbf912d1913512", "semantic-proposition:d0ad8ce7c2bb71c33fd3619189222f11f52957614f5fc10f51fa5ef8b7bd8727"], "rationale": "Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0809500a491391df7e3d569177a86b8f5f5642aaa37a2e7b78bbf912d1913512", "semantic-proposition:d0ad8ce7c2bb71c33fd3619189222f11f52957614f5fc10f51fa5ef8b7bd8727"], "rationale": "Alternatives are requested in PR, proposal and feature prompts; the jlcanovas prompts condition them on alternatives existing."}]`
 
 ## semantic-proposition:e365a85130cfb6e48b9ac62e1a6f3c703b26dc1fd2a62e5cf41084093d8c0e97
 
@@ -2321,18 +2417,6 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": ["Conflicts with README and LICENSE.md Attribution 4.0 identity; preserve for C0"], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "choose", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "a suitable project license after exploring alternatives", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source describes CC-BY-SA as starting point"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
 Relationships: `[{"classification": "CONFLICTING", "counterpart_ids": ["semantic-proposition:7c1b58c56afdbad1aadb30c7cf293a4eeaa1d112f1c95cafb486f328015b0421"], "rationale": "README declares CC BY 4.0 while guidelines describe CC-BY-SA as the starting license. Retain the documented source identity inconsistency; LICENSE.md remains B0 reference-only evidence, and no publication permission is decided."}]`
-
-## semantic-proposition:e5468438ce56320a0cd9535fef610ea89cfc11206f860dcc904922d2e86137bd
-
-DISTINCT: PROHIBITED participants — avoid discriminatory jokes or language
-
-Retain an independent source-local proposition: participants — PROHIBITED avoid discriminatory jokes or language. No equivalent or superseding proposition is asserted in this batch.
-
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "discriminatory jokes or language", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
-
-Relationships: `[]`
 
 ## semantic-proposition:e953052abf0e062502a47740ddae2690af333729bf85be6d1e8dba5aa0723a8d
 
@@ -2348,51 +2432,63 @@ Relationships: `[]`
 
 ## semantic-proposition:ead9cd2f5bcab669c1da8572ba6e368c1cd9e9a5ac5595e7211d6a59893553c2
 
-SPECIALIZED: SHOULD project participants — consider splitting issues larger than a single pull request
+DISTINCT: SHOULD project participants — consider splitting issues larger than a single pull request
 
-Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 49, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "ee4cc8571265df19ad8e9ae91ba988a359e7426f757f5ea780a15fe8a11d56ea", "start_line": 47}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "consider splitting", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "issues larger than a single pull request", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Advance issues enable feedback, retain intent and track later attempts"], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431", "semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33", "semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2dafbdaad5c7217c70e7107a6cee140f4f080f15570feec01f8c3b023d3ec431", "semantic-proposition:393eec09bfe975ee68f3c73e9762ecae6621d27c9159c6f525e3c52d97f8fb33", "semantic-proposition:cb6154618defbce295e39c7f0e69a8b8dcd9c2ca76f4a606fed7a7b19fa1044b"], "rationale": "Single-purpose work and bounded review overlap; preserve large-idea exception, approximate few-day advice and reproduction information where possible."}]`
 
 ## semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234
 
-SPECIALIZED: MUST community leaders — moderate nonconforming contributions and communicate reasons when appropriate
+DISTINCT: MUST community leaders — moderate nonconforming contributions and communicate reasons when appropriate
 
-Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 49, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "8ce250ea4e0d82921b06445448e99e414b7b1f2b17c113616d1ce0449f0b1372", "start_line": 46}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "moderate", "consequences": [], "exceptions": [], "modality": "MUST", "object": "nonconforming contributions and communicate reasons when appropriate", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "community leaders"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c", "semantic-proposition:345e84c893c49793a31d2f591bb6b2a20804f3972a74cf19f58970c99206c79c", "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4", "semantic-proposition:a0e5d8e64b6a20002bca5ee9740019c707b8e840198914313ba4999108981d83"], "rationale": "Behavior clarification, corrective action, contribution removal and banning are related but have different actors, modalities and response duties; all are retained."}]`
 
 ## semantic-proposition:eecd5c8892f0e437dc966170b5bd5618d79ab99c1b90b4f7ae87a5340c5685b9
 
-SPECIALIZED: SHOULD participants — show empathy for other participants
+DISTINCT: SHOULD participants — show empathy for other participants
 
-Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate.
 
 Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 39, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "9465024e8cb4b47befe0d034c8ece409641cf6fce1fa6e21527a12522c2258d1", "start_line": 35}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "show", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "empathy for other participants", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01", "semantic-proposition:cc357b938c1a1da5f121260ffced3a6d5f50a118c4c8ed8935510dc496be1767", "semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:081f31a8ff74dff830d11cca35a51038b92f2fd93832577a55eb755f0a666f01", "semantic-proposition:cc357b938c1a1da5f121260ffced3a6d5f50a118c4c8ed8935510dc496be1767", "semantic-proposition:d265eab3ef6db45e91ef99e5d39138befed6500612f194066ede97023fa3e776"], "rationale": "Empathy is shared conduct intent, with kindness and participant/community wording retained; short, long and contribution versions remain separate."}]`
 
 ## semantic-proposition:f0d4e7e90285f95e52ceb9cde4023aef53b1481101730bef23e788f2eac971f1
 
-SPECIALIZED: SHOULD participants — give and accept constructive feedback gracefully
+DISTINCT: SHOULD participants — give and accept constructive feedback gracefully
 
-Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 33, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "757bfd5273cefb59917a86fb0b320d907e93e6e917e0f13e3a9f93af8f483334", "start_line": 28}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "give and accept", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "constructive feedback gracefully", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd", "semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd", "semantic-proposition:a4b3551dfd79150eb9d0189f069800629e6983ee36ffe1c5f9e46937e5075773"], "rationale": "Constructive feedback covers giving, accepting and graceful criticism; retain the distinct actions rather than flattening them."}]`
+
+## semantic-proposition:f2383cb4a985c55dbe08d710674cdb806afa673003e21c31d2da36c7ca410dd5
+
+DISTINCT: MUST contributors and maintainers — pledge harassment-free participation regardless of the enumerated personal characteristics
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor.
+
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 28, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "f9c0e38a9c8c8c4510db64ca3327a332f054e2cde3f2b084ca5797b784818d39", "start_line": 23}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "pledge", "consequences": [], "exceptions": [], "modality": "MUST", "object": "harassment-free participation regardless of the enumerated personal characteristics", "parameters": ["characteristic:age", "characteristic:body size", "characteristic:disability", "characteristic:ethnicity", "characteristic:gender identity and expression", "characteristic:level of experience", "characteristic:nationality", "characteristic:personal appearance", "characteristic:race", "characteristic:religion", "characteristic:sexual identity and orientation"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Covenant 1.4-derived pledge; scope and enumeration preserved in source span"], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "contributors and maintainers"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:6ce3efeb81184d9fa9ffae8d8903be6b3de70f856d783c9569c25bc73b1d713c", "semantic-proposition:8e75625620c4a6f75886f9e52a960f14e52660c202084f784303a7cb3cdfacc2", "semantic-proposition:9f4018de5c2e6bb1678d501bb94b0302aa571a839b2dd20ee1ea92997a83be6c"], "rationale": "Harassment-free pledges span Covenant 1.4/2.0-derived and short/long forms. Enumerated characteristics and participating roles differ; no version is designated a successor."}]`
 
 ## semantic-proposition:f2f1083e08f9af5c8af382be6bf92f6fe94b8dafbce9eab53ced3124106ca35a
 
@@ -2408,15 +2504,15 @@ Relationships: `[]`
 
 ## semantic-proposition:f2f5fe250f654079981c8a39ead77d76a1e2f1461b86ec4c79a76c2e03c5314a
 
-SPECIALIZED: SHOULD repository owner — consider code-owner identification and settings
+DISTINCT: SHOULD repository owner — consider code-owner identification and settings
 
-Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed.
 
 Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b", "end_line": 20, "path": "guidelines.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "8ae68fc82a53f064a10f2bfad585b476d13a0020312dc18e92d53d22eee4c8a6", "start_line": 20}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement", "Guidelines assume repository admin or owner permissions"], "semantic_ast": {"action": "consider", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "code-owner identification and settings", "parameters": [], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["Source shoulds category"], "scope": ["jlcanovas/gh-best-practices-template", "guidelines.md"], "subject": "repository owner"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:53888d0999bc168e78b94ad9f1b47fe98003e10db70a3b13723ed373f4071e50", "semantic-proposition:8e17ff56a50fb9d4449e7fa47ac598e02458af76c13f30aef51d1168d68519ed"], "rationale": "Considering ownership is specialized by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:53888d0999bc168e78b94ad9f1b47fe98003e10db70a3b13723ed373f4071e50", "semantic-proposition:8e17ff56a50fb9d4449e7fa47ac598e02458af76c13f30aef51d1168d68519ed"], "rationale": "Considering ownership is complemented by definition/checking against platform docs and explicit team write access. Platform truth awaits C4; no settings are changed."}]`
 
 ## semantic-proposition:f34830665030f3e50b30d79b205709f05f0c160e030a18a0a95e09707c4a7ac9
 
@@ -2432,27 +2528,39 @@ Relationships: `[]`
 
 ## semantic-proposition:f3ff9668a240b8a5a2c507ae7331dddcf00460aac4a0a5f1caeee2b1868e7dfa
 
-SPECIALIZED: SHOULD project participants — rewrite poor automatically generated commit messages using squash or rebase
+DISTINCT: SHOULD project participants — rewrite poor automatically generated commit messages using squash or rebase
 
-Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate.
 
 Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 106, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "2a3587fbedca4651809e1bcec9453f28e3bf78959b915869ea368d4ac105f1c4", "start_line": 106}]`
 
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "rewrite", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "poor automatically generated commit messages using squash or rebase", "parameters": [], "polarity": "POSITIVE", "preconditions": ["Tools produce unhelpful commit history"], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:0e8541d6dcccc73b218d9fa055348d33755adc6b153390116a26f2732f394bf5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:4be68e7e45e38d45af75c12b417ae771c8560f44988e9b235ceb99b9a056d8f3"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:0e8541d6dcccc73b218d9fa055348d33755adc6b153390116a26f2732f394bf5", "semantic-proposition:2c44a979b5cbf683c1aa0624ad537d0bec99c3afb78cf82cf289104c693b1d1e", "semantic-proposition:4be68e7e45e38d45af75c12b417ae771c8560f44988e9b235ceb99b9a056d8f3"], "rationale": "Meaningful commit history and PR explanations coexist with discretionary integration strategy; rewriting poor generated messages is conditional, not a universal squash mandate."}]`
 
-## semantic-proposition:f4dd7a4697ec6b6981ccdc0d2dcae6422b071c2ebae5fa45f11066cbb9363f18
+## semantic-proposition:f48b9e2f14655d45a3639fbd65c926b4260be7e3f9700bdbe39ef99168782dcb
 
-SPECIALIZED: PROHIBITED participants — avoid trolling, derogatory comments and personal or political attacks
+DISTINCT: PROHIBITED participants — engage in public or private harassment
 
-Trolling and personal/political attacks overlap; insulting versus derogatory language is retained.
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition.
 
-Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f", "end_line": 37, "path": "CODE_OF_CONDUCT.md", "repository": "atapas/model-repo", "span_sha256": "4b5b6be953bb068f9f45137712fb3ef859e622f1fc8bfd823c00dd7cb4ecfd4c", "start_line": 30}]`
 
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "trolling, derogatory comments and personal or political attacks", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "public or private harassment", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
 
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:7fd5b777fe54d09974108575a3f5300c608adfe87632b10111c7a90e11722cfb", "semantic-proposition:b3ee3b0c477a0685b9b9483f2d091818e0f67a1ce829b7ab85563e113123ec73"], "rationale": "Trolling and personal/political attacks overlap; insulting versus derogatory language is retained."}]`
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2128e9de2e0cd4a03cf0a9f89d62830e384eb463d461c4dcabee64c0a5b6832d", "semantic-proposition:f76fac07f8b1350cce73db5df7559e063818f8074850febd9462f983fe3406a0"], "rationale": "Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition."}]`
+
+## semantic-proposition:f686003fc87143e65b95501cd293fc2ca76e0acb733f54c77e1a21efee583939
+
+DISTINCT: PROHIBITED project participants — use categorical unbounded milestones
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism.
+
+Source locators: `[{"commit": "801411757531a8880cb315148160fde3079d7227", "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67", "end_line": 68, "path": "README.md", "repository": "tmcw/github-best-practices", "span_sha256": "18ed90a4677c5cd1aeaabe7332d5602cef6c70f43db14a9c0991a6abd39b65f1", "start_line": 66}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Long-lived continuously deployed product such as a web application or API", "Author opinion; advice is not platform authority"], "semantic_ast": {"action": "use", "consequences": ["Progress cannot complete and deadline semantics are unsuitable"], "exceptions": [], "modality": "PROHIBITED", "object": "categorical unbounded milestones", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["tmcw/github-best-practices", "README.md"], "subject": "project participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:38d9e9255e66084a702b77a061db0f2cf1600474af1d21229ab4629f81ed262d"], "rationale": "Bounded dated milestones complement prohibition of categorical unbounded milestones; labels provide the alternative category mechanism."}]`
 
 ## semantic-proposition:f6f455e0e3fc3292ffc6dbc8175bee299c35404189d31e8ca24bf086869ac315
 
@@ -2466,6 +2574,18 @@ Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repos
 
 Relationships: `[]`
 
+## semantic-proposition:f76fac07f8b1350cce73db5df7559e063818f8074850febd9462f983fe3406a0
+
+DISTINCT: PROHIBITED participants — engage in public or private harassment
+
+Retain this source-local proposition independently; supplemental topical links do not imply subsumption or equivalence. Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition.
+
+Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa", "end_line": 44, "path": "CODE_OF_CONDUCT.md", "repository": "jlcanovas/gh-best-practices-template", "span_sha256": "68938890c3824c2ba84adb3ec9a101d446a955f3ffebded9d15d5b858421026a", "start_line": 37}]`
+
+Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "engage in", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "public or private harassment", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["jlcanovas/gh-best-practices-template", "CODE_OF_CONDUCT.md"], "subject": "participants"}}`
+
+Relationships: `[{"classification": "RELATED", "counterpart_ids": ["semantic-proposition:2128e9de2e0cd4a03cf0a9f89d62830e384eb463d461c4dcabee64c0a5b6832d", "semantic-proposition:f48b9e2f14655d45a3639fbd65c926b4260be7e3f9700bdbe39ef99168782dcb"], "rationale": "Harassment prohibition overlaps across conduct versions and projects; scope/applicability prevent an exact duplicate disposition."}]`
+
 ## semantic-proposition:fc60ed6cfd4aba5ef66b267df97b0d58650bb9f5e97f1c9369749f2973e37de7
 
 DISTINCT: SHOULD maintainer — document security-supported versions
@@ -2477,15 +2597,3 @@ Source locators: `[{"commit": "bf13cd2c7992876da01de065084e8af3e9c7db06", "conte
 Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Adaptable community template; local project scope, not GES policy", "Placeholders require owner-specific replacement"], "semantic_ast": {"action": "document", "consequences": [], "exceptions": [], "modality": "SHOULD", "object": "security-supported versions", "parameters": ["Examples: supported 5.1.x and 4.0.x; unsupported 5.0.x and <4.0"], "polarity": "POSITIVE", "preconditions": [], "qualifiers": ["No real supported version promise is inferred"], "scope": ["jlcanovas/gh-best-practices-template", "SECURITY.md"], "subject": "maintainer"}}`
 
 Relationships: `[]`
-
-## semantic-proposition:fdfbd6a953c7f288eaf60f400d3baeb2d3c2759b0f3542e3f3a85520306d49f3
-
-SPECIALIZED: PROHIBITED participants — avoid other professionally inappropriate conduct
-
-Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes.
-
-Source locators: `[{"commit": "9aa52517830a0e10043116ff768af8fabeeb4347", "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687", "end_line": 50, "path": "CONTRIBUTING.md", "repository": "atapas/model-repo", "span_sha256": "45749c5f93e83d820404b02ccb9d3e0b4be93d88fd8e73316c88b4a8cadd2c3e", "start_line": 43}]`
-
-Preserved AST/applicability: `{"ambiguities": [], "applicability": ["Model repository community example; only local source scope", "Presentation/stack/identity examples are not consumer facts"], "semantic_ast": {"action": "avoid", "consequences": [], "exceptions": [], "modality": "PROHIBITED", "object": "other professionally inappropriate conduct", "parameters": [], "polarity": "NEGATIVE", "preconditions": [], "qualifiers": [], "scope": ["atapas/model-repo", "CONTRIBUTING.md"], "subject": "participants"}}`
-
-Relationships: `[{"classification": "SPECIALIZED", "counterpart_ids": ["semantic-proposition:44431fcdd4e33b3ed3478a64653fc2642036df49c0f015bdc9b8b15265043377", "semantic-proposition:9a745252ccc68d81c02ebb8c6053a2df2c57f2b9187e560eaa462dbde6aa05c8"], "rationale": "Professionally inappropriate conduct is a shared catch-all within distinct local conduct scopes."}]`

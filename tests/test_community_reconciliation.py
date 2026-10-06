@@ -10,7 +10,7 @@ import unittest
 from unittest.mock import patch
 
 from ges.core import ROOT
-from ges.community_reconciliation import BASE, B0, INPUT_FILES, build, main
+from ges.community_reconciliation import BASE, B0, INPUT_FILES, MANIFEST, ANNOTATIONS, build, main, validate_specialization
 from ges.reconciliation import AST_FIELDS, _disposition, fingerprint, inputs
 
 
@@ -19,17 +19,17 @@ class CommunityReconciliationTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        for name in INPUT_FILES | {str(BASE / 'annotations.json'), str(BASE / 'input-manifest.json')}:
+        for name in INPUT_FILES | {str(ANNOTATIONS), str(MANIFEST)}:
             destination = self.root / name
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / name, destination)
 
     def alter_annotations(self, change):
-        path = self.root / BASE / 'annotations.json'
+        path = self.root / ANNOTATIONS
         rows = json.loads(path.read_text())
         change(rows)
         path.write_text(json.dumps(rows))
-        manifest_path = self.root / BASE / 'input-manifest.json'
+        manifest_path = self.root / MANIFEST
         manifest = json.loads(manifest_path.read_text())
         manifest['annotations_digest'] = fingerprint(rows)
         manifest_path.write_text(json.dumps(manifest))
@@ -40,7 +40,7 @@ class CommunityReconciliationTests(unittest.TestCase):
         original = {p['id']: p for p in (json.loads(line) for line in
                     (self.root / B0 / 'ledger/propositions.jsonl').read_text().splitlines())}
         self.assertEqual({r['proposition_id'] for r in rows}, set(original))
-        self.assertEqual(len(rows), 207)
+        self.assertEqual(len(rows), 216)
         decisions = [json.loads(line) for line in outputs['decisions.jsonl'].splitlines()]
         indexed, controls, _ = inputs(list(original.values()), [])
         for row in rows:
@@ -99,8 +99,8 @@ class CommunityReconciliationTests(unittest.TestCase):
     def test_conflicts_remain_residual(self):
         outputs = build(self.root)
         residual = json.loads(outputs['residual.json'])
-        self.assertEqual(len(residual['pending_decision_reviews']), 207)
-        self.assertEqual(len(residual['conflicts']), 6)
+        self.assertEqual(len(residual['pending_decision_reviews']), 216)
+        self.assertEqual(len(residual['conflicts']), 4)
         self.assertTrue(all(r['counterpart_ids'] for r in residual['conflicts']))
 
     def test_cannot_erase_conflict_by_reclassification(self):
@@ -111,7 +111,7 @@ class CommunityReconciliationTests(unittest.TestCase):
             build(self.root)
 
     def test_cannot_omit_frozen_inputs(self):
-        path = self.root / BASE / 'input-manifest.json'
+        path = self.root / MANIFEST
         manifest = json.loads(path.read_text())
         manifest['files'].pop(next(iter(manifest['files'])))
         path.write_text(json.dumps(manifest))
@@ -151,6 +151,53 @@ class CommunityReconciliationTests(unittest.TestCase):
         path.symlink_to(target)
         with self.assertRaisesRegex(ValueError, 'Symlinked input'):
             build(self.root)
+
+    def specialization_fixture(self):
+        rows = json.loads((ROOT / BASE / 'ledger/relationships.json').read_bytes())
+        base = copy.deepcopy(rows[0]['proposition'])
+        refinement = copy.deepcopy(base)
+        refinement['semantic_ast']['preconditions'].append('Only when the feature is enabled')
+        relation = {'classification': 'SPECIALIZED', 'counterpart_ids': ['refinement'],
+                    'rationale': 'Same predicate restricted to feature-enabled context',
+                    'specialization': {'base_id': 'base', 'refinement_id': 'refinement'}}
+        return relation, {'base': base, 'refinement': refinement}
+
+    def test_specialization_requires_predicate_preserving_direction(self):
+        relation, indexed = self.specialization_fixture()
+        validate_specialization('base', relation, indexed)
+        indexed['refinement']['semantic_ast']['action'] = 'an unrelated action'
+        with self.assertRaisesRegex(ValueError, 'not predicate-preserving'):
+            validate_specialization('base', relation, indexed)
+
+    def test_specialization_cannot_lose_conditions_or_assert_identical_narrowing(self):
+        relation, indexed = self.specialization_fixture()
+        relation['specialization'] = {'base_id': 'refinement', 'refinement_id': 'base'}
+        with self.assertRaisesRegex(ValueError, 'loses a condition'):
+            validate_specialization('base', relation, indexed)
+        relation['specialization'] = {'base_id': 'base', 'refinement_id': 'refinement'}
+        indexed['refinement'] = copy.deepcopy(indexed['base'])
+        with self.assertRaisesRegex(ValueError, 'explicit narrowing'):
+            validate_specialization('base', relation, indexed)
+
+    def test_related_group_cannot_be_relabelled_as_undirected_specialization(self):
+        def change(rows):
+            row = next(r for r in rows if any(g['classification'] == 'RELATED' for g in r['relationships']))
+            row['classification'] = 'SPECIALIZED'
+            row['relationships'][0]['classification'] = 'SPECIALIZED'
+        self.alter_annotations(change)
+        with self.assertRaisesRegex(ValueError, 'Malformed relationship'):
+            build(self.root)
+
+    def test_security_selection_and_conditional_adaptation_are_compatible(self):
+        rows = json.loads(build(self.root)['relationships.json'])
+        selected = [r for r in rows if r['proposition']['semantic_ast']['object'] in
+                    {'security policy', 'SECURITY.md describing vulnerability reporting'}]
+        self.assertEqual(len(selected), 2)
+        self.assertTrue(all(r['classification'] == 'DISTINCT' for r in selected))
+        self.assertTrue(all(r['relationships'][0]['classification'] == 'COMPLEMENTARY' for r in selected))
+        adapted = next(r for r in selected if r['proposition']['semantic_ast']['action'] == 'adapt')
+        self.assertTrue(adapted['proposition']['semantic_ast']['preconditions'])
+        self.assertTrue(adapted['proposition']['semantic_ast']['exceptions'])
 
 
 if __name__ == '__main__':

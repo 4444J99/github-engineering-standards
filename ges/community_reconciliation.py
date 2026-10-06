@@ -14,19 +14,42 @@ from .semantics import canonical_bytes, stable_id, validate_record
 
 BASE = Path('evidence/semantics/c0')
 B0 = Path('evidence/semantics/b0')
+MANIFEST = BASE / 'input-manifest.v2.json'
+ANNOTATIONS = BASE / 'annotations.v2.json'
 CLASSES = {'DISTINCT', 'SPECIALIZED', 'REFERENTIAL', 'CONFLICTING'}
 PROPOSED = {'status': 'PROPOSED', 'reviewer': None, 'evidence_reference': None}
 INPUT_FILES = {str(B0 / name) for name in (
-    'input-manifest.json', 'annotations.json', 'ledger/propositions.jsonl',
+    'input-manifest.v2.json', 'annotations.v2.json', 'revision-v2.json', 'ledger/propositions.jsonl',
     'ledger/occurrences.jsonl', 'ledger/receipt.json')}
 
 
+def validate_specialization(identity: str, relation: dict, indexed: dict) -> None:
+    """Check declared direction and predicate-preserving narrowing, not semantic truth."""
+    direction = relation['specialization']
+    require(isinstance(direction, dict) and set(direction) == {'base_id', 'refinement_id'},
+            'Specialization requires an explicit base and refinement')
+    base_id, refinement_id = direction['base_id'], direction['refinement_id']
+    require(base_id != refinement_id and {base_id, refinement_id} ==
+            {identity, *relation['counterpart_ids']}, 'Specialization direction does not bind peers')
+    base, refinement = indexed[base_id], indexed[refinement_id]
+    require(base['applicability'] == refinement['applicability'], 'Specialization changes unaccounted applicability')
+    fields = AST_FIELDS - {'preconditions', 'qualifiers'}
+    require(all(base['semantic_ast'][field] == refinement['semantic_ast'][field] for field in fields),
+            'Related/complementary actions are not predicate-preserving specialization')
+    differences = False
+    for field in ('preconditions', 'qualifiers'):
+        broad, narrow = set(base['semantic_ast'][field]), set(refinement['semantic_ast'][field])
+        require(broad <= narrow, 'Specialization loses a condition or qualifier')
+        differences |= broad != narrow
+    require(differences, 'Specialization requires an explicit narrowing difference')
+
+
 def build(root: Path) -> dict[str, bytes]:
-    manifest = json.loads((root / BASE / 'input-manifest.json').read_text())
+    manifest = json.loads((root / MANIFEST).read_text())
     require(set(manifest) == {'schema', 'b0_commit', 'files', 'proposition_ids',
                              'annotations_digest'}, 'Malformed C0 manifest')
     require(manifest['schema'] == 'ges.c0-input.v1', 'Wrong C0 input schema')
-    require(manifest['b0_commit'] == '5f2f3b8d4141a8e1be1e6aac0e002378f46c6fa2',
+    require(manifest['b0_commit'] == '2bdc382e15965a5b6c85fba8a7a18bb283941479',
             'Unexpected B0 revision')
     require(set(manifest['files']) == INPUT_FILES, 'Incomplete B0 input membership')
     for name, digest in manifest['files'].items():
@@ -46,7 +69,7 @@ def build(root: Path) -> dict[str, bytes]:
                                'semantic-occurrence')
     occurrence_index = {o['id']: o for o in occurrences}
     require(len(occurrence_index) == len(occurrences), 'Duplicate occurrence')
-    annotations = json.loads((root / BASE / 'annotations.json').read_text())
+    annotations = json.loads((root / ANNOTATIONS).read_text())
     require(fingerprint(annotations) == manifest['annotations_digest'],
             'Changed authored annotations')
     require(isinstance(annotations, list), 'Annotations must be an array')
@@ -64,9 +87,12 @@ def build(root: Path) -> dict[str, bytes]:
         require(isinstance(row['relationships'], list), 'Malformed relationships')
         seen = set()
         for relation in row['relationships']:
-            require(set(relation) == {'classification', 'counterpart_ids', 'rationale'},
+            fields = {'classification', 'counterpart_ids', 'rationale'}
+            if relation.get('classification') == 'SPECIALIZED':
+                fields.add('specialization')
+            require(set(relation) == fields,
                     'Malformed relationship')
-            require(relation['classification'] in {'SPECIALIZED', 'CONFLICTING'},
+            require(relation['classification'] in {'SPECIALIZED', 'CONFLICTING', 'RELATED', 'COMPLEMENTARY'},
                     'Unsupported source relationship')
             peers = relation['counterpart_ids']
             require(isinstance(peers, list) and bool(peers) and
@@ -74,14 +100,17 @@ def build(root: Path) -> dict[str, bytes]:
                     all(peer in indexed for peer in peers), 'Invalid counterparts')
             require(isinstance(relation['rationale'], str) and
                     bool(relation['rationale'].strip()), 'Missing relationship rationale')
+            if relation['classification'] == 'SPECIALIZED':
+                validate_specialization(identity, relation, indexed)
             signature = fingerprint(relation)
             require(signature not in seen, 'Duplicate relationship')
             seen.add(signature)
         classes = {r['classification'] for r in row['relationships']}
         expected = 'CONFLICTING' if 'CONFLICTING' in classes else (
-            'SPECIALIZED' if classes else row['classification'])
+            'SPECIALIZED' if 'SPECIALIZED' in classes else row['classification'])
         require(row['classification'] == expected and
-                (bool(classes) == (row['classification'] in {'SPECIALIZED', 'CONFLICTING'})),
+                (bool(classes & {'SPECIALIZED', 'CONFLICTING'}) ==
+                 (row['classification'] in {'SPECIALIZED', 'CONFLICTING'})),
                 'Classification does not match relationships')
         authored[identity] = row
     require(set(authored) == set(indexed), 'Missing proposition disposition')
@@ -92,6 +121,8 @@ def build(root: Path) -> dict[str, bytes]:
                               'counterpart_ids': sorted((set(relation['counterpart_ids']) |
                                                         {identity}) - {peer}),
                               'rationale': relation['rationale']}
+                if 'specialization' in relation:
+                    reciprocal['specialization'] = relation['specialization']
                 require(reciprocal in authored[peer]['relationships'],
                         'Asymmetric authored relationship')
     decisions, rows, conflicts = [], [], []
@@ -135,13 +166,13 @@ def build(root: Path) -> dict[str, bytes]:
         'conflicts': conflicts,
         'inherited_b0_hold': 'B0 primary/omission and artifact reviews, foundation acceptance remain B0 obligations.',
         'pending_gates': ['B0 and foundation acceptance', 'Authorized reconciliation reviews',
-                          'Independent audit', 'Resolution of source tensions',
+                          'Independent audit', 'Reviewed source-conflict classifications (resolution owned downstream)',
                           'Exact-head human approval and remote CI',
                           'Merge and merged-main verification', 'Owner scope acceptance'],
     }
     review = ['# C0 source-only reconciliation review', '',
               'HOLD — all decisions PROPOSED; zero approvals or policy adoption.', '',
-              'SPECIALIZED denotes related source-specific variants, not directional subsumption.',
+              'RELATED/COMPLEMENTARY links do not change a DISTINCT or REFERENTIAL disposition. SPECIALIZED requires an explicit base-to-refinement direction.',
               'REFERENCE in A5 retains a proposition as source evidence; it does not exclude actionable guidance.',
               'No duplicates or supersessions are asserted across differing scope/applicability.', '']
     for row in rows:

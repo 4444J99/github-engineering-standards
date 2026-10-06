@@ -1,80 +1,57 @@
-# C0 — Community reconciliation
+# C0 — Community reconciliation, correction revision 2
 
-This is a **HOLD staging deliverable**, stacked on B0 PR #479 at
-`5f2f3b8d4141a8e1be1e6aac0e002378f46c6fa2`. The user's instruction to proceed
-authorizes this preparation; it does not constitute approval of the 207 B0
-propositions or independent review of C0. B0's residual obligations remain B0's.
+Status: staged, HOLD. Frozen B0 input: `2bdc382e15965a5b6c85fba8a7a18bb283941479`.
+The original C0 manifest/annotations remain unchanged as revision-1 evidence.
+`evidence/semantics/c0/input-manifest.v2.json` and `annotations.v2.json` bind
+corrected B0 files, its explicit old/new ID map, and all 216 proposition IDs.
+The nine new issue-template bindings each have a source-only decision proposal.
+All 207 former IDs were deliberately migrated; no source pins were refreshed.
 
-The immutable input manifest binds the full B0 proposition/occurrence ledgers,
-annotations, input manifest and receipt. C0's authored annotations classify every
-one of the 207 propositions and record explicit reciprocal relationships.
-The compiler performs structural validation and deterministic projection only;
-it contains no keyword or similarity-based semantic classifier.
-
-| Source relationship | Propositions | Meaning |
+| Disposition | Propositions | Meaning |
 | --- | ---: | --- |
-| DISTINCT | 45 | Retained independently; no equivalent or successor asserted within this batch. |
-| SPECIALIZED | 128 | Related source-specific variants, with differences retained. No directional subsumption is asserted. |
-| REFERENTIAL | 28 | Source examples, descriptions or illustrative implementation instructions retained as evidence. |
-| CONFLICTING | 6 | Three paired source tensions remain open, with explicit counterparts. |
+| DISTINCT | 173 | Retained independently, including complementary source instructions. |
+| REFERENTIAL | 39 | Source examples, descriptive statements and implementation bindings. |
+| CONFLICTING | 4 | Two paired source tensions retained explicitly. |
 
-The A5 decision vocabulary has no source-only DISTINCT or SPECIALIZED disposition.
-C0 therefore projects retained source propositions to `REFERENCE` with their
-authored relationship rationale, and tensions to `CONFLICT`. A `REFERENCE`
-decision here preserves actionable source guidance for C4/D0; it is **not** an
-exclusion, a policy rejection, a completeness certificate, or a claim that the
-guidance is nonnormative. No canonical control is referenced or created. The
-source relationship view is supplementary authored staging data, not a new
-approval schema or replacement for the A5/A6 review contracts.
+RELATED and COMPLEMENTARY are supplemental links, not specializations, duplicates
+or approval dispositions. All former undirected SPECIALIZED participants were
+reclassified with source-local predicates intact. Their shared topics/compositions
+remain discoverable through reciprocal supplemental links.
+True SPECIALIZED relationships remain supported but require an explicit base and
+refinement. The bounded validator requires the same predicate and applicability,
+retained conditions/qualifiers and at least one explicit narrowing condition or
+qualifier. Changed actions, lost qualifiers, reversed direction and identical
+predicates without narrowing fail closed. Such structural checks do not establish
+the semantic truth of an arbitrary additional condition; reviewer judgment remains
+required. This dataset asserts no directed specialization or exact duplicate.
 
-No exact duplicates or supersessions are asserted. Source scope, applicability,
-roles and Covenant-version distinctions prevent flattening apparently similar
-conduct statements. Full AST fields, source locators, applicability, authority,
-ambiguities and B0 review status are preserved in `relationships.json` and its
-human-readable `review.md`. The decision ledger accounts for every AST field as
-preserved and none as lost; this is structurally testable preservation, not an
-independent endorsement of B0 formalization or omission completeness.
+Optional security-policy selection and conditional adaptation/removal are distinct,
+compatible instructions. B0 now carries the coverage precondition and removal
+exception; C0 links these instructions as COMPLEMENTARY, with no conflict claim.
+The genuine license-label inconsistency and optional/promotional starring wording
+remain explicit source tensions. A reviewed CONFLICTING classification is allowed
+by the C0 contract; C0 does not need to adopt a license or enforce starring.
+Cross-source resolution and owner policy/rights decisions remain C4/D0/D3 work.
 
-## Findings retained for review
-
-- Conduct pledges differ across short/long and Covenant 1.4/2.0-derived versions;
-  characteristic lists, sexual-conduct wording, leadership roles and conduct
-  response scope remain distinct.
-- Merge guidance differs by project and role. The two-maintainer rule retains
-  its one-approval exception after more than 14 days; the two-other-developer
-  rule retains its delegation condition; maintainer opposition remains a veto.
-  No universal approval threshold or 48-hour service promise is adopted.
-- Security-policy selection is optional in the coulds category, while file
-  adaptation is should-level with a removal exception. That modal tension is
-  recorded rather than resolved through an unreviewed interpretation.
-- The jlcanovas README's CC BY 4.0 description and guidelines' CC-BY-SA starting
-  point remain an explicit inconsistency. LICENSE.md retains its B0 legal-support
-  disposition; C0 makes no license interpretation or redistribution decision.
-- Atapas optional starring and promotional must wording remain a modal tension.
-  Promotional language is not adopted as an enforceable requirement.
-- CODEOWNERS examples and funding location assertions remain community source
-  claims. C4 must compare relevant claims with authoritative platform evidence.
-  Template identities, support links, example environments, deployment links,
-  citation metadata and TryShape links remain examples rather than consumer facts.
-
-## Reproduction and acceptance boundary
+A5 has no source-only DISTINCT category. Retained source decisions project to
+REFERENCE with their authored classification/rationale; genuine tensions project
+to CONFLICT. All complete B0 ASTs, enumerations, applicability, authority, parameters,
+exceptions and ambiguities are preserved in relationships.json and review.md.
+No control is created or referenced. Every decision remains PROPOSED with null
+review identity/evidence; no authorized or independent review is invented.
 
 ```sh
-python -m ges.community_reconciliation
 python -m ges.community_reconciliation --check
 python -m ges semantics validate --input evidence/semantics/c0/ledger/decisions.jsonl
 ```
 
-Generation refuses an existing destination. `--check` requires exact generated
-membership and bytes. An unchanged regeneration does not produce a GO receipt.
-Use `--output` for a fresh temporary destination when comparing a second run.
+Generation requires a new output path. Check mode compares exact membership and
+bytes. C0 binds the current v2 input manifest and annotations; revision-1 files
+are historical inputs, not current certification evidence.
 
-All 207 decisions remain `PROPOSED` with null reviewer/evidence. The residual
-ledger lists every pending decision and all six tension participants. Acceptance
-requires accepted B0/foundations, authorized reconciliation reviews, independent
-audit, reviewed resolution of tensions, exact-head review/CI, merged-main
-verification and owner acceptance. No reviewers or approval receipts are invented.
-
-Exclude GHQR, Well-Architected, Docs, C4, owner policy adoption, consumer templates,
-rights clearance, native operations, upstream submissions and release. Checkout
-retained. C0 cannot be labeled verified or complete from these local checks.
+All five blocking findings from the earlier agent quality review have specific
+corrections and regressions. The follow-up acceptance receipt records their
+resolution without promoting proposals into reviewed evidence. Foundation/B0
+acceptance, authorized reviews, independent audit, exact-head human approval,
+remote-head CI, main merge and merged-main verification remain required for GO.
+No B1 activation, native operation, rights clearance or policy adoption occurs.

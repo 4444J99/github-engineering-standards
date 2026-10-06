@@ -1,0 +1,48 @@
+{
+  "schema": "ges.tranche-correction-review.v1",
+  "review_date": "2026-10-06",
+  "review_kind": "AGENT_TECHNICAL_FOLLOWUP",
+  "b0_head": "2bdc382e15965a5b6c85fba8a7a18bb283941479",
+  "c0_inputs_digest": "9bb05536f0453b93958ff2f2fcb3c6a0a86c24c83d20d9dec146cd79c16a03df",
+  "prior_review": "acceptance-review-2026-10-06.json",
+  "finding_results": {
+    "B0-R1": {
+      "status": "CORRECTED_WITH_REGRESSION",
+      "evidence": "test_prohibition_is_on_underlying_action_not_avoidance"
+    },
+    "B0-R2": {
+      "status": "CORRECTED_WITH_REGRESSION",
+      "evidence": "test_nonempty_template_binding_cannot_hide_in_nonclaim_span"
+    },
+    "B0-R3": {
+      "status": "CORRECTED_WITH_REGRESSION",
+      "evidence": "test_complete_characteristic_lists_are_source_bound"
+    },
+    "C0-R1": {
+      "status": "CORRECTED_WITH_REGRESSION",
+      "evidence": "test_related_group_cannot_be_relabelled_as_undirected_specialization"
+    },
+    "C0-R2": {
+      "status": "CORRECTED_WITH_REGRESSION",
+      "evidence": "test_security_selection_and_conditional_adaptation_are_compatible"
+    }
+  },
+  "technical_corrections": "PASS_FOR_THE_FIVE_REPORTED_FINDINGS",
+  "acceptance": "HOLD",
+  "scope": "Targeted correction review, not exhaustive primary/omission or independent audit approval.",
+  "remaining_gates": [
+    "Foundation acceptance",
+    "B0/C0 authorized semantic reviews",
+    "Independent audit",
+    "Exact-head human approval",
+    "Exact remote-head CI",
+    "Merge to main",
+    "Merged-head verification"
+  ],
+  "conflict_policy": "Genuine reviewed C0 conflict classifications may remain explicit; downstream policy/license decisions are excluded.",
+  "source_refresh": false,
+  "policy_adopted": false,
+  "semantic_truth_certified": false,
+  "next_tranche_authorized": false,
+  "checkout_retained": true
+}
