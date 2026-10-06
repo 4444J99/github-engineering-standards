@@ -102,11 +102,51 @@ def configure_parser(subparsers) -> None:
     commands = parser.add_subparsers(dest='semantic_command', required=True)
     command = commands.add_parser('validate', help='Validate JSONL record structure')
     command.add_argument('--input', type=Path, required=True)
-    for name in ('extract', 'reconcile', 'audit'):
-        commands.add_parser(name, help='Reserved interface; unavailable in A5')
+    commands.add_parser('extract', help='Reserved for the extraction tranche')
+    for name in ('reconcile', 'audit'):
+        command = commands.add_parser(name, help=(
+            'Produce comparison proposals' if name == 'reconcile'
+            else 'Validate authorized reconciliation and audit receipts'))
+        command.add_argument('--propositions', type=Path)
+        command.add_argument('--controls', type=Path)
+        command.add_argument('--output', type=Path)
+        if name == 'audit':
+            command.add_argument('--decisions', type=Path)
+            command.add_argument('--authority', type=Path)
+            command.add_argument('--audits', type=Path)
+            command.add_argument('--evidence-root', type=Path)
 
 
 def run(args) -> int:
+    if args.semantic_command in ('reconcile', 'audit') and args.propositions:
+        from .reconciliation import audit, propose, read_records
+        required = ('controls', 'output')
+        if args.semantic_command == 'audit':
+            required += ('decisions', 'authority', 'audits', 'evidence_root')
+        if any(getattr(args, field) is None for field in required):
+            raise ValueError('Missing reconciliation inputs: ' + ', '.join(required))
+        propositions = read_records(args.propositions, 'semantic-proposition')
+        catalog = json.loads(args.controls.read_text(encoding='utf-8'))
+        if args.semantic_command == 'reconcile':
+            report = propose(propositions, catalog)
+        else:
+            report = audit(
+                propositions, catalog,
+                read_records(args.decisions, 'reconciliation-decision'),
+                json.loads(args.authority.read_text(encoding='utf-8')),
+                args.evidence_root,
+                json.loads(args.audits.read_text(encoding='utf-8')))
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        with args.output.open('x', encoding='utf-8') as stream:
+            stream.write(canonical_bytes(report).decode('utf-8') + '\n')
+        print(json.dumps({'output': str(args.output), 'schema': report['schema'],
+                          'semantic_truth_certified': False, 'policy_adopted': False}))
+        return (1 if args.semantic_command == 'audit'
+                and not report['decision_accounting_complete'] else 0)
+    if args.semantic_command in ('reconcile', 'audit') and any(
+            value is not None for key, value in vars(args).items()
+            if key in ('controls', 'output', 'decisions', 'authority', 'audits', 'evidence_root')):
+        raise ValueError('Missing --propositions')
     if args.semantic_command != 'validate':
         print(json.dumps({'status': 'UNAVAILABLE', 'command': args.semantic_command,
                           'reason': 'Reserved for a later implementation tranche'}))
