@@ -244,10 +244,24 @@ class RightsAcceptance(unittest.TestCase):
             rights_accounting(self.artifacts, self.pins, [None], [], {}, evidence_root=self.root)
 
     def test_recovery_requires_paired_inputs_before_acquisition(self):
-        for kwargs in [{'rights_acceptance': Path('unused')},
-                       {'rights_acceptance_policy': Path('unused')}]:
+        for kwargs in [
+                {'reviews': Path('unused')},
+                {'review_policy': Path('unused')},
+                {'published_assurance': Path('unused')},
+                {'published_assurance_policy': Path('unused')},
+                {'rights_acceptance': Path('unused')},
+                {'rights_acceptance_policy': Path('unused')},
+                {'source_fidelity': Path('unused')},
+                {'source_fidelity_policy': Path('unused')},
+                {'claim_reconciliation': Path('unused')},
+                {'claim_reconciliation_policy': Path('unused')}]:
             with self.assertRaisesRegex(ValueError, 'both receipts and authority policy'):
                 status(Path('absent'), Path('absent'), **kwargs)
+
+        with self.assertRaisesRegex(ValueError, 'requires source reviews'):
+            status(Path('absent'), Path('absent'),
+                   source_fidelity=Path('unused'),
+                   source_fidelity_policy=Path('unused'))
 
     def test_synthetic_rights_gate_closes_only_complete_scoped_attestations(self):
         result = self.run_accounting()

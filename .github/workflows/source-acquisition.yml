@@ -9,6 +9,17 @@ on:
   push:
     paths:
       - sources/sources.lock.json
+      - scripts/a3_*.py
+      - ges/pinned_sources.py
+      - evidence/a3-six-source-capsule-repair.json
+      - .github/workflows/source-acquisition.yml
+  pull_request:
+    paths:
+      - sources/sources.lock.json
+      - scripts/a3_*.py
+      - ges/pinned_sources.py
+      - evidence/a3-six-source-capsule-repair.json
+      - .github/workflows/source-acquisition.yml
 permissions:
   contents: read
 concurrency:
@@ -41,6 +52,24 @@ jobs:
           PY
       - run: python -m ges corpus --snapshots .cache/sources --output .cache/corpus
       - run: python -m ges ledger --snapshots .cache/sources --corpus .cache/corpus
+      - name: Verify pinned text against the repaired capsule content identities
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from ges.pinned_sources import inventory_digest, verify_snapshot
+          baseline = json.loads(Path('evidence/a3-six-source-capsule-repair.json').read_text())
+          lock = json.loads(Path('sources/sources.lock.json').read_text())
+          sources = Path('.cache/sources')
+          for spec in lock['sources']:
+              repo = spec['repository']
+              slug = repo.replace('/', '__')
+              inventory = json.loads((sources / (slug+'.inventory.json')).read_text())
+              if inventory_digest(inventory) != baseline['inventory_identity_digests'][repo]:
+                  raise ValueError('Acquired inventory differs from repaired A3 baseline')
+              verify_snapshot(sources / (slug+'.text.jsonl.gz'), inventory, repo, spec['commit'])
+          print('Six pinned source snapshots replayed; no semantic or owner acceptance asserted')
+          PY
       - name: Package public-safe metadata evidence
         if: always()
         run: |
