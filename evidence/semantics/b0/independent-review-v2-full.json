@@ -1,0 +1,509 @@
+{
+  "schema": "ges.b0-independent-full-review.v1",
+  "created_at": "2026-10-06T22:15:46.663926+00:00",
+  "status": "HOLD",
+  "review_result": "FULL_SCOPE_REVIEW_COMPLETED_WITH_BLOCKING_FINDINGS",
+  "review_kind": "independent automated semantic and omission review",
+  "reviewer": {
+    "agent_task": "/root/bounded_independent_review",
+    "role": "independent semantic and omission reviewer",
+    "root_native_session_witness": "01a11342-68e2-7851-9636-9af99289c0d7",
+    "native_session_witness_owner": "root agent; not represented as an independent reviewer native session",
+    "human_review": false,
+    "source_acceptance_or_policy_adoption_authority_claimed": false
+  },
+  "reviewed_head": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+  "input_bindings": [
+    {
+      "path": "evidence/semantics/b0/input-manifest.v2.json",
+      "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+      "reviewed_commit": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+      "sha256": "9108a7496ddf821f99d531e03b371d6d20ae320ea0bd94ab10aeb9711d55fbbe"
+    },
+    {
+      "path": "evidence/semantics/b0/annotations.v2.json",
+      "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+      "reviewed_commit": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+      "sha256": "f933f202bf082344296d9a7b65a8478a6c4f3e6f07ef05a2ae09292a0a0a29b3"
+    },
+    {
+      "path": "evidence/semantics/b0/ledger/occurrences.jsonl",
+      "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+      "reviewed_commit": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+      "sha256": "2c68b3ee5b9a4177749ed58c377e0703320a18bd5efde9827f1142d2c7ca8a18"
+    },
+    {
+      "path": "evidence/semantics/b0/ledger/propositions.jsonl",
+      "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+      "reviewed_commit": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+      "sha256": "9ba3f1706d4854202dac1c59edfd96aef43554845d8cce37a24c77610e34b378"
+    },
+    {
+      "path": "evidence/semantics/c0/annotations.v2.json",
+      "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+      "reviewed_commit": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+      "sha256": "d51c8d4a9d7bdcaa69a3c5e85ebbed46ad5bfa2f60c59e0f4c0d9d592dc6edb1"
+    },
+    {
+      "path": "evidence/semantics/c0/ledger/decisions.jsonl",
+      "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+      "reviewed_commit": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+      "sha256": "6f85e22db16ac083cfb28fa8e7b1c23299cdb0eaf69ef0e96b99db4617161b05"
+    },
+    {
+      "path": "evidence/semantics/c0/ledger/relationships.json",
+      "reviewed_checkout": "/Users/4jp/Workspace/4444J99/.worktrees/github-engineering-standards-c0",
+      "reviewed_commit": "86adf1d473ffdbf58a6956a44fe745780e396d5a",
+      "sha256": "3515360199e23d120c46b182900c3409834fa6009408fc54d66ed2ac3ec245a3"
+    }
+  ],
+  "scope": {
+    "artifacts_reviewed": 22,
+    "artifacts_denominator": 22,
+    "source_lines_reviewed": 1550,
+    "source_lines_denominator": 1550,
+    "source_lines_by_repository": {
+      "tmcw/github-best-practices": 126,
+      "jlcanovas/gh-best-practices-template": 929,
+      "atapas/model-repo": 495
+    },
+    "occurrences_reviewed": 178,
+    "occurrences_denominator": 178,
+    "nonclaim_spans_reviewed": 160,
+    "nonclaim_spans_denominator": 160,
+    "nonclaim_lines_reviewed": 878,
+    "propositions_reviewed": 216,
+    "propositions_denominator": 216,
+    "c0_decisions_reviewed": 216,
+    "c0_decisions_denominator": 216,
+    "c0_classifications": {
+      "DISTINCT": 173,
+      "REFERENTIAL": 39,
+      "CONFLICTING": 4
+    },
+    "source_artifacts": [
+      {
+        "repository": "tmcw/github-best-practices",
+        "commit": "801411757531a8880cb315148160fde3079d7227",
+        "artifact_id": "692df3f7f43459a4d2a4572c",
+        "path": "README.md",
+        "content_sha256": "8e3b37ceccf44de1261065078c301dc95e541f990e8740092d6270af32c03e67",
+        "git_blob_sha": "2fba1a5991a39536d4c39aa52976e290bc39228c",
+        "line_count": 126
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "cc9e63a56f99ee879a219b8a",
+        "path": ".github/ISSUE_TEMPLATE/proposal.md",
+        "content_sha256": "a1f028fd0f7eee898fbbd8d070315a6a272d9aea10f65b92dac8d533c5638c17",
+        "git_blob_sha": "75212d205ea3029b8d4b5a17744ea978a31dc0f4",
+        "line_count": 17
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "b44a756b2f8ca2839f5e4825",
+        "path": ".github/ISSUE_TEMPLATE/question.md",
+        "content_sha256": "a6dba91fa5b37b2fb9a8e04801285423766e9fcad526eb6a8f427ed4a63c4396",
+        "git_blob_sha": "bfce09f6ac86074dc64bc6f19a6554a5ad2e837f",
+        "line_count": 9
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "171be1af2b704a76690ef6ec",
+        "path": ".github/pull_request_template.md",
+        "content_sha256": "2ac638530c56711a57688b78aed79e808bd206335877e94c139aace84c8e9970",
+        "git_blob_sha": "50939928cf48354121ce83fb440f69b89eb56b5b",
+        "line_count": 11
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "4b53ff459db315d76cc0d1ca",
+        "path": "CITATION.cff",
+        "content_sha256": "b61bac9eed8e8b770fbf76c91faf923c20fee14d7c6d00f474d8ff78e56c56fb",
+        "git_blob_sha": "f5f502f4d83a9a808f040c429e193c93b4e7d351",
+        "line_count": 32
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "18ee7859bdf49d0ac62fb182",
+        "path": "CODEOWNERS",
+        "content_sha256": "5f81d760176abcc6875aaae4a02019d868f1b2e3059b11481c4f0327a2c77225",
+        "git_blob_sha": "3dde2f7e8a83d231d3469235366b04aabddefdf5",
+        "line_count": 62
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "f96fef141a1fde6a77783186",
+        "path": "CODE_OF_CONDUCT.md",
+        "content_sha256": "33cfd16c320b8999276ffbf672cbe7f5c4c73d33eebce4ce09c89940b9a473aa",
+        "git_blob_sha": "50ef1ee05b2f967fcfafb3557ad41f8d314576f1",
+        "line_count": 108
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "cbcb2ce2d02ecd1afba84430",
+        "path": "CONTRIBUTING.md",
+        "content_sha256": "810b425907a9cfd4c098e0cd25d772d3f0d7c9e318e8bf4207ac0acbd1138907",
+        "git_blob_sha": "8e1a5eab4a0395920f8fa0a288f9850b1eb314ae",
+        "line_count": 41
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "e8ef625a126b72930b73635a",
+        "path": "FUNDING.yml",
+        "content_sha256": "74eedd61a6e8bfdb213829cedbcaf93579bf6aef703981b14e692fb40486e8e7",
+        "git_blob_sha": "3392841661d2fc6fb241c8d49e83a172892dcd6f",
+        "line_count": 13
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "81535ac64c3c583c3db1b2fb",
+        "path": "GOVERNANCE.md",
+        "content_sha256": "de034656a1636b3fdfb9e4eeb5f68db09c41606da996b6fef98b43152ee67b5e",
+        "git_blob_sha": "34b5fbfbc051bc02080054d1b111ce608e505430",
+        "line_count": 43
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "cf2b69f222fe9200bd76ca8e",
+        "path": "LICENSE.md",
+        "content_sha256": "62202e40780cad6d159546cdf74b5b218d07091f6feeca7b1244771ac72cba7c",
+        "git_blob_sha": "f688175943d5dcd1e89befc10af75bbb4ea64b8d",
+        "line_count": 395
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "71b23c19c3531e8983ae6039",
+        "path": "README.md",
+        "content_sha256": "e275e420804025a8fda3625a7a296a3baa5a0f179ab8239c7978798b0052b48f",
+        "git_blob_sha": "3500676a83a648084baf4621cf97b8a3dd0fbb3b",
+        "line_count": 47
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "56d2500c0a197cc4f30b160d",
+        "path": "SECURITY.md",
+        "content_sha256": "ba9643955bfcb04524a6fe5a8c2929b54abc2e67bb3480ce806e742d506e4dc9",
+        "git_blob_sha": "034e848032092eaf8ef96eac731b6ed5961987f3",
+        "line_count": 21
+      },
+      {
+        "repository": "jlcanovas/gh-best-practices-template",
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "artifact_id": "44b65945bf40f36605b8caf0",
+        "path": "guidelines.md",
+        "content_sha256": "b3d8e64d45b94dff9323f45fed65f8bff2dff41c478c3f2be6d43e262d3a6c3b",
+        "git_blob_sha": "e9bb1887f1ad64c9bd5fc99f9acdb9dd219d7761",
+        "line_count": 130
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "4e88907cd259f999c3887fce",
+        "path": ".github/FUNDING.yml",
+        "content_sha256": "8ca043d78f4a8dccc9e346bee4ad9d2250a6ec0287aa6e5fe8eabfd6ad81c09f",
+        "git_blob_sha": "a0bec89c56bd78446aaafe3d18546c2e7f3acea8",
+        "line_count": 3
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "fa97387dee26e808be803604",
+        "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+        "content_sha256": "0c8d64f29fb4536513653bf8c97da30f3340e2041b91c8952db1515d6b23a7b3",
+        "git_blob_sha": "dd84ea7824f11be1eeda22377549cbc1aec7f980",
+        "line_count": 38
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "8c5b509e0d8b537a6f98ef08",
+        "path": ".github/ISSUE_TEMPLATE/feature_request.md",
+        "content_sha256": "1f48c52f209a971b8e7eae4120144d28fcf8ee38a7778a7b4d8cf1ab356617d2",
+        "git_blob_sha": "bbcbbe7d61558adde3cbfd0c7a63a67c27ed6d30",
+        "line_count": 20
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "c7dc5a97994a343b48c54d49",
+        "path": ".github/pull_request_template.md",
+        "content_sha256": "215fecebc0056f8126c91a008934166f518bbe1526e3d5203531b6274299d675",
+        "git_blob_sha": "0720d9ee3917d7e967d181aab3465fb12f3b54b7",
+        "line_count": 38
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "e2e69e4ebe1b2edbc1c88d7e",
+        "path": "CODE_OF_CONDUCT.md",
+        "content_sha256": "e151c0dedf5e9d7ed354fc2b02e4e65289dfffe3397c2851fcae90254a95da4f",
+        "git_blob_sha": "41d9c31373551c578f6a1ed71d51ae61c879dc73",
+        "line_count": 128
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "ee9215c398fe4b4c86aa67a1",
+        "path": "CONTRIBUTING.md",
+        "content_sha256": "7be44aa465129dbaef9ff324a07426e097c166ed56fb955d942052a36f2ea687",
+        "git_blob_sha": "fa179f8728606141ef492df436b7ca99b1f7580b",
+        "line_count": 92
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "4aa5db4aa4be4df9da6f154c",
+        "path": "LICENSE",
+        "content_sha256": "2f700804e58d016e4b62aeb1f250d519eeba332821b321c77a8c0a17e0bf7246",
+        "git_blob_sha": "a030700ae49044d993a9665d37120ea02fa41f4a",
+        "line_count": 21
+      },
+      {
+        "repository": "atapas/model-repo",
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "artifact_id": "04d3e5d117d9ec9c2625b9d3",
+        "path": "README.md",
+        "content_sha256": "cfd165c08d9ef794e79fee309f841657ee2ed01daec8af3637940d5e201845c3",
+        "git_blob_sha": "77376d322bb626568843f2a335a69cd25f3894ff",
+        "line_count": 155
+      }
+    ]
+  },
+  "method": [
+    "Read all original source artifacts from existing pinned gzip snapshots, displaying complete source lines grouped by authored occurrences and nonclaim spans.",
+    "Compared every source span and nonclaim disposition with all linked proposition ASTs, including nonempty subject/action/modality/polarity/condition/qualifier/exception/consequence/parameter fields and ambiguity statements.",
+    "Read all216 authored C0 classifications and supplemental relationships against source-local predicates and the original sources; examined both retained conflict pairs without resolving source licensing or policy.",
+    "Supplemented semantic reading with read-only digest checks: source snapshot/inventory hashes,22 commit/content/Git-blob/line-count identities,178 inclusive span hashes, complete line accounting, C0 proposition membership and exact full-proposition preservation in relationships.json.",
+    "Tests, prior five-finding correction receipt and generated counts were not used as evidence of semantic truth."
+  ],
+  "structural_observations": {
+    "frozen_source_identities_match": true,
+    "source_span_digests_match": true,
+    "complete_nonoverlapping_line_accounting": true,
+    "c0_full_proposition_copies_match_b0": true,
+    "c0_no_lost_fields_or_control_references": true,
+    "all_existing_proposition_and_decision_review_fields_remain": "PROPOSED"
+  },
+  "findings": [
+    {
+      "id": "B0-INDEPENDENT-V2-01",
+      "severity": "P1",
+      "summary": "Optional issue participation loses a separate mandatory conduct obligation.",
+      "source_locators": [
+        {
+          "repository": "jlcanovas/gh-best-practices-template",
+          "path": "GOVERNANCE.md",
+          "start_line": 23,
+          "end_line": 23,
+          "proposition_ids": [
+            "semantic-proposition:c989526098ddd79efccb930eb72c52f54e32e14e03baff8a249d22a7409bbacb"
+          ]
+        }
+      ],
+      "finding": "Source allows collaborators/maintainers to propose issues, opens discussion, and separately requires discussion to follow Code of Conduct. Joint MAY propose and discuss subject to conduct does not preserve the explicit MUST obligation.",
+      "required_correction": "Separate permission to propose/discuss from mandatory conduct compliance during discussion; retain actors, condition and linked source policy."
+    },
+    {
+      "id": "B0-INDEPENDENT-V2-02",
+      "severity": "P2",
+      "summary": "Citation request loses its software-use condition and addresses the wrong actor.",
+      "source_locators": [
+        {
+          "repository": "jlcanovas/gh-best-practices-template",
+          "path": "CITATION.cff",
+          "start_line": 1,
+          "end_line": 32,
+          "proposition_ids": [
+            "semantic-proposition:dd05a0a6aead7e7884ee411c22f0efc6e607521342f04d82b6d63366519020be"
+          ]
+        }
+      ],
+      "finding": "Line2 requests software users to cite if they use the software. AST instead says template author SHOULD request citation with empty preconditions. Source message and example metadata do not establish an unconditional citation duty or consumer facts.",
+      "required_correction": "Represent user citation with if-use condition, or an explicitly descriptive message assertion preserving the conditional request; retain example/placeholder status of metadata."
+    },
+    {
+      "id": "B0-INDEPENDENT-V2-03",
+      "severity": "P1",
+      "summary": "Three reporting paragraphs invent mandatory participant reporting by combining MAY reporting with required team duties.",
+      "source_locators": [
+        {
+          "repository": "atapas/model-repo",
+          "path": "CONTRIBUTING.md",
+          "start_line": 75,
+          "end_line": 80,
+          "proposition_ids": [
+            "semantic-proposition:26a25d9b384f2a76243e85456c38a031610ccb8f778100fa192a49bfca9c44c9"
+          ]
+        },
+        {
+          "repository": "atapas/model-repo",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 61,
+          "end_line": 67,
+          "proposition_ids": [
+            "semantic-proposition:bc7e605d5ac9316dfe746741fd851aff7d8f45e7e8ee5774b1f26252ba970e07"
+          ]
+        },
+        {
+          "repository": "jlcanovas/gh-best-practices-template",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 61,
+          "end_line": 69,
+          "proposition_ids": [
+            "semantic-proposition:c54d4ba1716a8f3e44183d0f3f963feea46e470d0441904d0a9bb5026eec040e"
+          ]
+        }
+      ],
+      "finding": "Each source permits reporting, promises review/investigation, and obligates reporter confidentiality or privacy/security. MUST report and investigate with joint participants-and-team/leader subjects promotes reporting permission into an obligation.",
+      "required_correction": "Separate participant MAY report from team/leader required investigation, appropriate response where stated, and confidentiality or privacy/security. Preserve promptly/fairly, literal versus placeholder contacts and separately posted-policy qualification."
+    },
+    {
+      "id": "B0-INDEPENDENT-V2-04",
+      "severity": "P1",
+      "summary": "Moderation right and responsibility are flattened into a single modality.",
+      "source_locators": [
+        {
+          "repository": "atapas/model-repo",
+          "path": "CONTRIBUTING.md",
+          "start_line": 58,
+          "end_line": 62,
+          "proposition_ids": [
+            "semantic-proposition:2683ea08aa8b36fe7f5cf5eb1d229a1438a32dca6b55acf134a22fa21d447b6c"
+          ]
+        },
+        {
+          "repository": "jlcanovas/gh-best-practices-template",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 48,
+          "end_line": 50,
+          "proposition_ids": [
+            "semantic-proposition:781151aeb26f6aaa2e781d43b6b606ac81986061b1fce5dfbdb9fa6daf4f50d4"
+          ]
+        },
+        {
+          "repository": "atapas/model-repo",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 46,
+          "end_line": 49,
+          "proposition_ids": [
+            "semantic-proposition:ed744ad262eddb97378e9165e803af16d1a4fc504506a403386e4a79bf6ba234"
+          ]
+        }
+      ],
+      "finding": "Atapas contribution clause expressly gives right AND responsibility, but its AST retains only MAY moderate or ban. The analogous standalone clauses retain a duty but combine response alternatives with it. A correction must preserve the responsibility without creating a mandatory ban or mandatory use of every permitted response.",
+      "required_correction": "Separate moderation/corrective responsibility from permissible remove/edit/reject and temporary/permanent ban alternatives where stated; retain conditional communication of moderation reasons in the atapas standalone clause."
+    },
+    {
+      "id": "B0-INDEPENDENT-V2-05",
+      "severity": "P1",
+      "summary": "Optional PR submission weakens promised maintainer governance assessment.",
+      "source_locators": [
+        {
+          "repository": "jlcanovas/gh-best-practices-template",
+          "path": "CONTRIBUTING.md",
+          "start_line": 33,
+          "end_line": 37,
+          "proposition_ids": [
+            "semantic-proposition:4463ee475b590661ef0fb61909e337267a874b10a9c3fc6c12e71e19438eb497"
+          ]
+        }
+      ],
+      "finding": "Source invites contributors to submit PRs but states maintainers will review/address contributions under governance. Joint contributors-and-maintainers MAY submit and assess loses required governance treatment of received contributions.",
+      "required_correction": "Separate contributor submission permission from maintainer governance review/addressing obligation conditioned on receiving a contribution."
+    },
+    {
+      "id": "B0-INDEPENDENT-V2-06",
+      "severity": "P2",
+      "summary": "Three conduct lists drop one of insulting/derogatory comments; C0 invents a source difference.",
+      "source_locators": [
+        {
+          "repository": "atapas/model-repo",
+          "path": "CONTRIBUTING.md",
+          "start_line": 43,
+          "end_line": 50,
+          "proposition_ids": [
+            "semantic-proposition:d4da34ce3bf4197e2c82180ffc7b9149a43cb83ee7d4fa034603b39d5df81dac"
+          ]
+        },
+        {
+          "repository": "atapas/model-repo",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 30,
+          "end_line": 37,
+          "proposition_ids": [
+            "semantic-proposition:bd42f67eb7788294eebb3f7d7347b9a5834c371f81d56d320d188a5430b31e2b"
+          ]
+        },
+        {
+          "repository": "jlcanovas/gh-best-practices-template",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 37,
+          "end_line": 44,
+          "proposition_ids": [
+            "semantic-proposition:affdb8a1c7f2e661cd9795852dab57033568491ba9dcb61dbaf29bc991c6ef3e"
+          ]
+        }
+      ],
+      "finding": "All three originals prohibit both insulting and derogatory comments. Contribution AST retains insulting alone; both standalone ASTs retain derogatory alone. C0 supplemental rationale says insulting versus derogatory language differs, contrary to source text.",
+      "required_correction": "Retain both terms in all three ASTs and revise C0 rationale to state the actual shared enumeration with distinct source scope."
+    },
+    {
+      "id": "B0-INDEPENDENT-V2-07",
+      "severity": "P2",
+      "summary": "Graceful acceptance qualification is omitted from atapas standalone conduct feedback.",
+      "source_locators": [
+        {
+          "repository": "atapas/model-repo",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 20,
+          "end_line": 26,
+          "proposition_ids": [
+            "semantic-proposition:886502be25fba36356e8b0f1b1d83bb4140778b1f3fc9b8ee0234f9c7aca40cd"
+          ]
+        }
+      ],
+      "finding": "Source line22 says giving and gracefully accepting constructive feedback; AST give and accept constructive feedback omits gracefully.",
+      "required_correction": "Preserve graceful acceptance as action/qualification without requiring giving feedback to be modified by the acceptance-specific adverb."
+    },
+    {
+      "id": "B0-INDEPENDENT-V2-08",
+      "severity": "P2",
+      "summary": "Warning trigger is marked NONCLAIM outside the occurrence that formalizes it.",
+      "source_locators": [
+        {
+          "repository": "jlcanovas/gh-best-practices-template",
+          "path": "CODE_OF_CONDUCT.md",
+          "start_line": 82,
+          "end_line": 86,
+          "proposition_ids": [
+            "semantic-proposition:8b6cd2331fc1f45d4fbb2fdd33e0d43dfc5de84860bf96b3055ff88142bb2d20"
+          ]
+        }
+      ],
+      "finding": "Line84 Community Impact (violation through single incident or series of actions) is classified NONCLAIM, while occurrence85\u201386 formalizes that trigger. Meaning is retained in the AST but its operative trigger is excluded from the bound occurrence span.",
+      "required_correction": "Expand occurrence to include line84 and narrow adjacent nonclaim range to headings/whitespace; migrate occurrence references and digest bindings."
+    }
+  ],
+  "residual_uncertainty": [
+    "This review applies only to the frozen22-artifact B0/C0 v2 batch; no other corpus files, external links, rendered page bodies or downstream policies were semantically reviewed.",
+    "Both license texts were read and their engineering-scope reference-only dispositions reviewed; legal applicability, exact-use permission, attribution obligations and redistribution approval remain D3 decisions.",
+    "Source authority remains COMMUNITY. Borrowed platform claims and CODEOWNERS enforcement statements were not established as current platform truth.",
+    "The recorded license-label inconsistency and optional/promotional starring tension remain unresolved source tensions, not adopted consumer obligations.",
+    "This automated independent review is not independent human review, organization acceptance, authorized source-review attestation, merged-main verification, rights clearance or native rollout.",
+    "All eight finding groups require correction and independent changed-input recheck; no v3 inputs or correction outcome are certified by this v2 receipt."
+  ],
+  "mutation_scope": "Only this review receipt was written; reviewer did not edit source annotations, propositions, reconciliation decisions, controls or templates and made no commits or publication."
+}

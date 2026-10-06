@@ -183,7 +183,7 @@ class CommunityExtraction(unittest.TestCase):
         receipt = json.loads((ledger / 'receipt.json').read_bytes())
         for name, expected in receipt['outputs_sha256'].items():
             self.assertEqual(sha((ledger / name).read_bytes()), expected)
-        manifest = json.loads((ledger.parent / 'input-manifest.v2.json').read_bytes())
+        manifest = json.loads((ledger.parent / 'input-manifest.v3.json').read_bytes())
         self.assertEqual(sha(canonical_bytes(manifest)), receipt['input_manifest_sha256'])
 
     def test_prohibition_is_on_underlying_action_not_avoidance(self):
@@ -251,7 +251,7 @@ class CommunityExtraction(unittest.TestCase):
     def test_corrected_golden_records_close_reported_fidelity_findings(self):
         root = ROOT / 'evidence/semantics/b0'
         records = [json.loads(s) for s in (root / 'ledger/propositions.jsonl').read_text().splitlines()]
-        self.assertEqual(len(records), 216)
+        self.assertEqual(len(records), 227)
         for record in records:
             ast = record['semantic_ast']
             if ast['modality'] == 'PROHIBITED':
@@ -266,3 +266,42 @@ class CommunityExtraction(unittest.TestCase):
         revision = json.loads((root / 'revision-v2.json').read_bytes())
         self.assertEqual(len(revision['added_proposition_ids']), 9)
         self.assertEqual(len(revision['old_to_new_proposition_ids']), 207)
+
+    def test_review_corrections_preserve_distinct_actors_and_modalities(self):
+        root = ROOT / 'evidence/semantics/b0'
+        records = [json.loads(s) for s in (root / 'ledger/propositions.jsonl').read_text().splitlines()]
+        asts = [p['semantic_ast'] for p in records]
+        reports = [a for a in asts if a['action'] == 'report' and a['subject'] == 'participants']
+        self.assertEqual(len(reports), 3)
+        self.assertTrue(all(a['modality'] == 'MAY' and a['subject'] == 'participants' for a in reports))
+        investigations = [a for a in asts if a['action'] == 'review and investigate']
+        self.assertEqual(len(investigations), 3)
+        self.assertTrue(all(a['modality'] == 'MUST' and a['preconditions'] for a in investigations))
+        privacy = [a for a in asts if a['action'] == 'protect']
+        self.assertEqual(len(privacy), 3)
+        self.assertTrue(all(a['modality'] == 'MUST' for a in privacy))
+        citation = next(a for a in asts if a['scope'][-1] == 'CITATION.cff')
+        self.assertEqual(citation['subject'], 'software user')
+        self.assertEqual(citation['preconditions'], ['Uses this software'])
+        choices = [a for a in asts if a['action'] == 'choose corrective measures']
+        self.assertEqual(len(choices), 3)
+        self.assertTrue(all(a['modality'] == 'MAY' for a in choices))
+        discussions = [a for a in asts if a['scope'][-1] == 'GOVERNANCE.md' and
+                       a['subject'] == 'issue-discussion participants']
+        self.assertEqual(len(discussions), 1)
+        self.assertEqual(discussions[0]['modality'], 'MUST')
+
+    def test_warning_trigger_is_bound_and_comment_terms_are_complete(self):
+        root = ROOT / 'evidence/semantics/b0/ledger'
+        props = [json.loads(s) for s in (root / 'propositions.jsonl').read_text().splitlines()]
+        comments = [p['semantic_ast']['object'] for p in props if
+                    p['semantic_ast']['object'].startswith('trolling,')]
+        self.assertEqual(len(comments), 3)
+        self.assertTrue(all('insulting' in text and 'derogatory' in text for text in comments))
+        occurrences = [json.loads(s) for s in (root / 'occurrences.jsonl').read_text().splitlines()]
+        warning = next(o for o in occurrences if
+                       o['source']['repository'].startswith('jlcanovas/') and
+                       o['source']['path'] == 'CODE_OF_CONDUCT.md' and
+                       o['semantic_ast']['object'].startswith('warning with consequences'))
+        self.assertEqual(warning['source']['start_line'], 84)
+        self.assertEqual(warning['source']['end_line'], 86)
