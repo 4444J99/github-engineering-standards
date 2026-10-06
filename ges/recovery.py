@@ -1,12 +1,14 @@
 """Reproducible construction accounting. Inventory never closes review gates."""
-from collections import Counter
-from pathlib import Path
 import gzip
 import hashlib
 import json
+from collections import Counter
+from pathlib import Path
 
+from .claim_reconciliation import reconciliation_accounting
 from .core import ROOT, digest, dump, load, now
 from .corpus import coverage_with_reviews
+from .source_fidelity import source_fidelity_accounting
 
 
 def evaluate_gate(name: str, completed: int, denominator: int | None,
@@ -36,12 +38,28 @@ def evaluate_gate(name: str, completed: int, denominator: int | None,
 def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None,
            rendered_directory: Path | None=None, published_assurance: Path | None=None,
            published_assurance_policy: Path | None=None, rights_acceptance: Path | None=None,
-           rights_acceptance_policy: Path | None=None) -> dict:
-    if (rights_acceptance is None) != (rights_acceptance_policy is None):
-        raise ValueError('Rights acceptance requires both receipts and authority policy')
+           rights_acceptance_policy: Path | None=None, source_fidelity: Path | None=None,
+           source_fidelity_policy: Path | None=None,
+           claim_reconciliation: Path | None=None,
+           claim_reconciliation_policy: Path | None=None) -> dict:
+    paired_inputs = (
+        (reviews, review_policy, 'Source reviews'),
+        (published_assurance, published_assurance_policy, 'Published assurance'),
+        (rights_acceptance, rights_acceptance_policy, 'Rights acceptance'),
+        (source_fidelity, source_fidelity_policy, 'Source fidelity'),
+        (claim_reconciliation, claim_reconciliation_policy, 'Claim reconciliation'),
+    )
+    for evidence, policy, label in paired_inputs:
+        if (evidence is None) != (policy is None):
+            raise ValueError(label + ' requires both receipts and authority policy')
+    if ((source_fidelity is not None or claim_reconciliation is not None) and
+            reviews is None):
+        raise ValueError('Semantic certification requires source reviews and review policy')
     controls = load(ROOT/'controls/catalog.json')
     queue = load(ROOT/'controls/review_queue.json')
     pins = load(ROOT/'sources/sources.lock.json')['sources']
+    pin_map = {pin['repository']: pin['commit'] for pin in pins}
+    review_policy_document = load(review_policy) if review_policy is not None else None
     receipts=[]
     if reviews:
         for p in sorted(reviews.glob('*.json')):
@@ -56,7 +74,8 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         receipt_path=Path(td)/'reviews.json';dump(receipt_path,receipts)
         review_result=coverage_with_reviews(corpus/'artifacts.jsonl',receipt_path,
                          candidates=candidate_records,controls=controls,
-                         authorized_reviewers=load(review_policy)['authorized_reviewers'] if review_policy else [])
+                         authorized_reviewers=(review_policy_document['authorized_reviewers']
+                                               if review_policy_document else []))
     if review_result['errors']: raise ValueError('Invalid review receipts: '+str(review_result['errors']))
     reviewed_by_source=Counter()
     corpus_artifacts=[json.loads(l) for l in (corpus/'artifacts.jsonl').read_text().splitlines() if l.strip()]
@@ -104,17 +123,15 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         verified = cached_pages(rendered_directory, pages, page_ledger_sha)
         rendered.extend((r['version'], r['path']) for r in verified.values())
     acquired = len(page_keys & set(rendered))
-    if (published_assurance is None) != (published_assurance_policy is None):
-        raise ValueError('Published assurance requires both receipt and authority policy inputs')
     from .published_assurance import assurance_accounting
     assurance = assurance_accounting(
         corpus/'published-page-ledger.json', rendered_directory, corpus/'artifacts.jsonl',
         load(published_assurance) if published_assurance is not None else [],
         load(published_assurance_policy) if published_assurance_policy is not None else {},
-        {p['repository']: p['commit'] for p in pins}, evidence_root=ROOT)
+        pin_map, evidence_root=ROOT)
     from .rights_acceptance import rights_accounting
     rights = rights_accounting(
-        corpus_artifacts, {p['repository']: p['commit'] for p in pins},
+        corpus_artifacts, pin_map,
         load(ROOT/'evidence/rights-review-queue.json')['records'],
         load(rights_acceptance) if rights_acceptance is not None else [],
         load(rights_acceptance_policy) if rights_acceptance_policy is not None else {},
@@ -123,11 +140,68 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
     canonical_ids = {c['id'] for c in controls}
     if canonical_ids & {c['id'] for c in queue} or len({c['id'] for c in queue}) != len(queue):
         raise ValueError('Review queue IDs duplicate canonical or proposal IDs')
+
+    if reviews is not None:
+        fidelity = source_fidelity_accounting(
+            corpus/'artifacts.jsonl', corpus/'candidates.jsonl', reviews,
+            review_policy_document, sources, controls, pin_map,
+            load(source_fidelity) if source_fidelity is not None else None,
+            load(source_fidelity_policy) if source_fidelity_policy is not None else None,
+            proposals=queue,
+            evidence_root=ROOT)
+        if any(reviews.glob('*-claims.json')):
+            reconciliation = reconciliation_accounting(
+                corpus/'artifacts.jsonl', sources, reviews, review_policy_document,
+                pin_map, controls, queue,
+                load(claim_reconciliation) if claim_reconciliation is not None else None,
+                (load(claim_reconciliation_policy)
+                 if claim_reconciliation_policy is not None else None))
+        else:
+            if claim_reconciliation is not None:
+                raise ValueError(
+                    'Claim reconciliation requires reviewed claim documents')
+            reconciliation = {
+                'schema': 'ges.claim-reconciliation-accounting.v1',
+                'known_claim_denominator': None,
+                'validated_count': 0,
+                'unresolved_count': None,
+                'validated_claim_ids': [],
+                'mapping_complete': None,
+                'claim_provenance_validated': False,
+            }
+    else:
+        fidelity = {
+            'schema': 'ges.source-fidelity-accounting.v1',
+            'reviewed': 0,
+            'inventoried': inventories,
+            'remaining': inventories,
+            'coverage_complete': None if inventories == 0 else False,
+            'reference_claims': 0,
+            'claim_provenance_validated': None,
+            'atomic_claim_fidelity_audit': None,
+            'independent_source_to_claim_omission_audit': None,
+            'evaluation': 'UNVERIFIED',
+        }
+        reconciliation = {
+            'schema': 'ges.claim-reconciliation-accounting.v1',
+            'known_claim_denominator': None,
+            'validated_count': 0,
+            'unresolved_count': None,
+            'validated_claim_ids': [],
+            'mapping_complete': None,
+            'claim_provenance_validated': None,
+        }
+    reconciliation = {
+        **reconciliation,
+        'structured_occurrences_completed': 0,
+        'structured_occurrence_denominator': len(requirements),
+        'all_structured_occurrences_reconciled': None,
+    }
     gates = [
         ('exhaustive_artifact_accounting',review_result['reviewed'],inventories,'Every artifact has a validated reviewed disposition and independent omission audit'),
         ('published_content_assurance',assurance['completed'],len(pages),'Every page has rendered/version/dependency review; retrieval alone is insufficient'),
-        ('semantic_extraction',review_result['reviewed'],inventories,'Full-artifact omission review and atomic claims; candidate count is not a claim denominator'),
-        ('consolidation',0,len(requirements),'All structured occurrences mapped with exact provenance; remaining unstructured claims also reviewed'),
+        ('semantic_extraction',fidelity['reviewed'],fidelity['inventoried'],'Full-artifact omission review and atomic claims; candidate count is not a claim denominator'),
+        ('consolidation',reconciliation['validated_count'],reconciliation['known_claim_denominator'],'All structured occurrences mapped with exact provenance; remaining unstructured claims also reviewed'),
         ('generalization',0,len(controls)+len(queue),'Every definition and proposal has reviewed scope, policy, parameters and conflicts'),
         ('operational_completeness',0,accepted,'Accepted controls have all required tested bindings and accountable review procedures'),
         ('native_enforcement',0,None,'Approved target inventory, positive/negative behavior tests and recovery receipts'),
@@ -141,15 +215,19 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         'exhaustive_artifact_accounting': {
             'pinned_git_trees_match': all(s['git_tree_reconciliation'].get('status') == 'MATCH' for s in sources_report),
             'review_receipts_valid': not review_result['errors'],
-            'independent_omission_audit': None},
+            'independent_omission_audit': fidelity['independent_source_to_claim_omission_audit']},
         'published_content_assurance': {
             'all_bodies_durably_acquired': acquired == len(pages),
             'all_source_paths_reconciled': all(p['source_matches'] for p in pages),
             'version_include_and_render_assurance': assurance['version_include_and_render_assurance']},
-        'semantic_extraction': {'atomic_claim_fidelity_audit': None,
-                                'independent_source_to_claim_omission_audit': None},
-        'consolidation': {'exact_claim_mapping_and_conflict_review': None,
-                          'unstructured_claim_denominator_certified': None},
+        'semantic_extraction': {
+            'atomic_claim_fidelity_audit': fidelity['atomic_claim_fidelity_audit'],
+            'independent_source_to_claim_omission_audit': fidelity['independent_source_to_claim_omission_audit'],
+            'claim_document_provenance_validated': fidelity['claim_provenance_validated']},
+        'consolidation': {
+            'exact_claim_mapping_and_conflict_review': reconciliation['mapping_complete'],
+            'unstructured_claim_denominator_certified': fidelity['independent_source_to_claim_omission_audit'],
+            'all_structured_occurrences_reconciled': reconciliation['all_structured_occurrences_reconciled']},
         'generalization': {'profiles_parameters_and_templates_reviewed': None},
         'operational_completeness': {'accepted_policy_exists': accepted > 0,
                                      'all_required_bindings_verified': None},
@@ -164,10 +242,11 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
                  for name, done, total, condition in gates]
     return {'schema_version':'ges.recovery.v1','generated_at':now(),
             'project_complete':all(g['status'] == 'CLOSED' for g in evaluated),
-            'certification_adapter_status':'INCOMPLETE_SEMANTIC_AND_RUNTIME_ADAPTERS',
+            'certification_adapter_status':'INCOMPLETE_STRUCTURED_GENERALIZATION_ADOPTION_BINDING_AND_RUNTIME_ADAPTERS',
             'certification_adapters': {
-                'source_fidelity_and_omission': 'NOT_IMPLEMENTED',
-                'claim_reconciliation': 'NOT_IMPLEMENTED',
+                'source_fidelity_and_omission': 'IMPLEMENTED_PINNED_ARTIFACT_RECEIPTS_ONLY',
+                'claim_reconciliation': 'IMPLEMENTED_PROVENANCE_BOUND_CLAIM_RECEIPTS_ONLY',
+                'structured_occurrence_reconciliation': 'NOT_IMPLEMENTED',
                 'generalization': 'NOT_IMPLEMENTED',
                 'policy_adoption': 'NOT_IMPLEMENTED',
                 'binding_verification': 'NOT_IMPLEMENTED',
@@ -183,6 +262,8 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             'published_pages':len(pages),'rendered_bodies_acquired':acquired,
             'published_assurance_accounting': assurance,
             'rights_acceptance_accounting': rights,
+            'source_fidelity_accounting': fidelity,
+            'claim_reconciliation_accounting': reconciliation,
             'unresolved_published_pages':[{'page_id':r['page_id'],'version':r['version'],'path':r['path']}
                                           for r in pages if not r['source_matches']],
             'ledger':ledger,'catalog_controls':len(controls),'catalog_digest':digest(controls),
@@ -211,10 +292,20 @@ if __name__ == '__main__':
                    help='Optional exact-use per-file rights acceptance receipts')
     p.add_argument('--rights-acceptance-policy',type=Path,
                    help='Separately approved rights/human/distribution authority; not triage policy')
+    p.add_argument('--source-fidelity',type=Path,
+                   help='Optional digest-bound source-fidelity certification receipt array')
+    p.add_argument('--source-fidelity-policy',type=Path,
+                   help='Separately approved fidelity and omission-audit authority')
+    p.add_argument('--claim-reconciliation',type=Path,
+                   help='Optional exact-claim reconciliation receipt array')
+    p.add_argument('--claim-reconciliation-policy',type=Path,
+                   help='Separately approved reconciliation authority')
     args=p.parse_args()
     report=status(args.sources,args.corpus,args.reviews,args.review_policy,args.rendered_directory,
                   args.published_assurance,args.published_assurance_policy,
-                  args.rights_acceptance,args.rights_acceptance_policy)
+                  args.rights_acceptance,args.rights_acceptance_policy,
+                  args.source_fidelity,args.source_fidelity_policy,
+                  args.claim_reconciliation,args.claim_reconciliation_policy)
     dump(args.output,report)
     print(json.dumps({'project_complete':report['project_complete'],
                       'gates_open':sum(g['status'] != 'CLOSED' for g in report['gates']),

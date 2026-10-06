@@ -1,0 +1,24 @@
+{
+  "schema": "ges.session-verification.v1",
+  "status": "HISTORICAL_SUPERSEDED_FOR_CURRENT_PR_VALIDATION",
+  "scope": "Observed checks at implementation_head only. This receipt does not certify any later PR head; see evidence/pr-472-review-repair-verification.json for the repair checks.",
+  "session_id": "01a10de7-db22-7ca2-adbf-bac969f730ef",
+  "implementation_head": "5f0e249cfd895cb9423e8ab6aa67cc8f659f62b3",
+  "source": "Observed command results in the exact native session; unchanged green implementation checks reused during closeout.",
+  "checks": [
+    {"command": "python -m unittest discover -s tests", "exit_code": 0, "tests_passed": 376},
+    {"command": "python -m ges validate", "exit_code": 0, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "git diff --exit-code -- generated/functional-checklist.md generated/source-crosswalk.md generated/bindings.json", "exit_code": 0},
+    {"command": "ruff check ges/source_fidelity.py ges/claim_reconciliation.py ges/recovery.py tests/test_source_fidelity.py tests/test_claim_reconciliation.py", "exit_code": 0},
+    {"command": "git diff --check", "exit_code": 0},
+    {"command": "installed scripts/credential-wall.py --check", "exit_code": 0, "registered_secret_atoms": 31},
+    {"command": "python -m ges.claim_review with actual pinned corpus, sources, review directory and policy", "exit_code": 0, "reference_claims": 61427, "semantic_truth_certified": false},
+    {"command": "python -m ges.recovery with actual pinned corpus, sources, review directory and policy", "exit_code": 0, "project_complete": false, "gates_open": 9}
+  ],
+  "publication": {"owner_url": "https://github.com/4444J99/github-engineering-standards/pull/472", "state_observed": "OPEN", "head_observed": "5f0e249cfd895cb9423e8ab6aa67cc8f659f62b3"},
+  "completion_owner": "https://github.com/4444J99/github-engineering-standards/issues/471",
+  "completion_predicate": "All nine gates in docs/remaining-work.md have validated evidence and recovery reports project_complete=true, followed by repository-required review and acceptance.",
+  "next_action": "Review PR 472 through the existing integration rail; continue per-file semantic extraction and independent reconciliation under issue 471.",
+  "merge_condition": "Repository review and acceptance authority; this receipt is a handoff and grants no bypass."
+}
