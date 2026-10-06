@@ -9,6 +9,7 @@ import re
 from collections import Counter,defaultdict
 from pathlib import Path
 from .core import ROOT, dump, digest, load, timestamp, now
+from .evidence_integrity import invalidated_reviewer
 
 
 def classify(path: str) -> str:
@@ -160,6 +161,8 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates:
         return valid
     for r in reviews:
         if not isinstance(r,dict): errors.append('Review record must be an object'); continue
+        if invalidated_reviewer(r.get('reviewer')):
+            errors.append('Invalidated heuristic reviewer'); continue
         a=by_id.get(r.get('artifact_id'))
         if a is None: errors.append('Unknown reviewed artifact'); continue
         if a['artifact_id'] in reviewed_ids:

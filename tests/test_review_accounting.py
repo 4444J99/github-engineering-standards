@@ -30,18 +30,24 @@ class ReviewAccounting(unittest.TestCase):
                                            'disposition': 'CONTROL', 'control_id': self.control['id'],
                                            'control_revision': self.control['revision']}]}
 
-    def coverage(self, reviews, *, candidates=None):
+    def coverage(self, reviews, *, candidates=None, reviewers=None):
         artifacts = self.root/'artifacts.jsonl'
         artifacts.write_text(json.dumps(self.artifact)+'\n')
         receipts = self.root/'reviews.json'
         receipts.write_text(json.dumps(reviews))
         return coverage_with_reviews(artifacts, receipts,
                                      candidates=[self.candidate] if candidates is None else candidates,
-                                     controls=[self.control], authorized_reviewers=['reviewer'],
+                                     controls=[self.control], authorized_reviewers=['reviewer'] if reviewers is None else reviewers,
                                      evidence_root=self.root)
 
     def test_valid_full_accounting(self):
         self.assertEqual(self.coverage([self.review])['reviewed'], 1)
+
+    def test_invalidated_heuristic_cannot_be_reauthorized(self):
+        self.review['reviewer'] = 'automated:semantic-review-v0.2.0'
+        report = self.coverage([self.review], reviewers=[self.review['reviewer']])
+        self.assertEqual(report['reviewed'], 0)
+        self.assertIn('Invalidated heuristic reviewer', report['errors'])
 
     def test_receipt_coverage_does_not_claim_semantic_certification(self):
         report = self.coverage([self.review])
