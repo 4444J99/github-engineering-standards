@@ -124,6 +124,8 @@ def build_corpus(snapshot_dir: Path, output: Path, *, include_restricted_text: b
 def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates: list[dict] | None=None,
                           controls: list[dict] | None=None, authorized_reviewers: list[str] | None=None,
                           evidence_root: Path | None=None) -> dict:
+    from .evidence_integrity import validate_authority
+    validate_authority({'authorized_reviewers': authorized_reviewers})
     artifacts=[json.loads(x) for x in artifact_path.read_text().splitlines() if x.strip()]
     reviews=load(review_path)
     by_id={a['artifact_id']:a for a in artifacts}; complete=set(); errors=[]
@@ -161,13 +163,13 @@ def coverage_with_reviews(artifact_path: Path, review_path: Path, *, candidates:
         return valid
     for r in reviews:
         if not isinstance(r,dict): errors.append('Review record must be an object'); continue
-        if invalidated_reviewer(r.get('reviewer')):
-            errors.append('Invalidated heuristic reviewer'); continue
         a=by_id.get(r.get('artifact_id'))
         if a is None: errors.append('Unknown reviewed artifact'); continue
         if a['artifact_id'] in reviewed_ids:
             complete.discard(a['artifact_id']); errors.append(a['path']+': duplicate review receipt'); continue
         reviewed_ids.add(a['artifact_id'])
+        if invalidated_reviewer(r.get('reviewer')):
+            errors.append(a['path']+': Invalidated heuristic reviewer'); continue
         if r.get('commit')!=a['commit'] or r.get('content_sha256')!=a.get('sha256'):
             errors.append(a['path']+': review invalidated by content change'); continue
         if not all(r.get(k) for k in ('reviewer','reviewed_at','disposition','rationale')):

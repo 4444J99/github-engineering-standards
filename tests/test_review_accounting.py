@@ -45,9 +45,11 @@ class ReviewAccounting(unittest.TestCase):
 
     def test_invalidated_heuristic_cannot_be_reauthorized(self):
         self.review['reviewer'] = 'automated:semantic-review-v0.2.0'
-        report = self.coverage([self.review], reviewers=[self.review['reviewer']])
+        with self.assertRaisesRegex(ValueError, 'Invalidated heuristic'):
+            self.coverage([self.review], reviewers=[self.review['reviewer']])
+        report = self.coverage([self.review])
         self.assertEqual(report['reviewed'], 0)
-        self.assertIn('Invalidated heuristic reviewer', report['errors'])
+        self.assertIn(self.artifact['path']+': Invalidated heuristic reviewer', report['errors'])
 
     def test_receipt_coverage_does_not_claim_semantic_certification(self):
         report = self.coverage([self.review])

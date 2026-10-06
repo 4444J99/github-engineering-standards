@@ -18,6 +18,8 @@ def validate_accounting(root: Path, ledger: Path, accounting: Path,
     if (not isinstance(authorized_reviewers, list) or not authorized_reviewers or
             any(not isinstance(r, str) or not r.strip() for r in authorized_reviewers)):
         raise ValueError('Authorized reviewers must be a nonempty list of identities')
+    from .evidence_integrity import validate_authority
+    validate_authority({'authorized_reviewers': authorized_reviewers})
     evidence = json.loads(accounting.read_text())
     rows = json.loads(ledger.read_text())
     if not isinstance(rows, list) or not rows:

@@ -44,7 +44,7 @@ class ClaimProvenance(unittest.TestCase):
 
     def test_invalidated_heuristic_cannot_be_reauthorized(self):
         self.doc['reviewer'] = 'automated:semantic-review-v0.2.0'
-        with self.assertRaisesRegex(ValueError, 'Invalidated heuristic reviewer'):
+        with self.assertRaisesRegex(ValueError, 'Invalidated heuristic'):
             self.check(reviewers=[self.doc['reviewer']])
 
     def test_claim_beyond_end_of_file_rejected(self):
