@@ -8,10 +8,14 @@ import json
 from pathlib import Path
 import re
 
+from .evidence_integrity import invalidated_reviewer
+
 
 def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
                         reviewers: list[str], pins: dict[str, str],
                         control_ids: set[str] | None = None) -> dict:
+    from .evidence_integrity import validate_authority
+    validate_authority({'authorized_reviewers': reviewers})
     if not isinstance(reviewers, list) or not reviewers or any(not isinstance(r, str) for r in reviewers):
         raise ValueError('Invalid authorized reviewer policy')
     rows = [json.loads(line) for line in artifacts.read_text().splitlines() if line.strip()]
@@ -22,7 +26,10 @@ def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
     for path in sorted(reviews.glob('*-claims.json')):
         doc = json.loads(path.read_text())
         if not isinstance(doc, dict):
-            raise ValueError('Claim document must be an object: ' + path.name)
+            raise ValueError("Claim document must be an object: " + path.name)
+        if invalidated_reviewer(doc.get("reviewer")):
+            raise ValueError("Invalidated heuristic reviewer: " + path.name)
+
         if doc.get('reviewer') not in reviewers:
             raise ValueError('Unauthorized reviewer: '+path.name)
         stamp = datetime.fromisoformat(doc['reviewed_at'].replace('Z', '+00:00'))

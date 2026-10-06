@@ -26,14 +26,14 @@ class ClaimProvenance(unittest.TestCase):
         self.doc = {'reviewer': 'reviewer', 'reviewed_at': '2026-01-01T00:00:00Z',
                     'claims': [self.claim]}
 
-    def check(self, text=None, control_ids=None):
+    def check(self, text=None, control_ids=None, reviewers=None):
         artifacts = self.root / 'artifacts.jsonl'
         artifacts.write_text(json.dumps(self.artifact)+'\n')
         (self.root / 'reference-claims.json').write_text(json.dumps(self.doc))
         with gzip.open(self.root / 'owner__repo.text.jsonl.gz', 'wt') as stream:
             stream.write(json.dumps({'source': self.source, 'commit': self.commit,
                                      'path': 'guide.md', 'content': self.text if text is None else text})+'\n')
-        return validate_provenance(artifacts, self.root, self.root, ['reviewer'],
+        return validate_provenance(artifacts, self.root, self.root, ['reviewer'] if reviewers is None else reviewers,
                                    {self.source: self.commit}, control_ids)
 
     def test_valid_reference_provenance_is_not_semantic_certification(self):
@@ -41,6 +41,11 @@ class ClaimProvenance(unittest.TestCase):
         self.assertEqual(result['reference_claims'], 1)
         self.assertFalse(result['semantic_truth_certified'])
         self.assertFalse(result['rights_cleared'])
+
+    def test_invalidated_heuristic_cannot_be_reauthorized(self):
+        self.doc['reviewer'] = 'automated:semantic-review-v0.2.0'
+        with self.assertRaisesRegex(ValueError, 'Invalidated heuristic'):
+            self.check(reviewers=[self.doc['reviewer']])
 
     def test_claim_beyond_end_of_file_rejected(self):
         self.claim['end_line'] = 3
