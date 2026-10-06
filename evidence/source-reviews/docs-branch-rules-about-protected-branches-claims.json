@@ -1,0 +1,372 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T23:50:11.334835+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches.md",
+  "content_sha256": "f803163895c73c5ffbf99c45747c0626e20075913686e7b51674a73a19ee860f",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-001",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 1,
+      "end_line": 27,
+      "span_sha256": "479cd324ef899b2ca4c6f0b2c4f1f7ab563abad6d0f100b85c79d40dc2b9b664",
+      "statement": "The page declares FPT, GHEC and GHES versions, but protected-branch availability is plan/visibility constrained: public Free user/organization repositories and public/private Pro, Team, Enterprise Cloud or Enterprise Server repositories. Redirects and category metadata are navigation, not policy adoption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-002",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 31,
+      "end_line": 31,
+      "span_sha256": "9be34c1efd3f9fd9db2d6679d679462e309249b445e3585b9450af2679c41373",
+      "statement": "Required status-check job names should be unique across workflows; reused names can produce ambiguous results that block merging.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-003",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 33,
+      "end_line": 33,
+      "span_sha256": "3f6e6091d0edb15e22c20f830fef4c5e7d0ec4f2bfeb136f03864d844a826e2a",
+      "statement": "A configured branch protection rule can enforce requirements on pushes, including pull-request merges, before a collaborator changes a branch.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-004",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 33,
+      "end_line": 33,
+      "span_sha256": "3f6e6091d0edb15e22c20f830fef4c5e7d0ec4f2bfeb136f03864d844a826e2a",
+      "statement": "Only organization-owned repositories can add actors to branch-protection bypass lists.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-005",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 35,
+      "end_line": 35,
+      "span_sha256": "77e9e577a0233fba0813a013847c0e229e93dba10b5f4b8858c01fe1048c7764",
+      "statement": "Branch protection disables force pushes by default for matching branches, but administrators can configure exceptions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-006",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 35,
+      "end_line": 35,
+      "span_sha256": "77e9e577a0233fba0813a013847c0e229e93dba10b5f4b8858c01fe1048c7764",
+      "statement": "Branch protection prevents deletion by default for matching branches, but the restriction is configurable.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-007",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 37,
+      "end_line": 37,
+      "span_sha256": "c1e142d60c2f85adde2ce2982df64044db876582bd29d9bcff5a4fbccbe94375",
+      "statement": "By default, repository administrators and custom roles with bypass-branch-protections permission are exempt; an optional setting applies restrictions to them.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-008",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 39,
+      "end_line": 39,
+      "span_sha256": "1d937dc40f29e75fef7f00101ad74c780a27c6a24378294a7815659b60b24526",
+      "statement": "Classic protection can target one branch, all branches, or fnmatch patterns; the release wildcard example is illustrative, not a locally selected branch scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-009",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 41,
+      "end_line": 41,
+      "span_sha256": "fc34918de6a722ca3731a99f55fe9abf056c68de7caad25b08d482a14777064b",
+      "statement": "Auto-merge can be configured to occur once all merge requirements are met; this is a documented capability, not observed automatic integration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-010",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 43,
+      "end_line": 44,
+      "span_sha256": "fbe4b37c7aceb9dc094840ebe5ba0d7501e7579c01431aab1215f5c9f16d2067",
+      "statement": "Only one classic branch protection rule applies at a time, unlike cumulative rulesets. Cross-repository organization rules are conditional on repo-rules-enterprise (GHEC or GHES>3.10); conversion guidance is gated to FPT/GHEC or GHES>=3.23.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-011",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 48,
+      "end_line": 62,
+      "span_sha256": "0b10f29aff29b0ca67e1b64228dc3b1a57f4e00c83812574a2c8e562fa7d845b",
+      "statement": "The twelve linked settings are configurable capabilities, not a mandate to enable every option; the linked how-to is in this batch, but other destination pages are not certified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-012",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 66,
+      "end_line": 68,
+      "span_sha256": "0d10be10b8852cc24911f8eba5fcafd4cf1727530dab5ccf03321049e36681ec",
+      "statement": "Repository administrators or edit-repository-rules roles can require a chosen approval count; when required reviews are enabled, changes go through an approved pull request with write-permission reviewers or a designated owner.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-013",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 70,
+      "end_line": 70,
+      "span_sha256": "25043d72bedf028bb6c9554b8fba1809cb30eb59ea20a0fa407d6cacc91d0047",
+      "statement": "An administrator who requests changes must later approve for merge; if a blocking reviewer is unavailable, a write-permission collaborator can dismiss that review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-014",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 72,
+      "end_line": 72,
+      "span_sha256": "d660e5e080fe20559020489f898b2824f6a2b4f5a779c802b28f5f20d8b65900",
+      "statement": "Other open pull requests sharing the same head commit can block a reviewed pull request when their reviews are pending or rejected; a writer must approve or dismiss the blocking review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-015",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 74,
+      "end_line": 79,
+      "span_sha256": "9b309a257b3171f6ce4f77d5f872c3ae553bbbe2b52a1fe3378c51fa54026b69",
+      "statement": "Attempting to merge with pending or rejected required reviews produces an error; the shown GH006 transcript is illustrative, not an observed negative test.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-016",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 81,
+      "end_line": 81,
+      "span_sha256": "a214e757f1fddf02e78efabe8b28ca35740472a685893512f956a1d2ed12f472",
+      "statement": "Optional stale-approval dismissal tracks the approved diff, including changes caused by new commits, Update branch or related merges; a changed diff requires fresh approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-017",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 83,
+      "end_line": 83,
+      "span_sha256": "d30aafde9e4be45f868d85dceb77d2166757230ec54a3f6f1294c71221bd6a67",
+      "statement": "Review dismissal can optionally be restricted to designated people or teams.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-018",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 85,
+      "end_line": 85,
+      "span_sha256": "5e3e954d30d1a2c7734ae03ca2266c81351117f9e04d548bc72dfb348cd042c1",
+      "statement": "Optional code-owner review requires approval by an owner of affected owned code; this is distinct from ordinary approval count.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-019",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 87,
+      "end_line": 89,
+      "span_sha256": "db9023ada2d795cd35f5e6da24ff972a09fd4aa5a5d24ab9fce634030dc748a3",
+      "statement": "An optional latest-reviewable-push approval must come from someone other than its pusher; earlier reviews remain unless stale dismissal is enabled, and an existing reviewer may reapprove. The source recommends stale dismissal against hijacked approved changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-020",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 91,
+      "end_line": 91,
+      "span_sha256": "03daff4bc0b2922a59e06a1305bb8e9389bbe887c5de237abbbdc698bc392d6f",
+      "statement": "With stale dismissal or latest-push approval enabled, a directly pushed manually made merge must exactly match GitHub’s generated merge; a merge-base change introducing new content also invalidates approvals.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-021",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 95,
+      "end_line": 95,
+      "span_sha256": "acbc3cacd682912aeaa42e40f8d236aa56925aaee4620f10de0f6ea888a46d43",
+      "statement": "Required status checks may conclude successful, skipped or neutral and may be checks or commit statuses; a configured gate is not proof that its analysis actually ran.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-022",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 97,
+      "end_line": 101,
+      "span_sha256": "b330ff706d5ab88dc9d2c7eec83864e650fbdade018b6bd4a3370d7e1dd8b88d",
+      "statement": "External services can set commit statuses. Any person or integration with repository write permission can set them, but an expected recently reporting GitHub App can be selected; other publishers then block merge. With any-source mode the source says status authors can still be inspected manually.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-023",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 99,
+      "end_line": 99,
+      "span_sha256": "38f3f1bc340593d14d3668742a8452da88eebfa5e5de3d183046e7161ee30f59",
+      "statement": "After required status checks pass, changes can be pushed to another branch for merge or directly to the protected branch; checks alone do not require a pull request.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-024",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 103,
+      "end_line": 109,
+      "span_sha256": "1e1be6013a0947466d49aea5a40cbf15c793cc45c04cfbcd9627c9063b700dae",
+      "statement": "Strict checks require an up-to-date base and are the documented default, with extra builds; loose checks omit that requirement and risk post-merge incompatibility; disabled check requirements permit merges irrespective of CI freshness.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-025",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 115,
+      "end_line": 115,
+      "span_sha256": "df20ee890e7c55e2441d82c27850b358b8461b1a97bcc1420e53d2e0b7f8f4c6",
+      "statement": "Optional conversation resolution requires pull-request comments to be addressed or acknowledged before protected-branch merge.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-026",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 119,
+      "end_line": 119,
+      "span_sha256": "e79a13e1728ee435036579565eae557e6767e5a55a40218621bc8eefad31d77c",
+      "statement": "Required signing allows only signed, verified commits; the source explicitly includes bots on FPT/GHEC and does not make signing a universal obligation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-027",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 121,
+      "end_line": 127,
+      "span_sha256": "6d6d22449cd875036331316be49aa5fd4af7cff4f3211d4c84798efc3f931203",
+      "statement": "On FPT/GHEC vigilant-mode partially verified commits are permitted under required signing; an unsigned push requires rewriting with a verified signature and force-pushing, subject to the other protections.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-028",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 129,
+      "end_line": 129,
+      "span_sha256": "94cdf391e130c647f7b591895b7d45bc0f1e3c81d8be3c3c29e6e2d4d8aef1fd",
+      "statement": "The signed-commit reusable allows signed local commits. On FPT/GHEC a test merge checks introduced head commits, so unsigned head commits can block even a signed squash result; remediation is rewrite/sign or authorized bypass. On GHES the reusable says web pull-request merging is unavailable in this context.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-029",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 129,
+      "end_line": 129,
+      "span_sha256": "94cdf391e130c647f7b591895b7d45bc0f1e3c81d8be3c3c29e6e2d4d8aef1fd",
+      "statement": "Locally merged commits must be signed before push; a separate pull-request requirement can require bypass permission for that local push. Source signing and pull-request rules must be composed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-030",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 133,
+      "end_line": 135,
+      "span_sha256": "50ef502cfff4cc9dc028e290936bc7656bcd3ec31a4e0eb9c27e73017030a2d1",
+      "statement": "Linear history rejects merge commits and requires squash or rebase integration; the repository must allow one of those merge methods before enabling the requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-031",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 139,
+      "end_line": 142,
+      "span_sha256": "fd67902aaea355f5eeaa164a4b790fe0f4bc8a083ee1c1a6b8bd1e0963913c67",
+      "statement": "Merge queue evaluates required checks against the latest target plus preceding queued pull requests; a writer can enqueue after existing protections pass, using Actions or another CI provider. Queue merging uses the configured strategy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-032",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 146,
+      "end_line": 146,
+      "span_sha256": "6b753fb372aaa909c9da19cb3dd574ed1c034d5ee8bc80a831fe82646e8b1adf",
+      "statement": "A branch rule can require successful deployment to chosen environments before merge; staging is an example rather than an adopted production or environment policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-033",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 150,
+      "end_line": 152,
+      "span_sha256": "1a3fe515792473a7dc567d7c775bc95139103186687f2d9437f30b77951fd7ee",
+      "statement": "Locking makes a branch read-only and undeletable; fork syncing is disabled by default, with an option to allow upstream pulls while preventing other contributions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-034",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 156,
+      "end_line": 158,
+      "span_sha256": "5cb7ac093a74c1c00c93ea88aa85df38db61ce1974c1b67c87f35976fcf70b6d",
+      "statement": "The no-bypass setting extends restrictions to administrators and bypass-branch-protections roles, which otherwise have a default exemption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-035",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 162,
+      "end_line": 166,
+      "span_sha256": "8bf443ec9fcc2c78ece0b2846f1f2fbb7d007786ce65741097720f43b492301e",
+      "statement": "FPT/GHEC push restrictions are available for Free organization public repositories and Team/Enterprise Cloud organization repositories; authorized users, teams and apps still must satisfy required status checks and pull-request rules.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-036",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 168,
+      "end_line": 170,
+      "span_sha256": "51e3ac8302a3de8299181683db63f77c3be7ba3ac1fdca397c8262c04dcc0eb6",
+      "statement": "Matching-branch creation can be restricted too. Grants require repository write access for users, teams or installed apps; the source says administrators and admin apps can always push/create in this push-access setting, to be composed with the separately documented no-bypass option.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-037",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 174,
+      "end_line": 177,
+      "span_sha256": "6ebbaaa7d945a60b5760e18cc71deeaba3de90546997a24dbf4b2370fd0572eb",
+      "statement": "Force-push exceptions may admit all repository writers including admins, or only selected people/teams; the default block is not evidence that exceptions are absent.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-038",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 179,
+      "end_line": 181,
+      "span_sha256": "bcb4baa54f687a88bcee0aa80e7bfe712b5709324511fda5cd1238905719f974",
+      "statement": "Force pushes can remove collaborators’ history, corrupt pull requests or introduce unapproved commits; enabling them does not bypass other rules such as linear history.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-039",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 183,
+      "end_line": 185,
+      "span_sha256": "452b20be14840e0707dce0f0502b6752f7cf83106a666672267b4c3166721d40",
+      "statement": "On GHES a site-wide force-push ban prevents branch exceptions; a default-branch-only ban still permits enabling force pushes on other protected branches.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-040",
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "start_line": 189,
+      "end_line": 192,
+      "span_sha256": "ea832f6313ecaf7460bdf9dc1ddc81abce4656b7c20d8f1142e43d73389c9e17",
+      "statement": "Allow-deletion admits any repository writer, but a locked branch remains undeletable even for otherwise authorized actors.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Primary reading of full pinned article and recursively included dependencies. Reviewed source statements only; no adoption or live platform verification."
+}

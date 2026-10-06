@@ -585,21 +585,21 @@ Check a box only when scoped, current evidence satisfies the stated criterion.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-007 r1 — Effective protection includes all inheritance and bypass paths** (MUST; REVIEWED_DRAFT)
+- [ ] **GES-RULE-007 r2 — Effective protection includes all inheritance and bypass paths** (MUST; REVIEWED_DRAFT)
   Inspect active rulesets, legacy protection, repository/organization inheritance and bypass permissions together. Exercise rejected and accepted changes in a safe test repository.
   Acceptance: Inspect active rulesets, legacy protection, repository/organization inheritance and bypass permissions together. Exercise rejected and accepted changes in a safe test repository.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `manual`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-008 r1 — Required checks execute on the right integration revision** (MUST; REVIEWED_DRAFT)
+- [ ] **GES-RULE-008 r2 — Required checks execute on the right integration revision** (MUST; REVIEWED_DRAFT)
   Ensure required check names exist and run on the proposed or queued merge revision; validate triggers, filters and trusted publishers.
   Acceptance: Ensure required check names exist and run on the proposed or queued merge revision; validate triggers, filters and trusted publishers.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `manual`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-009 r1 — Signing and history policies have justified applicability** (SHOULD; REVIEWED_DRAFT)
+- [ ] **GES-RULE-009 r2 — Signing and history policies have justified applicability** (SHOULD; REVIEWED_DRAFT)
   Decide commit-signing and history requirements by trust and delivery needs; verify compatibility with automated contributors before enabling them.
   Acceptance: Decide commit-signing and history requirements by trust and delivery needs; verify compatibility with automated contributors before enabling them.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `manual`; scope: repository.

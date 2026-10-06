@@ -1,0 +1,498 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T23:50:11.334835+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+  "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-001",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 1,
+      "end_line": 19,
+      "span_sha256": "e63c2559a70d56473bc59d0867da4a56f7ecdcd516805ed054d9bcd874defa0d",
+      "statement": "This page declares FPT/GHEC/GHES and administrator/edit-repository-rules permission. Branch/tag rules differ from push rules, whose availability is limited to eligible private/internal repositories and their forks; bypass can be granted to selected roles, teams or apps.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-002",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 21,
+      "end_line": 21,
+      "span_sha256": "77b10f59726240f4625b07cec92017b2a776c082490e3250e6b6a0ceb8430fa0",
+      "statement": "Across a fork network, root-repository push-ruleset bypass grants determine bypass in forks too.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-003",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 25,
+      "end_line": 27,
+      "span_sha256": "8b0c3899dc4b2f78f1fcdb7c0857e9ed4e675154eb2167c529818f7e7a6fb346",
+      "statement": "Restrict creations permits only bypass actors to create matching branches/tags. Creation protection is distinct from update protection.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-004",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 29,
+      "end_line": 31,
+      "span_sha256": "1eae4d1c596ec128bb94e088bd3f73b4e1334bae182055ab4d7cfe442670f9aa",
+      "statement": "Restrict updates permits only bypass actors to push matching branches/tags; configured bypass must be evaluated separately.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-005",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 33,
+      "end_line": 35,
+      "span_sha256": "c9d6a07b2d141e496aeb585e9497c0baef5ffcc6184d7c2c0dfe1abcd6b0a6b3",
+      "statement": "Restrict deletions permits only bypass actors to delete matching branches/tags; the option is selected by default, not proof of its activation in a target.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-006",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 37,
+      "end_line": 41,
+      "span_sha256": "8a6995af1eb4e2656480686fe811ec8c7fbe97cc8c88a1e23210fb4b28d48282",
+      "statement": "Linear history disallows merge commits and therefore requires squash or rebase merging enabled; incompatible repository merge methods matter to applicability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-007",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 43,
+      "end_line": 50,
+      "span_sha256": "b9f1abe53258c71c2904b9b8a45f9d0a8dcaafdcfb55f1e7ef4c42f77f9c6118",
+      "statement": "Merge-queue rules are gated to GHEC or GHES>=3.15 and can require merges through a queue at repository level; this rule is not available for organization-level rulesets. Optional settings below are source choices, not adopted defaults.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-008",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 53,
+      "end_line": 61,
+      "span_sha256": "151dac85a0e639de2eeff2f5b1fa75f9747abd6f77d3bdf09504f834fb003815",
+      "statement": "Queue configuration offers allowed merge method, build concurrency, minimum/maximum merge-group sizes and minimum-size wait time; concurrency limits requesting checks and merge_group.checks_requested dispatch, not group size. After wait time expires, a smaller group may merge.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-009",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 62,
+      "end_line": 64,
+      "span_sha256": "9b3347fce7fd341a05a75077388409fae66a61e4194500b236bf59509f4d97dd",
+      "statement": "Require all queue entries to pass checks can require each grouped entry’s checks, or only the group-head commit containing all grouped changes when disabled; this choice changes which revisions have passed validation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-010",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 65,
+      "end_line": 65,
+      "span_sha256": "f5211b3fadd2629cb78e5e0c445744f3eac2dc47ccdeb1261859bcc6fdadd34b",
+      "statement": "Status-check timeout bounds waiting for any conclusion before treating checks without a conclusion as failed. It is a configurable value, not a universal local deadline.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-011",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 69,
+      "end_line": 77,
+      "span_sha256": "cccba4753a5c5a24c484956f4e2b67c77fed271bdc335ba81f35044412b76677",
+      "statement": "Required deployments select successful deployment environments before merging; when repo-rules-enterprise applies, the included note says this rule is NOT available at organization level. Selecting environments is not proof of environment approval, recovery or rollback.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-012",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 79,
+      "end_line": 85,
+      "span_sha256": "0f59fb808919818c81aab9189dd643ccb68394e5527d4f62b9f270414252cc58",
+      "statement": "Required signatures demand verified signatures on pushed commits. For new branches rulesets check only commits unreachable from other branches, while classic protection checks only when matching-branch creation is restricted; branch updates check the entire specified commit range.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-013",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 85,
+      "end_line": 85,
+      "span_sha256": "f50e9b9842b887e624f8247351da7eece5e54603a9e6a7bc253f71cae920700c",
+      "statement": "Signature references describe source verification behavior, not certification of a human author’s identity or adoption of mandatory signing.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-014",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 87,
+      "end_line": 93,
+      "span_sha256": "286d34fc39c0efabd8d1a8c757b1aae1b462bb5bc50d9994e41e1bfaddfa3927",
+      "statement": "The FPT/GHEC vigilant-mode reusable permits partially verified commits for users who enable vigilant mode. An unsigned commit can require signed rewriting and a force push; those exceptions affect compatible signing policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-015",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 95,
+      "end_line": 99,
+      "span_sha256": "38a4156a37ce9f3cc9602e6d0200a3b01aa5104a47131a2dd98c9c9cef312b47",
+      "statement": "The signing reusable describes test-merge checking of introduced head commits: unsigned head commits can block even a GitHub-signed squash result, including for the PR author. Rewrite/sign or authorized bypass may be needed; GHES does not allow GitHub-side merging in this context. Signed local merges and any required-PR bypass need explicit review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-016",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 101,
+      "end_line": 103,
+      "span_sha256": "09b22f4b8b7a0ab4eb2f2b660c0eb171df2c7249c878865e6755a23d82d9ae03",
+      "statement": "Require a pull request requires a PR before merging; by itself it does not require any approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-017",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 105,
+      "end_line": 107,
+      "span_sha256": "0f8c3964bebdcc96e0ac122c92a9cb0e78fd94b818949846c153a781713f6d0b",
+      "statement": "Additional review settings govern approvals, stale reviews and code owners. Manual merging under stale-review or latest-push protection is rejected unless the generated merge content exactly matches GitHub’s result.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-018",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 109,
+      "end_line": 115,
+      "span_sha256": "0982357e6e02fc771f0eda30398bc8d932825d110bb7f903edffa42b6c302898",
+      "statement": "Required reviews allow changes through PRs approved by the required number of reviewers with write permission. A person requesting changes must subsequently approve; if that reviewer is unavailable a writer can dismiss the blocking review. Pending/rejected reviews on other PRs with the same head commit can also block merging.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-019",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 117,
+      "end_line": 117,
+      "span_sha256": "d238582171f0cc40c4d246b462794ef71787a8ec127cd49010dc85daf189c349",
+      "statement": "Stale-approval dismissal responds to changed reviewed diff or merge base; this supports the pushed-diff predicate of RULE005 but the merge-base qualification remains additional source context.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-020",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 119,
+      "end_line": 119,
+      "span_sha256": "1fb2e155be1894961345d3798df1fc535fcc590b47babd354ec9021abec95072",
+      "statement": "For required code-owner review, any one of multiple owners for the affected code can satisfy the source requirement; the source does not require unanimous ownership approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-021",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 121,
+      "end_line": 121,
+      "span_sha256": "dc43600163879519fb09fe404bf90390529081cb14a7c5a34bc3750aac9bfa54",
+      "statement": "Review dismissal permissions can be limited to chosen people, teams or apps through the UI, REST API or GraphQL; dismissal authority is distinct from obtaining required approvals.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-022",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 123,
+      "end_line": 125,
+      "span_sha256": "bb8cede6c88b62d53795217042d0340aff513a85e8df00cb213e54a10ba75aeb",
+      "statement": "Latest-reviewable-push approval must come from someone other than its pusher; this can preserve previous approvals while reducing the risk of an unreviewed final change.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-023",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 127,
+      "end_line": 127,
+      "span_sha256": "75beab1a69c83a4f044438a816a905b97107862325700b6f905c737ea23a2a87",
+      "statement": "Required conversation resolution blocks merging until all PR comments are resolved, meaning addressed or acknowledged; it is separate from approval count and code-owner review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-024",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 129,
+      "end_line": 129,
+      "span_sha256": "3ad87f170d939e9e220cfa7b9228b3eccfb8a74495abde61064227a8fb233f34",
+      "statement": "Allowed merge types must intersect with repository-enabled merge methods; disjoint choices block merging.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-025",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 131,
+      "end_line": 140,
+      "span_sha256": "2e40067c050398d6370d8ee45173e0fc2e4288d2b2644f1c880d7ddddd3085f8",
+      "statement": "The FPT/GHEC public-preview extra-approval option is enabled by default for new and existing rulesets. It applies when Copilot OPENS a PR under its app identity without attribution to a person, requiring one more human write-access approval than configured; it does not describe Copilot approving a review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-026",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 142,
+      "end_line": 146,
+      "span_sha256": "98a636bc3f8f2980f8afe9c3d0764f379f06e264545f1cd73a9d397400ea4c0c",
+      "statement": "The Copilot extra-approval option has no effect when configured approvals are zero. If cleared, only the configured count applies; a separately enabled latest-push requirement still needs approval covering the last push from someone other than Copilot.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-027",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 148,
+      "end_line": 159,
+      "span_sha256": "065826cac2995c242603144fa7e97fae0e63182e512624201fff487ec73b960a",
+      "statement": "Required team reviewers are gated to FPT/GHEC/GHES>=3.22: at most 15 teams; a team member’s approval counts only if that team has repository write permission or higher. Organization membership/scope must fit and user-owned repositories cannot use it.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-028",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 160,
+      "end_line": 168,
+      "span_sha256": "febc4879e967f6393859f921c8ed6cba5f3d075cb7b3806f81220a066ea197f3",
+      "statement": "A team may require 0–10 approvals; zero gives visibility without gating. File-pattern matching follows ordered gitignore semantics including negation, not the fnmatch semantics of branch targeting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-029",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 170,
+      "end_line": 178,
+      "span_sha256": "90d86b1d99129f82505325f320061c915b5213e2edb0ca79b9b0ea28e41d8bae",
+      "statement": "Required checks/statuses must pass before merging. Expected GitHub App selection requires the app installed with statuses:write, a recent check run and association with a pre-existing required check. Other publishers then block merging; any-source authors can still be manually inspected.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-030",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 176,
+      "end_line": 176,
+      "span_sha256": "0461457681907aa6d0b6507e8f16584eec351808a96308019f6d2bd37dc8ca49",
+      "statement": "Optional do-not-require-checks-on-creation is gated to GHEC/GHES>=3.15 and permits branch creation regardless of check results; update requirements must not be inferred to cover creation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-031",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 182,
+      "end_line": 186,
+      "span_sha256": "975643149b77d2ffd2812e55c98bb472f0b86cdff016a91b5a25aa1d7081885b",
+      "statement": "For organization-level required statuses, only installed apps with statuses:write appear in configuration; this note is gated to repo-rules-enterprise.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-032",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 188,
+      "end_line": 194,
+      "span_sha256": "bea5a27b1cddcb9cf89bd1caa04529f7489d02bc3aadf1f6228f98210fa7585d",
+      "statement": "Strict checks require an up-to-date branch; loose checks accept passed checks without updating to the target and may encounter integration failures; disabled checks allow merges irrespective of check results.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-033",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 198,
+      "end_line": 202,
+      "span_sha256": "8a62d552ea8556c8e021d79862cf52ac42be32ba0b74e4e5438d71e8c7fb1901",
+      "statement": "Block force pushes is selected by default and prevents users with push permission from force pushing, subject to bypass. Force pushing rewrites history and can discard collaborators’ commits; setting presence is not a rejection test.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-034",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 204,
+      "end_line": 206,
+      "span_sha256": "169486e56683287e6d73ed682584a5d8d57b2d446d4b43f2a82b7c5d71a673f0",
+      "statement": "Force-push blocking can also block administrator default-branch renaming absent bypass. Allowing force pushes does not override other protections such as linear history.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-035",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 208,
+      "end_line": 210,
+      "span_sha256": "c2fe4fc247389bc7d9cc71fb18017c375817031337f9ef7dec3a15873fecab5b",
+      "statement": "GHES site-level prohibition on all branches prevents repository force-push allowances; a default-branch-only site prohibition still permits allowing force pushes on other branches or tags. Evaluate the scope of this inherited constraint.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-036",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 212,
+      "end_line": 222,
+      "span_sha256": "97e22470c99778fc7b9e9d05c8632eda88a8d54ee0e2606ae07a7062f8aaad8c",
+      "statement": "Secret-scanning merge protection is gated to FPT/GHEC/GHES>=3.24 and described as public preview; it scans the PR head and blocks while scanning is pending or qualifying introduced open alerts remain. It is not a certificate that all secrets or history were cleared.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-037",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 219,
+      "end_line": 228,
+      "span_sha256": "b82c810432a22769a7013b91f86be66bb80950f4c28e59bd40c07e874a277e2c",
+      "statement": "The secret gate blocks a pending PR-head scan or a commit introducing an OPEN alert matching a selected secret TYPE. Provider, custom and generic patterns are supported; AI-detected secrets are not. Alert remediation and safe credential replacement remain separate work.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-038",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 230,
+      "end_line": 236,
+      "span_sha256": "6c1cf3e7ed980607818397bc857a67b188cdfa405f1bfb42e405bdb37039e4e1",
+      "statement": "Required code-scanning results can select tools and severity thresholds. Missing setup, analyses still in progress or qualifying alerts can block merging; configured tools alone do not prove completed analysis for the relevant revision.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-039",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 238,
+      "end_line": 248,
+      "span_sha256": "d202934e1c0b57e44697a42a60f20cae119660d5d9fc3fc3e3d32813d9e8dcac",
+      "statement": "Code-quality protection is FPT/GHEC-only and blocks pending analysis, analysis failure (including exhausted Actions-minutes budget), or results at/above the configured severity. It does not specify a new-issue count budget.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-040",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 250,
+      "end_line": 266,
+      "span_sha256": "dfce5dbef5cfcd1dc156a4c72a85516de37f8656d113b994655e4b38172d01de",
+      "statement": "Code-coverage protection is preview functionality requiring code quality enabled and coverage uploads. It checks aggregated PR-branch minimum line percentage and a maximum percentage-POINT drop relative to DEFAULT-branch coverage. It does not wait for uploads: require the upload-associated status checks to await all expected coverage evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-041",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 268,
+      "end_line": 282,
+      "span_sha256": "e2636f85dc08a12f6c812c88c400868598d30e675b61dfed35e01fd79b302afd",
+      "statement": "Required-workflow rules are gated to GHEC/GHES>=3.12, with enterprise scope additionally gated by enterprise-ruleset-workflow-rule (GHEC/GHES>=3.18). Source repository visibility constrains targets: public can target all, internal internal/private, private private; external reuse permissions matter.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-042",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 284,
+      "end_line": 290,
+      "span_sha256": "96e831b2bb32079f28c454f70390d0907f01da1840cfcf6237b782854b7f8aa8",
+      "statement": "Evaluate-mode passing workflow runs can be reused on activation, and PRs opened before Evaluate may merge without those runs. Observe the specific PR and enforcement state before claiming a required workflow ran.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-043",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 292,
+      "end_line": 294,
+      "span_sha256": "7c8760a7da37e96d534278183d076252d7f3552504439a5080872065bbc44b5e",
+      "statement": "The required workflow must specify one or more supported events in on:. Ruleset workflow events ignore branch, path and activity filters. Supported defaults are PR/PR-target opened, synchronize and reopened, and merge-group checks_requested; ordinary filter assumptions do not establish ruleset behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-044",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 296,
+      "end_line": 303,
+      "span_sha256": "78dee8404d637b5d4d5424357af1f877b7ea190180e64c5f8cb194df3da62cce",
+      "statement": "Required-workflow rules block direct pushes and should target branches accepting PRs, not every branch. Optional creation-check bypass must be distinguished from update checks.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-045",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 305,
+      "end_line": 309,
+      "span_sha256": "4e93f2021e7bd4e35d32e446c3a4b7686b27de5a635ae5494b7f4e1dcf4075c2",
+      "statement": "Enterprise metadata restrictions are gated to GHEC/GHES>3.10. The included metadata note says ALL commits on a squash-merged branch must satisfy the base branch metadata requirements, in conflict with this page’s later resulting-commit-only statement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-046",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 311,
+      "end_line": 320,
+      "span_sha256": "3489703403f2f1af106f108c76c48f18810436bfd1c626401b6f6906959aa33b",
+      "statement": "Metadata rules can constrain author/committer email, message or new branch/tag names with literal or regex patterns. Immutable metadata can require rebase/rewrite. Ref-update blocking still lets commits enter and be retrieved without being reachable from the rejected ref; other valid refs can update. GHES hooks are an alternative, not proven equivalent. Metadata consistency is not a content-security boundary.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-047",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 322,
+      "end_line": 322,
+      "span_sha256": "97c68d7550501fef3e53c33c8a7b66da6ee9e98ff3712203da6d93b0be35223c",
+      "statement": "To reduce contributor friction the source recommends restricting metadata on a limited branch set, with main plus PRs as an example; this is source advice, not local adoption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-048",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 324,
+      "end_line": 324,
+      "span_sha256": "d561258f7a2767203c9952b0a2dfbeb246bf5b2aeafff0a9074767ff4a5262d2",
+      "statement": "For squash merges this page says individual PR commits are ignored and ONLY the resulting squash commit metadata is validated; this conflicts with the included all-commits requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-049",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 326,
+      "end_line": 330,
+      "span_sha256": "bffd9344831782727281d6e07c4b4aaac69e13f4a079e41557bd64de4a3f67b6",
+      "statement": "Committer-email patterns must include noreply@github.com to permit web merges and GitHub-created commits. Metadata rules apply to new commits from activation forward, not existing branch/tag history.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-050",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 332,
+      "end_line": 336,
+      "span_sha256": "af2db8d3e5ca3209c6b26c8bb740cb175c174da2ef4ed8cb3489c7cf3fb44e1d",
+      "statement": "File-path push restrictions accept at most 200 entries of at most 200 characters using the included fnmatch examples. These pinned limits are not observed live quotas.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-051",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 336,
+      "end_line": 344,
+      "span_sha256": "5a5197955bd2f53b3b5f5c681a3bfe93c6f3dd2c5b8cab708b9b62662fdcd78e",
+      "statement": "File-path allowed exceptions are gated to FPT/GHEC and use fnmatch, with validation when saving. An exception intentionally permits matching content; this does not automatically apply on GHES.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-052",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 346,
+      "end_line": 348,
+      "span_sha256": "fc0af793d8c8d93e237651e01e17f867da6c0580ca35140d6b16cfb31fbee09b",
+      "statement": "Path-length push restrictions block paths exceeding the configured limit, across the applicable push-ruleset fork scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-053",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 350,
+      "end_line": 358,
+      "span_sha256": "4634bbd2f064bab683d09ad3dd6fed6326a302a5c7fa89dae1120de246482f96",
+      "statement": "Extension restrictions accept at most 200 entries of 200 characters. Allowed exceptions are only for path/size restrictions; a jar exception to a broad filename constraint should instead be expressed through path patterns.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-054",
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "start_line": 360,
+      "end_line": 370,
+      "span_sha256": "837992db1132e4515d8fe8e546eb8089ba3aeb978501ef1a065996f51bdc5ecd",
+      "statement": "File-size restrictions use a selected size limit; their FPT/GHEC allowed path exceptions may admit matching larger files. Restrictions and exceptions do not themselves satisfy the catalog’s approved artifact-storage objective.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Primary reading of full pinned article and recursively included dependencies. Reviewed source statements only; no adoption or live platform verification."
+}

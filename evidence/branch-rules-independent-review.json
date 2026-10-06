@@ -1,0 +1,3025 @@
+{
+  "schema": "ges.bounded-source-review.v1",
+  "reviewer": "codex:/root/bounded_independent_review",
+  "reviewer_task": "/root/bounded_independent_review",
+  "parent_native_session_witness": "01a11342-68e2-7851-9636-9af99289c0d7",
+  "independent_native_session_id": null,
+  "human_review": false,
+  "reviewed_at": "2026-10-06T23:54:36.860467+00:00",
+  "quality_status": "PASS",
+  "status": "PASS",
+  "scope": "Independent fidelity, bounded omission and exact-claim reconciliation review of five pinned GitHub Docs branch/ruleset articles, their literal dependency closure, six GHQR comparison inputs, and GES-RULE-001 through GES-RULE-009. No fresh semantic review of unrelated claims.",
+  "method": [
+    "Read all 855 original lines including frontmatter, option lists, examples, actor/modality/condition qualifications and navigation. Independently read all 48 recursive reusable bodies and 14 feature files (351 dependency lines), plus the 22 referenced variable values. No upstream source execution.",
+    "Read GHQR branch_protection.yaml, bestpractices/branch_protection.go and all ruleset.go; read relevant caller composition and type bodies. Compared scanner behavior with catalog objectives. Read the linked primary RE2 syntax page solely to assess the pinned regex example, not to certify live GitHub behavior.",
+    "Compared every authored claim and selected span with original source and included bodies; sent substantive draft findings before correction and rechecked actual corrected statements. Reviewed all 156 reconciliation decisions and rationale against current catalog objectives. MAP is partial supporting evidence, not equivalence to every objective criterion.",
+    "Checked all 369 candidate IDs/text hashes for unique complete inventory membership. The conservative parser is bookkeeping, not semantic or omission proof. Bounded original reading supplies the semantic review. Repository tests/provenance validity were not treated as semantic proof.",
+    "Reconstructed production subject bindings across all 61,618 known claims solely to verify policy digest, not to re-review their semantics. Used the actual ges.core.digest serialization and checked actual catalog and 593-record proposal collection; all match policy. Initially reported digest concerns caused by reviewer verifier serialization/inference error were withdrawn after this check."
+  ],
+  "observed_counts": {
+    "primary_articles": 5,
+    "original_lines": 855,
+    "reusable_files": 48,
+    "feature_files": 14,
+    "dependency_lines": 351,
+    "variable_bindings": 22,
+    "bounded_authored_claims": 156,
+    "candidate_mappings": 369,
+    "global_known_claim_denominator": 61618,
+    "global_unresolved_after_this_batch": 61462,
+    "reconciliation_dispositions": {
+      "REFERENCE": 44,
+      "MAP": 109,
+      "CONFLICT": 3
+    }
+  },
+  "claims_per_document": {
+    "docs-branch-rules-about-protected-branches-claims.json": 40,
+    "docs-branch-rules-about-rulesets-claims.json": 16,
+    "docs-branch-rules-available-rules-for-rulesets-claims.json": 54,
+    "docs-branch-rules-creating-rulesets-for-a-repository-claims.json": 24,
+    "docs-branch-rules-managing-a-branch-protection-rule-claims.json": 22
+  },
+  "candidate_mappings_per_receipt": {
+    "docs-branch-rules-about-protected-branches.json": 87,
+    "docs-branch-rules-about-rulesets.json": 28,
+    "docs-branch-rules-available-rules-for-rulesets.json": 157,
+    "docs-branch-rules-creating-rulesets-for-a-repository.json": 30,
+    "docs-branch-rules-managing-a-branch-protection-rule.json": 67
+  },
+  "inputs": [
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-about-protected-branches-claims.json",
+      "sha256": "af824f1f26387400313d60c5dcc3a7a6a2f6091b08ac50e9317922017e11be49"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-about-protected-branches.json",
+      "sha256": "30163f25a1c55bad2b32bb414d16ae642e545094fc49584ee9e09edc7b23835b"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-about-rulesets-claims.json",
+      "sha256": "b45a728d5a47f3eb3f7e90fbc99f82b780a2ebc4841e2aa8953be4778b53c5d8"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-about-rulesets.json",
+      "sha256": "a61a1a65f683d6200d744cbc79506f2f846d517ee9e34074aea6148a4f148ab3"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-available-rules-for-rulesets-claims.json",
+      "sha256": "4177f1d4ad640d858e2f8f6decb6b6dbbc9ccff8e3a31380a670532906916dfc"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-available-rules-for-rulesets.json",
+      "sha256": "af68d9ec171f7f8864a0acdb466bc587bf5c4b1395c168f9e48cf76921cf0ed1"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-creating-rulesets-for-a-repository-claims.json",
+      "sha256": "4846150142118ef77a960cee731284edda367f1576a56aeb1489e044fca1b81c"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-creating-rulesets-for-a-repository.json",
+      "sha256": "261d3e6168a473c4f67eda44b86c98285aae9750f85a55fde474cb26da7e2cf1"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-managing-a-branch-protection-rule-claims.json",
+      "sha256": "de66ceb71e05537334a83f666250b9ea4c78f58a17d484dd0a5427e87df3a82b"
+    },
+    {
+      "path": "evidence/source-reviews/docs-branch-rules-managing-a-branch-protection-rule.json",
+      "sha256": "1f74ea8bba36c4972f637a0eeb6138d6152885ed81d73a68ac12845cf4ab634b"
+    },
+    {
+      "path": "controls/catalog.json",
+      "sha256": "1c232a87868655a90bf5df2082114425b704e37c1c27b44bbb203fdfa75a4834"
+    },
+    {
+      "path": "controls/review_queue.json",
+      "sha256": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9"
+    },
+    {
+      "path": "evidence/branch-rules-primary-review.json",
+      "sha256": "9668ad9da554b78ef765a32adf9cf9263aba2a860f3ca4b98d60ea84e0d24a8d"
+    },
+    {
+      "path": "docs/branch-rules-review.md",
+      "sha256": "f52b848388abfe8e38468e9211080e3089f2ebe701d504843c69ad17e1a1b941"
+    },
+    {
+      "path": "/tmp/ges-branch-rules-reconciliation-draft.json",
+      "sha256": "e599f961668748f2604359805a2e02bd1740feb0e2321cb1d12445d5f04fde6a"
+    },
+    {
+      "path": "/tmp/ges-branch-rules-policy-draft.json",
+      "sha256": "e057404beb37d7da1d9a321b4c60bfb28db5220b088b38b05a34178767a02ac2"
+    }
+  ],
+  "source_hash_manifest": [
+    {
+      "artifact_id": "8972f40de3ccd627754753a5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches.md",
+      "content_sha256": "f803163895c73c5ffbf99c45747c0626e20075913686e7b51674a73a19ee860f",
+      "lines_read": 192,
+      "role": "primary_article"
+    },
+    {
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule.md",
+      "content_sha256": "624257ee7eac0b09757425e561d04ff332b7393236caa7dbc2a97f49a955adfa",
+      "lines_read": 111,
+      "role": "primary_article"
+    },
+    {
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
+      "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
+      "lines_read": 72,
+      "role": "primary_article"
+    },
+    {
+      "artifact_id": "c45d5e021274a87d1fd5aadf",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+      "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+      "lines_read": 370,
+      "role": "primary_article"
+    },
+    {
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository.md",
+      "content_sha256": "4195b4a9bbd4606de02aa48a19b4e646bb3411ea322135dda1872397455261a7",
+      "lines_read": 110,
+      "role": "primary_article"
+    },
+    {
+      "artifact_id": "6801ffe545e56d6bcd04ce5f",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/branch-protection-ruleset-conversion.yml",
+      "content_sha256": "6ce07ed17db03452ec390af173954763c55d48d1224f08c1c3f0d7e1d3b36dff",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "c040b7a2db1ed8db4ef020a2",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/code-quality.yml",
+      "content_sha256": "393034bd65c903ea060d599383c5197b3db0687cee69573970fd9c5825e516ab",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "ae35a19b013bb4dbbb6f1a7d",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/enterprise-code-rulesets.yml",
+      "content_sha256": "5a1213fa450ee50a8576f9b84594e40d3f9aa8515a8f93996ad23b67cc9dc706",
+      "lines_read": 4,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "a5907db25adf3ee13ce09817",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/enterprise-ruleset-workflow-rule.yml",
+      "content_sha256": "d72243861248568fb54004c08a634365b1c9dbede716f66de987a152fafa99b9",
+      "lines_read": 5,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "26ccb286ef88f37845a8d9b7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/push-rule-allowed-exceptions.yml",
+      "content_sha256": "b16d7df48d01f1db0328dabe9aa834c633931f1960bb5f0deb46a92bfb994031",
+      "lines_read": 7,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "3ab7cea4e6a25611b7b9c9fc",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/push-rule-delegated-bypass.yml",
+      "content_sha256": "be623d0db6f3335a03b27b88423e51ce838feaa5e79ed58afff96db8ec0f4bf9",
+      "lines_read": 4,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "3079cf29dadf5351ec22addd",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/repo-rules-copilot-extra-approval.yml",
+      "content_sha256": "b43e964f2fe35ee5b43a07e1fcb002b80c458b6d3a39917f57b03ff105792cd1",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "c501480e91ca45d7ca0f8148",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/repo-rules-enterprise.yml",
+      "content_sha256": "095ee205504fd971997d1cc6d9376ad8967d1c94dccbd5bce11e8b05b4461d48",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "e05be2eefd61a99aaa7c585f",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/repo-rules-ignorecheck.yml",
+      "content_sha256": "dd9cf5c4be01a073a43262332e2fbcd09635f9e24e708df6b91d668d81a7bfa6",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "5440e21a8a05144f135da1e6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/repo-rules-management.yml",
+      "content_sha256": "e4d60d0d55e9482d51a99edb64848fdb66248a6571f9ba8d9fa30ee3c3a2eb19",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "9a28a97217c86a35df026b02",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/repo-rules-merge-queue.yml",
+      "content_sha256": "2249bf0aa150c8f2b548a7617aeb9cd23649bc88581849f96611b33f53e468be",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "218a6c8b10090c6a505fea90",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/repo-rules-required-reviewer.yml",
+      "content_sha256": "8f05f01ce7b6465fc457634638faaa8d030a3ea8804db403acb523dce861339e",
+      "lines_read": 7,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "2397ca1aa2ab3aed8f86c4a9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/repo-rules-required-workflows.yml",
+      "content_sha256": "97976cdbcd4100b799dc6aed33b7a0e1de7fec6cea4a9f4bd95dfdb620491062",
+      "lines_read": 5,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "2cc2a9ce7e367b53b4ed2b20",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/features/secret-scanning-merge-protection.yml",
+      "content_sha256": "48df8fcfa5e2762e986caf6eb3f45c09f6c75705dc3ae613970d5173bde81620",
+      "lines_read": 7,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "a911c24e95a1ade50b456426",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/code-scanning/merge-protection-rulesets-conditions.md",
+      "content_sha256": "d88c87c88e993cd6a3b4515996377d25073e9c405c2d861233a35b6f632afb2a",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "0f595fc783a330125c0c3f5a",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/gated-features/more-info.md",
+      "content_sha256": "5e41a2c69569db9733488fad5ada6ebb1cccb7ae2e00bf699fccab5559236af4",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "3994d0ae5b9706b938b8f6c4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/gated-features/protected-branches.md",
+      "content_sha256": "369862bd6b9f99564949e6d87889a6bc0257ad28941431b4c7808948e97c012e",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "eb66d9255da600e3c064f067",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/gated-features/repo-rules.md",
+      "content_sha256": "8a805b9de812867b9385470e318acf3b4d0ecf89bc10551993906757fd808ddf",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "f14c67aafd1b7e9d47751b64",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/pull_requests/merge-queue-merging-method.md",
+      "content_sha256": "46166ab36eaef253caddce1160119d4ad2b01de0ac0c2279d3fb9d81660bdbf6",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "557de2dcebdfd0eea0f22278",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/pull_requests/merge-queue-overview.md",
+      "content_sha256": "00008b55054578c947f05f8b17a6fdfdb809f826f511346c53c804038b5023da",
+      "lines_read": 9,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "e10b6ae2afb9a5fe7fbf07e0",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/pull_requests/merge-queue-references.md",
+      "content_sha256": "3c9139b13e7dec888ff286eec79e5beb223ee86392ce2541e3c38b042dc8bf6c",
+      "lines_read": 2,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "ce4a6ef8bd080782e6c9da22",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/pull_requests/required-reviews-for-prs-summary.md",
+      "content_sha256": "7e0104ef3beb11043b123af4a492e49d15685397a9cecf55d09f9bc74c960c0b",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "802a2e270a212f08eef4257a",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/pull_requests/security-changes-mergeability.md",
+      "content_sha256": "0913874b05ec711db919882c2173fc084a37afb089409223353e0e8397ed4238",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "dfa2e819d3cdb019630b61aa",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/pull_requests/you-can-auto-merge.md",
+      "content_sha256": "72cdd0dfae2b99674399e9825e25b3f1f15e0a30fc263fce83a26853fe6cf277",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "71f018b7bde58475ec8c57b5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/about-fnmatch.md",
+      "content_sha256": "19f908dddde2e922625b679c34e511b7bb090ca85a741309c4f2fdad6efc4da9",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "55fc3be058fb52dafc0184e1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/about-push-rule-delegated-bypass.md",
+      "content_sha256": "bc4f7eb0d82205f56736788f45deebba0c4d12c65e274654bc158aac40a37232",
+      "lines_read": 7,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "f88a298d3e8cfb9cbd49f2b6",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/add-branch-protection-rules.md",
+      "content_sha256": "5c01937c209fb6cef264b549ec5592fc3e297e962b0d4b1d48a7d98f24cff733",
+      "lines_read": 2,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "6d24fbd2dd035e8fc9b47d38",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/branch-rules-example.md",
+      "content_sha256": "62cd9fa0276814e88d3cb289c708ff8e78126255547afab29a0811896a9e8f59",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "9271121db68d138a73bb9678",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/create-push-ruleset-step.md",
+      "content_sha256": "67d28cfa65ce9ff62d2036b15b66ccd01d15f1e5f13c314c63472c55225dadf1",
+      "lines_read": 2,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "9383c838168443941302f841",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/create-ruleset-step.md",
+      "content_sha256": "8b757d1ada0c2fe323edfc2983e40f0fea4357566879901cfe203975370f38ed",
+      "lines_read": 2,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "c5cc38b0fb4f08e433881f35",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/import-a-ruleset-conceptual.md",
+      "content_sha256": "d1402a27233142bd2e2b8e848352602469cc031c1da976de42b287557671ffa7",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "8999bc9be3540d09f9befe93",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/navigate-to-repo.md",
+      "content_sha256": "942ded86ff856fda44a03ed2d007305ef83aed48cf8e7c348b3ddce878099fb7",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "dfce220a9edff8c02041ca45",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/push-rules-fork-network-note.md",
+      "content_sha256": "88cbc5f952c6c248583dea1a3b10a2e3b516d382ec0ecc5f56c75ae6e09cff97",
+      "lines_read": 2,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "da335b0378d48e1cc0d518d5",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/push-rulesets-overview.md",
+      "content_sha256": "b82525127b79ca341f60413237c9f8863299edb696692f83202465c119288e04",
+      "lines_read": 18,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "9ac17b16fc11ce80decd04e4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/repo-rules-permissions.md",
+      "content_sha256": "68981006df70ceaf40f0a23bb52f955e689f0e40bd60d194753fe2bb774491f0",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "443e61e58cd602a85c5c3a76",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/repo-rulesets-settings.md",
+      "content_sha256": "241469ff9b847b8ff6e7b3eb462a85bc496434debace43bd692672e9dac51d8b",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "8374d7670e58ccb9bf8f7865",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/repository-branches.md",
+      "content_sha256": "caa261c027d2ca268a2d690a48405b1694cd5fba297f1210bd9410cbbcfb5689",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "c088ddd493c555a6498cf499",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/required-signed-commits.md",
+      "content_sha256": "4c6d76802000af78dcc508764a34ae1a40ca310d2dd3f2b54c378ed7635e476e",
+      "lines_read": 17,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "d5e4a9ae48b76d60895cd95c",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/review-policy-overlapping-commits.md",
+      "content_sha256": "f9a365a745d77909272c0325bf368f5e1b0e277925b16034515646926d719e96",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "6310b81e4e04d82ef78c35a7",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/ruleset-workflow-event-triggers.md",
+      "content_sha256": "65f7092ddd43b36309e82bfd57b1af5666395beffbfcb9d4222e13f4f4ca59ca",
+      "lines_read": 9,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "7643f272ab8bfba05057e05c",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-about-enforcement-statuses.md",
+      "content_sha256": "1b343a1ab2c5cc09f183c6041b2776d92ce23e18546012311a1b45053bfacce8",
+      "lines_read": 13,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "31a61f744e97256cc7cc2050",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-branch-tag-bypass-optional-step.md",
+      "content_sha256": "6761aa241f0438b82ffe45b09a730a5a2772bf5c967577a925b49bbe252b7c40",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "4f93f61988d4680ca8f2994d",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-bypass-step.md",
+      "content_sha256": "25f39a7decf21a917c277c69291bf33de4cccbc951dda80aa1bef0a728370808",
+      "lines_read": 17,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "1e5590b93f9658458e1ca8a8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-commit-regex.md",
+      "content_sha256": "a7ea7af1629dc69da4547f7cee5eb9f7e5f947da0c4c164e9ef9197ef77009c4",
+      "lines_read": 74,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "032c1d65397ae64e65197bd1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-convert-branch-protection-rule.md",
+      "content_sha256": "540299271db712d21e2264b44be60b5bbed10c9f2fbb49742ce4534bb315fb7b",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "bacf1c53b17e0fb00b46c9ca",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-create-and-insights-step.md",
+      "content_sha256": "5e194d093a0b1a92dba9e02d9301a5dde6bcb8c0d1d42bad670216c7c38f3901",
+      "lines_read": 5,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "21be37eff7d567928ae2b5d8",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-fnmatch.md",
+      "content_sha256": "91aa75b4f6584da14e92bf33e68193f2cb8e7e61bc94371220b7966509341b00",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "fc001f8150934dcf337e17b1",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-general-step.md",
+      "content_sha256": "799ef827fbed8f365860a7655aed62810f6e8eeea627540e98b5b4e427fb2271",
+      "lines_read": 2,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "163b1ff53a3510a969af40d9",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-metadata-restrictions-notes.md",
+      "content_sha256": "49c2cd5aec2d370a9d4852fac35621ef2e268c02fdeb92e8a6eab1b82440b357",
+      "lines_read": 4,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "a26f7b228424fb2657a4f92a",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-metadata-step.md",
+      "content_sha256": "780ff06df6661ee915f5beaa4ff4fd57ab25f6aface3686beb8b99b71fb6fe65",
+      "lines_read": 16,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "c03d35dc395dfd9c29de5c83",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-protections-step.md",
+      "content_sha256": "e4ba919968fc534cd0e76c4545ba7b5e97620488c2203648429454fe8d09badf",
+      "lines_read": 6,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "d63fff3ac3247942581f89a4",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-push-rules-allowed-exceptions.md",
+      "content_sha256": "508f0b9c2da580a44dd8ff73e5b1c8f31d278e960571b2829245982a3f985b29",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "ff1cdfbc93fd3c859435ad33",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-push-rules-path-example.md",
+      "content_sha256": "810ea7338b65d09c7066c5a2856a975d2c4b5b83ed56a9d673f0e0b53fbac75c",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "5f839c7a76aa2841c3e27814",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-push-rules-step.md",
+      "content_sha256": "d6135cf5ee6976b11c0abee64704806124249e47d90d17cc0a2e4e924fd1b22f",
+      "lines_read": 12,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "01872c85e2649e921ea1ecfa",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-push-rulesets-bypass-permissions.md",
+      "content_sha256": "5325acf5fc4d0a6f5cd1cda7342fb29ac1edb673e9d194d4ee247272d44e331a",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "b53656b9bf1fd1f57f3a8e26",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-push-rulesets-fork-network-information.md",
+      "content_sha256": "bee375fc3e14ce046a28ba4bf35a93248b895dece3ff3908e672cfaddf48d44b",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "de3a07baf970d1df2cc9f84f",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-push-rulesets-intro.md",
+      "content_sha256": "3db15893d1da0d2c1d6cd9a5d70fdd3357b4a219500a2b6c191c87fa9c0999d4",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "1ecaf379da0a2e8212516b80",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-target-branches.md",
+      "content_sha256": "f98de9da9b4c4ce11c838332c98c1ea6b7018713e1013d0eb46b14c0e38bbc06",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "4eb846f849b2b1022a074dbf",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulesets-unsupported-fnmatch-syntax.md",
+      "content_sha256": "01bb4b72ff04c19aaa6e4afcb0002244f6f42d18dc2c9d1ad018ea5b1a27ff4e",
+      "lines_read": 5,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "c03f11b3e14c34304b10de97",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/rulest-workflows-intro-paragraph.md",
+      "content_sha256": "cd9915d6f9cc9603927a8eb109c1e849b0348d32d171b92a638f5a0e8b7ffda5",
+      "lines_read": 1,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "e102caade55a87aee14a4ef3",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/repositories/sidebar-settings.md",
+      "content_sha256": "5f8a3e8af289b95bfcc3371016d8c1c90239a303bf0c85706f2e17ac46bfc06c",
+      "lines_read": 3,
+      "role": "included_dependency"
+    },
+    {
+      "artifact_id": "4813f88e9d057ddf24e54aba",
+      "source": "github/docs",
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "path": "data/reusables/secret-scanning/merge-protection-public-preview.md",
+      "content_sha256": "79426d3fe122bcd8d3437fca2e8c7f00cedf480be338095f83001dfadb7e5828",
+      "lines_read": 1,
+      "role": "included_dependency"
+    }
+  ],
+  "variable_bindings": [
+    {
+      "key": "copilot.copilot_cloud_agent",
+      "path": "data/variables/copilot.yml",
+      "content_sha256": "8d274044b1764b53d1c1a7af13fb04e901d6aab4fc344fe1538b298db5bed2b2",
+      "resolved_value": "Copilot cloud agent"
+    },
+    {
+      "key": "product.company_short",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub"
+    },
+    {
+      "key": "product.github",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub"
+    },
+    {
+      "key": "product.prodname_actions",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Actions"
+    },
+    {
+      "key": "product.prodname_code_quality",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Code Quality"
+    },
+    {
+      "key": "product.prodname_code_quality_short",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "Code Quality"
+    },
+    {
+      "key": "product.prodname_code_scanning",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "code scanning"
+    },
+    {
+      "key": "product.prodname_copilot_short",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "Copilot"
+    },
+    {
+      "key": "product.prodname_dependabot",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "Dependabot"
+    },
+    {
+      "key": "product.prodname_dotcom",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub"
+    },
+    {
+      "key": "product.prodname_dotcom_the_website",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub.com"
+    },
+    {
+      "key": "product.prodname_enterprise",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Enterprise"
+    },
+    {
+      "key": "product.prodname_free_team",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Free"
+    },
+    {
+      "key": "product.prodname_free_user",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Free"
+    },
+    {
+      "key": "product.prodname_ghe_cloud",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Enterprise Cloud"
+    },
+    {
+      "key": "product.prodname_ghe_server",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Enterprise Server"
+    },
+    {
+      "key": "product.prodname_github_app",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub App"
+    },
+    {
+      "key": "product.prodname_github_apps",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Apps"
+    },
+    {
+      "key": "product.prodname_pro",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Pro"
+    },
+    {
+      "key": "product.prodname_secret_scanning",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "secret scanning"
+    },
+    {
+      "key": "product.prodname_team",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "resolved_value": "GitHub Team"
+    },
+    {
+      "key": "release-phases.public_preview",
+      "path": "data/variables/release-phases.yml",
+      "content_sha256": "bdb2e5aae5096ba5f22663ec179ccb0b3040d2393153c443139fc8dbce768cd8",
+      "resolved_value": "public preview"
+    }
+  ],
+  "ghqr_comparison_inputs": [
+    {
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/pipeline/stage_evaluation.go",
+      "content_sha256": "8434790b5f31cffcc190826d84d4b0ef32a7d7494649492698eb5ff17761bb8c"
+    },
+    {
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/pipeline/stage_repository_scan.go",
+      "content_sha256": "5e2b5ecc6aaa0d6cc12228eadb4ced025e49132bf9155f6b31dc12028465d73a"
+    },
+    {
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304"
+    },
+    {
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/bestpractices/branch_protection.go",
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36"
+    },
+    {
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/repository_types.go",
+      "content_sha256": "5e4e3315b57df4ed7055450de073d992da8bf98c36e461c93e18755a20826744"
+    },
+    {
+      "source": "microsoft/ghqr",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "path": "internal/scanners/ruleset.go",
+      "content_sha256": "da0e3aab30c9bcba52419c7141e1f554432cd8899a46c5737efe7c6997901692"
+    }
+  ],
+  "reviewed_claim_span_manifest": [
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-001",
+      "start_line": 1,
+      "end_line": 27,
+      "span_sha256": "479cd324ef899b2ca4c6f0b2c4f1f7ab563abad6d0f100b85c79d40dc2b9b664",
+      "statement_sha256": "9c5939232d52de687ca9fc6eda9fbad90245367d27ffc79702be572cc489f7d1",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-002",
+      "start_line": 31,
+      "end_line": 31,
+      "span_sha256": "9be34c1efd3f9fd9db2d6679d679462e309249b445e3585b9450af2679c41373",
+      "statement_sha256": "314c2be90c3de049230c5d6772fd17178c45932e5b39a17ce758b199894ce958",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-003",
+      "start_line": 33,
+      "end_line": 33,
+      "span_sha256": "3f6e6091d0edb15e22c20f830fef4c5e7d0ec4f2bfeb136f03864d844a826e2a",
+      "statement_sha256": "70af66cbf88686ff07d3a9e669da81cbe3642ddcd814326370026cd3fc6f4142",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-004",
+      "start_line": 33,
+      "end_line": 33,
+      "span_sha256": "3f6e6091d0edb15e22c20f830fef4c5e7d0ec4f2bfeb136f03864d844a826e2a",
+      "statement_sha256": "6e9acf307f8e5d5f258b3e1a683121416eb8992fc92ca4628dc9e58a8ce20766",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-005",
+      "start_line": 35,
+      "end_line": 35,
+      "span_sha256": "77e9e577a0233fba0813a013847c0e229e93dba10b5f4b8858c01fe1048c7764",
+      "statement_sha256": "8f4d8bce1597aa4c67cb697113e91bb4d4afa61f49c31d84f42f542e0ce7ae77",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-002",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-006",
+      "start_line": 35,
+      "end_line": 35,
+      "span_sha256": "77e9e577a0233fba0813a013847c0e229e93dba10b5f4b8858c01fe1048c7764",
+      "statement_sha256": "65732e4d8e7600d7f396d5df3016a8fd8091e0453e5c52a2082658a0f09d6e86",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-001",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-007",
+      "start_line": 37,
+      "end_line": 37,
+      "span_sha256": "c1e142d60c2f85adde2ce2982df64044db876582bd29d9bcff5a4fbccbe94375",
+      "statement_sha256": "6e2ab2243a34ca39c1ab2f448d5c65dd1d6c2ba9bac9552e8a415274d390c698",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-008",
+      "start_line": 39,
+      "end_line": 39,
+      "span_sha256": "1d937dc40f29e75fef7f00101ad74c780a27c6a24378294a7815659b60b24526",
+      "statement_sha256": "774ebf64121e7cfcae6f60eb800bb6e3e29b3d5d8e18caf52525e95dc66f10ea",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-009",
+      "start_line": 41,
+      "end_line": 41,
+      "span_sha256": "fc34918de6a722ca3731a99f55fe9abf056c68de7caad25b08d482a14777064b",
+      "statement_sha256": "7ce0364e5496f2f2907de7d60b60d6932a99c98407c724cdcfbc9aaa737ce07e",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-010",
+      "start_line": 43,
+      "end_line": 44,
+      "span_sha256": "fbe4b37c7aceb9dc094840ebe5ba0d7501e7579c01431aab1215f5c9f16d2067",
+      "statement_sha256": "5259656fb39187ebd2590f0ced062553323cc485f8bee92185aa75922d2ec044",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-011",
+      "start_line": 48,
+      "end_line": 62,
+      "span_sha256": "0b10f29aff29b0ca67e1b64228dc3b1a57f4e00c83812574a2c8e562fa7d845b",
+      "statement_sha256": "6893275fae1e5b2bddd6d4192356b9797d7f0ab80d868938cfee1160f065b2d6",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-012",
+      "start_line": 66,
+      "end_line": 68,
+      "span_sha256": "0d10be10b8852cc24911f8eba5fcafd4cf1727530dab5ccf03321049e36681ec",
+      "statement_sha256": "c5d64db638e43aabe603d1b06783d72bbf926ca1a9bd8fbe05a359733c073f67",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-013",
+      "start_line": 70,
+      "end_line": 70,
+      "span_sha256": "25043d72bedf028bb6c9554b8fba1809cb30eb59ea20a0fa407d6cacc91d0047",
+      "statement_sha256": "8e8af648a4855d568f5962d93c0f32cf1da879580202f08ca2b85c12fce98a83",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-014",
+      "start_line": 72,
+      "end_line": 72,
+      "span_sha256": "d660e5e080fe20559020489f898b2824f6a2b4f5a779c802b28f5f20d8b65900",
+      "statement_sha256": "6d631fe5f615f8f461aa6b06e94081af166682963a1be117fa27c6405fd8c230",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-015",
+      "start_line": 74,
+      "end_line": 79,
+      "span_sha256": "9b309a257b3171f6ce4f77d5f872c3ae553bbbe2b52a1fe3378c51fa54026b69",
+      "statement_sha256": "139c9a3080fd0d35ce3648f2f12eba4ac4bf595639a031ce268758a6b2785aa1",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-016",
+      "start_line": 81,
+      "end_line": 81,
+      "span_sha256": "a214e757f1fddf02e78efabe8b28ca35740472a685893512f956a1d2ed12f472",
+      "statement_sha256": "8e6141ea72a8e228b97b5a9c0f62eca741527abff440fa1179ccb4960a75b913",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-005",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-017",
+      "start_line": 83,
+      "end_line": 83,
+      "span_sha256": "d30aafde9e4be45f868d85dceb77d2166757230ec54a3f6f1294c71221bd6a67",
+      "statement_sha256": "a49a837461788495eab76bf8604bf7d427cfb3377a5b314350ee967e2d76cd7d",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-018",
+      "start_line": 85,
+      "end_line": 85,
+      "span_sha256": "5e3e954d30d1a2c7734ae03ca2266c81351117f9e04d548bc72dfb348cd042c1",
+      "statement_sha256": "46075c9224dc327401b526f63fcfab94aa2c6aba019d14636a6405e9a558427e",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-GOV-004",
+          "revision": 1,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-019",
+      "start_line": 87,
+      "end_line": 89,
+      "span_sha256": "db9023ada2d795cd35f5e6da24ff972a09fd4aa5a5d24ab9fce634030dc748a3",
+      "statement_sha256": "37ee1e964dca5a18ab573de33a63b91c6c18a5689ce8cfaa7360cded6792f2d8",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-020",
+      "start_line": 91,
+      "end_line": 91,
+      "span_sha256": "03daff4bc0b2922a59e06a1305bb8e9389bbe887c5de237abbbdc698bc392d6f",
+      "statement_sha256": "4091d5d47380a1492ad3a169d37a58b4688c52ea69591d9234d46b26a7665fa0",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-005",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-021",
+      "start_line": 95,
+      "end_line": 95,
+      "span_sha256": "acbc3cacd682912aeaa42e40f8d236aa56925aaee4620f10de0f6ea888a46d43",
+      "statement_sha256": "b4d029ebdf29fb60be14ce1bb4b6def055642c0fefd7e1e70be40458ddc29c73",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-022",
+      "start_line": 97,
+      "end_line": 101,
+      "span_sha256": "b330ff706d5ab88dc9d2c7eec83864e650fbdade018b6bd4a3370d7e1dd8b88d",
+      "statement_sha256": "8279354b6ba54e281b8b5cb8c86fc9b91d2f6fc1d9ba47410584df091b10bff5",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-023",
+      "start_line": 99,
+      "end_line": 99,
+      "span_sha256": "38f3f1bc340593d14d3668742a8452da88eebfa5e5de3d183046e7161ee30f59",
+      "statement_sha256": "07e4decd4f4816c7db2f8aae9a752eee500a0cf267377fad8cca6f3ec02357f3",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-003",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-024",
+      "start_line": 103,
+      "end_line": 109,
+      "span_sha256": "1e1be6013a0947466d49aea5a40cbf15c793cc45c04cfbcd9627c9063b700dae",
+      "statement_sha256": "f66cff2283ea38942d6022619e8bc434d60e89b61d43a1c24bd11ba8e1b73038",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-025",
+      "start_line": 115,
+      "end_line": 115,
+      "span_sha256": "df20ee890e7c55e2441d82c27850b358b8461b1a97bcc1420e53d2e0b7f8f4c6",
+      "statement_sha256": "f9624819a83452eaa3d3ad149b69bfc1de22e91a85ee62010072c22f4606bd22",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-006",
+          "revision": 3,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-026",
+      "start_line": 119,
+      "end_line": 119,
+      "span_sha256": "e79a13e1728ee435036579565eae557e6767e5a55a40218621bc8eefad31d77c",
+      "statement_sha256": "e7c1dd94649cfcbca773d5332825e481d2f1bb34751b9e2c9fba6f6f811d48ff",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-027",
+      "start_line": 121,
+      "end_line": 127,
+      "span_sha256": "6d6d22449cd875036331316be49aa5fd4af7cff4f3211d4c84798efc3f931203",
+      "statement_sha256": "cfc740a22b7805f48ea9e1b97ad44fa29067adf6329d118ca387e7f447e6db2b",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-028",
+      "start_line": 129,
+      "end_line": 129,
+      "span_sha256": "94cdf391e130c647f7b591895b7d45bc0f1e3c81d8be3c3c29e6e2d4d8aef1fd",
+      "statement_sha256": "f03de07f198d6c1d0e1069f36579d4b1720f81015f9defdc0266e1b1fe560b1f",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-029",
+      "start_line": 129,
+      "end_line": 129,
+      "span_sha256": "94cdf391e130c647f7b591895b7d45bc0f1e3c81d8be3c3c29e6e2d4d8aef1fd",
+      "statement_sha256": "bb80532e9c01f1b35f2cbbb3737e903b1404b7a389635a56ef102334e1ea4937",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-030",
+      "start_line": 133,
+      "end_line": 135,
+      "span_sha256": "50ef502cfff4cc9dc028e290936bc7656bcd3ec31a4e0eb9c27e73017030a2d1",
+      "statement_sha256": "c384550e56896c9509710d7af7b3a826f5ca4a8e42c8d5cff61153747c0e9697",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-031",
+      "start_line": 139,
+      "end_line": 142,
+      "span_sha256": "fd67902aaea355f5eeaa164a4b790fe0f4bc8a083ee1c1a6b8bd1e0963913c67",
+      "statement_sha256": "7945b23033b8c3ee1b095fa4c2d2fd9e65e8dbeced707a45e9c3b1ae9994490d",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-032",
+      "start_line": 146,
+      "end_line": 146,
+      "span_sha256": "6b753fb372aaa909c9da19cb3dd574ed1c034d5ee8bc80a831fe82646e8b1adf",
+      "statement_sha256": "e6906640854cd6d6df431bc8f88dd0fb0854ad95cd779b8b217a8701006b4c48",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-033",
+      "start_line": 150,
+      "end_line": 152,
+      "span_sha256": "1a3fe515792473a7dc567d7c775bc95139103186687f2d9437f30b77951fd7ee",
+      "statement_sha256": "6a2bb501c4483dbb00e73199ff353367691d1245bcb82ad51dc9857e203dcd51",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-034",
+      "start_line": 156,
+      "end_line": 158,
+      "span_sha256": "5cb7ac093a74c1c00c93ea88aa85df38db61ce1974c1b67c87f35976fcf70b6d",
+      "statement_sha256": "33a870f64a918df10bcbd2375ba3ce394d8b214a229ec19ae91b5c729b46065a",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-035",
+      "start_line": 162,
+      "end_line": 166,
+      "span_sha256": "8bf443ec9fcc2c78ece0b2846f1f2fbb7d007786ce65741097720f43b492301e",
+      "statement_sha256": "a47debde41faed446ca9370eaeb4c9c206720286228c65499f48327456605fc7",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-036",
+      "start_line": 168,
+      "end_line": 170,
+      "span_sha256": "51e3ac8302a3de8299181683db63f77c3be7ba3ac1fdca397c8262c04dcc0eb6",
+      "statement_sha256": "febf196fe4f1415c15a6436e91a06a5838056441b7ce0dd2a5b3ce1f55c25b91",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-037",
+      "start_line": 174,
+      "end_line": 177,
+      "span_sha256": "6ebbaaa7d945a60b5760e18cc71deeaba3de90546997a24dbf4b2370fd0572eb",
+      "statement_sha256": "01314888938c61dcc85a8801e9e8fac832d0f5150f8d33fda44ed77a28877cda",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-002",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-038",
+      "start_line": 179,
+      "end_line": 181,
+      "span_sha256": "bcb4baa54f687a88bcee0aa80e7bfe712b5709324511fda5cd1238905719f974",
+      "statement_sha256": "2dc2313b3c25bdb66ece0ff69b8d8cfb4f3675e1bc7bbaf282d60de316946a25",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-002",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-039",
+      "start_line": 183,
+      "end_line": 185,
+      "span_sha256": "452b20be14840e0707dce0f0502b6752f7cf83106a666672267b4c3166721d40",
+      "statement_sha256": "f1d59a5e800415396d2143c7321b3d4f6a86a23f3b12996e9a773a3ae2919fb8",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-APB-040",
+      "start_line": 189,
+      "end_line": 192,
+      "span_sha256": "ea832f6313ecaf7460bdf9dc1ddc81abce4656b7c20d8f1142e43d73389c9e17",
+      "statement_sha256": "64dbb928ec18456b37b0b721dd1481ae82c59f1453cc46d7994e0ed668d08628",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-001",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-001",
+      "start_line": 1,
+      "end_line": 13,
+      "span_sha256": "937de0d6955dab09dbbbccadd6a025d84f3a0e1dd71682c09faeb8be5c2c1257",
+      "statement_sha256": "a65dfef652aa42ab6b07000453ff880e5e8d10c4d4c26b5b04ea38cd2493ab0d",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-002",
+      "start_line": 9,
+      "end_line": 9,
+      "span_sha256": "7dcc67a7fe3365868fcb0aac2b5cb2860537403d42fce79937b88904e930e3dd",
+      "statement_sha256": "ecb5c6f00e512a4c9078f20866fed9a38aef4c5994dc279b207d09af00bd8e20",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-003",
+      "start_line": 17,
+      "end_line": 17,
+      "span_sha256": "5a3f1232e85408f0414d97b7f41b90bbb61f714174229699dba78ebfff0f004b",
+      "statement_sha256": "2c21f243076981514bc1010b002d4a2399c3c365bd6c50f3b2461220f2779828",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-004",
+      "start_line": 19,
+      "end_line": 19,
+      "span_sha256": "59e131273e5c43621bda1a90238d9557aaf74c7f670048fb1b33cae6f18aa61b",
+      "statement_sha256": "84a36b1ade31a8452b3d75901ee495aa1543647a94753aa6a8759518575b2810",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-005",
+      "start_line": 21,
+      "end_line": 25,
+      "span_sha256": "8448d21efbf2998954d3e57738b3d2a2b6776b5c0143c6e44a563bc8f91313fb",
+      "statement_sha256": "a59ef9cd8480e2f16740c8e3b5fb4c1ed6cb8315a871caeb0987fde12dc69b6f",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-006",
+      "start_line": 27,
+      "end_line": 27,
+      "span_sha256": "226630528e51ab06482aa98837d07d7c902c16a63c8761bd8904b4a7c0b9e996",
+      "statement_sha256": "3ee812f5f0e07716756fe62f1a9f1435b1387e5da9a25e6431ae979f651cb5e5",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-007",
+      "start_line": 29,
+      "end_line": 33,
+      "span_sha256": "9a0571de494cb71d58894cc69a1c2a3744c6161c1eafcae479ca768948490535",
+      "statement_sha256": "a174e76f820baceaad830ba4ecd09faf61c8e2b2caf60d1117500492f26114d1",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-008",
+      "start_line": 35,
+      "end_line": 39,
+      "span_sha256": "498e9dbc6ebcbe911e2fc14a09bd9ed599037dec4e71e41a032eb9b1b09c99a3",
+      "statement_sha256": "02391b41c24717ea7abdd65a0df3629b58f42594690ccfad37073faf3f85c8ac",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-009",
+      "start_line": 41,
+      "end_line": 43,
+      "span_sha256": "6a234d63475b42c4038a94f0c20777eb8d088cb7426f3c7fff7559b9f3471591",
+      "statement_sha256": "28e8d6747b4a622820b18f64c70fa83fda59267997e61f35e385180059232cb2",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-010",
+      "start_line": 41,
+      "end_line": 43,
+      "span_sha256": "6a234d63475b42c4038a94f0c20777eb8d088cb7426f3c7fff7559b9f3471591",
+      "statement_sha256": "22591ca484ee8dc25218cdde6246a7e6a0e2022520868128acf756f38ce39e45",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-011",
+      "start_line": 47,
+      "end_line": 51,
+      "span_sha256": "09044d8909de09104b1e6a6ae370a4591b263cea72dc8ed6f22e886bbb1c9795",
+      "statement_sha256": "b1116f3cbcc6c98b8f31f32fb7035efede4a10a42b4cadc8707304a0485f044c",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-012",
+      "start_line": 52,
+      "end_line": 54,
+      "span_sha256": "29096382a1a0b7e777e3c4624d10014b5860e509d3588f3b909afb0b36334d6d",
+      "statement_sha256": "fb5b85f0faace7007590039a20a6338690aad21bace05ce436398d59e0b831c1",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-013",
+      "start_line": 56,
+      "end_line": 56,
+      "span_sha256": "94667690f0969cd1a36723627519f8bcc42c277d247ea35c3b2714739c86568e",
+      "statement_sha256": "527f87cc64e4f36709332a8925e24cd897471d56f3d41a5c3cc3d1f9e503386c",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-014",
+      "start_line": 58,
+      "end_line": 60,
+      "span_sha256": "2138484db55c4f086da5adc5997da98a548a5b3791a78fad7188d3a8489b2bae",
+      "statement_sha256": "e3d74f56669d383c1f995d806d5b5b28caacf8d7bec61428da826f38c339cbd8",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-015",
+      "start_line": 64,
+      "end_line": 64,
+      "span_sha256": "c6bf5f46f99845b13aacb2a23303a0103e9eaa2a637ad63025ffef40df68a576",
+      "statement_sha256": "83833c8c6712a32dbe76982761f5f7dc6df00c0b252d121addd856d3385418db",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-016",
+      "start_line": 66,
+      "end_line": 72,
+      "span_sha256": "1326ec7d4af71a2c193c188fbfbf0dd41ec3a34ff84f876bf30da8f14857915e",
+      "statement_sha256": "b0f95260c5f275f36dc4553576709480f5a5f6d276b4759bb0a6bec61a269fa7",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-001",
+      "start_line": 1,
+      "end_line": 19,
+      "span_sha256": "e63c2559a70d56473bc59d0867da4a56f7ecdcd516805ed054d9bcd874defa0d",
+      "statement_sha256": "4e8f654fac6f3cd893ebefaa68fce7fcf288a72b922f36f798a8a49efe6e4e7b",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-002",
+      "start_line": 21,
+      "end_line": 21,
+      "span_sha256": "77b10f59726240f4625b07cec92017b2a776c082490e3250e6b6a0ceb8430fa0",
+      "statement_sha256": "ebf3cf113caacaca726b7865747c8cb5b5f53b42526b3d00b2233204e2d9a0d0",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-003",
+      "start_line": 25,
+      "end_line": 27,
+      "span_sha256": "8b0c3899dc4b2f78f1fcdb7c0857e9ed4e675154eb2167c529818f7e7a6fb346",
+      "statement_sha256": "0e83543da005462f396f1525047dc69d863b6ad9a185cd7e6aca60f31cf03cb2",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-004",
+      "start_line": 29,
+      "end_line": 31,
+      "span_sha256": "1eae4d1c596ec128bb94e088bd3f73b4e1334bae182055ab4d7cfe442670f9aa",
+      "statement_sha256": "97a72126f5fc19a89eca2ed787fcfe4265b8274a7dc14a89347e364a6b870550",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-005",
+      "start_line": 33,
+      "end_line": 35,
+      "span_sha256": "c9d6a07b2d141e496aeb585e9497c0baef5ffcc6184d7c2c0dfe1abcd6b0a6b3",
+      "statement_sha256": "ba73cdc311e0e54250e6699dabe38d5733052324e235f7c6e33bafe97a10b859",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-001",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-006",
+      "start_line": 37,
+      "end_line": 41,
+      "span_sha256": "8a6995af1eb4e2656480686fe811ec8c7fbe97cc8c88a1e23210fb4b28d48282",
+      "statement_sha256": "1b77b2e5e94bc05c71cfd7de8136567f663c538550968177a4f4e756875d1430",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-007",
+      "start_line": 43,
+      "end_line": 50,
+      "span_sha256": "b9f1abe53258c71c2904b9b8a45f9d0a8dcaafdcfb55f1e7ef4c42f77f9c6118",
+      "statement_sha256": "fbde074d473742d6fd1f591d4eb729cf1837ff6876ce659c6981db15b5a33979",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-008",
+      "start_line": 53,
+      "end_line": 61,
+      "span_sha256": "151dac85a0e639de2eeff2f5b1fa75f9747abd6f77d3bdf09504f834fb003815",
+      "statement_sha256": "b3efd26b060fffb60984d4933941f6274f62a923062c6a4f48c6e8d57c1775e8",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-009",
+      "start_line": 62,
+      "end_line": 64,
+      "span_sha256": "9b3347fce7fd341a05a75077388409fae66a61e4194500b236bf59509f4d97dd",
+      "statement_sha256": "0d7dcd5b0b3f4a405586e05f064bad2f97a6dd1f215144236955d1a9aae910f5",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-010",
+      "start_line": 65,
+      "end_line": 65,
+      "span_sha256": "f5211b3fadd2629cb78e5e0c445744f3eac2dc47ccdeb1261859bcc6fdadd34b",
+      "statement_sha256": "8d085126ab16f6ba5a673653b9a4eaea8133a686b4a7e768907325294e1c0387",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-011",
+      "start_line": 69,
+      "end_line": 77,
+      "span_sha256": "cccba4753a5c5a24c484956f4e2b67c77fed271bdc335ba81f35044412b76677",
+      "statement_sha256": "a352908b86c84556db03861f5375d0a62d326b7b586d3a667908a76dd713c50d",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-012",
+      "start_line": 79,
+      "end_line": 85,
+      "span_sha256": "0f59fb808919818c81aab9189dd643ccb68394e5527d4f62b9f270414252cc58",
+      "statement_sha256": "62b1c332c864bbef933ec034ba055703bfaca344836d3cb4079a48ca180b2ea2",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-013",
+      "start_line": 85,
+      "end_line": 85,
+      "span_sha256": "f50e9b9842b887e624f8247351da7eece5e54603a9e6a7bc253f71cae920700c",
+      "statement_sha256": "d5d243737e78c532b30e826b5845802ac33c18f6739aa64746d2fcf5fafef17b",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-014",
+      "start_line": 87,
+      "end_line": 93,
+      "span_sha256": "286d34fc39c0efabd8d1a8c757b1aae1b462bb5bc50d9994e41e1bfaddfa3927",
+      "statement_sha256": "8542e2e6f03f445b0d980c787b9672bf3743ec873d7f4e48b733cacd2f5f5a43",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-015",
+      "start_line": 95,
+      "end_line": 99,
+      "span_sha256": "38a4156a37ce9f3cc9602e6d0200a3b01aa5104a47131a2dd98c9c9cef312b47",
+      "statement_sha256": "71748ac88e7257ff885bdee98e07be22ffd64c51bf2e05d021a5a2c14297a994",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-016",
+      "start_line": 101,
+      "end_line": 103,
+      "span_sha256": "09b22f4b8b7a0ab4eb2f2b660c0eb171df2c7249c878865e6755a23d82d9ae03",
+      "statement_sha256": "9f946471aa944fda1a6b249552c149c91e6f1e1233edad9439cc13f7fd63c0e2",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-003",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-017",
+      "start_line": 105,
+      "end_line": 107,
+      "span_sha256": "0f8c3964bebdcc96e0ac122c92a9cb0e78fd94b818949846c153a781713f6d0b",
+      "statement_sha256": "1f24c6ff1b9e3f558993bb295337892a2c749ea50e1d783a12085953af457b40",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-018",
+      "start_line": 109,
+      "end_line": 115,
+      "span_sha256": "0982357e6e02fc771f0eda30398bc8d932825d110bb7f903edffa42b6c302898",
+      "statement_sha256": "8cab9e9e3efd39fd76e3a4ea2cf0aa8c0a2d1552eea141b5942250397264f790",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-019",
+      "start_line": 117,
+      "end_line": 117,
+      "span_sha256": "d238582171f0cc40c4d246b462794ef71787a8ec127cd49010dc85daf189c349",
+      "statement_sha256": "f0031ff4439571c046aa8529edebefb345798bd0a78fd22ff4fd95de76f6e78c",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-005",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-020",
+      "start_line": 119,
+      "end_line": 119,
+      "span_sha256": "1fb2e155be1894961345d3798df1fc535fcc590b47babd354ec9021abec95072",
+      "statement_sha256": "a84987b35ac0617ea18af22d0d0979e6f9e51e5a2f207c4dcc491dcc6313ea87",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-GOV-004",
+          "revision": 1,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-021",
+      "start_line": 121,
+      "end_line": 121,
+      "span_sha256": "dc43600163879519fb09fe404bf90390529081cb14a7c5a34bc3750aac9bfa54",
+      "statement_sha256": "fa019dffab2dca90b48900722ca5e5ea7945c74a859b5c7703320e830bd7b065",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-022",
+      "start_line": 123,
+      "end_line": 125,
+      "span_sha256": "bb8cede6c88b62d53795217042d0340aff513a85e8df00cb213e54a10ba75aeb",
+      "statement_sha256": "f0ef0121fd35b2493837bf89308f951718a0fae592c53ddae92e0161b844cdd6",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-023",
+      "start_line": 127,
+      "end_line": 127,
+      "span_sha256": "75beab1a69c83a4f044438a816a905b97107862325700b6f905c737ea23a2a87",
+      "statement_sha256": "4b0fc232f745d60f067872afe6b09164698e255e5a747550bbda08ae0a89c13c",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-006",
+          "revision": 3,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-024",
+      "start_line": 129,
+      "end_line": 129,
+      "span_sha256": "3ad87f170d939e9e220cfa7b9228b3eccfb8a74495abde61064227a8fb233f34",
+      "statement_sha256": "bc6e9d794259ba296c20b2750ab5165d71c020887cc5e8dead37f0d39f004942",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-025",
+      "start_line": 131,
+      "end_line": 140,
+      "span_sha256": "2e40067c050398d6370d8ee45173e0fc2e4288d2b2644f1c880d7ddddd3085f8",
+      "statement_sha256": "87a3734dd4b8020d6efdb63b4ec2fe93eb4d5e4510ced5d1aacbd43b35bf54f0",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-026",
+      "start_line": 142,
+      "end_line": 146,
+      "span_sha256": "98a636bc3f8f2980f8afe9c3d0764f379f06e264545f1cd73a9d397400ea4c0c",
+      "statement_sha256": "7fca95db27c4bcee192f39be95ae08cbfd95c28ff03c5ff0fb599d07a1d9737a",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-027",
+      "start_line": 148,
+      "end_line": 159,
+      "span_sha256": "065826cac2995c242603144fa7e97fae0e63182e512624201fff487ec73b960a",
+      "statement_sha256": "7753c6efb5ff9b3a22f525d522f48110b23fa6b03c7405a49ae5fce41f23bc3f",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-028",
+      "start_line": 160,
+      "end_line": 168,
+      "span_sha256": "febc4879e967f6393859f921c8ed6cba5f3d075cb7b3806f81220a066ea197f3",
+      "statement_sha256": "3add0b7475800e8dc63832ebfeeae6112e93b8d4d0589b25d87b2070734f414c",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-029",
+      "start_line": 170,
+      "end_line": 178,
+      "span_sha256": "90d86b1d99129f82505325f320061c915b5213e2edb0ca79b9b0ea28e41d8bae",
+      "statement_sha256": "3cdd41201066427579626e6c410b5ac1d32f7d237e85eae09edbe86960d49bfc",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-030",
+      "start_line": 176,
+      "end_line": 176,
+      "span_sha256": "0461457681907aa6d0b6507e8f16584eec351808a96308019f6d2bd37dc8ca49",
+      "statement_sha256": "f846676f5b8d9f535b9f5ce3a22b6a77a3cda13dd6c7b1c11af962a5bd42718d",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-031",
+      "start_line": 182,
+      "end_line": 186,
+      "span_sha256": "975643149b77d2ffd2812e55c98bb472f0b86cdff016a91b5a25aa1d7081885b",
+      "statement_sha256": "471963c163be9c6c63f3dd10815bcf5c7a81a4f319daea6b9700dcb5b11d18a2",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-032",
+      "start_line": 188,
+      "end_line": 194,
+      "span_sha256": "bea5a27b1cddcb9cf89bd1caa04529f7489d02bc3aadf1f6228f98210fa7585d",
+      "statement_sha256": "14290479d781f43067fc0f918be09d931bcce64d001b16c6894583c27c3c4b78",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-033",
+      "start_line": 198,
+      "end_line": 202,
+      "span_sha256": "8a62d552ea8556c8e021d79862cf52ac42be32ba0b74e4e5438d71e8c7fb1901",
+      "statement_sha256": "92152569cb72b25e6f5595506ef5ddcf5b399e2a68be159fb5f63a9ef9961c0c",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-002",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-034",
+      "start_line": 204,
+      "end_line": 206,
+      "span_sha256": "169486e56683287e6d73ed682584a5d8d57b2d446d4b43f2a82b7c5d71a673f0",
+      "statement_sha256": "5b4d6a68dcabd91407bef22d6fc285d0f6b5f9dbac82f0214b31db22c32fcfb5",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-035",
+      "start_line": 208,
+      "end_line": 210,
+      "span_sha256": "c2fe4fc247389bc7d9cc71fb18017c375817031337f9ef7dec3a15873fecab5b",
+      "statement_sha256": "bd3ca7a32fbbbf2ce3e071d54b437f2abf2957a636baa9f49aa7b10800e1e939",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-036",
+      "start_line": 212,
+      "end_line": 222,
+      "span_sha256": "97e22470c99778fc7b9e9d05c8632eda88a8d54ee0e2606ae07a7062f8aaad8c",
+      "statement_sha256": "d9c34443c100c9bdc710e42c91dfbe3b7254f9a4c1eb0713bf9b63d8700df928",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-037",
+      "start_line": 219,
+      "end_line": 228,
+      "span_sha256": "b82c810432a22769a7013b91f86be66bb80950f4c28e59bd40c07e874a277e2c",
+      "statement_sha256": "5528e57f167c2f00988a05283fc3a22700fb5665e783717b104b605120ec0135",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-038",
+      "start_line": 230,
+      "end_line": 236,
+      "span_sha256": "6c1cf3e7ed980607818397bc857a67b188cdfa405f1bfb42e405bdb37039e4e1",
+      "statement_sha256": "8c9380c7a283f03b17687be1cf1d12f12974fa18c4a1d5862794a2473982fcd0",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-SEC-003",
+          "revision": 1,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-039",
+      "start_line": 238,
+      "end_line": 248,
+      "span_sha256": "d202934e1c0b57e44697a42a60f20cae119660d5d9fc3fc3e3d32813d9e8dcac",
+      "statement_sha256": "701ce5d77ba84495aca9b8cffbb6ab20180384596b5ebc1234efd64dd1fd4fce",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-040",
+      "start_line": 250,
+      "end_line": 266,
+      "span_sha256": "dfce5dbef5cfcd1dc156a4c72a85516de37f8656d113b994655e4b38172d01de",
+      "statement_sha256": "5c81cdc49445bcc2aa4410881b3abeab3125f4c59f81b0e54d4394e666ab3c28",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-041",
+      "start_line": 268,
+      "end_line": 282,
+      "span_sha256": "e2636f85dc08a12f6c812c88c400868598d30e675b61dfed35e01fd79b302afd",
+      "statement_sha256": "f5c9007155f16c2b601af2e196c003c54c641ef6abe531543f0206ead73620b1",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-042",
+      "start_line": 284,
+      "end_line": 290,
+      "span_sha256": "96e831b2bb32079f28c454f70390d0907f01da1840cfcf6237b782854b7f8aa8",
+      "statement_sha256": "5e40b374379e0cc933dfd8bf45b579b636540ebbdf0812496fe07cf069af8b61",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-043",
+      "start_line": 292,
+      "end_line": 294,
+      "span_sha256": "7c8760a7da37e96d534278183d076252d7f3552504439a5080872065bbc44b5e",
+      "statement_sha256": "df11e4d32ea01c3da13dcb9a93302eae900ffaa883631c31fe3a3fab7a009268",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-044",
+      "start_line": 296,
+      "end_line": 303,
+      "span_sha256": "78dee8404d637b5d4d5424357af1f877b7ea190180e64c5f8cb194df3da62cce",
+      "statement_sha256": "6025653b3b0a11eb7e9dc1991744e930d4cdfddc9a0ac1d971e7fe536463453e",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-045",
+      "start_line": 305,
+      "end_line": 309,
+      "span_sha256": "4e93f2021e7bd4e35d32e446c3a4b7686b27de5a635ae5494b7f4e1dcf4075c2",
+      "statement_sha256": "fa50131914195a216f4aba75c65893b8221883264eea39766f9805591efadfc6",
+      "disposition": "CONFLICT",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-046",
+      "start_line": 311,
+      "end_line": 320,
+      "span_sha256": "3489703403f2f1af106f108c76c48f18810436bfd1c626401b6f6906959aa33b",
+      "statement_sha256": "b8dfb8d6110021c2c236fe29d7d66d95f0de42a19192810a540b775d06b17b37",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-047",
+      "start_line": 322,
+      "end_line": 322,
+      "span_sha256": "97c68d7550501fef3e53c33c8a7b66da6ee9e98ff3712203da6d93b0be35223c",
+      "statement_sha256": "cd48477c22f9528c5322e33b124c32ac3e34f5e6b403c45aea0916db7833a6ef",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-048",
+      "start_line": 324,
+      "end_line": 324,
+      "span_sha256": "d561258f7a2767203c9952b0a2dfbeb246bf5b2aeafff0a9074767ff4a5262d2",
+      "statement_sha256": "5e1057567f7706421215ad84236f22c44c596207a97732cff6e952e0b2463a1b",
+      "disposition": "CONFLICT",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-049",
+      "start_line": 326,
+      "end_line": 330,
+      "span_sha256": "bffd9344831782727281d6e07c4b4aaac69e13f4a079e41557bd64de4a3f67b6",
+      "statement_sha256": "b319927b42df9314e00eb79481530bb722943310f8c09a270a04e12a5b89520d",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-050",
+      "start_line": 332,
+      "end_line": 336,
+      "span_sha256": "af2db8d3e5ca3209c6b26c8bb740cb175c174da2ef4ed8cb3489c7cf3fb44e1d",
+      "statement_sha256": "09cc1981750cb505cb55dcd84e99ba1c9156bfa11f3b838f12451e0fd5092ff1",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-051",
+      "start_line": 336,
+      "end_line": 344,
+      "span_sha256": "5a5197955bd2f53b3b5f5c681a3bfe93c6f3dd2c5b8cab708b9b62662fdcd78e",
+      "statement_sha256": "c1373c4a5f071bc114800fa13cde83487006bad9a0856deba2534380ac94eb6e",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-052",
+      "start_line": 346,
+      "end_line": 348,
+      "span_sha256": "fc0af793d8c8d93e237651e01e17f867da6c0580ca35140d6b16cfb31fbee09b",
+      "statement_sha256": "259757ba5368673f08500b52f22bebeae49658b72d3f84d886bf99ff85997675",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-053",
+      "start_line": 350,
+      "end_line": 358,
+      "span_sha256": "4634bbd2f064bab683d09ad3dd6fed6326a302a5c7fa89dae1120de246482f96",
+      "statement_sha256": "9280ed4970d3b1ffed173976102bfe11d1c238e5fcfc6caa0e9fb28ed4f35351",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-AVR-054",
+      "start_line": 360,
+      "end_line": 370,
+      "span_sha256": "837992db1132e4515d8fe8e546eb8089ba3aeb978501ef1a065996f51bdc5ecd",
+      "statement_sha256": "a6792dff9d8d0ce48eb7c5e724b480233ac36f60923acf7514eb995baea397f1",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-001",
+      "start_line": 1,
+      "end_line": 15,
+      "span_sha256": "693c26ac224136c1434b529edb5f8871af12b3547ac73884828b1d4de44a58e1",
+      "statement_sha256": "90f5f6d2cf44102d7ad44ed09db8668c8db7df37f18de5ba62b48290f6d76920",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-002",
+      "start_line": 17,
+      "end_line": 19,
+      "span_sha256": "ef8d43fd7e4071501b086eb9448426095b45974f348fe68446023ad222ec2d6f",
+      "statement_sha256": "0f008d84c09f2b559b344ed89a79c499abb27c0dcd2c1b44c5ed4c8bb4ffbca6",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-003",
+      "start_line": 21,
+      "end_line": 23,
+      "span_sha256": "3333856fd033119e2419400000690a66f223ba68e2a19201f22fd5508cdbd2d8",
+      "statement_sha256": "129886f338e0f72a5e73572016d31ed8310a6795674aef606517b785fc372e52",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-004",
+      "start_line": 25,
+      "end_line": 27,
+      "span_sha256": "b26ff6a8ebe299129b1543292676aa737aec176160f196817efe81ca606b52b6",
+      "statement_sha256": "a83d7e6b1e03086cd3fc86e61f146074c9a4009701ec62fbc4ed12de3b3b29ba",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-005",
+      "start_line": 29,
+      "end_line": 35,
+      "span_sha256": "c1bbde31f7fea104a09a07ad51d62db357449add7bbfac455b9372de73f05eaa",
+      "statement_sha256": "6f1786add62826d6d40da7cf9c6125883ad2009b3d7dee10c735e6fc3a89b831",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-006",
+      "start_line": 37,
+      "end_line": 41,
+      "span_sha256": "c52abe38de1901ebb18471039eb28346e568293ea64f3e2f263b797983cb0872",
+      "statement_sha256": "2577ec5886f0d98554b08ead2570741f0131dec2b55186f02eb02e1001a07e33",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-007",
+      "start_line": 43,
+      "end_line": 43,
+      "span_sha256": "52bc818c3b33d98b39791379ccbdcbb7816d2f99adbc846a41cd91d8ad9fc4f3",
+      "statement_sha256": "88168b5b5fae43f82da8b0d6c5d862d5c7c3f8c50421c0577536f2b363c05200",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-008",
+      "start_line": 45,
+      "end_line": 49,
+      "span_sha256": "917376dbbe9487c55dd5d4bce271020f781559dc135a0679eab652a519b262fe",
+      "statement_sha256": "cf9a8786a4a3b15a992b24d952d5c2f2887e74eb9ad7bfdea533a15495dc7f3a",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-009",
+      "start_line": 49,
+      "end_line": 49,
+      "span_sha256": "19b31a9bd3c7f6bfc3b9624b200e0f2336c62046375740e1e66cc1746ea0feab",
+      "statement_sha256": "b8c3681c9d6ca35ca068a3b2503975060ac0271b46eae49d79124655573472ad",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-010",
+      "start_line": 49,
+      "end_line": 49,
+      "span_sha256": "19b31a9bd3c7f6bfc3b9624b200e0f2336c62046375740e1e66cc1746ea0feab",
+      "statement_sha256": "eec106cf1ca42a07346177fa64fdd7aa1190bfc377dae4a7a11fbeff9a48d6c9",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-011",
+      "start_line": 49,
+      "end_line": 49,
+      "span_sha256": "19b31a9bd3c7f6bfc3b9624b200e0f2336c62046375740e1e66cc1746ea0feab",
+      "statement_sha256": "6e97bad9f81bb5a5fdb26c26de8d39c9bc2fdb6aa7a72969cc63f6c387fe112f",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-012",
+      "start_line": 51,
+      "end_line": 55,
+      "span_sha256": "7a2334dd6fce7df6181fc45ee87854f56143047c40f20a57d99ce1cd06f1d978",
+      "statement_sha256": "da483ca0397badc2367865822d57631bd876543ad6ba30a6d1ff672e77cd388b",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-013",
+      "start_line": 57,
+      "end_line": 64,
+      "span_sha256": "96ec60228313899914cd5f5915aa602f2f0d4d24d66e2c543f361528bbae0c4d",
+      "statement_sha256": "4b97d461438be6fb0f343086a44cb86353f2ab05ad41e872ba4a2e2e573ac719",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-014",
+      "start_line": 66,
+      "end_line": 67,
+      "span_sha256": "c391e2d0a79082dcbd27c7bcfa4d9dd53dd221cb5e342d09fb6c130a164f7f7a",
+      "statement_sha256": "48e7409c8113ebdf340fdf9f998842b876b27591b8dedc572405f413d4b2dec6",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-015",
+      "start_line": 68,
+      "end_line": 68,
+      "span_sha256": "47cd0d3d8e2e15ee7fa0e0692c54ae7d84275cf0e405886d53ced33cfb1e3642",
+      "statement_sha256": "4e6edc104238db55ad7f849a73f555b1eecb478a466a1829a84b46145adf8087",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-016",
+      "start_line": 70,
+      "end_line": 72,
+      "span_sha256": "293f3cb10b72b31c4184f0ca0948b14cb612b779a00d649aea2ec77537ad2598",
+      "statement_sha256": "bad35e04886614aa7a6f42e53afeb2c4a39304967f27b72653da7ba334d77ec3",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-017",
+      "start_line": 74,
+      "end_line": 76,
+      "span_sha256": "3ed6ce9efdc921ea6305a1c79eb9344d1070616811e7f0b830e13f7cf271aaa8",
+      "statement_sha256": "21b9f2bd333e072294cafac392585bc57cd8cbaffea00f1bcd8cdd2829b7afd1",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-018",
+      "start_line": 78,
+      "end_line": 80,
+      "span_sha256": "728987e4336e3af8b6761960d05f68c3ed81acca47c79b7eb3fd40c08dee5321",
+      "statement_sha256": "2e8675da832435d1d522a28d0bb2b7bb88c81abb21ee43ffbc77b47c4efb83b1",
+      "disposition": "CONFLICT",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-019",
+      "start_line": 82,
+      "end_line": 84,
+      "span_sha256": "43b1db2da99409de874821bf9ee169cc9f6bc9302c3275cea90aad5c3b86573c",
+      "statement_sha256": "3a3195b4b76e16cc944862ef02d108e8fa2ef2b09f80a6666e2cc25757bb5dd8",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-020",
+      "start_line": 86,
+      "end_line": 95,
+      "span_sha256": "a0ad6d21c79ae263af568749b808c998e86b7c3c0d1b22f9d493ccdfc61d39f3",
+      "statement_sha256": "2ebab49be9003a7c9e735c78be6aee246408674b9c99fcb1c17c58ce45784fff",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-021",
+      "start_line": 94,
+      "end_line": 96,
+      "span_sha256": "cd1d9e23c5fd9706b35efd51196e467ac1ad71ba3c04d196671bb4838ec292bd",
+      "statement_sha256": "fc945f219b9d931179ba6bc19875c8c326654e39997b702b52212a98f7a1670c",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-022",
+      "start_line": 98,
+      "end_line": 102,
+      "span_sha256": "0de4173c8f8c100721e14a66e68240e81465185a35ab01becf2a4b6451417ea8",
+      "statement_sha256": "fd9902b3f27570e2bc727275d180e774f9b06e378d03d7fd598a962bf95c86c4",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-023",
+      "start_line": 104,
+      "end_line": 106,
+      "span_sha256": "448c4a9330604bad4abb24389229aca603abd857588b950db9ea6a466d40dbbc",
+      "statement_sha256": "f289e5d848d3d7e30c5bb3487888e88698d4ee6550c903da6a781309506645ea",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-024",
+      "start_line": 108,
+      "end_line": 110,
+      "span_sha256": "627e0049501696d7d2f4f9d23ed03b0d043f8fae8a73464d3dedd343f5bf6ee3",
+      "statement_sha256": "a79d2d31a8e8926517a4accdb5e562c607cf081cb947c065e75f023203c3a474",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-001",
+      "start_line": 1,
+      "end_line": 30,
+      "span_sha256": "d95dcd217aa882faa0eb9dfeb7f4d6169cca7bae5d8e0e8fc17ec5d79e4b5797",
+      "statement_sha256": "33d6d96982168047372ac8ccda14be1f16ff86aa46b43819a47bce13f0093537",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-002",
+      "start_line": 33,
+      "end_line": 35,
+      "span_sha256": "6cbd47eba6b6d0a6bdcc0276cb440fcb0ea9a607e8412ba62eba456250fad5f7",
+      "statement_sha256": "893d7e7a8e33edadf3b119803b556bf5134ca95b57f3f11a3cfae1342360f83c",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-003",
+      "start_line": 37,
+      "end_line": 39,
+      "span_sha256": "2187ed1c2d08995875c6c10dcf5a6f4848bfbd0abd3a4106268ad52639643272",
+      "statement_sha256": "2028c8c613e7b921fc054e5714b47d63e625422a8ed543f74d4e4dc2ac519bd1",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-004",
+      "start_line": 41,
+      "end_line": 46,
+      "span_sha256": "62cea338f5bf6798f8d770e87728ca1fe946c3b76388b980910ff90c30a177dc",
+      "statement_sha256": "6b32605118f6c2b40ba41ae966e1fa80bc4dc006b9b2ba7380a09618186cfd96",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-005",
+      "start_line": 50,
+      "end_line": 53,
+      "span_sha256": "70b41f3d1b3cd93efa88c603def5a093829079ef41a71161979f7aa5ee53f8c8",
+      "statement_sha256": "5631ce65737477b6154ede790a251701b68981d2585efefd7359aa8b0e8267c0",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-006",
+      "start_line": 55,
+      "end_line": 58,
+      "span_sha256": "00ea567a7ac2eb9a1e173017477a571959f5a6eb6a9df9a8e710056f05a9bed0",
+      "statement_sha256": "9744c4091a5282e50bbbcba1965dbe57dc1aff0d63255dd3e26db2183ef2acd2",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-007",
+      "start_line": 59,
+      "end_line": 64,
+      "span_sha256": "e2c16a356f87ea7f616d214645b2150f0316770a408677dbbad797fe865ecca9",
+      "statement_sha256": "b962fa8944c82310e0a517811274efc02eef5eb69d8e07d184333251a759252f",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-008",
+      "start_line": 60,
+      "end_line": 60,
+      "span_sha256": "7143d9f6b694dc8c08055ae9d9ca4028f592c93741a46c50e7586292edb05d30",
+      "statement_sha256": "5a67b4bf34ffc2b1700a40b85d45a5d8eaa6ef56e9689ee94c49d73c94164d74",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-005",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-009",
+      "start_line": 65,
+      "end_line": 65,
+      "span_sha256": "ab3c3596f92e6d467ff128c087c74e6896ae81e0fc5ab26efcf59c2793c3e7cd",
+      "statement_sha256": "989f8bef91d543cf65b88e2de54fbe7763433dc3f71bc8f62eabd3593fb0d0e6",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-005",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-010",
+      "start_line": 66,
+      "end_line": 66,
+      "span_sha256": "96cfc523eaa43b4459ad22bae797818b0fb710fb7e427424c4faf472a013c47e",
+      "statement_sha256": "1ca126cd5f43185b6c909f9b946e2c553b0250ba4bc12e961b187b9242a263c0",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-GOV-004",
+          "revision": 1,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-011",
+      "start_line": 67,
+      "end_line": 68,
+      "span_sha256": "e8e758ce16d4dd012f5afeb5aee5da697ce61b30918a4a56b786fefa90ef706d",
+      "statement_sha256": "ac118c343eb8c69a7cc6c6eb797ff8198c78aa1441d2835a7e6c348cb0ee7299",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-012",
+      "start_line": 69,
+      "end_line": 69,
+      "span_sha256": "dab26005c1ba8bc38bc16476e82dcc477d782411f2e862b75ad4b8a7c27f97bd",
+      "statement_sha256": "0bf477d07a338498c74237c2752868f731d68c9e8f42e3d9a47e1a18bcdb8fef",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-004",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-013",
+      "start_line": 70,
+      "end_line": 73,
+      "span_sha256": "d7434605ec2457a1641ae7f6f9dedf6e052677f30a99b64cd7001e35150a99c4",
+      "statement_sha256": "6694cddfe4e6e0c395c4ac8d835034b3dad2de6742effcc031dd93ad8ec24b2d",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-008",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-014",
+      "start_line": 74,
+      "end_line": 74,
+      "span_sha256": "a01dd88feb6914c6eac92e88cdaa6f07d05ae979844ac842caf73772082a9d80",
+      "statement_sha256": "753854e491518e6963140682404776e1ad1ba8d5ac85c484f1ab91ba2086d945",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-006",
+          "revision": 3,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-015",
+      "start_line": 75,
+      "end_line": 76,
+      "span_sha256": "7459462cb035f876db2173338391c7931431735e9ef22530a6d2f779e2add36d",
+      "statement_sha256": "85cba904ba00093f40ad5729193b897cd309c8790784c8225cb186bbd6a6df7b",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-009",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-016",
+      "start_line": 77,
+      "end_line": 78,
+      "span_sha256": "3e9bcd0d7e4fde8294acd7c8c7af5734984ff2c10150c9fa3e73a4ca25509469",
+      "statement_sha256": "c84bc36add1904817e2bb7dd8ea23f4c19c48f89a32d91a16b1401638e845355",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-017",
+      "start_line": 79,
+      "end_line": 82,
+      "span_sha256": "18ac354640b8902b8e3719f27dc063b82278b00cd088748ffb484b74ed85fbb0",
+      "statement_sha256": "f4dc391061433a365a15252c661c5b31f2e1d5966e6184c42c58440c25db6e8c",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-018",
+      "start_line": 83,
+      "end_line": 86,
+      "span_sha256": "bc498b1f9ffd30b956b4166d41a4b3453b881846ec6e0f5cf2925f90f6115b5b",
+      "statement_sha256": "3a3b4790e57251064e69521c0cefaf66acfd132492e6ccba402f7de7d56b4a24",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-007",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-019",
+      "start_line": 87,
+      "end_line": 93,
+      "span_sha256": "2a6e034f850a8ffa516116cbca1f5acde9cbcd4f7adb264e2c70782b077c1154",
+      "statement_sha256": "9a7009b88c0847d3812ee8132045c312d4e81d13b0a513598560598a7b8dbf84",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-002",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-020",
+      "start_line": 94,
+      "end_line": 95,
+      "span_sha256": "e995ab6dfe030e067d58520e5839cb8d1079996f295d7d963668a0b2ae5d4fc1",
+      "statement_sha256": "158a51fa93fd73e1a0bf4079079456d1695372cd44be6eacd0de880ad59ca223",
+      "disposition": "MAP",
+      "control_references": [
+        {
+          "id": "GES-RULE-001",
+          "revision": 2,
+          "collection": "CATALOG"
+        }
+      ]
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-021",
+      "start_line": 97,
+      "end_line": 104,
+      "span_sha256": "375273726f0ecb4a92a361ae14bf0effa221c0fe3960aaa88088baf0a4f8cf48",
+      "statement_sha256": "6c82d8ba159e8798f14d88f517fc12b3a3ed51f57f866ef757c284b23512eada",
+      "disposition": "REFERENCE",
+      "control_references": []
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-022",
+      "start_line": 106,
+      "end_line": 111,
+      "span_sha256": "64d02d1ab932f3a3ad329d5be055d0b15e5dedd5c3225b97a400de198f68d4e7",
+      "statement_sha256": "df387cf64424843398c4b974559fc6673a051b332b8d6314665628b642e25ddc",
+      "disposition": "REFERENCE",
+      "control_references": []
+    }
+  ],
+  "reconciliation_binding": {
+    "draft_receipts_sha256": "e599f961668748f2604359805a2e02bd1740feb0e2321cb1d12445d5f04fde6a",
+    "draft_policy_sha256": "e057404beb37d7da1d9a321b4c60bfb28db5220b088b38b05a34178767a02ac2",
+    "semantic_payload_digest_excluding_reviewed_at": "b8273e0630bc7035a8d4903d4034dd54de50d4fdc1969a3e3290318e7de2cc04",
+    "allowed_post_attestation_change": "Only receipt reviewed_at may be populated with this actual review timestamp; any other payload/input change requires recheck.",
+    "claim_input_digest": "ce1c78c041636c264b9894420259ffa76cbcf6d63e25dec7936a8eeed01b1cd5",
+    "catalog_digest": "a7d94b1b362bef2ff21a4459ff17d3f2e1274b3d91cd08e51e89991ec7a0da37",
+    "proposal_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4"
+  },
+  "findings": [
+    {
+      "status": "CORRECTED_AND_RECHECKED",
+      "finding": "APB022 optional author inspection and integration write-permission qualification restored."
+    },
+    {
+      "status": "CORRECTED_AND_RECHECKED",
+      "finding": "Deployment exclusion inversion, Copilot PR opening versus approval confusion, invented code-quality issue budget and invented GHES owner prohibition removed; AVR011/025-026/039/035 now agree with literal source."
+    },
+    {
+      "status": "CORRECTED_AND_RECHECKED",
+      "finding": "Queue checks/timeouts, creation-check skip, user-owned reviewer scope, secret head/open/type clauses, workflow enterprise feature, metadata update/noreply/history and fnmatch spans/gates corrected. Substantive candidate clauses now link to relevant authored claims."
+    },
+    {
+      "status": "CORRECTED_AND_RECHECKED",
+      "finding": "Queue event dispatch/minimum wait, workflow on events and ignored filters, coverage percentage-point/default-branch qualifiers, optional Disabled status, literal UI routes and metadata security limits retained."
+    },
+    {
+      "status": "CORRECTED_AND_RECHECKED",
+      "finding": "AVR015 can-block signing/bypass context, AVR018 unavailable-reviewer condition, AVR027 approval-count write-or-higher condition and AVR036 exact secret source span restored."
+    },
+    {
+      "status": "CORRECTED_AND_RECHECKED",
+      "finding": "RULE007 frontmatter citation replaced by body/bypass provenance; RULE008/009 received objective-specific source/dependency links, duplicate links removed. Only provenance and these three revisions changed; obligations, objectives, verification and draft status retained."
+    }
+  ],
+  "residuals": [
+    {
+      "status": "SOURCE_CONFLICT_RETAINED",
+      "claims": [
+        "DOCS-BRANCH-RULES-AVR-045",
+        "DOCS-BRANCH-RULES-AVR-048",
+        "DOCS-BRANCH-RULES-CRR-018"
+      ],
+      "detail": "Squash metadata all-commits reusable conflicts with resulting-commit-only article statement. Reciprocal CONFLICT relationships retain all three claims; no behavior interpretation adopted."
+    },
+    {
+      "status": "REFERENCE_ONLY_DEFECTS",
+      "claims": [
+        "DOCS-BRANCH-RULES-CRR-009",
+        "DOCS-BRANCH-RULES-CRR-010"
+      ],
+      "detail": "Positive-lookahead workaround conflicts with linked RE2 syntax; one-character Windows expression cannot match the supplied multi-character example. No regex adopted.",
+      "authority_url": "https://github.com/google/re2/wiki/Syntax"
+    },
+    {
+      "status": "SCANNER_LIMITS_PRESERVED",
+      "detail": "GHQR chooses legacy OR rulesets and skips enrichment when legacy protection is present; query caps first25 rulesets/first30 rules without pagination/target conditions/bypass. Branch does not constrain parser applicability; presence/OR/max/union cannot certify combined effective protection or the informational no-action claim."
+    },
+    {
+      "status": "SOURCE_RENDERING_UNCERTAINTY",
+      "detail": "GHES reusable else-branch uses Enterprise Cloud product wording. Unsupported-fnmatch text literally labels branch protection despite inclusion in ruleset guide. Product/version gates remain pinned descriptions, not live eligibility certification. Ordinary navigation bodies and external recipes were not recursively reviewed."
+    }
+  ],
+  "docs_accounting_assertions_reviewed": "Five new receipts and 156 new claims; 3128 to3133 Docs receipts,3565 to3570 all-source receipts/unchanged13657 artifacts,61462 to61618 text claims,6345 to6340 unreviewed substantive Docs files. Dependency reading receives no extra whole-artifact receipt credit. Final production reconciliation validation remains contingent on actual reviewed_at population.",
+  "source_to_claim_omission_reviewed_within_declared_five_article_scope": true,
+  "whole_corpus_omission_certified": false,
+  "semantic_truth_automatically_certified": false,
+  "policy_adopted": false,
+  "rights_cleared": false,
+  "native_behavior_verified": false,
+  "rollout_authorized_by_this_record": false,
+  "full_control_acceptance_or_all_nine_gate_closure": false
+}
