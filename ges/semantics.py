@@ -102,7 +102,12 @@ def configure_parser(subparsers) -> None:
     commands = parser.add_subparsers(dest='semantic_command', required=True)
     command = commands.add_parser('validate', help='Validate JSONL record structure')
     command.add_argument('--input', type=Path, required=True)
-    commands.add_parser('extract', help='Reserved for the extraction tranche')
+    command = commands.add_parser('extract', help='Compile authored B0 community annotations')
+    command.add_argument('--manifest', type=Path, required=True)
+    command.add_argument('--annotations', type=Path, required=True)
+    command.add_argument('--sources', type=Path, required=True)
+    command.add_argument('--output', type=Path, required=True)
+    command.add_argument('--check', action='store_true', help='Compare existing outputs without writing')
     for name in ('reconcile', 'audit'):
         command = commands.add_parser(name, help=(
             'Produce comparison proposals' if name == 'reconcile'
@@ -118,6 +123,11 @@ def configure_parser(subparsers) -> None:
 
 
 def run(args) -> int:
+    if args.semantic_command == 'extract':
+        from .community_extraction import extract
+        report = extract(args.manifest, args.annotations, args.sources, args.output, check=args.check)
+        print(json.dumps(report, sort_keys=True))
+        return 0
     if args.semantic_command in ('reconcile', 'audit') and args.propositions:
         from .reconciliation import audit, propose, read_records
         required = ('controls', 'output')
