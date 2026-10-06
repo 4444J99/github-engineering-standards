@@ -116,6 +116,9 @@ The large source corpus and page-level review queues are workflow artifacts and 
 
 ### Reproduce an assigned source-review partition
 
+See the [A3 frozen-input receipt](docs/a3-six-source-capsule.md) for the reviewed
+capsule fingerprint, supplement assertions, and remaining source-mapping gaps.
+
 Do not bootstrap review workers with a fresh `sync`: its source archives are pinned,
 but its published page lists are live. Freeze the exact existing metadata first:
 
@@ -147,9 +150,18 @@ Codex disposition receipts only; a cloud worker must not impersonate that identi
 
 ## What is not finished
 
-Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; per-file licensing clearance; all upstream scanner predicates implemented as local deterministic checks; all platform feature/plan adapters; live human-review and exception services; native protection activation and cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
+Completion is tracked as separate [milestones](docs/remaining-work.md): exhaustive
+six-source synthesis, public release clearance for actual reused expression,
+native pilot acceptance, and estate rollout. GES v0.2 requires the first three.
+Estate rollout and subsequent external-standard/implementation-ancestry ingestion
+for Engineering Environment Standards have separate acceptance boundaries.
+The existing recovery `project_complete` field still reports the legacy
+all-nine-gate program and does not yet implement these milestone statuses.
 
-The recovery suite passed 324 local tests on 2026-10-02; this does not imply 95 controls implemented
+Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; exact-use publication clearance; all upstream scanner predicates implemented as local deterministic checks; all required evaluator bindings and platform feature/plan adapters; live human-review and exception services; native pilot acceptance and separately authorized cross-estate rollout. `docs/remaining-work.md` tracks scanner-predicate coverage separately within operational completeness and defines the open acceptance gates.
+
+The historical recovery checkpoint passed 324 local tests on 2026-10-02; the A2
+branch at `84b9b2c` passed 340 tests on 2026-10-06. Neither implies 95 controls implemented
 as automatic checks or 150,903 candidates reviewed. Current catalog controls remain
 `REVIEWED_DRAFT`; 593 non-adopted generated proposals are preserved separately in
 `controls/review_queue.json`. No native policy is silently activated. See

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ges:reconciliation-decision:v1",
+  "title": "ges.reconciliation-decision.v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ges.reconciliation-decision.v1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^reconciliation-decision:[a-f0-9]{64}$"
+    },
+    "proposition_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "disposition": {
+      "type": "string",
+      "enum": [
+        "EXISTING_CONTROL",
+        "NEW_CONTROL",
+        "SPECIALIZATION",
+        "REFERENCE",
+        "DUPLICATE",
+        "SUPERSEDED",
+        "CONFLICT",
+        "EXCLUDED_WITH_REASON"
+      ]
+    },
+    "source_treatment": {
+      "type": "string",
+      "enum": [
+        "RETAINED",
+        "GENERALIZED",
+        "PARAMETERIZED",
+        "STRENGTHENED",
+        "NARROWED",
+        "OMITTED",
+        "CONFLICTING"
+      ]
+    },
+    "control_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "id",
+          "revision"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "preserved_fields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "lost_fields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "PROPOSED",
+            "REVIEWED"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "reviewer",
+        "evidence_reference"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "proposition_ids",
+    "disposition",
+    "source_treatment",
+    "control_references",
+    "rationale",
+    "preserved_fields",
+    "lost_fields",
+    "conflicts",
+    "review"
+  ],
+  "additionalProperties": false
+}

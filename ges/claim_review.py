@@ -21,6 +21,8 @@ def validate_provenance(artifacts: Path, sources: Path, reviews: Path,
     claims, ids, documents = [], set(), []
     for path in sorted(reviews.glob('*-claims.json')):
         doc = json.loads(path.read_text())
+        if not isinstance(doc, dict):
+            raise ValueError('Claim document must be an object: ' + path.name)
         if doc.get('reviewer') not in reviewers:
             raise ValueError('Unauthorized reviewer: '+path.name)
         stamp = datetime.fromisoformat(doc['reviewed_at'].replace('Z', '+00:00'))

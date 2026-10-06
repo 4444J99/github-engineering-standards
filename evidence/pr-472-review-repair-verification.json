@@ -1,0 +1,30 @@
+{
+  "schema": "ges.pr-review-repair-verification.v1",
+  "implementation_head": "7419bd6b7c12b4c31ef5394527382a4b6b7bc3b8",
+  "scope": "PR 472 review repair implementation. This receipt is added in a subsequent evidence-only commit; it certifies the named implementation head, not itself or future code.",
+  "state": "STAGED_PENDING_HUMAN_REVIEW_AND_REMOTE_CI",
+  "checks": [
+    {"command": "python -m unittest discover -s tests -q", "exit_code": 0, "tests_passed": 381},
+    {"command": "python -m ges validate", "exit_code": 0, "controls": 95},
+    {"command": "python -m ges compile", "exit_code": 0},
+    {"command": "git diff --exit-code -- generated", "exit_code": 0},
+    {"command": "git diff --check", "exit_code": 0},
+    {"command": "python -m ges.recovery using the existing canonical sources, corpus and rendered-docs caches, evidence/source-reviews and evidence/source-review-policy.json; temporary output /tmp/ges-472-review-repair-recovery.json", "exit_code": 0, "inventory_artifacts": 13657, "published_pages": 18019, "project_complete": false, "gates_open": 9}
+  ],
+  "blocking_review_findings": {
+    "source_snapshot_substitution": "Regression rejects replacement after provenance; compressed source hashes are bound in subject and checked again before success.",
+    "claim_document_addition": "Regression rejects a new claim file after provenance; the complete review-directory manifest is checked again.",
+    "stale_closeout_receipts": "Original observations remain historical at their recorded heads; this separate receipt records repair verification.",
+    "process_count": "Historical total corrected to sum of categories: 86 total, 12 unresolved. No new process observation asserted."
+  },
+  "remaining_nonblocking_review_items": [
+    "Recovery CLI structured error output and invalidation of an older output after failure, including corrupted gzip handling.",
+    "Uniform accounting fallback schema and non-certification marker fields.",
+    "Bounds on reconciliation rationale and detail text.",
+    "Bind advertised supporting-review evidence bytes, beyond presence validation.",
+    "Share provenance work and avoid repeated per-claim splitlines allocations."
+  ],
+  "human_approval": false,
+  "owner_acceptance": false,
+  "merged": false
+}
