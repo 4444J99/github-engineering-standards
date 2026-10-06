@@ -1,5 +1,33 @@
 # Correction and completion attack order
 
+## Current delivery order — approved 2026-10-06
+
+Complete independently reviewable tranches in this order: validator repair;
+heuristic containment; completion reset; six-source capsule; original-intent
+charters; semantic contracts and reconciliation machinery; source-by-source
+extraction and reconciliation; six-source crosswalk; owner policy decisions;
+canonical catalog; profiles/templates/bindings; exact-use publication review;
+independent fidelity/omission audit; native pilot and GES v0.2.
+
+Each tranche has a fixed input manifest, one deliverable, explicit exclusions,
+and an in-scope residual ledger. Independent tranches may be prepared while
+earlier PRs receive review; integration follows their actual dependencies.
+Semantic batches contain at most 250 reviewed propositions; policy batches
+contain at most 20 control decisions. New findings cannot silently enlarge an
+active batch.
+
+GES v0.2 requires the synthesis, publication, and native-pilot milestones in
+`remaining-work.md`. Estate rollout is a separately authorized follow-on.
+Later external-standard admission and internal ancestry reconciliation follow
+the accepted GES baseline, then EES semantics, ownership, composition, pilots,
+and release. Preserve the original six-source provenance throughout.
+
+## Historical delivery order — 2026-10-03
+
+The following records the earlier all-nine-gate program. Its estate-wide release
+boundary and blanket per-file rights requirement are superseded by the current
+milestones. Custody and provider-admission restrictions remain applicable.
+
 Approved 2026-10-03; foundation owner: issue #454. The public toolkit remains public.
 The source-disposition numerator is not an overall completion percentage.
 
@@ -65,7 +93,7 @@ references and aggregate receipts committed here.
 Run claim provenance, recovery accounting, `python -m unittest discover -s tests -v`,
 `python -m ges validate`, `python -m ges compile`, and `git diff --check` for each
 integrated tranche. Record exact commands, exits, test counts and scope.
-The project is complete only when all nine original gates are proven on the
+The historical program defined completion only when all nine original gates were proven on the
 release head, remote restoration succeeds and approved rollout has real behavior
 and recovery evidence. Otherwise checkpoint the actual completed work without
 claiming certification or overall completion.
