@@ -31,6 +31,8 @@ milestones. Custody and provider-admission restrictions remain applicable.
 Approved 2026-10-03; foundation owner: issue #454. The public toolkit remains public.
 The source-disposition numerator is not an overall completion percentage.
 
+### Superseded sequence (historical record)
+
 1. Correct visibility and measurement labels; inspect existing public exposure
    without changing visibility or rewriting history. Freeze exact source inventory,
    candidate, dependency and published-page ledger inputs for reproducible workers.
@@ -60,7 +62,7 @@ rulesets/reviews; app/token permissions; organization administration; security
 adapters; then remaining domains and assets. More low-risk reference extraction
 cannot replace missing closure mechanisms or approval decisions.
 
-## Cloud and custody boundary
+### Cloud and custody boundary (retained restrictions)
 
 Jules repository access is verified, but implementation dispatch is not admitted
 by the canonical workspace deadline contract. Its submission timeout does not
@@ -83,7 +85,7 @@ key escrow are not verified. No new credentials, costs, key escrow, public sourc
 copies or native changes are authorized by a successful capsule freeze. Retain
 local originals; no deletion is part of this implementation.
 
-## Delivery and verification
+### Historical delivery and verification
 
 Every tranche: issue, scoped changes and evidence, six checks, explicit-path
 commit, push, exact remote-head parity and an issue receipt. Human closes issues.

@@ -152,9 +152,10 @@ for Engineering Environment Standards have separate acceptance boundaries.
 The existing recovery `project_complete` field still reports the legacy
 all-nine-gate program and does not yet implement these milestone statuses.
 
-Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; exact-use publication clearance; all required evaluator bindings and platform feature/plan adapters; live human-review and exception services; native pilot acceptance and separately authorized cross-estate rollout. `docs/remaining-work.md` defines the open acceptance gates.
+Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; exact-use publication clearance; all upstream scanner predicates implemented as local deterministic checks; all required evaluator bindings and platform feature/plan adapters; live human-review and exception services; native pilot acceptance and separately authorized cross-estate rollout. `docs/remaining-work.md` tracks scanner-predicate coverage separately within operational completeness and defines the open acceptance gates.
 
-The recovery suite passed 324 local tests on 2026-10-02; this does not imply 95 controls implemented
+The historical recovery checkpoint passed 324 local tests on 2026-10-02; the A2
+branch at `84b9b2c` passed 340 tests on 2026-10-06. Neither implies 95 controls implemented
 as automatic checks or 150,903 candidates reviewed. Current catalog controls remain
 `REVIEWED_DRAFT`; 593 non-adopted generated proposals are preserved separately in
 `controls/review_queue.json`. No native policy is silently activated. See
