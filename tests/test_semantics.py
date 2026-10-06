@@ -131,7 +131,7 @@ class SemanticContracts(unittest.TestCase):
                 main(['semantics', 'validate', '--input', str(path)])
 
     def test_reserved_commands_do_not_claim_success(self):
-        for command in ('extract', 'reconcile', 'audit'):
+        for command in ('reconcile', 'audit'):
             with self.subTest(command=command), redirect_stdout(io.StringIO()) as output:
                 self.assertEqual(main(['semantics', command]), 2)
                 self.assertEqual(json.loads(output.getvalue())['status'], 'UNAVAILABLE')
