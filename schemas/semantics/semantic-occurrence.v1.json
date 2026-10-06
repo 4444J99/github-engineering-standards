@@ -1,0 +1,319 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ges:semantic-occurrence:v1",
+  "title": "ges.semantic-occurrence.v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ges.semantic-occurrence.v1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^semantic-occurrence:[a-f0-9]{64}$"
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "repository": {
+          "type": "string",
+          "pattern": "^[\\w.-]+/[\\w.-]+$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "content_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "start_line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "end_line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "span_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "repository",
+        "commit",
+        "path",
+        "content_sha256",
+        "start_line",
+        "end_line",
+        "span_sha256"
+      ],
+      "additionalProperties": false
+    },
+    "heading_ancestry": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "include_chain": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "page_applications": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "versions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "authority_class": {
+      "type": "string",
+      "enum": [
+        "PLATFORM",
+        "GUIDANCE",
+        "EVALUATOR",
+        "COMMUNITY"
+      ]
+    },
+    "semantic_kind": {
+      "type": "string",
+      "enum": [
+        "DEFINITION",
+        "FACT",
+        "CAPABILITY",
+        "CONSTRAINT",
+        "REQUIREMENT",
+        "RECOMMENDATION",
+        "PERMISSION",
+        "PROHIBITION",
+        "PROCEDURE",
+        "EXCEPTION",
+        "EXAMPLE",
+        "IMPLEMENTATION",
+        "TEST",
+        "NONOPERATIVE"
+      ]
+    },
+    "semantic_ast": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "object": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "modality": {
+          "type": "string",
+          "enum": [
+            "MUST",
+            "SHOULD",
+            "MAY",
+            "PROHIBITED",
+            "DESCRIPTIVE"
+          ]
+        },
+        "polarity": {
+          "type": "string",
+          "enum": [
+            "POSITIVE",
+            "NEGATIVE"
+          ]
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "preconditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "qualifiers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "consequences": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "subject",
+        "action",
+        "object",
+        "modality",
+        "polarity",
+        "scope",
+        "preconditions",
+        "qualifiers",
+        "exceptions",
+        "consequences",
+        "parameters"
+      ],
+      "additionalProperties": false
+    },
+    "formalization": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "extraction": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "method",
+        "version"
+      ],
+      "additionalProperties": false
+    },
+    "review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "PROPOSED",
+            "REVIEWED"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "reviewer",
+        "evidence_reference"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "source",
+    "heading_ancestry",
+    "include_chain",
+    "page_applications",
+    "conditions",
+    "products",
+    "versions",
+    "authority_class",
+    "semantic_kind",
+    "semantic_ast",
+    "formalization",
+    "extraction",
+    "review"
+  ],
+  "additionalProperties": false
+}
