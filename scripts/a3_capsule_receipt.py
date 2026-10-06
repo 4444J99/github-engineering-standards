@@ -14,7 +14,9 @@ def fingerprint(path):
             'bytes': path.stat().st_size}
 
 
-def receipt(capsule, expected, sources, corpus, rendered):
+def receipt(capsule, expected, sources, corpus, rendered, *, expected_structured_count):
+    if type(expected_structured_count) is not int or expected_structured_count < 1:
+        raise ValueError('Expected structured occurrence count must be positive')
     accounting = validate_capsule(capsule, expected)
     lock = load(capsule / 'sources.lock.json')
     trees = {}
@@ -39,6 +41,8 @@ def receipt(capsule, expected, sources, corpus, rendered):
                     (corpus / 'dependencies.jsonl').read_text().splitlines() if line]
     structured = load(corpus / 'structured-source-requirements.json')
     summary = load(corpus / 'ledger-summary.json')
+    if len(structured) != expected_structured_count:
+        raise ValueError('Structured occurrence count differs from trusted expected count')
     if len(dependencies) != summary['dependency_references']:
         raise ValueError('Dependency count differs from ledger summary')
     if len(structured) != summary['structured_source_requirements']:
@@ -74,11 +78,13 @@ def main():
     for name in ('capsule', 'sources', 'corpus', 'rendered', 'output'):
         parser.add_argument('--' + name, type=Path, required=True)
     parser.add_argument('--capsule-sha256', required=True)
+    parser.add_argument('--expected-structured-count', type=int, required=True)
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError('Receipt output already exists')
     result = receipt(args.capsule, args.capsule_sha256, args.sources,
-                     args.corpus, args.rendered)
+                     args.corpus, args.rendered,
+                     expected_structured_count=args.expected_structured_count)
     dump(args.output, result)
     print(json.dumps({key: result[key] for key in
                       ('capsule_sha256', 'dependency_references',

@@ -113,6 +113,9 @@ The large source corpus and page-level review queues are workflow artifacts and 
 
 ### Reproduce an assigned source-review partition
 
+See the [A3 frozen-input receipt](docs/a3-six-source-capsule.md) for the reviewed
+capsule fingerprint, supplement assertions, and remaining source-mapping gaps.
+
 Do not bootstrap review workers with a fresh `sync`: its source archives are pinned,
 but its published page lists are live. Freeze the exact existing metadata first:
 

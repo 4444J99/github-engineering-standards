@@ -1,9 +1,11 @@
+import hashlib
 import json
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
+from ges.core import ROOT
 from scripts.a3_capsule_receipt import receipt
 
 
@@ -33,9 +35,9 @@ class CapsuleReceipt(unittest.TestCase):
         for directory in (self.corpus, self.capsule / 'corpus'):
             self.write(directory / 'published-page-ledger.json',
                        [{'page_id': 'page', 'source_matches': []}])
-        self.write(self.corpus / 'structured-source-requirements.json', [])
+        self.write(self.corpus / 'structured-source-requirements.json', [{}])
         self.write(self.corpus / 'ledger-summary.json',
-                   {'dependency_references': 0, 'structured_source_requirements': 0})
+                   {'dependency_references': 0, 'structured_source_requirements': 1})
         (self.rendered / 'index.jsonl').write_text('')
         self.validation = patch('scripts.a3_capsule_receipt.validate_capsule',
                                 return_value={'published_ledger_sha256': 'fixture'})
@@ -50,7 +52,15 @@ class CapsuleReceipt(unittest.TestCase):
         path.write_text(json.dumps(value))
 
     def account(self):
-        return receipt(self.capsule, 'fixture', self.sources, self.corpus, self.rendered)
+        return receipt(self.capsule, 'fixture', self.sources, self.corpus, self.rendered,
+                       expected_structured_count=1)
+
+    def test_consistent_structured_row_and_summary_removal_is_rejected(self):
+        self.write(self.corpus / 'structured-source-requirements.json', [])
+        self.write(self.corpus / 'ledger-summary.json',
+                   {'dependency_references': 0, 'structured_source_requirements': 0})
+        with self.assertRaisesRegex(ValueError, 'trusted expected count'):
+            self.account()
 
     def test_receipt_is_deterministic_and_preserves_unresolved_mappings(self):
         self.assertEqual(self.account(), self.account())
@@ -73,3 +83,28 @@ class CapsuleReceipt(unittest.TestCase):
         with patch('scripts.a3_capsule_receipt.cached_pages', return_value={}):
             with self.assertRaisesRegex(ValueError, 'acquisition is incomplete'):
                 self.account()
+
+
+class CommittedCapsuleReceipt(unittest.TestCase):
+    def test_committed_receipt_binds_current_source_lock_and_manifest(self):
+        record = json.loads((ROOT / 'evidence/a3-six-source-capsule.json').read_text())
+        lock_path = ROOT / 'sources/sources.lock.json'
+        lock_sha = hashlib.sha256(lock_path.read_bytes()).hexdigest()
+        manifest = record['capsule_manifest']
+        self.assertEqual(manifest['source_lock_sha256'], lock_sha)
+        self.assertEqual(manifest['files']['sources.lock.json'],
+                         {'sha256': lock_sha, 'bytes': lock_path.stat().st_size})
+        manifest_bytes = (json.dumps(manifest, indent=2, sort_keys=True) + '\n').encode()
+        self.assertEqual(record['capsule_sha256'],
+                         hashlib.sha256(manifest_bytes).hexdigest())
+        lock = json.loads(lock_path.read_text())
+        self.assertEqual(set(record['source_trees']),
+                         {source['repository'] for source in lock['sources']})
+        self.assertEqual(manifest['accounting']['inventory_artifacts'],
+                         sum(source['artifacts'] for source in lock['sources']))
+        for source in lock['sources']:
+            tree = record['source_trees'][source['repository']]
+            self.assertEqual(tree['status'], 'MATCH')
+            self.assertEqual(tree['git_tree_artifacts'], source['artifacts'])
+            self.assertEqual(tree['archive_artifacts'], source['artifacts'])
+        self.assertEqual(record['structured_occurrences'], 605)
