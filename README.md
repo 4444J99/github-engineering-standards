@@ -23,6 +23,9 @@ The initial acquisition contains all six pinned source archives: 13,657 artifact
 
 Exact commits and artifact digests are in `sources/sources.lock.json` and the acquisition receipts. See `docs/source-rights.md` before redistributing upstream material.
 
+The proposed [original-intent matrix and six source charters](docs/source-charters/README.md)
+separate each source's authority from local policy adoption. Owner approval is pending.
+
 ## Run from a source checkout
 
 Python 3.11 or newer is required. The supported interface is `python -m ges` from this repository root; a standalone installed wheel is not provided.
