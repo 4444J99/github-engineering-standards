@@ -206,7 +206,7 @@ def compile_ledger(manifest: dict, annotations: dict, sources: Path) -> dict[str
             review_lines.append(f"- Lines {nonclaim['start_line']}-{nonclaim['end_line']}: "
                                 + nonclaim['reason'])
         review_lines.append('')
-    files['review.md'] = ('\n'.join(review_lines) + '\n').encode('utf-8')
+    files['review.md'] = ('\n'.join(review_lines).rstrip() + '\n').encode('utf-8')
     residual = {
         'schema': 'ges.b0-residual.v1', 'status': 'HOLD', 'next_tranche': 'C0',
         'source_accounting_gaps': [], 'primary_review_pending': sorted(seen_propositions),

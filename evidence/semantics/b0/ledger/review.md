@@ -441,4 +441,3 @@ These source-bound line dispositions also require B0 approval. License text rema
 - Lines 117-121: Unannotated lines are section headings, whitespace, illustrations or supporting rationale for the adjacent annotated recommendations; outbound links are references without importing their targets.
 - Lines 123-123: Unannotated lines are section headings, whitespace, illustrations or supporting rationale for the adjacent annotated recommendations; outbound links are references without importing their targets.
 - Lines 125-125: Unannotated lines are section headings, whitespace, illustrations or supporting rationale for the adjacent annotated recommendations; outbound links are references without importing their targets.
-
