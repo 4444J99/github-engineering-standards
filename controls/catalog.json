@@ -2632,7 +2632,7 @@
   },
   {
     "id": "GES-RULE-007",
-    "revision": 1,
+    "revision": 2,
     "title": "Effective protection includes all inheritance and bypass paths",
     "objective": "Inspect active rulesets, legacy protection, repository/organization inheritance and bypass permissions together. Exercise rejected and accepted changes in a safe test repository.",
     "category": "rule",
@@ -2658,11 +2658,21 @@
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
         "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
+        "section": "Interaction, enforcement states and effective layering",
+        "start_line": 47,
+        "end_line": 72,
         "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L1"
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md#L47"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "data/reusables/repositories/rulesets-push-rulesets-bypass-permissions.md",
+        "section": "Fork-network bypass inheritance",
+        "start_line": 1,
+        "end_line": 1,
+        "content_sha256": "5325acf5fc4d0a6f5cd1cda7342fb29ac1edb673e9d194d4ee247272d44e331a",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/data/reusables/repositories/rulesets-push-rulesets-bypass-permissions.md#L1"
       }
     ],
     "verification": {
@@ -2690,7 +2700,7 @@
   },
   {
     "id": "GES-RULE-008",
-    "revision": 1,
+    "revision": 2,
     "title": "Required checks execute on the right integration revision",
     "objective": "Ensure required check names exist and run on the proposed or queued merge revision; validate triggers, filters and trusted publishers.",
     "category": "rule",
@@ -2721,6 +2731,36 @@
         "end_line": 72,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
         "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L67"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Required checks, expected publisher and strict versus loose",
+        "start_line": 170,
+        "end_line": 194,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L170"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "data/reusables/repositories/ruleset-workflow-event-triggers.md",
+        "section": "Ruleset workflow triggers and ignored filters",
+        "start_line": 1,
+        "end_line": 9,
+        "content_sha256": "65f7092ddd43b36309e82bfd57b1af5666395beffbfcb9d4222e13f4f4ca59ca",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/data/reusables/repositories/ruleset-workflow-event-triggers.md#L1"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "data/reusables/pull_requests/merge-queue-overview.md",
+        "section": "Queued integration revision",
+        "start_line": 1,
+        "end_line": 9,
+        "content_sha256": "00008b55054578c947f05f8b17a6fdfdb809f826f511346c53c804038b5023da",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/data/reusables/pull_requests/merge-queue-overview.md#L1"
       }
     ],
     "verification": {
@@ -2748,7 +2788,7 @@
   },
   {
     "id": "GES-RULE-009",
-    "revision": 1,
+    "revision": 2,
     "title": "Signing and history policies have justified applicability",
     "objective": "Decide commit-signing and history requirements by trust and delivery needs; verify compatibility with automated contributors before enabling them.",
     "category": "rule",
@@ -2779,6 +2819,36 @@
         "end_line": 138,
         "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
         "url": "https://github.com/microsoft/ghqr/blob/02b89961921ac43f93aa8b3ff74cdcb7cd3d9244/internal/recommendations/definitions/repository/branch_protection.yaml#L133"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Required signatures, branch creation and product qualifications",
+        "start_line": 79,
+        "end_line": 99,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L79"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "data/reusables/repositories/required-signed-commits.md",
+        "section": "Signed-commit merge compatibility",
+        "start_line": 1,
+        "end_line": 17,
+        "content_sha256": "4c6d76802000af78dcc508764a34ae1a40ca310d2dd3f2b54c378ed7635e476e",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/data/reusables/repositories/required-signed-commits.md#L1"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md",
+        "section": "Linear history and permitted merge methods",
+        "start_line": 37,
+        "end_line": 41,
+        "content_sha256": "1d1dad8bfbc0cc3ec1905193b12292d4e6e780c6ec9d3db7ee0f4b154d24f00b",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets.md#L37"
       }
     ],
     "verification": {

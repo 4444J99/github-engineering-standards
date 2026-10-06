@@ -1,0 +1,156 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T23:50:11.334835+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets.md",
+  "content_sha256": "ad074c0507552b396bd5d506a7e80875c5664dd7e6f0e496f5a1dbc1bd039810",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-001",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 1,
+      "end_line": 13,
+      "span_sha256": "937de0d6955dab09dbbbccadd6a025d84f3a0e1dd71682c09faeb8be5c2c1257",
+      "statement": "The source declares FPT/GHEC/GHES. The product reusable describes branch/tag rulesets for public Free repositories and public/private Pro/Team/Enterprise Cloud repositories; push availability varies by plan and product. The GHES else-branch uses Enterprise Cloud wording, retained as ambiguous eligibility rather than silently generalized.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-002",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 9,
+      "end_line": 9,
+      "span_sha256": "7dcc67a7fe3365868fcb0aac2b5cb2860537403d42fce79937b88904e930e3dd",
+      "statement": "Anyone with read access can view rulesets; creating/editing/deleting requires admin or edit-repository-rules permission. The non-FPT reusable also mentions insights.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-003",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 17,
+      "end_line": 17,
+      "span_sha256": "5a3f1232e85408f0414d97b7f41b90bbb61f714174229699dba78ebfff0f004b",
+      "statement": "Rulesets are named rule lists; the source permits up to 75 per repository and 75 organization-wide, with cross-repository organization use for Team/Enterprise plans. These limits are pinned assertions, not locally measured platform quotas.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-004",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 19,
+      "end_line": 19,
+      "span_sha256": "59e131273e5c43621bda1a90238d9557aaf74c7f670048fb1b33cae6f18aa61b",
+      "statement": "Rulesets can grant bypass to roles such as repository administrator, specific teams or GitHub Apps; an active ruleset therefore does not alone prove rejection for all actors.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-005",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 21,
+      "end_line": 25,
+      "span_sha256": "8448d21efbf2998954d3e57738b3d2a2b6776b5c0143c6e44a563bc8f91313fb",
+      "statement": "The non-GHES paragraph describes Enterprise-plan organization targeting and GHEC-only enterprise-code-rulesets enterprise targeting; its cross-product documentation link is not GHES availability evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-006",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 27,
+      "end_line": 27,
+      "span_sha256": "226630528e51ab06482aa98837d07d7c902c16a63c8761bd8904b4a7c0b9e996",
+      "statement": "Rulesets may target branches/tags or block repository pushes across the complete fork network; their scopes are different.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-007",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 29,
+      "end_line": 33,
+      "span_sha256": "9a0571de494cb71d58894cc69a1c2a3744c6161c1eafcae479ca768948490535",
+      "statement": "Delegated push bypass is gated to GHEC/GHES>3.15: contributors request a designated reviewer’s permission for restricted content; approval permits the push, denial requires removing that content before retrying.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-008",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 35,
+      "end_line": 39,
+      "span_sha256": "498e9dbc6ebcbe911e2fc14a09bd9ed599037dec4e71e41a032eb9b1b09c99a3",
+      "statement": "Branch/tag rulesets can control pushes, tag deletion/rename and conditionally enterprise metadata. They select targets with fnmatch, including recursive releases/**/*; the illustrative administrator bypass is not mandatory local policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-009",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 41,
+      "end_line": 43,
+      "span_sha256": "6a234d63475b42c4038a94f0c20777eb8d088cb7426f3c7fff7559b9f3471591",
+      "statement": "Push rules apply to every push without branch targeting and restrict paths, path lengths, extensions or sizes across the fork network. Root-repository bypass grants determine fork bypass too.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-010",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 41,
+      "end_line": 43,
+      "span_sha256": "6a234d63475b42c4038a94f0c20777eb8d088cb7426f3c7fff7559b9f3471591",
+      "statement": "Allowed path/size exceptions in the push overview are gated to FPT/GHEC and do not establish GHES availability; other type restrictions do not acquire exceptions merely from this overview.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-011",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 47,
+      "end_line": 51,
+      "span_sha256": "09044d8909de09104b1e6a6ae370a4591b263cea72dc8ed6f22e886bbb1c9795",
+      "statement": "Rulesets and classic branch protection operate together; multiple rulesets can apply while only one classic rule applies. Evaluate the combined effective rules, not presence of a single configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-012",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 52,
+      "end_line": 54,
+      "span_sha256": "29096382a1a0b7e777e3c4624d10014b5860e509d3588f3b909afb0b36334d6d",
+      "statement": "Ruleset enforcement status can be changed without deletion; repository readers can inspect active rulesets, and metadata-format controls add capabilities beyond classic protection.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-013",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 56,
+      "end_line": 56,
+      "span_sha256": "94667690f0969cd1a36723627519f8bcc42c277d247ea35c3b2714739c86568e",
+      "statement": "Classic-to-ruleset conversion navigation is available only under branch-protection-ruleset-conversion (FPT/GHEC or GHES>=3.23); conversion was not performed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-014",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 58,
+      "end_line": 60,
+      "span_sha256": "2138484db55c4f086da5adc5997da98a548a5b3791a78fad7188d3a8489b2bae",
+      "statement": "Active enforces on creation; Disabled does not enforce (nor conditionally evaluate); Evaluate is a non-enforcing observation mode gated to repo-rules-enterprise, not proof of active protection.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-015",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 64,
+      "end_line": 64,
+      "span_sha256": "c6bf5f46f99845b13aacb2a23303a0103e9eaa2a637ad63025ffef40df68a576",
+      "statement": "Rulesets have no priority: applicable rules aggregate, the most restrictive variant wins, and classic protection layers with them. Branch/tag applicability must be established before aggregating.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-ARS-016",
+      "artifact_id": "6d75f7cb96dffa74733ad33f",
+      "start_line": 66,
+      "end_line": 72,
+      "span_sha256": "1326ec7d4af71a2c193c188fbfbf0dd41ec3a34ff84f876bf30da8f14857915e",
+      "statement": "The illustrative 3-review signed ruleset plus 2-review linear classic rule and conditional 1-review no-force-push organization ruleset yields three reviews, signing and linear history with conditional force-push blocking. Those counts are example inputs, not a universal quorum.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Primary reading of full pinned article and recursively included dependencies. Reviewed source statements only; no adoption or live platform verification."
+}

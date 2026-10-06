@@ -1,0 +1,210 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T23:50:11.334835+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule.md",
+  "content_sha256": "624257ee7eac0b09757425e561d04ff332b7393236caa7dbc2a97f49a955adfa",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-001",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 1,
+      "end_line": 30,
+      "span_sha256": "d95dcd217aa882faa0eb9dfeb7f4d6169cca7bae5d8e0e8fc17ec5d79e4b5797",
+      "statement": "The how-to declares FPT/GHEC/GHES with plan/visibility-dependent protected-branch availability; managing rules requires repository admin or a custom edit-repository-rules permission, not merely write access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-002",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 33,
+      "end_line": 35,
+      "span_sha256": "6cbd47eba6b6d0a6bdcc0276cb440fcb0ea9a607e8412ba62eba456250fad5f7",
+      "statement": "Classic rules can target named, current/future or wildcard branches. FNM_PATHNAME means star does not match slash; qa/* is one level, while qa/**/* is recursive. Example names are not adopted target scopes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-003",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 37,
+      "end_line": 39,
+      "span_sha256": "2187ed1c2d08995875c6c10dcf5a6f4848bfbd0abd3a4106268ad52639643272",
+      "statement": "An exact-name classic rule outranks patterned rules; among repeated identical exact names the earliest wins, and rules with special characters are applied oldest first.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-004",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 41,
+      "end_line": 46,
+      "span_sha256": "62cea338f5bf6798f8d770e87728ca1fe946c3b76388b980910ff90c30a177dc",
+      "statement": "A higher-priority exact-name rule can make an exception. Only one classic rule applies, unlike rulesets; enterprise cross-repository and conversion links retain their feature gates.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-005",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 50,
+      "end_line": 53,
+      "span_sha256": "70b41f3d1b3cd93efa88c603def5a093829079ef41a71161979f7aa5ee53f8c8",
+      "statement": "A protected branch need not yet exist when its rule is created; bypass-list actors are supported only for organization-owned repositories.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-006",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 55,
+      "end_line": 58,
+      "span_sha256": "00ea567a7ac2eb9a1e173017477a571959f5a6eb6a9df9a8e710056f05a9bed0",
+      "statement": "Navigate to the repository Settings (More menu if hidden), then Branches, add a classic rule and enter the branch-name pattern. FPT/GHEC and GHES sidebar labels differ; these are UI instructions, not executed changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-007",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 59,
+      "end_line": 64,
+      "span_sha256": "e2c16a356f87ea7f616d214645b2150f0316770a408677dbbad797fe865ecca9",
+      "statement": "Pull requests and approvals are separately optional: select Require a pull request, then optionally Require approvals and choose the approval count. The source does not choose a universal quorum.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-008",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 60,
+      "end_line": 60,
+      "span_sha256": "7143d9f6b694dc8c08055ae9d9ca4028f592c93741a46c50e7586292edb05d30",
+      "statement": "The included mergeability note preserves the exact-GitHub-generated-merge exception for manual pushes and invalidation after merge-base content changes when stale/latest-push settings are enabled.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-009",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 65,
+      "end_line": 65,
+      "span_sha256": "ab3c3596f92e6d467ff128c087c74e6896ae81e0fc5ab26efcf59c2793c3e7cd",
+      "statement": "Optional stale approval dismissal applies when code-modifying commits are pushed; selecting it is not proof of native rejection behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-010",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 66,
+      "end_line": 66,
+      "span_sha256": "96cfc523eaa43b4459ad22bae797818b0fb710fb7e427424c4faf472a013c47e",
+      "statement": "Optional Code Owners review accepts any one of multiple owners of affected code, rather than requiring every listed owner.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-011",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 67,
+      "end_line": 68,
+      "span_sha256": "e8e758ce16d4dd012f5afeb5aee5da697ce61b30918a4a56b786fefa90ef706d",
+      "statement": "Selected actors may bypass required pull requests; organization repositories can restrict review dismissal to selected actors. Record both paths when evaluating effective protection.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-012",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 69,
+      "end_line": 69,
+      "span_sha256": "dab26005c1ba8bc38bc16476e82dcc477d782411f2e862b75ad4b8a7c27f97bd",
+      "statement": "Optional approval of the latest reviewable push must be by someone other than its pusher.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-013",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 70,
+      "end_line": 73,
+      "span_sha256": "d7434605ec2457a1641ae7f6f9dedf6e052677f30a99b64cd7001e35150a99c4",
+      "statement": "Optional required checks have explicit selected names; up-to-date-before-merge is a separate option for testing against latest protected-branch code.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-014",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 74,
+      "end_line": 74,
+      "span_sha256": "a01dd88feb6914c6eac92e88cdaa6f07d05ae979844ac842caf73772082a9d80",
+      "statement": "Conversation resolution is an optional setting distinct from approvals and code-owner review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-015",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 75,
+      "end_line": 76,
+      "span_sha256": "7459462cb035f876db2173338391c7931431735e9ef22530a6d2f779e2add36d",
+      "statement": "Required signing and linear history are separate optional settings; applicability and compatible delivery methods still require deliberate policy decisions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-016",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 77,
+      "end_line": 78,
+      "span_sha256": "3e9bcd0d7e4fde8294acd7c8c7af5734984ff2c10150c9fa3e73a4ca25509469",
+      "statement": "Merge queue and successful deployment to chosen environments are optional settings; their navigation references do not certify live queue or environment behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-017",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 79,
+      "end_line": 82,
+      "span_sha256": "18ac354640b8902b8e3719f27dc063b82278b00cd088748ffb484b74ed85fbb0",
+      "statement": "Lock branch can optionally allow fork syncing; no-bypass is a separate option. These settings must be composed with other rules.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-018",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 83,
+      "end_line": 86,
+      "span_sha256": "bc498b1f9ffd30b956b4166d41a4b3453b881846ec6e0f5cf2925f90f6115b5b",
+      "statement": "For eligible organization plans/visibility, restrict push actors and optionally restrict matching-branch creation, choosing people/teams/apps for those grants.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-019",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 87,
+      "end_line": 93,
+      "span_sha256": "2a6e034f850a8ffa516116cbca1f5acde9cbcd4f7adb264e2c70782b077c1154",
+      "statement": "Optional force pushes can admit every writer including administrators or selected actors, retaining the source’s linked constraints.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-020",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 94,
+      "end_line": 95,
+      "span_sha256": "e995ab6dfe030e067d58520e5839cb8d1079996f295d7d963668a0b2ae5d4fc1",
+      "statement": "Allow deletions is an optional setting; clicking Create saves the configured classic rule. This procedure was read, not executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-021",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 97,
+      "end_line": 104,
+      "span_sha256": "375273726f0ecb4a92a361ae14bf0effa221c0fe3960aaa88088baf0a4f8cf48",
+      "statement": "To edit, use the repository Settings/Branches route, Edit the rule, change desired settings and Save changes; the source supplies no observed readback.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-MBP-022",
+      "artifact_id": "6d146a4df608b7c71dbdea1f",
+      "start_line": 106,
+      "end_line": 111,
+      "span_sha256": "64d02d1ab932f3a3ad329d5be055d0b15e5dedd5c3225b97a400de198f68d4e7",
+      "statement": "To delete a classic rule, use Settings/Branches and Delete beside that rule; permission to follow a source instruction is not authorization to remove this estate’s protection.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Primary reading of full pinned article and recursively included dependencies. Reviewed source statements only; no adoption or live platform verification."
+}

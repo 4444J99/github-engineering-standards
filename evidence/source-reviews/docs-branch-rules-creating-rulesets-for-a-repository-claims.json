@@ -1,0 +1,228 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T23:50:11.334835+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository.md",
+  "content_sha256": "4195b4a9bbd4606de02aa48a19b4e646bb3411ea322135dda1872397455261a7",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-001",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 1,
+      "end_line": 15,
+      "span_sha256": "693c26ac224136c1434b529edb5f8871af12b3547ac73884828b1d4de44a58e1",
+      "statement": "The procedure declares FPT/GHEC/GHES with plan/visibility limits in the product reusable and administrator/edit-repository-rules permission. This is an instruction source, not owner approval to change live estate settings.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-002",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 17,
+      "end_line": 19,
+      "span_sha256": "ef8d43fd7e4071501b086eb9448426095b45974f348fe68446023ad222ec2d6f",
+      "statement": "Branch/tag rulesets control selected branches/tags; the source also mentions repository and tag rename restrictions without supplying a separate observed repository-rename enforcement mechanism.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-003",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 21,
+      "end_line": 23,
+      "span_sha256": "3333856fd033119e2419400000690a66f223ba68e2a19201f22fd5508cdbd2d8",
+      "statement": "Push rulesets restrict paths, lengths, extensions and sizes across eligible private/internal fork networks; bypass roles, teams and apps must be reviewed with that inherited scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-004",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 25,
+      "end_line": 27,
+      "span_sha256": "b26ff6a8ebe299129b1543292676aa737aec176160f196817efe81ca606b52b6",
+      "statement": "The guide also links organization rulesets for Team/Enterprise organizations; repository instructions do not establish estate-wide adoption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-005",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 29,
+      "end_line": 35,
+      "span_sha256": "c1bbde31f7fea104a09a07ad51d62db357449add7bbfac455b9372de73f05eaa",
+      "statement": "JSON ruleset import and external ruleset-recipes are available under repo-rules-management (FPT/GHEC/GHES>=3.19). External recipes were not treated as reviewed source text.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-006",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 37,
+      "end_line": 41,
+      "span_sha256": "c52abe38de1901ebb18471039eb28346e568293ea64f3e2f263b797983cb0872",
+      "statement": "Branch/tag targeting uses File.fnmatch, where * does not match slash, qa/* matches one directory depth, and qa/**/* includes recursive matching.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-007",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 43,
+      "end_line": 43,
+      "span_sha256": "52bc818c3b33d98b39791379ccbdcbb7816d2f99adbc846a41cd91d8ad9fc4f3",
+      "statement": "The fnmatch-options reusable excludes backslash quoting, complemented sets and EXTGLOB but literally attributes those limits to branch protection. Its inclusion in a ruleset guide does not prove parity of all rule engines.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-008",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 45,
+      "end_line": 49,
+      "span_sha256": "917376dbbe9487c55dd5d4bce271020f781559dc135a0679eab652a519b262fe",
+      "statement": "Metadata regex rules require selecting a regex operator; otherwise patterns are literal. The reusable identifies RE2 and multiline (?m) for multiple-line messages, with signed-off trailers requiring deliberate compatibility checks.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-009",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 49,
+      "end_line": 49,
+      "span_sha256": "19b31a9bd3c7f6bfc3b9624b200e0f2336c62046375740e1e66cc1746ea0feab",
+      "statement": "The regex reusable claims positive lookahead can substitute for unsupported negative lookahead; the linked primary RE2 syntax lists BOTH (?=re) and (?!re) unsupported. The workaround is not a safe recommended pattern.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-010",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 49,
+      "end_line": 49,
+      "span_sha256": "19b31a9bd3c7f6bfc3b9624b200e0f2336c62046375740e1e66cc1746ea0feab",
+      "statement": "The Windows branch-name example uses an anchored single-character class without repetition yet claims it matches my-branch. That literal pattern cannot match the multi-character example; retain the defect instead of adopting it.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-011",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 49,
+      "end_line": 49,
+      "span_sha256": "19b31a9bd3c7f6bfc3b9624b200e0f2336c62046375740e1e66cc1746ea0feab",
+      "statement": "The reusable’s SemVer, 50-character message and Fixes/conventional-commit regexes are illustrative source examples, not mandatory local version or commit policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-012",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 51,
+      "end_line": 55,
+      "span_sha256": "7a2334dd6fce7df6181fc45ee87854f56143047c40f20a57d99ce1cd06f1d978",
+      "statement": "Active enforces, Disabled does not enforce, and feature-gated Evaluate observes without blocking. The source recommends Evaluate for testing, which is not an activation receipt.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-013",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 57,
+      "end_line": 64,
+      "span_sha256": "96ec60228313899914cd5f5915aa602f2f0d4d24d66e2c543f361528bbae0c4d",
+      "statement": "Creating a branch/tag ruleset uses repository Settings and the pinned Rulesets sidebar then Rulesets route, new branch/tag ruleset and name with optional enforcement-status change. Default enforcement is Disabled; a saved ruleset can remain non-enforcing.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-014",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 66,
+      "end_line": 67,
+      "span_sha256": "c391e2d0a79082dcbd27c7bcfa4d9dd53dd221cb5e342d09fb6c130a164f7f7a",
+      "statement": "Bypass may admit administrators, eligible organization roles, custom writer roles, non-secret teams and apps/Dependabot, with extra enterprise/Copilot or deploy-key actors gated by product. Delegated bypass approval is separate from ordinary write permission.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-015",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 68,
+      "end_line": 68,
+      "span_sha256": "47cd0d3d8e2e15ee7fa0e0692c54ae7d84275cf0e405886d53ced33cfb1e3642",
+      "statement": "For branch/tag rulesets, pull-request-only bypass preserves a PR audit trail; Always bypass also permits direct pushes. Neither proves that the bypassed changes satisfy every ordinary requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-016",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 70,
+      "end_line": 72,
+      "span_sha256": "293f3cb10b72b31c4184f0ca0948b14cb612b779a00d649aea2ec77537ad2598",
+      "statement": "Select include/exclude branch/tag target criteria using fnmatch or explicit names. Multiple criteria require applicability review before combining rules.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-017",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 74,
+      "end_line": 76,
+      "span_sha256": "3ed6ce9efdc921ea6305a1c79eb9344d1070616811e7f0b830e13f7cf271aaa8",
+      "statement": "Selected checks must be entered and added by name; strict/up-to-date protection requires at least one actual defined status check. Selecting strict alone does not establish any check requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-018",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 78,
+      "end_line": 80,
+      "span_sha256": "728987e4336e3af8b6761960d05f68c3ed81acca47c79b7eb3fd40c08dee5321",
+      "statement": "Metadata restrictions support consistency, not a substitute for security checks; patterns are literal unless regex is selected, descriptions are visible, and Evaluate can reveal mismatches. The included metadata note repeats the all-commits squash requirement that conflicts with the available-rules resulting-commit-only statement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-019",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 82,
+      "end_line": 84,
+      "span_sha256": "43b1db2da99409de874821bf9ee169cc9f6bc9302c3275cea90aad5c3b86573c",
+      "statement": "Create saves the ruleset; immediate enforcement depends on Active status. Feature-gated insights in Evaluate show would-be failures without demonstrating blocked pushes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-020",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 86,
+      "end_line": 95,
+      "span_sha256": "a0ad6d21c79ae263af568749b808c998e86b7c3c0d1b22f9d493ccdfc61d39f3",
+      "statement": "Push ruleset creation uses the eligible repository’s Settings, pinned Rulesets sidebar then Rulesets, and new-push-ruleset route; it applies across the fork network rather than branch/tag target criteria.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-021",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 94,
+      "end_line": 96,
+      "span_sha256": "cd1d9e23c5fd9706b35efd51196e467ac1ad71ba3c04d196671bb4838ec292bd",
+      "statement": "Name the push ruleset and optionally change enforcement status from the included default Disabled; leaving it unchanged creates no active enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-022",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 98,
+      "end_line": 102,
+      "span_sha256": "0de4173c8f8c100721e14a66e68240e81465185a35ab01becf2a4b6451417ea8",
+      "statement": "Only actors with root-repository bypass grants can bypass fork push rulesets; the guide repeats the eligible-role choices and conditional product actors.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-023",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 104,
+      "end_line": 106,
+      "span_sha256": "448c4a9330604bad4abb24389229aca603abd857588b950db9ea6a466d40dbbc",
+      "statement": "Configure desired push restrictions with full or partial paths and optional path/size exceptions where gated; path length, extension and size constraints are different controls, not interchangeable filters.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-RULES-CRR-024",
+      "artifact_id": "67cb6ae3f5fc20f79e5f59bf",
+      "start_line": 108,
+      "end_line": 110,
+      "span_sha256": "627e0049501696d7d2f4f9d23ed03b0d043f8fae8a73464d3dedd343f5bf6ee3",
+      "statement": "Create and available insights complete the push procedure; reading these steps does not certify active enforcement, rejected-push behavior, effective bypass, rollback or estate rollout.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Primary reading of full pinned article and recursively included dependencies. Reviewed source statements only; no adoption or live platform verification."
+}
