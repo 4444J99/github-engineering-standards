@@ -13,7 +13,8 @@ MISSING = object()
 
 
 def load(path: str | Path) -> Any:
-    return json.loads(Path(path).read_text(encoding='utf-8'))
+    from .evidence_integrity import validate_authority
+    return validate_authority(json.loads(Path(path).read_text(encoding='utf-8')))
 
 
 def dump(path: str | Path, data: Any) -> None:
@@ -34,6 +35,8 @@ def timestamp(value: str) -> dt.datetime:
 
 
 def digest(value: Any) -> str:
+    from .evidence_integrity import validate_authority
+    validate_authority(value)
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',',':')).encode()).hexdigest()
 
 

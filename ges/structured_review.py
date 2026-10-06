@@ -12,12 +12,28 @@ def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def validate_pinned_span(text: str, row: dict) -> None:
+    """Check source content and canonical newline-joined span (no final LF)."""
+    lines = text.splitlines()
+    start, end = row['start_line'], row['end_line']
+    if (type(start) is not int or type(end) is not int or
+            not 1 <= start <= end <= len(lines)):
+        raise ValueError('Ledger span exceeds pinned source')
+    if hashlib.sha256(text.encode()).hexdigest() != row['content_sha256']:
+        raise ValueError('Pinned source content digest mismatch')
+    span = '\n'.join(lines[start-1:end])
+    if hashlib.sha256(span.encode()).hexdigest() != row['span_sha256']:
+        raise ValueError('Pinned source span digest mismatch')
+
+
 def validate_accounting(root: Path, ledger: Path, accounting: Path,
                         authorized_reviewers: list[str], sources: Path | None = None) -> dict:
     """Fail closed on changed evidence or unsupported reference-accounting claims."""
     if (not isinstance(authorized_reviewers, list) or not authorized_reviewers or
             any(not isinstance(r, str) or not r.strip() for r in authorized_reviewers)):
         raise ValueError('Authorized reviewers must be a nonempty list of identities')
+    from .evidence_integrity import validate_authority
+    validate_authority({'authorized_reviewers': authorized_reviewers})
     evidence = json.loads(accounting.read_text())
     rows = json.loads(ledger.read_text())
     if not isinstance(rows, list) or not rows:
@@ -57,16 +73,7 @@ def validate_accounting(root: Path, ledger: Path, accounting: Path,
             raise ValueError('Missing pinned source artifacts')
         for row in rows:
             text = source_texts[(row['source'], row['commit'], row['path'])]
-            lines = text.splitlines()
-            start, end = row['start_line'], row['end_line']
-            if (type(start) is not int or type(end) is not int or
-                    not 1 <= start <= end <= len(lines)):
-                raise ValueError('Ledger span exceeds pinned source')
-            if hashlib.sha256(text.encode()).hexdigest() != row['content_sha256']:
-                raise ValueError('Pinned source content digest mismatch')
-            span = '\n'.join(lines[start-1:end])
-            if hashlib.sha256(span.encode()).hexdigest() != row['span_sha256']:
-                raise ValueError('Pinned source span digest mismatch')
+            validate_pinned_span(text, row)
 
     def match(identity: str, item: dict, doc: dict) -> None:
         if identity not in indexed:

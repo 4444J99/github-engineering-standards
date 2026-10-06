@@ -9,6 +9,33 @@ on:
   push:
     paths:
       - sources/sources.lock.json
+      - scripts/a3_*.py
+      - evidence/a3-six-source-capsule-repair.json
+      - docs/source-charters/**
+      - evidence/a4-source-charters.json
+      - evidence/a4-capsule-baseline.json
+      - ges/source_charters.py
+      - ges/pinned_sources.py
+      - ges/structured_review.py
+      - .github/workflows/source-acquisition.yml
+      - ges/**
+      - tests/test_source_charters.py
+      - requirements.txt
+  pull_request:
+    paths:
+      - sources/sources.lock.json
+      - scripts/a3_*.py
+      - evidence/a3-six-source-capsule-repair.json
+      - docs/source-charters/**
+      - evidence/a4-source-charters.json
+      - evidence/a4-capsule-baseline.json
+      - ges/source_charters.py
+      - ges/pinned_sources.py
+      - ges/structured_review.py
+      - .github/workflows/source-acquisition.yml
+      - ges/**
+      - tests/test_source_charters.py
+      - requirements.txt
 permissions:
   contents: read
 concurrency:
@@ -41,6 +68,37 @@ jobs:
           PY
       - run: python -m ges corpus --snapshots .cache/sources --output .cache/corpus
       - run: python -m ges ledger --snapshots .cache/sources --corpus .cache/corpus
+      - name: Verify pinned text against the repaired capsule content identities
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from ges.pinned_sources import inventory_digest, verify_snapshot
+          baseline = json.loads(Path('evidence/a3-six-source-capsule-repair.json').read_text())
+          lock = json.loads(Path('sources/sources.lock.json').read_text())
+          sources = Path('.cache/sources')
+          for spec in lock['sources']:
+              repo = spec['repository']
+              slug = repo.replace('/', '__')
+              inventory = json.loads((sources / (slug+'.inventory.json')).read_text())
+              if inventory_digest(inventory) != baseline['inventory_identity_digests'][repo]:
+                  raise ValueError('Acquired inventory differs from repaired A3 baseline')
+              verify_snapshot(sources / (slug+'.text.jsonl.gz'), inventory, repo, spec['commit'])
+          print('Six pinned source snapshots replayed; no semantic or owner acceptance asserted')
+          PY
+      - name: Replay charter citations against trusted A3 content identities
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from ges.source_charters import validate_manifest
+          binding = json.loads(Path('evidence/a4-source-charters.json').read_text())
+          result = validate_manifest(Path('.'), Path('.cache/sources'),
+                                    capsule_receipt=Path('evidence/a4-capsule-baseline.json'),
+                                    capsule_sha256=binding['a3_capsule_sha256'],
+                                    receipt_sha256=binding['a3_receipt_sha256'])
+          print(json.dumps(result))
+          PY
       - name: Package public-safe metadata evidence
         if: always()
         run: |

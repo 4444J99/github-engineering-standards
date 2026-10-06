@@ -8,6 +8,8 @@ from .checks import execute
 
 def audit(controls: list[dict], snapshot: dict, profile: dict, *, at: str | None=None,
           attestations: list[dict] | None=None, exceptions: list[dict] | None=None) -> dict:
+    from .evidence_integrity import validate_authority
+    validate_authority(profile)
     at=at or now(); clock=timestamp(at); rows=[]
     context=profile.get('context',{})
     trusted=set(profile.get('authorized_reviewers',[]))
