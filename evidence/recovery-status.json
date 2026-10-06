@@ -18,7 +18,7 @@
   "claim_reconciliation_accounting": {
     "all_structured_occurrences_reconciled": null,
     "catalog_digest": "c55f7257ae7f92500f4af7e8ae5bde2f5ec25f49c16f13bc676575f7a0248ae8",
-    "claim_input_digest": "3b757accbd4536d1ca2b3d52893affc6175701062787745d25ca32840344397e",
+    "claim_input_digest": "d580d68932efb588a1c8ae46b5125bc5b65e9c52b945b18181a552b84184bc59",
     "claim_provenance_validated": true,
     "disposition_counts": {
       "CONFLICT": 0,
@@ -27,7 +27,7 @@
       "REFERENCE": 0,
       "SPECIALIZE": 0
     },
-    "known_claim_denominator": 61427,
+    "known_claim_denominator": 61462,
     "mapping_complete": false,
     "policy_adopted": false,
     "policy_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
@@ -40,14 +40,14 @@
     "source_to_claim_omission_denominator_certified": false,
     "structured_occurrence_denominator": 605,
     "structured_occurrences_completed": 0,
-    "unresolved_count": 61427,
+    "unresolved_count": 61462,
     "validated_claim_ids": [],
     "validated_count": 0
   },
   "gates": [
     {
       "closure_condition": "Every artifact has a validated reviewed disposition and independent omission audit",
-      "completed": 3560,
+      "completed": 3565,
       "conditions": {
         "coverage_complete": false,
         "independent_omission_audit": null,
@@ -61,7 +61,7 @@
       "incomplete_conditions": [
         "coverage_complete"
       ],
-      "remaining": 10097,
+      "remaining": 10092,
       "status": "OPEN",
       "unverified_conditions": [
         "independent_omission_audit"
@@ -71,7 +71,7 @@
       "closure_condition": "Every page has rendered/version/dependency review; retrieval alone is insufficient",
       "completed": 0,
       "conditions": {
-        "all_bodies_durably_acquired": false,
+        "all_bodies_durably_acquired": true,
         "all_source_paths_reconciled": false,
         "coverage_complete": false,
         "version_include_and_render_assurance": null
@@ -82,7 +82,6 @@
       "gate": "published_content_assurance",
       "incomplete_conditions": [
         "coverage_complete",
-        "all_bodies_durably_acquired",
         "all_source_paths_reconciled"
       ],
       "remaining": 18019,
@@ -93,7 +92,7 @@
     },
     {
       "closure_condition": "Full-artifact omission review and atomic claims; candidate count is not a claim denominator",
-      "completed": 3560,
+      "completed": 3565,
       "conditions": {
         "atomic_claim_fidelity_audit": null,
         "claim_document_provenance_validated": true,
@@ -107,7 +106,7 @@
       "incomplete_conditions": [
         "coverage_complete"
       ],
-      "remaining": 10097,
+      "remaining": 10092,
       "status": "OPEN",
       "unverified_conditions": [
         "atomic_claim_fidelity_audit",
@@ -123,7 +122,7 @@
         "exact_claim_mapping_and_conflict_review": false,
         "unstructured_claim_denominator_certified": null
       },
-      "denominator": 61427,
+      "denominator": 61462,
       "evaluation": "INCOMPLETE",
       "evidence": "evidence/recovery-status.json",
       "gate": "consolidation",
@@ -131,7 +130,7 @@
         "coverage_complete",
         "exact_claim_mapping_and_conflict_review"
       ],
-      "remaining": 61427,
+      "remaining": 61462,
       "status": "OPEN",
       "unverified_conditions": [
         "unstructured_claim_denominator_certified",
@@ -245,7 +244,7 @@
       ]
     }
   ],
-  "generated_at": "2026-10-05T21:38:50.218360+00:00",
+  "generated_at": "2026-10-06T22:29:42.477787+00:00",
   "historical_checkpoint": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
   "inventory_artifacts": 13657,
   "justified_exclusions": 0,
@@ -285,20 +284,20 @@
   "published_pages": 18019,
   "quarantined_proposals": 593,
   "queue_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
-  "rendered_bodies_acquired": 100,
+  "rendered_bodies_acquired": 18019,
   "review_accounting": {
     "coverage_unit": "artifact_disposition_receipts",
     "errors": [],
     "independent_omission_certified": false,
     "inventoried": 13657,
     "note": "Review receipts require independent source-to-control audit before exhaustive certification.",
-    "receipt_count": 3560,
-    "receipt_coverage": 0.260672182763418,
-    "review_coverage": 0.260672182763418,
-    "reviewed": 3560,
+    "receipt_count": 3565,
+    "receipt_coverage": 0.2610382953796588,
+    "review_coverage": 0.2610382953796588,
+    "reviewed": 3565,
     "semantic_truth_certified": false
   },
-  "review_receipts_digest": "fc1b77dc4b1f4d89269fe5ee6fbde8f3b2d45f9fdfc44569d51742982940ec04",
+  "review_receipts_digest": "a61a77d1e3854bd05a0b0f5a8e38f2d3200d4170b1e7fe203043cabb0f634bbe",
   "rights_acceptance_accounting": {
     "authority_authenticity_automatically_certified": false,
     "authorized_distribution_decision": null,
@@ -328,9 +327,9 @@
     "independent_source_to_claim_omission_audit": null,
     "inventoried": 13657,
     "policy_adopted": false,
-    "reference_claims": 61427,
-    "remaining": 10097,
-    "reviewed": 3560,
+    "reference_claims": 61462,
+    "remaining": 10092,
+    "reviewed": 3565,
     "reviewed_claim_documents": [
       {
         "path": "evidence/source-reviews/docs-account-conversion-procedure-claims.json",
@@ -459,6 +458,26 @@
       {
         "path": "evidence/source-reviews/docs-actions-path-pending-claims.json",
         "sha256": "09cea8dce63361fa379543c679643a24a103c3b614968f58919db9323742e2cc"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-pilot-about-actions-policies-claims.json",
+        "sha256": "6e256dbe6189969d11b2dcedd897da35eaf5f5cd086db4c8204f6ed7032a23dd"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-pilot-billing-and-usage-claims.json",
+        "sha256": "759eb52263d71e7a67063b92ee3407b0a470aadbc8fcafdbed47255336c6f8f1"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-pilot-metrics-claims.json",
+        "sha256": "6844e00d7e901c08ed145effb30767142e9430cd8dcbb37fb538c2712d10798d"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-pilot-runners-larger-runners-claims.json",
+        "sha256": "6e580570a47c78e5fdeb9fce6eb84738b9307e575ed504c4c760d5f61064a802"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-pilot-runners-private-networking-claims.json",
+        "sha256": "ba303874b9283dc6292445ba68e842cd3795fe1ffd546403a2723f119d17b65b"
       },
       {
         "path": "evidence/source-reviews/docs-actions-policy-runner-limits-claims.json",
@@ -2838,22 +2857,23 @@
       "candidate_ledger_digest": "33c7c46bb5f0b501ef3eb59dae1e0c7081be6d9171e18f873a0fd944aadcfb25",
       "candidate_ledger_sha256": "1bd1c456fc141ad1afc02c0f4959f29d8835b224cf0196c411343dfd366ea6b6",
       "catalog_digest": "c55f7257ae7f92500f4af7e8ae5bde2f5ec25f49c16f13bc676575f7a0248ae8",
-      "claim_document_count": 624,
-      "claim_documents_digest": "7f7e045ee117c7dca3f300aa907718d52241044bb07fe355b2e48155019e2154",
-      "claim_provenance_digest": "b58e7acfcd0a1515ca5e7db0c23d24184b657d1f4877104a7cec2d7a3e522027",
+      "claim_document_count": 629,
+      "claim_documents_digest": "29c6628d16bf78457cb47f723286f3c2941ba25ee6ed57a4bb7fee79719bb999",
+      "claim_provenance_digest": "7c03d2b1f9c4bf4e41eb39be9068ebc56cd6a4ec4045cbc03f31f080b47d9989",
       "coverage_complete": false,
       "inventory_count": 13657,
       "inventory_digest": "eaa9c32da3762d0947864cc12aac1857b13d65d15e08aaf3ed44f8f89dc62cb8",
       "inventory_sha256": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c",
       "proposal_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
-      "reference_claim_count": 61427,
-      "reviewed_count": 3560,
+      "reference_claim_count": 61462,
+      "reviewed_count": 3565,
       "source_pins_digest": "6f735e66edd9975c3fdb6d0b435e1ad8ade1f6aa8653a3da610c7cd78b37140a",
-      "source_review_accounting_digest": "264a5a8181a0710a8e46d074a45b6b85e854e568d3f6ca1e85579c73908ab996",
-      "source_review_document_count": 617,
-      "source_review_documents_digest": "899500906f1955e267dce13ad438cbcb383df79db8c448baf0eed390881845ff",
+      "source_review_accounting_digest": "d4f4c28bc1f05dd69dba8eb1002b1a8d728aaee228082191d8013ee4464e1608",
+      "source_review_document_count": 1251,
+      "source_review_documents_digest": "7511b36498719354c7b53919a0eb184d9256249e8446129d661dda01aadfcc63",
       "source_review_policy_digest": "981a3f665137a9a14cc73250656792c17417a65f60980978b7e932da3b13475b",
-      "source_review_receipts_digest": "fc1b77dc4b1f4d89269fe5ee6fbde8f3b2d45f9fdfc44569d51742982940ec04"
+      "source_review_receipts_digest": "a61a77d1e3854bd05a0b0f5a8e38f2d3200d4170b1e7fe203043cabb0f634bbe",
+      "source_snapshots_digest": "551003ced9d7f8776e237c9328240378b4e091cad163c70d97c0c467536ead30"
     },
     "validated_evidence": {},
     "validated_evidence_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
@@ -2947,7 +2967,7 @@
       },
       "repository": "github/docs",
       "review_evidence": "evidence/source-reviews; source review is not control adoption or independent omission certification",
-      "reviewed_artifacts": 3123
+      "reviewed_artifacts": 3128
     }
   ],
   "structured_requirements": 605,

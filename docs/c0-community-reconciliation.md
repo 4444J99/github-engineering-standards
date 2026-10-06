@@ -1,3 +1,7 @@
+Final v3 primary and independent source review passed. The reviewed overlay and
+its exact accounting are documented in [bounded source review](bounded-source-review.md);
+generated proposal ledgers below remain HOLD by design.
+
 # C0 — Community reconciliation, correction revision 2
 
 Status: staged, HOLD. Frozen B0 input: `b2f73d3df70dcd08a72de6e0d7d7a0ca28278b9f`.

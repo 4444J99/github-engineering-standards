@@ -32,3 +32,9 @@ record cumulative usage and scoped published checkpoints, and preserve the
 standing GES continuation authorization. Retain active source/worktree state.
 Freeze #453 remains in force. No controls, rights decisions, repository settings,
 credentials, costs, native rollout, or unrelated backlog are authorized here.
+
+Checkpoint 2026-10-06: complete22-file primary/independent review; eightfindinggroups
+corrected216→227; five-filepilot35claims/104candidate dispositions independently
+reviewed with networking correction. Foundation PRs472–478 merged. Accounting
+negativecases hardened,485tests passed. Integration retained activeworktrees and
+standing continuation; cumulative native session work continues, no budget reset.

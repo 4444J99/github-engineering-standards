@@ -1,0 +1,73 @@
+{
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/billing-and-usage.md",
+  "content_sha256": "4cca65c2637088f6a776bea80e81fc2f58484850de43adfbc04fd26f91ab6b70",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-06T22:24:38.647645+00:00",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-BILLING-AND-USAGE-1",
+      "artifact_id": "dc7295a65a4d69e0ece9977b",
+      "start_line": 1,
+      "end_line": 17,
+      "span_sha256": "795f804a019d5c0de81b7cf333b1628e23b375a9d5c525cc7d4b687e8ee5d698",
+      "statement": "Page metadata lists fpt, ghec and ghes, but billing and feature applicability depend on conditional body branches. The introduction describes charges beyond included minutes/storage; it is not an estate billing observation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-BILLING-AND-USAGE-2",
+      "artifact_id": "dc7295a65a4d69e0ece9977b",
+      "start_line": 21,
+      "end_line": 25,
+      "span_sha256": "65cfdf29814819ca272a55f5e00c42b7d0d6a8191080ced890be9e97570de346",
+      "statement": "The fpt/ghec include says standard GitHub-hosted runners in public repositories and self-hosted runners are free; private hosted use receives plan-dependent minutes/storage and excess is billed. The GHES else branch describes free Actions usage on self-hosted runners. Larger-runner exceptions remain in the separate larger-runners page.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-BILLING-AND-USAGE-3",
+      "artifact_id": "dc7295a65a4d69e0ece9977b",
+      "start_line": 27,
+      "end_line": 33,
+      "span_sha256": "b080657c8034bb4f7e4cd7f541aed1fe45494e704ebae1ea55c2332822ce4c17",
+      "statement": "In fpt/ghec, Actions is available across GitHub products except private repositories owned by legacy per-repository-plan accounts. The linked plan page is not imported as a new reviewed source.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-BILLING-AND-USAGE-4",
+      "artifact_id": "dc7295a65a4d69e0ece9977b",
+      "start_line": 35,
+      "end_line": 39,
+      "span_sha256": "9a68965fda0406b437daaf196c40953f322530d710d980b613ecd4a141d1851a",
+      "statement": "Hosted-runner usage limits are linked rather than enumerated here. The source requires use within GitHub Terms of Service and references additional Actions product terms; these linked legal bodies were not cleared or adopted by this review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-BILLING-AND-USAGE-5",
+      "artifact_id": "dc7295a65a4d69e0ece9977b",
+      "start_line": 41,
+      "end_line": 49,
+      "span_sha256": "f343ae2ad7e28fa4ad70ec9ff980c090f4b0e3f8f7b2ef08a78075344eb58e0a",
+      "statement": "In fpt/ghec, organization owners and users with View organization Actions metrics permission may view usage. The include warns displayed usage minutes exclude minute multipliers and primarily describe where/how usage occurs; they are not billing totals.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-BILLING-AND-USAGE-6",
+      "artifact_id": "dc7295a65a4d69e0ece9977b",
+      "start_line": 51,
+      "end_line": 55,
+      "span_sha256": "e8653cbf70af7a56b142033ec71ad246db59c8fe3fc899a3bd0586a0a2eaca8d",
+      "statement": "Reusable-workflow billing is always associated with the caller. Hosted-runner assignment uses only the caller context; the caller cannot use hosted runners from the called repository.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-PILOT-BILLING-AND-USAGE-7",
+      "artifact_id": "dc7295a65a4d69e0ece9977b",
+      "start_line": 57,
+      "end_line": 63,
+      "span_sha256": "b09f7bb7eda8faa257fc5f690e62c566c6673d33562113615d4ae8cbc0455928",
+      "statement": "Usage and retention policies can be managed at repository, organization and enterprise scopes. The four configuration links are navigation references, not reviewed configurations or executed changes.",
+      "accepted_policy": false
+    }
+  ]
+}
