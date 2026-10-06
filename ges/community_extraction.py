@@ -4,9 +4,11 @@ from __future__ import annotations
 import gzip
 import hashlib
 import json
+import re
 import shutil
 import tempfile
 from pathlib import Path
+import yaml
 
 from .semantics import canonical_bytes, stable_id, validate_record
 from .core import ROOT, digest
@@ -14,6 +16,48 @@ from .core import ROOT, digest
 SOURCES = {'tmcw/github-best-practices', 'jlcanovas/gh-best-practices-template',
            'atapas/model-repo'}
 PROPOSED = {'status': 'PROPOSED', 'reviewer': None, 'evidence_reference': None}
+
+
+def characteristic_parameters(text: str) -> list[str]:
+    """Bind an authored pledge's enumeration to its complete source list."""
+    normalized = ' '.join(text.split())
+    match = re.search(r'regardless of (.*?)(?:\.\s|\.$)', normalized)
+    if not match:
+        return []
+    return ['characteristic:' + item.strip().removeprefix('or ')
+            for item in match[1].split(',')]
+
+
+def template_parameters(record: dict) -> list[str]:
+    """Validate operative frontmatter bindings, without extracting new meaning."""
+    if not record['path'].startswith('.github/ISSUE_TEMPLATE/'):
+        return []
+    lines = record['content'].splitlines()
+    if not lines or lines[0] != '---':
+        return []
+    require('---' in lines[1:], 'Unterminated issue-template frontmatter')
+    end = lines.index('---', 1)
+    fields = yaml.safe_load('\n'.join(lines[1:end]))
+    require(isinstance(fields, dict), 'Invalid issue-template frontmatter')
+    result = []
+    for key in ('name', 'about', 'title', 'labels', 'assignees'):
+        value = fields.get(key)
+        if value is not None and value != '' and value != []:
+            require(isinstance(value, str), 'Unsupported nonempty frontmatter binding')
+            result.append('frontmatter.' + key + '=' + value)
+    return result
+
+
+def validate_interpretation(ast: dict, span: str) -> None:
+    """B0-specific fidelity guards; these do not certify arbitrary semantics."""
+    if ast['modality'] == 'PROHIBITED':
+        require(ast['polarity'] == 'NEGATIVE', 'Prohibition must negate its underlying action')
+        require(ast['action'].strip().lower() not in {'avoid', 'prevent', 'refrain from', 'not'},
+                'Prohibited avoidance reverses or obscures the underlying action')
+    if ast['action'] == 'pledge':
+        expected = characteristic_parameters(span)
+        actual = [p for p in ast['parameters'] if p.startswith('characteristic:')]
+        require(actual == expected, 'Protected-characteristic enumeration differs from source')
 
 
 def sha(raw: bytes) -> str:
@@ -99,6 +143,7 @@ def compile_ledger(manifest: dict, annotations: dict, sources: Path) -> dict[str
         covered = set()
         occurrence_ids = []
         nonclaims = []
+        authored_parameters = set()
         for entry in artifact['spans']:
             start, end = entry['start_line'], entry['end_line']
             require(type(start) is int and type(end) is int and 1 <= start <= end <= len(lines),
@@ -143,6 +188,9 @@ def compile_ledger(manifest: dict, annotations: dict, sources: Path) -> dict[str
             occurrences.append(occurrence)
             occurrence_ids.append(occurrence['id'])
             for authored in entry['propositions']:
+                ast = authored['semantic_ast']
+                validate_interpretation(ast, b''.join(lines[start - 1:end]).decode('utf-8'))
+                authored_parameters.update(ast['parameters'])
                 prop = {
                     'schema': 'ges.semantic-proposition.v1', 'semantic_ast': authored['semantic_ast'],
                     'occurrence_ids': [occurrence['id']], 'preserved_differences': [],
@@ -157,6 +205,8 @@ def compile_ledger(manifest: dict, annotations: dict, sources: Path) -> dict[str
                 seen_propositions.add(prop['id'])
                 propositions.append(prop)
         require(covered == set(range(1, len(lines) + 1)), 'Unaccounted source lines')
+        require(set(template_parameters(record)) <= authored_parameters,
+                'Operative issue-template binding is missing')
         require(occurrence_ids or nonclaims, 'Undispositioned artifact')
         accounting.append({'repository': key[0], 'path': key[1], 'commit': record['commit'],
                            'artifact_id': digest([key[0], record['commit'], key[1]])[:24],

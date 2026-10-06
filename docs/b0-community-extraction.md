@@ -8,19 +8,19 @@ see only this tranche. Integration into main remains conditional on foundation a
 
 ## Inputs and output
 
-The immutable `evidence/semantics/b0/input-manifest.json` names all 22 artifact
+The immutable `evidence/semantics/b0/input-manifest.v2.json` names all 22 artifact
 IDs: one tmcw README, 13 jlcanovas artifacts and eight atapas artifacts. It binds
 commits, archive identities, inventory/snapshot hashes, Git blob hashes, line
 counts, A3 capsule identity, A4 charter commit/file hashes and authored annotation
 hash. All source bytes were read from the already acquired pinned snapshots.
 No source refresh, linked-source admission or upstream execution occurred.
 
-The primary deliverable is `evidence/semantics/b0/ledger/`: 174 source occurrences,
-207 source-local proposition proposals, artifact/line accounting, residual ledger
+The primary deliverable is `evidence/semantics/b0/ledger/`: 178 source occurrences,
+216 source-local proposition proposals, artifact/line accounting, residual ledger
 and an output-digest receipt. The annotator read the full files; the compiler
 consumes authored spans and interpretations rather than detecting keywords.
 No authorized primary or omission review is asserted. Every review field remains
-PROPOSED with null reviewer/evidence. The 207 pending proposition IDs and all 22
+PROPOSED with null reviewer/evidence. The 216 pending proposition IDs and all 22
 artifact/nonclaim reviews remain explicitly assigned to B0 in residual.json.
 
 Each occurrence binds an exact inclusive line span; its digest includes original
@@ -62,8 +62,8 @@ setup or run a fresh sync. The three pinned archives can separately be hydrated
 through A3's existing capsule workflow when access/custody permits.
 
 ```sh
-python -m ges semantics extract --manifest evidence/semantics/b0/input-manifest.json --annotations evidence/semantics/b0/annotations.json --sources SOURCES --output NEW_OUTPUT
-python -m ges semantics extract --manifest evidence/semantics/b0/input-manifest.json --annotations evidence/semantics/b0/annotations.json --sources SOURCES --output evidence/semantics/b0/ledger --check
+python -m ges semantics extract --manifest evidence/semantics/b0/input-manifest.v2.json --annotations evidence/semantics/b0/annotations.v2.json --sources SOURCES --output NEW_OUTPUT
+python -m ges semantics extract --manifest evidence/semantics/b0/input-manifest.v2.json --annotations evidence/semantics/b0/annotations.v2.json --sources SOURCES --output evidence/semantics/b0/ledger --check
 python -m ges semantics validate --input evidence/semantics/b0/ledger/occurrences.jsonl
 python -m ges semantics validate --input evidence/semantics/b0/ledger/propositions.jsonl
 ```
@@ -80,3 +80,18 @@ controls, consumer templates, rights clearance, native operations and rollout.
 The next tranche is C0 only after B0's approved exact head is merged and verified
 on main with an empty in-scope residual ledger. Pending B0 judgments cannot move
 into C0. The worktree is retained for review and dependency integration.
+
+## Correction revision 2
+
+The original manifest and annotations remain unchanged as revision-1 evidence.
+`input-manifest.v2.json` and `annotations.v2.json` freeze the corrected input set;
+`revision-v2.json` maps all 207 old proposition IDs to their successors and names
+nine added operative issue-template bindings. No source pins or source bytes changed.
+Prohibitions apply to the underlying action: PROHIBITED + NEGATIVE means the
+subject must not perform that action, never that avoiding it is prohibited.
+The compiler rejects negated avoidance verbs in prohibited predicates.
+All four pledge enumerations are explicitly represented as source-bound
+characteristic parameters; omitted or reordered members fail validation.
+Nonempty template name/about/title/labels/assignee values require authored
+implementation parameters even if their lines otherwise have nonclaim accounting.
+These bounded guards do not certify arbitrary semantic truth or reviewer authority.

@@ -5,7 +5,9 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from ges.community_extraction import compile_ledger, extract, sha
+from ges.community_extraction import (compile_ledger, extract, sha,
+                                      validate_interpretation, template_parameters,
+                                      characteristic_parameters)
 from ges.core import ROOT, digest
 from ges.semantics import canonical_bytes, validate_record
 
@@ -181,5 +183,86 @@ class CommunityExtraction(unittest.TestCase):
         receipt = json.loads((ledger / 'receipt.json').read_bytes())
         for name, expected in receipt['outputs_sha256'].items():
             self.assertEqual(sha((ledger / name).read_bytes()), expected)
-        manifest = json.loads((ledger.parent / 'input-manifest.json').read_bytes())
+        manifest = json.loads((ledger.parent / 'input-manifest.v2.json').read_bytes())
         self.assertEqual(sha(canonical_bytes(manifest)), receipt['input_manifest_sha256'])
+
+    def test_prohibition_is_on_underlying_action_not_avoidance(self):
+        ast = copy.deepcopy(self.annotations['artifacts'][0]['spans'][1]['propositions'][0]['semantic_ast'])
+        ast.update(modality='PROHIBITED', polarity='NEGATIVE', action='avoid', object='harassment')
+        with self.assertRaisesRegex(ValueError, 'Prohibited avoidance'):
+            validate_interpretation(ast, 'Harassment is unacceptable.')
+        ast['action'] = 'engage in'
+        validate_interpretation(ast, 'Harassment is unacceptable.')
+        ast['polarity'] = 'POSITIVE'
+        with self.assertRaisesRegex(ValueError, 'negate its underlying action'):
+            validate_interpretation(ast, 'Harassment is unacceptable.')
+
+    def test_nonempty_template_binding_cannot_hide_in_nonclaim_span(self):
+        record = {'path': '.github/ISSUE_TEMPLATE/question.md',
+                  'content': '---\nname: Question\nabout: Ask something\nlabels: question\nassignees: ""\n---\n'}
+        self.assertEqual(template_parameters(record), ['frontmatter.name=Question',
+                         'frontmatter.about=Ask something', 'frontmatter.labels=question'])
+        art = self.annotations['artifacts'][0]
+        source = self.manifest['sources'][0]
+        original_path = art['path']
+        inventory_path = self.root / (source['repository'].replace('/', '__') + '.inventory.json')
+        snapshot_path = self.root / (source['repository'].replace('/', '__') + '.text.jsonl.gz')
+        inventory = json.loads(inventory_path.read_bytes())
+        rows = [json.loads(s) for s in gzip.decompress(snapshot_path.read_bytes()).splitlines()]
+        import hashlib
+        raw = record['content'].encode()
+        blob = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
+        for row in inventory + rows:
+            if row['path'] == original_path:
+                row.update(path=record['path'], sha256=sha(raw), git_blob_sha=blob)
+                if 'content' in row:
+                    row['content'] = record['content']
+        art['path'] = record['path']
+        source['artifacts'][0].update(path=record['path'], content_sha256=sha(raw),
+            git_blob_sha=blob, line_count=len(raw.splitlines()),
+            artifact_id=digest([source['repository'], source['commit'], record['path']])[:24])
+        inventory_path.write_bytes(canonical_bytes(inventory))
+        snapshot_path.write_bytes(gzip.compress(b''.join(canonical_bytes(r) + b'\n' for r in rows), mtime=0))
+        source['inventory_sha256'] = sha(inventory_path.read_bytes())
+        source['snapshot_sha256'] = sha(snapshot_path.read_bytes())
+        original = copy.deepcopy(art['spans'][1]['propositions'][0])
+        art['spans'] = [{'kind': 'NONCLAIM', 'start_line': 1, 'end_line': 6, 'reason': 'Metadata'}]
+        self.bind()
+        with self.assertRaisesRegex(ValueError, 'Operative issue-template binding'):
+            self.compile()
+        original['semantic_ast'].update(parameters=template_parameters(record),
+            scope=[source['repository'], record['path']])
+        art['spans'] = [{'kind': 'OCCURRENCE', 'start_line': 1, 'end_line': 6,
+            'semantic_kind': 'IMPLEMENTATION', 'propositions': [original]}]
+        self.bind()
+        self.compile()
+
+    def test_complete_characteristic_lists_are_source_bound(self):
+        span = 'We pledge participation regardless of age, caste, or sexual identity and orientation.'
+        ast = copy.deepcopy(self.annotations['artifacts'][0]['spans'][1]['propositions'][0]['semantic_ast'])
+        ast.update(action='pledge', parameters=characteristic_parameters(span))
+        self.assertEqual(ast['parameters'], ['characteristic:age', 'characteristic:caste',
+                                            'characteristic:sexual identity and orientation'])
+        validate_interpretation(ast, span)
+        ast['parameters'].remove('characteristic:caste')
+        with self.assertRaisesRegex(ValueError, 'enumeration differs'):
+            validate_interpretation(ast, span)
+
+    def test_corrected_golden_records_close_reported_fidelity_findings(self):
+        root = ROOT / 'evidence/semantics/b0'
+        records = [json.loads(s) for s in (root / 'ledger/propositions.jsonl').read_text().splitlines()]
+        self.assertEqual(len(records), 216)
+        for record in records:
+            ast = record['semantic_ast']
+            if ast['modality'] == 'PROHIBITED':
+                self.assertNotEqual(ast['action'], 'avoid')
+                self.assertEqual(ast['polarity'], 'NEGATIVE')
+        bindings = [p for p in records if 'frontmatter.labels=question' in p['semantic_ast']['parameters']]
+        self.assertEqual(len(bindings), 1)
+        self.assertEqual(bindings[0]['semantic_ast']['modality'], 'DESCRIPTIVE')
+        pledges = [p for p in records if p['semantic_ast']['action'] == 'pledge']
+        self.assertEqual(len(pledges), 4)
+        self.assertTrue(all(p['semantic_ast']['parameters'] for p in pledges))
+        revision = json.loads((root / 'revision-v2.json').read_bytes())
+        self.assertEqual(len(revision['added_proposition_ids']), 9)
+        self.assertEqual(len(revision['old_to_new_proposition_ids']), 207)
