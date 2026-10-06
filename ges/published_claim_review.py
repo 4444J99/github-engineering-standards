@@ -17,6 +17,8 @@ from .pages import cached_pages, MAX_BYTES
 
 def validate_published_claims(ledger: Path, cache: Path, documents: list[Path],
                              reviewers: list[str]) -> dict:
+    from .evidence_integrity import validate_authority
+    validate_authority({'authorized_reviewers': reviewers})
     if (not isinstance(reviewers, list) or not reviewers or
             any(not isinstance(r, str) or not r.strip() for r in reviewers) or
             len(set(reviewers)) != len(reviewers)):
