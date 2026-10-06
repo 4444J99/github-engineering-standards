@@ -1,0 +1,85 @@
+{
+  "schema": "ges.c0-local-validation.v1",
+  "status": "STAGED_HOLD",
+  "b0_commit": "5f2f3b8d4141a8e1be1e6aac0e002378f46c6fa2",
+  "tested_files_sha256": {
+    "ges/community_reconciliation.py": "bf1cbd1ad5bdddb0a31b3219ea9ed9a64008d0ea5883c74f08d27da12444924d",
+    "tests/test_community_reconciliation.py": "66667b5bc848cdb4f341e0c33e646bcd496fc9a0fd41f05932a6d70d84293348",
+    "evidence/semantics/c0/annotations.json": "044e061cdc85a8de00e8a82e53c1f97224f49e70ebecf57123205ada0f73c934",
+    "evidence/semantics/c0/input-manifest.json": "9815a06ae3c5fd7481295a2323629143b0e776c9a2bb3eba0648ae3bc637ab5c",
+    "evidence/semantics/c0/ledger/decisions.jsonl": "08241b480c2a53f67d46131b310e4087cbf3194b98ca75582ebedfa7b9f460c7",
+    "evidence/semantics/c0/ledger/receipt.json": "16fcb8afcac9cd8a5eb265a58b3a8eddf2fbb0e58c1f003068c37a28dda1974c",
+    "evidence/semantics/c0/ledger/relationships.json": "879ac8f776dbd91091d2a264a101e98e9a1c85a2823b2378db6d7f544386a742",
+    "evidence/semantics/c0/ledger/residual.json": "2d476e354754a7846bc7eed095c193c495b1cacc1ba57bf5e5cace883494a0e2",
+    "evidence/semantics/c0/ledger/review.md": "dffbf868755b047196e8e5ca9545986a57e12a9ca7a13ce5d64a72c5a0441b81"
+  },
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.community_reconciliation --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges semantics validate --input evidence/semantics/c0/ledger/decisions.jsonl",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges semantics extract --manifest evidence/semantics/b0/input-manifest.json --annotations evidence/semantics/b0/annotations.json --sources /Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources --output evidence/semantics/b0/ledger --check",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.claim_review --artifacts /Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/corpus/artifacts.jsonl --sources /Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m ges.recovery --sources /Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources --corpus /Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory /Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/rendered-docs --output /tmp/ges-c0-recovery-20261006.json",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "source_cache": "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources",
+  "corpus": "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/corpus",
+  "rendered_docs": "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/rendered-docs",
+  "temporary_recovery_output": "/tmp/ges-c0-recovery-20261006.json",
+  "unit_tests": 394,
+  "c0_regressions": 15,
+  "deterministic_regeneration": {
+    "matching_files": 5,
+    "result": "PASS"
+  },
+  "a6_comparison_groups": 9,
+  "a6_possible_conflicts": 0,
+  "authored_source_tensions": 3,
+  "recovery": {
+    "project_complete": false,
+    "gates_open": 9,
+    "inventory_artifacts": 13657,
+    "published_pages": 18019
+  },
+  "pending": [
+    "B0 and foundation acceptance",
+    "Authorized C0 reconciliation and independent audit",
+    "Resolution of source tensions",
+    "Remote exact-head CI",
+    "Human review",
+    "Merge and merged-main verification",
+    "Owner acceptance"
+  ],
+  "checkout": "RETAINED",
+  "semantic_truth_certified": false,
+  "policy_adopted": false
+}
