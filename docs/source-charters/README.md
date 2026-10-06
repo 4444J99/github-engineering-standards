@@ -53,3 +53,26 @@ The linked evidence manifest records inspected root spans, not an exhaustive
 review denominator or a human-acceptance receipt.
 
 See [provenance manifest](../../evidence/a4-source-charters.json).
+
+Replay all citations against an existing pinned source cache:
+
+```sh
+python -m ges.source_charters --sources .cache/sources --capsule-receipt evidence/a4-capsule-baseline.json --capsule-sha256 TRUSTED_A3_CAPSULE_SHA256 --receipt-sha256 TRUSTED_A3_RECEIPT_SHA256
+```
+
+`content_sha256` hashes the complete UTF-8 source text. `span_sha256` uses the
+canonical ledger convention: `"\n".join(text.splitlines()[start_line-1:end_line])`,
+without an appended newline. The replay uses the same verifier as structured
+review and fails on missing source bytes. The validator compares visible charter
+links with the manifest and retains only cited text while verifying every snapshot
+row against the complete inventory. Independently supplied receipt and capsule
+fingerprints bind the full A3 baseline bytes and content identities; unchanged
+cited spans in an altered corpus are insufficient. CI acquires the same pinned
+archives and runs this replay on changes to its inputs, with fresh acquisition
+timestamps excluded from content identity. Synthetic tests remain separate.
+
+The reviewed repository commit is the trust rail for the two expected fingerprints
+in the manifest. Do not trust replacement fingerprints supplied alongside an
+unreviewed baseline. This baseline is prepared from the repaired A3 receipt, not
+an assertion that A3 has been accepted. Replay always reports owner approval and
+A3 owner acceptance as unverified; those remain separately recorded human gates.

@@ -9,6 +9,29 @@ on:
   push:
     paths:
       - sources/sources.lock.json
+      - docs/source-charters/**
+      - evidence/a4-source-charters.json
+      - evidence/a4-capsule-baseline.json
+      - ges/source_charters.py
+      - ges/pinned_sources.py
+      - ges/structured_review.py
+      - .github/workflows/source-acquisition.yml
+      - ges/**
+      - tests/test_source_charters.py
+      - requirements.txt
+  pull_request:
+    paths:
+      - sources/sources.lock.json
+      - docs/source-charters/**
+      - evidence/a4-source-charters.json
+      - evidence/a4-capsule-baseline.json
+      - ges/source_charters.py
+      - ges/pinned_sources.py
+      - ges/structured_review.py
+      - .github/workflows/source-acquisition.yml
+      - ges/**
+      - tests/test_source_charters.py
+      - requirements.txt
 permissions:
   contents: read
 concurrency:
@@ -41,6 +64,19 @@ jobs:
           PY
       - run: python -m ges corpus --snapshots .cache/sources --output .cache/corpus
       - run: python -m ges ledger --snapshots .cache/sources --corpus .cache/corpus
+      - name: Replay charter citations against trusted A3 content identities
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from ges.source_charters import validate_manifest
+          binding = json.loads(Path('evidence/a4-source-charters.json').read_text())
+          result = validate_manifest(Path('.'), Path('.cache/sources'),
+                                    capsule_receipt=Path('evidence/a4-capsule-baseline.json'),
+                                    capsule_sha256=binding['a3_capsule_sha256'],
+                                    receipt_sha256=binding['a3_receipt_sha256'])
+          print(json.dumps(result))
+          PY
       - name: Package public-safe metadata evidence
         if: always()
         run: |
