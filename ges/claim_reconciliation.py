@@ -286,7 +286,7 @@ def reconciliation_accounting(artifacts: Path, sources: Path, reviews: Path,
         claim_id = subject.get('claim_id')
         _require(_text(claim_id) and claim_id in indexed and claim_id not in seen,
                  'Foreign or duplicate reconciliation receipt')
-        _require(subject == indexed[claim_id], 'Known claim changed')
+        _require(digest(subject) == digest(indexed[claim_id]), 'Known claim changed')
         _require(receipt.get('claim_input_digest') == input_digest and
                  receipt.get('catalog_digest') == catalog_digest and
                  receipt.get('proposal_digest') == proposal_digest,

@@ -79,8 +79,13 @@ nonempty `method` and `observations`. Fidelity evidence belongs to the fidelity
 auditor; omission evidence belongs to the independent omission auditor. Both
 must postdate the reviewed inputs and not postdate certification.
 
-Evidence and claim documents are read again before success is returned so a
-replacement during validation cannot silently inherit an earlier digest.
+Evidence, the complete review-directory manifest (including claim documents),
+and all pinned compressed source snapshots are read again before success is
+returned. Snapshot content digests are bound in `source_snapshots_digest` in
+the subject; adding a claim document or replacing source bytes invalidates
+certification. Existing certificates must be regenerated for the expanded
+subject. These checks detect changes between reads; callers must keep the
+input capsule immutable because the validator does not lock concurrent writers.
 
 ## Result boundary
 

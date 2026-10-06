@@ -118,6 +118,41 @@ class SourceFidelity(unittest.TestCase):
     def write_source_review(self):
         (self.reviews / 'artifact.json').write_text(json.dumps([self.source_review]))
 
+    def test_snapshot_replacement_after_provenance_rejected(self):
+        from ges.claim_review import validate_provenance
+
+        def replace_snapshot(*args, **kwargs):
+            result = validate_provenance(*args, **kwargs)
+            with gzip.open(self.sources / 'example__source.text.jsonl.gz', 'wt') as stream:
+                stream.write(json.dumps({
+                    'source': 'example/source', 'commit': self.commit,
+                    'path': 'README.md', 'content': 'Unrelated replacement.',
+                }) + '\n')
+            return result
+
+        with patch('ges.source_fidelity.validate_provenance', replace_snapshot):
+            with self.assertRaisesRegex(ValueError, 'input changed'):
+                self.account()
+
+    def test_claim_document_added_after_provenance_rejected(self):
+        from ges.claim_review import validate_provenance
+
+        def add_claim(*args, **kwargs):
+            result = validate_provenance(*args, **kwargs)
+            document = copy.deepcopy(self.claim_document)
+            document['claims'][0]['claim_id'] = 'claim-2'
+            (self.reviews / 'new-claims.json').write_text(json.dumps(document))
+            return result
+
+        with patch('ges.source_fidelity.validate_provenance', add_claim):
+            with self.assertRaisesRegex(ValueError, 'input changed'):
+                self.account()
+
+    def test_boolean_count_cannot_inherit_integer_subject(self):
+        self.receipt['subject']['reference_claim_count'] = True
+        with self.assertRaisesRegex(ValueError, 'subject or count changed'):
+            self.account()
+
     def write_claim_document(self):
         (self.reviews / 'artifact-claims.json').write_text(json.dumps(self.claim_document))
 

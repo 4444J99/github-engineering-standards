@@ -58,7 +58,16 @@ def _jsonl(path: Path, label: str) -> list[dict]:
 def _file_sha256(path: Path) -> str:
     _require(path.is_file() and not path.is_symlink(),
              'Evidence input is missing or symlinked: ' + str(path))
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    with path.open('rb') as stream:
+        return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def _snapshot_manifest(sources: Path, pins: dict[str, str]) -> list[dict]:
+    """Bind the actual compressed source bytes, not only their release pins."""
+    return [{'path': source.replace('/', '__') + '.text.jsonl.gz',
+             'sha256': _file_sha256(
+                 sources / (source.replace('/', '__') + '.text.jsonl.gz'))}
+            for source in sorted(pins)]
 
 
 def _review_records(reviews: Path) -> tuple[list[dict], list[dict]]:
@@ -66,9 +75,9 @@ def _review_records(reviews: Path) -> tuple[list[dict], list[dict]]:
     records = []
     manifest = []
     for path in sorted(reviews.glob('*.json')):
+        manifest.append({'path': path.name, 'sha256': _file_sha256(path)})
         if path.name.endswith('-claims.json'):
             continue
-        manifest.append({'path': path.name, 'sha256': _file_sha256(path)})
         document = json.loads(path.read_text(encoding='utf-8'))
         _require(isinstance(document, list),
                  'Source-review receipt file must contain an array: ' + path.name)
@@ -152,7 +161,8 @@ def _validate_policy(policy: object, subject: dict) -> dict:
              'Missing explicit source-fidelity authority policy')
     _require(isinstance(policy.get('approval_reference'), str) and
              bool(policy['approval_reference'].strip()), 'Missing authority approval reference')
-    _require(policy.get('subject') == subject, 'Authority policy input digests changed')
+    _require(digest(policy.get('subject')) == digest(subject),
+             'Authority policy input digests changed')
     for role in ('authorized_fidelity_auditors',
                  'authorized_independent_omission_auditors'):
         _require(_strings(policy.get(role)), 'Invalid or absent authority role: ' + role)
@@ -177,6 +187,8 @@ def source_fidelity_accounting(
     inventory_sha256 = _file_sha256(artifacts_path)
     candidate_ledger_sha256 = _file_sha256(candidates_path)
     reviews_list, source_review_documents = _review_records(reviews)
+    source_snapshots = (_snapshot_manifest(sources, pins)
+                        if any(reviews.glob('*-claims.json')) else [])
 
     with TemporaryDirectory() as temporary:
         aggregate = Path(temporary) / 'reviews.json'
@@ -226,6 +238,7 @@ def source_fidelity_accounting(
         'source_review_accounting_digest': digest(review_accounting),
         'source_review_policy_digest': digest(review_policy),
         'source_pins_digest': digest(pins),
+        'source_snapshots_digest': digest(source_snapshots),
         'catalog_digest': digest(controls),
         'proposal_digest': digest(proposal_records),
         'claim_documents_digest': digest(claim_documents),
@@ -280,7 +293,8 @@ def source_fidelity_accounting(
     _require(isinstance(receipt, dict) and set(receipt) == RECEIPT_FIELDS and
              receipt.get('schema') == RECEIPT_SCHEMA,
              'Malformed source-fidelity certification receipt')
-    _require(receipt.get('subject') == subject, 'Certification subject or count changed')
+    _require(digest(receipt.get('subject')) == digest(subject),
+             'Certification subject or count changed')
     fidelity = receipt.get('fidelity_auditor')
     omission = receipt.get('independent_omission_auditor')
     _require(fidelity in policy['authorized_fidelity_auditors'] and
@@ -304,7 +318,7 @@ def source_fidelity_accounting(
                  document.get('schema') == EVIDENCE_SCHEMA and
                  document.get('kind') == kind and
                  document.get('identity') == expected_identity and
-                 document.get('subject') == subject,
+                 digest(document.get('subject')) == digest(subject),
                  'Source-fidelity evidence identity or subject mismatch')
         reviewed_at = _time(document.get('reviewed_at'))
         _require((latest_input_review is None or latest_input_review <= reviewed_at) and
@@ -324,7 +338,8 @@ def source_fidelity_accounting(
              'Claim document changed during certification validation')
     _require(_file_sha256(artifacts_path) == inventory_sha256 and
              _file_sha256(candidates_path) == candidate_ledger_sha256 and
-             _review_records(reviews)[1] == source_review_documents,
+             _review_records(reviews)[1] == source_review_documents and
+             _snapshot_manifest(sources, pins) == source_snapshots,
              'Certification input changed during validation')
     result.update({
         'atomic_claim_fidelity_audit': True,
