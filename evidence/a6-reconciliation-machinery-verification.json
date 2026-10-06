@@ -1,0 +1,18 @@
+{
+  "schema": "ges.tranche-verification.v1",
+  "tranche": "A6",
+  "base_commit": "109a10d65179522d2f4e412c5b559858908d44cd",
+  "dependency": "PR #477 / A5",
+  "checks": {
+    "unittest_discover": {"passed": true, "tests": 370},
+    "ges_validate": {"passed": true, "controls": 95},
+    "ges_compile": {"passed": true},
+    "git_diff_check": {"passed": true},
+    "claim_provenance": {"passed": true, "reference_claims": 61427},
+    "recovery_accounting": {"passed": true, "project_complete": false, "gates_open": 9}
+  },
+  "scope": "Synthetic reconciliation machinery tests; no real corpus dispositions or policy adoption",
+  "semantic_truth_certified": false,
+  "policy_adopted": false,
+  "human_accepted": false
+}

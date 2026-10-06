@@ -26,9 +26,11 @@ parsing and executing those expressions belongs to the Docs resolver tranche.
 Source text remains in the pinned cache. Records carry locators, digests, and
 independently authored formalizations.
 
-`extract`, `reconcile`, and `audit` expose help and return exit 2 with
-`UNAVAILABLE`. Later tranches implement their inputs and behavior. Validation
-returns exit 0 only for structural validity; malformed input returns exit 2.
+`extract` remains reserved and returns exit 2 with `UNAVAILABLE`. A6 implements
+`reconcile` and `audit` with explicit proposition inputs; see
+[reconciliation machinery](reconciliation-machinery.md). Calling these commands
+without inputs retains the reserved-interface response. Validation returns exit
+0 only for structural validity; malformed input returns exit 2.
 
 A3 supplies the capsule and A4 supplies reviewed source charters later. Their
 absence does not prevent this independent interface tranche from being reviewed.
