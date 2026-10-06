@@ -268,6 +268,26 @@ class PublishedAssurance(unittest.TestCase):
         policy.write_text(json.dumps(self.policy))
         return sources, corpus, receipts, policy
 
+    def recovery_reviews_without_claims(self):
+        reviews = self.root / 'source-reviews'
+        reviews.mkdir()
+        (reviews / 'artifact.json').write_text(json.dumps([{
+            'artifact_id': self.artifact['artifact_id'],
+            'commit': self.artifact['commit'],
+            'content_sha256': self.artifact['sha256'],
+            'reviewer': 'source-reviewer',
+            'reviewed_at': '2026-01-02T00:00:00Z',
+            'disposition': 'REFERENCE_ONLY',
+            'rationale': 'Synthetic reviewed artifact without reference claims.',
+            'all_claims_accounted_for': True,
+            'claim_mappings': [],
+        }]))
+        policy = self.root / 'source-review-policy.json'
+        policy.write_text(json.dumps({
+            'authorized_reviewers': ['source-reviewer'],
+        }))
+        return reviews, policy
+
     def test_recovery_uses_validated_receipts_and_preserves_other_gates(self):
         sources, corpus, receipts, policy = self.recovery_fixture()
         with patch('ges.recovery.ROOT', self.root):
@@ -302,6 +322,40 @@ class PublishedAssurance(unittest.TestCase):
         self.assertEqual(
             result['certification_adapters']['structured_occurrence_reconciliation'],
             'NOT_IMPLEMENTED')
+
+    def test_recovery_without_claim_documents_keeps_reconciliation_unknown(self):
+        sources, corpus, _, _ = self.recovery_fixture()
+        reviews, review_policy = self.recovery_reviews_without_claims()
+        with patch('ges.recovery.ROOT', self.root):
+            result = status(
+                sources, corpus, reviews=reviews, review_policy=review_policy,
+                rendered_directory=self.cache)
+        accounting = result['claim_reconciliation_accounting']
+        self.assertIsNone(accounting['known_claim_denominator'])
+        self.assertEqual(accounting['validated_count'], 0)
+        self.assertIsNone(accounting['unresolved_count'])
+        self.assertIsNone(accounting['mapping_complete'])
+        self.assertFalse(accounting['claim_provenance_validated'])
+        gate = next(gate for gate in result['gates']
+                    if gate['gate'] == 'consolidation')
+        self.assertEqual(gate['status'], 'OPEN')
+        self.assertIsNone(gate['denominator'])
+
+    def test_recovery_rejects_reconciliation_receipts_without_claim_documents(self):
+        sources, corpus, _, _ = self.recovery_fixture()
+        reviews, review_policy = self.recovery_reviews_without_claims()
+        receipts = self.root / 'claim-reconciliation.json'
+        receipts.write_text('[]')
+        policy = self.root / 'claim-reconciliation-policy.json'
+        policy.write_text('{}')
+        with (patch('ges.recovery.ROOT', self.root),
+              self.assertRaisesRegex(
+                  ValueError,
+                  'Claim reconciliation requires reviewed claim documents')):
+            status(
+                sources, corpus, reviews=reviews, review_policy=review_policy,
+                rendered_directory=self.cache, claim_reconciliation=receipts,
+                claim_reconciliation_policy=policy)
 
     def test_recovery_rejects_duplicate_corpus_before_rights_accounting(self):
         sources, corpus, _, _ = self.recovery_fixture()

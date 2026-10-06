@@ -149,12 +149,26 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             load(source_fidelity_policy) if source_fidelity_policy is not None else None,
             proposals=queue,
             evidence_root=ROOT)
-        reconciliation = reconciliation_accounting(
-            corpus/'artifacts.jsonl', sources, reviews, review_policy_document,
-            pin_map, controls, queue,
-            load(claim_reconciliation) if claim_reconciliation is not None else None,
-            (load(claim_reconciliation_policy)
-             if claim_reconciliation_policy is not None else None))
+        if any(reviews.glob('*-claims.json')):
+            reconciliation = reconciliation_accounting(
+                corpus/'artifacts.jsonl', sources, reviews, review_policy_document,
+                pin_map, controls, queue,
+                load(claim_reconciliation) if claim_reconciliation is not None else None,
+                (load(claim_reconciliation_policy)
+                 if claim_reconciliation_policy is not None else None))
+        else:
+            if claim_reconciliation is not None:
+                raise ValueError(
+                    'Claim reconciliation requires reviewed claim documents')
+            reconciliation = {
+                'schema': 'ges.claim-reconciliation-accounting.v1',
+                'known_claim_denominator': None,
+                'validated_count': 0,
+                'unresolved_count': None,
+                'validated_claim_ids': [],
+                'mapping_complete': None,
+                'claim_provenance_validated': False,
+            }
     else:
         fidelity = {
             'schema': 'ges.source-fidelity-accounting.v1',
