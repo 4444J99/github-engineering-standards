@@ -125,6 +125,14 @@ Consumers declare a standard version and applicability profile. Central policy c
 
 ## 10. Acceptance gates
 
+Completion is reported through the independent milestones in
+`remaining-work.md`: six-source synthesis, public release clearance, native
+pilot acceptance, and estate rollout. GES v0.2 requires the first three;
+estate rollout has its own approved targets and acceptance. Publication review
+applies to exact expression actually redistributed or adapted. Later external
+standards and internal implementation ancestry feed the broader EES architecture
+after the accepted six-source GES baseline and retain separate provenance.
+
 The six-source consolidation is not complete until:
 
 - Every artifact in the declared corpus is inventoried, reviewed, and dispositioned, including any page-generation and shared-fragment gaps.
