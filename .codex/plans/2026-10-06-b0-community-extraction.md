@@ -37,3 +37,9 @@ and artifact/nonclaim review. Human approval, foundation acceptance, remote-head
 merge to main and merged-head verification remain in B0 and cannot spill into C0.
 GO requires an empty in-scope residual ledger and the user's universal verification.
 Checkout retained; no automatic continuation beyond this bounded implementation attempt.
+
+2026-10-06 checkpoint: fullprimary/independent source review complete; eight
+findinggroups corrected and independently rechecked in v3;227propositions.
+Merged foundation inputs integrated,457tests passed. Native owner authorized
+integration; worktree retained. Source-only review acceptance is separate from
+control adoption, legal clearance and whole-project completion.

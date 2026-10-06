@@ -1,6 +1,11 @@
 # B0 community extraction
 
-Status: staged proposal; **HOLD**. A0 remains Primary. Foundation PRs #472–#478
+Source quality review of corrected v3: **PASS** by primary and independent reviewers.
+The native owner authorized dependency integration on 2026-10-06.
+Compiler output remains PROPOSED/HOLD; see the separate reviewed accounting in
+[bounded source review](bounded-source-review.md), delivered by C0.
+
+Historical staging boundary: A0 remains Primary. Foundation PRs #472–#478
 require their own acceptance. B0 does not certify extraction, approve policy or
 advance to C0. The branch is stacked on A6 commit
 `551e2650ec03e22ddb3b34627702bf51dfc620c4`; its PR targets the A6 branch so reviewers
