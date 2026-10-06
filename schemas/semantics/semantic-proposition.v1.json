@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ges:semantic-proposition:v1",
+  "title": "ges.semantic-proposition.v1",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "ges.semantic-proposition.v1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^semantic-proposition:[a-f0-9]{64}$"
+    },
+    "semantic_ast": {
+      "type": "object",
+      "properties": {
+        "subject": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "object": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "modality": {
+          "type": "string",
+          "enum": [
+            "MUST",
+            "SHOULD",
+            "MAY",
+            "PROHIBITED",
+            "DESCRIPTIVE"
+          ]
+        },
+        "polarity": {
+          "type": "string",
+          "enum": [
+            "POSITIVE",
+            "NEGATIVE"
+          ]
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "preconditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "qualifiers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "consequences": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "subject",
+        "action",
+        "object",
+        "modality",
+        "polarity",
+        "scope",
+        "preconditions",
+        "qualifiers",
+        "exceptions",
+        "consequences",
+        "parameters"
+      ],
+      "additionalProperties": false
+    },
+    "occurrence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "preserved_differences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "authority_order": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "applicability": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "ambiguities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "uniqueItems": true
+    },
+    "primary_review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "PROPOSED",
+            "REVIEWED"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "reviewer",
+        "evidence_reference"
+      ],
+      "additionalProperties": false
+    },
+    "omission_review": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "PROPOSED",
+            "REVIEWED"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "reviewer",
+        "evidence_reference"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema",
+    "id",
+    "semantic_ast",
+    "occurrence_ids",
+    "preserved_differences",
+    "authority_order",
+    "applicability",
+    "ambiguities",
+    "primary_review",
+    "omission_review"
+  ],
+  "additionalProperties": false
+}

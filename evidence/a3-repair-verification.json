@@ -1,0 +1,57 @@
+{
+  "schema": "ges.scoped-repair-verification.v1",
+  "state": "STAGED_PENDING_HUMAN_REVIEW_AND_REMOTE_CI",
+  "implementation_head": "a72849dc598d7c34706d777cbc95d2c99d5a3779",
+  "scope": "a3-repair-verification",
+  "does_not_certify_later_heads": true,
+  "human_approval": false,
+  "organization_acceptance": false,
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests_passed": 355
+    },
+    {
+      "command": "python3 -m ges validate",
+      "exit_code": 0,
+      "controls": 95
+    },
+    {
+      "command": "python3 -m ges compile --output TEMP_DIRECTORY",
+      "exit_code": 0,
+      "generated_views_byte_identical": true
+    },
+    {
+      "command": "python3 -m ges.claim_review with canonical pinned sources/corpus and branch reviews/policy",
+      "exit_code": 0,
+      "reference_claims": 61427,
+      "source_artifacts": 3526,
+      "semantic_truth_certified": false
+    },
+    {
+      "command": "python3 -m ges.recovery with canonical pinned sources/corpus/rendered cache and branch reviews/policy; temporary output",
+      "exit_code": 0,
+      "project_complete": false,
+      "gates_open": 9
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "real_replay": {
+    "receipt": "evidence/a3-six-source-capsule-repair.json",
+    "regenerated_bytes_identical": true,
+    "pinned_tree_matches": 6,
+    "structured_occurrences": 605,
+    "rendered_applications": 18019,
+    "unresolved_page_source_mappings": 14
+  },
+  "remaining_gates": [
+    "Human code and applicable security review",
+    "Remote CI on repaired heads",
+    "Merged-main scoped checks and owner acceptance",
+    "Remote capsule custody remains unverified"
+  ]
+}
