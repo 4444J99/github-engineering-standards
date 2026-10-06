@@ -1,0 +1,128 @@
+{
+  "schema": "ges.tranche-acceptance-review.v1",
+  "review_date": "2026-10-06",
+  "review_kind": "AGENT_BLOCKING_QUALITY_REVIEW",
+  "review_scope": "Blocking semantic/code audit; not an exhaustive authorized primary or independent omission review of all propositions.",
+  "reviewed_heads": {
+    "B0": "5f2f3b8d4141a8e1be1e6aac0e002378f46c6fa2",
+    "C0": "1690496e344448dbe785375f286c537d8ccfe1f2"
+  },
+  "decisions": {
+    "B0": "HOLD_CHANGES_REQUIRED",
+    "C0": "HOLD_CHANGES_REQUIRED"
+  },
+  "findings": [
+    {
+      "id": "B0-R1",
+      "severity": "P1",
+      "tranche": "B0",
+      "title": "Prohibition predicate is negated twice or remains ambiguous",
+      "proposition_ids": [
+        "semantic-proposition:183bf337651ff9b6b2cfa68689e8683d48baa172e055aa3c62a6c6edbb9576f2",
+        "semantic-proposition:3af19ca07d23bc0b3c9f4a5b98c62277d71ffdd411d528056cc42db3b4e91070",
+        "semantic-proposition:44431fcdd4e33b3ed3478a64653fc2642036df49c0f015bdc9b8b15265043377",
+        "semantic-proposition:6901a5ceda16838921e6391cfdd5f0ff3a47aa501dc8f3308a4a9789eb6f0ef2",
+        "semantic-proposition:7c3403c3ff73b05121b6b222393c2aad0ac19a89943e21ee95c29dcd1f423dce",
+        "semantic-proposition:7dd372944da500c199a2249e65761fe00af6caccfe3a578425f0eda8abbbcedd",
+        "semantic-proposition:7fd5b777fe54d09974108575a3f5300c608adfe87632b10111c7a90e11722cfb",
+        "semantic-proposition:9a745252ccc68d81c02ebb8c6053a2df2c57f2b9187e560eaa462dbde6aa05c8",
+        "semantic-proposition:9b3581dee852be85c346a49007154da28070996215bda16e5dacec61d168473c",
+        "semantic-proposition:a64896c0bcc4d77fc3b31ea7e8e82fc19688fc8d367abe43ec402150a7172043",
+        "semantic-proposition:ac4979a6484cf0715ae55c68fe36781f21c8e0af03a0654dc65bd8e2526b6f38",
+        "semantic-proposition:b3ee3b0c477a0685b9b9483f2d091818e0f67a1ce829b7ab85563e113123ec73",
+        "semantic-proposition:ca4e91daef67b731bbba0d19637d478fc878a2cd2ab748850ae148b8bd805b22",
+        "semantic-proposition:d79887bdcba6f9d19709b6679ff89ab38202f2f283ea6bb24baab538668b9c4a",
+        "semantic-proposition:d80b422b070fae3a3d33db1a231d601a72127da81ddfe4039d48d88d1344c466",
+        "semantic-proposition:e5468438ce56320a0cd9535fef610ea89cfc11206f860dcc904922d2e86137bd",
+        "semantic-proposition:f4dd7a4697ec6b6981ccdc0d2dcae6422b071c2ebae5fa45f11066cbb9363f18",
+        "semantic-proposition:fdfbd6a953c7f288eaf60f400d3baeb2d3c2759b0f3542e3f3a85520306d49f3"
+      ],
+      "evidence": [
+        "evidence/semantics/b0/annotations.json",
+        "evidence/semantics/b0/ledger/propositions.jsonl",
+        "schemas/semantics/semantic-proposition.v1.json"
+      ],
+      "finding": "Eighteen predicates combine action=avoid, modality=PROHIBITED and polarity=NEGATIVE. The displayed interpretation prohibits avoidance, although the source prohibits the underlying harmful action. No polarity convention or regression resolves this ambiguity. Structural schema validation accepts these records.",
+      "required_change": "Model the prohibited underlying action explicitly, define polarity/modality interpretation, add a source-fidelity negative regression, regenerate IDs and update C0 references under a revised immutable manifest."
+    },
+    {
+      "id": "B0-R2",
+      "severity": "P2",
+      "tranche": "B0",
+      "title": "Operative issue-label configuration is classified as nonclaim scaffolding",
+      "evidence": [
+        "jlcanovas/gh-best-practices-template@bf13cd2c7992876da01de065084e8af3e9c7db06:.github/ISSUE_TEMPLATE/question.md:1-5",
+        "evidence/semantics/b0/ledger/artifact-accounting.json"
+      ],
+      "finding": "The question issue template configures the question label, but B0 dispositions its frontmatter as scaffolding with no substantive claim. This is source-defined implementation behavior, unlike an empty labels field. Accounting every line does not account for its operative meaning.",
+      "required_change": "Extract the nonempty label binding as an IMPLEMENTATION occurrence/proposition and review other nonempty template frontmatter for the same omission; retain names/placeholders as source-local facts."
+    },
+    {
+      "id": "B0-R3",
+      "severity": "P2",
+      "tranche": "B0",
+      "title": "Protected-characteristic enumerations remain opaque in semantic ASTs",
+      "proposition_ids": [
+        "semantic-proposition:1d289445aee7d57aa7c8c419c9ed9c24b98aadc091b46a254347e85784fbdba1",
+        "semantic-proposition:31ea8e22be5a509bb9ab0ccb80613326b87afd6b2c0ba942072d193d737355d8",
+        "semantic-proposition:87c48b409721f459cde668183ad7c0f0cc5c101075f81fafd6925630393170a0"
+      ],
+      "finding": "Pledge ASTs refer to enumerated characteristics instead of retaining the complete lists. A source span preserves provenance, but C0 cannot compare the complete predicates from these ASTs. Some differences are mentioned in qualifiers; the complete enumerations are still absent.",
+      "required_change": "Retain the complete source-local enumerations in structured qualifiers or parameters, distinguishing short/long pledge and Covenant-version scopes without normalizing away differences."
+    },
+    {
+      "id": "C0-R1",
+      "severity": "P1",
+      "tranche": "C0",
+      "title": "SPECIALIZED is used as topical RELATED rather than demonstrated specialization",
+      "proposition_ids": [
+        "semantic-proposition:031cc9fd8d53d51678e9773ac78a7718e4a754c26e4b101469fa536bd73d1e22",
+        "semantic-proposition:6c3ef4d4f2a71d47ede077ddf887c4424efe90135956cda2983328be7a4c6502",
+        "semantic-proposition:765865566b2fd3f0e289453b175d044828aef1945816649cfe8379a21bf6114d",
+        "semantic-proposition:7c3403c3ff73b05121b6b222393c2aad0ac19a89943e21ee95c29dcd1f423dce",
+        "semantic-proposition:85b4a380beb7691ff384c58e954d1f38d294280f52f1d7d78a0371d7ea2d3001",
+        "semantic-proposition:a1d2b8a2cb1f1d2695caf96ac2bad1a7778d62cc175ce03c31f7632e4c7790bf",
+        "semantic-proposition:aad87746726494dd28b204c8ad11720b30321704fff023577eae2d6aa86b52ba",
+        "semantic-proposition:b7f600ea8726903fd3347fe81506cf175f06e3884fd59b15d1695574cb72b8a6",
+        "semantic-proposition:da0476f1e8c3aa0f2c2ccd2d8ef02f138b13736ac7ded86b662a5224343e95c4"
+      ],
+      "finding": "Issue-description, issue-search, advance planning and PR linkage are complementary distinct actions. The branch family similarly groups allowed topology, prohibited depth and prerequisite development alternatives. Reciprocal links and matching topic do not establish semantic specialization. The implementation explicitly defines SPECIALIZED as nondirectional relatedness, which does not satisfy the roadmap category.",
+      "required_change": "Classify complementary propositions as DISTINCT with separate supporting/composition relationships. Reserve SPECIALIZED for documented base-to-refinement relationships with preserved conditions/qualifiers; review all 128 current SPECIALIZED participants using that definition."
+    },
+    {
+      "id": "C0-R2",
+      "severity": "P2",
+      "tranche": "C0",
+      "title": "Optional security selection versus conditional adaptation is a false conflict",
+      "proposition_ids": [
+        "semantic-proposition:217074c1d5a6d4b05ea470e61865f6f3fb53efcbfde25478b4249edd8a184069",
+        "semantic-proposition:27553762bc8e81ea584a1bf8ec4aca89e02f9d5ed0c9c74c59cdeca8ebfe11fa"
+      ],
+      "finding": "Optional policy selection and guidance to adapt a chosen policy (or remove it when not covered) concern different actions and can both be satisfied. Unlike the funding/template families, C0 declares this a modal conflict without demonstrating incompatible outcomes under the same conditions.",
+      "required_change": "Represent selection and adaptation applicability separately; classify as distinct/complementary unless a source-bound counterexample demonstrates incompatibility."
+    }
+  ],
+  "validation": {
+    "unit_tests": 394,
+    "unit_exit_code": 0,
+    "ges_validate_exit_code": 0,
+    "ges_compile_exit_code": 0,
+    "c0_regeneration_exit_code": 0,
+    "b0_regeneration": "MATCH_ALL_OUTPUT_BYTES",
+    "git_diff_check_exit_code": 0,
+    "exact_remote_head_ci": "SUCCESS_FOR_BOTH_REVIEWED_HEADS"
+  },
+  "acceptance_gates": {
+    "foundation_acceptance": "PENDING",
+    "authorized_semantic_reviews": "PENDING",
+    "independent_audit": "PENDING",
+    "human_exact_head_approval": "NOT_ASSERTED",
+    "merge_to_main": "NOT_OCCURRED",
+    "merged_main_verification": "NOT_RUN"
+  },
+  "conflict_policy": "A reviewed CONFLICTING classification may preserve a genuine source conflict in C0. The roadmap does not require a local policy/license decision in C0; downstream resolution remains C4/D0/D3 as applicable. Conflict existence alone is not a C0 rejection reason.",
+  "policy_adopted": false,
+  "semantic_truth_certified": false,
+  "next_tranche_authorized": false,
+  "checkout_retained": true
+}
