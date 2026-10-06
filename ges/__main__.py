@@ -13,6 +13,8 @@ def main(argv=None):
     p=argparse.ArgumentParser(description='GitHub Engineering Standards — no implicit writes to GitHub')
     p.add_argument('--catalog',type=Path,default=ROOT/'controls/catalog.json')
     sub=p.add_subparsers(dest='command',required=True)
+    from .semantics import configure_parser
+    configure_parser(sub)
     sub.add_parser('validate')
     c=sub.add_parser('sync'); c.add_argument('--output',type=Path,required=True); c.add_argument('--rendered',action='store_true'); c.add_argument('--rendered-limit',type=int,default=0); c.add_argument('--workers',type=int,default=4)
     c=sub.add_parser('compile'); c.add_argument('--output',type=Path,default=ROOT/'generated')
@@ -31,7 +33,11 @@ def main(argv=None):
     c.add_argument('--include-org',action='store_true'); c.add_argument('--include-enterprise',action='store_true')
     c.add_argument('--enterprise-slug'); c.add_argument('--max-pages',type=int,default=100)
     c.add_argument('--ref',help='Repository branch to inspect; defaults to the default branch')
-    args=p.parse_args(argv); controls=load(args.catalog)
+    args=p.parse_args(argv)
+    if args.command == 'semantics':
+        from .semantics import run
+        return run(args)
+    controls=load(args.catalog)
     errors=validate_controls(controls)
     if errors: print(json.dumps({'validation_errors':errors},indent=2)); return 2
     if args.command=='validate': print(json.dumps({'valid':True,'controls':len(controls)})); return 0
