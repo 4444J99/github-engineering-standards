@@ -24,6 +24,38 @@ class APIOnlyRedirect(NoAuthRedirect):
 OPENER = urllib.request.build_opener(APIOnlyRedirect())
 
 
+def _omit_credentials(value, api_credential: str | None) -> tuple[object, int]:
+    """Omit known credential fields, not permission names or alert metadata.
+
+    This is response minimization, not a guarantee that arbitrary source text,
+    transformed secrets or unknown provider fields are safe to publish.
+    """
+    credential_fields = {'temp_clone_token', 'token', 'access_token',
+                         'refresh_token', 'client_secret', 'secret',
+                         'private_key', 'password', 'authorization'}
+    omitted = 0
+
+    def visit(item):
+        nonlocal omitted
+        if isinstance(item, dict):
+            result = {}
+            for key, child in item.items():
+                if (key.lower().replace('-', '_') in credential_fields or
+                        (api_credential and api_credential in key)):
+                    omitted += 1
+                else:
+                    result[key] = visit(child)
+            return result
+        if isinstance(item, list):
+            return [visit(child) for child in item]
+        if isinstance(item, str) and api_credential and api_credential in item:
+            omitted += 1
+            return item.replace(api_credential, '[REDACTED]')
+        return item
+
+    return visit(value), omitted
+
+
 def collect(
     target: str | None = None,
     *,
@@ -76,7 +108,9 @@ def collect(
                 data = json.loads(raw)
                 if not isinstance(data, (dict, list)):
                     return {'status': 'ERROR', 'reason': 'Unexpected API payload type', 'data': None, 'complete': False, 'truncated': False}
-                return {'status': 'OK', 'http_status': 200, 'data': data, 'complete': True, 'truncated': False}
+                data, omitted = _omit_credentials(data, api_credential)
+                return {'status': 'OK', 'http_status': 200, 'data': data, 'complete': True, 'truncated': False,
+                        'credential_fields_omitted': omitted}
         except urllib.error.HTTPError as exc:
             return {'status': 'HTTP_ERROR', 'http_status': exc.code, 'data': None, 'complete': False, 'truncated': False}
         except (urllib.error.URLError, TimeoutError, ValueError):
@@ -88,6 +122,7 @@ def collect(
         page = 1
         complete = True
         truncated = False
+        omitted = 0
         sep = '&' if '?' in path else '?'
         headers = {'Accept': 'application/vnd.github+json', 'User-Agent': 'github-engineering-standards/0.1'}
         if api_credential:
@@ -100,25 +135,27 @@ def collect(
                 with OPENER.open(req, timeout=30) as r:
                     raw = r.read(20_000_001)
                     if len(raw) > 20_000_000:
-                        return {'status': 'ERROR', 'reason': 'Response too large', 'data': items, 'complete': False, 'truncated': True}
+                        return {'status': 'ERROR', 'reason': 'Response too large', 'data': items, 'complete': False, 'truncated': True, 'credential_fields_omitted': omitted}
                     page_data = json.loads(raw)
+                    page_data, page_omitted = _omit_credentials(page_data, api_credential)
+                    omitted += page_omitted
                     if collection_key:
                         if not isinstance(page_data, dict) or type(page_data.get('total_count')) is not int or page_data['total_count'] < 0:
-                            return {'status': 'ERROR', 'reason': 'Malformed paginated envelope', 'data': items, 'complete': False, 'truncated': False}
+                            return {'status': 'ERROR', 'reason': 'Malformed paginated envelope', 'data': items, 'complete': False, 'truncated': False, 'credential_fields_omitted': omitted}
                         total_count = page_data['total_count']
                         page_data = page_data.get(collection_key)
                     if path.endswith('/actions/permissions/repositories') and isinstance(page_data, dict):
                         page_data = page_data.get('repositories')
                     if not isinstance(page_data, list) or any(not isinstance(item, dict) for item in page_data):
-                        return {'status': 'ERROR', 'reason': 'Expected API object list', 'data': items, 'complete': False, 'truncated': False}
+                        return {'status': 'ERROR', 'reason': 'Expected API object list', 'data': items, 'complete': False, 'truncated': False, 'credential_fields_omitted': omitted}
                     items.extend(page_data)
                     link = r.headers.get('Link', '')
                     has_next = ('rel="next"' in link if link else
                                 len(items) < total_count if collection_key else len(page_data) >= per_page)
                     if collection_key and len(items) < total_count and not has_next:
-                        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True}
+                        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True, 'credential_fields_omitted': omitted}
                     if has_next and not page_data:
-                        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True}
+                        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True, 'credential_fields_omitted': omitted}
                     if not has_next:
                         complete = True
                         truncated = False
@@ -130,16 +167,18 @@ def collect(
                     page += 1
             except urllib.error.HTTPError as exc:
                 if page == 1:
-                    return {'status': 'HTTP_ERROR', 'http_status': exc.code, 'data': None, 'complete': False, 'truncated': False}
+                    return {'status': 'HTTP_ERROR', 'http_status': exc.code, 'data': None, 'complete': False, 'truncated': False, 'credential_fields_omitted': omitted}
                 else:
-                    return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True, 'error_page': page}
+                    return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True, 'error_page': page, 'credential_fields_omitted': omitted}
             except (urllib.error.URLError, TimeoutError, ValueError):
                 if page == 1:
-                    return {'status': 'ERROR', 'reason': 'Transport or decoding failure', 'data': None, 'complete': False, 'truncated': False}
+                    return {'status': 'ERROR', 'reason': 'Transport or decoding failure', 'data': None, 'complete': False, 'truncated': False, 'credential_fields_omitted': omitted}
                 else:
-                    return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True}
+                    return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True, 'credential_fields_omitted': omitted}
 
-        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': complete, 'truncated': truncated}
+        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': complete, 'truncated': truncated,
+                'credential_fields_omitted': omitted}
+
 
     # Resolve target type
     if target_type is None:
@@ -277,7 +316,10 @@ def collect(
             if not isinstance(b['data'], dict) or b['data'].get('encoding') not in {None, 'base64'}:
                 complete = False
                 continue
-            files[path] = {'content': base64.b64decode(b['data']['content']).decode('utf-8'), 'blob_sha': entry['sha']}
+            content = base64.b64decode(b['data']['content']).decode('utf-8')
+            content, omitted = _omit_credentials(content, api_credential)
+            files[path] = {'content': content, 'blob_sha': entry['sha'],
+                           'credential_fields_omitted': omitted}
         except (KeyError, TypeError, UnicodeDecodeError, ValueError):
             complete = False
 

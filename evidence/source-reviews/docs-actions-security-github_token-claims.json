@@ -1,0 +1,84 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T01:31:25.845628+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/security/github_token.md",
+  "content_sha256": "e9bad7ea7f8cfb23dd27a6be3df7b9ee586b63490890e4c6bf1a9ccbdc9d29f8",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-001",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 1,
+      "end_line": 11,
+      "span_sha256": "fc8f47cf0e8c3ea6a07e53d311b88707e0511ca45b4bf0ec238b3b3c89acdd95",
+      "statement": "Metadata scopes this concept article to FPT, GHEC and GHES; titles and categories are navigation, not policy adoption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-002",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 15,
+      "end_line": 17,
+      "span_sha256": "08481034d1aee3a7b0e44f46b8973e4cc39f594264be9d2351eb2b31ae44b274",
+      "statement": "GitHub creates a unique GITHUB_TOKEN for each workflow job. It is an installation token for the repository app, scoped to the repository containing the workflow; repository scope does not mean unrestricted privileges.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-003",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 19,
+      "end_line": 24,
+      "span_sha256": "6cfdb4b53e6979c6bd9fde81163fdb3b1f96b3d45818cfb572b4a059566d6a66",
+      "statement": "The token expires at job completion or its effective lifetime limit. Hosted jobs/token lifetime are bounded to six hours. A self-hosted job may run five days, but installation-token refresh is limited to twenty-four hours; longer jobs need another reviewed authentication method.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-004",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 26,
+      "end_line": 26,
+      "span_sha256": "3956738b65df8e59fbd43528a4489690fdf28c13eb150fd8c6e134f2825227b7",
+      "statement": "The job token is also available through github.token; an absent explicit secrets expression is not proof the job lacks this built-in credential.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-005",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 30,
+      "end_line": 30,
+      "span_sha256": "9f72612eff16cf43bfd413779513c0fa64d2f78a5b89672af0d38d1b809a6342",
+      "statement": "The included trigger rule suppresses token-generated workflow events except workflow_dispatch/repository_dispatch and, where the feature applies, PR opened/synchronize/reopened events that create approval-required runs. A user with repository write access can approve those runs; other PR activity types do not run. This is not unconditional suppression.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-006",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 32,
+      "end_line": 35,
+      "span_sha256": "cabb550a3a6175c654690bf68efc6f36795f554db592ea34e411a50163e5fa33",
+      "statement": "For feature-enabled token-created or updated PRs, the article offers an App token or PAT when approval-free workflow triggering is required. This is an option needing least-privilege review, not authority to install an app or issue credentials.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-007",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 37,
+      "end_line": 37,
+      "span_sha256": "de9d23d40704b051a3e6a958e7a6060ec77cf600ecec8b5da5ec80be20b72697",
+      "statement": "The included rule says commits pushed by a workflow using GITHUB_TOKEN do not trigger GitHub Pages builds. An observed push does not establish Pages execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-01-008",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "start_line": 39,
+      "end_line": 42,
+      "span_sha256": "d3d2b987b46afb67153d968846629a4da9cd36b427609ef87744ab9f0eade262",
+      "statement": "Authentication and permissions links identify follow-up references; this reading does not certify those linked artifacts.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Pinned full-article reading with literal includes, selected variables and visual dependencies; source claims only, no adoption or live behavior assertion."
+}

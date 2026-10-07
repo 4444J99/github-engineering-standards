@@ -1,0 +1,212 @@
+{
+  "schema": "ges.actions-security-review-inputs.v1",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "reviewed_at": "2026-10-07T01:32:00.571313+00:00",
+  "articles": [
+    {
+      "path": "content/actions/concepts/security/github_token.md",
+      "artifact_id": "2ec94aecb4d2fba51645f1cf",
+      "content_sha256": "e9bad7ea7f8cfb23dd27a6be3df7b9ee586b63490890e4c6bf1a9ccbdc9d29f8",
+      "lines": 42,
+      "claims": 8
+    },
+    {
+      "path": "content/actions/concepts/security/secrets.md",
+      "artifact_id": "e606b12e6ef42fee9b96c8c9",
+      "content_sha256": "1724a7ba81b25882e6ae47adc709a4e20c387419f2998b2652296bdb14f55ee1",
+      "lines": 59,
+      "claims": 13
+    },
+    {
+      "path": "content/actions/concepts/security/openid-connect.md",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "content_sha256": "42c389ef0e30da36e8baaa025cb742e125325c0add8d6c0c17428cba68d989ad",
+      "lines": 200,
+      "claims": 21
+    },
+    {
+      "path": "content/actions/concepts/security/script-injections.md",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "content_sha256": "0baf3d03886fad239486da939be05771a01da64b6713f2e6cb7da805d7f451f5",
+      "lines": 61,
+      "claims": 8
+    },
+    {
+      "path": "content/actions/concepts/security/compromised-runners.md",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "content_sha256": "7e50495e5d11d71252b5874223f54f8780c10a26fcf42ec7ea089c069ba0fd53",
+      "lines": 84,
+      "claims": 20
+    }
+  ],
+  "literal_dependencies": [
+    {
+      "path": "data/features/actions-OIDC-custom-claim-enterprise.yml",
+      "content_sha256": "9dd62d6779f44521dea495dd370c5495d77a7c4175de743175058453c11c274b",
+      "lines": 5,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    },
+    {
+      "path": "data/features/actions-OIDC-enterprise_id-claim.yml",
+      "content_sha256": "2f3b6d27053a056a62d6e0a4c8e56eadc4346b786c13ea6116df7fbebe19945f",
+      "lines": 4,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    },
+    {
+      "path": "data/features/actions-github-token-pull-request-approval.yml",
+      "content_sha256": "b8913cd5fb5c0cf985f7e89d7e3ee683afccb14106db51e29fa992321620fb14",
+      "lines": 7,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    },
+    {
+      "path": "data/features/dependabot-oidc-support.yml",
+      "content_sha256": "9adf8fdd3e248142d9b516fbeafa4b739b7eae1249fd970198b98ec42e1685a3",
+      "lines": 6,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    },
+    {
+      "path": "data/features/oidc-custom-properties.yml",
+      "content_sha256": "157e6d71d022063792e597caf29d15b978ba3bcdd3be897163ffb868e05916b5",
+      "lines": 3,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    },
+    {
+      "path": "data/reusables/actions/actions-do-not-trigger-pages-rebuilds.md",
+      "content_sha256": "f1efaa7e7ea8b2a12dc07960380bf70461fabf38ef7be15dc15fb22b05806f3c",
+      "lines": 1,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    },
+    {
+      "path": "data/reusables/actions/actions-do-not-trigger-workflows.md",
+      "content_sha256": "2077c4672482dd746c60cd2f75e62e394dd668b74fdd73338d5a895523fafdef",
+      "lines": 6,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    },
+    {
+      "path": "data/reusables/actions/secrets-org-level-overview.md",
+      "content_sha256": "b250f2aebbbcad3d72ce643dd0870866ac520103faa80e62815c29c4083bb7b1",
+      "lines": 1,
+      "scope": "Full pinned literal dependency read; availability conditional."
+    }
+  ],
+  "selected_variable_bindings": [
+    {
+      "key": "enterprise.data_residency",
+      "path": "data/variables/enterprise.yml",
+      "content_sha256": "eef85bf665e36d0ad03e580e3a8abf44845f587db12aa4146b004482e80acbec",
+      "value": "GitHub Enterprise Cloud with data residency",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "enterprise.data_residency_site",
+      "path": "data/variables/enterprise.yml",
+      "content_sha256": "eef85bf665e36d0ad03e580e3a8abf44845f587db12aa4146b004482e80acbec",
+      "value": "GHE.com",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.github",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "GitHub",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.pat_generic",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "personal access token",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.pat_v1",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "personal access token (classic)",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.pat_v1_plural",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "personal access tokens (classic)",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.pat_v2",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "fine-grained personal access token",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.prodname_actions",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "GitHub Actions",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.prodname_dependabot",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "Dependabot",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.prodname_dotcom",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "GitHub",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.prodname_ghe_server",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "GitHub Enterprise Server",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.prodname_github_app",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "GitHub App",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.prodname_github_apps",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "GitHub Apps",
+      "scope": "Selected referenced field only."
+    },
+    {
+      "key": "product.prodname_pages",
+      "path": "data/variables/product.yml",
+      "content_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+      "value": "GitHub Pages",
+      "scope": "Selected referenced field only."
+    }
+  ],
+  "visual_dependencies": [
+    {
+      "path": "assets/images/help/actions/oidc-architecture.png",
+      "artifact_id": "8fb5a592e07f8adbd93c9e84",
+      "content_sha256": "7f0d2e9502dcabf5d5ff16d9f33fa5ba8782b0765b0c369518315073b89db8a2",
+      "git_blob_sha": "938327036f40a6a7ef00c03c05e5a5f5f65b84dc",
+      "observation": "Cloud trust/resources/roles are separate from Actions workflow/OIDC provider; JWT/cloud-role handoff and access-token return illustrate flow, not live trust, permissions or TTL.",
+      "scope": "Digest verified and visually read; no new whole-artifact acceptance credit."
+    },
+    {
+      "path": "assets/images/help/actions/example-script-injection-pr-title.png",
+      "artifact_id": "d098732ce762d7dd6efe3cf0",
+      "content_sha256": "7cfca4ea62b6617dd9f7764616d18c01e08208d59a0936f5c05f4d7844a991cc",
+      "git_blob_sha": "8ba8efdb97a13b55e7c2a708ff9c6ea49c6b043e",
+      "observation": "An open sample PR title edit illustrates attacker-shaped shell interpolation, not command execution or enforcement proof.",
+      "scope": "Digest verified and visually read; no new whole-artifact acceptance credit."
+    }
+  ],
+  "scope": "Five full articles and eight full literal dependencies read. Selected variables and two images are dependency observations only, not new whole-artifact or published-page acceptance."
+}

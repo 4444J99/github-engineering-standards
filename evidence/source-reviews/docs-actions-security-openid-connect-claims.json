@@ -1,0 +1,201 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T01:34:33.407591+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/security/openid-connect.md",
+  "content_sha256": "42c389ef0e30da36e8baaa025cb742e125325c0add8d6c0c17428cba68d989ad",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-001",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 1,
+      "end_line": 15,
+      "span_sha256": "6af4fcf5c1425d924c6c375a99ebab2cdcd58e541484f8229030db4da3a2cfe8",
+      "statement": "The concept has FPT/GHEC/GHES metadata and historical redirects; individual conditional sections and feature files narrow applicability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-002",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 19,
+      "end_line": 23,
+      "span_sha256": "f239ca626997588a35f1fae1847f8436c18072ca0cf463940f5ab9a203754a88",
+      "statement": "Hardcoded cloud secrets require creating and duplicating cloud credentials. With a provider supporting OIDC and an established trust relationship, a workflow can instead request a short-lived cloud access token.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-003",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 27,
+      "end_line": 29,
+      "span_sha256": "eaae730c660bde91498dc64ee0a5af86dedd3549102f89c3a17fad02748bb9d0",
+      "statement": "OIDC can remove the need to duplicate long-lived cloud credentials in repository secrets by configuring cloud trust and updating the workflow; it does not eliminate all secrets automatically.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-004",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 30,
+      "end_line": 30,
+      "span_sha256": "4ba421daa9ff129a6b3b48c129278ae09fe38562b1220fa795942839a9e38d74",
+      "statement": "Cloud authentication and authorization controls can constrain workflow access to cloud resources. A token alone does not prove those constraints were configured.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-005",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 31,
+      "end_line": 31,
+      "span_sha256": "1c9ada13edbbccadefe60e0d9618f951c1ab57433c54dd8c9c4a9fd7ef1bf9b4",
+      "statement": "The source describes provider-issued job-limited expiring credentials; this is a claim about the documented OIDC model, not a measured lifetime of a live provider token.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-006",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 35,
+      "end_line": 42,
+      "span_sha256": "c57fde0fb2ac6eebcd2da3d509e8d84ec7fd3433e6cec710d102629a56663aef",
+      "statement": "The diagram and prose describe cloud trust for specified workflows/role, a GitHub job identity JWT, and a cloud-issued access token after validation. Neither depiction proves a target validates claims or executes a job.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-007",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 44,
+      "end_line": 46,
+      "span_sha256": "cf9e6473aafc8066c63e0a1c839871af1dce3b29dcb6becca9b265e9b0d8d1a8",
+      "statement": "The provider compares the JWT subject and other claims with conditions configured on the cloud role. Access is conditional on the configured claims matching; this description is not a live trust-policy verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-008",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 48,
+      "end_line": 89,
+      "span_sha256": "935b9be0bae166301064d7cfd4507f78235832a93e6eb18bd21c87e68961cf4f",
+      "statement": "The JWT is an example with placeholder identifiers, GHES-versus-dotcom issuer/audience substitution and separately gated enterprise/custom-property fields. Do not copy it as deployed trust or a universal subject format.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-009",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 91,
+      "end_line": 92,
+      "span_sha256": "c86083dd85eb4af732bf8d65dde109a1601ad5fd2b56ed2d573e8cd7edfebb2f",
+      "statement": "The example uses an older subject format. New repositories after July 15, 2026 use default immutable owner/repository IDs; this default is unavailable on GHES. Old name-only examples are not universal current defaults.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-010",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 94,
+      "end_line": 100,
+      "span_sha256": "060cb7c929a65882b10c7e343af51236487462114f179044c77f3c424cf9f080",
+      "statement": "Inside the GHEC section, trust must permit only authorized workflows; the provider matches the subject and configured conditions before issuing temporary access. Retain the section condition.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-011",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 102,
+      "end_line": 106,
+      "span_sha256": "0e341d6a2eb429ddee1810e8b39f4042ff3ed9e0527121f1892c98d21c082492",
+      "statement": "Inside the GHEC section and Dependabot-OIDC feature condition, Dependabot update jobs use event_name dynamic. An Actions-only trust policy should allow expected workflow event names when the provider supports that condition. Do not apply this nested passage to all products.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-012",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 110,
+      "end_line": 116,
+      "span_sha256": "437a664128985a4bf8542b4da9de66d05707a0ab2b75f790822e517f04e33fff",
+      "statement": "Enterprises using Cloud data residency on GHE.com must substitute certain OIDC configuration values. The linked reference specifies the substitutions; this concept does not supply a complete target configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-013",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 118,
+      "end_line": 122,
+      "span_sha256": "ac141ac04d74ca879ed781f80257045d362160cd7a91e37443b6a1e889f66efa",
+      "statement": "Custom actions can request an OIDC token through toolkit getIDToken or curl. This description alone does not verify requesting permissions, job execution or issuance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-014",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 124,
+      "end_line": 126,
+      "span_sha256": "05197a86f011f904bd89bc37bbc72ee978660df4c9fb4594ff42b9075a8196d0",
+      "statement": "Provider login actions can simplify updating workflows from secrets to OIDC; linked provider-specific setup remains follow-up evidence, not completed configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-015",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 128,
+      "end_line": 143,
+      "span_sha256": "f46de1a86ee05f73005888556bf465e5e90188f448485d2996999def9cba9cff",
+      "statement": "For the FPT/GHEC custom-property feature, admins define and assign repository properties, select claims for inclusion, then update cloud trust conditions. Enabled values appear with repo_property_ prefixes without workflow-level changes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-016",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 145,
+      "end_line": 148,
+      "span_sha256": "cf5a48499b6444495875d706f3b2009e6ebc16eb1087dd4ae8cf10dfeaaabcd0",
+      "statement": "Within the FPT/GHEC-only custom-property feature, custom properties must already exist at organization/enterprise level, and configuration requires an organization or enterprise admin. A repository user is not automatically authorized.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-017",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 150,
+      "end_line": 156,
+      "span_sha256": "e1a8ae4de162b5d24e75b096a9f6cd990259afb5fc779590fa6f649e1897fb2d",
+      "statement": "Within the FPT/GHEC-only custom-property feature, the article offers UI or the organization OIDC customization API to include property claims. This reference is not permission to mutate organization settings or a verified request schema.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-018",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 158,
+      "end_line": 174,
+      "span_sha256": "36fafd6af56b4b1d664097217a03fed42e60b284d7011ab23e2eb78d185235b1",
+      "statement": "Within the FPT/GHEC-only custom-property feature, the custom-property JWT is illustrative and uses a name-based sub alongside property claims; it does not override the immutable-default caveat or certify property limits.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-019",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 178,
+      "end_line": 184,
+      "span_sha256": "d93045fe6d836da8e819adb95c66df5695a2c5643efc55dafd8e5f1465e192fb",
+      "statement": "Where the Dependabot-OIDC feature applies (FPT/GHEC; GHES later than 3.20), private registries using username/password can use OIDC on AWS CodeArtifact, Azure DevOps Artifacts or JFrog Artifactory. Do not generalize this to every registry.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-020",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 186,
+      "end_line": 192,
+      "span_sha256": "4aaddb8cb6dc668614d7f66ccdf35ea57dde77e6a7847bcd29879f1b429a1572",
+      "statement": "Within the Dependabot OIDC feature available for FPT/GHEC and GHES newer than 3.20, the article lists reduced static credentials, simpler management and avoidance of static-token rate limits as benefits. These are not measurements of a particular rollout.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-03-021",
+      "artifact_id": "ccd7ae17af963bda4406a52f",
+      "start_line": 196,
+      "end_line": 200,
+      "span_sha256": "2f7c8c48ba92477fba317605ec4d42f2b6a2fe7bbd166f8155880e81c5fa59d9",
+      "statement": "Deployment and OIDC-reference links remain unreviewed follow-ups outside this concept batch.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Pinned full-article reading with literal includes, selected variables and visual dependencies; source claims only, no adoption or live behavior assertion."
+}
