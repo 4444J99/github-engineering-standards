@@ -15,6 +15,10 @@ def main(argv=None):
     sub=p.add_subparsers(dest='command',required=True)
     from .semantics import configure_parser
     configure_parser(sub)
+    c=sub.add_parser('branch-checks', help='Read-only exact-revision required-check observation; no enforcement certification')
+    c.add_argument('--snapshot',type=Path,required=True); c.add_argument('--profile',type=Path,required=True)
+    c.add_argument('--revision',required=True); c.add_argument('--revision-kind',choices=['head','test_merge','merge_group'],required=True)
+    c.add_argument('--output',type=Path,required=True)
     sub.add_parser('validate')
     c=sub.add_parser('sync'); c.add_argument('--output',type=Path,required=True); c.add_argument('--rendered',action='store_true'); c.add_argument('--rendered-limit',type=int,default=0); c.add_argument('--workers',type=int,default=4)
     c=sub.add_parser('compile'); c.add_argument('--output',type=Path,default=ROOT/'generated')
@@ -33,7 +37,13 @@ def main(argv=None):
     c.add_argument('--include-org',action='store_true'); c.add_argument('--include-enterprise',action='store_true')
     c.add_argument('--enterprise-slug'); c.add_argument('--max-pages',type=int,default=100)
     c.add_argument('--ref',help='Repository branch to inspect; defaults to the default branch')
+    c.add_argument('--check-revision',help='Exact SHA for checks; default is captured branch head')
     args=p.parse_args(argv)
+    if args.command == 'branch-checks':
+        from .branch_checks import assess
+        report=assess(load(args.snapshot),load(args.profile),args.revision,args.revision_kind)
+        dump(args.output,report); print(json.dumps(report['summary'],indent=2))
+        return 0 if report['observed_checks_pass'] else 1
     if args.command == 'semantics':
         from .semantics import run
         return run(args)
@@ -75,7 +85,7 @@ def main(argv=None):
         if not 1 <= args.max_pages <= 1000: raise ValueError('max-pages must be 1..1000')
         if args.enterprise_slug and not args.include_enterprise: raise ValueError('--enterprise-slug requires --include-enterprise')
         dump(args.output,collect(args.repository,max_files=args.max_files,include_org=args.include_org,
-                                include_enterprise=args.include_enterprise,enterprise_slug=args.enterprise_slug,max_pages=args.max_pages,ref=args.ref))
+                                include_enterprise=args.include_enterprise,enterprise_slug=args.enterprise_slug,max_pages=args.max_pages,ref=args.ref,check_revision=args.check_revision))
     return 0
 
 if __name__=='__main__':

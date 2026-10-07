@@ -1,0 +1,165 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T00:36:20.615722+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md",
+  "content_sha256": "700caf36acb0755221f0eddf85bbf5dd9096e1c7965eb1daa126937e09c653e9",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-001",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 1,
+      "end_line": 18,
+      "span_sha256": "fb44324ac2a733c1ffed921fcb5378d6b69f28eea433d607d5b6a3048868b4c3",
+      "statement": "Writers can create/edit CODEOWNERS and be owners; requiring approval needs an admin/owner. Availability is public Free or public/private Pro/Team/Enterprise. Named owners need write access; teams must be visible and have explicit TEAM write access even if individual members already have write.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-002",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 22,
+      "end_line": 24,
+      "span_sha256": "badd71cfd71df5c82754d18efad2a2e36c6a99ac63c9b97aa79106b03da14094",
+      "statement": "Owners are requested on owned changes once a PR is ready; draft PRs do not automatically request them. Converting back to draft does not unsubscribe prior owners. Required code-owner approval is a separate optional protection setting.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-003",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 26,
+      "end_line": 32,
+      "span_sha256": "d5e121d758c03eef8ac4cded186a285c448fb44dafd388b4cbe39f53a5bc04b9",
+      "statement": "Tooltips and product-specific screenshots illustrate ownership visibility, not independently verified owner permissions or binary-image assurance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-004",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 36,
+      "end_line": 38,
+      "span_sha256": "0d8c843c6c5a589be6243c29a4db375dd22f3d17bfbc5cb3730186e616fedd7c",
+      "statement": "CODEOWNERS lookup uses the FIRST file found in .github/, root, then docs/, rather than merging files. Ownership is branch-specific; gh-pages and main can use different owners.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-005",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 40,
+      "end_line": 48,
+      "span_sha256": "f6ccf4713cc49e85ba04e3df62d6777d83e3b106db97b905c2b5ce28b3542355",
+      "statement": "The PR BASE branch CODEOWNERS determines review requests. Fork PRs targeting upstream use upstream ownership; those targeting the fork use fork ownership, and named owners must have write access to that fork. Tooltips reflect the displayed branch.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-006",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 52,
+      "end_line": 54,
+      "span_sha256": "21b708cb49f2d9abe2dfd32ec0fc320c007cca34ab931a0cb7caa24f7e123aef",
+      "statement": "CODEOWNERS must be under 3 MB; an oversized file is not loaded and does not request owners. Wildcard consolidation is suggested to reduce size, but file existence alone proves no routing.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-007",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 59,
+      "end_line": 62,
+      "span_sha256": "8a70f9db0657acbae881bc5017d97de8d7048cd333a1c286d6b68a1d656180d8",
+      "statement": "CODEOWNERS does not support escaped leading #, ! negation, or [] character ranges from gitignore syntax. An ordinary gitignore parser is not equivalent.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-008",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 64,
+      "end_line": 69,
+      "span_sha256": "0d2a844eccd796740a2c5582d8533cadd6fe899f44203900da24cd10c59ad56b",
+      "statement": "Patterns are followed by users or @org/team with explicit write permissions. Only organization teams are supported; enterprise teams are not, where that feature distinction applies.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-009",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 73,
+      "end_line": 73,
+      "span_sha256": "0024b895274b892fd0104ac32c2dcdcacd879314f0b2c63c6f688ea716ee8d3c",
+      "statement": "Multiple owners for the same pattern must appear on one line. Repeated patterns on different lines retain only the last match.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-010",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 75,
+      "end_line": 75,
+      "span_sha256": "c866b24e6441d0b1d1a759919d79869fa77dd01a6be0302473409b937373ec52",
+      "statement": "Email ownership is generally possible, but FPT/GHEC managed-user accounts cannot be referenced by email. The source gives no reason for that limitation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-011",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 77,
+      "end_line": 81,
+      "span_sha256": "874c2598713843e8222f9a7d1940df67e3c36b9e1afc2be8a5096c2796ccd658",
+      "statement": "Matching is case-sensitive even on macOS. Invalid lines are skipped and can be inspected through UI/API errors; nonexistent or insufficient-permission owners are not assigned. A partly valid file is not blanket correct.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-012",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 85,
+      "end_line": 110,
+      "span_sha256": "b8dc9ea5a5c55db10605893c24f0b2cdaed1f4e8294577688810e36acddcbe88",
+      "statement": "Examples illustrate default * ownership, last-match precedence, inline comments, email Go owners and an explicitly writable organization team for txt. These owner handles and patterns are examples, not adopted local identities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-013",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 115,
+      "end_line": 138,
+      "span_sha256": "22bc8de8876fe2f4094e59b858a3f066fde813ceabe9e33dcb30193c5af26d98",
+      "statement": "Examples distinguish root build/logs, docs/* immediate entries, apps/ at any depth, /docs/ root subtree, /scripts/ with two alternative owners, and **/logs across depths. Matching depth and anchoring must be tested for actual changed files.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-014",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 140,
+      "end_line": 152,
+      "span_sha256": "807eddedc6b08d3e5e5352f0d1f7b3d3e40fab1c0326b16cd4cc1b6b5751b0f8",
+      "statement": "An /apps/github line with NO owners overrides /apps ownership and removes code-owner routing; a later specific line with another owner instead replaces the earlier owner. A presence check would miss both effects.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-015",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 157,
+      "end_line": 166,
+      "span_sha256": "0b75892ce3f8e53f4835bbb58f254c17c07a61a627541fb5bbf313966f6b4f08",
+      "statement": "Protected branches can separately require code-owner approval. Approval by ANY listed owner is enough when multiple owners share the affected pattern; all listed owners are not required.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-016",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 168,
+      "end_line": 170,
+      "span_sha256": "bf17ff6f73d62eff8fb825a61984fc8934ba89487e13da8b02cf9dd349ab4e20",
+      "statement": "Protect the CODEOWNERS file itself (or its .github directory) with an appropriate owner. The source suggests rulesets as an alternative, but these configuration suggestions do not prove comprehensive unauthorized-change prevention.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-05-017",
+      "artifact_id": "f331ad4d82f8bf968a8f73d0",
+      "start_line": 174,
+      "end_line": 178,
+      "span_sha256": "6cbc60f7fd47f9ac49ea91447801e9e6c71ebc484c7871e9d5ec15ed82685f3c",
+      "statement": "Further-reading destinations remain references; no additional artifact review is credited for following a link.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article plus literal dependency reading; source evidence only, without adoption or live behavior verification."
+}
