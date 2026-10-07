@@ -1,0 +1,874 @@
+{
+  "schema": "ges.bounded-source-review.v1",
+  "reviewer": "codex:/root/bounded_independent_review",
+  "reviewer_task": "/root/bounded_independent_review",
+  "parent_native_session_witness": "01a11342-68e2-7851-9636-9af99289c0d7",
+  "independent_native_session_id": null,
+  "human_review": false,
+  "reviewed_at": "2026-10-07T02:33:16.419498+00:00",
+  "verdict": "PASS",
+  "verdict_scope": "Five pinned Actions implementation articles, source-only reconciliation, supported local check fixes and proposed implementation review template; excludes native/billing/cloud writes, full platform schema, policy adoption, rights and whole-control acceptance.",
+  "worktree_head": "e7a62ca05e76a229493a47ba8b51dd44787637a8",
+  "input_files": [
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-oidc-cloud-providers-claims.json",
+      "sha256": "4e1200a87933b7854939af423f1cc3b5e64a72c633cf9eb0ed6cc2dcaf0ef8b8"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-oidc-cloud-providers.json",
+      "sha256": "530122f0a5a58b95af26fa52af4f57929f70cd64ef0f5e194b78e26022436b65"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-oidc-reusable-workflows-claims.json",
+      "sha256": "d9a66ecae903bb534836d8ce73e022cf1d595f7aea18a0b69c48a731120d7bfc"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-oidc-reusable-workflows.json",
+      "sha256": "5468dd36096440f0380c6b9204224b9b2cfc1c97ee85cae7fd478617f6a0b479"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-secrets-reference-claims.json",
+      "sha256": "1889f86c495cb969375e5c3e590af6658e51d714e97b7e68abe041b332da0cbb"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-secrets-reference.json",
+      "sha256": "6c13e0cf6bcacbee060f8cc486e1e1f960c4232f23f09e284c3a29622ec69139"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-secure-use-claims.json",
+      "sha256": "d6ce78494365969ee195c640192919b210c0fa1f19b989eb3bc24155bc961b9d"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-secure-use.json",
+      "sha256": "ec7d6779e2e07465bb940c2a3b6a30de0394831b8e262b5f6653f494e5d86c6a"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-use-secrets-claims.json",
+      "sha256": "2cba2b46a5b98e978804d9691da1737162a2818445dad2e88281108c6e4c2b58"
+    },
+    {
+      "path": "evidence/source-reviews/docs-actions-implementation-use-secrets.json",
+      "sha256": "749c98e3e348565aad52acf9bee092c0be01746decf08e71a21ad5afc3f4b294"
+    },
+    {
+      "path": "evidence/actions-implementation-primary-review.json",
+      "sha256": "16d2687aa684ee0130bcd6eaab84be73ca5aae5a03dd623769febec2888a0595"
+    },
+    {
+      "path": "evidence/actions-implementation-review-inputs.json",
+      "sha256": "6b775241e0878ea592bb77a6cbf68b3bd7c07b17378acf84d5bba0ed765c3ca2"
+    },
+    {
+      "path": "evidence/actions-implementation-reconciliation.json",
+      "sha256": "fe2aa202e2a7da8899adc041cd79f15ee7b28770ce3f1fe72ffb1d4b925d8983"
+    },
+    {
+      "path": "evidence/actions-implementation-reconciliation-policy.json",
+      "sha256": "b70fed79c0c2aabdb2e1420f8b6736aede2faa1bc0388168009294738331210e"
+    },
+    {
+      "path": "evidence/actions-security-reconciliation.json",
+      "sha256": "0b675737e25cb92aaf127702e37dc93d5af9e0c6be4490cf3b8923caf5310436"
+    },
+    {
+      "path": "controls/catalog.json",
+      "sha256": "91a34b8cd9730c0f41166e2d1dddf84a4fe0457e0e23fbc9eb15d84947f1d120"
+    },
+    {
+      "path": "controls/review_queue.json",
+      "sha256": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9"
+    },
+    {
+      "path": "ges/checks.py",
+      "sha256": "910d8d3782081cfee6bacc9777776223244b98fb9840238c55b518e30d0214c5"
+    },
+    {
+      "path": "tests/test_workflow_security_boundaries.py",
+      "sha256": "98b4c8e557ab9a34b468ba4ed653b4a25a0f78bc7618849151872df900e5ca75"
+    },
+    {
+      "path": "tests/test_ges.py",
+      "sha256": "80747b23abf45a6933197c1046faf7195c3eca15734576c8bf09ca088d786746"
+    },
+    {
+      "path": "templates/actions-security-review.md",
+      "sha256": "ff05ed9040ff54740384967b7acf3a6ff6f572a564636e28ae1b2a69ae9479c1"
+    },
+    {
+      "path": "docs/actions-security-implementation-review.md",
+      "sha256": "aebd48fc99f56797d18572a6571935a8c5bdc9bed236ee3148b0c046d28e88a5"
+    }
+  ],
+  "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "source_hash_manifest": {
+    "articles": [
+      {
+        "path": "content/actions/reference/security/secure-use.md",
+        "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+        "content_sha256": "bfc40bec3a30979187ed375da6534858b3012d5813ceb6418bdd755ca0769ec6",
+        "lines": 385,
+        "claims": 47,
+        "candidates": 158
+      },
+      {
+        "path": "content/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets.md",
+        "artifact_id": "0936487d6d8481fea3033516",
+        "content_sha256": "74718be5bae7996b04b8ecbc20d9b9580d38eb9efe7d331f8fa87d86dc2aa8cc",
+        "lines": 372,
+        "claims": 26,
+        "candidates": 118
+      },
+      {
+        "path": "content/actions/reference/security/secrets.md",
+        "artifact_id": "8e29ba89abce5b203d6d0bcd",
+        "content_sha256": "a830b105b5c3f7ad3d6bf7b2a28b6517443727802f3502748fa1084f94d0d6cd",
+        "lines": 66,
+        "claims": 10,
+        "candidates": 31
+      },
+      {
+        "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-cloud-providers.md",
+        "artifact_id": "4afef59bc2387d46581fb1bc",
+        "content_sha256": "6fe38819720205dff27932c3cc0a5a69db342287c81878c08d848ddc13ed6f44",
+        "lines": 147,
+        "claims": 14,
+        "candidates": 40
+      },
+      {
+        "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-with-reusable-workflows.md",
+        "artifact_id": "313ad41ff7191ac6912fc0f3",
+        "content_sha256": "03048b021e2054570794f334602a7f08014fee46a5ef6d96ec3699f3478fbb34",
+        "lines": 105,
+        "claims": 8,
+        "candidates": 35
+      }
+    ],
+    "literal_dependencies": [
+      {
+        "path": "data/reusables/actions/actions-pin-commit-sha.md",
+        "content_sha256": "608f9b21e6d50dfc9e74ac28b961bc50153ca2eb3eb6b41e331e3dd6bb4d66a2",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/org-roles-for-gh-actions.md",
+        "content_sha256": "8485117acc779fad21b1b5e55755692c55b88a9a72ef23abf8904fc4c44a8f96",
+        "lines": 6,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/about-oidc-short-overview.md",
+        "content_sha256": "7535f36b0974e1419f2a5f125a5f8274885838e677ec91e77c9661a5e0fc2206",
+        "lines": 2,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/oidc-custom-claims-aws-restriction.md",
+        "content_sha256": "f7fdc6f57dd11064d90679eef9b95d6c3c28238ea8a04ec41f96af79e5c4190d",
+        "lines": 2,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/dependabot-version-updates-for-actions.md",
+        "content_sha256": "1ef038717feb06ece6b327c74e994099b50b89c34410870f1275d810b9c0c5af",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/outside-collaborators-actions.md",
+        "content_sha256": "09e8fa5299c32a64360a6ba37f1e53d27608dcbe5ce5d75403a6550733b02587",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/scoped-token-note.md",
+        "content_sha256": "ac7efee7020a0117c6f5f5d0ae9fa19b33e4c9f558ca96008b6b560ab8d06eb6",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/workflow-pr-approval-permissions-intro.md",
+        "content_sha256": "efb9f83b4cc46fbe5fbb0d7492c4b3bcc4ca25e34945cd94d41cd821b24e9c1a",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/enterprise-github-hosted-runners.md",
+        "content_sha256": "217e71432c9354f078ca574fc303efd6e0cb7383e1018a108171c6e990f22626",
+        "lines": 6,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/runners-etc-hosts-file.md",
+        "content_sha256": "4f45fb0298fba216dde73df743bab1a5f1bb04d222d9708b1ca22d720b635825",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/disable-selfhosted-runners-crossrefs.md",
+        "content_sha256": "bd5688247a3251c868315b13d831006c9844ccf36983a6d3ec12e48b0e4a2fe0",
+        "lines": 5,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/dependabot/where-to-view-dependabot-alerts.md",
+        "content_sha256": "b9aa3d068abb4a1af832f2c4ac9b931ac3223c881bb48229aacfcfdfa148ba17",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/dependency-review/feature-overview.md",
+        "content_sha256": "509b5544fd6ffe2e26d07ac3b2888f768eee2d4b49c1b9d3a0384c4e34f868df",
+        "lines": 4,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/dependency-review/about-dependency-review-action.md",
+        "content_sha256": "b3805032e6a1faea5d461f7d16f02111f2689b7efd2959939dee0f25dcec6e4e",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/dependabot-version-updates-actions-caveats.md",
+        "content_sha256": "8ad4483c43d6167c2329845ff927042e8baf44450d68173b05c73b8467ce6991",
+        "lines": 5,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/security-advisory/security-advisory-overview.md",
+        "content_sha256": "e557c882e86e2fe7348a53b83e7e77b5ef4276d0ce27604156a7f333892c8103",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/features/actions-blocklist-sha-pinning.yml",
+        "content_sha256": "67ce82867ddda29031258e1e1eca1e73dd44a861d59e28212c749a83e101a6c9",
+        "lines": 5,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/features/custom-org-roles.yml",
+        "content_sha256": "7b57dce954e4a321086decba44d28234827ad3066194bcf5c64bf3cd0a2a19ae",
+        "lines": 3,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/features/actions-sbom.yml",
+        "content_sha256": "7a53d1c47f310a10f2ca2e171307bfca60b65d9edbc9ecbd0452dced017ffaa0",
+        "lines": 5,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/permissions-statement-secrets-variables-repository.md",
+        "content_sha256": "a11ffeb186a5b031974bcf41194f9b356ac35271a1d7b65788fd703fb30255ae",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/repositories/navigate-to-repo.md",
+        "content_sha256": "942ded86ff856fda44a03ed2d007305ef83aed48cf8e7c348b3ddce878099fb7",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/repositories/sidebar-settings.md",
+        "content_sha256": "5f8a3e8af289b95bfcc3371016d8c1c90239a303bf0c85706f2e17ac46bfc06c",
+        "lines": 3,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/sidebar-secrets-and-variables.md",
+        "content_sha256": "2de285f31d4e8ab91bc38c9c221ff9f2e71ca421ccc2a9e664c1895b902ee293",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/actions-secrets-tab.md",
+        "content_sha256": "ea030990301348f3ed2369323efb6f9761d45cfc797e88d702d04b4dd9735d62",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/permissions-statement-secrets-environment.md",
+        "content_sha256": "f93b39b0871d8473f17c4e88f20e759a8cac68986683fb081d0fb4b2bd2c102f",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/sidebar-environment.md",
+        "content_sha256": "092c1fe604d1b18e37fadcb4cbabee27209fc6ec273f5a8e1a61c6f351aa052f",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/actions-secrets-variables-repository-access.md",
+        "content_sha256": "5076b836aeff4320ea1b7ccfd4458569c5f7d6dc6a09cb62c492293ae3384177",
+        "lines": 9,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/permissions-statement-secrets-and-variables-organization.md",
+        "content_sha256": "902ec33ead810661dced748b28f9536188db659bd7ee252ce2e1ed7520a59225",
+        "lines": 3,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/organizations/navigate-to-org.md",
+        "content_sha256": "60e49bbb63a10d6cc4aea8e625d91c9502e347d13c5b514426b15bed8fa058bd",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/organizations/org_settings.md",
+        "content_sha256": "35997cee38f17fc074d643a661827093122bb6f604bdc54e7a2eb9904dc9824d",
+        "lines": 3,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/secrets-and-variables-org-permissions.md",
+        "content_sha256": "eb518c58396ac2e7af6b17fc8874df08b156059d51645bd69d2c8b79cf1c6795",
+        "lines": 6,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/forked-secrets.md",
+        "content_sha256": "482aa4bf0e2ad3061611c010143168a79cf1664126951c177722f6352662481e",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/action-checkout.md",
+        "content_sha256": "b557358f2727f5f925de5a33c380d488bdd1523c0c8f7869b6e01a94a62c8eab",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/actions-secrets-and-variables-naming.md",
+        "content_sha256": "dbb1400ef2db11791e200ea4b253e4e1b855403c78330f9521a840c11d6495f1",
+        "lines": 5,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/codespaces/secret-precedence.md",
+        "content_sha256": "151377ea2e2bd73b0042b6b6adf6bba15edcaa2fa074346c714ae807aa7bf8fc",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/oidc-link-to-intro.md",
+        "content_sha256": "b3291a1fb90b6904f8d4da60881384a043794e083258b430142457e4dd3cbe46",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/oidc-security-notice.md",
+        "content_sha256": "60c63facf810e1c7c8fbc720f68c05591784bab3aa7736d3421240aecf6c9279",
+        "lines": 4,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/oidc-on-ghecom.md",
+        "content_sha256": "31653f3c7f7e660e26acc5f8d45df3a0608dce25e65e21eaa7f4de784dcce759",
+        "lines": 3,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/oidc-deployment-protection-rules.md",
+        "content_sha256": "0b865457f7f718310047829a065c96fdba1cd9df541f7a7a013c17e812383c3a",
+        "lines": 2,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/oidc-permissions-token.md",
+        "content_sha256": "0e691d8acb3ed1cfbdf74ae928fa1352a54dccf628cd7838362885d2cdbfff3f",
+        "lines": 5,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/action-github-script.md",
+        "content_sha256": "51507695b8b6d96181be338006f3bf4c6b778cef5001745514bbe59047d21520",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/actions/oidc-further-reading.md",
+        "content_sha256": "af8500f2b4a253ff391d6eab92d8c281f8c7c68fafbdaf5754541141a5700305",
+        "lines": 2,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/reusables/dependency-review/short-summary.md",
+        "content_sha256": "aaa019662542090b129a0d5aa32e921e8196ee7e7895185e1b552544f1630ce9",
+        "lines": 1,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/features/repo-ci-cd-admin.yml",
+        "content_sha256": "67ce82867ddda29031258e1e1eca1e73dd44a861d59e28212c749a83e101a6c9",
+        "lines": 5,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      },
+      {
+        "path": "data/features/dependabot-oidc-support.yml",
+        "content_sha256": "9adf8fdd3e248142d9b516fbeafa4b739b7eae1249fd970198b98ec42e1685a3",
+        "lines": 6,
+        "scope": "Full recursive literal dependency read; no new whole-artifact credit."
+      }
+    ],
+    "selected_variables": [
+      {
+        "key": "code-scanning.codeql_workflow",
+        "path": "data/variables/code-scanning.yml",
+        "container_sha256": "b1b7cf270e813a0dcb22fb088908b9d4a5e124f76880fa1ae5d6cce0613b75e8",
+        "value": "CodeQL analysis workflow",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "dependency-review.action_name",
+        "path": "data/variables/dependency-review.yml",
+        "container_sha256": "fea12e8b373ee8f7fabf3065c7ceedab2dd5483a1b797b4e2b56192479015854",
+        "value": "dependency review action",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "enterprise.data_residency_site",
+        "path": "data/variables/enterprise.yml",
+        "container_sha256": "eef85bf665e36d0ad03e580e3a8abf44845f587db12aa4146b004482e80acbec",
+        "value": "GHE.com",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.company_short",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.github",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_actions",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub Actions",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_advisory_database",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub Advisory Database",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_cli",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub CLI",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_code_scanning",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "code scanning",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_code_scanning_caps",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "Code scanning",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_codeql",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "CodeQL",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_container_registry",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "Container registry",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_dependabot",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "Dependabot",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_dependabot_alerts",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "Dependabot alerts",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_dependabot_security_updates",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "Dependabot security updates",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_dependabot_version_updates",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "Dependabot version updates",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_dotcom",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_free_user",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub Free",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_ghe_server",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub Enterprise Server",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_marketplace",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub Marketplace",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_registry",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub Packages",
+        "scope": "Selected field read only; no whole-container credit."
+      },
+      {
+        "key": "product.prodname_security",
+        "path": "data/variables/product.yml",
+        "container_sha256": "e2d8439989171458282c8810557cce93f9e579789826eb3e4bb4b1fab21bc63c",
+        "value": "GitHub Security Lab",
+        "scope": "Selected field read only; no whole-container credit."
+      }
+    ]
+  },
+  "coverage": {
+    "whole_articles_read": 5,
+    "original_lines_read": 1075,
+    "recursive_literal_dependencies_read": 45,
+    "dependency_lines_read": 121,
+    "selected_variables_read": 22,
+    "variable_containers_digest_verified": 4,
+    "original_cached_text_files_verified": 54,
+    "referenced_screenshots": 4,
+    "binary_visuals_freshly_reviewed": 0,
+    "new_claims_semantically_reviewed": 105,
+    "new_candidate_dispositions_verified": 382,
+    "new_dispositions": {
+      "REFERENCE": 32,
+      "MAP": 73
+    },
+    "combined_receipts": 408,
+    "combined_dispositions": {
+      "REFERENCE": 108,
+      "MAP": 297,
+      "CONFLICT": 3
+    },
+    "inherited_decisions_preserved": 303,
+    "combined_candidate_accounting": 1143,
+    "known_subjects": 61870,
+    "known_subjects_outside_bounded_reconciliation": 61462,
+    "source_receipts": 3585,
+    "github_docs_source_receipts": 3148,
+    "new_whole_article_credit": 5,
+    "additional_dependency_or_visual_credit": 0
+  },
+  "method": [
+    "Read all1075 original lines across five articles and recursively inspect all45 literal reusable/feature bodies,121 lines, and22 selected variables from four containers as data. Independently match all54 selected text files and content SHA256s to original gzip at the pinned commit.",
+    "Compare every105 authored statement and cited span for modality, polarity, conditions, actors, platform/version availability, enumerations, examples, omissions and source-internal tensions. Read every new control relation and rationale against the named existing draft objective.",
+    "Independently validate exact382 candidate identities/text hashes,105 source-span hashes, primary claim-document hashes and production _known_claims canonical input digest; verify unchanged catalog/queue canonical bindings.",
+    "Compare all303 earlier receipt fields except global claim-input digest and all prior branch/security source-review files against HEAD. Reviewer identities, timestamps, subjects and three historical conflicts are preserved, without re-review credit.",
+    "Read changed checker, thirteen adversarial tests, revised positive fixture and template/guide; reproduce reported false passes and corrected cases using synthetic local data. Independently run13 boundary tests and78 test_ges tests.",
+    "Inspect screenshot captions and literal references only, without new binary visual credit, rendering certification or source execution. Review template choices as proposed accountable review prompts, not adopted rules or preset acceptance."
+  ],
+  "findings": [
+    {
+      "severity": "HIGH",
+      "area": "source",
+      "claim_ids": [
+        "DOCS-ACTIONS-IMPLEMENTATION-01-003"
+      ],
+      "finding": "Necessary redaction conditions were incorrectly presented as a sufficient guarantee.",
+      "resolution": "Requires used-job accessibility and explicitly preserves no-guarantee and source log-deletion/rotation guidance with custody limits.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "source",
+      "claim_ids": [
+        "DOCS-ACTIONS-IMPLEMENTATION-01-034"
+      ],
+      "finding": "Sensitive-information minimization was changed into an invented user-count restriction.",
+      "resolution": "Restores minimum sensitive information in runner environment and exposure to invoking users.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "source",
+      "claim_ids": [
+        "DOCS-ACTIONS-IMPLEMENTATION-01-039"
+      ],
+      "finding": "Conditional cloud/Vault recommendation was broadened and strengthened.",
+      "resolution": "Restores named cloud/Vault condition and recommends considering OIDC; no lifetime guarantee.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "source",
+      "claim_ids": [
+        "DOCS-ACTIONS-IMPLEMENTATION-02-023"
+      ],
+      "finding": "Windows Bash recommendation became a requirement.",
+      "resolution": "Restores recommendation and different-command possibility for other shells.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "source",
+      "claim_ids": [
+        "DOCS-ACTIONS-IMPLEMENTATION-04-005"
+      ],
+      "finding": "Environment deployment protection was conflated with branch/tag protection rules.",
+      "resolution": "Names environment protection and its example deploy/secret-access restrictions.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "source",
+      "claim_ids": [
+        "DOCS-ACTIONS-IMPLEMENTATION-01-029",
+        "DOCS-ACTIONS-IMPLEMENTATION-04-003",
+        "DOCS-ACTIONS-IMPLEMENTATION-02-002"
+      ],
+      "finding": "Standalone applicability and creation-authority statements lacked exact platform qualifiers.",
+      "resolution": "Restores FPT/GHEC-only SBOM, Dependabot GHES>3.20 and GHE.com GHEC, repository write FPT/GHEC/GHES>=3.19 versus earlier-GHES admin.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "source",
+      "claim_ids": [
+        "DOCS-ACTIONS-IMPLEMENTATION-03-008"
+      ],
+      "finding": "Automatic-redaction pattern enumeration was compressed beyond reusable exact accounting.",
+      "resolution": "Retains all fourteen entries,32/64-byte distinction and literal GitHub versions/prefixes without inferred Redis or underscore specificity.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "local_check",
+      "location": "ges/checks.py workflows/execute",
+      "finding": "Missing or empty jobs and empty execution forms could PASS the permission check.",
+      "resolution": "Shared bounded shape validation rejects them.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "local_check",
+      "location": "ges/checks.py workflow_shape_error/composite traversal",
+      "finding": "A step could contain both run and uses yet PASS.",
+      "resolution": "Exactly one nonempty string execution form is required in consumed workflow/composite shapes.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "local_check",
+      "location": "ges/checks.py workflows/local action traversal",
+      "finding": "Unresolved symlink contents could become pinning/permission proof.",
+      "resolution": "Workflow and local-dependency symlinks require MANUAL_REVIEW.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "local_check",
+      "location": "ges/checks.py permission_shape",
+      "finding": "Unknown scopes and invalid known permission syntax could appear as valid read-only evidence.",
+      "resolution": "Known invalid levels fail; unknown future scopes require review and cannot auto-pass.",
+      "status": "RESOLVED"
+    },
+    {
+      "severity": "MEDIUM",
+      "area": "local_check",
+      "location": "ges/checks.py workflow_permissions",
+      "finding": "Valid job-scoped OIDC/elevated permissions were unconditionally failed despite existing control allowing justification.",
+      "resolution": "Job elevation requires MANUAL_REVIEW; broad root write remains FAIL and no elevation is auto-accepted.",
+      "status": "RESOLVED"
+    }
+  ],
+  "open_findings": [],
+  "canonical_bindings": {
+    "claim_input_digest": "831ff6beb3adaa3572086d81b595ee3f98cf8585178cbc3e72389cca1730d942",
+    "catalog_digest": "6fd44fdb548c86a7e994d9c874fe945da9f74222c592220418361e745ec833e9",
+    "proposal_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
+    "reconciliation_semantic_payload_digest_excluding_reviewed_at": "69b164c481bb6b1b791b0342504b6ec4453ea40ab466152d2de9800b346954cd"
+  },
+  "timestamp_binding": {
+    "new_receipts_updated": 105,
+    "only_field_changed": "reviewed_at",
+    "value": "2026-10-07T02:33:16.419498+00:00",
+    "old303_reviewed_at_changed": false,
+    "authority": "Explicit parent authorization after actual independent PASS; final combined receipt SHA256 bound above."
+  },
+  "verification": {
+    "independent_workflow_boundary_tests": 13,
+    "independent_test_ges_tests": 78,
+    "independent_focused_result": "PASS",
+    "root_reported_full_suite_tests": 524,
+    "full_suite_independently_rerun": false,
+    "production_final_receipt_validation": "Parent performs final timestamp-bound validation and derived accounting after this attestation."
+  },
+  "residual_limits": [
+    "Check scope is consumed execution shape and permission syntax only, not complete GitHub platform schema, real execution, injection freedom, privilege adequacy or safe action provenance. Symlinks, unknown scopes, elevated jobs and required immutable-reference provenance retain review holds.",
+    "OIDC/custom large-secret examples log or expose sensitive material and use illustrative mutable dependencies; they are not approved production snippets. Job-bounded cloud-token wording remains qualified by provider-configurable expiry. No runtime token lifetime was measured.",
+    "Retain literal source path ./github/workflows/ and whitespace after @ in reusable-workflow example as source limitations, without silently rewriting upstream or manufacturing a policy conflict.",
+    "Caller standard JWT identity and called job_workflow_ref remain distinct; custom cloud claim support, GHEC issuer changes, trust conditions and effective environment protections require target-specific review.",
+    "Referenced screenshots and linked external navigation are not fresh visual, whole-artifact, rendered-page or live provider certification. No upstream code was executed or public raw corpus copied.",
+    "All mappings are partial supporting relations to existing draft controls;105 statements do not certify every control acceptance criterion or adopt a policy. Historical three conflicts remain.",
+    "No native pilot, billing or cloud changes/observations are performed by this batch. Previously recorded native status is not reassessed or promoted from source/check results.",
+    "The95 controls remain draft with zero accepted and all nine gates open; rights/publication permission and estate rollout remain separate."
+  ],
+  "acceptance": {
+    "source_quality": "PASS",
+    "bounded_local_check_regressions": "PASS",
+    "native_enforcement": "NOT_ASSESSED_IN_THIS_BATCH",
+    "native_acceptance": false,
+    "policy_adopted": false,
+    "legal_permission_inferred": false,
+    "whole_control_acceptance": false,
+    "all_nine_gate_closure": false
+  },
+  "corrective_rebinding": {
+    "reviewed_at": "2026-10-07T02:33:16.419498+00:00",
+    "prior_independent_report_sha256": "b3bb055d7eb4779d379e698fdd3b3ceca823290f64876d0a0f5cf7cbe70ac035",
+    "prior_reviewed_at": "2026-10-07T02:28:58.590663+00:00",
+    "prior_input_bindings": [
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-oidc-cloud-providers-claims.json",
+        "sha256": "beba2e3198ab875308feecf8b8bc8930296c2f41dd6a3c0df522e617cec0ee6f"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-oidc-cloud-providers.json",
+        "sha256": "e4f0364cbaa3b1a8440dfc3378bef541511ed5601011cb40dda64e41a60ef08b"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-oidc-reusable-workflows-claims.json",
+        "sha256": "557d9641dfd78a93bdd9ce755642ed0d1793ceee00ec665849e5257b876f80e5"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-oidc-reusable-workflows.json",
+        "sha256": "9efca7c47a9805164b10ca7d13bc00ae4f8045e525a5bf95daca5605a79f8152"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-secrets-reference-claims.json",
+        "sha256": "93600d304a359738e0d2a5eb42224365a4aa791e42a9c4b42efb7b0c1adf38b9"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-secrets-reference.json",
+        "sha256": "19bae7495c26f5d58eaa2dbf6f1965353dcddb01c77979645e2288d0677a5df4"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-secure-use-claims.json",
+        "sha256": "a4ae72c0049552a5655e495a6f04d139c3837505942043a2203a029340f00495"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-secure-use.json",
+        "sha256": "7ab6f696509ed4665f8221a93f2af1c5dcc79dc4759dffd5782cb733b9b6f2b8"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-use-secrets-claims.json",
+        "sha256": "6ca6a8eaad111b8bbb373bde6c5aa1458b1793f2d980c7e9fabdef4bc3e4799f"
+      },
+      {
+        "path": "evidence/source-reviews/docs-actions-implementation-use-secrets.json",
+        "sha256": "6d45bbbc35d025c2f9ee6245da1b131f26a5a1af688e2ee1a8783c2c02d026a3"
+      },
+      {
+        "path": "evidence/actions-implementation-primary-review.json",
+        "sha256": "fadaa4f2e6d77f1810a8ba6350221957ecc87948ee6058a14f56bfe80909fb1b"
+      },
+      {
+        "path": "evidence/actions-implementation-review-inputs.json",
+        "sha256": "0164304666343152c759cea974f6760311dec67e3fed893e8f7dc673cc55276d"
+      },
+      {
+        "path": "evidence/actions-implementation-reconciliation.json",
+        "sha256": "148f6dcf3966b81dea7209051d3ff7cebec251cf46ac8adf9c1e38cd0233c250"
+      },
+      {
+        "path": "evidence/actions-implementation-reconciliation-policy.json",
+        "sha256": "7ccbb64b3f40b6c9e6f1dfc678c7432f1d9e79791ea7ae32ddfa8ddca9f4901f"
+      },
+      {
+        "path": "evidence/actions-security-reconciliation.json",
+        "sha256": "0b675737e25cb92aaf127702e37dc93d5af9e0c6be4490cf3b8923caf5310436"
+      },
+      {
+        "path": "controls/catalog.json",
+        "sha256": "91a34b8cd9730c0f41166e2d1dddf84a4fe0457e0e23fbc9eb15d84947f1d120"
+      },
+      {
+        "path": "controls/review_queue.json",
+        "sha256": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9"
+      },
+      {
+        "path": "ges/checks.py",
+        "sha256": "910d8d3782081cfee6bacc9777776223244b98fb9840238c55b518e30d0214c5"
+      },
+      {
+        "path": "tests/test_workflow_security_boundaries.py",
+        "sha256": "98b4c8e557ab9a34b468ba4ed653b4a25a0f78bc7618849151872df900e5ca75"
+      },
+      {
+        "path": "tests/test_ges.py",
+        "sha256": "80747b23abf45a6933197c1046faf7195c3eca15734576c8bf09ca088d786746"
+      },
+      {
+        "path": "templates/actions-security-review.md",
+        "sha256": "18e23b72d3d902541bc96eea9cb8864fbd92fabe50219bd954c62bfa749139cd"
+      },
+      {
+        "path": "docs/actions-security-implementation-review.md",
+        "sha256": "aebd48fc99f56797d18572a6571935a8c5bdc9bed236ee3148b0c046d28e88a5"
+      }
+    ],
+    "reason": "Publication scanner misclassified literal OIDC permission syntax as a credential assignment; author used meaning-equivalent prose without suppressing scanning.",
+    "actual_delta": "Only DOCS-ACTIONS-IMPLEMENTATION-04-006 statement and corresponding rationale change semantically equivalent wording. Template elevated-job row rephrases the same permission. Author timestamps/document hashes, primary note/time, source-receipt timestamps, global bindings and new105 reconciled timestamps were regenerated.",
+    "verification": "Matched original Git-index bytes to prior report hashes. Compared all five claim payloads excluding author timestamps: only04-006 wording changes and its source span remains identical. All382 candidate receipt mappings unchanged; input manifest unchanged except author reviewed_at. Compared every408 strict receipt and every current production known subject: old303 only global digest rebinding, new105 only expected subject document hashes, changed04-006 statement hash/rationale, reconciliation and review times. Code, both tests, guide, catalog, queue and old303 source-security receipt file remain byte-identical.",
+    "observed_at_correction": "Detected serializer changing the live syntax-reference observation time without a new live read. Author restored exact staged observed_at2026-10-07T02:26:13.188870+00:00; independently checked restoration.",
+    "full_audit_credit_repeated": false,
+    "new_source_credit": 0,
+    "test_suite_repeated": false,
+    "current_binding_rule": "Prior report digest and input hashes are historical observations; refreshed input_files alone bind current final bytes.",
+    "remaining_findings": []
+  }
+}
