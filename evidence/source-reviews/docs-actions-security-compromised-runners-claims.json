@@ -1,0 +1,192 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T01:33:26.694888+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/security/compromised-runners.md",
+  "content_sha256": "7e50495e5d11d71252b5874223f54f8780c10a26fcf42ec7ea089c069ba0fd53",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-001",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 1,
+      "end_line": 13,
+      "span_sha256": "f40aa37c71e0c4915ec2f65b939f06e69bc591593e4f26bd2f9d2099a587bfe3",
+      "statement": "FPT/GHEC/GHES metadata scopes the runner-risk concept; conditional body sections still govern availability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-002",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 15,
+      "end_line": 17,
+      "span_sha256": "64814ecb06a3b692e2fe4f82508b1aa5b5841f42d58b3f32c18d478f9e0f0a77",
+      "statement": "The threat analysis assumes an attacker can run malicious commands on a runner; it is not a finding that the owned estate is compromised.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-003",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 19,
+      "end_line": 24,
+      "span_sha256": "d51c97f6d42a2b856e5e4a288c021f7ddccc4a025dbaf8e36a76a575a8632173",
+      "statement": "For FPT/GHEC, hosted runners do not scan user-downloaded job code such as a compromised dependency. Hosted isolation is not a promise of malware scanning.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-004",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 26,
+      "end_line": 28,
+      "span_sha256": "9f23d3e78fac8509961c8a50f09105d5941027a9673c97780c6f850bbf18d5bc",
+      "statement": "The article distinguishes fork pull_request jobs with read-only permissions/no secrets from other events or same-repository PRs that may expose credentials or write authority. Preserve event and trust-boundary differences.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-005",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 30,
+      "end_line": 30,
+      "span_sha256": "55f8d2c3023dbf6151cf42eaf3ff27aa1f3c3b53b124bb6f042c0f89ffabc94f",
+      "statement": "A malicious runner command can read a secret that has been supplied through its environment. Environment-variable transport is not isolation from untrusted job code.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-006",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 31,
+      "end_line": 31,
+      "span_sha256": "d7f2f7a971fa26e0c169854cc5b0a04a7cdff9eeacf6e76c531ec95bbbedf845",
+      "statement": "A secret interpolated directly into an expression can appear in the generated on-disk shell script. Expression placement changes exposure.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-007",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 32,
+      "end_line": 44,
+      "span_sha256": "694966809bcc943ca33d63b438c31c64f33e3a13b69ac3fe87d99713339ff44c",
+      "statement": "A custom action can expose supplied secrets through its argument handling. Referenced secrets and the built-in token can be harvested despite scrubbing unused secrets; library behavior requires review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-008",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 46,
+      "end_line": 48,
+      "span_sha256": "4c233d01f47e37155fb6451a1c942f0ef4ce6fc790b2acf4ee13800963c682b4",
+      "statement": "Automatic log masking is not a security boundary against deliberate exfiltration: transformed values and outbound network requests can leak runner data. Do not certify confidentiality from clean-looking logs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-009",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 50,
+      "end_line": 52,
+      "span_sha256": "6a712b372d4606fee800e3c031b1ac76d184090cd47e088582517acd8165a965",
+      "statement": "An attacker may steal the repository-scoped job token before expiration and use it immediately. Expiry bounds exposure but is not prevention; this does not describe temporary clone-token lifetimes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-010",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 54,
+      "end_line": 56,
+      "span_sha256": "64621730b68f462f2a93630cec0f7ab87cd143c020fd98a690d5a7182ffdc160",
+      "statement": "A stolen job token may modify repository content or releases if its assigned permissions permit it. Effective permission restriction matters, not merely token type.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-011",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 58,
+      "end_line": 60,
+      "span_sha256": "d88ba855499b625c5f37be21b6329977fa04614d37f1ec806f68d51d7bbdcb43",
+      "statement": "The cross-repository paragraph discusses a write-access user able to create or modify workflows and elevate workflow-token permissions. Its broad token-access comparison is qualified by that actor and configuration authority; it does not grant a read-only fork job write access or contradict the earlier fork case.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-012",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 62,
+      "end_line": 62,
+      "span_sha256": "e775657e282b7073371588afc8387c23bcf62f52307bd061fc2229b2670fdfc1",
+      "statement": "Enterprise-owned organizations can share Actions through internal repositories; this does not establish private personal-account support or authorize cross-repository data access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-013",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 64,
+      "end_line": 64,
+      "span_sha256": "e56b0895086e2fcb5840b3ba51e043b476ed710fa0764d944bb544bdb220e8b3",
+      "statement": "Other tokens or SSH keys can enable privileged cross-repository interactions but may give collaborators unexpectedly broad access; review exact resources and token type.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-014",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 66,
+      "end_line": 70,
+      "span_sha256": "dcb291ef52c3bf6f537930d17d0221e754b0610afbe18aa32697ca99ba4fdff6",
+      "statement": "The source ranks the per-job single-repository GITHUB_TOKEN first and recommends it when possible; that preference does not promise write privileges for every event.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-015",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 71,
+      "end_line": 73,
+      "span_sha256": "99a86ef6124b6666057418e79aa272bf936c723bdd0136bba466dc42817bee0b",
+      "statement": "A repository deploy key can provide single-repository Git clone/push access but cannot call REST or GraphQL. Its suitability depends on the required interface.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-016",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 74,
+      "end_line": 75,
+      "span_sha256": "e46e50421586b72b811a6483293a5c26ffefbe7728ed67e28b642ea3270e2cdd",
+      "statement": "An App installation can select repositories and fine-grained resource permissions for workflow access. Selection and installation must be reviewed; no live app adoption is inferred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-017",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 76,
+      "end_line": 77,
+      "span_sha256": "5e015846b2178fa2501be1454b9059c8ad00b9b9ab32dd9282388d4317893a46",
+      "statement": "The source rejects classic PATs in workflows because their broad account/organization reach can indirectly expose access to repository writers. This is source security guidance, not retroactive revocation authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-018",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 78,
+      "end_line": 78,
+      "span_sha256": "b5cfd19567765bf370626f547e3dd4ad583370b4262dfbc8b81d0cd99259efbe",
+      "statement": "If a PAT is needed, the source rejects a personal-account dependency and proposes a dedicated, narrowly granted fine-grained account token; it calls that approach unscalable and prefers alternatives. No new account is authorized here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-019",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 79,
+      "end_line": 80,
+      "span_sha256": "dd89efeab39cb3e88bd80d3b42e2f10e8212ec09dacee84add214d30a821f73f",
+      "statement": "The source rejects personal SSH keys in workflows because of broad repository reach, recommending individual deploy keys for Git-only use instead. API access needs a different reviewed credential.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-05-020",
+      "artifact_id": "25c564b6c898cfecae52e011",
+      "start_line": 82,
+      "end_line": 84,
+      "span_sha256": "ea1abd7de9a5d7d2b142e2cba8f8e595f38f7754b9fff96463585807d5b52692",
+      "statement": "The security-best-practices link is a follow-up reference, not additional review or estate assurance.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Pinned full-article reading with literal includes, selected variables and visual dependencies; source claims only, no adoption or live behavior assertion."
+}

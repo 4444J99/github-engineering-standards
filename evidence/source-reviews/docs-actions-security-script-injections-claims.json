@@ -1,0 +1,84 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T01:34:33.407900+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/concepts/security/script-injections.md",
+  "content_sha256": "0baf3d03886fad239486da939be05771a01da64b6713f2e6cb7da805d7f451f5",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-001",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 1,
+      "end_line": 11,
+      "span_sha256": "9cbdd4769bbfec9a709b66cf30ce3c0ce10d19d4eecb3798a0026d750ae756aa",
+      "statement": "The concept declares FPT/GHEC/GHES; its category and title are contextual metadata, not accepted policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-002",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 15,
+      "end_line": 15,
+      "span_sha256": "7d53cb382e06aa636736e9fea792aefb8a46904f13fabaf16c77a4475a61eb7f",
+      "statement": "Workflow, custom-action and composite-action authors should always consider whether attacker-controlled context strings can be interpreted as code on the runner.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-003",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 17,
+      "end_line": 17,
+      "span_sha256": "db8a924837419afcbbc062441f0c57f9795e281d6c75e4e42ce62c492c0e0406",
+      "statement": "The source recommends treating potentially attacker-controlled context fields with suffixes body, default_branch, email, head_ref, label, message, name, page_name, ref and title as untrusted input rather than trusted program text.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-004",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 19,
+      "end_line": 19,
+      "span_sha256": "7a897406ed47824a63d5d1d676f9bbf6c49af56aa91bdef28bb90e87278de26f",
+      "statement": "The source recommends ensuring untrusted values do not flow directly into workflows, actions, APIs or other execution positions where they can become code. This is partial injection-boundary support, not an adopted local prohibition or a completed detector.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-005",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 21,
+      "end_line": 21,
+      "span_sha256": "0c6e80d456246d653e5b7a14bb9428d5a1242beb9efd2811f093357c20e79f99",
+      "statement": "Branch names and email addresses are less obvious untrusted inputs; permitted syntax can contain shell-significant content. Valid metadata syntax is not shell safety.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-006",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 25,
+      "end_line": 46,
+      "span_sha256": "2f23a919124b55e10a84f1db5fe1dd1b6ce22b6ec6cce05ecd8b6035f1333abd",
+      "statement": "The inline PR-title example is vulnerable because expressions are evaluated and substituted into a temporary shell script before execution; surrounding quotes do not make arbitrary substituted text safe.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-007",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 48,
+      "end_line": 59,
+      "span_sha256": "9ee69f9862a380144f2c4ed709eb9eb9026396eb5cc251986be336cc17102aae",
+      "statement": "The screenshot and output demonstrate a title interrupting assignment quoting and introducing a listing command. This is an illustrative attack, not an instruction to execute it or proof of current target exploitability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-SECURITY-04-008",
+      "artifact_id": "c3bb81ba1f8fc6d66638e626",
+      "start_line": 61,
+      "end_line": 61,
+      "span_sha256": "17187ea64eb41b4a9a4fd39c701773597838d382216b6e022e7ffaa6da9280b6",
+      "statement": "The mitigation-practices link points outside this article; no linked artifact or effective remediation is credited from the reference alone.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Pinned full-article reading with literal includes, selected variables and visual dependencies; source claims only, no adoption or live behavior assertion."
+}

@@ -45,6 +45,15 @@ python -m ges compile
 
 Supply `GH_TOKEN` through your authorized secret store or runner environment when permissioned observations are needed. The collector only calls read APIs. It never changes settings, creates issues, or pushes commits.
 
+Capture omits known credential fields recursively from API responses and drops
+properties whose keys contain the active request credential. Exact echoes of that
+credential are redacted in response strings and decoded file content. Omission
+counts remain available on partial paginated observations; alert states, permission
+metadata, revisions and coverage flags are retained. A file's `blob_sha` identifies
+the upstream blob, while its captured content may be redacted. This is bounded
+response minimization, not proof that arbitrary source text, transformed secrets
+or unknown provider fields are safe to publish. Keep assessment snapshots private.
+
 ```sh
 python -m ges collect --repository OWNER/REPOSITORY --output .cache/snapshot.json
 python -m ges audit --snapshot .cache/snapshot.json --profile profiles/solo-software.json --output .cache/assessment.json
