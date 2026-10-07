@@ -159,6 +159,10 @@ Codex disposition receipts only; a cloud worker must not impersonate that identi
 
 ## What is not finished
 
+The latest [secret-scanning and CodeQL reconciliation](docs/security-context-reconciliation.md)
+reports exact reviewed relations, unsupported assertions, operational implications
+and remaining source work separately from table verification and policy adoption.
+
 Completion is tracked as separate [milestones](docs/remaining-work.md): exhaustive
 six-source synthesis, public release clearance for actual reused expression,
 native pilot acceptance, and estate rollout. GES v0.2 requires the first three.
