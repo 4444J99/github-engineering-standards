@@ -1,0 +1,84 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T02:30:25.067579+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-with-reusable-workflows.md",
+  "content_sha256": "03048b021e2054570794f334602a7f08014fee46a5ef6d96ec3699f3478fbb34",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-001",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 1,
+      "end_line": 25,
+      "span_sha256": "6ff2614c0961b7c2555ef04c3fe91cb3be6a7142aab294e88bebfc03cdc33ef5",
+      "statement": "The reusable-workflow OIDC guide spans all platforms, with the GHES hosted-runner exclusion; other reusable-workflow eligibility and OIDC navigation remain explicit external context.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-002",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 29,
+      "end_line": 33,
+      "span_sha256": "e18926eaaa83ad054b0a5d22bc5d1c257bcbce2fed8aded8c361be830c1d048c",
+      "statement": "Provider trust can restrict reusable workflows when custom job_workflow_ref is supported; standard aud/sub-only providers need supported subject customization, not assumed custom-claim support.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-003",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 32,
+      "end_line": 36,
+      "span_sha256": "e7b14846a874365913a865d0ea546c3b5efdc7a65fc335e3bae7f528ede143a1",
+      "statement": "The source identifies GCP and Vault as custom-claim examples, allows subject customization across versions, and limits issuer customization to GHEC; provider capabilities are pinned-source context, not current cloud verification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-004",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 40,
+      "end_line": 42,
+      "span_sha256": "fa10e6e629ad7a657a0e4f1284171f902f450efd2aefaafe3f884210f8183d71",
+      "statement": "Standard reusable-workflow JWT claims identify the caller; job_workflow_ref identifies the called workflow, so authorization must distinguish both.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-005",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 44,
+      "end_line": 77,
+      "span_sha256": "0d3ed57f719035ca6038a35e74faa2fc4970f0ffd2ff1a0cbf54fdd80d71ea8f",
+      "statement": "The JWT payload illustrates claim names, organization/repository/ref and called-workflow identity; sample IDs and values are not actual token observations.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-006",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 79,
+      "end_line": 79,
+      "span_sha256": "d05f09c3f7e738d67ea951d724a7a981f21a4e2203112ed15856cb564f6d4656",
+      "statement": "Called-workflow filtering can authorize callers from an organization; that capability does not justify broadening an existing trust policy to all repositories.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-007",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 85,
+      "end_line": 93,
+      "span_sha256": "0bc644dea71272f51e37b90773fe5ca1b203a9044c6661127aaed521129019cb",
+      "statement": "The organization/called-repository filter uses a wildcard reference as an example; it is broader than exact reviewed workflow revision binding.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-05-008",
+      "artifact_id": "313ad41ff7191ac6912fc0f3",
+      "start_line": 97,
+      "end_line": 105,
+      "span_sha256": "c10e4ba3714f6ef896a1b110e0a04416c87f5755d8930034b04b29331a4fb031",
+      "statement": "The specific-workflow example aims to bind a called path and SHA, but prints a space after @; retain the literal defect and use a validated whitespace-free reference in local review records.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}

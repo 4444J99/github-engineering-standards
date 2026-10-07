@@ -1,0 +1,138 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T02:30:25.067579+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-cloud-providers.md",
+  "content_sha256": "6fe38819720205dff27932c3cc0a5a69db342287c81878c08d848ddc13ed6f44",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-001",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 1,
+      "end_line": 22,
+      "span_sha256": "c69747dd679cb9a6f891d71dc2c751056feeb8901c6ad1fb5fa2233f9ac3d11d",
+      "statement": "This OIDC cloud guide applies to FPT/GHEC/GHES, while GHES does not support GitHub-hosted runners; OIDC avoids stored long-lived credentials where the provider supports it.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-002",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 24,
+      "end_line": 24,
+      "span_sha256": "de15adb4dfa6ff2acef2e28aed3f539a82937553f9862b3516ead80841fab073",
+      "statement": "Configure provider trust in the GitHub issuer and workflow authentication as separate steps; token issuance alone grants no cloud role.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-003",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 28,
+      "end_line": 32,
+      "span_sha256": "fdc1125f1cc80e95417a0340e92251322da5ccc5ea76ae559c9dd8f4c0c90818",
+      "statement": "The prerequisites require a security strategy and at least one trust condition excluding untrusted repositories. Dependabot dynamic event_name applies on FPT/GHEC and GHES>3.20; GHE.com substitutions apply to GHEC, and both require provider-specific review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-004",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 36,
+      "end_line": 40,
+      "span_sha256": "9006ed04ad95488d837d092d3915e9059a9fe6ff6c175630019d619e1223292e",
+      "statement": "Workflow setup requires token permission plus an official provider action for JWT exchange, or a reviewed manual exchange if none exists.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-005",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 42,
+      "end_line": 42,
+      "span_sha256": "4b11e4f3baff628cc7ec2f413721828fd516262461889b4b99b5f74768aa0e98",
+      "statement": "When environments participate in workflows or OIDC policies, the source recommends environment protection rules, for example restricting branches/tags that may deploy or access environment secrets.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-006",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 46,
+      "end_line": 46,
+      "span_sha256": "b71ad6e24dad4aa90ddc2227f0fd8beb45ff1d57cd70b10a34e2ce7c043a93e1",
+      "statement": "Setting the id-token permission to write permits requesting an OIDC JWT, not modifying repository resources; job-scoped elevation still needs explicit trust and permission review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-007",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 50,
+      "end_line": 52,
+      "span_sha256": "a6353efe3e11170c3b2496640f59a8b55007400b10544b7e29ee2d548b86535a",
+      "statement": "An official provider action simplifies JWT exchange; the named Alibaba action is an example, not reviewed installation or authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-008",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 56,
+      "end_line": 64,
+      "span_sha256": "12d960b6b7ab08d1f05197a268e21da564c5db0e4dba57ea8e2a57c0f8a3419d",
+      "statement": "Custom exchange uses core.getIDToken or the request URL/authorization environment values, then exchanges the JWT with the provider; those request credentials must remain confidential.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-009",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 68,
+      "end_line": 85,
+      "span_sha256": "c902d487640febfc3caf232c6fca6b6f20118bcf9f666dedcd7ada689291b7ff",
+      "statement": "The custom github-script example installs a versioned toolkit and puts a JWT in outputs; these illustrative dependencies and credential outputs require source review and safe handling rather than direct template adoption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-010",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 89,
+      "end_line": 110,
+      "span_sha256": "a038299a49b1903184c5bbe3c496dce28e087268b27f6141efa8dfea7b15e271",
+      "statement": "The request-token/URL output example exposes sensitive request material and enables debugging; it is an illustration, not a production-safe logging pattern.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-011",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 112,
+      "end_line": 127,
+      "span_sha256": "30e301ebb6befea5901da24a1601a1de639d8ba7b01282fe99914afbd8e2c05b",
+      "statement": "The curl example prints, decodes and writes a JWT to outputs; production implementations must reconcile this example with secret-masking and disclosure guidance instead of emitting credentials.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-012",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 131,
+      "end_line": 135,
+      "span_sha256": "796037a566e1efd786b1c1713b916bb03043f4ddf3495ddf2450c8d92e70c717",
+      "statement": "Cloud validation exchanges JWT claims for a provider access token described as job-bounded; no actual token lifetime or effective cloud permission is measured here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-013",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 139,
+      "end_line": 143,
+      "span_sha256": "2e19bbd30cd698ee8c4985d3b542eedb1285c24484423eca8bc14ad3fe4a04f4",
+      "statement": "Resource access steps vary by provider, and access-token expiry is configurable in the cloud; review actual lifetime instead of treating job duration as a universal TTL guarantee.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-04-014",
+      "artifact_id": "4afef59bc2387d46581fb1bc",
+      "start_line": 147,
+      "end_line": 147,
+      "span_sha256": "335f8a87fb4a6e23deff699cc9c4cf697708284ff1604e16dccb27c024c0a468",
+      "statement": "Reusable-workflow and self-hosted-runner further-reading links are navigation, not additional whole-file certification.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}

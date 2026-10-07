@@ -1,0 +1,435 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T02:30:25.067579+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/reference/security/secure-use.md",
+  "content_sha256": "bfc40bec3a30979187ed375da6534858b3012d5813ceb6418bdd755ca0769ec6",
+  "claims": [
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-001",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 1,
+      "end_line": 26,
+      "span_sha256": "880fa6146d9fb500728e284fb1af0dda12141e1c1a429236a4df69822d106ff4",
+      "statement": "This reference covers FPT, GHEC and GHES; version-specific sections and navigation are not evidence of deployed security.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-002",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 30,
+      "end_line": 34,
+      "span_sha256": "250a762807d62ceafcb7ddaaa0da171e8c48320d60d9ca1622b6cae28aee3517",
+      "statement": "Transformed secrets may evade redaction; repository write users can access secrets. Use least-privilege credentials and read-only token defaults with only necessary job-scoped elevation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-003",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 36,
+      "end_line": 38,
+      "span_sha256": "c35bba980a436d561528878845138b2ee42bc6a9c41f3ca54cd27ea2fe440b3a",
+      "statement": "Do not embed sensitive plaintext in workflow files; mask non-GitHub secrets. Runner redaction requires a secret to be used within the job and accessible to the runner, but is not guaranteed; exposure calls for source-recommended log deletion and rotation subject to actual custody and owner authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-004",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 40,
+      "end_line": 40,
+      "span_sha256": "c469e80dcd33a29495644fda9ad0d9dde1a56586f4de8bf0b6ee52113c59cd25",
+      "statement": "Avoid structured secret blobs because exact-match redaction is less reliable; individual values improve matching.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-005",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 42,
+      "end_line": 43,
+      "span_sha256": "adf59c57e40646cb9bca927bf696f1d8c2761df669e5dd45c3ea0eb9ab31d9df",
+      "statement": "Register generated sensitive values and transformations as secrets; transformations are not automatically safe in logs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-006",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 45,
+      "end_line": 46,
+      "span_sha256": "7b8c7834b9bb18ed38b50097d4f05abf582f43456f2ff838a3db27c8ce97d2f1",
+      "statement": "Review workflow/action code for unintended destinations and inspect stdout/stderr with both valid and invalid inputs; successful runs alone do not establish secrecy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-007",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 48,
+      "end_line": 49,
+      "span_sha256": "01c9f7954cf927612de93461940aa3da49004496535c255e872b2a6ee389b61a",
+      "statement": "Periodically review whether secrets remain needed, remove unnecessary secrets and rotate; this is upstream guidance, not a performed rotation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-008",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 51,
+      "end_line": 51,
+      "span_sha256": "2840dc37cae0859a4878fd584cfec6bc6376dba24d43ac95cc5683e97ebedd38",
+      "statement": "Environment required reviewers can withhold secret access pending approval; this does not establish runner isolation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-009",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 59,
+      "end_line": 65,
+      "span_sha256": "5a70c777c336d875c263abdf3e7759bb506130d0c3034f068d5ee11c4cb45bfe",
+      "statement": "An action argument avoids generating an inline script from untrusted expressions; the mutable example tag is illustrative and needs independent action review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-010",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 69,
+      "end_line": 93,
+      "span_sha256": "18b78c0287763583f8da7b09f0311207337fff22870a1032d2f1b57d5f1c5a46",
+      "statement": "Intermediate environment variables and quoted shell expansion mitigate expression-to-script injection; action and shell boundaries still need review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-011",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 95,
+      "end_line": 103,
+      "span_sha256": "f555847a730c16c9f9cd3f45f3e83d578285c3dec41c6d85702b1f3b5005461d",
+      "statement": "The FPT/GHEC CodeQL workflow-template references describe optional analysis setup, not installed scanning or acceptance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-012",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 107,
+      "end_line": 107,
+      "span_sha256": "7111f18b6c759f9a1cb714710bcc9d2c4f8d94ca6bd4e0d8fbb6242e18875dc5",
+      "statement": "Consider restricting GITHUB_TOKEN permissions; actual effective job authority requires a separate check.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-013",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 111,
+      "end_line": 123,
+      "span_sha256": "9d7e1918964f169cf04c16aa557f72a4a72ff9ca4087ee17d3444a7e374bf982",
+      "statement": "Privileged pull_request_target and workflow_run jobs must not execute untrusted fork content; untrusted checkout, shared caches and workflow_run artifacts require explicit trust-boundary review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-014",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 125,
+      "end_line": 127,
+      "span_sha256": "0e5088b410af37bd91bd32d7d510ce476c3ed03b4427ed9b8e4b4b618afcb481",
+      "statement": "CodeQL and Scorecard are suggested analysis aids; references alone do not prove comprehensive detection.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-015",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 131,
+      "end_line": 133,
+      "span_sha256": "7dd81f0f36dd629083b13018c712631f029068953bc8ac506a2cf6e6b7ffe0fe",
+      "statement": "Compromised actions may reach job credentials and interact with other jobs through files, environment or Docker sockets; review actual secret availability rather than infer universal access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-016",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 139,
+      "end_line": 139,
+      "span_sha256": "a30cb824702197dbdf179686801dc70900550e8ac647dcbeec60994b9f0e6b92",
+      "statement": "Full-length commit SHAs are described as immutable references, subject to the stated collision qualification; verify origin in the action repository, not a fork.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-017",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 143,
+      "end_line": 143,
+      "span_sha256": "d470df56c8a2e903e0c020a01c2d2b1278a9e6bb3a93cad69ba05c0338fc45e0",
+      "statement": "Optional SHA/blocklist policy capability is feature-gated: FPT/GHEC and GHES >=3.19; configuration availability is not activation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-018",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 155,
+      "end_line": 155,
+      "span_sha256": "cd6354adf30eb129c8367a7244cbb02f6f09cea507c126c0f9f1a45e20efd352",
+      "statement": "Audit selected action source for intended secret handling and absence of unintended log/host disclosure.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-019",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 159,
+      "end_line": 159,
+      "span_sha256": "635104828c61d0251343a3c14a27e66fe583e2282835c3e6394eee1dc61db33c",
+      "statement": "If trusting tags, creator identity can inform selection, but tags remain mutable and a verified creator badge is not code-safety proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-020",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 163,
+      "end_line": 163,
+      "span_sha256": "015c330bc52c72be928aaecea68db1291a6de42b79f9b7f8a7b24f9af9767b7d",
+      "statement": "Apply action immutability and source-review principles to third-party reusable workflows.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-021",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 167,
+      "end_line": 171,
+      "span_sha256": "d20bb1f65df6217ec5ad2c574b34c0a42c0beea57b84e23a314fc7ded504f081",
+      "statement": "Built-in security features and workflow CODEOWNERS monitoring are review options; a CODEOWNERS entry alone does not establish required approval.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-022",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 175,
+      "end_line": 181,
+      "span_sha256": "914957e36d077dca405bd79823ee3a6f964ae15f23e931383d1574ac1a901bf9",
+      "statement": "Custom organization Actions roles separate policy, runner, secret and variable management; the feature is GHEC and GHES >=3.14, not universal access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-023",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 189,
+      "end_line": 191,
+      "span_sha256": "b8be4ed46959f72f399d125193965135bc875e7224989d5ed7441f05ebf213f9",
+      "statement": "OIDC can replace long-lived cloud secrets where supported; this pin states AWS does not support custom claims, so provider trust capabilities require explicit review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-024",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 195,
+      "end_line": 195,
+      "span_sha256": "bf252b87a8da1ab8323f558bc2eff2e1e81ae9c74a4ad50ee373b8be51c29c92",
+      "statement": "Dependabot version updates can maintain action and reusable-workflow references; this does not establish installed configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-025",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 197,
+      "end_line": 205,
+      "span_sha256": "fcb3964814f7d0a4de1d090567edbcedc286b2b0e80cf629d51d47f2fffb6e9f",
+      "statement": "GHEC/GHES private/internal action sharing permits indirect outside-collaborator access to run logs; its scoped read installation token expires after one hour and is distinct from other workflow credentials.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-026",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 209,
+      "end_line": 211,
+      "span_sha256": "45b0f8b612c2ee7cb7e91ba504135897aced1948445a77a4629269a1b84b176e",
+      "statement": "Automated creation/approval of pull requests can bypass intended oversight; review enterprise, organization and repository settings rather than infer approval authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-027",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 215,
+      "end_line": 220,
+      "span_sha256": "18174fcc4c8eaab060d4170e57e4c33d7777fadf0829642cfa77602da2c6edab",
+      "statement": "CodeQL and optional Scorecard checks cover common insecure workflow patterns; installation, coverage and result freshness remain unproved.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-028",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 224,
+      "end_line": 226,
+      "span_sha256": "3f06bbbfa65bf05c8cf917763951fb8a8fb2f9697274bf016fe7bb305dde9ce6",
+      "statement": "GHES requires self-hosted runners; hosted-runner security and architecture links in the following section are FPT/GHEC guidance.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-029",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 230,
+      "end_line": 236,
+      "span_sha256": "8fa450e567aee53963e578b3dd4c119bbfdbbc1e081ff28d8ceb39cef4b586b3",
+      "statement": "On FPT/GHEC the actions-sbom feature exposes maintained hosted-image SBOM release assets for Ubuntu, Windows, macOS and ARM; vulnerability scanning or build inclusion is optional and not performed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-030",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 242,
+      "end_line": 242,
+      "span_sha256": "b2d81af3cfe7a51a83cc87d1e0465d85570c3ce9f96eff7aa613a2d3543ec002",
+      "statement": "Hosted-runner hosts files block specified mining/malicious hosts; this is not a general egress isolation guarantee.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-031",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 248,
+      "end_line": 254,
+      "span_sha256": "2af95dcbb96b56d63f529575ebd29bcbb94a29e500f5b2644464496c71cf3fa7",
+      "statement": "FPT/GHEC hosted runners are described as clean ephemeral environments; self-hosted runners lack that guarantee and should almost never serve public repositories. Private/internal untrusted forks remain hazardous.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-032",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 254,
+      "end_line": 256,
+      "span_sha256": "bd643cda561e4397ea0d0640174ac4c7e11a9bca512e978e2efa3a06abc606ac",
+      "statement": "Environment approval does not isolate self-hosted runners; owners can restrict repository-level creation, subject to platform and management-role scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-033",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 258,
+      "end_line": 258,
+      "span_sha256": "b9076b5f4f312bf86bf12b7fad757a6aac92054ecba93369023801163d27cf0f",
+      "statement": "Shared runners can spread compromise across repositories; runner groups and available workflow restrictions must follow trust boundaries, with workflow restriction availability GHEC/GHES.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-034",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 262,
+      "end_line": 263,
+      "span_sha256": "f511d8b314040c46d057c3f3e4ff421920f97422e2ed41938dcf5c43bdba46fd",
+      "statement": "Review resident credentials, network services and metadata endpoints on self-hosted runners; minimize sensitive information in the environment and recognize that any user able to invoke workflows may reach that information.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-035",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 265,
+      "end_line": 265,
+      "span_sha256": "bc050bb81a825f7db59fb565344690d4f53125ca33040cf4b643f30725e33dcb",
+      "statement": "Destroy-after-job schemes need verified cleanup and may still run multiple jobs; concurrent process arguments can expose credentials.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-036",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 269,
+      "end_line": 272,
+      "span_sha256": "16024bcbacc7cb408b6b174c561daba9e394fd89eb0292bec0922f342855c3c2",
+      "statement": "JIT registration limits a runner to at most one job before removal, but reused hardware still needs a clean environment.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-037",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 274,
+      "end_line": 278,
+      "span_sha256": "e9bc065d795c84fe8aa27871e0820f37daa949d98857b08d16892713782b3af6",
+      "statement": "The encoded JIT launch configuration is an illustration, not a runner installation or registration authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-038",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 282,
+      "end_line": 292,
+      "span_sha256": "d26284dd111401a44b664747198d6aedf037d0d7567de4023e53df3cec8c2a46",
+      "statement": "Choose runner-management level by shared ownership and isolation needs; enterprise/organization centralization and repository overhead tradeoffs are contextual, not a universal estate design.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-039",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 296,
+      "end_line": 296,
+      "span_sha256": "7174c847766f9b9a5da91a14ef1322fbdd170f555cfc4676a6aaa7890b8bec1a",
+      "statement": "For cloud deployment or intended HashiCorp Vault authentication, the source recommends considering OIDC to obtain short-lived, well-scoped tokens; this conditional recommendation is not a general provider deployment or measured lifetime guarantee.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-040",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 300,
+      "end_line": 304,
+      "span_sha256": "2b38dc8adbb630cd2affac6cbee066b6c50a84c9ce0e0988ef5d8b4580a72975",
+      "statement": "User security logs and organization/conditional enterprise audit logs expose different review scopes; the secret-update screenshot and action filter are examples, not actual audit evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-041",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 316,
+      "end_line": 326,
+      "span_sha256": "cd03b8c0e08cde42bac770d93d56ab768f2fd22c42327adfb9d442893bf1b89d",
+      "statement": "The dependency graph describes uses at step/job levels, versions/SHAs and known advisories. The source spells ./github/workflows/ here; local tooling uses .github/workflows/. Platform enablement differs between public/private FPT/GHEC and GHES enterprise setup.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-042",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 330,
+      "end_line": 330,
+      "span_sha256": "3a85057b2275ced1cd1adea915f01babaa6f6851fa8dbe83efdeab91764d61bf",
+      "statement": "The advisory database supports Actions filtering; marketplace or known advisory review does not cover unknown vulnerabilities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-043",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 339,
+      "end_line": 344,
+      "span_sha256": "227f98aba615a51ff7b8e51745fc50f4a4f78c339ff6716d149705a69116c75d",
+      "statement": "Dependabot alerts inspect default-branch known vulnerable actions, but only semantic-version references receive these alerts; SHA pinning is not evidence of automatic alert coverage.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-044",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 346,
+      "end_line": 356,
+      "span_sha256": "1322f84fb76752e95929e6aefd9ea9a4ce3f524fe8216dcbe09cd1a2390142b3",
+      "statement": "Dependabot alerts and dependency-review diffs/actions can inform rejection of introduced vulnerable versions; the linked tools are not configured by this review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-045",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 360,
+      "end_line": 365,
+      "span_sha256": "6f03dafddb175d2b6ab6004258f199e646f9fd4a39288b2aaa1e485652933a0a",
+      "statement": "Version updates target the latest action version while security updates target the minimum patched version; they solve different maintenance needs.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-046",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 368,
+      "end_line": 368,
+      "span_sha256": "8987150532fb6b4a5e2ecb91a46f03a6c3e79e3423c08d651217ffe3562bb631",
+      "statement": "Action-update support excludes local and Docker URL references; same-line version comments and untagged-commit update behavior need explicit maintenance review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-ACTIONS-IMPLEMENTATION-01-047",
+      "artifact_id": "7f01ea0c9a17277d4c4b28a5",
+      "start_line": 374,
+      "end_line": 385,
+      "span_sha256": "4848f8c3166e2f19891fa9c0ecb7343f0ea85903b1f0ff55c7aaa7ac9d6af3b9",
+      "statement": "FPT/GHEC action publishers can inspect dependents and coordinate advisories in private forks; these are conditional publishing capabilities, not permission to redistribute reviewed sources.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}

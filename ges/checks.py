@@ -46,6 +46,8 @@ def workflows(snapshot: dict):
         if path.startswith('.github/workflows/') and path.endswith(('.yml','.yaml')):
             if path.count('/') != 2:
                 continue
+            if isinstance(value, dict) and value.get('kind') == 'symlink':
+                return [], ('MANUAL_REVIEW', f'{path} is a symlink; target not established')
             text=value.get('content') if isinstance(value,dict) else value
             if not isinstance(text,str): return [],('ERROR',f'Missing workflow content: {path}')
             try: data=parse(text)
@@ -56,6 +58,50 @@ def workflows(snapshot: dict):
         return [],('NOT_VERIFIABLE','Workflow inventory incomplete')
     if not result: return [],('FAIL','Actions-enabled profile has no workflow files')
     return result,None
+
+
+def workflow_shape_error(wf: dict) -> str | None:
+    """Check the job/step shapes consumed below, not the complete platform schema."""
+    jobs = wf.get('jobs')
+    if not isinstance(jobs, dict) or not jobs:
+        return 'invalid or empty jobs'
+    for name, job in jobs.items():
+        if not isinstance(job, dict):
+            return f'invalid job {name}'
+        if 'uses' in job:
+            if 'steps' in job or 'runs-on' in job or not isinstance(job['uses'], str) or not job['uses'].strip():
+                return f'invalid reusable workflow job {name}'
+            continue
+        steps = job.get('steps')
+        if not isinstance(steps, list) or not steps:
+            return f'job {name} has no nonempty steps or reusable workflow'
+        for step in steps:
+            if not isinstance(step, dict) or ('run' in step) == ('uses' in step):
+                return f'job {name} step must contain exactly one of run or uses'
+            command = step.get('run', step.get('uses'))
+            if not isinstance(command, str) or not command.strip():
+                return f'job {name} step command must be a nonempty string'
+    return None
+
+
+def permission_shape(permissions) -> str:
+    """Known scope syntax; unknown future scopes require review rather than a pass."""
+    if isinstance(permissions, str):
+        return 'VALID' if permissions in {'read-all', 'write-all'} else 'INVALID'
+    if not isinstance(permissions, dict):
+        return 'INVALID'
+    known = {'actions', 'artifact-metadata', 'attestations', 'checks', 'code-quality',
+             'contents', 'deployments', 'discussions', 'id-token', 'issues', 'packages',
+             'pages', 'pull-requests', 'security-events', 'statuses', 'vulnerability-alerts'}
+    for key, value in permissions.items():
+        allowed = {'read', 'write', 'none'}
+        if key == 'id-token':
+            allowed = {'write', 'none'}
+        elif key == 'vulnerability-alerts':
+            allowed = {'read', 'none'}
+        if not isinstance(key, str) or not isinstance(value, str) or value not in allowed:
+            return 'INVALID'
+    return 'UNKNOWN' if set(permissions) - known else 'VALID'
 
 
 def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
@@ -144,6 +190,7 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
         if err: return err
         files_data=snapshot.get('observations',{}).get('files',{}).get('data',{})
         failures=[]
+        reviews=[]
 
         def check_composite_action(action_ref: str, origin: str, visited: set[str]):
             if not isinstance(action_ref, str):
@@ -172,6 +219,9 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                         failures.append(f'{origin}: local action path not found: {action_ref}')
                     return
                 entry = files_data[found_path]
+                if isinstance(entry, dict) and entry.get('kind') == 'symlink':
+                    reviews.append(f'{origin}: local dependency {found_path} is a symlink; target not established')
+                    return
                 text = entry.get('content') if isinstance(entry, dict) else entry
                 if not isinstance(text, str):
                     failures.append(f'{origin}: local action file missing content: {found_path}')
@@ -187,6 +237,10 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                     failures.append(f'{origin}: local composite action is not an object: {found_path}')
                     return
                 if found_path.startswith('.github/workflows/'):
+                    shape_error = workflow_shape_error(local_doc)
+                    if shape_error:
+                        failures.append(f'{origin}: {found_path}: {shape_error}')
+                        return
                     nested_jobs = local_doc.get('jobs')
                     if not isinstance(nested_jobs, dict) or not nested_jobs:
                         failures.append(f'{origin}: invalid local reusable workflow jobs: {found_path}')
@@ -229,8 +283,10 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                     return
                 if isinstance(steps, list):
                     for step in steps:
-                        if not isinstance(step, dict) or not ('uses' in step or 'run' in step):
+                        if not isinstance(step, dict) or ('uses' in step) == ('run' in step):
                             failures.append(f'{origin}: invalid composite step: {found_path}')
+                        elif not isinstance(step.get('uses', step.get('run')), str) or not step.get('uses', step.get('run')).strip():
+                            failures.append(f'{origin}: empty or non-string composite step: {found_path}')
                         if isinstance(step, dict) and 'uses' in step:
                             check_composite_action(step['uses'], f'{origin} -> {found_path}', visited.copy())
             elif action_ref.startswith('docker://'):
@@ -240,8 +296,18 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                 failures.append(f'{origin}: action/workflow not pinned to a full SHA: {action_ref}')
 
         for path,wf in entries:
+            shape_error = workflow_shape_error(wf)
+            if shape_error:
+                failures.append(f'{path}: {shape_error}')
+                continue
             if kind=='workflow_permissions':
                 p=wf.get('permissions',MISSING)
+                shape = permission_shape(p)
+                if shape == 'INVALID':
+                    failures.append(path+': invalid or absent default permissions')
+                    continue
+                if shape == 'UNKNOWN':
+                    reviews.append(path+': unsupported default permission scope requires review')
                 ok=p=='read-all' or isinstance(p,dict) and all(v in ('read','none') for v in p.values())
                 if not ok: failures.append(path+': default permissions are absent or not read-only')
                 jobs=wf.get('jobs',{})
@@ -250,8 +316,14 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                     if not isinstance(job,dict): return 'FAIL',path+': invalid job'
                     if 'permissions' in job:
                         jp=job['permissions']
+                        shape = permission_shape(jp)
+                        if shape == 'INVALID':
+                            failures.append(f'{path}: job {name} has invalid permission syntax')
+                            continue
+                        if shape == 'UNKNOWN':
+                            reviews.append(f'{path}: job {name} has unsupported permission scope')
                         if not (jp=='read-all' or isinstance(jp,dict) and all(v in ('read','none') for v in jp.values())):
-                            failures.append(f'{path}: job {name} permissions are not read-only')
+                            reviews.append(f'{path}: job {name} elevated permissions require scoped justification; OIDC issuance is not repository write authority')
                 continue
             jobs=wf.get('jobs',{})
             if not isinstance(jobs,dict) or not jobs: return 'FAIL',path+': invalid jobs'
@@ -267,6 +339,7 @@ def execute(control: dict, snapshot: dict, context: dict) -> tuple[str,str]:
                 for use in uses:
                     check_composite_action(use, path, set())
         if failures: return 'FAIL','; '.join(failures)
+        if reviews: return 'MANUAL_REVIEW','; '.join(reviews)
         if kind == 'workflow_pinning' and spec.get('require_provenance_review') is True:
             return 'MANUAL_REVIEW', ('Reference syntax satisfies immutability formatting, but action commit origin, '
                                      'container provenance and safe-update review have not been verified')

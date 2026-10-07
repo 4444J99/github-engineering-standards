@@ -81,7 +81,7 @@ class Checks(unittest.TestCase):
     def test_floating_reusable_workflow_fails(self): self.assertEqual(execute(control('workflow_pinning'),self.workflow('jobs:\n  test:\n    uses: org/repo/.github/workflows/test.yml@main'),{})[0],'FAIL')
     def test_container_digest(self): self.assertEqual(execute(control('workflow_pinning'),self.workflow('jobs:\n  test:\n    steps:\n      - uses: docker://alpine@sha256:'+'a'*64),{})[0],'PASS')
     def test_workflow_permission_missing(self): self.assertEqual(execute(control('workflow_permissions'),self.workflow('jobs: {}'),{})[0],'FAIL')
-    def test_read_only_permissions(self): self.assertEqual(execute(control('workflow_permissions'),self.workflow('permissions:\n  contents: read\njobs: {}'),{})[0],'PASS')
+    def test_read_only_permissions(self): self.assertEqual(execute(control('workflow_permissions'),self.workflow('permissions:\n  contents: read\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - run: echo safe'),{})[0],'PASS')
     def test_write_permissions_fail(self): self.assertEqual(execute(control('workflow_permissions'),self.workflow('permissions: write-all\njobs: {}'),{})[0],'FAIL')
     def test_invalid_yaml_fails(self): self.assertEqual(execute(control('workflow_permissions'),self.workflow('jobs: ['),{})[0],'FAIL')
     def test_absent_workflows_not_vacuous_pass(self): self.assertEqual(execute(control('workflow_pinning'),snapshot(),{})[0],'FAIL')
