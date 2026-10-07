@@ -1,0 +1,147 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T03:08:44.756184+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws.md",
+  "content_sha256": "c8c4c25d55c543bfd79c3b0582ab377b69dd0dbfff01c0d5316ad4c92909ad2a",
+  "claims": [
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-001",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 1,
+      "end_line": 24,
+      "span_sha256": "d0b1398456bbde4f46772375c88fcf6dd347bcdf9a81e5bdcc704dcb6a2f13a8",
+      "statement": "This AWS guide applies to FPT/GHEC/GHES and describes OIDC federation and the AWS credentials action without storing long-lived AWS secrets; GHES cannot use GitHub-hosted runners.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-002",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 26,
+      "end_line": 26,
+      "span_sha256": "e4dd3636d6caafae005a5de31fdc9c306c671e5ffedbc700a802e9a3ffe37bf5",
+      "statement": "At this source pin AWS does not support custom OIDC claims; do not assume reusable-workflow custom claims are available to AWS trust.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-003",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 30,
+      "end_line": 34,
+      "span_sha256": "fdc1125f1cc80e95417a0340e92251322da5ccc5ea76ae559c9dd8f4c0c90818",
+      "statement": "Provider trust requires a planned security strategy and at least one condition excluding untrusted repositories. Dependabot dynamic event_name is feature-gated to FPT/GHEC/GHES>3.20; GHE.com substitutions are GHEC-only.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-004",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 36,
+      "end_line": 46,
+      "span_sha256": "4b9c63061878032e872f72e28067511d0d02f5897bcf0770e2bda564c5982377",
+      "statement": "For GHES the cloud provider must access discovery and JWKS endpoints; AWS IP-range filtering is an option and the GHES-only note states GitHub does not natively support AWS session tags.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-005",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 50,
+      "end_line": 53,
+      "span_sha256": "d9d37ee46a755d3d68bdef2ff1733752391e01d80774c652f3692c747aea4aec",
+      "statement": "Add the GitHub identity provider to AWS IAM; issuer is the public Actions token URL or GHES hostname service URL. Audience sts.amazonaws.com is specified when using the official AWS action.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-006",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 57,
+      "end_line": 62,
+      "span_sha256": "52653167b8b0381fdd567b3a25f6295fbb5b9e6cd468dd7f372075e21e62d335",
+      "statement": "The source quotes IAM recommending evaluation of the subject condition for roles trusting GitHub OIDC, then directs adding subject validation to limit which Actions can assume the role.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-007",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 64,
+      "end_line": 71,
+      "span_sha256": "4f761ee472cb77e75e20eec2659f82899580a95bf35c3c3bd34e3f0f8e0b91b8",
+      "statement": "The branch-specific example uses audience and exact repository/branch subject equality; example organization, repository and branch values are not selected policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-008",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 73,
+      "end_line": 82,
+      "span_sha256": "0e609d4ddf0aae49838a620c56d2b3ae6ee6bbb2e639cadf97663b0934037443",
+      "statement": "This AWS guide says repositories created after July15,2026 or opted in use immutable owner/repository IDs in the subject, unavailable on GHES; match the actual subject format rather than copying old name-only examples.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-009",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 84,
+      "end_line": 95,
+      "span_sha256": "0428e067f885caf2b501a7cb40531385b59450366b45a11d24db2abc264e271d",
+      "statement": "When using an environment the subject must reference its name; environment protection rules are recommended to limit branch/tag deployment and secret access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-010",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 97,
+      "end_line": 120,
+      "span_sha256": "40836d5f8828b4e113e1e89dab387d2231f3a2425cb281b25248c4c4f48785eb",
+      "statement": "The wildcard subject example admits any branch, pull-request merge branch or environment in the named repository; this broader illustration is not approval of that trust scope.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-011",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 124,
+      "end_line": 134,
+      "span_sha256": "59b4d133733830243ec8b5c006a89cd59bf55106eb2ecda5640a83f96a3cc3f4",
+      "statement": "The workflow needs OIDC issuance permission and an AWS action to exchange JWT for cloud credentials; setting the id-token permission to write does not itself grant repository or cloud resource write.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-012",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 136,
+      "end_line": 153,
+      "span_sha256": "c4f5b982fb44c7812590a4637665127f8a782d32fa9e4a55cfa2190c79f7455d",
+      "statement": "Bucket, region and role are required example substitutions. The sample grants OIDC issuance at workflow root, which is upstream illustration rather than adoption of this project\u2019s draft read-only-root objective.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-013",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 154,
+      "end_line": 170,
+      "span_sha256": "38ac7807247645924af1cf3aedeafcafc1b35c566bd3ae37944e5ec804b9d4a1",
+      "statement": "The example checks out code, invokes a SHA-shaped AWS action reference and copies a file to S3; checkout remains a mutable example tag and no commit origin, cloud role or upload is verified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-014",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 143,
+      "end_line": 143,
+      "span_sha256": "c90c0106cd88f79f2a3499a9fd19b99927f087d650eb1812f36435c606cd760a",
+      "statement": "The injected comment states the third-party actions are not GitHub-certified and retain separate terms, privacy and support documentation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-01-015",
+      "artifact_id": "09399a59abc42a13b64c12d6",
+      "start_line": 172,
+      "end_line": 174,
+      "span_sha256": "79a2b0921aa40b651de77fad754a778dadbd0b4be4f45f8425805bcabc49b2ed",
+      "statement": "Further-reading links are contextual navigation, not additional artifact or runtime credit.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T03:08:44.756184+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-hashicorp-vault.md",
+  "content_sha256": "5baaf968f5ecb01011be6e697c3e5752233bdbeadf2541f8ac64c436706cd7a2",
+  "claims": [
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-001",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 1,
+      "end_line": 24,
+      "span_sha256": "1c2f58b3ab44d64fffbf62badb05d660379bd8c28899c4ec82056af8897f1a82",
+      "statement": "The Vault guide spans FPT/GHEC/GHES and uses OIDC to authenticate and retrieve secrets through vault-action; GHES requires self-hosted runners.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-002",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 28,
+      "end_line": 32,
+      "span_sha256": "fdc1125f1cc80e95417a0340e92251322da5ccc5ea76ae559c9dd8f4c0c90818",
+      "statement": "OIDC prerequisites require at least one trust condition excluding untrusted repositories. Dependabot dynamic event_name is feature-gated to FPT/GHEC/GHES>3.20; GHE.com substitutions are GHEC-only.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-003",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 36,
+      "end_line": 51,
+      "span_sha256": "7fdf336b173436708724c22eaf6cd8eaa80ac64bd0df41e1088ea61ca62da329",
+      "statement": "Vault must trust the GitHub issuer: enable JWT auth and configure discovery plus bound issuer using the public token URL or GHES hostname service URL. These setup commands are unexecuted examples.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-004",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 53,
+      "end_line": 58,
+      "span_sha256": "06d22431282a4f185bca9d370cc8ce75c45655222fe9f4d415fae04af1f30d2e",
+      "statement": "On GHEC, if a unique enterprise issuer was set, both discovery and bound-issuer settings must match it. The prose spells oidc_discover_url once but the configuration field elsewhere is oidc_discovery_url; retain the literal typo.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-005",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 60,
+      "end_line": 70,
+      "span_sha256": "4e26558ceab92ae5b388311c8a83ad4d781533731b6786d343d3f04ec74cf388",
+      "statement": "A Vault policy should grant only the secret paths the workflow needs; the production wildcard read policy is an example, not a selected or applied policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-006",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 72,
+      "end_line": 86,
+      "span_sha256": "0aaba96f729e0ef9a6efb49f1df0e8d5bcc4d3b93b85f61dffadc23aa8ada73c",
+      "statement": "Vault roles attach grouped policies to resulting access tokens; the sample actor claim, repository condition and10m TTL are illustrative configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-007",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 88,
+      "end_line": 90,
+      "span_sha256": "09ddbffc4ec9442952d2e2800aba01486b50123a95065eac0cf9ae9ddedc0832",
+      "statement": "TTL defines resulting token validity; bound_claims must match security requirements and contain at least one condition, while bound_subject and bound_audiences are optional in this guide.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-008",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 90,
+      "end_line": 93,
+      "span_sha256": "64318771c35a9a7c9dcb9bcafcf6a0a3f9e07627782701d97d297d4cf68515d8",
+      "statement": "The sample repository claim accepts incoming authentication from the named repository; arbitrary-claim checking and linked claim documentation do not imply narrower branch/environment trust.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-009",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 97,
+      "end_line": 108,
+      "span_sha256": "c410f8c12744b395153b41739b2754ef43a857534a737b8dc94a3413233075a0",
+      "statement": "Workflow changes grant OIDC issuance and use vault-action or toolkit exchange; a root grant makes issuance available to every job and is not this project\u2019s draft default-permission objective.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-010",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 101,
+      "end_line": 101,
+      "span_sha256": "4b11e4f3baff628cc7ec2f413721828fd516262461889b4b99b5f74768aa0e98",
+      "statement": "When environments participate, environment protection rules are recommended to restrict deployment branches/tags and secret access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-011",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 114,
+      "end_line": 117,
+      "span_sha256": "cdb25186b9289d5becc4f6a333a54ac4cfaffa58e1f174b3b1ceeeaf10501d65",
+      "statement": "The source notes that explicitly listed permissions leave unspecified scopes with no access except always-readable metadata; contents read may need to be added. This does not justify broad write authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-012",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 121,
+      "end_line": 155,
+      "span_sha256": "1902b40176eec08be2dfb8f526cb5b18301a01d0fcf6a06bb630d03061fa668e",
+      "statement": "Vault action exchange needs the chosen Vault URL, role and secret path; namespace applies to Vault Enterprise including HCP. Placeholder values do not establish effective trust or access.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-013",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 130,
+      "end_line": 151,
+      "span_sha256": "c90c4ca33b790bf9af17a6423bbd6fda83627457ea63fbfaad70571dc6f04328",
+      "statement": "The retrieval example grants job-scoped OIDC issuance and contents read, uses a patterned SHA-shaped action reference and makes a retrieved secret available to a later step; no action origin or secret handling is certified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-014",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 153,
+      "end_line": 155,
+      "span_sha256": "0af0a4ff0d6dff1ddd2bbdf1ec4e4c001de11b0e5f1c0c45c67c72377fb4d7a7",
+      "statement": "If Vault is not publicly accessible, consider a self-hosted runner with other available auth methods; namespace must be set for Vault Enterprise including HCP deployments.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-015",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 159,
+      "end_line": 162,
+      "span_sha256": "ed4cb6dbdb55bad31a0751e7bb3edd6a7a8fb5a86778627d63742421bd9cd40d",
+      "statement": "Vault normally revokes tokens at TTL expiry; optional immediate cleanup after completion/failure requires exporting the issued token, default false, and invoking self-revocation. Neither is performed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-016",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 164,
+      "end_line": 192,
+      "span_sha256": "0cad437f80f82ca488510ea90e025713ff44dbec53b02eff41d042866e223389",
+      "statement": "The optional cleanup example uses an always condition, an exported token in a curl header and verbose logging; apply the prior log/argv secrecy guidance instead of copying it as a safe production cleanup.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-04-017",
+      "artifact_id": "565e05a320b596ddd04d2963",
+      "start_line": 194,
+      "end_line": 196,
+      "span_sha256": "79a2b0921aa40b651de77fad754a778dadbd0b4be4f45f8425805bcabc49b2ed",
+      "statement": "Further reading does not expand reviewed artifacts or prove Vault behavior.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}
