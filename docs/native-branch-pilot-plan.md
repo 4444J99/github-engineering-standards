@@ -2,8 +2,10 @@
 
 Owner `4444J99`; target `4444J99/ges-native-enforcement-pilot`, private, disposable.
 Scope: one `main` branch; no existing estate targets or frozen #453.
-Native writes await the specific plan approval required by `remaining-work.md`
-lines20–23. Source-review/merge approval is not counted as adoption or pilot proof.
+The owner approved this specific plan on 2026-10-06. The reviewed payload baseline
+is commit `4d3aa01d85f22e78799d3de6589ee8f398e8b200`. Source-review/merge approval
+is not counted as adoption or pilot proof. See the bounded
+[execution observation](private-native-pilot-result.md) for the measured result.
 
 1. Read target existence, authenticated owner/admin permission, visibility and
    plan capability. The authenticated owner is a User and its plan was not

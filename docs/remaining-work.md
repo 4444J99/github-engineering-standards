@@ -17,11 +17,13 @@ baseline, as separate provenance layers for Engineering Environment Standards.
 | Native pilot acceptance | Approved private disposable target, effective policy readback, positive/negative behavior, bypass review, rollback, and unchanged second-run verification. | GES v0.2 requires synthesis, public release clearance, and this pilot. |
 | Estate rollout | Separately approved target inventory, rollout batches, freshness, exceptions, and drift reconciliation. | Independent follow-on program; not a GES synthesis or release blocker. |
 
-The intended private native pilot target is
-`4444J99/ges-native-enforcement-pilot`, pending repository creation, effective
-visibility/permission checks, and approval of its specific enforcement plan.
-The selected name does not establish provisioning or pilot acceptance. The
-specific proposed [branch pilot plan](native-branch-pilot-plan.md),
+The owner approved the specific private native pilot plan on 2026-10-06.
+`4444J99/ges-native-enforcement-pilot` is provisioned and its private visibility
+and owner/admin permission were verified. The rule remains Disabled: the real
+Actions canary jobs did not execute, so activation, positive/negative behavior,
+rollback and second-run acceptance remain outstanding. See the bounded
+[pilot observation](private-native-pilot-result.md). Provisioning does not
+establish pilot acceptance. The [branch pilot plan](native-branch-pilot-plan.md),
 [operational procedure](branch-policy-operations.md), draft profile and payloads
 are now concrete review inputs. Their publication does not activate policy.
 Upstream contribution packets require current-upstream verification and individual
