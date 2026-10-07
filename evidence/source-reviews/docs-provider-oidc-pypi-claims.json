@@ -1,0 +1,111 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T03:08:44.756184+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-pypi.md",
+  "content_sha256": "36003942dfaac828a268445a078ab74483911cb1b2f52168123d2cc7ecf0d17c",
+  "claims": [
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-001",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 1,
+      "end_line": 21,
+      "span_sha256": "aa6642307477ecce2f5a2ad90313c93e36b9978287d2f339806aff01bce06195",
+      "statement": "The PyPI guide is FPT/GHEC-only and describes package trusted publishing through OIDC without manual API-token management; it does not claim GHES support.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-002",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 25,
+      "end_line": 29,
+      "span_sha256": "fdc1125f1cc80e95417a0340e92251322da5ccc5ea76ae559c9dd8f4c0c90818",
+      "statement": "Within this FPT/GHEC-only PyPI guide, OIDC prerequisites require at least one trust condition excluding untrusted repositories. The included Dependabot dynamic event_name guidance is feature-qualified; its GHES feature availability does not add GHES support to this PyPI guide. GHE.com substitutions are GHEC-only.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-003",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 33,
+      "end_line": 37,
+      "span_sha256": "6084fa8cfa0afda8aff79bc82def9a8fbef6eb261a28331bbb3abbd1509c516f",
+      "statement": "Configure each PyPI project to trust the repository and workflow combination allowed to publish it; project publishing settings and sample identities are not configured here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-004",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 39,
+      "end_line": 45,
+      "span_sha256": "ed5a71b0fc78bc652f483234a3b5313e084e3701bb57050567df449ffb8998c1",
+      "statement": "Incorrect owner, repository or workflow publisher identity grants publishing power comparable to sharing an API token; environment is an optional additional publisher identity field.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-005",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 49,
+      "end_line": 53,
+      "span_sha256": "e21663ff73f5bcbf35e2530c705b4b5bf77c0b8c51355940117337e921b54b95",
+      "statement": "Register the trusted publisher first, then enable the publishing action by granting its containing job OIDC issuance and omitting username/password; environment protection remains recommended.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-006",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 55,
+      "end_line": 55,
+      "span_sha256": "59f4c6c21ffaa3a8f12c0d68afcbf09e66c2aaff3c39eaed0f699b94b381a0b7",
+      "statement": "The publishing action exchanges GitHub OIDC for a PyPI API token and uploads distributions; this is mechanism description, not an upload or release authorization.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-007",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 57,
+      "end_line": 80,
+      "span_sha256": "23fccb32b8a3df5e0e5bb2b5f457faba85a895d0a869ce14ae915ee22dd97670",
+      "statement": "The sample build job checks out code, sets up Python3.x, installs the build tool, builds distributions and uploads an artifact. Example mutable action tags and build commands are not accepted or executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-008",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 76,
+      "end_line": 80,
+      "span_sha256": "9fad13fa064786119d4b1274513892a7948c187894690466e482528c59940e60",
+      "statement": "The artifact-upload step is labeled windows distributions although its runner is Ubuntu; retain the illustrative naming inconsistency without asserting a Windows build.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-009",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 82,
+      "end_line": 98,
+      "span_sha256": "9e2656205eccfe4f2507a8d2ca14ec82c31a560645a8ea442ca9fcdd234c4aeb",
+      "statement": "A separate publishing job depends on the build job, gets job-scoped OIDC issuance, downloads the named distribution artifact and invokes a SHA-shaped publish action; artifact identity/integrity and action origin require separate review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-010",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 64,
+      "end_line": 91,
+      "span_sha256": "4487667566dad738e45a952b9d136b8a95690c104338f8dec4c1c5f39ae54d63",
+      "statement": "Artifact action versions are selected by the artifacts-v3-deprecation feature: FPT/GHEC use the new versions; the feature file does not add GHES availability. Mutable checkout/setup versions are source examples, not immutable policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-05-011",
+      "artifact_id": "9e81bc3c13523a1ae1882051",
+      "start_line": 58,
+      "end_line": 58,
+      "span_sha256": "c90c0106cd88f79f2a3499a9fd19b99927f087d650eb1812f36435c606cd760a",
+      "statement": "The injected third-party comment preserves separate service/privacy/support terms and absence of GitHub certification.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}

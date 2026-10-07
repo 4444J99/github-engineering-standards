@@ -1,0 +1,111 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T03:08:44.756184+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-azure.md",
+  "content_sha256": "bb9cb75976065b1c16cdef1070d2c37b4ffad727cbb016d109d0b4d9186f243a",
+  "claims": [
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-001",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 1,
+      "end_line": 25,
+      "span_sha256": "855f674e63af855ea9beefbee116f5724dc3cb9ae284af9f48da8865412f24e1",
+      "statement": "The Azure guide covers FPT/GHEC/GHES and describes token federation through azure/login; GHES requires self-hosted runners.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-002",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 29,
+      "end_line": 33,
+      "span_sha256": "fdc1125f1cc80e95417a0340e92251322da5ccc5ea76ae559c9dd8f4c0c90818",
+      "statement": "OIDC prerequisites require at least one trust condition excluding untrusted repositories. Dependabot dynamic event_name is feature-gated to FPT/GHEC/GHES>3.20; GHE.com substitutions are GHEC-only.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-003",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 35,
+      "end_line": 35,
+      "span_sha256": "e5db05cebec65b8fb214196bdef78e32c7ca0a4da31d294688d6eb8f85af7a82",
+      "statement": "The Azure guide says repositories created after July15,2026 and repositories renamed/transferred after that date use immutable owner/repository-ID subjects; existing repositories keep the prior format unless opted in, and GHES is excluded. Preserve this guide-specific wording.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-004",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 37,
+      "end_line": 45,
+      "span_sha256": "c6506c6ad2307921b74a8a02bd3549bf6fd3d7ed386aa95d9366b6bd29460327",
+      "statement": "For GHES Azure must reach discovery/JWKS endpoints and the JWT issuer must be publicly routable; Entra ID has no fixed IP ranges for those endpoints.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-005",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 49,
+      "end_line": 58,
+      "span_sha256": "4581ad86feee441dc16096c766e05533816ea62754e73c7aec09e5658b1e6692",
+      "statement": "Azure workload identity federation setup creates an Entra application/service principal and federated credentials, then stores Azure configuration in GitHub secrets; this is a procedure, not permission to create resources.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-006",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 61,
+      "end_line": 62,
+      "span_sha256": "ce5416220ecf4a9ee604f689ece896fb912f825b5160a6efdbc2a7968248d5f0",
+      "statement": "Review trust hardening; api://AzureADTokenExchange is the recommended Azure audience, but other values are permitted and require provider-specific review.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-007",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 66,
+      "end_line": 78,
+      "span_sha256": "b7f1f2e748f9485a43016c98c4e6865fac076144b180aac96b5e6c423cbcc91c",
+      "statement": "Workflow authentication combines OIDC issuance permission and azure/login JWT exchange; environment protection is recommended when environments participate.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-008",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 80,
+      "end_line": 99,
+      "span_sha256": "0439901f6c388a071b9af540d2b49c643129943a0619fea2086bec788aff6393",
+      "statement": "The sample root OIDC permission and Azure action reference/client/tenant/subscription placeholders are illustrative; they establish neither safe action origin nor an adopted root-permission policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-009",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 101,
+      "end_line": 105,
+      "span_sha256": "98eeb03f7ed4a1500f93c417c455eec98ef7f5e134f084b82080a2cae82db7e6",
+      "statement": "The sample Azure account/group listing demonstrates resource access after login; no real cloud read or access test occurred.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-010",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 83,
+      "end_line": 83,
+      "span_sha256": "c90c0106cd88f79f2a3499a9fd19b99927f087d650eb1812f36435c606cd760a",
+      "statement": "The reusable comment preserves third-party action terms/privacy/support and absence of GitHub certification.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-02-011",
+      "artifact_id": "58f3919a8f868f99d392311d",
+      "start_line": 107,
+      "end_line": 109,
+      "span_sha256": "79a2b0921aa40b651de77fad754a778dadbd0b4be4f45f8425805bcabc49b2ed",
+      "statement": "Further-reading links do not certify other source artifacts or the provider configuration.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}

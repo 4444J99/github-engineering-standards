@@ -1,0 +1,120 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T03:08:44.756184+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-google-cloud-platform.md",
+  "content_sha256": "b9876322085188d9644775b79df00cf8067bf060f9f6b41bfff76ae15c694fc6",
+  "claims": [
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-001",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 1,
+      "end_line": 24,
+      "span_sha256": "1055271956bbf1e00b283ea92540763c31c66a71e97d2d2b9a0a6c003258545b",
+      "statement": "This GCP guide covers FPT/GHEC/GHES and describes federation through google-github-actions/auth without long-lived GCP secrets; GHES lacks hosted runners.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-002",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 28,
+      "end_line": 32,
+      "span_sha256": "fdc1125f1cc80e95417a0340e92251322da5ccc5ea76ae559c9dd8f4c0c90818",
+      "statement": "OIDC prerequisites require at least one trust condition excluding untrusted repositories. Dependabot dynamic event_name is feature-gated to FPT/GHEC/GHES>3.20; GHE.com substitutions are GHEC-only.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-003",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 34,
+      "end_line": 34,
+      "span_sha256": "e5db05cebec65b8fb214196bdef78e32c7ca0a4da31d294688d6eb8f85af7a82",
+      "statement": "The GCP guide includes repositories created after July15,2026 and repositories renamed/transferred after that date in immutable owner/repository-ID subjects, excludes GHES, and says existing repositories retain old format unless opted in.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-004",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 36,
+      "end_line": 44,
+      "span_sha256": "3a51ee1ce417b77c790b4ce947d73c74b3d1f089d6341b3625dfb982e4b37cab",
+      "statement": "GHES discovery/JWKS endpoints must be accessible; GCP has no fixed IP ranges and the JWT issuer must be publicly routable.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-005",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 48,
+      "end_line": 52,
+      "span_sha256": "83c4abdc1051274506e2b72345adaf88c3c73590fcaad0af537464f755b87216",
+      "statement": "The prescribed GCP setup creates an identity pool, maps claims/adds conditions and connects it to a service account; no resource creation is performed here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-006",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 56,
+      "end_line": 58,
+      "span_sha256": "ff70827f5058e8ab9c3337d72b3ce7fdc8e23a5b8abb2b3c5a7bc6675c2cd63d",
+      "statement": "Review cloud trust; the source requires roles/iam.workloadIdentityUser for service-account configuration and selects public versus GHES issuer URLs. Exact role bindings and effective resource permissions remain unverified.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-007",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 62,
+      "end_line": 74,
+      "span_sha256": "dfba519e118bf04b56fc1c75446440c9c1d4be7b77e91cfa398ccd2fbdcd58c2",
+      "statement": "The workflow needs OIDC issuance permission and an auth action to exchange the JWT; environments warrant recommended protection rules.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-008",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 76,
+      "end_line": 81,
+      "span_sha256": "619b1b05b5b643dc11237ac065a6f5b25b9a4c3462b584d203741e42f065cf60",
+      "statement": "The identity-provider resource path and service account are example substitutions for workload identity federation, not actual admitted identities.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-009",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 83,
+      "end_line": 104,
+      "span_sha256": "9140117f5792b36adbcb2cc1b23f01c1fcc61383850e4a46e11d1308aa9d4a68",
+      "statement": "The sample triggers pull requests targeting main, uses a patterned full-SHA-shaped auth reference and creates a credential file; syntax does not prove action origin, trusted triggering inputs or safe credential-file handling.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-010",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 105,
+      "end_line": 110,
+      "span_sha256": "a32ab1930f76bcdd86b95cfa3cfc24ec8aae632c000fc2716875bd64dba6c345",
+      "statement": "The sample logs in gcloud using the emitted credential-file path and lists services; credential secrecy and actual cloud access need separate evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-011",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 84,
+      "end_line": 84,
+      "span_sha256": "c90c0106cd88f79f2a3499a9fd19b99927f087d650eb1812f36435c606cd760a",
+      "statement": "The third-party action comment disclaims GitHub certification and preserves separate terms/privacy/support.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-PROVIDER-OIDC-03-012",
+      "artifact_id": "508a67e22ddd75c6e6d7380b",
+      "start_line": 112,
+      "end_line": 114,
+      "span_sha256": "79a2b0921aa40b651de77fad754a778dadbd0b4be4f45f8425805bcabc49b2ed",
+      "statement": "Further reading remains navigation outside whole-file certification.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article and literal closure read; source propositions are reference-only and do not adopt policy."
+}

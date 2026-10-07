@@ -1,0 +1,77 @@
+{
+  "schema": "ges.provider-oidc-primary-review.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T03:08:51.320643+00:00",
+  "source_commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "whole_articles": 5,
+  "source_lines": 691,
+  "authored_claims": 66,
+  "literal_dependencies_read": 16,
+  "literal_dependency_lines": 48,
+  "selected_variable_bindings": 6,
+  "visual_dependencies_read": 0,
+  "documents": [
+    {
+      "path": "evidence/source-reviews/docs-provider-oidc-aws-claims.json",
+      "sha256": "4ea9dfe8049a3a72fbcec9d813a4b487a6bdf2c82f0c4629a107dab4bc28b8d0",
+      "claims": 15
+    },
+    {
+      "path": "evidence/source-reviews/docs-provider-oidc-azure-claims.json",
+      "sha256": "bfc6451bfca33e4991d775a12c421a45ade7a7e482f9451524a1bf4a8981d474",
+      "claims": 11
+    },
+    {
+      "path": "evidence/source-reviews/docs-provider-oidc-google-cloud-claims.json",
+      "sha256": "7a5adb18e7c16fd29d4a89b4ee86b8b8460738fdecec343bf120a44840d5c865",
+      "claims": 12
+    },
+    {
+      "path": "evidence/source-reviews/docs-provider-oidc-vault-claims.json",
+      "sha256": "db182f8cd0c19b5ddaa2c8c49a05746835d165007987bf8a0db2f3ef97916d80",
+      "claims": 17
+    },
+    {
+      "path": "evidence/source-reviews/docs-provider-oidc-pypi-claims.json",
+      "sha256": "e671588c4945bb849bf05297d14d1f8689db7e44862a500abaa04f40a30ff299",
+      "claims": 11
+    }
+  ],
+  "method": "Full original reading followed by manually authored propositions; exact candidate spans account source structure only. Explicit partial supporting control mappings, independently audited before integration.",
+  "old_receipts": {
+    "decisions": 408,
+    "changed_global_claim_digest": true,
+    "changed_catalog_digest": true,
+    "ACT006_reference_revisions_updated": 42,
+    "relation_review": "Independent recheck against unchanged objective and new manual provider template; no repeated extraction or new artifact credit. Other decision content remains unchanged."
+  },
+  "limits": {
+    "policy_adopted": false,
+    "native_behavior_proved": false,
+    "whole_corpus_omission_certified": false,
+    "published_pages_certified": false,
+    "rights_cleared": false
+  },
+  "local_validation": {
+    "observed_at": "2026-10-07T03:04:40.787724+00:00",
+    "unit_tests": {
+      "passed": 524,
+      "seconds": 3.832
+    },
+    "catalog_controls_valid": 95,
+    "missing_form_parameters_rejected": true,
+    "complete_form_renders": true,
+    "rendered_form_is_not_pass": true,
+    "revision1_attestation_does_not_approve_revision2": true,
+    "native_behavior_not_inferred": true,
+    "validation_scope": "Synthetic renderer/assessment checks and existing full suite; no provider access or deployment."
+  },
+  "resolved_independent_findings": [
+    "Creation-date threshold restored for Azure/GCP subject guidance.",
+    "Standalone prerequisites retain explicit feature/platform conditions.",
+    "PyPI outer FPT/GHEC availability retained despite reusable feature support on GHES.",
+    "Vault namespace qualified to Enterprise/HCP.",
+    "Draft default-permission wording replaces adoption presupposition.",
+    "Vault namespace qualifier span expanded to include its Enterprise/HCP source lines."
+  ]
+}

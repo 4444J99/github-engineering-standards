@@ -3140,7 +3140,7 @@
   },
   {
     "id": "GES-ACT-006",
-    "revision": 1,
+    "revision": 2,
     "title": "Workflow credentials have bounded lifetimes",
     "objective": "Prefer scoped short-lived credentials where supported; review OIDC trust subjects, audiences and allowed workflows.",
     "category": "act",
@@ -3167,10 +3167,11 @@
       "kind": "manual"
     },
     "implementation": {
-      "template": "templates/review-checklist.md",
+      "template": "templates/provider-oidc-review.md",
       "acceptance": [
         "Prefer scoped short-lived credentials where supported; review OIDC trust subjects, audiences and allowed workflows.",
-        "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date."
+        "Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.",
+        "The provider review record binds the control revision, actual issuer/audience/subject restrictions, resource privilege and credential lifetime to accountable, fresh target evidence; missing observations remain unknown."
       ]
     },
     "enforcement": {
