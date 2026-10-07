@@ -1,0 +1,147 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T00:36:20.615722+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/troubleshooting-rules.md",
+  "content_sha256": "4a81fb02023a28c58ab226aa6d7cd4ff9b6a0de894b8d4451de9db630a2acd37",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-001",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 1,
+      "end_line": 12,
+      "span_sha256": "3fc1f9607e5627f8e67f7a46707bd7f0dd0b5908a125e7169930ec84ffecb094",
+      "statement": "Ruleset troubleshooting retains product/version availability from the pinned repo-rules reusable; frontmatter does not establish native eligibility or adoption.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-002",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 16,
+      "end_line": 20,
+      "span_sha256": "ad183dda9034634d26a5da0fa497163cbffb430bf5c0b611313a3063ff6a322d",
+      "statement": "Active rules can explain a blocked action. Signing or metadata restrictions may require rewriting, renaming, rebasing or squash merging; these are potential remedies requiring authorization, not commands run here or resolution of the earlier squash-metadata source contradiction.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-003",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 22,
+      "end_line": 26,
+      "span_sha256": "e39eaed82f59ce6f28b5936b322979a7ee758154e10b600bc1edb6f1d134c4ae",
+      "statement": "Push rulesets allow at most 1,000 reference updates per push. Feature-gated file-path/file-size exceptions can be configured by eligible admins at repository, organization or enterprise scope; these source limits are not tested local behavior.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-004",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 30,
+      "end_line": 30,
+      "span_sha256": "f9e0cf519bec59118eb1f0b775139dd9059f296904ff02088174abe8a9bc1738",
+      "statement": "Push rulesets also apply to REST create-blob, create-tree and create/update-file-contents endpoints; UI-only testing does not cover all push surfaces.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-005",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 34,
+      "end_line": 40,
+      "span_sha256": "beaf9826128bba123efedd1dcd4a9fc9a6e9d4402a1b8a0699f90796cb9c35ad",
+      "statement": "Required names are job name, job name / reusable job name, or external check name. Workflow name, matrix and event types are not part of the required-status-check identity; identical names can therefore collide.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-006",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 42,
+      "end_line": 46,
+      "span_sha256": "2aeec27d4c6a6d614b1407065e76f213ac4527853cd0665b7afe3ef5ca90d3cb",
+      "statement": "Above-repository check names are not indexed where enterprise rulesets are available, so names must be entered exactly. Evaluate runs checks without requiring them to pass.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-007",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 49,
+      "end_line": 57,
+      "span_sha256": "34bed9327e1b5cddbf1547ac4fb4858af0dc0cb5646b0016727737778b86c692",
+      "statement": "Required workflows are organization/enterprise ruleset capabilities where gated. Creating a rule while a PR is already open does not automatically run it; a new commit, update or reopen can trigger it.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-008",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 61,
+      "end_line": 65,
+      "span_sha256": "9900e8dd275f10e7a5e23bf5a1b20f9841efc32f66d9e55ef7f301cf647392c4",
+      "statement": "Required ruleset workflows support pull_request, pull_request_target and merge_group default activities; their supported-event filters are ignored. Events triggered by GITHUB_TOKEN do not run ruleset workflows.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-009",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 69,
+      "end_line": 69,
+      "span_sha256": "c9a46ac6718a041ee90ef5c93f623000c0c7d2c372a709c08e3e7ec1f8287190",
+      "statement": "Required workflows can block initialization of a new repository. Bootstrap before enforcing them, or use an explicitly authorized bypass; no bypass authority is inferred here.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-010",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 77,
+      "end_line": 77,
+      "span_sha256": "8ab0aee2663b7b30076a779ed497c614d566e7dea60a1556a10d544baaae3519",
+      "statement": "The source recommends targeting PR integration branches rather than every branch, to avoid blocking ordinary development pushes.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-011",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 81,
+      "end_line": 84,
+      "span_sha256": "8839791d1cd1208cea283cf43f85231bc410ef96a5eb7ae05b5cce8799cb46b4",
+      "statement": "Required workflows must be in .github/workflows. The source describes excluding the source repository or disabling Actions/a workflow for source-repository handling; these remain reference options and do not authorize disabling any estate capability.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-012",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 88,
+      "end_line": 88,
+      "span_sha256": "49dea58935005203c297bfe1d6708ff73862187736a0f04a29c9a8fd85001b1b",
+      "statement": "Merge-queue required workflows need merge_group in their event list.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-013",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 92,
+      "end_line": 98,
+      "span_sha256": "3e9af42ebbf4665111af2064a3d277b57d027cafce8262349533e34bfa0ef5a7",
+      "statement": "An external required workflow must be accessible within the organization. Its source visibility must be no more restrictive than targets: public can serve any target, internal can serve internal/private, and private can serve private.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-014",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 102,
+      "end_line": 106,
+      "span_sha256": "38b84055bc0e49f5b97a15b3d02be4824f522dd8d125334a1ec90f78dc9647a8",
+      "statement": "Repository creation may require bypass when initial required workflows block it. Rule insights are logged only when a PR is merged or a merge is attempted; absence before an attempt is not a passing observation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-04-015",
+      "artifact_id": "6485b6483eb08d1256f162ca",
+      "start_line": 110,
+      "end_line": 110,
+      "span_sha256": "d334a29d4507c1e1aac504fc2dfe5bbf9319ae6c4d5ee5808a48615e86cd3556",
+      "statement": "Do not use cancel-in-progress for workflows required by rulesets; cancellation can prevent satisfying the required workflow. This is scoped required-workflow guidance, not a ban on concurrency for all workflows.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article plus literal dependency reading; source evidence only, without adoption or live behavior verification."
+}

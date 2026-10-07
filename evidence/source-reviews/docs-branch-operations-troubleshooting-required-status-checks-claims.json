@@ -1,0 +1,156 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T00:36:20.615722+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/pull-requests/how-tos/merge-and-close-pull-requests/troubleshooting-required-status-checks.md",
+  "content_sha256": "9b5561c1111ad4a6e3430d1656cc17d7f923539794df8224638952984e1e2990",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-001",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 1,
+      "end_line": 18,
+      "span_sha256": "791daaa7d582b5b0d1eac6f4991a67abf001da0d5573bc38fc66f421964f58c6",
+      "statement": "Availability is limited by the protected-branches reusable to public Free and public/private Pro, Team or Enterprise plans. Version and redirect metadata do not adopt protection locally.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-002",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 21,
+      "end_line": 21,
+      "span_sha256": "481bb5fe3ee38d5a734e9f37cdad9136f803cb51c8bde10a8ee8cc063eb7cf01",
+      "statement": "The source states that a required check must have completed successfully in the repository during the last seven days. This does not by itself establish success on the current merge SHA.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-003",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 22,
+      "end_line": 22,
+      "span_sha256": "386dc70bfe5a1bbbe37c4c350f8ffee87ab459f370cece326af40e6826a4825c",
+      "statement": "When a check run and commit status share a required name, BOTH must pass. A successful run alone cannot establish satisfaction.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-004",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 23,
+      "end_line": 23,
+      "span_sha256": "9bc7d23b7d24898c14ad3f2ae6a31d7e6dec052568ee34b0cd2b28bce616bb10",
+      "statement": "Strict required checks require the branch to be updated from the base before merge, using merge or rebase.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-005",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 25,
+      "end_line": 30,
+      "span_sha256": "357e634952a44ea2b98620b6f68a89971aa459abe4bfc36da0397da3ef187d2d",
+      "statement": "The GH006 ci-build transcript illustrates a failed required check. It is not a local negative-test result or a prescribed check name.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-006",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 33,
+      "end_line": 33,
+      "span_sha256": "a94ce7202638cdcbdd0f5b1d1e5f6bf6c7a775690892c28d8638ccbec31ec77f",
+      "statement": "If a pull request is up to date and required checks passed, the source permits local merging and pushing without checks on the merge commit itself. A policy requiring a separate integration-commit run is stricter local policy, not this universal platform requirement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-007",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 39,
+      "end_line": 40,
+      "span_sha256": "8fa4b8d9d747a99179f419a005f7ffe25165e0be608b17477e0baecffb164d36",
+      "statement": "Only checks against the latest commit SHA satisfy requirements; checks against previous SHAs do not. GitHub accepts successful, skipped or neutral conclusions, so passing configuration is not proof that analysis executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-008",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 46,
+      "end_line": 49,
+      "span_sha256": "5b45642916a2030a59fbe156de3d8d268a1f486239c66f818dfc0846190963f2",
+      "statement": "When the test merge commit has a status check it must pass; otherwise the head commit check must pass. The displayed merge-branch indication helps distinguish the revision being checked.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-009",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 55,
+      "end_line": 68,
+      "span_sha256": "fa25b4a206388036d94aac2641e849695814a119523b6d10e1d4d3ad9e08efb5",
+      "statement": "GitHub Actions job checks must use eligible PR events (push, pull_request, pull_request_review, pull_request_target, deployment or deployment_status); workflow_dispatch success does not satisfy this PR ruleset check requirement. External App checks are exempt from this Actions-event limitation.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-010",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 70,
+      "end_line": 70,
+      "span_sha256": "1039ebb666a3bbd12463cd4d9d96a3036f2ec10a165fbaaaf22dd350dfb482b2",
+      "statement": "Queued Actions checks need merge_group as an additional event; it is separate from push and pull_request.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-011",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 76,
+      "end_line": 76,
+      "span_sha256": "a4be20f4736791f217caeccc123f770c4b5aa2df1d36af133dea4ccfecb3c707",
+      "statement": "Skipping an entire workflow through path, branch or commit-message filters leaves associated checks Pending and can block a required-check pull request.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-012",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 77,
+      "end_line": 77,
+      "span_sha256": "35afca3d93bbac0734efc339ddcb64c23618748b961635cd45b4212e29ec696b",
+      "statement": "A job skipped by an if condition reports Success and does not block merge even when required. Success alone cannot prove work executed.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-013",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 78,
+      "end_line": 80,
+      "span_sha256": "d160308f3de07527c40d2c75265f9297f3b339b6da627cf0e3a3f41569ac7e4d",
+      "statement": "A job depending on a failed job can be skipped without reporting a failure and may not block merge. An always() condition with needs is recommended to ensure the dependent job reports; a safe aggregator must also examine dependency results.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-014",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 84,
+      "end_line": 110,
+      "span_sha256": "a06c71bb291dea257a088877b1901adc5423e83dcfdb23913d660fa038bc8fae",
+      "statement": "The scripts/** example demonstrates workflow-level filtering that leaves a README-only PR waiting; its checkout/setup-node includes and Node-version matrix are source examples, not selected local dependencies or production versions.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-015",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 114,
+      "end_line": 125,
+      "span_sha256": "b373d7518452a66c911f65213a370870b5716969a545fd130fc923e9c719008e",
+      "statement": "The source requires adding merge_group to Actions required-check workflows for merge queues; the pull_request plus merge_group YAML is illustrative event configuration.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-01-016",
+      "artifact_id": "5690ecac7b30ba3ac1808866",
+      "start_line": 131,
+      "end_line": 135,
+      "span_sha256": "de4ac966444d6837a4310f5b70452983c1820afcb0ea9c65d4532265f97cce0f",
+      "statement": "A required check restricted to an expected GitHub App must be produced by that App; a same-name check from another publisher does not meet the configured requirement.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article plus literal dependency reading; source evidence only, without adoption or live behavior verification."
+}

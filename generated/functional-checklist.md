@@ -289,7 +289,7 @@ Check a box only when scoped, current evidence satisfies the stated criterion.
   Applicability: `{}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-GOV-004 r1 — Code owners are operationally valid** (MUST; REVIEWED_DRAFT)
+- [ ] **GES-GOV-004 r2 — Code owners are operationally valid** (MUST; REVIEWED_DRAFT)
   Validate ownership syntax, precedence, team visibility, write access and protection of the ownership file itself; prove required reviewer routing.
   Acceptance: Validate ownership syntax, precedence, team visibility, write access and protection of the ownership file itself; prove required reviewer routing.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `manual`; scope: repository.
@@ -585,14 +585,14 @@ Check a box only when scoped, current evidence satisfies the stated criterion.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-007 r2 — Effective protection includes all inheritance and bypass paths** (MUST; REVIEWED_DRAFT)
+- [ ] **GES-RULE-007 r3 — Effective protection includes all inheritance and bypass paths** (MUST; REVIEWED_DRAFT)
   Inspect active rulesets, legacy protection, repository/organization inheritance and bypass permissions together. Exercise rejected and accepted changes in a safe test repository.
   Acceptance: Inspect active rulesets, legacy protection, repository/organization inheritance and bypass permissions together. Exercise rejected and accepted changes in a safe test repository.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `manual`; scope: repository.
   Applicability: `{'protected_branch': True}`.
   Evidence: target, revision, observation time, evidence reference, result, reviewer when required.
 
-- [ ] **GES-RULE-008 r2 — Required checks execute on the right integration revision** (MUST; REVIEWED_DRAFT)
+- [ ] **GES-RULE-008 r3 — Required checks execute on the right integration revision** (MUST; REVIEWED_DRAFT)
   Ensure required check names exist and run on the proposed or queued merge revision; validate triggers, filters and trusted publishers.
   Acceptance: Ensure required check names exist and run on the proposed or queued merge revision; validate triggers, filters and trusted publishers.; Evidence identifies the target, revision, responsible reviewer, observed outcome and review date.
   Verification: `manual`; scope: repository.

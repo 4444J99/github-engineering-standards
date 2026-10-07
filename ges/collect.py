@@ -1,5 +1,6 @@
 """Bounded GitHub read adapter. Tokens stay on api.github.com; no writes."""
 from __future__ import annotations
+
 import base64
 import json
 import os
@@ -7,6 +8,7 @@ import re
 import urllib.error
 import urllib.parse
 import urllib.request
+
 from .core import digest, now
 from .sources import NoAuthRedirect
 
@@ -33,6 +35,7 @@ def collect(
     enterprise_slug: str | None = None,
     target_type: str | None = None,
     ref: str | None = None,
+    check_revision: str | None = None,
 ) -> dict:
     """Collect snapshots from GitHub API for repositories or organizations.
 
@@ -47,6 +50,8 @@ def collect(
         raise ValueError('Target repository or organization required')
     if max_pages < 1 or max_files < 1:
         raise ValueError('Collection bounds must be positive')
+    if check_revision is not None and not re.fullmatch(r'[a-fA-F0-9]{40}', check_revision):
+        raise ValueError('Check revision must be an exact commit SHA')
     if target_type not in {None, 'repository', 'organization'}:
         raise ValueError('Unsupported target type')
     if enterprise_slug and not re.fullmatch(r'[A-Za-z0-9_.-]+', enterprise_slug):
@@ -77,7 +82,8 @@ def collect(
         except (urllib.error.URLError, TimeoutError, ValueError):
             return {'status': 'ERROR', 'reason': 'Transport or decoding failure', 'data': None, 'complete': False, 'truncated': False}
 
-    def get_paginated(path: str, *, max_pages: int = max_pages, per_page: int = 100) -> dict:
+    def get_paginated(path: str, *, max_pages: int = max_pages, per_page: int = 100,
+                      collection_key: str | None = None) -> dict:
         items = []
         page = 1
         complete = True
@@ -96,13 +102,23 @@ def collect(
                     if len(raw) > 20_000_000:
                         return {'status': 'ERROR', 'reason': 'Response too large', 'data': items, 'complete': False, 'truncated': True}
                     page_data = json.loads(raw)
+                    if collection_key:
+                        if not isinstance(page_data, dict) or type(page_data.get('total_count')) is not int or page_data['total_count'] < 0:
+                            return {'status': 'ERROR', 'reason': 'Malformed paginated envelope', 'data': items, 'complete': False, 'truncated': False}
+                        total_count = page_data['total_count']
+                        page_data = page_data.get(collection_key)
                     if path.endswith('/actions/permissions/repositories') and isinstance(page_data, dict):
                         page_data = page_data.get('repositories')
                     if not isinstance(page_data, list) or any(not isinstance(item, dict) for item in page_data):
                         return {'status': 'ERROR', 'reason': 'Expected API object list', 'data': items, 'complete': False, 'truncated': False}
                     items.extend(page_data)
                     link = r.headers.get('Link', '')
-                    has_next = 'rel="next"' in link if link else len(page_data) >= per_page
+                    has_next = ('rel="next"' in link if link else
+                                len(items) < total_count if collection_key else len(page_data) >= per_page)
+                    if collection_key and len(items) < total_count and not has_next:
+                        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True}
+                    if has_next and not page_data:
+                        return {'status': 'OK', 'http_status': 200, 'data': items, 'complete': False, 'truncated': True}
                     if not has_next:
                         complete = True
                         truncated = False
@@ -220,6 +236,18 @@ def collect(
     sha = ref_data['object']['sha']
     snap['target_revision'] = sha
     snap['target_branch'] = branch
+    check_sha = (check_revision or sha).lower()
+    snap['check_revision'] = check_sha
+    for name, path, key in (
+        ('check_runs', f'/commits/{check_sha}/check-runs?filter=latest', 'check_runs'),
+        ('commit_statuses', f'/commits/{check_sha}/statuses', None),
+        ('workflow_runs', f'/actions/runs?head_sha={check_sha}', 'workflow_runs'),
+    ):
+        observation = get_paginated(base + path, collection_key=key)
+        observation['revision'] = check_sha
+        observations[name] = observation
+    # GitHub limits this endpoint to the most recent 1,000 check suites. This
+    # bounded snapshot does not establish exhaustive historical check coverage.
     observations['effective_branch_rules'] = get(base + '/rules/branches/' + urllib.parse.quote(branch, safe=''))
     tree = get(base + '/git/trees/' + sha + '?recursive=1')
     if tree['status'] != 'OK':

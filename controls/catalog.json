@@ -1237,7 +1237,7 @@
   },
   {
     "id": "GES-GOV-004",
-    "revision": 1,
+    "revision": 2,
     "title": "Code owners are operationally valid",
     "objective": "Validate ownership syntax, precedence, team visibility, write access and protection of the ownership file itself; prove required reviewer routing.",
     "category": "gov",
@@ -1251,15 +1251,36 @@
         "repository": "github/docs",
         "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
         "path": "content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md",
-        "section": "(whole artifact)",
-        "start_line": 1,
-        "end_line": 6,
+        "section": "Explicit team write permission and visibility",
+        "start_line": 18,
+        "end_line": 18,
         "content_sha256": "700caf36acb0755221f0eddf85bbf5dd9096e1c7965eb1daa126937e09c653e9",
-        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md#L1"
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md#L18"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md",
+        "section": "Lookup, base-branch selection, size, syntax and skipped invalid lines",
+        "start_line": 36,
+        "end_line": 81,
+        "content_sha256": "700caf36acb0755221f0eddf85bbf5dd9096e1c7965eb1daa126937e09c653e9",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md#L36"
+      },
+      {
+        "repository": "github/docs",
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "path": "content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md",
+        "section": "Empty-owner override, any-owner approval and ownership-file protection",
+        "start_line": 140,
+        "end_line": 170,
+        "content_sha256": "700caf36acb0755221f0eddf85bbf5dd9096e1c7965eb1daa126937e09c653e9",
+        "url": "https://github.com/github/docs/blob/56fcfa816f27bca239e5d39fff0d4f74f77ec995/content/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners.md#L140"
       }
     ],
     "verification": {
-      "kind": "manual"
+      "kind": "manual",
+      "procedure": "docs/branch-policy-operations.md"
     },
     "implementation": {
       "template": "templates/CODEOWNERS",
@@ -2632,7 +2653,7 @@
   },
   {
     "id": "GES-RULE-007",
-    "revision": 2,
+    "revision": 3,
     "title": "Effective protection includes all inheritance and bypass paths",
     "objective": "Inspect active rulesets, legacy protection, repository/organization inheritance and bypass permissions together. Exercise rejected and accepted changes in a safe test repository.",
     "category": "rule",
@@ -2676,7 +2697,8 @@
       }
     ],
     "verification": {
-      "kind": "manual"
+      "kind": "manual",
+      "procedure": "docs/branch-policy-operations.md"
     },
     "implementation": {
       "template": "templates/ruleset.json",
@@ -2700,7 +2722,7 @@
   },
   {
     "id": "GES-RULE-008",
-    "revision": 2,
+    "revision": 3,
     "title": "Required checks execute on the right integration revision",
     "objective": "Ensure required check names exist and run on the proposed or queued merge revision; validate triggers, filters and trusted publishers.",
     "category": "rule",
@@ -2764,7 +2786,8 @@
       }
     ],
     "verification": {
-      "kind": "manual"
+      "kind": "manual",
+      "procedure": "docs/branch-policy-operations.md"
     },
     "implementation": {
       "template": "templates/review-checklist.md",

@@ -20,7 +20,10 @@ baseline, as separate provenance layers for Engineering Environment Standards.
 The intended private native pilot target is
 `4444J99/ges-native-enforcement-pilot`, pending repository creation, effective
 visibility/permission checks, and approval of its specific enforcement plan.
-The selected name does not establish provisioning or pilot acceptance.
+The selected name does not establish provisioning or pilot acceptance. The
+specific proposed [branch pilot plan](native-branch-pilot-plan.md),
+[operational procedure](branch-policy-operations.md), draft profile and payloads
+are now concrete review inputs. Their publication does not activate policy.
 Upstream contribution packets require current-upstream verification and individual
 user approval before submission; upstream acceptance does not block GES release.
 Broader EES requires separate source admission, ancestry reconciliation, ownership

@@ -1,0 +1,138 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T00:36:20.615722+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/managing-rulesets-for-a-repository.md",
+  "content_sha256": "c3d3a2e35bc63d4c3e58e3003700439ec76903f08056c44f8887c2cacb4d1e99",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-001",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 1,
+      "end_line": 13,
+      "span_sha256": "044c267d77da83f2a68a1d6dd51149547f47be2242d3e5cbbe3b4ac09d826da4",
+      "statement": "Ruleset plans and repository rule-management permissions are supplied by the pinned reusables: readers can view; admins or edit-repository-rules roles can manage. Visibility alone does not grant write authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-002",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 15,
+      "end_line": 17,
+      "span_sha256": "838b92790a1cc5ec629025a2906537bd12e249eb41cbf6e4124a631e294c857b",
+      "statement": "Where Evaluate exists it can precede Active after testing; temporary disabling is documented troubleshooting capability. REST/GraphQL links do not authorize changes or establish measured enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-003",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 19,
+      "end_line": 24,
+      "span_sha256": "701509adc67fdf98c0de792d5d32211449b255a624e005a17ae58fd3ff277950",
+      "statement": "Organization owners can manage organization rulesets targeting repositories and branches where the repo-rules-enterprise feature is available. Repository-level access does not imply inherited organization edit rights.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-004",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 28,
+      "end_line": 30,
+      "span_sha256": "9c8d09f5053814400f313de475e7b0c12d4809a230f5bc656b40eef725d00c69",
+      "statement": "Readers can view active branch, tag and push rules; feature-gated Evaluate rules are also visible but do not enforce. Fork push rules are managed by the root repository.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-005",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 32,
+      "end_line": 45,
+      "span_sha256": "9e80e992888eb4d37dc85715d005ac85a89045be14ceb030650a95570c62ce68",
+      "statement": "Branch-view shield icons, filters, /rules and the PR merge box expose rules or blocking requirements. UI visibility is not proof of complete layering or actor-specific enforcement.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-006",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 52,
+      "end_line": 52,
+      "span_sha256": "0dd0834441109f0979f0ffa08e1608fc23d816ed7200606b75bcc8356a348ba7",
+      "statement": "An inherited organization rule is edited in organization settings only when the viewer has appropriate authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-007",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 56,
+      "end_line": 65,
+      "span_sha256": "3dd0ee18663c86e65600e2a2461f5e62957eaeb7d43ddc387ab755d279e19217",
+      "statement": "Editing can change rules, bypass permissions or enforcement state; Disabled retains a ruleset configuration as an alternative to deleting it. Capture the current state before an authorized change.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-008",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 67,
+      "end_line": 70,
+      "span_sha256": "6d0b96e11e535132e4f6ecd8eb56319a8b991ed18c7116b3cd71c48e99c60a92",
+      "statement": "The delete procedure removes a ruleset; reading it grants neither deletion authority nor rollback proof.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-009",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 72,
+      "end_line": 83,
+      "span_sha256": "bdd26cc2180eee9a5e9b40c2e1d38ec54ae2bc1ba59524aeb72fdd507bf25a7b",
+      "statement": "Ruleset history is feature-gated (GHEC or GHES>=3.19). Its reusable lists changes in the last 180 days; on GHES only changes after upgrade to 3.17.0 or later are included. Exported historical JSON EXCLUDES the bypass list, so rollback custody must preserve bypass grants separately.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-010",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 87,
+      "end_line": 96,
+      "span_sha256": "d7868c8bd95d45b2586e89e4df1c4324d3acea8f05013c7fb38faec63a0ff6d4",
+      "statement": "Ruleset JSON import is feature-gated (FPT/GHEC or GHES>=3.19); an imported rule must be reviewed before Create. Reusing JSON does not preserve every bypass grant or certify suitability for a new target.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-011",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 100,
+      "end_line": 108,
+      "span_sha256": "69351beae72675f06ba073f2cdd8efd204aea36e33088e62920b314ce8402d5f",
+      "statement": "Rule insights distinguish passing, failing and bypassed actions; Evaluate shows would-be outcomes rather than blocking. Filters can select rule, branch, actor and time, and expanded rule runs expose failures or bypass.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-012",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 109,
+      "end_line": 110,
+      "span_sha256": "a933b134fdbe602be9a3a38af7765d975328b393a3e97cb9642a93874afc70b6",
+      "statement": "Merge-queue group details in insights are gated by repo-rules-merge-queue (GHEC or GHES>=3.15). They must not be assumed available on every product.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-013",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 114,
+      "end_line": 135,
+      "span_sha256": "8bec0050100c944c7cb3bf5fddde5d2b4750fbcd0bd9ceaa4aad1da439abbedf",
+      "statement": "The feature-gated insights dashboard is for Team and Enterprise Cloud plans and presents rule/bypass results over time and top bypass actors, with repository/organization drilldown. Summary visuals are not exhaustive actor-test evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-03-014",
+      "artifact_id": "551dd8516ce8473dbd423d07",
+      "start_line": 141,
+      "end_line": 143,
+      "span_sha256": "3ba2a63ffe63aa138a0d12ff9498f0087749c0dd0da5caee3f78f4dc5d2e0842",
+      "statement": "Delegated push bypass is feature-gated (GHEC or GHES>3.15). Bypass-list members receive email and have seven days to approve or deny. Cancelled means contributor-cancelled, Denied means reviewed and denied, Expired means the seven-day window elapsed, Open includes approved requests not yet pushed, and Completed means approval plus a successful push. Denial requires removing restricted content before pushing; approval alone is not a completed push or ordinary-rule satisfaction.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article plus literal dependency reading; source evidence only, without adoption or live behavior verification."
+}

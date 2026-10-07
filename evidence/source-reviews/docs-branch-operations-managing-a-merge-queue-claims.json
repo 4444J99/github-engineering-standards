@@ -1,0 +1,147 @@
+{
+  "schema_version": "ges.reference-claims.v1",
+  "reviewer": "codex:source-review",
+  "reviewed_at": "2026-10-07T00:36:20.615722+00:00",
+  "source": "github/docs",
+  "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+  "path": "content/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue.md",
+  "content_sha256": "3ccb7ceb787e04077634c15ff7b5cf63641f20b0245341dcf31d6ac3511e382e",
+  "claims": [
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-001",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 1,
+      "end_line": 19,
+      "span_sha256": "74fa26b031f9e15df30ff5f7c5e79fe9084616ea3d24f93de8eba6717f64d199",
+      "statement": "The page is for repository administrators. Merge queues on FPT/GHEC require organization-owned public repositories or organization-owned private repositories on Enterprise Cloud; user-owned private Pro repositories do not qualify under this pinned reusable. GHES allows organization-owned repositories.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-002",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 19,
+      "end_line": 19,
+      "span_sha256": "54345a2caf113744df75ad568832ecaeb6d472b485c7afbe8c30bcd92fdb7424",
+      "statement": "A merge queue tests changes against the latest base and earlier queued pull requests after their ordinary required checks pass; it can use Actions or another CI provider. This is documented behavior, not measured local execution.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-003",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 26,
+      "end_line": 28,
+      "span_sha256": "a8f02cf1332c1f20ffe4d6fb87bf8b3f81b21736c717fd7ecd7bcb32db06ff9f",
+      "statement": "A classic protection branch pattern containing * cannot use merge queues. Required queue checks must be triggered and reported by the CI provider, and queue configuration is coupled to branch protection or rulesets.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-004",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 32,
+      "end_line": 43,
+      "span_sha256": "d578f776b397735894250a9777eebcb5157da37589fa2e0bd76e4f70ed748d70",
+      "statement": "Actions CI must include merge_group for queued PRs; the example also retains pull_request. A passing PR-event run alone does not cover the group revision.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-005",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 49,
+      "end_line": 49,
+      "span_sha256": "431320507e63ab4b9aeade731fef5a9876cc6b6bc4886d8f8fe3b4cee76b3071",
+      "statement": "Third-party CI must handle the temporary gh-readonly-queue/{base_branch} prefix; the queued group SHA differs from the pull-request SHA.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-006",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 53,
+      "end_line": 57,
+      "span_sha256": "a160080e63c52c376d2752babe58613a64fbf94b634cf05766976adefa0c3927",
+      "statement": "Administrators can select Require merge queue in classic protection and choose merge, rebase or squash. These are configuration choices, not adoption of any method.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-007",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 59,
+      "end_line": 59,
+      "span_sha256": "f4d68bfca95011da99faf3949ab3f0a7c722d9de3893107f92f62fdc79225fe4",
+      "statement": "Build concurrency is 1–100 and controls maximum dispatched merge_group webhooks. It is separate from the number of PRs in a merge group.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-008",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 60,
+      "end_line": 65,
+      "span_sha256": "ccc5db43365d3fab734901e448af7fdde888a4587f1a06c7473fce7062444441",
+      "statement": "Only merge non-failing pull requests can require each PR to pass, or permit failing individual PRs when the final combined group passes. The latter is a source option, not a recommendation to weaken the local draft policy.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-009",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 67,
+      "end_line": 67,
+      "span_sha256": "e5904b4e9463da5542f97357042531ec33b60189eba90e6e1d7aa5e4fee908d3",
+      "statement": "A configured status-check timeout treats a still-unknown result as failure. The source gives no universally adopted local timeout.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-010",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 69,
+      "end_line": 78,
+      "span_sha256": "f98d762a9cc94a14db7cff0a824b4d36fdc512eab04d1f9a01b99e3ee75a07df",
+      "statement": "Minimum and maximum merge limits each range 1–100, and the minimum-wait timeout may allow fewer than the minimum. Merge limits do not combine builds: they govern merging after group checks succeed. Deployment examples do not select local thresholds.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-011",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 82,
+      "end_line": 84,
+      "span_sha256": "0d45f11d1c17ea1adba3cb1cd22e035b6cc905e0004b169243b3c1b864de262e",
+      "statement": "Queue processing is first-in-first-out once requirements are satisfied; groups contain latest base plus earlier queued changes and merge only after base-branch protections pass.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-012",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 90,
+      "end_line": 110,
+      "span_sha256": "431ca39c62d624bb4730a90cce5ce8f99627b4e17df91fcca3082555ba0dabe8",
+      "statement": "The main/pr-1/pr-2 examples illustrate group ancestry, successful merging after checks, rejection on failed checks or conflicts, and rebuilding later PRs without rejected predecessors. They are not real canary receipts.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-013",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 112,
+      "end_line": 112,
+      "span_sha256": "4493913f3a1dade92f66face0a7edeaec1da0eb2b29ae2541826401b106934cf",
+      "statement": "The included removal reasons are CI failure, check timeout, requested removal, or unresolved branch-protection failure; removal itself is not successful enforcement recovery evidence.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-014",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 116,
+      "end_line": 129,
+      "span_sha256": "ec8a86036fc6c694ac64a5d0d522a650e969115186aef01b5b9e2c2916a789f0",
+      "statement": "Jump to the top rebuilds all in-progress groups because commit ancestry changes; the feature may slow merging. The PR1/2/3 example is explanatory, not local queue authority.",
+      "accepted_policy": false
+    },
+    {
+      "claim_id": "DOCS-BRANCH-OPS-02-015",
+      "artifact_id": "05bdc4cde76a2e3505a1fd77",
+      "start_line": 131,
+      "end_line": 134,
+      "span_sha256": "92e169ee041618f6492230a8ac3906dc5c8c58f1f6286ac6c269406b97fcea38",
+      "statement": "Further-reading links are navigation; destination article bodies are not reviewed by this receipt.",
+      "accepted_policy": false
+    }
+  ],
+  "scope": "Full pinned article plus literal dependency reading; source evidence only, without adoption or live behavior verification."
+}
