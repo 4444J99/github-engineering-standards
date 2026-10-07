@@ -1,0 +1,165 @@
+{
+  "review_type": "bounded_independent_claim_workload_audit",
+  "verdict": "PASS",
+  "reviewed_at": "2026-10-07T03:26:07.750114+00:00",
+  "reviewer": "codex:/root/bounded_independent_review",
+  "reviewer_task": "/root/bounded_independent_review",
+  "parent_native_session_witness": "01a11342-68e2-7851-9636-9af99289c0d7",
+  "independent_native_session_id": null,
+  "human_review": false,
+  "observed_base_head": "fc1f9ad1c7e346f031c63be82f297628596ada47",
+  "scope": "Methodology, arithmetic, complete recorded-claim membership, advisory family preservation, fail-closed source/receipt/input binding, tests and workload-guide assertions. No fresh source-semantic certification.",
+  "inputs": [
+    {
+      "path": "ges/claim_workload.py",
+      "sha256": "4748a0d7a75f840aebfe82a3f5872cc6dd918370b7ed484c002083b7e72bc02e"
+    },
+    {
+      "path": "tests/test_claim_workload.py",
+      "sha256": "16b0965cb78bed385210e089f914beedd1d1e0dcfc695b59d4b17a32c640a09e"
+    },
+    {
+      "path": "docs/claim-workload-audit.md",
+      "sha256": "9061a812c9642727992cd73c76e18074c2d76f3b0ad73bc4bf18b74ff754fb5d"
+    },
+    {
+      "path": ".codex/plans/2026-10-06-claim-denominator-audit.md",
+      "sha256": "8f9198eb32785d6409818482594b100c5cf55d2f8387894d5cae6681171ed990"
+    },
+    {
+      "path": "evidence/claim-workload-inventory.json",
+      "sha256": "6151dcc71dda756610f371337bebe9981c0f9656cc6f7b252ad60e007701f5ec"
+    },
+    {
+      "path": "evidence/provider-oidc-reconciliation.json",
+      "sha256": "91f52141398c7670bd4e3335b5dad89c88815c3141c75d6007fc52a674e54485"
+    },
+    {
+      "path": "ges/core.py",
+      "sha256": "274ffcba6542cd305523c53f5f6289202e3b02dc8828019611be6af1dc7fb493"
+    },
+    {
+      "path": "sources/sources.lock.json",
+      "sha256": "bd5d0d44f4990997d9de434d85225cf06a0c40ebc2797ceaf9c4c0367df37c2c"
+    }
+  ],
+  "original_private_artifact_inventory": {
+    "logical_path": ".cache/corpus/artifacts.jsonl in retained original source checkout",
+    "sha256": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c"
+  },
+  "claim_document_binding": {
+    "documents": 654,
+    "recorded_claims": 61936,
+    "document_hashes_location": "inputs.claim_documents in the exact-bound workload inventory",
+    "document_membership_digest": "7ebfa24213ced6db88ae38fd8df829cebc3f71ea96fb30190e10768ee29b80b5",
+    "claim_membership_digest": "7d6aed3fbe6b924aff56d019a356ca3c3ade84f8466b1fdcc81d9356bd9ec857",
+    "all_documents_and_member_ids_independently_checked": true
+  },
+  "observations": {
+    "recorded_claims": 61936,
+    "claim_documents": 654,
+    "claims_by_queue_kind": {
+      "PROVIDER_CAPABILITY_MATRIX": 31456,
+      "QUERY_TABLE_ROW": 3638,
+      "SOURCE_ARTIFACT_CONTEXT": 26842
+    },
+    "families_by_queue_kind": {
+      "PROVIDER_CAPABILITY_MATRIX": 556,
+      "QUERY_TABLE_ROW": 544,
+      "SOURCE_ARTIFACT_CONTEXT": 3551
+    },
+    "total_advisory_families": 4651,
+    "provider_dataset_rows": 5132,
+    "provider_product_version_paths": 12,
+    "query_row_occurrences": 544,
+    "exact_statement_hashes": 59395,
+    "repeated_statement_occurrences": 2541,
+    "exact_source_spans": 50680,
+    "repeated_source_span_occurrences": 11256,
+    "existing_source_bound_reconciliation_records": 474,
+    "recorded_claims_without_reconciliation": 61462,
+    "all_claim_ids_present_exactly_once": true,
+    "all_family_memberships_match_independent_reconstruction": true,
+    "by_source": {
+      "atapas/model-repo": 96,
+      "github/docs": 57541,
+      "github/github-well-architected": 3424,
+      "jlcanovas/gh-best-practices-template": 90,
+      "microsoft/ghqr": 749,
+      "tmcw/github-best-practices": 36
+    },
+    "recorded_source_strength_counts_and_provider_field_counts_independently_match": true,
+    "legacy_community_claims_in_this_lane": 222,
+    "separate_B0_C0_reviewed_propositions": 227,
+    "new_review_credit": 0,
+    "new_reconciliation_credit": 0,
+    "unique_actionable_obligations": null
+  },
+  "method": [
+    "Read final local module, all scoped tests, guide and plan; inspect existing source/claim/receipt shapes as data.",
+    "Independently reconstruct every claim identity and family membership from all 654 documents; compare every member and family key, raw provider identities, full path/ordinal rows, query-help identities, all arithmetic and document hashes.",
+    "Verify supplied source artifact metadata against the pinned original inventory and exact 474 receipt subject/hash bindings. Reproduce final inventory object exactly with the final module.",
+    "Run all13 scoped tests and five additional independent temporary-fixture rejection cases. No full-corpus semantic reread or upstream execution.",
+    "Confirm tracked source, controls, reconciliation and recovery bytes were not changed by this work; review only new audit artifacts."
+  ],
+  "resolved_findings": [
+    {
+      "id": "CW-01",
+      "severity": "MEDIUM",
+      "file": "ges/claim_workload.py",
+      "problem": "Initial final hash loop could miss a new claim document added while constructing the full inventory.",
+      "resolution": "Final sorted path membership is compared with the initial list, then all initial document and artifact/receipt bytes are rechecked.",
+      "independent_verification": "New document introduced during a read rejects; regression test passes."
+    },
+    {
+      "id": "CW-02",
+      "severity": "MEDIUM",
+      "file": "ges/claim_workload.py",
+      "problem": "Initial receipt source locator checks omitted exact content/statement/document hashes; supplied claim/document artifact metadata could be silently overridden.",
+      "resolution": "Exact content, statement and document receipt hashes are checked; supplied claim or inherited document artifact/content bindings must match indexed source identity. Missing legacy metadata remains derived from the pinned index and fully bound document.",
+      "independent_verification": "All 474 current receipt subjects validate; wrong claim artifact ID, wrong document artifact ID and wrong document content hash reject; targeted regressions pass."
+    },
+    {
+      "id": "CW-03",
+      "severity": "MEDIUM",
+      "file": "ges/claim_workload.py",
+      "problem": "Incomplete typed provider context could fall back to generic artifact context, including when the display credential identifier was absent.",
+      "resolution": "Any intersection with the six provider classification keys requires all six keys, then field/types/range validation.",
+      "independent_verification": "Missing definition end without display identifier rejects; full current claim-document corpus has no partial typed contexts; regression passes."
+    }
+  ],
+  "open_findings": [],
+  "executed_validation": {
+    "scoped_test_command": "python3 -m unittest discover -s tests -p test_claim_workload.py -v",
+    "scoped_tests": 13,
+    "scoped_test_result": "PASS",
+    "additional_independent_rejection_cases": [
+      "wrong_document_artifact_id",
+      "wrong_claim_artifact_id",
+      "wrong_document_content_hash",
+      "partial_provider_without_display_identifier",
+      "new_document_during_read"
+    ],
+    "additional_case_result": "PASS",
+    "full_inventory_object_reproduction": "PASS",
+    "independent_membership_arithmetic_reconstruction": "PASS",
+    "tracked_diff_at_review": "EMPTY",
+    "full_repository_suite": "Not independently rerun in this bounded audit.",
+    "root_reported_validation": {
+      "full_suite": 537,
+      "controls_validated": 95,
+      "scoped_ruff": "PASS",
+      "full_production_provenance_and_recovery": "Matches prior committed accounting except generated_at",
+      "generated_views": "UNCHANGED",
+      "independently_rerun": false
+    }
+  },
+  "residual_limits": [
+    "61936 is the 654 claim-document lane, not the full source omission or distinct-obligation denominator. Existing B0/C0 227 propositions retain separate accounting.",
+    "Provider/query typing is existing authored metadata. This audit verifies preservation and bindings, not source values, semantic equivalence, obligation modality, omissions, or live capability.",
+    "Shared family membership, exact text and shared spans grant no exclusions, dispositions, review/reconciliation credit, adoption, rights or native enforcement credit.",
+    "Receipt records here are source-bound and counted; authority, reviewer, disposition and acceptance validation remain owned by the existing reconciliation contract.",
+    "655th future document or changed bytes require regeneration/review; observed endpoint hash and membership checks do not provide an operating-system atomic snapshot or detect an adversarial change-and-restore between reads.",
+    "No semantic workers, external cloud workers, provider/native/billing operations or control changes occurred in this audit; acceptance gates remain open."
+  ]
+}
