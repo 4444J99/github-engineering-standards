@@ -22,11 +22,22 @@ spending, visibility, existing estate policy or frozen #453 setting was changed.
 Detailed observations, provider diagnosis and the independent review are stored
 in the private target; public GES contains only this bounded aggregate result.
 
-The immutable private [outcome and independent audit](https://github.com/4444J99/ges-native-enforcement-pilot/tree/255358a6740ac6f4bdc14c5b6740456e81ec8af4/evidence)
-are retained at commit `255358a`. The independent audit's SHA256 is
-`975c0a5408bd4154a8df822637792c700000e458191ac5c01ec8d02ed4cbd481`.
-Its verdict is truthful observation accounting PASS, native acceptance BLOCKED;
-it is agent review, not human policy adoption or a completed enforcement test.
+The current immutable private [sanitized evidence and independent audits](https://github.com/4444J99/ges-native-enforcement-pilot/tree/c5882e96eec46f2ea884703e5f8b300c228c5446/evidence)
+are retained at commit `c5882e9`. A post-merge scan found a provider-generated
+temporary clone credential in private metadata. The captured credential was
+rejected by the private Git endpoint; expiration or revocation was not inferred.
+That field was removed from all seven exclusively pilot-owned branch histories
+with exact leases. The independent corrective audit verified sanitized reachable
+history and current manifest; its SHA256 is
+`b4a1c6c9ddbd00f664ccf0084a69b14ae468568d936bdccc662bb0df1d8a382b`.
+Provider-held unreferenced caches are not measured as purged.
+
+The original native observation audit remains a historical attestation to
+pre-redaction bytes and SHAs, not validation of current sanitized bytes. The
+history correction changed branch SHAs and does not prove fresh native behavior.
+The original verdict remains truthful observation accounting PASS, native
+acceptance BLOCKED; the corrective custody verdict is PASS. These are agent
+reviews, not human policy adoption or completed enforcement tests.
 
 The Disabled rule was created before publisher confirmation. That ordering
 deviation is recorded in the private evidence. Activation was never attempted;
