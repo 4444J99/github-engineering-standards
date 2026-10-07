@@ -35,6 +35,7 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
     strengths = Counter()
     provider_fields = Counter()
     provider_rows = set()
+    provider_row_bindings = {}
     query_rows = set()
     counts = Counter()
     paths = sorted(reviews.glob('*-claims.json'))
@@ -88,12 +89,22 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
                 key = [source, commit, context['provider'],
                        context['raw_credential_identifier']]
                 provider_fields[context['source_field']] += 1
-                provider_rows.add((*identity, context['entry_ordinal']))
-            elif 'query_occurrence' in claim:
+                row_identity = (*identity, context['entry_ordinal'])
+                row_binding = (
+                    context['provider'], context['raw_credential_identifier'],
+                    context['definition_start_line'], context['definition_end_line'])
+                previous = provider_row_bindings.get(row_identity)
+                if previous is not None and previous != row_binding:
+                    raise ValueError('Conflicting provider row identity: ' + cid)
+                provider_row_bindings[row_identity] = row_binding
+                provider_rows.add(row_identity)
+            elif any(k in claim for k in ('query_occurrence', 'query_help_identity')):
+                if not all(k in claim for k in ('query_occurrence', 'query_help_identity')):
+                    raise ValueError('Incomplete query row: ' + cid)
                 occurrence = claim['query_occurrence']
                 if (not isinstance(occurrence, str) or
                         occurrence != source_path + '#L' + str(start) or
-                        not isinstance(claim.get('query_help_identity'), str) or
+                        not isinstance(claim['query_help_identity'], str) or
                         not claim['query_help_identity'].strip()):
                     raise ValueError('Malformed query row: ' + cid)
                 kind = 'QUERY_TABLE_ROW'
