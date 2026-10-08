@@ -328,6 +328,10 @@
         "source_evidence_digest": {
           "type": "string",
           "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_inventory_reference_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
         }
       },
       "required": [
@@ -340,7 +344,8 @@
         "output_inventory_digest",
         "inventory_digest",
         "pins_digest",
-        "source_evidence_digest"
+        "source_evidence_digest",
+        "source_inventory_reference_digest"
       ]
     },
     "manifest": {
@@ -1162,6 +1167,17 @@
         },
         "legacy_rights_reinterpreted": {
           "const": false
+        },
+        "source_inventory_reference_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
         }
       },
       "required": [
@@ -1194,7 +1210,8 @@
         "legal_truth_automatically_certified",
         "authority_authenticity_automatically_certified",
         "publication_performed",
-        "legacy_rights_reinterpreted"
+        "legacy_rights_reinterpreted",
+        "source_inventory_reference_digest"
       ]
     }
   },

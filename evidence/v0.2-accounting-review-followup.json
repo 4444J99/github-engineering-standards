@@ -1,0 +1,152 @@
+{
+  "schema": "ges.publication-accounting-repair-checkpoint.v1",
+  "observed_at": "2026-10-08T07:02:54.745479+00:00",
+  "status": "STAGED",
+  "scope": "Two publication-accounting repairs and checkpoint corrections; no release, native, semantic-review, policy-adoption or human-acceptance credit.",
+  "reviewed_base_commit": "dc799dbb62b6bb698cae1390aed30fb0c32a4249",
+  "merge_candidate": {
+    "repository": "4444J99/github-engineering-standards",
+    "pull_request": 494,
+    "url": "https://github.com/4444J99/github-engineering-standards/pull/494",
+    "component_pull_requests": [
+      492,
+      493
+    ],
+    "component_heads": [
+      "14e9af7c4201f65f11e68031fb313f8b07fc8f1c",
+      "8f84d79aee774fb353477c591ac8024372155905"
+    ],
+    "component_ancestry_confirmed": true,
+    "separate_component_merges_permitted": false,
+    "merge_performed": false
+  },
+  "tested_files_sha256": {
+    "ges/publication_use.py": "07054f1414cfc75065c76be2912f418a4dc11e48f6259281a1f568f911187841",
+    "schemas/publication-use.v1.json": "03d83bd04249f2b172d718ff144be97e810527c2041884188ec4c84bea9bc25c",
+    "tests/test_publication_use.py": "ea0cfc63bce27969797a53aacd5958dc460fce3492c9437a5df1ac19e10c29b5",
+    "tests/test_publication_source_inventory.py": "670e06a834cd487dc0f3449462ca3e4514ad6932c0a1b033c16f58abf2dc9c0a",
+    "tests/test_publication_draft_directory.py": "c77c95e10c5ceb27f74d23152dc697d31cde8ae962b6edbaf0bcd4fd01ff797d",
+    "tests/test_completion_milestones.py": "c2d3cac69e6525f7b16e5060736f2cf5fe32e98ad98b448bf62c7065040bb6e6"
+  },
+  "findings": [
+    {
+      "id": "P1",
+      "review_url": "https://github.com/4444J99/github-engineering-standards/pull/494#discussion_r4213921407",
+      "original_counterexample": "A canonical fabricated artifact ID/path and matching RAW or SNAPSHOT_TEXT bytes with the real tmcw source pin and rebound synthetic approvals returned clearance true at dc799db.",
+      "repair": "Authenticate an independently fingerprinted source-tree receipt; check complete per-pin counts/content-identity digests and canonical IDs before using source bytes; bind the reference fingerprint into exact approval subjects and recheck it before returning.",
+      "status": "IMPLEMENTED_AND_REGRESSION_TESTED",
+      "fixed_default_cli_fabrication_exit_code": 2
+    },
+    {
+      "id": "P2",
+      "review_url": "https://github.com/4444J99/github-engineering-standards/pull/494#discussion_r4213921405",
+      "original_counterexample": "Nested draft output returned exit 0, wrote four metadata files inside the candidate, and then failed its own extra-output accounting.",
+      "repair": "Reject equal/nested/normalized/symlink-alias destinations before inventory or writes; recheck destination after inventory; retain disjoint sibling support and complete candidate enumeration.",
+      "status": "IMPLEMENTED_AND_REGRESSION_TESTED",
+      "fixed_nested_draft_exit_code": 2
+    }
+  ],
+  "validation": {
+    "python": "3.12.14",
+    "unit_tests": {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "tests": 639,
+      "new_regression_methods": 19
+    },
+    "catalog": {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95
+    },
+    "compile": {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    "generated_parity": {
+      "command": "git diff --exit-code -- generated/functional-checklist.md generated/source-crosswalk.md generated/bindings.json",
+      "exit_code": 0
+    },
+    "diff_check": {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    "current_workload": {
+      "command": "python -m ges.claim_workload --reviews evidence/source-reviews --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz --reconciliation evidence/provider-oidc-reconciliation.json --check evidence/claim-workload-current-inventory.json --historical evidence/claim-workload-inventory.json --provenance evidence/claim-workload-current-provenance.json",
+      "exit_code": 0,
+      "status": "MATCH",
+      "recorded_claims": 61936,
+      "claim_documents": 654,
+      "families": 4651,
+      "new_review_credit": 0,
+      "new_reconciliation_credit": 0
+    },
+    "default_source_inventory": {
+      "reference": "evidence/a3-six-source-capsule-repair.json",
+      "sha256": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+      "sources": 6,
+      "artifact_rows": 13657,
+      "complete_content_identity_groups_match": true,
+      "new_source_body_replay": false
+    },
+    "frozen_parent_replay": {
+      "candidate_revision": "db7517449f5c11750ca55dfeccc47167c10c3fb4",
+      "manifest": "evidence/publication-candidates/ges-v0.2-20261008/manifest.json",
+      "register": "evidence/publication-candidates/ges-v0.2-20261008/register.json",
+      "exit_code": 1,
+      "valid": true,
+      "output_count": 2379,
+      "unreviewed_output_count": 2379,
+      "denominator": 0,
+      "complete_output_inventory": true,
+      "exact_use_clearance": null,
+      "zero_use_clearance": false,
+      "source_inventory_reference_digest": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+      "new_release_candidate_selected": false
+    },
+    "remote_ci": "Not asserted by this local observation; inspect Toolkit and source-acquisition checks at the corrected #494 head.",
+    "independent_agent_review": "Reproduced original false positives and inspected both repairs, schema and tests; no additional blocking accounting finding reported. This is not a human review."
+  },
+  "preserved_boundaries": {
+    "source_synthesis": "INCOMPLETE",
+    "artifact_dispositions": {
+      "completed": 3590,
+      "denominator": 13657,
+      "source": "preserved integration checkpoint; no new disposition credit"
+    },
+    "claim_relationships": {
+      "completed": 1866,
+      "denominator": 61936,
+      "unresolved": 60070,
+      "source": "preserved integration checkpoint; no new reconciliation credit"
+    },
+    "public_release_clearance": "UNVERIFIED",
+    "native_pilot_acceptance": "BLOCKED",
+    "estate_rollout": "SEPARATE_UNACCEPTED_SCOPE",
+    "legacy_gates_open": 9,
+    "accepted_controls": 0,
+    "control_statuses": {
+      "REVIEWED_DRAFT": 95
+    },
+    "historical_artifact_input": {
+      "status": "UNAVAILABLE_NOT_REPRODUCED",
+      "sha256": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c"
+    },
+    "historical_rendered_body_count": {
+      "preserved_count": 18019,
+      "reproduced_by_this_repair": false
+    },
+    "frozen_candidate": "db751744 is a historical parent inventory. Neither the corrected PR head nor a future merge commit is the release candidate covered by that manifest.",
+    "private_retry": "No new dispatch or rerun. Run 37560956698 attempt 2 remains the recorded approximately three-second failure without runner assignment or executed steps. Billing is suspected; 3000/3000 came from a quota email, not a billing-page readback.",
+    "retry_hold": "No further private-pilot retry until an independently observed job in the private pilot receives a runner and executes a step.",
+    "custody": "The preserved record describes removal of a temporary provider credential from seven pilot-owned histories. Revocation and provider-held cache purge remain unverified; the original audit binds pre-redaction bytes. No new custody action is asserted.",
+    "remaining_human_governance": "One explicit human approval on corrected #494, applicable human security review, merged-main validation and CI, owner acceptance, and satisfaction of in-scope gates under AGENTS.md/GOVERNANCE.md."
+  },
+  "limitations": [
+    "The source inventory fingerprint is a separately trusted input. An alternate reference and expected fingerprint must come from an independent controlled process; the validator does not authenticate that process.",
+    "All synthetic approvals in tests are fixtures and establish no real use permission, legal truth, human approval or owner acceptance.",
+    "Existing historical workload, source/review, source-lock, candidate and validation JSON records are unchanged. Current-baseline reproduction and metadata identity checks are distinct from historical original-input/body reproduction.",
+    "This file is an observation record, not an approval receipt or a replacement for actual publication inputs."
+  ]
+}

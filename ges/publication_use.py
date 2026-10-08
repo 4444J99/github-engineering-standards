@@ -1,7 +1,8 @@
 """Validate exact candidate publication-use attestations without granting rights.
 
-The authority policy is a separately approved, trusted input. A manifest cannot
-certify its own completeness, and JSON identities cannot authenticate a human.
+The authority policy and source-inventory fingerprint are separately trusted
+inputs. A manifest cannot certify its own completeness, and JSON identities
+cannot authenticate a human.
 Candidate files and pinned source evidence are read locally; nothing is published.
 The legacy whole-corpus rights_accounting contract is deliberately unchanged.
 """
@@ -18,6 +19,7 @@ import stat
 import sys
 
 from .core import ROOT, digest, dump, load, now
+from .pinned_sources import inventory_digest as source_inventory_digest
 from .published_assurance import _evidence, _require, _strings, _time
 from .source_fidelity import _file_sha256
 
@@ -30,8 +32,13 @@ ROLES = {'reviewer': 'authorized_use_reviewers',
          'distribution_approver': 'authorized_distribution_approvers'}
 SCOPE_FIELDS = {'candidate_id', 'candidate_revision', 'distribution_scope', 'release_scope',
                 'manifest_digest', 'register_digest', 'output_inventory_digest',
-                'inventory_digest', 'pins_digest', 'source_evidence_digest'}
+                'inventory_digest', 'pins_digest', 'source_evidence_digest',
+                'source_inventory_reference_digest'}
 MAX_SOURCE_RECORD_BYTES = 200_000_000
+# Recorded independently of publication inputs in the current-workload provenance.
+# Changing this authority requires review; never derive it from --artifacts.
+DEFAULT_SOURCE_INVENTORY_REFERENCE = ROOT / 'evidence/a3-six-source-capsule-repair.json'
+DEFAULT_SOURCE_INVENTORY_SHA256 = '05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15'
 
 
 def _text(value: object) -> bool:
@@ -118,6 +125,19 @@ def prepare_draft(output_root: Path, candidate_id: str, candidate_revision: str,
     return {'manifest': manifest, 'register': register, 'receipts': [], 'policy': {}}
 
 
+def _draft_destination(output_root: Path, draft_directory: Path) -> Path:
+    """Keep generated review metadata outside the exact candidate output set."""
+    root = _root(output_root, 'output')
+    destination = draft_directory.absolute()
+    _require(not any(path.is_symlink() for path in (destination, *destination.parents)),
+             'Symlink draft directory is not permitted')
+    destination = destination.resolve()
+    _require(not destination.is_relative_to(root),
+             'Draft directory must be outside the candidate output root')
+    _require(not destination.exists(), 'Draft directory already exists; refusing overwrite')
+    return destination
+
+
 def _span(value: object, raw: bytes, label: str) -> None:
     span = _object(value, {'start_byte', 'end_byte', 'sha256'}, 'Malformed ' + label + ' span')
     start, end = span['start_byte'], span['end_byte']
@@ -128,13 +148,44 @@ def _span(value: object, raw: bytes, label: str) -> None:
              label + ' expression bytes changed')
 
 
-def _artifacts(artifacts: list[dict], pins: dict[str, str], current) -> dict[str, dict]:
+def _inventory_authority(path: Path, expected_sha256: str) -> dict:
+    """Read a source-tree receipt whose fingerprint is independently trusted."""
+    _require(isinstance(path, Path) and _sha(expected_sha256),
+             'An independently trusted source inventory reference and fingerprint are required')
+    target = _file(_root(path.parent, 'source inventory reference'), path.name)
+    raw = target.read_bytes()
+    _require(hashlib.sha256(raw).hexdigest() == expected_sha256,
+             'Source inventory reference differs from trusted fingerprint')
+    reference = json.loads(raw)
+    _require(isinstance(reference, dict) and isinstance(reference.get('source_trees'), dict) and
+             isinstance(reference.get('inventory_identity_digests'), dict),
+             'Malformed trusted source inventory reference')
+    trees, identities = reference['source_trees'], reference['inventory_identity_digests']
+    _require(bool(trees) and set(trees) == set(identities),
+             'Trusted source inventory reference has inconsistent source coverage')
+    for repository, tree in trees.items():
+        _require(isinstance(repository, str) and re.fullmatch(r'[\w.-]+/[\w.-]+', repository) and
+                 isinstance(tree, dict) and tree.get('repository') == repository and
+                 isinstance(tree.get('commit'), str) and re.fullmatch('[a-f0-9]{40}', tree['commit']) and
+                 tree.get('status') == 'MATCH' and type(tree.get('artifacts')) is int and
+                 tree['artifacts'] > 0 and _sha(tree.get('inventory_digest')) and
+                 tree['inventory_digest'] == identities[repository] and
+                 isinstance(tree.get('tree_sha'), str) and re.fullmatch('[a-f0-9]{40}', tree['tree_sha']),
+                 'Invalid trusted pinned source-tree identity')
+    return trees
+
+
+def _artifacts(artifacts: list[dict], pins: dict[str, str], current,
+               authority: dict) -> dict[str, dict]:
     _require(isinstance(artifacts, list) and isinstance(pins, dict),
              'Malformed source inventory or pins')
     _require(all(isinstance(k, str) and re.fullmatch(r'[\w.-]+/[\w.-]+', k) and
                  isinstance(v, str) and re.fullmatch('[a-f0-9]{40}', v)
                  for k, v in pins.items()), 'Malformed source pin')
-    index, identities = {}, set()
+    _require(all(repository in authority and authority[repository]['commit'] == commit
+                 for repository, commit in pins.items()),
+             'Source pin is absent from or differs from trusted inventory reference')
+    index, identities, groups = {}, set(), {repository: [] for repository in pins}
     for row in artifacts:
         _require(isinstance(row, dict) and all(_text(row.get(k)) for k in IDENTITY) and
                  _sha(row['sha256']), 'Malformed source artifact identity')
@@ -142,10 +193,18 @@ def _artifacts(artifacts: list[dict], pins: dict[str, str], current) -> dict[str
         _require(pins.get(row['source']) == row['commit'], 'Source differs from locked pin')
         _require(_time(row.get('retrieved_at')) <= current, 'Future source acquisition')
         identity = (row['source'], row['commit'], row['path'])
+        _require(row['artifact_id'] == digest(list(identity))[:24],
+                 'Source artifact ID differs from canonical pinned identity')
         _require(row['artifact_id'] not in index and identity not in identities,
                  'Duplicate source artifact identity')
         index[row['artifact_id']] = row
         identities.add(identity)
+        groups[row['source']].append(row)
+    for repository, rows in groups.items():
+        locked = authority[repository]
+        _require(len(rows) == locked['artifacts'] and
+                 source_inventory_digest(rows) == locked['inventory_digest'],
+                 'Source artifacts differ from complete trusted pinned inventory: ' + repository)
     return index
 
 
@@ -320,7 +379,8 @@ def validate_accounting_result(result: dict) -> dict:
              type(result.get('inventory_receipt_validated')) is bool,
              'Invalid publication zero-use or inventory condition')
     for key in ('manifest_digest', 'register_digest', 'policy_digest', 'receipts_digest',
-                'output_inventory_digest', 'source_evidence_digest', 'inventory_digest', 'pins_digest'):
+                'output_inventory_digest', 'source_evidence_digest', 'inventory_digest', 'pins_digest',
+                'source_inventory_reference_digest'):
         _require(result.get(key) is None or _sha(result[key]), 'Invalid publication binding: ' + key)
     _require(isinstance(result.get('diagnostics'), list) and
              all(_text(item) for item in result['diagnostics']), 'Invalid publication diagnostics')
@@ -337,7 +397,8 @@ def validate_accounting_result(result: dict) -> dict:
                  result['use_register_complete'] is True and
                  all(_sha(result[k]) for k in ('manifest_digest', 'register_digest', 'policy_digest',
                                                'receipts_digest', 'output_inventory_digest',
-                                               'source_evidence_digest', 'inventory_digest', 'pins_digest')),
+                                               'source_evidence_digest', 'inventory_digest', 'pins_digest',
+                                               'source_inventory_reference_digest')),
                  'Accepted publication inventory lacks bound nonempty output evidence')
     else:
         _require(result['use_register_complete'] is None, 'Unreviewed use register cannot be certified')
@@ -366,11 +427,15 @@ def validate_accounting_result(result: dict) -> dict:
 def publication_accounting(manifest: dict | None, register: dict | None,
                            receipts: list[dict], policy: dict, artifacts: list[dict],
                            pins: dict[str, str], *, output_root: Path | None = None,
-                           source_root: Path | None = None, evidence_root: Path = ROOT) -> dict:
+                           source_root: Path | None = None, evidence_root: Path = ROOT,
+                           source_inventory_reference: Path | None = None,
+                           source_inventory_sha256: str | None = None) -> dict:
     """Bind actual outputs/uses to separately authorized exact-scope evidence.
 
     Invalid data/evidence raises ValueError. Missing approval stays unknown;
     valid partial approvals retain the entire registered-use denominator.
+    Alternative inventory references require a separately trusted fingerprint;
+    neither the artifact rows nor publication approvals can authenticate it.
     """
     _require(isinstance(receipts, list) and isinstance(policy, dict), 'Malformed publication approval inputs')
     result = {'schema': 'ges.publication-use-accounting.v1',
@@ -384,6 +449,7 @@ def publication_accounting(manifest: dict | None, register: dict | None,
               'inventory_receipt_validated': False, 'manifest_digest': None,
               'release_scope': None,
               'register_digest': None, 'output_inventory_digest': None,
+              'source_inventory_reference_digest': None,
               'source_evidence_digest': None, 'inventory_digest': digest(artifacts),
               'pins_digest': digest(pins), 'policy_digest': digest(policy),
               'receipts_digest': digest(receipts), 'diagnostics': [],
@@ -429,7 +495,15 @@ def publication_accounting(manifest: dict | None, register: dict | None,
              register['manifest_digest'] == digest(manifest), 'Register refers to a different candidate')
     registered = _time(register['prepared_at'])
     _require(prepared <= registered <= current, 'Use register is premature or future')
-    index = _artifacts(artifacts, pins, current)
+    _require((source_inventory_reference is None) == (source_inventory_sha256 is None),
+             'Source inventory reference and independently trusted fingerprint must be supplied together')
+    inventory_reference = (DEFAULT_SOURCE_INVENTORY_REFERENCE if source_inventory_reference is None
+                           else source_inventory_reference)
+    inventory_sha256 = (DEFAULT_SOURCE_INVENTORY_SHA256 if source_inventory_sha256 is None
+                        else source_inventory_sha256)
+    authority = _inventory_authority(inventory_reference, inventory_sha256)
+    index = _artifacts(artifacts, pins, current, authority)
+    result['source_inventory_reference_digest'] = inventory_sha256
     _require(isinstance(register['uses'], list) and isinstance(register['outputs'], list),
              'Register uses/output dispositions must be arrays')
     uses, needed, spans = {}, set(), {}
@@ -554,6 +628,7 @@ def publication_accounting(manifest: dict | None, register: dict | None,
         source_base = _root(source_root, 'source')
         _require(_file_sha256(_file(source_base, path.relative_to(source_base).as_posix())) == sha,
                  'Source evidence changed during validation')
+    _inventory_authority(inventory_reference, inventory_sha256)
     return validate_accounting_result(result)
 
 
@@ -568,12 +643,14 @@ def main(argv: list[str] | None = None) -> int:
         parser.add_argument('--release-scope', choices=['GES_V0_2', 'BOUNDED_PACKAGE'], default='BOUNDED_PACKAGE')
         args = parser.parse_args(argv[1:])
         try:
-            _require(not args.draft_directory.exists(), 'Draft directory already exists; refusing overwrite')
+            draft_directory = _draft_destination(args.output_root, args.draft_directory)
             draft = prepare_draft(args.output_root, args.candidate_id, args.candidate_revision,
                                   args.distribution_scope, release_scope=args.release_scope)
-            args.draft_directory.mkdir(parents=True)
+            # Recheck after observation in case an existing parent changed meanwhile.
+            _draft_destination(args.output_root, draft_directory)
+            draft_directory.mkdir(parents=True)
             for key, value in draft.items():
-                dump(args.draft_directory / (key + '.json'), value)
+                dump(draft_directory / (key + '.json'), value)
         except (ValueError, TypeError, KeyError, OSError) as exc:
             print(json.dumps({'valid': False, 'error': str(exc)}))
             return 2
@@ -585,13 +662,19 @@ def main(argv: list[str] | None = None) -> int:
         parser.add_argument('--' + name, type=Path, required=True)
     parser.add_argument('--pins', type=Path, default=ROOT / 'sources/sources.lock.json')
     parser.add_argument('--evidence-root', type=Path, default=ROOT)
+    parser.add_argument('--source-inventory-reference', type=Path,
+                        help='Separately trusted source-tree inventory receipt; defaults to the pinned A3 receipt')
+    parser.add_argument('--source-inventory-sha256',
+                        help='Independently approved fingerprint for the alternate inventory reference')
     args = parser.parse_args(argv)
     try:
         artifacts = [json.loads(line) for line in args.artifacts.read_text().splitlines() if line.strip()]
         pins = {s['repository']: s['commit'] for s in load(args.pins)['sources']}
         result = publication_accounting(load(args.manifest), load(args.register), load(args.receipts),
                                          load(args.policy), artifacts, pins, output_root=args.output_root,
-                                         source_root=args.source_root, evidence_root=args.evidence_root)
+                                         source_root=args.source_root, evidence_root=args.evidence_root,
+                                         source_inventory_reference=args.source_inventory_reference,
+                                         source_inventory_sha256=args.source_inventory_sha256)
     except (ValueError, TypeError, KeyError, OSError, UnicodeError, RuntimeError, EOFError) as exc:
         print(json.dumps({'valid': False, 'error': str(exc)}))
         return 2

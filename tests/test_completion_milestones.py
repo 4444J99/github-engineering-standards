@@ -289,7 +289,9 @@ class RecoveryMilestoneIntegration(unittest.TestCase):
                 path.write_text(json.dumps(fixture[name]))
                 inputs['publication_' + name] = path
             inputs['publication_output_root'] = fixture['output_root']
-            with patch('ges.recovery.ROOT', root):
+            with patch('ges.recovery.ROOT', root), \
+                 patch('ges.publication_use.DEFAULT_SOURCE_INVENTORY_REFERENCE', fixture['source_inventory_reference']), \
+                 patch('ges.publication_use.DEFAULT_SOURCE_INVENTORY_SHA256', fixture['source_inventory_sha256']):
                 result = status(sources, corpus, **inputs)
         self.assertTrue(result['publication_use_accounting']['exact_use_clearance'])
         milestones = result['milestone_accounting']['milestones']

@@ -10,6 +10,7 @@ import unittest
 from unittest.mock import patch
 
 from ges.core import digest
+from ges.pinned_sources import inventory_digest as source_inventory_digest
 from ges.publication_use import (EXPRESSION_KINDS, SCOPE_FIELDS, main, output_inventory,
                                  prepare_draft, publication_accounting, validate_accounting_result)
 
@@ -18,6 +19,23 @@ def byte_range(raw, start=0, end=None):
     end = len(raw) if end is None else end
     return {'start_byte': start, 'end_byte': end,
             'sha256': hashlib.sha256(raw[start:end]).hexdigest()}
+
+
+def bind_source_inventory(fixture):
+    """Establish synthetic source authority once, independently of approvals."""
+    trees = {}
+    for repository, commit in fixture['pins'].items():
+        rows = [row for row in fixture['artifacts'] if row['source'] == repository]
+        trees[repository] = {'repository': repository, 'commit': commit, 'artifacts': len(rows),
+                             'inventory_digest': source_inventory_digest(rows), 'status': 'MATCH',
+                             'tree_sha': 'c' * 40, 'method': 'SYNTHETIC TEST ONLY; trusted fixture identity'}
+    reference = {'source_trees': trees,
+                 'inventory_identity_digests': {repo: tree['inventory_digest'] for repo, tree in trees.items()}}
+    path = fixture['evidence_root'] / 'source-inventory-authority.json'
+    path.write_text(json.dumps(reference), encoding='utf-8')
+    fixture['source_inventory_reference'] = path
+    fixture['source_inventory_sha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
+    return fixture
 
 
 def bind_approvals(fixture):
@@ -29,6 +47,7 @@ def bind_approvals(fixture):
     subject.update(manifest_digest=digest(manifest), register_digest=digest(register),
                    output_inventory_digest=digest(output_inventory(fixture['output_root'])),
                    inventory_digest=digest(fixture['artifacts']), pins_digest=digest(fixture['pins']),
+                   source_inventory_reference_digest=fixture['source_inventory_sha256'],
                    source_evidence_digest=digest(register['source_evidence']))
     fixture['policy'] = {'schema': 'ges.publication-use-authority-policy.v1',
                          'approval_reference': 'SYNTHETIC TEST ONLY; externally trusted in this fixture',
@@ -99,8 +118,11 @@ def create_fixture(root: Path, *, kind='LICENSED_COPY', zero_use=False, release_
         output = b'https://github.com/test/source/blob/' + b'a' * 40 + b'/README.md\n'
     (source_root / 'source.txt').write_bytes(source)
     (output_root / 'release.txt').write_bytes(output)
-    artifact = {'artifact_id': 'source:one', 'source': 'test/source', 'commit': 'a' * 40,
+    artifact = {'artifact_id': digest(['test/source', 'a' * 40, 'README.md'])[:24],
+                'source': 'test/source', 'commit': 'a' * 40,
                 'path': 'README.md', 'sha256': hashlib.sha256(source).hexdigest(),
+                'kind': 'text', 'size': len(source),
+                'git_blob_sha': hashlib.sha1(b'blob ' + str(len(source)).encode() + b'\0' + source).hexdigest(),
                 'retrieved_at': '2026-01-01T00:00:00Z', 'url': 'https://example.invalid/source'}
     draft = prepare_draft(output_root, 'synthetic-v0.2-candidate', 'b' * 40,
                           'Synthetic public distribution fixture; no publication authorized',
@@ -123,7 +145,7 @@ def create_fixture(root: Path, *, kind='LICENSED_COPY', zero_use=False, release_
                                        'path': 'source.txt', 'sha256': hashlib.sha256(source).hexdigest()}]
     fixture = {**draft, 'artifacts': [artifact], 'pins': {'test/source': 'a' * 40},
                'output_root': output_root, 'source_root': source_root, 'evidence_root': root}
-    return bind_approvals(fixture)
+    return bind_approvals(bind_source_inventory(fixture))
 
 
 class PublicationUse(unittest.TestCase):
@@ -190,8 +212,10 @@ class PublicationUse(unittest.TestCase):
         for kind in ['REFERENCES_ONLY', 'INDEPENDENT_PARAPHRASE']:
             with self.subTest(kind=kind):
                 self.fixture = create_fixture(Path(self.temp.name), kind=kind)
-                unused = {**self.fixture['artifacts'][0], 'artifact_id': 'unreferenced:two', 'path': 'unused.md'}
+                unused = {**self.fixture['artifacts'][0],
+                          'artifact_id': digest(['test/source', 'a' * 40, 'unused.md'])[:24], 'path': 'unused.md'}
                 self.fixture['artifacts'].append(unused)
+                bind_source_inventory(self.fixture)
                 bind_approvals(self.fixture)
                 self.assertEqual(len(self.fixture['receipts']), 1)
                 result = self.account()

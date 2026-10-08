@@ -20,8 +20,9 @@ A manifest must declare `release_scope` as `GES_V0_2` or `BOUNDED_PACKAGE`.
 Clearing a bounded patch or control package does not clear the complete GES v0.2
 release. The candidate ID, candidate Git revision, audience/distribution scope,
 release boundary, complete output bytes, register, full source inventory, source
-pins, and used-source evidence all enter the reviewed subject. A change to any
-of those inputs requires newly bound evidence.
+pins, independently trusted source-inventory reference, and used-source evidence
+all enter the reviewed subject. A change to any of those inputs requires newly
+bound evidence.
 
 The candidate directory is a dedicated staging directory containing **every file
 intended for that candidate**. The manifest, register, receipts and authority
@@ -67,7 +68,10 @@ python -m ges.publication_use prepare-draft \
 
 This command writes four new files: `manifest.json`, `register.json`, empty
 `receipts.json` (`[]`) and empty `policy.json` (`{}`). It refuses to overwrite an
-existing draft directory. It does not classify existing source material as
+existing draft directory. Before inventory or writes, it rejects a destination
+equal to or beneath the candidate root, including normalized relative paths and
+symlink aliases. A disjoint sibling directory is supported. The destination is
+checked again after inventory and before writes. It does not classify existing source material as
 original, independent paraphrase or licensed content. Each observed output starts
 with the explicit `UNREVIEWED` disposition and a rationale; missing judgments
 remain visible through `unreviewed_output_count` and diagnostics. No complete
@@ -119,7 +123,7 @@ Each use row includes:
 |---|---|
 | `use_id` | Stable nonempty unique identity within the exact register. |
 | `kind` | `REFERENCES_ONLY`, `INDEPENDENT_PARAPHRASE`, `LICENSED_COPY`, or `ADAPTATION`. |
-| `source` | Exact `artifact_id`, `source`, pinned `commit`, `path`, and `sha256`, matching the supplied artifact inventory and source lock. |
+| `source` | Exact `artifact_id`, `source`, pinned `commit`, `path`, and `sha256`, matching the complete inventory authenticated against the independent source-tree reference. |
 | `source_range` | `null` for reference-only locators; otherwise the exact source byte range and its digest. |
 | `output_path`, `output_range` | An inventoried output and nonempty byte span identifying that precise use. |
 | `attributions` | Array of actual notice/credit spans in inventoried output files; these byte references are checked, not merely asserted to exist. |
@@ -144,6 +148,49 @@ Unused corpus artifacts remain in the bound provenance inventory; they do not
 acquire a requirement for individual publication grants merely by being cited
 elsewhere in the corpus.
 
+### Independently anchored source membership
+
+A caller-supplied artifact row and matching local bytes do not prove that the
+artifact exists at the source pin. The validator first authenticates the source
+inventory reference against an independently trusted SHA256. Its default is the
+repository-controlled [A3 source-tree receipt](../evidence/a3-six-source-capsule-repair.json),
+with the fingerprint recorded before this publication review:
+
+`05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15`
+
+For every declared source pin, the complete supplied artifact group must match
+that receipt's commit, artifact count and content-identity digest. The digest
+uses `ges.pinned_sources.inventory_digest` over source, commit, path, kind,
+SHA256, Git blob SHA, size and link target. Artifact IDs must independently equal
+`ges.core.digest([source, commit, path])[:24]`; IDs and source paths must be unique.
+Neither a computed ID nor an internally consistent RAW file or snapshot can
+substitute for membership in this independently anchored inventory.
+
+The validator reads the reference without following symlinks and checks its
+fingerprint again before returning. It binds that exact file fingerprint as
+`source_inventory_reference_digest` in the result, policy and receipt subject.
+Changing the reference invalidates earlier approvals even if the source content
+identities happen to be unchanged. Older publication subjects lacking this
+binding cannot establish clearance under the corrected validator.
+
+The standalone CLI uses the default reference without additional flags. An
+alternate reference requires **both** `--source-inventory-reference PATH` and
+`--source-inventory-sha256 INDEPENDENTLY_TRUSTED_SHA256`. The Python API accepts
+the paired `source_inventory_reference` and `source_inventory_sha256` keyword
+arguments. These are trust configuration supplied through the same controlled
+review process as source pins; do not calculate the expected fingerprint from
+an untrusted replacement receipt, artifact inventory or publication register.
+The reference must contain matching `source_trees` and
+`inventory_identity_digests` maps, with a successful pinned-tree observation,
+commit, count, identity digest and tree SHA for each source. Recovery uses the
+repository's default A3 reference and the same executable validator.
+
+This is content-identity verification against preserved source-tree evidence.
+It does not reproduce the unavailable historical artifact-input bytes or
+rendered-body cache, authenticate the external authority process, establish
+semantic synthesis, or grant publication rights. Acquisition timestamps remain
+bound to the specific publication input but do not alter source content identity.
+
 ## Authority policy and approval receipts
 
 The `ges.publication-use-authority-policy.v1` policy has an external
@@ -159,7 +206,8 @@ The `ges.publication-use-authority-policy.v1` policy has an external
 The complete subject is returned by unapproved accounting after the candidate's
 structural and byte validation. It includes `manifest_digest`, `register_digest`,
 `output_inventory_digest`, `inventory_digest`, `pins_digest`, and
-`source_evidence_digest`, plus the four candidate/scope fields. JSON digests use
+`source_evidence_digest` and `source_inventory_reference_digest`, plus the four
+candidate/scope fields. JSON digests use
 `ges.core.digest`: sorted object keys, compact separators, and array order
 preserved. Output inventories are sorted by path. File and span SHA256 values
 hash their actual bytes.
