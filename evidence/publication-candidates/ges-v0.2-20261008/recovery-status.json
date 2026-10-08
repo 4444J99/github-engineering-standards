@@ -10,6 +10,7 @@
     "generalization": "NOT_IMPLEMENTED",
     "native_and_estate_verification": "NOT_IMPLEMENTED",
     "policy_adoption": "NOT_IMPLEMENTED",
+    "publication_use": "IMPLEMENTED_EXACT_OUTPUT_USE_RECEIPTS_ONLY",
     "published_assurance": "IMPLEMENTED_LOCKED_SOURCE_ONLY",
     "rights_acceptance": "IMPLEMENTED_PINNED_ARTIFACTS_ONLY",
     "source_fidelity_and_omission": "IMPLEMENTED_PINNED_ARTIFACT_RECEIPTS_ONLY",
@@ -1938,7 +1939,7 @@
       "closure_condition": "Every page has rendered/version/dependency review; retrieval alone is insufficient",
       "completed": 0,
       "conditions": {
-        "all_bodies_durably_acquired": true,
+        "all_bodies_durably_acquired": false,
         "all_source_paths_reconciled": false,
         "coverage_complete": false,
         "version_include_and_render_assurance": null
@@ -1949,6 +1950,7 @@
       "gate": "published_content_assurance",
       "incomplete_conditions": [
         "coverage_complete",
+        "all_bodies_durably_acquired",
         "all_source_paths_reconciled"
       ],
       "remaining": 18019,
@@ -2111,7 +2113,7 @@
       ]
     }
   ],
-  "generated_at": "2026-10-07T04:20:10.688696+00:00",
+  "generated_at": "2026-10-08T02:01:25.940068+00:00",
   "historical_checkpoint": "30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040",
   "inventory_artifacts": 13657,
   "justified_exclusions": 0,
@@ -2123,16 +2125,276 @@
     "generated_or_unresolved_page_instances": 14,
     "published_page_version_instances": 18019,
     "published_source_path_matches": 18005,
-    "source_artifacts_referenced_by_canonical_controls": 30,
+    "source_artifacts_referenced_by_canonical_controls": 35,
     "structured_requirements_by_source": {
       "github/github-well-architected": 476,
       "microsoft/ghqr": 129
     },
     "structured_source_requirements": 605
   },
+  "milestone_accounting": {
+    "ges_v0_2": {
+      "conditions": {
+        "native_pilot_acceptance.native_enforcement.approved_target_inventory": null,
+        "native_pilot_acceptance.native_enforcement.coverage_complete": null,
+        "native_pilot_acceptance.native_enforcement.positive_negative_bypass_and_recovery_evidence": null,
+        "public_release_clearance.all_registered_uses_cleared": null,
+        "public_release_clearance.authorized_distribution_decision": null,
+        "public_release_clearance.complete_output_inventory": true,
+        "public_release_clearance.exact_use_clearance": null,
+        "public_release_clearance.ges_v0_2_release_scope": true,
+        "public_release_clearance.use_register_complete": null,
+        "six_source_synthesis.consolidation.all_structured_occurrences_reconciled": null,
+        "six_source_synthesis.consolidation.coverage_complete": false,
+        "six_source_synthesis.consolidation.exact_claim_mapping_and_conflict_review": false,
+        "six_source_synthesis.consolidation.unstructured_claim_denominator_certified": null,
+        "six_source_synthesis.exhaustive_artifact_accounting.coverage_complete": false,
+        "six_source_synthesis.exhaustive_artifact_accounting.independent_omission_audit": null,
+        "six_source_synthesis.exhaustive_artifact_accounting.pinned_git_trees_match": true,
+        "six_source_synthesis.exhaustive_artifact_accounting.review_receipts_valid": true,
+        "six_source_synthesis.generalization.coverage_complete": false,
+        "six_source_synthesis.generalization.profiles_parameters_and_templates_reviewed": null,
+        "six_source_synthesis.operational_completeness.accepted_policy_exists": false,
+        "six_source_synthesis.operational_completeness.all_required_bindings_verified": null,
+        "six_source_synthesis.operational_completeness.coverage_complete": null,
+        "six_source_synthesis.published_content_assurance.all_bodies_durably_acquired": false,
+        "six_source_synthesis.published_content_assurance.all_source_paths_reconciled": false,
+        "six_source_synthesis.published_content_assurance.coverage_complete": false,
+        "six_source_synthesis.published_content_assurance.version_include_and_render_assurance": null,
+        "six_source_synthesis.semantic_extraction.atomic_claim_fidelity_audit": null,
+        "six_source_synthesis.semantic_extraction.claim_document_provenance_validated": true,
+        "six_source_synthesis.semantic_extraction.coverage_complete": false,
+        "six_source_synthesis.semantic_extraction.independent_source_to_claim_omission_audit": null
+      },
+      "estate_rollout_required": false,
+      "evaluation": "INCOMPLETE",
+      "incomplete_conditions": [
+        "six_source_synthesis.exhaustive_artifact_accounting.coverage_complete",
+        "six_source_synthesis.published_content_assurance.coverage_complete",
+        "six_source_synthesis.published_content_assurance.all_bodies_durably_acquired",
+        "six_source_synthesis.published_content_assurance.all_source_paths_reconciled",
+        "six_source_synthesis.semantic_extraction.coverage_complete",
+        "six_source_synthesis.consolidation.coverage_complete",
+        "six_source_synthesis.consolidation.exact_claim_mapping_and_conflict_review",
+        "six_source_synthesis.generalization.coverage_complete",
+        "six_source_synthesis.operational_completeness.accepted_policy_exists"
+      ],
+      "required_milestones": [
+        "six_source_synthesis",
+        "public_release_clearance",
+        "native_pilot_acceptance"
+      ],
+      "status": "OPEN",
+      "unverified_conditions": [
+        "six_source_synthesis.exhaustive_artifact_accounting.independent_omission_audit",
+        "six_source_synthesis.published_content_assurance.version_include_and_render_assurance",
+        "six_source_synthesis.semantic_extraction.atomic_claim_fidelity_audit",
+        "six_source_synthesis.semantic_extraction.independent_source_to_claim_omission_audit",
+        "six_source_synthesis.consolidation.unstructured_claim_denominator_certified",
+        "six_source_synthesis.consolidation.all_structured_occurrences_reconciled",
+        "six_source_synthesis.generalization.profiles_parameters_and_templates_reviewed",
+        "six_source_synthesis.operational_completeness.coverage_complete",
+        "six_source_synthesis.operational_completeness.all_required_bindings_verified",
+        "public_release_clearance.use_register_complete",
+        "public_release_clearance.exact_use_clearance",
+        "public_release_clearance.authorized_distribution_decision",
+        "public_release_clearance.all_registered_uses_cleared",
+        "native_pilot_acceptance.native_enforcement.coverage_complete",
+        "native_pilot_acceptance.native_enforcement.approved_target_inventory",
+        "native_pilot_acceptance.native_enforcement.positive_negative_bypass_and_recovery_evidence"
+      ]
+    },
+    "governance_acceptance_automatically_certified": false,
+    "milestones": {
+      "estate_rollout": {
+        "conditions": {
+          "estate_rollout.approved_estate_inventory": null,
+          "estate_rollout.coverage_complete": null,
+          "estate_rollout.fresh_effective_enforcement_and_drift_evidence": null
+        },
+        "evaluation": "UNVERIFIED",
+        "evidence_inputs": [
+          "gates.estate_rollout"
+        ],
+        "incomplete_conditions": [],
+        "required_gates": [
+          "estate_rollout"
+        ],
+        "status": "OPEN",
+        "unverified_conditions": [
+          "estate_rollout.coverage_complete",
+          "estate_rollout.approved_estate_inventory",
+          "estate_rollout.fresh_effective_enforcement_and_drift_evidence"
+        ]
+      },
+      "native_pilot_acceptance": {
+        "conditions": {
+          "native_enforcement.approved_target_inventory": null,
+          "native_enforcement.coverage_complete": null,
+          "native_enforcement.positive_negative_bypass_and_recovery_evidence": null
+        },
+        "evaluation": "UNVERIFIED",
+        "evidence_inputs": [
+          "gates.native_enforcement"
+        ],
+        "incomplete_conditions": [],
+        "required_gates": [
+          "native_enforcement"
+        ],
+        "status": "OPEN",
+        "unverified_conditions": [
+          "native_enforcement.coverage_complete",
+          "native_enforcement.approved_target_inventory",
+          "native_enforcement.positive_negative_bypass_and_recovery_evidence"
+        ]
+      },
+      "public_release_clearance": {
+        "accounting_digest": "29f6804d4435185dbcd6534ce5f0b81f6752a41c5a2c6acd82fc3d451cd48548",
+        "completed": 0,
+        "conditions": {
+          "all_registered_uses_cleared": null,
+          "authorized_distribution_decision": null,
+          "complete_output_inventory": true,
+          "exact_use_clearance": null,
+          "ges_v0_2_release_scope": true,
+          "use_register_complete": null
+        },
+        "denominator": 0,
+        "evaluation": "UNVERIFIED",
+        "evidence_inputs": [
+          "publication_use_accounting"
+        ],
+        "incomplete_conditions": [],
+        "legacy_gate_8_is_exact_use_clearance": false,
+        "release_scope": "GES_V0_2",
+        "required_gates": [],
+        "status": "OPEN",
+        "unverified_conditions": [
+          "use_register_complete",
+          "exact_use_clearance",
+          "authorized_distribution_decision",
+          "all_registered_uses_cleared"
+        ]
+      },
+      "six_source_synthesis": {
+        "conditions": {
+          "consolidation.all_structured_occurrences_reconciled": null,
+          "consolidation.coverage_complete": false,
+          "consolidation.exact_claim_mapping_and_conflict_review": false,
+          "consolidation.unstructured_claim_denominator_certified": null,
+          "exhaustive_artifact_accounting.coverage_complete": false,
+          "exhaustive_artifact_accounting.independent_omission_audit": null,
+          "exhaustive_artifact_accounting.pinned_git_trees_match": true,
+          "exhaustive_artifact_accounting.review_receipts_valid": true,
+          "generalization.coverage_complete": false,
+          "generalization.profiles_parameters_and_templates_reviewed": null,
+          "operational_completeness.accepted_policy_exists": false,
+          "operational_completeness.all_required_bindings_verified": null,
+          "operational_completeness.coverage_complete": null,
+          "published_content_assurance.all_bodies_durably_acquired": false,
+          "published_content_assurance.all_source_paths_reconciled": false,
+          "published_content_assurance.coverage_complete": false,
+          "published_content_assurance.version_include_and_render_assurance": null,
+          "semantic_extraction.atomic_claim_fidelity_audit": null,
+          "semantic_extraction.claim_document_provenance_validated": true,
+          "semantic_extraction.coverage_complete": false,
+          "semantic_extraction.independent_source_to_claim_omission_audit": null
+        },
+        "evaluation": "INCOMPLETE",
+        "evidence_inputs": [
+          "gates.exhaustive_artifact_accounting",
+          "gates.published_content_assurance",
+          "gates.semantic_extraction",
+          "gates.consolidation",
+          "gates.generalization",
+          "gates.operational_completeness"
+        ],
+        "incomplete_conditions": [
+          "exhaustive_artifact_accounting.coverage_complete",
+          "published_content_assurance.coverage_complete",
+          "published_content_assurance.all_bodies_durably_acquired",
+          "published_content_assurance.all_source_paths_reconciled",
+          "semantic_extraction.coverage_complete",
+          "consolidation.coverage_complete",
+          "consolidation.exact_claim_mapping_and_conflict_review",
+          "generalization.coverage_complete",
+          "operational_completeness.accepted_policy_exists"
+        ],
+        "required_gates": [
+          "exhaustive_artifact_accounting",
+          "published_content_assurance",
+          "semantic_extraction",
+          "consolidation",
+          "generalization",
+          "operational_completeness"
+        ],
+        "status": "OPEN",
+        "unverified_conditions": [
+          "exhaustive_artifact_accounting.independent_omission_audit",
+          "published_content_assurance.version_include_and_render_assurance",
+          "semantic_extraction.atomic_claim_fidelity_audit",
+          "semantic_extraction.independent_source_to_claim_omission_audit",
+          "consolidation.unstructured_claim_denominator_certified",
+          "consolidation.all_structured_occurrences_reconciled",
+          "generalization.profiles_parameters_and_templates_reviewed",
+          "operational_completeness.coverage_complete",
+          "operational_completeness.all_required_bindings_verified"
+        ]
+      }
+    },
+    "schema": "ges.completion-milestones.v1",
+    "scope": "Evidence projection only; owner acceptance, human review, merged-main verification, and release authorization retain their governance requirements."
+  },
   "owner_url": "https://github.com/4444J99/github-engineering-standards/pull/1",
   "profiles": 7,
   "project_complete": false,
+  "publication_use_accounting": {
+    "authority_authenticity_automatically_certified": false,
+    "authorized_distribution_decision": null,
+    "complete_output_inventory": true,
+    "completed": 0,
+    "copied_or_adapted_count": 0,
+    "denominator": 0,
+    "diagnostics": [
+      "No approved complete output/use inventory receipt; clearance unknown.",
+      "2379 output use classifications remain unreviewed; use denominator is uncertified."
+    ],
+    "exact_use_clearance": null,
+    "independent_paraphrase_count": 0,
+    "inventory_digest": "75217e40d8b6a4a9e89090b272079cb888c7417fe12123923d8d45ccc8f69c0e",
+    "inventory_receipt_validated": false,
+    "legacy_rights_reinterpreted": false,
+    "legal_truth_automatically_certified": false,
+    "manifest_digest": "006d331ed1daab2751de4efc10d50014b81108fdf39c1dc9abae76fbfaa12a02",
+    "output_count": 2379,
+    "output_inventory_digest": "09b1bda89f7c903ac1079c96ca891ba3a135bcf4f8ab36df88235b52b081393f",
+    "pins_digest": "6f735e66edd9975c3fdb6d0b435e1ad8ade1f6aa8653a3da610c7cd78b37140a",
+    "policy_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "publication_performed": false,
+    "receipts_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "reference_only_count": 0,
+    "register_digest": "4115ce0b9af591b05338c2cc31d6317d60ff53a48e60f98d26efb5be35c7f826",
+    "release_scope": "GES_V0_2",
+    "schema": "ges.publication-use-accounting.v1",
+    "source_evidence_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "subject": {
+      "candidate_id": "ges-v0.2-candidate-20261008",
+      "candidate_revision": "db7517449f5c11750ca55dfeccc47167c10c3fb4",
+      "distribution_scope": "Complete tracked repository snapshot proposed for public GES v0.2 distribution; review metadata is retained outside this exact candidate.",
+      "inventory_digest": "75217e40d8b6a4a9e89090b272079cb888c7417fe12123923d8d45ccc8f69c0e",
+      "manifest_digest": "006d331ed1daab2751de4efc10d50014b81108fdf39c1dc9abae76fbfaa12a02",
+      "output_inventory_digest": "09b1bda89f7c903ac1079c96ca891ba3a135bcf4f8ab36df88235b52b081393f",
+      "pins_digest": "6f735e66edd9975c3fdb6d0b435e1ad8ade1f6aa8653a3da610c7cd78b37140a",
+      "register_digest": "4115ce0b9af591b05338c2cc31d6317d60ff53a48e60f98d26efb5be35c7f826",
+      "release_scope": "GES_V0_2",
+      "source_evidence_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "unreviewed_output_count": 2379,
+    "use_register_complete": null,
+    "validated_expression_count": 0,
+    "validated_use_ids": [],
+    "zero_use_clearance": false
+  },
   "published_assurance_accounting": {
     "completed": 0,
     "denominator": 18019,
@@ -2151,7 +2413,7 @@
   "published_pages": 18019,
   "quarantined_proposals": 593,
   "queue_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
-  "rendered_bodies_acquired": 18019,
+  "rendered_bodies_acquired": 0,
   "review_accounting": {
     "coverage_unit": "artifact_disposition_receipts",
     "errors": [],
@@ -2171,7 +2433,7 @@
     "completed": 0,
     "denominator": 13657,
     "findings_digest": "bdd078b4730f1c2b4027203a96520ed3345f3e5f45fd103e0b7910c854e2e52b",
-    "inventory_digest": "eaa9c32da3762d0947864cc12aac1857b13d65d15e08aaf3ed44f8f89dc62cb8",
+    "inventory_digest": "75217e40d8b6a4a9e89090b272079cb888c7417fe12123923d8d45ccc8f69c0e",
     "legal_truth_automatically_certified": false,
     "per_file_rights_acceptance": null,
     "policy_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
@@ -4829,8 +5091,8 @@
       "claim_provenance_digest": "c06672cfc0aef7e55fbc9f03cb2996d9e0cb28b14d64a6d877fe1eb3ec83b017",
       "coverage_complete": false,
       "inventory_count": 13657,
-      "inventory_digest": "eaa9c32da3762d0947864cc12aac1857b13d65d15e08aaf3ed44f8f89dc62cb8",
-      "inventory_sha256": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c",
+      "inventory_digest": "75217e40d8b6a4a9e89090b272079cb888c7417fe12123923d8d45ccc8f69c0e",
+      "inventory_sha256": "86225491fb70197b893a0bfb1fa96ebfc1f5a6e33c21c86ab874d9d34f5db9a2",
       "proposal_digest": "e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4",
       "reference_claim_count": 61936,
       "reviewed_count": 3590,
@@ -4840,7 +5102,7 @@
       "source_review_documents_digest": "2936a71d9b7c2c6f53d18d57a2496d371526a70dbfeacbf36c9e82be768ca5b8",
       "source_review_policy_digest": "981a3f665137a9a14cc73250656792c17417a65f60980978b7e932da3b13475b",
       "source_review_receipts_digest": "23746e5eef63eeaa9c13ff7b9bbad3816d5109094ba8e98d053416c319f80473",
-      "source_snapshots_digest": "551003ced9d7f8776e237c9328240378b4e091cad163c70d97c0c467536ead30"
+      "source_snapshots_digest": "9b67c562a9223ab7b340e178b32802ea897caba3929740fa8bdbc8e4c1a70b32"
     },
     "validated_evidence": {},
     "validated_evidence_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"

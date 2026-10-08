@@ -1,0 +1,118 @@
+{
+  "schema": "ges.claim-workload-current-provenance.v1",
+  "observed_at": "2026-10-08T01:46:22.795874+00:00",
+  "acquisition_kind": "NEW_OBSERVED_WORKFLOW_METADATA",
+  "is_historical_cache_restoration": false,
+  "scope": "Frozen workflow metadata, pinned source identities and unchanged recorded-claim accounting. No new semantic review or acceptance credit.",
+  "bindings": {
+    "historical_report_sha256": "6151dcc71dda756610f371337bebe9981c0f9656cc6f7b252ad60e007701f5ec",
+    "current_report_sha256": "2e718486119b29cf286f4b21f067d67dc3bea17f2559a45fbc01105931a22658",
+    "artifact_inventory_sha256": "86225491fb70197b893a0bfb1fa96ebfc1f5a6e33c21c86ab874d9d34f5db9a2",
+    "compressed_artifact_inventory_sha256": "9bf57e2bdf62d37026d5c06981c34e2c9db593e44bf03f39c7e441c9751358ac"
+  },
+  "historical_report_path": "claim-workload-inventory.json",
+  "current_report_path": "claim-workload-current-inventory.json",
+  "artifact_inventory_path": "claim-workload-inputs/artifacts.jsonl.gz",
+  "historical_original_input_replay": {
+    "status": "UNAVAILABLE",
+    "artifact_inventory_sha256": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c"
+  },
+  "historical_recovery_observation": {
+    "actions_runs_scope": "2026-10-01 UTC; all 22 returned runs inspected",
+    "source_acquisition_runs": [
+      36920555495
+    ],
+    "matching_original_input_found": false,
+    "reason": "Available October 1 and October 7 workflow inventories have different exact bytes. No source-acquisition workflow ran near the separately recorded 2026-10-01T20:58:19.262517+00:00 acquisition. The original private cache was not available.",
+    "limitation": "Bounded recovery did not establish that the original input is absent from every possible external location."
+  },
+  "allowed_report_difference": [
+    "inputs.artifacts_sha256"
+  ],
+  "equivalence": "Every other historical report field matches, including all document hashes, counts, memberships, reconciliation bindings and zero-credit fields.",
+  "workflow_origin": {
+    "repository": "4444J99/github-engineering-standards",
+    "workflow_run_id": 37571019639,
+    "workflow_run_url": "https://github.com/4444J99/github-engineering-standards/actions/runs/37571019639",
+    "head_sha": "c55899f8d52185ec69a5d3b06f22e9f2c4a21d31",
+    "artifact_id": 11460399285,
+    "artifact_name": "standards-metadata-evidence",
+    "artifact_metadata_url": "https://api.github.com/repos/4444J99/github-engineering-standards/actions/runs/37571019639/artifacts",
+    "zip_sha256": "33456e7d2d64f24eae94a4331603fe4aa48e6c36f8d4265148ffcda17f3bdf70",
+    "zip_digest_matched_github_artifact_metadata": true,
+    "zip_member": "metadata-evidence.tar.gz",
+    "source_member": "corpus/artifacts.jsonl"
+  },
+  "metadata_projection": {
+    "artifact_rows": 13657,
+    "uncompressed_bytes": 9446125,
+    "compressed_bytes": 1440178,
+    "fields": [
+      "artifact_id",
+      "candidate_count",
+      "commit",
+      "git_blob_sha",
+      "kind",
+      "path",
+      "proposed_disposition",
+      "retrieval_status",
+      "retrieved_at",
+      "review_status",
+      "sha256",
+      "size",
+      "source",
+      "url"
+    ],
+    "raw_source_bodies_included": false,
+    "source_archives_included": false,
+    "credentials_included": false
+  },
+  "source_identity_reference": {
+    "path": "a3-six-source-capsule-repair.json",
+    "sha256": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15"
+  },
+  "source_identity_digests": {
+    "atapas/model-repo": "4c9d95130c28b2bf1cadbf3bbeae650f36f1185a3e861b447f829e6eed4aebcb",
+    "github/docs": "dc7fa5ec31023b8457a262c86d64b34d4f13615b443884d8d0e7e30f6af7e88f",
+    "github/github-well-architected": "b5939b61905bd3b0d4f9a6c7449e382748a59af2c04f6ede214859cd7d3c73c4",
+    "jlcanovas/gh-best-practices-template": "7df995f9db7f87493e28fde1f216e4d6ea7db4c33ba5af767551dadab3b669df",
+    "microsoft/ghqr": "4f0af7e94e3a31bd342479627a3008bbff3db2067682925054a0ff936ec5514f",
+    "tmcw/github-best-practices": "4f1cb0becbecf859fc1c50e5f2d25ef79321bf69442d919eac6eb7eb82c69def"
+  },
+  "acquisition_timestamps": {
+    "atapas/model-repo": [
+      "2026-10-07T04:21:06.675553+00:00"
+    ],
+    "github/docs": [
+      "2026-10-07T04:21:06.805543+00:00"
+    ],
+    "github/github-well-architected": [
+      "2026-10-07T04:21:06.718166+00:00"
+    ],
+    "jlcanovas/gh-best-practices-template": [
+      "2026-10-07T04:21:06.246655+00:00"
+    ],
+    "microsoft/ghqr": [
+      "2026-10-07T04:21:06.245232+00:00"
+    ],
+    "tmcw/github-best-practices": [
+      "2026-10-07T04:21:06.246070+00:00"
+    ]
+  },
+  "credits": {
+    "new_review_credit": 0,
+    "new_reconciliation_credit": 0,
+    "source_body_validation": "NOT_ASSERTED_BY_THIS_METADATA_OBSERVATION",
+    "rights_clearance": "NOT_GRANTED",
+    "policy_adoption": "NOT_GRANTED",
+    "native_acceptance": "NOT_GRANTED",
+    "human_review": "NOT_ASSERTED"
+  },
+  "reproduction_limits": [
+    "The current report is reproduced from the preserved October 7 workflow metadata; the historical original-input replay remains unavailable.",
+    "CI checks local preserved bytes, metadata-only field boundaries and A3 source identities without contacting GitHub or retrieving source bodies.",
+    "The recorded workflow artifact origin was checked at observation time; offline CI does not independently re-download or authenticate that origin.",
+    "Pinned metadata identity and workload equivalence do not certify source semantics, rendered versions, rights, adoption or operational enforcement.",
+    "Existing historical review and source-table receipts retain their original report hashes and scopes."
+  ]
+}

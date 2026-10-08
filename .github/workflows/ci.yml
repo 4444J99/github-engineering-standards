@@ -23,6 +23,15 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
+      - name: Reproduce current workload and preserve historical accounting
+        run: >-
+          python -m ges.claim_workload
+          --reviews evidence/source-reviews
+          --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz
+          --reconciliation evidence/provider-oidc-reconciliation.json
+          --check evidence/claim-workload-current-inventory.json
+          --historical evidence/claim-workload-inventory.json
+          --provenance evidence/claim-workload-current-provenance.json
       - run: python -m ges validate
       - run: python -m ges compile
       - name: Generated views match the canonical catalog

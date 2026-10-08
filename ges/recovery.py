@@ -8,31 +8,8 @@ from pathlib import Path
 from .claim_reconciliation import reconciliation_accounting
 from .core import ROOT, digest, dump, load, now
 from .corpus import coverage_with_reviews
+from .milestones import evaluate_gate, milestone_accounting
 from .source_fidelity import source_fidelity_accounting
-
-
-def evaluate_gate(name: str, completed: int, denominator: int | None,
-                  condition: str, prerequisites: dict[str, bool | None]) -> dict:
-    """Separate observed incompleteness from absent certification evidence."""
-    if type(completed) is not int or completed < 0:
-        raise ValueError('Invalid completed count')
-    if denominator is not None and (type(denominator) is not int or denominator < completed):
-        raise ValueError('Invalid or reduced denominator')
-    if (not prerequisites or 'coverage_complete' in prerequisites or
-            any(v is not None and type(v) is not bool for v in prerequisites.values())):
-        raise ValueError('Gate prerequisites must be explicit boolean/unknown observations')
-    coverage = None if denominator is None or denominator == 0 else completed == denominator
-    observations = {'coverage_complete': coverage, **prerequisites}
-    failed = [key for key, value in observations.items() if value is False]
-    unknown = [key for key, value in observations.items() if value is None]
-    closed = not failed and not unknown
-    return {'gate': name, 'status': 'CLOSED' if closed else 'OPEN',
-            'evaluation': 'PROVEN' if closed else ('INCOMPLETE' if failed else 'UNVERIFIED'),
-            'completed': completed, 'denominator': denominator,
-            'remaining': denominator-completed if denominator is not None else None,
-            'closure_condition': condition, 'conditions': observations,
-            'incomplete_conditions': failed, 'unverified_conditions': unknown,
-            'evidence': 'evidence/recovery-status.json'}
 
 
 def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None,
@@ -41,7 +18,20 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
            rights_acceptance_policy: Path | None=None, source_fidelity: Path | None=None,
            source_fidelity_policy: Path | None=None,
            claim_reconciliation: Path | None=None,
-           claim_reconciliation_policy: Path | None=None) -> dict:
+           claim_reconciliation_policy: Path | None=None,
+           publication_manifest: Path | None=None,
+           publication_register: Path | None=None,
+           publication_receipts: Path | None=None,
+           publication_policy: Path | None=None,
+           publication_output_root: Path | None=None) -> dict:
+    publication_inputs = (
+        publication_manifest, publication_register, publication_receipts,
+        publication_policy, publication_output_root,
+    )
+    if any(value is not None for value in publication_inputs) and not all(
+            value is not None for value in publication_inputs):
+        raise ValueError('Publication use accounting requires manifest, register, '
+                         'receipts, approved policy and candidate output root together')
     paired_inputs = (
         (reviews, review_policy, 'Source reviews'),
         (published_assurance, published_assurance_policy, 'Published assurance'),
@@ -136,6 +126,14 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         load(rights_acceptance) if rights_acceptance is not None else [],
         load(rights_acceptance_policy) if rights_acceptance_policy is not None else {},
         evidence_root=ROOT)
+    publication = None
+    if publication_manifest is not None:
+        from .publication_use import publication_accounting
+        publication = publication_accounting(
+            load(publication_manifest), load(publication_register),
+            load(publication_receipts), load(publication_policy),
+            corpus_artifacts, pin_map, output_root=publication_output_root,
+            source_root=sources, evidence_root=ROOT)
     accepted = sum(c['status'] == 'ACCEPTED' for c in controls)
     canonical_ids = {c['id'] for c in controls}
     if canonical_ids & {c['id'] for c in queue} or len({c['id'] for c in queue}) != len(queue):
@@ -240,8 +238,10 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
     }
     evaluated = [evaluate_gate(name, done, total, condition, prerequisites[name])
                  for name, done, total, condition in gates]
+    milestones = milestone_accounting(evaluated, publication)
     return {'schema_version':'ges.recovery.v1','generated_at':now(),
             'project_complete':all(g['status'] == 'CLOSED' for g in evaluated),
+            'milestone_accounting': milestones,
             'certification_adapter_status':'INCOMPLETE_STRUCTURED_GENERALIZATION_ADOPTION_BINDING_AND_RUNTIME_ADAPTERS',
             'certification_adapters': {
                 'source_fidelity_and_omission': 'IMPLEMENTED_PINNED_ARTIFACT_RECEIPTS_ONLY',
@@ -252,7 +252,8 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
                 'binding_verification': 'NOT_IMPLEMENTED',
                 'native_and_estate_verification': 'NOT_IMPLEMENTED',
                 'published_assurance': 'IMPLEMENTED_LOCKED_SOURCE_ONLY',
-                'rights_acceptance': 'IMPLEMENTED_PINNED_ARTIFACTS_ONLY'},
+                'rights_acceptance': 'IMPLEMENTED_PINNED_ARTIFACTS_ONLY',
+                'publication_use': 'IMPLEMENTED_EXACT_OUTPUT_USE_RECEIPTS_ONLY'},
             'historical_checkpoint':'30b1f83c5eeb3db48ea168bdd9d4cfeb8532c040',
             'owner_url':'https://github.com/4444J99/github-engineering-standards/pull/1',
             'review_accounting':review_result,'review_receipts_digest':digest(receipts),
@@ -262,6 +263,7 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             'published_pages':len(pages),'rendered_bodies_acquired':acquired,
             'published_assurance_accounting': assurance,
             'rights_acceptance_accounting': rights,
+            'publication_use_accounting': publication,
             'source_fidelity_accounting': fidelity,
             'claim_reconciliation_accounting': reconciliation,
             'unresolved_published_pages':[{'page_id':r['page_id'],'version':r['version'],'path':r['path']}
@@ -300,13 +302,29 @@ if __name__ == '__main__':
                    help='Optional exact-claim reconciliation receipt array')
     p.add_argument('--claim-reconciliation-policy',type=Path,
                    help='Separately approved reconciliation authority')
+    p.add_argument('--publication-manifest',type=Path,
+                   help='Exact public release output inventory; requires all publication inputs')
+    p.add_argument('--publication-register',type=Path,
+                   help='Actual upstream-expression uses for the exact candidate output set')
+    p.add_argument('--publication-receipts',type=Path,
+                   help='Exact-use review, independent audit, human acceptance and distribution evidence')
+    p.add_argument('--publication-policy',type=Path,
+                   help='Separately approved publication inventory and use authority')
+    p.add_argument('--publication-output-root',type=Path,
+                   help='Candidate directory whose complete file set and bytes must match the manifest')
     args=p.parse_args()
     report=status(args.sources,args.corpus,args.reviews,args.review_policy,args.rendered_directory,
                   args.published_assurance,args.published_assurance_policy,
                   args.rights_acceptance,args.rights_acceptance_policy,
                   args.source_fidelity,args.source_fidelity_policy,
-                  args.claim_reconciliation,args.claim_reconciliation_policy)
+                  args.claim_reconciliation,args.claim_reconciliation_policy,
+                  args.publication_manifest,args.publication_register,
+                  args.publication_receipts,args.publication_policy,
+                  args.publication_output_root)
     dump(args.output,report)
     print(json.dumps({'project_complete':report['project_complete'],
                       'gates_open':sum(g['status'] != 'CLOSED' for g in report['gates']),
+                      'milestones': {name: item['evaluation'] for name, item in
+                                     report['milestone_accounting']['milestones'].items()},
+                      'ges_v0_2': report['milestone_accounting']['ges_v0_2']['evaluation'],
                       'inventory_artifacts':report['inventory_artifacts'],'published_pages':report['published_pages']}))

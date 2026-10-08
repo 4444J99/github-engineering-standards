@@ -1,0 +1,1244 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ges:publication-use:v1",
+  "title": "GES exact candidate publication-use contracts",
+  "$comment": "Structural validation only. ges.publication_use validates actual bytes, complete output membership, independently trusted policy bindings, authorization roles, evidence and time order. JSON names and digests do not authenticate real people or confer rights.",
+  "$defs": {
+    "span": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start_byte": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_byte": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "start_byte",
+        "end_byte",
+        "sha256"
+      ]
+    },
+    "evidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^evidence/[^\\\\]+\\.json$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "sourceIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "source": {
+          "type": "string",
+          "pattern": "^[\\w.-]+/[\\w.-]+$"
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)[^\\\\\\u0000]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "source",
+        "commit",
+        "path",
+        "sha256"
+      ]
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)[^\\\\\\u0000]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "size_bytes"
+      ]
+    },
+    "attribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "output_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)[^\\\\\\u0000]+$"
+        },
+        "output_range": {
+          "$ref": "#/$defs/span"
+        }
+      },
+      "required": [
+        "output_path",
+        "output_range"
+      ]
+    },
+    "use": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "use_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "kind": {
+          "enum": [
+            "REFERENCES_ONLY",
+            "INDEPENDENT_PARAPHRASE",
+            "LICENSED_COPY",
+            "ADAPTATION"
+          ]
+        },
+        "source": {
+          "$ref": "#/$defs/sourceIdentity"
+        },
+        "source_range": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/span"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "output_path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)[^\\\\\\u0000]+$"
+        },
+        "output_range": {
+          "$ref": "#/$defs/span"
+        },
+        "attributions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attribution"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        }
+      },
+      "required": [
+        "use_id",
+        "kind",
+        "source",
+        "source_range",
+        "output_path",
+        "output_range",
+        "attributions",
+        "rationale"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "REFERENCES_ONLY"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "source_range": {
+                "type": "null"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "source_range": {
+                "$ref": "#/$defs/span"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "outputDisposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)[^\\\\\\u0000]+$"
+        },
+        "disposition": {
+          "enum": [
+            "UNREVIEWED",
+            "USES_RECORDED",
+            "NO_UPSTREAM_EXPRESSION"
+          ]
+        },
+        "use_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        }
+      },
+      "required": [
+        "path",
+        "disposition",
+        "use_ids",
+        "rationale"
+      ]
+    },
+    "sourceEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "format": {
+          "enum": [
+            "RAW",
+            "SNAPSHOT_TEXT"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.{1,2}(?:/|$))(?!.*//)[^\\\\\\u0000]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "format",
+        "path",
+        "sha256"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "candidate_revision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "distribution_scope": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "release_scope": {
+          "enum": [
+            "GES_V0_2",
+            "BOUNDED_PACKAGE"
+          ]
+        },
+        "manifest_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "register_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "output_inventory_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "inventory_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "pins_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_evidence_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "source_inventory_reference_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "candidate_id",
+        "candidate_revision",
+        "distribution_scope",
+        "release_scope",
+        "manifest_digest",
+        "register_digest",
+        "output_inventory_digest",
+        "inventory_digest",
+        "pins_digest",
+        "source_evidence_digest",
+        "source_inventory_reference_digest"
+      ]
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-output-manifest.v1"
+        },
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "candidate_revision": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "distribution_scope": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "release_scope": {
+          "enum": [
+            "GES_V0_2",
+            "BOUNDED_PACKAGE"
+          ]
+        },
+        "prepared_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/output"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema",
+        "candidate_id",
+        "candidate_revision",
+        "distribution_scope",
+        "release_scope",
+        "prepared_at",
+        "outputs"
+      ]
+    },
+    "register": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-use-register.v1"
+        },
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "manifest_digest": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "prepared_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/outputDisposition"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "uses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/use"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceEvidence"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema",
+        "candidate_id",
+        "manifest_digest",
+        "prepared_at",
+        "outputs",
+        "uses",
+        "source_evidence"
+      ]
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-use-authority-policy.v1"
+        },
+        "approval_reference": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "subject": {
+          "$ref": "#/$defs/scope"
+        },
+        "issued_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "valid_until": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "authorized_inventory_reviewers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "authorized_use_reviewers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "authorized_independent_auditors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "authorized_human_acceptors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "authorized_distribution_approvers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "schema",
+        "approval_reference",
+        "subject",
+        "issued_at",
+        "valid_until",
+        "authorized_inventory_reviewers",
+        "authorized_use_reviewers",
+        "authorized_independent_auditors",
+        "authorized_human_acceptors",
+        "authorized_distribution_approvers"
+      ]
+    },
+    "inventoryReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-use-receipt.v1"
+        },
+        "subject": {
+          "$ref": "#/$defs/scope"
+        },
+        "valid_until": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "independent_auditor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "human_acceptor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "distribution_approver": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "kind": {
+          "const": "OUTPUT_INVENTORY"
+        },
+        "disposition": {
+          "enum": [
+            "REGISTER_COMPLETE",
+            "NO_UPSTREAM_EXPRESSION"
+          ]
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "inventory_review": {
+              "$ref": "#/$defs/evidenceReference"
+            },
+            "independent_omission_audit": {
+              "$ref": "#/$defs/evidenceReference"
+            },
+            "human_acceptance": {
+              "$ref": "#/$defs/evidenceReference"
+            },
+            "distribution_approval": {
+              "$ref": "#/$defs/evidenceReference"
+            }
+          },
+          "required": [
+            "inventory_review",
+            "independent_omission_audit",
+            "human_acceptance",
+            "distribution_approval"
+          ]
+        }
+      },
+      "required": [
+        "schema",
+        "subject",
+        "valid_until",
+        "obligations",
+        "reviewer",
+        "independent_auditor",
+        "human_acceptor",
+        "distribution_approver",
+        "kind",
+        "disposition",
+        "evidence"
+      ]
+    },
+    "useReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-use-receipt.v1"
+        },
+        "subject": {
+          "$ref": "#/$defs/scope"
+        },
+        "valid_until": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reviewer": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "independent_auditor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "human_acceptor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "distribution_approver": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "kind": {
+          "const": "EXPRESSION_USE"
+        },
+        "use_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "attribution_disposition": {
+          "enum": [
+            "REQUIRED_PROVIDED",
+            "NOT_REQUIRED_WITH_REASON"
+          ]
+        },
+        "attribution_rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "expression_rights_review": {
+              "$ref": "#/$defs/evidenceReference"
+            },
+            "independent_exception_audit": {
+              "$ref": "#/$defs/evidenceReference"
+            },
+            "human_acceptance": {
+              "$ref": "#/$defs/evidenceReference"
+            },
+            "distribution_approval": {
+              "$ref": "#/$defs/evidenceReference"
+            }
+          },
+          "required": [
+            "expression_rights_review",
+            "independent_exception_audit",
+            "human_acceptance",
+            "distribution_approval"
+          ]
+        }
+      },
+      "required": [
+        "schema",
+        "subject",
+        "valid_until",
+        "obligations",
+        "reviewer",
+        "independent_auditor",
+        "human_acceptor",
+        "distribution_approver",
+        "kind",
+        "use_id",
+        "attribution_disposition",
+        "attribution_rationale",
+        "evidence"
+      ]
+    },
+    "inventorySubject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "valid_until": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "disposition": {
+          "enum": [
+            "REGISTER_COMPLETE",
+            "NO_UPSTREAM_EXPRESSION"
+          ]
+        }
+      },
+      "required": [
+        "scope",
+        "obligations",
+        "valid_until",
+        "disposition"
+      ]
+    },
+    "useSubject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "valid_until": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "use": {
+          "$ref": "#/$defs/use"
+        },
+        "attribution_disposition": {
+          "enum": [
+            "REQUIRED_PROVIDED",
+            "NOT_REQUIRED_WITH_REASON"
+          ]
+        },
+        "attribution_rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        }
+      },
+      "required": [
+        "scope",
+        "obligations",
+        "valid_until",
+        "use",
+        "attribution_disposition",
+        "attribution_rationale"
+      ]
+    },
+    "inventoryAssurances": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "all_candidate_outputs_accounted_for": {
+          "const": true
+        },
+        "all_upstream_uses_accounted_for": {
+          "const": true
+        },
+        "source_use_classifications_reviewed": {
+          "const": true
+        },
+        "no_upstream_expression_confirmed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "all_candidate_outputs_accounted_for",
+        "all_upstream_uses_accounted_for",
+        "source_use_classifications_reviewed",
+        "no_upstream_expression_confirmed"
+      ]
+    },
+    "useAssurances": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "exact_expression_and_grant_reviewed": {
+          "const": true
+        },
+        "restrictions_accounted_for": {
+          "const": true
+        },
+        "attribution_accounted_for": {
+          "const": true
+        }
+      },
+      "required": [
+        "exact_expression_and_grant_reviewed",
+        "restrictions_accounted_for",
+        "attribution_accounted_for"
+      ]
+    },
+    "inventoryAttestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-use-attestation.v1"
+        },
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "decision": {
+          "const": "APPROVED_FOR_SPECIFIED_USE"
+        },
+        "unresolved": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "kind": {
+          "enum": [
+            "inventory_review",
+            "independent_omission_audit",
+            "human_acceptance",
+            "distribution_approval"
+          ]
+        },
+        "subject": {
+          "$ref": "#/$defs/inventorySubject"
+        },
+        "assurances": {
+          "$ref": "#/$defs/inventoryAssurances"
+        }
+      },
+      "required": [
+        "schema",
+        "identity",
+        "reviewed_at",
+        "decision",
+        "unresolved",
+        "rationale",
+        "kind",
+        "subject",
+        "assurances"
+      ]
+    },
+    "useAttestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-use-attestation.v1"
+        },
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "decision": {
+          "const": "APPROVED_FOR_SPECIFIED_USE"
+        },
+        "unresolved": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": ".*\\S.*"
+        },
+        "kind": {
+          "enum": [
+            "expression_rights_review",
+            "independent_exception_audit",
+            "human_acceptance",
+            "distribution_approval"
+          ]
+        },
+        "subject": {
+          "$ref": "#/$defs/useSubject"
+        },
+        "assurances": {
+          "$ref": "#/$defs/useAssurances"
+        }
+      },
+      "required": [
+        "schema",
+        "identity",
+        "reviewed_at",
+        "decision",
+        "unresolved",
+        "rationale",
+        "kind",
+        "subject",
+        "assurances"
+      ]
+    },
+    "accounting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema": {
+          "const": "ges.publication-use-accounting.v1"
+        },
+        "completed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "denominator": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "output_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "copied_or_adapted_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reference_only_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "independent_paraphrase_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "validated_expression_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unreviewed_output_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "validated_use_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "complete_output_inventory": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "use_register_complete": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "exact_use_clearance": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "authorized_distribution_decision": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "zero_use_clearance": {
+          "type": "boolean"
+        },
+        "inventory_receipt_validated": {
+          "type": "boolean"
+        },
+        "manifest_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "register_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "output_inventory_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_evidence_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "inventory_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "pins_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "policy_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "receipts_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "release_scope": {
+          "enum": [
+            "GES_V0_2",
+            "BOUNDED_PACKAGE",
+            null
+          ]
+        },
+        "subject": {
+          "$ref": "#/$defs/scope"
+        },
+        "diagnostics": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": ".*\\S.*"
+          },
+          "minItems": 0
+        },
+        "legal_truth_automatically_certified": {
+          "const": false
+        },
+        "authority_authenticity_automatically_certified": {
+          "const": false
+        },
+        "publication_performed": {
+          "const": false
+        },
+        "legacy_rights_reinterpreted": {
+          "const": false
+        },
+        "source_inventory_reference_digest": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schema",
+        "completed",
+        "denominator",
+        "output_count",
+        "copied_or_adapted_count",
+        "reference_only_count",
+        "independent_paraphrase_count",
+        "validated_expression_count",
+        "unreviewed_output_count",
+        "validated_use_ids",
+        "complete_output_inventory",
+        "use_register_complete",
+        "exact_use_clearance",
+        "authorized_distribution_decision",
+        "zero_use_clearance",
+        "inventory_receipt_validated",
+        "manifest_digest",
+        "register_digest",
+        "output_inventory_digest",
+        "source_evidence_digest",
+        "inventory_digest",
+        "pins_digest",
+        "policy_digest",
+        "receipts_digest",
+        "release_scope",
+        "diagnostics",
+        "legal_truth_automatically_certified",
+        "authority_authenticity_automatically_certified",
+        "publication_performed",
+        "legacy_rights_reinterpreted",
+        "source_inventory_reference_digest"
+      ]
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/manifest"
+    },
+    {
+      "$ref": "#/$defs/register"
+    },
+    {
+      "$ref": "#/$defs/policy"
+    },
+    {
+      "$ref": "#/$defs/inventoryReceipt"
+    },
+    {
+      "$ref": "#/$defs/useReceipt"
+    },
+    {
+      "$ref": "#/$defs/inventoryAttestation"
+    },
+    {
+      "$ref": "#/$defs/useAttestation"
+    },
+    {
+      "$ref": "#/$defs/accounting"
+    }
+  ]
+}
