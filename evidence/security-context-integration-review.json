@@ -1,0 +1,82 @@
+{
+  "review_type": "BOUNDED_SECURITY_CONTEXT_RECEIPT_INTEGRATION_RECHECK",
+  "verdict": "PASS",
+  "reviewed_at": "2026-10-07T04:21:44.099964+00:00",
+  "reviewer": "codex:/root/bounded_independent_review",
+  "reviewer_task": "/root/bounded_independent_review",
+  "parent_native_session_witness": "01a11342-68e2-7851-9636-9af99289c0d7",
+  "independent_native_session_id": null,
+  "human_review": false,
+  "scope": "One exact projection, authority policy, public summary and recovery-accounting check after the frozen semantic review; no new semantic credit.",
+  "inputs": [
+    {
+      "path": "evidence/security-context-reconciliation.json",
+      "sha256": "171faa8e4d768f2ec05a33b4052e9cc851df714e70d30ad6ca92e94cc5040c39"
+    },
+    {
+      "path": "evidence/security-context-reconciliation-policy.json",
+      "sha256": "1a19ab507bc5f39ebdd10b52b47cd6cc8d96d6a0b738a261710c03262216952c"
+    },
+    {
+      "path": "docs/security-context-reconciliation.md",
+      "sha256": "f4686b986746476974404843502d276cdd0a4776a7ebd8d7df3aa5dd52c438f9"
+    },
+    {
+      "path": "evidence/recovery-status.json",
+      "sha256": "bb00d4d69d659bf13d46487843b8fd1cbcfddf375ace17163628e6cd560e7b49"
+    },
+    {
+      "path": "evidence/security-context-independent-review.json",
+      "sha256": "37df215a2adae045e95daea8412902af62ec52197c346d7b132612a2d100ccfb"
+    },
+    {
+      "path": "evidence/secret-context-primary-review.json",
+      "sha256": "ead5f53c6f4ae3244b2eecee2df79107b44db3c707a18a40d9e14d02bd441776"
+    },
+    {
+      "path": "evidence/codeql-context-primary-review.json",
+      "sha256": "e5c6d820e90539c63d806f2292ae4bcf23dc8e4edadc46b6de0604d251643689"
+    },
+    {
+      "path": "evidence/provider-oidc-reconciliation.json",
+      "sha256": "91f52141398c7670bd4e3335b5dad89c88815c3141c75d6007fc52a674e54485"
+    },
+    {
+      "path": "controls/catalog.json",
+      "sha256": "2a61be160fdbf1d45564b31b3c83336ae14941758cf99e19d8344d630eae2e4c"
+    }
+  ],
+  "observations": {
+    "new_projected_receipts": 1392,
+    "prior_receipts_preserved_object_identically": 474,
+    "combined_receipts": 1866,
+    "known_claim_denominator": 61936,
+    "unresolved_claims": 60070,
+    "combined_dispositions": {
+      "REFERENCE": 1495,
+      "MAP": 363,
+      "CONFLICT": 3,
+      "EXCLUDED_WITH_REASON": 5
+    },
+    "prior_source_conflicts_preserved": 3,
+    "unsupported_exclusions_retained": 5,
+    "all_project_gates_open": 9,
+    "accepted_controls": 0,
+    "artifact_completed": 3590,
+    "artifact_denominator": 13657,
+    "remaining_non_table_unreconciled": 24976,
+    "semantic_report_inputs_unchanged": true
+  },
+  "method": [
+    "Independently reconstruct all 61936 exact subjects from unchanged claim documents and private artifact inventory; reproduce the canonical subject digest and match every one of 1392 newly integrated subjects.",
+    "Compare disposition, references, details and rationale for every new receipt to the independently approved primary decision, and verify primary/independent identities and actual timestamps. Preserve the first 474 objects exactly, including all three historical conflicts.",
+    "Check policy catalog/subject digests, scoped authority and non-adoption constraints; compare recovery to HEAD, confirming only generated_at, claim-reconciliation accounting and consolidation progress change.",
+    "Read summary documentation for accurate five failed extractions, 1387 source-faithful assertions, 1392 relation decisions, separate 382 metadata/35094 cell boundaries and unclosed source-omission/rights/native/estate limits."
+  ],
+  "findings": [],
+  "residual_limits": [
+    "The prior semantic review remains immutable and supplies the per-claim judgments. This assembly check creates no additional review denominator.",
+    "Five unchanged unsupported original statements retain source/extraction FAIL. Receipt validation certifies provenance/accounting rather than automatic semantic truth.",
+    "No publication-rights, adoption, live/native behavior, whole-artifact omission or project-gate closure is granted."
+  ]
+}

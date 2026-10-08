@@ -59,24 +59,31 @@ The review queue in the corpus ledger is the authoritative remaining-item invent
 
 ## Reporting boundary
 
-This tranche changes the delivery contract, not runtime accounting. The current
-`ges.recovery` reporter's `project_complete` still means all nine legacy gates
-are closed. It must not be presented as the new GES v0.2 milestone status.
-Existing receipts retain their original scope and timestamps. A later accounting
-implementation must expose the milestones without weakening any evidence gate.
+`ges.recovery` now adds `milestone_accounting` with the four completion
+milestones and a separate `ges_v0_2` aggregate requiring the first three.
+The existing `project_complete` field retains its exact legacy meaning: all
+nine legacy gates are closed. Estate rollout remains independently reported.
+Every gate is preserved and its identity, conditions, counts and claimed state
+are checked before milestone projection. Existing receipts retain their original
+scope and timestamps. See [completion reporting](completion-milestones.md).
 
 Gate 8 also retains legacy runtime semantics: `ges.recovery` still describes
 per-file rights review, and `ges.rights_acceptance` computes
 `per_file_rights_acceptance` over the entire artifact inventory. The exact-use
-publication boundary above is the adopted delivery contract, not an implemented
-runtime acceptance rule. A later implementation must introduce and validate an
-actual-use register before that milestone can be evaluated; existing per-file
-receipts cannot be silently reinterpreted as exact-use clearance.
+publication boundary uses a separate validated candidate output manifest,
+actual-use register, scoped review receipts and approved authority policy.
+The candidate directory's complete file set and exact bytes must match that
+manifest. A bounded package cannot establish clearance of the full GES v0.2
+release. Missing publication inputs leave this milestone `UNVERIFIED`; existing
+per-file receipts cannot be silently reinterpreted as exact-use clearance.
 
 Construction reporting now distinguishes observed incomplete coverage from
 unverified prerequisites. Every gate lists `incomplete_conditions` and
 `unverified_conditions`; its state is calculated instead of universally assigned
-OPEN. Zero or undeclared denominators cannot pass. Pinned tree matching and
+OPEN. Zero or undeclared legacy gate denominators cannot pass. Publication may
+clear an explicitly reviewed zero-use register only for a nonempty exact output
+set with the separately validated inventory, review and distribution approvals;
+an empty register alone is insufficient. Pinned tree matching and
 durable-body acquisition are observed checks, not semantic certification.
 
 Source-fidelity/omission and exact-claim reconciliation now have fail-closed,
@@ -88,4 +95,8 @@ narrower documented scopes.
 The reporter does not invent failed audits or permit a boolean sidecar to close
 any gate. Gate evaluation is not itself source review or native verification.
 See the individual conditions in `evidence/recovery-status.json` for the actual
-outstanding work.
+outstanding work at that report's recorded timestamp. New milestone reporting
+does not rewrite that historical receipt or claim that any acceptance gate has
+closed. Calculated `PROVEN` evidence is not the governed designation `Verified`;
+the merged-main, review and owner-acceptance requirements in `GOVERNANCE.md`
+remain in force.

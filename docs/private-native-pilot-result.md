@@ -54,3 +54,23 @@ The reviewed source payload is PR #485 at `4d3aa01`; that PR was still open at
 the execution preflight. Its earlier merge submission was deferred and is not
 represented as merged. This observation does not change source-review coverage,
 adoption accounting or any of the nine legacy gate verdicts.
+
+## Bounded retry on 2026-10-08
+
+The user authorized proceeding with the outstanding work package. One retry of
+the existing nominal passing PR workflow was accepted by the provider. Both the
+canary job and required aggregator again completed with failure and zero executed
+steps. A requested job log was unavailable. The earlier provider diagnosis was
+not independently reconfirmed for this attempt.
+
+The rule was read back as Disabled and the protected branch remained unchanged.
+The workflow-execution prerequisite was not met, so activation, protected-branch
+operation tests and rollback were not attempted. This observation supplies no
+native acceptance, rights, source-review or estate credit.
+
+The new sanitized observation and ruleset readback are retained in the private
+[evidence commit 14c160d](https://github.com/4444J99/ges-native-enforcement-pilot/tree/14c160d0ac76a75e5528aa546f9a07c78e68e025/evidence).
+That commit preserves earlier observations. Resume under the approved plan once
+the canary and aggregator actually execute with the expected publisher; then
+complete the positive/negative operations, bypass assessment, rollback and
+unchanged second-run verification before requesting native acceptance.

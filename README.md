@@ -99,6 +99,14 @@ No real authority grant or clearance receipt is supplied. Triage remains pending
 machine validation is not legal permission or publication. See
 [rights receipt contract](docs/rights-acceptance-receipts.md).
 
+The separate `--publication-manifest`, `--publication-register`,
+`--publication-receipts`, `--publication-policy`, and `--publication-output-root`
+inputs validate the exact candidate output set and actual upstream-expression
+uses for public release accounting. Supply all five together. Missing inputs
+leave public release clearance `UNVERIFIED`; legacy per-file rights receipts
+cannot clear that milestone. See the [actual-use contract](docs/publication-use-register.md)
+and [completion reporting](docs/completion-milestones.md).
+
 ### Render a template
 
 ```sh
@@ -159,13 +167,20 @@ Codex disposition receipts only; a cloud worker must not impersonate that identi
 
 ## What is not finished
 
+The latest [secret-scanning and CodeQL reconciliation](docs/security-context-reconciliation.md)
+reports exact reviewed relations, unsupported assertions, operational implications
+and remaining source work separately from table verification and policy adoption.
+
 Completion is tracked as separate [milestones](docs/remaining-work.md): exhaustive
 six-source synthesis, public release clearance for actual reused expression,
 native pilot acceptance, and estate rollout. GES v0.2 requires the first three.
 Estate rollout and subsequent external-standard/implementation-ancestry ingestion
 for Engineering Environment Standards have separate acceptance boundaries.
-The existing recovery `project_complete` field still reports the legacy
-all-nine-gate program and does not yet implement these milestone statuses.
+Recovery's `milestone_accounting` reports all four evidence states and the
+separate `ges_v0_2` result. Its existing `project_complete` field still reports
+the legacy all-nine-gate program. Neither field substitutes for governed
+human review, owner acceptance or release authorization. See
+[completion reporting](docs/completion-milestones.md).
 
 Full semantic page/file review; semantic deduplication of every source claim; rendered-content/version assurance; exact-use publication clearance; all upstream scanner predicates implemented as local deterministic checks; all required evaluator bindings and platform feature/plan adapters; live human-review and exception services; native pilot acceptance and separately authorized cross-estate rollout. `docs/remaining-work.md` tracks scanner-predicate coverage separately within operational completeness and defines the open acceptance gates.
 
