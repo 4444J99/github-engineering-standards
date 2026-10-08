@@ -2,16 +2,23 @@
 from __future__ import annotations
 
 import argparse
+import gzip
 import hashlib
 import json
 from collections import Counter
 from pathlib import Path
 
 from .core import digest
+from .pinned_sources import inventory_digest
 
 PROVIDER_FIELDS = {
     'isPublic', 'isPrivateWithGhas', 'hasPushProtection', 'hasValidityCheck',
     'base64Supported', 'isduplicate', 'hasExtendedMetadata',
+}
+ARTIFACT_METADATA_FIELDS = {
+    'artifact_id', 'candidate_count', 'commit', 'git_blob_sha', 'kind', 'path',
+    'proposed_disposition', 'retrieval_status', 'retrieved_at', 'review_status',
+    'sha256', 'size', 'source', 'url',
 }
 
 
@@ -19,9 +26,19 @@ def _sha(raw: bytes) -> str:
     return hashlib.sha256(raw).hexdigest()
 
 
+def _artifact_bytes(path: Path) -> bytes:
+    """Read the original JSONL bytes, optionally preserved in a gzip container."""
+    raw = path.read_bytes()
+    return gzip.decompress(raw) if path.suffix == '.gz' else raw
+
+
+def _inventory_bytes(result: dict) -> bytes:
+    return (json.dumps(result, indent=2) + '\n').encode('utf-8')
+
+
 def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
     """Count an immutable occurrence inventory, including all family members."""
-    artifact_raw = artifacts.read_bytes()
+    artifact_raw = _artifact_bytes(artifacts)
     records = [json.loads(line) for line in artifact_raw.splitlines() if line.strip()]
     indexed = {(a['source'], a['commit'], a['path']): a for a in records}
     if len(indexed) != len(records):
@@ -73,6 +90,18 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
             provider = all(k in context for k in provider_keys)
             if any(k in context for k in provider_keys) and not provider:
                 raise ValueError('Incomplete provider field context: ' + cid)
+            query = any(k in claim for k in ('query_occurrence', 'query_help_identity'))
+            if query:
+                if not all(k in claim for k in ('query_occurrence', 'query_help_identity')):
+                    raise ValueError('Incomplete query row: ' + cid)
+                occurrence = claim['query_occurrence']
+                if (not isinstance(occurrence, str) or
+                        occurrence != source_path + '#L' + str(start) or
+                        not isinstance(claim['query_help_identity'], str) or
+                        not claim['query_help_identity'].strip()):
+                    raise ValueError('Malformed query row: ' + cid)
+                if provider:
+                    raise ValueError('Ambiguous provider and query context: ' + cid)
             if provider:
                 if (not isinstance(context['source_field'], str) or
                         context['source_field'] not in PROVIDER_FIELDS or
@@ -98,15 +127,7 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
                     raise ValueError('Conflicting provider row identity: ' + cid)
                 provider_row_bindings[row_identity] = row_binding
                 provider_rows.add(row_identity)
-            elif any(k in claim for k in ('query_occurrence', 'query_help_identity')):
-                if not all(k in claim for k in ('query_occurrence', 'query_help_identity')):
-                    raise ValueError('Incomplete query row: ' + cid)
-                occurrence = claim['query_occurrence']
-                if (not isinstance(occurrence, str) or
-                        occurrence != source_path + '#L' + str(start) or
-                        not isinstance(claim['query_help_identity'], str) or
-                        not claim['query_help_identity'].strip()):
-                    raise ValueError('Malformed query row: ' + cid)
+            elif query:
                 kind = 'QUERY_TABLE_ROW'
                 key = [source, commit, occurrence, claim['query_help_identity']]
                 query_rows.add(tuple(key))
@@ -157,7 +178,7 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
     for item in documents:
         if _sha((reviews / item['path']).read_bytes()) != item['sha256']:
             raise ValueError('Claim document changed during audit')
-    if (_sha(artifacts.read_bytes()) != _sha(artifact_raw) or
+    if (_sha(_artifact_bytes(artifacts)) != _sha(artifact_raw) or
             _sha(reconciliation.read_bytes()) != _sha(reconciliation_raw)):
         raise ValueError('Inventory or reconciliation changed during audit')
     families = sorted(groups.values(), key=lambda x: (x['kind'], x['family_id']))
@@ -202,17 +223,166 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
     }
 
 
+def check_historical_equivalence(result: dict, historical: Path) -> bytes:
+    """Require identical accounting while allowing a separately observed input hash."""
+    original_raw = historical.read_bytes()
+    original = json.loads(original_raw)
+    comparable = []
+    for report in (original, result):
+        if (not isinstance(report, dict) or
+                report.get('schema') != 'ges.claim-workload-inventory.v1' or
+                not isinstance(report.get('inputs'), dict) or
+                not isinstance(report['inputs'].get('artifacts_sha256'), str)):
+            raise ValueError('Invalid report for historical workload equivalence')
+        input_sha = report['inputs']['artifacts_sha256']
+        if len(input_sha) != 64 or any(char not in '0123456789abcdef' for char in input_sha):
+            raise ValueError('Invalid artifact SHA256 for historical workload equivalence')
+        inputs = {key: value for key, value in report['inputs'].items()
+                  if key != 'artifacts_sha256'}
+        comparable.append({**report, 'inputs': inputs})
+    # Canonical JSON comparison preserves JSON types (for example, false != 0).
+    if digest(comparable[0]) != digest(comparable[1]):
+        raise ValueError('Historical workload accounting differs beyond inputs.artifacts_sha256')
+    if historical.read_bytes() != original_raw:
+        raise ValueError('Historical workload inventory changed during check')
+    return original_raw
+
+
+def _check_provenance(path: Path, artifacts: Path, current_raw: bytes,
+                      historical_raw: bytes) -> None:
+    """Check preserved byte bindings and pinned identities without new acquisition."""
+    raw = path.read_bytes()
+    provenance = json.loads(raw)
+    if (not isinstance(provenance, dict) or
+            provenance.get('schema') != 'ges.claim-workload-current-provenance.v1'):
+        raise ValueError('Invalid current workload provenance')
+    credits = {
+        'new_review_credit': 0, 'new_reconciliation_credit': 0,
+        'source_body_validation': 'NOT_ASSERTED_BY_THIS_METADATA_OBSERVATION',
+        'rights_clearance': 'NOT_GRANTED', 'policy_adoption': 'NOT_GRANTED',
+        'native_acceptance': 'NOT_GRANTED', 'human_review': 'NOT_ASSERTED',
+    }
+    if (provenance.get('acquisition_kind') != 'NEW_OBSERVED_WORKFLOW_METADATA' or
+            provenance.get('is_historical_cache_restoration') is not False or
+            digest(provenance.get('credits')) != digest(credits)):
+        raise ValueError('Current metadata cannot claim restoration, review or acceptance credit')
+    if artifacts.suffix != '.gz':
+        raise ValueError('Current provenance requires gzip-preserved metadata')
+    compressed_raw = artifacts.read_bytes()
+    artifact_raw = gzip.decompress(compressed_raw)
+    bindings = {
+        'historical_report_sha256': _sha(historical_raw),
+        'current_report_sha256': _sha(current_raw),
+        'artifact_inventory_sha256': _sha(artifact_raw),
+        'compressed_artifact_inventory_sha256': _sha(compressed_raw),
+    }
+    if provenance.get('bindings') != bindings:
+        raise ValueError('Current workload provenance byte bindings differ')
+    original = json.loads(historical_raw)
+    if (provenance.get('historical_original_input_replay') != {
+            'status': 'UNAVAILABLE',
+            'artifact_inventory_sha256': original['inputs']['artifacts_sha256']} or
+            provenance.get('allowed_report_difference') != ['inputs.artifacts_sha256']):
+        raise ValueError('Historical replay limitation or equivalence scope changed')
+    reference = provenance.get('source_identity_reference', {})
+    name = reference.get('path') if isinstance(reference, dict) else None
+    if (not isinstance(name, str) or not name or
+            Path(name).name != name or name in {'.', '..'}):
+        raise ValueError('Source identity reference must name a sibling metadata file')
+    reference_path = path.parent / name
+    if reference_path.resolve().parent != path.parent.resolve():
+        raise ValueError('Source identity reference leaves the provenance directory')
+    reference_raw = reference_path.read_bytes()
+    if _sha(reference_raw) != reference.get('sha256'):
+        raise ValueError('Source identity reference digest changed')
+    expected = json.loads(reference_raw).get('inventory_identity_digests')
+    records = [json.loads(line) for line in artifact_raw.splitlines() if line.strip()]
+    if any(not isinstance(row, dict) or set(row) - ARTIFACT_METADATA_FIELDS
+           for row in records):
+        raise ValueError('Current artifact input contains non-metadata fields')
+    projection = {
+        'artifact_rows': len(records), 'uncompressed_bytes': len(artifact_raw),
+        'compressed_bytes': len(compressed_raw),
+        'fields': sorted({key for row in records for key in row}),
+        'raw_source_bodies_included': False, 'source_archives_included': False,
+        'credentials_included': False,
+    }
+    if digest(provenance.get('metadata_projection')) != digest(projection):
+        raise ValueError('Current metadata projection or content boundary differs')
+    actual = {source: inventory_digest([row for row in records if row['source'] == source])
+              for source in sorted({row['source'] for row in records})}
+    if (actual != expected or actual != provenance.get('source_identity_digests')):
+        raise ValueError('Current artifact identities differ from the pinned source baseline')
+    if (path.read_bytes() != raw or reference_path.read_bytes() != reference_raw or
+            artifacts.read_bytes() != compressed_raw):
+        raise ValueError('Current workload provenance inputs changed during check')
+
+
+def check_inventory(reviews: Path, artifacts: Path, reconciliation: Path,
+                    committed: Path, *, historical: Path | None = None,
+                    provenance: Path | None = None) -> dict:
+    """Reproduce the committed report exactly without writing or repairing inputs."""
+    expected_raw = committed.read_bytes()
+    expected = json.loads(expected_raw)
+    if (not isinstance(expected, dict) or
+            expected.get('schema') != 'ges.claim-workload-inventory.v1' or
+            not isinstance(expected.get('inputs'), dict)):
+        raise ValueError('Invalid committed workload inventory')
+    if _sha(_artifact_bytes(artifacts)) != expected['inputs'].get('artifacts_sha256'):
+        raise ValueError('Artifact inventory differs from the committed input SHA256')
+    result = inventory(reviews, artifacts, reconciliation)
+    if _inventory_bytes(result) != expected_raw:
+        differences = sorted(key for key in set(result) | set(expected)
+                             if result.get(key) != expected.get(key))
+        raise ValueError('Committed workload inventory differs in ' +
+                         ', '.join(differences or ['serialization']) +
+                         '; regenerate separately and review the changed inputs and report')
+    if provenance is not None and historical is None:
+        raise ValueError('Current provenance requires the historical inventory')
+    if historical is not None:
+        historical_raw = check_historical_equivalence(result, historical)
+        if provenance is not None:
+            _check_provenance(provenance, artifacts, expected_raw, historical_raw)
+        if historical.read_bytes() != historical_raw:
+            raise ValueError('Historical workload inventory changed during check')
+    if committed.read_bytes() != expected_raw:
+        raise ValueError('Committed workload inventory changed during check')
+    return result
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--reviews', type=Path, required=True)
-    parser.add_argument('--artifacts', type=Path, required=True)
+    parser.add_argument('--artifacts', type=Path, required=True,
+                        help='Exact original artifacts.jsonl, optionally gzip-compressed')
     parser.add_argument('--reconciliation', type=Path, required=True)
-    parser.add_argument('--output', type=Path, required=True)
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--output', type=Path, help='Create a new report; never overwrite')
+    mode.add_argument('--check', type=Path,
+                      help='Fail unless the committed report is reproduced byte for byte')
+    parser.add_argument('--historical', type=Path,
+                        help='Require identical historical accounting except artifact input SHA256')
+    parser.add_argument('--provenance', type=Path,
+                        help='Check current/historical byte bindings and pinned source identities')
     args = parser.parse_args()
-    result = inventory(args.reviews, args.artifacts, args.reconciliation)
-    with args.output.open('x') as stream:
-        json.dump(result, stream, indent=2)
-        stream.write('\n')
+    if (args.historical is not None or args.provenance is not None) and args.check is None:
+        parser.error('--historical and --provenance require --check')
+    try:
+        if args.check is not None:
+            result = check_inventory(args.reviews, args.artifacts,
+                                     args.reconciliation, args.check,
+                                     historical=args.historical, provenance=args.provenance)
+            print(json.dumps({'status': 'MATCH',
+                              'recorded_claims': result['counts']['recorded_claims'],
+                              'claim_documents': result['counts']['claim_documents'],
+                              'families': len(result['families']),
+                              'new_review_credit': 0, 'new_reconciliation_credit': 0}))
+            return
+        result = inventory(args.reviews, args.artifacts, args.reconciliation)
+        with args.output.open('xb') as stream:
+            stream.write(_inventory_bytes(result))
+    except (OSError, EOFError, ValueError) as exc:
+        parser.exit(1, 'Claim workload failed: ' + str(exc) + '\n')
     print(json.dumps(result['counts'], sort_keys=True))
 
 
