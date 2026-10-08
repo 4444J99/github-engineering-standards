@@ -5,11 +5,16 @@ import argparse
 import gzip
 import hashlib
 import json
+import re
+import zlib
 from collections import Counter
-from pathlib import Path
+from datetime import datetime, timezone
+from pathlib import Path, PurePosixPath
+from urllib.parse import quote
 
 from .core import digest
-from .pinned_sources import inventory_digest
+from .evidence_paths import canonical_path
+from .pinned_sources import DEFAULT_SOURCE_INVENTORY_SHA256, inventory_digest
 
 PROVIDER_FIELDS = {
     'isPublic', 'isPrivateWithGhas', 'hasPushProtection', 'hasValidityCheck',
@@ -20,6 +25,95 @@ ARTIFACT_METADATA_FIELDS = {
     'proposed_disposition', 'retrieval_status', 'retrieved_at', 'review_status',
     'sha256', 'size', 'source', 'url',
 }
+ARTIFACT_DISPOSITIONS = {
+    'license', 'template', 'test', 'reusable', 'documentation',
+    'configuration', 'implementation', 'supporting_asset',
+}
+MAX_ARTIFACT_BYTES = 200_000_000
+MAX_METADATA_BYTES = 150_000_000
+
+
+def _unique_metadata_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError('Duplicate metadata object field')
+        result[key] = value
+    return result
+
+
+def _preserved_metadata_bytes(compressed: bytes) -> bytes:
+    """Admit one gzip member with no optional fields that can carry arbitrary text."""
+    if len(compressed) < 18 or compressed[:4] != b'\x1f\x8b\x08\x00':
+        raise ValueError('Preserved metadata gzip has unsupported header payload fields')
+    try:
+        decoder = zlib.decompressobj(wbits=31)
+        raw = decoder.decompress(compressed, MAX_METADATA_BYTES + 1)
+    except zlib.error as exc:
+        raise ValueError('Invalid preserved metadata gzip') from exc
+    if (len(raw) > MAX_METADATA_BYTES or not decoder.eof or
+            decoder.unused_data or decoder.unconsumed_tail):
+        raise ValueError('Preserved metadata gzip must contain one complete bounded member')
+    return raw
+
+
+def _metadata_records(raw: bytes) -> list[dict]:
+    """Validate the closed value contract; field names alone do not exclude payloads."""
+    records = [json.loads(line, object_pairs_hook=_unique_metadata_object)
+               for line in raw.splitlines() if line.strip()]
+    identities, artifact_ids = set(), set()
+    current = datetime.now(timezone.utc)
+    for row in records:
+        if not isinstance(row, dict) or set(row) != ARTIFACT_METADATA_FIELDS:
+            raise ValueError('Current artifact input contains missing or non-metadata fields')
+        if (not isinstance(row['source'], str) or
+                not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', row['source']) or
+                not isinstance(row['commit'], str) or
+                not re.fullmatch('[a-f0-9]{40}', row['commit']) or
+                not isinstance(row['sha256'], str) or
+                not re.fullmatch('[a-f0-9]{64}', row['sha256']) or
+                not isinstance(row['git_blob_sha'], str) or
+                not re.fullmatch('[a-f0-9]{40}', row['git_blob_sha'])):
+            raise ValueError('Invalid current artifact source or content digest')
+        name = row['path']
+        if (not isinstance(name, str) or not 0 < len(name) <= 4096 or
+                '\\' in name or any(ord(char) < 32 or ord(char) == 127 for char in name)):
+            raise ValueError('Invalid current artifact relative path')
+        relative = PurePosixPath(name)
+        if (relative.is_absolute() or '..' in relative.parts or
+                relative.as_posix() != name or name == '.'):
+            raise ValueError('Noncanonical current artifact relative path')
+        identity = (row['source'], row['commit'], name)
+        if (row['artifact_id'] != digest(list(identity))[:24] or
+                identity in identities or row['artifact_id'] in artifact_ids):
+            raise ValueError('Invalid or duplicate canonical current artifact identity')
+        identities.add(identity)
+        artifact_ids.add(row['artifact_id'])
+        canonical_url = f'https://github.com/{row["source"]}/blob/{row["commit"]}/{quote(name)}'
+        if row['url'] != canonical_url:
+            raise ValueError('Current artifact URL differs from its canonical pinned locator')
+        if (row['kind'] not in ('text', 'binary') or
+                row['retrieval_status'] != 'RETRIEVED' or row['review_status'] != 'UNREVIEWED' or
+                not isinstance(row['proposed_disposition'], str) or
+                row['proposed_disposition'] not in ARTIFACT_DISPOSITIONS):
+            raise ValueError('Invalid current artifact metadata classification')
+        if (type(row['size']) is not int or not 0 <= row['size'] <= MAX_ARTIFACT_BYTES or
+                type(row['candidate_count']) is not int or
+                not 0 <= row['candidate_count'] <= row['size'] or
+                (row['candidate_count'] != 0 and
+                 (row['kind'] != 'text' or not name.endswith(('.md', '.mdx', '.rst'))))):
+            raise ValueError('Invalid bounded current artifact size or candidate count')
+        stamp = row['retrieved_at']
+        if (not isinstance(stamp, str) or not re.fullmatch(
+                r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{6})?\+00:00', stamp)):
+            raise ValueError('Invalid canonical UTC artifact acquisition timestamp')
+        try:
+            acquired = datetime.fromisoformat(stamp)
+        except ValueError as exc:
+            raise ValueError('Invalid artifact acquisition timestamp') from exc
+        if acquired > current:
+            raise ValueError('Future artifact acquisition timestamp')
+    return records
 
 
 def _sha(raw: bytes) -> str:
@@ -269,7 +363,7 @@ def _check_provenance(path: Path, artifacts: Path, current_raw: bytes,
     if artifacts.suffix != '.gz':
         raise ValueError('Current provenance requires gzip-preserved metadata')
     compressed_raw = artifacts.read_bytes()
-    artifact_raw = gzip.decompress(compressed_raw)
+    artifact_raw = _preserved_metadata_bytes(compressed_raw)
     bindings = {
         'historical_report_sha256': _sha(historical_raw),
         'current_report_sha256': _sha(current_raw),
@@ -286,20 +380,26 @@ def _check_provenance(path: Path, artifacts: Path, current_raw: bytes,
         raise ValueError('Historical replay limitation or equivalence scope changed')
     reference = provenance.get('source_identity_reference', {})
     name = reference.get('path') if isinstance(reference, dict) else None
-    if (not isinstance(name, str) or not name or
+    if (not isinstance(reference, dict) or set(reference) != {'path', 'sha256'} or
+            not isinstance(name, str) or not name or '\\' in name or
             Path(name).name != name or name in {'.', '..'}):
         raise ValueError('Source identity reference must name a sibling metadata file')
-    reference_path = path.parent / name
-    if reference_path.resolve().parent != path.parent.resolve():
-        raise ValueError('Source identity reference leaves the provenance directory')
+    reference_input = path.parent / name
+    reference_path = canonical_path(reference_input, symlink_error='Symlink source identity reference is not permitted')
+    if (not reference_path.is_file() or
+            reference_path.resolve().parent != path.parent.resolve()):
+        raise ValueError('Source identity reference is missing, symlinked or leaves the provenance directory')
     reference_raw = reference_path.read_bytes()
-    if _sha(reference_raw) != reference.get('sha256'):
-        raise ValueError('Source identity reference digest changed')
-    expected = json.loads(reference_raw).get('inventory_identity_digests')
-    records = [json.loads(line) for line in artifact_raw.splitlines() if line.strip()]
-    if any(not isinstance(row, dict) or set(row) - ARTIFACT_METADATA_FIELDS
-           for row in records):
-        raise ValueError('Current artifact input contains non-metadata fields')
+    # The mutable provenance cannot choose its own authority fingerprint.
+    if (reference.get('sha256') != DEFAULT_SOURCE_INVENTORY_SHA256 or
+            _sha(reference_raw) != DEFAULT_SOURCE_INVENTORY_SHA256):
+        raise ValueError('Source identity reference differs from independently pinned A3 fingerprint')
+    authority = json.loads(reference_raw)
+    expected, trees = authority.get('inventory_identity_digests'), authority.get('source_trees')
+    if (not isinstance(expected, dict) or not isinstance(trees, dict) or not expected or
+            set(expected) != set(trees)):
+        raise ValueError('Trusted source reference has incomplete pinned tree identities')
+    records = _metadata_records(artifact_raw)
     projection = {
         'artifact_rows': len(records), 'uncompressed_bytes': len(artifact_raw),
         'compressed_bytes': len(compressed_raw),
@@ -309,11 +409,24 @@ def _check_provenance(path: Path, artifacts: Path, current_raw: bytes,
     }
     if digest(provenance.get('metadata_projection')) != digest(projection):
         raise ValueError('Current metadata projection or content boundary differs')
-    actual = {source: inventory_digest([row for row in records if row['source'] == source])
-              for source in sorted({row['source'] for row in records})}
+    groups = {}
+    for row in records:
+        groups.setdefault(row['source'], []).append(row)
+    if set(groups) != set(expected):
+        raise ValueError('Current metadata does not contain every independently pinned source')
+    for source, rows in groups.items():
+        tree = trees[source]
+        if (not isinstance(tree, dict) or tree.get('repository') != source or
+                tree.get('status') != 'MATCH' or type(tree.get('artifacts')) is not int or
+                tree['artifacts'] <= 0 or len(rows) != tree['artifacts'] or
+                tree.get('inventory_digest') != expected[source] or
+                any(row['commit'] != tree.get('commit') for row in rows)):
+            raise ValueError('Current metadata differs from complete pinned source counts or commits')
+    actual = {source: inventory_digest(rows) for source, rows in sorted(groups.items())}
     if (actual != expected or actual != provenance.get('source_identity_digests')):
         raise ValueError('Current artifact identities differ from the pinned source baseline')
-    if (path.read_bytes() != raw or reference_path.read_bytes() != reference_raw or
+    if (canonical_path(reference_input, symlink_error='Symlink source identity reference is not permitted') != reference_path or
+            path.read_bytes() != raw or reference_path.read_bytes() != reference_raw or
             artifacts.read_bytes() != compressed_raw):
         raise ValueError('Current workload provenance inputs changed during check')
 

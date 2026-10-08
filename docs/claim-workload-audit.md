@@ -92,8 +92,14 @@ reproduces the current report byte for byte. It then requires every historical
 report field to match except the artifact input hash. Changes to denominators,
 memberships, document hashes, reconciliation bindings, JSON types or credit
 fields fail. Provenance validation preserves the historical report's exact byte
-hash, rejects non-metadata artifact fields, and recomputes all six pinned source
-identity digests against the bound A3 receipt. Missing, stale or changing inputs
+hash, requires exact metadata fields and canonical values, and recomputes all six
+complete pinned source memberships against the independently fingerprinted A3
+receipt. URLs must be derived from the authenticated source, pin and path;
+IDs, digests, enums, integer bounds and acquisition timestamps have closed
+contracts. Duplicate JSON keys, optional gzip text/header fields and extra gzip
+members are rejected. The A3 fingerprint comes from the reviewed validator
+code shared with publication accounting, rather than the mutable provenance
+record. Counts, pins and identity digests must all match. Missing, stale or changing inputs
 produce a nonzero exit. CI reads committed local bytes; it does not download,
 rewrite, accept or certify evidence.
 

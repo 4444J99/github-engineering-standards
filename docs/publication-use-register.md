@@ -70,12 +70,21 @@ This command writes four new files: `manifest.json`, `register.json`, empty
 `receipts.json` (`[]`) and empty `policy.json` (`{}`). It refuses to overwrite an
 existing draft directory. Before inventory or writes, it rejects a destination
 equal to or beneath the candidate root, including normalized relative paths and
-symlink aliases. A disjoint sibling directory is supported. The destination is
+caller-controlled symlink aliases. A disjoint sibling directory is supported. The destination is
 checked again after inventory and before writes. It does not classify existing source material as
 original, independent paraphrase or licensed content. Each observed output starts
 with the explicit `UNREVIEWED` disposition and a rationale; missing judgments
 remain visible through `unreviewed_output_count` and diagnostics. No complete
 inventory receipt is accepted while any output is `UNREVIEWED`.
+
+On Darwin, root and draft paths may use the fixed `/etc`, `/tmp`, and `/var`
+system aliases only when each link is root-owned and points exactly to its
+corresponding directory under `/private`, with no further target symlinks.
+These prefixes are checked before canonicalization; caller-created aliases
+and symlinks within a candidate or source directory remain invalid. Containment
+checks use the canonical paths, so a nested draft is rejected through either
+spelling. The platform-policy tests emulate these aliases in temporary fixtures;
+they are not evidence of execution on physical macOS hardware.
 
 The equivalent Python helper is:
 

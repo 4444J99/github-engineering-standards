@@ -1,0 +1,423 @@
+{
+  "schema": "ges.premerge-review-checkpoint.v1",
+  "observed_at": "2026-10-08T07:42:35.916111+00:00",
+  "status": "STAGED_PENDING_ORDINARY_MERGE",
+  "human_review": {
+    "channel": "working ChatGPT conversation",
+    "quote": "Human review approved proceed with all",
+    "received_on": "2026-10-08",
+    "available_reviewed_checkpoint": "66321c84eea2f5e7128a62edebc578a6155b0018",
+    "ordinary_integration_authorized": true,
+    "github_approve_object_created": false,
+    "subsequent_changes_separately_identified": true,
+    "organization_control_acceptance_asserted": false,
+    "publication_rights_acceptance_asserted": false
+  },
+  "merge_scope": {
+    "pull_request": 494,
+    "only_merge_candidate": true,
+    "superseded_draft_inputs": [
+      492,
+      493
+    ],
+    "separate_component_merges_permitted": false,
+    "merge_performed": false
+  },
+  "findings": [
+    {
+      "review_comment_id": 4216053888,
+      "scope": "workload metadata value validation",
+      "counterexample_reproduced": true,
+      "repair": "Closed artifact metadata values, derived pinned URL, canonical identifiers/digests/paths/enums/counts/timestamps, duplicate-key rejection and single-member gzip without optional header payloads."
+    },
+    {
+      "review_comment_id": 4216053899,
+      "scope": "independent complete source authority",
+      "counterexample_reproduced": true,
+      "repair": "Fingerprint comes from reviewed shared validator code; require every source, count, commit and identity digest from unchanged A3."
+    },
+    {
+      "review_comment_id": 4216025486,
+      "scope": "historical README receipt binding",
+      "repair": "Restore original bound README bytes; move later explanation to an unbound follow-up document; preserve every historical candidate JSON byte."
+    },
+    {
+      "review_comment_id": 4216025491,
+      "scope": "Darwin system prefix canonicalization",
+      "repair": "Only exact root-owned fixed system aliases; target ancestry has no further links; caller-created aliases reject and containment remains canonical."
+    }
+  ],
+  "tested_file_sha256": {
+    "ges/claim_workload.py": "d4aeb0a49adbc981376dbf34f225d800d637b593e78324c87207db8e542432e9",
+    "ges/pinned_sources.py": "2750eb33de07ee6a212379b4e768d5b1f858d4daea21a9cae1ea904a01c555de",
+    "ges/evidence_paths.py": "47305739d5caa88c2dbd92eb9a0a6ff71efa6d312c578087dd562c2bde2768c2",
+    "ges/publication_use.py": "104588ecd4ed8d28075e8f8206152eeae35a90d728bd9ea916303b30b11b2d32",
+    "tests/test_claim_workload.py": "6e9f97bf997bc0a22dfb5bc4c29cb3539a628ce9c60a377f3352785c1265c058",
+    "tests/test_claim_workload_integrity.py": "2450893d1a57359b92be32fe8a0706328350ea518c66b6779474588bed8e2a70",
+    "tests/test_evidence_paths.py": "0ed112239206b96340146ebe35dc2ec12c78d52e91ad56bda90f5403bcf8d50a",
+    "tests/test_publication_draft_directory.py": "c77c95e10c5ceb27f74d23152dc697d31cde8ae962b6edbaf0bcd4fd01ff797d",
+    "tests/test_publication_source_inventory.py": "670e06a834cd487dc0f3449462ca3e4514ad6932c0a1b033c16f58abf2dc9c0a"
+  },
+  "unchanged_historical_inputs_sha256": {
+    "evidence/claim-workload-inputs/artifacts.jsonl.gz": "9bf57e2bdf62d37026d5c06981c34e2c9db593e44bf03f39c7e441c9751358ac",
+    "evidence/claim-workload-current-inventory.json": "2e718486119b29cf286f4b21f067d67dc3bea17f2559a45fbc01105931a22658",
+    "evidence/claim-workload-inventory.json": "6151dcc71dda756610f371337bebe9981c0f9656cc6f7b252ad60e007701f5ec",
+    "evidence/claim-workload-current-provenance.json": "239fc3e89643202c9a7935749249eb4a0ca14e67a32c6e2a0517166a81e9bbf8",
+    "evidence/a3-six-source-capsule-repair.json": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+    "sources/sources.lock.json": "bd5d0d44f4990997d9de434d85225cf06a0c40ebc2797ceaf9c4c0367df37c2c"
+  },
+  "validation": {
+    "python": "3.12.14",
+    "unit_command": "python -m unittest discover -s tests -v",
+    "unit_exit_code": 0,
+    "unit_tests": 656,
+    "unit_seconds": 14.185,
+    "new_workload_regression_methods": 9,
+    "new_path_regression_methods": 8,
+    "catalog": {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "valid": true,
+      "controls": 95,
+      "accepted_controls": 0
+    },
+    "compile": {
+      "command": "python -m ges compile",
+      "exit_code": 0
+    },
+    "diff_check": {
+      "command": "git diff --check",
+      "exit_code": 0
+    },
+    "current_workload": {
+      "status": "MATCH",
+      "recorded_claims": 61936,
+      "claim_documents": 654,
+      "families": 4651,
+      "new_review_credit": 0,
+      "new_reconciliation_credit": 0
+    },
+    "platform_policy_emulated": true,
+    "physical_macos_execution_asserted": false,
+    "merged_main_validation_asserted": false,
+    "new_remote_ci_asserted": false,
+    "independent_agent_audit": {
+      "reviewer": "separate publication-triage agent",
+      "subject_local_commit": "29c0c1cb31ffe69a94bb45008e8dc29f3e05e71d",
+      "base_commit": "66321c84eea2f5e7128a62edebc578a6155b0018",
+      "blocking_findings": 0,
+      "workload_tests": 38,
+      "path_policy_tests": 8,
+      "draft_directory_tests": 7,
+      "unchanged_historical_input_hashes_confirmed": true,
+      "human_approval_supplied": false
+    }
+  },
+  "source_hydration": {
+    "a3_reference_sha256": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+    "complete": true,
+    "historical_metadata_bytes_reproduced": false,
+    "implementation_commit": "ddef2e1e41e3c4d819fc4de31a325d5819092c40",
+    "observed_at": "2026-10-08T07:31:18.300534+00:00",
+    "published_page_fetch_performed": false,
+    "rendered_body_reproduction_performed": false,
+    "schema": "ges.source-only-cache-hydration.v1",
+    "semantic_review_performed": false,
+    "source_lock_sha256": "bd5d0d44f4990997d9de434d85225cf06a0c40ebc2797ceaf9c4c0367df37c2c",
+    "sources": [
+      {
+        "archive_bytes": 7344,
+        "archive_sha256": "c9ba7c9f4e03ec7eadf0b3ba507a6eff0c1720988367299b539e85017ef73641",
+        "artifacts": 8,
+        "binary_artifacts": 0,
+        "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+        "complete_inventory_matches_a3": true,
+        "elapsed_seconds": 15.763,
+        "git_tree_reconciliation": {
+          "archive_artifacts": 8,
+          "blob_mismatches": [],
+          "extra_in_archive": [],
+          "git_tree_artifacts": 8,
+          "missing_from_archive": [],
+          "status": "MATCH"
+        },
+        "inventory_identity_digest": "4c9d95130c28b2bf1cadbf3bbeae650f36f1185a3e861b447f829e6eed4aebcb",
+        "locked_archive_digest_and_size_verified": true,
+        "new_semantic_review_credit": 0,
+        "repository": "atapas/model-repo",
+        "retrieved_at": "2026-10-08T07:30:06.685612+00:00",
+        "snapshot_file_bytes": 8021,
+        "snapshot_file_sha256": "45eb96b0ce736794be29697daab3c4abf7577a3c4152c00ae6112986b20fab97",
+        "status": "VERIFIED_PINNED_SOURCE",
+        "text_artifacts": 8,
+        "text_snapshot_complete_and_content_verified": true
+      },
+      {
+        "archive_bytes": 153872646,
+        "archive_sha256": "1e5e46d7ed5e3394d29be6495a07a409b615fb40c7f6d5c30b1d4bf4e7d7e4fc",
+        "artifacts": 13219,
+        "binary_artifacts": 1801,
+        "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+        "complete_inventory_matches_a3": true,
+        "elapsed_seconds": 93.683,
+        "git_tree_reconciliation": {
+          "archive_artifacts": 13219,
+          "blob_mismatches": [],
+          "extra_in_archive": [],
+          "git_tree_artifacts": 13219,
+          "missing_from_archive": [],
+          "status": "MATCH"
+        },
+        "inventory_identity_digest": "dc7fa5ec31023b8457a262c86d64b34d4f13615b443884d8d0e7e30f6af7e88f",
+        "locked_archive_digest_and_size_verified": true,
+        "new_semantic_review_credit": 0,
+        "repository": "github/docs",
+        "retrieved_at": "2026-10-08T07:29:44.612002+00:00",
+        "snapshot_file_bytes": 42912994,
+        "snapshot_file_sha256": "1b4aa91587fc47b4913e0c2ebde604e0a7e4ecbfa48e5e07fb713f03acf1b690",
+        "status": "VERIFIED_PINNED_SOURCE",
+        "text_artifacts": 11418,
+        "text_snapshot_complete_and_content_verified": true
+      },
+      {
+        "archive_bytes": 15475140,
+        "archive_sha256": "d20eb002be65ae45ee49fe223c9aa61f4a66fbb7aeb90f7e08809cc9cac7c2d0",
+        "artifacts": 244,
+        "binary_artifacts": 27,
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "complete_inventory_matches_a3": true,
+        "elapsed_seconds": 22.075,
+        "git_tree_reconciliation": {
+          "archive_artifacts": 244,
+          "blob_mismatches": [],
+          "extra_in_archive": [],
+          "git_tree_artifacts": 244,
+          "missing_from_archive": [],
+          "status": "MATCH"
+        },
+        "inventory_identity_digest": "b5939b61905bd3b0d4f9a6c7449e382748a59af2c04f6ede214859cd7d3c73c4",
+        "locked_archive_digest_and_size_verified": true,
+        "new_semantic_review_credit": 0,
+        "repository": "github/github-well-architected",
+        "retrieved_at": "2026-10-08T07:29:44.610812+00:00",
+        "snapshot_file_bytes": 454793,
+        "snapshot_file_sha256": "c6679e69703110192413f1553a8e9e87573c62d87e4d700e793d0b5155934de9",
+        "status": "VERIFIED_PINNED_SOURCE",
+        "text_artifacts": 217,
+        "text_snapshot_complete_and_content_verified": true
+      },
+      {
+        "archive_bytes": 15922,
+        "archive_sha256": "c076b9c354c3f474ce9912dd8647bbeb870889fb8cbca04aadabb0d5fc101483",
+        "artifacts": 13,
+        "binary_artifacts": 0,
+        "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+        "complete_inventory_matches_a3": true,
+        "elapsed_seconds": 16.048,
+        "git_tree_reconciliation": {
+          "archive_artifacts": 13,
+          "blob_mismatches": [],
+          "extra_in_archive": [],
+          "git_tree_artifacts": 13,
+          "missing_from_archive": [],
+          "status": "MATCH"
+        },
+        "inventory_identity_digest": "7df995f9db7f87493e28fde1f216e4d6ea7db4c33ba5af767551dadab3b669df",
+        "locked_archive_digest_and_size_verified": true,
+        "new_semantic_review_credit": 0,
+        "repository": "jlcanovas/gh-best-practices-template",
+        "retrieved_at": "2026-10-08T07:30:06.462053+00:00",
+        "snapshot_file_bytes": 17075,
+        "snapshot_file_sha256": "bba428975c43d3703b41a4a73cfc2a91d845097da8761554e064658fde0bc99f",
+        "status": "VERIFIED_PINNED_SOURCE",
+        "text_artifacts": 13,
+        "text_snapshot_complete_and_content_verified": true
+      },
+      {
+        "archive_bytes": 187788,
+        "archive_sha256": "14dc41aabad8a4181cee765603e15fcb33477ff9c922862864388d19ff3a0ff9",
+        "artifacts": 172,
+        "binary_artifacts": 1,
+        "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+        "complete_inventory_matches_a3": true,
+        "elapsed_seconds": 21.849,
+        "git_tree_reconciliation": {
+          "archive_artifacts": 172,
+          "blob_mismatches": [],
+          "extra_in_archive": [],
+          "git_tree_artifacts": 172,
+          "missing_from_archive": [],
+          "status": "MATCH"
+        },
+        "inventory_identity_digest": "4f0af7e94e3a31bd342479627a3008bbff3db2067682925054a0ff936ec5514f",
+        "locked_archive_digest_and_size_verified": true,
+        "new_semantic_review_credit": 0,
+        "repository": "microsoft/ghqr",
+        "retrieved_at": "2026-10-08T07:29:44.613049+00:00",
+        "snapshot_file_bytes": 191188,
+        "snapshot_file_sha256": "69c11a2d76958e10357ed4fab57ccb8346d9555173de8add091ce47d234bcbaa",
+        "status": "VERIFIED_PINNED_SOURCE",
+        "text_artifacts": 171,
+        "text_snapshot_complete_and_content_verified": true
+      },
+      {
+        "archive_bytes": 4939,
+        "archive_sha256": "cb921f214653a54b542b6f6118136989dcb5df0a575414d50bcfd7952c93fa40",
+        "artifacts": 1,
+        "binary_artifacts": 0,
+        "commit": "801411757531a8880cb315148160fde3079d7227",
+        "complete_inventory_matches_a3": true,
+        "elapsed_seconds": 11.651,
+        "git_tree_reconciliation": {
+          "archive_artifacts": 1,
+          "blob_mismatches": [],
+          "extra_in_archive": [],
+          "git_tree_artifacts": 1,
+          "missing_from_archive": [],
+          "status": "MATCH"
+        },
+        "inventory_identity_digest": "4f1cb0becbecf859fc1c50e5f2d25ef79321bf69442d919eac6eb7eb82c69def",
+        "locked_archive_digest_and_size_verified": true,
+        "new_semantic_review_credit": 0,
+        "repository": "tmcw/github-best-practices",
+        "retrieved_at": "2026-10-08T07:30:22.449241+00:00",
+        "snapshot_file_bytes": 5063,
+        "snapshot_file_sha256": "e677d077ceb438380a1de91bfb89f5377f935c0f5bd02c4ca306d3f4489b0959",
+        "status": "VERIFIED_PINNED_SOURCE",
+        "text_artifacts": 1,
+        "text_snapshot_complete_and_content_verified": true
+      }
+    ],
+    "started_at": "2026-10-08T07:29:44.609935+00:00",
+    "upstream_code_executed": false,
+    "implementation_commit_scope": "Local checkout; source-acquisition implementation is unchanged from the reviewed 66321c8 checkpoint. This local commit is not asserted published.",
+    "source_implementation_sha256": "8c2b333a0d677f995f3d93899d84a9994d26c06130308e8e1d4cedc01f9a1b1b"
+  },
+  "verification_input_assembly": {
+    "schema": "ges.verification-input-assembly.v1",
+    "historical_archive_id": 11191578546,
+    "historical_archive_sha256": "473d70ec984260549e3e736528ad6578b9216cb71b55c214c2ed6eb53849a1d0",
+    "historical_candidate_error": {
+      "file": "corpus/candidates.jsonl in preserved October 1 archive",
+      "line": 85862,
+      "line_bytes": 393,
+      "error": "Unterminated string starting at",
+      "column": 295
+    },
+    "files": [
+      {
+        "path": "corpus/artifacts.jsonl",
+        "origin": "preserved-current-artifact-metadata",
+        "sha256": "86225491fb70197b893a0bfb1fa96ebfc1f5a6e33c21c86ab874d9d34f5db9a2",
+        "size_bytes": 9446125
+      },
+      {
+        "path": "corpus/candidates.jsonl",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "1bd1c456fc141ad1afc02c0f4959f29d8835b224cf0196c411343dfd366ea6b6",
+        "size_bytes": 112346551
+      },
+      {
+        "path": "corpus/coverage.json",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "570140bc0df9c18c9795d24cad3e637e3ef9448992ade3d5a07e11ea31882390",
+        "size_bytes": 1403
+      },
+      {
+        "path": "corpus/dependencies.jsonl",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "1e084ea9e1a1949d880fa4d8792d0837170ff1cf4837a5946b9d5e34230cda72",
+        "size_bytes": 15766178
+      },
+      {
+        "path": "corpus/docs-source-pages.json",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "beeaa66d1776ca8d2f47c7d95cb1c753580d622e214a3df0fa9d7ac0f40e3a47",
+        "size_bytes": 1550919
+      },
+      {
+        "path": "corpus/exact-duplicate-groups.json",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "cb39d06dfb3eca4dd57fdd92d54ad125105b33eb0baf35c1b2e675e34eefbe86",
+        "size_bytes": 1159875
+      },
+      {
+        "path": "corpus/ledger-summary.json",
+        "origin": "fresh-source-extraction-with-historical-page-counts",
+        "sha256": "795f37d7e5302948bd1a7749508f7d94a122da5dcf31213484fec2d79173116c",
+        "size_bytes": 508
+      },
+      {
+        "path": "corpus/page-function-checklist.md",
+        "origin": "historical-human-readable-checklist",
+        "sha256": "6dc3339098b02141ad3f4ead3100f888768a1d418ee98530648cf546aa3bbce3",
+        "size_bytes": 3664632
+      },
+      {
+        "path": "corpus/published-page-ledger.json",
+        "origin": "exact-historical-published-ledger",
+        "sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+        "size_bytes": 11700449
+      },
+      {
+        "path": "corpus/source-consolidation-matrix.json",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "897caf419377f11c72b28fbc80025b3a083e77a818839eb74c407c8da9bad1c2",
+        "size_bytes": 4523240
+      },
+      {
+        "path": "corpus/source-ledger.md",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "8ef26e6d8144f11674ed4a39f1321cabac42131659dd6c832fb0b4c182effd2a",
+        "size_bytes": 1367958
+      },
+      {
+        "path": "corpus/structured-source-requirements.json",
+        "origin": "fresh-pinned-source-extraction",
+        "sha256": "1e52b9dc75f3f911f5ae2b4b323242e277e07faa7c2645fc9290802b13ca163d",
+        "size_bytes": 616114
+      }
+    ],
+    "artifact_metadata_equal_to_fresh_extraction_except_retrieval_timestamps": true,
+    "historical_d53_artifact_reproduced": false,
+    "rendered_body_cache_available": false
+  },
+  "private_pilot_observation": {
+    "repository": "4444J99/ges-native-enforcement-pilot",
+    "retained_runs": 14,
+    "retained_jobs": 29,
+    "jobs_with_runner": 0,
+    "jobs_with_executed_steps": 0,
+    "last_retry_run": 37560956698,
+    "last_retry_attempt": 2,
+    "new_dispatch_or_retry": false,
+    "hold": "No retry until an independently observed private-pilot job receives a runner and executes a step.",
+    "billing": "Suspected; 3000/3000 came from quota email, not billing-page readback."
+  },
+  "project_state": {
+    "source_synthesis": "INCOMPLETE",
+    "artifact_dispositions": 3590,
+    "artifact_denominator": 13657,
+    "recorded_claim_relationships": 1866,
+    "claim_denominator": 61936,
+    "unresolved_claim_relationships": 60070,
+    "public_release_clearance": "UNVERIFIED",
+    "native_pilot_acceptance": "BLOCKED_BEFORE_EXECUTION",
+    "legacy_gates_open": 9,
+    "accepted_controls": 0,
+    "historical_d53_input_reproduced": false,
+    "historical_rendered_body_count_reproduced": false,
+    "rendered_bodies_available_in_current_replay": 0
+  },
+  "limitation": "This observation is not an acceptance receipt. Later source/publication continuation is separate work; no Verified status, gate closure, source omission certification or rights clearance is asserted.",
+  "restored_historical_candidate_sha256": {
+    "README.md": "7ee71ce970ab3534bcf0c132ce3d31084eff1d112467b78f83a6447d3a2e4a75",
+    "accounting.json": "56eec885ab9182489d33b614255d8d9c2c6ec83d02b2e3ebb947156f012fca7d",
+    "manifest.json": "13f8a37b0d31759c305288cf80fc6cc101867b3396a6ee811fd1b89140310151",
+    "policy.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "receipts.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "recovery-status.json": "a4cd77bde43992e40a1cff988c89c70af1adeca6d9de63bb872263f7ec1094b3",
+    "register.json": "dbdee25bdc392246e769f2850bf9f1a5e4df037283a3c80b4536b168cb0d3c3d",
+    "scope.json": "cc0655d6960a11cc496bb09bc0299b3e73c9d2ffd47ecac5ada67379b9bdeb0e"
+  }
+}

@@ -4,7 +4,12 @@ import hashlib
 import json
 import zlib
 
-from .core import digest
+from .core import ROOT, digest
+
+# Independently recorded source-tree authority, never supplied by candidate data.
+# Updating the six-source baseline requires an explicit reviewed code change.
+DEFAULT_SOURCE_INVENTORY_REFERENCE = ROOT / 'evidence/a3-six-source-capsule-repair.json'
+DEFAULT_SOURCE_INVENTORY_SHA256 = '05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15'
 
 IDENTITY_FIELDS = ('source', 'commit', 'path', 'kind', 'sha256',
                    'git_blob_sha', 'size', 'link_target')

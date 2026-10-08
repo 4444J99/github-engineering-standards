@@ -7,8 +7,10 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from urllib.parse import quote
 
 from ges.claim_workload import check_historical_equivalence, check_inventory, inventory
+from ges.core import digest
 from ges.pinned_sources import inventory_digest
 
 
@@ -16,7 +18,7 @@ class ClaimWorkload(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.reviews = self.root / 'reviews'
         self.reviews.mkdir()
         self.artifacts = self.root / 'artifacts.jsonl'
@@ -26,8 +28,13 @@ class ClaimWorkload(unittest.TestCase):
 
     def add(self, path, claims):
         self.records.append({'source': 'owner/source', 'commit': 'a' * 40,
-                             'path': path, 'artifact_id': path,
-                             'sha256': 'b' * 64})
+                             'path': path, 'artifact_id': digest(['owner/source', 'a' * 40, path])[:24],
+                             'sha256': 'b' * 64, 'git_blob_sha': 'c' * 40,
+                             'kind': 'text', 'size': 128, 'candidate_count': 0,
+                             'retrieval_status': 'RETRIEVED', 'review_status': 'UNREVIEWED',
+                             'proposed_disposition': 'documentation',
+                             'retrieved_at': '2026-01-01T00:00:00+00:00',
+                             'url': 'https://github.com/owner/source/blob/' + 'a' * 40 + '/' + quote(path)})
         self.artifacts.write_text(''.join(json.dumps(r) + '\n' for r in self.records))
         doc = {'source': 'owner/source', 'commit': 'a' * 40,
                'path': path, 'claims': claims}
@@ -69,7 +76,17 @@ class ClaimWorkload(unittest.TestCase):
         compressed.write_bytes(gzip.compress(self.artifacts.read_bytes(), mtime=0))
         identities = {'owner/source': inventory_digest(self.records)}
         reference = self.root / 'pinned-identities.json'
-        reference.write_text(json.dumps({'inventory_identity_digests': identities}))
+        reference.write_text(json.dumps({'inventory_identity_digests': identities,
+                                         'source_trees': {'owner/source': {
+                                             'repository': 'owner/source', 'commit': 'a' * 40,
+                                             'artifacts': len(self.records), 'status': 'MATCH',
+                                             'inventory_digest': identities['owner/source'],
+                                             'tree_sha': 'd' * 40}}}))
+        # Synthetic authority is fixed independently before any attack rewrites inputs.
+        authority = patch('ges.claim_workload.DEFAULT_SOURCE_INVENTORY_SHA256',
+                          hashlib.sha256(reference.read_bytes()).hexdigest())
+        authority.start()
+        self.addCleanup(authority.stop)
         provenance = self.root / 'provenance.json'
         provenance.write_text(json.dumps({
             'schema': 'ges.claim-workload-current-provenance.v1',

@@ -19,7 +19,9 @@ import stat
 import sys
 
 from .core import ROOT, digest, dump, load, now
-from .pinned_sources import inventory_digest as source_inventory_digest
+from .evidence_paths import canonical_path
+from .pinned_sources import (DEFAULT_SOURCE_INVENTORY_REFERENCE, DEFAULT_SOURCE_INVENTORY_SHA256,
+                             inventory_digest as source_inventory_digest)
 from .published_assurance import _evidence, _require, _strings, _time
 from .source_fidelity import _file_sha256
 
@@ -35,10 +37,6 @@ SCOPE_FIELDS = {'candidate_id', 'candidate_revision', 'distribution_scope', 'rel
                 'inventory_digest', 'pins_digest', 'source_evidence_digest',
                 'source_inventory_reference_digest'}
 MAX_SOURCE_RECORD_BYTES = 200_000_000
-# Recorded independently of publication inputs in the current-workload provenance.
-# Changing this authority requires review; never derive it from --artifacts.
-DEFAULT_SOURCE_INVENTORY_REFERENCE = ROOT / 'evidence/a3-six-source-capsule-repair.json'
-DEFAULT_SOURCE_INVENTORY_SHA256 = '05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15'
 
 
 def _text(value: object) -> bool:
@@ -66,11 +64,9 @@ def _relative(value: object) -> Path:
 
 def _root(root: Path | None, label: str) -> Path:
     _require(isinstance(root, Path), 'Missing ' + label + ' root')
-    absolute = root.absolute()
-    _require(not any(p.is_symlink() for p in (absolute, *absolute.parents)),
-             'Symlink ' + label + ' root is not permitted')
-    _require(absolute.is_dir(), 'Missing ' + label + ' directory')
-    return absolute.resolve()
+    resolved = canonical_path(root, symlink_error='Symlink ' + label + ' root is not permitted')
+    _require(resolved.is_dir(), 'Missing ' + label + ' directory')
+    return resolved
 
 
 def _file(root: Path, path: str) -> Path:
@@ -128,10 +124,7 @@ def prepare_draft(output_root: Path, candidate_id: str, candidate_revision: str,
 def _draft_destination(output_root: Path, draft_directory: Path) -> Path:
     """Keep generated review metadata outside the exact candidate output set."""
     root = _root(output_root, 'output')
-    destination = draft_directory.absolute()
-    _require(not any(path.is_symlink() for path in (destination, *destination.parents)),
-             'Symlink draft directory is not permitted')
-    destination = destination.resolve()
+    destination = canonical_path(draft_directory, symlink_error='Symlink draft directory is not permitted')
     _require(not destination.is_relative_to(root),
              'Draft directory must be outside the candidate output root')
     _require(not destination.exists(), 'Draft directory already exists; refusing overwrite')
