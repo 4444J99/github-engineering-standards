@@ -1,0 +1,661 @@
+{
+  "schema": "ges.bounded-integration-proposed-decisions.v1",
+  "state": "PROPOSED_PENDING_E_AUDIT",
+  "tranche": "tranche-02",
+  "baseline": "7af46c827565d4746daed9ed1a9206524c944f70",
+  "reconciler": "codex:/root",
+  "reconciled_at": "2026-10-09T20:44:36.139292+00:00",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/source/tranche-02/draft-dispositions.json",
+      "sha256": "c73e762d831f122a18f7e32a1e22f69f679dacedf2d1675bca52967037464269"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-02/primary-review.json",
+      "sha256": "354e20b95acf0877b6effbe346101bf3d2892baaf4fc506edf0b582bc5c1b334"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-02/input-bindings.json",
+      "sha256": "1c989fc376a89e482a3429ff52383c813057394970ba6ca1064f0e623f182eb4"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-02/residuals.json",
+      "sha256": "e28ee597011c96853084d24efea89cd76ed9688b7c989cb2d90626d52aa1c1b6"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-02/packet-manifest.json",
+      "sha256": "378541bec9bbc0cc0f749c92ff6843000315be881008c91da86a76fa593e2a9b"
+    },
+    {
+      "path": "evidence/wave-20261009/omission/tranche-02/source-findings.json",
+      "sha256": "c9e08ddf4bd4300eb5d5782dc6258d19c8a5f65acdcc4228b1d6a5a7fb4091f1"
+    },
+    {
+      "path": "controls/catalog.json",
+      "sha256": "2a61be160fdbf1d45564b31b3c83336ae14941758cf99e19d8344d630eae2e4c"
+    },
+    {
+      "path": "controls/review_queue.json",
+      "sha256": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9"
+    },
+    {
+      "path": "evidence/wave-20261009/assignment.json",
+      "sha256": "cdb2829b7b1de6336a95377bca2cf2e3b1748185302789fae88dc8abe6f7873d"
+    }
+  ],
+  "source_relations": [
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-019",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 47,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 47,
+        "statement_sha256": "a587d4a237f06b6b70a35cfba4c156f1167d9362b7d137555193d70ac4e32dab"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-055",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "List the regulations and standards applicable to the organization; GDPR and HIPAA are examples, not universal applicability. The draft identifies external obligations but must expose the maintained list and avoid hiding applicability discovery behind an already-regulated profile.",
+        "scope": "organization; applicability discovery and obligation inventory"
+      },
+      "rationale": "List the regulations and standards applicable to the organization; GDPR and HIPAA are examples, not universal applicability. The draft identifies external obligations but must expose the maintained list and avoid hiding applicability discovery behind an already-regulated profile.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-020",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 48,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 48,
+        "statement_sha256": "1e4ba4e8b90672748ab6e7bd31564809fa27f7b29dc0782c5ce972d50f61521b"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-056",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Actual conformity with applicable regulations and standards is distinct from identifying obligations or obtaining qualified review. Keep the conformity objective open for qualified assessment; no checklist or agent review certifies legal compliance.",
+        "scope": "organization; applicable regulations and standards"
+      },
+      "rationale": "Actual conformity with applicable regulations and standards is distinct from identifying obligations or obtaining qualified review. Keep the conformity objective open for qualified assessment; no checklist or agent review certifies legal compliance.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-021",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 49,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 49,
+        "statement_sha256": "ab870e4179e20f16301addc002b69d07e944615e54db079ae04e741b4a57bd9e"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-057",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Perform recurring compliance audits. Qualified review without a recurrence requirement or audit procedure is insufficient; define cadence through the target profile and retain audit scope, findings and date.",
+        "scope": "organization; recurring compliance audit"
+      },
+      "rationale": "Perform recurring compliance audits. Qualified review without a recurrence requirement or audit procedure is insufficient; define cadence through the target profile and retain audit scope, findings and date.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-022",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 50,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 50,
+        "statement_sha256": "bb1311f0b930f3170e0687cfd81e8dc3f2aa196877e2d10c4e4a93cacd24ca39"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-058",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Maintain documentation of compliance efforts, including the relevant assessment and remediation work. A single qualified review does not establish maintained records covering those efforts.",
+        "scope": "organization; maintained compliance records"
+      },
+      "rationale": "Maintain documentation of compliance efforts, including the relevant assessment and remediation work. A single qualified review does not establish maintained records covering those efforts.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-033",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 69,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 69,
+        "statement_sha256": "1f3e93186c1b186e85500021bd02f8a0bce63fc8cf05d0fd0090ae824cec8a20"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-069",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Include new regulations and standards in compliance training. Monitoring obligations or updating only generic guidance does not establish training content updates; retain applicable-obligation context without assuming every regulation applies.",
+        "scope": "compliance curriculum; new regulations and standards"
+      },
+      "rationale": "Include new regulations and standards in compliance training. Monitoring obligations or updating only generic guidance does not establish training content updates; retain applicable-obligation context without assuming every regulation applies.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-034",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 70,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 70,
+        "statement_sha256": "78631096db98ded89aa760770ba313a1565d1fe73ca1dbf9c0a5e8175f83eb50"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-070",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Track and document compliance-training completion. Qualified review does not replace participant completion records and documentation; distinguish delivery from completion.",
+        "scope": "compliance-training participants; completion tracking and documentation"
+      },
+      "rationale": "Track and document compliance-training completion. Qualified review does not replace participant completion records and documentation; distinguish delivery from completion.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-037",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 77,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 77,
+        "statement_sha256": "dbf565a83ec8dd742644a19cfcc09716ad7c119e7998c1f4fbbe401e8b041d71"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-005",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-073",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Update threat models for new threats and environmental changes. Updating after material system changes alone excludes new threat information and non-system environmental changes.",
+        "scope": "threat models; new threats and environmental changes"
+      },
+      "rationale": "Update threat models for new threats and environmental changes. Updating after material system changes alone excludes new threat information and non-system environmental changes.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-041",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 83,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 83,
+        "statement_sha256": "5cc2d573c0737ad3c6ac5affe5fae5fab4ed6506d94f3bafef53723d22fd2eb3"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-006",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-077",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Document and track penetration-test remediation efforts. Finding inventory and remediation-age metrics support tracking but do not establish the documented remediation actions and resulting evidence.",
+        "scope": "penetration-test remediation efforts; documentation and tracking"
+      },
+      "rationale": "Document and track penetration-test remediation efforts. Finding inventory and remediation-age metrics support tracking but do not establish the documented remediation actions and resulting evidence.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-042",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 86,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 86,
+        "statement_sha256": "8c26159b44dd8caa412034760719d2191f58a8ea4deaa659f0922d2a6ae62b16"
+      },
+      "control_references": [
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-078",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Apply security patches and updates in a timely manner. Finding prioritization and dependency update configuration do not establish patch application across affected systems; define timeliness by target risk and preserve observed installation evidence.",
+        "scope": "software and hardware; timely security patch and update application"
+      },
+      "rationale": "Apply security patches and updates in a timely manner. Finding prioritization and dependency update configuration do not establish patch application across affected systems; define timeliness by target risk and preserve observed installation evidence.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-045",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 91,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 91,
+        "statement_sha256": "957c29473117b2070da1b9cc80dfaf3a45b5b9830c38dd4690135b656c0a07df"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-006",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-081",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Implement a robust vulnerability-management program. A finding list with priorities does not establish the program roles, discovery, treatment and follow-up necessary to operate it; define robustness through reviewed procedures rather than an unsupported adjective.",
+        "scope": "applications and infrastructure; vulnerability-management program"
+      },
+      "rationale": "Implement a robust vulnerability-management program. A finding list with priorities does not establish the program roles, discovery, treatment and follow-up necessary to operate it; define robustness through reviewed procedures rather than an unsupported adjective.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-049",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 97,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 97,
+        "statement_sha256": "bb0f29f2af84a201bdd5e8ae13e7eba3267879808ff518ddd771a3591e140cf3"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-009",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-085",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Configure alerts for suspicious activity. The canonical deployed-service applicability can miss security monitoring of non-service enterprise activity; retain that broader security scope and evidence of configured suspicious-activity alerts.",
+        "scope": "suspicious activity; configured security alerts"
+      },
+      "rationale": "Configure alerts for suspicious activity. The canonical deployed-service applicability can miss security monitoring of non-service enterprise activity; retain that broader security scope and evidence of configured suspicious-activity alerts.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-053",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 105,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 105,
+        "statement_sha256": "39813a737e0123c5385d8a279542bcd4ac5dd2f752a821f4c957a7064d95e1e4"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-009",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-089",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Track and document security-training completion. Completion tracking is in the draft objective, but retain documented evidence and the preceding all-employee program scope before consolidating this claim.",
+        "scope": "all employee training participants; completion tracking and documentation"
+      },
+      "rationale": "Track and document security-training completion. Completion tracking is in the draft objective, but retain documented evidence and the preceding all-employee program scope before consolidating this claim.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-055",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 109,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 109,
+        "statement_sha256": "72c4c2da5ccfc312d4d8e124fbbac2d6a3575ee8aa49dcb7e89414f3811035f9"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-009",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-091",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Analyze simulation results and provide feedback to employees. Merely tracking course completion does not establish analysis and individualized or team feedback after exercises.",
+        "scope": "phishing-simulation results; analysis and employee feedback"
+      },
+      "rationale": "Analyze simulation results and provide feedback to employees. Merely tracking course completion does not establish analysis and individualized or team feedback after exercises.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-056",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 110,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 110,
+        "statement_sha256": "a03785c9579890f5c2fa29db086cb49c34411e8f69dc26b778fe666b919b314e"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-009",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-092",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Adjust training based on phishing-simulation outcomes. Maintain a trace from observed exercise results to curriculum changes; general guidance maintenance does not demonstrate this feedback loop.",
+        "scope": "phishing-simulation findings; training adaptation"
+      },
+      "rationale": "Adjust training based on phishing-simulation outcomes. Maintain a trace from observed exercise results to curriculum changes; general guidance maintenance does not demonstrate this feedback loop.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    }
+  ],
+  "source_relations_digest": "343bf21223ad43d1427fa6cf3f0b28e0d82c43e665c24cdca83f1d97119903e0",
+  "held_claim_ids": [
+    "WA-APPSEC-023",
+    "WA-APPSEC-024",
+    "WA-APPSEC-025",
+    "WA-APPSEC-026",
+    "WA-APPSEC-027",
+    "WA-APPSEC-028",
+    "WA-APPSEC-029",
+    "WA-APPSEC-030",
+    "WA-APPSEC-031",
+    "WA-APPSEC-032",
+    "WA-APPSEC-035",
+    "WA-APPSEC-036",
+    "WA-APPSEC-038",
+    "WA-APPSEC-039",
+    "WA-APPSEC-040",
+    "WA-APPSEC-043",
+    "WA-APPSEC-044",
+    "WA-APPSEC-046",
+    "WA-APPSEC-047",
+    "WA-APPSEC-048",
+    "WA-APPSEC-050",
+    "WA-APPSEC-051",
+    "WA-APPSEC-052",
+    "WA-APPSEC-054",
+    "WA-APPSEC-057",
+    "WA-APPSEC-058",
+    "WA-APPSEC-059"
+  ],
+  "finding_dispositions": [
+    {
+      "finding_id": "D-T02-035-METHOD-LOSS",
+      "claim_id": "WA-APPSEC-035",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add035 to fidelity holds; do not modify primary packet or historical claim."
+    },
+    {
+      "finding_id": "D-T02-OBJECTIVE-BOUNDARY",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Retain only14 faithful bounded relation meanings and27 holds; preserve unresolved objective work."
+    }
+  ],
+  "source_coverage": {
+    "assigned_claims": 162,
+    "reviewed_in_tranche": 41,
+    "proposed_relation_receipts": 14,
+    "held": 27,
+    "completed_objective_synthesis_credit": 0
+  },
+  "scope_boundaries": [
+    "These are source relations to exact existing draft proposal revisions, not completed control objectives or implementation.",
+    "Every historical fidelity defect remains held, with original claims and primary packet preserved.",
+    "Source recommendation strength, actor, cadence and applicability remain source context; no adopted policy.",
+    "Four actual automated runtime roles are authorized by the user; human review and acceptance are not asserted.",
+    "Other tranches, publication clearance, cross-source synthesis and native execution remain outside this subject."
+  ]
+}
