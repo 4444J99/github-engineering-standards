@@ -1,0 +1,253 @@
+{
+  "assignment_commit": "18abc10",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/ghqr/source/README.md",
+      "sha256": "3baf27b62fb3f757f425d16a01b7e4490a95f8c40fec79ecee7e4a3e13438590"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/build_packet.py",
+      "sha256": "ebbfff608eef35f2ae55554dbfc6cdacdc9e6ec2ad022ba420f21f8047a3b774"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/draft-dispositions.json",
+      "sha256": "e44642a79b4dfbd1755c5d1d8f599716f50bd6e12576b5ef27e62c0d2101d8c9"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/input-bindings.json",
+      "sha256": "55c951465cc3e46dc847a49024a3116cd63851a3ea0a688d3f80352b65f96822"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/occurrence-crosswalk.json",
+      "sha256": "06974038a6bce13be8306dff664855e3aa45ca292a61ac027ede369c1168d3f8"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/packet-manifest.json",
+      "sha256": "70ca78389203e336cf9bcbae084d16c1399e18d548847b5bec7037d9e7025eea"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/primary-review.json",
+      "sha256": "9ce66c622ba2b64add905b145f343413c912472a233bb2e2f7fa351fd474c9e3"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/residuals.json",
+      "sha256": "4e663cfca69b0e41122415ed2d43571f0665b94d7cee3d711c55073adf3e5225"
+    }
+  ],
+  "claim_findings": [
+    {
+      "claim_id": "GHQR-BP-001",
+      "fidelity_defect": "Original claim omits explicit prevention of direct pushes; source all-component scope requires preservation.",
+      "independent_observation": "Unprotected/missing input yields broad finding and suppresses component inspection. Missing observation is not proof of actual unprotected state. Production branches are recommendation scope, beyond prose-described default-branch observation.",
+      "observed_predicate": "detail == nil OR !detail.Protected; returns immediately",
+      "occurrence_id": "SRC-GHQR-repo-bp-001",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "092f896686e44886d110e53bf6bce1a92fd1389a5dcec49a80342240aeb51374",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-002",
+      "fidelity_defect": "Original claim adds when selected policy requires peer review, weakening the unconditional upstream recommendation; preserve numeric1 and local exception separately.",
+      "independent_observation": "Minimum1 source recommendation, not conditional on already choosing peer review. Count alone does not authenticate reviewer independence or verify approval application.",
+      "observed_predicate": "reviews != nil AND RequiredApprovingReviewCount < 1",
+      "occurrence_id": "SRC-GHQR-repo-bp-002",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "3d668134efd9215fee016b1e577630fdd9c4fd69c98aa5b345dae523872c9873",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-003",
+      "fidelity_defect": "Original claim loses numeric2-or-more and narrows production guidance to high-risk changes.",
+      "independent_observation": "Advisory2-or-more production review threshold must remain source wording; local target quorum decision separate.",
+      "observed_predicate": "reviews != nil AND 1 <= count < 2",
+      "occurrence_id": "SRC-GHQR-repo-bp-003",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "1d5966cbc7a1c0e6ec6ab85359a9c0d972c73b3b20c57f1b382ccfd9691cd275",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-004",
+      "fidelity_defect": "Original claim and catalog condition on changed reviewed proposal; source wording says new commits. Preserve source versus platform/local qualification.",
+      "independent_observation": "Boolean observation does not establish behavior for altered diff; source new-commit dismissal recommendation broader than selective actual-diff rule.",
+      "observed_predicate": "reviews != nil AND !DismissStaleReviews",
+      "occurrence_id": "SRC-GHQR-repo-bp-004",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "b421ee160c5d697cba0fb1349acf697a6ceb8b7946f77392477854aeaa5b6d7b",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-005",
+      "fidelity_defect": "Original claim says review instead of approval and lacks explicit enabled requirement.",
+      "independent_observation": "Explicit required CODEOWNERS approval; CODEOWNERS existence, PR requirement and conversation resolution not equivalent.",
+      "observed_predicate": "reviews != nil AND !RequireCodeOwnerReviews",
+      "occurrence_id": "SRC-GHQR-repo-bp-005",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "e740662ea336f81977cbb497971b229ac7e342dc0f687bc5f02dd77af30ea228",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-006",
+      "fidelity_defect": "Historical proposition specifies integrated policy but omits configuration of PR review requirements. Component names alone do not preserve the configuration action.",
+      "independent_observation": "Composite recommendation contains approver count, dismissal and owner reviews, not just PR existence. Nil input does not cause individual002-005 findings.",
+      "observed_predicate": "reviews == nil",
+      "occurrence_id": "SRC-GHQR-repo-bp-006",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "e82190670ca75be4dc93c2386ccaf013a9d23670a65855c0db4be1153486cb46",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-007",
+      "fidelity_defect": "Original claim inserts when strict policy applies, making the upstream strict-mode recommendation conditional; preserve source and local choice separately.",
+      "independent_observation": "Requires up-to-date branch strictness, beyond merely checks on some proposed revision. Source recommendation is not conditional on preselecting strict policy.",
+      "observed_predicate": "statusChecks != nil AND !Strict",
+      "occurrence_id": "SRC-GHQR-repo-bp-007",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "eb2b91a0c9f7a8fbb2d4bc6b4ae422319252a4b1caeed147b83dbcd90ccdd5f5",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-008",
+      "fidelity_defect": "Original claim names checks but omits that they must pass before merge.",
+      "independent_observation": "Actual nonempty named contexts required; scanner does not verify trusted publisher, trigger validity, check success or selected revision.",
+      "observed_predicate": "statusChecks != nil AND len(Contexts)==0",
+      "occurrence_id": "SRC-GHQR-repo-bp-008",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "619ba192141fc52a43c4c1f95c27283461b768995533ae5dcda81e59f8703df1",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-009",
+      "fidelity_defect": null,
+      "independent_observation": "Missing requirement distinguished from zero contexts or nonstrict mode. Scanner does not execute checks or establish merge rejection.",
+      "observed_predicate": "statusChecks == nil",
+      "occurrence_id": "SRC-GHQR-repo-bp-009",
+      "required_action": "Retain only proposed bounded relation with source branch denominator and missing objectives explicit; do not certify predicate implementation or native enforcement.",
+      "source_recommendation_sha256": "c8fe592e244f12f34ad9b0067fe9c24eb3a46b66350993afb31ad26829346bd4",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "GHQR-BP-010",
+      "fidelity_defect": null,
+      "independent_observation": "All-protected-branch recommendation exceeds one default-branch observation. No bypass-principal enforcement assessment in this function.",
+      "observed_predicate": "AllowForcePushes == true",
+      "occurrence_id": "SRC-GHQR-repo-bp-010",
+      "required_action": "Retain only proposed bounded relation with source branch denominator and missing objectives explicit; do not certify predicate implementation or native enforcement.",
+      "source_recommendation_sha256": "c193bdb2eded9adf6025fb1d8fb0e87d3e95e90bf2449b9b76fef868ba660da5",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "GHQR-BP-011",
+      "fidelity_defect": null,
+      "independent_observation": "Protected-branch deletion safeguard separate from topic-branch cleanup. Actual refusal and bypass coverage not observed.",
+      "observed_predicate": "AllowDeletions == true",
+      "occurrence_id": "SRC-GHQR-repo-bp-011",
+      "required_action": "Retain only proposed bounded relation with source branch denominator and missing objectives explicit; do not certify predicate implementation or native enforcement.",
+      "source_recommendation_sha256": "73b0e3bc09322d2e768ac8da36d97b7ffeb28a676ed7e89ac192807f52038d83",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "GHQR-BP-012",
+      "fidelity_defect": "Original claim changes enable required signatures into evaluate; legitimate local policy choice must not erase upstream recommendation or authorship overclaim.",
+      "independent_observation": "Source recommends enabling signatures and asserts authorship verification; local evaluate-first policy is a deliberate conflict/qualification, not unchanged meaning.",
+      "observed_predicate": "!RequiredSignatures",
+      "occurrence_id": "SRC-GHQR-repo-bp-012",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "9fee52dd988b3191e38859c393e4d93264f7570b82684cec30919ca0f8c4bd3b",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-013",
+      "fidelity_defect": "Original claim omits squash/rebase alternatives; its delivery/audit condition is local interpretation.",
+      "independent_observation": "Consider squash/rebase remains advisory. A false boolean observation cannot select merge method or certify cleaner history.",
+      "observed_predicate": "!RequiredLinearHistory",
+      "occurrence_id": "SRC-GHQR-repo-bp-013",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "9e6812d9bf22ad77d35517268fcd99561884ab4fc6fff2bcfac943ad2338b9c0",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "GHQR-BP-014",
+      "fidelity_defect": "Original claim omits optional migration consideration; preserve it as source context without making redundant legacy rules mandatory.",
+      "independent_observation": "Ruleset informational note emitted before same component checks, so014 can coexist with deficiencies. No-action wording is not whole-policy clearance. Optional remaining-legacy migration suggestion requires separate preservation.",
+      "observed_predicate": "ruleset detail != nil AND detail.Protected",
+      "occurrence_id": "SRC-GHQR-repo-bp-014",
+      "required_action": "Hold resolving receipt; preserve historical proposition and upstream recommendation separately from local qualification.",
+      "source_recommendation_sha256": "c56791264d9ee762109d7c5b5c65abf2b110fe79c6e18be1598e55829686898e",
+      "verdict": "HOLD"
+    }
+  ],
+  "coverage": {
+    "assigned_unreviewed": 0,
+    "claims_reviewed": 14,
+    "definition_lines": [
+      1,
+      153
+    ],
+    "native_predicates_verified": 0,
+    "occurrences_reviewed": 14,
+    "scanner_lines": [
+      1,
+      98
+    ]
+  },
+  "findings": [
+    {
+      "action": "HOLD",
+      "claim_id": "GHQR-BP-006",
+      "finding": "Policy specification omits actual PR requirement configuration despite retaining the three composite field names.",
+      "id": "D-GHQR-006-CONFIGURATION",
+      "required_action": "Add006 to fidelity holds; preserve composite components as unresolved source-bound objectives.",
+      "status": "CHANGE_REQUIRED_OR_HOLD"
+    },
+    {
+      "action": "PRESERVE",
+      "finding": "Nil detail and nil configuration branches generate broad findings and suppress finer predicates; normalized detail cannot establish data availability, production/all-branch coverage or bypass enforcement. Ruleset014 may coexist with failures.",
+      "id": "D-GHQR-NIL-AND-SCOPE",
+      "required_action": "Retain per-predicate scope, input unknowns and scanner limitations; no configuration boolean implies runtime PASS.",
+      "status": "BOUNDARY_REQUIRED"
+    },
+    {
+      "action": "HOLD",
+      "claim_id": "GHQR-BP-012",
+      "finding": "Source enablement and authorship assertion differ from evaluate-first local trust policy. Signature setting observation supplies no proof of human authorship.",
+      "id": "D-GHQR-AUTHORSHIP",
+      "required_action": "Keep conflict and source recommendation visible pending separately reviewed faithful treatment; no stronger authority claim.",
+      "status": "UNRESOLVED_CONFLICT"
+    },
+    {
+      "action": "PRESERVE",
+      "finding": "Three faithful source relations009010011 do not certify completed scanner predicates, local control objectives, complete branch coverage or native rejection.",
+      "id": "D-GHQR-OBJECTIVE-BOUNDARY",
+      "required_action": "Retain unresolved canonical objectives, bypass/collector dependencies, target policies and operational bindings.",
+      "status": "BOUNDARY_REQUIRED"
+    }
+  ],
+  "human_approval": false,
+  "owner_acceptance": null,
+  "primary_commit": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234",
+  "publication_clearance": null,
+  "remaining_scope": "Scanner input collection and normalization, whole-repository ruleset aggregation, other GHQR predicates and substantive sources, source-fidelity repair, canonical objective decisions, owner adoption, native tests, publication review of later bytes and acceptance remain outstanding.",
+  "result": "Three bounded proposed relation meanings supported;11 fidelity holds required.14 scanner predicate relations inspected without executing upstream. No zero-control disposition or overall enforcement certification.",
+  "reviewer": "codex:/root/omission_reviewer_d",
+  "schema": "ges.bounded-omission-findings.v1",
+  "source_fidelity_holds": [
+    "GHQR-BP-001",
+    "GHQR-BP-002",
+    "GHQR-BP-003",
+    "GHQR-BP-004",
+    "GHQR-BP-005",
+    "GHQR-BP-006",
+    "GHQR-BP-007",
+    "GHQR-BP-008",
+    "GHQR-BP-012",
+    "GHQR-BP-013",
+    "GHQR-BP-014"
+  ],
+  "state": "Staged",
+  "supported_proposed_relation_claim_ids": [
+    "GHQR-BP-009",
+    "GHQR-BP-010",
+    "GHQR-BP-011"
+  ],
+  "upstream_executed": false
+}
