@@ -1,0 +1,1638 @@
+{
+  "schema": "ges.correction-omission-review.v1",
+  "review_id": "omission-review-CORRECTION-01",
+  "role": "D",
+  "wave": "wave-20261009-correction-01",
+  "pr": 496,
+  "reviewer_identity": "opencode session ses_edbadcab6ffeDVVMjqnv9QjY8R (source: env OPENCODE_SESSION_ID); lease 2faae7b2c82c419ca3df40571ca5360d to 2026-10-10T06:11:10Z under surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 per conductor binding",
+  "created_at_utc": "2026-10-10T05:58:10Z",
+  "method": "Independent bounded re-check of correction-stage outputs against committed inputs only: (1) each B record parsed and cross-checked line-by-line against the predecessor claims document (re-read from this checkout), residuals.json holds, primary-review interpretation/residual/decision fields, draft-dispositions status, proposed-decisions entries, and blob hashes of every cited file at B's verified head; (2) each C record parsed and cross-checked against the predecessor publication primary-review rows, a fresh byte slice of controls/review_queue.json at the two frozen output spans, the committed validator/register text, the frozen accounting replay, and an independent re-hash of all nine candidate files against the conductor planning-freeze bindings; (3) completeness: the union of B+C -CORRECTION-01 records against the planning freeze selection (5 claims + 2 use fields), with extra-file listing of both exclusive roots.",
+  "verified_inputs": {
+    "own_branch": {
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-d-20261009",
+      "head": "4768db8929420538e3b828467de9dbe314fd4b74",
+      "tracked_tree_clean": true
+    },
+    "stage_B": {
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-b-20261009",
+      "head": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+      "tracked_tree_clean": true,
+      "result": "MATCH_EXPECTED"
+    },
+    "stage_C": {
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-c-20261009",
+      "head": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+      "tracked_tree_clean": true,
+      "result": "MATCH_EXPECTED"
+    },
+    "conductor_freeze_read": {
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+      "head": "d8e0d6bfe7f15c47c9cbc1d5590d098a1ad0ef6e",
+      "tracked_tree_clean": true,
+      "files_read": [
+        "evidence/wave-20261009-correction-01/serialized-admission-03/execution-freeze-20261010.json",
+        "evidence/wave-20261009-correction-01/assignment.json"
+      ]
+    },
+    "read_discipline": "git show at pinned commits / clean working trees; no network, no fetch, no sibling write, no uncommitted sibling file"
+  },
+  "stage_B_findings": [
+    {
+      "claim_id": "WA-APPSEC-005",
+      "record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-005-CORRECTION-01.json",
+      "verdict": "SUPPORTED_BOUNDED_STATEMENT_CORRECTION_NO_OMISSION_FOUND"
+    },
+    {
+      "claim_id": "WA-APPSEC-009",
+      "record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-009-CORRECTION-01.json",
+      "verdict": "SUPPORTED_BOUNDED_STATEMENT_CORRECTION_NO_OMISSION_FOUND"
+    },
+    {
+      "claim_id": "WA-APPSEC-011",
+      "record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-011-CORRECTION-01.json",
+      "verdict": "SUPPORTED_BOUNDED_STATEMENT_CORRECTION_NO_OMISSION_FOUND"
+    },
+    {
+      "claim_id": "WA-APPSEC-017",
+      "record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-017-CORRECTION-01.json",
+      "verdict": "SUPPORTED_BOUNDED_STATEMENT_CORRECTION_NO_OMISSION_FOUND"
+    },
+    {
+      "claim_id": "WA-APPSEC-018",
+      "record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-018-CORRECTION-01.json",
+      "verdict": "SUPPORTED_BOUNDED_STATEMENT_CORRECTION_NO_OMISSION_FOUND"
+    }
+  ],
+  "stage_C_findings": [
+    {
+      "use_id": "GES-OPS-008-objective",
+      "record": "evidence/wave-20261009-correction-01/publication/use-correction-ges-ops-008-objective-CORRECTION-01.json",
+      "verdict": "HOLD_PRESERVED_NO_OMISSION_NO_OVERCLAIM"
+    },
+    {
+      "use_id": "GES-OPS-008-implementation-acceptance-0",
+      "record": "evidence/wave-20261009-correction-01/publication/use-correction-ges-ops-008-implementation-acceptance-0-CORRECTION-01.json",
+      "verdict": "HOLD_PRESERVED_NO_OMISSION_NO_OVERCLAIM"
+    }
+  ],
+  "scope_coverage_matrix": {
+    "selected_by_planning_freeze": {
+      "claims": [
+        "WA-APPSEC-005",
+        "WA-APPSEC-009",
+        "WA-APPSEC-011",
+        "WA-APPSEC-017",
+        "WA-APPSEC-018"
+      ],
+      "use_fields": [
+        "GES-OPS-008-objective",
+        "GES-OPS-008-implementation-acceptance-0"
+      ]
+    },
+    "claims": [
+      {
+        "claim_id": "WA-APPSEC-005",
+        "prior_omission_verdict": "HOLD (D-SOURCE-FIDELITY finding on wave-20261009/omission/source-findings.json)",
+        "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-005-CORRECTION-01.json",
+        "record_present": true,
+        "covered": true,
+        "hold_text_matches_residuals": true,
+        "support_level": "statement-level correction derived from committed primary-review interpretation; source bytes NOT re-read; no receipt, mapping, or policy change claimed",
+        "omission_or_overclaim_found": "NONE"
+      },
+      {
+        "claim_id": "WA-APPSEC-009",
+        "prior_omission_verdict": "HOLD (D-SOURCE-FIDELITY finding on wave-20261009/omission/source-findings.json)",
+        "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-009-CORRECTION-01.json",
+        "record_present": true,
+        "covered": true,
+        "hold_text_matches_residuals": true,
+        "support_level": "statement-level correction derived from committed primary-review interpretation; source bytes NOT re-read; no receipt, mapping, or policy change claimed",
+        "omission_or_overclaim_found": "NONE"
+      },
+      {
+        "claim_id": "WA-APPSEC-011",
+        "prior_omission_verdict": "HOLD (D-SOURCE-FIDELITY finding on wave-20261009/omission/source-findings.json)",
+        "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-011-CORRECTION-01.json",
+        "record_present": true,
+        "covered": true,
+        "hold_text_matches_residuals": true,
+        "support_level": "statement-level correction derived from committed primary-review interpretation; source bytes NOT re-read; no receipt, mapping, or policy change claimed",
+        "omission_or_overclaim_found": "NONE"
+      },
+      {
+        "claim_id": "WA-APPSEC-017",
+        "prior_omission_verdict": "HOLD (D-SOURCE-FIDELITY finding on wave-20261009/omission/source-findings.json)",
+        "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-017-CORRECTION-01.json",
+        "record_present": true,
+        "covered": true,
+        "hold_text_matches_residuals": true,
+        "support_level": "statement-level correction derived from committed primary-review interpretation; source bytes NOT re-read; no receipt, mapping, or policy change claimed",
+        "omission_or_overclaim_found": "NONE"
+      },
+      {
+        "claim_id": "WA-APPSEC-018",
+        "prior_omission_verdict": "HOLD (D-SOURCE-FIDELITY finding on wave-20261009/omission/source-findings.json)",
+        "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-018-CORRECTION-01.json",
+        "record_present": true,
+        "covered": true,
+        "hold_text_matches_residuals": true,
+        "support_level": "statement-level correction derived from committed primary-review interpretation; source bytes NOT re-read; no receipt, mapping, or policy change claimed",
+        "omission_or_overclaim_found": "NONE"
+      }
+    ],
+    "use_fields": [
+      {
+        "use_id": "GES-OPS-008-objective",
+        "prior_omission_verdict": "UNRESOLVED_PRESERVED (D-PUBLICATION-ESCAPING finding on wave-20261009/omission/publication-findings.json)",
+        "successor_record": "evidence/wave-20261009-correction-01/publication/use-correction-ges-ops-008-objective-CORRECTION-01.json",
+        "record_present": true,
+        "covered": true,
+        "hold_outcome_represented": "REMAINING_HOLD, kind stays null, no approval or clearance",
+        "structural_finding_reproduced": "raw span 170 B != source span 168 B; delta is exactly the two mandated JSON quote escapes; decoded sha equals committed source-span sha",
+        "omission_or_overclaim_found": "NONE"
+      },
+      {
+        "use_id": "GES-OPS-008-implementation-acceptance-0",
+        "prior_omission_verdict": "UNRESOLVED_PRESERVED (D-PUBLICATION-ESCAPING finding on wave-20261009/omission/publication-findings.json)",
+        "successor_record": "evidence/wave-20261009-correction-01/publication/use-correction-ges-ops-008-implementation-acceptance-0-CORRECTION-01.json",
+        "record_present": true,
+        "covered": true,
+        "hold_outcome_represented": "REMAINING_HOLD, kind stays null, no approval or clearance",
+        "structural_finding_reproduced": "raw span 170 B != source span 168 B; delta is exactly the two mandated JSON quote escapes; decoded sha equals committed source-span sha",
+        "omission_or_overclaim_found": "NONE"
+      }
+    ],
+    "extra_records_found": {
+      "stage_B": [],
+      "stage_C": []
+    },
+    "non_record_files_in_roots": {
+      "stage_B": [
+        "evidence/wave-20261009-correction-01/source/README.md",
+        "evidence/wave-20261009-correction-01/source/identity-cancelled-ses_edbeebdceffe8CrNpIv5HJMXtW.json",
+        "evidence/wave-20261009-correction-01/source/identity.json"
+      ],
+      "stage_C": [
+        "evidence/wave-20261009-correction-01/publication/README.md",
+        "evidence/wave-20261009-correction-01/publication/candidate-integrity.json",
+        "evidence/wave-20261009-correction-01/publication/identity.json"
+      ]
+    },
+    "scope_drift": "NONE detected: exactly 5 claim records + 2 use-field records, correct -CORRECTION-01 suffixes, roots contain only records plus README/identity artifacts (B additionally preserves the cancelled attempt's identity file bytes, renamed, not a record)"
+  },
+  "candidate_integrity_independent_recheck": [
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/README.md",
+      "sha256_rehashed_by_D": "fffc3127fb1da3dd1eee30694b05be09c1f6891f1fba2f0288c264f2fe62b5e0",
+      "bytes_rehashed_by_D": 13301,
+      "planning_freeze_sha256": "fffc3127fb1da3dd1eee30694b05be09c1f6891f1fba2f0288c264f2fe62b5e0",
+      "planning_freeze_bytes": 13301,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/accounting.json",
+      "sha256_rehashed_by_D": "a156e9a5d7051c22c5788e0cc573058b6c2eb516e3aa6b330734933ad2257309",
+      "bytes_rehashed_by_D": 2770,
+      "planning_freeze_sha256": "a156e9a5d7051c22c5788e0cc573058b6c2eb516e3aa6b330734933ad2257309",
+      "planning_freeze_bytes": 2770,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/manifest.json",
+      "sha256_rehashed_by_D": "0a6b833676277f5a4b9967d6bd01a7d80b1db0bd314c0decfb87c79f48bb811e",
+      "bytes_rehashed_by_D": 467187,
+      "planning_freeze_sha256": "0a6b833676277f5a4b9967d6bd01a7d80b1db0bd314c0decfb87c79f48bb811e",
+      "planning_freeze_bytes": 467187,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/output-triage.json.gz",
+      "sha256_rehashed_by_D": "4e6d5c9a0fd893239c5101812f2584a57e6d651cdc9531182bcacf5da38f2881",
+      "bytes_rehashed_by_D": 5657259,
+      "planning_freeze_sha256": "4e6d5c9a0fd893239c5101812f2584a57e6d651cdc9531182bcacf5da38f2881",
+      "planning_freeze_bytes": 5657259,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/policy.json",
+      "sha256_rehashed_by_D": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes_rehashed_by_D": 3,
+      "planning_freeze_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "planning_freeze_bytes": 3,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/receipts.json",
+      "sha256_rehashed_by_D": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes_rehashed_by_D": 3,
+      "planning_freeze_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "planning_freeze_bytes": 3,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/register.json",
+      "sha256_rehashed_by_D": "ab7b70ea59ac8bb05fc824a1afb6b409049f9fbda2bb11ecd8713f5823587cee",
+      "bytes_rehashed_by_D": 593146,
+      "planning_freeze_sha256": "ab7b70ea59ac8bb05fc824a1afb6b409049f9fbda2bb11ecd8713f5823587cee",
+      "planning_freeze_bytes": 593146,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/review-priorities.json",
+      "sha256_rehashed_by_D": "b6a24e7e12995438969f1f1de063a8857b1958697cb7a33211bda3dfd9401095",
+      "bytes_rehashed_by_D": 402380,
+      "planning_freeze_sha256": "b6a24e7e12995438969f1f1de063a8857b1958697cb7a33211bda3dfd9401095",
+      "planning_freeze_bytes": 402380,
+      "match": true
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/scope.json",
+      "sha256_rehashed_by_D": "00ee1d3a89251204bdc0545cee079b7d2d2f251417e84f7e9c249f68fe807a70",
+      "bytes_rehashed_by_D": 14292,
+      "planning_freeze_sha256": "00ee1d3a89251204bdc0545cee079b7d2d2f251417e84f7e9c249f68fe807a70",
+      "planning_freeze_bytes": 14292,
+      "match": true
+    }
+  ],
+  "key_findings": [
+    "No overclaim found in any of the seven successor records: every B record claims only 'corrected at statement level' with an explicit SOURCE_BYTES_NOT_REREAD hold; both C records end in REMAINING_HOLD with approvals_created=none and publication_clearance_granted=none.",
+    "No obligation silently dropped: all four common remaining holds appear in every B record; B additionally carries the claim-specific obligations (rotation authority for 009, enforcement evidence for 017, cadence for 018); C carries the unresolved classification decision and the frozen publication gate.",
+    "All evidence references in all seven records resolve to committed blobs whose sha256 values match the cited hashes (recomputed at the verified sibling heads).",
+    "B's quoted hold texts match residuals.json source_fidelity_repairs_required[0..4] verbatim, and B's README citation residuals.json -> source_fidelity_repairs_required is accurate.",
+    "C's structural LICENSED_COPY finding was independently reproduced from committed candidate bytes: the only difference between output and source spans is the two JSON-mandated quote escapes, so raw-byte identity is unattainable for this text inside JSON; the ADAPTATION classification is left to an authorized owner, as required.",
+    "Candidate integrity 9/9 MATCH independently re-derived against the conductor's planning-freeze bindings.",
+    "B's linked_decisions control_references match the committed proposed-decisions entries by (id, revision); B's records add a 'collection' label (CATALOG/PROPOSAL) not present in the committed decision file - recorded here as a presentational annotation, not an omission or overclaim; ids and revisions are correct.",
+    "Completeness: the union of B+C outputs covers exactly the five claims and two use fields the planning freeze selected; no extra records; no scope drift."
+  ],
+  "not_verified": [
+    "Source-byte re-reads: the pinned checklist text (content/library/application-security/checklist.md at a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7) and the pinned ghqr budgets.yaml bytes at 02b89961921ac43f93aa8b3ff74cdcb7cd3d9244 are not present in any reviewed checkout; every 'source says X' statement in B's corrections and C's source-span binding is inherited from committed review records, not re-derived from upstream bytes by this reviewer.",
+    "Semantic or rights approval: not granted. The five corrected statements are statement-fidelity repairs reviewed by no authorized approver here; ADAPTATION classification for the two use fields is a substantive rights judgment this worker does not make.",
+    "Publication clearance: not granted. The frozen gate (byte-identical LICENSED_COPY spans / byte-identical candidate bytes) is unchanged; both use fields remain HOLD.",
+    "Reconciliation receipt, D/A/E gates, mapping, policy adoption: unchanged and unverified; proposed-decisions review.status stays PROPOSED with reviewer null; claims document keeps policy_adoption=NONE, rights_clearance=UNRESOLVED, independent_omission_audit=false.",
+    "Heavy/Governance verification suite: not run here by instruction; deferred to integration.",
+    "The session-identity discrepancy (env OPENCODE_SESSION_ID vs the conductor-specified lease surface) is recorded, not resolved."
+  ],
+  "carry_forward": {
+    "prior_semantic_and_rights_approval": false,
+    "delivery_status": "Staged",
+    "approval_or_clearance_granted_by_this_review": "none",
+    "statement": "This review only verifies structural fidelity, internal consistency, hash resolvability, and bounded outcome claims of the correction outputs against committed inputs. It releases nothing."
+  },
+  "checker_results": {
+    "role_D_checker": "ges.correction-omission-checker.v1",
+    "checks": [
+      {
+        "name": "inputs.residuals_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "inputs.primary_review_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "inputs.claims_doc_present_in_D",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "inputs.assignment_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "inputs.freeze_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "inputs.residuals_has_five_holds",
+        "ok": true,
+        "detail": "count=5"
+      },
+      {
+        "name": "hold_text.WA-APPSEC-005",
+        "ok": true,
+        "detail": "WA-APPSEC-005: static restriction absent from original source"
+      },
+      {
+        "name": "hold_text.WA-APPSEC-009",
+        "ok": true,
+        "detail": "WA-APPSEC-009: reviewed practice does not establish regular actual rotation"
+      },
+      {
+        "name": "hold_text.WA-APPSEC-011",
+        "ok": true,
+        "detail": "WA-APPSEC-011: relevant contributors narrows all team members"
+      },
+      {
+        "name": "hold_text.WA-APPSEC-017",
+        "ok": true,
+        "detail": "WA-APPSEC-017: connected business systems narrows other business systems"
+      },
+      {
+        "name": "hold_text.WA-APPSEC-018",
+        "ok": true,
+        "detail": "WA-APPSEC-018: investigation does not establish recurring audit"
+      },
+      {
+        "name": "bindings.claims_doc_sha_matches_prior",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "bindings.blob_sha.residuals.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "bindings.blob_sha.primary-review.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "bindings.blob_sha.draft-dispositions.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "bindings.blob_sha.proposed-decisions.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.parsed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.record_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.suffix",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.predecessor_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.fields_present",
+        "ok": true,
+        "detail": "[]"
+      },
+      {
+        "name": "B.WA-APPSEC-005.doc_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.statement",
+        "ok": true,
+        "detail": "record='Include static security analysis in delivery pipelines.' doc='Include static security analysis in delivery pipelines.'"
+      },
+      {
+        "name": "B.WA-APPSEC-005.line_span",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.statement_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.mapping_status",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.accepted_policy",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.hold_text_matches_residuals",
+        "ok": true,
+        "detail": "record='WA-APPSEC-005: static restriction absent from original source'"
+      },
+      {
+        "name": "B.WA-APPSEC-005.hold_field_index",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.primary_review_entry",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.residual_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.interpretation_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.source_span_sha_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.decision_id_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.disposition_status",
+        "ok": true,
+        "detail": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+      },
+      {
+        "name": "B.WA-APPSEC-005.disposition_distinction",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.disposition_rationale",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.decision_exists",
+        "ok": true,
+        "detail": "reconciliation-decision:8cb13948af70fb61e028a787fc955712fa238042fb1e380059fb4536261b7bd0"
+      },
+      {
+        "name": "B.WA-APPSEC-005.decision_disposition",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.decision_controls",
+        "ok": true,
+        "detail": "got=[('GES-OPS-041', 1), ('GES-SEC-003', 1)] want=[('GES-OPS-041', 1), ('GES-SEC-003', 1)]"
+      },
+      {
+        "name": "B.WA-APPSEC-005.decision_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.evidence_ref_sha.residuals.json",
+        "ok": true,
+        "detail": "got=cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124"
+      },
+      {
+        "name": "B.WA-APPSEC-005.evidence_ref_sha.primary-review.json",
+        "ok": true,
+        "detail": "got=8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1"
+      },
+      {
+        "name": "B.WA-APPSEC-005.evidence_ref_sha.draft-dispositions.json",
+        "ok": true,
+        "detail": "got=7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52"
+      },
+      {
+        "name": "B.WA-APPSEC-005.evidence_ref_sha.proposed-decisions.json",
+        "ok": true,
+        "detail": "got=1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db"
+      },
+      {
+        "name": "B.WA-APPSEC-005.evidence_ref_sha.wa-application-security-checklist-claims.json",
+        "ok": true,
+        "detail": "got=a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993"
+      },
+      {
+        "name": "B.WA-APPSEC-005.outcome_bounded",
+        "ok": true,
+        "detail": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED"
+      },
+      {
+        "name": "B.WA-APPSEC-005.boundaries",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.remaining_hold.SOURCE_BYTES_NOT_REREAD",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.remaining_hold.NO_RECONCILIATION_RECEIPT",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.remaining_hold.DECISION_STILL_PROPOSED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.remaining_hold.MAPPING_AND_POLICY_UNCHANGED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-005.derivation_disclosed",
+        "ok": true,
+        "detail": "Derived verbatim-in-substance from the committed primary-review interpretation f"
+      },
+      {
+        "name": "B.WA-APPSEC-009.parsed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.record_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.suffix",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.predecessor_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.fields_present",
+        "ok": true,
+        "detail": "[]"
+      },
+      {
+        "name": "B.WA-APPSEC-009.doc_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.statement",
+        "ok": true,
+        "detail": "record='Maintain a reviewed credential-rotation practice.' doc='Maintain a reviewed credential-rotation practice.'"
+      },
+      {
+        "name": "B.WA-APPSEC-009.line_span",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.statement_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.mapping_status",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.accepted_policy",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.hold_text_matches_residuals",
+        "ok": true,
+        "detail": "record='WA-APPSEC-009: reviewed practice does not establish regular actual rotation'"
+      },
+      {
+        "name": "B.WA-APPSEC-009.hold_field_index",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.primary_review_entry",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.residual_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.interpretation_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.source_span_sha_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.decision_id_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.disposition_status",
+        "ok": true,
+        "detail": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+      },
+      {
+        "name": "B.WA-APPSEC-009.disposition_distinction",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.disposition_rationale",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.decision_exists",
+        "ok": true,
+        "detail": "reconciliation-decision:03c3a18e773a549ac79ddfaaa805b8c78e28ee9e42120d73f3d16e23260990fb"
+      },
+      {
+        "name": "B.WA-APPSEC-009.decision_disposition",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.decision_controls",
+        "ok": true,
+        "detail": "got=[('GES-OPS-045', 1), ('GES-SEC-004', 1)] want=[('GES-OPS-045', 1), ('GES-SEC-004', 1)]"
+      },
+      {
+        "name": "B.WA-APPSEC-009.decision_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.evidence_ref_sha.residuals.json",
+        "ok": true,
+        "detail": "got=cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124"
+      },
+      {
+        "name": "B.WA-APPSEC-009.evidence_ref_sha.primary-review.json",
+        "ok": true,
+        "detail": "got=8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1"
+      },
+      {
+        "name": "B.WA-APPSEC-009.evidence_ref_sha.draft-dispositions.json",
+        "ok": true,
+        "detail": "got=7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52"
+      },
+      {
+        "name": "B.WA-APPSEC-009.evidence_ref_sha.proposed-decisions.json",
+        "ok": true,
+        "detail": "got=1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db"
+      },
+      {
+        "name": "B.WA-APPSEC-009.evidence_ref_sha.wa-application-security-checklist-claims.json",
+        "ok": true,
+        "detail": "got=a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993"
+      },
+      {
+        "name": "B.WA-APPSEC-009.outcome_bounded",
+        "ok": true,
+        "detail": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED"
+      },
+      {
+        "name": "B.WA-APPSEC-009.boundaries",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.remaining_hold.SOURCE_BYTES_NOT_REREAD",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.remaining_hold.NO_RECONCILIATION_RECEIPT",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.remaining_hold.DECISION_STILL_PROPOSED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.remaining_hold.MAPPING_AND_POLICY_UNCHANGED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-009.derivation_disclosed",
+        "ok": true,
+        "detail": "Derived verbatim-in-substance from the committed primary-review interpretation f"
+      },
+      {
+        "name": "B.WA-APPSEC-011.parsed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.record_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.suffix",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.predecessor_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.fields_present",
+        "ok": true,
+        "detail": "[]"
+      },
+      {
+        "name": "B.WA-APPSEC-011.doc_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.statement",
+        "ok": true,
+        "detail": "record='Make security guidance available to relevant contributors.' doc='Make security guidance available to relevant contributors.'"
+      },
+      {
+        "name": "B.WA-APPSEC-011.line_span",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.statement_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.mapping_status",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.accepted_policy",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.hold_text_matches_residuals",
+        "ok": true,
+        "detail": "record='WA-APPSEC-011: relevant contributors narrows all team members'"
+      },
+      {
+        "name": "B.WA-APPSEC-011.hold_field_index",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.primary_review_entry",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.residual_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.interpretation_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.source_span_sha_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.decision_id_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.disposition_status",
+        "ok": true,
+        "detail": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+      },
+      {
+        "name": "B.WA-APPSEC-011.disposition_distinction",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.disposition_rationale",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.decision_exists",
+        "ok": true,
+        "detail": "reconciliation-decision:9d68d9bf438cdfe96065209192445b3c8e567a6450cb44322d567a2a11ab06a4"
+      },
+      {
+        "name": "B.WA-APPSEC-011.decision_disposition",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.decision_controls",
+        "ok": true,
+        "detail": "got=[('GES-GOV-010', 1), ('GES-OPS-047', 1)] want=[('GES-GOV-010', 1), ('GES-OPS-047', 1)]"
+      },
+      {
+        "name": "B.WA-APPSEC-011.decision_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.evidence_ref_sha.residuals.json",
+        "ok": true,
+        "detail": "got=cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124"
+      },
+      {
+        "name": "B.WA-APPSEC-011.evidence_ref_sha.primary-review.json",
+        "ok": true,
+        "detail": "got=8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1"
+      },
+      {
+        "name": "B.WA-APPSEC-011.evidence_ref_sha.draft-dispositions.json",
+        "ok": true,
+        "detail": "got=7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52"
+      },
+      {
+        "name": "B.WA-APPSEC-011.evidence_ref_sha.proposed-decisions.json",
+        "ok": true,
+        "detail": "got=1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db"
+      },
+      {
+        "name": "B.WA-APPSEC-011.evidence_ref_sha.wa-application-security-checklist-claims.json",
+        "ok": true,
+        "detail": "got=a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993"
+      },
+      {
+        "name": "B.WA-APPSEC-011.outcome_bounded",
+        "ok": true,
+        "detail": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED"
+      },
+      {
+        "name": "B.WA-APPSEC-011.boundaries",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.remaining_hold.SOURCE_BYTES_NOT_REREAD",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.remaining_hold.NO_RECONCILIATION_RECEIPT",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.remaining_hold.DECISION_STILL_PROPOSED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.remaining_hold.MAPPING_AND_POLICY_UNCHANGED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-011.derivation_disclosed",
+        "ok": true,
+        "detail": "Derived verbatim-in-substance from the committed primary-review interpretation f"
+      },
+      {
+        "name": "B.WA-APPSEC-017.parsed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.record_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.suffix",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.predecessor_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.fields_present",
+        "ok": true,
+        "detail": "[]"
+      },
+      {
+        "name": "B.WA-APPSEC-017.doc_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.statement",
+        "ok": true,
+        "detail": "record='Use role-based grants across GitHub and connected business systems.' doc='Use role-based grants across GitHub and connected business systems.'"
+      },
+      {
+        "name": "B.WA-APPSEC-017.line_span",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.statement_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.mapping_status",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.accepted_policy",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.hold_text_matches_residuals",
+        "ok": true,
+        "detail": "record='WA-APPSEC-017: connected business systems narrows other business systems'"
+      },
+      {
+        "name": "B.WA-APPSEC-017.hold_field_index",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.primary_review_entry",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.residual_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.interpretation_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.source_span_sha_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.decision_id_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.disposition_status",
+        "ok": true,
+        "detail": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+      },
+      {
+        "name": "B.WA-APPSEC-017.disposition_distinction",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.disposition_rationale",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.decision_exists",
+        "ok": true,
+        "detail": "reconciliation-decision:5ee4ab6eff6b2c0bd7ed0e0369e7d17889922a9257cb8032ca5fa1cfc3cb34c9"
+      },
+      {
+        "name": "B.WA-APPSEC-017.decision_disposition",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.decision_controls",
+        "ok": true,
+        "detail": "got=[('GES-GOV-003', 1), ('GES-OPS-053', 1)] want=[('GES-GOV-003', 1), ('GES-OPS-053', 1)]"
+      },
+      {
+        "name": "B.WA-APPSEC-017.decision_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.evidence_ref_sha.residuals.json",
+        "ok": true,
+        "detail": "got=cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124"
+      },
+      {
+        "name": "B.WA-APPSEC-017.evidence_ref_sha.primary-review.json",
+        "ok": true,
+        "detail": "got=8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1"
+      },
+      {
+        "name": "B.WA-APPSEC-017.evidence_ref_sha.draft-dispositions.json",
+        "ok": true,
+        "detail": "got=7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52"
+      },
+      {
+        "name": "B.WA-APPSEC-017.evidence_ref_sha.proposed-decisions.json",
+        "ok": true,
+        "detail": "got=1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db"
+      },
+      {
+        "name": "B.WA-APPSEC-017.evidence_ref_sha.wa-application-security-checklist-claims.json",
+        "ok": true,
+        "detail": "got=a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993"
+      },
+      {
+        "name": "B.WA-APPSEC-017.outcome_bounded",
+        "ok": true,
+        "detail": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED"
+      },
+      {
+        "name": "B.WA-APPSEC-017.boundaries",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.remaining_hold.SOURCE_BYTES_NOT_REREAD",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.remaining_hold.NO_RECONCILIATION_RECEIPT",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.remaining_hold.DECISION_STILL_PROPOSED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.remaining_hold.MAPPING_AND_POLICY_UNCHANGED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-017.derivation_disclosed",
+        "ok": true,
+        "detail": "Derived verbatim-in-substance from the committed primary-review interpretation f"
+      },
+      {
+        "name": "B.WA-APPSEC-018.parsed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.record_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.suffix",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.predecessor_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.fields_present",
+        "ok": true,
+        "detail": "[]"
+      },
+      {
+        "name": "B.WA-APPSEC-018.doc_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.statement",
+        "ok": true,
+        "detail": "record='Investigate suspicious access-log activity across those systems.' doc='Investigate suspicious access-log activity across those systems.'"
+      },
+      {
+        "name": "B.WA-APPSEC-018.line_span",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.statement_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.mapping_status",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.accepted_policy",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.hold_text_matches_residuals",
+        "ok": true,
+        "detail": "record='WA-APPSEC-018: investigation does not establish recurring audit'"
+      },
+      {
+        "name": "B.WA-APPSEC-018.hold_field_index",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.primary_review_entry",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.residual_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.interpretation_quote",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.source_span_sha_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.decision_id_vs_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.disposition_status",
+        "ok": true,
+        "detail": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+      },
+      {
+        "name": "B.WA-APPSEC-018.disposition_distinction",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.disposition_rationale",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.decision_exists",
+        "ok": true,
+        "detail": "reconciliation-decision:67012a3ff508d16f8d0048002cdd305bd6f1a5fc29006d95de4db6ae128c5520"
+      },
+      {
+        "name": "B.WA-APPSEC-018.decision_disposition",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.decision_controls",
+        "ok": true,
+        "detail": "got=[('GES-GOV-008', 1), ('GES-OPS-054', 1)] want=[('GES-GOV-008', 1), ('GES-OPS-054', 1)]"
+      },
+      {
+        "name": "B.WA-APPSEC-018.decision_review",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.evidence_ref_sha.residuals.json",
+        "ok": true,
+        "detail": "got=cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124"
+      },
+      {
+        "name": "B.WA-APPSEC-018.evidence_ref_sha.primary-review.json",
+        "ok": true,
+        "detail": "got=8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1"
+      },
+      {
+        "name": "B.WA-APPSEC-018.evidence_ref_sha.draft-dispositions.json",
+        "ok": true,
+        "detail": "got=7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52"
+      },
+      {
+        "name": "B.WA-APPSEC-018.evidence_ref_sha.proposed-decisions.json",
+        "ok": true,
+        "detail": "got=1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db"
+      },
+      {
+        "name": "B.WA-APPSEC-018.evidence_ref_sha.wa-application-security-checklist-claims.json",
+        "ok": true,
+        "detail": "got=a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993"
+      },
+      {
+        "name": "B.WA-APPSEC-018.outcome_bounded",
+        "ok": true,
+        "detail": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED"
+      },
+      {
+        "name": "B.WA-APPSEC-018.boundaries",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.remaining_hold.SOURCE_BYTES_NOT_REREAD",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.remaining_hold.NO_RECONCILIATION_RECEIPT",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.remaining_hold.DECISION_STILL_PROPOSED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.remaining_hold.MAPPING_AND_POLICY_UNCHANGED",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.WA-APPSEC-018.derivation_disclosed",
+        "ok": true,
+        "detail": "Derived verbatim-in-substance from the committed primary-review interpretation f"
+      },
+      {
+        "name": "claimsdoc.policy_adoption_none",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "claimsdoc.rights_unresolved",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "claimsdoc.omission_audit_false",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "claimsdoc.rotation_authority_conflict_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.readme_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "B.readme_cites_residuals",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.primary_review_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.review_queue_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.review_queue_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.parsed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.record_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.suffix",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.predecessor_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.fields_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.outcome_hold",
+        "ok": true,
+        "detail": "REMAINING_HOLD"
+      },
+      {
+        "name": "C.GES-OPS-008-objective.no_approvals",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.status_staged",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.predecessor_row",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.predecessor_kind_null",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.predecessor_status",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.predecessor_output_range",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.predecessor_raw_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.predecessor_source_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.span_len",
+        "ok": true,
+        "detail": "len=170"
+      },
+      {
+        "name": "C.GES-OPS-008-objective.span_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.escape_count",
+        "ok": true,
+        "detail": "count=2"
+      },
+      {
+        "name": "C.GES-OPS-008-objective.decoded_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.raw_ne_source",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.pub_readme",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.validator_lines",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-objective.register_doc",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.parsed",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.record_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.suffix",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.predecessor_id",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.fields_present",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.outcome_hold",
+        "ok": true,
+        "detail": "REMAINING_HOLD"
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.no_approvals",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.status_staged",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.predecessor_row",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.predecessor_kind_null",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.predecessor_status",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.predecessor_output_range",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.predecessor_raw_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.predecessor_source_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.span_len",
+        "ok": true,
+        "detail": "len=170"
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.span_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.escape_count",
+        "ok": true,
+        "detail": "count=2"
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.decoded_sha",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.raw_ne_source",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.pub_readme",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.validator_lines",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.GES-OPS-008-implementation-acceptance-0.register_doc",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.accounting_replay",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity_9_of_9",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.README.md",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.accounting.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.manifest.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.output-triage.json.gz",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.policy.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.receipts.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.register.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.review-priorities.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "C.candidate_integrity.scope.json",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "coverage.B_exactly_five_records",
+        "ok": true,
+        "detail": "['evidence/wave-20261009-correction-01/source/WA-APPSEC-005-CORRECTION-01.json', 'evidence/wave-20261009-correction-01/source/WA-APPSEC-009-CORRECTION-01.json', 'evidence/wave-20261009-correction-01/source/WA-APPSEC-011-CORRECTION-01.json', 'evidence/wave-20261009-correction-01/source/WA-APPSEC-017-CORRECTION-01.json', 'evidence/wave-20261009-correction-01/source/WA-APPSEC-018-CORRECTION-01.json']"
+      },
+      {
+        "name": "coverage.C_exactly_two_records",
+        "ok": true,
+        "detail": "['evidence/wave-20261009-correction-01/publication/use-correction-ges-ops-008-implementation-acceptance-0-CORRECTION-01.json', 'evidence/wave-20261009-correction-01/publication/use-correction-ges-ops-008-objective-CORRECTION-01.json']"
+      },
+      {
+        "name": "coverage.B_selection_matches_freeze",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "coverage.C_selection_matches_freeze",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "name": "coverage.freeze_role_D_root",
+        "ok": true,
+        "detail": ""
+      }
+    ],
+    "failures": []
+  }
+}
