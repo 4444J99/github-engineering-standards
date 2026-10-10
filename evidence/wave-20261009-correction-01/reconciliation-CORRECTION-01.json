@@ -1,0 +1,102 @@
+{
+  "schema": "ges.correction-reconciliation.v1",
+  "stage": "A-reconcile",
+  "observed_at": "2026-10-10T06:03:56Z",
+  "A_identity": {
+    "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+    "agent": "opencode",
+    "provider": "opencode/big-pickle",
+    "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+    "branch": "wave/correction-serialized-admission-20261009-a",
+    "head_before": "d8e0d6bfe7f15c47c9cbc1d5590d098a1ad0ef6e",
+    "lease": {
+      "lease_id": "8a0216832456477f854592dfa9fd8dcf",
+      "owner": "ges-correction-20261009",
+      "acquired_at": "2026-10-10T06:03:31Z",
+      "expires_at": "2026-10-10T06:33:31.472484+00:00",
+      "preceded_by": "released lease 2faae7b2c82c419ca3df40571ca5360d (held across stages B/C/D, pid 3518, explicit release after D stopped writing)"
+    },
+    "lane_revalidation": "HEAD d8e0d6b matched freeze base, tracked tree clean, remote head matched, at 2026-10-10T06:03:56Z"
+  },
+  "freeze_binding": {
+    "file": "evidence/wave-20261009-correction-01/serialized-admission-03/execution-freeze-20261010.json",
+    "sha256": "b1b8fd0f7389369f9a1cfd02513d07794239be0072ddfa7a1b2e4d9b4c1dd573",
+    "order_executed": ["B", "C", "D", "A-reconcile"],
+    "remaining": ["E", "A-integrate"]
+  },
+  "stages": [
+    {
+      "role": "B",
+      "session_id": "ses_edbc2fa97ffeVoEPHOghcPA455",
+      "identity_source": "env OPENCODE_SESSION_ID, recorded by the worker in its own root",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-b-20261009",
+      "branch": "review/wa-source-wave-20261009",
+      "head_before": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234",
+      "head_after": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+      "lease": "2faae7b2c82c419ca3df40571ca5360d (stage window 2026-10-10T05:15:43Z-05:24:09Z)",
+      "wall_clock": "8.6 minutes (reported)",
+      "files": "8 added, 651 insertions, 0 deletions, all under evidence/wave-20261009-correction-01/source/",
+      "output": "Five WA-APPSEC-*-CORRECTION-01 successor records plus identity.json, README.md, and identity-cancelled-ses_edbeebdceffe8CrNpIv5HJMXtW.json (bytes of the cancelled first attempt, session ses_edbeebdceffe8CrNpIv5HJMXtW, preserved)",
+      "outcome": "All five holds corrected at statement level with committed-evidence references; each record honestly retains remaining holds (source bytes not re-read in-checkout, no reconciliation receipt, decision PROPOSED, mapping/policy unchanged; plus per-claim: rotation authority / enforcement evidence / audit cadence not established). No byte-level or approval claim.",
+      "release_verified_by_A": "HEAD, clean tracked tree, remote match, additions-only diff"
+    },
+    {
+      "role": "C",
+      "session_id": "ses_edbb9e21fffe41Hfn52r71dsoS",
+      "identity_source": "env OPENCODE_SESSION_ID, recorded by the worker in its own root",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-c-20261009",
+      "branch": "codex/wave-publication-c-20261009",
+      "head_before": "a2b81ff848d0c4137f0df03baf09e9685473a016",
+      "head_after": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+      "lease": "2faae7b2c82c419ca3df40571ca5360d (refreshed, expiry 2026-10-10T05:55:52Z)",
+      "wall_clock": "not reported precisely; bounded by B release 2026-10-10T05:24:09Z and D spawn 2026-10-10T05:38:58Z (upper bound 14.8 minutes)",
+      "files": "5 added, 478 insertions, 0 deletions, all under evidence/wave-20261009-correction-01/publication/",
+      "output": "Two use-correction-*-CORRECTION-01 records, candidate-integrity.json, identity.json, README.md",
+      "outcome": "Both selected publication fields REMAIN ON HOLD. Byte forensics over committed controls/review_queue.json: each held span differs from committed source-span text by exactly the two JSON-mandated quote escapes; raw 170 B sha e429fb1a... vs decoded 168 B sha 5c22f1ab... matching committed microsoft/ghqr budgets.yaml span. Structural result: no candidate storing the sentence in JSON can satisfy the validator's raw-byte LICENSED_COPY identity (ges/publication_use.py lines 545-549); INDEPENDENT_PARAPHRASE and REFERENCES_ONLY excluded; ADAPTATION not asserted; candidate regeneration recorded as a false path. Release requires an authorized owner decision or policy/validator amendment. No clearance granted.",
+      "candidate_integrity": "9 of 9 ges-v0.2-merged-f628db26-20261008 files MATCH planning-freeze sha256 + byte counts; candidate unmodified",
+      "release_verified_by_A": "HEAD, clean tracked tree, remote match, additions-only diff"
+    },
+    {
+      "role": "D",
+      "session_id": "ses_edbadcab6ffeDVVMjqnv9QjY8R",
+      "identity_source": "env OPENCODE_SESSION_ID, recorded by the worker in its own root",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-d-20261009",
+      "branch": "wave/omission-d-20261009",
+      "head_before": "4768db8929420538e3b828467de9dbe314fd4b74",
+      "head_after": "4e137f69448ac10fe20002838941369b72d255b1",
+      "lease": "2faae7b2c82c419ca3df40571ca5360d (refreshed, expiry 2026-10-10T06:11:10Z)",
+      "wall_clock": "22 minutes (2026-10-10T05:38:58Z-06:01:16Z, reported)",
+      "files": "4 added, 2195 insertions, 0 deletions, all under evidence/wave-20261009-correction-01/omission/",
+      "output": "omission-review-CORRECTION-01.json, check-correction-01.py, identity.json, README.md",
+      "outcome": "Independent omission review of B and C outputs: 270 checks, 0 failures, no omission and no overclaim found; coverage exactly the five claims and two use fields selected by the planning freeze, no scope drift, correct -CORRECTION-01 suffixes; LICENSED_COPY structural finding and candidate integrity 9/9 independently re-derived from committed bytes; one presentational observation (B's control_references carry a collection label absent from the committed decision file; ids/revisions correct). NOT_VERIFIED recorded: source-byte re-reads, semantic/rights approval, publication clearance, reconciliation receipt, heavy suite.",
+      "inputs_read": "B checkout @ c034c82 and C checkout @ a29214d (both HEAD- and clean-verified before reading), conductor @ d8e0d6b read-only; committed states only, no network, no sibling writes",
+      "release_verified_by_A": "HEAD, clean tracked tree, remote match, additions-only diff"
+    },
+    {
+      "role": "A-reconcile",
+      "session_id": "ses_edcbc89dcffe1pHZoV5eWgrR33",
+      "status": "this record; commit follows"
+    }
+  ],
+  "reconciliation": {
+    "coverage": "Exactly 5 claim corrections + 2 publication-field records, matching assignment.json selected counts; independently verified by D (scope-coverage matrix).",
+    "verification_chain": "Each stage released only after A re-verified head, clean tracked tree, remote match, and additions-only diff. B's records were then content-verified by D (270 checks). C's candidate integrity was re-derived independently by D (9/9). No stage's report is accepted beyond what its committed files and A's own checks support.",
+    "claim_dispositions": "WA-APPSEC-005/009/011/017/018: corrected at statement level; residual holds retained per record (byte re-read, receipt, PROPOSED decision, mapping/policy unchanged, plus per-claim authority/enforcement/cadence gaps).",
+    "field_dispositions": "GES-OPS-008-objective and GES-OPS-008-implementation-acceptance-0: REMAIN ON HOLD pending owner decision or validator/policy amendment (structural LICENSED_COPY conflict).",
+    "precedents": "Predecessor records, historical packets, and the f628db26 candidate remain byte-identical (additions-only commits at every stage; candidate hashes re-verified 9/9)."
+  },
+  "admission_state": {
+    "execution_leases": "Single wave lease 2faae7b2 held serially across B/C/D (acquired 05:16:00Z, refreshed 05:41:10Z), explicitly released after D stopped; current A-reconcile lease 8a021683 to 06:33:31Z. Tranche rule honored: no stage exceeded 30 minutes (B 8.6, C <=14.8 bounded, D 22).",
+    "host_vitals": "vitals_action shed at 06:02:51Z with swap_fraction 0.130; execution admission still allowed; heavy admission remains deferred to the final tranche and may deny (gate intact, never overridden).",
+    "broker": "Reservation closed (execution_priority_not_approved, owner-gated under 4444J99/limen#2840), recorded once in serialized-admission-03/broker-status-20261010.json; zero runs claimed; not bypassed.",
+    "storage": "New-checkout latch remained closed; only the ten pre-existing checkouts were used.",
+    "input_authentication": "Cache replay AUTHENTICATED (6/6 MATCH) at admission; committed inputs only in all stages; stale nested checkout never executed."
+  },
+  "accounting": {
+    "meter_policy": "File-derived stage spans recorded here are distinct from substrate telemetry; upper bounds are not actual usage; cumulative usage never reset; full meter reconciliation deferred to A-integrate.",
+    "stage_spans_file_derived_minutes": {"B": 8.6, "C": "14.8 upper bound", "D": 22, "A-reconcile": "in progress"},
+    "continuation": "Standing GES continuation #2821 reapplied by the owner; <=30-minute tranches with <=10 minutes verification per stage (all stages within budget)."
+  },
+  "status": "Staged",
+  "next": "Stage E (audit) reading this record at its committed head plus B/C/D heads read-only, then A-integrate."
+}
