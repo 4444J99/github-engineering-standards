@@ -1,0 +1,46 @@
+{
+  "schema": "ges.host-admission.v1",
+  "recorded_at": "2026-10-10T04:22:10Z",
+  "owner": "ges-correction-20261009",
+  "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+  "command": "python /Users/4jp/Workspace/limen/scripts/host-work-admission.py acquire --kind execution --owner ges-correction-20261009 --surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 --ttl-seconds 1800",
+  "execution_leases": [
+    {
+      "lease_id": "f9f61f30a15a4a38a1b184c7b1c37345",
+      "acquired_at": "2026-10-10T03:05:33Z",
+      "expires_at": "2026-10-10T03:35:33Z",
+      "allowed": true,
+      "note": "Admission-phase lease; lapsed at expiry and was reacquired, never treated as held after expiry."
+    },
+    {
+      "lease_id": "548706550eb948ca8b80fe39728579ba",
+      "acquired_at": "2026-10-10T04:03:08.664858+00:00",
+      "expires_at": "2026-10-10T04:33:08.664858+00:00",
+      "allowed": true,
+      "reasons": [],
+      "swap_fraction": 0.263,
+      "vitals": "ok"
+    },
+    {
+      "lease_id": "f83dbc8882d64770b603ca31322c84a6",
+      "acquired_at": "2026-10-10T04:19:34.170053+00:00",
+      "expires_at": "2026-10-10T04:49:34.170053+00:00",
+      "allowed": true,
+      "reasons": [],
+      "swap_fraction": 0.2635,
+      "vitals": "ok",
+      "pressure_observed_at": "2026-10-10T03:03:03.328057+00:00"
+    }
+  ],
+  "ttl_policy": "30-minute execution tranche leases, reacquired per stage before each writer starts.",
+  "heavy": {
+    "status": "NOT_ADMITTED_IN_THIS_ADMISSION_PHASE",
+    "deferred_to": "final verification tranche after stage E",
+    "prior_owner_records": [
+      "exit 3, swap-fraction and vitals-shed denial recorded by the prior A (serialized-admission-03 era)",
+      "exit 75, swap-fraction and disk-throughput denial recorded by the Limen recovery owner (4444J99/limen#2840 receipts)"
+    ],
+    "gate_intact": true,
+    "rule": "Heavy admission will be requested honestly at the final tranche; a denial is published as the outcome and never overridden or fabricated."
+  }
+}

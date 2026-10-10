@@ -1,0 +1,518 @@
+{
+  "schema": "ges.publication-candidate-independent-integrity-audit.v1",
+  "status": "INTEGRITY_AND_ACCOUNTING_AUDIT_PASSED_CLEARANCE_UNESTABLISHED",
+  "reviewer": "codex:/root/checkpoint_handoff",
+  "task_identity": "/root/checkpoint_handoff",
+  "delegating_task": "/root",
+  "packet_preparer_task": "/root/draft_directory_fix",
+  "audit_role": "Independent candidate-byte, binding, accounting-replay and detector-replay audit only.",
+  "audit_observation_at": "2026-10-08T08:06:48+00:00",
+  "audit_observation_timestamp_basis": "UTC clock observation immediately before the final committed-packet binding check; the completed audit result was then delivered to the parent task.",
+  "recorded_at": "2026-10-08T08:12:04.330299+00:00",
+  "packet_head": "ce76d14d44eee7f1348ab855641d51effb9c3027",
+  "packet_tree": "663fcd054841963ea46e0bacc1b0614f03f5db48",
+  "packet_directory": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008",
+  "packet_scope": {
+    "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/scope.json",
+    "sha256": "00ee1d3a89251204bdc0545cee079b7d2d2f251417e84f7e9c249f68fe807a70",
+    "size_bytes": 14292
+  },
+  "packet_files": [
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/README.md",
+      "sha256": "fffc3127fb1da3dd1eee30694b05be09c1f6891f1fba2f0288c264f2fe62b5e0",
+      "size_bytes": 13301
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/accounting.json",
+      "sha256": "a156e9a5d7051c22c5788e0cc573058b6c2eb516e3aa6b330734933ad2257309",
+      "size_bytes": 2770
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/manifest.json",
+      "sha256": "0a6b833676277f5a4b9967d6bd01a7d80b1db0bd314c0decfb87c79f48bb811e",
+      "size_bytes": 467187
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/output-triage.json.gz",
+      "sha256": "4e6d5c9a0fd893239c5101812f2584a57e6d651cdc9531182bcacf5da38f2881",
+      "size_bytes": 5657259
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/policy.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "size_bytes": 3
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/receipts.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "size_bytes": 3
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/register.json",
+      "sha256": "ab7b70ea59ac8bb05fc824a1afb6b409049f9fbda2bb11ecd8713f5823587cee",
+      "size_bytes": 593146
+    },
+    {
+      "path": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/review-priorities.json",
+      "sha256": "b6a24e7e12995438969f1f1de063a8857b1958697cb7a33211bda3dfd9401095",
+      "size_bytes": 402380
+    }
+  ],
+  "scope_digest": "46d215b0d34ba254dc2b480f4d90b89b97318fae6d02bd1fcee9511bb9c3dc19",
+  "candidate": {
+    "candidate_id": "ges-v0.2-merged-main-f628db26-20261008",
+    "candidate_revision": "f628db26cee1e6fc8fcc5ad5513959de0401d73d",
+    "candidate_tree": "51f2ae5030dddce8add625dbc709c48ac37ebbf2",
+    "release_scope": "GES_V0_2",
+    "distribution_scope": "Proposed complete GES v0.2 public source release at frozen merged main; review inputs do not authorize distribution.",
+    "regular_file_count": 2396,
+    "total_bytes": 129939371,
+    "output_inventory_digest": "87db152e1e263409e1b385e103c525b70e8b6a4c45292112634a4122aef06e25",
+    "inventory_comparison": "Every regular Git blob was read independently through git cat-file --batch. The auditor recomputed Git blob identity, SHA256 and size and compared the complete sorted path set with manifest and triage outputs.",
+    "git_modes_observed": [
+      "100644"
+    ],
+    "git_mode_counts": {
+      "100644": 2396
+    },
+    "symlinks_or_submodules_omitted": false,
+    "later_metadata_tooling_and_source_continuation_excluded": true
+  },
+  "reproduced_digests": {
+    "manifest_digest": "f3a200bad8d549f533ac27b9900e5ffc3d64a68b59aa4883751eb9e3f7dd97f5",
+    "register_digest": "e9d86272a81ec6a92158b30736aa2a5efda49eb1b10ad56a0dda481af04f8d13",
+    "output_inventory_digest": "87db152e1e263409e1b385e103c525b70e8b6a4c45292112634a4122aef06e25",
+    "stored_accounting_file_sha256": "a156e9a5d7051c22c5788e0cc573058b6c2eb516e3aa6b330734933ad2257309",
+    "accounting_cli_result_digest": "3f14c57fbcc8717d1aa726987c433385189f6b00c7c39a0fb244e29b97938ae8",
+    "accounting_digest_scope": "Complete parsed CLI result, including valid: true.",
+    "stored_triage_file_sha256": "4e6d5c9a0fd893239c5101812f2584a57e6d651cdc9531182bcacf5da38f2881",
+    "triage_report_digest": "bcf10ea9ba90a75ad50643fb6a3a69be7651dc9910a7a7585df27b497dd77e78",
+    "review_priorities_digest": "4570a95b384be3ed12e00207b7ac1dfd9059ca2375060b8ce8fdff4a207fad11",
+    "source_inventory_digest": "75217e40d8b6a4a9e89090b272079cb888c7417fe12123923d8d45ccc8f69c0e",
+    "pins_digest": "6f735e66edd9975c3fdb6d0b435e1ad8ade1f6aa8653a3da610c7cd78b37140a",
+    "source_inventory_reference_digest": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+    "policy_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "receipts_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "source_evidence_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "commands_and_results": [
+    {
+      "kind": "GIT_OBJECT_AUDIT",
+      "working_directory": "/workspace/scratch/47c1e6c7d8cb/ges-publication-triage",
+      "commands": [
+        [
+          "git",
+          "ls-tree",
+          "-rz",
+          "--full-tree",
+          "f628db26cee1e6fc8fcc5ad5513959de0401d73d"
+        ],
+        [
+          "git",
+          "cat-file",
+          "--batch"
+        ],
+        [
+          "git",
+          "rev-parse",
+          "f628db26cee1e6fc8fcc5ad5513959de0401d73d^{tree}"
+        ]
+      ],
+      "invocation_detail": "The Python audit sent each enumerated object ID to git cat-file --batch, read the exact response length, checked Git SHA1 over the blob header and content, and independently computed SHA256 and byte size. The full sorted results were compared with both stored output inventories.",
+      "audit_assertions_exit_code": 0,
+      "verified_regular_files": 2396,
+      "verified_blob_bytes": 129939371,
+      "missing_paths": [],
+      "extra_paths": [],
+      "identity_mismatches": []
+    },
+    {
+      "kind": "PUBLICATION_ACCOUNTING_REPLAY",
+      "working_directory": "/workspace/scratch/47c1e6c7d8cb/ges-publication-triage",
+      "command": [
+        "python",
+        "-m",
+        "ges.publication_use",
+        "--manifest",
+        "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/manifest.json",
+        "--register",
+        "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/register.json",
+        "--receipts",
+        "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/receipts.json",
+        "--policy",
+        "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/policy.json",
+        "--artifacts",
+        ".cache/publication/f628db26cee1e6fc8fcc5ad5513959de0401d73d/artifacts.jsonl",
+        "--output-root",
+        ".cache/publication/f628db26cee1e6fc8fcc5ad5513959de0401d73d/candidate",
+        "--source-root",
+        "/workspace/scratch/47c1e6c7d8cb/ges/.cache/sources"
+      ],
+      "exit_code": 1,
+      "result": "The complete parsed stdout result exactly equaled the frozen accounting.json object.",
+      "valid": true,
+      "output_count": 2396,
+      "unreviewed_output_count": 2396,
+      "complete_output_inventory": true,
+      "use_register_complete": null,
+      "exact_use_clearance": null,
+      "authorized_distribution_decision": null,
+      "zero_use_clearance": false,
+      "diagnostics": [
+        "No approved complete output/use inventory receipt; clearance unknown.",
+        "2396 output use classifications remain unreviewed; use denominator is uncertified."
+      ],
+      "audit_assertions_exit_code": 0
+    },
+    {
+      "kind": "FULL_TRIAGE_API_REPLAY",
+      "working_directory": "/workspace/scratch/47c1e6c7d8cb/ges-publication-triage",
+      "interpreter_command": [
+        "python",
+        "-"
+      ],
+      "actual_api_call": "triage(Path.cwd(), 'f628db26cee1e6fc8fcc5ad5513959de0401d73d', artifacts, pins, source_root=Path('/workspace/scratch/47c1e6c7d8cb/ges/.cache/sources'))",
+      "artifact_input": "evidence/claim-workload-inputs/artifacts.jsonl.gz",
+      "pins_input": "sources/sources.lock.json",
+      "inventory_reference": "evidence/a3-six-source-capsule-repair.json",
+      "inventory_reference_sha256": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+      "implementation_commit": "59052516d163cdaa7c137fa049bc877796b7a495",
+      "implementation_sha256": "944d73635a2e960df8d7aa8db49e6b5eb92cdaf838ef5a0ab5a711eeb466902e",
+      "result": "Recomputed report equaled the complete parsed frozen output-triage.json.gz object.",
+      "audit_assertions_exit_code": 0,
+      "elapsed_seconds": 33.684,
+      "complete_source_snapshots_revalidated": 6,
+      "detector_expression_candidates": 62591,
+      "detector_candidates_with_exact_match": 1491,
+      "new_review_or_clearance_credit": 0
+    },
+    {
+      "kind": "PRIORITY_AND_HISTORICAL_BINDING_AUDIT",
+      "interpreter_command": [
+        "python",
+        "-"
+      ],
+      "git_command": [
+        "git",
+        "show",
+        "f628db26cee1e6fc8fcc5ad5513959de0401d73d:controls/review_queue.json"
+      ],
+      "result": "All priority JSON pointers, output identities, candidate indices, matched fields and source identities matched the frozen triage and proposal queue. Every original scope file hash also matched.",
+      "audit_assertions_exit_code": 0,
+      "exact_match_priority_outputs": 7,
+      "proposal_records_and_match_lists": 593,
+      "proposals_with_detected_matches": 543,
+      "proposals_without_detected_matches": 50,
+      "matched_proposal_fields": 1477,
+      "unresolved_locator_output_pointers": 32,
+      "unresolved_locator_observations": 224,
+      "incomplete_format_records": 1,
+      "original_scope_bindings": 7
+    },
+    {
+      "kind": "FINAL_COMMITTED_PACKET_BINDING_AUDIT",
+      "interpreter_command": [
+        "python",
+        "-"
+      ],
+      "commands": [
+        [
+          "git",
+          "rev-parse",
+          "HEAD"
+        ],
+        [
+          "git",
+          "diff-tree",
+          "--no-commit-id",
+          "--name-status",
+          "-r",
+          "ce76d14d44eee7f1348ab855641d51effb9c3027"
+        ],
+        [
+          "git",
+          "status",
+          "--porcelain"
+        ]
+      ],
+      "invocation_detail": "For every packet, source-input, implementation and historical binding, git show REV:PATH supplied the independently compared committed bytes. SHA256 and size were checked, the packet file set was compared with scope.files plus scope.json, and all accounting and triage digest fields were cross-checked.",
+      "audit_assertions_exit_code": 0,
+      "new_packet_scope_bindings": 8,
+      "source_input_and_accounting_implementation_bindings": 8,
+      "separate_triage_implementation_bindings": 3,
+      "source_snapshot_observations_aligned": 6,
+      "historical_packet_files_preserved": 8,
+      "new_packet_commit_added_files": 9,
+      "packet_worktree_clean": true
+    }
+  ],
+  "source_input_bindings": [
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "evidence/claim-workload-inputs/artifacts.jsonl.gz",
+      "sha256": "9bf57e2bdf62d37026d5c06981c34e2c9db593e44bf03f39c7e441c9751358ac",
+      "size_bytes": 1440178
+    },
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "sources/sources.lock.json",
+      "sha256": "bd5d0d44f4990997d9de434d85225cf06a0c40ebc2797ceaf9c4c0367df37c2c",
+      "size_bytes": 3732
+    },
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "evidence/a3-six-source-capsule-repair.json",
+      "sha256": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+      "size_bytes": 8865
+    }
+  ],
+  "accounting_implementation_bindings": [
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "ges/publication_use.py",
+      "sha256": "104588ecd4ed8d28075e8f8206152eeae35a90d728bd9ea916303b30b11b2d32",
+      "size_bytes": 43657
+    },
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "ges/pinned_sources.py",
+      "sha256": "2750eb33de07ee6a212379b4e768d5b1f858d4daea21a9cae1ea904a01c555de",
+      "size_bytes": 3475
+    },
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "ges/source_fidelity.py",
+      "sha256": "9721b2881f7d2a3d5d6c72f297b2c1be9010d084ed16a3aa3fba0a191f98ee05",
+      "size_bytes": 19519
+    },
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "ges/core.py",
+      "sha256": "274ffcba6542cd305523c53f5f6289202e3b02dc8828019611be6af1dc7fb493",
+      "size_bytes": 7509
+    },
+    {
+      "identical_to_candidate_bytes": true,
+      "path": "ges/evidence_paths.py",
+      "sha256": "47305739d5caa88c2dbd92eb9a0a6ff71efa6d312c578087dd562c2bde2768c2",
+      "size_bytes": 1587
+    }
+  ],
+  "triage_implementation": {
+    "contained_in_candidate": false,
+    "files": [
+      {
+        "path": "ges/publication_triage.py",
+        "sha256": "944d73635a2e960df8d7aa8db49e6b5eb92cdaf838ef5a0ab5a711eeb466902e",
+        "size_bytes": 29573
+      },
+      {
+        "path": "tests/test_publication_triage.py",
+        "sha256": "2f93ff646396bfc9345fd258da6469b7c828db4e57bf86883c7e570531d02b28",
+        "size_bytes": 13008
+      },
+      {
+        "path": "docs/publication-triage.md",
+        "sha256": "b78b4efaefe3916965916cf3656c6e242c850a31552291ef45f54810b82c5f6f",
+        "size_bytes": 11530
+      }
+    ],
+    "local_commit": "59052516d163cdaa7c137fa049bc877796b7a495",
+    "parent_commit": "f628db26cee1e6fc8fcc5ad5513959de0401d73d"
+  },
+  "source_snapshot_observations": [
+    {
+      "artifact_count": 8,
+      "commit": "9aa52517830a0e10043116ff768af8fabeeb4347",
+      "retained_for_comparison": 8,
+      "snapshot_path": "atapas__model-repo.text.jsonl.gz",
+      "snapshot_sha256": "45eb96b0ce736794be29697daab3c4abf7577a3c4152c00ae6112986b20fab97",
+      "source": "atapas/model-repo",
+      "status": "COMPLETE_PINNED_TEXT_VALIDATED",
+      "text_artifact_count": 8
+    },
+    {
+      "artifact_count": 13219,
+      "commit": "56fcfa816f27bca239e5d39fff0d4f74f77ec995",
+      "retained_for_comparison": 3155,
+      "snapshot_path": "github__docs.text.jsonl.gz",
+      "snapshot_sha256": "1b4aa91587fc47b4913e0c2ebde604e0a7e4ecbfa48e5e07fb713f03acf1b690",
+      "source": "github/docs",
+      "status": "COMPLETE_PINNED_TEXT_VALIDATED",
+      "text_artifact_count": 11418
+    },
+    {
+      "artifact_count": 244,
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "retained_for_comparison": 217,
+      "snapshot_path": "github__github-well-architected.text.jsonl.gz",
+      "snapshot_sha256": "c6679e69703110192413f1553a8e9e87573c62d87e4d700e793d0b5155934de9",
+      "source": "github/github-well-architected",
+      "status": "COMPLETE_PINNED_TEXT_VALIDATED",
+      "text_artifact_count": 217
+    },
+    {
+      "artifact_count": 13,
+      "commit": "bf13cd2c7992876da01de065084e8af3e9c7db06",
+      "retained_for_comparison": 13,
+      "snapshot_path": "jlcanovas__gh-best-practices-template.text.jsonl.gz",
+      "snapshot_sha256": "bba428975c43d3703b41a4a73cfc2a91d845097da8761554e064658fde0bc99f",
+      "source": "jlcanovas/gh-best-practices-template",
+      "status": "COMPLETE_PINNED_TEXT_VALIDATED",
+      "text_artifact_count": 13
+    },
+    {
+      "artifact_count": 172,
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "retained_for_comparison": 171,
+      "snapshot_path": "microsoft__ghqr.text.jsonl.gz",
+      "snapshot_sha256": "69c11a2d76958e10357ed4fab57ccb8346d9555173de8add091ce47d234bcbaa",
+      "source": "microsoft/ghqr",
+      "status": "COMPLETE_PINNED_TEXT_VALIDATED",
+      "text_artifact_count": 171
+    },
+    {
+      "artifact_count": 1,
+      "commit": "801411757531a8880cb315148160fde3079d7227",
+      "retained_for_comparison": 1,
+      "snapshot_path": "tmcw__github-best-practices.text.jsonl.gz",
+      "snapshot_sha256": "e677d077ceb438380a1de91bfb89f5377f935c0f5bd02c4ca306d3f4489b0959",
+      "source": "tmcw/github-best-practices",
+      "status": "COMPLETE_PINNED_TEXT_VALIDATED",
+      "text_artifact_count": 1
+    }
+  ],
+  "source_input_limit": "Current preserved artifact metadata and authenticated exact-pin source snapshots do not reproduce the missing historical artifact-input bytes or the historical rendered-page body cache.",
+  "historical_packet_preservation": {
+    "candidate_revision": "db7517449f5c11750ca55dfeccc47167c10c3fb4",
+    "comparison_baseline_commit": "dc799dbb62b6bb698cae1390aed30fb0c32a4249",
+    "git_commands": [
+      [
+        "git",
+        "ls-tree",
+        "-rz",
+        "--full-tree",
+        "dc799db",
+        "--",
+        "evidence/publication-candidates/ges-v0.2-20261008"
+      ],
+      [
+        "git",
+        "ls-tree",
+        "-rz",
+        "--full-tree",
+        "f628db26cee1e6fc8fcc5ad5513959de0401d73d",
+        "--",
+        "evidence/publication-candidates/ges-v0.2-20261008"
+      ]
+    ],
+    "git_tree_entries_identical": true,
+    "all_eight_files_byte_identical": true,
+    "all_seven_original_scope_bindings_valid": true,
+    "files": [
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/README.md",
+        "sha256": "7ee71ce970ab3534bcf0c132ce3d31084eff1d112467b78f83a6447d3a2e4a75",
+        "size_bytes": 4035
+      },
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/accounting.json",
+        "sha256": "56eec885ab9182489d33b614255d8d9c2c6ec83d02b2e3ebb947156f012fca7d",
+        "size_bytes": 2547
+      },
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/manifest.json",
+        "sha256": "13f8a37b0d31759c305288cf80fc6cc101867b3396a6ee811fd1b89140310151",
+        "size_bytes": 463967
+      },
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/policy.json",
+        "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+        "size_bytes": 3
+      },
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/receipts.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "size_bytes": 3
+      },
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/recovery-status.json",
+        "sha256": "a4cd77bde43992e40a1cff988c89c70af1adeca6d9de63bb872263f7ec1094b3",
+        "size_bytes": 220650
+      },
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/register.json",
+        "sha256": "dbdee25bdc392246e769f2850bf9f1a5e4df037283a3c80b4536b168cb0d3c3d",
+        "size_bytes": 589008
+      },
+      {
+        "path": "evidence/publication-candidates/ges-v0.2-20261008/scope.json",
+        "sha256": "cc0655d6960a11cc496bb09bc0299b3e73c9d2ffd47ecac5ada67379b9bdeb0e",
+        "size_bytes": 3196
+      }
+    ],
+    "historical_readme_sha256": "7ee71ce970ab3534bcf0c132ce3d31084eff1d112467b78f83a6447d3a2e4a75",
+    "original_scope_sha256": "cc0655d6960a11cc496bb09bc0299b3e73c9d2ffd47ecac5ada67379b9bdeb0e"
+  },
+  "defects_found_in_audited_packet": [],
+  "boundary": {
+    "all_output_dispositions": "UNREVIEWED",
+    "registered_use_rows": 0,
+    "registered_source_evidence_rows": 0,
+    "authority_policy": {},
+    "approval_receipts": [],
+    "actual_use_denominator_certified": false,
+    "actual_use_classification_performed": false,
+    "license_or_authorship_judgment_performed": false,
+    "source_to_claim_omission_review_performed": false,
+    "human_review_or_approval_created": false,
+    "rights_clearance_granted": false,
+    "distribution_authorized": false,
+    "publication_performed": false,
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "accepted_control_credit": 0,
+    "gate_or_milestone_credit": 0,
+    "native_pilot_actions_performed": false,
+    "remote_mutations_performed": false,
+    "candidate_or_packet_files_modified_by_auditor": false,
+    "historical_missing_input_reproduced": false,
+    "historical_18019_rendered_page_body_count_reconfirmed": false,
+    "remaining_work": "Exact-use classification, component rights and notices, independent omission review, authorized policy, applicable human approvals and final distribution acceptance remain outstanding.",
+    "detector_limit": "Exact equality and structural categories are reproducible detector observations. Counts are not distinct actual uses, copying-direction determinations, originality findings, license grants or completed semantic review."
+  },
+  "audit_record_local_validation": {
+    "baseline_commit": "ce76d14d44eee7f1348ab855641d51effb9c3027",
+    "scope": "Isolated worktree at the frozen packet head plus this one new audit record; no existing tracked file changed.",
+    "commands": [
+      {
+        "command": "python -m unittest discover -s tests -v",
+        "exit_code": 0,
+        "tests": 667,
+        "elapsed_seconds": 15.237
+      },
+      {
+        "command": "python -m ges validate",
+        "exit_code": 0,
+        "valid": true,
+        "controls": 95
+      },
+      {
+        "command": "python -m ges compile",
+        "exit_code": 0,
+        "tracked_generated_changes": false
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      },
+      {
+        "command": "git diff --cached --check",
+        "exit_code": 0
+      }
+    ],
+    "boundary": "Validation of this local audit record does not establish merged-main, human-approval, organization-acceptance or publication-clearance status."
+  },
+  "record_finalized_at": "2026-10-08T08:12:49.298941+00:00"
+}

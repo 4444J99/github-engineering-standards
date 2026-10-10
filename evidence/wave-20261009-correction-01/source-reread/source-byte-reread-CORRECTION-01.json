@@ -1,0 +1,123 @@
+{
+  "schema": "ges.claim-source-byte-reread.v1",
+  "record_id": "source-byte-reread-CORRECTION-01",
+  "correction_wave": "wave-20261009-correction-01",
+  "observed_at": "2026-10-10T18:39:32Z",
+  "method": "Read the one matching UTF-8 content row from the retained authenticated gzip JSONL cache, verified the cache snapshot digest and the row's commit/path/size/full-content digest, then re-read the exact newline-terminated bytes at the five frozen line numbers. No upstream code or network request was executed.",
+  "cache_binding": {
+    "authentication_receipt": "evidence/wave-20261009-correction-01/serialized-admission-03/cache-authentication-20261010.json",
+    "snapshot_name": "github__github-well-architected.text.jsonl.gz",
+    "snapshot_sha256": "8f13d7adfc4b6d1a108acc7381936ec471ddbc7d932f4f9991c8012067ca4b27",
+    "authentication_status": "AUTHENTICATED",
+    "inventory_digest": "b5939b61905bd3b0d4f9a6c7449e382748a59af2c04f6ede214859cd7d3c73c4"
+  },
+  "source_binding": {
+    "source": "github/github-well-architected",
+    "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+    "path": "content/library/application-security/checklist.md",
+    "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+    "git_blob_sha": "defd8205c96f51216141ce047dc9f91971bd47a7",
+    "size_bytes": 13719,
+    "retrieval_status": "RETRIEVED"
+  },
+  "integration_binding": {
+    "A_before_worker_integration": "3d4c0bf7504e69719c8c5d8edc613cffb2c27052",
+    "A_after_worker_integration": "e8f3d5eb772bd8cba16a665d59ab3322c7d87d91",
+    "worker_heads": {
+      "B": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+      "C": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+      "D": "4e137f69448ac10fe20002838941369b72d255b1",
+      "E": "2dad9e426d75977d1e436679c0d20ecb036ad774"
+    },
+    "exclusive_root_tree_identity": "MATCH for B/C/D/E after additions-only cherry-picks"
+  },
+  "claim_rereads": [
+    {
+      "claim_id": "WA-APPSEC-005",
+      "line_number": 21,
+      "line_text": "  - Integrate code scanning into the CI/CD pipeline.",
+      "line_utf8_hex": "20202d20496e7465677261746520636f6465207363616e6e696e6720696e746f207468652043492f434420706970656c696e652e0a",
+      "line_sha256": "da108340b8291055f57d3be12de0d558f70621da85746a515f626f54fd10e157",
+      "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-005-CORRECTION-01.json",
+      "successor_statement": "Include code scanning in delivery pipelines.",
+      "successor_statement_sha256": "7d6628789d802f2385eaf15b397a1b9fb273e28a5d505304af170bf0c53ba6c9",
+      "fidelity_result": "MATCH_WITH_RETAINED_QUALIFICATIONS",
+      "fidelity_basis": "The successor preserves code scanning and pipeline integration and removes the predecessor's unsupported static-analysis restriction. Delivery pipelines generalizes CI/CD without narrowing the source obligation.",
+      "clears_only": "SOURCE_BYTES_NOT_REREAD_HERE"
+    },
+    {
+      "claim_id": "WA-APPSEC-009",
+      "line_number": 27,
+      "line_text": "  - Regularly rotate secrets and credentials.",
+      "line_utf8_hex": "20202d20526567756c61726c7920726f74617465207365637265747320616e642063726564656e7469616c732e0a",
+      "line_sha256": "0da434591e4bbebd962ec37251f38f82747d7bdb8f7ef75963c8c0d281b745e5",
+      "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-009-CORRECTION-01.json",
+      "successor_statement": "Regularly rotate secrets and credentials regardless of confirmed exposure.",
+      "successor_statement_sha256": "0986746c211fe38edfe184f07d998fe35cde3962d67e1682f37f9bf08e8a78e6",
+      "fidelity_result": "MATCH_WITH_RETAINED_QUALIFICATIONS",
+      "fidelity_basis": "The successor restores regular actual rotation and both source object classes. The source states recurring rotation without an exposure precondition; the successor makes that lack of precondition explicit. Rotation authority remains unresolved.",
+      "clears_only": "SOURCE_BYTES_NOT_REREAD_HERE"
+    },
+    {
+      "claim_id": "WA-APPSEC-011",
+      "line_number": 31,
+      "line_text": "  - Ensure policies are accessible to all team members.",
+      "line_utf8_hex": "20202d20456e7375726520706f6c6963696573206172652061636365737369626c6520746f20616c6c207465616d206d656d626572732e0a",
+      "line_sha256": "cc3f6e884088f9452edfc2a3aa12f3280a5b7d841437990d218e0743a9cee18c",
+      "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-011-CORRECTION-01.json",
+      "successor_statement": "Make security guidance available to all team members; availability is distinct from having been trained.",
+      "successor_statement_sha256": "8dc5b65158d269316501a32a90e1e7f35b9abed8623182f0b0c9533432f17599",
+      "fidelity_result": "MATCH_WITH_RETAINED_QUALIFICATIONS",
+      "fidelity_basis": "The successor restores the source's all-team audience. Its training distinction is an explicit review qualification and is not treated as additional source expression or proof of training.",
+      "clears_only": "SOURCE_BYTES_NOT_REREAD_HERE"
+    },
+    {
+      "claim_id": "WA-APPSEC-017",
+      "line_number": 41,
+      "line_text": "  - Use role-based access control (RBAC) to limit access to GitHub and other business systems.",
+      "line_utf8_hex": "20202d2055736520726f6c652d62617365642061636365737320636f6e74726f6c2028524241432920746f206c696d69742061636365737320746f2047697448756220616e64206f7468657220627573696e6573732073797374656d732e0a",
+      "line_sha256": "6ae6873ed802458a5589f5fd1191a9f2cfb3695a1f717f2d4764e38639bf6b1f",
+      "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-017-CORRECTION-01.json",
+      "successor_statement": "Use role-based access control to limit access across GitHub and other business systems; explicit role assignments alone do not prove role-based enforcement.",
+      "successor_statement_sha256": "77a85f6548e30ae3fc1ab3fdc045eb14f673a77d084d9a895abb2e92ebf50f16",
+      "fidelity_result": "MATCH_WITH_RETAINED_QUALIFICATIONS",
+      "fidelity_basis": "The successor restores role-based access control across GitHub and other business systems. Its enforcement caveat preserves the evidence boundary and does not weaken the source obligation; enforcement remains unproven.",
+      "clears_only": "SOURCE_BYTES_NOT_REREAD_HERE"
+    },
+    {
+      "claim_id": "WA-APPSEC-018",
+      "line_number": 42,
+      "line_text": "  - Regularly audit access logs for suspicious activity for GitHub and other business systems.",
+      "line_utf8_hex": "20202d20526567756c61726c7920617564697420616363657373206c6f677320666f7220737573706963696f757320616374697669747920666f722047697448756220616e64206f7468657220627573696e6573732073797374656d732e0a",
+      "line_sha256": "9c5ebb52178ab4104e287ff4c1b981ffceb5e2e168b762b3c350143012823741",
+      "successor_record": "evidence/wave-20261009-correction-01/source/WA-APPSEC-018-CORRECTION-01.json",
+      "successor_statement": "Regularly audit access logs for suspicious activity across GitHub and other business systems.",
+      "successor_statement_sha256": "909669ca037f8621600bb77e0a8980a6173b107b3f9707cdb48a29bb51af4240",
+      "fidelity_result": "MATCH_WITH_RETAINED_QUALIFICATIONS",
+      "fidelity_basis": "The successor preserves recurring audit, suspicious-activity scope, and both system classes. The source does not establish a numeric cadence, so cadence remains unresolved.",
+      "clears_only": "SOURCE_BYTES_NOT_REREAD_HERE"
+    }
+  ],
+  "remaining_holds_preserved": [
+    "NO_RECONCILIATION_RECEIPT",
+    "DECISION_STILL_PROPOSED",
+    "MAPPING_AND_POLICY_UNCHANGED",
+    "ROTATION_AUTHORITY_UNRESOLVED for WA-APPSEC-009",
+    "ENFORCEMENT_NOT_EVIDENCED for WA-APPSEC-017",
+    "SCOPE_CADENCE_NOT_FULLY_DETERMINED for WA-APPSEC-018",
+    "PUBLICATION_HOLD for both GES-OPS-008 fields",
+    "WHOLE_FILE_CLEARANCE_UNREVIEWED for all 2396 candidate outputs",
+    "HUMAN_AND_ORGANIZATION_ACCEPTANCE_UNMET",
+    "HEAVY_AND_MERGED_MAIN_VERIFICATION_UNRUN"
+  ],
+  "boundaries": {
+    "delivery_status": "Staged",
+    "reconciliation_receipt_created": false,
+    "policy_or_mapping_changed": false,
+    "rights_or_publication_clearance_granted": false,
+    "human_approval_granted": false,
+    "heavy_verification_run": false,
+    "predecessor_records_modified": false
+  },
+  "status": "SOURCE_BYTES_REREAD_MATCH_CORRECTION_SCOPE"
+}

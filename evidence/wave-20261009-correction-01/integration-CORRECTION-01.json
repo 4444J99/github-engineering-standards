@@ -1,0 +1,79 @@
+{
+  "schema": "ges.correction-integration.v1",
+  "stage": "A-integrate",
+  "observed_at": "2026-10-10T06:20:30Z",
+  "A_identity": {
+    "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+    "agent": "opencode",
+    "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+    "branch": "wave/correction-serialized-admission-20261009-a",
+    "head_before": "21e9719",
+    "execution_lease": {
+      "lease_id": "d1425ef310184a63a18f6e86a6647045",
+      "owner": "ges-correction-20261009",
+      "acquired_at": "2026-10-10T06:20:0xZ",
+      "expires_at": "2026-10-10T06:49:54.694725+00:00",
+      "preceded_by": "explicit release of E's lease fb2e8ffd19aa43b5894eaad67c21d636 (pid 3518) after E stopped writing; release returned allowed:true"
+    }
+  },
+  "wave_execution_summary": {
+    "order_executed": ["B", "C", "D", "A-reconcile", "E", "A-integrate"],
+    "serialization": "One writer at a time; each stage revalidated head/payload/live-writers before first write, committed and pushed only its own branch, stopped, and was release-verified by A (head, clean tracked tree, remote match, additions-only diff) before the next stage started.",
+    "stages": {
+      "B": {"session": "ses_edbc2fa97ffeVoEPHOghcPA455", "branch": "review/wa-source-wave-20261009", "head": "2ad83ba..c034c82", "files": "8 added / 651 insertions", "wall": "8.6 min", "result": "Five WA-APPSEC-*-CORRECTION-01 statement-level corrections with retained residual holds; cancelled first attempt (ses_edbeebdceffe8CrNpIv5HJMXtW) identity preserved byte-identically."},
+      "C": {"session": "ses_edbb9e21fffe41Hfn52r71dsoS", "branch": "codex/wave-publication-c-20261009", "head": "a2b81ff..a29214d", "files": "5 added / 478 insertions", "wall": "<=14.8 min (bounded by B release 05:24:09Z and D spawn 05:38:58Z)", "result": "Both publication fields REMAIN ON HOLD with structural LICENSED_COPY byte-identity conflict; candidate integrity 9/9 MATCH; no clearance granted."},
+      "D": {"session": "ses_edbadcab6ffeDVVMjqnv9QjY8R", "branch": "wave/omission-d-20261009", "head": "4768db8..4e137f6", "files": "4 added / 2195 insertions", "wall": "22 min", "result": "Independent omission review: 270 checks, 0 failures, coverage exactly 5 claims + 2 fields; NOT_VERIFIED items enumerated."},
+      "A-reconcile": {"session": "ses_edcbc89dcffe1pHZoV5eWgrR33", "branch": "wave/correction-serialized-admission-20261009-a", "head": "d8e0d6b..21e9719", "files": "1 added / 102 insertions", "wall": "~2 min", "result": "reconciliation-CORRECTION-01.json consolidating stages B/C/D (sha256 de3c95432914a7821936347cdf7bad59634ef3aee8fd863a697ca75a2f15728b)."},
+      "E": {"session": "ses_edb94c890ffeK7iqZc9PU59AgI", "branch": "review/wave-20261009-e", "head": "509f4a4..2dad9e4", "files": "4 added / 761 insertions", "wall": "10.9 min", "result": "Independent audit: 60 machine checks, overall PASS_WITH_FINDINGS; one FAIL (serialization.lease_record_consistency, record accuracy only); candidate re-hashed 9/9; no approval/clearance/merge granted."},
+      "A-integrate": {"session": "ses_edcbc89dcffe1pHZoV5eWgrR33", "result": "this record"}
+    }
+  },
+  "audit_finding_disposition": {
+    "finding": "E FAIL serialization.lease_record_consistency: C's identity.json records acquired_at 05:16:00.270654Z with expires_at 05:55:52.484409Z (implying an unrecorded refresh at ~05:25:52Z); C's preflight.completed_at 05:16:00Z predates B's release; the A-reconcile record omitted that refresh.",
+    "acknowledged": true,
+    "conclusion": "Record-accuracy defect only; no evidence of concurrent writers (D's independent exclusivity checks and E's additions-only re-derivation both pass; lease owner constant across stages).",
+    "amendment": "Full lease timeline, supplementing (not overwriting) reconciliation-CORRECTION-01.json: acquire 05:16:00.270654Z (B) -> refresh to 05:55:52.484409Z (~05:25:52Z, C; implied, previously unrecorded) -> refresh at 05:41:10.696960Z to 06:11:10.696960Z (D) -> explicit release by A ~06:03Z after D stopped (allowed:true) -> A-reconcile lease 8a0216832456477f854592dfa9fd8dcf acquired 06:03:31Z (not present at E's status read 06:09:34Z; A had stopped writing at ~06:05Z) -> E lease fb2e8ffd19aa43b5894eaad67c21d636 acquired 06:06:26Z -> explicit release by A ~06:20Z after E stopped (allowed:true) -> A-integrate lease d1425ef310184a63a18f6e86a6647045 to 06:49:54Z. Worker identity files remain as committed evidence; nothing was edited retroactively.",
+    "residual": "C's preflight timestamp inaccuracy stays on the record as found; correction recorded here only."
+  },
+  "final_heavy_tranche": {
+    "attempted_at": "2026-10-10T06:20Z",
+    "command": "host-work-admission.py acquire --kind heavy --owner ges-correction-20261009 --surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 --ttl-seconds 1800",
+    "result": "DENIED",
+    "reasons": ["vitals-shed"],
+    "pressure": {"vitals_action": "shed", "swap_fraction": 0.1282, "disk_mib_per_second_samples": [0.05, 0.0]},
+    "consequence": "The six GOVERNANCE verification commands were NOT run in this wave. The review gate remains unmet and the denial is published as the outcome; it was not overridden, retried around, or replaced by any lesser check presented as verification. Prior heavy denials (exit 3 swap-fraction/vitals-shed; exit 75 swap-fraction/disk-throughput) remain on record.",
+    "verification_claim": "none - no test suite result, verification, review approval, or main-merge state is claimed anywhere in this wave."
+  },
+  "gates_final_state": {
+    "storage": "Latch CLOSED throughout; zero new checkouts; only the ten pre-existing checkouts written (9 workers + conductor).",
+    "broker": "Reservation CLOSED (execution_priority_not_approved; owner deployment/policy gate under 4444J99/limen#2840); recorded once; zero runs claimed; not bypassed.",
+    "deadline": "Every stage within its 30-minute attempt deadline including verification.",
+    "review": "UNMET - heavy admission denied (vitals-shed); six-command verification not executed; gate intact.",
+    "publication": "HOLD retained - both selected fields remain on hold (structural LICENSED_COPY conflict); no publication clearance; f628db26 candidate and historical packets/envelopes byte-identical (re-verified 9/9 by C and independently by E).",
+    "merge": "No merge authority exercised; no approval fabricated.",
+    "status": "Staged"
+  },
+  "cumulative_accounting": {
+    "meters": "Substrate telemetry and file-derived elapsed bounds remain different measurements; upper bounds are not actual usage; cumulative usage is never reset.",
+    "file_derived_this_wave_stages_minutes": {"B": 8.6, "C": "<=14.8", "D": 22, "A-reconcile": "~2", "E": 10.9, "A-integrate": "in progress"},
+    "file_derived_admission_phase": "First execution lease 2026-10-10T03:05:33Z through freeze push before 04:38Z, plus post-restart custody re-check 05:14-05:15Z; a server-restart gap 04:39Z-05:14Z is downtime, not agent work.",
+    "substrate_telemetry": "Not extracted for this wave's sessions inside this stage; recorded as an accounting limitation, non-blocking under continuation #2821 (reapply by owner). Prior substrate lower bounds remain as recorded in serialized-admission-03/blocked-recovery.json.",
+    "remaining_allowance": "UNKNOWN - never derived as zero; cumulative totals supersede nothing.",
+    "prior_checkpoint": "evidence/wave-20261009/README.md"
+  },
+  "inputs_binding": {
+    "execution_freeze_sha256": "b1b8fd0f7389369f9a1cfd02513d07794239be0072ddfa7a1b2e4d9b4c1dd573",
+    "planning_freeze_sha256": "dc9854e6740a1c1c122f3d292a4f53b9a349e89f72fca568d430acf54f31a3a4 (unmodified)",
+    "reconciliation_sha256": "de3c95432914a7821936347cdf7bad59634ef3aee8fd863a697ca75a2f15728b",
+    "worker_heads": {"B": "c034c82d6e15b29e30711f3cb77b53d5a61e206c", "C": "a29214dc5ff55dd5df6176a80d1f4478789a9beb", "D": "4e137f69448ac10fe20002838941369b72d255b1", "E": "2dad9e426d75977d1e436679c0d20ecb036ad774"},
+    "cache_authentication": "AUTHENTICATED 6/6 at admission (serialized-admission-03/cache-authentication-20261010.json); stale nested checkout never executed."
+  },
+  "open_items_for_owner": [
+    "Two publication fields: owner decision or authorized policy/validator amendment needed (structural LICENSED_COPY conflict; no rights judgment may be fabricated).",
+    "Five claim corrections: residual holds retained (source-byte re-read, reconciliation receipt, decision PROPOSED, mapping/policy unchanged, per-claim authority/enforcement/cadence gaps).",
+    "Heavy verification tranche: re-attempt when host vitals allow; then the six GOVERNANCE commands; verification still requires merge to main + human approvals (out of this wave's authority).",
+    "Broker execution policy readback/install remains owner-gated under 4444J99/limen#2840.",
+    "Substrate telemetry extraction for this wave's sessions for full cumulative reconciliation."
+  ],
+  "status": "Staged"
+}
