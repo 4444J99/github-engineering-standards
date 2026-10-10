@@ -1,0 +1,88 @@
+{
+  "schema": "ges.claim-correction-record.v1",
+  "record_id": "WA-APPSEC-005-CORRECTION-01",
+  "correction_wave": "wave-20261009-correction-01",
+  "role": "B",
+  "created_by": "opencode session ses_edbc2fa97ffeVoEPHOghcPA455 (source: env OPENCODE_SESSION_ID)",
+  "predecessor_claim_id": "WA-APPSEC-005",
+  "predecessor_record": {
+    "path": "evidence/source-reviews/wa-application-security-checklist-claims.json",
+    "document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+    "field": "claims[claim_id=WA-APPSEC-005].statement",
+    "statement": "Include static security analysis in delivery pipelines.",
+    "start_line": 21,
+    "end_line": 21,
+    "statement_sha256": "337bee4c8c0dba0284c60a9a8d1213ab1419821c2ef0db6a0cc13c8c54cac7a9",
+    "source_span_sha256": "9bea9f3c7d7e67a1a562949eb22905d8a2b38705fc952c3a5534b3317a4e9558",
+    "mapping_status": "UNMAPPED_REQUIRES_OBJECTIVE_AND_BINDING_REVIEW",
+    "accepted_policy": false,
+    "mutation": "NONE - predecessor record left byte-identical; this record only adds a successor."
+  },
+  "hold_corrected": {
+    "hold_kind": "SOURCE_FIDELITY_STATEMENT_NARROWING",
+    "hold_statement": "WA-APPSEC-005: static restriction absent from original source",
+    "hold_statement_field": "evidence/wave-20261009/source/residuals.json -> source_fidelity_repairs_required[0]",
+    "residual": "original claim must not narrow code scanning to static analysis",
+    "residual_field": "evidence/wave-20261009/source/primary-review.json -> claim_id=WA-APPSEC-005.residual",
+    "reviewed_interpretation": "Pipeline integration is covered by the canonical delivery-workflow objective. The original claim introduces static analysis although the source says code scanning without that restriction; correct or explicitly qualify that narrowing before treating source consolidation as resolved.",
+    "reviewed_interpretation_field": "evidence/wave-20261009/source/primary-review.json -> claim_id=WA-APPSEC-005.interpretation"
+  },
+  "correction": {
+    "corrected_statement": "Include code scanning in delivery pipelines.",
+    "change_summary": "Removes the static-analysis-only restriction that the predecessor paraphrase added; the committed review records that the source says code scanning without that restriction.",
+    "derivation": "Derived verbatim-in-substance from the committed primary-review interpretation field cited above; the pinned source bytes were not re-read in this checkout.",
+    "qualification": "This is a statement-fidelity correction of the claim paraphrase. It is not a reconciliation receipt, a mapping decision, a source-byte re-verification, or policy adoption."
+  },
+  "evidence_references": [
+    {
+      "path": "evidence/wave-20261009/source/residuals.json",
+      "sha256": "cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124",
+      "field": "source_fidelity_repairs_required[0]"
+    },
+    {
+      "path": "evidence/wave-20261009/source/primary-review.json",
+      "sha256": "8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1",
+      "field": "claim_id=WA-APPSEC-005.interpretation, .residual, .decision_id, .source_span_sha256"
+    },
+    {
+      "path": "evidence/wave-20261009/source/draft-dispositions.json",
+      "sha256": "7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52",
+      "field": "claim_id=WA-APPSEC-005.details.distinction, .rationale, .status"
+    },
+    {
+      "path": "evidence/wave-20261009/source/proposed-decisions.json",
+      "sha256": "1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db",
+      "field": "id=reconciliation-decision:8cb13948af70fb61e028a787fc955712fa238042fb1e380059fb4536261b7bd0 .rationale, .review.status"
+    },
+    {
+      "path": "evidence/source-reviews/wa-application-security-checklist-claims.json",
+      "sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "field": "claims[claim_id=WA-APPSEC-005].statement, .start_line, .end_line, .mapping_status, .accepted_policy"
+    }
+  ],
+  "linked_decisions": {
+    "decision_id": "reconciliation-decision:8cb13948af70fb61e028a787fc955712fa238042fb1e380059fb4536261b7bd0",
+    "disposition": "SPECIALIZATION",
+    "control_references": [
+      {"collection": "CATALOG", "id": "GES-SEC-003", "revision": 1},
+      {"collection": "PROPOSAL", "id": "GES-OPS-041", "revision": 1}
+    ],
+    "review_status": "PROPOSED",
+    "reviewer": null
+  },
+  "outcome": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED",
+  "remaining_holds": [
+    "SOURCE_BYTES_NOT_REREAD_HERE: the corrected wording is derived from the committed primary-review interpretation, not from a fresh read of the pinned checklist bytes in this checkout; no network or cache read was performed.",
+    "NO_RECONCILIATION_RECEIPT: draft-dispositions.json status is PROPOSED_NOT_RECONCILIATION_RECEIPT; reconciler and independent reviewer identities, timestamps and authority-policy bindings are absent.",
+    "DECISION_STILL_PROPOSED: proposed-decisions.json review.status is PROPOSED with reviewer null; residuals.all_decisions_pending_D_A_E is true.",
+    "MAPPING_AND_POLICY_UNCHANGED: mapping_status stays UNMAPPED_REQUIRES_OBJECTIVE_AND_BINDING_REVIEW, accepted_policy stays false, claims-document policy_adoption is NONE, rights_clearance UNRESOLVED, independent_omission_audit false.",
+    "ACCOUNTING_OWNED_BY_A: correction-wave assignment.json accounting (new_raw_claim_records, new_repaired_logical_claims) is frozen at 0 and is updated only by the conductor at reconciliation."
+  ],
+  "boundaries": {
+    "delivery_status": "Staged",
+    "accepted_policy": false,
+    "human_approval": false,
+    "predecessor_modified": false,
+    "heavy_validation_run": false
+  }
+}
