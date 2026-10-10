@@ -1,0 +1,71 @@
+{
+  "schema": "ges.correction-execution-freeze.v1",
+  "observed_at": "2026-10-10T04:22:10Z",
+  "status": "FROZEN_READY_FOR_SERIALIZED_EXECUTION",
+  "delivery_status_retained": "Staged",
+  "freeze_relationship": {
+    "planning_freeze": "evidence/wave-20261009-correction-01/assignment.json (observed_at 2026-10-09T21:25:18Z, sha256 dc9854e6740a1c1c122f3d292a4f53b9a349e89f72fca568d430acf54f31a3a4) remains unmodified - this freeze does not overwrite it.",
+    "checkpoint_receipt": "serialized-admission-03/blocked-recovery.json (sha256 819b7c6eff6a098f99f93ed75abef34657f7601670633c6cee5eea8fc4f1b3ca) and its README (sha256 74e602c857a6865e57b206430a5c7a2fea5956d5e249bcaf3253fd3ca0bd0af3) remain unmodified; its input binding 02d6741 is preserved there.",
+    "prior_waves": "evidence/wave-20261009/**, publication candidate f628db26cee1e6fc8fcc5ad5513959de0401d73d, and historical packets/envelopes stay byte-identical."
+  },
+  "admission": {
+    "authorization": {"file": "authorization-20261010.json", "state": "owner transfer + continuation #2821 reapplied + measurement policy recorded"},
+    "custody": {"file": "custody-transfer-20261010.json", "state": "TRANSFERRED_REVALIDATED - all nine workers at their recorded transfer heads, conductor at e3ba18e; tracked trees clean; zero git locks; zero live writers; ignored payload manifests recorded per checkout"},
+    "inputs": {"file": "cache-authentication-20261010.json", "state": "AUTHENTICATED, gate OPEN - reference hash plus all six snapshot sha256 values, inventory digests, artifact counts, and full snapshot verification MATCH against evidence/wave-20261009/cache-validation.json; the stale nested checkout was only read, never executed"},
+    "host": {"file": "host-admission-20261010.json", "state": "execution admitted (lease f83dbc8882d64770b603ca31322c84a6 to 2026-10-10T04:49:34Z, reacquired per stage); heavy deferred to final tranche, gate intact"},
+    "broker": {"file": "broker-status-20261010.json", "state": "identity registered and inspected; run reservation CLOSED (execution_priority_not_approved, owner-gated under 4444J99/limen#2840); recorded once; not bypassed; zero runs claimed"}
+  },
+  "identities": {
+    "A_conductor": {
+      "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+      "agent": "opencode",
+      "provider": "opencode/big-pickle",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+      "branch": "wave/correction-serialized-admission-20261009-a",
+      "predecessor_not_reused": "codex coordinator of the planning freeze (coordinator field codex:/root in assignment.json); its checkout custody ended and is not claimed as released - new custody was established by this wave's authorization"
+    },
+    "worker_binding_rule": "Each worker, at spawn and before its first write, records its own runtime-reported identity (session id and agent label) in identity.json inside its exclusive write root. The coordinator never asserts another session's identity, and assignment.json worker_identities is not rewritten.",
+    "roles": [
+      {"role": "B", "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-b-20261009", "branch": "review/wa-source-wave-20261009", "expected_head": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234", "exclusive_write_root": "evidence/wave-20261009-correction-01/source", "claim_ids": ["WA-APPSEC-005", "WA-APPSEC-009", "WA-APPSEC-011", "WA-APPSEC-017", "WA-APPSEC-018"], "successor_record_suffix": "-CORRECTION-01", "identity_state": "to be captured by the worker at spawn"},
+      {"role": "C", "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-c-20261009", "branch": "codex/wave-publication-c-20261009", "expected_head": "a2b81ff848d0c4137f0df03baf09e9685473a016", "exclusive_write_root": "evidence/wave-20261009-correction-01/publication", "use_ids": ["GES-OPS-008-objective", "GES-OPS-008-implementation-acceptance-0"], "identity_state": "to be captured by the worker at spawn"},
+      {"role": "D", "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-d-20261009", "branch": "wave/omission-d-20261009", "expected_head": "4768db8929420538e3b828467de9dbe314fd4b74", "exclusive_write_root": "evidence/wave-20261009-correction-01/omission", "identity_state": "to be captured by the worker at spawn"},
+      {"role": "A-reconcile", "checkout": "conductor (same as A_conductor)", "head_at_freeze": "e3ba18e3598a8af1d8dd184fa64dbcb90b0adf76", "exclusive": "shared correction-01 reconciliation and admission files outside the four role roots", "identity_state": "A identity recorded in this freeze"},
+      {"role": "E", "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-e-20261009", "branch": "review/wave-20261009-e", "expected_head": "509f4a4f3268d1d91c97d898f1c90e48a6946a52", "exclusive_write_root": "evidence/wave-20261009-correction-01/audit", "identity_state": "to be captured by the worker at spawn", "alternates": "ges-wave-e02, e02v2, e03, e03v2, eghqr are retained at their recorded heads as read-only alternates; no stage writes them unless the owner redirects."},
+      {"role": "A-integrate", "checkout": "conductor (same as A_conductor)", "exclusive": "shared correction-01 integration and release files outside the four role roots", "identity_state": "A identity recorded in this freeze"}
+    ],
+    "order": ["B", "C", "D", "A-reconcile", "E", "A-integrate"],
+    "serialization_contract": "One active writer at a time. Per stage: revalidate head, payload inventory, and absence of live writers before the first write (hold on any conflict); refresh host execution admission under owner ges-correction-20261009; record worker identity; work at most 30 minutes including at most 10 minutes of verification; commit and push only that stage's own branch; stop writing; report release. The coordinator verifies head, clean tracked tree, and remote match before the next stage starts."
+  },
+  "inputs_frozen": {
+    "execution_input_commit": "e3ba18e3598a8af1d8dd184fa64dbcb90b0adf76",
+    "execution_input_tree": "cb84b0e1ea5deae2b1b894079fd2b6e5a4438fa8",
+    "revalidated_at": "2026-10-10 (admission phase)",
+    "checkpoint_03_binding_preserved": "02d6741... remains the recorded input binding of blocked-recovery.json and is not rewritten here",
+    "planning_freeze_bindings": "assignment.json's 26 bound inputs (publication candidate files, source reviews, prior wave evidence, sources.lock.json) remain byte-identical; publication_revision f628db26cee1e6fc8fcc5ad5513959de0401d73d preserved",
+    "committed_inputs_only": "Workers read committed inputs in their own checkout. No network fetches for evidence. No new checkouts: the storage gate (14.7 GiB available below the 50 GiB new-worktree threshold) keeps new-checkout creation latched closed; only the ten pre-existing checkouts are written.",
+    "stale_cache_rule": "The stale nested checkout and its .cache/sources are read-only inputs to hash-based authentication only; no process executes from it."
+  },
+  "budgets_accounting": {
+    "continuation": "Standing GES continuation (github/4444J99#2821) reapplied by the owner to this correction outcome; supersedes the 120-minute stop; tranches at most 30 minutes including at most 10 minutes of verification; cumulative accounting preserved and never reset.",
+    "meters": [
+      {"meter": "substrate_telemetry", "classification": "recorded lower bound", "values": "Main-wave workers: B 956701 ms / 3 turns, C 210675 ms / 1, D 726377 ms / 4, E 679690 ms / 6; A-recovery 117.56 s at checkpoint 03", "provenance": "serialized-admission-03/blocked-recovery.json"},
+      {"meter": "file_derived_turn_spans", "classification": "upper bound - task_started to task_complete deltas in native rollout records; includes in-turn idle; not substrate telemetry", "values": "Correction-wave A-lineage candidates approximately 133-283 minutes depending on session subset; method sanity check: session 01a12291 delta 210.7 s exactly matches substrate 210675 ms", "provenance": "admission-phase investigation of native rollout records"},
+      {"meter": "owner_side_candidates", "classification": "mixed-outcome, non-exhaustive native active duration", "values": "76.9666 minutes candidate total across 18 completed turns, two inherited duplicates, one unfinished turn", "provenance": "Limen recovery owner receipts (4444J99/limen#2840)"},
+      {"meter": "wall_elapsed_spans", "classification": "wall clock elapsed, not active time", "values": "Main-wave A sessions 01a12216 about 417.73 min, 01a1225c about 70.08 min", "provenance": "rollout file timestamps"}
+    ],
+    "distinction_rule": "Substrate telemetry and file-derived elapsed bounds remain different measurements; an upper bound above 120 minutes does not prove actual usage exceeded 120 minutes.",
+    "remaining_allowance": "UNKNOWN - never derived as zero and never derived as 43.0334 minutes; the owner-side receipt states remaining GES allowance is unknown.",
+    "missing_cloud_telemetry": "Accounting limitation (Codex app-server telemetry and broker per-agent usage unavailable); under the continuation authorization it does not independently block progress.",
+    "this_session": "ses_edcbc89dcffe1pHZoV5eWgrR33 usage accumulates live and is not yet totaled; to be reconciled in the integration stage.",
+    "unrelated_work": "Excluded from this outcome's usage unless the owner explicitly classifies it."
+  },
+  "gates_retained": {
+    "storage": "New-checkout latch CLOSED; only existing checkouts written.",
+    "broker": "Reservation gate CLOSED for this wave (execution_priority_not_approved; owner deployment and policy install gated on 4444J99/limen#2840); not bypassed; recorded once in broker-status-20261010.json; no run or capacity claimed.",
+    "deadline": "Each stage: attempt deadline = stage start + 30 minutes; publish a checkpoint and stop at exhaustion; at most one corrective retry, only after relevant inputs change.",
+    "review": "GOVERNANCE six-command verification runs at the final heavy tranche; heavy host admission may deny (prior exits 3 and 75); denial is published, never overridden or fabricated.",
+    "publication": "LICENSED_COPY requires byte-identical published bytes; f628db26 candidate and historical packets/envelopes stay byte-identical; retain HOLD where evidence does not support release; no publication clearance is granted by this freeze.",
+    "merge": "No merge authority; the pull request stays draft with no claimed approval.",
+    "changes": "No public CLI or schema changes, no native rollout, no fabricated approvals, no claimed historical release, approval, or verification beyond evidence; no reset, stash, delete, or history rewrite."
+  }
+}
