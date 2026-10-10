@@ -317,3 +317,46 @@ directories under explicitly synthetic identities. They exercise validation and
 are not project approval receipts. Native behavior, source synthesis, legacy
 whole-corpus rights accounting, estate rollout and organization acceptance remain
 separate evidence boundaries.
+
+## Version 2: explicit JSON string representation
+
+The owner approved the narrow engineering amendment on 2026-10-10; see
+`evidence/v02-finish-20261010/owner-authorization.json` and the preserved proposal
+`publication-json-representation-amendment-v2-proposed.md`. This authorizes the
+validator change, not expression rights or distribution.
+
+The versioned structural contract is
+[`schemas/publication-use.v2.json`](../schemas/publication-use.v2.json); v1 is unchanged.
+
+Opt in with `ges.publication-use-register.v2`. Every use adds `representation`:
+either exactly `{"mode":"RAW"}`, or `JSON_STRING` with exactly `json_pointer`,
+`token_start_byte`, `token_end_byte`, and `decoded_expression_sha256` in addition
+to `mode`. JSON_STRING is supported only for copied/adapted expression. Output
+bounds must be the complete encoded interior of the selected JSON string token;
+token bounds include its delimiters. Both use existing UTF-8 byte offsets.
+
+The complete output must be valid UTF-8 JSON (<=50 MB; nesting <=200), with no
+duplicate decoded keys, non-JSON constants, unpaired surrogates or trailing data.
+The RFC 6901 pointer must select that exact string token, not another equal-valued
+string. Valid strings nested in arrays ARE supported. The proposal's final test
+paragraph accidentally grouped these with reject cases; its explicit array-index
+interface and the actual acceptance-array field govern. Invalid/noncanonical or
+out-of-range array pointers fail.
+
+Raw source/output hashes and candidate hashes remain mandatory. JSON_STRING
+separately hashes decoded UTF-8 and compares it to exact source expression bytes,
+without normalization. LICENSED_COPY requires decoded equality; substantive change
+cannot pass that classification. RAW and all v1 records keep byte equality.
+
+V2 requires correspondingly versioned authority policy, receipt and attestation
+schemas (`ges.publication-use-authority-policy.v2`, `ges.publication-use-receipt.v2`,
+`ges.publication-use-attestation.v2`). Their field sets and rights/independence/time
+requirements are unchanged; exact register digest and full use are still bound.
+V1 approval envelopes are not accepted for a v2 register. The output manifest
+remains v1. Draft preparation remains v1 unless deliberately migrated for review.
+
+V2 accounting is `ges.publication-use-accounting.v2` and adds
+`representation_comparisons`: one per non-reference use, containing `use_id`,
+`mode`, `raw_equal`, `decoded_equal` (null for RAW). The existing independent
+expression-rights, complete inventory, human and distribution gates all remain.
+Neither equality result is a rights decision.
