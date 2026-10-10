@@ -20,6 +20,7 @@ import sys
 
 from .core import ROOT, digest, dump, load, now
 from .evidence_paths import canonical_path
+from .json_representation import decoded_json_expression
 from .pinned_sources import (DEFAULT_SOURCE_INVENTORY_REFERENCE, DEFAULT_SOURCE_INVENTORY_SHA256,
                              inventory_digest as source_inventory_digest)
 from .published_assurance import _evidence, _require, _strings, _time
@@ -250,11 +251,11 @@ def _source_content(records: list[dict], needed: set[str], index: dict,
     return content, bound
 
 
-def _policy(policy: dict, subject: dict, earliest, current) -> tuple[object, object]:
+def _policy(policy: dict, subject: dict, earliest, current, version='v1') -> tuple[object, object]:
     _object(policy, {'schema', 'approval_reference', 'subject', 'issued_at', 'valid_until',
                      'authorized_inventory_reviewers', *ROLES.values()},
             'Missing explicit publication-use authority policy')
-    _require(policy['schema'] == 'ges.publication-use-authority-policy.v1' and
+    _require(policy['schema'] == 'ges.publication-use-authority-policy.' + version and
              _text(policy['approval_reference']), 'Missing external authority approval reference')
     _require(policy['subject'] == subject, 'Approved publication scope or input digests changed')
     for role in {'authorized_inventory_reviewers', *ROLES.values()}:
@@ -266,12 +267,12 @@ def _policy(policy: dict, subject: dict, earliest, current) -> tuple[object, obj
 
 def _receipt(receipt: dict, scope: dict, policy: dict, uses: dict,
              earliest, current, policy_expiry, evidence_root: Path,
-             references: dict, zero: bool) -> tuple[str | None, bool]:
+             references: dict, zero: bool, version='v1') -> tuple[str | None, bool]:
     inventory = receipt.get('kind') == 'OUTPUT_INVENTORY'
     fields = {'schema', 'kind', 'subject', 'valid_until', 'obligations', 'evidence', *ROLES}
     fields |= {'disposition'} if inventory else {'use_id', 'attribution_disposition', 'attribution_rationale'}
     _object(receipt, fields, 'Malformed publication-use receipt')
-    _require(receipt['schema'] == 'ges.publication-use-receipt.v1' and
+    _require(receipt['schema'] == 'ges.publication-use-receipt.' + version and
              receipt['kind'] in {'OUTPUT_INVENTORY', 'EXPRESSION_USE'}, 'Unsupported publication receipt')
     _require(receipt['subject'] == scope, 'Publication receipt scope changed')
     _require(_strings(receipt['obligations']), 'Missing explicit use obligations')
@@ -322,7 +323,7 @@ def _receipt(receipt: dict, scope: dict, policy: dict, uses: dict,
         doc = _evidence(evidence_root, reference)
         _object(doc, {'schema', 'kind', 'identity', 'subject', 'reviewed_at', 'decision',
                       'assurances', 'unresolved', 'rationale'}, 'Malformed publication-use attestation')
-        _require(doc['schema'] == 'ges.publication-use-attestation.v1' and doc['kind'] == kind and
+        _require(doc['schema'] == 'ges.publication-use-attestation.' + version and doc['kind'] == kind and
                  doc['identity'] == receipt[field] and doc['subject'] == subject,
                  'Wrong publication attestation identity or exact scope')
         _require(doc['decision'] == 'APPROVED_FOR_SPECIFIED_USE' and
@@ -348,7 +349,8 @@ def validate_accounting_result(result: dict) -> dict:
     Consumers must call publication_accounting on actual inputs; this function
     does not turn a supplied sidecar report into trustworthy release evidence.
     """
-    _require(isinstance(result, dict) and result.get('schema') == 'ges.publication-use-accounting.v1',
+    _require(isinstance(result, dict) and result.get('schema') in
+             {'ges.publication-use-accounting.v1', 'ges.publication-use-accounting.v2'},
              'Malformed publication-use accounting result')
     for key in ('completed', 'denominator', 'output_count', 'copied_or_adapted_count',
                 'reference_only_count', 'independent_paraphrase_count', 'validated_expression_count',
@@ -356,6 +358,22 @@ def validate_accounting_result(result: dict) -> dict:
         _require(type(result.get(key)) is int and result[key] >= 0, 'Invalid publication count: ' + key)
     _require(result['denominator'] == result['copied_or_adapted_count'] + result['reference_only_count'] +
              result['independent_paraphrase_count'], 'Publication use denominator disagrees with kinds')
+    if result['schema'] == 'ges.publication-use-accounting.v2':
+        comparisons = result.get('representation_comparisons')
+        _require(isinstance(comparisons, list) and
+                 len(comparisons) == result['denominator'] - result['reference_only_count'],
+                 'Invalid representation comparison denominator')
+        seen_comparisons = set()
+        for comparison in comparisons:
+            _object(comparison, {'use_id', 'mode', 'raw_equal', 'decoded_equal'},
+                    'Malformed representation comparison')
+            _require(_text(comparison['use_id']) and comparison['use_id'] not in seen_comparisons and
+                     comparison['mode'] in {'RAW', 'JSON_STRING'} and
+                     type(comparison['raw_equal']) is bool and
+                     (comparison['decoded_equal'] is None if comparison['mode'] == 'RAW'
+                      else type(comparison['decoded_equal']) is bool),
+                     'Invalid or duplicate representation comparison')
+            seen_comparisons.add(comparison['use_id'])
     identities = result.get('validated_use_ids')
     _require(isinstance(identities, list) and all(_text(v) for v in identities) and
              len(set(identities)) == len(identities) == result['completed'] <= result['denominator'],
@@ -483,7 +501,7 @@ def publication_accounting(manifest: dict | None, register: dict | None,
              'Candidate output changed during read')
     _object(register, {'schema', 'candidate_id', 'manifest_digest', 'prepared_at',
                        'outputs', 'uses', 'source_evidence'}, 'Malformed publication-use register')
-    _require(register['schema'] == 'ges.publication-use-register.v1' and
+    _require(register['schema'] in {'ges.publication-use-register.v1', 'ges.publication-use-register.v2'} and
              register['candidate_id'] == manifest['candidate_id'] and
              register['manifest_digest'] == digest(manifest), 'Register refers to a different candidate')
     registered = _time(register['prepared_at'])
@@ -500,9 +518,24 @@ def publication_accounting(manifest: dict | None, register: dict | None,
     _require(isinstance(register['uses'], list) and isinstance(register['outputs'], list),
              'Register uses/output dispositions must be arrays')
     uses, needed, spans = {}, set(), {}
+    representation_v2 = register['schema'] == 'ges.publication-use-register.v2'
+    version = 'v2' if representation_v2 else 'v1'
+    if representation_v2:
+        result['schema'] = 'ges.publication-use-accounting.v2'
     for use in register['uses']:
-        _object(use, {'use_id', 'kind', 'source', 'source_range', 'output_path',
-                      'output_range', 'attributions', 'rationale'}, 'Malformed actual-use row')
+        use_fields = {'use_id', 'kind', 'source', 'source_range', 'output_path',
+                      'output_range', 'attributions', 'rationale'}
+        _object(use, use_fields | ({'representation'} if representation_v2 else set()),
+                'Malformed actual-use row')
+        if representation_v2:
+            representation = use['representation']
+            _require(isinstance(representation, dict) and
+                     representation.get('mode') in {'RAW', 'JSON_STRING'}, 'Invalid expression representation')
+            if representation['mode'] == 'RAW':
+                _object(representation, {'mode'}, 'Unexpected raw representation fields')
+            else:
+                _require(use['kind'] in EXPRESSION_KINDS,
+                         'JSON representation requires copied or adapted expression')
         uid = use['use_id']
         _require(_text(uid) and uid not in uses and isinstance(use['kind'], str) and
                  use['kind'] in KINDS and _text(use['rationale']), 'Duplicate or invalid actual-use identity')
@@ -537,16 +570,33 @@ def publication_accounting(manifest: dict | None, register: dict | None,
         uses[uid] = use
         needed.add(aid)
     source_bytes, source_files = _source_content(register['source_evidence'], needed, index, source_root)
+    comparisons = []
     for use in uses.values():
         if use['kind'] == 'REFERENCES_ONLY':
             _require(use['source_range'] is None, 'Reference-only rows must not claim copied source expression')
         else:
             _span(use['source_range'], source_bytes[use['source']['artifact_id']], 'Source')
+            source_span, output_span = use['source_range'], use['output_range']
+            source_expression = source_bytes[use['source']['artifact_id']][source_span['start_byte']:source_span['end_byte']]
+            output_expression = output_bytes[use['output_path']][output_span['start_byte']:output_span['end_byte']]
+            raw_equal = source_expression == output_expression
+            mode = use['representation']['mode'] if representation_v2 else 'RAW'
+            decoded_equal = None
+            if mode == 'JSON_STRING':
+                decoded = decoded_json_expression(output_bytes[use['output_path']],
+                                                  use['representation'], output_span)
+                # Strict UTF-8; no normalization or substantive expression repair.
+                source_expression.decode('utf-8')
+                decoded_equal = decoded == source_expression
             if use['kind'] == 'LICENSED_COPY':
-                source_span, output_span = use['source_range'], use['output_range']
-                _require(source_bytes[use['source']['artifact_id']][source_span['start_byte']:source_span['end_byte']] ==
-                         output_bytes[use['output_path']][output_span['start_byte']:output_span['end_byte']],
-                         'LICENSED_COPY spans are not identical source/output bytes; review the actual use kind')
+                _require(decoded_equal if mode == 'JSON_STRING' else raw_equal,
+                         ('LICENSED_COPY decoded expression differs from source' if mode == 'JSON_STRING' else
+                          'LICENSED_COPY spans are not identical source/output bytes; review the actual use kind'))
+            if representation_v2:
+                comparisons.append({'use_id': use['use_id'], 'mode': mode,
+                                    'raw_equal': raw_equal, 'decoded_equal': decoded_equal})
+    if representation_v2:
+        result['representation_comparisons'] = comparisons
     dispositions = set()
     unreviewed = 0
     assigned = set()
@@ -578,18 +628,18 @@ def publication_accounting(manifest: dict | None, register: dict | None,
     result['release_scope'] = manifest['release_scope']
     if not receipts:
         if policy:
-            _policy(policy, subject, registered, current)
+            _policy(policy, subject, registered, current, version)
         result['diagnostics'] = ['No approved complete output/use inventory receipt; clearance unknown.']
     else:
         earliest = max([registered, *(_time(index[aid]['retrieved_at']) for aid in needed)])
-        issued, policy_expiry = _policy(policy, subject, earliest, current)
+        issued, policy_expiry = _policy(policy, subject, earliest, current, version)
         seen, references, inventory_seen = set(), {}, False
         for receipt in receipts:
             _require(isinstance(receipt, dict), 'Publication receipt must be an object')
             _require(receipt.get('kind') != 'OUTPUT_INVENTORY' or unreviewed == 0,
                      'Unreviewed output dispositions cannot receive inventory clearance')
             uid, inventory = _receipt(receipt, subject, policy, uses, issued, current,
-                                      policy_expiry, evidence_root, references, not bool(uses))
+                                      policy_expiry, evidence_root, references, not bool(uses), version)
             if inventory:
                 _require(not inventory_seen, 'Duplicate output inventory receipt')
                 inventory_seen = True
