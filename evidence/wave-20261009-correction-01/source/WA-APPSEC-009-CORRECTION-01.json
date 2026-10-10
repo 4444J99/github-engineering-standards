@@ -1,0 +1,88 @@
+{
+  "schema": "ges.claim-correction-record.v1",
+  "record_id": "WA-APPSEC-009-CORRECTION-01",
+  "correction_wave": "wave-20261009-correction-01",
+  "role": "B",
+  "created_by": "opencode session ses_edbc2fa97ffeVoEPHOghcPA455 (source: env OPENCODE_SESSION_ID)",
+  "predecessor_claim_id": "WA-APPSEC-009",
+  "predecessor_record": {
+    "path": "evidence/source-reviews/wa-application-security-checklist-claims.json",
+    "document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+    "field": "claims[claim_id=WA-APPSEC-009].statement",
+    "statement": "Maintain a reviewed credential-rotation practice.",
+    "start_line": 27,
+    "end_line": 27,
+    "statement_sha256": "84c546700442a8450623b37bb5c63157378018c3ad76c0e310f5aa5c94dfcd08",
+    "source_span_sha256": "4505e3a71446ee2ee135d96a1ed1a359b9a2c539b7cde299fce1ff4a806dcc75",
+    "mapping_status": "UNMAPPED_REQUIRES_OBJECTIVE_AND_BINDING_REVIEW",
+    "accepted_policy": false,
+    "mutation": "NONE - predecessor record left byte-identical; this record only adds a successor."
+  },
+  "hold_corrected": {
+    "hold_kind": "SOURCE_FIDELITY_STATEMENT_WEAKENING",
+    "hold_statement": "WA-APPSEC-009: reviewed practice does not establish regular actual rotation",
+    "hold_statement_field": "evidence/wave-20261009/source/residuals.json -> source_fidelity_repairs_required[1]",
+    "residual": "proactive recurring rotation differs from reactive exposed-credential revocation",
+    "residual_field": "evidence/wave-20261009/source/primary-review.json -> claim_id=WA-APPSEC-009.residual",
+    "reviewed_interpretation": "The source calls for regular rotation of secrets and credentials regardless of confirmed exposure. The original claim only maintains a reviewed rotation practice; actual recurring rotation and both object classes must be restored.",
+    "reviewed_interpretation_field": "evidence/wave-20261009/source/primary-review.json -> claim_id=WA-APPSEC-009.interpretation"
+  },
+  "correction": {
+    "corrected_statement": "Regularly rotate secrets and credentials regardless of confirmed exposure.",
+    "change_summary": "Restores (a) actual recurring rotation instead of a reviewed practice, (b) both object classes (secrets and credentials), and (c) the proactive trigger independent of confirmed exposure.",
+    "derivation": "Derived verbatim-in-substance from the committed primary-review interpretation field cited above; the pinned source bytes were not re-read in this checkout.",
+    "qualification": "This is a statement-fidelity correction of the claim paraphrase. It is not a reconciliation receipt, a mapping decision, a source-byte re-verification, or policy adoption; rotation cadence and any authority to execute it remain target-profile and authority dependent."
+  },
+  "evidence_references": [
+    {
+      "path": "evidence/wave-20261009/source/residuals.json",
+      "sha256": "cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124",
+      "field": "source_fidelity_repairs_required[1]"
+    },
+    {
+      "path": "evidence/wave-20261009/source/primary-review.json",
+      "sha256": "8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1",
+      "field": "claim_id=WA-APPSEC-009.interpretation, .residual, .decision_id, .source_span_sha256"
+    },
+    {
+      "path": "evidence/wave-20261009/source/draft-dispositions.json",
+      "sha256": "7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52",
+      "field": "claim_id=WA-APPSEC-009.details.distinction, .rationale, .status"
+    },
+    {
+      "path": "evidence/wave-20261009/source/proposed-decisions.json",
+      "sha256": "1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db",
+      "field": "id=reconciliation-decision:03c3a18e773a549ac79ddfaaa805b8c78e28ee9e42120d73f3d16e23260990fb .rationale, .review.status"
+    },
+    {
+      "path": "evidence/source-reviews/wa-application-security-checklist-claims.json",
+      "sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "field": "claims[claim_id=WA-APPSEC-009].statement, .start_line, .end_line, .mapping_status, .accepted_policy"
+    }
+  ],
+  "linked_decisions": {
+    "decision_id": "reconciliation-decision:03c3a18e773a549ac79ddfaaa805b8c78e28ee9e42120d73f3d16e23260990fb",
+    "disposition": "SPECIALIZATION",
+    "control_references": [
+      {"collection": "CATALOG", "id": "GES-SEC-004", "revision": 1},
+      {"collection": "PROPOSAL", "id": "GES-OPS-045", "revision": 1}
+    ],
+    "review_status": "PROPOSED",
+    "reviewer": null
+  },
+  "outcome": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED",
+  "remaining_holds": [
+    "SOURCE_BYTES_NOT_REREAD_HERE: the corrected wording is derived from the committed primary-review interpretation, not from a fresh read of the pinned checklist bytes in this checkout; no network or cache read was performed.",
+    "NO_RECONCILIATION_RECEIPT: draft-dispositions.json status is PROPOSED_NOT_RECONCILIATION_RECEIPT; reconciler and independent reviewer identities, timestamps and authority-policy bindings are absent.",
+    "DECISION_STILL_PROPOSED: proposed-decisions.json review.status is PROPOSED with reviewer null; residuals.all_decisions_pending_D_A_E is true.",
+    "MAPPING_AND_POLICY_UNCHANGED: mapping_status stays UNMAPPED_REQUIRES_OBJECTIVE_AND_BINDING_REVIEW, accepted_policy stays false, claims-document policy_adoption is NONE, rights_clearance UNRESOLVED, independent_omission_audit false.",
+    "ROTATION_AUTHORITY_UNRESOLVED: the claims document conflicts entry records that rotation requires applicable authority; this record does not grant it."
+  ],
+  "boundaries": {
+    "delivery_status": "Staged",
+    "accepted_policy": false,
+    "human_approval": false,
+    "predecessor_modified": false,
+    "heavy_validation_run": false
+  }
+}

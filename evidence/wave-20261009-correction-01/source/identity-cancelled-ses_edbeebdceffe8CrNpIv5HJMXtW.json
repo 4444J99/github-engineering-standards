@@ -1,0 +1,45 @@
+{
+  "schema": "ges.source-review-identity.v1",
+  "role": "B",
+  "role_description": "worker B (first writer) of serialized correction wave for PR #496",
+  "session_id": {
+    "value": "ses_edbeebdceffe8CrNpIv5HJMXtW",
+    "source_environment_variable": "OPENCODE_SESSION_ID",
+    "note": "Runtime-reported session id. The execution-freeze binding names surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 (the conductor's surface used for the lease command); the id actually exposed to this runtime is the one recorded here. Both are stated verbatim; neither is invented."
+  },
+  "agent": "opencode",
+  "agent_reported": {
+    "AI_AGENT": "opencode",
+    "OPENCODE": "1"
+  },
+  "provider": "opencode",
+  "model_id": "mimo-v2.6-flash-free",
+  "spawn_time_utc": "2026-10-10T04:38:22Z",
+  "checkout_path": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-b-20261009",
+  "branch": "review/wa-source-wave-20261009",
+  "starting_head": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234",
+  "preflight": {
+    "head_matches_expected": true,
+    "tracked_tree_clean": true,
+    "git_lock_files_found": 0,
+    "other_live_writers_found": false,
+    "remote_head_matches": true,
+    "remote_head": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234"
+  },
+  "lease": {
+    "lease_id": "28621f7a54e5442f9a976682153e382e",
+    "owner": "ges-correction-20261009",
+    "kind": "execution",
+    "acquired_at": "2026-10-10T04:26:31.097188+00:00",
+    "expires_at": "2026-10-10T05:12:04.846090+00:00",
+    "ttl_seconds": 1800
+  },
+  "claims": [
+    "WA-APPSEC-005",
+    "WA-APPSEC-009",
+    "WA-APPSEC-011",
+    "WA-APPSEC-017",
+    "WA-APPSEC-018"
+  ],
+  "exclusive_write_root": "evidence/wave-20261009-correction-01/source"
+}
