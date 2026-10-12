@@ -1,0 +1,59 @@
+{
+  "schema": "ges.recovery-integration-execution.v1",
+  "started_at": "2026-10-12T22:02:13.734675+00:00",
+  "completed_at": "2026-10-12T22:02:49.203436+00:00",
+  "elapsed_seconds": 32.00852,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-m",
+    "ges.recovery",
+    "--sources",
+    "/workspace/scratch/fa16634431e1/ges/.cache/recovery-integration-20261012/retained-cloud/fresh-pinned/sources",
+    "--corpus",
+    "/workspace/scratch/fa16634431e1/ges/.cache/recovery-integration-20261012/restored-corpus",
+    "--reviews",
+    "evidence/source-reviews",
+    "--review-policy",
+    "evidence/source-review-policy.json",
+    "--claim-reconciliation",
+    "/workspace/scratch/fa16634431e1/ges/.cache/recovery-integration-20261012/authorized-ledger/issued-reviewed.json",
+    "--claim-reconciliation-policy",
+    "/workspace/scratch/fa16634431e1/ges/evidence/v02-authorized-reconciliation-20261012/claim-reconciliation-policy.json",
+    "--output",
+    "/workspace/scratch/fa16634431e1/ges/.cache/recovery-integration-20261012/reviewed-recovery/recovery-current.json"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "deadline_seconds": 150,
+  "limits": {
+    "address_space_bytes": 3221225472,
+    "cpu_seconds": [
+      120,
+      125
+    ]
+  },
+  "base_revision": "a6a163ee29f81a3cf6371c931f2eef87364dce32",
+  "code_worktree_state": " M ges/recovery.py\n",
+  "executed_code_binding": "code/* entries in the input closure; includes the staged preflight change",
+  "driver_sha256": "1b37c54ee554c9cd502e631977f6176e1b978ee0cb6614069f3a0ee504d18b4c",
+  "driver_sha256_after": "1b37c54ee554c9cd502e631977f6176e1b978ee0cb6614069f3a0ee504d18b4c",
+  "driver_unchanged": true,
+  "input_closure_unchanged": true,
+  "input_files": 1654,
+  "input_closure_sha256": "3eafca353a3c3feba1f4d912601c743cdfb7e37d53748b43e155b430f75dfa41",
+  "stdout_sha256": "388c66284f9a0adacb91644120f3f75db009155b0692aeb619c1e6a793a509fa",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_acquisition_performed": false,
+  "receipts_reissued_or_modified": false,
+  "rendered_bodies_supplied": false,
+  "human_acceptance_claimed": false,
+  "recovery_report_sha256": "f17c84642f111cf8be0fe7577dd8977b69a5d8912ab62d32cd18052e6a211fa2",
+  "result": {
+    "known_claim_denominator": 61941,
+    "validated_count": 2174,
+    "unresolved_count": 59767,
+    "mapping_complete": false,
+    "claim_provenance_validated": true,
+    "receipts_digest": "9085ac042ae2b951aa582b390faf36e78380d8108199de1c4073e84557a17e8f"
+  }
+}

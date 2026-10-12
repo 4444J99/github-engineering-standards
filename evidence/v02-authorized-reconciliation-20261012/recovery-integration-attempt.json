@@ -1,0 +1,31 @@
+{
+  "schema": "ges.recovery-integration-attempt.v1",
+  "started_at": "2026-10-12T21:46:45.493266+00:00",
+  "completed_at": "2026-10-12T21:46:45.688929+00:00",
+  "actual_seconds": 0.19566260899955523,
+  "deadline_seconds": 30,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "ges.recovery",
+    "--sources",
+    "/workspace/scratch/9f3cdabec13b/ges/.cache/cloud-replay-20261012/fresh-pinned/sources",
+    "--corpus",
+    "/workspace/scratch/9f3cdabec13b/ges/.cache/cloud-replay-20261012/fresh-pinned",
+    "--reviews",
+    "evidence/source-reviews",
+    "--review-policy",
+    "evidence/source-review-policy.json",
+    "--claim-reconciliation",
+    ".cache/reconciliation-issued-20261012/issued-reviewed.json",
+    "--claim-reconciliation-policy",
+    "evidence/v02-authorized-reconciliation-20261012/claim-reconciliation-policy.json",
+    "--output",
+    "evidence/v02-authorized-reconciliation-20261012/recovery-current.json"
+  ],
+  "exit_code": 1,
+  "stderr_sha256": "58cd5db35afa4860c47734630bba5f43ca549e5274dfef7f7f916462c6c777da",
+  "recovery_report_produced": false,
+  "missing_retained_input": "Full frozen corpus candidates.jsonl; the fresh replay cache is source evidence, not the full frozen corpus.",
+  "full_recovery_integration_verified": false
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "ges.independent-recovery-software-review.v1",
+  "reviewer": "/root/audit_reconciliation",
+  "review_context": "ChatGPT cloud session fa16634431e1; actual delegated software reviewer",
+  "reviewed_at": "2026-10-12T22:04:26.818792+00:00",
+  "status": "PASS_WITHIN_REVIEWED_SOFTWARE_SCOPE",
+  "scope": "Recovery input preflight, focused regressions, and the bounded Linux recovery execution driver. This review grants no receipt issuance authority, human approval, or release acceptance.",
+  "reviewed_files_sha256": {
+    "ges/recovery.py": "047c05311c4eb823ca7201e8e735d29daa6913fb2777f3109b916a4d686dd515",
+    "tests/test_recovery_preflight.py": "c08f626373fa98024212552d2dd5721883dfbc36964ea0ab023172d4fbb8088b",
+    "evidence/v02-recovery-integration-20261012/run-recovery.py": "1b37c54ee554c9cd502e631977f6176e1b978ee0cb6614069f3a0ee504d18b4c",
+    "ges/evidence_paths.py": "47305739d5caa88c2dbd92eb9a0a6ff71efa6d312c578087dd562c2bde2768c2"
+  },
+  "resolved_findings": [
+    {
+      "id": "RECOVERY-PREFLIGHT-DARWIN-ALIASES",
+      "finding": "The initial preflight rejected every symlink ancestor, including the narrowly trusted Darwin operating-system directory aliases supported by the existing evidence-path contract.",
+      "resolution": "Preflight now uses ges.evidence_paths.canonical_path. Trusted platform aliases retain their exact-target and ownership checks; caller symlinks and changed targets remain rejected. The focused regression checks an accepted trusted alias and rejects caller aliases and an unexpected alias target.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "RECOVERY-DRIVER-REPORT-INVENTORIES",
+      "finding": "The initial execution closure omitted templates and profiles even though recovery reports their inventory counts.",
+      "resolution": "Both directories are included in the before/after closure, binding their file membership and bytes along with source, corpus, code, reviews, controls, policies and supporting evidence.",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "RECOVERY-DRIVER-SELF-BINDING",
+      "finding": "The initial driver recorded its own digest only after execution, so an in-flight file change could misidentify the executed driver bytes.",
+      "resolution": "The driver captures its digest before and after execution, records both digests and their equality, and returns nonzero if they differ.",
+      "status": "RESOLVED"
+    }
+  ],
+  "unresolved_findings": [],
+  "production_review_observations": [
+    "Optional argument-pair validation still precedes corpus access.",
+    "Preflight aggregates missing or invalid required metadata before expensive candidate and source accounting.",
+    "Metadata-only recovery does not acquire a new snapshot requirement, and legitimately empty candidate ledgers remain available for downstream validation.",
+    "When claim documents are supplied, preflight requires the snapshot set that source-fidelity accounting already consumes.",
+    "Availability checks supply no semantic or authorization credit. Existing content, provenance, identity, receipt, and milestone validation remains in place.",
+    "Executed code is bound by code/* entries in the input closure and the recorded code worktree state; the reported base revision is not treated as the complete executed source identity."
+  ],
+  "tests_actually_run_by_reviewer": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests -p test_recovery_preflight.py -v",
+      "working_directory": "/workspace/scratch/fa16634431e1/ges",
+      "exit_code": 0,
+      "tests_run": 7,
+      "failures": 0,
+      "errors": 0,
+      "reported_test_seconds": 0.011,
+      "environment": "Linux cloud; trusted Darwin alias behavior exercised through the existing policy simulation, not physical macOS execution"
+    }
+  ],
+  "full_test_suite_rerun_by_reviewer": false,
+  "full_recovery_rerun_by_reviewer": false,
+  "final_recovery_evidence_audit_delegated_separately": true,
+  "human_review_approval": false,
+  "release_acceptance": false,
+  "limits": [
+    "Review covers the exact listed source bytes. Later source changes require a bounded review update.",
+    "Before/after path and digest checks do not establish an atomic filesystem snapshot.",
+    "This software review does not certify semantic extraction, source omission completeness, rights, control adoption, native enforcement, or historical rendered-body preservation."
+  ]
+}

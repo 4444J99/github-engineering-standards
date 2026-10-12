@@ -115,10 +115,14 @@ acceptance and distribution approvals. An empty register or a summary claiming
 
 ## Current limits and validation boundary
 
-Structured-occurrence reconciliation, generalization, policy adoption, binding
-verification, native enforcement and estate evidence adapters remain unfinished.
-The milestone projection does not implement those adapters or invent evidence
-for them. Recovery consequently retains their unknown or incomplete conditions.
+Structured-occurrence reconciliation is implemented through paired recovery
+inputs and validates pinned occurrence identities, claim associations, evidence,
+authority, independent review and coverage. The adapter does not itself supply
+actual reconciliation receipts or close the structured-occurrence condition.
+Generalization, policy adoption, binding verification, native enforcement and
+estate evidence adapters remain unfinished. The milestone projection does not
+implement those adapters or invent evidence for them. Recovery consequently
+retains their unknown or incomplete conditions.
 
 Regression tests exercise inconsistent gate identities, altered conditions and
 counts, false closure claims, missing publication inputs, legacy-rights

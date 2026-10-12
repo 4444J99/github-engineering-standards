@@ -8,8 +8,50 @@ from pathlib import Path
 from .claim_reconciliation import reconciliation_accounting
 from .core import ROOT, digest, dump, load, now
 from .corpus import coverage_with_reviews
+from .evidence_paths import canonical_path
 from .milestones import evaluate_gate, milestone_accounting
 from .source_fidelity import source_fidelity_accounting
+
+
+RECOVERY_CORPUS_FILES = (
+    'artifacts.jsonl', 'candidates.jsonl', 'ledger-summary.json',
+    'structured-source-requirements.json', 'published-page-ledger.json',
+)
+
+
+def preflight_recovery_inputs(sources: Path, corpus: Path, pins: list[dict], *,
+                              require_snapshots: bool = False) -> None:
+    """Reject incomplete caches before loading the large review/candidate inputs.
+
+    This checks file availability only. Existing provenance, identity, receipt and
+    content validators still establish whether the supplied bytes are valid.
+    Empty candidate ledgers remain valid for corpora without candidate blocks.
+    """
+    required = [('corpus/' + name, corpus / name) for name in RECOVERY_CORPUS_FILES]
+    suffixes = ['inventory.json', 'tree-reconciliation.json']
+    if require_snapshots:
+        suffixes.append('text.jsonl.gz')
+    for pin in pins:
+        slug = pin['repository'].replace('/', '__')
+        required.extend(('sources/' + slug + '.' + suffix,
+                         sources / (slug + '.' + suffix)) for suffix in suffixes)
+    problems = []
+    for name, path in required:
+        try:
+            resolved = canonical_path(path, symlink_error=name + ' (symlink)')
+            if not resolved.is_file():
+                problems.append(name + ' (missing or not a regular file)')
+        except ValueError as exc:
+            problems.append(str(exc))
+        except OSError:
+            problems.append(name + ' (cannot inspect)')
+    if problems:
+        raise ValueError(
+            'Recovery input preflight failed: ' + '; '.join(problems) + '. '
+            'Recovery requires the complete corpus metadata and locked source '
+            'inputs; a source-only claim-provenance cache is insufficient. '
+            'Restore and authenticate the missing inputs before rerunning; '
+            'do not substitute empty ledgers.')
 
 
 def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy: Path | None=None,
@@ -50,9 +92,12 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
     if ((source_fidelity is not None or claim_reconciliation is not None) and
             reviews is None):
         raise ValueError('Semantic certification requires source reviews and review policy')
+    pins = load(ROOT/'sources/sources.lock.json')['sources']
+    preflight_recovery_inputs(
+        sources, corpus, pins,
+        require_snapshots=reviews is not None and any(reviews.glob('*-claims.json')))
     controls = load(ROOT/'controls/catalog.json')
     queue = load(ROOT/'controls/review_queue.json')
-    pins = load(ROOT/'sources/sources.lock.json')['sources']
     pin_map = {pin['repository']: pin['commit'] for pin in pins}
     review_policy_document = load(review_policy) if review_policy is not None else None
     receipts=[]
