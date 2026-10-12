@@ -70,4 +70,4 @@ The repository's "Verified" definition requires merged-main and organization
 acceptance. This tranche closes only the specific current-role/issuance/accounting
 dependency for these partial reconciliation receipts; it does not close v0.2.
 
-New-head Toolkit validation succeeded on commit 7eff5385ff70e86ce2eb12ef6d406ff297c6e88e.
+New-head Toolkit validation succeeded on commit 8642b789f0ee8e4d9fdd40ef8497059cc95b5238 (https://github.com/4444J99/github-engineering-standards/actions/runs/38313165646).
