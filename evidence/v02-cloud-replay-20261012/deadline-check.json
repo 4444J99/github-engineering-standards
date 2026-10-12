@@ -1,0 +1,17 @@
+{
+  "schema": "ges.cloud-deadline-check.v1",
+  "executor": "current cloud Linux workspace",
+  "command": [
+    "/usr/bin/timeout",
+    "--signal=TERM",
+    "--kill-after=0.2s",
+    "0.2s",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-c",
+    "import signal,time; signal.signal(signal.SIGTERM, signal.SIG_IGN); time.sleep(10)"
+  ],
+  "exit_code": -9,
+  "elapsed_seconds": 0.402,
+  "terminated_term_ignoring_child": true,
+  "native_host_used": false
+}
