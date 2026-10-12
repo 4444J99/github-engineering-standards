@@ -1,0 +1,76 @@
+{
+  "schema": "ges.independent-recovery-input-integrity.v1",
+  "reviewer": "chatgpt-cloud:20261012:fa16634431e1:/root/recovery_contract",
+  "started_at": "2026-10-12T21:55:59.029560+00:00",
+  "completed_at": "2026-10-12T21:56:03.502203+00:00",
+  "status": "PASS",
+  "explicit_outer_checks": 70,
+  "source_files_byte_matched_to_executed_replay": 23,
+  "source_input_hashes": {
+    "sources/atapas__model-repo.inventory.json": "68a5dc79aeedf10f745db6f292acf73fd5782fc4e41e5f3de291a4f669cb80ee",
+    "sources/atapas__model-repo.notices.json": "c6d0415b3ba6b47c17fcbacea5cb61db901c4ee39ff7203adcc4343bea4c232c",
+    "sources/atapas__model-repo.text.jsonl.gz": "25ae8fc51b874d8c043b96d0e2e2eee14d812ea4c824b6945fea1853a49ce003",
+    "sources/atapas__model-repo.tree-reconciliation.json": "002200eadfef138eedb51abd185fac5b70d81c99b85a13a31d10554862b6f5b8",
+    "sources/github__docs.inventory.json": "5d8dcb0da192332700dee7e7e82b82935b9160d1f5404a83099b58e86348fa68",
+    "sources/github__docs.notices.json": "42e1e57945b136b50f9c7a6a75c783eb82756759ff56cd5bf296ad1cdae128c8",
+    "sources/github__docs.text.jsonl.gz": "70bc41882d392aa69313414c02df0e7e126cbd86465f1f9ff314ee0277d83599",
+    "sources/github__docs.tree-reconciliation.json": "24e9deb3a08df4d919c0f33446dbd91e955de3fc39889e0763fb1089982cb3b1",
+    "sources/github__github-well-architected.inventory.json": "3db22b5b44fb754465d3487577f14fabd38ff50c8147dddeb80ab23f7c68644d",
+    "sources/github__github-well-architected.notices.json": "a0b1a93e236c7d739cd246e4d0acd705f49580c92058d5eca4db416b9f6bdbbe",
+    "sources/github__github-well-architected.text.jsonl.gz": "67fb276d9d21e636ff8f4d90c2ecac3bdb41c44a61bd15021c92af07601afeed",
+    "sources/github__github-well-architected.tree-reconciliation.json": "869128ae58de283685c77a02c17b06083bf670ea9ffe485e9b342c9ee35b76ee",
+    "sources/jlcanovas__gh-best-practices-template.inventory.json": "ee40dbd57924b121f87613faab0e3ae7701e15cffe729993f1aa4cbf380378e7",
+    "sources/jlcanovas__gh-best-practices-template.notices.json": "3e384e9a6ce467fa56d8e944843adf8f0d427f1cea7343c2b7b5c23ce7e533bf",
+    "sources/jlcanovas__gh-best-practices-template.text.jsonl.gz": "a381e4702d156aa3c3f927ce79bbd7e1d0803c8986a3773442ec24daebe87bc0",
+    "sources/jlcanovas__gh-best-practices-template.tree-reconciliation.json": "ff9d95ba6861cbd305735c7a86cd94d1af252d0bd15d654ee1e9532cde2a826a",
+    "sources/microsoft__ghqr.inventory.json": "8d8aa9272734b28b89538098239cc2c27b8612173f99b78cb06a2b2b781fdef4",
+    "sources/microsoft__ghqr.notices.json": "1c60ececcb03ecc9ef039f620d240118d8c1b2af734388c05db30d238421796b",
+    "sources/microsoft__ghqr.text.jsonl.gz": "e875d53d823f1de48dad635077c68d3a8bb7167630f0f53e595c9532ada47bb1",
+    "sources/microsoft__ghqr.tree-reconciliation.json": "7017136dd9ba5685b1daf8d0b0c4db50960d838ece023b31d44501822fb657b2",
+    "sources/tmcw__github-best-practices.inventory.json": "b13419d401ad8461c8936a7460a85917b3f52938cf81be148133cb3aa600f574",
+    "sources/tmcw__github-best-practices.text.jsonl.gz": "f3e3224cd565068c0c79ae3a459b698d5b7d5bb62bf5021927b547572dd53113",
+    "sources/tmcw__github-best-practices.tree-reconciliation.json": "7f511fdc0326498d629fa781a609cf40a2972025db19dbb7df7e6632c9f91ebb"
+  },
+  "all_six_snapshots_fully_authenticated": true,
+  "source_counts": {
+    "microsoft/ghqr": {
+      "artifacts": 172,
+      "text_artifacts": 171
+    },
+    "tmcw/github-best-practices": {
+      "artifacts": 1,
+      "text_artifacts": 1
+    },
+    "jlcanovas/gh-best-practices-template": {
+      "artifacts": 13,
+      "text_artifacts": 13
+    },
+    "atapas/model-repo": {
+      "artifacts": 8,
+      "text_artifacts": 8
+    },
+    "github/github-well-architected": {
+      "artifacts": 244,
+      "text_artifacts": 217
+    },
+    "github/docs": {
+      "artifacts": 13219,
+      "text_artifacts": 11418
+    }
+  },
+  "artifact_identities": 13657,
+  "text_artifacts": 11828,
+  "a3_exact_corpus_members": [
+    "candidates.jsonl",
+    "structured-source-requirements.json"
+  ],
+  "restored_ledger_sha256": "b4147bf94b13d18188b7acc775c1f7508f1653f2737bcecc7f27920afe58b73f",
+  "reconciliation_receipts": 2174,
+  "semantics_rejudged": false,
+  "new_receipts_issued": false,
+  "original_full_a3_capsule_restored": false,
+  "boundaries": [
+    "Byte authentication and complete source-snapshot validation; not new semantic review, rights acceptance, policy adoption, or full historical capsule restoration.",
+    "Current CI corpus page/dependency/artifact metadata is separately identified and not mislabeled as original A3."
+  ]
+}

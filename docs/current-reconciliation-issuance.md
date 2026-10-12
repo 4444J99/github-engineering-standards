@@ -13,11 +13,16 @@ Accounting now reports **2,174 validated / 59,767 unresolved out of 61,941**, wi
 The private final ledger is preserved separately. The original authority finding
 below describes the pre-grant inspection; it is superseded for this exact scope.
 
-Full recovery integration was attempted and failed for the missing full frozen
-corpus `candidates.jsonl`; no successful recovery report was produced. Original
-capsule/rendered-body restoration, publication, pilot and acceptance gates remain
-open. The completed source cache was reused without acquisition; source provenance
-was revalidated as part of the accounting contract.
+The initial recovery attempt failed because the source-only cache lacked
+`candidates.jsonl`. The subsequent
+[recovery integration](../evidence/v02-recovery-integration-20261012/README.md)
+restores five corpus members to their independently recorded A3 hashes and runs
+the actual full reporter with the same issued receipts. It reproduces
+**2,174 validated / 59,767 unresolved / 61,941 total**. The candidate ledger is
+available; the earlier failed attempt remains an unchanged historical record.
+The original complete capsule and rendered-body cache, publication, pilot and
+acceptance requirements remain open. Retained authenticated source files were
+reused without acquisition, and recovery revalidated source provenance.
 
 
 PR #506 preserves completed current source replay at `6c37fe5` and its independent

@@ -1,0 +1,107 @@
+{
+  "schema": "ges.recovery-repair-verification.v1",
+  "recorded_at": "2026-10-12T22:05:32.146602+00:00",
+  "python": "3.12.14",
+  "pyyaml": "6.0.3",
+  "base_revision": "a6a163ee29f81a3cf6371c931f2eef87364dce32",
+  "unit_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tests": 721,
+    "reported_seconds": 16.489,
+    "log_sha256": "c7e814602627844324698c9223a8410856e5985b4d71b23b1cbc33d0346ef32e",
+    "log_location": "private restart package verification/unit-tests-final.log"
+  },
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "ges",
+        "validate"
+      ],
+      "started_at": "2026-10-12T22:05:32.035819+00:00",
+      "completed_at": "2026-10-12T22:05:32.085937+00:00",
+      "exit_code": 0,
+      "stdout": "{\"valid\": true, \"controls\": 95}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "ges",
+        "compile"
+      ],
+      "started_at": "2026-10-12T22:05:32.085947+00:00",
+      "completed_at": "2026-10-12T22:05:32.135025+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--quiet",
+        "--",
+        "generated"
+      ],
+      "started_at": "2026-10-12T22:05:32.135034+00:00",
+      "completed_at": "2026-10-12T22:05:32.141708+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-12T22:05:32.141717+00:00",
+      "completed_at": "2026-10-12T22:05:32.146595+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "claim_provenance": {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-m",
+      "ges.claim_review",
+      "--artifacts",
+      "/workspace/scratch/fa16634431e1/ges/.cache/recovery-integration-20261012/restored-corpus/artifacts.jsonl",
+      "--sources",
+      "/workspace/scratch/fa16634431e1/ges/.cache/recovery-integration-20261012/retained-cloud/fresh-pinned/sources",
+      "--reviews",
+      "evidence/source-reviews",
+      "--review-policy",
+      "evidence/source-review-policy.json"
+    ],
+    "started_at": "2026-10-12T22:03:29.875411+00:00",
+    "completed_at": "2026-10-12T22:03:39.216732+00:00",
+    "elapsed_seconds": 9.341327,
+    "exit_code": 0,
+    "stdout_sha256": "c174b9b941667bdbbcc5a35b548ac403e7763112e3926f31704242c33b76fcd6",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "recovery_execution_sha256": "0b3992156894145c9ec704237d9da840410a461991d6c2ff86459e3fc3ddbae2",
+  "reviewed_files": {
+    "ges/recovery.py": "047c05311c4eb823ca7201e8e735d29daa6913fb2777f3109b916a4d686dd515",
+    "tests/test_recovery_preflight.py": "c08f626373fa98024212552d2dd5721883dfbc36964ea0ab023172d4fbb8088b",
+    "evidence/v02-recovery-integration-20261012/run-recovery.py": "1b37c54ee554c9cd502e631977f6176e1b978ee0cb6614069f3a0ee504d18b4c"
+  },
+  "merged_main_verification": false,
+  "human_review": false,
+  "owner_acceptance": false
+}

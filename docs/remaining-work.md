@@ -105,13 +105,44 @@ closed. Calculated `PROVEN` evidence is not the governed designation `Verified`;
 the merged-main, review and owner-acceptance requirements in `GOVERNANCE.md`
 remain in force.
 
-## Current admitted implementation checkpoint
+## Current staged checkpoint — October 12, 2026
 
-The [v0.2 continuation package](../evidence/v02-finish-20261010/README.md) records
-five new consumed successor claims, independently reviewed semantic dispositions,
-complete metadata input digests and scoped owner authority. Raw records grew by
-five; no replacement envelopes or new validated-accounting closure are claimed.
-Heavy host admission denied authenticated full replay and the prescribed full
-verification commands. The approved JSON representation amendment is implemented,
-but its two exact-expression rights decisions remain HOLD. The complete release
-candidate, six-source closure and human acceptance remain pending.
+The [cloud source replay in PR #506](../evidence/v02-cloud-replay-20261012/README.md)
+authenticated all six locked sources and replayed provenance for 61,941 claims in
+655 documents. Its independent audit and retained input hashes are recorded with
+the execution. The earlier native host admission denials remain historical
+observations; the completed cloud replay uses its own execution evidence.
+
+The [authorized reconciliation in PR #507](../evidence/v02-authorized-reconciliation-20261012/README.md)
+records the owner's exact current-role grant, actual issuance of 2,174 receipts,
+distinct final-envelope review and successful source-bound accounting. The result
+is **2,174 validated dispositions and 59,767 unresolved claims out of 61,941**,
+with `mapping_complete=false`. Historical grants, receipts and the original
+nonissued draft are preserved. Agent review does not supply human approval or
+extend the recorded grant to adoption, publication, merge or release acceptance.
+
+The subsequent [recovery integration](../evidence/v02-recovery-integration-20261012/README.md)
+recovers the candidate and historical page ledgers, reconstructs the dependency
+ledger and historical summary, and restores the structured requirements. All five
+match independently recorded A3 byte hashes. With the preserved October 7 artifact
+metadata and authenticated October 12 source files, the actual reporter now
+succeeds and carries the authorized 2,174-receipt accounting into its gates and
+milestones. The earlier failed attempt remains preserved; missing candidates are
+no longer the current blocker. A required-input preflight now identifies missing
+corpus/source files before expensive processing, preserving the existing trusted
+Darwin path-alias policy.
+
+The report contains 3,590 valid artifact disposition receipts out of 13,657;
+10,067 artifacts remain without such receipts. It retains 150,903 candidate
+blocks, 605 structured occurrences, 18,019 published page applications and the
+original 14 unresolved source mappings. No new structured-occurrence certification,
+control adoption or semantic-omission certification is claimed. The frozen summary
+retains its historical 31 catalog-referenced artifacts; the current catalog's
+reference count is independently 35.
+
+Complete original capsule and historical rendered-body authentication, omission completeness, remaining
+generalization/adoption/binding/native adapters, six-source synthesis and the full
+public pilot matrix remain open. The approved JSON representation amendment is
+implemented, but its two exact-expression rights decisions remain HOLD. The final
+release candidate, publication clearance, human review, governed integration,
+merged-main verification and owner acceptance remain pending.
