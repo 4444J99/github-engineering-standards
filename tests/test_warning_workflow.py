@@ -18,7 +18,7 @@ VALID = 'on: push\npermissions: {contents: read}\njobs: {test: {runs-on: ubuntu-
 
 
 class WarningWorkflowTests(unittest.TestCase):
-    def run_fixture(self, files=None, checks='["test"]', event='pull_request', mismatch=False):
+    def run_fixture(self, files=None, checks='["test"]', event='pull_request', mismatch=False, metadata=None):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             candidate = root / 'candidate'
@@ -42,14 +42,16 @@ class WarningWorkflowTests(unittest.TestCase):
                        REPOSITORY_ID='1', EXPECTED_CHECKS=checks, EVIDENCE=str(root/'evidence'),
                        GITHUB_EVENT_NAME=event, GITHUB_REPOSITORY_OWNER='fixture',
                        GITHUB_REPOSITORY='fixture/repo', GITHUB_RUN_ID='123', GITHUB_RUN_ATTEMPT='1',
-                       GITHUB_STEP_SUMMARY=str(root/'summary'))
-            result = subprocess.run([sys.executable, '-c', SCRIPT], cwd=ROOT, env=env,
+                       GITHUB_STEP_SUMMARY=str(root/'summary'), SOURCE_REPOSITORY='fork/repo',
+                       SOURCE_REPOSITORY_ID='2', GH_TOKEN='fixture-not-a-credential')
+            bootstrap = "import io, json, urllib.request\nfrom unittest.mock import patch\n" + "payload = " + repr(json.dumps(metadata if metadata is not None else {'referenced_workflows': [{'path':'4444J99/github-engineering-standards/.github/workflows/warning-pilot.yml@'+'b'*40,'sha':'b'*40}]}).encode()) + "\nwith patch('urllib.request.urlopen', return_value=io.BytesIO(payload)):\n    exec(" + repr(SCRIPT) + ")\n"
+            result = subprocess.run([sys.executable, '-c', bootstrap], cwd=ROOT, env=env,
                                     capture_output=True, text=True, timeout=30)
             data = {p.name: json.loads(p.read_text()) for p in (root/'evidence').glob('*.json')}
             return result, data
 
     def test_read_only_pins_and_narrow_artifact_boundary(self):
-        self.assertEqual(WORKFLOW['permissions'], {'contents': 'read'})
+        self.assertEqual(WORKFLOW['permissions'], {'contents': 'read', 'actions': 'read'})
         self.assertEqual(set(WORKFLOW.get('on', WORKFLOW.get(True))), {'workflow_call'})
         job = WORKFLOW['jobs']['inspect']
         self.assertLessEqual(job['timeout-minutes'], 3)
@@ -63,7 +65,11 @@ class WarningWorkflowTests(unittest.TestCase):
         checkouts = [s for s in STEPS if s.get('uses', '').startswith('actions/checkout@')]
         self.assertTrue(all(s['with']['persist-credentials'] is False for s in checkouts))
         self.assertEqual(checkouts[1]['with']['ref'], 'a5cdf48e9f255cb407a1ae69be62397f1151847d')
-        self.assertEqual(checkouts[0]['with']['sparse-checkout'], '!/*')
+        self.assertNotIn('filter', checkouts[0]['with'])
+        self.assertNotIn('sparse-checkout', checkouts[0]['with'])
+        install = next(s['run'] for s in STEPS if s.get('name') == 'Install inspector dependency')
+        self.assertIn('--require-hashes', install)
+        self.assertIn('--only-binary=:all:', install)
         upload = STEPS[-1]['with']
         self.assertNotIn('snapshot', upload['path'])
         self.assertNotIn('*', upload['path'])
@@ -79,6 +85,9 @@ class WarningWorkflowTests(unittest.TestCase):
         manifest = data['manifest.json']
         self.assertFalse(manifest['retrieval_verified'])
         self.assertFalse(manifest['restoration_verified'])
+        self.assertEqual(manifest['source_repository'], 'fork/repo')
+        self.assertEqual(manifest['source_repository_id'], 2)
+        self.assertEqual(manifest['wrapper']['sha'], 'b'*40)
         for name, expected in manifest['files'].items():
             raw = (json.dumps(data[name], indent=2) + '\n').encode()
             self.assertEqual(hashlib.sha256(raw).hexdigest(), expected['sha256'])
@@ -113,3 +122,15 @@ class WarningWorkflowTests(unittest.TestCase):
                 self.assertNotEqual(result.returncode, 0)
                 self.assertNotIn('report.json', data)
 
+
+    def test_local_action_dependencies_remain_unknown(self):
+        result, data = self.run_fixture({'ci.yml': VALID.replace('run: "true"', 'uses: ./actions/build')})
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse(data['snapshot.json']['observations']['files']['complete'])
+        self.assertTrue(all(f['status'] == 'NOT_VERIFIABLE' for f in data['report.json']['findings'][:2]))
+
+    def test_missing_or_mutable_wrapper_binding_fails_visibly(self):
+        for metadata in ({}, {'referenced_workflows': [{'path': '4444J99/github-engineering-standards/.github/workflows/warning-pilot.yml@main', 'sha': 'b'*40}]}):
+            result, data = self.run_fixture(metadata=metadata)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertNotIn('report.json', data)

@@ -15,15 +15,19 @@ inspector is the merged CLI at immutable commit
 pinned reusable-workflow file. There is no release tag or mutable runtime branch.
 
 The workflow reads the caller's PR head, or its exact event SHA for push/manual
-calls. It checks the checkout SHA and reads Git blobs as data. The consumer working
-tree is excluded by a non-cone sparse pattern; no consumer scripts, local actions,
+calls. It checks the checkout SHA and reads Git blobs as data. Consumer blobs are fetched during authenticated checkout so subsequent private
+repository reads do not require lazy-fetch credentials. No consumer scripts, local actions,
 dependencies, build hooks or Python modules execute. Inspector dependencies come
-only from the pinned toolkit. All actions use full SHAs, credentials are not
-persisted, submodules/LFS are off, and the token has only `contents: read`.
+only from the pinned toolkit's approved PyYAML 6.0.3 dependency, restricted to the
+SHA-256-locked CPython 3.12 Linux x86_64 wheel from PyPI. All actions use full SHAs, credentials are not
+persisted, submodules/LFS are off, and the token has only `contents: read` and `actions: read` (for exact run metadata).
 Unsupported events, including `pull_request_target` and `workflow_run`, fail
 inspection visibly. No inherited secrets or publication/deployment operation is
 requested. The workflow never changes settings or existing job identities.
 
+Tree enumeration streams with a 1 MiB output ceiling and stops at the file cap.
+Local action/reusable-workflow references conservatively make dependency resolution
+incomplete; missing manifests cannot become false warnings.
 Inspection is bounded to 128 direct workflow files, 1 MiB per blob, 8 MiB of decoded
 source input, 15 seconds per Git command, and a three-minute job deadline.
 Skipped oversized/binary files and count/size truncation mark the inventory
@@ -51,7 +55,8 @@ retains the CLI's explicit `not_evaluated` list.
 Only `plan.json`, `report.json` and `manifest.json` upload into the caller
 repository's Actions artifact custody. Raw workflow text and the snapshot are not
 uploaded. The manifest binds repository ID, exact revision, inspector commit,
-run/attempt identity, observed file count, inventory completeness, SHA-256/byte
+run/attempt identity, source fork repository name/ID separately from target identity,
+invoked wrapper SHA/ref read from GitHub's run metadata, dependency wheel digest, observed file count, inventory completeness, SHA-256/byte
 length of the retained plan/report, access scope and a conservative 30-day expiry.
 Retrieval and restoration start explicitly false. No attestation is fabricated.
 

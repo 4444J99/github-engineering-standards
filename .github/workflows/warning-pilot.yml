@@ -8,6 +8,7 @@ on:
         type: string
 permissions:
   contents: read
+  actions: read
 jobs:
   inspect:
     runs-on: ubuntu-24.04
@@ -16,14 +17,12 @@ jobs:
       - name: Read consumer revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           path: candidate
           persist-credentials: false
           submodules: false
           lfs: false
-          filter: blob:none
-          sparse-checkout: '!/*'
-          sparse-checkout-cone-mode: false
       - name: Read immutable inspector
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -38,7 +37,9 @@ jobs:
           python-version: '3.12'
       - name: Install inspector dependency
         working-directory: toolkit
-        run: python -m pip install --disable-pip-version-check --no-input -r requirements.txt
+        run: |
+          echo 'PyYAML==6.0.3 --hash=sha256:ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc' > "$RUNNER_TEMP/ges-requirements.txt"
+          python -m pip install --disable-pip-version-check --no-input --only-binary=:all: --require-hashes --index-url https://pypi.org/simple -r "$RUNNER_TEMP/ges-requirements.txt"
       - name: Inspect data without executing consumer code
         id: inspect
         working-directory: toolkit
@@ -46,11 +47,15 @@ jobs:
           CANDIDATE: ${{ github.workspace }}/candidate
           REVISION: ${{ github.event.pull_request.head.sha || github.sha }}
           REPOSITORY_ID: ${{ github.repository_id }}
+          SOURCE_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          SOURCE_REPOSITORY_ID: ${{ github.event.pull_request.head.repo.id || github.repository_id }}
+          GH_TOKEN: ${{ github.token }}
           EXPECTED_CHECKS: ${{ inputs.expected-checks }}
           EVIDENCE: ${{ runner.temp }}/ges-warning
         run: |
           python - <<'PY'
-          import hashlib, json, os, re, subprocess, time
+          import hashlib, json, os, re, subprocess, time, threading, urllib.request
+          from ges.yamlutil import parse
           from datetime import datetime, timedelta, timezone
           from pathlib import Path
           from ges.warning_pilot import main, validate_plan
@@ -69,9 +74,36 @@ jobs:
                   'checks': json.loads(os.environ['EXPECTED_CHECKS'])}
           plan['plan_digest'] = hashlib.sha256(json.dumps(plan, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
           validate_plan(plan)
-          entries = git('ls-tree', '-z', revision, '.github/workflows/').split(b'\0')
+          def entries():
+              proc = subprocess.Popen(['git', '-C', candidate, 'ls-tree', '-z', revision, '.github/workflows/'], stdout=subprocess.PIPE)
+              timer = threading.Timer(15, proc.kill)
+              timer.start()
+              try:
+                  pending, consumed = b'', 0
+                  while True:
+                      chunk = proc.stdout.read(4096)
+                      if not chunk:
+                          if proc.wait() != 0:
+                              raise ValueError('Tree enumeration failed or timed out')
+                          break
+                      consumed += len(chunk)
+                      if consumed > 1024 * 1024:
+                          raise ValueError('Tree enumeration exceeds 1 MiB')
+                      pending += chunk
+                      while b'\0' in pending:
+                          entry, pending = pending.split(b'\0', 1)
+                          yield entry
+                  if pending:
+                      raise ValueError('Truncated tree entry')
+              finally:
+                  timer.cancel()
+                  proc.stdout.close()
+                  if proc.poll() is None:
+                      proc.kill()
+                  proc.wait()
+          stream = entries()
           files, complete, total = {}, True, 0
-          for entry in filter(None, entries):
+          for entry in stream:
               metadata, raw_path = entry.split(b'\t', 1)
               mode, kind, oid = metadata.decode().split()
               path = raw_path.decode('utf-8')
@@ -95,6 +127,36 @@ jobs:
                   files[path] = git('cat-file', 'blob', oid).decode('utf-8')
               except UnicodeDecodeError:
                   complete = False
+          stream.close()
+          def local_reference(value, seen=None):
+              seen = set() if seen is None else seen
+              if isinstance(value, (dict, list)):
+                  if id(value) in seen:
+                      return False
+                  seen.add(id(value))
+              if isinstance(value, dict):
+                  return (isinstance(value.get('uses'), str) and value['uses'].startswith('./')) or any(local_reference(v, seen) for v in value.values())
+              return isinstance(value, list) and any(local_reference(v, seen) for v in value)
+          for value in files.values():
+              if isinstance(value, str):
+                  try:
+                      if local_reference(parse(value)):
+                          complete = False
+                  except Exception:
+                      complete = False  # Parsing uncertainty cannot establish dependency completeness.
+          request = urllib.request.Request(
+              'https://api.github.com/repos/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/' + str(int(os.environ['GITHUB_RUN_ID'])),
+              headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+          with urllib.request.urlopen(request, timeout=20) as response:
+              raw_run = response.read(1024 * 1024 + 1)
+          if len(raw_run) > 1024 * 1024:
+              raise ValueError('Run metadata exceeds 1 MiB')
+          run = json.loads(raw_run)
+          wrappers = [w for w in run.get('referenced_workflows', []) if w.get('path', '').startswith('4444J99/github-engineering-standards/.github/workflows/warning-pilot.yml@')]
+          if len(wrappers) != 1 or not re.fullmatch(r'[0-9a-f]{40}', wrappers[0].get('sha', '')):
+              raise ValueError('Cannot bind invoked wrapper to GitHub run metadata')
+          if wrappers[0]['path'] != '4444J99/github-engineering-standards/.github/workflows/warning-pilot.yml@' + wrappers[0]['sha']:
+              raise ValueError('Wrapper must be called at an immutable full SHA')
           snapshot = {'repository_id': plan['repository_id'], 'revision': revision,
                       'observations': {'files': {'status': 'OK', 'complete': complete, 'data': files}}}
           root = Path(os.environ['EVIDENCE'])
@@ -113,7 +175,10 @@ jobs:
               retained[name] = {'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw)}
           manifest = {'schema': 'ges.warning-workflow.v1', 'owner': os.environ['GITHUB_REPOSITORY_OWNER'],
                       'repository': os.environ['GITHUB_REPOSITORY'], 'repository_id': plan['repository_id'],
-                      'revision': revision, 'toolkit_commit': 'a5cdf48e9f255cb407a1ae69be62397f1151847d',
+                      'revision': revision, 'source_repository': os.environ['SOURCE_REPOSITORY'],
+                      'source_repository_id': int(os.environ['SOURCE_REPOSITORY_ID']),
+                      'wrapper': wrappers[0], 'dependency_sha256': 'ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc',
+                      'toolkit_repository': '4444J99/github-engineering-standards', 'toolkit_commit': 'a5cdf48e9f255cb407a1ae69be62397f1151847d',
                       'run_id': os.environ['GITHUB_RUN_ID'], 'run_attempt': os.environ['GITHUB_RUN_ATTEMPT'],
                       'workflow_files_observed': len(files), 'workflow_inventory_complete': complete,
                       'invocation_seconds': round(time.monotonic() - started, 6),
