@@ -1,0 +1,612 @@
+{
+  "schema": "ges.workload-publication-preparation.v1",
+  "source_parent_revision": "afdd2ffe03bd840516947a9256ff9aea380335fb",
+  "actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+  "recorded_at": "2026-10-12T19:34:42Z",
+  "writer_admission": {
+    "schema": "limen.host_admission_decision.v1",
+    "operation": "acquire",
+    "allowed": true,
+    "reasons": [],
+    "lease": {
+      "lease_id": "fa83beb8eca644b887ef85a45fa3b5d7",
+      "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+      "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+      "surface": "chatgpt:workload-publication",
+      "pid": 44085,
+      "process_identity": "darwin-proc-start:1791833681:796732",
+      "acquired_epoch": 1791833682.225209,
+      "acquired_at": "2026-10-12T19:34:42.225209+00:00",
+      "refreshed_epoch": 1791833682.225209,
+      "refreshed_at": "2026-10-12T19:34:42.225209+00:00",
+      "expires_epoch": 1791833839.225209,
+      "expires_at": "2026-10-12T19:37:19.225209+00:00"
+    },
+    "inherited": false,
+    "leases": [
+      {
+        "lease_id": "fa83beb8eca644b887ef85a45fa3b5d7",
+        "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+        "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+        "surface": "chatgpt:workload-publication",
+        "pid": 44085,
+        "process_identity": "darwin-proc-start:1791833681:796732",
+        "acquired_epoch": 1791833682.225209,
+        "acquired_at": "2026-10-12T19:34:42.225209+00:00",
+        "refreshed_epoch": 1791833682.225209,
+        "refreshed_at": "2026-10-12T19:34:42.225209+00:00",
+        "expires_epoch": 1791833839.225209,
+        "expires_at": "2026-10-12T19:37:19.225209+00:00"
+      }
+    ],
+    "pressure": {
+      "backblaze_cpu_percent": 0.0,
+      "backblaze_rss_bytes": 0,
+      "disk_mib_per_second_samples": [
+        92.27,
+        75.9
+      ],
+      "memory_bytes": 17179869184,
+      "observed_at": "2026-10-12T19:20:05.143058+00:00",
+      "observed_epoch": 1791832805.1430578,
+      "sensor_errors": [],
+      "swap_fraction": 0.6833038330078125,
+      "swap_growth_bytes_per_minute": 292227736.453,
+      "swap_used_bytes": 11739070464,
+      "vitals_action": "throttle"
+    },
+    "reaped": []
+  },
+  "same_tranche_started_at": "2026-10-12T19:08:19Z",
+  "historical_cumulative_usage": "UNKNOWN_NOT_RESET",
+  "preserved_artifact_sha256": {
+    "evidence/claim-workload-inventory.json": "6151dcc71dda756610f371337bebe9981c0f9656cc6f7b252ad60e007701f5ec",
+    "evidence/claim-workload-current-inventory.json": "2e718486119b29cf286f4b21f067d67dc3bea17f2559a45fbc01105931a22658",
+    "evidence/claim-workload-current-provenance.json": "239fc3e89643202c9a7935749249eb4a0ca14e67a32c6e2a0517166a81e9bbf8",
+    "evidence/claim-workload-inputs/artifacts.jsonl.gz": "9bf57e2bdf62d37026d5c06981c34e2c9db593e44bf03f39c7e441c9751358ac",
+    "evidence/a3-six-source-capsule-repair.json": "05dab95bfbc88c2401a97da702339f4f1be89545c8f8c9f48198194aac07bb15",
+    "evidence/provider-oidc-reconciliation.json": "91f52141398c7670bd4e3335b5dad89c88815c3141c75d6007fc52a674e54485",
+    "evidence/v02-finish-20261010/owner-authorization.json": "36f84bae0ecc112c03229cd0e7d2a2a2587f689a24e8a377bfb3ffe7157a82d4",
+    "evidence/v02-finish-20261010/claim-migration-audit.json": "9c17a1fcbfee8a38e5d7dc49e95e4df108f96b43dc8e51ad744342c4d0ba4e04"
+  },
+  "tested_implementation_sha256": {
+    "ges/claim_workload.py": "592c7027c7a876d28f5224e231873556de3f29e6a664f8609f31eda6c623315e",
+    "ges/claim_workload_migration.py": "9d95556548e96329681b91d2a45b4ed47e78b8d109c803fb9c455f0481a25b99",
+    "tests/test_claim_workload_integrity.py": "61c1ceba69fabb8f6e812c56e564e70b155479ae74208cb7f60ce8ea310331b7",
+    "tests/test_claim_workload_migration.py": "3c5bbbfd0b48853b38334ce10427e49e4f6db31612e1c74579469d4fc3002295",
+    "evidence/claim-workload-v02-transition.json": "f92cbe31c618e793b9bdc07f51b609d0b464fa5f8698fe715efc6bb542089dd8",
+    ".github/workflows/ci.yml": "4bbc3e00e820129fa1c33082d56b6862d2edd4cefb8e169d5111e0c01e35e920",
+    "evidence/v02-workload-migration-20261012/independent_metadata_audit.py": "4c57b6ed0706081771f592e593b8f3552eaf7d3f2e9d7f7ff9be3bc215f6cbc5"
+  },
+  "reviewed_evidence_sha256": {
+    "evidence/v02-workload-migration-20261012/README.md": "d2d74a4f3147a15c7bb1efe22586174c807fdcba39bd3b65442ba27f4740752b",
+    "evidence/v02-workload-migration-20261012/host-observation.json": "893391578cd2dede6f31e3605a704768bccd5b0ad5a4bd96873f78798f7fbd53",
+    "evidence/v02-workload-migration-20261012/independent-review.json": "bbdc933f452257b2fee7af9c2001112fdf0632492f7c5f9f46a94738bc16063d",
+    "evidence/v02-workload-migration-20261012/verification-execution.json": "100b23f172590ac00d1a47db2c5af3be3713a10fcbb3ee5a4345f3728f4abf6d",
+    "docs/claim-workload-audit.md": "f6b0af23a2b0d891fcfca541a5397a0f5ee0a5cbec2f16b74cf21c8020869c83"
+  },
+  "driver_cleanup": {
+    "status": "NO_RELEASE_RECEIPT_RECORDED",
+    "cause": "The completed metadata driver passed lease_id positionally although the deployed API requires it by keyword. Successful child results are separate from driver cleanup.",
+    "prior_driver_pid": 19111,
+    "subsequent_admission": {
+      "schema": "limen.host_admission_decision.v1",
+      "operation": "acquire",
+      "allowed": true,
+      "reasons": [],
+      "lease": {
+        "lease_id": "fa83beb8eca644b887ef85a45fa3b5d7",
+        "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+        "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+        "surface": "chatgpt:workload-publication",
+        "pid": 44085,
+        "process_identity": "darwin-proc-start:1791833681:796732",
+        "acquired_epoch": 1791833682.225209,
+        "acquired_at": "2026-10-12T19:34:42.225209+00:00",
+        "refreshed_epoch": 1791833682.225209,
+        "refreshed_at": "2026-10-12T19:34:42.225209+00:00",
+        "expires_epoch": 1791833839.225209,
+        "expires_at": "2026-10-12T19:37:19.225209+00:00"
+      },
+      "inherited": false,
+      "leases": [
+        {
+          "lease_id": "fa83beb8eca644b887ef85a45fa3b5d7",
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "surface": "chatgpt:workload-publication",
+          "pid": 44085,
+          "process_identity": "darwin-proc-start:1791833681:796732",
+          "acquired_epoch": 1791833682.225209,
+          "acquired_at": "2026-10-12T19:34:42.225209+00:00",
+          "refreshed_epoch": 1791833682.225209,
+          "refreshed_at": "2026-10-12T19:34:42.225209+00:00",
+          "expires_epoch": 1791833839.225209,
+          "expires_at": "2026-10-12T19:37:19.225209+00:00"
+        }
+      ],
+      "pressure": {
+        "backblaze_cpu_percent": 0.0,
+        "backblaze_rss_bytes": 0,
+        "disk_mib_per_second_samples": [
+          92.27,
+          75.9
+        ],
+        "memory_bytes": 17179869184,
+        "observed_at": "2026-10-12T19:20:05.143058+00:00",
+        "observed_epoch": 1791832805.1430578,
+        "sensor_errors": [],
+        "swap_fraction": 0.6833038330078125,
+        "swap_growth_bytes_per_minute": 292227736.453,
+        "swap_used_bytes": 11739070464,
+        "vitals_action": "throttle"
+      },
+      "reaped": []
+    }
+  },
+  "full_suite_ran": false,
+  "authenticated_source_replay_ran": false,
+  "replacement_envelopes_issued": false,
+  "publication_status_at_recording": "PENDING; actual commit, push and final lease outcome are recorded in the PR update",
+  "publication_attempts": [
+    {
+      "schema": "ges.workload-publication-transaction.v1",
+      "actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+      "same_tranche_started_at": "2026-10-12T19:08:19Z",
+      "deadline_epoch": 1791833839.7,
+      "source_parent_revision": "afdd2ffe03bd840516947a9256ff9aea380335fb",
+      "started_at": "2026-10-12T19:32:27Z",
+      "commands": [
+        {
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.005333,
+          "stdout": "afdd2ffe03bd840516947a9256ff9aea380335fb\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "symbolic-ref",
+            "--short",
+            "HEAD"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.004485,
+          "stdout": "wave/correction-serialized-admission-20261009-a\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--cached",
+            "--name-only"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.008346,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "ls-remote",
+            "--exit-code",
+            "origin",
+            "refs/heads/wave/correction-serialized-admission-20261009-a"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.471338,
+          "stdout": "afdd2ffe03bd840516947a9256ff9aea380335fb\trefs/heads/wave/correction-serialized-admission-20261009-a\n",
+          "stderr": ""
+        }
+      ],
+      "writer_admission": {
+        "schema": "limen.host_admission_decision.v1",
+        "operation": "acquire",
+        "allowed": true,
+        "reasons": [],
+        "lease": {
+          "lease_id": "28f4a28f57194f699517801068db8969",
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "surface": "chatgpt:workload-publication",
+          "pid": 40251,
+          "process_identity": "darwin-proc-start:1791833547:93458",
+          "acquired_epoch": 1791833547.4112709,
+          "acquired_at": "2026-10-12T19:32:27.411271+00:00",
+          "refreshed_epoch": 1791833547.4112709,
+          "refreshed_at": "2026-10-12T19:32:27.411271+00:00",
+          "expires_epoch": 1791833839.4112709,
+          "expires_at": "2026-10-12T19:37:19.411271+00:00"
+        },
+        "inherited": false,
+        "leases": [
+          {
+            "lease_id": "28f4a28f57194f699517801068db8969",
+            "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+            "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+            "surface": "chatgpt:workload-publication",
+            "pid": 40251,
+            "process_identity": "darwin-proc-start:1791833547:93458",
+            "acquired_epoch": 1791833547.4112709,
+            "acquired_at": "2026-10-12T19:32:27.411271+00:00",
+            "refreshed_epoch": 1791833547.4112709,
+            "refreshed_at": "2026-10-12T19:32:27.411271+00:00",
+            "expires_epoch": 1791833839.4112709,
+            "expires_at": "2026-10-12T19:37:19.411271+00:00"
+          }
+        ],
+        "pressure": {
+          "backblaze_cpu_percent": 0.0,
+          "backblaze_rss_bytes": 0,
+          "disk_mib_per_second_samples": [
+            92.27,
+            75.9
+          ],
+          "memory_bytes": 17179869184,
+          "observed_at": "2026-10-12T19:20:05.143058+00:00",
+          "observed_epoch": 1791832805.1430578,
+          "sensor_errors": [],
+          "swap_fraction": 0.6833038330078125,
+          "swap_growth_bytes_per_minute": 292227736.453,
+          "swap_used_bytes": 11739070464,
+          "vitals_action": "throttle"
+        },
+        "reaped": [
+          {
+            "lease_id": "eebc1a5a894c4020b9ac404364d2d79b",
+            "reason": "dead-pid"
+          }
+        ]
+      },
+      "status": "FAILED",
+      "error": "RuntimeError: native verification bytes differ from reviewed record",
+      "traceback": "Traceback (most recent call last):\n  File \"/tmp/ges-workload-publish-b970b9876653.py\", line 48, in <module>\n    raise RuntimeError('native verification bytes differ from reviewed record')\nRuntimeError: native verification bytes differ from reviewed record\n",
+      "writer_release": {
+        "schema": "limen.host_admission_decision.v1",
+        "operation": "release",
+        "allowed": true,
+        "reasons": [],
+        "lease": {
+          "acquired_at": "2026-10-12T19:32:27.411271+00:00",
+          "acquired_epoch": 1791833547.4112709,
+          "expires_at": "2026-10-12T19:37:19.411271+00:00",
+          "expires_epoch": 1791833839.4112709,
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "lease_id": "28f4a28f57194f699517801068db8969",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "pid": 40251,
+          "process_identity": "darwin-proc-start:1791833547:93458",
+          "refreshed_at": "2026-10-12T19:32:27.411271+00:00",
+          "refreshed_epoch": 1791833547.4112709,
+          "surface": "chatgpt:workload-publication"
+        },
+        "inherited": false,
+        "leases": [],
+        "pressure": {
+          "backblaze_cpu_percent": 0.0,
+          "backblaze_rss_bytes": 0,
+          "disk_mib_per_second_samples": [
+            92.27,
+            75.9
+          ],
+          "memory_bytes": 17179869184,
+          "observed_at": "2026-10-12T19:20:05.143058+00:00",
+          "observed_epoch": 1791832805.1430578,
+          "sensor_errors": [],
+          "swap_fraction": 0.6833038330078125,
+          "swap_growth_bytes_per_minute": 292227736.453,
+          "swap_used_bytes": 11739070464,
+          "vitals_action": "throttle"
+        },
+        "reaped": []
+      },
+      "finished_at": "2026-10-12T19:32:27Z"
+    },
+    {
+      "schema": "ges.workload-publication-transaction.v1",
+      "actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+      "same_tranche_started_at": "2026-10-12T19:08:19Z",
+      "deadline_epoch": 1791833839.7,
+      "source_parent_revision": "afdd2ffe03bd840516947a9256ff9aea380335fb",
+      "started_at": "2026-10-12T19:34:41Z",
+      "commands": [
+        {
+          "argv": [
+            "git",
+            "rev-parse",
+            "HEAD"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.009206,
+          "stdout": "afdd2ffe03bd840516947a9256ff9aea380335fb\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "symbolic-ref",
+            "--short",
+            "HEAD"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.009279,
+          "stdout": "wave/correction-serialized-admission-20261009-a\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--cached",
+            "--name-only"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.013606,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "ls-remote",
+            "--exit-code",
+            "origin",
+            "refs/heads/wave/correction-serialized-admission-20261009-a"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.563941,
+          "stdout": "afdd2ffe03bd840516947a9256ff9aea380335fb\trefs/heads/wave/correction-serialized-admission-20261009-a\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "status",
+            "--porcelain",
+            "--untracked-files=all"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.04719,
+          "stdout": " M .github/workflows/ci.yml\n M docs/claim-workload-audit.md\n M ges/claim_workload.py\n M tests/test_claim_workload_integrity.py\n?? evidence/claim-workload-v02-inventory.json\n?? evidence/claim-workload-v02-transition.json\n?? evidence/v02-workload-migration-20261012/README.md\n?? evidence/v02-workload-migration-20261012/host-observation.json\n?? evidence/v02-workload-migration-20261012/independent-evidence-review.json\n?? evidence/v02-workload-migration-20261012/independent-review.json\n?? evidence/v02-workload-migration-20261012/independent_metadata_audit.py\n?? evidence/v02-workload-migration-20261012/metadata-review-execution.json\n?? evidence/v02-workload-migration-20261012/publication-preparation.json\n?? evidence/v02-workload-migration-20261012/verification-execution.json\n?? ges/claim_workload_migration.py\n?? tests/test_claim_workload_migration.py\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "add",
+            "--",
+            ".github/workflows/ci.yml",
+            "docs/claim-workload-audit.md",
+            "evidence/claim-workload-v02-inventory.json",
+            "evidence/claim-workload-v02-transition.json",
+            "evidence/v02-workload-migration-20261012/README.md",
+            "evidence/v02-workload-migration-20261012/host-observation.json",
+            "evidence/v02-workload-migration-20261012/independent-evidence-review.json",
+            "evidence/v02-workload-migration-20261012/independent-review.json",
+            "evidence/v02-workload-migration-20261012/independent_metadata_audit.py",
+            "evidence/v02-workload-migration-20261012/metadata-review-execution.json",
+            "evidence/v02-workload-migration-20261012/publication-preparation.json",
+            "evidence/v02-workload-migration-20261012/verification-execution.json",
+            "ges/claim_workload.py",
+            "ges/claim_workload_migration.py",
+            "tests/test_claim_workload_integrity.py",
+            "tests/test_claim_workload_migration.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.087511,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--cached",
+            "--name-only"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.019896,
+          "stdout": ".github/workflows/ci.yml\ndocs/claim-workload-audit.md\nevidence/claim-workload-v02-inventory.json\nevidence/claim-workload-v02-transition.json\nevidence/v02-workload-migration-20261012/README.md\nevidence/v02-workload-migration-20261012/host-observation.json\nevidence/v02-workload-migration-20261012/independent-evidence-review.json\nevidence/v02-workload-migration-20261012/independent-review.json\nevidence/v02-workload-migration-20261012/independent_metadata_audit.py\nevidence/v02-workload-migration-20261012/metadata-review-execution.json\nevidence/v02-workload-migration-20261012/publication-preparation.json\nevidence/v02-workload-migration-20261012/verification-execution.json\nges/claim_workload.py\nges/claim_workload_migration.py\ntests/test_claim_workload_integrity.py\ntests/test_claim_workload_migration.py\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--cached",
+            "--check"
+          ],
+          "exit_code": 2,
+          "duration_seconds": 0.037419,
+          "stdout": "evidence/v02-workload-migration-20261012/host-observation.json:118: new blank line at EOF.\nevidence/v02-workload-migration-20261012/independent-review.json:47: new blank line at EOF.\n",
+          "stderr": ""
+        }
+      ],
+      "writer_admission": {
+        "schema": "limen.host_admission_decision.v1",
+        "operation": "acquire",
+        "allowed": true,
+        "reasons": [],
+        "lease": {
+          "lease_id": "fa83beb8eca644b887ef85a45fa3b5d7",
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "surface": "chatgpt:workload-publication",
+          "pid": 44085,
+          "process_identity": "darwin-proc-start:1791833681:796732",
+          "acquired_epoch": 1791833682.225209,
+          "acquired_at": "2026-10-12T19:34:42.225209+00:00",
+          "refreshed_epoch": 1791833682.225209,
+          "refreshed_at": "2026-10-12T19:34:42.225209+00:00",
+          "expires_epoch": 1791833839.225209,
+          "expires_at": "2026-10-12T19:37:19.225209+00:00"
+        },
+        "inherited": false,
+        "leases": [
+          {
+            "lease_id": "fa83beb8eca644b887ef85a45fa3b5d7",
+            "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+            "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+            "surface": "chatgpt:workload-publication",
+            "pid": 44085,
+            "process_identity": "darwin-proc-start:1791833681:796732",
+            "acquired_epoch": 1791833682.225209,
+            "acquired_at": "2026-10-12T19:34:42.225209+00:00",
+            "refreshed_epoch": 1791833682.225209,
+            "refreshed_at": "2026-10-12T19:34:42.225209+00:00",
+            "expires_epoch": 1791833839.225209,
+            "expires_at": "2026-10-12T19:37:19.225209+00:00"
+          }
+        ],
+        "pressure": {
+          "backblaze_cpu_percent": 0.0,
+          "backblaze_rss_bytes": 0,
+          "disk_mib_per_second_samples": [
+            92.27,
+            75.9
+          ],
+          "memory_bytes": 17179869184,
+          "observed_at": "2026-10-12T19:20:05.143058+00:00",
+          "observed_epoch": 1791832805.1430578,
+          "sensor_errors": [],
+          "swap_fraction": 0.6833038330078125,
+          "swap_growth_bytes_per_minute": 292227736.453,
+          "swap_used_bytes": 11739070464,
+          "vitals_action": "throttle"
+        },
+        "reaped": []
+      },
+      "status": "FAILED",
+      "error": "RuntimeError: command failed: ['git', 'diff', '--cached', '--check']",
+      "traceback": "Traceback (most recent call last):\n  File \"/tmp/ges-workload-publish-b970b9876653.py\", line 86, in <module>\n    run(['git','diff','--cached','--check'])\n    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/ges-workload-publish-b970b9876653.py\", line 25, in run\n    if result.returncode: raise RuntimeError('command failed: '+repr(argv))\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: command failed: ['git', 'diff', '--cached', '--check']\n",
+      "writer_release": {
+        "schema": "limen.host_admission_decision.v1",
+        "operation": "release",
+        "allowed": true,
+        "reasons": [],
+        "lease": {
+          "acquired_at": "2026-10-12T19:34:42.225209+00:00",
+          "acquired_epoch": 1791833682.225209,
+          "expires_at": "2026-10-12T19:37:19.225209+00:00",
+          "expires_epoch": 1791833839.225209,
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "lease_id": "fa83beb8eca644b887ef85a45fa3b5d7",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "pid": 44085,
+          "process_identity": "darwin-proc-start:1791833681:796732",
+          "refreshed_at": "2026-10-12T19:34:42.225209+00:00",
+          "refreshed_epoch": 1791833682.225209,
+          "surface": "chatgpt:workload-publication"
+        },
+        "inherited": false,
+        "leases": [],
+        "pressure": {
+          "backblaze_cpu_percent": 0.0,
+          "backblaze_rss_bytes": 0,
+          "disk_mib_per_second_samples": [
+            92.27,
+            75.9
+          ],
+          "memory_bytes": 17179869184,
+          "observed_at": "2026-10-12T19:20:05.143058+00:00",
+          "observed_epoch": 1791832805.1430578,
+          "sensor_errors": [],
+          "swap_fraction": 0.6833038330078125,
+          "swap_growth_bytes_per_minute": 292227736.453,
+          "swap_used_bytes": 11739070464,
+          "vitals_action": "throttle"
+        },
+        "reaped": []
+      },
+      "finished_at": "2026-10-12T19:34:43Z"
+    }
+  ],
+  "final_commit_tranche": {
+    "schema": "ges.workload-publication-transaction.v1",
+    "actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+    "started_at": "2026-10-12T19:37:46Z",
+    "publication_tranche_limit_seconds": 600,
+    "publication_tranche_started_at": "2026-10-12T19:37:12.430544+00:00",
+    "previous_tranche_started_at": "2026-10-12T19:08:19Z",
+    "previous_tranche_deadline": "2026-10-12T19:37:19Z",
+    "previous_writer_released_at": "2026-10-12T19:34:43Z",
+    "historical_cumulative_usage": "UNKNOWN_NOT_RESET",
+    "source_parent_revision": "afdd2ffe03bd840516947a9256ff9aea380335fb",
+    "writer_admission": {
+      "schema": "limen.host_admission_decision.v1",
+      "operation": "acquire",
+      "allowed": true,
+      "reasons": [],
+      "lease": {
+        "lease_id": "83f0a3de801148e78c5d6f94a4df31b0",
+        "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+        "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+        "surface": "chatgpt:workload-commit-tranche",
+        "pid": 56261,
+        "process_identity": "darwin-proc-start:1791833865:994208",
+        "acquired_epoch": 1791833866.5501142,
+        "acquired_at": "2026-10-12T19:37:46.550114+00:00",
+        "refreshed_epoch": 1791833866.5501142,
+        "refreshed_at": "2026-10-12T19:37:46.550114+00:00",
+        "expires_epoch": 1791834431.5501142,
+        "expires_at": "2026-10-12T19:47:11.550114+00:00"
+      },
+      "inherited": false,
+      "leases": [
+        {
+          "lease_id": "83f0a3de801148e78c5d6f94a4df31b0",
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "surface": "chatgpt:workload-commit-tranche",
+          "pid": 56261,
+          "process_identity": "darwin-proc-start:1791833865:994208",
+          "acquired_epoch": 1791833866.5501142,
+          "acquired_at": "2026-10-12T19:37:46.550114+00:00",
+          "refreshed_epoch": 1791833866.5501142,
+          "refreshed_at": "2026-10-12T19:37:46.550114+00:00",
+          "expires_epoch": 1791834431.5501142,
+          "expires_at": "2026-10-12T19:47:11.550114+00:00"
+        }
+      ],
+      "pressure": {
+        "backblaze_cpu_percent": 0.0,
+        "backblaze_rss_bytes": 0,
+        "disk_mib_per_second_samples": [
+          683.47,
+          344.34
+        ],
+        "memory_bytes": 17179869184,
+        "observed_at": "2026-10-12T19:36:09.252829+00:00",
+        "observed_epoch": 1791833769.2528288,
+        "sensor_errors": [],
+        "swap_fraction": 0.41573364252690226,
+        "swap_growth_bytes_per_minute": null,
+        "swap_used_bytes": 7142249594,
+        "vitals_action": "shed"
+      },
+      "reaped": []
+    }
+  },
+  "terminal_lf_review": {
+    "reviewer": "/root/accounting_review",
+    "observed_at": "2026-10-12T19:36:13.417456+00:00",
+    "scope": "Both current files plus one LF reproduce their previous reviewed hashes; all JSON fields unchanged. No native execution or tests repeated.",
+    "hashes": {
+      "host-observation.json": {
+        "previous_review_copy_sha256": "b701dd5ab2d3ce1f4109b5145cfe241cc2eab1f07a23efa92e84f090122a2ba1",
+        "current_sha256": "893391578cd2dede6f31e3605a704768bccd5b0ad5a4bd96873f78798f7fbd53"
+      },
+      "independent-review.json": {
+        "previous_review_copy_sha256": "d2461acffce6fa7cb5502a7c2e7a8eea6f4093cf37e9d75bf7697d9a780c3fad",
+        "current_sha256": "bbdc933f452257b2fee7af9c2001112fdf0632492f7c5f9f46a94738bc16063d"
+      }
+    }
+  }
+}
