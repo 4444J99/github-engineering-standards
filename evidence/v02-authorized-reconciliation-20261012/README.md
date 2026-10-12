@@ -69,3 +69,5 @@ The integration remains on draft PR #507, after #496 -> #497 -> #503 -> #506.
 The repository's "Verified" definition requires merged-main and organization
 acceptance. This tranche closes only the specific current-role/issuance/accounting
 dependency for these partial reconciliation receipts; it does not close v0.2.
+
+New-head Toolkit validation succeeded on commit 7eff5385ff70e86ce2eb12ef6d406ff297c6e88e.
