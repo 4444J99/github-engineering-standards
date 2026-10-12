@@ -1,0 +1,31 @@
+{
+  "schema": "ges.reconciliation-verification-change.v1",
+  "status": "STAGED",
+  "recorded_at": "2026-10-12T21:42:08.105206+00:00",
+  "base": "1d01932773d35e4364b167fd7febbe5f53f4ee68",
+  "unit_command": "python -m unittest discover -s tests -v",
+  "unit_tests": 714,
+  "unit_exit": 0,
+  "unit_log_sha256": "490c8d4d37e744bfd38f81bffc40b3e5b3b457cf9b4cb236724b80272c419de1",
+  "other_checks": {
+    "python -m ges validate": "PASS_95_CONTROLS",
+    "python -m ges compile": "PASS",
+    "git diff --check": "PASS",
+    "git diff --exit-code -- generated/": "PASS"
+  },
+  "independent_code_review": {
+    "actor": "chatgpt-cloud:20261012:2aefcbff59bd:/root/envelope_review",
+    "result": "NO_BLOCKING_FINDINGS",
+    "focused_tests_observed": 6,
+    "minor_finding": "Same-actor test did not isolate independence from role authorization",
+    "response": "Added seventh test with overlapping authorized role arrays; full suite passes",
+    "receipt_authority_granted": false,
+    "human_review": false
+  },
+  "source_replay_repeated": false,
+  "receipts_issued": false,
+  "owner_role_grant_issued": false,
+  "accounting_performed": false,
+  "main_merged": false,
+  "owner_acceptance": false
+}
