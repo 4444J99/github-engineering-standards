@@ -1,0 +1,57 @@
+{
+  "schema": "ges.workload-a3-continuity-regression.v1",
+  "execution_actor": "current ChatGPT /root in workspace 9f3cdabec13b",
+  "base_commit": "25affa78bcbf16e89667cbe3cbcfbc3a7fa05006",
+  "scope": "Synthetic metadata stability regression; no source authentication, reconciliation authority or acceptance credit.",
+  "tests": 2,
+  "subcases": [
+    "changed reference bytes after preserved replay",
+    "changed reference bytes after current replay",
+    "identical-byte symlink after preserved replay",
+    "identical-byte symlink after current replay"
+  ],
+  "before": {
+    "phase": "before production fix",
+    "base": "25affa78bcbf16e89667cbe3cbcfbc3a7fa05006",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_claim_workload_migration.py",
+      "-k",
+      "source_identity",
+      "-v"
+    ],
+    "started_at": "2026-10-12T19:47:28.107165+00:00",
+    "duration_seconds": 0.108,
+    "exit_code": 1,
+    "log_sha256": "7be72ddb5d9a595ff7e0b0bf1ad39a437437802a4c4e9df74ab4c5c1323f25b7",
+    "complete_log": "test_source_identity_reference_changes_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_changes_after_either_replay_are_rejected) ... \n  test_source_identity_reference_changes_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_changes_after_either_replay_are_rejected) (after='current.json') ... FAIL\n  test_source_identity_reference_changes_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_changes_after_either_replay_are_rejected) (after='new-current.json') ... FAIL\ntest_source_identity_reference_symlinks_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_symlinks_after_either_replay_are_rejected) ... \n  test_source_identity_reference_symlinks_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_symlinks_after_either_replay_are_rejected) (after='current.json') ... FAIL\n  test_source_identity_reference_symlinks_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_symlinks_after_either_replay_are_rejected) (after='new-current.json') ... FAIL\n\n======================================================================\nFAIL: test_source_identity_reference_changes_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_changes_after_either_replay_are_rejected) (after='current.json')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/scratch/9f3cdabec13b/ges/tests/test_claim_workload_migration.py\", line 219, in test_source_identity_reference_changes_after_either_replay_are_rejected\n    with self.assertRaisesRegex(ValueError,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_source_identity_reference_changes_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_changes_after_either_replay_are_rejected) (after='new-current.json')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/scratch/9f3cdabec13b/ges/tests/test_claim_workload_migration.py\", line 219, in test_source_identity_reference_changes_after_either_replay_are_rejected\n    with self.assertRaisesRegex(ValueError,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_source_identity_reference_symlinks_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_symlinks_after_either_replay_are_rejected) (after='current.json')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/scratch/9f3cdabec13b/ges/tests/test_claim_workload_migration.py\", line 242, in test_source_identity_reference_symlinks_after_either_replay_are_rejected\n    with self.assertRaisesRegex(ValueError,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n======================================================================\nFAIL: test_source_identity_reference_symlinks_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_symlinks_after_either_replay_are_rejected) (after='new-current.json')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/scratch/9f3cdabec13b/ges/tests/test_claim_workload_migration.py\", line 242, in test_source_identity_reference_symlinks_after_either_replay_are_rejected\n    with self.assertRaisesRegex(ValueError,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 2 tests in 0.019s\n\nFAILED (failures=4)\n"
+  },
+  "after": {
+    "phase": "after production fix",
+    "base": "25affa78bcbf16e89667cbe3cbcfbc3a7fa05006",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_claim_workload_migration.py",
+      "-k",
+      "source_identity",
+      "-v"
+    ],
+    "started_at": "2026-10-12T19:47:49.377687+00:00",
+    "duration_seconds": 0.096,
+    "exit_code": 0,
+    "log_sha256": "c11cafe9a5caf1518ffd0d26f72cef73580e1b584dccc5333056550f141145c8",
+    "complete_log": "test_source_identity_reference_changes_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_changes_after_either_replay_are_rejected) ... ok\ntest_source_identity_reference_symlinks_after_either_replay_are_rejected (test_claim_workload_migration.WorkloadMigration.test_source_identity_reference_symlinks_after_either_replay_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.015s\n\nOK\n"
+  }
+}

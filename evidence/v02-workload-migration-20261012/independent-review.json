@@ -1,168 +1,46 @@
 {
-  "schema": "ges.independent-workload-code-review-observation.v1",
-  "reviewer_identity": "/root/migration_review",
-  "reviewer_kind": "current independent automated code-review helper",
-  "observed_at": "2026-10-12T19:19:11.401563+00:00",
-  "verdict": "PASS_FOR_BOUNDED_METADATA_MIGRATION_SCOPE",
-  "scope": "Code and fail-closed review; independent historical/current workload reconstruction from committed metadata and claim documents. No fresh source semantics or authenticated retained-source replay.",
-  "base_head": "afdd2ffe03bd840516947a9256ff9aea380335fb",
-  "writes": "Only parent-authorized scratch review script and this observation; no repository or native-host edits.",
-  "verified_observations": {
-    "historical_claims": 61936,
-    "current_claims": 61941,
-    "historical_documents": 654,
-    "current_documents": 655,
-    "added_claims": 5,
+  "schema": "ges.workload-independent-review.v1",
+  "kind": "Software and metadata review; no semantic-envelope authority or human acceptance",
+  "reviewer": "/root/accounting_review",
+  "recorded_by": "chatgpt-ges-workload-20261012-b970b9876653",
+  "review_observed_at": "2026-10-12T19:15:54.156565+00:00",
+  "result": "PASS_WITHIN_SCOPE",
+  "execution_observed_at": "2026-10-12T19:14:46.431519+00:00",
+  "execution_actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+  "execution_output_review": "Complete recorded output inspected; independent metadata PASS is supported",
+  "execution_record_sha256": "c1d283d6ffdec5d221197a4e2ef0af419403ddd4f7c43b2c2ba1e0ee6f96615f",
+  "execution_record_note": "The preserved execution record's PENDING field states its status at execution time. This later review supplies that review without rewriting the observed record.",
+  "reviewed_files": {
+    "ges/claim_workload.py": "592c7027c7a876d28f5224e231873556de3f29e6a664f8609f31eda6c623315e",
+    "ges/claim_workload_migration.py": "9d95556548e96329681b91d2a45b4ed47e78b8d109c803fb9c455f0481a25b99",
+    "tests/test_claim_workload_integrity.py": "61c1ceba69fabb8f6e812c56e564e70b155479ae74208cb7f60ce8ea310331b7",
+    "tests/test_claim_workload_migration.py": "3c5bbbfd0b48853b38334ce10427e49e4f6db31612e1c74579469d4fc3002295",
+    "evidence/claim-workload-v02-transition.json": "f92cbe31c618e793b9bdc07f51b609d0b464fa5f8698fe715efc6bb542089dd8",
+    ".github/workflows/ci.yml": "4bbc3e00e820129fa1c33082d56b6862d2edd4cefb8e169d5111e0c01e35e920",
+    "evidence/v02-workload-migration-20261012/independent_metadata_audit.py": "4c57b6ed0706081771f592e593b8f3552eaf7d3f2e9d7f7ff9be3bc215f6cbc5"
+  },
+  "current_report_sha256": "ed4ee7e8be9a5369d4651769dc8717456473063d2db21010544349a9848b8a00",
+  "verified_metadata": {
+    "claim_documents": 655,
+    "historical_documents_preserved": 654,
+    "claim_ids": 61941,
+    "families": 4651,
+    "frozen_workload_receipt_subjects": 474,
     "added_documents": 1,
-    "all_historical_documents_unchanged_against_base": true,
-    "all_historical_claim_subject_bindings_unchanged": true,
-    "all_report_count_fields_independently_reconstructed": true,
-    "all_family_ids_keys_members_and_receipt_members_independently_reconstructed": true,
-    "advisory_families": 4651,
-    "exact_statement_hashes": 59400,
-    "exact_source_spans": 50680,
-    "repeated_source_span_occurrences": 11261,
-    "frozen_source_bound_receipts": 474,
-    "current_claims_without_these_frozen_receipts": 61467,
-    "artifact_metadata_rows": 13657,
-    "all_six_complete_source_identity_digests_match_independent_a3_anchor": true,
-    "full_current_claim_membership_digest": "c23a807acdb2e2972b07c4bb8d96e07c93d7478aa577e9e5835170db083459fb",
-    "approved_successor_document": "wa-application-security-correction-01-claims.json",
-    "approved_successor_document_sha256": "3830522db4425a0e7e267479fff32b00cc12541b36bfacd01033faa009df2589",
-    "exact_predecessor_successor_pairs": [
-      {
-        "predecessor": "WA-APPSEC-005",
-        "successor": "WA-APPSEC-005-CORRECTION-01"
-      },
-      {
-        "predecessor": "WA-APPSEC-009",
-        "successor": "WA-APPSEC-009-CORRECTION-01"
-      },
-      {
-        "predecessor": "WA-APPSEC-011",
-        "successor": "WA-APPSEC-011-CORRECTION-01"
-      },
-      {
-        "predecessor": "WA-APPSEC-017",
-        "successor": "WA-APPSEC-017-CORRECTION-01"
-      },
-      {
-        "predecessor": "WA-APPSEC-018",
-        "successor": "WA-APPSEC-018-CORRECTION-01"
-      }
-    ]
+    "added_successor_claims": 5,
+    "new_review_credit": 0,
+    "new_reconciliation_credit": 0
   },
-  "report_sha256": {
-    "historical": "6151dcc71dda756610f371337bebe9981c0f9656cc6f7b252ad60e007701f5ec",
-    "baseline": "2e718486119b29cf286f4b21f067d67dc3bea17f2559a45fbc01105931a22658",
-    "current": "ed4ee7e8be9a5369d4651769dc8717456473063d2db21010544349a9848b8a00"
-  },
-  "reviewed_file_sha256": {
-    "ges/claim_workload.py": "114578c40dae9eb5ea01517b001b672dc3201f1318bbc5a60661a113fb42707a",
-    "ges/claim_workload_migration.py": "1d9dc8d68c4dea63ef92b0be83bd568a0edf73bddbe6e6900798d2bcfce512a0",
-    "tests/test_claim_workload_integrity.py": "a8ea423a8452bbeb0a8218f1b4d0bfaf8c770265920a59961736dbe4848a31ac",
-    "tests/test_claim_workload_migration.py": "f5a949dbd62430477494bf2e553554022f5a87e8fb3e31037d6cacb056bdea04",
-    ".github/workflows/ci.yml": "6e4af3788e7b1edbe51a51feafdcca7f0da61eb2e6516386f78a17846dc9ab2b"
-  },
-  "independent_reconstruction": {
-    "cwd": "/workspace/scratch/9f3cdabec13b/ges",
-    "argv": [
-      "python",
-      "/workspace/scratch/9f3cdabec13b/migration_review_independent.py"
-    ],
-    "script_sha256": "65b1e15c066a4a7da1e39ae23d785c6e8e836dd88adea1df1bf18202a31b8307",
-    "imports_project_code": false,
-    "hard_limit_seconds": 30,
-    "returncode": 0,
-    "elapsed_seconds": 1.893051,
-    "earlier_successful_inline_run": {
-      "observed_at": "2026-10-12T19:16:07.163234+00:00",
-      "elapsed_seconds": 1.865389,
-      "returncode": 0
-    },
-    "earlier_aborted_draft": {
-      "hard_limit_seconds": 30,
-      "returncode": 142,
-      "result": "NO_PASS",
-      "cause": "Per-claim repeated hashing of complete document bytes exceeded the bounded command limit. Cached immutable document hashes were used in the corrected script."
-    },
-    "prior_retained_script_run": {
-      "observed_at": "2026-10-12T19:16:59.927875+00:00",
-      "elapsed_seconds": 1.836194,
-      "returncode": 0,
-      "script_sha256": "6b7ae864ce80075a9b5cb8979c29efa22ff50024e8c18589cc22a9aecd35c21c"
-    },
-    "assertions_required": true,
-    "optimized_invocation": {
-      "cwd": "/workspace/scratch/9f3cdabec13b/ges",
-      "argv": [
-        "python",
-        "-O",
-        "/workspace/scratch/9f3cdabec13b/migration_review_independent.py"
-      ],
-      "returncode": 1,
-      "output": "Independent review requires assertions enabled\n",
-      "emitted_pass": false
-    }
-  },
-  "independent_tests": {
-    "cwd": "/workspace/scratch/9f3cdabec13b/ges",
-    "argv": [
-      "python",
-      "-"
-    ],
-    "stdin": "import signal,time,unittest,sys\nsignal.alarm(30)\nsys.path.insert(0,'tests')\nstart=time.perf_counter()\nsuite=unittest.defaultTestLoader.loadTestsFromName('test_claim_workload_migration')\nresult=unittest.TextTestRunner(verbosity=1).run(suite)\nprint({'elapsed_seconds':round(time.perf_counter()-start,6),'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors)})\nsys.exit(not result.wasSuccessful())\n",
-    "hard_limit_seconds": 30,
-    "tests": 15,
-    "failures": 0,
-    "errors": 0,
-    "unittest_elapsed_seconds": 3.813,
-    "wrapper_elapsed_seconds": 3.847132,
-    "returncode": 0,
-    "full_repository_suite_independently_run": false
-  },
-  "findings": [
-    {
-      "id": "WMR-01",
-      "severity": "MEDIUM",
-      "status": "RESOLVED",
-      "observation": "The migration wrapper originally relied on provenance validation after a general gzip decompression call; altered compressed bytes could reach decompression before their immutable transport fingerprint was checked.",
-      "resolution": "Root added an exact compressed SHA256 precheck against frozen provenance before invoking inventory/replay, and added a regression that fails if replay is reached for a changed transport.",
-      "independent_confirmation": "Reviewed final code and ran the 15-test migration module successfully."
-    },
-    {
-      "id": "WMR-02",
-      "severity": "LOW",
-      "status": "RESOLVED",
-      "reported_by": "/root",
-      "observation": "The independent reproduction script uses assertions; optimized Python must not disable its checks and still emit PASS.",
-      "resolution": "Added an explicit __debug__ guard before every assertion.",
-      "independent_confirmation": "Normal invocation passed; python -O exited 1 before checks with the declared assertion-required error and no PASS."
-    }
+  "code_review": "No blocking findings in exact reviewed code, tests, CI and transition files.",
+  "audit_script_adaptations": [
+    "Descriptive module docstring",
+    "Mandatory __debug__ guard",
+    "Portable repository root from Path(__file__).resolve().parents[2]"
   ],
-  "open_code_findings": [],
-  "limits": [
-    "This helper is not the original finishline_gates actor and issues no reconciliation authority or replacement envelopes.",
-    "No fresh source-body authentication, semantic review, rights clearance, control adoption, native pilot verification, human approval, owner acceptance, merge, or release is established.",
-    "The 474 source-bound workload receipts are distinct from the 2,164 historically validated dispositions and the conditional 2,174 target.",
-    "This observation binds the listed code/test/workflow bytes. Subsequent changes require corresponding review.",
-    "The independent script checks observed before/after byte stability, not an operating-system atomic snapshot or adversarial change-and-restore resistance.",
-    "Only individual command durations were measured; no complete helper wall-clock interval is claimed.",
-    "Documentation was read at its recorded SHA. Native-cache observations described there are root observations and were not independently reperformed by this helper."
-  ],
-  "new_semantic_review_credit": 0,
-  "new_reconciliation_credit": 0,
-  "human_approval": false,
-  "release_acceptance": false,
-  "updated_at": "2026-10-12T19:20:00.971590+00:00",
-  "documentation_review": {
-    "path": "docs/claim-workload-audit.md",
-    "sha256": "df5ac99d564bf5a45e9edee4ace8115d2d51c6ad1e0552324d4f85b516b84fd1",
-    "verdict": "Three-state report model and distinct workload/reconciliation arithmetic are correct.",
-    "nonblocking_clarity_suggestions": [
-      "Label the frozen provenance record as preserved October 7 rather than new.",
-      "Label the first count table as historical records."
-    ],
-    "native_observations_independently_reperformed": false
-  }
+  "limitations": [
+    "Reviewer did not independently execute the unit tests or full suite.",
+    "The successful audit was independently authored and root executed; the reviewer then inspected the complete recorded output.",
+    "Two earlier helper-owned native attempts yielded no recoverable completion output and receive no verification credit.",
+    "Full authenticated source replay, semantic decisions, replacement envelopes, human review, owner acceptance and merged-main verification remain open."
+  ]
 }

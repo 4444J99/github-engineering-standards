@@ -1,0 +1,117 @@
+{
+  "schema": "ges.workload-host-observation.v1",
+  "actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+  "scope": "Bounded isolated metadata migration; no heavy execution",
+  "same_tranche_started_at": "2026-10-12T19:08:19Z",
+  "deadline": "2026-10-12T19:37:19Z",
+  "historical_cumulative_usage": "UNKNOWN_NOT_RESET",
+  "heavy_admission": {
+    "observed_at": "2026-10-12T19:20:03Z",
+    "result": {
+      "schema": "limen.host_admission_decision.v1",
+      "operation": "acquire",
+      "allowed": false,
+      "reasons": [
+        "swap-fraction"
+      ],
+      "lease": null,
+      "inherited": false,
+      "leases": [
+        {
+          "acquired_at": "2026-10-12T19:08:19.779026+00:00",
+          "acquired_epoch": 1791832099.779026,
+          "expires_at": "2026-10-12T19:37:19.706441+00:00",
+          "expires_epoch": 1791833839.706441,
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "lease_id": "58fbfceda6c94cb080e80a55c1543f75",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "pid": 85276,
+          "process_identity": "darwin-proc-start:1791832072:215701",
+          "refreshed_at": "2026-10-12T19:17:01.706441+00:00",
+          "refreshed_epoch": 1791832621.706441,
+          "surface": "chatgpt:desktop-commander"
+        }
+      ],
+      "pressure": {
+        "observed_epoch": 1791832805.1430578,
+        "backblaze_cpu_percent": 0,
+        "backblaze_rss_bytes": 0,
+        "swap_used_bytes": 11739070464,
+        "memory_bytes": 17179869184,
+        "disk_mib_per_second_samples": [
+          92.27,
+          75.9
+        ],
+        "vitals_action": "throttle",
+        "sensor_errors": [],
+        "observed_at": "2026-10-12T19:20:05.143058+00:00",
+        "swap_fraction": 0.6833038330078125,
+        "swap_growth_bytes_per_minute": 292227736.453
+      },
+      "reaped": []
+    }
+  },
+  "writer_session_resume": {
+    "resumed_at": "2026-10-12T19:22:33Z",
+    "same_tranche_started_at": "2026-10-12T19:08:19Z",
+    "same_deadline_epoch": 1791833839.7,
+    "remaining_seconds": 886,
+    "prior_pid_dead": true,
+    "writer_admission": {
+      "schema": "limen.host_admission_decision.v1",
+      "operation": "acquire",
+      "allowed": true,
+      "reasons": [],
+      "lease": {
+        "lease_id": "a1b214fa122444ef8044273b32b9cd50",
+        "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+        "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+        "surface": "chatgpt:desktop-commander-resumed",
+        "pid": 13476,
+        "process_identity": "darwin-proc-start:1791832935:425794",
+        "acquired_epoch": 1791832953.4800901,
+        "acquired_at": "2026-10-12T19:22:33.480090+00:00",
+        "refreshed_epoch": 1791832953.4800901,
+        "refreshed_at": "2026-10-12T19:22:33.480090+00:00",
+        "expires_epoch": 1791833839.4800901,
+        "expires_at": "2026-10-12T19:37:19.480090+00:00"
+      },
+      "inherited": false,
+      "leases": [
+        {
+          "lease_id": "a1b214fa122444ef8044273b32b9cd50",
+          "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+          "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+          "surface": "chatgpt:desktop-commander-resumed",
+          "pid": 13476,
+          "process_identity": "darwin-proc-start:1791832935:425794",
+          "acquired_epoch": 1791832953.4800901,
+          "acquired_at": "2026-10-12T19:22:33.480090+00:00",
+          "refreshed_epoch": 1791832953.4800901,
+          "refreshed_at": "2026-10-12T19:22:33.480090+00:00",
+          "expires_epoch": 1791833839.4800901,
+          "expires_at": "2026-10-12T19:37:19.480090+00:00"
+        }
+      ],
+      "pressure": {
+        "backblaze_cpu_percent": 0,
+        "backblaze_rss_bytes": 0,
+        "disk_mib_per_second_samples": [
+          92.27,
+          75.9
+        ],
+        "memory_bytes": 17179869184,
+        "observed_at": "2026-10-12T19:20:05.143058+00:00",
+        "observed_epoch": 1791832805.1430578,
+        "sensor_errors": [],
+        "swap_fraction": 0.6833038330078125,
+        "swap_growth_bytes_per_minute": 292227736.453,
+        "swap_used_bytes": 11739070464,
+        "vitals_action": "throttle"
+      },
+      "reaped": []
+    }
+  },
+  "full_authenticated_replay_launched": false,
+  "replacement_envelopes_issued": false
+}

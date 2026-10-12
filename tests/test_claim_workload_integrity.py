@@ -7,6 +7,7 @@ from unittest.mock import patch
 
 import test_claim_workload as fixtures
 from ges.claim_workload import _metadata_records, check_inventory
+from ges.claim_workload_migration import check_transition
 from ges.core import ROOT, digest
 from ges.pinned_sources import inventory_digest
 
@@ -194,7 +195,7 @@ class WorkloadMetadataIntegrity(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'inputs changed during check'):
                 self.check(*files)
 
-    def test_real_current_baseline_and_independent_a3_bytes_reproduce_unchanged(self):
+    def test_real_preserved_membership_and_independent_a3_bytes_reproduce_unchanged(self):
         evidence = ROOT / 'evidence'
         artifacts = evidence / 'claim-workload-inputs/artifacts.jsonl.gz'
         current = evidence / 'claim-workload-current-inventory.json'
@@ -206,11 +207,31 @@ class WorkloadMetadataIntegrity(unittest.TestCase):
         result = check_inventory(evidence / 'source-reviews', artifacts,
                                  evidence / 'provider-oidc-reconciliation.json', current,
                                  historical=historical, provenance=provenance,
-                                 preserved_membership=True)
+                                 recorded_membership=True)
         self.assertEqual(result['counts']['recorded_claims'], 61936)
         self.assertEqual(result['counts']['claim_documents'], 654)
         self.assertEqual(len(result['families']), 4651)
         self.assertEqual(before, {path: sha(path.read_bytes()) for path in before})
+
+    def test_real_current_membership_has_only_the_five_pinned_successors(self):
+        evidence = ROOT / 'evidence'
+        result = check_transition(
+            evidence / 'source-reviews', evidence / 'claim-workload-inputs/artifacts.jsonl.gz',
+            evidence / 'provider-oidc-reconciliation.json',
+            evidence / 'claim-workload-current-inventory.json',
+            evidence / 'claim-workload-inventory.json',
+            evidence / 'claim-workload-current-provenance.json',
+            evidence / 'claim-workload-v02-transition.json',
+            evidence / 'claim-workload-v02-inventory.json')
+        self.assertEqual(result['current_recorded_claims'], 61941)
+        self.assertEqual(result['current_claim_documents'], 655)
+        self.assertEqual(result['added_claims'], 5)
+        self.assertEqual(result['preserved_families'], 4651)
+        self.assertEqual(result['workload_receipt_subjects'], 474)
+        self.assertEqual(result['recorded_claims_without_workload_receipt'], 61467)
+        self.assertEqual(result['new_review_credit'], 0)
+        self.assertEqual(result['new_reconciliation_credit'], 0)
+        self.assertFalse(result['full_source_provenance_replayed'])
 
 
 if __name__ == '__main__':

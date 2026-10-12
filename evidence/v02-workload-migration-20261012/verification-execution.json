@@ -1,0 +1,164 @@
+{
+  "schema": "ges.workload-verification-execution.v1",
+  "source_parent_revision": "afdd2ffe03bd840516947a9256ff9aea380335fb",
+  "actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+  "python": "3.14.8 (main, Sep 30 2026, 17:55:09) [Clang 21.0.0 (clang-2100.3.34.2)]",
+  "scope": "focused metadata verification only",
+  "full_source_replay": false,
+  "full_suite": false,
+  "results": [
+    {
+      "label": "focused-workload-tests",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_claim_workload*.py",
+        "-v"
+      ],
+      "cwd": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+      "started_at": "2026-10-12T19:22:51Z",
+      "exit_code": 0,
+      "duration_seconds": 3.485752,
+      "stdout": "",
+      "stderr": "test_added_document_during_read_rejected (test_claim_workload.ClaimWorkload.test_added_document_during_read_rejected) ... ok\ntest_changed_statement_cannot_keep_old_receipt_binding (test_claim_workload.ClaimWorkload.test_changed_statement_cannot_keep_old_receipt_binding) ... ok\ntest_committed_inventory_change_during_check_rejected (test_claim_workload.ClaimWorkload.test_committed_inventory_change_during_check_rejected) ... ok\ntest_committed_inventory_cli_fails_missing_or_stale_input_without_repair (test_claim_workload.ClaimWorkload.test_committed_inventory_cli_fails_missing_or_stale_input_without_repair) ... ok\ntest_committed_inventory_rejects_changed_input_bytes (test_claim_workload.ClaimWorkload.test_committed_inventory_rejects_changed_input_bytes) ... ok\ntest_committed_inventory_rejects_tampered_counts_and_membership (test_claim_workload.ClaimWorkload.test_committed_inventory_rejects_tampered_counts_and_membership) ... ok\ntest_committed_inventory_reproduces_without_writing (test_claim_workload.ClaimWorkload.test_committed_inventory_reproduces_without_writing) ... ok\ntest_compressed_artifact_input_reproduces_original_byte_binding (test_claim_workload.ClaimWorkload.test_compressed_artifact_input_reproduces_original_byte_binding) ... ok\ntest_conflicting_provider_row_identity_rejected (test_claim_workload.ClaimWorkload.test_conflicting_provider_row_identity_rejected) ... ok\ntest_consistent_fields_share_one_provider_row_without_losing_claims (test_claim_workload.ClaimWorkload.test_consistent_fields_share_one_provider_row_without_losing_claims) ... ok\ntest_document_artifact_binding_cannot_be_silently_overridden (test_claim_workload.ClaimWorkload.test_document_artifact_binding_cannot_be_silently_overridden) ... ok\ntest_duplicate_claim_id_rejected (test_claim_workload.ClaimWorkload.test_duplicate_claim_id_rejected) ... ok\ntest_equal_text_in_different_files_does_not_collapse_context (test_claim_workload.ClaimWorkload.test_equal_text_in_different_files_does_not_collapse_context) ... ok\ntest_forward_baseline_provenance_passes_without_restoring_old_input (test_claim_workload.ClaimWorkload.test_forward_baseline_provenance_passes_without_restoring_old_input) ... ok\ntest_forward_provenance_rejects_changed_hashes_identities_and_scope (test_claim_workload.ClaimWorkload.test_forward_provenance_rejects_changed_hashes_identities_and_scope) ... ok\ntest_forward_provenance_rejects_raw_source_content_even_with_updated_hashes (test_claim_workload.ClaimWorkload.test_forward_provenance_rejects_raw_source_content_even_with_updated_hashes) ... ok\ntest_historical_equivalence_allows_only_artifact_input_hash_change (test_claim_workload.ClaimWorkload.test_historical_equivalence_allows_only_artifact_input_hash_change) ... ok\ntest_historical_equivalence_rejects_other_accounting_changes (test_claim_workload.ClaimWorkload.test_historical_equivalence_rejects_other_accounting_changes) ... ok\ntest_incomplete_provider_or_false_boolean_span_rejected (test_claim_workload.ClaimWorkload.test_incomplete_provider_or_false_boolean_span_rejected) ... ok\ntest_incomplete_provider_without_display_identifier_rejected (test_claim_workload.ClaimWorkload.test_incomplete_provider_without_display_identifier_rejected) ... ok\ntest_malformed_query_values_rejected (test_claim_workload.ClaimWorkload.test_malformed_query_values_rejected) ... ok\ntest_mid_read_mutation_rejected (test_claim_workload.ClaimWorkload.test_mid_read_mutation_rejected) ... ok\ntest_provider_context_cannot_hide_query_metadata (test_claim_workload.ClaimWorkload.test_provider_context_cannot_hide_query_metadata) ... ok\ntest_provider_versions_and_duplicate_rows_remain_members (test_claim_workload.ClaimWorkload.test_provider_versions_and_duplicate_rows_remain_members) ... ok\ntest_query_help_identity_and_language_context_preserved (test_claim_workload.ClaimWorkload.test_query_help_identity_and_language_context_preserved) ... ok\ntest_query_metadata_missing_either_key_rejected (test_claim_workload.ClaimWorkload.test_query_metadata_missing_either_key_rejected) ... ok\ntest_raw_identity_variants_are_not_normalized_away (test_claim_workload.ClaimWorkload.test_raw_identity_variants_are_not_normalized_away) ... ok\ntest_supplied_artifact_binding_cannot_be_silently_overridden (test_claim_workload.ClaimWorkload.test_supplied_artifact_binding_cannot_be_silently_overridden) ... ok\ntest_unknown_reconciliation_claim_rejected (test_claim_workload.ClaimWorkload.test_unknown_reconciliation_claim_rejected) ... ok\ntest_allowed_url_payload_is_rejected_even_after_every_mutable_hash_is_rebound (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_allowed_url_payload_is_rejected_even_after_every_mutable_hash_is_rebound) ... ok\ntest_canonical_metadata_paths_preserve_spaces_and_url_encoding (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_canonical_metadata_paths_preserve_spaces_and_url_encoding) ... ok\ntest_changed_source_pin_is_rejected_against_the_unchanged_independent_anchor (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_changed_source_pin_is_rejected_against_the_unchanged_independent_anchor) ... ok\ntest_duplicate_field_cannot_hide_a_discarded_string_payload (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_duplicate_field_cannot_hide_a_discarded_string_payload) ... ok\ntest_gzip_header_payloads_and_extra_members_cannot_bypass_row_checks (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_gzip_header_payloads_and_extra_members_cannot_bypass_row_checks) ... ok\ntest_metadata_values_have_closed_types_ranges_and_canonical_forms (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_metadata_values_have_closed_types_ranges_and_canonical_forms) ... ok\ntest_real_current_membership_has_only_the_five_pinned_successors (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_real_current_membership_has_only_the_five_pinned_successors) ... ok\ntest_real_preserved_membership_and_independent_a3_bytes_reproduce_unchanged (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_real_preserved_membership_and_independent_a3_bytes_reproduce_unchanged) ... ok\ntest_reference_symlinks_and_mid_validation_changes_are_rejected (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_reference_symlinks_and_mid_validation_changes_are_rejected) ... ok\ntest_unreferenced_artifact_cannot_be_removed_or_authenticated_by_rewritten_reference (test_claim_workload_integrity.WorkloadMetadataIntegrity.test_unreferenced_artifact_cannot_be_removed_or_authenticated_by_rewritten_reference) ... ok\ntest_altered_successor_cannot_rebind_its_own_report_and_transition (test_claim_workload_migration.WorkloadMigration.test_altered_successor_cannot_rebind_its_own_report_and_transition) ... ok\ntest_changed_frozen_receipt_or_baseline_cannot_be_used (test_claim_workload_migration.WorkloadMigration.test_changed_frozen_receipt_or_baseline_cannot_be_used) ... ok\ntest_historical_selection_is_explicit_and_does_not_weaken_default_check (test_claim_workload_migration.WorkloadMigration.test_historical_selection_is_explicit_and_does_not_weaken_default_check) ... ok\ntest_missing_old_document_is_rejected (test_claim_workload_migration.WorkloadMigration.test_missing_old_document_is_rejected) ... ok\ntest_omitted_or_duplicate_successor_is_rejected (test_claim_workload_migration.WorkloadMigration.test_omitted_or_duplicate_successor_is_rejected) ... ok\ntest_outer_transaction_rejects_an_extra_document_after_current_replay (test_claim_workload_migration.WorkloadMigration.test_outer_transaction_rejects_an_extra_document_after_current_replay) ... ok\ntest_preserved_and_current_reports_both_reproduce_without_writing (test_claim_workload_migration.WorkloadMigration.test_preserved_and_current_reports_both_reproduce_without_writing) ... ok\ntest_preserved_membership_requires_safe_unique_direct_child_names_and_types (test_claim_workload_migration.WorkloadMigration.test_preserved_membership_requires_safe_unique_direct_child_names_and_types) ... ok\ntest_same_count_historical_claim_or_document_byte_changes_are_rejected (test_claim_workload_migration.WorkloadMigration.test_same_count_historical_claim_or_document_byte_changes_are_rejected) ... ok\ntest_symlinked_claim_and_transition_inputs_are_rejected (test_claim_workload_migration.WorkloadMigration.test_symlinked_claim_and_transition_inputs_are_rejected) ... ok\ntest_transition_and_bound_input_changes_during_check_are_rejected (test_claim_workload_migration.WorkloadMigration.test_transition_and_bound_input_changes_during_check_are_rejected) ... ok\ntest_unrelated_extra_document_is_not_hidden_by_historical_selection (test_claim_workload_migration.WorkloadMigration.test_unrelated_extra_document_is_not_hidden_by_historical_selection) ... ok\n\n----------------------------------------------------------------------\nRan 51 tests in 3.379s\n\nOK\n"
+    },
+    {
+      "label": "preserved-workload-reproduction",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "ges.claim_workload",
+        "--reviews",
+        "evidence/source-reviews",
+        "--artifacts",
+        "evidence/claim-workload-inputs/artifacts.jsonl.gz",
+        "--reconciliation",
+        "evidence/provider-oidc-reconciliation.json",
+        "--check",
+        "evidence/claim-workload-current-inventory.json",
+        "--historical",
+        "evidence/claim-workload-inventory.json",
+        "--provenance",
+        "evidence/claim-workload-current-provenance.json",
+        "--recorded-membership"
+      ],
+      "cwd": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+      "started_at": "2026-10-12T19:24:43Z",
+      "exit_code": 0,
+      "duration_seconds": 1.318548,
+      "stdout": "{\"status\": \"MATCH\", \"membership_scope\": \"PRESERVED_REPORT\", \"recorded_claims\": 61936, \"claim_documents\": 654, \"families\": 4651, \"new_review_credit\": 0, \"new_reconciliation_credit\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "label": "current-workload-transition",
+      "argv": [
+        "/opt/homebrew/opt/python@3.14/bin/python3.14",
+        "-m",
+        "ges.claim_workload_migration",
+        "--reviews",
+        "evidence/source-reviews",
+        "--artifacts",
+        "evidence/claim-workload-inputs/artifacts.jsonl.gz",
+        "--reconciliation",
+        "evidence/provider-oidc-reconciliation.json",
+        "--baseline",
+        "evidence/claim-workload-current-inventory.json",
+        "--historical",
+        "evidence/claim-workload-inventory.json",
+        "--provenance",
+        "evidence/claim-workload-current-provenance.json",
+        "--transition",
+        "evidence/claim-workload-v02-transition.json",
+        "--check",
+        "evidence/claim-workload-v02-inventory.json"
+      ],
+      "cwd": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+      "started_at": "2026-10-12T19:24:45Z",
+      "exit_code": 0,
+      "duration_seconds": 1.993027,
+      "stdout": "{\"added_claims\": 5, \"current_claim_documents\": 655, \"current_recorded_claims\": 61941, \"full_source_provenance_replayed\": false, \"historical_recorded_claims\": 61936, \"new_reconciliation_credit\": 0, \"new_review_credit\": 0, \"preserved_families\": 4651, \"recorded_claims_without_workload_receipt\": 61467, \"replacement_receipt_envelopes_issued\": false, \"scope\": \"METADATA_WORKLOAD_TRANSITION_ONLY\", \"status\": \"MATCH\", \"transition_id\": \"wa-application-security-correction-01\", \"workload_receipt_subjects\": 474}\n",
+      "stderr": ""
+    },
+    {
+      "label": "diff-whitespace-check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+      "started_at": "2026-10-12T19:24:47Z",
+      "exit_code": 0,
+      "duration_seconds": 0.020676,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "continuation_writer_admission": {
+    "schema": "limen.host_admission_decision.v1",
+    "operation": "acquire",
+    "allowed": true,
+    "reasons": [],
+    "lease": {
+      "lease_id": "eebc1a5a894c4020b9ac404364d2d79b",
+      "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+      "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+      "surface": "chatgpt:bounded-metadata-cli",
+      "pid": 19111,
+      "process_identity": "darwin-proc-start:1791833083:551912",
+      "acquired_epoch": 1791833083.944407,
+      "acquired_at": "2026-10-12T19:24:43.944407+00:00",
+      "refreshed_epoch": 1791833083.944407,
+      "refreshed_at": "2026-10-12T19:24:43.944407+00:00",
+      "expires_epoch": 1791833838.944407,
+      "expires_at": "2026-10-12T19:37:18.944407+00:00"
+    },
+    "inherited": false,
+    "leases": [
+      {
+        "lease_id": "eebc1a5a894c4020b9ac404364d2d79b",
+        "kind": "execution:c2ad434ac928a5ac7756611eb854ade7c58dd2512fa91b89d2ec1252f187343b",
+        "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+        "surface": "chatgpt:bounded-metadata-cli",
+        "pid": 19111,
+        "process_identity": "darwin-proc-start:1791833083:551912",
+        "acquired_epoch": 1791833083.944407,
+        "acquired_at": "2026-10-12T19:24:43.944407+00:00",
+        "refreshed_epoch": 1791833083.944407,
+        "refreshed_at": "2026-10-12T19:24:43.944407+00:00",
+        "expires_epoch": 1791833838.944407,
+        "expires_at": "2026-10-12T19:37:18.944407+00:00"
+      }
+    ],
+    "pressure": {
+      "backblaze_cpu_percent": 0.0,
+      "backblaze_rss_bytes": 0,
+      "disk_mib_per_second_samples": [
+        92.27,
+        75.9
+      ],
+      "memory_bytes": 17179869184,
+      "observed_at": "2026-10-12T19:20:05.143058+00:00",
+      "observed_epoch": 1791832805.1430578,
+      "sensor_errors": [],
+      "swap_fraction": 0.6833038330078125,
+      "swap_growth_bytes_per_minute": 292227736.453,
+      "swap_used_bytes": 11739070464,
+      "vitals_action": "throttle"
+    },
+    "reaped": [
+      {
+        "lease_id": "a1b214fa122444ef8044273b32b9cd50",
+        "reason": "dead-pid"
+      }
+    ]
+  },
+  "same_tranche_started_at": "2026-10-12T19:08:19Z",
+  "deadline_epoch": 1791833839.7,
+  "transport_recovery": "Prior own REPL no longer accepted input; its registered deadline handler closed it. Cumulative tranche deadline was retained."
+}

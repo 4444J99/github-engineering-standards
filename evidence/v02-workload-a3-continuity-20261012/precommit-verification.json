@@ -1,0 +1,140 @@
+{
+  "base_commit": "25affa78bcbf16e89667cbe3cbcfbc3a7fa05006",
+  "context": "Precommit verification of narrow A3 continuity integration",
+  "commands": [
+    {
+      "name": "unit",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "started_at": "2026-10-12T19:49:41.164689+00:00",
+      "duration_seconds": 14.507,
+      "exit_code": 0,
+      "log_sha256": "24cf88738592122a9335e87d8fe4a42d036dc558c4c1d3008a846cc028d1a012"
+    },
+    {
+      "name": "historical-workload",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "ges.claim_workload",
+        "--reviews",
+        "evidence/source-reviews",
+        "--artifacts",
+        "evidence/claim-workload-inputs/artifacts.jsonl.gz",
+        "--reconciliation",
+        "evidence/provider-oidc-reconciliation.json",
+        "--check",
+        "evidence/claim-workload-current-inventory.json",
+        "--historical",
+        "evidence/claim-workload-inventory.json",
+        "--provenance",
+        "evidence/claim-workload-current-provenance.json",
+        "--recorded-membership"
+      ],
+      "started_at": "2026-10-12T19:49:55.672221+00:00",
+      "duration_seconds": 2.019,
+      "exit_code": 0,
+      "log_sha256": "a28ed993d93829b7635e063421e5a1bd03a88460e227014823e9f6374f71415e"
+    },
+    {
+      "name": "current-transition",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "ges.claim_workload_migration",
+        "--reviews",
+        "evidence/source-reviews",
+        "--artifacts",
+        "evidence/claim-workload-inputs/artifacts.jsonl.gz",
+        "--reconciliation",
+        "evidence/provider-oidc-reconciliation.json",
+        "--baseline",
+        "evidence/claim-workload-current-inventory.json",
+        "--historical",
+        "evidence/claim-workload-inventory.json",
+        "--provenance",
+        "evidence/claim-workload-current-provenance.json",
+        "--transition",
+        "evidence/claim-workload-v02-transition.json",
+        "--check",
+        "evidence/claim-workload-v02-inventory.json"
+      ],
+      "started_at": "2026-10-12T19:49:57.691076+00:00",
+      "duration_seconds": 3.623,
+      "exit_code": 0,
+      "log_sha256": "a78a7f73953afbaa804900c81059d77b3c84be65b6b69cc8702ad6771464a8d3"
+    },
+    {
+      "name": "validate",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "ges",
+        "validate"
+      ],
+      "started_at": "2026-10-12T19:50:01.314126+00:00",
+      "duration_seconds": 0.064,
+      "exit_code": 0,
+      "log_sha256": "74bb4525b9b900006126e2c8ea295e29f1e8b454357085d3458009791496a535"
+    },
+    {
+      "name": "compile",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "ges",
+        "compile"
+      ],
+      "started_at": "2026-10-12T19:50:01.378476+00:00",
+      "duration_seconds": 0.064,
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "generated",
+      "argv": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "generated/functional-checklist.md",
+        "generated/source-crosswalk.md",
+        "generated/bindings.json"
+      ],
+      "started_at": "2026-10-12T19:50:01.442445+00:00",
+      "duration_seconds": 0.032,
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "whitespace",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-12T19:50:01.474498+00:00",
+      "duration_seconds": 0.008,
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "tests_run": 707,
+  "unit_summary": [
+    "Ran 707 tests in 14.324s",
+    "",
+    "OK"
+  ],
+  "all_passed": true,
+  "reviewed_files": {
+    "ges/claim_workload_migration.py": "d1be041a2742e902e1a93d05235b7a21c642cebe8f4ea730248c947ddf5aecda",
+    "tests/test_claim_workload_migration.py": "8b5560a7c8814d8f78d3e4f0b6f6faa1a10be97451a071b6a28eae623f16955e"
+  }
+}

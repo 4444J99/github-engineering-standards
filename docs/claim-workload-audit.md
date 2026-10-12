@@ -1,6 +1,47 @@
 # Claim workload audit
 
-The historical audit's 61,936 denominator counts recorded source-reference claims, not
+## Current five-successor migration
+
+The current metadata workload is recorded separately in
+`evidence/claim-workload-v02-inventory.json`: 61,941 claims in 655 documents,
+4,651 advisory families, and the same 474 source-bound workload receipt subjects.
+The original 61,936-claim reports and their provenance remain immutable.
+`claim-workload-current-inventory.json` retains its historical filename; it is the
+preserved October 7 metadata baseline, not the complete current claim directory.
+
+The transition contract in `evidence/claim-workload-v02-transition.json` binds
+both preserved reports, the new report, provenance, compressed metadata and frozen
+workload receipts to exact hashes. The validator pins that contract independently
+in code. It checks every old document byte, exact full current membership, the
+five reviewed successor IDs and their predecessor links, and unchanged historical
+family and receipt memberships. Changing totals or rebinding a mutable contract
+cannot authorize a different migration. New additions require a separately
+reviewed transition; the default full-directory inventory never ignores them.
+
+Both commands are required and run in Toolkit validation:
+
+```sh
+python -m ges.claim_workload --reviews evidence/source-reviews --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz --reconciliation evidence/provider-oidc-reconciliation.json --check evidence/claim-workload-current-inventory.json --historical evidence/claim-workload-inventory.json --provenance evidence/claim-workload-current-provenance.json --recorded-membership
+python -m ges.claim_workload_migration --reviews evidence/source-reviews --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz --reconciliation evidence/provider-oidc-reconciliation.json --baseline evidence/claim-workload-current-inventory.json --historical evidence/claim-workload-inventory.json --provenance evidence/claim-workload-current-provenance.json --transition evidence/claim-workload-v02-transition.json --check evidence/claim-workload-v02-inventory.json
+```
+
+`--recorded-membership` is an explicit preserved-snapshot check. It does not
+establish current coverage. The second command replays the complete directory
+and the preservation checks together, with an outer input-stability check.
+Missing files, symlinks, unsafe names, duplicate membership, changed bytes,
+unrelated additions, stale report hashes and altered predecessor pairs fail.
+
+This remains metadata accounting: 61,467 records lack a workload receipt, with
+zero new review or reconciliation credit. The separate broader ledger's 2,164
+historically validated dispositions and conditional 2,174-disposition expectation
+belong to authenticated claim reconciliation. Neither is a workload result.
+Original source-cache restoration, full authenticated provenance replay, semantic
+review, replacement envelopes and all acceptance decisions retain their own gates.
+See [the migration evidence](../evidence/v02-workload-migration-20261012/README.md).
+
+## Preserved baseline audit
+
+The committed audit's 61,936 denominator counts recorded source-reference claims, not
 61,936 distinct obligations. The audit preserves every occurrence and leaves
 the unique actionable-obligation count unknown. Its frozen reconciliation input
 records 474 / 61,936; this audit grants no gate closure or new review credit.
@@ -8,12 +49,7 @@ This is the 654-document `*-claims.json` lane, including 222 legacy community
 claims. The separately reviewed 227-proposition B0/C0 community ledger retains
 its own accounting and is not added to, removed from or re-reviewed here.
 
-The October 12 successor migration adds a separately reproduced current report:
-61,941 recorded claims in 655 documents, still 4,651 advisory families. The five
-predecessors remain in the historical and current inventories. This is five added
-records, not five new validated dispositions; see the migration section below.
-
-| Historical records | Occurrences | Advisory review families |
+| Existing records | Occurrences | Advisory review families |
 |---|---:|---:|
 | Secret-scanning provider capability fields | 31,456 | 556 raw provider/credential identity families |
 | CodeQL query-table fields with row identities | 3,638 | 544 exact query-row families |
@@ -64,23 +100,21 @@ review hours or a claim that all remaining source review has been enumerated.
 
 ## Reproduction
 
-Three committed reports retain distinct provenance:
+Two preserved baseline reports retain distinct provenance:
 
 | Report | Input and scope |
 |---|---|
-| `evidence/claim-workload-inventory.json` | Historical report bound to the original private artifact inventory. Original-input replay was **UNAVAILABLE** in its preservation observation. Existing review and source-table receipts retain this report's unchanged hash. |
-| `evidence/claim-workload-current-inventory.json` | October 7 workflow metadata, preserved under `evidence/claim-workload-inputs/`, applied to the frozen 654-document membership. Its existing name and bytes remain unchanged. |
-| `evidence/v02-workload-migration-20261012/current-inventory.json` | The same preserved workflow metadata with the complete current 655-document claim membership, including the five approved successor records. |
+| `evidence/claim-workload-inventory.json` | Historical report bound to the original private artifact inventory. Original-input byte replay is **UNAVAILABLE**. Existing review and source-table receipts retain this report's unchanged hash. |
+| `evidence/claim-workload-current-inventory.json` | Newly observed October 7 workflow metadata, preserved under `evidence/claim-workload-inputs/`. This report can be reproduced locally without network access. |
 
-The October 7 report preserves every historical field except
-`inputs.artifacts_sha256`. No report grants additional review credit.
-The Toolkit validation workflow now requires both frozen-membership reproduction
-with that strict historical equivalence and full-current reproduction with an
-exact approved migration, for both supported Python versions. Run the same command
-locally:
+The preserved October 7 report preserves every historical field except
+`inputs.artifacts_sha256`. Neither report grants additional review credit.
+Toolkit validation reproduces this baseline using its exact recorded membership,
+then checks the separate full current transition above, for both supported Python
+versions. Run the preserved-baseline command locally:
 
 ```sh
-python -m ges.claim_workload_migration --reviews evidence/source-reviews --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz --reconciliation evidence/provider-oidc-reconciliation.json --baseline evidence/claim-workload-current-inventory.json --current evidence/v02-workload-migration-20261012/current-inventory.json --historical evidence/claim-workload-inventory.json --provenance evidence/claim-workload-current-provenance.json --approval evidence/v02-finish-20261010/claim-migration-audit.json
+python -m ges.claim_workload --reviews evidence/source-reviews --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz --reconciliation evidence/provider-oidc-reconciliation.json --check evidence/claim-workload-current-inventory.json --historical evidence/claim-workload-inventory.json --provenance evidence/claim-workload-current-provenance.json --recorded-membership
 ```
 
 The gzip input contains only artifact metadata from workflow run
@@ -89,14 +123,13 @@ artifact `11460399285`. Its decompressed SHA256 is
 `86225491fb70197b893a0bfb1fa96ebfc1f5a6e33c21c86ab874d9d34f5db9a2`.
 The downloaded ZIP matched GitHub's recorded SHA256
 `33456e7d2d64f24eae94a4331603fe4aa48e6c36f8d4265148ffcda17f3bdf70`.
-The preserved October 7 [provenance record](../evidence/claim-workload-current-provenance.json)
+The preserved [provenance record](../evidence/claim-workload-current-provenance.json)
 binds both report files, the compressed and decompressed metadata, the source
 identity reference, acquisition timestamps and the observed workflow origin.
-This was the October 7 acquisition observation; it did not restore the original cache.
+This is the recorded acquisition observation; it does not restore the original cache.
 
-The preserved-state check requires the input's exact decompressed SHA256 and
-reproduces the October 7 report byte for byte from its own recorded document
-membership. It then requires every historical
+The baseline check first requires the preserved input's exact decompressed SHA256 and
+reproduces the preserved October 7 report byte for byte. It then requires every historical
 report field to match except the artifact input hash. Changes to denominators,
 memberships, document hashes, reconciliation bindings, JSON types or credit
 fields fail. Provenance validation preserves the historical report's exact byte
@@ -111,7 +144,7 @@ record. Counts, pins and identity digests must all match. Missing, stale or chan
 produce a nonzero exit. CI reads committed local bytes; it does not download,
 rewrite, accept or certify evidence.
 
-The original artifact SHA256 recorded as unavailable in that observation remains
+The unavailable original artifact SHA256 remains
 `d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c`.
 Bounded recovery inspected all October 1 workflow runs and the available
 October 1 and October 7 metadata archives. Neither contained those exact bytes.
@@ -120,50 +153,6 @@ their acquisition timestamps and 653 proposed-disposition classifications
 differ. Both reproduce all historical workload fields except the input hash.
 No timestamps or source metadata were inferred or rewritten to simulate recovery.
 This does not prove the original bytes are absent from every external location.
-
-On October 12, a bounded read of the retained native cache located both original
-artifact inventories with exactly that SHA256, and the v2 frozen capsule manifest
-with its expected `0a177df2…1d83` fingerprint. These new observations do not rewrite
-the historical provenance file. Full source authentication and provenance replay
-remain blocked by native heavy-work admission.
-
-### Exact successor migration
-
-The migration checker pins the unchanged historical report, October 7 report,
-October 7 provenance, and October 10 independent migration audit in reviewed code.
-A changed report cannot authorize itself by rebinding neighboring hashes. Before
-decompression, the compressed artifact input must match the pinned provenance.
-The original A3 source-identity validation remains mandatory.
-
-For the preserved reproduction, every recorded document must have its original
-canonical filename, exact byte hash, and claim count. Current reproduction always
-enumerates the complete `*-claims.json` set. That set must equal the historical
-membership plus `wa-application-security-correction-01-claims.json`, with exactly
-its independently reviewed SHA256 and the five approved predecessor/successor
-pairs. All original claims, artifact and receipt inputs, and family memberships
-must be preserved. Both reproductions and a final combined input-stability check
-must pass; the CLI offers no subset-only mode.
-
-| Metadata workload measure | Frozen membership | Current membership |
-|---|---:|---:|
-| Recorded claims | 61,936 | 61,941 |
-| Claim documents | 654 | 655 |
-| Advisory families | 4,651 | 4,651 |
-| Records in the frozen provider/OIDC receipt input | 474 | 474 |
-| Claims without a record in that specific input | 61,462 | 61,467 |
-| New review or reconciliation credit | 0 | 0 |
-
-The 474-record input here is `provider-oidc-reconciliation.json`. It is distinct
-from the later 2,164-disposition validated ledger. The proposed ten replacement
-dispositions and conditional 2,174 / 59,767 accounting require authenticated source
-replay, authentic current role authority, actual envelope issuance, and independent
-decision comparison. No migration check certifies those decisions.
-
-The existing `ges.claim_workload --check` command still enumerates the full current
-set and rejects the old 654-document report. Historical equivalence still permits
-only the artifact-input hash difference; it rejects the 655-document state. A
-future legitimate claim addition requires a separately reviewed migration scope.
-See [execution and review evidence](../evidence/v02-workload-migration-20261012/README.md).
 
 To propose a new report, write a separate output for review:
 

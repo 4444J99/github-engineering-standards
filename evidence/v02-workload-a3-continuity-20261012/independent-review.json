@@ -1,0 +1,113 @@
+{
+  "schema": "ges.independent-a3-continuity-review.v1",
+  "reviewer_identity": "/root/migration_review",
+  "reviewer_kind": "Current independent automated code-review helper",
+  "observed_at": "2026-10-12 19:49:07 UTC",
+  "result": "PASS_WITHIN_SCOPE",
+  "base_head": "25affa78bcbf16e89667cbe3cbcfbc3a7fa05006",
+  "reviewed_change": "Thirteen production lines retain the A3 source-identity reference across preserved/current workload replay; two tests exercise changed bytes and identical-byte symlink replacement after each replay.",
+  "reviewed_file_sha256": {
+    "ges/claim_workload_migration.py": "d1be041a2742e902e1a93d05235b7a21c642cebe8f4ea730248c947ddf5aecda",
+    "tests/test_claim_workload_migration.py": "8b5560a7c8814d8f78d3e4f0b6f6faa1a10be97451a071b6a28eae623f16955e"
+  },
+  "reviewed_preserved_files": {
+    "ges/claim_workload.py": "592c7027c7a876d28f5224e231873556de3f29e6a664f8609f31eda6c623315e",
+    ".github/workflows/ci.yml": "4bbc3e00e820129fa1c33082d56b6862d2edd4cefb8e169d5111e0c01e35e920",
+    "evidence/claim-workload-v02-transition.json": "f92cbe31c618e793b9bdc07f51b609d0b464fa5f8698fe715efc6bb542089dd8",
+    "evidence/claim-workload-v02-inventory.json": "ed4ee7e8be9a5369d4651769dc8717456473063d2db21010544349a9848b8a00",
+    "evidence/claim-workload-current-provenance.json": "239fc3e89643202c9a7935749249eb4a0ca14e67a32c6e2a0517166a81e9bbf8"
+  },
+  "observations": [
+    "The source reference comes from frozen provenance after the preserved replay has validated its identity, canonical locator, and independent A3 authority.",
+    "The immediate reference SHA check rejects a mutation between preserved-replay completion and the new snapshot; it does not merely preserve possibly changed bytes.",
+    "Final canonical-path and byte checks cover changes after current replay, including an identical-byte symlink replacement.",
+    "The two regression tests each cover mutations after preserved replay and after current replay, for four independently failing pre-fix subcases.",
+    "No transition contract, report, provenance, public API, default inventory behavior, or CI workflow was changed relative to the target's existing implementation.",
+    "The target's existing implementation and evidence are retained; this is a narrow continuity fix rather than the earlier alternative migration implementation."
+  ],
+  "findings": [
+    {
+      "id": "A3-CONTINUITY-01",
+      "severity": "MEDIUM",
+      "status": "RESOLVED_IN_REVIEWED_BYTES",
+      "defect": "The target implementation checked A3 reference integrity inside preserved replay but did not retain that integrity through the combined transition.",
+      "resolution": "Verify and retain the trusted reference immediately after preserved replay; recheck canonical path and exact bytes before returning MATCH."
+    }
+  ],
+  "reviewed_integrator_validation": {
+    "actual_executor": "Root integrator; not independently re-executed by this reviewer",
+    "command_argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_claim_workload_migration.py",
+      "-k",
+      "source_identity",
+      "-v"
+    ],
+    "cwd": "/workspace/scratch/9f3cdabec13b/ges",
+    "before": {
+      "started_at": "2026-10-12T19:47:28.107165+00:00",
+      "duration_seconds": 0.108,
+      "exit_code": 1,
+      "tests": 2,
+      "failing_subcases": 4,
+      "observed_failure": "AssertionError: ValueError not raised",
+      "metadata_path": ".cache/continuation-20261012/a3-guard-before.json",
+      "log_path": ".cache/continuation-20261012/a3-guard-before.log",
+      "log_sha256": "7be72ddb5d9a595ff7e0b0bf1ad39a437437802a4c4e9df74ab4c5c1323f25b7"
+    },
+    "after": {
+      "started_at": "2026-10-12T19:47:49.377687+00:00",
+      "duration_seconds": 0.096,
+      "exit_code": 0,
+      "tests": 2,
+      "failing_subcases": 0,
+      "observed_result": "OK",
+      "metadata_path": ".cache/continuation-20261012/a3-guard-after.json",
+      "log_path": ".cache/continuation-20261012/a3-guard-after.log",
+      "log_sha256": "c11cafe9a5caf1518ffd0d26f72cef73580e1b584dccc5333056550f141145c8"
+    },
+    "complete_stdout_stderr_reviewed": true,
+    "recorded_log_sha256_independently_checked": true
+  },
+  "review_commands": [
+    [
+      "git",
+      "diff",
+      "25affa78bcbf16e89667cbe3cbcfbc3a7fa05006",
+      "--",
+      "ges/claim_workload_migration.py",
+      "tests/test_claim_workload_migration.py"
+    ],
+    [
+      "git",
+      "diff",
+      "--stat",
+      "25affa78bcbf16e89667cbe3cbcfbc3a7fa05006"
+    ],
+    [
+      "cat",
+      ".cache/continuation-20261012/a3-guard-before.json",
+      ".cache/continuation-20261012/a3-guard-before.log",
+      ".cache/continuation-20261012/a3-guard-after.json",
+      ".cache/continuation-20261012/a3-guard-after.log"
+    ]
+  ],
+  "open_findings": [],
+  "limitations": [
+    "This observation is an automated software review at the listed file hashes, not original semantic-envelope authority, a human approval, or release acceptance.",
+    "The reviewer inspected complete red/green records and independently checked their log hashes, but did not execute those tests or a full suite.",
+    "No authenticated source replay, native-host action, GitHub write, workflow dispatch/cancel, replacement envelope, or acceptance credit was performed by this reviewer.",
+    "Before/after observations do not provide an operating-system atomic snapshot or detect adversarial change-and-restore between reads.",
+    "Later code, contract, evidence, or workflow changes require the corresponding review and validation."
+  ],
+  "new_semantic_review_credit": 0,
+  "new_reconciliation_credit": 0,
+  "human_approval": false,
+  "release_acceptance": false
+}

@@ -1,163 +1,157 @@
-# Workload migration repair — Staged
+# Five-successor workload migration — staged evidence
 
-This repair restores the Toolkit workload gate while preserving its historical
-accounting guarantee. It is based on draft PR #497 at
-`afdd2ffe03bd840516947a9256ff9aea380335fb`, dependent on unchanged PR #496.
-It establishes metadata reproduction, not GES v0.2 completion.
+This repair preserves the historical workload while adding an independently
+checked current inventory for the five already approved WA successors. It is a
+bounded metadata migration on PR #497, based on
+`afdd2ffe03bd840516947a9256ff9aea380335fb`, and remains dependent on PR #496.
+GES v0.2 remains **Staged and unfinished**.
 
-## What changed
+## Defect and repair
 
-The failed test enumerated all current claim documents and compared that expanded
-set with a frozen report written before five approved successors were consumed.
-The original failure was reproduced: nine integrity tests ran, with one error in
-`test_real_current_baseline_and_independent_a3_bytes_reproduce_unchanged`.
-The comparison correctly detected changed inputs, counts, family membership,
-and claim membership; merely increasing expected counts would lose preservation.
+Toolkit push run [38081454423](https://github.com/4444J99/github-engineering-standards/actions/runs/38081454423)
+at the parent revision ran 692 tests with one workload-integrity error. The test
+compared the full current claim directory with a preserved 654-document report.
+Five successors in one new document made that comparison correctly reject
+changed membership, counts, families and inputs. Later workload and governance
+steps were skipped. The separate source-acquisition run
+[38081456873](https://github.com/4444J99/github-engineering-standards/actions/runs/38081456873)
+succeeded at that parent revision; it does not establish this repair's CI status
+or authenticated current reconciliation.
 
-The repair preserves these exact files:
+The repair makes historical membership explicit with `--recorded-membership`
+and keeps the original full-directory behavior as the default. Both preserved
+reports, their provenance, artifact metadata, A3 reference and workload receipts
+remain byte unchanged. A new `claim-workload-v02-inventory.json` records complete
+current membership. A separately pinned transition contract requires exactly
+the approved successor document and five predecessor/successor pairs. It rejects
+unrelated additions, changed old bytes, changed receipt or family membership,
+unsafe paths, symlinks, stale bindings and inputs changed during either replay.
 
-| Preserved file | SHA-256 |
-|---|---|
-| `evidence/claim-workload-inventory.json` | `6151dcc71dda756610f371337bebe9981c0f9656cc6f7b252ad60e007701f5ec` |
-| `evidence/claim-workload-current-inventory.json` | `2e718486119b29cf286f4b21f067d67dc3bea17f2559a45fbc01105931a22658` |
-| `evidence/claim-workload-current-provenance.json` | `239fc3e89643202c9a7935749249eb4a0ca14e67a32c6e2a0517166a81e9bbf8` |
+The updated real-data tests and Toolkit workflow require both historical
+preservation and complete current reproduction. No full-suite or downstream CI
+step has been disabled. The generated inventory is 4,651 advisory families;
+families provide workload grouping, not semantic acceptance or deduplication.
 
-`ges.claim_workload_migration` reproduces the frozen report from its exact
-654-document membership and applies the original strict historical-equivalence
-and A3 provenance checks. It independently reproduces the complete current glob
-against [current-inventory.json](current-inventory.json), then permits only the
-previously reviewed successor document and its five exact predecessor/successor
-pairs. All original claim documents, receipts, approval files, and source metadata
-remain unchanged. CI requires both states and the transition.
+## Actual metadata accounting
 
-The new report SHA-256 is
-`ed4ee7e8be9a5369d4651769dc8717456473063d2db21010544349a9848b8a00`.
-
-| Metadata workload measure | Frozen | Current |
+| Measure | Preserved baseline | Independently checked current metadata |
 |---|---:|---:|
 | Recorded claims | 61,936 | 61,941 |
 | Claim documents | 654 | 655 |
 | Advisory families | 4,651 | 4,651 |
-| Source-bound records in the frozen provider/OIDC input | 474 | 474 |
-| Claims without a record in that input | 61,462 | 61,467 |
-| New review or reconciliation credit | 0 | 0 |
+| Frozen workload receipt subjects | 474 | 474 |
+| Records without a workload receipt | 61,462 | 61,467 |
+| New review credit | 0 | 0 |
+| New reconciliation credit | 0 | 0 |
 
-Those 474 records belong to this workload's frozen input. They are not the later
-2,164 validated dispositions. The conditional future 2,174 dispositions and
-59,767 unresolved claims still require authenticated replay and legitimate
-replacement-envelope issuance and review.
+The added document is
+`evidence/source-reviews/wa-application-security-correction-01-claims.json`.
+It adds `WA-APPSEC-005-CORRECTION-01`, `009-CORRECTION-01`,
+`011-CORRECTION-01`, `017-CORRECTION-01` and `018-CORRECTION-01`, each retaining
+its full `WA-APPSEC-` prefix and linking to the corresponding preserved
+predecessor. All five join the existing artifact-context family.
 
-## Verification and independent review
+These 474 workload subjects are a separate input from the broader historical
+ledger's 2,164 validated dispositions. The conditional broader expectation of
+2,174 dispositions and 59,767 unresolved claims remains **unexecuted**. This
+repair provides no new semantic decision, envelope or reconciliation credit.
 
-[verification.json](verification.json) records the exact precommit commands,
-runtime, elapsed times, outcomes, and code/report hashes. The prepared review
-package records the exact committed head and its subsequent verification.
+## Verification actually performed
 
-| Check | Observed result |
+The original native checkout was clean at the parent revision before this
+repair. The integrator used Python 3.14.8 and a granted isolated execution lease.
+Every native source file matched the independently reviewed implementation
+fingerprints before the focused tests ran.
+
+| Check | Actual outcome |
 |---|---|
-| `python -m unittest discover -s tests -v` | 707 tests pass; 0 failures, errors, or skips |
-| `python -m ges.claim_workload_migration` with all eight bound inputs | MATCH: both inventories and exactly five successors |
-| `python -m ges validate` | Valid; 95 controls |
-| `python -m ges compile` | Exit 0 |
-| Generated checklist/crosswalk/bindings diff | No changes |
-| `git diff --check` | Exit 0 |
+| Generate separate current inventory from retained artifact metadata | Exit 0; 1.774 seconds |
+| Independently authored metadata audit, root executed | PASS; 1.091 seconds |
+| `python -m unittest discover -s tests -p 'test_claim_workload*.py' -v` | 51 tests, all passed; subprocess 3.486 seconds |
+| Preserved workload reproduction with `--recorded-membership` | Exit 0, `MATCH`; 1.319 seconds |
+| Complete current workload transition | Exit 0, `MATCH`; 1.993 seconds |
+| `git diff --check` before evidence closeout | Exit 0 |
 
-These checks ran in the isolated Linux session using Python 3.12 and public
-committed metadata. They do not claim either native source authentication or the
-six merged-main governance checks. The configured CI Python 3.11/3.13 matrix
-remains required; local success does not manufacture a remote result.
+[verification-execution.json](verification-execution.json) contains the exact
+native interpreter, argument arrays, working directory, timestamps, return
+codes and complete stdout/stderr. The two workload CLI commands are also in
+[the workload audit](../../docs/claim-workload-audit.md).
 
-The current `/root/migration_review` helper independently reconstructed every
-count, family, claim/document membership and source binding without importing
-GES code. [independent-review.json](independent-review.json) preserves that
-actor's exact observation, commands, reviewed file hashes, and limitations.
-The retained [independent-reconstruction.py](independent-reconstruction.py) runs
-from the repository root, enforces a 30-second alarm, and rejects optimized Python
-instead of silently disabling its assertions. This is an audit reproduction;
-the production CI checker uses explicit exceptions.
+The independent audit checked every one of the 655 document hashes, all 61,941
+unique IDs, every family and count field, all 474 frozen receipt subjects, the
+exact five successor pairs, historical byte preservation and input stability.
+Its [preserved script](independent_metadata_audit.py) does not import the GES
+workload implementation or read retained raw source bodies. It must be run with
+ordinary Python; optimized mode is explicitly rejected.
 
-The reviewer found one resource-safety gap: changed compressed bytes could reach
-decompression before the later provenance check rejected them. The repair now
-compares the compressed input fingerprint with the independently pinned provenance
-before replay. Its new regression was observed failing before the change and
-passing afterward. The reviewer independently ran all 15 migration tests.
+[metadata-review-execution.json](metadata-review-execution.json) records the
+root-executed audit at `2026-10-12T19:14:46.431519+00:00`.
+[independent-review.json](independent-review.json) records the actual
+`/root/accounting_review` agent's subsequent review of its complete output and
+exact software files at `2026-10-12T19:15:54.156565+00:00`. The execution record's
+`PENDING` field is preserved as its execution-time observation; the later review
+supplies that output review without rewriting history. This is agent software
+and metadata review, not human review or original semantic-envelope authority.
 
-## Native replay and concurrent work
+## Admission and finite continuation
 
-[native-prerequisites.json](native-prerequisites.json) records actual read-only
-observations. At 19:07:42 UTC the host still denied heavy admission for
-`swap-fraction`; at 19:15:14 UTC it denied `swap-fraction` and `vitals-shed`, with
-10,324,541,440 swap bytes on a 17,179,869,184-byte host. No native execution or
-heavy lease was acquired by this session, and no source replay was launched.
+[host-observation.json](host-observation.json) preserves the actual deployed
+Limen admission responses. Heavy acquisition at 3:20 p.m. EDT on October 12
+was denied for `swap-fraction`: 11,739,070,464 swap bytes on a 17,179,869,184-byte
+physical-memory host, with vitals action `throttle`. An isolated writer lease
+was allowed. No heavy lease was acquired, no full source replay was launched,
+and full-suite/native governance verification remained blocked.
 
-The retained original cache is present. Bounded metadata hashing found the exact
-original artifact SHA-256 `d53ff71f…47c87c` in both its corpus locations, plus
-the expected v2 frozen capsule manifest fingerprint `0a177df2…1d83`.
-That corrects the available-location knowledge while leaving the old unavailable
-observation intact. Snapshot contents and rendered bodies still require actual
-authentication; an index-file hash is not a full-body verification.
+Terminal transport lost its live session handles during this work. Completed
+metadata results were recovered from files. Own idle REPLs were closed through
+their already registered deadline handlers; canonical admission cleanup reaped
+dead own leases. Replacement scoped leases retained the same tranche start
+(`19:08:19Z`) and deadline (`19:37:19Z`), rather than resetting elapsed work.
+Historical cumulative usage remains **UNKNOWN_NOT_RESET**. Recorded native
+metadata command/audit durations total approximately 9.68 seconds; this is not
+the session's total wall time. No other process, host threshold or peer lease
+was changed to obtain admission.
 
-Another GES session acquired the retained checkout's writer lease at 19:08:19 UTC
-and left its own untracked `evidence/claim-workload-v02-inventory.json`. This
-session preserved that checkout and its owner's work. The repair is prepared on
-a separate local dependent branch for review and integration into #497.
-Automatic approval review rejected the GitHub push because the evidence payload
-may contain private organizational metadata and this exact public upload needs
-explicit authorization. No remote branch or draft PR was created. Publication
-remains pending approval of the concrete review package.
+The metadata driver's child verification commands all completed successfully.
+Its later lease-release call supplied `lease_id` positionally, although the
+deployed API requires that argument by keyword. No successful driver cleanup
+receipt was recorded, and no clean overall driver exit is claimed. This does
+not change the already captured child return codes. The publication update
+on [PR #497](https://github.com/4444J99/github-engineering-standards/pull/497)
+records the final scoped lease outcome separately.
 
-The original-head Toolkit run 38081454423 failed and skipped the later gate steps.
-Source-acquisition run 38081456873 is independently observed successful. Neither
-is an execution receipt for the new repair or current replacement envelopes.
+## Input fingerprints
 
-## Concrete next execution
+| Artifact | SHA-256 |
+|---|---|
+| Historical inventory | `6151dcc71dda756610f371337bebe9981c0f9656cc6f7b252ad60e007701f5ec` |
+| Preserved October 7 inventory | `2e718486119b29cf286f4b21f067d67dc3bea17f2559a45fbc01105931a22658` |
+| Preserved provenance | `239fc3e89643202c9a7935749249eb4a0ca14e67a32c6e2a0517166a81e9bbf8` |
+| Compressed metadata input | `9bf57e2bdf62d37026d5c06981c34e2c9db593e44bf03f39c7e441c9751358ac` |
+| Decompressed metadata input | `86225491fb70197b893a0bfb1fa96ebfc1f5a6e33c21c86ab874d9d34f5db9a2` |
+| Frozen workload receipts | `91f52141398c7670bd4e3335b5dad89c88815c3141c75d6007fc52a674e54485` |
+| Approved successor document | `3830522db4425a0e7e267479fff32b00cc12541b36bfacd01033faa009df2589` |
+| New current inventory | `ed4ee7e8be9a5369d4651769dc8717456473063d2db21010544349a9848b8a00` |
+| Pinned transition contract | `f92cbe31c618e793b9bdc07f51b609d0b464fa5f8698fe715efc6bb542089dd8` |
 
-The retained source locator is in `evidence/wave-20261009/cache-validation.json`.
-After the active writer releases or intentionally integrates this repair, obtain
-actual scoped execution and heavy admission. Use the retained v2 capsule,
-`a3-corpus-20261006`, sources, and rendered cache. Within a finite verification
-deadline, run:
+Current claim-membership digest:
+`c23a807acdb2e2972b07c4bb8d96e07c93d7478aa577e9e5835170db083459fb`.
+Neither the preserved metadata nor this digest restores the unavailable
+original artifact cache or authenticates the underlying source bodies.
 
-```sh
-python -m scripts.a3_capsule_receipt \
-  --capsule <original-cache>/a3-six-source-capsule-20261006-v2 \
-  --capsule-sha256 0a177df2e99bd3add5a8701a2f3a1e1ebd0ca1ba51fdb1676947a79f21ea1d83 \
-  --sources <original-cache>/sources \
-  --corpus <original-cache>/a3-corpus-20261006 \
-  --rendered <original-cache>/rendered-docs \
-  --expected-structured-count 605 \
-  --tree-evidence evidence/a3-pin-bound-tree-observations.json \
-  --output <new-ignored-output>/authenticated-capsule.json
+## Remaining sequence
 
-python -m ges.claim_reconciliation \
-  --artifacts <original-cache>/a3-corpus-20261006/artifacts.jsonl \
-  --sources <original-cache>/sources \
-  --reviews evidence/source-reviews \
-  --review-policy evidence/source-review-policy.json
-```
+Obtain actual heavy admission, authenticate retained inputs and replay complete
+claim provenance with the actual denominator and fresh input digests. Recheck
+the preserved/current workload transition against those inputs. Replacement
+envelopes then require the original authorized actors or an authentic renewed
+grant covering current actors, plus independent comparison of every carried
+decision and all ten new dispositions. Do not substitute identities or backdate.
+Only then record current reconciliation and recovery accounting.
 
-The second command intentionally omits both receipt and reconciliation-policy
-inputs. It can produce current provenance accounting and input digests without
-inventing certification. It reports zero validated dispositions for that absent
-receipt input, not a repudiation of preserved historical decisions.
-
-The original owner grant names the October 10 Codex reconciler and its
-`finishline_gates` reviewer. It does not authorize the current actors to use those
-identities. After genuine renewed authority, prepare new envelopes without
-altering originals; independently compare all 2,164 carried decisions and the
-ten proposed new dispositions; then execute reconciliation and recovery with
-the new exact-input policy. Provisional decisions stay in ignored cache until
-that authentic evidence exists.
-
-## Remaining acceptance and custody
-
-The native/adapters/synthesis, retained-body assurance, complete public pilot,
-release-file inventory and rights, human code/security review, owner acceptance,
-merged-main checks, and release distribution remain governed by the October 10
-plan. Private support is unverified. No gate is closed by this repair.
-
-This tranche began at 19:04:54 UTC and has a 19:34:54 UTC checkpoint boundary.
-The recorded root verification work is below 600 seconds; helper script timeouts
-remain explicit in its observation. Historical cumulative usage remains UNKNOWN;
-this session is additive. Native checkouts and caches are retained. The isolated
-repair checkout is retained and its tracked products are preserved in Git.
+Remaining adapters and synthesis, retained-body authentication, complete public
+disposable pilot evidence, final publication clearance, human code/security
+review, owner acceptance and merged-main checks remain open. The approved
+[implementation plan](../../.codex/plans/2026-10-10-finish-ges-v02.md) governs;
+private support remains unverified. This metadata repair closes no v0.2
+acceptance gate and changes no protection, visibility, pilot state or release.

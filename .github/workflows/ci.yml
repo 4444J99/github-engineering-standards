@@ -23,17 +23,27 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
-      - name: Reproduce frozen and current workload and verify approved migration
+      - name: Reproduce preserved workload membership and historical accounting
+        run: >-
+          python -m ges.claim_workload
+          --reviews evidence/source-reviews
+          --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz
+          --reconciliation evidence/provider-oidc-reconciliation.json
+          --check evidence/claim-workload-current-inventory.json
+          --historical evidence/claim-workload-inventory.json
+          --provenance evidence/claim-workload-current-provenance.json
+          --recorded-membership
+      - name: Reproduce complete current workload and exact approved transition
         run: >-
           python -m ges.claim_workload_migration
           --reviews evidence/source-reviews
           --artifacts evidence/claim-workload-inputs/artifacts.jsonl.gz
           --reconciliation evidence/provider-oidc-reconciliation.json
           --baseline evidence/claim-workload-current-inventory.json
-          --current evidence/v02-workload-migration-20261012/current-inventory.json
           --historical evidence/claim-workload-inventory.json
           --provenance evidence/claim-workload-current-provenance.json
-          --approval evidence/v02-finish-20261010/claim-migration-audit.json
+          --transition evidence/claim-workload-v02-transition.json
+          --check evidence/claim-workload-v02-inventory.json
       - run: python -m ges validate
       - run: python -m ges compile
       - name: Generated views match the canonical catalog
