@@ -1,0 +1,141 @@
+name: Warning-only standards inspection
+on:
+  workflow_call:
+    inputs:
+      expected-checks:
+        description: 'Reviewed JSON array of check names; not an execution attestation'
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Read consumer revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          path: candidate
+          persist-credentials: false
+          submodules: false
+          lfs: false
+          filter: blob:none
+          sparse-checkout: '!/*'
+          sparse-checkout-cone-mode: false
+      - name: Read immutable inspector
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: 4444J99/github-engineering-standards
+          ref: a5cdf48e9f255cb407a1ae69be62397f1151847d
+          path: toolkit
+          persist-credentials: false
+          submodules: false
+          lfs: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Install inspector dependency
+        working-directory: toolkit
+        run: python -m pip install --disable-pip-version-check --no-input -r requirements.txt
+      - name: Inspect data without executing consumer code
+        id: inspect
+        working-directory: toolkit
+        env:
+          CANDIDATE: ${{ github.workspace }}/candidate
+          REVISION: ${{ github.event.pull_request.head.sha || github.sha }}
+          REPOSITORY_ID: ${{ github.repository_id }}
+          EXPECTED_CHECKS: ${{ inputs.expected-checks }}
+          EVIDENCE: ${{ runner.temp }}/ges-warning
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, re, subprocess, time
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+          from ges.warning_pilot import main, validate_plan
+          started = time.monotonic()
+          candidate = os.environ['CANDIDATE']
+          if os.environ['GITHUB_EVENT_NAME'] not in ('push', 'pull_request', 'workflow_dispatch'):
+              raise ValueError('Unsupported or privileged caller event')
+          revision = os.environ['REVISION']
+          if not re.fullmatch(r'[0-9a-f]{40}', revision):
+              raise ValueError('Expected exact lowercase commit SHA')
+          def git(*args):
+              return subprocess.check_output(['git', '-C', candidate, *args], timeout=15)
+          if git('rev-parse', 'HEAD').decode().strip() != revision:
+              raise ValueError('Checkout does not match requested revision')
+          plan = {'repository_id': int(os.environ['REPOSITORY_ID']), 'revision': revision,
+                  'checks': json.loads(os.environ['EXPECTED_CHECKS'])}
+          plan['plan_digest'] = hashlib.sha256(json.dumps(plan, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+          validate_plan(plan)
+          entries = git('ls-tree', '-z', revision, '.github/workflows/').split(b'\0')
+          files, complete, total = {}, True, 0
+          for entry in filter(None, entries):
+              metadata, raw_path = entry.split(b'\t', 1)
+              mode, kind, oid = metadata.decode().split()
+              path = raw_path.decode('utf-8')
+              if path.count('/') != 2 or not path.endswith(('.yml', '.yaml')):
+                  continue
+              if len(files) >= 128:
+                  complete = False
+                  break
+              if mode == '120000':
+                  files[path] = {'kind': 'symlink'}
+                  continue
+              if kind != 'blob':
+                  complete = False
+                  continue
+              size = int(git('cat-file', '-s', oid).decode())
+              if size > 1024 * 1024 or total + size > 8 * 1024 * 1024:
+                  complete = False
+                  continue
+              total += size
+              try:
+                  files[path] = git('cat-file', 'blob', oid).decode('utf-8')
+              except UnicodeDecodeError:
+                  complete = False
+          snapshot = {'repository_id': plan['repository_id'], 'revision': revision,
+                      'observations': {'files': {'status': 'OK', 'complete': complete, 'data': files}}}
+          root = Path(os.environ['EVIDENCE'])
+          root.mkdir(mode=0o700)
+          for name, value in (('snapshot', snapshot), ('plan', plan)):
+              (root / (name + '.json')).write_text(json.dumps(value, indent=2) + '\n')
+          import sys
+          sys.argv = ['warning-pilot', '--snapshot', str(root / 'snapshot.json'),
+                      '--plan', str(root / 'plan.json'), '--output', str(root / 'report.json')]
+          if main() != 0:
+              raise RuntimeError('Inspection failed')
+          report = json.loads((root / 'report.json').read_text())
+          retained = {}
+          for name in ('plan.json', 'report.json'):
+              raw = (root / name).read_bytes()
+              retained[name] = {'sha256': hashlib.sha256(raw).hexdigest(), 'bytes': len(raw)}
+          manifest = {'schema': 'ges.warning-workflow.v1', 'owner': os.environ['GITHUB_REPOSITORY_OWNER'],
+                      'repository': os.environ['GITHUB_REPOSITORY'], 'repository_id': plan['repository_id'],
+                      'revision': revision, 'toolkit_commit': 'a5cdf48e9f255cb407a1ae69be62397f1151847d',
+                      'run_id': os.environ['GITHUB_RUN_ID'], 'run_attempt': os.environ['GITHUB_RUN_ATTEMPT'],
+                      'workflow_files_observed': len(files), 'workflow_inventory_complete': complete,
+                      'invocation_seconds': round(time.monotonic() - started, 6),
+                      'timing_scope': 'inspection only; hosted job duration must be measured separately',
+                      'plan_authority': 'caller-declared configuration, not independently authenticated execution policy',
+                      'retention_deadline': (datetime.now(timezone.utc) + timedelta(days=30)).isoformat(),
+                      'access': 'caller repository Actions artifact permissions',
+                      'retrieval_verified': False, 'restoration_verified': False, 'files': retained}
+          (root / 'manifest.json').write_text(json.dumps(manifest, indent=2) + '\n')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as summary:
+              summary.write('Warning-only inspection completed; execution remains NOT_VERIFIABLE.\n')
+              for finding in report['findings']:
+                  summary.write(f"- {finding['control']}: {finding['status']}\n")
+          PY
+      - name: Retain report and integrity manifest in caller custody
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: warning-pilot-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/ges-warning/plan.json
+            ${{ runner.temp }}/ges-warning/report.json
+            ${{ runner.temp }}/ges-warning/manifest.json
+          retention-days: 30
+          if-no-files-found: error
+          include-hidden-files: false

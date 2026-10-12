@@ -1,0 +1,94 @@
+{
+  "schema": "ges.shared-warning-workflow.validation.v1",
+  "date": "2026-10-12",
+  "owner": "4444J99",
+  "executor": "Codex",
+  "status": "staged-local-passes",
+  "source_sha256": {
+    ".github/workflows/warning-pilot.yml": "91ddb32a192659cde746b7bddf5dd9608ade9079b789ebbe15e9b07f0d065bfc",
+    "tests/test_warning_workflow.py": "1bf73d335d8971fc3fa35f9bf7dc6c58130782958725513340f5e87b0dd482fd",
+    "docs/shared-warning-workflow.md": "66ade4016b47e977b00d1e51e31dd5a02120adf36acc9689adba1d0e79bb11b1"
+  },
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 63.694,
+      "output_sha256": "3c86ee01bfda5f7ed7070a009260af819a6603a3ed5470f6e7e8f781b0bb8184",
+      "summary": "ok\ntest_reusable_job_cannot_mix_execution_forms (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_reusable_job_cannot_mix_execution_forms) ... ok\ntest_root_write_still_fails (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_root_write_still_fails) ... ok\ntest_unresolved_workflow_symlink_requires_review (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unresolved_workflow_symlink_requires_review) ... ok\ntest_unsupported_scope_is_not_green (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unsupported_scope_is_not_green) ... ok\n\n----------------------------------------------------------------------\nRan 676 tests in 62.542s\n\nOK\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ges",
+        "validate"
+      ],
+      "exit_code": 0,
+      "seconds": 0.072,
+      "output_sha256": "74bb4525b9b900006126e2c8ea295e29f1e8b454357085d3458009791496a535",
+      "summary": "{\"valid\": true, \"controls\": 95}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ges",
+        "compile"
+      ],
+      "exit_code": 0,
+      "seconds": 0.079,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": ""
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/actionlint",
+        ".github/workflows/warning-pilot.yml"
+      ],
+      "exit_code": 0,
+      "seconds": 0.171,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.069,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "generated/functional-checklist.md",
+        "generated/source-crosswalk.md",
+        "generated/bindings.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.033,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "summary": ""
+    }
+  ],
+  "hosted_execution_observed": false,
+  "consumer_activated": false,
+  "artifact_retrieval_verified": false,
+  "rollback_rehearsed": false,
+  "limitations": "Local fixtures and lint are not hosted onboarding, measured whole-job overhead, organizational acceptance, or native enforcement."
+}
