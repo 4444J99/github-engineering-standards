@@ -1,12 +1,13 @@
 import copy
 import json
+import hashlib
 import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
 
-from ges.warning_pilot import inspect, execution_result, load, validate_plan
+from ges.warning_pilot import inspect, execution_result, load, load_input, validate_plan
 
 
 class WarningPilotTests(unittest.TestCase):
@@ -79,6 +80,17 @@ class WarningPilotTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "x.json"; p.write_text('{"x":1,"x":2}')
             with self.assertRaises(ValueError): load(str(p))
+
+    def test_digest_identifies_parsed_bytes_after_source_changes(self):
+        with tempfile.TemporaryDirectory() as d:
+            p = Path(d) / "input.json"
+            raw = b'{"value": "original"}'
+            p.write_bytes(raw)
+            value, digest = load_input(str(p))
+            p.write_text('{"value": "replacement"}')
+            self.assertEqual({"value": "original"}, value)
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), digest)
+            self.assertNotEqual(hashlib.sha256(p.read_bytes()).hexdigest(), digest)
 
     def test_warning_exit_zero_but_bad_input_exit_two_and_no_overwrite(self):
         with tempfile.TemporaryDirectory() as d:

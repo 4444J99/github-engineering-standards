@@ -79,7 +79,7 @@ def inspect(snapshot: dict, plan: dict, receipt: dict | None = None) -> dict:
                               "complete_workflow_schema", "privileged_trigger_dataflow", "evidence_authenticity"]}
 
 
-def load(path: str) -> dict:
+def load_input(path: str) -> tuple[dict, str]:
     def unique(pairs):
         result = {}
         for key, value in pairs:
@@ -87,7 +87,15 @@ def load(path: str) -> dict:
                 raise ValueError("Duplicate JSON key: " + key)
             result[key] = value
         return result
-    return json.loads(Path(path).read_text(), object_pairs_hook=unique)
+    with Path(path).open("rb") as source:
+        raw = source.read(16 * 1024 * 1024 + 1)
+    if len(raw) > 16 * 1024 * 1024:
+        raise ValueError("Input exceeds 16 MiB")
+    return json.loads(raw, object_pairs_hook=unique), hashlib.sha256(raw).hexdigest()
+
+
+def load(path: str) -> dict:
+    return load_input(path)[0]
 
 
 def main() -> int:
@@ -98,9 +106,11 @@ def main() -> int:
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     try:
-        result = inspect(load(args.snapshot), load(args.plan), load(args.receipt) if args.receipt else None)
-        result["input_digests"] = {name: hashlib.sha256(Path(path).read_bytes()).hexdigest()
-                                  for name, path in (("snapshot", args.snapshot), ("plan", args.plan), ("receipt", args.receipt)) if path}
+        inputs = {name: load_input(path) for name, path in
+                  (("snapshot", args.snapshot), ("plan", args.plan), ("receipt", args.receipt)) if path}
+        result = inspect(inputs["snapshot"][0], inputs["plan"][0],
+                         inputs["receipt"][0] if "receipt" in inputs else None)
+        result["input_digests"] = {name: value[1] for name, value in inputs.items()}
         with Path(args.output).open("x") as output:
             json.dump(result, output, indent=2)
             output.write("\n")
