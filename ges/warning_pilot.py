@@ -59,6 +59,8 @@ def inspect(snapshot: dict, plan: dict, receipt: dict | None = None) -> dict:
     validate_plan(plan)
     if not isinstance(snapshot, dict):
         raise ValueError("Snapshot must be an object")
+    if not isinstance(snapshot.get("observations", {}), dict):
+        raise ValueError("Snapshot observations must be an object")
     bound = (type(snapshot.get("repository_id")) is int and snapshot.get("repository_id") == plan["repository_id"]
              and snapshot.get("revision") == plan["revision"])
     findings = []

@@ -81,6 +81,11 @@ class WarningPilotTests(unittest.TestCase):
             p = Path(d) / "x.json"; p.write_text('{"x":1,"x":2}')
             with self.assertRaises(ValueError): load(str(p))
 
+    def test_malformed_observations_rejected(self):
+        for observations in (None, [], "invalid"):
+            with self.subTest(observations=observations), self.assertRaises(ValueError):
+                inspect({**self.snapshot, "observations": observations}, self.plan)
+
     def test_digest_identifies_parsed_bytes_after_source_changes(self):
         with tempfile.TemporaryDirectory() as d:
             p = Path(d) / "input.json"
