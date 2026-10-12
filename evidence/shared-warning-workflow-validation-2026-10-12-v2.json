@@ -1,0 +1,61 @@
+{
+  "source_sha256": {
+    ".github/workflows/warning-pilot.yml": "d605a8d4ef492d387eb93413f940bd7ca8d42c0cc27b40af6b08dbddad60422e",
+    "tests/test_warning_workflow.py": "a4f1664ef873323bfc92b03b48f8478319523007c4f6961999add68edb15cd63",
+    "docs/shared-warning-workflow.md": "40dc3381abb932ced4c7452b92f159a50bd52029d759c3f02e9eeb049b116268"
+  },
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "summary": "lved_workflow_symlink_requires_review (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unresolved_workflow_symlink_requires_review) ... ok\ntest_unsupported_scope_is_not_green (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unsupported_scope_is_not_green) ... ok\n\n----------------------------------------------------------------------\nRan 678 tests in 14.680s\n\nOK\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ges",
+        "validate"
+      ],
+      "exit_code": 0,
+      "summary": "{\"valid\": true, \"controls\": 95}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ges",
+        "compile"
+      ],
+      "exit_code": 0,
+      "summary": ""
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/actionlint",
+        ".github/workflows/warning-pilot.yml"
+      ],
+      "exit_code": 0,
+      "summary": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": ""
+    }
+  ],
+  "hosted_execution_observed": false,
+  "review_dispositions": "4251879331: full authenticated blob checkout; 4251879346: local references unknown; 4251879356: separate fork identity; 4251879367: streaming bounded enumeration; 4251879377: GitHub run-bound immutable wrapper SHA; 4251879385: hash-locked wheel"
+}
