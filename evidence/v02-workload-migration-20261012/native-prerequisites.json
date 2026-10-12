@@ -1,0 +1,70 @@
+{
+  "schema": "ges.native-replay-prerequisites-observation.v1",
+  "actor": "ChatGPT /root; workspace 9f3cdabec13b",
+  "native_checkout_head_observed": "afdd2ffe03bd840516947a9256ff9aea380335fb",
+  "native_checkout_mutated_by_this_session": false,
+  "native_heavy_lease_acquired_by_this_session": false,
+  "native_source_replay_launched_by_this_session": false,
+  "admission_observations": [
+    {
+      "observed_at": "2026-10-12T19:07:42.356386+00:00",
+      "operation": "status",
+      "allowed": false,
+      "reasons": [
+        "swap-fraction"
+      ],
+      "memory_bytes": 17179869184,
+      "swap_used_bytes": 8422225346,
+      "swap_fraction": 0.4902380370767787,
+      "vitals_action": "throttle",
+      "active_lease_count": 0
+    },
+    {
+      "observed_at": "2026-10-12T19:15:14.712921+00:00",
+      "operation": "status",
+      "allowed": false,
+      "reasons": [
+        "swap-fraction",
+        "vitals-shed"
+      ],
+      "memory_bytes": 17179869184,
+      "swap_used_bytes": 10324541440,
+      "swap_fraction": 0.6009674072265625,
+      "vitals_action": "shed",
+      "active_execution_lease": {
+        "owner": "chatgpt-ges-workload-20261012-b970b9876653",
+        "lease_id": "58fbfceda6c94cb080e80a55c1543f75",
+        "expires_at": "2026-10-12T19:38:19.779026+00:00",
+        "owned_by_this_session": false
+      }
+    }
+  ],
+  "projection_note": "Bounded fields transcribed from actual Desktop Commander controller responses; not a fabricated lease or full raw response. Status returns report-only exit 0 despite denied admission.",
+  "observed_concurrent_work": "Untracked evidence/claim-workload-v02-inventory.json in retained native checkout; left untouched.",
+  "retained_metadata_fingerprints": [
+    {
+      "relative_to_original_cache": "a3-six-source-capsule-20261006-v2/manifest.json",
+      "bytes": 3393,
+      "sha256": "0a177df2e99bd3add5a8701a2f3a1e1ebd0ca1ba51fdb1676947a79f21ea1d83"
+    },
+    {
+      "relative_to_original_cache": "a3-corpus-20261006/artifacts.jsonl",
+      "bytes": 9446125,
+      "sha256": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c"
+    },
+    {
+      "relative_to_original_cache": "corpus/artifacts.jsonl",
+      "bytes": 9446125,
+      "sha256": "d53ff71f62a5facec4c60f94ec66c967861e79f46f0af5bbb606654d5d47c87c"
+    },
+    {
+      "relative_to_original_cache": "rendered-docs/index.jsonl",
+      "bytes": 11003364,
+      "sha256": "5f38aa6318b69a1eec051ed362537c068ab825d4c7e7f8c061aa0b45a6a2bab4"
+    }
+  ],
+  "fingerprint_method": "Read-only SHA-256 of selected metadata files under 12 MB each; full snapshots and rendered bodies were not authenticated.",
+  "source_cache_locator": "Use source_root in evidence/wave-20261009/cache-validation.json; original cache is its parent.",
+  "receipt_authority": "Existing owner grant names the original Codex session and finishline_gates; current actors have no renewed envelope issuance grant.",
+  "checkout_disposition": "Retained unchanged by this session; another writer remains owner of its native scope."
+}

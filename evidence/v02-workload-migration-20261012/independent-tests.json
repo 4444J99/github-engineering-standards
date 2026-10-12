@@ -1,0 +1,29 @@
+{
+  "schema": "ges.independent-workload-test-observation.v1",
+  "reviewer_identity": "/root/migration_review",
+  "scope": "Bounded test_claim_workload_migration module only",
+  "tests": {
+    "cwd": "/workspace/scratch/9f3cdabec13b/ges",
+    "argv": [
+      "python",
+      "-"
+    ],
+    "stdin": "import signal,time,unittest,sys\nsignal.alarm(30)\nsys.path.insert(0,'tests')\nstart=time.perf_counter()\nsuite=unittest.defaultTestLoader.loadTestsFromName('test_claim_workload_migration')\nresult=unittest.TextTestRunner(verbosity=1).run(suite)\nprint({'elapsed_seconds':round(time.perf_counter()-start,6),'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors)})\nsys.exit(not result.wasSuccessful())\n",
+    "hard_limit_seconds": 30,
+    "tests": 15,
+    "failures": 0,
+    "errors": 0,
+    "unittest_elapsed_seconds": 3.813,
+    "wrapper_elapsed_seconds": 3.847132,
+    "returncode": 0,
+    "full_repository_suite_independently_run": false
+  },
+  "tested_file_sha256": {
+    "ges/claim_workload.py": "114578c40dae9eb5ea01517b001b672dc3201f1318bbc5a60661a113fb42707a",
+    "ges/claim_workload_migration.py": "1d9dc8d68c4dea63ef92b0be83bd568a0edf73bddbe6e6900798d2bcfce512a0",
+    "tests/test_claim_workload_integrity.py": "a8ea423a8452bbeb0a8218f1b4d0bfaf8c770265920a59961736dbe4848a31ac",
+    "tests/test_claim_workload_migration.py": "f5a949dbd62430477494bf2e553554022f5a87e8fb3e31037d6cacb056bdea04"
+  },
+  "human_approval": false,
+  "full_repository_suite_independently_run": false
+}

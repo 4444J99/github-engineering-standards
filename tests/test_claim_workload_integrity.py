@@ -205,7 +205,8 @@ class WorkloadMetadataIntegrity(unittest.TestCase):
                   (artifacts, current, historical, provenance, authority)}
         result = check_inventory(evidence / 'source-reviews', artifacts,
                                  evidence / 'provider-oidc-reconciliation.json', current,
-                                 historical=historical, provenance=provenance)
+                                 historical=historical, provenance=provenance,
+                                 preserved_membership=True)
         self.assertEqual(result['counts']['recorded_claims'], 61936)
         self.assertEqual(result['counts']['claim_documents'], 654)
         self.assertEqual(len(result['families']), 4651)
