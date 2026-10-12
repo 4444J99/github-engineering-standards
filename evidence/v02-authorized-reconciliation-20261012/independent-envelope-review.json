@@ -1,0 +1,55 @@
+{
+  "accounting_performed": false,
+  "checks_passed": 69621,
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "-m",
+    "ges.reconciliation_envelopes",
+    "--draft",
+    "/workspace/scratch/9f3cdabec13b/ges/.cache/cloud-replay-20261012/replacement-draft/replacement-decisions.draft.json",
+    "--draft-sha256",
+    "a8b9065b0a5a43e950451683badcbeaa335cc344bbce78940dac4420fb6d7185",
+    "--receipts",
+    "/workspace/scratch/2aefcbff59bd/ges/.cache/reconciliation-issued-20261012/issued-reviewed.json",
+    "--policy",
+    "/workspace/scratch/2aefcbff59bd/ges/evidence/v02-authorized-reconciliation-20261012/claim-reconciliation-policy.json"
+  ],
+  "comparison_sha256": "c71913fdafb4cde74afb0b4603ef07ac5283db2e2051cd3ba69f2170408aaddc",
+  "completed_at": "2026-10-12T21:46:06.937288+00:00",
+  "decisions": 2174,
+  "final_ledger_canonical_digest": "9085ac042ae2b951aa582b390faf36e78380d8108199de1c4073e84557a17e8f",
+  "final_ledger_sha256": "b4147bf94b13d18188b7acc775c1f7508f1653f2737bcecc7f27920afe58b73f",
+  "findings": [],
+  "human_approval": false,
+  "input_sha256": {
+    "/workspace/scratch/2aefcbff59bd/ges/.cache/reconciliation-issued-20261012/issued-pending-review.json": "31e2b25ad9c95f62d7c839aee61c9fd44ebf07a2f6078345531daefb8407feee",
+    "/workspace/scratch/2aefcbff59bd/ges/evidence/v02-authorized-reconciliation-20261012/claim-reconciliation-policy.json": "06e34189c0d9a30d3d7a592e3e229ded0c22452a47f656e5bcae1e5bdb994f98",
+    "/workspace/scratch/2aefcbff59bd/ges/evidence/v02-authorized-reconciliation-20261012/issuance.json": "2e8608fef0827dda5da9834ec41eaeb5b45e6e820d2f6b5542608cd0b2b0575c",
+    "/workspace/scratch/2aefcbff59bd/ges/evidence/v02-authorized-reconciliation-20261012/owner-authorization.json": "72b8510137eb0de5c12095a816f48cc2f3cf21c94df5b7331c0b56e79e2c8ed0",
+    "/workspace/scratch/2aefcbff59bd/ges/evidence/v02-cloud-replay-20261012/independent-decision-review.json": "138db9ed06305fc38107e69c78fb7240ae9194f642ce075ed725a861224b333c",
+    "/workspace/scratch/9f3cdabec13b/ges/.cache/cloud-replay-20261012/replacement-draft/replacement-decisions.draft.json": "a8b9065b0a5a43e950451683badcbeaa335cc344bbce78940dac4420fb6d7185"
+  },
+  "limits": [
+    "Actual scoped agent final-envelope review under the direct owner grant; this is not human approval, release acceptance, or identity-provider authentication.",
+    "Reuses prior independent semantic review of ten dispositions and preservation review of 2164 carried decisions; no fresh semantic adjudication of all carried decisions or source replay.",
+    "Actual review timestamps generated after complete comparison; issuance actor and timestamps preserved. Script runtime timestamps cover mechanical checks; manual reading of grant, prior review reasoning and ten decisions preceded this execution."
+  ],
+  "reconciler": "chatgpt-cloud:20261012:2aefcbff59bd:/root",
+  "release_acceptance": false,
+  "reviewed_at": "2026-10-12T21:46:06.610245+00:00",
+  "reviewer": "chatgpt-cloud:20261012:2aefcbff59bd:/root/envelope_review",
+  "schema": "ges.independent-authorized-final-envelope-review.v1",
+  "script_command": [
+    "timeout",
+    "60s",
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/2aefcbff59bd/ges/evidence/v02-authorized-reconciliation-20261012/review-final-envelopes.py"
+  ],
+  "script_sha256": "138c2e2abd60682a868febc4ca841e5ab468d3dd9e05ba7b95d9242cff7bff08",
+  "semantic_review_reused": true,
+  "source_acquisition_repeated": false,
+  "started_at": "2026-10-12T21:46:06.296672+00:00",
+  "status": "PASS_EXACT_AUTHORIZED_FINAL_ENVELOPES",
+  "subject_field_comparisons": 23914,
+  "substantive_field_comparisons": 21740
+}

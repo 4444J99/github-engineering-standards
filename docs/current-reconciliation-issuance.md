@@ -1,6 +1,24 @@
 # Current reconciliation issuance after cloud replay
 
-Status: staged; no current receipt issuance or v0.2 acceptance.
+Status: staged authorized partial reconciliation; v0.2 acceptance remains open.
+
+## Authorized execution — October 12, 2026
+
+After this runbook was staged in PR #507, the owner directly approved the exact
+current actor pair and 2,174-decision scope at 21:44:17 UTC. The additive grant,
+actual issuance, distinct final-envelope review and successful source-bound
+accounting are retained in `evidence/v02-authorized-reconciliation-20261012/`.
+Accounting now reports **2,174 validated / 59,767 unresolved out of 61,941**, with
+`mapping_complete=false`. No historical grant, receipt or report was overwritten.
+The private final ledger is preserved separately. The original authority finding
+below describes the pre-grant inspection; it is superseded for this exact scope.
+
+Full recovery integration was attempted and failed for the missing full frozen
+corpus `candidates.jsonl`; no successful recovery report was produced. Original
+capsule/rendered-body restoration, publication, pilot and acceptance gates remain
+open. The completed source cache was reused without acquisition; source provenance
+was revalidated as part of the accounting contract.
+
 
 PR #506 preserves completed current source replay at `6c37fe5` and its independent
 review. Reuse those executed results for the same locked archives and unchanged
