@@ -18,7 +18,7 @@ VALID = 'on: push\npermissions: {contents: read}\njobs: {test: {runs-on: ubuntu-
 
 
 class WarningWorkflowTests(unittest.TestCase):
-    def run_fixture(self, files=None, checks='["test"]', event='pull_request', mismatch=False, metadata=None):
+    def run_fixture(self, files=None, checks='["test"]', event='pull_request', mismatch=False, metadata=None, missing_blob=False):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             candidate = root / 'candidate'
@@ -38,6 +38,9 @@ class WarningWorkflowTests(unittest.TestCase):
             subprocess.run(['git', '-C', str(candidate), 'add', '.'], check=True, capture_output=True)
             subprocess.run(['git', '-C', str(candidate), 'commit', '-qm', 'fixture'], check=True, capture_output=True)
             sha = subprocess.check_output(['git', '-C', str(candidate), 'rev-parse', 'HEAD'], text=True).strip()
+            if missing_blob:
+                oid = subprocess.check_output(['git', '-C', str(candidate), 'rev-parse', 'HEAD:.github/workflows/ci.yml'], text=True).strip()
+                (candidate / '.git/objects' / oid[:2] / oid[2:]).unlink()
             env = dict(os.environ, CANDIDATE=str(candidate), REVISION='a'*40 if mismatch else sha,
                        REPOSITORY_ID='1', EXPECTED_CHECKS=checks, EVIDENCE=str(root/'evidence'),
                        GITHUB_EVENT_NAME=event, GITHUB_REPOSITORY_OWNER='fixture',
@@ -64,9 +67,12 @@ class WarningWorkflowTests(unittest.TestCase):
                 self.assertNotIn('${{', step['run'])
         checkouts = [s for s in STEPS if s.get('uses', '').startswith('actions/checkout@')]
         self.assertTrue(all(s['with']['persist-credentials'] is False for s in checkouts))
-        self.assertEqual(checkouts[1]['with']['ref'], 'a5cdf48e9f255cb407a1ae69be62397f1151847d')
-        self.assertNotIn('filter', checkouts[0]['with'])
-        self.assertNotIn('sparse-checkout', checkouts[0]['with'])
+        self.assertEqual(checkouts[0]['with']['ref'], 'a5cdf48e9f255cb407a1ae69be62397f1151847d')
+        fetch = next(s['run'] for s in STEPS if s.get('name') == 'Fetch consumer objects without a working tree')
+        self.assertIn("'--bare'", fetch)
+        self.assertIn("GIT_CONFIG_VALUE_0", fetch)
+        self.assertIn("'--filter=blob:limit=1048577'", fetch)
+        self.assertIn("GIT_NO_LAZY_FETCH='1'", SCRIPT)
         install = next(s['run'] for s in STEPS if s.get('name') == 'Install inspector dependency')
         self.assertIn('--require-hashes', install)
         self.assertIn('--only-binary=:all:', install)
@@ -134,3 +140,9 @@ class WarningWorkflowTests(unittest.TestCase):
             result, data = self.run_fixture(metadata=metadata)
             self.assertNotEqual(result.returncode, 0)
             self.assertNotIn('report.json', data)
+
+    def test_missing_prefetched_blob_is_unknown_not_an_authenticated_lazy_fetch(self):
+        result, data = self.run_fixture(missing_blob=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertFalse(data['snapshot.json']['observations']['files']['complete'])
+        self.assertTrue(all(f['status'] != 'OBSERVED' for f in data['report.json']['findings'][:2]))

@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "summary": "lved_workflow_symlink_requires_review (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unresolved_workflow_symlink_requires_review) ... ok\ntest_unsupported_scope_is_not_green (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unsupported_scope_is_not_green) ... ok\n\n----------------------------------------------------------------------\nRan 679 tests in 30.852s\n\nOK\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ges",
+        "validate"
+      ],
+      "exit_code": 0,
+      "summary": "{\"valid\": true, \"controls\": 95}\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "ges",
+        "compile"
+      ],
+      "exit_code": 0,
+      "summary": ""
+    },
+    {
+      "command": [
+        "/opt/homebrew/bin/actionlint",
+        ".github/workflows/warning-pilot.yml"
+      ],
+      "exit_code": 0,
+      "summary": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "summary": ""
+    }
+  ],
+  "source_sha256": {
+    ".github/workflows/warning-pilot.yml": "4d3c30b11f5fcf8a7c1aed8d18cae7dc4e7de7cb25bac20adc628117a1125c59",
+    "tests/test_warning_workflow.py": "052ed07a8f0cc9905f5a0a1cec44980e8880fa8c4b679af813ecf050662d81d7",
+    "docs/shared-warning-workflow.md": "db50cbc9dee556e642d7c4bd4e07b881674820da4ab9551c91433ca3e8f81355"
+  },
+  "hosted_failure_run": 38303780905,
+  "actual_engine_bare_fetch_rehearsal": "passed without consumer working tree or persisted header",
+  "hosted_corrective_attempt": "pending"
+}
