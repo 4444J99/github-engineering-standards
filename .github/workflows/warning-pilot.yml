@@ -14,15 +14,32 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
-      - name: Read consumer revision
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-          path: candidate
-          persist-credentials: false
-          submodules: false
-          lfs: false
+      - name: Fetch consumer objects without a working tree
+        env:
+          SOURCE_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          REVISION: ${{ github.event.pull_request.head.sha || github.sha }}
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE: ${{ github.workspace }}/candidate
+        run: |
+          python3 - <<'PY'
+          import base64, os, re, subprocess
+          from pathlib import Path
+          repo, revision = os.environ['SOURCE_REPOSITORY'], os.environ['REVISION']
+          if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repo) or not re.fullmatch(r'[0-9a-f]{40}', revision):
+              raise ValueError('Invalid source identity')
+          path = os.environ['CANDIDATE']
+          subprocess.run(['git', 'init', '--bare', path], check=True, capture_output=True, timeout=15)
+          credential = base64.b64encode(('x-access-token:' + os.environ['GH_TOKEN']).encode()).decode()
+          env = dict(os.environ, GIT_TERMINAL_PROMPT='0', GIT_CONFIG_COUNT='1',
+                     GIT_CONFIG_KEY_0='http.https://github.com/.extraheader',
+                     GIT_CONFIG_VALUE_0='AUTHORIZATION: basic ' + credential)
+          result = subprocess.run(['git', '-C', path, 'fetch', '--depth=1', '--filter=blob:limit=1048577',
+                                   'https://github.com/' + repo + '.git', revision],
+                                  env=env, capture_output=True, timeout=45)
+          if result.returncode:
+              raise RuntimeError('Authenticated source fetch failed')
+          subprocess.run(['git', '-C', path, 'update-ref', 'HEAD', revision], check=True, capture_output=True, timeout=15)
+          PY
       - name: Read immutable inspector
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
@@ -67,7 +84,7 @@ jobs:
           if not re.fullmatch(r'[0-9a-f]{40}', revision):
               raise ValueError('Expected exact lowercase commit SHA')
           def git(*args):
-              return subprocess.check_output(['git', '-C', candidate, *args], timeout=15)
+              return subprocess.check_output(['git', '-C', candidate, *args], timeout=15, env=dict(os.environ, GIT_NO_LAZY_FETCH='1'), stderr=subprocess.PIPE)
           if git('rev-parse', 'HEAD').decode().strip() != revision:
               raise ValueError('Checkout does not match requested revision')
           plan = {'repository_id': int(os.environ['REPOSITORY_ID']), 'revision': revision,
@@ -118,7 +135,11 @@ jobs:
               if kind != 'blob':
                   complete = False
                   continue
-              size = int(git('cat-file', '-s', oid).decode())
+              try:
+                  size = int(git('cat-file', '-s', oid).decode())
+              except subprocess.CalledProcessError:
+                  complete = False
+                  continue  # An absent filtered blob is unknown; never lazy-fetch credentials.
               if size > 1024 * 1024 or total + size > 8 * 1024 * 1024:
                   complete = False
                   continue

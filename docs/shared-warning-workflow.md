@@ -15,12 +15,15 @@ inspector is the merged CLI at immutable commit
 pinned reusable-workflow file. There is no release tag or mutable runtime branch.
 
 The workflow reads the caller's PR head, or its exact event SHA for push/manual
-calls. It checks the checkout SHA and reads Git blobs as data. Consumer blobs are fetched during authenticated checkout so subsequent private
-repository reads do not require lazy-fetch credentials. No consumer scripts, local actions,
+calls. It checks the checkout SHA and reads Git blobs as data. Blobs up to the inspection ceiling are prefetched into a bare object store using
+a process-scoped authentication header. No consumer working tree or submodule
+cleanup runs, so unrelated malformed gitlinks do not disrupt inspection. Inspector Git reads
+disable lazy fetching; an absent filtered blob marks inventory incomplete rather
+than reusing credentials or producing a positive observation. No consumer scripts, local actions,
 dependencies, build hooks or Python modules execute. Inspector dependencies come
 only from the pinned toolkit's approved PyYAML 6.0.3 dependency, restricted to the
 SHA-256-locked CPython 3.12 Linux x86_64 wheel from PyPI. All actions use full SHAs, credentials are not
-persisted, submodules/LFS are off, and the token has only `contents: read` and `actions: read` (for exact run metadata).
+persisted, consumer submodules/LFS are never materialized, and the token has only `contents: read` and `actions: read` (for exact run metadata).
 Unsupported events, including `pull_request_target` and `workflow_run`, fail
 inspection visibly. No inherited secrets or publication/deployment operation is
 requested. The workflow never changes settings or existing job identities.
