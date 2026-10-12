@@ -31,3 +31,7 @@ not semantic review, conflict resolution, rights clearance, or effective enforce
 Recovery repairs collector/evaluator contracts and adds regression verification.
 See `evidence/recovery-status.json` for measured construction status and
 `docs/recovery-delivery.md` for executed verification and remaining work.
+
+## Unreleased
+
+Phase 1 (secrets & supply chain) warn-only package: reusable `phase1-warn.yml`, `standards/phase1/` checks, pass/fail fixtures, and `docs/phase1-warn-only.md`. No required checks or ruleset changes.
