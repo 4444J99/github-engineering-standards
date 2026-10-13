@@ -1,0 +1,20 @@
+{
+  "schema": "ges.public-native-pilot-observations.v1",
+  "status": "PARTIAL_OBSERVATIONS_NOT_NATIVE_ACCEPTANCE",
+  "observer": "codex:01a12707-22ff-7f52-b05b-937b45b7ce0c:/root",
+  "repository": "4444J99/ges-native-enforcement-pilot",
+  "ruleset_id": 24619160,
+  "baseline": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3",
+  "fresh_canary": {"sha": "2ed8276792dbabea8ac8812df8d51be50500e95b", "tree": "01056b12aa6e2f867d4252b4a24e747619dbcc71", "parent": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3", "changed_files": 0, "retained_ref": "refs/heads/canary/direct-unassociated-v02-20261010", "associated_prs_observed_before_test": []},
+  "events": [
+    {"sequence": 1, "operation": "PUT approved full active payload to rule 24619160", "enforcement": "active", "bypass_actors": [], "updated_at": "2026-10-10T19:31:12.539Z"},
+    {"sequence": 2, "operation": "PATCH main force=false to fresh unassociated canary", "http_status": 422, "result": "Changes must be made through a pull request; required pilot-required check is expected", "main_readback": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3", "limitation": "Observed combined PR/check enforcement; does not isolate each rule"},
+    {"sequence": 3, "operation": "Repeat identical full active payload", "enforcement": "active", "updated_at": "2026-10-10T19:31:12.539Z", "configuration_unchanged": true, "bypass_actors": [], "current_user_can_bypass": "never", "limitation": "Configuration idempotence observed; behavioral test replay on second apply remains separate"},
+    {"sequence": 4, "operation": "Restore complete disabled preimage", "enforcement": "disabled", "updated_at": "2026-10-10T19:31:25.639Z"},
+    {"sequence": 5, "operation": "Read main, effective rules and full ruleset", "main_sha": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3", "effective_rules": [], "enforcement": "disabled", "configuration_matches_preimage": true, "bypass_actors": [], "current_user_can_bypass": "never"}
+  ],
+  "prior_observations": "public-pilot-observations-01.json",
+  "native_acceptance": false,
+  "private_support_verified": false,
+  "pending": ["Current failed/cancelled/skipped runner behavior", "Isolated deletion/force/bypass proof", "Behavioral unchanged second-run test", "Independent native adapter acceptance"]
+}

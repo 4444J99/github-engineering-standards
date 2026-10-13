@@ -130,7 +130,36 @@ def _inventory_bytes(result: dict) -> bytes:
     return (json.dumps(result, indent=2) + '\n').encode('utf-8')
 
 
-def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
+def _recorded_claim_paths(reviews: Path, documents: list[dict]) -> list[Path]:
+    """Resolve an exact preserved membership; never silently discard bad entries."""
+    if not isinstance(documents, list) or not documents:
+        raise ValueError('Preserved claim membership must be a nonempty list')
+    names = []
+    for item in documents:
+        if not isinstance(item, dict) or set(item) != {'path', 'sha256', 'claims'}:
+            raise ValueError('Invalid preserved claim document entry')
+        name = item['path']
+        if (not isinstance(name, str) or not name.endswith('-claims.json') or
+                Path(name).name != name or '\\' in name or
+                any(ord(char) < 32 or ord(char) == 127 for char in name) or
+                name in names or type(item['claims']) is not int or item['claims'] < 1 or
+                not isinstance(item['sha256'], str) or
+                not re.fullmatch('[a-f0-9]{64}', item['sha256'])):
+            raise ValueError('Invalid preserved claim document identity, digest or count')
+        names.append(name)
+    if names != sorted(names):
+        raise ValueError('Preserved claim membership is not canonically ordered')
+    root = canonical_path(reviews, symlink_error='Symlink claim directory is not permitted')
+    paths = [reviews / name for name in names]
+    for path in paths:
+        resolved = canonical_path(path, symlink_error='Symlink claim document is not permitted')
+        if resolved.parent != root or not resolved.is_file():
+            raise ValueError('Preserved claim document is missing or outside the review directory')
+    return paths
+
+
+def inventory(reviews: Path, artifacts: Path, reconciliation: Path, *,
+              claim_documents: list[dict] | None = None) -> dict:
     """Count an immutable occurrence inventory, including all family members."""
     artifact_raw = _artifact_bytes(artifacts)
     records = [json.loads(line) for line in artifact_raw.splitlines() if line.strip()]
@@ -149,8 +178,14 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
     provider_row_bindings = {}
     query_rows = set()
     counts = Counter()
-    paths = sorted(reviews.glob('*-claims.json'))
+    directory_paths = sorted(reviews.glob('*-claims.json'))
+    paths = (directory_paths if claim_documents is None else
+             _recorded_claim_paths(reviews, claim_documents))
+    membership_digest = None if claim_documents is None else digest(claim_documents)
+    expected_documents = ({item['path']: item for item in claim_documents}
+                          if claim_documents is not None else None)
     for path in paths:
+        canonical_path(path, symlink_error='Symlink claim document is not permitted')
         raw = path.read_bytes()
         document_sha = _sha(raw)
         doc = json.loads(raw)
@@ -158,6 +193,8 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
             raise ValueError('Missing claims: ' + path.name)
         documents.append({'path': path.name, 'sha256': document_sha,
                           'claims': len(doc['claims'])})
+        if expected_documents is not None and documents[-1] != expected_documents[path.name]:
+            raise ValueError('Preserved claim document bytes or count differ: ' + path.name)
         for claim in doc['claims']:
             cid = claim.get('claim_id')
             statement = claim.get('statement')
@@ -267,9 +304,13 @@ def inventory(reviews: Path, artifacts: Path, reconciliation: Path) -> dict:
         reconciled.add(cid)
         groups[known['family_id']]['reconciled_claim_ids'].append(cid)
     # Fail closed if an input changed while constructing the advisory queue.
-    if sorted(reviews.glob('*-claims.json')) != paths:
+    if sorted(reviews.glob('*-claims.json')) != directory_paths:
         raise ValueError('Claim document membership changed during audit')
+    if claim_documents is not None and digest(claim_documents) != membership_digest:
+        raise ValueError('Preserved claim membership changed during audit')
     for item in documents:
+        canonical_path(reviews / item['path'],
+                       symlink_error='Symlink claim document is not permitted')
         if _sha((reviews / item['path']).read_bytes()) != item['sha256']:
             raise ValueError('Claim document changed during audit')
     if (_sha(_artifact_bytes(artifacts)) != _sha(artifact_raw) or
@@ -433,7 +474,8 @@ def _check_provenance(path: Path, artifacts: Path, current_raw: bytes,
 
 def check_inventory(reviews: Path, artifacts: Path, reconciliation: Path,
                     committed: Path, *, historical: Path | None = None,
-                    provenance: Path | None = None) -> dict:
+                    provenance: Path | None = None,
+                    recorded_membership: bool = False) -> dict:
     """Reproduce the committed report exactly without writing or repairing inputs."""
     expected_raw = committed.read_bytes()
     expected = json.loads(expected_raw)
@@ -443,7 +485,10 @@ def check_inventory(reviews: Path, artifacts: Path, reconciliation: Path,
         raise ValueError('Invalid committed workload inventory')
     if _sha(_artifact_bytes(artifacts)) != expected['inputs'].get('artifacts_sha256'):
         raise ValueError('Artifact inventory differs from the committed input SHA256')
-    result = inventory(reviews, artifacts, reconciliation)
+    documents = expected['inputs'].get('claim_documents') if recorded_membership else None
+    if recorded_membership and not isinstance(documents, list):
+        raise ValueError('Committed report has no preserved claim membership')
+    result = inventory(reviews, artifacts, reconciliation, claim_documents=documents)
     if _inventory_bytes(result) != expected_raw:
         differences = sorted(key for key in set(result) | set(expected)
                              if result.get(key) != expected.get(key))
@@ -477,15 +522,23 @@ def main() -> None:
                         help='Require identical historical accounting except artifact input SHA256')
     parser.add_argument('--provenance', type=Path,
                         help='Check current/historical byte bindings and pinned source identities')
+    parser.add_argument('--recorded-membership', action='store_true',
+                        help='Replay only the exact membership of a preserved --check report; '
+                             'does not check the complete current directory')
     args = parser.parse_args()
     if (args.historical is not None or args.provenance is not None) and args.check is None:
         parser.error('--historical and --provenance require --check')
+    if args.recorded_membership and args.check is None:
+        parser.error('--recorded-membership requires --check')
     try:
         if args.check is not None:
             result = check_inventory(args.reviews, args.artifacts,
                                      args.reconciliation, args.check,
-                                     historical=args.historical, provenance=args.provenance)
+                                     historical=args.historical, provenance=args.provenance,
+                                     recorded_membership=args.recorded_membership)
             print(json.dumps({'status': 'MATCH',
+                              'membership_scope': ('PRESERVED_REPORT' if args.recorded_membership
+                                                   else 'CURRENT_DIRECTORY'),
                               'recorded_claims': result['counts']['recorded_claims'],
                               'claim_documents': result['counts']['claim_documents'],
                               'families': len(result['families']),

@@ -1,0 +1,46 @@
+{
+  "schema": "ges.workload-independent-review.v1",
+  "kind": "Software and metadata review; no semantic-envelope authority or human acceptance",
+  "reviewer": "/root/accounting_review",
+  "recorded_by": "chatgpt-ges-workload-20261012-b970b9876653",
+  "review_observed_at": "2026-10-12T19:15:54.156565+00:00",
+  "result": "PASS_WITHIN_SCOPE",
+  "execution_observed_at": "2026-10-12T19:14:46.431519+00:00",
+  "execution_actual_executor": "chatgpt-ges-workload-20261012-b970b9876653",
+  "execution_output_review": "Complete recorded output inspected; independent metadata PASS is supported",
+  "execution_record_sha256": "c1d283d6ffdec5d221197a4e2ef0af419403ddd4f7c43b2c2ba1e0ee6f96615f",
+  "execution_record_note": "The preserved execution record's PENDING field states its status at execution time. This later review supplies that review without rewriting the observed record.",
+  "reviewed_files": {
+    "ges/claim_workload.py": "592c7027c7a876d28f5224e231873556de3f29e6a664f8609f31eda6c623315e",
+    "ges/claim_workload_migration.py": "9d95556548e96329681b91d2a45b4ed47e78b8d109c803fb9c455f0481a25b99",
+    "tests/test_claim_workload_integrity.py": "61c1ceba69fabb8f6e812c56e564e70b155479ae74208cb7f60ce8ea310331b7",
+    "tests/test_claim_workload_migration.py": "3c5bbbfd0b48853b38334ce10427e49e4f6db31612e1c74579469d4fc3002295",
+    "evidence/claim-workload-v02-transition.json": "f92cbe31c618e793b9bdc07f51b609d0b464fa5f8698fe715efc6bb542089dd8",
+    ".github/workflows/ci.yml": "4bbc3e00e820129fa1c33082d56b6862d2edd4cefb8e169d5111e0c01e35e920",
+    "evidence/v02-workload-migration-20261012/independent_metadata_audit.py": "4c57b6ed0706081771f592e593b8f3552eaf7d3f2e9d7f7ff9be3bc215f6cbc5"
+  },
+  "current_report_sha256": "ed4ee7e8be9a5369d4651769dc8717456473063d2db21010544349a9848b8a00",
+  "verified_metadata": {
+    "claim_documents": 655,
+    "historical_documents_preserved": 654,
+    "claim_ids": 61941,
+    "families": 4651,
+    "frozen_workload_receipt_subjects": 474,
+    "added_documents": 1,
+    "added_successor_claims": 5,
+    "new_review_credit": 0,
+    "new_reconciliation_credit": 0
+  },
+  "code_review": "No blocking findings in exact reviewed code, tests, CI and transition files.",
+  "audit_script_adaptations": [
+    "Descriptive module docstring",
+    "Mandatory __debug__ guard",
+    "Portable repository root from Path(__file__).resolve().parents[2]"
+  ],
+  "limitations": [
+    "Reviewer did not independently execute the unit tests or full suite.",
+    "The successful audit was independently authored and root executed; the reviewer then inspected the complete recorded output.",
+    "Two earlier helper-owned native attempts yielded no recoverable completion output and receive no verification credit.",
+    "Full authenticated source replay, semantic decisions, replacement envelopes, human review, owner acceptance and merged-main verification remain open."
+  ]
+}

@@ -321,7 +321,7 @@ class PublishedAssurance(unittest.TestCase):
             'IMPLEMENTED_PROVENANCE_BOUND_CLAIM_RECEIPTS_ONLY')
         self.assertEqual(
             result['certification_adapters']['structured_occurrence_reconciliation'],
-            'NOT_IMPLEMENTED')
+            'IMPLEMENTED_PINNED_OCCURRENCE_AND_CLAIM_RECEIPTS_ONLY')
 
     def test_recovery_without_claim_documents_keeps_reconciliation_unknown(self):
         sources, corpus, _, _ = self.recovery_fixture()

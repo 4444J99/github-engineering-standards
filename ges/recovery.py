@@ -23,7 +23,9 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
            publication_register: Path | None=None,
            publication_receipts: Path | None=None,
            publication_policy: Path | None=None,
-           publication_output_root: Path | None=None) -> dict:
+           publication_output_root: Path | None=None,
+           structured_reconciliation: Path | None=None,
+           structured_reconciliation_policy: Path | None=None) -> dict:
     publication_inputs = (
         publication_manifest, publication_register, publication_receipts,
         publication_policy, publication_output_root,
@@ -38,10 +40,13 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
         (rights_acceptance, rights_acceptance_policy, 'Rights acceptance'),
         (source_fidelity, source_fidelity_policy, 'Source fidelity'),
         (claim_reconciliation, claim_reconciliation_policy, 'Claim reconciliation'),
+        (structured_reconciliation, structured_reconciliation_policy, 'Structured reconciliation'),
     )
     for evidence, policy, label in paired_inputs:
         if (evidence is None) != (policy is None):
             raise ValueError(label + ' requires both receipts and authority policy')
+    if structured_reconciliation is not None and (claim_reconciliation is None or reviews is None):
+        raise ValueError('Structured reconciliation requires source reviews and validated claim receipts')
     if ((source_fidelity is not None or claim_reconciliation is not None) and
             reviews is None):
         raise ValueError('Semantic certification requires source reviews and review policy')
@@ -189,11 +194,22 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             'mapping_complete': None,
             'claim_provenance_validated': None,
         }
+    structured = {'completed': 0, 'denominator': len(requirements),
+                  'all_structured_occurrences_reconciled': None}
+    if structured_reconciliation is not None:
+        from .structured_reconciliation import reconciliation_accounting as structured_accounting
+        structured = structured_accounting(
+            requirements=requirements, artifacts=corpus/'artifacts.jsonl', sources=sources,
+            reviews=reviews, review_policy=review_policy_document, pins=pin_map,
+            catalog=controls, proposals=queue,
+            claim_receipts=load(claim_reconciliation), claim_policy=load(claim_reconciliation_policy),
+            receipts=load(structured_reconciliation), policy=load(structured_reconciliation_policy),
+            evidence_root=ROOT)
     reconciliation = {
         **reconciliation,
-        'structured_occurrences_completed': 0,
-        'structured_occurrence_denominator': len(requirements),
-        'all_structured_occurrences_reconciled': None,
+        'structured_occurrences_completed': structured['completed'],
+        'structured_occurrence_denominator': structured['denominator'],
+        'all_structured_occurrences_reconciled': structured['all_structured_occurrences_reconciled'],
     }
     gates = [
         ('exhaustive_artifact_accounting',review_result['reviewed'],inventories,'Every artifact has a validated reviewed disposition and independent omission audit'),
@@ -242,11 +258,11 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
     return {'schema_version':'ges.recovery.v1','generated_at':now(),
             'project_complete':all(g['status'] == 'CLOSED' for g in evaluated),
             'milestone_accounting': milestones,
-            'certification_adapter_status':'INCOMPLETE_STRUCTURED_GENERALIZATION_ADOPTION_BINDING_AND_RUNTIME_ADAPTERS',
+            'certification_adapter_status':'INCOMPLETE_GENERALIZATION_ADOPTION_BINDING_AND_RUNTIME_ADAPTERS',
             'certification_adapters': {
                 'source_fidelity_and_omission': 'IMPLEMENTED_PINNED_ARTIFACT_RECEIPTS_ONLY',
                 'claim_reconciliation': 'IMPLEMENTED_PROVENANCE_BOUND_CLAIM_RECEIPTS_ONLY',
-                'structured_occurrence_reconciliation': 'NOT_IMPLEMENTED',
+                'structured_occurrence_reconciliation': 'IMPLEMENTED_PINNED_OCCURRENCE_AND_CLAIM_RECEIPTS_ONLY',
                 'generalization': 'NOT_IMPLEMENTED',
                 'policy_adoption': 'NOT_IMPLEMENTED',
                 'binding_verification': 'NOT_IMPLEMENTED',
@@ -266,6 +282,7 @@ def status(sources: Path, corpus: Path, reviews: Path | None=None, review_policy
             'publication_use_accounting': publication,
             'source_fidelity_accounting': fidelity,
             'claim_reconciliation_accounting': reconciliation,
+            'structured_reconciliation_accounting': structured,
             'unresolved_published_pages':[{'page_id':r['page_id'],'version':r['version'],'path':r['path']}
                                           for r in pages if not r['source_matches']],
             'ledger':ledger,'catalog_controls':len(controls),'catalog_digest':digest(controls),
@@ -302,6 +319,10 @@ if __name__ == '__main__':
                    help='Optional exact-claim reconciliation receipt array')
     p.add_argument('--claim-reconciliation-policy',type=Path,
                    help='Separately approved reconciliation authority')
+    p.add_argument('--structured-reconciliation',type=Path,
+                   help='Exact structured-occurrence receipts; requires claim reconciliation inputs')
+    p.add_argument('--structured-reconciliation-policy',type=Path,
+                   help='Separately approved occurrence review and independent audit authority')
     p.add_argument('--publication-manifest',type=Path,
                    help='Exact public release output inventory; requires all publication inputs')
     p.add_argument('--publication-register',type=Path,
@@ -320,7 +341,8 @@ if __name__ == '__main__':
                   args.claim_reconciliation,args.claim_reconciliation_policy,
                   args.publication_manifest,args.publication_register,
                   args.publication_receipts,args.publication_policy,
-                  args.publication_output_root)
+                  args.publication_output_root,
+                  args.structured_reconciliation,args.structured_reconciliation_policy)
     dump(args.output,report)
     print(json.dumps({'project_complete':report['project_complete'],
                       'gates_open':sum(g['status'] != 'CLOSED' for g in report['gates']),

@@ -285,7 +285,7 @@ class PublicationUse(unittest.TestCase):
                 if stage == 'initial':
                     add_unreviewed_file()
                 def inaccessible(path):
-                    if Path(path) == restricted:
+                    if Path(path).resolve() == restricted.resolve():
                         raise PermissionError('Synthetic inaccessible candidate subtree')
                     return real_scandir(path)
                 def add_during_review(root, reference):

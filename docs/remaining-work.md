@@ -14,16 +14,19 @@ baseline, as separate provenance layers for Engineering Environment Standards.
 |---|---|---|
 | Six-source synthesis | Artifact accounting, published content assurance, semantic extraction, consolidation, generalization, and operational completeness (gates 1–6 below). | Immutable semantic release candidate; every source proposition and GES output has an accountable disposition. |
 | Public release clearance | Exact-use rights review of expression actually redistributed or adapted, required attribution, and approved distribution. | Only cleared expression enters public release artifacts. Reference-only source locators do not require blanket per-artifact publication grants. |
-| Native pilot acceptance | Approved private disposable target, effective policy readback, positive/negative behavior, bypass review, rollback, and unchanged second-run verification. | GES v0.2 requires synthesis, public release clearance, and this pilot. |
+| Native pilot acceptance | Approved public disposable target, effective policy readback, positive/negative behavior, bypass review, rollback, and unchanged second-run verification. | GES v0.2 requires synthesis, public release clearance, and this pilot. Private support remains unverified. |
 | Estate rollout | Separately approved target inventory, rollout batches, freshness, exceptions, and drift reconciliation. | Independent follow-on program; not a GES synthesis or release blocker. |
 
-The owner approved the specific private native pilot plan on 2026-10-06.
-`4444J99/ges-native-enforcement-pilot` is provisioned and its private visibility
-and owner/admin permission were verified. The rule remains Disabled: the real
-Actions canary jobs did not execute, so activation, positive/negative behavior,
-rollback and second-run acceptance remain outstanding. See the bounded
-[pilot observation](private-native-pilot-result.md). Provisioning does not
-establish pilot acceptance. The [branch pilot plan](native-branch-pilot-plan.md),
+The 2026-10-06 private attempt remains historical and unverified; see its
+[pilot observation](private-native-pilot-result.md). The owner has since selected
+the public `4444J99/ges-native-enforcement-pilot` target. Current runner/publisher
+evidence, approved rule activation, partial negative behavior, restoration and
+unchanged reapplication are recorded in the
+[2026-10-10 continuation](../evidence/v02-finish-20261010/README.md).
+The rule was returned to Disabled and main to its original baseline after tests.
+Cancelled/skipped behavior and isolated deletion/bypass acceptance remain open;
+neither this public evidence nor provisioning verifies private support.
+The historical [branch pilot plan](native-branch-pilot-plan.md),
 [operational procedure](branch-policy-operations.md), draft profile and payloads
 are now concrete review inputs. Their publication does not activate policy.
 Upstream contribution packets require current-upstream verification and individual
@@ -88,9 +91,10 @@ durable-body acquisition are observed checks, not semantic certification.
 
 Source-fidelity/omission and exact-claim reconciliation now have fail-closed,
 digest-bound receipt validators. In the absence of separately authorized
-receipts, their required inputs remain explicitly unknown. Structured-occurrence
-reconciliation, generalization, adoption, binding, native-enforcement, and estate
-adapters remain unfinished; rights and published-content adapters retain their
+receipts, their required inputs remain explicitly unknown. The structured-occurrence
+adapter is now implemented with focused adversarial tests, but no actual occurrences
+have acquired new certified reconciliation through it. Generalization, adoption,
+binding, native-enforcement, and estate adapters remain unfinished; rights and published-content adapters retain their
 narrower documented scopes.
 The reporter does not invent failed audits or permit a boolean sidecar to close
 any gate. Gate evaluation is not itself source review or native verification.
@@ -100,3 +104,14 @@ does not rewrite that historical receipt or claim that any acceptance gate has
 closed. Calculated `PROVEN` evidence is not the governed designation `Verified`;
 the merged-main, review and owner-acceptance requirements in `GOVERNANCE.md`
 remain in force.
+
+## Current admitted implementation checkpoint
+
+The [v0.2 continuation package](../evidence/v02-finish-20261010/README.md) records
+five new consumed successor claims, independently reviewed semantic dispositions,
+complete metadata input digests and scoped owner authority. Raw records grew by
+five; no replacement envelopes or new validated-accounting closure are claimed.
+Heavy host admission denied authenticated full replay and the prescribed full
+verification commands. The approved JSON representation amendment is implemented,
+but its two exact-expression rights decisions remain HOLD. The complete release
+candidate, six-source closure and human acceptance remain pending.

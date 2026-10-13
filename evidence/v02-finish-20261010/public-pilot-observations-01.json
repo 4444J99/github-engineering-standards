@@ -1,0 +1,28 @@
+{
+  "schema": "ges.public-native-pilot-observations.v1",
+  "status": "PARTIAL_OBSERVATIONS_NOT_NATIVE_ACCEPTANCE",
+  "observer": "codex:01a12707-22ff-7f52-b05b-937b45b7ce0c:/root",
+  "repository": "4444J99/ges-native-enforcement-pilot",
+  "ruleset_id": 24619160,
+  "observed_date": "2026-10-10",
+  "baseline": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3",
+  "events": [
+    {"sequence": 1, "operation": "Create recovery/v02-20261010 from baseline", "result": "CREATED", "sha": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3"},
+    {"sequence": 2, "operation": "PUT rulesets/24619160 using pilot-ruleset-active.json", "result": "active", "updated_at": "2026-10-10T19:20:25.857Z", "effective_rule_types": ["deletion", "non_fast_forward", "pull_request", "required_status_checks"], "bypass_actors": []},
+    {"sequence": 3, "operation": "PUT pulls/2/merge with exact head and merge method", "head": "6f940e6400a71b8e84e0390af3012a0b844ec502", "http_status": 405, "result": "Required status check pilot-required is failing", "acceptance_limitation": "Historical failed check; current public-runner execution not established"},
+    {"sequence": 4, "operation": "PUT pulls/4/merge with exact head and merge method", "head": "827dc41ed47f41c67235e7e0236fde6bda44ff40", "http_status": 405, "result": "Required status check pilot-required is expected"},
+    {"sequence": 5, "operation": "PATCH git/refs/heads/main force=false to passing PR 1 head", "head": "b22370e86f69485f3ca72439f29692972d7aa199", "http_status": 200, "result": "ACCEPTED", "readback_sha": "b22370e86f69485f3ca72439f29692972d7aa199", "pr_merged_at": "2026-10-10T19:20:39Z", "acceptance_limitation": "This commit was already associated with an open passing PR. It is not an isolated direct-push negative test or evidence of unauthorized bypass."},
+    {"sequence": 6, "operation": "PATCH git/refs/heads/main force=true to absent PR head", "head": "827dc41ed47f41c67235e7e0236fde6bda44ff40", "http_status": 422, "result": "Cannot force-push; changes must be made through a pull request; pilot-required expected", "acceptance_limitation": "Multiple violated rules; no isolated force-update or bypass conclusion"},
+    {"sequence": 7, "operation": "DELETE git/refs/heads/main", "http_status": 422, "result": "Cannot delete default branch", "acceptance_limitation": "Default-branch protection does not isolate ruleset deletion enforcement"},
+    {"sequence": 8, "operation": "PUT rulesets/24619160 using complete disabled preimage", "result": "disabled", "updated_at": "2026-10-10T19:21:00.362Z"},
+    {"sequence": 9, "operation": "PATCH git/refs/heads/main force=true to baseline during approved rollback", "http_status": 200, "readback_sha": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3"},
+    {"sequence": 10, "operation": "Read back main, full ruleset and effective branch rules", "result": "BASELINE_RESTORED_RULE_DISABLED", "main_sha": "3f0b63ca3f7ff7fce30163c20fbb7c1ca4f462e3", "bypass_actors": [], "current_user_can_bypass": "never", "effective_rules": []},
+    {"sequence": 11, "operation": "GET pulls/1 after restoration", "observed_at": "2026-10-10T19:24:18Z", "state": "closed", "merged": true, "merge_commit_sha": "b22370e86f69485f3ca72439f29692972d7aa199", "acceptance_limitation": "Rollback restored main but did not erase the synthetic PR's merge history"}
+  ],
+  "documentation_reference": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets",
+  "interpretation": "The documented pull-request rule requires PR association; inference: sequence 5 may be permitted integration behavior. A fresh unassociated commit is needed to distinguish prohibited direct push from a PR-associated fast-forward.",
+  "retained_recovery_ref": "refs/heads/recovery/v02-20261010",
+  "pending": ["Fresh unassociated direct-push test", "Current failed/cancelled/skipped runner observations", "Isolated deletion and bypass behavior", "Reapplication and unchanged second-run evidence", "Native adapter and independent acceptance"],
+  "private_support_verified": false,
+  "native_acceptance": false
+}

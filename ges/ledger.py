@@ -9,6 +9,48 @@ from .core import digest,dump,load
 from .yamlutil import parse
 
 
+def structured_rows(record: dict, artifact: dict) -> list[dict]:
+    """Reproduce source-defined occurrences without accepting their policy."""
+    text, path, repo = record['content'], record['path'], record['source']
+    if hashlib.sha256(text.encode()).hexdigest() != artifact['sha256']:
+        raise ValueError('Ledger source content hash mismatch: ' + path)
+    rows = []
+    base = dict(artifact_id=artifact['artifact_id'], source=repo,
+                commit=record['commit'], path=path, review_status='UNREVIEWED',
+                adopted_obligation=None, canonical_control_ids=[],
+                verification_binding='manual_source_disposition', license='MIT')
+    lines = text.splitlines()
+    if repo == 'microsoft/ghqr' and path.startswith('internal/recommendations/definitions/') and path.endswith('.yaml'):
+        definitions = parse(text)
+        if not isinstance(definitions, list):
+            raise ValueError('Unexpected GHQR definition format')
+        starts = [i for i, line in enumerate(lines, 1) if re.match(r'^-\s*id:', line)]
+        for definition in definitions:
+            start = next((i for i, line in enumerate(lines, 1)
+                          if re.match(r'\s*-\s*id:\s*' + re.escape(definition['id']) + r'\s*$', line)), 1)
+            end = next((n - 1 for n in starts if n > start), len(lines))
+            rows.append({**base, 'requirement_id': 'SRC-GHQR-' + definition['id'],
+                         'line': start, 'source_definition': definition,
+                         'start_line': start, 'end_line': end,
+                         'content_sha256': artifact['sha256'],
+                         'span_sha256': hashlib.sha256('\n'.join(lines[start-1:end]).encode()).hexdigest()})
+    if repo == 'github/github-well-architected' and path.startswith('content/library/') and path.endswith('/checklist.md'):
+        heading = []
+        for number, line in enumerate(lines, 1):
+            title = re.match(r'^(#{1,6})\s+(.+)', line)
+            if title and not title[2].startswith('SPDX-License-Identifier:'):
+                heading = heading[:len(title[1])-1] + [title[2]]
+            match = re.match(r'^\s*-\s+(.+)', line)
+            if not match or match[1].endswith((':', ':**')):
+                continue
+            rows.append({**base, 'requirement_id': 'SRC-WA-' + digest([path, number, match[1]])[:16],
+                         'line': number, 'function': ' / '.join(heading),
+                         'source_statement': match[1], 'start_line': number, 'end_line': number,
+                         'content_sha256': artifact['sha256'],
+                         'span_sha256': hashlib.sha256(line.encode()).hexdigest()})
+    return rows
+
+
 def enrich(snapshots: Path, corpus: Path, controls: list[dict]) -> dict:
     artifacts=[json.loads(l) for l in (corpus/'artifacts.jsonl').read_text().splitlines()]
     idx={(r['source'],r['commit'],r['path']):r for r in artifacts};mdpages={};dependencies=[];structured=[]
@@ -36,31 +78,7 @@ def enrich(snapshots: Path, corpus: Path, controls: list[dict]) -> dict:
                         except Exception as exc:error=type(exc).__name__
                     title=meta.get('title',Path(path).stem) if isinstance(meta,dict) else Path(path).stem
                     mdpages[path]={'artifact_id':a['artifact_id'],'source_path':path,'function':title,'versions':meta.get('versions',{}) if isinstance(meta,dict) else {},'frontmatter_error':error,'candidate_count':a['candidate_count'],'semantic_review':'UNREVIEWED','canonical_control_ids':[c['id'] for c in controls if any(s['repository']==repo and s['path']==path for s in c['sources'])]}
-                if repo=='microsoft/ghqr' and path.startswith('internal/recommendations/definitions/') and path.endswith('.yaml'):
-                    definitions=parse(text)
-                    if not isinstance(definitions,list):raise ValueError('Unexpected GHQR definition format')
-                    lines=text.splitlines()
-                    starts=[i for i,l in enumerate(lines,1) if re.match(r'^-\s*id:',l)]
-                    for d in definitions:
-                        # Source-defined fields remain source-defined, not adopted obligations.
-                        line_no=next((i for i,l in enumerate(text.splitlines(),1) if re.match(r'\s*-\s*id:\s*'+re.escape(d['id'])+r'\s*$',l)),1)
-                        structured.append({'requirement_id':'SRC-GHQR-'+d['id'],'artifact_id':a['artifact_id'],'source':repo,'commit':r['commit'],'path':path,'line':line_no,'source_definition':d,'review_status':'UNREVIEWED','adopted_obligation':None,'canonical_control_ids':[],'verification_binding':'manual_source_disposition','license':'MIT'})
-                        end=next((n-1 for n in starts if n>line_no),len(lines))
-                        structured[-1].update(start_line=line_no,end_line=end,content_sha256=a['sha256'],
-                            span_sha256=hashlib.sha256('\n'.join(lines[line_no-1:end]).encode()).hexdigest())
-                if repo=='github/github-well-architected' and path.startswith('content/library/') and path.endswith('/checklist.md'):
-                    heading=[];n=0
-                    for line_no,l in enumerate(text.splitlines(),1):
-                        h=re.match(r'^(#{1,6})\s+(.+)',l)
-                        if h and not h[2].startswith('SPDX-License-Identifier:'):
-                            heading=heading[:len(h[1])-1]+[h[2]]
-                        match=re.match(r'^\s*-\s+(.+)',l)
-                        if not match:continue
-                        statement=match[1]
-                        if statement.endswith(':') or statement.endswith(':**'):continue
-                        n+=1;structured.append({'requirement_id':'SRC-WA-'+digest([path,line_no,statement])[:16],'artifact_id':a['artifact_id'],'source':repo,'commit':r['commit'],'path':path,'line':line_no,'function':' / '.join(heading),'source_statement':statement,'review_status':'UNREVIEWED','adopted_obligation':None,'canonical_control_ids':[],'verification_binding':'manual_source_disposition','license':'MIT'})
-                        structured[-1].update(start_line=line_no,end_line=line_no,content_sha256=a['sha256'],
-                            span_sha256=hashlib.sha256(l.encode()).hexdigest())
+                structured.extend(structured_rows(r, a))
     with (corpus/'dependencies.jsonl').open('w') as f:
         for r in dependencies:f.write(json.dumps(r,sort_keys=True)+'\n')
     dump(corpus/'docs-source-pages.json',list(mdpages.values()))
