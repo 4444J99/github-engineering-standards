@@ -202,6 +202,50 @@ class WorkloadMigration(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'membership changed during transition check'):
                 self.check()
 
+    def test_source_identity_reference_changes_after_either_replay_are_rejected(self):
+        identity = json.loads(self.provenance.read_text())['source_identity_reference']
+        reference = self.provenance.parent / identity['path']
+        original = reference.read_bytes()
+        for replay in (self.baseline, self.current):
+            with self.subTest(after=replay.name):
+                def change_after_check(*args, **kwargs):
+                    result = check_inventory(*args, **kwargs)
+                    if args[3] == replay:
+                        reference.write_bytes(original + b'\n')
+                    return result
+                try:
+                    with patch('ges.claim_workload_migration.check_inventory',
+                               side_effect=change_after_check):
+                        with self.assertRaisesRegex(ValueError,
+                                                    'Source identity reference changed'):
+                            self.check()
+                finally:
+                    reference.write_bytes(original)
+
+    def test_source_identity_reference_symlinks_after_either_replay_are_rejected(self):
+        identity = json.loads(self.provenance.read_text())['source_identity_reference']
+        reference = self.provenance.parent / identity['path']
+        original = reference.read_bytes()
+        target = self.fixture.root / 'identical-reference.json'
+        target.write_bytes(original)
+        for replay in (self.baseline, self.current):
+            with self.subTest(after=replay.name):
+                def link_after_check(*args, **kwargs):
+                    result = check_inventory(*args, **kwargs)
+                    if args[3] == replay:
+                        reference.unlink()
+                        reference.symlink_to(target)
+                    return result
+                try:
+                    with patch('ges.claim_workload_migration.check_inventory',
+                               side_effect=link_after_check):
+                        with self.assertRaisesRegex(ValueError,
+                                                    'Symlink source identity reference'):
+                            self.check()
+                finally:
+                    reference.unlink(missing_ok=True)
+                    reference.write_bytes(original)
+
     def test_transition_and_bound_input_changes_during_check_are_rejected(self):
         real_read = Path.read_bytes
         for target in (self.transition, *self.inputs.values()):

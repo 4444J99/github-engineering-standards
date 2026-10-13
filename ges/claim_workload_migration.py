@@ -63,6 +63,15 @@ def check_transition(reviews: Path, artifacts: Path, reconciliation: Path,
     old = check_inventory(reviews, artifacts, reconciliation, baseline,
                           historical=historical, provenance=provenance,
                           recorded_membership=True)
+    # The old replay validates this pinned sibling reference. Keep that same
+    # authority stable through the current replay and the outer final checks.
+    reference = json.loads(before['provenance'])['source_identity_reference']
+    reference_input = provenance.parent / reference['path']
+    reference_path = canonical_path(
+        reference_input, symlink_error='Symlink source identity reference is not permitted')
+    reference_raw = reference_path.read_bytes()
+    if _sha(reference_raw) != reference['sha256']:
+        raise ValueError('Source identity reference changed during transition check')
     new = check_inventory(reviews, artifacts, reconciliation, current)
     old_documents = old['inputs']['claim_documents']
     if added['path'] in {item['path'] for item in old_documents}:
@@ -121,6 +130,10 @@ def check_transition(reviews: Path, artifacts: Path, reconciliation: Path,
         canonical_path(path, symlink_error='Symlink workload transition input is not permitted')
         if path.read_bytes() != before[label]:
             raise ValueError('Workload transition input changed during check: ' + label)
+    if (canonical_path(reference_input,
+                       symlink_error='Symlink source identity reference is not permitted') !=
+            reference_path or reference_path.read_bytes() != reference_raw):
+        raise ValueError('Source identity reference changed during transition check')
     if (canonical_path(transition, symlink_error='Symlink workload transition is not permitted') !=
             transition_path or transition_path.read_bytes() != transition_raw):
         raise ValueError('Workload transition contract changed during check')
