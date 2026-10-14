@@ -1,0 +1,244 @@
+{
+  "schema": "ges.bounded-decision-audit.v1",
+  "state": "Staged",
+  "verdict": "PASS",
+  "auditor": "codex:/root/decision_auditor_e",
+  "reviewed_at": "2026-10-09T20:43:44.710950Z",
+  "reviewed_commit": "2b9a2d541717495412dbed2716cb9456da6d271d",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/integration/proposed-decisions.json",
+      "sha256": "143c96b9ab24843ee9554dd70910464b12d0fd4261d6e8fb38dc78a23e7e8da1"
+    },
+    {
+      "path": "evidence/wave-20261009/integration/publication-register.json",
+      "sha256": "6e909ca6fa76f16d92ca215f43b7756b5b429bc7839e94fdce4a50900fd762fd"
+    },
+    {
+      "path": "evidence/wave-20261009/integration/publication-policy.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    {
+      "path": "evidence/wave-20261009/integration/publication-receipts.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "path": "evidence/wave-20261009/omission/source-findings.json",
+      "sha256": "46e614996fa95621562a88893c570952e888150d1e72dfd5eefc5ccd942cc8be"
+    },
+    {
+      "path": "evidence/wave-20261009/omission/publication-findings.json",
+      "sha256": "7c835775aaca5bdcbeb30eee7a66af818c25be66106cdfd9610f2d0961e7aa4a"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/replay.py",
+      "sha256": "7b3ee03b51210b8c6db251f9a0186efc6a0cd2c79aa4b5c9db524bd47dcc78e5"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/replay-results.json",
+      "sha256": "6d68ad8f8b3148248ce3e4dadfdb6640549d1d1d052e3c248d76fcac32cecf89"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/publication-accounting.json",
+      "sha256": "323cbf660f40d680c508170eff6fe15e3842d3c49eedcfeb3a7c2cd109cafa70"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/local-validation.json",
+      "sha256": "b576be2670d434a87bf9036f95cf5fee7385e98ddb262efff697526f8def4786"
+    }
+  ],
+  "source_relations_digest": "6d34a7aa4bbac4860c2c4e09602fa91473826fac75754feb19f4f984f16cd0f4",
+  "approved_claim_ids": [
+    "WA-APPSEC-001",
+    "WA-APPSEC-002",
+    "WA-APPSEC-003",
+    "WA-APPSEC-004",
+    "WA-APPSEC-006",
+    "WA-APPSEC-007",
+    "WA-APPSEC-008",
+    "WA-APPSEC-010",
+    "WA-APPSEC-012",
+    "WA-APPSEC-013",
+    "WA-APPSEC-014",
+    "WA-APPSEC-015",
+    "WA-APPSEC-016"
+  ],
+  "source_decision_reviews": [
+    {
+      "claim_id": "WA-APPSEC-001",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Automation and dependency vulnerabilities preserved; manual scans or configuration presence cannot substitute. Canonical automation objective remains open."
+    },
+    {
+      "claim_id": "WA-APPSEC-002",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Recurring scanner tool updates remain separate from scanning/remediation."
+    },
+    {
+      "claim_id": "WA-APPSEC-003",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Prompt review and handling preserved without invented numeric SLA."
+    },
+    {
+      "claim_id": "WA-APPSEC-004",
+      "disposition": "MAP",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Tool-based potential code issue detection supported by current SEC-003 run-analysis objective; no operational completion inferred."
+    },
+    {
+      "claim_id": "WA-APPSEC-006",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Recurring review and update of both rules and configurations retained as missing specialization."
+    },
+    {
+      "claim_id": "WA-APPSEC-007",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Routine secrets and sensitive-information management assessment remains distinct from exposure response."
+    },
+    {
+      "claim_id": "WA-APPSEC-008",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Secret storage and management tools remain distinct from disclosure prevention."
+    },
+    {
+      "claim_id": "WA-APPSEC-010",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Security policy and guidelines presence plus enforcement retained separately from contributor training."
+    },
+    {
+      "claim_id": "WA-APPSEC-012",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Recurring policy refresh for threats and best practices retained separately from governance feedback."
+    },
+    {
+      "claim_id": "WA-APPSEC-013",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Establishing and enforcing secure coding guidelines across every development team retained separately from education."
+    },
+    {
+      "claim_id": "WA-APPSEC-014",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Actual secure-coding training delivery retained; applicable training completion does not prove secure coding coverage."
+    },
+    {
+      "claim_id": "WA-APPSEC-015",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Reviewing code for adherence remains distinct from reviewer count/staffing policy."
+    },
+    {
+      "claim_id": "WA-APPSEC-016",
+      "disposition": "SPECIALIZE",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION_ONLY",
+      "observation": "Strict implemented access control plus recurring permission review retained; strictness requires policy, not an invented number."
+    }
+  ],
+  "held_claim_ids": [
+    "WA-APPSEC-005",
+    "WA-APPSEC-009",
+    "WA-APPSEC-011",
+    "WA-APPSEC-017",
+    "WA-APPSEC-018"
+  ],
+  "finding_dispositions": [
+    {
+      "finding_id": "D-SOURCE-FIDELITY-005",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "claim_id": "WA-APPSEC-005",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed."
+    },
+    {
+      "finding_id": "D-SOURCE-FIDELITY-009",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "claim_id": "WA-APPSEC-009",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed."
+    },
+    {
+      "finding_id": "D-SOURCE-FIDELITY-011",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "claim_id": "WA-APPSEC-011",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed."
+    },
+    {
+      "finding_id": "D-SOURCE-FIDELITY-017",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "claim_id": "WA-APPSEC-017",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed."
+    },
+    {
+      "finding_id": "D-SOURCE-FIDELITY-018",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "claim_id": "WA-APPSEC-018",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed."
+    },
+    {
+      "finding_id": "D-SOURCE-OBJECTIVE-BOUNDARY",
+      "action": "RETAIN_UNRESOLVED_OBJECTIVE_AND_BINDING_WORK",
+      "claim_id": null,
+      "required_action": "Keep draft objective and binding work unresolved; do not count the relationships as completed objective synthesis. Five fidelity holds remain excluded from approved relation receipts."
+    },
+    {
+      "finding_id": "D-PUBLICATION-ESCAPING",
+      "action": "KEEP_TWO_USE_CLASSIFICATIONS_UNRESOLVED",
+      "required_action": "Preserve both unresolved rows; any later adaptation classification or contract change requires freshly bound review."
+    },
+    {
+      "finding_id": "D-PUBLICATION-COVERAGE",
+      "action": "KEEP_ALL_OUTPUTS_UNREVIEWED_AND_APPROVALS_EMPTY",
+      "required_action": "Keep all 2396 outputs unreviewed and all human/distribution approvals empty."
+    }
+  ],
+  "publication": {
+    "candidate_revision": "f628db26cee1e6fc8fcc5ad5513959de0401d73d",
+    "approved_bounded_classification_count": 198,
+    "licensed_copy_count": 148,
+    "references_only_count": 50,
+    "selected_proposal_count": 50,
+    "primary_span_count_checked": 200,
+    "unresolved_use_ids": [
+      "GES-OPS-008-objective",
+      "GES-OPS-008-implementation-acceptance-0"
+    ],
+    "all_output_count": 2396,
+    "unreviewed_output_count": 2396,
+    "actual_validator_exit_code": 1,
+    "judgment": "Raw copied expressions and pinned repository locators support these bounded actual-use classifications. Complete Microsoft MIT copyright, permission and disclaimer bytes match each referenced candidate attribution slice. Selected recommendation contexts carry no overriding component notice. Two JSON-escaped fields remain unresolved. Generic scaffolding comparison supports no identified additional reuse in these selected objects, not independent authorship or complete expression inventory.",
+    "complete_output_or_use_review": false,
+    "rights_clearance": null,
+    "human_acceptance": null,
+    "distribution_approval": null
+  },
+  "independence": {
+    "primary": "codex:/root/source_worker_b",
+    "omission_reviewer": "codex:/root/omission_reviewer_d",
+    "reconciler": "codex:/root",
+    "decision_auditor": "codex:/root/decision_auditor_e",
+    "authority_basis": "User explicitly requested distinct parallel collaborating runtime roles. All identities represent actual tasks; no human identity or cryptographic authority certification asserted."
+  },
+  "review_method": "Original pinned checklist lines 15\u201342 and relevant security-design/dependency context read independently; current referenced catalog/proposal objectives compared against each source meaning. All primary publication expression fields and pinned source-context bindings replayed, selected titles/objectives inspected directly, reference locators and complete MIT notice checked. All eight D findings independently assessed against A dispositions.",
+  "conditions": [
+    "PASS covers only the 13 qualified relations and 198 registered classifications at the bound digests.",
+    "Five held historical claim fidelity defects remain unresolved and receive no resolving receipt.",
+    "SPECIALIZE references quarantined proposals; canonical objective, applicability, source hash repair and operational binding work remains outstanding.",
+    "No source synthesis, policy adoption, owner acceptance, release completeness or publication clearance credit.",
+    "Additional tranches and changed reviewed subjects require separate freshly bound audits."
+  ],
+  "remaining_scope": {
+    "unreviewed_source_claims": 144,
+    "held_source_claims": 5,
+    "unreviewed_matched_proposals": 493,
+    "unselected_proposals_total": 543,
+    "unreviewed_candidate_outputs": 2396,
+    "completed_synthesis_credit": 0
+  }
+}

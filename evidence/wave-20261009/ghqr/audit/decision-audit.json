@@ -1,0 +1,109 @@
+{
+  "schema": "ges.bounded-decision-audit.v1",
+  "state": "Staged",
+  "verdict": "PASS",
+  "auditor": "codex:/root/decision_auditor_e",
+  "reviewed_at": "2026-10-09T20:57:20.501557Z",
+  "reviewed_commit": "6c74ebb51470f09cf63acb5387356f3f646bd7fb",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/ghqr/integration/proposed-decisions.json",
+      "sha256": "e4bb4ccb4107d78744409c5ad3ee9fb5bac2049c99faa8123fd2a21455c4ec2f"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/omission/source-findings.json",
+      "sha256": "08e3fb15b07a611612d02987c8c174140276b69806770be157d31b0444c40b2d"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/primary-review.json",
+      "sha256": "9ce66c622ba2b64add905b145f343413c912472a233bb2e2f7fa351fd474c9e3"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/audit/replay.py",
+      "sha256": "7ebc912e5493d7f4eefeb9e736633b1f4c771a0a4338747bb10cd9f32ac83884"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/audit/replay-results.json",
+      "sha256": "6527deed1d64707acef43d4a160743b642ffcd2f806f1cfb809b8e0c692d7c75"
+    }
+  ],
+  "source_relations_digest": "4d04208dc83798b3e19d4d39e163a11f30833a68736308323eda356d0214a23e",
+  "approved_claim_ids": [
+    "GHQR-BP-009",
+    "GHQR-BP-010",
+    "GHQR-BP-011"
+  ],
+  "held_claim_ids": [
+    "GHQR-BP-001",
+    "GHQR-BP-002",
+    "GHQR-BP-003",
+    "GHQR-BP-004",
+    "GHQR-BP-005",
+    "GHQR-BP-006",
+    "GHQR-BP-007",
+    "GHQR-BP-008",
+    "GHQR-BP-012",
+    "GHQR-BP-013",
+    "GHQR-BP-014"
+  ],
+  "finding_dispositions": [
+    {
+      "finding_id": "D-GHQR-006-CONFIGURATION",
+      "claim_id": "GHQR-BP-006",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add006 to fidelity holds; preserve composite components as unresolved source-bound objectives."
+    },
+    {
+      "finding_id": "D-GHQR-NIL-AND-SCOPE",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Retain per-predicate scope, input unknowns and scanner limitations; no configuration boolean implies runtime PASS."
+    },
+    {
+      "finding_id": "D-GHQR-AUTHORSHIP",
+      "claim_id": "GHQR-BP-012",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Keep conflict and source recommendation visible pending separately reviewed faithful treatment; no stronger authority claim."
+    },
+    {
+      "finding_id": "D-GHQR-OBJECTIVE-BOUNDARY",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Retain unresolved canonical objectives, bypass/collector dependencies, target policies and operational bindings."
+    }
+  ],
+  "decision_reviews": [
+    {
+      "claim_id": "GHQR-BP-009",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION",
+      "observation": "Source recommends configured checks succeeding before any PR merge; historical requirement preserves success. Nil statusChecks generates009, but does not establish run success, merge rejection or native behavior. SEC source relation must specialize current RULE008 run/check-name objective to include success enforcement."
+    },
+    {
+      "claim_id": "GHQR-BP-010",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION",
+      "observation": "Rejecting non-fast-forward protected-branch updates preserves force-push prevention. Source all-protected denominator extends beyond one assessed detail. allowForcePushes flag alone does not establish bypass denial or complete branch coverage."
+    },
+    {
+      "claim_id": "GHQR-BP-011",
+      "verdict": "PASS_FOR_QUALIFIED_RELATION",
+      "observation": "Rejecting protected-branch deletion preserves source recommendation. all-protected scope, bypass principals and actual rejected deletion remain separate unresolved evidence. Topic-branch cleanup is a distinct use."
+    }
+  ],
+  "review_method": "Independently read complete pinned branch-protection YAML153 lines, scanner98 lines and historical14 statements; compared current six referenced catalog/proposal revisions and all four D finding dispositions. Replayed14 source/statement/recommendation/span/occurrence bindings, authenticated snapshot/scanner digests and four distinct actual runtime identities. Upstream code treated as read-only evidence, never executed.",
+  "qualified_observations": [
+    "Nil detail produces broad001 then returns; nil review/status configurations generate composite006/009 and suppress finer predicates. Ruleset014 may coexist with failing component findings.",
+    "009/010/011 report predicates over supplied normalized detail, not complete source acquisition, all-production/all-protected scope, effective inherited policy or bypass/native enforcement.",
+    "Signature enablement/authorship conflict remains held012. All11 historical fidelity holds preserved.",
+    "Three SPECIALIZE relations reference quarantined draft proposals and retain missing objective and operational-binding work."
+  ],
+  "remaining_scope": [
+    "Scanner collector/normalization, aggregation, other GHQR predicates and sources remain outside this audit.",
+    "No native predicate implementation, whole-repository enforcement, owner policy adoption, synthesis or publication clearance is certified."
+  ],
+  "source_synthesis_credit": 0,
+  "canonical_objective_completion": false,
+  "policy_adoption": false,
+  "human_approval": false,
+  "owner_acceptance": null,
+  "native_execution": false
+}

@@ -1,0 +1,1427 @@
+{
+  "schema": "ges.bounded-integration-proposed-decisions.v1",
+  "state": "PROPOSED_PENDING_E_AUDIT",
+  "tranche": "tranche-03",
+  "baseline": "7af46c827565d4746daed9ed1a9206524c944f70",
+  "reconciler": "codex:/root",
+  "reconciled_at": "2026-10-09T20:48:36.302995+00:00",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/source/tranche-03/draft-dispositions.json",
+      "sha256": "b19579bd6fdf8703d75225751ff174ad1699e33849c6c04c433c7f1f408cf998"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-03/primary-review.json",
+      "sha256": "cbb6c819e564818c4f324d8ddc042aa6b45d58c97f5a96c5f63c6015b01d8cdc"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-03/input-bindings.json",
+      "sha256": "2a560dbc2f58cb06f298a32fb2ae4d5a8c663a65f87b5a31fbc7c0c0fe60df6f"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-03/residuals.json",
+      "sha256": "d19cd88bbc52fb06ce39043d4c3d227b2e454ffdf499a54dd4d8e0d4363d9b4e"
+    },
+    {
+      "path": "evidence/wave-20261009/source/tranche-03/packet-manifest.json",
+      "sha256": "b8e7e1a62cc44e09924fef6fccfa1ecf766965b6afa70c8c53ff5c99fda5898f"
+    },
+    {
+      "path": "evidence/wave-20261009/omission/tranche-03/source-findings.json",
+      "sha256": "69501c61735db6b45d8286130c7e3a4c846a09795c3c062dc2acca8e90fe9d42"
+    },
+    {
+      "path": "controls/catalog.json",
+      "sha256": "2a61be160fdbf1d45564b31b3c83336ae14941758cf99e19d8344d630eae2e4c"
+    },
+    {
+      "path": "controls/review_queue.json",
+      "sha256": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9"
+    },
+    {
+      "path": "evidence/wave-20261009/assignment.json",
+      "sha256": "cdb2829b7b1de6336a95377bca2cf2e3b1748185302789fae88dc8abe6f7873d"
+    }
+  ],
+  "source_relations": [
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-060",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 118,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 118,
+        "statement_sha256": "c0d1375eee3b25936fe864a1a7ba3d3a9146aeb0085ac3ac4bf333322340d324"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-011",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-096",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Create clear channels for security incidents and concerns. Private vulnerability disclosure is related but does not cover internal incident and concern reporting. Keep both channels and their audiences explicit.",
+        "scope": "General security-awareness and communication practice."
+      },
+      "rationale": "Create clear channels for security incidents and concerns. Private vulnerability disclosure is related but does not cover internal incident and concern reporting. Keep both channels and their audiences explicit.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-061",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 119,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 119,
+        "statement_sha256": "715bfd1b25199054c2a28ca9ea58761e88cf2534c90d045b945ef0c1865ddadb"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-011",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-097",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Provide anonymity for security reporters. A private channel is not necessarily anonymous; specify anonymity capability and limits rather than asserting it from privacy.",
+        "scope": "General security-awareness and communication practice."
+      },
+      "rationale": "Provide anonymity for security reporters. A private channel is not necessarily anonymous; specify anonymity capability and limits rather than asserting it from privacy.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-064",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 124,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 124,
+        "statement_sha256": "e30ac0cc97ddfebd93c1a8881b9b7d80e766f65e2bac71178b1c0df28087a1ce"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-COM-003",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-100",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Encourage open discussions about security. Engineering feedback channels support discussion but do not by themselves establish open security dialogue; protect sensitive information while retaining the recommendation.",
+        "scope": "General security-awareness and communication practice."
+      },
+      "rationale": "Encourage open discussions about security. Engineering feedback channels support discussion but do not by themselves establish open security dialogue; protect sensitive information while retaining the recommendation.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-069",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 133,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 133,
+        "statement_sha256": "0f4922a034be3fb166d81db5f5c5714823aa8bcb5339ecbf74e61135d28d8b49"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-GOV-009",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-105",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Document Enterprise configuration changes and approvals. The canonical approval and rollback trace supports this, but target Enterprise configuration and actual approval records need explicit scope.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Document Enterprise configuration changes and approvals. The canonical approval and rollback trace supports this, but target Enterprise configuration and actual approval records need explicit scope.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-074",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 142,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 142,
+        "statement_sha256": "b7428c96b081a101e52ee00156661f585e2b4b924cc9bd86f411a519516666e0"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-003",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-110",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Store Enterprise Server backups securely. An isolated restoration test does not establish secure backup storage and associated access protection.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Store Enterprise Server backups securely. An isolated restoration test does not establish secure backup storage and associated access protection.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-077",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 147,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 147,
+        "statement_sha256": "07599cf282626cd4025d71c206e1cedf40d68c91841fd1a16539e522764e92e5"
+      },
+      "control_references": [
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-113",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Implement network safeguards protecting Enterprise instances, with VPNs and firewalls as examples. Select deployment-appropriate measures through explicit target policy; do not assume Cloud and Server have identical control surfaces.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Implement network safeguards protecting Enterprise instances, with VPNs and firewalls as examples. Select deployment-appropriate measures through explicit target policy; do not assume Cloud and Server have identical control surfaces.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-081",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 153,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 153,
+        "statement_sha256": "683496920aaa22e768419338bdbb0dd6b456028a530fb2085e3baec453edd219"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-GOV-007",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-117",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Review user access and permissions regularly. The canonical periodic review supports this but must preserve Enterprise target scope and user access as well as individual grants.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Review user access and permissions regularly. The canonical periodic review supports this but must preserve Enterprise target scope and user access as well as individual grants.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-085",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 159,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 159,
+        "statement_sha256": "b43600ea4b95d406ee4a2777ac7416e418f9b9529cd08f338e24a429b4481a15"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-GOV-010",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-121",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Communicate Enterprise security policy to all relevant stakeholders. Training governance policies does not demonstrate communication coverage for this deployment.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Communicate Enterprise security policy to all relevant stakeholders. Training governance policies does not demonstrate communication coverage for this deployment.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-086",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 162,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 162,
+        "statement_sha256": "1b9259169b637b4cde0992691b72954224d5f5f97b2afa9dc10b695a28e897bf"
+      },
+      "control_references": [
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-122",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Secure Enterprise APIs with appropriate authentication and authorization. Preserve both access controls and the API target, rather than assuming repository permission reviews cover API mechanisms.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Secure Enterprise APIs with appropriate authentication and authorization. Preserve both access controls and the API target, rather than assuming repository permission reviews cover API mechanisms.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-088",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 164,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 164,
+        "statement_sha256": "eaee4d5e55839c59b60e66de6b115db4270638ccd04aa1389a46626329f7c079"
+      },
+      "control_references": [
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-124",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Establish API-use best-practice guidelines, including token use. Short-lived workflow credentials are narrower than guidelines for all Enterprise API use; preserve token handling and permitted API practices.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Establish API-use best-practice guidelines, including token use. Short-lived workflow credentials are narrower than guidelines for all Enterprise API use; preserve token handling and permitted API practices.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-089",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 167,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 167,
+        "statement_sha256": "c35485e26be0ee937ec30eacd3789225d2a1139b7d0827f21ee2e2a1a6c11b5a"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-009",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-125",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Establish monitoring and alerts for unusual Enterprise activities. Service-alert rules do not cover every Enterprise administrative or security event; retain broader Enterprise activity scope.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Establish monitoring and alerts for unusual Enterprise activities. Service-alert rules do not cover every Enterprise administrative or security event; retain broader Enterprise activity scope.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-092",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 172,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 172,
+        "statement_sha256": "d25a0245c4d5210a36c76d3f126ce2a3695b0696dcd0a95dce0754c67c1a96c2"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-128",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Meet applicable data-residency requirements, especially for Enterprise Server replication. Identifying obligations and qualified review alone do not establish conformity or replicated-data coverage.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Meet applicable data-residency requirements, especially for Enterprise Server replication. Identifying obligations and qualified review alone do not establish conformity or replicated-data coverage.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-094",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 174,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 174,
+        "statement_sha256": "ce8a7a2aeca80af16e24165fdbce757f07d8f57bb8322be5ba2a6eed2e7d2fe5"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-130",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Document data-residency policies and procedures. Qualified review does not establish both maintained policy and procedural documentation.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Document data-residency policies and procedures. Qualified review does not establish both maintained policy and procedural documentation.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-095",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 177,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 177,
+        "statement_sha256": "f4bd3471d498a9ec9a0dd8ddf9fb1ccb8c5e7a755525b9c963564bdc1888c654"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-008",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-131",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Review and secure Enterprise third-party integrations to prevent security risk. Installation inventory and permission review do not establish actual securing of the integration.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Review and secure Enterprise third-party integrations to prevent security risk. Installation inventory and permission review do not establish actual securing of the integration.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-096",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 178,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 178,
+        "statement_sha256": "42788f7b11c49f5e01b83fc8c71fb0c27e86ebe1d769d4c82e320c3c85136d94"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-SEC-008",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-132",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Assess third-party integration security regularly. A one-time inventory and revocation path do not establish recurring security assessment.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Assess third-party integration security regularly. A one-time inventory and revocation path do not establish recurring security assessment.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-098",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 184,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 184,
+        "statement_sha256": "2bc5b2ee5b89dee1967a03fcefb40c68eb39b3a2329296a720bc44822fc0b8b2"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-001",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-134",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Assess repository organization and structure for clarity and scalability. Function ownership supports this but does not establish assessment of growth and comprehensibility in Enterprise deployment.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Assess repository organization and structure for clarity and scalability. Function ownership supports this but does not establish assessment of growth and comprehensibility in Enterprise deployment.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-102",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 188,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 188,
+        "statement_sha256": "6d197aa9f748cbea08c5d3ab59aa92c9d79a8571f78579aca3852948f8117cbb"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-RULE-007",
+          "revision": 3
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-138",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Check branch-protection use for code quality. Effective-rule inspection is relevant, but this source does not itself prescribe particular review thresholds, checks or bypass policies.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Check branch-protection use for code quality. Effective-rule inspection is relevant, but this source does not itself prescribe particular review thresholds, checks or bypass policies.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-103",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 191,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 191,
+        "statement_sha256": "7998dfb36a99e9ad84cfab6718cb1fb2952bbc7bc667d0b78c2d3c894e6b123f"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-003",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-139",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Evaluate code modularity for maintainability and scalability. A preference for reusable components does not establish the assessment or its two outcomes.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Evaluate code modularity for maintainability and scalability. A preference for reusable components does not establish the assessment or its two outcomes.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-110",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 200,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 200,
+        "statement_sha256": "f73bb72ee134266e8bb4b010b583544374fb1ab1cb7e5b534a50e4c26e68f599"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-GOV-009",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-146",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Check version control use for technology-stack dependencies. A generic configuration-change process does not establish versioned dependency-management configuration.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Check version control use for technology-stack dependencies. A generic configuration-change process does not establish versioned dependency-management configuration.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-111",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 203,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 203,
+        "statement_sha256": "2a024861f851bdb5ec5f3f0791ff193a4984140625ef3597da149649ea72e224"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-004",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-147",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Ensure ephemeral resources can be recreated on demand. Reproducible environments support this, but preserve all relevant ephemeral resource classes and on-demand availability.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Ensure ephemeral resources can be recreated on demand. Reproducible environments support this, but preserve all relevant ephemeral resource classes and on-demand availability.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-117",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 213,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 213,
+        "statement_sha256": "f44d4b380a1634ac76c66480e7c288093ffc116461ed745e8c063fb5b2f3457e"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-005",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-153",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Document and review recovery-test results. Merely retaining restoration outcomes does not establish review of them.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Document and review recovery-test results. Merely retaining restoration outcomes does not establish review of them.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-118",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 214,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 214,
+        "statement_sha256": "4593d147f3d7e309cad62552c28695249717988385e4e5a08646740cfeaee683"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-005",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-154",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Address issues identified during recovery testing. Test completion does not establish defect treatment; retain tracked unresolved defects instead of declaring recovery successful from execution alone.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Address issues identified during recovery testing. Test completion does not establish defect treatment; retain tracked unresolved defects instead of declaring recovery successful from execution alone.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-120",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 218,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 218,
+        "statement_sha256": "cd5e8fd19e8aecbb5eac9714230d75a905d8126d078eb05bd2267116e98602fe"
+      },
+      "control_references": [
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-156",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Verify replication processes are monitored. Replication existence does not establish process monitoring and monitoring evidence.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Verify replication processes are monitored. Replication existence does not establish process monitoring and monitoring evidence.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-128",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 234,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 234,
+        "statement_sha256": "ebf09516212d837ae5c1ac2f2dc244edc34c7a8393b505f67cd61d087ee267fb"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-003",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-164",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Consider microservices where appropriate. This is an evaluation, not a universal microservice mandate; preserve the suitability condition and record the decision.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Consider microservices where appropriate. This is an evaluation, not a universal microservice mandate; preserve the suitability condition and record the decision.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-129",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 235,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 235,
+        "statement_sha256": "7768972fadaf9bb4c5393b95cc5251ebc004961bf733a905efed4a5a3f8a07c6"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-003",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-165",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Verify microservices are independently deployable when that architecture applies. Justifying services does not establish their actual independent deployment capability.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Verify microservices are independently deployable when that architecture applies. Justifying services does not establish their actual independent deployment capability.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-136",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 247,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 247,
+        "statement_sha256": "f0e12c67e355108a8ba66a2c922a155c7f6c150753f509a1bee0ba6da03eedc7"
+      },
+      "control_references": [
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-172",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Verify firewalls and security groups are configured properly. Preserve both mechanisms and actual configuration assessment without inventing a universal rule set.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Verify firewalls and security groups are configured properly. Preserve both mechanisms and actual configuration assessment without inventing a universal rule set.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-140",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 253,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 253,
+        "statement_sha256": "3c944efd842dc2d29ff9a23b3a5da575a176188fdbb20b87ad85ec06a475654d"
+      },
+      "control_references": [
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-176",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Verify update procedures are documented and tested. Generic configuration rollback or policy change controls do not establish update-procedure documentation and testing.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Verify update procedures are documented and tested. Generic configuration rollback or policy change controls do not establish update-procedure documentation and testing.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-141",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 256,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 256,
+        "statement_sha256": "825aa5e92f474f45d704cff03db4e372c2583002bf56b0e1ae17ed9f77248a3f"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-007",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-177",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Plan hardware scaling for future growth. Resource monitoring supports planning but does not establish a documented hardware scaling strategy.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Plan hardware scaling for future growth. Resource monitoring supports planning but does not establish a documented hardware scaling strategy.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-145",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 262,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 262,
+        "statement_sha256": "ff9ae427ff3e531816ab08ba77f863751d191a2155bb19077a60759cdc00ae64"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-IAM-003",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-181",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Verify documented and tested backup procedures. Preserve verification of procedures, documentation and tests as distinct from a successful restoration example.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Verify documented and tested backup procedures. Preserve verification of procedures, documentation and tests as distinct from a successful restoration example.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-149",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 270,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 270,
+        "statement_sha256": "7f24b4838fa273b7d75ce6657251a0cc43a87a8459f5949c6ace7b4069683e4e"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-GOV-005",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-185",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Check code-review use to maintain code quality. Reviewer threshold and staffing choices do not establish actual code-quality review or its content.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Check code-review use to maintain code quality. Reviewer threshold and staffing choices do not establish actual code-quality review or its content.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "8109355ec58c910ed86a2618",
+        "claim_document": "wa-application-security-checklist-claims.json",
+        "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+        "claim_id": "WA-APPSEC-152",
+        "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+        "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+        "end_line": 275,
+        "path": "content/library/application-security/checklist.md",
+        "source": "github/github-well-architected",
+        "start_line": 275,
+        "statement_sha256": "2c323447bea251c039a06587bb5bf3ff94b0de3b518a51080e6fc3e611bdcd04"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-ARC-003",
+          "revision": 1
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-OPS-188",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Verify system architecture is straightforward and easy to understand. Justified complexity is related but does not demonstrate clarity and comprehension.",
+        "scope": "Additional checklist items for GitHub Enterprise deployments; distinguish Cloud, Server, relevant workload and capability before local adoption."
+      },
+      "rationale": "Verify system architecture is straightforward and easy to understand. Justified complexity is related but does not demonstrate clarity and comprehension.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    }
+  ],
+  "source_relations_digest": "e5c805a810bc829e4caf333fe92c5c3316ae315277b873d43bb688f7632f20f5",
+  "held_claim_ids": [
+    "WA-APPSEC-062",
+    "WA-APPSEC-063",
+    "WA-APPSEC-065",
+    "WA-APPSEC-066",
+    "WA-APPSEC-067",
+    "WA-APPSEC-068",
+    "WA-APPSEC-070",
+    "WA-APPSEC-071",
+    "WA-APPSEC-072",
+    "WA-APPSEC-073",
+    "WA-APPSEC-075",
+    "WA-APPSEC-076",
+    "WA-APPSEC-078",
+    "WA-APPSEC-079",
+    "WA-APPSEC-080",
+    "WA-APPSEC-082",
+    "WA-APPSEC-083",
+    "WA-APPSEC-084",
+    "WA-APPSEC-087",
+    "WA-APPSEC-090",
+    "WA-APPSEC-091",
+    "WA-APPSEC-093",
+    "WA-APPSEC-097",
+    "WA-APPSEC-099",
+    "WA-APPSEC-100",
+    "WA-APPSEC-101",
+    "WA-APPSEC-104",
+    "WA-APPSEC-105",
+    "WA-APPSEC-106",
+    "WA-APPSEC-107",
+    "WA-APPSEC-108",
+    "WA-APPSEC-109",
+    "WA-APPSEC-112",
+    "WA-APPSEC-113",
+    "WA-APPSEC-114",
+    "WA-APPSEC-115",
+    "WA-APPSEC-116",
+    "WA-APPSEC-119",
+    "WA-APPSEC-121",
+    "WA-APPSEC-122",
+    "WA-APPSEC-123",
+    "WA-APPSEC-124",
+    "WA-APPSEC-125",
+    "WA-APPSEC-126",
+    "WA-APPSEC-127",
+    "WA-APPSEC-130",
+    "WA-APPSEC-131",
+    "WA-APPSEC-132",
+    "WA-APPSEC-133",
+    "WA-APPSEC-134",
+    "WA-APPSEC-135",
+    "WA-APPSEC-137",
+    "WA-APPSEC-138",
+    "WA-APPSEC-139",
+    "WA-APPSEC-142",
+    "WA-APPSEC-143",
+    "WA-APPSEC-144",
+    "WA-APPSEC-146",
+    "WA-APPSEC-147",
+    "WA-APPSEC-148",
+    "WA-APPSEC-150",
+    "WA-APPSEC-151",
+    "WA-APPSEC-153",
+    "WA-APPSEC-154",
+    "WA-APPSEC-155",
+    "WA-APPSEC-156",
+    "WA-APPSEC-157",
+    "WA-APPSEC-158",
+    "WA-APPSEC-159",
+    "WA-APPSEC-160",
+    "WA-APPSEC-161",
+    "WA-APPSEC-162"
+  ],
+  "finding_dispositions": [
+    {
+      "finding_id": "D-T03-FIDELITY-79",
+      "claim_id": "WA-APPSEC-079",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-106",
+      "claim_id": "WA-APPSEC-106",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-107",
+      "claim_id": "WA-APPSEC-107",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-116",
+      "claim_id": "WA-APPSEC-116",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-124",
+      "claim_id": "WA-APPSEC-124",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-127",
+      "claim_id": "WA-APPSEC-127",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-147",
+      "claim_id": "WA-APPSEC-147",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-157",
+      "claim_id": "WA-APPSEC-157",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve original primary packet and historical proposition."
+    },
+    {
+      "finding_id": "D-T03-SCOPE-BOUNDARY",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Retain source scopes and alternatives; do not guess duplicate or zero-control dispositions."
+    },
+    {
+      "finding_id": "D-T03-OBJECTIVE-BOUNDARY",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Keep unresolved objective work explicit and72 defective historical propositions held."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-101",
+      "claim_id": "WA-APPSEC-101",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve historical proposition and primary packet."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-156",
+      "claim_id": "WA-APPSEC-156",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve historical proposition and primary packet."
+    },
+    {
+      "finding_id": "D-T03-FIDELITY-160",
+      "claim_id": "WA-APPSEC-160",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add to fidelity holds; preserve historical proposition and primary packet."
+    }
+  ],
+  "source_coverage": {
+    "assigned_claims": 162,
+    "reviewed_in_tranche": 103,
+    "proposed_relation_receipts": 31,
+    "held": 72,
+    "completed_objective_synthesis_credit": 0
+  },
+  "scope_boundaries": [
+    "These are source relations to exact existing draft proposal revisions, not completed control objectives or implementation.",
+    "Every historical fidelity defect remains held, with original claims and primary packet preserved.",
+    "Source recommendation strength, actor, cadence and applicability remain source context; no adopted policy.",
+    "Four actual automated runtime roles are authorized by the user; human review and acceptance are not asserted.",
+    "Other tranches, publication clearance, cross-source synthesis and native execution remain outside this subject."
+  ]
+}

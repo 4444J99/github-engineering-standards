@@ -1,0 +1,182 @@
+[
+  {
+    "catalog_record_digest": "1579b3c07e4d9fbc9e306e36010d8046e372d4ffc5047e7b91adf67c062d694b",
+    "claim_id": "WA-APPSEC-001",
+    "decision_id": "reconciliation-decision:4af195d73cd4154c6357b9267b0010f1412f7bc52c80052c952d2e5c9b5afe1f",
+    "interpretation": "Automated dependency scanning is stronger than an unspecified scan. Preserve automation and dependencies; do not equate manual review or configuration existence with execution.",
+    "proposal_record_digest": "3e1c725f11883d05b754d71fcd4e71dcd10ec93099f990bcd1a149d63a67b36b",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "automation must be explicit in the objective and evidence",
+    "source_span_sha256": "e4e9b304e9206d336397ec1a028cfcccd7d5b2f407fb43d84ac24b5337eb2f5f"
+  },
+  {
+    "catalog_record_digest": "1579b3c07e4d9fbc9e306e36010d8046e372d4ffc5047e7b91adf67c062d694b",
+    "claim_id": "WA-APPSEC-002",
+    "decision_id": "reconciliation-decision:347b3cc4b55329581b6a34cb957a6fc558378721259a080d3c060a0d9020cf10",
+    "interpretation": "Tool maintenance is distinct from reviewing dependency findings. Retain recurring scanner update responsibility and evidence of current supported tooling.",
+    "proposal_record_digest": "6c8ebb531de92637b8ef050f8e0c61e46318f2ea35041fb9f2a9313a4301a41a",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "recurring scanner-tool updates are absent from the canonical acceptance",
+    "source_span_sha256": "384b1078c8fc253d5598aae0ab6d110ec6fb0a16d52b61d4205398c79801216d"
+  },
+  {
+    "catalog_record_digest": "1579b3c07e4d9fbc9e306e36010d8046e372d4ffc5047e7b91adf67c062d694b",
+    "claim_id": "WA-APPSEC-003",
+    "decision_id": "reconciliation-decision:6b5824fe84886d4bead68cbaaa497e74b10a55972e0f43c0f4142ae783751991",
+    "interpretation": "Dependency triage is covered in the broad draft objective, but prompt handling must retain a target-defined risk-based response cadence; no numeric SLA is supplied by the source.",
+    "proposal_record_digest": "348c9ad99d3806388f10f0bb6d095e9485e55110c133e31ae7b7062e2d0c2ea7",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "prompt remediation requires explicit target cadence",
+    "source_span_sha256": "5f439831b544899e6ac0a602d0e7550e39a1d4497b9c130333cc68b9b6069712"
+  },
+  {
+    "catalog_record_digest": "ec442b2bd3b0811ddbf391252e191843b5381796f7338d18f33d372372448f1c",
+    "claim_id": "WA-APPSEC-004",
+    "decision_id": "reconciliation-decision:9b1d2c7f7315f3db37f4c6334b1b56d2308560ad223383d778ef5034d1ae7535",
+    "interpretation": "The draft objective requires supported code security analysis and evidence of completed analysis on relevant revisions; this preserves using detection tools for potential code security defects.",
+    "proposal_record_digest": "bbdf4b39b0d9516479fa287976aa54e3a2d78428287c74333637cf4fe0ff2ee6",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": null,
+    "source_span_sha256": "7aefc222af525123fe7fda680b675f7baf71cbca8a18d26523b984478d00f990"
+  },
+  {
+    "catalog_record_digest": "ec442b2bd3b0811ddbf391252e191843b5381796f7338d18f33d372372448f1c",
+    "claim_id": "WA-APPSEC-005",
+    "decision_id": "reconciliation-decision:8cb13948af70fb61e028a787fc955712fa238042fb1e380059fb4536261b7bd0",
+    "interpretation": "Pipeline integration is covered by the canonical delivery-workflow objective. The original claim introduces static analysis although the source says code scanning without that restriction; correct or explicitly qualify that narrowing before treating source consolidation as resolved.",
+    "proposal_record_digest": "a84d953300fdbe51b6764285a743aac371afd2ee3ecf2da407a06a2b3aa672ca",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "original claim must not narrow code scanning to static analysis",
+    "source_span_sha256": "9bea9f3c7d7e67a1a562949eb22905d8a2b38705fc952c3a5534b3317a4e9558"
+  },
+  {
+    "catalog_record_digest": "ec442b2bd3b0811ddbf391252e191843b5381796f7338d18f33d372372448f1c",
+    "claim_id": "WA-APPSEC-006",
+    "decision_id": "reconciliation-decision:ca41976217fcd8b42f7887de6636a0446de13af854d5e59dd2e306ccb77b250a",
+    "interpretation": "Maintaining scan rules does not fully record periodic review of rules and configuration. Preserve both review and updates, including configurations, with profile-defined recurrence.",
+    "proposal_record_digest": "38fba171abe12085b4581f0646a0a0f2680dcd99821d9b24f9a3b690a911c255",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "periodic review and configuration maintenance must remain explicit",
+    "source_span_sha256": "65563f893e9a3b21e201ec18b3f177e8c9c456038e4d7679dab93f77f5fa48c1"
+  },
+  {
+    "catalog_record_digest": "52c1e74e118741e1e590ae8068aad06b276dc56dff3e9b7707a7e8b48d5bbb1a",
+    "claim_id": "WA-APPSEC-007",
+    "decision_id": "reconciliation-decision:cc51898201f5482b7d0db45ee11668334798020a570856db031ea56c30b03e44",
+    "interpretation": "Assess secret and sensitive-information management practices. An exposed-credential response control is a related safeguard and cannot replace assessment of routine handling.",
+    "proposal_record_digest": "ae1958156f5909544cb68f984c93e112b1e684fe3e52d26b30799a108f853c93",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "routine assessment of secrets and sensitive information is a separate objective",
+    "source_span_sha256": "a6b65bf762231918c4592ebea1ca7801519f54d6b650342ee7f375155520d196"
+  },
+  {
+    "catalog_record_digest": "52c1e74e118741e1e590ae8068aad06b276dc56dff3e9b7707a7e8b48d5bbb1a",
+    "claim_id": "WA-APPSEC-008",
+    "decision_id": "reconciliation-decision:9bcfbb80679c3afe61484eb088cc7ef8dbbbf1115a2cb25d17e62e3fa4269241",
+    "interpretation": "Use a tool for storing and managing secrets. Incident response and prevention do not establish that an appropriate management system exists and is used.",
+    "proposal_record_digest": "4d1dd089406cd1c0266133ff21c86e0f14550c8b315a6acaa25b0a83712dc0c6",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "secret storage and management tooling requires its own evidence",
+    "source_span_sha256": "c3bac1ad967ae38432e17e5d3e81166a2b5f90315e22d786754e5e23d9eba819"
+  },
+  {
+    "catalog_record_digest": "52c1e74e118741e1e590ae8068aad06b276dc56dff3e9b7707a7e8b48d5bbb1a",
+    "claim_id": "WA-APPSEC-009",
+    "decision_id": "reconciliation-decision:03c3a18e773a549ac79ddfaaa805b8c78e28ee9e42120d73f3d16e23260990fb",
+    "interpretation": "The source calls for regular rotation of secrets and credentials regardless of confirmed exposure. The original claim only maintains a reviewed rotation practice; actual recurring rotation and both object classes must be restored.",
+    "proposal_record_digest": "56342c9f01e7a182e25350da923c006921a3cdbbd786d27d04f2dfdf3ea7aa0e",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "proactive recurring rotation differs from reactive exposed-credential revocation",
+    "source_span_sha256": "4505e3a71446ee2ee135d96a1ed1a359b9a2c539b7cde299fce1ff4a806dcc75"
+  },
+  {
+    "catalog_record_digest": "bd7698051593fc7516e7f163ceb09036b910b47ec4bceb867433349133ca0d64",
+    "claim_id": "WA-APPSEC-010",
+    "decision_id": "reconciliation-decision:8139ea3722286fb7124662320f90edc81c76f1c6a7f13800f724c6d875d79e1e",
+    "interpretation": "Review both presence and enforcement of security policy and guidelines. Training and feedback alone cannot demonstrate effective operation of the security policy.",
+    "proposal_record_digest": "fde1252e127d6034b4c123285228a42bd693f3636195ee662716f3b7085fcc4e",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "security-policy existence and effective enforcement need separate checks",
+    "source_span_sha256": "341ab0ff13c9e1aa7a3d2cc00ff55840b5e6dc13b8d8a4a2f8313b787a78d4c2"
+  },
+  {
+    "catalog_record_digest": "bd7698051593fc7516e7f163ceb09036b910b47ec4bceb867433349133ca0d64",
+    "claim_id": "WA-APPSEC-011",
+    "decision_id": "reconciliation-decision:9d68d9bf438cdfe96065209192445b3c8e567a6450cb44322d567a2a11ab06a4",
+    "interpretation": "Policy accessibility extends to all team members, not merely a subset deemed relevant. Preserve this audience in the assessment and distinguish access from having been trained.",
+    "proposal_record_digest": "fa1ff86ff431712d0dda570e9d4847f386c97372479f96d3cc336ec811ba1b1e",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "all-team accessibility is a retained audience requirement",
+    "source_span_sha256": "bdedfce67509c41b81f0f22c97b725a59e6975561f120c54ac875ee3ce143ead"
+  },
+  {
+    "catalog_record_digest": "bd7698051593fc7516e7f163ceb09036b910b47ec4bceb867433349133ca0d64",
+    "claim_id": "WA-APPSEC-012",
+    "decision_id": "reconciliation-decision:0345f739e85edc7ee008ecd2e8630d98dba21aa5cf39ff713f9859828d022e97",
+    "interpretation": "Update policies regularly for new threats and best practices. Governance feedback is related, but does not itself specify security-policy updates and their cadence.",
+    "proposal_record_digest": "d030a91433cc95eab7a6fd08d5a251f6ebdf425e5e73bad69e7bee2e97ebce88",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "recurring security-policy refresh and change triggers are required",
+    "source_span_sha256": "417a185a0e0bbfe613e6c602d09e150ee6bb7b3aa1859aadc85e522ace996532"
+  },
+  {
+    "catalog_record_digest": "b4c7ec0eec768b7506c13389c277fc852c65fea1556fbd0f3e82951dd8d7f4bd",
+    "claim_id": "WA-APPSEC-013",
+    "decision_id": "reconciliation-decision:64a3ee37d783ce6603b1dfe5f563c8d063d807b8c8d8f4979a73f123f3694075",
+    "interpretation": "Establish and enforce secure coding guidelines across all development teams. Providing education does not establish guideline adoption or enforcement; preserve cross-team scope.",
+    "proposal_record_digest": "56ef0793982eb70edd924d4b5cec2cd9c90221c1936f21585b31782123a0e05c",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "guideline establishment and enforcement are distinct from training",
+    "source_span_sha256": "80c0de283ca8f25aec7ab72280e8bf7867e90dc4d3ce86203b9556c034594f94"
+  },
+  {
+    "catalog_record_digest": "b4c7ec0eec768b7506c13389c277fc852c65fea1556fbd0f3e82951dd8d7f4bd",
+    "claim_id": "WA-APPSEC-014",
+    "decision_id": "reconciliation-decision:5f1e97a6f1ae6da6c63314fa683e0cfee98b789866582e48640458dd533da051",
+    "interpretation": "Secure-development guidance and training applicability are addressed by the draft education objective. Preserve secure coding as training content, and verify the training actually occurs rather than the mere presence of guidance.",
+    "proposal_record_digest": "373a6c96ac0172aad31cd3dabda36dd53dcf357f8ba78b3bf32ec0c3799b25be",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "training delivery in secure coding must be explicit",
+    "source_span_sha256": "65c2c7d915a5bcc9a1e7120c84f74bf0835f99404d7de50a3c184cb683d5bfbc"
+  },
+  {
+    "catalog_record_digest": "b0a0432a526a23a60344893bfffe37c17072cd8958b6b0e263dd36aa8a9facd5",
+    "claim_id": "WA-APPSEC-015",
+    "decision_id": "reconciliation-decision:8648e3a46ce667ea7654b1ca41957cf5ecef1f7ecebe4d1add6972bc72291769",
+    "interpretation": "Conduct code reviews to assess adherence to secure coding guidance. Reviewer threshold and staffing policy do not establish security-guideline adherence in an actual review.",
+    "proposal_record_digest": "704edcd6a210c334df6365b6d0e77ebcb84302c960e71f56218c1355cab00a4c",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "review content and adherence evidence are distinct from reviewer-count policy",
+    "source_span_sha256": "488fd1471ad26b6604b9dee4aabb58a6bcd8ca9734304329c9fb3ae4ebdb05f6"
+  },
+  {
+    "catalog_record_digest": "ab66ee8708e405924625f37d2d3fd5f2bb99772b86de724289bd1afdb79628c3",
+    "claim_id": "WA-APPSEC-016",
+    "decision_id": "reconciliation-decision:e0bdbe26dc63717f03e50427e78d2c6dc1b57e9e37db5268d37a16ebcb3be3c5",
+    "interpretation": "Implement strict access controls and regularly review permissions. Periodic access review supports the latter, but effective control implementation and strictness remain separate; define strictness through a target policy rather than a fabricated universal threshold.",
+    "proposal_record_digest": "e6662ead6fcbbc065252dc34c74c02f7f776587b28c7a46a6992e8af74f49443",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "implemented access restrictions and recurring entitlement review must both remain",
+    "source_span_sha256": "cee1b5179e3b723dac62b193620ab10a4eda1dd49a2b1b72446ba615248aebb0"
+  },
+  {
+    "catalog_record_digest": "efcf0f2802bc64eab9a5335c1109a38b27f9a9efc62b1219ca909116c3e07e05",
+    "claim_id": "WA-APPSEC-017",
+    "decision_id": "reconciliation-decision:5ee4ab6eff6b2c0bd7ed0e0369e7d17889922a9257cb8032ca5fa1cfc3cb34c9",
+    "interpretation": "Use RBAC to limit access in GitHub and other business systems. Explicit role assignments do not prove role-based enforcement; do not narrow business-system scope to connected systems only.",
+    "proposal_record_digest": "567e6a8ec45670ba371ac72cec374a2825ef1413e87898cbaaded16887a47a4f",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "role-based enforcement spans GitHub and other business systems",
+    "source_span_sha256": "99c107c840ae0e3df2b646bbc2409b5920a405a4b0f4a3e12dab503dba94c168"
+  },
+  {
+    "catalog_record_digest": "bab5a5271555c725daa36a43fabe13b3297867b1f54b965a3a8229d169515a49",
+    "claim_id": "WA-APPSEC-018",
+    "decision_id": "reconciliation-decision:67012a3ff508d16f8d0048002cdd305bd6f1a5fc29006d95de4db6ae128c5520",
+    "interpretation": "Regularly audit access logs for suspicious activity across GitHub and other business systems. General audit retention and anomaly investigation do not prove recurring access-log examination or full system coverage.",
+    "proposal_record_digest": "b2f62ad6a306d26ef4e68d2122bd09a06e6bd199d63b5732efac6e6fe87ab2d3",
+    "publication_boundary": "Pinned spans inspected privately; no upstream text copied into this review.",
+    "residual": "periodic access-log audit and both system scopes must remain",
+    "source_span_sha256": "b6d466b8875f806315a0571d6f3d5720dd021fa72373c044ebf3434cddbf32d6"
+  }
+]

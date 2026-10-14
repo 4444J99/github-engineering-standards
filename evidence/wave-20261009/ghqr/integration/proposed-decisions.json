@@ -1,0 +1,222 @@
+{
+  "schema": "ges.bounded-integration-proposed-decisions.v1",
+  "state": "PROPOSED_PENDING_E_AUDIT",
+  "tranche": "ghqr",
+  "baseline": "7af46c827565d4746daed9ed1a9206524c944f70",
+  "reconciler": "codex:/root",
+  "reconciled_at": "2026-10-09T20:55:47.353193+00:00",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/ghqr/source/draft-dispositions.json",
+      "sha256": "e44642a79b4dfbd1755c5d1d8f599716f50bd6e12576b5ef27e62c0d2101d8c9"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/primary-review.json",
+      "sha256": "9ce66c622ba2b64add905b145f343413c912472a233bb2e2f7fa351fd474c9e3"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/input-bindings.json",
+      "sha256": "55c951465cc3e46dc847a49024a3116cd63851a3ea0a688d3f80352b65f96822"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/residuals.json",
+      "sha256": "4e663cfca69b0e41122415ed2d43571f0665b94d7cee3d711c55073adf3e5225"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/source/packet-manifest.json",
+      "sha256": "70ca78389203e336cf9bcbae084d16c1399e18d548847b5bec7037d9e7025eea"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/omission/source-findings.json",
+      "sha256": "08e3fb15b07a611612d02987c8c174140276b69806770be157d31b0444c40b2d"
+    },
+    {
+      "path": "controls/catalog.json",
+      "sha256": "2a61be160fdbf1d45564b31b3c83336ae14941758cf99e19d8344d630eae2e4c"
+    },
+    {
+      "path": "controls/review_queue.json",
+      "sha256": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9"
+    },
+    {
+      "path": "evidence/wave-20261009/ghqr/assignment.json",
+      "sha256": "4f2d1c92f8a244a1cb40d9ef4e32a8bfc9212648b926d0cfacf78f799170e62a"
+    }
+  ],
+  "source_relations": [
+    {
+      "claim": {
+        "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+        "claim_document": "ghqr-branch-protection-claims.json",
+        "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+        "claim_id": "GHQR-BP-009",
+        "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+        "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+        "end_line": 99,
+        "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+        "source": "microsoft/ghqr",
+        "start_line": 89,
+        "statement_sha256": "682ebe2c1ca7726862cebc82be713840c54a2f87af46314059b1ded4d9976aea"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-RULE-008",
+          "revision": 3
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-RULE-014",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "High recommendation requires CI checks to pass before any PR merge. Scanner emits009 only for nil statusChecks; a configured object does not prove actual successful runs or native rejection. Catalog execution revision alone does not fully state success enforcement.",
+        "scope": "Source recommendation and supplied detail; all-protected/production/default branch scopes remain distinct."
+      },
+      "rationale": "High recommendation requires CI checks to pass before any PR merge. Scanner emits009 only for nil statusChecks; a configured object does not prove actual successful runs or native rejection. Catalog execution revision alone does not fully state success enforcement.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+        "claim_document": "ghqr-branch-protection-claims.json",
+        "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+        "claim_id": "GHQR-BP-010",
+        "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+        "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+        "end_line": 110,
+        "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+        "source": "microsoft/ghqr",
+        "start_line": 100,
+        "statement_sha256": "c1305bc7d82d42ebfb37516e3dc64cb186b05c7b5de8c78e2be841169beca423"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-RULE-002",
+          "revision": 2
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-RULE-015",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "Critical recommendation disables force pushes on all protected branches. Scanner checks AllowForcePushes on supplied detail only; false does not prove effective denial for bypass principals or every branch. Canonical per-instance rejection supports meaning but full branch denominator remains explicit.",
+        "scope": "Source recommendation and supplied detail; all-protected/production/default branch scopes remain distinct."
+      },
+      "rationale": "Critical recommendation disables force pushes on all protected branches. Scanner checks AllowForcePushes on supplied detail only; false does not prove effective denial for bypass principals or every branch. Canonical per-instance rejection supports meaning but full branch denominator remains explicit.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    },
+    {
+      "claim": {
+        "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+        "claim_document": "ghqr-branch-protection-claims.json",
+        "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+        "claim_id": "GHQR-BP-011",
+        "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+        "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+        "end_line": 121,
+        "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+        "source": "microsoft/ghqr",
+        "start_line": 111,
+        "statement_sha256": "ce245f1a62b912e823fa085c7efc2917d3725676e9dcbe7c91da88934d1c8d75"
+      },
+      "control_references": [
+        {
+          "collection": "CATALOG",
+          "id": "GES-RULE-001",
+          "revision": 2
+        },
+        {
+          "collection": "PROPOSAL",
+          "id": "GES-RULE-016",
+          "revision": 1
+        }
+      ],
+      "details": {
+        "distinction": "High recommendation disables deletion on all protected branches. Scanner checks AllowDeletions for supplied detail only. Keep topic-branch cleanup separate and verify bypass/target coverage; a false flag is not an exercised native denial.",
+        "scope": "Source recommendation and supplied detail; all-protected/production/default branch scopes remain distinct."
+      },
+      "rationale": "High recommendation disables deletion on all protected branches. Scanner checks AllowDeletions for supplied detail only. Keep topic-branch cleanup separate and verify bypass/target coverage; a false flag is not an exercised native denial.",
+      "disposition": "SPECIALIZE",
+      "primary_reviewer": "codex:/root/source_worker_b",
+      "omission_reviewer": "codex:/root/omission_reviewer_d",
+      "reconciler": "codex:/root",
+      "decision_auditor_required": "codex:/root/decision_auditor_e",
+      "objective_synthesis_complete": false,
+      "accepted_policy": false,
+      "adopted_obligation": null
+    }
+  ],
+  "source_relations_digest": "4d04208dc83798b3e19d4d39e163a11f30833a68736308323eda356d0214a23e",
+  "held_claim_ids": [
+    "GHQR-BP-001",
+    "GHQR-BP-002",
+    "GHQR-BP-003",
+    "GHQR-BP-004",
+    "GHQR-BP-005",
+    "GHQR-BP-006",
+    "GHQR-BP-007",
+    "GHQR-BP-008",
+    "GHQR-BP-012",
+    "GHQR-BP-013",
+    "GHQR-BP-014"
+  ],
+  "finding_dispositions": [
+    {
+      "finding_id": "D-GHQR-006-CONFIGURATION",
+      "claim_id": "GHQR-BP-006",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add006 to fidelity holds; preserve composite components as unresolved source-bound objectives."
+    },
+    {
+      "finding_id": "D-GHQR-NIL-AND-SCOPE",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Retain per-predicate scope, input unknowns and scanner limitations; no configuration boolean implies runtime PASS."
+    },
+    {
+      "finding_id": "D-GHQR-AUTHORSHIP",
+      "claim_id": "GHQR-BP-012",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Keep conflict and source recommendation visible pending separately reviewed faithful treatment; no stronger authority claim."
+    },
+    {
+      "finding_id": "D-GHQR-OBJECTIVE-BOUNDARY",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Retain unresolved canonical objectives, bypass/collector dependencies, target policies and operational bindings."
+    }
+  ],
+  "source_coverage": {
+    "assigned_claims": 14,
+    "reviewed_in_tranche": 14,
+    "proposed_relation_receipts": 3,
+    "held": 11,
+    "completed_objective_synthesis_credit": 0
+  },
+  "scope_boundaries": [
+    "These are source relations to exact existing draft proposal revisions, not completed control objectives or implementation.",
+    "Every historical fidelity defect remains held, with original claims and primary packet preserved.",
+    "Source recommendation strength, actor, cadence and applicability remain source context; no adopted policy.",
+    "Four actual automated runtime roles are authorized by the user; human review and acceptance are not asserted.",
+    "Other tranches, publication clearance, cross-source synthesis and native execution remain outside this subject."
+  ]
+}

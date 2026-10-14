@@ -1,0 +1,61 @@
+{
+  "schema": "ges.publication-review-identity.v1",
+  "role": "C",
+  "role_description": "Serialized correction wave worker C (second writer), publication-field correction lane",
+  "session": {
+    "source_variable": "OPENCODE_SESSION_ID",
+    "session_id": "ses_edbb9e21fffe41Hfn52r71dsoS",
+    "note": "Real session id read from the OPENCODE_SESSION_ID environment variable at identity-write time. The execution-freeze lease command referenced surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 as pre-assigned for this lane; that surface string is recorded verbatim in the lease and is not substituted for the runtime session id here."
+  },
+  "runtime": {
+    "agent": "opencode",
+    "provider": "opencode",
+    "model_id": "mimo-v2.6-flash-free",
+    "model_name": "MiMo-V2.6-Flash Free"
+  },
+  "identity_recorded_at_utc": "2026-10-10T05:30:47Z",
+  "checkout": {
+    "path": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-c-20261009",
+    "branch": "codex/wave-publication-c-20261009",
+    "starting_head": "a2b81ff848d0c4137f0df03baf09e9685473a016",
+    "remote_head_at_preflight": "a2b81ff848d0c4137f0df03baf09e9685473a016",
+    "remote": "origin"
+  },
+  "preflight": {
+    "completed_at_utc": "2026-10-10T05:16:00Z",
+    "head_matches_expected": true,
+    "git_status_porcelain_uno_empty": true,
+    "remote_branch_matches_local": true,
+    "lock_files_under_git_dir": "none (find .git -name '*.lock' returned no paths)",
+    "other_live_processes_writing_checkout": "none (ps -Ao pid,command filtered on the checkout path returned only the excluding grep itself; no other match)",
+    "conflicts": "none"
+  },
+  "lease": {
+    "acquired": true,
+    "allowed": true,
+    "lease_id": "2faae7b2c82c419ca3df40571ca5360d",
+    "acquired_at_utc": "2026-10-10T05:16:00.270654Z",
+    "expires_at_utc": "2026-10-10T05:55:52.484409Z",
+    "kind": "execution",
+    "owner": "ges-correction-20261009",
+    "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+    "reacquired_because": "Stage B lease expiry (2026-10-10T05:46:00Z) too soon for this worker; fresh 1800s TTL acquired before any write."
+  },
+  "use_ids": [
+    "GES-OPS-008-objective",
+    "GES-OPS-008-implementation-acceptance-0"
+  ],
+  "exclusive_write_root": "evidence/wave-20261009-correction-01/publication",
+  "authority": {
+    "planning_freeze": "evidence/wave-20261009-correction-01/assignment.json (conductor checkout; read-only for this worker)",
+    "execution_freeze": "evidence/wave-20261009-correction-01/serialized-admission-03/execution-freeze-20261010.json (conductor checkout; read-only for this worker)",
+    "coordinator": "wave conductor (role A)",
+    "successor_suffix": "-CORRECTION-01"
+  },
+  "constraints_observed": {
+    "network": "none used",
+    "writes_outside_exclusive_root": "none",
+    "predecessor_records_modified": "none (predecessors and publication candidate remain byte-identical)",
+    "stale_nested_checkout": "/Users/4jp/Workspace/4444J99/engineering-environment-standards/ not read or executed"
+  }
+}

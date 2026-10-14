@@ -1,0 +1,294 @@
+{
+  "schema": "ges.bounded-decision-audit.v1",
+  "record_id": "decision-audit-CORRECTION-01",
+  "correction_wave": "wave-20261009-correction-01",
+  "stage": "E",
+  "state": "Staged",
+  "auditor": "opencode session ses_edb94c890ffeK7iqZc9PU59AgI (source: env OPENCODE_SESSION_ID)",
+  "auditor_runtime": {
+    "agent": "opencode",
+    "provider": "opencode",
+    "model_id": "mimo-v2.6-flash-free",
+    "model_name": "MiMo-V2.6-Flash Free"
+  },
+  "observed_at": "2026-10-10T06:14:00Z",
+  "pr": 496,
+  "method": "Independent re-derivation from committed bytes only. All reads were 'git show <expected-head>:<path>' or equivalent against pre-verified heads; no network, no fetch, no sibling write, no stale nested checkout read or executed, no heavy/Governance suite. Mechanical re-derivation performed by evidence/wave-20261009-correction-01/audit/check-audit-correction-01.py (60 bounded checks, read-only) plus an inline candidate-integrity re-hash (9 files) recorded below.",
+  "verified_input_heads": [
+    {
+      "role": "E (self)",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-e-20261009",
+      "branch": "review/wave-20261009-e",
+      "expected": "509f4a4f3268d1d91c97d898f1c90e48a6946a52",
+      "observed": "509f4a4f3268d1d91c97d898f1c90e48a6946a52",
+      "remote_ls_remote": "509f4a4f3268d1d91c97d898f1c90e48a6946a52",
+      "tracked_tree_clean": true,
+      "result": "MATCH"
+    },
+    {
+      "role": "A (conductor, read-only)",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+      "expected": "21e9719af490740b7807bf4fa5ce3931d120ed5d",
+      "observed": "21e9719af490740b7807bf4fa5ce3931d120ed5d",
+      "tracked_tree_clean": true,
+      "result": "MATCH"
+    },
+    {
+      "role": "B",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-b-20261009",
+      "expected": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+      "observed": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+      "tracked_tree_clean": true,
+      "result": "MATCH"
+    },
+    {
+      "role": "C",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-c-20261009",
+      "expected": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+      "observed": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+      "tracked_tree_clean": true,
+      "result": "MATCH"
+    },
+    {
+      "role": "D",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-d-20261009",
+      "expected": "4e137f69448ac10fe20002838941369b72d255b1",
+      "observed": "4e137f69448ac10fe20002838941369b72d255b1",
+      "tracked_tree_clean": true,
+      "result": "MATCH"
+    }
+  ],
+  "checks": [
+    {
+      "id": "preflight.self",
+      "verdict": "PASS",
+      "statement": "Worker E preflight: HEAD equals 509f4a4f3268d1d91c97d898f1c90e48a6946a52, 'git status --porcelain -uno' empty, 'git ls-remote origin review/wave-20261009-e' returns the same sha, zero *.lock files under the git dir, no live process writing the checkout on recheck.",
+      "evidence": "evidence/wave-20261009-correction-01/audit/identity.json -> preflight; commands run 2026-10-10T06:06:12Z-06:06:40Z"
+    },
+    {
+      "id": "preflight.siblings",
+      "verdict": "PASS",
+      "statement": "All four sibling checkouts verified at the exact expected heads with clean tracked trees before any input was read.",
+      "evidence": "checks clean.A/B/C/D/E and heads.A/B/C/D/E in check-audit-correction-01.py output"
+    },
+    {
+      "id": "role_binding.identity_files",
+      "verdict": "PASS",
+      "statement": "identity.json exists in each stage's own exclusive root at that stage's end head: B evidence/wave-20261009-correction-01/source/identity.json (role B), C .../publication/identity.json (role C), D .../omission/identity.json (role D); B additionally preserves the cancelled first attempt as identity-cancelled-ses_edbeebdceffe8CrNpIv5HJMXtW.json with its own lease/session bytes intact; A's identity is recorded in execution-freeze-20261010.json -> identities.A_conductor and in reconciliation-CORRECTION-01.json -> A_identity (identical surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33); E's identity is this wave's audit/identity.json.",
+      "evidence": "identity_present.B, identity_present.B_cancelled, identity_present.C, identity_present.D, freeze.roles_complete, A_identity_in_freeze_and_recon"
+    },
+    {
+      "id": "role_binding.distinct_sessions",
+      "verdict": "PASS",
+      "statement": "Recorded session ids are distinct per worker and each cites env OPENCODE_SESSION_ID as source: B ses_edbc2fa97ffeVoEPHOghcPA455, B-cancelled ses_edbeebdceffe8CrNpIv5HJMXtW, C ses_edbb9e21fffe41Hfn52r71dsoS, D ses_edbadcab6ffeDVVMjqnv9QjY8R, A ses_edcbc89dcffe1pHZoV5eWgrR33, E ses_edb94c890ffeK7iqZc9PU59AgI (6 distinct).",
+      "evidence": "check 'sessions.distinct' -> 6/6 unique; per-file fields session_id.value / session.session_id / A_identity.surface"
+    },
+    {
+      "id": "exclusivity.B",
+      "verdict": "PASS",
+      "statement": "git diff --name-only 2ad83ba6a3029eebadfd9c97e80cf6def8e98234..c034c82d6e15b29e30711f3cb77b53d5a61e206c lists 8 files, all under evidence/wave-20261009-correction-01/source/; no file outside the exclusive root.",
+      "evidence": "check exclusivity.B (stray=[])"
+    },
+    {
+      "id": "exclusivity.C",
+      "verdict": "PASS",
+      "statement": "git diff --name-only a2b81ff848d0c4137f0df03baf09e9685473a016..a29214dc5ff55dd5df6176a80d1f4478789a9beb lists 5 files, all under evidence/wave-20261009-correction-01/publication/.",
+      "evidence": "check exclusivity.C (stray=[])"
+    },
+    {
+      "id": "exclusivity.D",
+      "verdict": "PASS",
+      "statement": "git diff --name-only 4768db8929420538e3b828467de9dbe314fd4b74..4e137f69448ac10fe20002838941369b72d255b1 lists 4 files, all under evidence/wave-20261009-correction-01/omission/.",
+      "evidence": "check exclusivity.D (stray=[])"
+    },
+    {
+      "id": "additions_only.B",
+      "verdict": "PASS",
+      "statement": "git diff --numstat over B's range: 651 insertions, 0 deletions, 0 renames across 8 files; every tracked predecessor and predecessor artifact is byte-identical (any modification would appear as a deletion).",
+      "evidence": "check additions_only.B"
+    },
+    {
+      "id": "additions_only.C",
+      "verdict": "PASS",
+      "statement": "478 insertions, 0 deletions, 0 renames across 5 files.",
+      "evidence": "check additions_only.C"
+    },
+    {
+      "id": "additions_only.D",
+      "verdict": "PASS",
+      "statement": "2195 insertions, 0 deletions, 0 renames across 4 files.",
+      "evidence": "check additions_only.D"
+    },
+    {
+      "id": "serialization.single_lease",
+      "verdict": "PASS",
+      "statement": "One wave execution lease id 2faae7b2c82c419ca3df40571ca5360d is recorded by B, C and D identities and by reconciliation-CORRECTION-01.json -> admission_state.execution_leases; A-reconcile records a different successor lease 8a0216832456477f854592dfa9fd8dcf; E holds its own lease fb2e8ffd19aa43b5894eaad67c21d636.",
+      "evidence": "check lease.single_wave_lease_BCD; identity.json lease.lease_id per stage; reconciliation -> A_identity.lease"
+    },
+    {
+      "id": "serialization.non_overlapping_stages",
+      "verdict": "PASS",
+      "statement": "Commit timestamps are strictly ordered B 2026-10-10T05:23:50Z < C 05:36:18Z < D 06:00:53Z < A-reconcile 06:04:59Z, consistent with the reconciliation's stage windows (B released 05:24:09Z; C bounded by D spawn 05:38:58Z; D stopped 06:01:16Z). No commit from any stage falls inside another stage's window.",
+      "evidence": "git log -1 --format=%cI on c034c82 / a29214d / 4e137f6 / 21e9719; reconciliation -> stages[].wall_clock"
+    },
+    {
+      "id": "serialization.release_before_A_reconcile",
+      "verdict": "NOT_VERIFIED",
+      "statement": "The reconciliation asserts lease 2faae7b2 was explicitly released after D stopped writing before A-reconcile acquired 8a021683. No committed release receipt exists for that event, so the release itself is an assertion. Corroboration only: at E's acquire (2026-10-10T06:06:26Z) the admission store returned inherited=false and listed no live lease under owner ges-correction-20261009 other than E's own, and a read-only 'status' call at 06:09:34Z likewise listed only E's lease - i.e. A's 8a021683 (nominal expiry 06:33:31Z) was no longer live after A's 06:04:59Z commit, which is consistent with an explicit release but does not date it.",
+      "evidence": "host-work-admission.py acquire/status output 2026-10-10T06:06:26Z and 06:09:34Z; reconciliation -> A_identity.lease.preceded_by"
+    },
+    {
+      "id": "serialization.lease_record_consistency",
+      "verdict": "FAIL",
+      "statement": "Worker C's identity.json lease block is internally inconsistent and the reconciliation narrative omits the refresh it implies. C records acquired_at_utc 2026-10-10T05:16:00.270654Z (stage B's acquisition) together with expires_at_utc 2026-10-10T05:55:52.484409Z and the note 'fresh 1800s TTL acquired before any write'; acquire+1800s yields 05:46:00.270654Z, so an unrecorded refresh at 05:25:52.484409Z is required. C's preflight.completed_at_utc (05:16:00Z) is also identical to stage B's lease acquisition instant although B was still writing at that time (B committed 05:23:50Z). reconciliation-CORRECTION-01.json -> admission_state.execution_leases records only 'acquired 05:16:00Z, refreshed 05:41:10Z' and does not mention the 05:25:52Z refresh. Impact: a record-accuracy/narrative gap in lease bookkeeping, not evidence of concurrent writers - the lease id is the same single wave lease, stage commit times do not overlap, and C's own writes (identity written 05:30:47Z, commit 05:36:18Z) follow B's release at 05:24:09Z. Stage B's cancelled-attempt identity shows the same class of defect (ttl_seconds 1800 with 04:26:31Z->05:12:04Z, a 45.6-minute span).",
+      "evidence": "check lease.C_expiry_derivable_from_acquire_plus_ttl (FAILED, sole failed check of 60); C identity fields lease.acquired_at_utc, lease.expires_at_utc, preflight.completed_at_utc; B cancelled identity lease.acquired_at/expires_at/ttl_seconds; reconciliation -> admission_state.execution_leases"
+    },
+    {
+      "id": "dispositions.B_five_records_retain_holds",
+      "verdict": "PASS",
+      "statement": "All five WA-APPSEC-{005,009,011,017,018}-CORRECTION-01.json records keep outcome HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED and each retains 4-5 remaining_holds: every record carries SOURCE_BYTES_NOT_REREAD_HERE, NO_RECONCILIATION_RECEIPT, DECISION_STILL_PROPOSED and MAPPING_AND_POLICY_UNCHANGED; per-claim extras are ROTATION_AUTHORITY_UNRESOLVED (009), ENFORCEMENT_NOT_EVIDENCED (017), SCOPE_CADENCE_NOT_FULLY_DETERMINED (018). boundaries in every record: delivery_status Staged, accepted_policy false, human_approval false, predecessor_modified false, heavy_validation_run false. No overclaim of receipt, approval, mapping, or policy adoption.",
+      "evidence": "checks B_005..B_018.remaining_holds and B_005..B_018.honest_boundaries; fields outcome, remaining_holds[], boundaries.* in each record at head c034c82"
+    },
+    {
+      "id": "dispositions.C_two_fields_remaining_hold",
+      "verdict": "PASS",
+      "statement": "Both use-correction-*-CORRECTION-01.json records carry outcome REMAINING_HOLD, publication_clearance_granted 'none', approvals_created 'none', delivery_status Staged for GES-OPS-008-objective and GES-OPS-008-implementation-acceptance-0.",
+      "evidence": "checks C_objective.*, C_implementation-acceptance-0.*; fields outcome, publication_clearance_granted, approvals_created, delivery_status at head a29214d"
+    },
+    {
+      "id": "dispositions.D_coverage_matrix",
+      "verdict": "PASS",
+      "statement": "D's scope_coverage_matrix contains exactly 5 claim entries (005/009/011/017/018, all covered=true) and 2 use-field entries (both covered=true), with selected_by_planning_freeze matching assignment.json, extra_records_found empty for both stages, scope_drift NONE, and recorded checker results of 270 checks with 0 failures.",
+      "evidence": "checks D.matrix_5_claims, D.matrix_2_fields, D.matrix_selected_ids, D.checker_270_clean; omission-review-CORRECTION-01.json -> scope_coverage_matrix, checker_results"
+    },
+    {
+      "id": "planning_freeze_selected_counts",
+      "verdict": "PASS",
+      "statement": "Read-only assignment.json (conductor) accounting.selected_unresolved_claims = 5 and accounting.selected_unresolved_publication_fields = 2, matching the executed coverage exactly; assignment.json sha256 dc9854e6740a1c1c122f3d292a4f53b9a349e89f72fca568d430acf54f31a3a4 equals the hash cited by the execution freeze's freeze_relationship.planning_freeze (planning freeze unmodified).",
+      "evidence": "checks hash.planning_freeze_unmodified, D.matrix_5_claims, D.matrix_2_fields; assignment.json -> accounting.selected_unresolved_claims / selected_unresolved_publication_fields"
+    },
+    {
+      "id": "gates.storage_latch_closed",
+      "verdict": "PASS",
+      "statement": "execution-freeze-20261010.json -> gates_retained.storage = 'New-checkout latch CLOSED; only existing checkouts written.'",
+      "evidence": "check gate.storage_closed (field gates_retained.storage) at head 21e9719"
+    },
+    {
+      "id": "gates.broker_closed_not_bypassed",
+      "verdict": "PASS",
+      "statement": "freeze gates_retained.broker states the reservation gate is CLOSED, 'not bypassed', 'no run or capacity claimed'; broker-status-20261010.json -> reservation_attempt records result 'HTTP 409 execution_priority_not_approved', run_created false, retained_runs 0.",
+      "evidence": "checks gate.broker_closed_not_bypassed, receipt.broker_closed_0_runs"
+    },
+    {
+      "id": "gates.deadline_30min",
+      "verdict": "PASS",
+      "statement": "freeze gates_retained.deadline sets attempt deadline = stage start + 30 minutes with one corrective retry; host-admission-20261010.json -> ttl_policy = '30-minute execution tranche leases, reacquired per stage'; reconciliation records B 8.6 min, C <=14.8 min upper bound, D 22 min, all within budget.",
+      "evidence": "checks gate.deadline_30min, receipt.ttl_policy_30min; reconciliation -> accounting.stage_spans_file_derived_minutes"
+    },
+    {
+      "id": "gates.review_deferred_to_heavy_tranche",
+      "verdict": "PASS",
+      "statement": "freeze gates_retained.review defers the GOVERNANCE six-command verification to the final heavy tranche; host-admission-20261010.json -> heavy.status NOT_ADMITTED_IN_THIS_ADMISSION_PHASE, deferred_to 'final verification tranche after stage E', gate_intact true, denials published never overridden.",
+      "evidence": "checks gate.review_deferred_to_heavy, receipt.host_heavy_deferred_gate_intact"
+    },
+    {
+      "id": "gates.publication_hold_retained",
+      "verdict": "PASS",
+      "statement": "freeze gates_retained.publication retains HOLD where evidence does not support release and grants no publication clearance; both C records and D's carry_forward restate no clearance; freeze delivery_status_retained and reconciliation status are both 'Staged'.",
+      "evidence": "checks gate.publication_hold_retained, gate.status_staged; EXECUTION-FREEZE-20261010.md ('Status remains Staged')"
+    },
+    {
+      "id": "admission_receipts_present",
+      "verdict": "PASS",
+      "statement": "All named freeze/admission receipts exist at head 21e9719 under evidence/wave-20261009-correction-01/serialized-admission-03/: execution-freeze-20261010.json, EXECUTION-FREEZE-20261010.md, authorization-20261010.json, custody-transfer-20261010.json, cache-authentication-20261010.json, host-admission-20261010.json, broker-status-20261010.json (plus preserved blocked-recovery.json and its sha256).",
+      "evidence": "directory listing of serialized-admission-03/ at 21e9719; freeze -> admission.{authorization,custody,inputs,host,broker}"
+    },
+    {
+      "id": "hash_bindings.freeze_and_planning",
+      "verdict": "PASS",
+      "statement": "execution-freeze-20261010.json sha256 b1b8fd0f7389369f9a1cfd02513d07794239be0072ddfa7a1b2e4d9b4c1dd573 equals reconciliation.freeze_binding.sha256 (re-derived independently); assignment.json sha256 equals the value cited inside the freeze.",
+      "evidence": "checks hash.freeze_matches_reconciliation_binding, hash.planning_freeze_unmodified"
+    },
+    {
+      "id": "candidate_integrity.independent_rederivation",
+      "verdict": "PASS",
+      "statement": "Re-derived independently in worker E's own checkout: sha256 over raw bytes of the nine evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/* files matches assignment.json -> bindings sha256 and byte counts 9/9, corroborating C's candidate-integrity.json (MATCH 9/9) and D's recheck.",
+      "evidence": "inline re-hash run 2026-10-10T06:13Z against assignment.json bindings at head 21e9719; candidate-integrity.json -> files[], match_count"
+    }
+  ],
+  "check_summary": {
+    "checks_run_by_checker": 60,
+    "checks_failed_by_checker": 1,
+    "failed": ["serialization.lease_record_consistency"],
+    "group_verdicts": {
+      "preflight_and_input_binding": "PASS",
+      "role_binding": "PASS",
+      "exclusivity": "PASS",
+      "additions_only_preservation": "PASS",
+      "serialization_and_lease_continuity": "PASS_WITH_ONE_FAIL (see serialization.lease_record_consistency) and one NOT_VERIFIED (release receipt)",
+      "honest_dispositions": "PASS",
+      "planning_freeze_selected_counts": "PASS",
+      "gate_retention": "PASS",
+      "hash_bindings": "PASS",
+      "candidate_integrity": "PASS (independently re-derived 9/9)"
+    }
+  },
+  "findings": [
+    {
+      "id": "E-FINDING-01",
+      "severity": "MINOR",
+      "kind": "record_accuracy",
+      "statement": "C's identity.json lease block reuses stage B's acquired_at (05:16:00.270654Z) with an expiry (05:55:52.484409Z) that implies an unrecorded refresh at 05:25:52Z, and its preflight.completed_at (05:16:00Z) predates B's release although C describes that preflight as its own; the reconciliation lease narrative likewise omits the 05:25:52Z refresh. The same class of defect appears in B's cancelled-attempt identity (ttl_seconds 1800 vs a 45.6-minute acquired->expires span).",
+      "impact": "Bookkeeping/evidence-quality defect in lease metadata. No evidence of a concurrent writer: one lease id across B/C/D, commit times strictly ordered, C's writes follow B's release.",
+      "recommended_owner_action": "A-integrate should either correct the narrative with an explicit note (never rewriting committed predecessors) or record the unobserved refresh as a known metadata gap."
+    },
+    {
+      "id": "E-FINDING-02",
+      "severity": "INFORMATIONAL",
+      "kind": "evidence_gap",
+      "statement": "The explicit release of wave lease 2faae7b2 after stage D is asserted only in reconciliation-CORRECTION-01.json; no release receipt is committed.",
+      "impact": "Serialization remains corroborated by commit-time ordering and by the absence of any live owner lease at E's acquire, but the release event itself is not independently evidenced.",
+      "recommended_owner_action": "Record the release event (or its store history) in the integration stage if the lease store retains it."
+    }
+  ],
+  "not_verified": {
+    "statement": "This audit grants no approval, no release, no clearance, no reconciliation receipt, no mapping or policy decision, and no merge authority. Status remains Staged. The pull request stays draft with no claimed approval.",
+    "grants": {
+      "approval": "none",
+      "release": "none",
+      "publication_clearance": "none",
+      "merge": "none",
+      "heavy_or_governance_verification": "none"
+    },
+    "items": [
+      "Exact release event and timestamp of wave lease 2faae7b2 (no committed release receipt).",
+      "Source-byte re-reads: the pinned checklist bytes and the pinned ghqr budgets.yaml bytes are not present in the reviewed checkouts; every 'source says X' statement is inherited from committed review records, not re-derived from upstream bytes by this auditor.",
+      "Semantic or rights approval of the five corrected statements and the ADAPTATION question for the two use fields - substantive judgments not made here.",
+      "Publication clearance: the byte-identical LICENSED_COPY gate is unchanged and both use fields remain HOLD; no clearance is granted or verified.",
+      "Reconciliation receipt, D/A/E gates, mapping status and policy adoption - unchanged and unverified; proposed-decisions review.status stays PROPOSED with reviewer null.",
+      "D's 270 checker results were verified as recorded (count and zero-failure) but the checker was not re-executed by E; only the coverage matrix, hold text presence and candidate integrity were re-derived here.",
+      "Stage wall-clock durations are self-reported by each worker; E corroborated only commit timestamps and stage ordering.",
+      "Heavy/Governance verification suite - deliberately not run; deferred to A-integrate by the execution freeze.",
+      "Live vitals: a read-only admission status call at 06:09:34Z returned allowed=false with reason 'vitals-shed' while E's execution lease (fb2e8ffd..., expiry 06:36:26Z, granted allowed=true at 06:06:26Z) remained live; the heavy gate may still deny at the final tranche and is never overridden here."
+    ]
+  },
+  "overall_audit_verdict": "PASS_WITH_FINDINGS",
+  "overall_statement": "The serialized correction execution through A-reconcile conforms to the execution freeze on every independently re-derivable dimension checked: exclusive write roots, additions-only preservation of predecessors, distinct per-worker identity binding, single serial lease id with non-overlapping stage commits, honest hold-preserving dispositions (5 claims + 2 fields exactly as selected by the planning freeze), and retention of every gate (storage latch closed, broker closed-not-bypassed with zero runs, 30-minute deadlines, review deferred to the heavy tranche, publication HOLD, status Staged). One FAIL is recorded: a lease-metadata inconsistency in C's identity record (and the matching omission in the reconciliation narrative), plus one NOT_VERIFIED (the asserted lease release receipt). Neither indicates a writer-concurrency or gate violation. This record is evidence only and confers no approval, release, clearance or merge.",
+  "bindings": [
+    {"path": "evidence/wave-20261009-correction-01/serialized-admission-03/execution-freeze-20261010.json", "head": "21e9719af490740b7807bf4fa5ce3931d120ed5d", "sha256": "b1b8fd0f7389369f9a1cfd02513d07794239be0072ddfa7a1b2e4d9b4c1dd573"},
+    {"path": "evidence/wave-20261009-correction-01/assignment.json", "head": "21e9719af490740b7807bf4fa5ce3931d120ed5d", "sha256": "dc9854e6740a1c1c122f3d292a4f53b9a349e89f72fca568d430acf54f31a3a4"},
+    {"path": "evidence/wave-20261009-correction-01/reconciliation-CORRECTION-01.json", "head": "21e9719af490740b7807bf4fa5ce3931d120ed5d"},
+    {"path": "evidence/wave-20261009-correction-01/source/", "head": "c034c82d6e15b29e30711f3cb77b53d5a61e206c", "range_start": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234"},
+    {"path": "evidence/wave-20261009-correction-01/publication/", "head": "a29214dc5ff55dd5df6176a80d1f4478789a9beb", "range_start": "a2b81ff848d0c4137f0df03baf09e9685473a016"},
+    {"path": "evidence/wave-20261009-correction-01/omission/", "head": "4e137f69448ac10fe20002838941369b72d255b1", "range_start": "4768db8929420538e3b828467de9dbe314fd4b74"}
+  ],
+  "approval_section": {
+    "approved_by": "none",
+    "approval_granted": false,
+    "release_granted": false,
+    "clearance_granted": false,
+    "merge_authorized": false,
+    "status": "Staged",
+    "note": "Worker E is an auditor, not an approver. This record must not be cited as an approval, verification receipt, reconciliation receipt, publication clearance, or merge authorization. Heavy/Governance verification and integration remain with A-integrate; human-gated atoms remain with the human owner."
+  }
+}

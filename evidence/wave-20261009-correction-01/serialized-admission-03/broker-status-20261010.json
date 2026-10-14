@@ -1,0 +1,74 @@
+{
+  "schema": "ges.broker-admission-status.v1",
+  "recorded_at": "2026-10-10T04:22:10Z",
+  "credentials": {
+    "source": "~/.limen.env loaded through the owning authentication mechanism (credentials helper in the OpenCode runtime scratch root)",
+    "selected_token": "LIMEN_CONDUCT_TOKEN_OPENCODE; token values never emitted, logged, or written into any receipt",
+    "identity_rule": "Own registered identity only; Codex's identity never substituted."
+  },
+  "runtime_identity": {
+    "deployment_id": "a0c5aa90-6538-4382-833a-b9844072d7a5",
+    "git_sha": "f93f3dd9076992ce6d38f4d697a5f7176b776013",
+    "schema_version": "limen.conduct_runtime_identity.v1",
+    "generated_at": "2026-10-10T03:05:33.756Z",
+    "sessions_visible": 274
+  },
+  "registration": {
+    "session_id": "ses_edcbc89dcffe1pHZoV5eWgrR33",
+    "agent": "opencode",
+    "provider": "opencode/big-pickle",
+    "worktree": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009",
+    "capabilities": ["code", "execute", "conduct", "inspect", "review"],
+    "concurrency": 1,
+    "transport": "native",
+    "meter": "vendors/opencode logs/usage.json#",
+    "registered_at": "2026-10-10T03:09:18Z",
+    "accepting_work_at_first_full_read": false,
+    "note": "A subsequent registration with --accepting-work returned the identical record (registered_at unchanged); both observations retained as read."
+  },
+  "inspection": [
+    {"call": "limen conduct capabilities", "result": "OK"},
+    {"call": "GET /api/conduct/execution/policy", "result": "HTTP 404 - readback capability not present on deployed runtime f93f3dd; consistent with the Limen recovery-owner receipt: readback undeployed, which proves the readback capability is unavailable, not that administrator credentials are unavailable."},
+    {"call": "conduct graph query for this session", "result": "unknown run - no prior runs for this session"}
+  ],
+  "reservation_attempt": {
+    "packet": {
+      "work_id": "ges-correction-20261009-root",
+      "intent_kind": "fanout-root",
+      "predicate": "python -m ges.evidence-integrity",
+      "receipt_target": "git:4444J99/github-engineering-standards:evidence/wave-20261009-correction-01",
+      "work_loan": "human_prompt present, budget_cost 1, owner_surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+      "spend_limit": 1,
+      "reserve": 1,
+      "deadline": "2026-10-10T03:35:33Z"
+    },
+    "result": "HTTP 409 execution_priority_not_approved",
+    "run_created": false,
+    "retained_runs": 0,
+    "resolution_chain_faced": [
+      "reject extra field native_session_id (AgentIdentityV1)",
+      "task-not-underwritten (work_loan missing)",
+      "task-not-underwritten (predicate, receipt_target)",
+      "packet conductor session not healthy (fixed by re-registration)",
+      "execution_priority_not_approved (terminal for this wave)"
+    ]
+  },
+  "owner_gate": {
+    "requirement": "Broker execution admission for this work_key requires an execution policy entry approved for the wave outcome. Installing it requires (a) the deployed Worker runtime with the authenticated policy readback endpoint and (b) the owner reconciler run with the owner's policy source and the exact work key, followed by bounded broker admission.",
+    "custodian": "Limen recovery owner: 4444J99/limen#2840 and 4444J99/ops#6 (receipts at docs/operations/receipts/recovery-admission-20261010/ and docs/receipts/recovery-admission-20261010/ in the recovery-admission-20261010 worktree)",
+    "facts": [
+      "Authenticated live GET of /api/conduct/execution/policy returned HTTP 404 (readback unavailable).",
+      "CLI installation, Worker deployment, policy installation, and ops reservations remain gated on unresolved CLI verification (#2840; verification allowance exhausted).",
+      "The prior rejected coordinator work key ops6-coordinate-20261009 has zero retained runs and zero active leases; policy-admission.json records status blocked, gate owner_route_rejected, http_status 404, installed false.",
+      "No policy replacement, capacity reservation, native subagent, deployment custody, or production apply occurred in the owner attempt."
+    ],
+    "bypassed": false
+  },
+  "disposition": {
+    "broker_reservation": "CLOSED_FOR_THIS_WAVE",
+    "recorded_once": true,
+    "repeat_observation": "none - this file is the single blocked-broker record for the correction wave",
+    "execution_path": "The wave executes under host execution admission (see host-admission-20261010.json) per the owner's execution directive. The broker gate stays intact and unmodified; no runs are claimed.",
+    "runs_reserved": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "ges.owner-authorization.v1",
+  "recorded_at": "2026-10-10T04:22:10Z",
+  "recorded_by": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 (role A)",
+  "source": "Human owner message received in this OpenCode session on 2026-10-10, authorizing the serialized correction wave; constraints below are quoted or closely paraphrased from that message.",
+  "authorization": {
+    "checkout_transfer": {
+      "scope": "The nine listed worker checkouts transfer to OpenCode session ses_edcbc89dcffe1pHZoV5eWgrR33 at their recorded heads.",
+      "payload_disposition": "Retain all tracked and ignored payloads unchanged.",
+      "evidence_conditions": "Archived task_complete records are not positive historical checkout release. Revalidate head, payload inventory, and absence of live writers before enabling any writer. Hold any lane with conflicting evidence."
+    },
+    "continuation": {
+      "source": "Standing GES continuation authorization (github/4444J99 issue #2821), explicitly reapplied by the human owner to this correction outcome.",
+      "effect": "Supersedes this handoff's additional 120-minute stop.",
+      "tranche_rule": "Bounded tranches of at most 30 minutes, including at most 10 minutes of verification.",
+      "accounting_rule": "Preserve cumulative accounting; do not reset historical usage. Count attributable A preparation, recovery, implementation, review, integration, and descendant work. Retain main-wave usage as related outcome history, separately identified. Unrelated Codex/OpenCode work does not count merely because it shares a runtime or surface."
+    },
+    "measurement_policy": "Preserve substrate telemetry and file-derived elapsed bounds as different measurements. An upper bound above 120 minutes does not prove actual usage exceeded 120 minutes. Missing cloud telemetry remains an accounting limitation; under the continuation authorization it does not independently block progress.",
+    "broker_credentials": "Use the configured OpenCode-scoped credentials through the owning authentication mechanism to register the actual identity and inspect/reserve broker runs. Never expose credentials and never substitute Codex's identity.",
+    "execution_directive": "Record this authorization and the custody evidence in the existing recovery owner. Then obtain current host admission, authenticate inputs, and execute B -> C -> D -> A reconcile -> E -> A integrate, one writer at a time. Publish a new execution freeze without overwriting the planning freeze. Bind real B/C/D/E identities and exact inputs.",
+    "gates_retained": "Keep storage, broker, deadline, review, and publication gates intact. No new checkouts. No repeat blocked observation. No claimed historical release, approval, or verification beyond evidence. Status stays Staged. No public CLI/schema changes, fabricated approvals, publication clearance, native rollout, or merge authority. Preserve f628db26 candidate and historical packets/envelopes byte-identical. No reset, stash, delete, or history rewrite."
+  },
+  "related_receipts": [
+    "custody-transfer-20261010.json",
+    "host-admission-20261010.json",
+    "broker-status-20261010.json",
+    "cache-authentication-20261010.json",
+    "execution-freeze-20261010.json"
+  ]
+}

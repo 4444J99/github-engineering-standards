@@ -1,0 +1,61 @@
+{
+  "schema": "ges.correction-worker-identity.v1",
+  "role": "D",
+  "wave": "wave-20261009-correction-01",
+  "session_id": {
+    "value": "ses_edbadcab6ffeDVVMjqnv9QjY8R",
+    "source": "env OPENCODE_SESSION_ID as reported by the runtime tool shell at spawn (stated, never invented)",
+    "note": "The lease command specified by the conductor binds surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 (the conductor's own session surface per the execution freeze identities.A_conductor); that exact binding was used for lease acquisition as instructed. The env-var value above differs from that surface and is recorded verbatim without reconciliation - the discrepancy is visible, not resolved here."
+  },
+  "agent": "opencode",
+  "provider": "opencode",
+  "model": "mimo-v2.6-flash-free",
+  "spawned_at_utc": "2026-10-10T05:38:58Z",
+  "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-d-20261009",
+  "branch": "wave/omission-d-20261009",
+  "starting_head": "4768db8929420538e3b828467de9dbe314fd4b74",
+  "exclusive_write_root": "evidence/wave-20261009-correction-01/omission",
+  "preflight": {
+    "local_head_matches_expected": true,
+    "tracked_tree_clean": "git status --porcelain -uno empty (verified before first write)",
+    "remote_head_matches_local": "git ls-remote origin wave/omission-d-20261009 -> 4768db8929420538e3b828467de9dbe314fd4b74 (matches local; note ls-remote is a remote query required verbatim by the freeze preflight, not an evidence fetch)",
+    "git_lock_files": "none (find over git-common-dir for *.lock returned nothing)",
+    "live_writers": "none found (ps scan for ges-wave processes found none)",
+    "result": "PASS"
+  },
+  "lease": {
+    "acquire_command": "python /Users/4jp/Workspace/limen/scripts/host-work-admission.py acquire --kind execution --owner ges-correction-20261009 --surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 --ttl-seconds 1800",
+    "allowed": true,
+    "lease_id": "2faae7b2c82c419ca3df40571ca5360d",
+    "acquired_at": "2026-10-10T05:16:00.270654+00:00",
+    "refreshed_at": "2026-10-10T05:41:10.696960+00:00",
+    "expires_at": "2026-10-10T06:11:10.696960+00:00",
+    "inherited": false,
+    "owner": "ges-correction-20261009",
+    "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+    "pid": 3518,
+    "process_identity": "darwin-proc-start:1791609247:2292"
+  },
+  "verified_sibling_heads": [
+    {
+      "role": "B",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-b-20261009",
+      "expected_head": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+      "observed_head": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+      "tracked_tree_clean": true,
+      "result": "MATCH"
+    },
+    {
+      "role": "C",
+      "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-c-20261009",
+      "expected_head": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+      "observed_head": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+      "tracked_tree_clean": true,
+      "result": "MATCH"
+    }
+  ],
+  "read_discipline": "Committed states only (git show / working-tree files at the verified heads). No network, no fetch, no sibling write, no uncommitted sibling file read.",
+  "delivery_status": "Staged",
+  "approvals_granted": "none",
+  "created_at_utc": "2026-10-10T05:48:19Z"
+}

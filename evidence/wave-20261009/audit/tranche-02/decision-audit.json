@@ -1,0 +1,125 @@
+{
+  "schema": "ges.bounded-decision-audit.v1",
+  "state": "Staged",
+  "verdict": "PASS",
+  "auditor": "codex:/root/decision_auditor_e",
+  "reviewed_at": "2026-10-09T20:48:01.086198Z",
+  "reviewed_commit": "4ef5a8e0480fdd089c0710bd98fd1475af240565",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/integration/tranche-02/proposed-decisions-v2.json",
+      "sha256": "8a25ecdf65964c8e004f388ca88cace6ee64e703b021da067600707a88d3f4ed"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/tranche-02/initial-findings.json",
+      "sha256": "ce121708f105806ca6c739b9b2e6d53f5d828bf45fd22c32f1b88fb91260c550"
+    },
+    {
+      "path": "evidence/wave-20261009/integration/tranche-02/proposed-decisions.json",
+      "sha256": "0bec1bd1d580a9e70fd3d436fbf19ea891b81295ae39b6443c3039869490b611"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/tranche-02/replay-v2.py",
+      "sha256": "551beeb214c613d4bd629fc20dfbbf6fcb5236fa22f74d8adb705a2abde1ebbf"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/tranche-02/replay-results-v2.json",
+      "sha256": "3703a189b336cc649c432ad8c452d14bc073748d935199399c8149179f3d296c"
+    },
+    {
+      "path": "evidence/wave-20261009/audit/tranche-02/replay-results-v2-baseline.json",
+      "sha256": "0d4a3cad2898b1c5c39fc731f70550dcf0376631f38419825e952e8b8981a483"
+    }
+  ],
+  "source_relations_digest": "f49478f22b09e385608027c56c72ae43b43403ad72a33728fb0a3d12128cc4c8",
+  "approved_claim_ids": [
+    "WA-APPSEC-019",
+    "WA-APPSEC-021",
+    "WA-APPSEC-022",
+    "WA-APPSEC-033",
+    "WA-APPSEC-034",
+    "WA-APPSEC-037",
+    "WA-APPSEC-041",
+    "WA-APPSEC-042",
+    "WA-APPSEC-045",
+    "WA-APPSEC-049",
+    "WA-APPSEC-053",
+    "WA-APPSEC-055",
+    "WA-APPSEC-056"
+  ],
+  "held_claim_ids": [
+    "WA-APPSEC-020",
+    "WA-APPSEC-023",
+    "WA-APPSEC-024",
+    "WA-APPSEC-025",
+    "WA-APPSEC-026",
+    "WA-APPSEC-027",
+    "WA-APPSEC-028",
+    "WA-APPSEC-029",
+    "WA-APPSEC-030",
+    "WA-APPSEC-031",
+    "WA-APPSEC-032",
+    "WA-APPSEC-035",
+    "WA-APPSEC-036",
+    "WA-APPSEC-038",
+    "WA-APPSEC-039",
+    "WA-APPSEC-040",
+    "WA-APPSEC-043",
+    "WA-APPSEC-044",
+    "WA-APPSEC-046",
+    "WA-APPSEC-047",
+    "WA-APPSEC-048",
+    "WA-APPSEC-050",
+    "WA-APPSEC-051",
+    "WA-APPSEC-052",
+    "WA-APPSEC-054",
+    "WA-APPSEC-057",
+    "WA-APPSEC-058",
+    "WA-APPSEC-059"
+  ],
+  "finding_dispositions": [
+    {
+      "finding_id": "D-T02-035-METHOD-LOSS",
+      "claim_id": "WA-APPSEC-035",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Add035 to fidelity holds; do not modify primary packet or historical claim."
+    },
+    {
+      "finding_id": "D-T02-OBJECTIVE-BOUNDARY",
+      "claim_id": null,
+      "action": "KEEP_MISSING_OBJECTIVES_AND_OPERATIONAL_BINDINGS_UNRESOLVED",
+      "required_action": "Retain only14 faithful bounded relation meanings and27 holds; preserve unresolved objective work."
+    },
+    {
+      "finding_id": "E-T02-020-DEPLOYMENT-NARROWING",
+      "claim_id": "WA-APPSEC-020",
+      "action": "HOLD_NO_RECEIPT_OR_FIDELITY_CREDIT",
+      "required_action": "Keep organizational obligation scope distinct from deployment scope; preserve original claim and exclude020 from new receipts."
+    }
+  ],
+  "review_method": "One corrective audit after changed inputs. Replayed original41 source/statement/span and occurrence bindings, exact current referenced catalog/proposal revisions, snapshot/context digests and four distinct identities. Verified v2 contains exactly the13 unchanged relation rows supported in initial audit;020 is excluded and held. Historical14-subject, primary packet and CHANGE_REQUIRED evidence remain byte-identical and digest-bound.",
+  "finding_resolution": [
+    {
+      "finding_id": "E-T02-020-DEPLOYMENT-NARROWING",
+      "resolution": "020 now receives no relation receipt or fidelity credit and remains an explicit preserved historical claim hold.",
+      "verdict": "PASS_FOR_HOLD"
+    }
+  ],
+  "qualified_observations": [
+    "Remaining13 proposed relation meanings preserve their bounded source distinctions through explicit missing-objective specializations; no canonical objective completion is demonstrated.",
+    "Recurring audit cadence, new threat/environment triggers, training population and feedback, actual timely patch application and program operation remain explicit scope distinctions.",
+    "D035 method loss correctly held; all existing D findings have explicit A dispositions."
+  ],
+  "scope": "Only13 qualified source relations at v2 digest;28 holds remain unresolved. Other source tranches and publication are separate subjects.",
+  "source_synthesis_credit": 0,
+  "canonical_objective_completion": false,
+  "policy_adoption": false,
+  "human_approval": false,
+  "owner_acceptance": null,
+  "native_execution": false,
+  "remaining_scope": [
+    "28 fidelity defects in this tranche require independently reviewed faithful propositions or qualified dispositions.",
+    "Canonical objective, applicability, proposal source-hash repair and operational binding work remains unresolved.",
+    "No whole-source/corpus completeness or acceptance certification."
+  ]
+}

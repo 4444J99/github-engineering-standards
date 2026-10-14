@@ -1,0 +1,78 @@
+{
+  "schema": "ges.wave-worker-identity.v1",
+  "role": "E",
+  "role_description": "independent auditor (fourth writer) of the serialized correction execution",
+  "wave": "wave-20261009-correction-01",
+  "session": {
+    "session_id": "ses_edb94c890ffeK7iqZc9PU59AgI",
+    "session_id_source": "environment variable OPENCODE_SESSION_ID (read at 2026-10-10T06:06:38Z; value not invented)",
+    "runtime_agent": "opencode",
+    "runtime_agent_source": "environment variable AI_AGENT=opencode",
+    "runtime_provider": "opencode",
+    "runtime_model_id": "mimo-v2.6-flash-free",
+    "runtime_model_name": "MiMo-V2.6-Flash Free",
+    "runtime_model_source": "agent runtime self-report (system prompt model block)"
+  },
+  "spawned_at_utc": "2026-10-10T06:06:12Z",
+  "spawned_at_note": "first command executed by this session (date -u captured at session start)",
+  "identity_written_at_utc": "2026-10-10T06:06:38Z",
+  "checkout_path": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-e-20261009",
+  "branch": "review/wave-20261009-e",
+  "starting_head": "509f4a4f3268d1d91c97d898f1c90e48a6946a52",
+  "exclusive_write_root": "evidence/wave-20261009-correction-01/audit",
+  "preflight": {
+    "performed_at_utc": "2026-10-10T06:06:12Z..06:06:38Z",
+    "head_matches_expected": {
+      "expected": "509f4a4f3268d1d91c97d898f1c90e48a6946a52",
+      "observed": "509f4a4f3268d1d91c97d898f1c90e48a6946a52",
+      "result": "PASS"
+    },
+    "git_status_porcelain_uno": {
+      "observed": "",
+      "result": "PASS"
+    },
+    "ls_remote_origin_branch": {
+      "command": "git ls-remote origin review/wave-20261009-e",
+      "observed": "509f4a4f3268d1d91c97d898f1c90e48a6946a52\trefs/heads/review/wave-20261009-e",
+      "matches_local": true,
+      "result": "PASS",
+      "note": "origin resolves to the local bare repository; no external network used"
+    },
+    "lock_files_under_git_dir": {
+      "command": "find <git-dir> -name '*.lock' -maxdepth 3",
+      "observed": [],
+      "result": "PASS"
+    },
+    "live_writers_in_checkout": {
+      "command": "lsof +D <checkout>",
+      "observed": "only this worker's own short-lived git processes during the preflight window; empty on recheck at 2026-10-10T06:06:40Z",
+      "result": "PASS"
+    },
+    "overall": "PASS"
+  },
+  "lease": {
+    "acquire_command": "python /Users/4jp/Workspace/limen/scripts/host-work-admission.py acquire --kind execution --owner ges-correction-20261009 --surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 --ttl-seconds 1800",
+    "allowed": true,
+    "lease_id": "fb2e8ffd19aa43b5894eaad67c21d636",
+    "acquired_at": "2026-10-10T06:06:26.711888+00:00",
+    "expires_at": "2026-10-10T06:36:26.711888+00:00",
+    "kind": "execution",
+    "owner": "ges-correction-20261009",
+    "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+    "reasons": [],
+    "inherited": false
+  },
+  "verified_input_heads": {
+    "wave-e (self)": "509f4a4f3268d1d91c97d898f1c90e48a6946a52",
+    "conductor ges-wave-20261009": "21e9719af490740b7807bf4fa5ce3931d120ed5d",
+    "B ges-wave-b-20261009": "c034c82d6e15b29e30711f3cb77b53d5a61e206c",
+    "C ges-wave-c-20261009": "a29214dc5ff55dd5df6176a80d1f4478789a9beb",
+    "D ges-wave-d-20261009": "4e137f69448ac10fe20002838941369b72d255b1"
+  },
+  "verified_input_cleanliness": {
+    "note": "git status --porcelain -uno observed empty for all four sibling checkouts at 2026-10-10T06:06:12Z",
+    "result": "PASS"
+  },
+  "state": "Staged",
+  "grants_no_approval": true
+}
