@@ -22,7 +22,8 @@ LOCKS = {
 
 def _load(p: Path):
     try:
-        return yaml.safe_load(p.read_text()) or {}
+        res = yaml.safe_load(p.read_text())
+        return {} if res is None else res
     except Exception as exc:  # report, never crash the warn-only run
         return {"__error__": str(exc)}
 
@@ -35,14 +36,17 @@ def check_repo(root: Path) -> list[dict]:
     for p in files:
         n = f".github/workflows/{p.name}"
         y = _load(p)
+        if not isinstance(y, dict):
+            add("yaml-parse", n, "top-level YAML document must be a mapping"); continue
         if "__error__" in y:
-            add("yaml-parse", n, y["__error__"][:200]); continue
-        jobs = y.get("jobs") or {}
-        if "permissions" not in y and not all("permissions" in (j or {}) for j in jobs.values()):
+            add("yaml-parse", n, str(y["__error__"])[:200]); continue
+        jobs = y.get("jobs") if isinstance(y.get("jobs"), dict) else {}
+        if "permissions" not in y and not all(isinstance(j, dict) and "permissions" in j for j in jobs.values()):
             add("least-privilege-permissions", n, "no top-level or per-job `permissions:`")
         top_conc = "concurrency" in y
         for jn, j in jobs.items():
-            j = j or {}
+            if not isinstance(j, dict):
+                continue
             where = f"{n}#{jn}"
             if "uses" in j:  # reusable workflow call
                 u = str(j["uses"])
@@ -58,8 +62,10 @@ def check_repo(root: Path) -> list[dict]:
                 add("concurrency", where, "no workflow- or job-level concurrency group")
             if j.get("continue-on-error") is True:
                 add("no-masked-failures", where, "job continue-on-error: true")
-            for i, s in enumerate(j.get("steps") or []):
-                s = s or {}
+            steps = j.get("steps") if isinstance(j.get("steps"), list) else []
+            for i, s in enumerate(steps):
+                if not isinstance(s, dict):
+                    continue
                 u = s.get("uses")
                 if u and not str(u).startswith(("./", "docker://")) and not SHA.search(str(u)):
                     add("pin-by-sha", f"{where} step {i+1}", f"action not pinned by SHA: {u}")
@@ -73,10 +79,20 @@ def check_repo(root: Path) -> list[dict]:
         add("dependabot-configured", ".github/dependabot.yml", "missing")
     else:
         y = _load(db[0])
-        for u in (y.get("updates") or []):
-            eco = u.get("package-ecosystem")
-            if (u.get("schedule") or {}).get("interval") != "weekly" or not u.get("groups"):
-                add("dependabot-grouped-weekly", ".github/dependabot.yml", f"{eco}: needs weekly schedule + groups")
+        n_db = f".github/{db[0].name}"
+        if not isinstance(y, dict):
+            add("yaml-parse", n_db, "top-level YAML document must be a mapping")
+        elif "__error__" in y:
+            add("yaml-parse", n_db, str(y["__error__"])[:200])
+        else:
+            updates = y.get("updates") if isinstance(y.get("updates"), list) else []
+            for u in updates:
+                if not isinstance(u, dict):
+                    continue
+                eco = u.get("package-ecosystem")
+                sched = u.get("schedule") if isinstance(u.get("schedule"), dict) else {}
+                if sched.get("interval") != "weekly" or not u.get("groups"):
+                    add("dependabot-grouped-weekly", n_db, f"{eco}: needs weekly schedule + groups")
     for man, locks in LOCKS.items():
         if (root / man).exists() and not any((root / l).exists() for l in locks):
             add("lockfile-committed", man, "manifest at root without a committed lockfile")
