@@ -222,7 +222,7 @@
    "propositions": [
     {
      "ambiguities": [],
-     "formalization": "NOT RUN unless event in {workflow_dispatch, repository_dispatch}.",
+     "formalization": "NO_RUN unless event in {workflow_dispatch, repository_dispatch}, or the approval flag applies and event = pull_request with activity in {opened, synchronize, reopened} (APPROVAL_REQUIRED).",
      "preserved_differences": [],
      "rules": [
       "E3"
@@ -231,7 +231,8 @@
       "action": "create",
       "consequences": [],
       "exceptions": [
-       "workflow_dispatch and repository_dispatch events always create workflow runs"
+       "workflow_dispatch and repository_dispatch events always create workflow runs",
+       "pull_request opened, synchronize and reopened events create approval-required runs when the actions-github-token-pull-request-approval version flag applies"
       ],
       "modality": "DESCRIPTIVE",
       "object": "a new workflow run",
@@ -341,6 +342,54 @@
    "semantic_kind": "CONSTRAINT",
    "start_line": 6,
    "versions": []
+  },
+  {
+   "conditions": [],
+   "content_sha256": "bfc40bec3a30979187ed375da6534858b3012d5813ceb6418bdd755ca0769ec6",
+   "end_line": 111,
+   "expect": "access to referenced secrets",
+   "heading_ancestry": [
+    "Mitigating the risks of untrusted code checkout"
+   ],
+   "include_chain": [],
+   "path": "content/actions/reference/security/secure-use.md",
+   "propositions": [
+    {
+     "ambiguities": [
+      "The page does not say which secrets or conditions; workflow_run is not modelled"
+     ],
+     "formalization": "Privileged triggers: a fork pull_request_target run is not subject to the fork secret withholding of the forked-secrets rule.",
+     "preserved_differences": [],
+     "rules": [
+      "T13"
+     ],
+     "semantic_ast": {
+      "action": "have",
+      "consequences": [],
+      "exceptions": [],
+      "modality": "DESCRIPTIVE",
+      "object": "repository write access and access to referenced secrets",
+      "parameters": [],
+      "polarity": "POSITIVE",
+      "preconditions": [],
+      "qualifiers": [
+       "Stated as \"may\"; the model treats pull_request_target as able to reach secrets"
+      ],
+      "scope": [
+       "github/docs",
+       "content/actions/reference/security/secure-use.md"
+      ],
+      "subject": "pull_request_target and workflow_run workflows"
+     }
+    }
+   ],
+   "semantic_kind": "FACT",
+   "start_line": 111,
+   "versions": [
+    "fpt",
+    "ghes",
+    "ghec"
+   ]
   },
   {
    "conditions": [],
@@ -1171,6 +1220,47 @@
   {
    "conditions": [],
    "content_sha256": "69e251c1510f84d7b0a05ff8a4146456e657f175133081213805e02b0a655f50",
+   "end_line": 469,
+   "expect": "varies for a closed pull request",
+   "heading_ancestry": [
+    "`pull_request`"
+   ],
+   "include_chain": [],
+   "path": "content/actions/reference/workflows-and-actions/events-that-trigger-workflows.md",
+   "propositions": [
+    {
+     "ambiguities": [],
+     "formalization": "ref(pull_request, closed, merged) = destination branch; otherwise refs/pull/N/merge.",
+     "preserved_differences": [],
+     "rules": [
+      "E1"
+     ],
+     "semantic_ast": {
+      "action": "set",
+      "consequences": [],
+      "exceptions": [],
+      "modality": "DESCRIPTIVE",
+      "object": "GITHUB_REF to refs/pull/PULL_REQUEST_NUMBER/merge when closed unmerged and to the fully qualified destination branch ref when closed by merge",
+      "parameters": [],
+      "polarity": "POSITIVE",
+      "preconditions": [],
+      "qualifiers": [],
+      "scope": [
+       "github/docs",
+       "content/actions/reference/workflows-and-actions/events-that-trigger-workflows.md",
+       "pull_request"
+      ],
+      "subject": "pull_request event for a closed pull request"
+     }
+    }
+   ],
+   "semantic_kind": "FACT",
+   "start_line": 469,
+   "versions": []
+  },
+  {
+   "conditions": [],
+   "content_sha256": "69e251c1510f84d7b0a05ff8a4146456e657f175133081213805e02b0a655f50",
    "end_line": 467,
    "expect": "payload is empty",
    "heading_ancestry": [
@@ -1254,7 +1344,7 @@
   },
   {
    "conditions": [
-    "ifversion ghes < 3.20"
+    "GHES before 3.20 selects the pull request base branch; GitHub.com and later GHES select the default branch"
    ],
    "content_sha256": "69e251c1510f84d7b0a05ff8a4146456e657f175133081213805e02b0a655f50",
    "end_line": 669,
@@ -1338,7 +1428,7 @@
   },
   {
    "conditions": [
-    "ifversion ghes < 3.20 selects the base of the pull request instead"
+    "GHES before 3.20 selects the pull request base branch; GitHub.com and later GHES select the default branch"
    ],
    "content_sha256": "69e251c1510f84d7b0a05ff8a4146456e657f175133081213805e02b0a655f50",
    "end_line": 676,

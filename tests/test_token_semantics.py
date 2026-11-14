@@ -73,6 +73,23 @@ class Model(unittest.TestCase):
         self.assertEqual(read_all['vulnerability-alerts'], 'read')
         self.assertEqual(ts.apply_permissions_key('write-all', flags)['vulnerability-alerts'], 'read')
 
+    def test_pull_request_target_fork_run_can_reach_secrets_pull_request_cannot(self):
+        self.assertFalse(ts.secrets_reach_runner('DEPLOY_KEY', from_fork=True, event='pull_request'))
+        self.assertTrue(ts.secrets_reach_runner('DEPLOY_KEY', from_fork=True, event='pull_request_target'))
+
+    def test_merged_closure_ref_is_the_destination_branch(self):
+        merged = ts.pull_request_event_context('pull_request', closed_by_merge=True)['ref']
+        self.assertNotIn('refs/pull', merged)
+        self.assertIn('refs/pull', ts.pull_request_event_context('pull_request')['ref'])
+
+    def test_version_split_statements_do_not_restrict_applicability_to_old_ghes(self):
+        for line in (ts.PROPOSITIONS.read_text(encoding='utf-8').splitlines()):
+            record = json.loads(line)
+            if record['semantic_ast']['subject'] == 'pull_request_target event':
+                self.assertTrue(any('GitHub.com and later GHES' in item for item in record['applicability']),
+                                record['semantic_ast']['object'])
+                self.assertFalse(any(item == 'ifversion ghes < 3.20' for item in record['applicability']))
+
     def test_unknown_runner_rejected(self):
         with self.assertRaises(ValueError):
             ts.token_is_valid('hosted', 1.0, job_finished=False)

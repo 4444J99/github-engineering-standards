@@ -142,11 +142,17 @@ def allows(permissions: dict[str, str], scope: str, needed: str) -> bool:
     return LEVELS.index(permissions.get(scope, 'none')) >= LEVELS.index(needed)
 
 
-def pull_request_event_context(event: str, *, ghes_before_3_20: bool = False) -> dict[str, object]:
-    """Rules E1, E2, E4: what GITHUB_SHA and GITHUB_REF denote for the two PR triggers."""
+def pull_request_event_context(event: str, *, ghes_before_3_20: bool = False,
+                               closed_by_merge: bool = False) -> dict[str, object]:
+    """Rules E1, E2, E4: what GITHUB_SHA and GITHUB_REF denote for the two PR triggers.
+
+    `closed_by_merge` applies to `pull_request` closed activity: the ref is then the
+    fully qualified destination branch rather than the pull request merge ref.
+    """
     if event == 'pull_request':
         return {'sha': 'last merge commit on the GITHUB_REF branch',
-                'ref': 'refs/pull/PULL_REQUEST_NUMBER/merge',
+                'ref': ('fully qualified ref of the branch the pull request was merged into'
+                        if closed_by_merge else 'refs/pull/PULL_REQUEST_NUMBER/merge'),
                 'runs_against': 'merge commit of the pull request',
                 'default_activity_types': DEFAULT_PULL_REQUEST_ACTIVITY_TYPES,
                 'skipped_on_merge_conflict': True}
@@ -188,9 +194,13 @@ def token_is_valid(runner: str, elapsed_hours: float, *, job_finished: bool) -> 
     return not job_finished and elapsed_hours < limits[runner]
 
 
-def secrets_reach_runner(name: str, *, from_fork: bool) -> bool:
-    """Rule T13: from a forked repository only GITHUB_TOKEN reaches the runner."""
-    return name == 'GITHUB_TOKEN' or not from_fork
+def secrets_reach_runner(name: str, *, from_fork: bool, event: str = 'pull_request') -> bool:
+    """Rule T13: from a forked repository only GITHUB_TOKEN reaches the runner.
+
+    `pull_request_target` is a privileged trigger whose workflows may access referenced
+    secrets (secure-use reference), so it is not withheld.
+    """
+    return name == 'GITHUB_TOKEN' or not from_fork or event == PULL_REQUEST_TARGET
 
 
 # --- source-bound ledger ---------------------------------------------------------------
@@ -347,7 +357,8 @@ def _run_case(case: dict) -> dict:
             send_write_tokens=given.get('send_write_tokens', False), flags=flags)
         return {'allowed': allows(permissions, given['scope'], given['needed'])}
     if kind == 'event-context':
-        context = pull_request_event_context(given['event'], ghes_before_3_20=given.get('ghes_before_3_20', False))
+        context = pull_request_event_context(given['event'], ghes_before_3_20=given.get('ghes_before_3_20', False),
+                                           closed_by_merge=given.get('closed_by_merge', False))
         return {'context': {k: list(v) if isinstance(v, tuple) else v for k, v in context.items()}}
     if kind == 'token-event':
         return {'result': workflow_run_for_token_event(
@@ -355,7 +366,7 @@ def _run_case(case: dict) -> dict:
     if kind == 'token-valid':
         return {'valid': token_is_valid(given['runner'], given['elapsed_hours'], job_finished=given['job_finished'])}
     if kind == 'secret':
-        return {'reaches_runner': secrets_reach_runner(given['name'], from_fork=given['from_fork'])}
+        return {'reaches_runner': secrets_reach_runner(given['name'], from_fork=given['from_fork'], event=given.get('event', 'pull_request'))}
     raise ValueError(f'unknown case kind {kind}')
 
 

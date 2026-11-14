@@ -21,7 +21,7 @@ adopted, no control accepted, and no live GitHub behaviour was observed. Where t
 prose is silent or hedged the model says so (see Ambiguities) rather than guessing.
 
 Source: `github/docs` at `56fcfa816f27bca239e5d39fff0d4f74f77ec995` (the commit in
-`sources/sources.lock.json`), nine files, 30 occurrences, 34 propositions. 30
+`sources/sources.lock.json`), ten files, 32 occurrences, 36 propositions. 32
 propositions name a model rule; 4 are preserved without one. The ledger stores
 hashes and formalized ASTs, not the prose.
 
@@ -44,8 +44,8 @@ from the docs' permission list; `id-token` allows `write|none` (fpt/ghec),
 | T10 | In a fork run the key can add or remove `read` but typically not grant `write` | `resolve_token_permissions` |
 | T11 | The admin setting above is the exception that allows fork `write` | `resolve_token_permissions` |
 | T12 | `pull_request_target` runs are not downgraded, even from a public fork | `resolve_token_permissions` |
-| T13 | From a fork, no secret except `GITHUB_TOKEN` reaches the runner | `secrets_reach_runner` |
-| E1 | `pull_request`: `GITHUB_SHA` is the merge commit, `GITHUB_REF` is `refs/pull/N/merge`; skipped on a merge conflict | `pull_request_event_context` |
+| T13 | From a fork, no secret except `GITHUB_TOKEN` reaches the runner, except that `pull_request_target` (a privileged trigger that may access referenced secrets) is not withheld | `secrets_reach_runner` |
+| E1 | `pull_request`: `GITHUB_SHA` is the merge commit, `GITHUB_REF` is `refs/pull/N/merge` (the destination branch when closed by merge); skipped on a merge conflict | `pull_request_event_context` |
 | E2 | Both triggers run by default for `opened`, `synchronize`, `reopened` | `pull_request_event_context` |
 | E3 | Events caused by the repository token create no run, except `workflow_dispatch`/`repository_dispatch` (always) and `pull_request` `opened`/`synchronize`/`reopened` (approval-required, behind the docs' version flag) | `workflow_run_for_token_event` |
 | E4 | `pull_request_target` runs against the default branch of the base repository (base branch on GHES before 3.20), never the merge commit | `pull_request_event_context` |
@@ -56,7 +56,7 @@ cases use `contents: read, packages: read` as an illustration.
 
 ## Conformance
 
-`evidence/semantics/github-token-permissions/conformance.json` holds 38 cases. Each
+`evidence/semantics/github-token-permissions/conformance.json` holds 40 cases. Each
 cites rules; `check_conformance` fails when the model disagrees with a case, when a
 case cites a rule no source statement supports, and when a rule that source statements
 support has no case. Cases include the error results the model must produce (for

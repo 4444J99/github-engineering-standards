@@ -880,6 +880,45 @@
    "rules": [
     "E3"
    ]
+  },
+  {
+   "expect": {
+    "reaches_runner": true
+   },
+   "given": {
+    "event": "pull_request_target",
+    "from_fork": true,
+    "name": "DEPLOY_KEY"
+   },
+   "id": "T13-pull-request-target-fork-secret-reachable",
+   "kind": "secret",
+   "rules": [
+    "T13"
+   ]
+  },
+  {
+   "expect": {
+    "context": {
+     "default_activity_types": [
+      "opened",
+      "synchronize",
+      "reopened"
+     ],
+     "ref": "fully qualified ref of the branch the pull request was merged into",
+     "runs_against": "merge commit of the pull request",
+     "sha": "last merge commit on the GITHUB_REF branch",
+     "skipped_on_merge_conflict": true
+    }
+   },
+   "given": {
+    "closed_by_merge": true,
+    "event": "pull_request"
+   },
+   "id": "E1-pull-request-closed-by-merge-ref",
+   "kind": "event-context",
+   "rules": [
+    "E1"
+   ]
   }
  ],
  "default_note": "Defaults are caller-supplied illustrations (contents:read, packages:read); the pinned pages do not enumerate the restricted/permissive presets.",
