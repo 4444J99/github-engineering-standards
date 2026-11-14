@@ -123,6 +123,16 @@ class Semantics(unittest.TestCase):
         changed['limitations'] = ['changed']
         self.assertNotEqual(receipts.receipt_id(changed), self.verified['id'])
 
+    def test_impossible_calendar_values_are_errors_not_crashes(self):
+        for value in ('2026-02-30T10:05:00Z', '2026-11-14T25:00:00Z', '2026-13-01T00:00:00Z'):
+            receipt = copy.deepcopy(self.verified)
+            receipt['generated_at'] = value
+            errors = receipts.validate_receipt(receipts.seal(receipt))
+            self.assertTrue(any('impossible calendar' in e for e in errors), value)
+        receipt = copy.deepcopy(self.verified)
+        receipt['generated_at'] = '2026-11-14T12:00:00.250Z'
+        self.assertEqual(receipts.validate_receipt(receipts.seal(receipt)), [])
+
     def test_booleans_are_not_integers(self):
         receipt = copy.deepcopy(self.verified)
         receipt['subject']['pull_request'] = True

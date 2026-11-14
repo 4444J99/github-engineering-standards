@@ -261,9 +261,29 @@ def validate_semantics(receipt: dict) -> list[str]:
     return errors
 
 
+def _calendar_errors(node: object, path: str = '$') -> list[str]:
+    """The schema pattern checks timestamp shape; reject impossible calendar values here."""
+    errors: list[str] = []
+    if isinstance(node, dict):
+        for key, value in node.items():
+            errors += _calendar_errors(value, path + '.' + key)
+    elif isinstance(node, list):
+        for index, value in enumerate(node):
+            errors += _calendar_errors(value, f'{path}[{index}]')
+    elif isinstance(node, str) and re.fullmatch(r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{3}|\.\d{6})?Z', node):
+        try:
+            _time(node)
+        except ValueError:
+            errors.append(path + ': impossible calendar date or time')
+    return errors
+
+
 def validate_receipt(receipt: object) -> list[str]:
     """Return every violation found; an empty list means structurally and semantically valid."""
     errors = validate_structure(receipt)
+    if errors:
+        return errors
+    errors = _calendar_errors(receipt)
     if errors:
         return errors
     errors = validate_semantics(receipt)
