@@ -1,0 +1,48 @@
+{
+  "acceptance": null,
+  "agent": {
+    "kind": "claude",
+    "name": "claude-code",
+    "session_ref": "session-0001"
+  },
+  "checks": [
+    {
+      "command": "GitHub check run: validate (3.13)",
+      "exit_code": null,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": "success",
+      "name": "validate (3.13)",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "command": "GitHub check run: lint",
+      "exit_code": null,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": "skipped",
+      "name": "lint",
+      "observation": "provider skipped the job",
+      "output_sha256": null,
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "NOT_VERIFIABLE"
+    }
+  ],
+  "claim": "STAGED",
+  "generated_at": "2026-11-14T10:05:00Z",
+  "id": "agent-verification-receipt:58e9eb271ad523e936d7074928226aac47081dbde6f682800a91a5d6916c4cbb",
+  "limitations": [
+    "Branch-only evidence; not merged to main."
+  ],
+  "merge_evidence": null,
+  "overall_status": "INCOMPLETE",
+  "schema": "ges.agent-verification-receipt.v1",
+  "subject": {
+    "base_ref": "main",
+    "base_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "pull_request": 521,
+    "repository": "4444J99/guide-github-standard"
+  }
+}

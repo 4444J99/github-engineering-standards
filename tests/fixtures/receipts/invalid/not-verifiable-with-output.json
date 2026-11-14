@@ -1,0 +1,70 @@
+{
+  "acceptance": null,
+  "agent": {
+    "kind": "claude",
+    "name": "claude-code",
+    "session_ref": "session-0001"
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": null,
+      "name": "unit tests",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": null,
+      "name": "ges validate",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "command": "gh pr checks 521",
+      "exit_code": null,
+      "finished_at": null,
+      "github_conclusion": null,
+      "name": "remote CI",
+      "observation": "CI had not started",
+      "output_sha256": null,
+      "started_at": null,
+      "status": "NOT_RUN"
+    },
+    {
+      "command": "human review",
+      "exit_code": null,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": null,
+      "name": "security review",
+      "observation": "requires a human reviewer",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "NOT_VERIFIABLE"
+    }
+  ],
+  "claim": "STAGED",
+  "generated_at": "2026-11-14T10:05:00Z",
+  "id": "agent-verification-receipt:1c9a22e3ecff936258fdec25c7c98401a67f2a64d94eaf542e1866dbcc472251",
+  "limitations": [
+    "Branch-only evidence; not merged to main."
+  ],
+  "merge_evidence": null,
+  "overall_status": "INCOMPLETE",
+  "schema": "ges.agent-verification-receipt.v1",
+  "subject": {
+    "base_ref": "main",
+    "base_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "pull_request": 521,
+    "repository": "4444J99/guide-github-standard"
+  }
+}

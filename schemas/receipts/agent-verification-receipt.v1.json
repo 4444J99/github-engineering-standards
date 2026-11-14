@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ges:agent-verification-receipt:v1",
+  "title": "ges.agent-verification-receipt.v1",
+  "$comment": "Structural contract only. ges.receipts additionally enforces cross-field invariants (derived overall status, status/exit-code consistency, GitHub conclusion mapping, claim ladder, identity digest). A receipt records what an agent observed; it does not authenticate the agent or any named human, and it never certifies Verified without merged-main evidence and human acceptance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "id", "generated_at", "agent", "subject", "claim", "checks", "overall_status", "merge_evidence", "acceptance", "limitations"],
+  "properties": {
+    "schema": {"const": "ges.agent-verification-receipt.v1"},
+    "id": {"type": "string", "pattern": "^agent-verification-receipt:[a-f0-9]{64}$"},
+    "generated_at": {"$ref": "#/$defs/timestamp"},
+    "agent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "kind", "session_ref"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "\\S"},
+        "kind": {"type": "string", "enum": ["claude", "codex", "gemini", "copilot", "opencode", "cursor", "human", "other"]},
+        "session_ref": {"type": ["string", "null"], "minLength": 1, "maxLength": 256, "pattern": "\\S"}
+      }
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "pull_request", "head_sha", "base_ref", "base_sha"],
+      "properties": {
+        "repository": {"type": "string", "pattern": "^[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})/[A-Za-z0-9._-]{1,100}$"},
+        "pull_request": {"type": ["integer", "null"], "minimum": 1},
+        "head_sha": {"$ref": "#/$defs/sha"},
+        "base_ref": {"type": "string", "minLength": 1, "maxLength": 255, "pattern": "^[^\\s]+$"},
+        "base_sha": {"anyOf": [{"$ref": "#/$defs/sha"}, {"type": "null"}]}
+      }
+    },
+    "claim": {"type": "string", "enum": ["STAGED", "MERGED", "VERIFIED"]},
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {"$ref": "#/$defs/check"}
+    },
+    "overall_status": {"type": "string", "enum": ["PASS", "FAIL", "INCOMPLETE"]},
+    "merge_evidence": {
+      "anyOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["main_sha", "merged_at", "ci_run_url", "ci_conclusion"],
+          "properties": {
+            "main_sha": {"$ref": "#/$defs/sha"},
+            "merged_at": {"$ref": "#/$defs/timestamp"},
+            "ci_run_url": {"type": "string", "pattern": "^https://github\\.com/[A-Za-z0-9._-]+/[A-Za-z0-9._-]+/actions/runs/[0-9]+$"},
+            "ci_conclusion": {"$ref": "#/$defs/githubConclusion"}
+          }
+        }
+      ]
+    },
+    "acceptance": {
+      "anyOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["accepted_by", "reference", "accepted_at"],
+          "properties": {
+            "accepted_by": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "\\S"},
+            "reference": {"type": "string", "minLength": 1, "maxLength": 512, "pattern": "\\S"},
+            "accepted_at": {"$ref": "#/$defs/timestamp"}
+          }
+        }
+      ]
+    },
+    "limitations": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1, "maxLength": 512, "pattern": "\\S"}
+    }
+  },
+  "$defs": {
+    "sha": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+    "timestamp": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]{1,6})?Z$"},
+    "githubConclusion": {"type": "string", "enum": ["success", "failure", "neutral", "cancelled", "skipped", "timed_out", "action_required", "stale"]},
+    "check": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "command", "status", "exit_code", "github_conclusion", "started_at", "finished_at", "output_sha256", "observation"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[^\\r\\n]+$"},
+        "command": {"type": "string", "minLength": 1, "maxLength": 1024, "pattern": "^[^\\r\\n]+$"},
+        "status": {"type": "string", "enum": ["PASS", "FAIL", "NOT_RUN", "NOT_VERIFIABLE"]},
+        "exit_code": {"type": ["integer", "null"], "minimum": -255, "maximum": 255},
+        "github_conclusion": {"anyOf": [{"$ref": "#/$defs/githubConclusion"}, {"type": "null"}]},
+        "started_at": {"anyOf": [{"$ref": "#/$defs/timestamp"}, {"type": "null"}]},
+        "finished_at": {"anyOf": [{"$ref": "#/$defs/timestamp"}, {"type": "null"}]},
+        "output_sha256": {"anyOf": [{"type": "string", "pattern": "^[a-f0-9]{64}$"}, {"type": "null"}]},
+        "observation": {"type": "string", "maxLength": 2048}
+      }
+    }
+  }
+}

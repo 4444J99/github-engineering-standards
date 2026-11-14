@@ -1,0 +1,48 @@
+{
+  "acceptance": null,
+  "agent": {
+    "kind": "claude",
+    "name": "claude-code",
+    "session_ref": "session-0001"
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": null,
+      "name": "unit tests",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": null,
+      "name": "ges validate",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "PASS"
+    }
+  ],
+  "claim": "MERGED",
+  "generated_at": "2026-11-14T11:00:00Z",
+  "id": "agent-verification-receipt:0e142180809671bca35d5247a1c9e47f36e6481ef48c00d579d37226aa56b572",
+  "limitations": [
+    "Branch-only evidence; not merged to main."
+  ],
+  "merge_evidence": null,
+  "overall_status": "PASS",
+  "schema": "ges.agent-verification-receipt.v1",
+  "subject": {
+    "base_ref": "main",
+    "base_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "pull_request": 521,
+    "repository": "4444J99/guide-github-standard"
+  }
+}
