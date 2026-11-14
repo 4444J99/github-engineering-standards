@@ -1,0 +1,87 @@
+{
+  "schema": "ges.claim-correction-record.v1",
+  "record_id": "WA-APPSEC-011-CORRECTION-01",
+  "correction_wave": "wave-20261009-correction-01",
+  "role": "B",
+  "created_by": "opencode session ses_edbc2fa97ffeVoEPHOghcPA455 (source: env OPENCODE_SESSION_ID)",
+  "predecessor_claim_id": "WA-APPSEC-011",
+  "predecessor_record": {
+    "path": "evidence/source-reviews/wa-application-security-checklist-claims.json",
+    "document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+    "field": "claims[claim_id=WA-APPSEC-011].statement",
+    "statement": "Make security guidance available to relevant contributors.",
+    "start_line": 31,
+    "end_line": 31,
+    "statement_sha256": "0a2fde39dd5262c981f850f4cf248ad9efbf7d4401c3a19f18c1232891fd16b8",
+    "source_span_sha256": "bdedfce67509c41b81f0f22c97b725a59e6975561f120c54ac875ee3ce143ead",
+    "mapping_status": "UNMAPPED_REQUIRES_OBJECTIVE_AND_BINDING_REVIEW",
+    "accepted_policy": false,
+    "mutation": "NONE - predecessor record left byte-identical; this record only adds a successor."
+  },
+  "hold_corrected": {
+    "hold_kind": "SOURCE_FIDELITY_STATEMENT_NARROWING",
+    "hold_statement": "WA-APPSEC-011: relevant contributors narrows all team members",
+    "hold_statement_field": "evidence/wave-20261009/source/residuals.json -> source_fidelity_repairs_required[2]",
+    "residual": "all-team accessibility is a retained audience requirement",
+    "residual_field": "evidence/wave-20261009/source/primary-review.json -> claim_id=WA-APPSEC-011.residual",
+    "reviewed_interpretation": "Policy accessibility extends to all team members, not merely a subset deemed relevant. Preserve this audience in the assessment and distinguish access from having been trained.",
+    "reviewed_interpretation_field": "evidence/wave-20261009/source/primary-review.json -> claim_id=WA-APPSEC-011.interpretation"
+  },
+  "correction": {
+    "corrected_statement": "Make security guidance available to all team members; availability is distinct from having been trained.",
+    "change_summary": "Replaces the subset audience 'relevant contributors' with the all-team audience recorded by the committed review, and preserves the access-versus-training distinction the review requires.",
+    "derivation": "Derived verbatim-in-substance from the committed primary-review interpretation field cited above; the pinned source bytes were not re-read in this checkout.",
+    "qualification": "This is a statement-fidelity correction of the claim paraphrase. It is not a reconciliation receipt, a mapping decision, a source-byte re-verification, or policy adoption, and it does not assert that any team member has been trained."
+  },
+  "evidence_references": [
+    {
+      "path": "evidence/wave-20261009/source/residuals.json",
+      "sha256": "cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124",
+      "field": "source_fidelity_repairs_required[2]"
+    },
+    {
+      "path": "evidence/wave-20261009/source/primary-review.json",
+      "sha256": "8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1",
+      "field": "claim_id=WA-APPSEC-011.interpretation, .residual, .decision_id, .source_span_sha256"
+    },
+    {
+      "path": "evidence/wave-20261009/source/draft-dispositions.json",
+      "sha256": "7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52",
+      "field": "claim_id=WA-APPSEC-011.details.distinction, .rationale, .status"
+    },
+    {
+      "path": "evidence/wave-20261009/source/proposed-decisions.json",
+      "sha256": "1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db",
+      "field": "id=reconciliation-decision:9d68d9bf438cdfe96065209192445b3c8e567a6450cb44322d567a2a11ab06a4 .rationale, .review.status"
+    },
+    {
+      "path": "evidence/source-reviews/wa-application-security-checklist-claims.json",
+      "sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "field": "claims[claim_id=WA-APPSEC-011].statement, .start_line, .end_line, .mapping_status, .accepted_policy"
+    }
+  ],
+  "linked_decisions": {
+    "decision_id": "reconciliation-decision:9d68d9bf438cdfe96065209192445b3c8e567a6450cb44322d567a2a11ab06a4",
+    "disposition": "SPECIALIZATION",
+    "control_references": [
+      {"collection": "CATALOG", "id": "GES-GOV-010", "revision": 1},
+      {"collection": "PROPOSAL", "id": "GES-OPS-047", "revision": 1}
+    ],
+    "review_status": "PROPOSED",
+    "reviewer": null
+  },
+  "outcome": "HOLD_CORRECTED_AT_STATEMENT_LEVEL_SUCCESSOR_RECORDED",
+  "remaining_holds": [
+    "SOURCE_BYTES_NOT_REREAD_HERE: the corrected wording is derived from the committed primary-review interpretation, not from a fresh read of the pinned checklist bytes in this checkout; no network or cache read was performed.",
+    "NO_RECONCILIATION_RECEIPT: draft-dispositions.json status is PROPOSED_NOT_RECONCILIATION_RECEIPT; reconciler and independent reviewer identities, timestamps and authority-policy bindings are absent.",
+    "DECISION_STILL_PROPOSED: proposed-decisions.json review.status is PROPOSED with reviewer null; residuals.all_decisions_pending_D_A_E is true.",
+    "MAPPING_AND_POLICY_UNCHANGED: mapping_status stays UNMAPPED_REQUIRES_OBJECTIVE_AND_BINDING_REVIEW, accepted_policy stays false, claims-document policy_adoption is NONE, rights_clearance UNRESOLVED, independent_omission_audit false."
+  ],
+  "boundaries": {
+    "delivery_status": "Staged",
+    "accepted_policy": false,
+    "human_approval": false,
+    "predecessor_modified": false,
+    "heavy_validation_run": false
+  }
+}

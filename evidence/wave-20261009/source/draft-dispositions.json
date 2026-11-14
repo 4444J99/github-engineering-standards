@@ -1,0 +1,678 @@
+[
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-001",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 15,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 15,
+      "statement_sha256": "6facf7fafe3da57001ac62b8498c52e7ce06c295df61eeda54648adfbdbcf640"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-002",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-037",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:4af195d73cd4154c6357b9267b0010f1412f7bc52c80052c952d2e5c9b5afe1f",
+    "details": {
+      "distinction": "automation must be explicit in the objective and evidence",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Automated dependency scanning is stronger than an unspecified scan. Preserve automation and dependencies; do not equate manual review or configuration existence with execution.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-002",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 16,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 16,
+      "statement_sha256": "da04efdc90beec3c9497e92ce6747009c851cf8fbc39041df57adad1a93018a8"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-002",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-038",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:347b3cc4b55329581b6a34cb957a6fc558378721259a080d3c060a0d9020cf10",
+    "details": {
+      "distinction": "recurring scanner-tool updates are absent from the canonical acceptance",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Tool maintenance is distinct from reviewing dependency findings. Retain recurring scanner update responsibility and evidence of current supported tooling.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-003",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 17,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 17,
+      "statement_sha256": "2d28db2ee7b44fc8a32f2dd4d8603cc211fe5d2dbdffbc86de18f3473228a9a1"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-002",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-039",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:6b5824fe84886d4bead68cbaaa497e74b10a55972e0f43c0f4142ae783751991",
+    "details": {
+      "distinction": "prompt remediation requires explicit target cadence",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Dependency triage is covered in the broad draft objective, but prompt handling must retain a target-defined risk-based response cadence; no numeric SLA is supplied by the source.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-004",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 20,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 20,
+      "statement_sha256": "79e102ba90be4d6ab37a3c3d4596b32a37093d1ebd48bbe211de7295d693d5bb"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-003",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:9b1d2c7f7315f3db37f4c6334b1b56d2308560ad223383d778ef5034d1ae7535",
+    "details": {},
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "MAP",
+    "rationale": "The draft objective requires supported code security analysis and evidence of completed analysis on relevant revisions; this preserves using detection tools for potential code security defects.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-005",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 21,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 21,
+      "statement_sha256": "337bee4c8c0dba0284c60a9a8d1213ab1419821c2ef0db6a0cc13c8c54cac7a9"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-003",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-041",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:8cb13948af70fb61e028a787fc955712fa238042fb1e380059fb4536261b7bd0",
+    "details": {
+      "distinction": "original claim must not narrow code scanning to static analysis",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Pipeline integration is covered by the canonical delivery-workflow objective. The original claim introduces static analysis although the source says code scanning without that restriction; correct or explicitly qualify that narrowing before treating source consolidation as resolved.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-006",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 22,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 22,
+      "statement_sha256": "bcfeb8402704bfcdca7e9be9a3631c84ec3b4d87088ff098db2ed1c2b128aae1"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-003",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-042",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:ca41976217fcd8b42f7887de6636a0446de13af854d5e59dd2e306ccb77b250a",
+    "details": {
+      "distinction": "periodic review and configuration maintenance must remain explicit",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Maintaining scan rules does not fully record periodic review of rules and configuration. Preserve both review and updates, including configurations, with profile-defined recurrence.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-007",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 25,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 25,
+      "statement_sha256": "26e88981d34a74a4abf9faeceb384c0e432be2ab3b0cfc4c0583b7d0a40323e5"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-004",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-043",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:cc51898201f5482b7d0db45ee11668334798020a570856db031ea56c30b03e44",
+    "details": {
+      "distinction": "routine assessment of secrets and sensitive information is a separate objective",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Assess secret and sensitive-information management practices. An exposed-credential response control is a related safeguard and cannot replace assessment of routine handling.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-008",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 26,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 26,
+      "statement_sha256": "34ad8cb793a4a7411f6821eb6a57a1ac20c1c7585e73cea4aa9108ae72c69d8f"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-004",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-044",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:9bcfbb80679c3afe61484eb088cc7ef8dbbbf1115a2cb25d17e62e3fa4269241",
+    "details": {
+      "distinction": "secret storage and management tooling requires its own evidence",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Use a tool for storing and managing secrets. Incident response and prevention do not establish that an appropriate management system exists and is used.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-009",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 27,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 27,
+      "statement_sha256": "84c546700442a8450623b37bb5c63157378018c3ad76c0e310f5aa5c94dfcd08"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-004",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-045",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:03c3a18e773a549ac79ddfaaa805b8c78e28ee9e42120d73f3d16e23260990fb",
+    "details": {
+      "distinction": "proactive recurring rotation differs from reactive exposed-credential revocation",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "The source calls for regular rotation of secrets and credentials regardless of confirmed exposure. The original claim only maintains a reviewed rotation practice; actual recurring rotation and both object classes must be restored.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-010",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 30,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 30,
+      "statement_sha256": "b9aa84fb2e80bfb8cd2d825a0423c98d127cb2f21d0996687dd18931ae9e3b83"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-010",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-046",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:8139ea3722286fb7124662320f90edc81c76f1c6a7f13800f724c6d875d79e1e",
+    "details": {
+      "distinction": "security-policy existence and effective enforcement need separate checks",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Review both presence and enforcement of security policy and guidelines. Training and feedback alone cannot demonstrate effective operation of the security policy.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-011",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 31,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 31,
+      "statement_sha256": "0a2fde39dd5262c981f850f4cf248ad9efbf7d4401c3a19f18c1232891fd16b8"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-010",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-047",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:9d68d9bf438cdfe96065209192445b3c8e567a6450cb44322d567a2a11ab06a4",
+    "details": {
+      "distinction": "all-team accessibility is a retained audience requirement",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Policy accessibility extends to all team members, not merely a subset deemed relevant. Preserve this audience in the assessment and distinguish access from having been trained.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-012",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 32,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 32,
+      "statement_sha256": "8b38a116926e4dc5cea1c8171c8db6cbe1778fb9a05272f60f56b2365391d57a"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-010",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-048",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:0345f739e85edc7ee008ecd2e8630d98dba21aa5cf39ff713f9859828d022e97",
+    "details": {
+      "distinction": "recurring security-policy refresh and change triggers are required",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Update policies regularly for new threats and best practices. Governance feedback is related, but does not itself specify security-policy updates and their cadence.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-013",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 35,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 35,
+      "statement_sha256": "52a38cd25346de262ab4c6dc58ff196a8aa47b0f7e4e4fb04781bd01477b65e0"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-009",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-049",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:64a3ee37d783ce6603b1dfe5f563c8d063d807b8c8d8f4979a73f123f3694075",
+    "details": {
+      "distinction": "guideline establishment and enforcement are distinct from training",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Establish and enforce secure coding guidelines across all development teams. Providing education does not establish guideline adoption or enforcement; preserve cross-team scope.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-014",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 36,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 36,
+      "statement_sha256": "9cca96207ab98d02f04485f213b4ff88b387d3fb41aad6b6cadaa9b73ecb1d77"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-SEC-009",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-050",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:5f1e97a6f1ae6da6c63314fa683e0cfee98b789866582e48640458dd533da051",
+    "details": {
+      "distinction": "training delivery in secure coding must be explicit",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Secure-development guidance and training applicability are addressed by the draft education objective. Preserve secure coding as training content, and verify the training actually occurs rather than the mere presence of guidance.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-015",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 37,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 37,
+      "statement_sha256": "13ee169b469344caa3cc53820828eb263e8dc19ab0f1176fe11e635d9978b419"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-005",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-051",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:8648e3a46ce667ea7654b1ca41957cf5ecef1f7ecebe4d1add6972bc72291769",
+    "details": {
+      "distinction": "review content and adherence evidence are distinct from reviewer-count policy",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Conduct code reviews to assess adherence to secure coding guidance. Reviewer threshold and staffing policy do not establish security-guideline adherence in an actual review.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-016",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 40,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 40,
+      "statement_sha256": "7d541eb200c02610ac0c3837988c38fe7057fde1abc4d595ce5ccf9a8863a4c7"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-007",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-052",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:e0bdbe26dc63717f03e50427e78d2c6dc1b57e9e37db5268d37a16ebcb3be3c5",
+    "details": {
+      "distinction": "implemented access restrictions and recurring entitlement review must both remain",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Implement strict access controls and regularly review permissions. Periodic access review supports the latter, but effective control implementation and strictness remain separate; define strictness through a target policy rather than a fabricated universal threshold.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-017",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 41,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 41,
+      "statement_sha256": "79496ee4fee36190005fb69d0e0dab79e94f52b8ad04c47e9f98d065b66e8dda"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-003",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-053",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:5ee4ab6eff6b2c0bd7ed0e0369e7d17889922a9257cb8032ca5fa1cfc3cb34c9",
+    "details": {
+      "distinction": "role-based enforcement spans GitHub and other business systems",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Use RBAC to limit access in GitHub and other business systems. Explicit role assignments do not prove role-based enforcement; do not narrow business-system scope to connected systems only.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  },
+  {
+    "accepted_policy": false,
+    "adopted_obligation": null,
+    "claim": {
+      "artifact_id": "8109355ec58c910ed86a2618",
+      "claim_document": "wa-application-security-checklist-claims.json",
+      "claim_document_sha256": "a41ba69a8ea30a5338ad56d8bd2c1909a4912eb219ab862e9e4b1af460959993",
+      "claim_id": "WA-APPSEC-018",
+      "commit": "a30275bc2d7eb860e612f93cbc1f26d0ff20c0c7",
+      "content_sha256": "d460c2c2daf45d6914cc15b908f1e487d0e4afe8e28632706b58ccddaab27773",
+      "end_line": 42,
+      "path": "content/library/application-security/checklist.md",
+      "source": "github/github-well-architected",
+      "start_line": 42,
+      "statement_sha256": "55f5e113729b63a65b37d83dd05ac9355a4aa2d5fdb23abe193e0ed21947c722"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-008",
+        "revision": 1
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-OPS-054",
+        "revision": 1
+      }
+    ],
+    "decision_id": "reconciliation-decision:67012a3ff508d16f8d0048002cdd305bd6f1a5fc29006d95de4db6ae128c5520",
+    "details": {
+      "distinction": "periodic access-log audit and both system scopes must remain",
+      "scope": "Applicable software security lifecycle; duties and cadence require a target profile"
+    },
+    "primary_reviewer": "codex:/root/source_worker_b",
+    "proposed_disposition": "SPECIALIZE",
+    "rationale": "Regularly audit access logs for suspicious activity across GitHub and other business systems. General audit retention and anomaly investigation do not prove recurring access-log examination or full system coverage.",
+    "status": "PROPOSED_NOT_RECONCILIATION_RECEIPT"
+  }
+]

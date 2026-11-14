@@ -1,0 +1,372 @@
+{
+  "schema": "ges.merged-main-verification.v1",
+  "commit": "f628db26cee1e6fc8fcc5ad5513959de0401d73d",
+  "tree": "51f2ae5030dddce8add625dbc709c48ac37ebbf2",
+  "started_at": "2026-10-08T07:53:28.305009+00:00",
+  "commands": [
+    {
+      "command": "python -m ges.claim_review --artifacts .cache/corpus/artifacts.jsonl --sources .cache/sources --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json",
+      "exit_code": 0,
+      "elapsed_seconds": 12.809,
+      "log_sha256": "e9fdad442ce2ddfce325268dc40b4e3fd9cd4969d58f5cab37569d5aee87a004"
+    },
+    {
+      "command": "python -m ges.recovery --sources .cache/sources --corpus .cache/corpus --reviews evidence/source-reviews --review-policy evidence/source-review-policy.json --rendered-directory .cache/rendered-docs --output evidence/recovery-status.json",
+      "exit_code": 0,
+      "elapsed_seconds": 47.842,
+      "log_sha256": "388c66284f9a0adacb91644120f3f75db009155b0692aeb619c1e6a793a509fa"
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "elapsed_seconds": 32.914,
+      "log_sha256": "b916b4aafa8e0ba7d7080def59104d919ca42f42b942dcaaa48f9322b5a7c7ee"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "elapsed_seconds": 0.179,
+      "log_sha256": "74bb4525b9b900006126e2c8ea295e29f1e8b454357085d3458009791496a535"
+    },
+    {
+      "command": "python -m ges compile",
+      "exit_code": 0,
+      "elapsed_seconds": 0.069,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "elapsed_seconds": 0.734,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "completed_at": "2026-10-08T07:55:02.878540+00:00",
+  "tracked_worktree_unchanged": true,
+  "historical_recovery_record_preserved": true,
+  "claim_review": {
+    "valid": true,
+    "reference_claims": 61936,
+    "source_artifacts": 3556,
+    "duplicate_relationships_validated": 7,
+    "proposed_control_identities_verified": true,
+    "proposed_mapping_equivalence_certified": false,
+    "semantic_truth_certified": false,
+    "omission_completeness_certified": false,
+    "rights_cleared": false,
+    "policy_adopted": false
+  },
+  "recovery": {
+    "project_complete": false,
+    "gates_open": 9,
+    "inventory_artifacts": 13657,
+    "published_pages": 18019,
+    "rendered_bodies_acquired": 0,
+    "milestones": {
+      "estate_rollout": "UNVERIFIED",
+      "native_pilot_acceptance": "UNVERIFIED",
+      "public_release_clearance": "UNVERIFIED",
+      "six_source_synthesis": "INCOMPLETE"
+    }
+  },
+  "unit_suite": {
+    "tests": 656,
+    "python": "3.12.14",
+    "assertion": true
+  },
+  "observation_recorded_at": "2026-10-08T07:59:15.232666+00:00",
+  "pull_request": 494,
+  "premerge_head": "e23d9641e283abd569efca190dd851ca647d6d7c",
+  "merge_method": "ordinary GitHub merge with exact expected head",
+  "merged_at": "2026-10-08T07:49:24Z",
+  "only_merge_action_issued": 494,
+  "component_pr_readback": {
+    "pull_requests": [
+      492,
+      493
+    ],
+    "draft": true,
+    "state": "closed",
+    "merged": true,
+    "merged_at": "2026-10-08T07:49:26Z",
+    "merge_commit_sha": "db7517449f5c11750ca55dfeccc47167c10c3fb4",
+    "explanation": "GitHub automatically marked included ancestors as merged after #494 reached main; no separate component merge was issued."
+  },
+  "remote_ci": [
+    {
+      "run": 37745826557,
+      "name": "Toolkit validation",
+      "head": "f628db26cee1e6fc8fcc5ad5513959de0401d73d",
+      "jobs": [
+        {
+          "id": 113206955622,
+          "name": "validate (3.13)",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_id": 1000049263,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m pip install -r requirements.txt",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m unittest discover -s tests -v",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Reproduce current workload and preserve historical accounting",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m ges validate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m ges compile",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Generated views match the canonical catalog",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 113206955924,
+          "name": "validate (3.11)",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_id": 1000049265,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m pip install -r requirements.txt",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m unittest discover -s tests -v",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Reproduce current workload and preserve historical accounting",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m ges validate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m ges compile",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Generated views match the canonical catalog",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": 37745826615,
+      "name": "Source acquisition and coverage",
+      "head": "f628db26cee1e6fc8fcc5ad5513959de0401d73d",
+      "jobs": [
+        {
+          "id": 113206956174,
+          "name": "acquire",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_id": 1000049264,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m pip install -r requirements.txt",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Acquire pinned archives, reconcile Git trees and sample rendered bodies",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m ges corpus --snapshots .cache/sources --output .cache/corpus",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m ges ledger --snapshots .cache/sources --corpus .cache/corpus",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify pinned text against the repaired capsule content identities",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Replay charter citations against trusted A3 content identities",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Package public-safe metadata evidence",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "human_approval": {
+    "quote": "Human review approved proceed with all",
+    "channel": "working ChatGPT conversation",
+    "available_checkpoint": "66321c84eea2f5e7128a62edebc578a6155b0018",
+    "github_approval_object_fabricated": false,
+    "later_agent_fixes_separately_disclosed": true,
+    "organization_acceptance_asserted": false
+  },
+  "input_boundaries": {
+    "assembly_reference": "evidence/v0.2-premerge-review-20261008.json",
+    "current_artifact_inventory_sha256": "86225491fb70197b893a0bfb1fa96ebfc1f5a6e33c21c86ab874d9d34f5db9a2",
+    "published_ledger_sha256": "df6a93828cba4cb3c3b98a4de5af47367e9924121be76f9c9a039dec7a4e5f19",
+    "historical_d53_artifact_reproduced": false,
+    "historical_rendered_body_count_reproduced": false,
+    "fresh_ci_rendered_sample_is_not_full_historical_replay": true
+  },
+  "pilot_scope_observation": {
+    "target": "4444J99/ges-native-enforcement-pilot",
+    "approved_visibility": "private",
+    "observed_visibility": "public",
+    "observed_private_flag": false,
+    "provider_updated_at": "2026-10-08T07:46:07Z",
+    "successful_run": 37560956698,
+    "successful_attempt": 3,
+    "successful_execution_is_private_proof": false,
+    "private_execution_hold_cleared": false,
+    "rule_enforcement": "disabled",
+    "assistant_pilot_mutations": 0,
+    "status": "BLOCKED_OUTSIDE_APPROVED_PRIVATE_SCOPE",
+    "private_detail_observation_sha256": "b200b38a2e885fc0feb6070b17a0224a8ee7094a6822a290375d87a7b9832357",
+    "visibility_change_actor_or_cause_inferred": false,
+    "billing_page_readback_performed": false,
+    "required_next_action": "Owner decides the target visibility/scope before a private pilot resumes.",
+    "detail_boundary": "Sanitized scope-stop observation only. The full preflight is retained separately from this public repository."
+  },
+  "acceptance": {
+    "controls_accepted": 0,
+    "legacy_gates_open": 9,
+    "source_synthesis_complete": false,
+    "public_release_clearance": false,
+    "native_acceptance": false,
+    "estate_acceptance": false,
+    "formal_verified_status_asserted": false
+  }
+}

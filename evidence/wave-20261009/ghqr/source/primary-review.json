@@ -1,0 +1,562 @@
+[
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-001",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 11,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 1,
+      "statement_sha256": "0dd2a1744c894a68bcac1a1c1c00523dc28790ad7620d4f5e0859ba4c473c237"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-003",
+        "revision": 2
+      },
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-004",
+        "revision": 2
+      },
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-008",
+        "revision": 3
+      },
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-007",
+        "revision": 3
+      }
+    ],
+    "interpretation": "Critical source recommendation covers production-branch protection, direct-push prevention, review and CI. The scanner emits001 and returns when detail is nil or not Protected; it cannot distinguish inaccessible data from absent protection here. Production scope is broader than the input-default-branch description. Composite catalog references preserve components but need exact branch coverage and bypass testing.",
+    "occurrence_digest": "698fca1a20c09b4fcd9638e3799c7dedd26ed7b767db5cceb0d59830c062f28d",
+    "occurrence_id": "SRC-GHQR-repo-bp-001",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 18,
+      "start_line": 16
+    },
+    "source_fidelity_hold": "Original claim omits explicit prevention of direct pushes; source all-component scope requires preservation.",
+    "source_recommendation_sha256": "092f896686e44886d110e53bf6bce1a92fd1389a5dcec49a80342240aeb51374",
+    "source_severity": "critical",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-002",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 22,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 12,
+      "statement_sha256": "58e41f55b6190aa486c302983601602268a0c4401e71448a688583968dc07a25"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-004",
+        "revision": 2
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-RULE-010",
+        "revision": 1
+      }
+    ],
+    "interpretation": "Critical recommendation requires at least1 approving review. Scanner emits002 for count<1 only when reviews exists; count1 instead emits003. Quorum and actual independent review are distinct from configuring a number. Source threshold remains upstream; solo exceptions need explicit local policy.",
+    "occurrence_digest": "64c063122bbb18e9f3cc46baef861bebcacba046c399bb02b3f3986eb741e76d",
+    "occurrence_id": "SRC-GHQR-repo-bp-002",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 59,
+      "start_line": 54
+    },
+    "source_fidelity_hold": "Original claim adds when selected policy requires peer review, weakening the unconditional upstream recommendation; preserve numeric1 and local exception separately.",
+    "source_recommendation_sha256": "3d668134efd9215fee016b1e577630fdd9c4fd69c98aa5b345dae523872c9873",
+    "source_severity": "critical",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-003",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 33,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 23,
+      "statement_sha256": "28a73f0ef6e0f8b48e97d966dc2a997ac924f9e7047ae1c2865a3d642870f931"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-004",
+        "revision": 2
+      }
+    ],
+    "interpretation": "Medium recommendation considers2 or more approvals for production branches, especially high-risk changes. Scanner emits003 for count1, independently of production risk. This is advisory consideration, not universally mandatory2.",
+    "occurrence_digest": "1169dce64374e893685820cd489780afc352880ce09b9cad52275f41c4ecee6f",
+    "occurrence_id": "SRC-GHQR-repo-bp-003",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 59,
+      "start_line": 54
+    },
+    "source_fidelity_hold": "Original claim loses numeric2-or-more and narrows production guidance to high-risk changes.",
+    "source_recommendation_sha256": "1d5966cbc7a1c0e6ec6ab85359a9c0d972c73b3b20c57f1b382ccfd9691cd275",
+    "source_severity": "medium",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-004",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 44,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 34,
+      "statement_sha256": "9b110823598c36ae4b9236ca5c21d9f10af751416e90138c20e123e8e51b2f30"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-005",
+        "revision": 2
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-RULE-011",
+        "revision": 1
+      }
+    ],
+    "interpretation": "High recommendation enables stale approval dismissal on new commits. Scanner tests the DismissStaleReviews flag; it does not push changes or prove runtime invalidation. Catalog narrows to commits affecting reviewed diff, which needs explicit platform interpretation.",
+    "occurrence_digest": "0bbd1e32d6eb657a6f5f69d56069a675455ede5a666879493f51f90eed22f19d",
+    "occurrence_id": "SRC-GHQR-repo-bp-004",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 63,
+      "start_line": 61
+    },
+    "source_fidelity_hold": "Original claim and catalog condition on changed reviewed proposal; source wording says new commits. Preserve source versus platform/local qualification.",
+    "source_recommendation_sha256": "b421ee160c5d697cba0fb1349acf697a6ceb8b7946f77392477854aeaa5b6d7b",
+    "source_severity": "high",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-005",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 55,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 45,
+      "statement_sha256": "c67b51768e664be3779550fab6806a3596772a8a3764ac84b339c57a44453b2c"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-004",
+        "revision": 2
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-RULE-012",
+        "revision": 1
+      }
+    ],
+    "interpretation": "Medium recommendation requires designated-owner approval for CODEOWNERS paths. Scanner checks RequireCodeOwnerReviews only. CODEOWNERS existence, valid routing and actual required owner approval are separate; conversation resolution cannot substitute.",
+    "occurrence_digest": "d367d09b5ce4afb2318a08e83eb571540f5eb0cad6ed4f9fc50c4a96a12cb88f",
+    "occurrence_id": "SRC-GHQR-repo-bp-005",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 67,
+      "start_line": 65
+    },
+    "source_fidelity_hold": "Original claim says review instead of approval and lacks explicit enabled requirement.",
+    "source_recommendation_sha256": "e740662ea336f81977cbb497971b229ac7e342dc0f687bc5f02dd77af30ea228",
+    "source_severity": "medium",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-006",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 66,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 56,
+      "statement_sha256": "9ee904166b8e227ab9b4102cf58ac0796aacd4731fb02c8cfeb6b01c735588f2"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-003",
+        "revision": 2
+      },
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-004",
+        "revision": 2
+      },
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-005",
+        "revision": 2
+      },
+      {
+        "collection": "CATALOG",
+        "id": "GES-GOV-004",
+        "revision": 2
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-RULE-013",
+        "revision": 1
+      }
+    ],
+    "interpretation": "Critical composite requires approval-count configuration, stale dismissal and code-owner reviews. Scanner emits006 only for nil reviews; when present it separately evaluates002-005. PR existence alone cannot cover all components.",
+    "occurrence_digest": "4fe25dca6b8954045550f97d78273bee14b01aa4e19e37dd46240c7982169e5e",
+    "occurrence_id": "SRC-GHQR-repo-bp-006",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 70,
+      "start_line": 54
+    },
+    "source_fidelity_hold": null,
+    "source_recommendation_sha256": "e82190670ca75be4dc93c2386ccaf013a9d23670a65855c0db4be1153486cb46",
+    "source_severity": "critical",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-007",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 77,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 67,
+      "statement_sha256": "d035e4f38f2a2a4bbb9a7fcf78763367b916d47c0dfd247c2335c5dcf56519e7"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-008",
+        "revision": 3
+      }
+    ],
+    "interpretation": "High recommendation enables strict checks so branch is up to date before merge. Scanner emits007 for nonnil statusChecks with Strict false; nil emits009 instead. General right-revision analysis does not implement strict mode.",
+    "occurrence_digest": "a6559674a9f99571b0a3abe47197deea9d19b362e94a9bb87e86c5561377d9e0",
+    "occurrence_id": "SRC-GHQR-repo-bp-007",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 75,
+      "start_line": 72
+    },
+    "source_fidelity_hold": "Original claim inserts when strict policy applies, making the upstream strict-mode recommendation conditional; preserve source and local choice separately.",
+    "source_recommendation_sha256": "eb2b91a0c9f7a8fbb2d4bc6b4ae422319252a4b1caeed147b83dbcd90ccdd5f5",
+    "source_severity": "high",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-008",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 88,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 78,
+      "statement_sha256": "d5240ac530510b8537a4015b5b1e9527b9fd4d7fe467e53e22e3d3c1429adb4f"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-008",
+        "revision": 3
+      }
+    ],
+    "interpretation": "High recommendation configures specific checks that must pass before merge. Scanner tests nonempty Contexts, not successful execution or trusted publisher identity. Names, run revision, actual success gating and bypass all need distinct evidence.",
+    "occurrence_digest": "e516e9148bd0b227d55ca39cd41ea3c37cbc1693a6a7257d15ee725542aa2dae",
+    "occurrence_id": "SRC-GHQR-repo-bp-008",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 78,
+      "start_line": 76
+    },
+    "source_fidelity_hold": "Original claim names checks but omits that they must pass before merge.",
+    "source_recommendation_sha256": "619ba192141fc52a43c4c1f95c27283461b768995533ae5dcda81e59f8703df1",
+    "source_severity": "high",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-009",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 99,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 89,
+      "statement_sha256": "682ebe2c1ca7726862cebc82be713840c54a2f87af46314059b1ded4d9976aea"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-008",
+        "revision": 3
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-RULE-014",
+        "revision": 1
+      }
+    ],
+    "interpretation": "High recommendation requires CI checks to pass before any PR merge. Scanner emits009 only for nil statusChecks; a configured object does not prove actual successful runs or native rejection. Catalog execution revision alone does not fully state success enforcement.",
+    "occurrence_digest": "b9d5c65c8dfc72ff5d4b7144d740ce5cb165e348c00e29f156184ac78e4c9258",
+    "occurrence_id": "SRC-GHQR-repo-bp-009",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 81,
+      "start_line": 79
+    },
+    "source_fidelity_hold": null,
+    "source_recommendation_sha256": "c8fe592e244f12f34ad9b0067fe9c24eb3a46b66350993afb31ad26829346bd4",
+    "source_severity": "high",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-010",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 110,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 100,
+      "statement_sha256": "c1305bc7d82d42ebfb37516e3dc64cb186b05c7b5de8c78e2be841169beca423"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-002",
+        "revision": 2
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-RULE-015",
+        "revision": 1
+      }
+    ],
+    "interpretation": "Critical recommendation disables force pushes on all protected branches. Scanner checks AllowForcePushes on supplied detail only; false does not prove effective denial for bypass principals or every branch. Canonical per-instance rejection supports meaning but full branch denominator remains explicit.",
+    "occurrence_digest": "7ec339cb4d584db24c6c784e61a8273cc09e1da6e17694e2082ab404492baaef",
+    "occurrence_id": "SRC-GHQR-repo-bp-010",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 85,
+      "start_line": 83
+    },
+    "source_fidelity_hold": null,
+    "source_recommendation_sha256": "c193bdb2eded9adf6025fb1d8fb0e87d3e95e90bf2449b9b76fef868ba660da5",
+    "source_severity": "critical",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-011",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 121,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 111,
+      "statement_sha256": "ce245f1a62b912e823fa085c7efc2917d3725676e9dcbe7c91da88934d1c8d75"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-001",
+        "revision": 2
+      },
+      {
+        "collection": "PROPOSAL",
+        "id": "GES-RULE-016",
+        "revision": 1
+      }
+    ],
+    "interpretation": "High recommendation disables deletion on all protected branches. Scanner checks AllowDeletions for supplied detail only. Keep topic-branch cleanup separate and verify bypass/target coverage; a false flag is not an exercised native denial.",
+    "occurrence_digest": "d475aa52bf1fc70ac7b3a47750349293ec42335d40a2a738490656c506c0428e",
+    "occurrence_id": "SRC-GHQR-repo-bp-011",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 89,
+      "start_line": 87
+    },
+    "source_fidelity_hold": null,
+    "source_recommendation_sha256": "73b0e3bc09322d2e768ac8da36d97b7ffeb28a676ed7e89ac192807f52038d83",
+    "source_severity": "high",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-012",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 132,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 122,
+      "statement_sha256": "7d9935243049e308c336a166927bcc64b33a9ec902bd36f5c9636b29a1af8191"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-009",
+        "revision": 2
+      }
+    ],
+    "interpretation": "Medium recommendation enables signed commits for every commit merged into default. Scanner checks RequiredSignatures, not cryptographic verification. Source attribution claim overstates human authorship assurance; preserve that disputed assertion and explicit trust assumptions as an unresolved source/platform conflict.",
+    "occurrence_digest": "4a723567c671dd84ef4b46578a05867dde0b0ed9a4308cbb1631fd522fd02ae7",
+    "occurrence_id": "SRC-GHQR-repo-bp-012",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 93,
+      "start_line": 91
+    },
+    "source_fidelity_hold": "Original claim changes enable required signatures into evaluate; legitimate local policy choice must not erase upstream recommendation or authorship overclaim.",
+    "source_recommendation_sha256": "9fee52dd988b3191e38859c393e4d93264f7570b82684cec30919ca0f8c4bd3b",
+    "source_severity": "medium",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-013",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 143,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 133,
+      "statement_sha256": "9d80f7c88549eb670808be664fc88725c552c218091d385d229cc3d8cb16f641"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-009",
+        "revision": 2
+      },
+      {
+        "collection": "CATALOG",
+        "id": "GES-BR-003",
+        "revision": 1
+      }
+    ],
+    "interpretation": "Low recommendation considers squash or rebase for linear history. Scanner tests RequiredLinearHistory, not selected merge methods or readability/bisect outcomes. Preserve advisory modality, alternatives and local delivery/audit decision; no external tmcw conflict certified in this bounded read.",
+    "occurrence_digest": "0d7bfb886587b4be7ea0aba67fe4ded22b447c752076e4d75a4282c04e9aae45",
+    "occurrence_id": "SRC-GHQR-repo-bp-013",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 97,
+      "start_line": 95
+    },
+    "source_fidelity_hold": "Original claim omits squash/rebase alternatives; its delivery/audit condition is local interpretation.",
+    "source_recommendation_sha256": "9e6812d9bf22ad77d35517268fcd99561884ab4fc6fff2bcfac943ad2338b9c0",
+    "source_severity": "low",
+    "status": "PROPOSED_PENDING_D_A_E"
+  },
+  {
+    "claim": {
+      "artifact_id": "15fbb50bf8de3b7b3fef1dd7",
+      "claim_document": "ghqr-branch-protection-claims.json",
+      "claim_document_sha256": "7b210ce3dce0d7d7685eb3e39cbbe8abab0f534445c1e9381a1c047713ce180b",
+      "claim_id": "GHQR-BP-014",
+      "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+      "content_sha256": "b3cb18ff7a002ec66feb7975fa05cf49d19926516440d22f0dd369418e266304",
+      "end_line": 153,
+      "path": "internal/recommendations/definitions/repository/branch_protection.yaml",
+      "source": "microsoft/ghqr",
+      "start_line": 144,
+      "statement_sha256": "ae3189a85d4b686b7632af3f6d55e0966c6bca139fc4725a7798e4aee2b49e08"
+    },
+    "control_references": [
+      {
+        "collection": "CATALOG",
+        "id": "GES-RULE-007",
+        "revision": 3
+      }
+    ],
+    "interpretation": "Informational014 is emitted only for nonnil ruleset detail marked Protected; shared settings are then evaluated and may still fail. Nil/unprotected ruleset detail returns nil, not PASS. Source no-action statement and optional migration advice do not prove active enforcement, inheritance or bypass coverage.",
+    "occurrence_digest": "67a8ab64b229b44d641c46e9ef8f3e0f0751bf26d3a0acefd3841efae6e417d9",
+    "occurrence_id": "SRC-GHQR-repo-bp-014",
+    "primary_identity": "codex:/root/source_worker_b",
+    "scanner_span": {
+      "content_sha256": "6ec74e207a759b0d7280731473e290767bc7b404eeaf4509a82d539d19deba36",
+      "end_line": 40,
+      "start_line": 26
+    },
+    "source_fidelity_hold": "Original claim omits optional migration consideration; preserve it as source context without making redundant legacy rules mandatory.",
+    "source_recommendation_sha256": "c56791264d9ee762109d7c5b5c65abf2b110fe79c6e18be1598e55829686898e",
+    "source_severity": "info",
+    "status": "PROPOSED_PENDING_D_A_E"
+  }
+]

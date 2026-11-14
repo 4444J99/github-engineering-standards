@@ -1,0 +1,34 @@
+{
+  "schema": "ges.correction-admission-checkpoint.v1",
+  "observed_at": "2026-10-09T21:25:18.647534+00:00",
+  "storage": {
+    "command": "df -k /Users/4jp/Workspace/4444J99/.worktrees",
+    "exit_code": 0,
+    "available_kib": 15430928,
+    "available_gib": 14.716079711914062,
+    "new_worktree_threshold_gib": 50,
+    "decision": "DENIED_BY_OWNING_POLICY",
+    "policy": "/Users/4jp/Workspace/limen/docs/architecture/finite-workspace-recovery.md"
+  },
+  "heavy": {
+    "command": "python /Users/4jp/Workspace/limen/scripts/host-work-admission.py acquire --kind heavy --owner ges-correction-20261009 --surface codex:/root --ttl-seconds 1800",
+    "exit_code": 3,
+    "allowed": false,
+    "reasons": [
+      "swap-fraction",
+      "vitals-shed"
+    ],
+    "swap_used_bytes": 4810080256,
+    "swap_fraction": 0.2799835205078125,
+    "observed_at": "2026-10-09T21:24:13.242447+00:00"
+  },
+  "execution": {
+    "allowed": true,
+    "lease_id": "f4a7625bccbd48858096ec8ca7283cbc",
+    "purpose": "Read-only preparation and durable blocked checkpoint only"
+  },
+  "workers_started": [],
+  "new_worktrees_created": [],
+  "verification_batch": "NOT_RUN; no final repair tree exists and heavy admission was denied",
+  "historical_reports": "Preserved unchanged; their success is not reused as validation of this follow-up."
+}

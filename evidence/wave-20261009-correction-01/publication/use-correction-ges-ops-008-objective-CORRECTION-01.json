@@ -1,0 +1,113 @@
+{
+  "schema": "ges.publication-use-correction.v1",
+  "use_id": "GES-OPS-008-objective-CORRECTION-01",
+  "predecessor_use_id": "GES-OPS-008-objective",
+  "predecessor_record": "evidence/wave-20261009/publication/primary-review.json, uses[] entry with use_id \"GES-OPS-008-objective\" (kind: null, classification_status: UNRESOLVED_JSON_ENCODING)",
+  "supersedes_classification_field": "kind (predecessor value null)",
+  "created_at_utc": "2026-10-10T05:34:00Z",
+  "created_by": {
+    "role": "C",
+    "session_id_env_OPENCODE_SESSION_ID": "ses_edbb9e21fffe41Hfn52r71dsoS",
+    "checkout": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-c-20261009",
+    "branch": "codex/wave-publication-c-20261009",
+    "head": "a2b81ff848d0c4137f0df03baf09e9685473a016",
+    "lease_id": "2faae7b2c82c419ca3df40571ca5360d"
+  },
+  "hold_being_corrected": "Predecessor row left kind null because the candidate output bytes at the row output span are JSON-escaped and therefore are not byte-identical to the pinned source span bytes, while the decoded text is identical. Under that condition the committed review declined to propose LICENSED_COPY (raw-byte invariant fails) and declined to invent ADAPTATION (encoding alone is not a semantic adaptation).",
+  "correction_scope": "Read-only byte forensics over committed inputs in this checkout, plus a classification-path analysis against the committed validator and register contract. No candidate bytes, predecessor records, validator, policy, register, receipts, or shared views were modified. This record grants no approval and no publication clearance.",
+  "verified_observations": {
+    "output_file": "controls/review_queue.json",
+    "output_file_sha256_observed": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9",
+    "output_file_sha256_expected_planning_freeze_binding": "091b1afe9c2f195accda530a8a0f59e0f1f6cfc347c46d303ebb60284acde8a9",
+    "output_file_binding_reference": "evidence/wave-20261009-correction-01/assignment.json (conductor checkout, read-only), bindings entry for controls/review_queue.json",
+    "json_pointer": "/4/objective",
+    "output_range": {
+      "start_byte": 9754,
+      "end_byte": 9924
+    },
+    "output_span_sha256_observed": "e429fb1a28c34aef1b2bfb70e1ea18da086ad07ef8009cbeca4a8db3bcac3779",
+    "output_span_sha256_committed_in_predecessor": "e429fb1a28c34aef1b2bfb70e1ea18da086ad07ef8009cbeca4a8db3bcac3779",
+    "output_span_raw_length_bytes": 170,
+    "json_escape_sequences_in_span": [
+      {
+        "byte_offset_in_span": 7,
+        "sequence": "\\\"",
+        "count": 2
+      }
+    ],
+    "escape_characterization": "The span is the interior of one JSON string literal (span excludes the enclosing quotation marks). The only non-source bytes are exactly two backslash-escaped double quotes (\\\") around the phrase \"prevent further usage\". No other escape, normalization, truncation or reordering is present.",
+    "decoded_text_sha256": "5c22f1ab4b96debea71867950f713067492f6d5d2d44561fedb496b043ff87a8",
+    "decoded_text_length_bytes": 168,
+    "source_span": {
+      "start_byte": 1897,
+      "end_byte": 2065,
+      "sha256": "5c22f1ab4b96debea71867950f713067492f6d5d2d44561fedb496b043ff87a8"
+    },
+    "decoded_equals_committed_source_span_bytes": true,
+    "raw_equals_committed_source_span_bytes": false,
+    "raw_byte_delta": "output span 170 bytes vs source span 168 bytes; the +2 bytes are precisely the two added backslashes of the JSON quote escapes"
+  },
+  "committed_evidence_references": [
+    {
+      "file": "evidence/wave-20261009/publication/primary-review.json",
+      "field": "uses[] where use_id == \"GES-OPS-008-objective\" -> kind, classification_status, rationale, source_range, output_range, decoded_text_sha256"
+    },
+    {
+      "file": "evidence/wave-20261009/publication/README.md",
+      "field": "lines 18-23 (unresolved rows: JSON escapes preserve decoded wording but break raw-byte equality; encoding alone does not justify an ADAPTATION judgment)"
+    },
+    {
+      "file": "controls/review_queue.json",
+      "field": "JSON pointer /4/objective, bytes [9754,9924)"
+    },
+    {
+      "file": "ges/publication_use.py",
+      "field": "lines 545-549: LICENSED_COPY requires source span bytes == output span bytes, else \"LICENSED_COPY spans are not identical source/output bytes; review the actual use kind\""
+    },
+    {
+      "file": "docs/publication-use-register.md",
+      "field": "use-row kind contract and byte-range contract (\"Each LICENSED_COPY source span must be byte-identical to its output span; a changed expression requires review under its actual use classification\")"
+    },
+    {
+      "file": "evidence/publication-candidates/ges-v0.2-merged-f628db26-20261008/review-priorities.json",
+      "field": "GES-OPS-008 entry: proposal_index 4, matched_fields objective=1/acceptance=1/title=1, matched_source_artifact_ids [ac4886e5c2fed8b2a3071888], publication_disposition UNREVIEWED"
+    },
+    {
+      "file": "evidence/wave-20261009/publication/accounting-replay.json",
+      "field": "valid true, register uses 0, denominator 0, unreviewed_output_count 2396 \u2014 frozen candidate register carries no use rows; the disputed rows exist only as proposals"
+    }
+  ],
+  "classification_analysis": {
+    "LICENSED_COPY": "Structurally unattainable for this field under the frozen validator and frozen candidate: the reused sentence contains two ASCII double-quote characters, which JSON syntax mandates escaping inside a string literal; therefore no candidate storing this text in JSON can present raw bytes identical to the source span. Re-observed here: the raw delta is exactly those two escapes.",
+    "INDEPENDENT_PARAPHRASE": "Not supported: the decoded output text is byte-identical to the source span text (sha256 verified), so the wording is not independent.",
+    "REFERENCES_ONLY": "Not supported: the expressive wording itself is present verbatim (decoded) in the output, and the committed rationale for GES-OPS-008-reference-0 already records that the pinned URL is a locator while the expressive wording is separately recorded.",
+    "ADAPTATION": "Mechanically accepted by the validator (no byte-identity check for ADAPTATION), but the classification is a substantive rights judgment. Committed evidence establishes only mechanical JSON string escaping; per the committed primary review, encoding alone does not justify an ADAPTATION judgment. This worker neither invents that judgment nor fabricates the human/distribution approvals it would require."
+  },
+  "outcome": "REMAINING_HOLD",
+  "hold_statement": "HOLD: classification for GES-OPS-008-objective remains unresolved (kind: null in any successor register until an authorized owner decides). Correction outcome is a sharpened, byte-exact characterization of the hold, not its release: the raw-byte LICENSED_COPY invariant cannot be satisfied for this field while the candidate stores the quoted sentence in JSON, and an ADAPTATION (or other) classification requires an accountable decision outside this worker's authority.",
+  "resolution_paths_not_executed": [
+    "Authorized rights review records an accountable ADAPTATION classification with rationale, using the byte-exact escape forensics in this record as supporting evidence.",
+    "Policy/validator amendment (by the integrator under frozen governance) addressing JSON-syntax escaping of otherwise-identical text.",
+    "Candidate regeneration cannot restore raw-byte identity for quoted text inside a JSON string; noted so it is not pursued as a false path."
+  ],
+  "pinned_source": {
+    "artifact_id": "ac4886e5c2fed8b2a3071888",
+    "source": "microsoft/ghqr",
+    "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+    "path": "internal/recommendations/definitions/enterprise/budgets.yaml",
+    "sha256": "f8ae1adbcfedb4618a40c20c9e32d5e8d93ba76cc62a847790003e6aac61a364"
+  },
+  "attributions_reference": {
+    "output_path": "THIRD_PARTY_NOTICES.md",
+    "output_range": {
+      "start_byte": 1549,
+      "end_byte": 2622,
+      "sha256": "a03acaea02517706329f1e65e14b720dada75ff0f559692f8a89c162b09e6de9"
+    },
+    "note": "Carried forward unchanged from the predecessor row; not re-adjudicated here."
+  },
+  "approvals_created": "none",
+  "publication_clearance_granted": "none",
+  "delivery_status": "Staged",
+  "prenote": "This record adds evidence only. The publication gate (byte-identical LICENSED_COPY spans / byte-identical candidate bytes) stays exactly as frozen."
+}

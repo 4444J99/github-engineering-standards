@@ -1,0 +1,100 @@
+[
+  {
+    "name": "claim-provenance",
+    "command": [
+      "python",
+      "-m",
+      "ges.claim_review",
+      "--artifacts",
+      ".cache/artifacts.jsonl",
+      "--sources",
+      "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources",
+      "--reviews",
+      "evidence/source-reviews",
+      "--review-policy",
+      "evidence/source-review-policy.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 5.555,
+    "output_sha256": "e9fdad442ce2ddfce325268dc40b4e3fd9cd4969d58f5cab37569d5aee87a004",
+    "output_tail": "e-reviews/wa-continuation-tooling-config-claims.json\", \"sha256\": \"19cee514cd62c4315add3322645f5c7016036f186a8937d24229e8c8f65236ba\"}, {\"path\": \"evidence/source-reviews/wa-continuation-workflow-config-claims.json\", \"sha256\": \"b756f9b0a537322f5db01d89400ea482d7a73abd29daca5ab05191db52500b0f\"}, {\"path\": \"evidence/source-reviews/wa-continuation-workspace-security-claims.json\", \"sha256\": \"377c83af0d56349287a1bcf32e5aa9c6b67d83b0555ec37022384bb46db6acf8\"}, {\"path\": \"evidence/source-reviews/wa-engineering-system-metrics-claims.json\", \"sha256\": \"3f3a7b230f2baaeafb2e717927dae1862ff06c4bd21252cac9597e0e2d1bf2bd\"}, {\"path\": \"evidence/source-reviews/wa-governance-productivity-checklists-claims.json\", \"sha256\": \"25b24d6cccefc5462e9c8059141cb5a053a354973c9f769a7046d983677098d3\"}, {\"path\": \"evidence/source-reviews/wa-overview-framework-claims.json\", \"sha256\": \"55fb330774bba94deb80027016f1ff58974bdb82acb4db1ee2a786b638cfc3fa\"}, {\"path\": \"evidence/source-reviews/wa-root-governance-claims.json\", \"sha256\": \"35346557df2a6a82ba71dbf6c8f563f9648ca8dcd0fd1e3c7ed60d37f0854943\"}], \"semantic_truth_certified\": false, \"omission_completeness_certified\": false, \"rights_cleared\": false, \"policy_adopted\": false}\n"
+  },
+  {
+    "name": "baseline-reconciliation",
+    "command": [
+      "python",
+      "-m",
+      "ges.claim_reconciliation",
+      "--artifacts",
+      ".cache/artifacts.jsonl",
+      "--sources",
+      "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources",
+      "--reviews",
+      "evidence/source-reviews",
+      "--review-policy",
+      "evidence/source-review-policy.json",
+      "--receipts",
+      "evidence/secret-context-continuation-20261008-reconciliation.json",
+      "--policy",
+      "evidence/secret-context-continuation-20261008-policy.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 6.243,
+    "output_sha256": "c3eb85a25d65a9b67354943d181c5f24c87aee60fe8818f021ebe828fd5386b5",
+    "output_tail": "-0355\", \"DOCS-SECRETGOV-0356\", \"DOCS-SECRETGOV-0357\", \"DOCS-SECRETGOV-0358\", \"DOCS-SECRETGOV-0402\", \"DOCS-SECRETGOV-0403\", \"DOCS-SECRETGOV-0404\", \"DOCS-SECRETGOV-0405\", \"DOCS-SECRETGOV-0472\", \"DOCS-SECRETGOV-0473\", \"DOCS-SECRETGOV-0474\", \"DOCS-SECVAR-001\", \"DOCS-SECVAR-002\", \"DOCS-SECVAR-003\", \"DOCS-SECVAR-004\", \"DOCS-SECVAR-005\", \"DOCS-SECVAR-006\", \"DOCS-SECVAR-007\", \"DOCS-SECVAR-008\", \"DOCS-SECVAR-009\"], \"claim_input_digest\": \"9e4116b7a70772c94f59e1f5b1a27b1a736c15a8cae78341586a12bf8f80bd0d\", \"catalog_digest\": \"125555b58ee9cfc66af0fb335429911005f1f9ad1da555ea4f0acd51602ec24c\", \"proposal_digest\": \"e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4\", \"receipts_digest\": \"4a9922dbb39004245e11a0fdb15f202d0e735648362b6b81e5d836b96c9cae87\", \"policy_digest\": \"0e72d848d11ee6051eac714ab193fcfd600c81f560331151ed70a820ce44d735\", \"claim_provenance_validated\": true, \"mapping_complete\": false, \"semantic_truth_automatically_certified\": false, \"source_to_claim_omission_denominator_certified\": false, \"rights_cleared\": false, \"policy_adopted\": false, \"scope\": \"Validated exact-claim reconciliation receipts only; no mapping is generated and independent gate evidence remains required.\"}\n"
+  },
+  {
+    "name": "unit-tests",
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 1,
+    "elapsed_seconds": 9.364,
+    "output_sha256": "38ca948da6c05bb304c615907dfbda443bb9147145a9a43f99626d93d6cd19ef",
+    "output_tail": "ndidate output set or bytes changed: missing, extra or mismatched files\"\n\n======================================================================\nFAIL: test_inaccessible_subtree_never_disappears_from_initial_or_final_inventory (test_publication_use.PublicationUse.test_inaccessible_subtree_never_disappears_from_initial_or_final_inventory) (stage='final')\n----------------------------------------------------------------------\nValueError: Candidate output changed during validation\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009/tests/test_publication_use.py\", line 298, in test_inaccessible_subtree_never_disappears_from_initial_or_final_inventory\n    with self.assertRaisesRegex(ValueError, 'Cannot completely enumerate candidate outputs'):\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: \"Cannot completely enumerate candidate outputs\" does not match \"Candidate output changed during validation\"\n\n----------------------------------------------------------------------\nRan 667 tests in 9.139s\n\nFAILED (failures=5)\n"
+  },
+  {
+    "name": "catalog",
+    "command": [
+      "python",
+      "-m",
+      "ges",
+      "validate"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.046,
+    "output_sha256": "74bb4525b9b900006126e2c8ea295e29f1e8b454357085d3458009791496a535",
+    "output_tail": "{\"valid\": true, \"controls\": 95}\n"
+  },
+  {
+    "name": "compile",
+    "command": [
+      "python",
+      "-m",
+      "ges",
+      "compile"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.059,
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output_tail": ""
+  },
+  {
+    "name": "diff-check",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.018,
+    "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "output_tail": ""
+  }
+]

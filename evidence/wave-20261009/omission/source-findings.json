@@ -1,0 +1,231 @@
+{
+  "assignment_sha256": "cdb2829b7b1de6336a95377bca2cf2e3b1748185302789fae88dc8abe6f7873d",
+  "bindings": [
+    {
+      "path": "evidence/wave-20261009/source/draft-dispositions.json",
+      "sha256": "7f87225f90b1aa2c581242eb2b09531dab2fc3f74b93f9f8c260802540828c52"
+    },
+    {
+      "path": "evidence/wave-20261009/source/input-bindings.json",
+      "sha256": "79be154afd1f0ce0c769a5ca18042a613927606b8ce69d4b27a8a555bd558f29"
+    },
+    {
+      "path": "evidence/wave-20261009/source/occurrence-crosswalk.json",
+      "sha256": "ed2ac06c227d9871c8cd15365c29772f26b4c33ff029af6960e2c1146363179d"
+    },
+    {
+      "path": "evidence/wave-20261009/source/packet-manifest.json",
+      "sha256": "62d403c9dfbfba51a8d3e8d24e00e56419c9db75d15f758caccae94f17965336"
+    },
+    {
+      "path": "evidence/wave-20261009/source/primary-review.json",
+      "sha256": "8e27182d8562f1cd85f1062c07cf43ba81efae76c6df71d8c93593379cfb26f1"
+    },
+    {
+      "path": "evidence/wave-20261009/source/proposed-decisions.json",
+      "sha256": "1acf2be74a71744708589d0f0042a4b46d9f881fc2bb2d8e84125e00d377e1db"
+    },
+    {
+      "path": "evidence/wave-20261009/source/residuals.json",
+      "sha256": "cbf159cf9c9d70be0a74bddaee581e67d50b7e0c6fa3444950429114fa7a7124"
+    }
+  ],
+  "bounded_result": "13 relation meanings supported (1 existing mapping, 12 proposed specializations), contingent on explicit objective residuals; five historical fidelity defects require hold. No zero-control dispositions or omitted checklist bullets found within lines 15-42.",
+  "claim_findings": [
+    {
+      "claim_id": "WA-APPSEC-001",
+      "decision_id": "reconciliation-decision:4af195d73cd4154c6357b9267b0010f1412f7bc52c80052c952d2e5c9b5afe1f",
+      "independent_observation": "Automated scanning and dependency object retained; automation objective remains missing.",
+      "source_span_sha256": "e4e9b304e9206d336397ec1a028cfcccd7d5b2f407fb43d84ac24b5337eb2f5f",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-002",
+      "decision_id": "reconciliation-decision:347b3cc4b55329581b6a34cb957a6fc558378721259a080d3c060a0d9020cf10",
+      "independent_observation": "Recurring tooling updates distinct from scanning outcomes; maintenance objective remains missing.",
+      "source_span_sha256": "384b1078c8fc253d5598aae0ab6d110ec6fb0a16d52b61d4205398c79801216d",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-003",
+      "decision_id": "reconciliation-decision:6b5824fe84886d4bead68cbaaa497e74b10a55972e0f43c0f4142ae783751991",
+      "independent_observation": "Prompt review and remediation retained without an invented numeric SLA.",
+      "source_span_sha256": "5f439831b544899e6ac0a602d0e7550e39a1d4497b9c130333cc68b9b6069712",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-004",
+      "decision_id": "reconciliation-decision:9b1d2c7f7315f3db37f4c6334b1b56d2308560ad223383d778ef5034d1ae7535",
+      "independent_observation": "Tool-based security analysis mapping is supported by GES-SEC-003 execution objective; assessment recommendation remains distinct from adopted MUST.",
+      "source_span_sha256": "7aefc222af525123fe7fda680b675f7baf71cbca8a18d26523b984478d00f990",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-005",
+      "decision_id": "reconciliation-decision:8cb13948af70fb61e028a787fc955712fa238042fb1e380059fb4536261b7bd0",
+      "independent_observation": "Pipeline code scanning must remain general rather than restricted to static analysis.",
+      "source_span_sha256": "9bea9f3c7d7e67a1a562949eb22905d8a2b38705fc952c3a5534b3317a4e9558",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-006",
+      "decision_id": "reconciliation-decision:ca41976217fcd8b42f7887de6636a0446de13af854d5e59dd2e306ccb77b250a",
+      "independent_observation": "Recurring review and updating of both rules and configurations retained as an explicit objective gap.",
+      "source_span_sha256": "65563f893e9a3b21e201ec18b3f177e8c9c456038e4d7679dab93f77f5fa48c1",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-007",
+      "decision_id": "reconciliation-decision:cc51898201f5482b7d0db45ee11668334798020a570856db031ea56c30b03e44",
+      "independent_observation": "Routine secret and sensitive-information handling assessment cannot be replaced by exposed-credential response.",
+      "source_span_sha256": "a6b65bf762231918c4592ebea1ca7801519f54d6b650342ee7f375155520d196",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-008",
+      "decision_id": "reconciliation-decision:9bcfbb80679c3afe61484eb088cc7ef8dbbbf1115a2cb25d17e62e3fa4269241",
+      "independent_observation": "Secret storage and management tooling remains a separate unmet objective.",
+      "source_span_sha256": "c3bac1ad967ae38432e17e5d3e81166a2b5f90315e22d786754e5e23d9eba819",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-009",
+      "decision_id": "reconciliation-decision:03c3a18e773a549ac79ddfaaa805b8c78e28ee9e42120d73f3d16e23260990fb",
+      "independent_observation": "Regular rotation of both secrets and credentials cannot be reduced to exposure response or a documented practice.",
+      "source_span_sha256": "4505e3a71446ee2ee135d96a1ed1a359b9a2c539b7cde299fce1ff4a806dcc75",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-010",
+      "decision_id": "reconciliation-decision:8139ea3722286fb7124662320f90edc81c76f1c6a7f13800f724c6d875d79e1e",
+      "independent_observation": "Policy and guideline presence and effective enforcement retained separately from training.",
+      "source_span_sha256": "341ab0ff13c9e1aa7a3d2cc00ff55840b5e6dc13b8d8a4a2f8313b787a78d4c2",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-011",
+      "decision_id": "reconciliation-decision:9d68d9bf438cdfe96065209192445b3c8e567a6450cb44322d567a2a11ab06a4",
+      "independent_observation": "All-team-member policy access cannot be narrowed to a relevant-contributor subset.",
+      "source_span_sha256": "bdedfce67509c41b81f0f22c97b725a59e6975561f120c54ac875ee3ce143ead",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-012",
+      "decision_id": "reconciliation-decision:0345f739e85edc7ee008ecd2e8630d98dba21aa5cf39ff713f9859828d022e97",
+      "independent_observation": "Recurring security-policy updates for threats and practices retained as an objective gap.",
+      "source_span_sha256": "417a185a0e0bbfe613e6c602d09e150ee6bb7b3aa1859aadc85e522ace996532",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-013",
+      "decision_id": "reconciliation-decision:64a3ee37d783ce6603b1dfe5f563c8d063d807b8c8d8f4979a73f123f3694075",
+      "independent_observation": "Cross-development-team secure coding guideline establishment and enforcement retained separately from education.",
+      "source_span_sha256": "80c0de283ca8f25aec7ab72280e8bf7867e90dc4d3ce86203b9556c034594f94",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-014",
+      "decision_id": "reconciliation-decision:5f1e97a6f1ae6da6c63314fa683e0cfee98b789866582e48640458dd533da051",
+      "independent_observation": "Actual secure coding training retained; generic education control needs secure coding specialization.",
+      "source_span_sha256": "65c2c7d915a5bcc9a1e7120c84f74bf0835f99404d7de50a3c184cb683d5bfbc",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-015",
+      "decision_id": "reconciliation-decision:8648e3a46ce667ea7654b1ca41957cf5ecef1f7ecebe4d1add6972bc72291769",
+      "independent_observation": "Code-review adherence to secure coding guidance retained separately from reviewer staffing thresholds.",
+      "source_span_sha256": "488fd1471ad26b6604b9dee4aabb58a6bcd8ca9734304329c9fb3ae4ebdb05f6",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-016",
+      "decision_id": "reconciliation-decision:e0bdbe26dc63717f03e50427e78d2c6dc1b57e9e37db5268d37a16ebcb3be3c5",
+      "independent_observation": "Strict effective access controls and recurring permission review remain separate; no invented universal numeric access rule.",
+      "source_span_sha256": "cee1b5179e3b723dac62b193620ab10a4eda1dd49a2b1b72446ba615248aebb0",
+      "verdict": "SUPPORTED_BOUNDED_RELATION"
+    },
+    {
+      "claim_id": "WA-APPSEC-017",
+      "decision_id": "reconciliation-decision:5ee4ab6eff6b2c0bd7ed0e0369e7d17889922a9257cb8032ca5fa1cfc3cb34c9",
+      "independent_observation": "RBAC across GitHub and other business systems remains required by source meaning.",
+      "source_span_sha256": "99c107c840ae0e3df2b646bbc2409b5920a405a4b0f4a3e12dab503dba94c168",
+      "verdict": "HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-018",
+      "decision_id": "reconciliation-decision:67012a3ff508d16f8d0048002cdd305bd6f1a5fc29006d95de4db6ae128c5520",
+      "independent_observation": "Recurring access-log audit remains distinct from retention or follow-up investigation.",
+      "source_span_sha256": "b6d466b8875f806315a0571d6f3d5720dd021fa72373c044ebf3434cddbf32d6",
+      "verdict": "HOLD"
+    }
+  ],
+  "coverage": {
+    "additional_actionable_omissions_in_bounded_lines_found": 0,
+    "assigned_claims": 162,
+    "assigned_occurrences": 162,
+    "crosswalk_identities_checked": 162,
+    "semantic_claims_reviewed": 18,
+    "semantic_occurrences_reviewed": 18,
+    "source_lines": [
+      15,
+      42
+    ],
+    "unreviewed_claims": 144
+  },
+  "dependency_review": {
+    "bindings": "Primary input-bindings.json four authenticated context artifacts replayed; original source inspected independently.",
+    "interpretation": "Maturity stages inform implementation context; they do not turn all advanced features into mandatory current policy. Dependency guidance assumes ecosystem adaptation, administrative permissions, variable plan features and adaptable CI/CD. No scanner feature availability implies objective inapplicability. Outbound links and remaining routing dependencies not certified.",
+    "read_scope": "Design for Security section; complete schema and index; dependency-threat overview, strategies and assumptions."
+  },
+  "final_auditor_identity": null,
+  "findings": [
+    {
+      "claim_id": "WA-APPSEC-005",
+      "finding": "Original claim restricts scanning to static analysis absent from source. Preserve general code-scanning pipeline integration.",
+      "id": "D-SOURCE-FIDELITY-005",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed.",
+      "status": "CHANGE_REQUIRED_OR_HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-009",
+      "finding": "Original claim describes reviewed rotation practice rather than actual regular rotation of both secrets and credentials.",
+      "id": "D-SOURCE-FIDELITY-009",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed.",
+      "status": "CHANGE_REQUIRED_OR_HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-011",
+      "finding": "Original claim audience narrows all team members to relevant contributors.",
+      "id": "D-SOURCE-FIDELITY-011",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed.",
+      "status": "CHANGE_REQUIRED_OR_HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-017",
+      "finding": "Original claim narrows other business systems to connected systems; role assignments cannot alone prove RBAC enforcement.",
+      "id": "D-SOURCE-FIDELITY-017",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed.",
+      "status": "CHANGE_REQUIRED_OR_HOLD"
+    },
+    {
+      "claim_id": "WA-APPSEC-018",
+      "finding": "Original claim describes investigation rather than regular audit of access logs; retain GitHub and other business systems.",
+      "id": "D-SOURCE-FIDELITY-018",
+      "required_action": "Retain the original historical claim; omit a resolving receipt until a separately bound faithful proposition or explicit qualified disposition is independently reviewed.",
+      "status": "CHANGE_REQUIRED_OR_HOLD"
+    },
+    {
+      "finding": "Seventeen proposed SPECIALIZATION decisions refer to quarantined draft proposals and declare all fields preserved. That is a proposed relationship, not proof the canonical control retains the source objective.",
+      "id": "D-SOURCE-OBJECTIVE-BOUNDARY",
+      "required_action": "Keep draft objective and binding work unresolved; do not count the relationships as completed objective synthesis. Five fidelity holds remain excluded from approved relation receipts.",
+      "status": "BOUNDARY_REQUIRED"
+    }
+  ],
+  "human_approval": false,
+  "primary_commit": "53d274be18bb5293685d14628b6d73b4a9476593",
+  "reconciler_identity": null,
+  "remaining_scope": "144 claims and occurrences, whole-file extraction completeness, other dependencies, canonical objective completion, policy adoption and operational bindings remain unreviewed or unresolved.",
+  "reviewer": "codex:/root/omission_reviewer_d",
+  "schema": "ges.bounded-omission-findings.v1",
+  "state": "Staged"
+}

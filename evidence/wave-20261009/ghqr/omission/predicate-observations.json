@@ -1,0 +1,79 @@
+{
+  "reviewer": "codex:/root/omission_reviewer_d",
+  "source": "microsoft/ghqr",
+  "commit": "02b89961921ac43f93aa8b3ff74cdcb7cd3d9244",
+  "scanner_executed": false,
+  "records": [
+    {
+      "claim_id": "GHQR-BP-001",
+      "observed_source_predicate": "detail == nil OR !detail.Protected; returns immediately",
+      "independent_observation": "Unprotected/missing input yields broad finding and suppresses component inspection. Missing observation is not proof of actual unprotected state. Production branches are recommendation scope, beyond prose-described default-branch observation."
+    },
+    {
+      "claim_id": "GHQR-BP-002",
+      "observed_source_predicate": "reviews != nil AND RequiredApprovingReviewCount < 1",
+      "independent_observation": "Minimum1 source recommendation, not conditional on already choosing peer review. Count alone does not authenticate reviewer independence or verify approval application."
+    },
+    {
+      "claim_id": "GHQR-BP-003",
+      "observed_source_predicate": "reviews != nil AND 1 <= count < 2",
+      "independent_observation": "Advisory2-or-more production review threshold must remain source wording; local target quorum decision separate."
+    },
+    {
+      "claim_id": "GHQR-BP-004",
+      "observed_source_predicate": "reviews != nil AND !DismissStaleReviews",
+      "independent_observation": "Boolean observation does not establish behavior for altered diff; source new-commit dismissal recommendation broader than selective actual-diff rule."
+    },
+    {
+      "claim_id": "GHQR-BP-005",
+      "observed_source_predicate": "reviews != nil AND !RequireCodeOwnerReviews",
+      "independent_observation": "Explicit required CODEOWNERS approval; CODEOWNERS existence, PR requirement and conversation resolution not equivalent."
+    },
+    {
+      "claim_id": "GHQR-BP-006",
+      "observed_source_predicate": "reviews == nil",
+      "independent_observation": "Composite recommendation contains approver count, dismissal and owner reviews, not just PR existence. Nil input does not cause individual002-005 findings."
+    },
+    {
+      "claim_id": "GHQR-BP-007",
+      "observed_source_predicate": "statusChecks != nil AND !Strict",
+      "independent_observation": "Requires up-to-date branch strictness, beyond merely checks on some proposed revision. Source recommendation is not conditional on preselecting strict policy."
+    },
+    {
+      "claim_id": "GHQR-BP-008",
+      "observed_source_predicate": "statusChecks != nil AND len(Contexts)==0",
+      "independent_observation": "Actual nonempty named contexts required; scanner does not verify trusted publisher, trigger validity, check success or selected revision."
+    },
+    {
+      "claim_id": "GHQR-BP-009",
+      "observed_source_predicate": "statusChecks == nil",
+      "independent_observation": "Missing requirement distinguished from zero contexts or nonstrict mode. Scanner does not execute checks or establish merge rejection."
+    },
+    {
+      "claim_id": "GHQR-BP-010",
+      "observed_source_predicate": "AllowForcePushes == true",
+      "independent_observation": "All-protected-branch recommendation exceeds one default-branch observation. No bypass-principal enforcement assessment in this function."
+    },
+    {
+      "claim_id": "GHQR-BP-011",
+      "observed_source_predicate": "AllowDeletions == true",
+      "independent_observation": "Protected-branch deletion safeguard separate from topic-branch cleanup. Actual refusal and bypass coverage not observed."
+    },
+    {
+      "claim_id": "GHQR-BP-012",
+      "observed_source_predicate": "!RequiredSignatures",
+      "independent_observation": "Source recommends enabling signatures and asserts authorship verification; local evaluate-first policy is a deliberate conflict/qualification, not unchanged meaning."
+    },
+    {
+      "claim_id": "GHQR-BP-013",
+      "observed_source_predicate": "!RequiredLinearHistory",
+      "independent_observation": "Consider squash/rebase remains advisory. A false boolean observation cannot select merge method or certify cleaner history."
+    },
+    {
+      "claim_id": "GHQR-BP-014",
+      "observed_source_predicate": "ruleset detail != nil AND detail.Protected",
+      "independent_observation": "Ruleset informational note emitted before same component checks, so014 can coexist with deficiencies. No-action wording is not whole-policy clearance. Optional remaining-legacy migration suggestion requires separate preservation."
+    }
+  ],
+  "remaining_scope": "Scanner input production, GraphQL/ruleset normalization, bypass evaluation, real API observations, repository tests and native runtime behavior not reviewed or executed."
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"retrieved\": 0, \"denominator\": 2, \"errors\": 1, \"kill_switch\": true}\n{\n  \"sources\": [\n    {\n      \"status\": \"SNAPSHOT_RETRIEVED\",\n      \"git_tree_reconciliation\": {\n        \"status\": \"MATCH\"\n      }\n    }\n  ],\n  \"published_docs\": {\n    \"status\": \"ERROR\"\n  }\n}\n",
+    "stderr": "tep_fails) ... ok\ntest_new_known_read_scopes_supported (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_new_known_read_scopes_supported) ... ok\ntest_readonly_and_none_remain_valid (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_readonly_and_none_remain_valid) ... ok\ntest_reusable_job_cannot_mix_execution_forms (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_reusable_job_cannot_mix_execution_forms) ... ok\ntest_root_write_still_fails (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_root_write_still_fails) ... ok\ntest_unresolved_workflow_symlink_requires_review (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unresolved_workflow_symlink_requires_review) ... ok\ntest_unsupported_scope_is_not_green (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unsupported_scope_is_not_green) ... ok\n\n----------------------------------------------------------------------\nRan 667 tests in 7.532s\n\nOK\n"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "ges",
+      "validate"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"valid\": true, \"controls\": 95}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "ges",
+      "compile"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

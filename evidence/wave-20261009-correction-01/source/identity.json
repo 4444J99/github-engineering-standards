@@ -1,0 +1,63 @@
+{
+  "schema": "ges.source-review-identity.v1",
+  "role": "B",
+  "role_description": "worker B (first writer) of serialized correction wave for PR #496",
+  "supersedes": "evidence/wave-20261009-correction-01/source/identity-cancelled-ses_edbeebdceffe8CrNpIv5HJMXtW.json - this identity.json replaces the cancelled attempt's identity file for this stage; the cancelled file's bytes are preserved unchanged.",
+  "session_id": {
+    "value": "ses_edbc2fa97ffeVoEPHOghcPA455",
+    "source_environment_variable": "OPENCODE_SESSION_ID",
+    "note": "Runtime-reported session id read from env OPENCODE_SESSION_ID. The execution-freeze binding names surface opencode:ses_edcbc89dcffe1pHZoV5eWgrR33 (the conductor-provided surface string used verbatim in the lease command); the id this runtime actually exposes is the one recorded here. Both are stated verbatim; neither is invented."
+  },
+  "agent": "opencode",
+  "agent_reported": {
+    "AI_AGENT": "opencode",
+    "OPENCODE": "1",
+    "OPENCODE_TERMINAL": "1"
+  },
+  "provider": "opencode",
+  "model_id": "mimo-v2.6-flash-free",
+  "spawn_time_utc": "2026-10-10T05:15:43Z",
+  "checkout_path": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-b-20261009",
+  "branch": "review/wa-source-wave-20261009",
+  "starting_head": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234",
+  "preflight": {
+    "head_matches_expected": true,
+    "head": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234",
+    "tracked_tree_clean": true,
+    "status_porcelain_uno": "empty",
+    "untracked_present": "evidence/wave-20261009-correction-01/ only (this stage's exclusive root; contains the preserved cancelled identity file before this stage's writes)",
+    "remote_head_matches": true,
+    "remote_head": "2ad83ba6a3029eebadfd9c97e80cf6def8e98234",
+    "git_lock_files_found": 0,
+    "git_dir": "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.git/worktrees/ges-wave-b-20261009",
+    "git_common_dir_lock_files_found": 0,
+    "other_live_writers_found": false,
+    "other_live_writers_method": "ps -Ao pid,command | grep <checkout path> returned only the grep command itself (pids 5721/5723)",
+    "conflicts": 0
+  },
+  "lease": {
+    "lease_id": "2faae7b2c82c419ca3df40571ca5360d",
+    "owner": "ges-correction-20261009",
+    "kind": "execution",
+    "surface": "opencode:ses_edcbc89dcffe1pHZoV5eWgrR33",
+    "acquired_at": "2026-10-10T05:16:00.270654+00:00",
+    "expires_at": "2026-10-10T05:46:00.270654+00:00",
+    "ttl_seconds": 1800,
+    "allowed": true,
+    "superseded_wave_lease": {
+      "lease_id": "472a80faee3a43b9b3da07c8e7f0dcd0",
+      "reaped_reason": "dead-pid",
+      "original_expiry": "2026-10-10T05:44:58Z",
+      "note": "The prior wave lease expired too soon for this stage and was reaped by the acquire call."
+    }
+  },
+  "claims": [
+    "WA-APPSEC-005",
+    "WA-APPSEC-009",
+    "WA-APPSEC-011",
+    "WA-APPSEC-017",
+    "WA-APPSEC-018"
+  ],
+  "successor_record_suffix": "-CORRECTION-01",
+  "exclusive_write_root": "evidence/wave-20261009-correction-01/source"
+}

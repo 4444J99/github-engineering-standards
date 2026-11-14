@@ -1,0 +1,106 @@
+{
+  "environment": {
+    "TMPDIR": "/Users/4jp/Workspace/4444J99/.worktrees/ges-wave-20261009/.cache/test-tmp"
+  },
+  "commands": [
+    {
+      "name": "claim-provenance-final",
+      "command": [
+        "python",
+        "-m",
+        "ges.claim_review",
+        "--artifacts",
+        ".cache/artifacts.jsonl",
+        "--sources",
+        "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources",
+        "--reviews",
+        "evidence/source-reviews",
+        "--review-policy",
+        "evidence/source-review-policy.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 5.874,
+      "output_sha256": "e9fdad442ce2ddfce325268dc40b4e3fd9cd4969d58f5cab37569d5aee87a004",
+      "output_tail": "claims.json\", \"sha256\": \"b756f9b0a537322f5db01d89400ea482d7a73abd29daca5ab05191db52500b0f\"}, {\"path\": \"evidence/source-reviews/wa-continuation-workspace-security-claims.json\", \"sha256\": \"377c83af0d56349287a1bcf32e5aa9c6b67d83b0555ec37022384bb46db6acf8\"}, {\"path\": \"evidence/source-reviews/wa-engineering-system-metrics-claims.json\", \"sha256\": \"3f3a7b230f2baaeafb2e717927dae1862ff06c4bd21252cac9597e0e2d1bf2bd\"}, {\"path\": \"evidence/source-reviews/wa-governance-productivity-checklists-claims.json\", \"sha256\": \"25b24d6cccefc5462e9c8059141cb5a053a354973c9f769a7046d983677098d3\"}, {\"path\": \"evidence/source-reviews/wa-overview-framework-claims.json\", \"sha256\": \"55fb330774bba94deb80027016f1ff58974bdb82acb4db1ee2a786b638cfc3fa\"}, {\"path\": \"evidence/source-reviews/wa-root-governance-claims.json\", \"sha256\": \"35346557df2a6a82ba71dbf6c8f563f9648ca8dcd0fd1e3c7ed60d37f0854943\"}], \"semantic_truth_certified\": false, \"omission_completeness_certified\": false, \"rights_cleared\": false, \"policy_adopted\": false}\n"
+    },
+    {
+      "name": "reconciliation-final",
+      "command": [
+        "python",
+        "-m",
+        "ges.claim_reconciliation",
+        "--artifacts",
+        ".cache/artifacts.jsonl",
+        "--sources",
+        "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources",
+        "--reviews",
+        "evidence/source-reviews",
+        "--review-policy",
+        "evidence/source-review-policy.json",
+        "--receipts",
+        "evidence/wave-20261009/integration/combined-reconciliation.json",
+        "--policy",
+        "evidence/wave-20261009/integration/combined-policy.json"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 6.867,
+      "output_sha256": "14ddfefadf774ae7d64c3d5111fa09c2cc82980491cc118399cde9f0c67b7f24",
+      "output_tail": "94\", \"WA-APPSEC-095\", \"WA-APPSEC-096\", \"WA-APPSEC-098\", \"WA-APPSEC-102\", \"WA-APPSEC-103\", \"WA-APPSEC-111\", \"WA-APPSEC-118\", \"WA-APPSEC-128\", \"WA-APPSEC-129\", \"WA-APPSEC-136\", \"WA-APPSEC-141\", \"WA-APPSEC-152\"], \"claim_input_digest\": \"9e4116b7a70772c94f59e1f5b1a27b1a736c15a8cae78341586a12bf8f80bd0d\", \"catalog_digest\": \"125555b58ee9cfc66af0fb335429911005f1f9ad1da555ea4f0acd51602ec24c\", \"proposal_digest\": \"e16b506ada35741ea1d61f93bcf11b846893b643eb6e25eaed4a6edb70cf59d4\", \"receipts_digest\": \"bbb956ac194df017fe1831d83dbe6caf2c4e4ca92b1591343a4898deff02caf9\", \"policy_digest\": \"7d5922b98889f8ad33498561dc4aa42a28f4239eb1104d138f7b09cc3c1d0183\", \"claim_provenance_validated\": true, \"mapping_complete\": false, \"semantic_truth_automatically_certified\": false, \"source_to_claim_omission_denominator_certified\": false, \"rights_cleared\": false, \"policy_adopted\": false, \"scope\": \"Validated exact-claim reconciliation receipts only; no mapping is generated and independent gate evidence remains required.\"}\n"
+    },
+    {
+      "name": "unit-tests-final",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.78,
+      "output_sha256": "e58513f23f3eb458186a74c2e82f3d04586b713501d4d2b3d84e6aecc42a2a9e",
+      "output_tail": "tep_fails) ... ok\ntest_new_known_read_scopes_supported (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_new_known_read_scopes_supported) ... ok\ntest_readonly_and_none_remain_valid (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_readonly_and_none_remain_valid) ... ok\ntest_reusable_job_cannot_mix_execution_forms (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_reusable_job_cannot_mix_execution_forms) ... ok\ntest_root_write_still_fails (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_root_write_still_fails) ... ok\ntest_unresolved_workflow_symlink_requires_review (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unresolved_workflow_symlink_requires_review) ... ok\ntest_unsupported_scope_is_not_green (test_workflow_security_boundaries.WorkflowSecurityBoundaries.test_unsupported_scope_is_not_green) ... ok\n\n----------------------------------------------------------------------\nRan 667 tests in 8.618s\n\nOK\n"
+    },
+    {
+      "name": "catalog-final",
+      "command": [
+        "python",
+        "-m",
+        "ges",
+        "validate"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.04,
+      "output_sha256": "74bb4525b9b900006126e2c8ea295e29f1e8b454357085d3458009791496a535",
+      "output_tail": "{\"valid\": true, \"controls\": 95}\n"
+    },
+    {
+      "name": "compile-final",
+      "command": [
+        "python",
+        "-m",
+        "ges",
+        "compile"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.043,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_tail": ""
+    },
+    {
+      "name": "diff-check-final",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.013,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_tail": ""
+    }
+  ],
+  "scope": "Core validation and Well-Architected 50-receipt accounting; later GHQR-only receipt additions require an additional final accounting replay."
+}

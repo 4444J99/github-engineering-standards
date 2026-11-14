@@ -1,0 +1,49 @@
+[
+  {
+    "command": [
+      "python",
+      "-m",
+      "ges.claim_reconciliation",
+      "--artifacts",
+      ".cache/artifacts.jsonl",
+      "--sources",
+      "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources",
+      "--reviews",
+      "evidence/source-reviews",
+      "--review-policy",
+      "evidence/source-review-policy.json",
+      "--receipts",
+      "evidence/wave-20261009/integration/combined-reconciliation.json",
+      "--policy",
+      "evidence/wave-20261009/integration/combined-policy.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 11.848,
+    "output_sha256": "7a74ab34fb78a432a8294d80fffcf9c4fd09d181a02ab4b677e6002d9cfff394"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "ges.recovery",
+      "--sources",
+      "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/sources",
+      "--corpus",
+      "/Users/4jp/Workspace/4444J99/engineering-environment-standards/github-engineering-standards/github-engineering-standards/.cache/a3-corpus-20261006",
+      "--reviews",
+      "evidence/source-reviews",
+      "--review-policy",
+      "evidence/source-review-policy.json",
+      "--claim-reconciliation",
+      "evidence/wave-20261009/integration/combined-reconciliation.json",
+      "--claim-reconciliation-policy",
+      "evidence/wave-20261009/integration/combined-policy.json",
+      "--output",
+      "evidence/wave-20261009/validation/recovery-current.json"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 20.374,
+    "output_tail": "{\"project_complete\": false, \"gates_open\": 9, \"milestones\": {\"six_source_synthesis\": \"INCOMPLETE\", \"public_release_clearance\": \"UNVERIFIED\", \"native_pilot_acceptance\": \"UNVERIFIED\", \"estate_rollout\": \"UNVERIFIED\"}, \"ges_v0_2\": \"INCOMPLETE\", \"inventory_artifacts\": 13657, \"published_pages\": 18019}\n",
+    "scope": "Authenticated A3 corpus metadata; historical rendered bodies excluded because not verified this turn; original historical recovery report unchanged."
+  }
+]
