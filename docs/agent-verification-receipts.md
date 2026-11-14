@@ -52,11 +52,19 @@ A receipt whose `overall_status` differs from the derivation is invalid.
 | --- | --- | --- |
 | `STAGED` | nothing beyond valid checks (branch-only evidence) | merge evidence, acceptance |
 | `MERGED` | `merge_evidence` (main SHA, merge time, CI run URL in the subject repository, CI conclusion) | acceptance |
-| `VERIFIED` | `overall_status = PASS`, `merge_evidence.ci_conclusion = success`, human `acceptance` at or after the merge time | none |
+| `VERIFIED` | `overall_status = PASS`, a non-empty `required_checks`, `merge_evidence.ci_conclusion = success`, every check started at or after `merged_at` (observed on the merged commit, not the branch), human `acceptance` at or after the merge time | none |
 
 `VERIFIED` therefore requires, in the receipt's own words, the merged-main and
 organization-acceptance conditions of the Verification Standard. A receipt cannot
 prove who the named human is; `acceptance.reference` is a pointer a reviewer follows.
+
+**Required checks.** `required_checks` names the checks the producer's policy demands
+(for this repository, the verification commands in AGENTS.md). Every name must have a
+recorded result in any receipt, so an omitted check cannot hide; `VERIFIED` additionally
+requires the set to be non-empty. The set is declared by the producer: the validator
+proves the receipt is complete against its own declaration, and a reviewer or caller
+policy decides whether the declaration is the right one. The schema does not hard-code
+any repository's command list.
 
 **Identity and time.** `id` is `agent-verification-receipt:` plus the SHA-256 of the
 canonical encoding (sorted keys, compact separators, UTF-8) of every other field.
@@ -129,7 +137,8 @@ Pin the action to a full commit SHA. The step:
 2. validates the receipt and fails on any violation;
 3. fetches the PR and refuses a receipt whose repository, PR number or `head_sha` differs
    from the PR's current head (stale or foreign evidence is never embedded);
-4. patches the body, then re-reads it and confirms the same receipt id is present.
+4. patches the body, then re-reads the PR and confirms the same receipt id is present and
+   still binds to the PR's head at that moment (a push during the update fails the step).
 
 Failure is always visible: an invalid receipt, a read-only token (fork pull requests,
 or a job without `pull-requests: write`) and a lost update from a concurrent body edit

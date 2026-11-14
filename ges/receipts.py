@@ -210,6 +210,10 @@ def validate_semantics(receipt: dict) -> list[str]:
         else:
             if exit_code is not None or check['output_sha256'] is not None:
                 errors.append(where + ': NOT_VERIFIABLE cannot carry exit_code or output evidence')
+    required = receipt['required_checks']
+    for name in required:
+        if name not in names:
+            errors.append(f'$.required_checks: required check "{name}" has no recorded result')
     statuses = {check['status'] for check in checks}
     derived = ('FAIL' if 'FAIL' in statuses
                else 'INCOMPLETE' if statuses & {'NOT_RUN', 'NOT_VERIFIABLE'} else 'PASS')
@@ -237,6 +241,13 @@ def validate_semantics(receipt: dict) -> list[str]:
             errors.append('$.claim: VERIFIED requires human acceptance')
         if receipt['overall_status'] != 'PASS':
             errors.append('$.claim: VERIFIED requires overall_status PASS')
+        if not required:
+            errors.append('$.required_checks: VERIFIED requires a declared, non-empty required check set')
+        if merge is not None:
+            for index, check in enumerate(checks):
+                if check['started_at'] is not None and _time(check['started_at']) < _time(merge['merged_at']):
+                    errors.append(f'$.checks[{index}]: VERIFIED evidence must start at or after merged_at '
+                                  '(observed on the merged commit, not the branch)')
         if merge is not None and accept is not None and _time(accept['accepted_at']) < _time(merge['merged_at']):
             errors.append('$.acceptance: accepted_at precedes merged_at')
     if merge is not None:
@@ -393,6 +404,8 @@ def configure_parser(subparsers) -> None:
     source.add_argument('--body-file')
     source.add_argument('--pr-json')
     command.add_argument('--expect-id', help='Fail unless the embedded receipt has this id')
+    command.add_argument('--repository', help='With --pr-json: also require the receipt to bind to this repository and head')
+    command.add_argument('--pull-request', type=int)
 
 
 def run(args) -> int:
@@ -439,9 +452,14 @@ def run(args) -> int:
             Path(args.output).write_text(inject(body, receipt), encoding='utf-8')
             return 0
         if args.receipt_command == 'extract':
-            body = (_pr_fields(_load_json(args.pr_json))[0] if args.pr_json
-                    else Path(args.body_file).read_text(encoding='utf-8'))
+            head = None
+            if args.pr_json:
+                body, head = _pr_fields(_load_json(args.pr_json))
+            else:
+                body = Path(args.body_file).read_text(encoding='utf-8')
             receipt = extract(body)
+            if receipt is not None and head is not None and args.repository and args.pull_request:
+                check_binding(receipt, args.repository, args.pull_request, head)
             if receipt is None:
                 print('no receipt block', file=sys.stderr)
                 return 2

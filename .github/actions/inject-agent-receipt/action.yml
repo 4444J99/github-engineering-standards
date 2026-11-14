@@ -55,7 +55,8 @@ runs:
         fi
         gh api "repos/$REPOSITORY/pulls/$pr" > "$work/after.json"
         id=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["id"])' "$receipt")
-        python3 "$tool" extract --pr-json "$work/after.json" --expect-id "$id" >/dev/null \
-          || fail "the receipt is not present in the pull request body after the update (concurrent body edit?)"
+        python3 "$tool" extract --pr-json "$work/after.json" --expect-id "$id" \
+          --repository "$REPOSITORY" --pull-request "$pr" >/dev/null \
+          || fail "after the update the receipt is missing from the body or no longer binds to the current head (concurrent edit or push)"
         echo "receipt-id=$id" >> "$GITHUB_OUTPUT"
         echo "Embedded $id into $REPOSITORY#$pr"

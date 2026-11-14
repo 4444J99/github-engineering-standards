@@ -13,29 +13,29 @@
     {
       "command": "python -m unittest discover -s tests -v",
       "exit_code": 0,
-      "finished_at": "2026-11-14T10:00:30Z",
+      "finished_at": "2026-11-14T10:32:00Z",
       "github_conclusion": null,
       "name": "unit tests",
       "observation": "observed locally",
       "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-      "started_at": "2026-11-14T10:00:00Z",
+      "started_at": "2026-11-14T10:31:00Z",
       "status": "PASS"
     },
     {
       "command": "python -m ges validate",
       "exit_code": 0,
-      "finished_at": "2026-11-14T10:00:30Z",
+      "finished_at": "2026-11-14T10:32:00Z",
       "github_conclusion": null,
       "name": "ges validate",
       "observation": "observed locally",
       "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-      "started_at": "2026-11-14T10:00:00Z",
+      "started_at": "2026-11-14T10:31:00Z",
       "status": "PASS"
     }
   ],
   "claim": "VERIFIED",
   "generated_at": "2026-11-14T12:00:00Z",
-  "id": "agent-verification-receipt:10b715ffe17d6cbeb9cf103e587b607119df17cf5e7d40aea5f7321267dff3a7",
+  "id": "agent-verification-receipt:88fb1baba4a8a05ba5bc13eb9e6cba0a51892cc8e41bc79052298d388a6c1300",
   "limitations": [],
   "merge_evidence": {
     "ci_conclusion": "success",
@@ -44,6 +44,10 @@
     "merged_at": "2026-11-14T10:30:00Z"
   },
   "overall_status": "PASS",
+  "required_checks": [
+    "unit tests",
+    "ges validate"
+  ],
   "schema": "ges.agent-verification-receipt.v1",
   "subject": {
     "base_ref": "main",

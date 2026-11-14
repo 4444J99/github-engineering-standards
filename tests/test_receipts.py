@@ -166,6 +166,7 @@ class Injection(unittest.TestCase):
     def test_hostile_text_cannot_break_out_of_the_block(self):
         receipt = copy.deepcopy(self.receipt)
         receipt['checks'][0]['name'] = '@octocat [click](https://evil.example) | x <script>'
+        receipt['required_checks'] = [receipt['checks'][0]['name']]
         receipt['checks'][0]['observation'] = '```\n</details>\n# injected heading ```` '
         block = receipts.render_block(receipts.seal(receipt))
         self.assertNotIn('@octocat', block.split('<details>')[0])
@@ -207,6 +208,16 @@ class Cli(unittest.TestCase):
         result = self.run_cli('validate', str(FX / 'valid' / 'merged.json'), str(FX / 'invalid' / 'short-sha.json'))
         self.assertEqual(result.returncode, 2)
         self.assertIn('head_sha', result.stderr)
+
+    def test_extract_checks_binding_to_the_current_head(self):
+        receipt = load(FX / 'valid' / 'staged-pass.json')
+        with tempfile.TemporaryDirectory() as tmp:
+            pr = Path(tmp) / 'pr.json'
+            pr.write_text(json.dumps({'body': receipts.inject('x', receipt), 'head': {'sha': 'e' * 40}}))
+            result = self.run_cli('extract', '--pr-json', str(pr), '--repository', receipt['subject']['repository'],
+                                  '--pull-request', '521')
+            self.assertEqual(result.returncode, 2)
+            self.assertIn('head_sha', result.stderr)
 
     def test_missing_file_is_a_clean_failure(self):
         self.assertEqual(self.run_cli('validate', '/nonexistent/receipt.json').returncode, 2)
@@ -253,9 +264,13 @@ if '-X' in args:
     spec = [a for a in args if a.startswith('body=@')][0][6:]
     if os.environ.get('FAKE_DROP') != '1':
         open(state, 'w').write(open(spec).read())
+        open(state + '.written', 'w').write('1')
     print('{}')
 else:
-    print(json.dumps({'body': open(state).read(), 'head': {'sha': os.environ['FAKE_HEAD']}}))
+    head = os.environ['FAKE_HEAD']
+    if os.environ.get('FAKE_HEAD_AFTER') and os.path.exists(state + '.written'):
+        head = os.environ['FAKE_HEAD_AFTER']
+    print(json.dumps({'body': open(state).read(), 'head': {'sha': head}}))
 ''')
         fake.chmod(fake.stat().st_mode | stat.S_IEXEC)
 
@@ -307,6 +322,12 @@ else:
         result = self.run_action(FAKE_DENY='1')
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('pull-requests: write', result.stdout)
+
+    def test_head_moving_during_the_update_fails_visibly(self):
+        result = self.run_action(FAKE_HEAD_AFTER='8' * 40)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn('no longer binds to the current head', result.stdout)
+        self.assertNotIn('receipt-id=', (self.dir / 'out.txt').read_text() if (self.dir / 'out.txt').exists() else '')
 
     def test_unconfirmed_write_fails(self):
         self.assertNotEqual(self.run_action(FAKE_DROP='1').returncode, 0)

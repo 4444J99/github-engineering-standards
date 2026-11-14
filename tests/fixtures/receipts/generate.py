@@ -38,6 +38,7 @@ def staged():
         'subject': {'repository': '4444J99/guide-github-standard', 'pull_request': 521,
                     'head_sha': SHA_A, 'base_ref': 'main', 'base_sha': SHA_B},
         'claim': 'STAGED',
+        'required_checks': ['unit tests', 'ges validate'],
         'checks': [
             check('unit tests', 'python -m unittest discover -s tests -v'),
             check('ges validate', 'python -m ges validate'),
@@ -49,6 +50,9 @@ def staged():
 
 def merged():
     receipt = staged()
+    for item in receipt['checks']:
+        item['started_at'], item['finished_at'] = '2026-11-14T10:31:00Z', '2026-11-14T10:32:00Z'
+
     receipt['claim'] = 'MERGED'
     receipt['generated_at'] = '2026-11-14T11:00:00Z'
     receipt['merge_evidence'] = {'main_sha': SHA_C, 'merged_at': '2026-11-14T10:30:00Z',
@@ -92,6 +96,7 @@ def github_checks():
         check('lint', 'GitHub check run: lint', status='NOT_VERIFIABLE', exit_code=None,
               github_conclusion='skipped', output_sha256=None, observation='provider skipped the job'),
     ]
+    receipt['required_checks'] = ['validate (3.13)']
     receipt['overall_status'] = 'INCOMPLETE'
     return receipt
 
@@ -138,6 +143,9 @@ def cases():
     add('verified-without-acceptance', verified, 'acceptance', None, 'VERIFIED requires human acceptance')
     add('verified-with-failing-ci', verified, 'merge_evidence.ci_conclusion', 'failure', 'ci_conclusion success')
     add('verified-with-incomplete-checks', verified, 'overall_status', 'INCOMPLETE', 'derived status is PASS')
+    add('verified-empty-required-checks', verified, 'required_checks', [], 'non-empty required check set')
+    add('required-check-missing', staged, 'required_checks', ['unit tests', 'ges compile'], 'has no recorded result')
+    add('verified-evidence-predates-merge', verified, 'checks.0.started_at', '2026-11-14T10:00:00Z', 'merged commit, not the branch')
     add('acceptance-before-merge', verified, 'acceptance.accepted_at', '2026-11-14T10:10:00Z', 'precedes merged_at')
     add('ci-run-other-repository', merged, 'merge_evidence.ci_run_url',
         'https://github.com/someone/else/actions/runs/1', 'does not belong to the subject repository')

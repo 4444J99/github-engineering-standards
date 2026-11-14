@@ -5,7 +5,7 @@
   "$comment": "Structural contract only. ges.receipts additionally enforces cross-field invariants (derived overall status, status/exit-code consistency, GitHub conclusion mapping, claim ladder, identity digest). A receipt records what an agent observed; it does not authenticate the agent or any named human, and it never certifies Verified without merged-main evidence and human acceptance.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema", "id", "generated_at", "agent", "subject", "claim", "checks", "overall_status", "merge_evidence", "acceptance", "limitations"],
+  "required": ["schema", "id", "generated_at", "agent", "subject", "claim", "required_checks", "checks", "overall_status", "merge_evidence", "acceptance", "limitations"],
   "properties": {
     "schema": {"const": "ges.agent-verification-receipt.v1"},
     "id": {"type": "string", "pattern": "^agent-verification-receipt:[a-f0-9]{64}$"},
@@ -33,6 +33,12 @@
       }
     },
     "claim": {"type": "string", "enum": ["STAGED", "MERGED", "VERIFIED"]},
+    "required_checks": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[^\\r\\n]+$"}
+    },
     "checks": {
       "type": "array",
       "minItems": 1,

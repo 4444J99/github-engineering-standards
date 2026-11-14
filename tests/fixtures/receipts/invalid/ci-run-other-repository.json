@@ -9,29 +9,29 @@
     {
       "command": "python -m unittest discover -s tests -v",
       "exit_code": 0,
-      "finished_at": "2026-11-14T10:00:30Z",
+      "finished_at": "2026-11-14T10:32:00Z",
       "github_conclusion": null,
       "name": "unit tests",
       "observation": "observed locally",
       "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-      "started_at": "2026-11-14T10:00:00Z",
+      "started_at": "2026-11-14T10:31:00Z",
       "status": "PASS"
     },
     {
       "command": "python -m ges validate",
       "exit_code": 0,
-      "finished_at": "2026-11-14T10:00:30Z",
+      "finished_at": "2026-11-14T10:32:00Z",
       "github_conclusion": null,
       "name": "ges validate",
       "observation": "observed locally",
       "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
-      "started_at": "2026-11-14T10:00:00Z",
+      "started_at": "2026-11-14T10:31:00Z",
       "status": "PASS"
     }
   ],
   "claim": "MERGED",
   "generated_at": "2026-11-14T11:00:00Z",
-  "id": "agent-verification-receipt:0e59cd107a2fbefab4e85c0ce11ebdc53b39571472d3f243a97fb039c96c840b",
+  "id": "agent-verification-receipt:d4ab8f4dbae00b888380229350b0e31b7c4f7f872721127b51c93f4a3d4eea10",
   "limitations": [
     "Branch-only evidence; not merged to main."
   ],
@@ -42,6 +42,10 @@
     "merged_at": "2026-11-14T10:30:00Z"
   },
   "overall_status": "PASS",
+  "required_checks": [
+    "unit tests",
+    "ges validate"
+  ],
   "schema": "ges.agent-verification-receipt.v1",
   "subject": {
     "base_ref": "main",
