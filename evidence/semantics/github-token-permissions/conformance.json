@@ -1,0 +1,926 @@
+{
+ "cases": [
+  {
+   "expect": {
+    "allowed": true
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "push",
+    "from_fork": false,
+    "needed": "read",
+    "scope": "contents",
+    "workflow": {
+     "contents": "write"
+    }
+   },
+   "id": "T4-write-includes-read",
+   "kind": "can",
+   "rules": [
+    "T4"
+   ]
+  },
+  {
+   "expect": {
+    "allowed": false
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "push",
+    "from_fork": false,
+    "needed": "write",
+    "scope": "contents",
+    "workflow": {
+     "contents": "read"
+    }
+   },
+   "id": "T4-read-excludes-write",
+   "kind": "can",
+   "rules": [
+    "T4"
+   ]
+  },
+  {
+   "expect": {
+    "error": "scope id-token cannot be set to 'read' (allowed: none|write)"
+   },
+   "given": {
+    "flags": [
+     "fpt-or-ghec"
+    ],
+    "spec": {
+     "id-token": "read"
+    }
+   },
+   "id": "T4-id-token-read-invalid",
+   "kind": "permissions-key",
+   "rules": [
+    "T4"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "none",
+     "deployments": "none",
+     "discussions": "none",
+     "id-token": "write",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "flags": [
+     "fpt-or-ghec"
+    ],
+    "spec": {
+     "id-token": "write"
+    }
+   },
+   "id": "T4-id-token-write-valid",
+   "kind": "permissions-key",
+   "rules": [
+    "T4"
+   ]
+  },
+  {
+   "expect": {
+    "error": "unknown or unavailable permission scope: id-token"
+   },
+   "given": {
+    "spec": {
+     "id-token": "write"
+    }
+   },
+   "id": "T4-id-token-gated-off-ghes",
+   "kind": "permissions-key",
+   "rules": [
+    "T4"
+   ]
+  },
+  {
+   "expect": {
+    "error": "scope vulnerability-alerts cannot be set to 'write' (allowed: none|read)"
+   },
+   "given": {
+    "flags": [
+     "vulnerability-alerts-permission"
+    ],
+    "spec": {
+     "vulnerability-alerts": "write"
+    }
+   },
+   "id": "T4-vulnerability-alerts-write-invalid",
+   "kind": "permissions-key",
+   "rules": [
+    "T4"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "none",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "write",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "push",
+    "from_fork": false,
+    "workflow": {
+     "issues": "write"
+    }
+   },
+   "id": "T5-unspecified-become-none",
+   "kind": "resolve",
+   "rules": [
+    "T5"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "read",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "none",
+     "packages": "read",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "push",
+    "from_fork": false
+   },
+   "id": "T5-absent-key-keeps-default",
+   "kind": "resolve",
+   "rules": [
+    "T5",
+    "T8"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "read",
+     "checks": "read",
+     "contents": "read",
+     "deployments": "read",
+     "discussions": "read",
+     "id-token": "none",
+     "issues": "read",
+     "packages": "read",
+     "pages": "read",
+     "pull-requests": "read",
+     "security-events": "read",
+     "statuses": "read",
+     "vulnerability-alerts": "read"
+    }
+   },
+   "given": {
+    "flags": [
+     "vulnerability-alerts-permission",
+     "fpt-or-ghec"
+    ],
+    "spec": "read-all"
+   },
+   "id": "T6-read-all",
+   "kind": "permissions-key",
+   "rules": [
+    "T6"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "write",
+     "checks": "write",
+     "contents": "write",
+     "deployments": "write",
+     "discussions": "write",
+     "id-token": "write",
+     "issues": "write",
+     "packages": "write",
+     "pages": "write",
+     "pull-requests": "write",
+     "security-events": "write",
+     "statuses": "write",
+     "vulnerability-alerts": "read"
+    }
+   },
+   "given": {
+    "flags": [
+     "vulnerability-alerts-permission",
+     "fpt-or-ghec"
+    ],
+    "spec": "write-all"
+   },
+   "id": "T6-write-all",
+   "kind": "permissions-key",
+   "rules": [
+    "T6"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "none",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "spec": {}
+   },
+   "id": "T7-empty-mapping-disables-all",
+   "kind": "permissions-key",
+   "rules": [
+    "T7"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "none",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "read",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "push",
+    "from_fork": false,
+    "job": {
+     "issues": "read"
+    },
+    "workflow": {
+     "contents": "write"
+    }
+   },
+   "id": "T8-job-level-replaces-workflow-level",
+   "kind": "resolve",
+   "rules": [
+    "T8",
+    "T9"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "write",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "push",
+    "from_fork": false,
+    "workflow": {
+     "contents": "write"
+    }
+   },
+   "id": "T8-workflow-level-applies-without-job",
+   "kind": "resolve",
+   "rules": [
+    "T8",
+    "T9"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "read",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "read",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request",
+    "from_fork": true,
+    "workflow": {
+     "contents": "read",
+     "pull-requests": "write"
+    }
+   },
+   "id": "T8-fork-pull-request-write-becomes-read",
+   "kind": "resolve",
+   "rules": [
+    "T8",
+    "T10"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "read",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "write",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request",
+    "from_fork": false,
+    "workflow": {
+     "contents": "read",
+     "pull-requests": "write"
+    }
+   },
+   "id": "T8-same-repo-pull-request-keeps-write",
+   "kind": "resolve",
+   "rules": [
+    "T8"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "none",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "read",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request_review",
+    "from_fork": true,
+    "workflow": {
+     "pull-requests": "write"
+    }
+   },
+   "id": "T8-fork-pull-request-review-also-downgraded",
+   "kind": "resolve",
+   "rules": [
+    "T8",
+    "T10"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "none",
+     "deployments": "none",
+     "discussions": "none",
+     "id-token": "none",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request",
+    "flags": [
+     "fpt-or-ghec"
+    ],
+    "from_fork": true,
+    "workflow": {
+     "id-token": "write"
+    }
+   },
+   "id": "T8-fork-id-token-write-becomes-none",
+   "kind": "resolve",
+   "rules": [
+    "T8",
+    "T10"
+   ]
+  },
+  {
+   "expect": {
+    "permissions": {
+     "actions": "none",
+     "checks": "none",
+     "contents": "write",
+     "deployments": "none",
+     "discussions": "none",
+     "issues": "none",
+     "packages": "none",
+     "pages": "none",
+     "pull-requests": "none",
+     "security-events": "none",
+     "statuses": "none"
+    }
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "workflow_dispatch",
+    "from_fork": true,
+    "workflow": {
+     "contents": "write"
+    }
+   },
+   "id": "T8-fork-workflow-dispatch-not-downgraded",
+   "kind": "resolve",
+   "rules": [
+    "T8"
+   ]
+  },
+  {
+   "expect": {
+    "allowed": false
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request",
+    "from_fork": true,
+    "needed": "write",
+    "scope": "pull-requests",
+    "workflow": {
+     "pull-requests": "write"
+    }
+   },
+   "id": "T10-fork-cannot-grant-write",
+   "kind": "can",
+   "rules": [
+    "T10"
+   ]
+  },
+  {
+   "expect": {
+    "allowed": true
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request",
+    "from_fork": true,
+    "needed": "read",
+    "scope": "pull-requests",
+    "workflow": {
+     "pull-requests": "read"
+    }
+   },
+   "id": "T10-fork-read-permission-retained",
+   "kind": "can",
+   "rules": [
+    "T10"
+   ]
+  },
+  {
+   "expect": {
+    "allowed": true
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request",
+    "from_fork": true,
+    "needed": "write",
+    "scope": "pull-requests",
+    "send_write_tokens": true,
+    "workflow": {
+     "pull-requests": "write"
+    }
+   },
+   "id": "T11-send-write-tokens-allows-fork-write",
+   "kind": "can",
+   "rules": [
+    "T11"
+   ]
+  },
+  {
+   "expect": {
+    "allowed": true
+   },
+   "given": {
+    "default": {
+     "contents": "read",
+     "packages": "read"
+    },
+    "event": "pull_request_target",
+    "from_fork": true,
+    "needed": "write",
+    "scope": "pull-requests",
+    "workflow": {
+     "pull-requests": "write"
+    }
+   },
+   "id": "T12-pull-request-target-fork-keeps-write",
+   "kind": "can",
+   "rules": [
+    "T12"
+   ]
+  },
+  {
+   "expect": {
+    "reaches_runner": false
+   },
+   "given": {
+    "from_fork": true,
+    "name": "DEPLOY_KEY"
+   },
+   "id": "T13-fork-secret-withheld",
+   "kind": "secret",
+   "rules": [
+    "T13"
+   ]
+  },
+  {
+   "expect": {
+    "reaches_runner": true
+   },
+   "given": {
+    "from_fork": true,
+    "name": "GITHUB_TOKEN"
+   },
+   "id": "T13-fork-github-token-passed",
+   "kind": "secret",
+   "rules": [
+    "T13"
+   ]
+  },
+  {
+   "expect": {
+    "reaches_runner": true
+   },
+   "given": {
+    "from_fork": false,
+    "name": "DEPLOY_KEY"
+   },
+   "id": "T13-same-repo-secret-passed",
+   "kind": "secret",
+   "rules": [
+    "T13"
+   ]
+  },
+  {
+   "expect": {
+    "valid": false
+   },
+   "given": {
+    "elapsed_hours": 6.0,
+    "job_finished": false,
+    "runner": "github-hosted"
+   },
+   "id": "T3-hosted-expires-at-6h",
+   "kind": "token-valid",
+   "rules": [
+    "T3"
+   ]
+  },
+  {
+   "expect": {
+    "valid": true
+   },
+   "given": {
+    "elapsed_hours": 5.9,
+    "job_finished": false,
+    "runner": "github-hosted"
+   },
+   "id": "T3-hosted-valid-before-6h",
+   "kind": "token-valid",
+   "rules": [
+    "T3"
+   ]
+  },
+  {
+   "expect": {
+    "valid": false
+   },
+   "given": {
+    "elapsed_hours": 24.0,
+    "job_finished": false,
+    "runner": "self-hosted"
+   },
+   "id": "T3-self-hosted-refresh-capped-24h",
+   "kind": "token-valid",
+   "rules": [
+    "T3"
+   ]
+  },
+  {
+   "expect": {
+    "valid": false
+   },
+   "given": {
+    "elapsed_hours": 1.0,
+    "job_finished": true,
+    "runner": "self-hosted"
+   },
+   "id": "T3-expires-when-job-finishes",
+   "kind": "token-valid",
+   "rules": [
+    "T3"
+   ]
+  },
+  {
+   "expect": {
+    "context": {
+     "default_activity_types": [
+      "opened",
+      "synchronize",
+      "reopened"
+     ],
+     "ref": "refs/pull/PULL_REQUEST_NUMBER/merge",
+     "runs_against": "merge commit of the pull request",
+     "sha": "last merge commit on the GITHUB_REF branch",
+     "skipped_on_merge_conflict": true
+    }
+   },
+   "given": {
+    "event": "pull_request"
+   },
+   "id": "E1-pull-request-context",
+   "kind": "event-context",
+   "rules": [
+    "E1"
+   ]
+  },
+  {
+   "expect": {
+    "context": {
+     "default_activity_types": [
+      "opened",
+      "synchronize",
+      "reopened"
+     ],
+     "ref": "default branch",
+     "runs_against": "default branch of the base repository",
+     "sha": "last commit on default branch",
+     "skipped_on_merge_conflict": false
+    }
+   },
+   "given": {
+    "event": "pull_request_target"
+   },
+   "id": "E2-default-activity-types",
+   "kind": "event-context",
+   "rules": [
+    "E2"
+   ]
+  },
+  {
+   "expect": {
+    "context": {
+     "default_activity_types": [
+      "opened",
+      "synchronize",
+      "reopened"
+     ],
+     "ref": "default branch",
+     "runs_against": "default branch of the base repository",
+     "sha": "last commit on default branch",
+     "skipped_on_merge_conflict": false
+    }
+   },
+   "given": {
+    "event": "pull_request_target"
+   },
+   "id": "E4-pull-request-target-context",
+   "kind": "event-context",
+   "rules": [
+    "E4"
+   ]
+  },
+  {
+   "expect": {
+    "context": {
+     "default_activity_types": [
+      "opened",
+      "synchronize",
+      "reopened"
+     ],
+     "ref": "pull request base branch",
+     "runs_against": "base of the pull request",
+     "sha": "last commit on the pull request base branch",
+     "skipped_on_merge_conflict": false
+    }
+   },
+   "given": {
+    "event": "pull_request_target",
+    "ghes_before_3_20": true
+   },
+   "id": "E4-ghes-before-3-20-base-branch",
+   "kind": "event-context",
+   "rules": [
+    "E4"
+   ]
+  },
+  {
+   "expect": {
+    "result": "RUN"
+   },
+   "given": {
+    "event": "workflow_dispatch"
+   },
+   "id": "E3-dispatch-always-runs",
+   "kind": "token-event",
+   "rules": [
+    "E3"
+   ]
+  },
+  {
+   "expect": {
+    "result": "NO_RUN"
+   },
+   "given": {
+    "event": "push"
+   },
+   "id": "E3-push-by-token-no-run",
+   "kind": "token-event",
+   "rules": [
+    "E3"
+   ]
+  },
+  {
+   "expect": {
+    "result": "APPROVAL_REQUIRED"
+   },
+   "given": {
+    "activity_type": "opened",
+    "event": "pull_request"
+   },
+   "id": "E3-pull-request-opened-needs-approval",
+   "kind": "token-event",
+   "rules": [
+    "E3"
+   ]
+  },
+  {
+   "expect": {
+    "result": "NO_RUN"
+   },
+   "given": {
+    "activity_type": "edited",
+    "event": "pull_request"
+   },
+   "id": "E3-pull-request-edited-no-run",
+   "kind": "token-event",
+   "rules": [
+    "E3"
+   ]
+  },
+  {
+   "expect": {
+    "result": "NO_RUN"
+   },
+   "given": {
+    "activity_type": "opened",
+    "approval_flag": false,
+    "event": "pull_request"
+   },
+   "id": "E3-approval-flag-off-no-run",
+   "kind": "token-event",
+   "rules": [
+    "E3"
+   ]
+  },
+  {
+   "expect": {
+    "reaches_runner": true
+   },
+   "given": {
+    "event": "pull_request_target",
+    "from_fork": true,
+    "name": "DEPLOY_KEY"
+   },
+   "id": "T13-pull-request-target-fork-secret-reachable",
+   "kind": "secret",
+   "rules": [
+    "T13"
+   ]
+  },
+  {
+   "expect": {
+    "context": {
+     "default_activity_types": [
+      "opened",
+      "synchronize",
+      "reopened"
+     ],
+     "ref": "fully qualified ref of the branch the pull request was merged into",
+     "runs_against": "merge commit of the pull request",
+     "sha": "last merge commit on the GITHUB_REF branch",
+     "skipped_on_merge_conflict": true
+    }
+   },
+   "given": {
+    "closed_by_merge": true,
+    "event": "pull_request"
+   },
+   "id": "E1-pull-request-closed-by-merge-ref",
+   "kind": "event-context",
+   "rules": [
+    "E1"
+   ]
+  }
+ ],
+ "default_note": "Defaults are caller-supplied illustrations (contents:read, packages:read); the pinned pages do not enumerate the restricted/permissive presets.",
+ "schema": "ges.token-semantics-conformance.v1"
+}

@@ -17,6 +17,8 @@ def main(argv=None):
     configure_parser(sub)
     from .receipts import configure_parser as configure_receipts
     configure_receipts(sub)
+    from .token_semantics import configure_parser as configure_token_semantics
+    configure_token_semantics(sub)
     c=sub.add_parser('branch-checks', help='Read-only exact-revision required-check observation; no enforcement certification')
     c.add_argument('--snapshot',type=Path,required=True); c.add_argument('--profile',type=Path,required=True)
     c.add_argument('--revision',required=True); c.add_argument('--revision-kind',choices=['head','test_merge','merge_group'],required=True)
@@ -46,6 +48,9 @@ def main(argv=None):
         report=assess(load(args.snapshot),load(args.profile),args.revision,args.revision_kind)
         dump(args.output,report); print(json.dumps(report['summary'],indent=2))
         return 0 if report['observed_checks_pass'] else 1
+    if args.command == 'token-semantics':
+        from .token_semantics import run as run_token_semantics
+        return run_token_semantics(args)
     if args.command == 'receipt':
         from .receipts import run as run_receipt
         return run_receipt(args)
