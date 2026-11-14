@@ -1,0 +1,61 @@
+name: Inject agent verification receipt
+description: >-
+  Validate an agent verification receipt (ges.agent-verification-receipt.v1) and insert it into the
+  pull request body between idempotent markers. Fails visibly on an invalid or stale receipt, an
+  unsupported event, or a token that cannot write the body; it never skips silently.
+inputs:
+  receipt-path:
+    description: Path to the sealed receipt JSON, relative to the workspace. The receipt must be produced by a trusted step, not read from untrusted PR content.
+    required: true
+  pull-request-number:
+    description: Pull request number. Defaults to the number in the triggering pull_request event.
+    required: false
+    default: ''
+  github-token:
+    description: Token with pull-requests write permission. The calling job must grant it.
+    required: false
+    default: ${{ github.token }}
+outputs:
+  receipt-id:
+    description: Identity of the receipt now embedded in the pull request body.
+    value: ${{ steps.inject.outputs.receipt-id }}
+runs:
+  using: composite
+  steps:
+    - id: inject
+      shell: bash
+      env:
+        RECEIPT_PATH: ${{ inputs.receipt-path }}
+        INPUT_PR: ${{ inputs.pull-request-number }}
+        EVENT_PR: ${{ github.event.pull_request.number }}
+        EVENT_NAME: ${{ github.event_name }}
+        REPOSITORY: ${{ github.repository }}
+        GH_TOKEN: ${{ inputs.github-token }}
+        ACTION_PATH: ${{ github.action_path }}
+        WORKSPACE: ${{ github.workspace }}
+        RUNNER_TEMP_DIR: ${{ runner.temp }}
+      run: |
+        set -euo pipefail
+        fail() { echo "::error title=agent-receipt::$1"; exit 1; }
+        [ "$EVENT_NAME" != "pull_request_target" ] || fail "pull_request_target is refused: the receipt would come from an untrusted context"
+        pr="${INPUT_PR:-$EVENT_PR}"
+        case "$pr" in ''|*[!0-9]*) fail "pull-request-number is missing or not numeric" ;; esac
+        receipt="$WORKSPACE/$RECEIPT_PATH"
+        [ -f "$receipt" ] || fail "receipt file not found: $RECEIPT_PATH"
+        tool="$ACTION_PATH/../../../ges/receipts.py"
+        python3 "$tool" validate "$receipt" || fail "receipt failed validation"
+        work="$RUNNER_TEMP_DIR/agent-receipt-$pr"
+        mkdir -p "$work"
+        gh api "repos/$REPOSITORY/pulls/$pr" > "$work/pr.json" || fail "cannot read the pull request"
+        python3 "$tool" inject --receipt "$receipt" --pr-json "$work/pr.json" \
+          --repository "$REPOSITORY" --pull-request "$pr" --output "$work/body.md" \
+          || fail "receipt does not bind to this pull request head or the body cannot be updated"
+        if ! gh api -X PATCH "repos/$REPOSITORY/pulls/$pr" -F "body=@$work/body.md" > "$work/patched.json"; then
+          fail "cannot write the pull request body (fork pull requests and read-only tokens cannot; the job needs pull-requests: write)"
+        fi
+        gh api "repos/$REPOSITORY/pulls/$pr" > "$work/after.json"
+        id=$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1]))["id"])' "$receipt")
+        python3 "$tool" extract --pr-json "$work/after.json" --expect-id "$id" >/dev/null \
+          || fail "the receipt is not present in the pull request body after the update (concurrent body edit?)"
+        echo "receipt-id=$id" >> "$GITHUB_OUTPUT"
+        echo "Embedded $id into $REPOSITORY#$pr"

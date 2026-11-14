@@ -349,6 +349,23 @@ def extract(body: str | None) -> dict | None:
     return receipt
 
 
+def check_binding(receipt: dict, repository: str, pull_request: int, head_sha: str) -> None:
+    """Refuse a receipt that does not describe this exact PR head (stale or foreign evidence)."""
+    subject = receipt['subject']
+    if subject['repository'].lower() != repository.lower():
+        raise ValueError(f"Receipt repository {subject['repository']} differs from {repository}")
+    if subject['pull_request'] is not None and subject['pull_request'] != pull_request:
+        raise ValueError(f"Receipt pull request {subject['pull_request']} differs from {pull_request}")
+    if subject['head_sha'] != head_sha:
+        raise ValueError(f"Receipt head_sha {subject['head_sha']} differs from current PR head {head_sha}")
+
+
+def _pr_fields(pr: object) -> tuple[str, str]:
+    if not isinstance(pr, dict) or not isinstance(pr.get('head'), dict) or not isinstance(pr['head'].get('sha'), str):
+        raise ValueError('Not a pull request API response')
+    return pr.get('body') or '', pr['head']['sha']
+
+
 def _load_json(path: str) -> object:
     return json.loads(Path(path).read_text(encoding='utf-8'))
 
@@ -365,10 +382,17 @@ def configure_parser(subparsers) -> None:
     command.add_argument('--receipt', required=True)
     command = commands.add_parser('inject', help='Insert or replace the receipt block in a PR body file')
     command.add_argument('--receipt', required=True)
-    command.add_argument('--body-file', required=True)
+    source = command.add_mutually_exclusive_group(required=True)
+    source.add_argument('--body-file')
+    source.add_argument('--pr-json', help='GET /repos/{r}/pulls/{n} response; also checks the receipt binds to this PR head')
+    command.add_argument('--repository', help='owner/name (required with --pr-json)')
+    command.add_argument('--pull-request', type=int, help='PR number (required with --pr-json)')
     command.add_argument('--output', required=True)
     command = commands.add_parser('extract', help='Validate the receipt embedded in a PR body file')
-    command.add_argument('--body-file', required=True)
+    source = command.add_mutually_exclusive_group(required=True)
+    source.add_argument('--body-file')
+    source.add_argument('--pr-json')
+    command.add_argument('--expect-id', help='Fail unless the embedded receipt has this id')
 
 
 def run(args) -> int:
@@ -399,13 +423,30 @@ def run(args) -> int:
             print(render_block(_load_json(args.receipt)))
             return 0
         if args.receipt_command == 'inject':
-            body = Path(args.body_file).read_text(encoding='utf-8')
-            Path(args.output).write_text(inject(body, _load_json(args.receipt)), encoding='utf-8')
+            receipt = _load_json(args.receipt)
+            errors = validate_receipt(receipt)
+            if errors:
+                for error in errors:
+                    print(f'{args.receipt}: {error}', file=sys.stderr)
+                return 2
+            if args.pr_json:
+                if not args.repository or not args.pull_request:
+                    raise ValueError('--pr-json requires --repository and --pull-request')
+                body, head = _pr_fields(_load_json(args.pr_json))
+                check_binding(receipt, args.repository, args.pull_request, head)
+            else:
+                body = Path(args.body_file).read_text(encoding='utf-8')
+            Path(args.output).write_text(inject(body, receipt), encoding='utf-8')
             return 0
         if args.receipt_command == 'extract':
-            receipt = extract(Path(args.body_file).read_text(encoding='utf-8'))
+            body = (_pr_fields(_load_json(args.pr_json))[0] if args.pr_json
+                    else Path(args.body_file).read_text(encoding='utf-8'))
+            receipt = extract(body)
             if receipt is None:
                 print('no receipt block', file=sys.stderr)
+                return 2
+            if args.expect_id and receipt['id'] != args.expect_id:
+                print('embedded receipt id differs from the expected id', file=sys.stderr)
                 return 2
             print(receipt['id'])
             return 0
