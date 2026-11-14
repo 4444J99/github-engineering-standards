@@ -1,0 +1,59 @@
+{
+  "acceptance": {
+    "accepted_at": "2026-11-14T11:30:00Z",
+    "accepted_by": "designated-owner",
+    "reference": "https://github.com/4444J99/guide-github-standard/pull/521#issuecomment-1"
+  },
+  "agent": {
+    "kind": "claude",
+    "name": "claude-code",
+    "session_ref": "session-0001"
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:32:00Z",
+      "github_conclusion": null,
+      "name": "unit tests",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:31:00Z",
+      "status": "PASS"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:32:00Z",
+      "github_conclusion": null,
+      "name": "ges validate",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:31:00Z",
+      "status": "PASS"
+    }
+  ],
+  "claim": "MERGED",
+  "generated_at": "2026-11-14T12:00:00Z",
+  "id": "agent-verification-receipt:de76c7ef5ae4e2faac08c816fcdadbfca11956ce9c19b25b424b16cfcac1b678",
+  "limitations": [],
+  "merge_evidence": {
+    "ci_conclusion": "success",
+    "ci_run_url": "https://github.com/4444J99/guide-github-standard/actions/runs/123456789",
+    "main_sha": "cccccccccccccccccccccccccccccccccccccccc",
+    "merged_at": "2026-11-14T10:30:00Z"
+  },
+  "overall_status": "PASS",
+  "required_checks": [
+    "unit tests",
+    "ges validate"
+  ],
+  "schema": "ges.agent-verification-receipt.v1",
+  "subject": {
+    "base_ref": "main",
+    "base_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "pull_request": 521,
+    "repository": "4444J99/guide-github-standard"
+  }
+}

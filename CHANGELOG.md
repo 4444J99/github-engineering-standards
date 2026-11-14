@@ -35,3 +35,5 @@ See `evidence/recovery-status.json` for measured construction status and
 ## Unreleased
 
 Phase 1 (secrets & supply chain) warn-only package: reusable `phase1-warn.yml`, `standards/phase1/` checks, pass/fail fixtures, and `docs/phase1-warn-only.md`. No required checks or ruleset changes.
+
+Agent verification receipts: `ges.agent-verification-receipt.v1` schema, stdlib validator (`python -m ges receipt ...`), valid/invalid fixtures, and the `inject-agent-receipt` composite action; see `docs/agent-verification-receipts.md`. No required checks or ruleset changes.

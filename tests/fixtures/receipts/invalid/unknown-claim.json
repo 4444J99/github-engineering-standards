@@ -1,0 +1,52 @@
+{
+  "acceptance": null,
+  "agent": {
+    "kind": "claude",
+    "name": "claude-code",
+    "session_ref": "session-0001"
+  },
+  "checks": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": null,
+      "name": "unit tests",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "PASS"
+    },
+    {
+      "command": "python -m ges validate",
+      "exit_code": 0,
+      "finished_at": "2026-11-14T10:00:30Z",
+      "github_conclusion": null,
+      "name": "ges validate",
+      "observation": "observed locally",
+      "output_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "started_at": "2026-11-14T10:00:00Z",
+      "status": "PASS"
+    }
+  ],
+  "claim": "DONE",
+  "generated_at": "2026-11-14T10:05:00Z",
+  "id": "agent-verification-receipt:5f9473cacec2c2a6c1f57bfba5b8f454a33d3dada45ca819ddc554fe7f8923f2",
+  "limitations": [
+    "Branch-only evidence; not merged to main."
+  ],
+  "merge_evidence": null,
+  "overall_status": "PASS",
+  "required_checks": [
+    "unit tests",
+    "ges validate"
+  ],
+  "schema": "ges.agent-verification-receipt.v1",
+  "subject": {
+    "base_ref": "main",
+    "base_sha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "head_sha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "pull_request": 521,
+    "repository": "4444J99/guide-github-standard"
+  }
+}
