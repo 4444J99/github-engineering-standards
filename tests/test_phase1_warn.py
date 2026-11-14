@@ -24,6 +24,33 @@ class Phase1Checks(unittest.TestCase):
         self.assertEqual(check.main([str(FX / "fail")]), 0)
         self.assertEqual(check.main([str(FX / "fail"), "--enforce"]), 1)
 
+    def test_non_mapping_yaml_top_level_emits_finding_without_crash(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmpdir:
+            tmppath = Path(tmpdir)
+            wfdir = tmppath / ".github" / "workflows"
+            wfdir.mkdir(parents=True)
+
+            # Non-empty sequence top level
+            (wfdir / "list.yml").write_text("- one\n- two\n")
+            # Scalar top level
+            (wfdir / "scalar.yml").write_text("just_a_string\n")
+            # Valid mapping control
+            (wfdir / "valid.yml").write_text("name: valid\non: push\njobs: {}\npermissions: {}\nconcurrency: c\n")
+
+            findings = check.check_repo(tmppath)
+            yaml_parse_findings = [f for f in findings if f["rule"] == "yaml-parse"]
+            self.assertEqual(len(yaml_parse_findings), 2)
+            self.assertEqual(yaml_parse_findings[0]["where"], ".github/workflows/list.yml")
+            self.assertEqual(yaml_parse_findings[0]["message"], "top-level YAML document must be a mapping")
+            self.assertEqual(yaml_parse_findings[1]["where"], ".github/workflows/scalar.yml")
+            self.assertEqual(yaml_parse_findings[1]["message"], "top-level YAML document must be a mapping")
+
+            # In warn-only mode (default), main exits 0
+            self.assertEqual(check.main([str(tmppath)]), 0)
+            # Under --enforce, main exits 1 without a traceback
+            self.assertEqual(check.main([str(tmppath), "--enforce"]), 1)
+
 
 class HonestGreen(unittest.TestCase):
     def test_all_success_is_green(self):
